@@ -1,0 +1,11 @@
+{
+  "name": "漢字の庭",
+  "short_name": "KnN",
+  "description": "Learn all 2136 Jōyō kanji through a Pokémon adventure.",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#111827",
+  "orientation": "portrait",
+  "icons": []
+}

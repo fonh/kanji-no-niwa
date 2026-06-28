@@ -1,0 +1,39 @@
+{
+  "name": "kanji-no-niwa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "import:kanjidic2": "tsx --env-file=.env.local scripts/import-kanjidic2.ts",
+    "import:kanjivg": "tsx --env-file=.env.local scripts/import-kanjivg.ts",
+    "import:kradfile": "tsx --env-file=.env.local scripts/import-kradfile.ts",
+    "audit:prd": "tsx scripts/audit-prd.ts",
+    "prune": "tsx scripts/prune-parasites.ts"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.108.2",
+    "next": "16.2.9",
+    "next-pwa": "^5.6.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "ts-fsrs": "^5.4.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.3",
+    "dotenv": "^17.4.2",
+    "fast-xml-parser": "^5.9.3",
+    "tailwindcss": "^4",
+    "tsx": "^4.22.4",
+    "typescript": "^5",
+    "vitest": "^4.1.9"
+  }
+}

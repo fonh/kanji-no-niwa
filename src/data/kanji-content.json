@@ -1,0 +1,130 @@
+{
+  "一": {
+    "etymology": "A single horizontal stroke — the simplest possible mark, representing the number one. Derived from a pictograph of one finger held up, it is the foundational unit from which all numbers are built.",
+    "mnemonic": "One stroke, one meaning: ONE (いち). If you can draw a line, you've written your first kanji."
+  },
+  "二": {
+    "etymology": "Two horizontal strokes stacked — a direct tally of the number two, using the same counting-mark logic found across ancient scripts worldwide. The strokes are equal, reflecting the balance inherent in the number two.",
+    "mnemonic": "Two parallel lines — count them: に (ni). Like the two rails of a train track going side by side."
+  },
+  "三": {
+    "etymology": "Three horizontal strokes — a tally of three. The strokes slightly vary in length to suggest progression. Three was considered the first truly plural number in classical East Asian thought.",
+    "mnemonic": "Three stripes — さん (san). Like a sergeant's three chevrons: one, two, three, san!"
+  },
+  "四": {
+    "etymology": "Originally a pictograph of a partition or nose dividing space into four parts; the outer square and internal strokes evolved from earlier more complex forms. Four (し) in Japanese is avoided in many contexts due to its homophone with 'death' (死).",
+    "mnemonic": "A box divided inside — four (よん / し). The four walls of a room: remember, し also sounds like 'death,' which is why elevators often skip floor 4!"
+  },
+  "五": {
+    "etymology": "Originally an X shape with horizontal strokes above and below, representing the intersection or midpoint. Five is the center of all single digits, the balance point between 1 and 9, and carries connotations of wholeness.",
+    "mnemonic": "An X pinned between two lines — FIVE (ご, go). Go with five fingers and make an X with both hands crossing!"
+  },
+  "六": {
+    "etymology": "Originally a pictograph of a simple hut or tent with a peaked roof. The number six acquired this character through phonetic borrowing in ancient Chinese, a common strategy for abstract numbers.",
+    "mnemonic": "A small roof with legs — 六 (ろく, roku). Rock on to SIX — ろく sounds like 'rock,' and six rocks make a solid base."
+  },
+  "七": {
+    "etymology": "A pictograph of a knife cutting through bone — the character originally meant 'to cut.' Seven was phonetically borrowed to represent the number, replacing the older word. The blade-cut shape is preserved in the modern stroke order.",
+    "mnemonic": "A cut stroke bending like a blade — SEVEN (しち, shichi / なな, nana). Seven lucky gods in Japan — lucky as a sharp cut through your problems."
+  },
+  "八": {
+    "etymology": "Two diverging strokes spreading apart from a single point — representing division or spreading out. Eight is auspicious in East Asian culture because it 'opens outward' (八方, the eight directions), suggesting expansion and prosperity.",
+    "mnemonic": "Two lines spreading like wings — EIGHT (はち, hachi). Hatch open! Eight wings spreading in all directions — 八方美人!"
+  },
+  "九": {
+    "etymology": "A pictograph of a bent arm coiled at the elbow, approaching completion — nine is the largest single digit, almost at ten, like an arm fully bent before striking. The coiled shape suggests tension just before release.",
+    "mnemonic": "An elbow bent at 90° — NINE (く, ku / きゅう, kyū). Your cue (kyū) to stop before ten — the arm bends but doesn't complete the circle."
+  },
+  "十": {
+    "etymology": "A cross shape (+) symbolizing completeness and the four cardinal directions united. Ten is the first number that requires a new counting unit, and the cross represents the sum of all directions — a perfect, closed set.",
+    "mnemonic": "A perfect plus sign — TEN (じゅう, jū). Ten is just perfect: a cross marks the spot where all numbers complete."
+  },
+  "百": {
+    "etymology": "One (一) placed above white (白), with 白 serving as a phonetic component. A hundred was a threshold number representing completeness — the first three-digit milestone, marking a full cycle above the tens.",
+    "mnemonic": "One (一) crowning white (白) — a HUNDRED (ひゃく, hyaku). One white sun blazing over everything: that's a hundred suns worth of brightness."
+  },
+  "千": {
+    "etymology": "A person (人, compressed to ノ) with a horizontal stroke through or above them — representing a great multitude, as if one person multiplied into a thousand. The single mark transforms one human into many.",
+    "mnemonic": "A person with a thousand-bar across them — A THOUSAND (せん, sen). Zen masters say: a thousand paths, one person."
+  },
+  "万": {
+    "etymology": "Originally a pictograph of a scorpion, whose many legs conveyed the concept of an uncountably large number. The character was phonetically borrowed for 'ten thousand,' which in East Asian counting is the base unit for large numbers (unlike Western thousands).",
+    "mnemonic": "A scorpion with many legs — TEN THOUSAND (まん/ばん, man/ban). Man, that's a LOT — ten thousand scorpions crawling!"
+  },
+  "億": {
+    "etymology": "Person (亻) beside 意 (thought/intention, itself meaning 'fullness of the heart') — one hundred million was such an enormous quantity it required a character suggesting a person overwhelmed by inconceivable scale.",
+    "mnemonic": "A person (亻) overwhelmed by thought (意) — ONE HUNDRED MILLION (おく, oku). 'Oku' — oh no, a billion ideas flooding in at once!"
+  },
+  "兆": {
+    "etymology": "A pictograph of the cracking pattern on a tortoise shell used in ancient divination — the radiating cracks spread outward in all directions, like the staggeringly vast number one trillion spreading beyond comprehension.",
+    "mnemonic": "Cracks spreading in all directions — A TRILLION (ちょう, chō). The cracks multiply endlessly, just like zeros in a trillion."
+  },
+  "半": {
+    "etymology": "An ox (牛) with a dividing stroke through its middle — cutting something in two equal halves. The concept of halving was first applied to splitting livestock or meat, making this one of the most visually transparent characters.",
+    "mnemonic": "An ox (牛) split down the middle — HALF (はん, han). 半分 (hanbun) — cut the bull in half and you get half."
+  },
+  "倍": {
+    "etymology": "Person (亻) beside 咅 (a phonetic component meaning overflow or full to excess) — to double is to make something overflow its original measure. The person amplifies whatever is beside them to double capacity.",
+    "mnemonic": "A person (亻) making something overflow (咅) — DOUBLE (ばい, bai). 'Bye-bye, double the fun!' — double your money, double your trouble."
+  },
+  "数": {
+    "etymology": "Left side: 婁 (a woman pulling at something, representing counting) combined with 攵 (strike/action) — counting was done by striking tallies. The character evolved to represent the act and result of counting: a number.",
+    "mnemonic": "Counting strokes being struck (攵) — NUMBER (すう/かず, sū/kazu). 'Kazu!' — count every kazu (number) with a tap!"
+  },
+  "量": {
+    "etymology": "Sun (日) above heavy (重) — measuring by comparing weight against the light of day, or gauging quantity by how much can be lifted. Ancient measurement unified visual judgment (sun) and physical heft (heavy).",
+    "mnemonic": "The sun (日) above 'heavy' (重) — QUANTITY (りょう, ryō). How much does the sun weigh? That's a ryō-t of quantity."
+  },
+  "多": {
+    "etymology": "Two evening moons (夕×2) stacked — when the moon appears many nights in a row, time accumulates; many evenings mean many days, hence 'many/much.' The repetition of the evening crescent directly encodes plurality.",
+    "mnemonic": "Two evening moons stacked — MANY (おおい, ōi / た, ta). Many evenings pass — たくさん (takusan), so many moons!"
+  },
+  "少": {
+    "etymology": "Small (小) with an additional diagonal stroke, suggesting something divided even smaller than small — a tiny remainder after division. What's smaller than small? A little, a few, a scarcity.",
+    "mnemonic": "Small (小) cut even smaller by a slash — FEW (すくない, sukunai / しょう, shō). 少し (sukoshi) — just a little, a teeny slash of 'small.'"
+  },
+  "大": {
+    "etymology": "A person standing with arms and legs spread wide — displaying the full horizontal extent of a human body to indicate greatness or largeness. One of the most transparent pictographic kanji: a big person with big arms.",
+    "mnemonic": "A person with arms flung wide — THIS BIG (おおきい, ōkii / だい, dai). Spread your arms as wide as possible and shout DAI!"
+  },
+  "小": {
+    "etymology": "A central stroke with two small marks on either side — representing something divided into smaller and smaller pieces. The outer dots suggest fragments breaking off from a center, embodying diminutiveness.",
+    "mnemonic": "A line with two tiny specks — SMALL (ちいさい, chiisai / しょう, shō). 小さい (chiisai) — so tiny you barely whisper 'chii.'"
+  },
+  "第": {
+    "etymology": "Bamboo (竹, abbreviated 竹→⺮) above 弟 (younger brother) — bamboo scrolls were numbered in sequence like younger siblings ranked by birth order. The ordinal marker came from the idea of ranking within a series.",
+    "mnemonic": "Bamboo scrolls (⺮) numbered like younger brothers (弟) — ORDINAL NUMBER (だい, dai). 第一 (daiichi) — the bamboo scroll that came first in the series."
+  },
+  "番": {
+    "etymology": "A hand releasing seeds over a rice field (田) — planting in turns, row by row. Taking turns planting gave rise to the meanings of 'one's turn,' 'number in sequence,' and 'watching over' (taking turns at guard duty).",
+    "mnemonic": "Seeds (釆) dropped into a field (田) in turns — NUMBER / TURN (ばん, ban). 番号 (bangō) — it's your number, your turn to plant!"
+  },
+  "号": {
+    "etymology": "A mouth (口) with breath or sound rising from it (丂, an old character for breath/call) — to call out a number or title. 号 is used for issue numbers, names of eras, and any labeled designation called aloud.",
+    "mnemonic": "A mouth calling out (号) — ISSUE NUMBER / TITLE (ごう, gō). 'Go!' shout your number — 何号？(nangō) What number are you?"
+  },
+  "分": {
+    "etymology": "A knife (刀) dividing something (八, two parts splitting) — cutting into portions. From physical division came all the extended meanings: a part, a minute (1/60 of an hour), a percentage point, and one's duty or station.",
+    "mnemonic": "A knife (刀) splitting something in two (八) — PART / MINUTE (ぶん/ふん/ぶ, bun/fun/bu). 五分 (gofun) — five minutes, five knife-cuts of time."
+  },
+  "度": {
+    "etymology": "A hand (又) measuring distance along a sloped surface (广, a cliff or lean-to) — ancient measurement was done by hand spans and body lengths along surfaces. Degree, angle, and frequency all derive from this act of measured repetition.",
+    "mnemonic": "A hand measuring along a cliff (广) — DEGREE / TIME (ど/たび, do/tabi). 何度も (nandomo) — how many degrees? Measured by hand, again and again."
+  },
+  "回": {
+    "etymology": "A square within a square — a whirlpool or spiral viewed from above, representing rotation and return. The inner square is the eye of the vortex, and the outer square is the revolving current circling it.",
+    "mnemonic": "A square inside a square — a whirlpool spinning around! TIMES / ROUND (かい/まわ, kai/mawa). 一回 (ikkai) — one spin of the whirlpool."
+  },
+  "次": {
+    "etymology": "Ice (冫, two water drops freezing) beside an open mouth (欠, a person yawning/waiting) — waiting in the cold, mouth open, for one's turn to come next. 次 captures the sense of patient sequential anticipation.",
+    "mnemonic": "Standing in the cold (冫), mouth open waiting (欠) — NEXT (つぎ, tsugi / じ, ji). 次は (tsugima) — next up! Waiting in the cold for your turn."
+  },
+  "倍": {
+    "etymology": "Person (亻) beside 咅 (full to overflow, a phonetic/semantic hint at excess) — doubling causes something to overflow its original measure, like a cup that suddenly holds twice as much.",
+    "mnemonic": "A person (亻) making something overflow (咅) — DOUBLE / TIMES (ばい, bai). 二倍 (nibai) — double! Bye-bye single portion, hello double!"
+  },
+  "以": {
+    "etymology": "A person (人) combined with a tool or marker suggesting 'from this point' — used as a grammatical marker meaning 'by means of' or 'from.' Originally showed a person using an instrument as a starting point for action.",
+    "mnemonic": "A person with a tool beside them — BY MEANS OF / FROM (い, i). 以上 (ijō) — from this point upward; い (i) is the key to 'using' something."
+  }
+}
