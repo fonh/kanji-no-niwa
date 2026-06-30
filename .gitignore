@@ -58,6 +58,7 @@ scripts/sources/jpn_sentences.tsv
 scripts/sources/jpn_sentences.tsv.bz2
 scripts/sources/links.csv
 scripts/sources/JMdict_e.gz
+scripts/sources/guidebook/
 
 # claude memory (personal, not project)
 .claude/
