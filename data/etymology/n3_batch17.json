@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "直",
+    "readings": {
+      "kun": "ただ.ちに、なお.す、-なお.す、なお.る、なお.き、す.ぐ",
+      "on": "チョク、ジキ、ジカ"
+    },
+    "meaning": "tout droit, honnêteté, franchise, réparer, corriger",
+    "etymology": "直 assemble 十 (une croix, marque de repère) en haut, 目 (l'œil) au centre, et un crochet 乚 en bas. Dans les formes anciennes sur os oraculaires, on voyait un œil regardant droit devant lui le long d'une ligne verticale — l'image de la vision directe, sans détour. De ce « regard droit », le sens s'est étendu à l'honnêteté (dire les choses en face), puis à l'idée de « redresser, corriger » : remettre quelque chose dans le droit chemin.",
+    "mnemonic": "Un inspecteur sévère plante son œil (目) sur vous, pointé comme une équerre (十), et dit d'un ton sec : « なおせ！ Corrige ça, チョク-tement ! » Ce regard vertical et sans détour, c'est toute l'essence de 直 : droit, honnête, et correctif.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "当",
+    "readings": {
+      "kun": "あ.たる、あ.たり、あ.てる、あ.て、まさ.に、まさ.にべし",
+      "on": "トウ"
+    },
+    "meaning": "toucher juste, approprié, correct, soi-même",
+    "etymology": "当 est la forme simplifiée de 當, composé de 尚 (estimer, valoriser) et 田 (champ). À l'origine, il évoquait deux champs de valeur équivalente qui se font face — l'idée de correspondance parfaite entre deux choses. De « se correspondre exactement », le sens a glissé vers « tomber juste, toucher une cible, être approprié ». Le composant 田 ancre la notion de délimitation précise.",
+    "mnemonic": "Imagine un archer qui vise un champ (田) avec la maîtrise d'un expert (尚) : sa flèche part — トウ ! — et frappe exactement le centre. C'est あたる, « tomber juste » ! トウ, c'est le son sourd et satisfaisant de la flèche qui touche la cible parfaite.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "馬",
+    "readings": {
+      "kun": "うま、うま-、ま",
+      "on": "バ"
+    },
+    "meaning": "cheval",
+    "etymology": "馬 est un pictogramme pur du cheval, l'un des plus lisibles de l'écriture chinoise ancienne. Dans les inscriptions sur os oraculaires (甲骨文字), on distinguait clairement la tête avec la crinière dressée, le corps allongé et les quatre pattes. Dans la forme moderne, le trait vertical central évoque l'encolure et le corps, les traits horizontaux figurent la tête et la crinière, et les quatre points (灬) en bas représentent les quatre sabots. Le caractère a conservé sa silhouette équine à travers trois mille ans d'écriture.",
+    "mnemonic": "Regarde 馬 comme une statue de cheval : la tête en haut avec sa crinière qui s'élance, le corps massif au centre, et tout en bas les quatre sabots (• • • •) qui frappent le sol ! うま, うま — c'est presque le hennissement lui-même ! Et バ (BA) claque comme un sabot sur le pavé.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "麦",
+    "readings": {
+      "kun": "むぎ",
+      "on": "バク"
+    },
+    "meaning": "orge, blé",
+    "etymology": "麦 est la forme japonaise moderne de 麥, composé de 來 (venir — lui-même issu d'un pictogramme ancien d'épi de blé !) et de 夂 (avancer lentement, associé à l'hiver). 來 fut emprunté phonétiquement pour signifier « venir », perdant son sens de grain. On ajouta alors 夂 pour recréer explicitement l'idée du « grain qui pousse lentement sous l'hiver et vient à maturité au printemps ». 麦 porte donc son propre ancêtre pictographique dans sa composition.",
+    "mnemonic": "L'épi de blé (来) avance à petits pas dans la neige (夂) — むぎ n'est pas pressé, il prend tout l'hiver pour mûrir ! Imaginez un boulanger qui frappe sa pâte en criant « BAK ! BAK ! » (バク) : toute cette énergie vient de l'orge qui a su résister patiemment au froid.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "番",
+    "readings": {
+      "kun": "つが.い",
+      "on": "バン"
+    },
+    "meaning": "tour, numéro dans une série, surveiller",
+    "etymology": "番 est composé de 釆 (distinguer, trier — figurant une main qui éparpille ou classe des graines) en haut et de 田 (champ) en bas. Le sens originel était « semer des graines rangée par rangée dans un champ selon un ordre précis », d'où l'idée de séquence et de tour. Par extension, le caractère a pris le sens de « surveiller à tour de rôle, numéro d'ordre, faction de garde ». Le kun つがい (paire, couple d'oiseaux) prolonge l'idée d'un arrangement ordonné.",
+    "mnemonic": "Dans le champ (田), la main (釆) sème grain après grain dans un ordre impeccable — c'est バン ! Imaginez des sentinelles qui se relaient : « Numéro un, prends ta faction ! Numéro deux, c'est ton BAN ! » Chaque tour, chaque numéro de série, tout suit cet ordre semé avec soin.",
+    "jlpt": "N3"
+  }
+]

@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "姓",
+    "readings": {
+      "kun": "",
+      "on": "セイ、ショウ"
+    },
+    "meaning": "surname",
+    "etymology": "Composé de 女 (femme) et 生 (naissance). La structure évoque l'origine du nom de famille au travers de la lignée maternelle. Ce caractère représente comment l'identité familiale se transmet par les générations.",
+    "mnemonic": "Imaginez une mère qui transmet le nom de sa famille à sa fille : 女(femme) + 生(vie). Le nom de famille (SEII) est littéralement « la vie de la femme » qui perdure dans les générations !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "占",
+    "readings": {
+      "kun": "し.める、うらな.う",
+      "on": "セン"
+    },
+    "meaning": "fortune-telling, divining, occupy",
+    "etymology": "Combine 卜 (tiges divinatoires de l'oracle) et 口 (bouche). Les anciens jetaient des bâtons gravés pour recevoir des messages oraculaires. Le caractère capture l'acte de consulter les forces invisibles pour connaître l'avenir.",
+    "mnemonic": "Voyez les tiges sacrées (卜) placées près de la bouche (口) qui prononce le destin : SENNN ! Les divins murmures qui occupent votre esprit et prédisent ce qui viendra !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "掃",
+    "readings": {
+      "kun": "は.く",
+      "on": "ソウ、シュ"
+    },
+    "meaning": "sweep, brush",
+    "etymology": "Formé de 手 (main) et 扫 (balai). La main tient l'ustensile pour nettoyer. Le radical de la main indique une action physique d'enlever la poussière et les impuretés du sol.",
+    "mnemonic": "Votre main (手) qui ha.ku, ha.ku — le son du balai qui balaie le sol! SOUUU — le geste de la main qui nettoie, qui purifie l'espace !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "燥",
+    "readings": {
+      "kun": "はしゃ.ぐ",
+      "on": "ソウ"
+    },
+    "meaning": "parch, dry up",
+    "etymology": "Composé de 火 (feu) et 爿 (planche). Le feu agissant sur la matière la sèche complètement. Cette image du feu consumant l'humidité évoque le desséchement et l'assèchement total.",
+    "mnemonic": "Le feu (火) qui sèche tout, qui rend le bois cassant et desséché : SOUUU ! C'est comme l'excitation childish (はしゃ.ぐ) du feu qui brûle avec fougue !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "贈",
+    "readings": {
+      "kun": "おく.る",
+      "on": "ゾウ、ソウ"
+    },
+    "meaning": "present, gift, send",
+    "etymology": "Formé de 贝 (coquille = trésor, monnaie ancienne) et 曾 (autrefois). Donner un présent symbolise transférer une richesse d'une personne à l'autre. Cette image de transmission de trésors incarne l'essence du don.",
+    "mnemonic": "Vous envoyez (おく.る) un trésor (贝)—ZOUUU—le cri de joie de celui qui reçoit votre cadeau précieux! Un présent qui voyage d'un cœur à l'autre !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "替",
+    "readings": {
+      "kun": "か.える、か.え-、か.わる",
+      "on": "タイ"
+    },
+    "meaning": "exchange, substitute, spare",
+    "etymology": "Combine 人 (personne) et 曾 (autrefois). Deux personnes qui échangent des objets, l'une donnant ce que l'autre reprend. Le caractère capture le mouvement d'une chose remplaçant une autre.",
+    "mnemonic": "Une personne (人) qui dit « ka.eru, ka.eru » — je change! Je remplace! TAII — comme deux choses qui se croisent et se substituent l'une à l'autre !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "袋",
+    "readings": {
+      "kun": "ふくろ",
+      "on": "タイ、ダイ"
+    },
+    "meaning": "sack, bag, pouch",
+    "etymology": "Formé de 衣 (vêtement) et 代 (remplacer). Un sac contient et protège comme un vêtement enveloppe le corps. La forme rappelle un tissu plié servant à contenir des choses.",
+    "mnemonic": "Un vêtement (衣) qui devient sac (ふくろ)—TAII !—vous glissez vos affaires dedans comme dans une poche géante qui remplace (代) tous vos poches !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "濯",
+    "readings": {
+      "kun": "すす.ぐ、ゆす.ぐ",
+      "on": "タク"
+    },
+    "meaning": "laundry, wash, rinse",
+    "etymology": "Composé de 水 (eau) et 卓 (table élevée). L'eau qui coule sur la lessive, purifiée par le ruissellement. Cette image de l'eau qui lave et nettoie est au cœur du sens.",
+    "mnemonic": "L'eau (水) qui coule, coule—susu.gu, yusu.gu !—le bruit de la lessive qu'on rince, qu'on agite dans le flot ! TAKUUU !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "恥",
+    "readings": {
+      "kun": "は.じる、はじ、は.じらう、は.ずかしい",
+      "on": "チ"
+    },
+    "meaning": "shame, dishonor",
+    "etymology": "Formé de 心 (cœur) et 耳 (oreille). La honte réside dans le cœur qui brûle, se contracte en pensant aux regards et aux paroles des autres. Le caractère évoque ce sentiment interne que tout le monde voit.",
+    "mnemonic": "Votre cœur (心) qui ha.jiru — vous êtes rouge de honte ! Vos oreilles (耳) brûlent ! CHIII — ce sentiment qu'on voudrait fuir quand on est ha.zuka.shii, humilié devant tous !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "駐",
+    "readings": {
+      "kun": "",
+      "on": "チュウ"
+    },
+    "meaning": "stop-over, station, reside",
+    "etymology": "Combine 馬 (cheval) et 注 (verser, concentrer). Un cheval qui s'arrête et concentre son attention. L'image évoque à la fois le repos et la stabilité d'une position établie.",
+    "mnemonic": "Un cheval (馬) qui CHU-U-U s'arrête complètement pour rester ! Il stationne, il réside, concentré (注) sur son repos !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "珍",
+    "readings": {
+      "kun": "めずら.しい、たから",
+      "on": "チン"
+    },
+    "meaning": "rare, curious, strange",
+    "etymology": "Formé de 王 (jade, roi) et 尤 (particulier, spécial). Une jade royale extraordinaire—quelque chose de précieux et unique. Ce qui est rare et bizarre a cette qualité de trésor incomparable.",
+    "mnemonic": "Une jade royale (王) si rare, si étrange (めずら.しい) que c'est un taka.ra ! CHIN-NN—c'est un trésor si précieux qu'on ne l'a jamais vu !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "渡",
+    "readings": {
+      "kun": "わた.る、-わた.る、わた.す",
+      "on": "ト"
+    },
+    "meaning": "cross, ford, ferry, transit",
+    "etymology": "Composé de 水 (eau) et 度 (degré, passage). Traverser l'eau en passant d'une rive à l'autre. Le caractère capture le mouvement d'un côté à l'autre, la progression à travers un obstacle.",
+    "mnemonic": "L'eau (水) que vous wa.ta.ru—TOU !—vous la traversez ! Wa.ta.su le bateau vous porte d'un côté à l'autre, degré (度) par degré !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "筒",
+    "readings": {
+      "kun": "つつ",
+      "on": "トウ"
+    },
+    "meaning": "cylinder, pipe, tube, gun barrel",
+    "etymology": "Formé de 竹 (bambou) et 同 (pareil, identique). Le bambou naturellement creuse et cylindrique. La structure montre comment les bambous de même section s'assemblent pour créer des tubes.",
+    "mnemonic": "Le bambou (竹) creux, cylindrique—TOU-U—qui tsu.tsu, qui résonne quand vous soufflez dedans ! C'est un tuyau parfait, un canon parfait !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "軟",
+    "readings": {
+      "kun": "やわ.らか、やわ.らかい",
+      "on": "ナン"
+    },
+    "meaning": "soft, tender",
+    "etymology": "Composé de 車 (chariot) et 欠 (manquant, qui manque de rigidité). Ce qui manque de dureté du métal du chariot devient souple. L'absence de rigidité crée la tendresse et la douceur.",
+    "mnemonic": "Un chariot (車) qui yawa.ra.ka—NANN-N—pas dure, pas rigide! C'est souple, c'est doux, c'est tendre comme du velours !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "杯",
+    "readings": {
+      "kun": "さかずき",
+      "on": "ハイ"
+    },
+    "meaning": "cup, glass, counter for cupfuls",
+    "etymology": "Formé de 木 (bois) et 不 (non). Un gobelet en bois non rempli. Le caractère montre un récipient de bois ordinaire utilisé pour boire—simple mais essentiel dans chaque foyer.",
+    "mnemonic": "Un bois (木) qui devient sa.ka.zu.ki—HAI HAI HAI !—le gobelet qui cling-cling ! Levez votre verre, c'est l'heure de trinquer !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "薄",
+    "readings": {
+      "kun": "うす.い、うす-、-うす、うす.める、うす.まる",
+      "on": "ハク"
+    },
+    "meaning": "thin, dilute, weak, pampas grass",
+    "etymology": "Combine 艹 (plante, herbe) et 白 (blanc) et 水 (eau). Les herbes blanches mélangées à l'eau deviennent diluées et ténues. L'image évoque quelque chose qui perd sa densité et devient transparente.",
+    "mnemonic": "L'herbe (艹) blanche (白) dilue dans l'eau—usu.i HAKUUU !—presque invisible, presque pas là ! C'est fin, c'est léger, c'est faible et transparent !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "髪",
+    "readings": {
+      "kun": "かみ",
+      "on": "ハツ"
+    },
+    "meaning": "hair of the head",
+    "etymology": "Formé de 髟 (radical de cheveux, mèches) et 友 (ami, compagnon). Les cheveux comme une couronne d'amis qui entourent la tête. Cette image poétique unit l'apparence physique et la notion de compagnie fidèle.",
+    "mnemonic": "Vos cheveux (髟) ka.mi—HATSUUU—qui encadrent votre visage, vos amis (友) éternels sur votre tête ! Une chevelure qui enveloppe tout !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "般",
+    "readings": {
+      "kun": "",
+      "on": "ハン"
+    },
+    "meaning": "general, all, kind, sort, carrier",
+    "etymology": "Composé de 舟 (bateau) et 殳 (bâton, outil). Un bateau qui transporte diverses choses d'un endroit à l'autre. Le caractère capte l'idée de mouvement généraliste et de transport universel.",
+    "mnemonic": "Un bateau (舟) qui transporte tout—HAN HAN !—général, commun, tous les types, toutes sortes de choses !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "販",
+    "readings": {
+      "kun": "",
+      "on": "ハン"
+    },
+    "meaning": "sell, trade, marketing",
+    "etymology": "Formé de 贝 (coquille = trésor, monnaie ancienne) et 反 (inverse, retour). Vendre signifie donner des biens en échange de monnaie et créer un échange inverse. Le caractère montre ce flux bidirectionnel du commerce.",
+    "mnemonic": "L'argent (贝) qui inverse de main en main—HAN HAN !—je vends, tu achètes, c'est la danse du commerce ! Échange constant !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "疲",
+    "readings": {
+      "kun": "つか.れる、-づか.れ、つか.らす",
+      "on": "ヒ"
+    },
+    "meaning": "exhausted, tire, weary",
+    "etymology": "Combine 疒 (maladie) et 皮 (peau). L'épuisement affecte l'intégrité physique et mentale. Comme une maladie qui affecte l'enveloppe du corps, la fatigue consume l'énergie vitale.",
+    "mnemonic": "Votre corps (疒) est usé, la peau (皮) tsuka.re.ru—HI HI HI !—haletante ! Vous êtes épur-usé jusqu'à l'os, complètement épuisé !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "匹",
+    "readings": {
+      "kun": "ひき",
+      "on": "ヒツ"
+    },
+    "meaning": "counter for small animals, roll of cloth",
+    "etymology": "Formé de 匚 (conteneur) et 匸 (petit paquet). Un petit paquet fermé ou un conteneur minuscule pour compter les créatures. Le caractère montre comment les petites choses se quantifient en unités discrètes.",
+    "mnemonic": "Un petit paquet (匚) qui hi.ki—HITSUUU !—un animal dans sa boîte ! Comptons les petites créatures une par une !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "怖",
+    "readings": {
+      "kun": "こわ.い、こわ.がる、お.じる、おそ.れる",
+      "on": "フ、ホ"
+    },
+    "meaning": "dreadful, frightened, fearful",
+    "etymology": "Composé de 心 (cœur) et 布 (tissu, étendue). Le cœur qui se contracte ou s'étend de peur. L'image d'un cœur replié ou tendu comme un tissu sous tension évoque la frayeur viscérale.",
+    "mnemonic": "Votre cœur (心) ko.wa.i—FU HOU !—vous frissonnez ! La peur (布) vous enveloppe ! Vous trem.ble.z, vous oso.re.ru cette chose terrifiante !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "浮",
+    "readings": {
+      "kun": "う.く、う.かれる、う.かぶ、う.かべる",
+      "on": "フ"
+    },
+    "meaning": "float, floating, rise to surface",
+    "etymology": "Formé de 水 (eau) et 不 (non) + 一 (un). Quelque chose qui n'est pas immergé dans l'eau mais flotte à la surface. Le caractère capture le mouvement ascendant et la légèreté.",
+    "mnemonic": "L'eau (水) où vous u.ku—FUUU !—vous flottez, vous remontez, vous ne coulez pas ! C'est magique, c'est léger, vous u.ka.bu à la surface !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "符",
+    "readings": {
+      "kun": "",
+      "on": "フ"
+    },
+    "meaning": "token, sign, mark, tally, charm",
+    "etymology": "Combine 竹 (bambou) et 付 (attacher, fixer). Un bâton de bambou gravé de marques magiques ou de talismans attachés. Le caractère montre ces objets rituels porteurs de sens symbolique.",
+    "mnemonic": "Le bambou (竹) gravé—FU !—avec des marques, des signes magiques attachés (付) ! C'est un talisman puissant, un token protecteur !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "膚",
+    "readings": {
+      "kun": "はだ",
+      "on": "フ"
+    },
+    "meaning": "skin, body, grain, texture",
+    "etymology": "Formé de 月 (chair, corps) et 夫 (homme, personne). La peau qui enveloppe le corps de la personne. Ce caractère montre l'enveloppe protectrice et sensible qui définit l'interface entre l'intérieur et l'extérieur.",
+    "mnemonic": "Votre chair (月)—ha.da—FU-U !—votre peau douce, votre surface sensible qui touche le monde ! C'est la texture, c'est le grain, c'est vous !",
+    "jlpt": "N3"
+  }
+]

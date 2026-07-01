@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "絞",
+    "readings": {
+      "on": "コウ",
+      "kun": "しぼ.る、し.める、し.まる"
+    },
+    "meaning": "étrangler, serrer, essorer",
+    "etymology": "絞 combine le radical 糸 (fil, corde) et 交 (croiser, entrelacer). Historiquement, l'image représente deux cordes ou fils entrecroisés et serrés, symbolisant l'action de torsion et de compression. Le sens s'est étendu à tout acte de serrage ou de constriction.",
+    "mnemonic": "Imaginez deux cordes (糸) entrecroisées (交) que l'on tire fort : c'est しぼ.る, essorer ! Quand vous essorez du linge mouillé avec force, vous le serrrez et l'étranglez littéralement pour en extraire l'eau.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "綱",
+    "readings": {
+      "on": "コウ",
+      "kun": "つな"
+    },
+    "meaning": "cordage, câble, corde, loi fondamentale",
+    "etymology": "綱 combine le radical 糸 (fil) et 罔 (réseau, maille). Le caractère pictographique montre des fils tressés ensemble formant une corde solide. 罔 représente l'idée d'un réseau entrecroisé, d'où l'image d'une corde robuste faite de multiples brins.",
+    "mnemonic": "Une つな (corde) est faite de nombreux 糸 (fils) entrelacés (罔). Pensez à un cordage de navire : コウ rappelle comment une grosse corde tient tout le bateau en place !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "拷",
+    "readings": {
+      "on": "ゴウ",
+      "kun": ""
+    },
+    "meaning": "torture, frapper",
+    "etymology": "拷 combine le radical 手 (main) et 高 (haut). L'image primitive suggère une main qui frappe de haut en bas avec force, d'où le sens de torturer ou battre. Le radical 手 indique l'action manuelle violente impliquée dans la torture.",
+    "mnemonic": "Une main (手) levée haut (高) qui frappe brutalement : voilà la ゴウ-torture ! C'est l'acte de frapper de haut en bas avec violence répétée.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "酷",
+    "readings": {
+      "on": "コク",
+      "kun": "ひど.い"
+    },
+    "meaning": "cruel, sévère, atroce, injuste",
+    "etymology": "酷 combine le radical 酉 (alcool, liqueur) et 谷 (vallée). L'origine picturale suggère quelque chose de très concentré ou intense, comme l'alcool qui brûle intensément. Métaphoriquement, cela représente une intensité extrême qui devient cruelle ou sévère.",
+    "mnemonic": "Imaginez de l'alcool (酉) versé dans une vallée (谷) - c'est une mixture ひど.い (terrible) et cruelle ! コク est la cruauté concentrée, intense et sans pitié.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "獄",
+    "readings": {
+      "on": "ゴク",
+      "kun": ""
+    },
+    "meaning": "prison, jail",
+    "etymology": "獄 combine le radical 犭 (animal, bête) et 各 (chacun, séparé). L'image primaire montre une bête enfermée ou des animaux séparés par des enclos. Le caractère suggère un endroit où les gens sont confinés et isolés comme des animaux en cage.",
+    "mnemonic": "C'est une ゴク (prison) où chaque 犭 (créature) est séparée, chacune (各) dans sa cage ! Vous êtes traité comme un animal enfermé, sans liberté ni contact avec les autres.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "墾",
+    "readings": {
+      "on": "コン",
+      "kun": "は.る、ひら.く"
+    },
+    "meaning": "défricher, ouvrir des terres agricoles",
+    "etymology": "墾 combine le radical 土 (terre) et 艮 (arrêt, immobile). L'image picturale montre la terre (土) qui est défrichée et ouverte, sortant d'un état immobile ou sauvage. Le caractère représente le processus de transformation de terre brute en champs cultivables.",
+    "mnemonic": "Vous ひら.く (ouvrez) la 土 (terre) vierge et immobile (艮) : voilà le コン-défrichage ! Chaque coup de houe transforme la wilderness en champs de riz productifs.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "恨",
+    "readings": {
+      "on": "コン",
+      "kun": "うら.む、うら.めしい"
+    },
+    "meaning": "regret, rancune, ressentiment, malveillance, haine",
+    "etymology": "恨 combine le radical 心 (cœur, sentiment) et 根 (racine). L'image montre un sentiment qui s'enracine profondément dans le cœur. La rancune est comme une racine amère qui pousse et se développe à l'intérieur, créant un ressentiment durable et inébranlable.",
+    "mnemonic": "Le うら.む (regret) pousse des 根 (racines) dans votre 心 (cœur) : ce コン-ressentiment s'enfonce profondément ! Plus le temps passe, plus cette rancune prend racine et grandit dans l'âme.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "懇",
+    "readings": {
+      "on": "コン",
+      "kun": "ねんご.ろ"
+    },
+    "meaning": "sociable, gentil, courtois, hospitalier, cordial",
+    "etymology": "懇 combine le radical 心 (cœur) et 根 (racine). Contrairement à 恨 qui montre l'amertume enracinée, 懇 montre un cœur profondément enraciné dans la bienveillance. C'est une affection sincère et établie qui vient du plus profond du cœur.",
+    "mnemonic": "Un cœur (心) dont les 根 (racines) sont plantées dans la gentillesse : c'est la ねんご.ろ (sincérité cordiale) ! Ce コン-affection sincère et enracinée crée une hospitalité profondément chaleureuse.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "紺",
+    "readings": {
+      "on": "コン",
+      "kun": ""
+    },
+    "meaning": "bleu foncé, bleu marine",
+    "etymology": "紺 combine le radical 糸 (fil, textile) et 根 (racine). L'origine montre un fil ou tissu teint avec une couleur profonde et enracinée. Historiquement, 紺 désigne la teinture indigo profonde et riche utilisée dans la teinture traditionnelle des textiles japonais.",
+    "mnemonic": "Un 糸 (fil) teint d'une couleur enracinée (根) dans la profondeur : c'est le コン (bleu marine) ! Pensez au 紺色 des uniformes scolaires japonais, ce bleu foncé et riche.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "魂",
+    "readings": {
+      "on": "コン",
+      "kun": "たましい、たま"
+    },
+    "meaning": "âme, esprit",
+    "etymology": "魂 combine le radical 鬼 (fantôme, esprit surnaturel) et 云 (dire, parole). L'image primaire montre un esprit ou fantôme qui parle ou s'exprime. Le caractère représente l'essence immatérielle d'une personne, sa たましい (âme) qui persiste après la mort physique.",
+    "mnemonic": "L'âme (たましい) est ce 鬼 (esprit) intérieur qui 云 (parle) et s'exprime : c'est votre コン (essence spirituelle) ! Quand vous êtes très énergique, on dit que votre たましい est vibrant et vivant.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "唆",
+    "readings": {
+      "on": "サ",
+      "kun": "そそ.る、そそのか.す"
+    },
+    "meaning": "tenter, séduire, instiguer, promouvoir",
+    "etymology": "唆 combine le radical 口 (bouche) et 差 (différence, distinction, tendance). L'image montre la bouche qui sussurre ou murmure pour inciter quelqu'un. Les paroles qui sortent de la bouche créent une tendance ou une attraction chez l'auditeur.",
+    "mnemonic": "Des paroles (口) qui そそのか.す (sussurrent pour inciter) avec une tendance (差) à vous tenter : c'est le サ-séduction ! Imaginez quelqu'un qui murmure à votre oreille pour vous tenter de faire quelque chose.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "沙",
+    "readings": {
+      "on": "サ、シャ",
+      "kun": "すな"
+    },
+    "meaning": "sable",
+    "etymology": "沙 combine le radical 水 (eau) et la composition phonétique. L'image montre l'eau et les particules de sable fin qu'elle transporte. Le caractère représente le sable fin trouvé dans les rivières et les bords de mer.",
+    "mnemonic": "L'eau (水) qui coule apporte du すな (sable) fin et scintillant : c'est le サ (sable) ! Regardez les rivières où l'eau dépose ses grains de sable sur les berges dorées.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "栽",
+    "readings": {
+      "on": "サイ",
+      "kun": ""
+    },
+    "meaning": "plantation, planter",
+    "etymology": "栽 combine le radical 木 (arbre, bois) et 才 (talent, capacité). L'image montre un jeune arbre (木) planté, plein de potentiel futur (才). Le caractère représente l'acte de planter des arbres ou de cultiver une plantation productive.",
+    "mnemonic": "Un 木 (arbre) en herbe, jeune (才) et plein de potentiel : c'est le サイ-plantation ! Chaque sapling planté devient un arbre majestueux grâce aux soins du cultivateur.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "采",
+    "readings": {
+      "on": "サイ",
+      "kun": "と.る、いろどり"
+    },
+    "meaning": "dés, forme, apparence, prendre, rassembler, coloration",
+    "etymology": "采 montre l'image d'une main (爫) qui cueille ou recueille quelque chose. L'image primaire évoque l'acte de cueillir ou de sélectionner, d'où les significations de 'prendre', 'rassembler', et par extension 'forme' ou 'apparence' de ce qui est sélectionné.",
+    "mnemonic": "Une main qui さっと と.る (attrape) les meilleurs 采 (morceaux) : c'est la sélection ! Imaginez cueillir des fleurs colorées dans un jardin - chaque coup de main capture une forme et une couleur distinctes.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "載",
+    "readings": {
+      "on": "サイ",
+      "kun": "の.せる、の.る"
+    },
+    "meaning": "monter, monter à bord, monter sur, placer, étendre, enregistrer, publier",
+    "etymology": "載 combine le radical 車 (chariot, véhicule) et 才 (talent, jeune). L'image montre quelque chose placé sur un véhicule (車), l'idée de 'monter sur' ou 'être transporté par'. Le caractère représente l'action de charger ou de monter dans un véhicule.",
+    "mnemonic": "Vous の.る (montez) dans une 車 (voiture) avec toute votre 才 (force) : c'est の.せる et サイ ! Chaque voyage en voiture symbolise le progrès et la progression vers un nouveau destination.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "剤",
+    "readings": {
+      "on": "ザイ、スイ、セイ",
+      "kun": "かる、けず.る"
+    },
+    "meaning": "dose, médicament, drogue",
+    "etymology": "剤 combine le radical 刂 (couteau, lame) et 斉 (égal, aligné). L'image montre une lame qui coupe ou divise quelque chose en portions égales. Historiquement, le caractère représente l'idée de diviser une substance en doses mesurées et uniformes pour un usage médical.",
+    "mnemonic": "Une lame (刂) qui coupe équitablement (斉) chaque portion de médicament : c'est la ザイ-dose ! Chaque comprimé est divisé en quantités précises pour l'efficacité thérapeutique.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "搾",
+    "readings": {
+      "on": "サク",
+      "kun": "しぼ.る"
+    },
+    "meaning": "presser, exprimer, essorer",
+    "etymology": "搾 combine le radical 手 (main) et 窄 (étroit, serrer). L'image montre une main qui serre ou presse quelque chose d'étroit. Le caractère représente l'action de presser ou de comprimer, particulièrement pour extraire des liquides.",
+    "mnemonic": "Vos mains (手) qui しぼ.る (essorent) fort, serrant étroitement (窄) le fruit ou le tissu : c'est le サク-pressage ! Imaginez presser une orange jusqu'à la dernière goutte de jus sucré.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "桟",
+    "readings": {
+      "on": "サン、セン",
+      "kun": "かけはし"
+    },
+    "meaning": "échafaudage, taquet, cadre, jetée, verrou (porte)",
+    "etymology": "桟 combine le radical 木 (bois, arbre) et 間 (espace, intervalle). L'image montre des poutres de bois (木) alignées avec des espaces réguliers (間) pour créer une structure d'appui. Le caractère représente un scaffold ou cadre en bois servant de pont ou de support.",
+    "mnemonic": "Des 木 (poutres) de bois espacées régulièrement (間) formant un かけはし (passerelle) : c'est le サン-échafaudage ! Pensez aux plateformes de construction où les ouvriers traversent sur des ponts temporaires.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "旨",
+    "readings": {
+      "on": "シ",
+      "kun": "むね、うま.い"
+    },
+    "meaning": "délicieux, savourer, montrer une préférence, propos, volonté, habile",
+    "etymology": "旨 combine le radical 日 (jour) et un pictogramme primitif de saveur. L'image évoque l'idée d'une bouche qui savoure - la langue détectant ce qui est うま.い (délicieux). Le caractère représente l'essence ou le propos le plus savoureux et important.",
+    "mnemonic": "Votre langue qui détecte le うま.い (délicieux) : c'est le シ-essence savoureuse ! L'intention ou le propos d'une action est son 旨, sa saveur centrale et son objectif principal.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "祉",
+    "readings": {
+      "on": "シ",
+      "kun": ""
+    },
+    "meaning": "bien-être, bonheur",
+    "etymology": "祉 combine le radical 示 (montrer, indiquer, divin) et 止 (arrêter). L'image montre la volonté divine (示) qui arrête ou prévient la souffrance (止). Le caractère représente la bienveillance divine et le bien-être qu'elle confère.",
+    "mnemonic": "Un ordre divin (示) qui arrête (止) la souffrance : c'est le シ-bien-être ! La 祉 (prospérité) vient de la protection bienveillante accordée aux nécessiteux.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "紫",
+    "readings": {
+      "on": "シ",
+      "kun": "むらさき"
+    },
+    "meaning": "violet, pourpre",
+    "etymology": "紫 combine le radical 糸 (fil, tissu) et 此 (ceci). L'image montre un fil ou tissu (糸) teint d'une couleur particulière et distinctive (此). Historiquement, 紫 désigne la teinture violette obtenue de sources naturelles rares et précieuses.",
+    "mnemonic": "Un 糸 (fil) teint en むらさき (violet) rare et précieux : c'est le シ-pourpre ! Dans le Japon ancien, seule la noblesse pouvait porter cette couleur somptueuse et difficile à obtenir.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "諮",
+    "readings": {
+      "on": "シ",
+      "kun": "はか.る"
+    },
+    "meaning": "consulter avec",
+    "etymology": "諮 combine le radical 言 (parole, langage) et 耆 (vieillard, ancien, sagesse). L'image montre la parole (言) adressée à un vieillard sage (耆). Le caractère représente l'acte de demander conseil à quelqu'un d'expérimenté et sage.",
+    "mnemonic": "Vous adressez la 言 (parole) à un 耆 (vieillard sage) : c'est はか.る (consulter) ! Quand vous avez une décision importante, vous allez parler avec les aînés pour obtenir leur sagesse et guidance précieuse.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "雌",
+    "readings": {
+      "on": "シ",
+      "kun": "め-、めす、めん"
+    },
+    "meaning": "féminin, femelle",
+    "etymology": "雌 combine le radical 隹 (oiseau) et 此 (ceci). L'image montre un oiseau femelle (隹) de ce type particulier (此). Le caractère représente le genre féminin, particulièrement appliqué aux animaux et créatures vivantes.",
+    "mnemonic": "Un oiseau femelle (隹) : voilà le シ-femelle (めす) ! Les mâles chantent avec éclat, mais les femelles sont sages et attentives, construisant les nids et soignant les petits avec dévouement.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "璽",
+    "readings": {
+      "on": "ジ",
+      "kun": ""
+    },
+    "meaning": "sceau impérial",
+    "etymology": "璽 combine le radical 玉 (joyau, jade) et 爾 (vous, ce). L'image montre un joyau précieux (玉) de grande importance (爾). Historiquement, 璽 représente le sceau sacré de l'empereur, symbolisant son autorité divine et absolue.",
+    "mnemonic": "Un 玉 (jade) gravé du sceau impérial : c'est la ジ-autorité suprême ! Ce joyau sacré représente la puissance et la légitimité d'un empire, précieux au-delà de toute comparaison.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "軸",
+    "readings": {
+      "on": "ジク",
+      "kun": ""
+    },
+    "meaning": "axe, pivot, tige, tronc, compteur pour les rouleaux de livres",
+    "etymology": "軸 combine le radical 車 (chariot, roue) et 由 (raison, source, cause). L'image montre l'essieu (軸) autour duquel tourne une roue (車). Le caractère représente le pivot central ou l'axe qui permet le mouvement et la rotation.",
+    "mnemonic": "Le ジク (pivot) autour duquel la 車 (roue) tourne sans fin : c'est l'axe fondamental ! Tout mouvement circulaire, toute rotation, tous les rouleaux de parchemin dépendent de cet ジク central et stable.",
+    "jlpt": "N2"
+  }
+]

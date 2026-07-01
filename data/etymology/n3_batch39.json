@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "券",
+    "readings": {
+      "kun": "",
+      "on": "ケン"
+    },
+    "meaning": "ticket",
+    "etymology": "券 provient de l'image d'un morceau de papier ou de parchemin. Le composant principal représente quelque chose qui peut être déchiré ou séparé, comme un ticket détachable. C'est devenu le symbole d'un document officiel ou d'une preuve d'achat.",
+    "mnemonic": "Imagine un ticket de loterie - c'est le composant 一 qui représente le ticket découpé dans une feuille ! 券 (ケン) = le morceau de papier qu'on garde.",
+    "jlpt": 3
+  },
+  {
+    "kanji": "呼",
+    "readings": {
+      "kun": "よ.ぶ",
+      "on": "コ"
+    },
+    "meaning": "call out to",
+    "etymology": "呼 combine 口 (la bouche) et 乎 (un son qui se porte au loin). C'est l'image de la voix sortant de la bouche, appelant quelqu'un. 乎 était un mot servant à renvoyer les sons loin.",
+    "mnemonic": "口 (la bouche) qui crie 呼ぶ (yobu) - visualise quelqu'un qui ouvre grand la bouche et appelle ses amis. La voix monte du 口!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "紅",
+    "readings": {
+      "kun": "べに、くれない、あか.い",
+      "on": "コウ、ク"
+    },
+    "meaning": "crimson, deep red",
+    "etymology": "紅 associe 糸 (la soie/le fil) et 工 (du travail/de la fabrication). À l'origine, c'était la description du fil teint en rouge écarlate - les artisans teignaient la soie avec des pigments rouges précieux, créant cette couleur riche et luxueuse.",
+    "mnemonic": "紅 (くれない) - c'est la soie rouge des vêtements de cour ! Imagine des fils écarlates brillants tissés ensemble - 糸 la soie rougie ! Cette couleur était si chère que seuls les nobles pouvaient la porter.",
+    "jlpt": 3
+  },
+  {
+    "kanji": "詞",
+    "readings": {
+      "kun": "ことば",
+      "on": "シ"
+    },
+    "meaning": "part of speech, words, poetry",
+    "etymology": "詞 combine 言 (la parole) et 司 (diriger/administrer). Le sens original était la parole organisée - les mots utilisés pour diriger ou expliquer quelque chose. C'est devenu le terme pour mots et parties du discours en général.",
+    "mnemonic": "言葉 - paroles qui 司 (dirigent) ! Pense à 詞 comme les mots d'un poème qui gouvernent le sens - chaque 詞 a son rôle.",
+    "jlpt": 3
+  },
+  {
+    "kanji": "誌",
+    "readings": {
+      "kun": "",
+      "on": "シ"
+    },
+    "meaning": "document, records",
+    "etymology": "誌 combine 言 (la parole/les mots) et 志 (l'intention/le but). Un document écrit est la manifestation des intentions mises en mots - c'est un enregistrement de ce qui a été pensé et décidé.",
+    "mnemonic": "誌 = 言 (les mots) + 志 (l'intention) - un magazine ou journal est l'intention de l'auteur capturée en mots écrits sur du papier!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "収",
+    "readings": {
+      "kun": "おさ.める、おさ.まる",
+      "on": "シュウ"
+    },
+    "meaning": "income, obtain, reap, pay, supply, store",
+    "etymology": "収 représente 手 (la main) qui rassemble ou rentre quelque chose. Le pictogramme montrait originellement une main qui saisit ou accumule, d'où les sens de récolter, obtenir ou ranger.",
+    "mnemonic": "収める (osamerui) - ta main qui rassemble! La 手 qui rentre la moisson dans le grenier, la main qui saisit les pièces d'or - 収 c'est obtenir et ranger ce qu'on obtient.",
+    "jlpt": 3
+  },
+  {
+    "kanji": "蒸",
+    "readings": {
+      "kun": "む.す、む.れる、む.らす",
+      "on": "ジョウ、セイ"
+    },
+    "meaning": "steam, heat, sultry, foment, get musty",
+    "etymology": "蒸 combine 艹 (les plantes) et 烝 (la chaleur qui monte). À l'origine, c'était l'image de la vapeur montant des plantes bouillantes ou chauffées - d'où le sens de cuire à la vapeur et chaleur humide.",
+    "mnemonic": "Regarde les plantes 艹 qui fument et créent de la 蒸気 (じょうき) - la vapeur qui monte! Quand tu fais cuire du riz à la vapeur, c'est 蒸す (musu) - la chaleur humide qui transforme les aliments.",
+    "jlpt": 3
+  },
+  {
+    "kanji": "針",
+    "readings": {
+      "kun": "はり",
+      "on": "シン"
+    },
+    "meaning": "needle, pin, staple, stinger",
+    "etymology": "針 combine 金 (le métal) et 真 (le vrai/le pur). Une aiguille est un objet de métal pur et pointu - le sens pictographique montre le métal forgé dans sa forme la plus fine et pointue.",
+    "mnemonic": "金 (or/métal) qui devient une fine pointe - 針 (はり)! C'est l'aiguille de couture qui pique - le 金 le plus fin jamais créé, capable de percer le tissu.",
+    "jlpt": 3
+  },
+  {
+    "kanji": "泉",
+    "readings": {
+      "kun": "いずみ",
+      "on": "セン"
+    },
+    "meaning": "spring, fountain",
+    "etymology": "泉 combine 白 (blanc/pur) et 水 (l'eau). Une source jaillit avec une eau pure et claire - c'est l'eau 水 blanche 白 qui monte du sol, symbolisant la pureté naturelle.",
+    "mnemonic": "Imagine une source qui jaillit - 泉 (いずみ)! La 水 qui monte du sol en bouillonnant, claire et pure comme 白. C'est l'endroit où l'eau pure émerge naturellement de la terre.",
+    "jlpt": 3
+  },
+  {
+    "kanji": "善",
+    "readings": {
+      "kun": "よ.い、い.い、よ.く、よし.とする",
+      "on": "ゼン"
+    },
+    "meaning": "virtuous, good, goodness",
+    "etymology": "善 combine 言 (parole) et 羊 (mouton). Un mouton représente la douceur et la bonté - d'où l'association avec bien et vertu. C'est comme si les bonnes paroles venues d'un cœur pur (doux comme un mouton) créaient la vertu.",
+    "mnemonic": "善い (よい) - c'est le cœur pur d'une 羊 (brebis) qui parle 言! Imagine un mouton doux parlant avec bonveillance - 善 c'est la vertu, la bonté, l'action juste.",
+    "jlpt": 3
+  },
+  {
+    "kanji": "窓",
+    "readings": {
+      "kun": "まど、てんまど、けむだし",
+      "on": "ソウ、ス"
+    },
+    "meaning": "window, pane",
+    "etymology": "窓 combine 穴 (le trou/l'ouverture) et 宍 (la chair, représentant l'intérieur). Une fenêtre est l'ouverture 穴 par laquelle on regarde l'extérieur depuis l'intérieur - c'est le trou qui connecte deux mondes.",
+    "mnemonic": "窓 (まど) - le trou 穴 où tu regardes dehors! Imagine-toi collée à la fenêtre, regardant le monde extérieur à travers ce cadre - 窓 c'est ton portail vers l'extérieur!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "装",
+    "readings": {
+      "kun": "よそお.う、よそお.い",
+      "on": "ソウ、ショウ"
+    },
+    "meaning": "attire, dress, pretend, disguise, profess",
+    "etymology": "装 combine 衣 (les vêtements) et 相 (l'apparence/le mutuel). S'équiper c'est revêtir des vêtements 衣 qui changent l'apparence 相 - c'est la transformation par l'habillement.",
+    "mnemonic": "装う (よそおう) - tu t'habilles! 衣 les vêtements qui changent ta 相 (l'apparence)! Imagine-toi qui mets un costume - tu te 装 (soō) - tu changes complètement d'apparence, tu te déguises!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "臓",
+    "readings": {
+      "kun": "はらわた",
+      "on": "ゾウ"
+    },
+    "meaning": "entrails, viscera, bowels",
+    "etymology": "臓 combine 肉 (la viande/le corps) et 蔵 (stocker/magasiner). Les organes internes sont comme les réserves du corps - c'est ce qui est stocké à l'intérieur pour maintenir la vie.",
+    "mnemonic": "臓 (ぞう) - l'organe caché inside! 肉 (le corps) qui contient les 臓器 - le cœur, les poumons, le foie. C'est comme un 蔵 (entrepôt) de vie à l'intérieur de toi!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "尊",
+    "readings": {
+      "kun": "たっと.い、とうと.い、たっと.ぶ、とうと.ぶ",
+      "on": "ソン"
+    },
+    "meaning": "revered, valuable, precious, noble, exalted",
+    "etymology": "尊 combine 寸 (une petite mesure) et 酉 (la bouteille/le récipient en poterie). Le plus petit récipient était parfois considéré comme précieux et honorable - d'où le sens de précieux, respecté, noble.",
+    "mnemonic": "尊い (とうとい) - précieux! La petite 寸 mesure dans un 酉 (récipient) - chaque goutte est 尊い! Imagine un petit mais précieux trésor qu'on honore - 尊ぶ (toutōbu) c'est respecter quelque chose de précieux.",
+    "jlpt": 3
+  },
+  {
+    "kanji": "段",
+    "readings": {
+      "kun": "",
+      "on": "ダン、タン"
+    },
+    "meaning": "grade, steps, stairs",
+    "etymology": "段 combine 殳 (une arme/un bâton) et 文 (les caractères/l'ordre). À l'origine, c'était les marches qu'on monte avec un bâton comme support - d'où les sens de niveau, étape, gradation.",
+    "mnemonic": "段 (だん) - une étape après l'autre! Chaque 段 c'est un niveau - comme l'escalier du dojo qui monte marche par marche vers la maîtrise. 段位 c'est ton niveau à la karate!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "宙",
+    "readings": {
+      "kun": "",
+      "on": "チュウ"
+    },
+    "meaning": "mid-air, air, space, sky, memorization, interval of time",
+    "etymology": "宙 combine 宀 (la maison/l'espace intérieur) et 由 (l'origine/le cours). L'espace entre la maison et le ciel - c'est la zone intermédiaire, l'intervalle, l'air.",
+    "mnemonic": "宙 (ちゅう) - le vide suspendu! C'est l'espace entre le sol et le ciel - ni ici, ni là. Imagine une plume qui flotte en 宙 (mid-air) - elle ne monte pas, elle ne descend pas, elle plane dans ce moment suspendu!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "党",
+    "readings": {
+      "kun": "なかま、むら",
+      "on": "トウ"
+    },
+    "meaning": "party, faction, clique",
+    "etymology": "党 combine 儿 (les personnes) et 黨 (originellement, une association). C'est le groupement de 儿 (gens) qui s'associent pour une cause commune - d'où parti politique ou faction.",
+    "mnemonic": "党 (とう) - des gens ensemble! 党員 c'est un membre du parti. Imagine un groupe de camarades なかま qui se réunissent pour une mission - 党 c'est ce groupe uni par un but commun!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "乳",
+    "readings": {
+      "kun": "ちち、ち",
+      "on": "ニュウ"
+    },
+    "meaning": "milk, breasts",
+    "etymology": "乳 combine 乛 (une ligne courbe) et 孚 (l'image de ce qui nourrit). C'est directement lié à l'allaitement et l'alimentation - le lait qui nourrit. Le symbole montre la courbe du corps.",
+    "mnemonic": "乳 (ちち、ち) - c'est le lait nutritif! 母乳 (ぼにゅう) - le lait maternel. C'est simplement l'image de ce qui nourrit - chaque mère le sait, c'est la nourriture la plus importante pour un bébé.",
+    "jlpt": 3
+  },
+  {
+    "kanji": "晩",
+    "readings": {
+      "kun": "",
+      "on": "バン"
+    },
+    "meaning": "nightfall, night",
+    "etymology": "晩 combine 日 (le jour/le soleil) et 万 (dix mille/la plénitude). Quand le soleil 日 arrive à sa plénitude et commence à décliner, c'est le soir - d'où 晩 signifiant tard dans la journée.",
+    "mnemonic": "晩 (ばん) - le jour qui finit! 日 le soleil qui descend à l'horizon. 今晩 (こんばん) - ce soir! Imagine le coucher de soleil qui peint le ciel en rouge - c'est 晩 (bangohan) le dîner du soir!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "閉",
+    "readings": {
+      "kun": "と.じる、と.ざす、し.める、し.まる、た.てる",
+      "on": "ヘイ"
+    },
+    "meaning": "closed, shut",
+    "etymology": "閉 combine 門 (la porte/la barrière) et 才 (l'incapacité/l'obstruction). Fermer une porte 門 c'est créer une barrière - d'où le sens de fermer, barrer, obstruction.",
+    "mnemonic": "閉じる (とじる) - la porte 門 qui se 閉! Tu pousses la 門 et elle se ferme - ポン! 閉まる (shimaru) - elle est maintenant fermée. Imagine une porte massive qui s'écrase - 閉!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "片",
+    "readings": {
+      "kun": "かた-、かた",
+      "on": "ヘン"
+    },
+    "meaning": "one-sided, leaf, sheet",
+    "etymology": "片 combine 片 (le côté/une portion) et montre une ligne verticale symbolisant un objet divisé. C'est l'image de quelque chose coupé en deux - d'où une moitié, un côté.",
+    "mnemonic": "片 (かた) - une feuille de papier! 片手 (かたて) - une main. Tu coupes une feuille 一 en deux - t'as deux 片! Ou une 片 d'une feuille tombée de l'arbre. La katana qui est 片刃 a un seul côté tranchant!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "補",
+    "readings": {
+      "kun": "おぎな.う",
+      "on": "ホ"
+    },
+    "meaning": "supplement, supply, make good, offset, compensate, assistant, learner",
+    "etymology": "補 combine 衣 (les vêtements) et 甫 (le commencement/l'aide). Un vêtement de secours ou un renfort - c'est ce qui aide, ce qui complète. D'où supplier, aider, renforcer.",
+    "mnemonic": "補う (おぎなう) - tu remplis! 衣 les vêtements qui se 補 (renforcent) - comme un patch sur un pantalon troué! 補助 c'est l'aide - quelque chose ou quelqu'un qui te 補 (aide)!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "依",
+    "readings": {
+      "kun": "よ.る",
+      "on": "イ、エ"
+    },
+    "meaning": "reliant, depend on, consequently, therefore, due to",
+    "etymology": "依 combine 人 (la personne) et 衣 (vêtements/couverture). Une personne qui s'appuie sur quelque chose - l'image d'une personne 人 qui se drape dans une couverture 衣 pour se protéger, montrant la dépendance.",
+    "mnemonic": "依る (よる) - tu te reposes sur! 人 la personne qui s'appuie 依る sur quelque chose. 依頼 (いらい) - une demande, on dépend de quelqu'un. Imagine-toi assis contre un arbre - tu 依る sur lui!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "偉",
+    "readings": {
+      "kun": "えら.い",
+      "on": "イ"
+    },
+    "meaning": "admirable, greatness, remarkable, conceited, famous, excellent",
+    "etymology": "偉 combine 人 (la personne) et 韋 (la vertu/le courage). Une grande personne 人 remplie de vertu 韋 - c'est ce qui crée l'admiration et le respect.",
+    "mnemonic": "偉い (えらい) - impressionnant! 人 la personne 偉い! Quand tu dis \"お母さんは偉い!\" (ta mère est admirable!) - c'est cette force impressionnante. 偉人 (いじん) c'est une personne remarquable dans l'histoire!",
+    "jlpt": 3
+  },
+  {
+    "kanji": "違",
+    "readings": {
+      "kun": "ちが.う、ちが.い、ちが.える、-ちが.える、たが.う、たが.える",
+      "on": "イ"
+    },
+    "meaning": "difference, differ",
+    "etymology": "違 combine 人 (la personne) et 委 (déléguer/confier). Quand deux personnes ont des tâches différentes, elles diffèrent - d'où le sens de différence, erreur, divergence.",
+    "mnemonic": "ちが.う (chigau) - différent! 人 deux personnes qui ne font pas la même chose - elles 違 (diffèrent)! 違う (chigau) - c'est différent! 間違う (machigau) - c'est une erreur, tu 違 (tu t'es trompé)!",
+    "jlpt": 3
+  }
+]

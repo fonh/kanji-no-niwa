@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "尻",
+    "readings": {
+      "kun": "しり",
+      "on": "コウ"
+    },
+    "meaning": "fesses, postérieur, arrière",
+    "etymology": "Composé de 尸 (corps) et 几 (forme assise). Anciennement écrit pour décrire la partie arrière du corps en position assise. Le radical 尸 évoque le corps étendu ou courbé.",
+    "mnemonic": "Le コウ (son on) sonne presque comme « cou » — imaginez quelqu'un se pliant en avant, montrant son derrière : c'est le bout du corps où on s'assoit !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "芯",
+    "readings": {
+      "kun": "",
+      "on": "シン"
+    },
+    "meaning": "mèche, cœur, essence",
+    "etymology": "Composé de 艹 (herbe/plante) et 心 (cœur). La mèche d'une bougie, ce cœur central qui brûle au milieu de la cire. Représente aussi l'essence centrale de quelque chose.",
+    "mnemonic": "Une mèche de bougie a un cœur (心) — c'est le シン ! Imaginez la braise brillante au centre : c'est l'âme vivante (心) de la flamme !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "裾",
+    "readings": {
+      "kun": "すそ",
+      "on": "キョ、コ"
+    },
+    "meaning": "ourlet, bas du vêtement, pied de montagne",
+    "etymology": "Composé de 衣 (vêtement) et 沙 (variante évoquant le bas/l'extrémité). Dépeint le bas d'un vêtement qui traîne, la partie inférieure du kimono ou du hakama.",
+    "mnemonic": "Le すそ (kun) ressemble à « sosoyer » — imaginez un vêtement qui s'étend vers le bas, trainant sur le sol ! C'est l'ourlet qui descend, descend, descend...",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "醒",
+    "readings": {
+      "kun": "さ.ます、さ.める",
+      "on": "セイ"
+    },
+    "meaning": "se réveiller, se désillusiouner, devenir lucide",
+    "etymology": "Composé de 酉 (alcool, fermentation) et 生 (vie, naissance). Représente le passage de l'ivresse à la lucidité, de la vie enivrée à la vie éveillée. L'éclairissement après l'obscurité de l'alcool.",
+    "mnemonic": "Vous avez bu (酉), vous vous endormez... puis soudain vous vous réveille et voyez clair ! Ce さ.ます (se réveiller) : c'est comme émerger du brouillard de l'ivresse vers la lumière de la clarté !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "戚",
+    "readings": {
+      "kun": "いた.む、うれ.える、みうち",
+      "on": "ソク、セキ"
+    },
+    "meaning": "souffrir, parents proches, peine",
+    "etymology": "Composé de 戈 (hallebarde, arme) et 又 (main). Évoque une blessure infligée aux proches — le chagrin des relations familiales blessées. Anciennement, une arme dans la main afflige la famille.",
+    "mnemonic": "ウレ.える (s'affliger) — le ソク sonne dur comme une hallebarde ! Imaginez la peine qui transperce le cœur de toute la famille (みうち) : c'est ce profond うれ.える !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "脊",
+    "readings": {
+      "kun": "せ、せい",
+      "on": "セキ"
+    },
+    "meaning": "colonne vertébrale, stature, taille",
+    "etymology": "Composé de 月 (viande, corps) et 夂 (pied descendant). Représente la structure principale du corps qui s'étend du haut en bas — l'épine dorsale qui soutient la posture. Le radicalement 月 renvoie au corps physique.",
+    "mnemonic": "Your せ (stature) dépend de votre colonne vertebrale — imaginez-la comme une épée verticale (セキ) dans la chair, dressant le corps vers le ciel ! C'est le core de votre taille !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "羨",
+    "readings": {
+      "kun": "うらや.む、あまり",
+      "on": "セン、エン"
+    },
+    "meaning": "envier, être jaloux, convoiter",
+    "etymology": "Composé de 羽 (aile, plume) et 欠 (manquer, absence). L'image d'une personne sans ailes regardant celui qui vole — l'envie de ce qu'on ne possède pas. L'absence de ce que l'autre a.",
+    "mnemonic": "うらや.む (envier) : vous voyez quelqu'un avec les ailes (羽), et vous manquez (欠) les vôtres ! C'est ce petit pincement au cœur : « J'aimerais avoir ce qu'il a ! » — voilà l'エン !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "腺",
+    "readings": {
+      "kun": "",
+      "on": "セン"
+    },
+    "meaning": "glande",
+    "etymology": "Composé de 月 (viande, corps) et 泉 (source, fontaine). Les glandes sont comme des sources d'humeurs et de sécrétions dans le corps — des fontaines internes. C'est un terme forgé pour exprimer cette fonction biologique.",
+    "mnemonic": "Une glande est une petite source (泉) dans votre chair (月) ! Imaginez votre glande thyroïde comme une petite fontaine invisible — c'est le セン qui murmure et produit en silence !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "詮",
+    "readings": {
+      "kun": "せん.ずる、かい、あき.らか",
+      "on": "セン"
+    },
+    "meaning": "discussion, moyen, débat, résultat",
+    "etymology": "Composé de 言 (parole, discours) et 泉 (source). Les paroles jaillissent comme une source lors d'une discussion. Évoque l'issue d'un débat, la clarté qui émerge des mots échangés.",
+    "mnemonic": "Dans une discussion (言), les idées coulent de source (泉) — c'est le flot du débat (せん.ずる) ! Le セン est cette claire résolution qui emerge quand tout le monde parle !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "膳",
+    "readings": {
+      "kun": "かしわ、すす.める、そな.える",
+      "on": "ゼン、セン"
+    },
+    "meaning": "petit plateau bas, plateau-repas, table",
+    "etymology": "Composé de 月 (viande, nourriture) et 善 (bien, bonté). Un plateau porteur de bonne nourriture — l'intention bienveillante d'offrir un repas. Anciennement le plateau sur lequel on servait le riz ou les mets.",
+    "mnemonic": "Un petit plateau (膳) offert avec善意 (bonne intention) ! Imaginez une mère posant son ゼン devant vous — c'est le そな.える (préparer, offrir) avec tout l'amour du cœur !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "曽",
+    "readings": {
+      "kun": "かつ、かつて、すなわち",
+      "on": "ソウ、ソ、ゾウ"
+    },
+    "meaning": "autrefois, jadis, jamais (temps ancien)",
+    "etymology": "Composé de 曰 (dire, parole) et 八 (division). Évoque ce qui a été dit depuis longtemps, les paroles du passé lointain. Anciennement une notation calendaire pour l'ancien temps.",
+    "mnemonic": "かつて (jadis) — imaginez une vieille voix qui murmure (曰) depuis le brouillard du temps ! Le ソウ sonne comme une légende ancienne : « C'était une fois, il y a bien longtemps... »",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "狙",
+    "readings": {
+      "kun": "ねら.う、ねら.い",
+      "on": "ソ、ショ"
+    },
+    "meaning": "viser, cibler, intention",
+    "etymology": "Composé de 犭 (animal, chien) et 母 (mère). L'animal qui vise sa proie — le regard perçant du chasseur. Évoque l'instinct de prédation et la concentration du regard sur un objectif.",
+    "mnemonic": "Le ねら.う (viser) : imaginez un ショ (chasseur) ou un animal qui vous fixe avec un regard laser ! Ce ねら.い (intention) est aussi intense qu'un félin avant d'attaquer !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "遡",
+    "readings": {
+      "kun": "さかのぼ.る",
+      "on": "ソ、サク"
+    },
+    "meaning": "remonter une rivière, retracer le passé, aller en amont",
+    "etymology": "Composé de 辶 (chemin, mouvement) et 朔 (première lune du mois, recommencement). Remonter le chemin vers l'origine, vers le commencement. Le mouvement inverse du courant.",
+    "mnemonic": "さかのぼ.る (remonter) : imaginez-vous nageant contre le courant ! Le ソ sonne comme « source » — vous remontez, remontez pour retrouver l'origine de la rivière, la source de tout !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "袖",
+    "readings": {
+      "kun": "そで",
+      "on": "シュウ"
+    },
+    "meaning": "manche, aile d'un bâtiment, délai, rebuff",
+    "etymology": "Composé de 衣 (vêtement) et 由 (raison, origine). La manche est la raison fonctionnelle du vêtement — la partie qui s'étend pour couvrir les bras. Anciennement, elle représentait aussi l'extension latérale.",
+    "mnemonic": "Le そで (manche) : imaginez-la flotter librement comme une voile ! Le シュウ sonne doux — vos manches ondulent gracieusement, ajoutant du charme à votre silhouette !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "遜",
+    "readings": {
+      "kun": "したが.う、へりくだ.る、ゆず.る",
+      "on": "ソン"
+    },
+    "meaning": "humble, modeste, se soumettre, céder",
+    "etymology": "Composé de 辶 (chemin, marche) et 孫 (petit-fils). Le petit-fils qui suit respectueusement son aîné sur le chemin — l'image de l'humilité et de la soumission. Le mouvement de se ranger en arrière.",
+    "mnemonic": "へりくだ.る (s'humilier) : un petit-fils (孫) marchant derrière son grand-père (ソン)... avec le cœur sincère de la modestie ! C'est ce ゆず.る (céder) gracieux du ソン !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "唾",
+    "readings": {
+      "kun": "つば、つばき",
+      "on": "ダ、タ"
+    },
+    "meaning": "salive, crachat",
+    "etymology": "Composé de 口 (bouche) et 垂 (pendre, tomber). Ce qui tombe de la bouche — la salive qui s'écoule. L'image simple et directe de la salive coulant de la lèvre inférieure.",
+    "mnemonic": "つば (salive) : imaginez une goutte de salive qui pend (垂) à votre lèvre ! Le ダ sonne mouillé, humide — c'est exactement le son de la salive qui s'écoule !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "堆",
+    "readings": {
+      "kun": "うずたか.い",
+      "on": "タイ、ツイ"
+    },
+    "meaning": "amoncellement, tas élevé, accumulé",
+    "etymology": "Composé de 土 (terre) et 隹 (oiseau). Un tas de terre comme un nid d'oiseau — l'image d'une accumulation en hauteur. Les tas de terre accumulés par le temps et l'effort.",
+    "mnemonic": "うずたか.い (amassé haut) : imaginez un nid de taupe géant (隹) fait de terre (土) — c'est un tas si élevé qu'on le voit de loin ! Le タイ résonne comme « ta-high » !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "戴",
+    "readings": {
+      "kun": "いただ.く",
+      "on": "タイ"
+    },
+    "meaning": "être couronné de, recevoir, supporter",
+    "etymology": "Composé de 戈 (hallebarde) et 載 (charger, porter). Porter une couronne sur la tête — l'image royale du fardeau de l'honneur. Ce qui repose sur le sommet du corps.",
+    "mnemonic": "いただ.く (recevoir honorablement) : imaginez une couronne posée sur votre tête (タイ) ! C'est la grâce royale du タイ — porter l'honneur avec fierté !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "綻",
+    "readings": {
+      "kun": "ほころ.びる",
+      "on": "タン"
+    },
+    "meaning": "se déchirer, se fendiller, s'ouvrir, sourire",
+    "etymology": "Composé de 糸 (fil) et 坦 (plat, uni, se déchirer). Les fils qui se rompent — l'image du tissu qui se déchire progressivement. Aussi l'idée d'un sourire qui 'se déchire' sur le visage.",
+    "mnemonic": "ほころ.びる (s'effilocher) : imaginez les fils (糸) d'une robe qui commencent à se défaire ! C'est ce petit déchirement du タン — mais aussi ce sourire discret qui s'ouvre !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "酎",
+    "readings": {
+      "kun": "かも.す",
+      "on": "チュウ、チュ"
+    },
+    "meaning": "alcool distillé, shochu",
+    "etymology": "Composé de 酉 (alcool, fermentation) et 中 (centre, intérieur, distillation). L'alcool concentré en son centre — le processus de distillation qui extrait l'essence. La boisson fermentée de l'intérieur.",
+    "mnemonic": "かも.す (brasser) : imaginez le チュウ (alcool) qui se concentre au cœur de la fermentation ! C'est le processus du チュウ — la magie de la distillation transformant le riz en élixir !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "捗",
+    "readings": {
+      "kun": "はかど.る",
+      "on": "チョク、ホ"
+    },
+    "meaning": "faire des progrès, avancer",
+    "etymology": "Composé de 手 (main) et 卜 (divination, destin). La main guidée par le destin vers l'avant — l'avancement fluide et prédéterminé. Le travail qui progresse naturellement.",
+    "mnemonic": "はかど.る (avancer rapidement) : votre main (手) est guidée par le チョク (destinée) ! Imaginez votre travail qui vole en avant — c'est ce momentum du ホ !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "爪",
+    "readings": {
+      "kun": "つめ、つま-",
+      "on": "ソウ"
+    },
+    "meaning": "griffe, ongle, talon",
+    "etymology": "Forme ancienne représentant la griffe courbe — l'image picturale d'une main crispée avec les ongles en évidence. Anciennement, la main du tigre ou du rapace, symbole de pouvoir et de préhension.",
+    "mnemonic": "つめ (ongle) : c'est une mini-arme ! Imaginez le ソウ comme la griffe d'un félin — courbe, pointue, prête à saisir ! C'est la partie acérée de votre doigt !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "貼",
+    "readings": {
+      "kun": "は.る、つ.く",
+      "on": "テン、チョウ"
+    },
+    "meaning": "coller, appliquer, afficher, adhérer",
+    "etymology": "Composé de 貝 (richesse, coquillage lisse) et 占 (coller, occuper). Adhérer et s'attacher — comme une perle précieuse collée à une surface. L'image de quelque chose qui se fixe solidement.",
+    "mnemonic": "は.る (coller) : imaginez un timbre qui adhère parfaitement (テン) à l'enveloppe ! C'est le チョウ doux et satisfaisant de quelque chose qui reste attaché !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "妬",
+    "readings": {
+      "kun": "ねた.む、そね.む、つも.る、ふさ.ぐ",
+      "on": "ト、ツ"
+    },
+    "meaning": "jalousie, envie, obstruer",
+    "etymology": "Composé de 女 (femme) et 度 (fois, mesure, limite). La jalousie féminine qui se répète — l'accumulation de ressentiment. Évoque aussi l'obstruction causée par l'envie.",
+    "mnemonic": "ねた.む (envier) : c'est la ト qui brûle dans le cœur ! Imaginez cette émotion qui s'accumule (つも.る) — c'est le feu jaloux du ト qui consume !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "賭",
+    "readings": {
+      "kun": "か.ける、かけ",
+      "on": "ト"
+    },
+    "meaning": "parier, miser, wager",
+    "etymology": "Composé de 貝 (richesse, monnaie) et 木 (arbre, ou en contexte : support). Mettre ses richesses en jeu — l'image d'une mise placée sur la table. L'acte de risquer ce qu'on possède.",
+    "mnemonic": "か.ける (parier) : vous posez votre richesse (貝) sur la table — c'est le ト ultime ! Imaginez les pièces d'or qui roulent, le cœur qui s'accélère : c'est le frisson du か.け !",
+    "jlpt": "N1"
+  }
+]

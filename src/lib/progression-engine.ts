@@ -77,6 +77,90 @@ export type Lesson = {
   quizQuestions: unknown[]
 }
 
+// ── Battle mode selection ─────────────────────────────────────────────────────
+
+export type QuestionMode =
+  | 'sens'
+  | 'lecture'
+  | 'ecriture'
+  | 'composition'
+  | 'grammaire'
+  | 'conjugaison'
+  | 'traduction'
+  | 'disposition'
+
+export type BattleType = 'route' | 'boss'
+
+export const BATTLE_WEIGHTS: Record<BattleType, Record<QuestionMode, number>> = {
+  route: {
+    sens: 0.28,
+    lecture: 0.22,
+    ecriture: 0.18,
+    composition: 0.10,
+    grammaire: 0.07,
+    conjugaison: 0.07,
+    traduction: 0.03,
+    disposition: 0.05,
+  },
+  boss: {
+    sens: 0.12,
+    lecture: 0.12,
+    ecriture: 0.10,
+    composition: 0.05,
+    grammaire: 0.13,
+    conjugaison: 0.13,
+    traduction: 0.05,
+    disposition: 0.30,
+  },
+}
+
+/**
+ * Picks a question mode using weighted random selection.
+ * Modes with no eligible content (grammar not yet encountered, no Disposition
+ * sentences matching the player's studied set) have their weight redistributed
+ * proportionally to the remaining modes.
+ */
+export function selectQuestionMode(
+  battleType: BattleType,
+  encounteredGrammarCount: number,
+  hasDispositionSentences: boolean
+): QuestionMode {
+  const weights = { ...BATTLE_WEIGHTS[battleType] }
+
+  if (encounteredGrammarCount < 5) {
+    weights.grammaire = 0
+    weights.conjugaison = 0
+  }
+  if (!hasDispositionSentences) {
+    weights.disposition = 0
+  }
+
+  const total = Object.values(weights).reduce((s, w) => s + w, 0)
+  const modes = Object.keys(weights) as QuestionMode[]
+  for (const mode of modes) weights[mode] /= total
+
+  const roll = Math.random()
+  let cumulative = 0
+  for (const mode of modes) {
+    cumulative += weights[mode]
+    if (roll < cumulative) return mode
+  }
+  return modes[0]
+}
+
+/**
+ * Returns the sentence chunks in a random order (Fisher-Yates shuffle).
+ * The caller validates the answer by comparing surface_form sequences.
+ */
+export function getDispositionChunks(chunks: string[]): string[] {
+  const arr = [...chunks]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}
+
 export function getLessonQueue(
   availableKanji: string[],
   completedLessons: string[],

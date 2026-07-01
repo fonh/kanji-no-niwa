@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "升",
+    "readings": {
+      "kun": "ます",
+      "on": "ショウ"
+    },
+    "meaning": "boîte à mesurer, unité de volume (1,8 litre)",
+    "etymology": "Le kanji 升 ressemble à un récipient ouvert. L'origine vient de la pictographie d'un récipient de mesure utilisé pour quantifier les grains. Les traits horizontaux et verticaux formaient les parois du récipient.",
+    "mnemonic": "Imaginez une BOÎTE (升) qui mesure exactement une TASSE japonaise (ます - masu). C'est comme un verre gradué en bois, utilisé depuis l'Antiquité pour mesurer le riz et le saké !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "宵",
+    "readings": {
+      "kun": "よい",
+      "on": "ショウ"
+    },
+    "meaning": "soirée, début de nuit, brèves heures de la nuit",
+    "etymology": "宵 combine 宀 (maison) et 小 (petit). C'est l'heure où le soleil descend derrière la maison. La structure pictographique représente la maison quand le jour faiblit et s'assombrit.",
+    "mnemonic": "C'est le moment magique du よい (SOIRÉE) - quand vous rentrez à la MAISON (宀) et que le ciel devient PETIT et foncé. SHOOOOU (ショウ) comme le son du ciel qui s'assombrit !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "尚",
+    "readings": {
+      "kun": "なお",
+      "on": "ショウ"
+    },
+    "meaning": "estime, en outre, toujours, cependant",
+    "etymology": "尚 combine les éléments de l'élévation verticale et de la dignité. Littéralement, c'est élever quelque chose jusqu'à le rendre précieux - le concept de l'estime et du respect. La structure évoque la verticalité morale.",
+    "mnemonic": "Un enfant PETIT qui se tient HAUT et DROIT (尚), aspirant à être admiré. Cette dignité innée, c'est l'estime ! ショウ résonne comme le son du respect ! なお (NAO) capture cette élévation continue.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "彰",
+    "readings": {
+      "kun": "",
+      "on": "ショウ"
+    },
+    "meaning": "patent, clair, manifeste, évident",
+    "etymology": "彰 combine 彡 (trois traits suggérant l'éclat, la lumière) et 章 (motif, pattern). Ensemble, ils représentent quelque chose de brillant et clair, rendant un motif visible et évident. C'est la LUMIÈRE qui illumine le MOTIF.",
+    "mnemonic": "Trois éclairs lumineux (彡) qui éclairent un MOTIF (章) jusqu'à ce qu'il soit complètement CLAIR (彰) ! ショウ comme le bruit d'une lampe s'allumant, révélant chaque détail !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "抄",
+    "readings": {
+      "kun": "",
+      "on": "ショウ"
+    },
+    "meaning": "extrait, sélection, résumé, copie",
+    "etymology": "抄 combine 扌 (main) et 少 (petit, peu). Littéralement 'prendre une petite partie avec la main' - c'est extraire ou sélectionner. La notion de saisir une PETITE PORTION avec la main.",
+    "mnemonic": "Avec votre MAIN (扌), vous sélectionnez une PETITE PARTIE (少) d'un livre - c'est un RÉSUMÉ (抄), ショウ ! Comme le geste de tourner les pages et de choisir les passages essentiels !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "掌",
+    "readings": {
+      "kun": "てのひら、たなごころ",
+      "on": "ショウ"
+    },
+    "meaning": "paume de la main, diriger, régner, administrer",
+    "etymology": "掌 se compose de 扌 (main) et 昌 (prospérité, éclat). C'est la MAIN qui régit et domine. Visuellement, c'est une paume ouverte - symbole du pouvoir et du contrôle depuis l'Antiquité. La paume est le siège du commandement.",
+    "mnemonic": "Ouvrez votre PAUME (てのひら - TENO HIRA) à la lumière - c'est SHOOOOU (ショウ), le kanji de celui qui DIRIGE ! La paume est le siège du pouvoir - c'est pourquoi on dit 'tenir quelque chose en main' !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "晶",
+    "readings": {
+      "kun": "",
+      "on": "ショウ"
+    },
+    "meaning": "étincelle, cristal, clair, pureté",
+    "etymology": "晶 est composé de trois 日 (soleil/lumière) empilés verticalement. Chaque soleil représente une facette brillante, et ensemble ils créent l'image d'un cristal étincelant sous plusieurs angles de lumière. C'est la CLARTÉ TRILATÉRALE.",
+    "mnemonic": "Trois SOLEILS (日) superposés - un CRISTAL qui BRILLE (晶) de tous les côtés ! ショウ comme le scintillement d'un diamant sous la lumière du matin ! Pur et transparent comme le jour !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "沼",
+    "readings": {
+      "kun": "ぬま",
+      "on": "ショウ"
+    },
+    "meaning": "marais, étang, marécage, lac",
+    "etymology": "沼 combine 水 (eau) et 召 (appel, son). C'est l'eau stagnante qui 'parle' avec ses gargouillements caractéristiques des zones humides. Littéralement, c'est l'eau marécageuse qui résonne.",
+    "mnemonic": "Une zone d'EAU (水) où tous les animaux vous APPELLENT (召) - 'ぬま!' (NUMA!) - le MARAIS vivant (沼) de ショウ ! Vous entendez les grenouilles coasser dans ce monde aquatique !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "焦",
+    "readings": {
+      "kun": "こ.げる、こ.がす、こ.がれる、あせ.る、じ.れる、じ.らす",
+      "on": "ショウ"
+    },
+    "meaning": "brûler, carboniser, se consumer, s'impatienter",
+    "etymology": "焦 combine 火 (feu) et un élément qui évoque l'action de brûler intensément. C'est le feu qui consume et détruit. Pictographiquement, c'est le feu qui noircit et déshydrate tout sur son passage.",
+    "mnemonic": "Le FEU (火) qui BRÛLE et te fait s'IMPATIENTER (じ.れる) - ショウ ! Quand vous êtes au-dessus d'une flamme, vous devenez NERVEUX comme du bois qui se CARBONISE (こ.げる) ! L'anxiété BRÛLE comme le feu !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "症",
+    "readings": {
+      "kun": "",
+      "on": "ショウ"
+    },
+    "meaning": "symptôme, maladie, affection",
+    "etymology": "症 combine 疒 (maladie, corps malade) et 正 (droit, correct). Les symptômes sont les signes visibles qui manifestent quand le corps n'est pas dans son état correct. C'est la maladie qui se montre clairement.",
+    "mnemonic": "Les signes de MALADIE (疒) qui deviennent ÉVIDENTS (正) - ce sont les SYMPTÔMES (症) ショウ ! Quand vous êtes malade, vos symptômes crient 'regarde-moi !' ! Ils s'affichent ouvertement sur votre corps !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "硝",
+    "readings": {
+      "kun": "",
+      "on": "ショウ"
+    },
+    "meaning": "nitrate, salpêtre, verre",
+    "etymology": "硝 combine 石 (pierre) et un élément suggérant la substance blanche cristalline. C'est le minéral blanc comme la pierre - le salpêtre qui recouvre les murs dans les endroits humides. Une substance minérale cristalline.",
+    "mnemonic": "Une PIERRE (石) blanche et cristalline - le SALPÊTRE (硝) ショウ ! C'est la poudre blanche magique qui fait brûler les feux d'artifice avec une CLARTÉ brillante ! Un minéral de la TERRE transformé par la CHIMIE !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "祥",
+    "readings": {
+      "kun": "さいわ.い、きざ.し、よ.い、つまび.らか",
+      "on": "ショウ"
+    },
+    "meaning": "heureux, présage favorable, bonheur, bonne fortune",
+    "etymology": "祥 combine 示 (divinité, signe) et 翔 (voler librement). C'est un signe du divin qui apporte la liberté et le bonheur. Pictographiquement, c'est l'oiseau de bon augure qui vole du ciel divin.",
+    "mnemonic": "Un SIGNE DIVIN (示) du ショウ (SHOOOUU) - les présages HEUREUX (きざ.し) qui volent vers vous comme des OISEAUX DE BON AUGURE (翔) ! さいわ.い (SAIWAI) - le BONHEUR qui descend du ciel !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "称",
+    "readings": {
+      "kun": "たた.える、とな.える、あ.げる、かな.う、はか.り、はか.る、ほめ.る",
+      "on": "ショウ"
+    },
+    "meaning": "appellation, éloge, nom, titre, gloire",
+    "etymology": "称 combine 禾 (céréales) et 匀 (égal, équilibré). C'est l'idée d'équilibre - quand on pèse des choses, elles doivent être équilibrées. D'où vient l'idée de 'nommer' ou 'mesurer' avec équité.",
+    "mnemonic": "Vous PESEZ (はか.る) les CÉRÉALES (禾) sur une BALANCE - ショウ (SHOOOUU) ! Quand tout est ÉQUILIBRÉ (匀), c'est juste et bon - d'où l'ÉLOGE (ほめ.る) qui suit ! C'est l'appellation JUSTE qui vous nomme !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "肖",
+    "readings": {
+      "kun": "あやか.る",
+      "on": "ショウ"
+    },
+    "meaning": "ressemblance, imitation, participer",
+    "etymology": "肖 combine 肉 (chair, corps) et un élément qui suggère la forme identique. C'est la ressemblance physique - quand deux corps ont la même forme, c'est une ressemblance. Pictographiquement, c'est deux silhouettes identiques.",
+    "mnemonic": "Votre CORPS (肉) ressemble à celui de votre PARENT - c'est un ショウ (SHOOOUU) de RESSEMBLANCE (肖) ! Vous PARTICIPEZ (あやか.る) à son apparence ! C'est l'hérédité gravée dans la CHAIR !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "衝",
+    "readings": {
+      "kun": "つ.く",
+      "on": "ショウ"
+    },
+    "meaning": "collide, brunt, highway, opposition, thrust",
+    "etymology": "衝 combine 行 (route, mouvement) et un élément qui évoque le choc. C'est deux objets qui se rencontrent sur une route - littéralement une collision frontale. L'image est celle d'un impact violent.",
+    "mnemonic": "Deux choses qui PERCUTENT (つ.く) sur une ROUTE (行) - SHOOOUU (ショウ) ! Le CHOC (衝) frontal ! Vous sentez le brunt de l'OPPOSITION (衝) comme deux trains qui se rencontrent !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "訟",
+    "readings": {
+      "kun": "",
+      "on": "ショウ"
+    },
+    "meaning": "sue, accuse, lawsuit",
+    "etymology": "訟 combine 言 (parole, discours) et un élément représentant le conflit. C'est les paroles qui s'affrontent - quand deux personnes se disputent devant un tribunal. Littéralement, c'est le langage en CONFLIT.",
+    "mnemonic": "Des PAROLES (言) qui s'AFFRONTENT - ショウ (SHOOOUU) ! Un PROCÈS (訟) commence quand les accusations commencent à voler ! Vous POURSUIVEZ (訟) quelqu'un en JUSTICE - c'est la GUERRE des MOTS !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "丈",
+    "readings": {
+      "kun": "たけ、だけ",
+      "on": "ジョウ"
+    },
+    "meaning": "length, ten shaku, measure, height, stature",
+    "etymology": "丈 est formé de 十 (dix) avec un trait vertical allongé. C'est littéralement l'unité de mesure 'shaku' (10 sun) - le kanji représente l'idée d'une LONGUEUR STANDARD. Visuellement, c'est une règle de mesure.",
+    "mnemonic": "Mesurer votre HAUTEUR (たけ - TAKE) avec une unité de DIX (十) - c'est la TAILLE (丈) en ジョウ ! Le trait au-dessus marque jusqu'où vous mesurez - votre STATURE (だけ) !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "冗",
+    "readings": {
+      "kun": "",
+      "on": "ジョウ"
+    },
+    "meaning": "superfluous, uselessness, redundant",
+    "etymology": "冗 combine 冫 (froid, gelé) et 永 (long, éternel). C'est quelque chose qui dure longtemps sans utilité - comme une période froide et vide. L'idée de 'vide prolongé' sans but.",
+    "mnemonic": "Quelque chose qui DURE LONGTEMPS (永) et vous CONGÈLE (冫) d'ennui - ジョウ ! C'est SUPERFLU (冗) et ne sert à rien ! Comme une attente gelée dans l'inutilité - les paroles qui refroidissent !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "壌",
+    "readings": {
+      "kun": "つち",
+      "on": "ジョウ"
+    },
+    "meaning": "lot, earth, soil",
+    "etymology": "壌 combine 土 (terre) et un élément suggérant l'enclosure. C'est la terre qui est délimitée - un lot de terre spécifique. Pictographiquement, c'est un espace terrestre clairement défini.",
+    "mnemonic": "Une parcelle de TERRE (つち - TSUCHI) délimitée - ジョウ ! La TERRE (土) que vous pouvez appeler VÔTRE - c'est votre propriété TERRESTRE (壌) ! Le sol que vous possédez !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "嬢",
+    "readings": {
+      "kun": "むすめ",
+      "on": "ジョウ"
+    },
+    "meaning": "lass, girl, miss, daughter",
+    "etymology": "嬢 combine 女 (femme, fille) et 襄 (aider, supporter). C'est une jeune FEMME qui aide et soutient. Historiquement, c'était un titre honorifique pour les filles de famille noble.",
+    "mnemonic": "Une jeune FILLE (女 - むすめ MUSUME) qui vous AIDE (襄) - ジョウ ! Une DEMOISELLE (嬢) gracieuse qui vous soutient avec bienveillance ! C'est le titre respectueux pour une jeune femme !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "浄",
+    "readings": {
+      "kun": "きよ.める、きよ.い",
+      "on": "ジョウ、セイ"
+    },
+    "meaning": "clean, purify, cleanse, exorcise",
+    "etymology": "浄 combine 水 (eau) et 情 (sentiment, cœur). C'est l'eau qui purifie le cœur - le nettoyage spirituel. Littéralement, c'est l'eau claire et pure qui lave l'âme.",
+    "mnemonic": "L'EAU (水) PURE qui nettoie votre CŒUR (情) - ジョウ ! きよ.い (KIYOI) - PUR et limpide ! Une eau claire qui vous purifie spirituellement - c'est le cœur du Bouddhisme pur !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "譲",
+    "readings": {
+      "kun": "ゆず.る",
+      "on": "ジョウ"
+    },
+    "meaning": "defer, turnover, transfer, convey",
+    "etymology": "譲 combine 言 (parole) et 讓 (céder, laisser). C'est la parole douce qui abandonne - quand vous CÉDEZ poliment. Littéralement, c'est dire 'je vous cède cela' avec respect.",
+    "mnemonic": "Vous PARLEZ (言) poliment pour CÉDER (ゆず.る - YUZURU) - ジョウ ! Quand quelqu'un dit 'c'est pour toi', c'est ÉLÉGANT (譲) - la DÉFÉRENCE (譲) japonaise incarnée !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "醸",
+    "readings": {
+      "kun": "かも.す",
+      "on": "ジョウ"
+    },
+    "meaning": "brew, cause, create, fermentation",
+    "etymology": "醸 combine 酉 (alcool, fermentation) et 讓 (changement graduel). C'est le processus de transformation lente - comme la fermentation du saké. Littéralement, c'est l'alcool qui se transforme graduellement.",
+    "mnemonic": "L'ALCOOL (酉) qui FERMENTE LENTEMENT (讓) pour devenir du SAKÉ - ジョウ ! かも.す (KAMOSU) - BRASSER le saké ! Une atmosphère d'automne qui CRÉE la nostalgie - c'est la CHIMIE vivante !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "錠",
+    "readings": {
+      "kun": "",
+      "on": "ジョウ"
+    },
+    "meaning": "lock, fetters, shackles",
+    "etymology": "錠 combine 金 (métal) et 貞 (constance, fidélité). C'est le métal qui assure la constance - une serrure de fer qui tient fermement. Littéralement, c'est le métal de la fidélité.",
+    "mnemonic": "Un MÉTAL (金) SOLIDE qui vous RETIENT (錠) - ジョウ ! Une SERRURE (錠) qui vous EMPRISONNE avec sa FIDÉLITÉ inévitable ! C'est le bruit du verrou qui se ferme - CLIC !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "嘱",
+    "readings": {
+      "kun": "しょく.する、たの.む",
+      "on": "ショク"
+    },
+    "meaning": "entrust, request, send a message",
+    "etymology": "嘱 combine 口 (bouche, parole) et 属 (catégorie, appartenance). C'est la parole qui confie - quand vous dites à quelqu'un 'fais ceci pour moi'. Littéralement, c'est l'ordre verbal de CONFIER une RESPONSABILITÉ.",
+    "mnemonic": "Vous PARLEZ (口) pour CONFIER (たの.む - TANOMU) une TÂCHE à quelqu'un - ショク ! C'est un MESSAGE CONFIÉ (嘱) que vous CONFIEZ solennellement - l'ACTION (しょく.する) de déléguer avec confiance !",
+    "jlpt": "N2"
+  }
+]

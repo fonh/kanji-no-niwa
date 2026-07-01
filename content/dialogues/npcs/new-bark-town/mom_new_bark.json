@@ -1,0 +1,27 @@
+{
+  "npc_id": "mom_new_bark",
+  "name": "Mom",
+  "zone_id": "new-bark-town",
+  "jlpt_level": "N5",
+  "state_rules": [
+    { "default": true, "state": "intro" }
+  ],
+  "dialogue_states": {
+    "intro": {
+      "pages": [
+        {
+          "jp": "おかえりなさい。",
+          "en": "Welcome back."
+        },
+        {
+          "jp": "ふくだせんせいが、道場（どうじょう）に　います。",
+          "en": "Fukuda-sensei is at the dojo."
+        },
+        {
+          "jp": "道場（どうじょう）へ　いってください。",
+          "en": "Please go to the dojo."
+        }
+      ]
+    }
+  }
+}

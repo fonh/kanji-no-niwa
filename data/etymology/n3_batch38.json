@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "職",
+    "readings": {
+      "kun": "",
+      "on": "ショク、ソク"
+    },
+    "meaning": "poste, emploi, travail",
+    "etymology": "Composée de 耳 (oreille) et de composants représentant le travail qualifié. L'oreille symbolise l'attention requise pour maîtriser un métier. Elle représente originellement les diverses professions et occupations.",
+    "mnemonic": "職人 (shokunin) — l'artisan maître ! L'oreille 耳 tendue symbolise l'apprentissage minutieux. Imaginez un apprenti écoutant chaque leçon du maître : c'est le secret de 職 !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "性",
+    "readings": {
+      "kun": "さが",
+      "on": "セイ、ショウ"
+    },
+    "meaning": "sexe, genre, nature, caractère",
+    "etymology": "Composée de 忄 (cœur, émotion) et 青 (bleu, verdant, jeune). Représente la nature profonde et les instincts inhérents d'une personne. L'aspect bleu-jeune évoque la vitalité des instincts naturels et du tempérament.",
+    "mnemonic": "性 chante la nature du cœur ! La 心 (cœur) en sa 青 (jeunesse) vitale ! Imaginez-vous découvrant qui vous êtes vraiment — c'est votre 性, votre essence セイ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "政",
+    "readings": {
+      "kun": "まつりごと、まん",
+      "on": "セイ、ショウ"
+    },
+    "meaning": "politique, gouvernement",
+    "etymology": "Composée de 攵 (radical d'action, main levée) et 正 (correct, droit). Représente l'action corrective de gouverner — faire régner l'ordre. Le gouvernement est l'action pour maintenir la rectitude 正.",
+    "mnemonic": "政 — c'est l'action 攵 pour rendre les choses 正しい (justes) ! Un leader qui tient le pays droit, c'est le まつりごと (politique) en セイ ! L'ordre par l'action !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "精",
+    "readings": {
+      "kun": "しら.げる、くわ.しい",
+      "on": "セイ、ショウ"
+    },
+    "meaning": "raffiné, esprit, fée, énergie, vitalité, excellence",
+    "etymology": "Composée de 忄 (cœur) et 青 (bleu, jeune, verdant). Représente l'essence pure ou l'esprit énergiétique d'une chose. L'énergie vitale en son état le plus pur et concentré.",
+    "mnemonic": "精 = 心 + la jeunesse 青 éternelle ! L'énergie brûlante de 精力 (seiryoku) ! Imaginez l'essence pure vibrant — c'est 精 qui cristallise tout le pouvoir en une goutte brillante de séイ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "製",
+    "readings": {
+      "kun": "",
+      "on": "セイ"
+    },
+    "meaning": "fabriqué à, fabrication, manufacture",
+    "etymology": "Composée de 木 (bois) et 制 (réguler, contrôler). Représente la fabrication réglementée et standardisée. Le bois travaillé selon des normes précises évoque l'industrie manufacturière organisée.",
+    "mnemonic": "製 — règles 制 et 木 (bois) taillé ! Imaginez des menuisiers créant en série avec précision — c'est 製造 (seizou), la fabrication séイ qui crée l'ordre !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "造",
+    "readings": {
+      "kun": "つく.る、つく.り、-づく.り",
+      "on": "ゾウ"
+    },
+    "meaning": "créer, faire, construire, structure",
+    "etymology": "Combinaison de 辶 (progresser, marcher) et 早 (rapide, tôt). Représente l'action rapide et dynamique de créer quelque chose. La progression vers la création.",
+    "mnemonic": "つく.る ! La création éclair — la rapidité 早 qui avance 辶 ! Imaginez un menuisier qui façonne une pièce en un éclair : c'est つく.る, créer avec ゾウ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "団",
+    "readings": {
+      "kun": "かたまり、まる.い",
+      "on": "ダン、トン"
+    },
+    "meaning": "groupe, association, unité",
+    "etymology": "Composée de 囗 (enclos) et 寸 (mesure). Représente des personnes rassemblées dans un espace clos. L'enclos symbolise le rassemblement collectif et la solidarité du groupe.",
+    "mnemonic": "団体 (dantai) — une unité ! L'enclos 囗 réunit les gens en かたまり ! Imaginez des amis formant un cercle fermé — c'est la 団 en ダン, l'unité forte !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "張",
+    "readings": {
+      "kun": "は.る、-は.り、-ば.り",
+      "on": "チョウ"
+    },
+    "meaning": "étirer, déployer, dresser, compteur pour cordes",
+    "etymology": "Composée de 弓 (arc) et 長 (long). Représente l'action de tendre une corde d'arc pour la rendre longue et vibrante. L'arc qu'on étend devient long.",
+    "mnemonic": "は.る ! La corde 弓 (arc) qu'on étend ! Imaginez un archer tendant son arc avec force — ぐーっと は.る ! C'est la tension vibrant en チョウ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "適",
+    "readings": {
+      "kun": "かな.う",
+      "on": "テキ"
+    },
+    "meaning": "convenable, approprié, qualifié",
+    "etymology": "Composée de 辶 (avancer) et 滴 (goutte). Représente la goutte d'eau qui trouve exactement son niveau — l'adaptation parfaite. L'ajustement naturel aux circonstances.",
+    "mnemonic": "かな.う — c'est l'ajustement juste ! Imaginez une goutte qui trouve sa place exacte : c'est 適 ! L'accord テキ du temps et du lieu !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "任",
+    "readings": {
+      "kun": "まか.せる、まか.す",
+      "on": "ニン"
+    },
+    "meaning": "responsabilité, devoir, confier",
+    "etymology": "Composée de 人 (personne) et 壬 (charge, nomination). Représente charger une personne d'une responsabilité. La personne 人 qui accepte une mission.",
+    "mnemonic": "まか.せる — confier ! La 人 (personne) accepte la 任務 ! Imaginez un chef confiant une mission à son apprenti : c'est まか.せる, la confiance en ニン !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "備",
+    "readings": {
+      "kun": "そな.える、そな.わる、つぶさ.に",
+      "on": "ビ"
+    },
+    "meaning": "équiper, pourvoir, préparation",
+    "etymology": "Composée de 攵 (action, main) et 有 (posséder). Représente l'action de rassembler tout ce qui est nécessaire. La préparation minutieuse et l'équipement complet.",
+    "mnemonic": "そな.える — préparer tout ! Imaginez un guerrier vérifiant chaque arme — c'est 備 ! La préparation totale en ビ, rien n'est oublié !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "婦",
+    "readings": {
+      "kun": "よめ",
+      "on": "フ"
+    },
+    "meaning": "femme, épouse, mariée",
+    "etymology": "Composée de 女 (femme) et 夫 (mari). Représente une femme dans le contexte du mariage et du foyer. La compagne du 夫 qui partagent la vie.",
+    "mnemonic": "よめ — la jeune mariée ! La 女 (femme) qui rejoint le foyer du 夫 ! Imaginez une よめ en kimono blanc : c'est 婦, l'épouse en フ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "武",
+    "readings": {
+      "kun": "たけ、たけ.し",
+      "on": "ブ、ム"
+    },
+    "meaning": "guerrier, militaire, chevalerie",
+    "etymology": "Composée de 止 (arrêter) et 戈 (hallebarde, arme). Représente l'art de combattre — arrêter l'ennemi avec la hallebarde. La maîtrise de la guerre.",
+    "mnemonic": "たけ.し — martial ! L'arme 戈 qui arrête 止 l'ennemi ! Imaginez un samouraï noble disant « Non ! » avec force : c'est 武, l'esprit en ブ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "復",
+    "readings": {
+      "kun": "また",
+      "on": "フク"
+    },
+    "meaning": "restaurer, retourner, reprendre",
+    "etymology": "Composée de 彳 (marcher) et 复 (doubler, répéter). Représente le retour — marcher de nouveau sur le même chemin. La restauration par la répétition.",
+    "mnemonic": "また — de nouveau ! Le voyage qui recommence ! Imaginez quelqu'un retournant au pays après la guerre : c'est 復, le retour en フク qui restaure !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "編",
+    "readings": {
+      "kun": "あ.む、-あ.み",
+      "on": "ヘン"
+    },
+    "meaning": "tricoter, tresser, compilation, partie d'un livre",
+    "etymology": "Composée de 糸 (fil) et 扁 (plat, feuille). Représente les fils entrelacés pour créer une tresse ou un tissu. L'assemblage de fils distincts en une harmonie.",
+    "mnemonic": "あ.む — tricoter ! Les 糸 (fils) qui s'entrelacent ! Imaginez des fils formant un beau motif géométrique : c'est 編, la tresse en ヘン !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "保",
+    "readings": {
+      "kun": "たも.つ",
+      "on": "ホ、ホウ"
+    },
+    "meaning": "protéger, garantir, conserver",
+    "etymology": "Composée de 人 (personne) et de radicaux évoquant la préservation. Représente prendre soin et garder en sécurité. La personne qui protège ce qui lui est cher.",
+    "mnemonic": "たも.つ — conserver ! Imaginez un parent tenant précieusement son enfant dans ses bras : c'est 保, la protection en ホ qui garantit la vie !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "報",
+    "readings": {
+      "kun": "むく.いる",
+      "on": "ホウ"
+    },
+    "meaning": "rapport, nouvelles, récompense",
+    "etymology": "Composée de 扌 (main) et 寺 (temple, organisme). Représente l'action de rendre ou de rapporter — la main qui restitue. La rétribution et la récompense.",
+    "mnemonic": "むく.いる — récompenser ! La main 扌 qui donne ! Imaginez un maître remerciant son apprenti fidèle : c'est 報, la gratitude en ホウ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "異",
+    "readings": {
+      "kun": "こと、こと.なる、け",
+      "on": "イ"
+    },
+    "meaning": "différent, étrange, curieux, merveilleux",
+    "etymology": "Composée de 田 (champ) et de radicaux representant la différence. Représente quelque chose de distinctement différent ou anormal. Le champ qui apparaît étrangement étrange.",
+    "mnemonic": "こと.なる — être différent ! C'est l'異monde fantastique ! Imaginez un champ magique où les règles changent : c'est 異, l'étrangeté en イ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "胃",
+    "readings": {
+      "kun": "",
+      "on": "イ"
+    },
+    "meaning": "estomac, ventre",
+    "etymology": "Composée de 月 (lune, chair) et 囗 (enclos). Représente l'organe interne de digestion — la chair enclose du corps travaillant. L'estomac qui transforme la nourriture.",
+    "mnemonic": "胃 — l'estomac qui travaille ! La 月 (chair) enclose à l'intérieur ! Imaginez votre estomac transformant le repas en énergie : c'est 胃 en イ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "延",
+    "readings": {
+      "kun": "の.びる、の.べる、の.べ、の.ばす",
+      "on": "エン"
+    },
+    "meaning": "prolonger, extension, allongement",
+    "etymology": "Composée de 廴 (extension, progression) et 廷 (cour, espace). Représente l'extension dans l'espace et le temps. Le mouvement qui s'étend graduellement.",
+    "mnemonic": "の.びる — s'étendre ! Imaginez un bambou qui grandit et s'allonge lentement : c'est 延, l'extension en エン qui n'arrête jamais !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "灰",
+    "readings": {
+      "kun": "はい",
+      "on": "カイ"
+    },
+    "meaning": "cendres, résidu de feu",
+    "etymology": "Composée de 火 (feu) et d'un radical représentant ce qui reste. Représente ce qui demeure après la combustion — les cendres grises et fines laissées par les flammes.",
+    "mnemonic": "はい — cendres ! Ce qui reste du 火 (feu) ! Imaginez un feu qui s'éteint, laissant 灰 grise flottante : c'est はい en カイ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "干",
+    "readings": {
+      "kun": "ほ.す、ほ.し-、-ぼ.し、ひ.る",
+      "on": "カン"
+    },
+    "meaning": "sécher, dessécher, interférer",
+    "etymology": "Représente un trait vertical d'extension, ou composée de radicaux évoquant le séchage. Évoque l'action du soleil qui dessèche. Le trait qui barre, l'interférence.",
+    "mnemonic": "ほ.す — sécher au soleil ! Imaginez du linge ほ.す suspendu qui sèche sous le soleil chaud : c'est 干, le séchage en カン !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "机",
+    "readings": {
+      "kun": "つくえ",
+      "on": "キ"
+    },
+    "meaning": "bureau, table, pupitre",
+    "etymology": "Composée de 木 (bois) et 几 (support, pied). Représente un meuble de bois avec pieds — un plateau soutenu par des supports. Le meuble de travail quotidien.",
+    "mnemonic": "つくえ — le bureau ! Meubles en 木 (bois) avec des pieds ! Imaginez votre つくえ où vous travaillez : c'est 机 en キ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "警",
+    "readings": {
+      "kun": "いまし.める",
+      "on": "ケイ"
+    },
+    "meaning": "avertir, mettre en garde, commandement",
+    "etymology": "Composée de 言 (parole) et de radicaux évoquant la vigilance ou le respect. Représente la parole d'avertissement ou l'ordre du supérieur. Le commandement vigilant.",
+    "mnemonic": "いまし.める — avertir ! La 言 (parole) qui met en garde ! Imaginez un maître vous intim*いまし.める* avec sagesse : c'est 警 en ケイ !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "劇",
+    "readings": {
+      "kun": "",
+      "on": "ゲキ"
+    },
+    "meaning": "drame, pièce de théâtre, intense",
+    "etymology": "Composée de 力 (force) et de radicaux évoquant le jeu ou le dramatique. Représente l'intensité émotionnelle du théâtre. L'action avec toute sa puissance.",
+    "mnemonic": "劇 — le drame intense ! La 力 (force) passionnelle qui explose ! Imaginez un acteur criant avec toute l'émotion : c'est 劇 en ゲキ !",
+    "jlpt": "N3"
+  }
+]

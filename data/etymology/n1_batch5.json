@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "瓦",
+    "readings": {
+      "kun": "かわら、ぐらむ",
+      "on": "ガ"
+    },
+    "meaning": "tuile, gramme",
+    "etymology": "Ce kanji représente une tuile courbe vue de haut, pictogramme d'une couverture traditionnelle. Le trait supérieur et la forme incurvée imitent la section transversale d'une tuile en terre cuite, matériau dominant des toitures asiatiques. La composition conserve cette silhouette distinctive sans composants complexes, restant un vrai pictogramme simplifié.",
+    "mnemonic": "瓦 (かわら) sur les toits ! Regardez sa forme courbée — c'est exactement une tuile vue de haut. Imaginez des centaines de かわら qui recouvrent un toit de temple, s'emboîtant parfaitement les unes dans les autres. Chaque 瓦 est une pièce du puzzle magnifique qui protège la maison du ciel.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "韓",
+    "readings": {
+      "kun": "から、いげた",
+      "on": "カン"
+    },
+    "meaning": "Corée",
+    "etymology": "Ce kanji combine 韋 (cuir travaillé, matière) avec 干 (bâton, sécher), créé historiquement pour translittérer le nom sino-coréen Goryeo. La partie 韋 renvoie aux techniques textiles et artisanales coréennes anciennes. Le composant 干 soutient structurellement l'ensemble, évoquant une stabilité géopolitique.",
+    "mnemonic": "韓 (かん) pour la Corée — c'est カン, mémorisez cette syllabe ! Vous voyez 干 (le bâton qui tient bon) au cœur du caractère — la Corée qui persiste, qui endure. Pensez à 韓国 (Corée) et ce 干 qui représente la nation stable et résiliente sur la péninsule.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "玩",
+    "readings": {
+      "kun": "もちあそ.ぶ、もてあそ.ぶ",
+      "on": "ガン"
+    },
+    "meaning": "jouer, trifouiller, s'amuser",
+    "etymology": "Ce kanji combine 王 (jade, trésor précieux) avec un élément de mouvement ou de manipulation. Le jade, matériau noble dans la culture asiatique, symbolise un objet qu'on tient précieusement pour l'examiner et s'en divertir. L'idée est celle de manier quelque chose de beau pour le plaisir intellectuel.",
+    "mnemonic": "玩 (ガン) — jouer, vraiment ! 王 (jade) qu'on tient dans sa main et on s'amuse avec (もてあそ.ぶ). Imaginez un enfant qui joue avec une pierre lisse et bella — il la tourne, l'examine, s'en amuse gentiment. Cet objet précieux devient un jouet pour votre esprit curieux !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "畿",
+    "readings": {
+      "kun": "みやこ",
+      "on": "キ"
+    },
+    "meaning": "capitale, banlieue de la capitale",
+    "etymology": "Ce kanji combine 田 (champs, terres agricoles) avec 奇 (étrange, singulier). Il désigne les terres cultivées qui entourent la capitale impériale, région administrative distincte des terres ordinaires. Les 田 nourrissent le centre politique, formant une zone spéciale autour du palais.",
+    "mnemonic": "畿 (きり) — attendez, c'est みやこ (la capitale) ! Tous ces 田 (champs) autour de la 都 (capitale) — la 関東地方 (Kanto), la 近畿地方 (Kinki). Les terres qui nourrissent l'empereur — une zone sacrée et prospère de 田 verdoyants qui servent la nation royale !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "僅",
+    "readings": {
+      "kun": "わず.か",
+      "on": "キン、ゴン"
+    },
+    "meaning": "un tout petit peu, guère",
+    "etymology": "Ce kanji combine 亻(人 — personne) avec 堇 (une petite plante herbacée ou un composant de réduction). Ensemble, ils créent l'image d'une personne qui se fait toute petite, qui demande peu, possédant presque rien. C'est la minuscule quantité, l'insignifiance extrême.",
+    "mnemonic": "僅 (わず.か) — juste un tout petit peu ! Une personne 亻 qui se recroqueville — わずか, à peine une miette. Imaginez prendre un grain de riz dans vos mains — c'est わずか, presque rien. Ou 僅 (ごん) une chance microscopique de réussir. Petit, discret, infime !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "巾",
+    "readings": {
+      "kun": "おお.い、ちきり、きれ",
+      "on": "キン、フク"
+    },
+    "meaning": "serviette, tissu, largeur",
+    "etymology": "Ce kanji est un pur pictogramme : une bande verticale représentant un tissu ou une étoffe suspendue, avec sa largeur bien marquée. La forme allongée imite un morceau de tissu déployé. Il fonctionne comme radical (n°50) dans tous les caractères concernant les tissus, les vêtements et les surfaces textiles.",
+    "mnemonic": "巾 (きん) — une serviette 巾 (おお.い) ! Regardez sa forme élancée — c'est un morceau de tissu que vous déployez pour vous couvrir ou vous essuyer. Tout kanji contenant 巾 parle d'étoffes et de couvertures. Imaginez une belle écharpe 巾 qu'on enroule autour de soi — pratique et élégante !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "稽",
+    "readings": {
+      "kun": "かんが.える、とど.める",
+      "on": "ケイ"
+    },
+    "meaning": "réfléchir, considérer, examiner",
+    "etymology": "Ce kanji combine 禾 (céréales, grain) avec 易 (changement, échange). Ensemble, ils expriment l'acte d'examiner minutieusement et d'ajuster — comme on trie les grains bon à garder des mauvais. C'est une étude attentive, une inspection détaillée et une vérification des faits.",
+    "mnemonic": "稽 (ケイ) — réfléchir profondément ! 禾 (grains de riz) qu'on examine un par un. かんが.える, c'est comme trier du riz, grain après grain — vous regardez, vous évaluez, vous délibérez. Une pause pour penser, pour vérifier la qualité — c'est la 稽 du sage qui médite sur chaque détail !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "詣",
+    "readings": {
+      "kun": "けい.する、まい.る、いた.る、もう.でる",
+      "on": "ケイ、ゲイ"
+    },
+    "meaning": "visiter un temple, arriver, atteindre",
+    "etymology": "Ce kanji combine 言 (parole, langage) avec 卦 (divination, présage). Ensemble, ils évoquent l'action de se rendre à un sanctuaire pour chercher conseil ou grâce — un pèlerinage de prière. C'est le voyage vers le divin par la parole et l'intention. L'arrivée au lieu sacré.",
+    "mnemonic": "詣 (けい.する) — faire un pèlerinage ! 言 (parole) + intention = aller au temple. もう.でる (gravir les marches) jusqu'au sanctuaire, vous 詣 (けい.する) pour présenter vos vœux respectueux. Imaginez les fidèles qui montent marches 詣 (詣でる) au temple Fushimi Inari — chaque 詣 est une quête spirituelle vers le sacré !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "隙",
+    "readings": {
+      "kun": "すき、す.く、す.かす、ひま",
+      "on": "ゲキ、キャク、ケキ"
+    },
+    "meaning": "crevasse, fissure, discorde, loisir",
+    "etymology": "Ce kanji combine 阝 (colline, côté montagneux) répété ou distinct, avec l'idée de séparation et d'espace vide. Il représente littéralement le jour (espace) qui passe entre deux surfaces proches mais ne se touchant pas — la fissure dans le roc, le creux qui reste.",
+    "mnemonic": "隙 (すき) — une crevasse ! Deux montagnes 阝 qui ne se touchent pas, laissant un すき (espace) lumineux entre elles. すき (loisir) c'est l'espace libre dans votre emploi du temps. Imaginez une faille rocheuse où la lumière s'infiltre — voilà la 隙 parfaite pour s'échapper du travail !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "桁",
+    "readings": {
+      "kun": "けた",
+      "on": "コウ"
+    },
+    "meaning": "poutre, chevron, ordre de grandeur",
+    "etymology": "Ce kanji combine 木 (bois) avec 各 (chaque, tous, distinct). Ensemble, ils évoquent les poutres de bois qui structurent un bâtiment — chacune à sa place, chacune avec sa fonction. En mathématiques, chaque 桁 (colonne) représente un ordre de grandeur dans un nombre.",
+    "mnemonic": "桁 (けた) — une poutre en bois 木 ! Imaginez les charpentiers qui placent chaque 木 (poutre) à sa 桁 (position précise) pour bâtir une maison stable. Ou en maths : les unités, les dizaines, les centaines — chaque 桁 compte ! Un édifice se tient par ses 桁 solides !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "鍵",
+    "readings": {
+      "kun": "かぎ",
+      "on": "ケン"
+    },
+    "meaning": "clé",
+    "etymology": "Ce kanji combine 金 (métal) avec 圭 (jade, emblème important). Une clé est forja dans le métal — objet crucial et prestigieux dans chaque maison. Le caractère souligne l'importance matérielle et symbolique de cet outil qui ouvre tous les secrets et tous les trésors.",
+    "mnemonic": "鍵 (かぎ) — la clé magique en 金 (métal brillant) ! Tenez une vraie clé dans votre paume — elle est lourde, rassurante, précieuse. かぎ c'est le crochet qui tourne pour ouvrir. La 鍵 est le secret qui déverrouille tous les mondes — un simple outil, mais forgé dans le métal intemporel !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "舷",
+    "readings": {
+      "kun": "ふなばた、ふなべり",
+      "on": "ゲン"
+    },
+    "meaning": "plat-bord, bordage du bateau",
+    "etymology": "Ce kanji combine 舟 (bateau) avec 弦 (corde, chaîne tendue). Le plat-bord est exactement cela : la ligne supérieure tendue du bateau, la limite entre le pont et l'eau. C'est la rambarde qui court horizontalement, formant la frontière protectrice du navire.",
+    "mnemonic": "舷 (ふなばた) — le bord du bateau 舟 ! Imaginez-vous martelot dans un navire, vous vous tenez à la 舷 (ふなべり) — cette rambarde accueillante. C'est la limite entre la sécurité du pont et l'océan agité. La 舷 c'est où on se tient pour regarder l'horizon en liberté, le vent dans les cheveux !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "股",
+    "readings": {
+      "kun": "また、もも",
+      "on": "コ"
+    },
+    "meaning": "cuisse, entrejambe",
+    "etymology": "Ce kanji combine 夂 (mouvement, aller de bas en haut) avec 月 (corps, chair). Ensemble, ils créent l'idée de la partie charnue et musclée du corps impliquée dans la locomotion — les cuisses et l'entrejambe. C'est le cœur de la force motrice des jambes.",
+    "mnemonic": "股 (また) — les cuisses puissantes ! 月 (chair) et le mouvement — vos また (もも) vous permettent de courir, danser, grimper. Imaginez les muscles robustes de vos jambes qui vous portent. 股 c'est la puissance cachée qui vous propulse en avant — la fondation de votre mobilité !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "乞",
+    "readings": {
+      "kun": "こ.う",
+      "on": "コツ、キツ、キ、キケ、コチ"
+    },
+    "meaning": "mendier, inviter, demander humblement",
+    "etymology": "Ce kanji est composé de 乙 (second, alter) combiné à une forme d'action ou de suppression. Ensemble, ils créent l'idée de demander quelque chose à autrui — une supplication, une requête humble adressée à une personne supérieure ou respectée.",
+    "mnemonic": "乞 (こ.う) — mendier, supplier ! Voyez la forme courbée qui évoque quelqu'un qui s'agenouille. こ.う, c'est tendre la main, demander avec humilité. Imaginez un mendigant qui 乞 (こ.う) la charité — une invitation ou une prière sincère. C'est l'acte de demander avec respect !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "勾",
+    "readings": {
+      "kun": "かぎ、ま.がる",
+      "on": "コウ、ク"
+    },
+    "meaning": "être courbé, pente, accrocher",
+    "etymology": "Ce kanji combine 力 (force, puissance) avec une forme courbée. Cela crée l'image d'une force appliquée qui crée une courbure — le mouvement de courber, de croiser ou d'enrouler quelque chose. C'est la force qui ploie, qui accroche, qui retient.",
+    "mnemonic": "勾 (かぎ) — un crochet puissant ! 力 (force) qui courbe et retient. ま.がる c'est se courber — imaginez une branche qui ploie sous le vent mais ne casse pas. Un crochet 勾 qui croise deux choses ensemble. La 勾 crée la forme incurvée et retient ce qu'elle capture !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "喉",
+    "readings": {
+      "kun": "のど",
+      "on": "コウ"
+    },
+    "meaning": "gorge, voix, passage",
+    "etymology": "Ce kanji combine 口 (bouche, ouverture) avec 候 (attendre, saison). Ensemble, ils évoquent le passage depuis la bouche qui descend profondément — la gorge qui transporte la voix et l'air vital. C'est le tube crucial qui lie la bouche aux poumons.",
+    "mnemonic": "喉 (のど) — la gorge vitale ! 口 (bouche) avec le passage invisible vers le cœur. Quand vous avez mal à la 喉, ça brûle juste sous votre 口. La 喉 est le chemin magique par lequel votre 声 (voix) s'échappe — c'est par la 喉 que vous chantez, riez, vivez !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "痕",
+    "readings": {
+      "kun": "あと",
+      "on": "コン"
+    },
+    "meaning": "marque, trace, cicatrice",
+    "etymology": "Ce kanji combine 疒 (maladie, affection du corps) avec 很 (très, profond, intensité). Ensemble, ils créent l'idée d'une marque profonde gravée dans le corps — une cicatrice, une empreinte durable du passé. C'est une trace persistante, un témoignage écrit dans la chair.",
+    "mnemonic": "痕 (こん) — une cicatrice indélébile ! 疒 (le corps) qui garde les あと (traces). Imaginez une ancienne blessure qui a laissé une 痕 — elle ne disparaît jamais vraiment, elle raconte une histoire gravée dans votre peau. Chaque 痕 est une 証 (preuve) vivante du passé, un souvenir inscrit dans la chair !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "挫",
+    "readings": {
+      "kun": "くじ.く、くじ.ける",
+      "on": "ザ、サ"
+    },
+    "meaning": "broyer, fracasser, entorse, démoraliser",
+    "etymology": "Ce kanji combine 手 (main, action) avec 坐 (s'asseoir, frapper au sol). Ensemble, ils créent l'image d'une action brusque et violente — écraser sous la main, casser net, ou métaphoriquement, briser un rêve ou un courage. C'est l'impact brutal qui détruit.",
+    "mnemonic": "挫 (ザ) — broyer, casser ! 手 (la main) qui frappe avec force — くじ.く (se fracturer). Imaginez un coureur qui se foule la cheville 挫 (entorse) — soudain l'arrêt douloureux. Ou un rêve 挫 (brisé) — くじ.ける quand le destin vous dit non. C'est l'impact brutal de la déception qui vous plie !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "塞",
+    "readings": {
+      "kun": "ふさ.ぐ、とりで、み.ちる",
+      "on": "ソク、サイ"
+    },
+    "meaning": "fermer, bloquer, fortifier, remplir",
+    "etymology": "Ce kanji combine 土 (terre, sol) avec 賽 (dé, barrière, barrage). Ensemble, ils créent l'image d'une barrière construite en terre — un mur défensif qui bloque le passage. C'est le concept de fermeture complète, de scellement, d'obstruction stratégique.",
+    "mnemonic": "塞 (ふさ.ぐ) — bloquer avec de la terre ! 土 (terre) entassée pour former une 塞 (barrière). Imaginez un col de montagne ふさ.ぐ (fermé) par l'avalanche — la route est impassable. Ou un cœur ふさ.がれた (obstrué) par la peur. 塞 ferme tout, rien ne passe — c'est la fortification naturelle !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "柵",
+    "readings": {
+      "kun": "しがら.む、しがらみ、とりで、やらい",
+      "on": "サク、サン"
+    },
+    "meaning": "palissade, clôture, obstacle, entrave",
+    "etymology": "Ce kanji combine 木 (bois) avec 冊 (volume, registre, arrangement méthodique). Ensemble, ils créent l'image de troncs de bois arrangés en ordre strict — une clôture ou une palissade. C'est la répétition structurelle qui crée la barrière physique et métaphorique.",
+    "mnemonic": "柵 (さく) — une clôture de bois 木 ! Voyez les pieux verticaux alignés qui forment une 柵 — しがら.む (s'enlacer). Imaginez une clôture rurale qui obstacle le chemin, ou les traditions しがらみ (chaînes sociales) qui vous lient. 柵 c'est la barrière naturelle qui sépare les mondes !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "拶",
+    "readings": {
+      "kun": "せま.る",
+      "on": "サツ"
+    },
+    "meaning": "être imminent, s'approcher, presser",
+    "etymology": "Ce kanji combine 手 (main, action) avec 察 (observer, constater, comprendre). Ensemble, ils créent l'idée de s'approcher si près qu'on pourrait presque toucher — la proximité croissante, l'imminence irrésistible. C'est le moment qui arrive, impossible à repousser.",
+    "mnemonic": "拶 (さつ) — s'approcher inexorablement ! 手 (main) qui se rapproche — せま.る l'horizon. Imaginez quelqu'un qui vous 拶 (s'approche) de très près, vous pressant presque. Ou la mort qui se 拶 (approche) — le moment inévitable. C'est l'imminence qui se resserre autour de vous !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "嫉",
+    "readings": {
+      "kun": "そね.む、ねた.む、にく.む",
+      "on": "シツ"
+    },
+    "meaning": "jaloux, envie, détester, ressentir",
+    "etymology": "Ce kanji combine 女 (femme, femelle) avec 疾 (maladie, rapidité, fièvre). Ensemble, ils créent l'image d'une émotion intense et destructrice — la jalousie qui brûle comme une fièvre intérieure. C'est une passion féroce et consommatrice, une envie qui consume l'âme.",
+    "mnemonic": "嫉 (しつ) — jalousie brûlante ! 女 (femme) avec l'intensité de 疾 (maladie rapide). そね.む (être jaloux) c'est un feu intérieur qui consume. Imaginez quelqu'un ねた.む (envieux) parce que son ami a reçu un prix — la 嫉妬 monte comme une fièvre rouge ! C'est l'émotion corrosive qui empoisonne tout !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "腫",
+    "readings": {
+      "kun": "は.れる、は.れ、は.らす、はれもの",
+      "on": "シュ、ショウ"
+    },
+    "meaning": "tumeur, enflure, gonflement, abcès",
+    "etymology": "Ce kanji combine 月 (corps, chair vivante) avec 腫 ou l'idée de gonflement excessif. Ensemble, ils créent l'image d'une partie du corps qui enflure anormalement — une tumeur, une bosse, une enflure pathologique. C'est l'expansion non-désirée de la chair.",
+    "mnemonic": "腫 (しゅ) — une enflure douloureuse ! 月 (chair du corps) qui は.れる (gonfle). Imaginez votre joue はれ (enflée) après une chicane au football — la 腫 (tumeur) qui grandit. Ou un 腫 (abcès) dégoûtant sur la peau. は.らす (dégonfler) — vous appliquez une pommade apaisante. L'enflure doit disparaître !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "蹴",
+    "readings": {
+      "kun": "け.る",
+      "on": "シュク、シュウ"
+    },
+    "meaning": "donner un coup de pied, botter",
+    "etymology": "Ce kanji combine 足 (pied, jambe) avec 促 (presser, accélérer, forcer). Ensemble, ils créent l'action rapide, violente et énergique d'un coup de pied — l'extension soudaine du pied pour frapper et expulser. C'est le mouvement explosif du pied en action.",
+    "mnemonic": "蹴 (しゅく) — donnez un coup de pied ! 足 (pied) en action explosive — け.る (frapper du pied). Imaginez un footballeur qui 蹴 (shoote) le ballon avec puissance — vlan ! Le pied qui s'étend, la jambe qui se déploie. C'est l'action brute du pied qui repousse, qui propulse le ballon vers la victoire !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "拭",
+    "readings": {
+      "kun": "ぬぐ.う、ふ.く",
+      "on": "ショク、シキ"
+    },
+    "meaning": "essuyer, nettoyer, frotter",
+    "etymology": "Ce kanji combine 手 (main, action) avec 式 (forme, style, méthode ordonnée). Ensemble, ils créent l'idée d'une action régulière et méthodique de la main — essuyer, nettoyer avec intention. C'est le geste mesuré et répété qui purifie une surface.",
+    "mnemonic": "拭 (しょく) — essuyer avec soin ! 手 (main) qui ぬぐ.う (essuie) délicatement. Imaginez-vous ふ.く (essuyant) vos larmes — le geste tendre et consolateur. Ou en cuisine, ぬぐ.う (essuyant) la table après le repas — la 拭 (action) qui ramène la propreté. C'est le nettoyage doux, efficace et rassurant !",
+    "jlpt": "N1"
+  }
+]

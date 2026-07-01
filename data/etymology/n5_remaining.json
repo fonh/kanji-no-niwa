@@ -1,0 +1,805 @@
+[
+  {
+    "kanji": "一",
+    "readings": {
+      "kun": "ひと",
+      "on": "イチ、イツ"
+    },
+    "meaning": "un, premier",
+    "etymology": "Pictogramme pur : un seul trait horizontal. L'unité la plus simple possible dans l'écriture humaine. Les premiers systèmes d'écriture comptaient avec des bâtons — un bâton = 一.",
+    "mnemonic": "Un seul trait = un. Aussi simple que ça. C'est le fondement de tout.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "右",
+    "readings": {
+      "kun": "みぎ",
+      "on": "ユウ、ウ"
+    },
+    "meaning": "droite",
+    "etymology": "Composition de 又 (main) et 口 (bouche). Dans l'antiquité chinoise, la main droite était celle qui portait la nourriture à la bouche. La droite = la main de la bouche.",
+    "mnemonic": "右 = 又 (main) + 口 (bouche). La main droite porte la nourriture à la bouche. Manger avec la droite.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "雨",
+    "readings": {
+      "kun": "あめ、あま",
+      "on": "ウ"
+    },
+    "meaning": "pluie",
+    "etymology": "Pictogramme : un ciel (ligne du haut), des nuages (les deux traits dans le cadre), et des gouttes de pluie qui tombent (les quatre points). Vue d'ensemble d'une averse.",
+    "mnemonic": "Le cadre = le ciel nuageux. Les 4 points = 4 gouttes de pluie. Regarde 雨 et tu vois une averse.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "円",
+    "readings": {
+      "kun": "まる",
+      "on": "エン"
+    },
+    "meaning": "yen, cercle, rond",
+    "etymology": "Forme simplifiée de 圓, un enclos circulaire (囗) contenant 員 (membre, personne comptée). L'argent japonais porte ce nom car les premières pièces étaient rondes — le cercle devint l'unité monétaire.",
+    "mnemonic": "円 = un cercle. La pièce de monnaie ronde. Rond + monnaie = yen.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "下",
+    "readings": {
+      "kun": "した、しも、くだ、さ",
+      "on": "カ、ゲ"
+    },
+    "meaning": "bas, dessous, descendre",
+    "etymology": "Pictogramme : une ligne horizontale (la surface de référence) avec un petit trait en dessous. Le point en bas montre ce qui se trouve sous la ligne. L'opposé exact de 上.",
+    "mnemonic": "Une ligne avec un point en dessous = en bas. Simple comme bonjour.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "花",
+    "readings": {
+      "kun": "はな",
+      "on": "カ"
+    },
+    "meaning": "fleur",
+    "etymology": "Composition de 艹 (herbe, plantes — radical botanique) et 化 (transformer, changer). La fleur est la transformation de la plante — son aboutissement spectaculaire.",
+    "mnemonic": "艹 (plante) + 化 (se transformer) = 花. La plante se transforme en quelque chose de beau.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "休",
+    "readings": {
+      "kun": "やす",
+      "on": "キュウ"
+    },
+    "meaning": "se reposer, vacances",
+    "etymology": "Composition de 人 (personne) et 木 (arbre). Un homme adossé à un arbre. Le repos naturel : s'asseoir à l'ombre d'un arbre.",
+    "mnemonic": "人 (un homme) + 木 (un arbre) = 休. L'homme s'appuie contre l'arbre pour se reposer à l'ombre.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "金",
+    "readings": {
+      "kun": "かね、かな",
+      "on": "キン、コン"
+    },
+    "meaning": "or, métal, argent (monnaie)",
+    "etymology": "Composition de 土 (terre) avec des points qui représentent les pépites d'or enfouies, et un toit (pour abriter). Les métaux précieux extraits de la terre, gardés sous un toit.",
+    "mnemonic": "金 = des pépites (points) dans la terre (土) sous un toit. L'or caché dans la montagne.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "九",
+    "readings": {
+      "kun": "ここの",
+      "on": "ク、キュウ"
+    },
+    "meaning": "neuf",
+    "etymology": "Pictogramme du bras qui se replie — forme d'un coude. Dans le système de comptage sur les doigts, 9 était représenté par un geste spécifique du bras. La forme s'est stylisée en trait courbé.",
+    "mnemonic": "九 ressemble à un coude replié. 9 doigts levés, le dixième (le pouce) replié contre la paume.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "五",
+    "readings": {
+      "kun": "いつ",
+      "on": "ゴ"
+    },
+    "meaning": "cinq",
+    "etymology": "Pictogramme des cinq éléments (五行 — bois, feu, terre, métal, eau) représentés par deux lignes croisées. Le chiffre 5 occupait une place centrale dans la cosmologie chinoise, au milieu des 10 chiffres.",
+    "mnemonic": "五 = deux lignes qui se croisent (×) avec des traits en haut et en bas. Un carrefour à cinq branches.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "校",
+    "readings": {
+      "kun": "",
+      "on": "コウ"
+    },
+    "meaning": "école",
+    "etymology": "Composition de 木 (bois, arbre) et 交 (croiser, échanger). Les premières écoles étaient construites en bois. 交 ajoute l'idée d'échange de savoir — un lieu en bois où les idées se croisent.",
+    "mnemonic": "木 (bois/construction) + 交 (échange) = 校. Un bâtiment en bois où on échange du savoir.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "左",
+    "readings": {
+      "kun": "ひだり",
+      "on": "サ"
+    },
+    "meaning": "gauche",
+    "etymology": "Composition de 又 (main) et 工 (travail, outil). La main gauche est celle qui tient l'outil pendant que la droite travaille. La gauche est la main du support.",
+    "mnemonic": "左 = 又 (main) + 工 (outil). La main gauche tient l'outil. Comparer avec 右 (droite = main + bouche).",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "三",
+    "readings": {
+      "kun": "み、みっ",
+      "on": "サン"
+    },
+    "meaning": "trois",
+    "etymology": "Trois traits horizontaux empilés. Comme 一 (un) et 二 (deux) — le système de numération ancienne par bâtons. Trois bâtons posés les uns sur les autres.",
+    "mnemonic": "三 = trois traits. Un (一) + un trait = deux (二) + un trait = trois (三). Le comptage par bâtons.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "四",
+    "readings": {
+      "kun": "よ、よっ、よん",
+      "on": "シ"
+    },
+    "meaning": "quatre",
+    "etymology": "Forme stylisée de 囗 (enclos) avec 八 (division en deux) à l'intérieur. L'idée d'un espace divisé en quatre parties égales. Les quatre coins d'un carré.",
+    "mnemonic": "四 ressemble à une fenêtre à quatre carreaux. L'espace intérieur est divisé en quatre.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "子",
+    "readings": {
+      "kun": "こ",
+      "on": "シ、ス"
+    },
+    "meaning": "enfant, fils",
+    "etymology": "Pictogramme d'un nouveau-né emmailloté, bras tendus. Les formes anciennes montrent clairement un bébé avec la tête disproportionnée et les bras qui pointent.",
+    "mnemonic": "子 = un bébé qui tend les bras. La tête ronde (le trait courbe en haut) et les bras (la croix en bas).",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "七",
+    "readings": {
+      "kun": "なな、なの",
+      "on": "シチ"
+    },
+    "meaning": "sept",
+    "etymology": "Pictogramme ancien d'une coupe ou d'un os sectionné. La forme initiale représentait 'couper' — plus tard récupérée pour désigner le chiffre 7 pour des raisons phonétiques.",
+    "mnemonic": "七 ressemble à un 7 avec un trait en bas. Imagine une faux qui a coupé sept fois.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "車",
+    "readings": {
+      "kun": "くるま",
+      "on": "シャ"
+    },
+    "meaning": "voiture, véhicule, roue",
+    "etymology": "Pictogramme d'un chariot vu de dessus : les deux traits du haut et du bas sont les deux roues, la ligne verticale est l'axe, le rectangle central est la caisse. Un chariot à bœufs simplifié.",
+    "mnemonic": "車 = un chariot vu d'en haut. Roue (—) / axe (|) / caisse (口) / roue (—). Rotation sur l'axe central.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "十",
+    "readings": {
+      "kun": "と",
+      "on": "ジュウ、ジッ"
+    },
+    "meaning": "dix",
+    "etymology": "Croix simple (+). Dans le système de comptage par bâtons, dix était représenté par une croix — un bâton vertical barré d'un trait horizontal pour marquer la dizaine.",
+    "mnemonic": "十 = une croix. Croix les bras pour indiquer la fin du comptage sur les doigts. Dix = terminé.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "出",
+    "readings": {
+      "kun": "で、だ",
+      "on": "シュツ、スイ"
+    },
+    "meaning": "sortir, apparaître",
+    "etymology": "Deux 山 (montagnes) empilées. L'idée de quelque chose qui émerge, qui sort de la terre — comme un pic montagneux qui se dresse. Sortir = dépasser, s'élever au-dessus.",
+    "mnemonic": "出 = deux montagnes (山) qui émergent du sol. Ce qui sort, c'est ce qui monte au-dessus de la ligne.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "女",
+    "readings": {
+      "kun": "おんな、め",
+      "on": "ジョ、ニョ"
+    },
+    "meaning": "femme",
+    "etymology": "Pictogramme d'une femme assise ou agenouillée, bras croisés devant elle. La posture de la femme dans la société ancienne — assise, mains jointes, posture gracieuse.",
+    "mnemonic": "女 = une silhouette assise qui croise les bras. Comme quelqu'un qui s'incline gracieusement.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "上",
+    "readings": {
+      "kun": "うえ、かみ、あ、のぼ",
+      "on": "ジョウ、ショウ"
+    },
+    "meaning": "haut, dessus, monter",
+    "etymology": "Pictogramme : une ligne horizontale (surface de référence) avec un petit trait au-dessus. Ce qui dépasse la ligne est en haut. Miroir de 下 (bas).",
+    "mnemonic": "上 = un point AU-DESSUS de la ligne. La ligne, c'est le sol. Ce qui est au-dessus est 上.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "生",
+    "readings": {
+      "kun": "い、う、は、き、なま",
+      "on": "セイ、ショウ"
+    },
+    "meaning": "vie, naître, vivre",
+    "etymology": "Pictogramme d'une plante qui pousse de la terre. Le trait du bas = le sol. Les traits montants = une tige qui émerge avec une feuille sur le côté. La naissance = une chose qui pousse.",
+    "mnemonic": "生 = une plante qui sort de terre. Le sol en bas, la tige au centre, la feuille sur le côté. La vie qui pousse.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "先",
+    "readings": {
+      "kun": "さき",
+      "on": "セン"
+    },
+    "meaning": "avant, premier, pointe, maître",
+    "etymology": "Composition de 之 (se déplacer) et 儿 (homme qui marche). Quelqu'un qui avance devant les autres. Celui qui est en tête = le maître, l'aîné, ce qui vient avant.",
+    "mnemonic": "先 = quelqu'un (儿) qui avance (之) devant tout le monde. Premier, avant, maître — celui qui est en tête.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "千",
+    "readings": {
+      "kun": "ち",
+      "on": "セン"
+    },
+    "meaning": "mille",
+    "etymology": "Composition de 十 (dix) et 人 (personne) — un homme qui porte dix fois dix. Mille personnes = une foule immense. La barre au milieu de 人 crée le millier.",
+    "mnemonic": "千 = 十 (10) posé sur 人 (une personne). Mille = dix fois cent personnes. Une foule infinie.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "男",
+    "readings": {
+      "kun": "おとこ",
+      "on": "ダン、ナン"
+    },
+    "meaning": "homme",
+    "etymology": "Composition de 田 (rizière, champ) et 力 (force, puissance). L'homme = celui qui travaille avec force dans les champs. L'étymologie est directement liée au travail agricole.",
+    "mnemonic": "田 (champ) + 力 (force) = 男. L'homme est celui qui laboure les champs avec force.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "中",
+    "readings": {
+      "kun": "なか",
+      "on": "チュウ"
+    },
+    "meaning": "milieu, intérieur, pendant",
+    "etymology": "Pictogramme d'un rectangle (enclos, territoire) avec une ligne verticale qui le perce exactement en son centre. Ce qui est exactement au milieu.",
+    "mnemonic": "中 = un carré avec une flèche qui le transperce en plein centre. Le milieu exact.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "天",
+    "readings": {
+      "kun": "あめ、あま",
+      "on": "テン"
+    },
+    "meaning": "ciel, paradis, dieu",
+    "etymology": "Composition de 大 (grand homme debout, bras écartés) avec un trait au-dessus de la tête. Ce qui est au-dessus de l'homme = le ciel. L'horizon au-dessus de l'humanité.",
+    "mnemonic": "天 = 大 (un homme les bras écartés) avec un chapeau au-dessus. Le ciel est ce qui est au-dessus de tout homme.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "二",
+    "readings": {
+      "kun": "ふた",
+      "on": "ニ"
+    },
+    "meaning": "deux",
+    "etymology": "Deux traits horizontaux. Continuité de 一 (un) — ajouter un deuxième bâton. Le système de comptage le plus simple.",
+    "mnemonic": "Deux traits = deux. Un de plus que 一, un de moins que 三.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "入",
+    "readings": {
+      "kun": "はい、い",
+      "on": "ニュウ、ジュ"
+    },
+    "meaning": "entrer",
+    "etymology": "Pictogramme d'une pointe ou d'un coin qui s'enfonce quelque part. Deux lignes qui convergent vers le bas = pénétrer, entrer dans quelque chose. L'opposé de 出 (sortir).",
+    "mnemonic": "入 = un coin pointu qui s'enfonce. Deux lignes qui convergent vers le bas. Entrer = s'insérer.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "八",
+    "readings": {
+      "kun": "や、やっ",
+      "on": "ハチ"
+    },
+    "meaning": "huit",
+    "etymology": "Pictogramme de deux traits qui s'écartent — l'idée de division, de séparation. Le chiffre 8 représentait aussi 'diviser en deux' dans la cosmologie ancienne.",
+    "mnemonic": "八 = deux traits qui s'écartent en V inversé. Huit doigts écartés (sans les pouces).",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "百",
+    "readings": {
+      "kun": "もも",
+      "on": "ヒャク、ビャク"
+    },
+    "meaning": "cent",
+    "etymology": "Composition de 一 (un) et 白 (blanc, large, clair). Le blanc représentait la clarté, l'expansion. Cent = un grand nombre clairement défini. Une autre interprétation : 白 (soleil au-dessus de la ligne de l'horizon) symbolise une mesure pleine.",
+    "mnemonic": "百 = un chapeau (一) sur 白. Cent = un chapeau sur quelque chose de grand et lumineux.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "名",
+    "readings": {
+      "kun": "な",
+      "on": "メイ、ミョウ"
+    },
+    "meaning": "nom, renommée",
+    "etymology": "Composition de 夕 (soir, crépuscule) et 口 (bouche). Le soir, quand il fait sombre, on ne voit plus les gens — on les appelle par leur nom. Le nom = ce qu'on dit dans l'obscurité pour identifier.",
+    "mnemonic": "夕 (soir, noir) + 口 (bouche, appeler) = 名. Quand il fait noir, tu appelles quelqu'un par son nom.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "立",
+    "readings": {
+      "kun": "た",
+      "on": "リツ、リュウ"
+    },
+    "meaning": "se lever, debout",
+    "etymology": "Pictogramme d'un homme debout sur le sol. La ligne du bas = le sol. La croix ou la personne au-dessus = une figure humaine qui se tient droite.",
+    "mnemonic": "立 = quelqu'un debout sur une ligne (le sol). La personne se dresse au-dessus de la ligne.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "六",
+    "readings": {
+      "kun": "む、むっ",
+      "on": "ロク、リク"
+    },
+    "meaning": "six",
+    "etymology": "Pictogramme d'une hutte ou d'une tente à deux pentes. La forme originelle montrait un abri simple. Récupéré phonétiquement pour le chiffre 6.",
+    "mnemonic": "六 = une petite maison avec un toit pointu. Six côtés d'une maison simple.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "何",
+    "readings": {
+      "kun": "なに、なん",
+      "on": "カ"
+    },
+    "meaning": "quoi, que, combien",
+    "etymology": "Composition de 人 (personne) et 可 (possible, approuver). À l'origine, l'idée de quelqu'un qui porte un fardeau et demande : 'Est-ce possible ?' La question sur la capacité est devenue la question générale.",
+    "mnemonic": "何 = 人 (quelqu'un) + 可 (possible). Quelqu'un demande 'C'est possible ?' = 'Qu'est-ce que c'est ?'",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "会",
+    "readings": {
+      "kun": "あ",
+      "on": "カイ、エ"
+    },
+    "meaning": "rencontrer, réunion",
+    "etymology": "Composition d'un toit (Δ) et de 人 (personnes) qui se retrouvent dessous. Plusieurs personnes qui se rassemblent sous un même abri = une réunion.",
+    "mnemonic": "会 = un toit sous lequel des gens se retrouvent. Réunion = gens + abri commun.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "外",
+    "readings": {
+      "kun": "そと、はず、ほか",
+      "on": "ガイ、ゲ"
+    },
+    "meaning": "dehors, extérieur",
+    "etymology": "Composition de 夕 (soir) et 卜 (divination). Les devins opéraient la nuit, à l'extérieur des habitations, sous les étoiles. Ce qui se passe dehors, la nuit = l'extérieur.",
+    "mnemonic": "外 = 夕 (soir) + 卜 (divination). Le devin opère dehors, la nuit. Ce qui est à l'extérieur.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "間",
+    "readings": {
+      "kun": "あいだ、ま",
+      "on": "カン、ケン"
+    },
+    "meaning": "entre, intervalle, espace, pièce",
+    "etymology": "Composition de 門 (porte, portail) et 日 (soleil). Le soleil qui filtre entre les battants d'une porte — la lumière dans l'espace entre deux choses. L'intervalle.",
+    "mnemonic": "間 = 門 (portail) avec 日 (soleil) dedans. La lumière du soleil qui passe par l'espace entre les portes.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "魚",
+    "readings": {
+      "kun": "さかな、うお",
+      "on": "ギョ"
+    },
+    "meaning": "poisson",
+    "etymology": "Pictogramme d'un poisson complet : la tête (en haut), le corps (au milieu), et la queue (les 4 traits du bas, comme 火 — les nageoires caudales). L'un des pictogrammes les plus lisibles.",
+    "mnemonic": "魚 = tête + corps + queue (火 = les nageoires). Un poisson vu de côté. Les 4 traits du bas sont les nageoires de queue.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "古",
+    "readings": {
+      "kun": "ふる",
+      "on": "コ"
+    },
+    "meaning": "vieux, ancien",
+    "etymology": "Composition de 十 (dix) et 口 (bouche). Ce qui se raconte depuis dix générations, de bouche en bouche = l'ancien. L'histoire transmise oralement depuis des dizaines d'années.",
+    "mnemonic": "古 = 十 (dix) + 口 (bouche). Dix générations de bouche en bouche = vieux. L'ancien = ce qu'on répète depuis longtemps.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "午",
+    "readings": {
+      "kun": "",
+      "on": "ゴ"
+    },
+    "meaning": "midi (heure du cheval)",
+    "etymology": "Pictogramme d'un mortier à pilon renversé. À l'origine, symbole du cheval dans le calendrier des 12 animaux. L'heure du cheval (午) correspond à midi (11h-13h).",
+    "mnemonic": "午 = l'heure du cheval = midi. Comme un 十 légèrement penché, l'aiguille de midi.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "後",
+    "readings": {
+      "kun": "うし、あと、おく、のち",
+      "on": "ゴ、コウ"
+    },
+    "meaning": "après, derrière, plus tard",
+    "etymology": "Composition de 彳 (petits pas, marcher) et 幺 (petit fil) et 夂 (pied qui traîne). Quelqu'un qui marche en traînant les pieds — qui reste derrière. Ce qui vient après.",
+    "mnemonic": "後 = quelqu'un qui traîne (幺 = petit + 夂 = pied lent) derrière les autres. Après = celui qui est resté derrière.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "行",
+    "readings": {
+      "kun": "い、ゆ、おこな",
+      "on": "コウ、ギョウ、アン"
+    },
+    "meaning": "aller, ligne, faire",
+    "etymology": "Pictogramme d'un carrefour vu de dessus — deux rues qui se croisent. Les gens vont dans toutes les directions. Aller = avancer dans une direction depuis un carrefour.",
+    "mnemonic": "行 = un carrefour en croix (彳 à gauche, 亍 à droite). Les gens qui partent dans toutes les directions.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "高",
+    "readings": {
+      "kun": "たか",
+      "on": "コウ"
+    },
+    "meaning": "haut, cher, élevé",
+    "etymology": "Pictogramme d'une tour à plusieurs étages : la porte du bas (口), les murs, et le toit pointu avec un ornement. Une construction élevée = haut.",
+    "mnemonic": "高 = une tour avec une porte (口) en bas et un toit pointu en haut. Tout ce qui est construit haut.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "今",
+    "readings": {
+      "kun": "いま",
+      "on": "コン、キン"
+    },
+    "meaning": "maintenant, présent",
+    "etymology": "Composition d'un toit (couvercle) et de 亼 (personnes rassemblées). Ce qui est sous ce toit en ce moment = le présent. L'instant rassemblé sous un seul point.",
+    "mnemonic": "今 = quelque chose de contenu (un toit qui referme). Le moment présent = ce qui est contenu dans l'instant.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "社",
+    "readings": {
+      "kun": "やしろ",
+      "on": "シャ"
+    },
+    "meaning": "société, compagnie, sanctuaire",
+    "etymology": "Composition de 示 (esprit, sanctuaire) et 土 (terre). Le lieu sacré sur la terre — le sanctuaire. Par extension, une société est une communauté ancrée dans un lieu (comme un village autour d'un sanctuaire).",
+    "mnemonic": "社 = 示 (esprit sacré) + 土 (terre). Un sanctuaire ancré dans la terre. La communauté autour du lieu sacré.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "週",
+    "readings": {
+      "kun": "",
+      "on": "シュウ"
+    },
+    "meaning": "semaine",
+    "etymology": "Composition de 辶 (se déplacer, cheminer) et 周 (tour complet, circonférence). Faire le tour complet — le cycle de sept jours. La semaine est un cercle qui se répète.",
+    "mnemonic": "週 = 辶 (déplacement) + 周 (tour). La semaine = faire un tour complet du cycle de 7 jours.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "少",
+    "readings": {
+      "kun": "すく、すこ",
+      "on": "ショウ"
+    },
+    "meaning": "peu, jeune",
+    "etymology": "Composition de 小 (petit) avec un trait incliné supplémentaire. Encore plus petit que 小 — une quantité réduite. Ce qui est si petit qu'il manque quelque chose.",
+    "mnemonic": "少 = 小 (déjà petit) avec encore moins. Un trait incliné qui fait pencher le tout — quantité réduite, instable.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "食",
+    "readings": {
+      "kun": "た、く",
+      "on": "ショク、ジキ"
+    },
+    "meaning": "manger, nourriture",
+    "etymology": "Composition d'un couvercle (△) et de 良 (bon, excellent). Les bons aliments sous un couvercle — la nourriture bien conservée, prête à manger. Un bol couvert de bonne nourriture.",
+    "mnemonic": "食 = un couvercle sur 良 (bon). Un bol couvert de bonne nourriture. Soulever le couvercle = manger.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "新",
+    "readings": {
+      "kun": "あたら、あら、にい",
+      "on": "シン"
+    },
+    "meaning": "nouveau",
+    "etymology": "Composition de 木 (arbre) et 斤 (hache) et 辛 (piquer, dur). L'acte de couper un arbre neuf à la hache pour obtenir du bois frais. Le bois fraîchement coupé = le nouveau.",
+    "mnemonic": "新 = 木 (arbre) + 斤 (hache) + 辛 (piquant/neuf). Couper du bois neuf à la hache = créer du nouveau.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "西",
+    "readings": {
+      "kun": "にし",
+      "on": "セイ、サイ"
+    },
+    "meaning": "ouest",
+    "etymology": "Pictogramme d'un panier ou d'un nid d'oiseau. Les oiseaux migrateurs reviennent à leur nid au coucher du soleil — à l'ouest. Le nid là où le soleil se couche.",
+    "mnemonic": "西 = un panier (nid). Les oiseaux rentrent au nid quand le soleil se couche — à l'ouest.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "前",
+    "readings": {
+      "kun": "まえ",
+      "on": "ゼン"
+    },
+    "meaning": "avant, devant",
+    "etymology": "Composition de 前 → à l'origine 歬 : 止 (pied) et 舟 (bateau). Le pied posé devant le bateau pour avancer. Ce qui est en avant de soi.",
+    "mnemonic": "前 = 刖 (avancer) + 刀 (lame). Ce qui est devant toi, tu coupes le chemin pour avancer.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "多",
+    "readings": {
+      "kun": "おお",
+      "on": "タ"
+    },
+    "meaning": "beaucoup, nombreux",
+    "etymology": "Deux 夕 (soir) superposés. Le soir se répète — chaque soir s'ajoute au précédent. La répétition du même soir = abondance, multiplicité.",
+    "mnemonic": "多 = deux soirs (夕 + 夕). Le soir revient encore et encore = beaucoup. Deux de la même chose = abondance.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "長",
+    "readings": {
+      "kun": "なが",
+      "on": "チョウ"
+    },
+    "meaning": "long, chef, grandir",
+    "etymology": "Pictogramme d'un vieillard aux cheveux longs. Les cheveux qui descendent longtemps = la longueur, l'ancienneté, l'autorité. Le chef est le plus vieux, celui dont les cheveux ont eu le plus de temps pour pousser.",
+    "mnemonic": "長 = un vieillard aux longs cheveux. Long = qui a duré longtemps. Chef = le plus ancien.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "店",
+    "readings": {
+      "kun": "みせ",
+      "on": "テン"
+    },
+    "meaning": "magasin, boutique",
+    "etymology": "Composition de 广 (abri, bâtiment ouvert) et 占 (divination, occuper). Un abri où on occupe de l'espace = un étal, une boutique. L'abri qui occupe son emplacement commercial.",
+    "mnemonic": "店 = 广 (abri) + 占 (occuper). Un abri qui occupe son emplacement = une boutique.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "電",
+    "readings": {
+      "kun": "",
+      "on": "デン"
+    },
+    "meaning": "électricité, éclair",
+    "etymology": "Composition de 雨 (pluie) et 申 (éclair, serpent fulgurant). L'éclair dans la pluie — la foudre. Par extension, l'électricité, qui reproduit l'éclair.",
+    "mnemonic": "電 = 雨 (pluie) + 申 (éclair). La foudre dans la tempête. L'électricité = l'éclair domestiqué.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "東",
+    "readings": {
+      "kun": "ひがし",
+      "on": "トウ"
+    },
+    "meaning": "est",
+    "etymology": "Pictogramme d'un soleil (日) derrière un arbre (木). Le soleil se lève derrière les arbres à l'horizon est. L'orient = là où le soleil apparaît entre les branches.",
+    "mnemonic": "東 = le soleil (日) dans un arbre (木). Le soleil qui monte derrière les arbres au matin = l'est.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "南",
+    "readings": {
+      "kun": "みなみ",
+      "on": "ナン"
+    },
+    "meaning": "sud",
+    "etymology": "Composition d'un abri (十 avec un cadre) et de plantes tropicales (幸). Le sud est la direction des plantes luxuriantes et de la chaleur. Une terre fertile et chaude sous un abri.",
+    "mnemonic": "南 = un abri avec des plantes luxuriantes. La direction des terres chaudes où les plantes poussent abondamment.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "買",
+    "readings": {
+      "kun": "か",
+      "on": "バイ"
+    },
+    "meaning": "acheter",
+    "etymology": "Composition de 网 (filet) et 貝 (coquillage = monnaie ancienne). Pêcher des coquillages avec un filet — les coquillages étaient la monnaie. Attraper de l'argent = acheter.",
+    "mnemonic": "買 = un filet (网) sur des coquillages (貝). Les coquillages = monnaie ancienne. Filet sur monnaie = acheter.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "半",
+    "readings": {
+      "kun": "なか",
+      "on": "ハン"
+    },
+    "meaning": "moitié, demi",
+    "etymology": "Composition de 八 (division) et 牛 (bœuf). Diviser un bœuf en deux parties égales — la moitié. Le boucher qui coupe au milieu.",
+    "mnemonic": "半 = 八 (diviser) + 牛 (bœuf). Couper le bœuf en deux. Demi = coupé exactement en deux.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "父",
+    "readings": {
+      "kun": "ちち",
+      "on": "フ"
+    },
+    "meaning": "père",
+    "etymology": "Pictogramme d'une main qui brandit un outil (bâton ou hache). L'autorité paternelle est représentée par la main qui tient l'outil — celui qui fabrique, protège, discipline.",
+    "mnemonic": "父 = une main qui brandit un bâton. Le père, c'est celui qui tient l'outil, qui travaille et protège.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "分",
+    "readings": {
+      "kun": "わ",
+      "on": "ブン、フン、ブ"
+    },
+    "meaning": "diviser, minute, comprendre",
+    "etymology": "Composition de 刀 (couteau) et 八 (diviser/séparer). Le couteau qui divise = partager, séparer. Par extension : comprendre = séparer les idées, les analyser.",
+    "mnemonic": "分 = 刀 (couteau) + 八 (séparation). Couper avec un couteau = diviser = comprendre (séparer les concepts).",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "聞",
+    "readings": {
+      "kun": "き",
+      "on": "ブン、モン"
+    },
+    "meaning": "entendre, écouter, demander",
+    "etymology": "Composition de 門 (porte, portail) et 耳 (oreille). L'oreille collée contre la porte — écouter ce qui se passe de l'autre côté. Entendre = tendre l'oreille vers.",
+    "mnemonic": "聞 = 門 (porte) + 耳 (oreille). Coller son oreille contre la porte pour écouter. Entendre = oreille à la porte.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "母",
+    "readings": {
+      "kun": "はは、かあ",
+      "on": "ボ、モ"
+    },
+    "meaning": "mère",
+    "etymology": "Dérivé de 女 (femme) avec deux points ajoutés pour représenter les seins — la femme qui allaite. La mère est définie par sa capacité à nourrir.",
+    "mnemonic": "母 = 女 (femme) avec deux points (seins). La femme qui nourrit = la mère.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "北",
+    "readings": {
+      "kun": "きた",
+      "on": "ホク"
+    },
+    "meaning": "nord",
+    "etymology": "Pictogramme de deux personnes assises dos à dos, l'une tournée vers le nord, l'autre vers le sud. À l'origine le sens était 'dos' (背). Puis devenu 'nord' car en Chine, on tournait le dos au nord (direction froide et sombre).",
+    "mnemonic": "北 = deux personnes dos à dos. On tourne le dos au nord (trop froid). Le dos = le nord.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "毎",
+    "readings": {
+      "kun": "ごと",
+      "on": "マイ"
+    },
+    "meaning": "chaque, tous les",
+    "etymology": "Dérivé de 母 (mère) avec modification du radical. La mère revient chaque jour — la régularité maternelle. Le soin quotidien = chaque jour, à chaque fois.",
+    "mnemonic": "毎 ressemble à 母 (mère) sans les points. La mère revient chaque jour — répétition, régularité.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "万",
+    "readings": {
+      "kun": "よろず",
+      "on": "マン、バン"
+    },
+    "meaning": "dix mille, innombrable",
+    "etymology": "Pictogramme d'un scorpion — dans l'antiquité, 10 000 était le nombre symbolique d'une quantité innombrable. Le scorpion avait une connotation de multitude (ses pattes nombreuses).",
+    "mnemonic": "万 = un scorpion simplifié. Dix mille = une quantité innombrable comme les pattes d'un scorpion.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "友",
+    "readings": {
+      "kun": "とも",
+      "on": "ユウ"
+    },
+    "meaning": "ami",
+    "etymology": "Composition de 又 et 又 (deux mains qui se joignent). Deux mains qui se tendent l'une vers l'autre. L'amitié = deux mains qui se prennent.",
+    "mnemonic": "友 = deux mains (又+又) qui se rejoignent. La poignée de main = l'amitié.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "来",
+    "readings": {
+      "kun": "く、き",
+      "on": "ライ"
+    },
+    "meaning": "venir",
+    "etymology": "Pictogramme d'un plant de blé (ou d'orge) avec ses épis. Le blé 'vient' d'au-delà les mers — selon la tradition, le blé est venu d'un pays lointain. Venir = arriver de loin.",
+    "mnemonic": "来 = une plante de blé. Le blé est venu de loin — venir = arriver d'un endroit éloigné.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "話",
+    "readings": {
+      "kun": "はな",
+      "on": "ワ"
+    },
+    "meaning": "parler, histoire, conversation",
+    "etymology": "Composition de 言 (paroles, discours) et 舌 (langue). La langue qui prononce des paroles = parler. L'organe de la parole en action.",
+    "mnemonic": "話 = 言 (paroles) + 舌 (langue). La langue qui produit des paroles = une conversation.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "安",
+    "readings": {
+      "kun": "やす",
+      "on": "アン"
+    },
+    "meaning": "calme, sécurité, bon marché",
+    "etymology": "Composition de 宀 (toit, maison) et 女 (femme). Une femme sous un toit = la sécurité du foyer. La paix domestique = ce qui est stable, serein, sans danger.",
+    "mnemonic": "安 = 宀 (toit) + 女 (femme). La femme dans la maison = la paix du foyer. La sécurité d'être protégé.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "飲",
+    "readings": {
+      "kun": "の",
+      "on": "イン"
+    },
+    "meaning": "boire",
+    "etymology": "Composition de 食 (manger, nourriture) et 欠 (manquer, bâiller, ouvrir la bouche). La bouche ouverte devant la nourriture = avaler, boire. La gorge qui accueille le liquide.",
+    "mnemonic": "飲 = 食 (nourriture) + 欠 (ouvrir la bouche). Ouvrir la bouche devant le liquide = boire.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "駅",
+    "readings": {
+      "kun": "",
+      "on": "エキ"
+    },
+    "meaning": "gare",
+    "etymology": "Composition de 馬 (cheval) et 尺 (mesure, distance). Les anciennes gares de relais (postes) étaient des lieux où on changeait les chevaux. La distance mesurée entre relais = la gare.",
+    "mnemonic": "駅 = 馬 (cheval) + 尺 (distance). Le relais de chevaux à une distance mesurée = la gare moderne.",
+    "jlpt": "N5"
+  }
+]

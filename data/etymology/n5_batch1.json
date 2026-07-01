@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "火",
+    "readings": {
+      "kun": "ひ、-び、ほ-",
+      "on": "カ"
+    },
+    "meaning": "feu",
+    "etymology": "Pictogramme de flammes montantes. Les trois traits courbes représentent les flammes qui dansent et crépitent vers le ciel.",
+    "mnemonic": "Imaginez les trois traits qui dansent comme des flammes - ひ (hi) c'est le son du feu qui crépite ! La 火 est l'âme ardente.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "学",
+    "readings": {
+      "kun": "まな.ぶ",
+      "on": "ガク"
+    },
+    "meaning": "étude, apprentissage",
+    "etymology": "Combine 子 (enfant) et 冖 (toit). Représente un enfant apprenant sous la protection et guidance d'un maître.",
+    "mnemonic": "Un enfant 子 assis sous un toit 冖 qui apprend - まな.ぶ (manabu) = étudier avec concentra tion !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "気",
+    "readings": {
+      "kun": "いき、き",
+      "on": "キ、ケ"
+    },
+    "meaning": "esprit, air, atmosphère, humeur",
+    "etymology": "Originellement vapeur invisible montant du sol. L'énergie vitale et l'atmosphère qui imprègne toute chose.",
+    "mnemonic": "Sentez le souffle invisible - いき (iki) = respirer, et キ (ki) c'est l'énergie vitale qui anime tout !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "空",
+    "readings": {
+      "kun": "そら、あ.く、あ.き、あ.ける、から、す.く、す.かす、むな.しい",
+      "on": "クウ"
+    },
+    "meaning": "vide, ciel, espace vacant",
+    "etymology": "Combine 穴 (cavité) et 工 (construction). Représente l'espace vide et l'immensité du ciel infini.",
+    "mnemonic": "Un grand trou béant 穴 ouvert - そら (sora) = le ciel bleu infini qui s'étend sans limite !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "月",
+    "readings": {
+      "kun": "つき",
+      "on": "ゲツ、ガツ"
+    },
+    "meaning": "lune, mois",
+    "etymology": "Pictogramme direct de la lune. Un carré avec un croissant intérieur représentant le disque lunaire luminescent.",
+    "mnemonic": "Regardez simplement la forme - c'est un croissant de lune ! つき (tsuki) = la lune qui marque les mois.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "見",
+    "readings": {
+      "kun": "み.る、み.える、み.せる",
+      "on": "ケン"
+    },
+    "meaning": "voir, regarder",
+    "etymology": "Combine 目 (œil) et 人 (personne). Littéralement l'œil de la personne qui regarde vers l'avant.",
+    "mnemonic": "Un grand œil 目 sur une jambe 人 - み.る (miru) = voir clairement avec les yeux grands ouverts !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "口",
+    "readings": {
+      "kun": "くち",
+      "on": "コウ、ク"
+    },
+    "meaning": "bouche",
+    "etymology": "Pictogramme direct et simple d'une bouche. Un carré représentant l'ouverture buccale par laquelle on parle.",
+    "mnemonic": "C'est littéralement une bouche carrée qui s'ouvre ! くち (kuchi) = la bouche qui parle et savoure.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "山",
+    "readings": {
+      "kun": "やま",
+      "on": "サン、セン"
+    },
+    "meaning": "montagne",
+    "etymology": "Pictogramme de trois pics montagneux. Les trois traits pointus représentent les sommets d'une chaîne.",
+    "mnemonic": "Trois pics qui s'élèvent haut ! やま (yama) = les montagnes majestueuses du Japon qui percent les nuages.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "耳",
+    "readings": {
+      "kun": "みみ",
+      "on": "ジ"
+    },
+    "meaning": "oreille",
+    "etymology": "Pictogramme stylisé d'une oreille humaine. Montre les replis caractéristiques avec le canal auditif.",
+    "mnemonic": "C'est une oreille complète avec ses détails ! みみ (mimi) = le redoublement du même son, comme l'écho.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "小",
+    "readings": {
+      "kun": "ちい.さい、こ-、お-、さ-",
+      "on": "ショウ"
+    },
+    "meaning": "petit, minuscule",
+    "etymology": "Pictogramme de trois traits rapprochés et compressés. Représente des choses réduites et pressées ensemble.",
+    "mnemonic": "Trois points minuscules pressés ! ちい.さい (chiisai) = si petit que vous devez plisser les yeux !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "人",
+    "readings": {
+      "kun": "ひと、-り、-と",
+      "on": "ジン、ニン"
+    },
+    "meaning": "personne",
+    "etymology": "Pictogramme stylisé d'une personne debout. Deux jambes écartées et un torse droit représentant un humain.",
+    "mnemonic": "Regardez les deux jambes et le torse - ひと (hito) = une personne qui marche avec confiance !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "水",
+    "readings": {
+      "kun": "みず、みず-",
+      "on": "スイ"
+    },
+    "meaning": "eau",
+    "etymology": "Pictogramme de l'eau coulante avec trois traits. Les traits représentent le courant et les ondulations.",
+    "mnemonic": "Les trois traits ressemblent à des vagues ! みず (mizu) = l'eau douce qui coule librement.",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "川",
+    "readings": {
+      "kun": "かわ",
+      "on": "セン"
+    },
+    "meaning": "rivière, fleuve",
+    "etymology": "Pictogramme simplifié d'une rivière vue de haut. Trois traits parallèles représentant le cours d'eau.",
+    "mnemonic": "Deux berges encadrant l'eau qui coule - かわ (kawa) = la rivière qui serpente à travers la vallée !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "足",
+    "readings": {
+      "kun": "あし、た.りる、た.る、た.す",
+      "on": "ソク"
+    },
+    "meaning": "jambe, pied",
+    "etymology": "Combine 止 (arrêt) et des traits représentant la jambe. Le pied qui s'arrête et supporte le corps.",
+    "mnemonic": "Les traits du bas ressemblent à des orteils - あし (ashi) = la jambe qui nous porte à travers le monde !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "大",
+    "readings": {
+      "kun": "おお-、おお.きい、-おお.いに",
+      "on": "ダイ、タイ"
+    },
+    "meaning": "grand, immense",
+    "etymology": "Pictogramme d'une personne 人 avec les bras écartés en grand. Représente l'immensité et l'ouverture.",
+    "mnemonic": "Un homme les bras grand ouverts vers le ciel ! おお.きい (ookii) = c'est GRAND, vraiment impressionnant !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "土",
+    "readings": {
+      "kun": "つち",
+      "on": "ド、ト"
+    },
+    "meaning": "terre, sol",
+    "etymology": "Pictogramme du sol et de la terre. Un carré avec un trait au centre représentant un champ fertile.",
+    "mnemonic": "Le carré 土 représente un champ de terre - つち (tsuchi) = la terre nourricière sous nos pieds !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "日",
+    "readings": {
+      "kun": "ひ、-び、-か",
+      "on": "ニチ、ジツ"
+    },
+    "meaning": "jour, soleil",
+    "etymology": "Pictogramme direct du soleil. Un carré avec un point central représentant le disque solaire luminescent.",
+    "mnemonic": "C'est un soleil carré avec un point rayonnant - ひ (hi) = le jour où le soleil brille intensément !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "年",
+    "readings": {
+      "kun": "とし",
+      "on": "ネン"
+    },
+    "meaning": "année, an",
+    "etymology": "Représente une personne 人 moissonnant les récoltes 禾 chaque cycle. Le rythme annuel du travail agricole.",
+    "mnemonic": "Une personne qui moisonne chaque année - とし (toshi) = l'année qui passe et revient encore !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "白",
+    "readings": {
+      "kun": "しろ、しら-、しろ.い",
+      "on": "ハク、ビャク"
+    },
+    "meaning": "blanc",
+    "etymology": "Pictogramme d'une surface blanc pur. Un carré avec un point lumineux au centre montrant la blancheur éclatante.",
+    "mnemonic": "Imaginez la pureté absolue - しろ (shiro) = la couleur blanche comme la neige fraîchement tombée !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "本",
+    "readings": {
+      "kun": "もと",
+      "on": "ホン"
+    },
+    "meaning": "livre, racine, origine",
+    "etymology": "Combine 木 (arbre) et un trait de racine. Représente l'arbre enraciné, d'où l'idée d'origine.",
+    "mnemonic": "Un arbre 木 avec une racine puissante - ほん (hon) = le livre qui nous enracine dans le savoir !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "木",
+    "readings": {
+      "kun": "き、こ-",
+      "on": "ボク、モク"
+    },
+    "meaning": "arbre, bois",
+    "etymology": "Pictogramme direct d'un arbre. Trois traits formant un tronc avec des branches s'ouvrant vers le ciel.",
+    "mnemonic": "Regardez simplement l'arbre - き (ki) = l'arbre vert qui se balance au vent !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "言",
+    "readings": {
+      "kun": "い.う、こと",
+      "on": "ゲン、ゴン"
+    },
+    "meaning": "dire, parole, mot",
+    "etymology": "言 est composé de 辛 (une épingle/aiguille pointue, symbole de précision) au-dessus de 口 (bouche). L'épingle pointe vers la bouche pour indiquer les paroles prononcées avec soin. Ce pictogramme composite évoque la précision de la parole — les mots qui sortent de la bouche comme des pointes aiguisées.",
+    "mnemonic": "Une aiguille pointée vers la bouche 口 — GEN/GON (ゲン/ゴン), les paroles ! 言葉 (kotoba), les mots sont comme des pointes : ils pénètrent l'esprit. Quand vous dites 言う (iu), vous lancez des mots précis. Parler c'est viser juste !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "時",
+    "readings": {
+      "kun": "とき、-どき",
+      "on": "ジ"
+    },
+    "meaning": "heure, moment, temps",
+    "etymology": "Combine 日 (soleil) et 寺 (temple). Le temps mesuré par le mouvement du soleil dans le ciel.",
+    "mnemonic": "Le soleil 日 qui se déplace - とき (toki) = le moment où le temps s'écoule comme l'eau !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "書",
+    "readings": {
+      "kun": "か.く、-が.き、-がき",
+      "on": "ショ"
+    },
+    "meaning": "écrire, écrit",
+    "etymology": "書 combine 聿 (pinceau tenu à la main, pictogramme d'un pinceau) et 曰 (bouche qui s'exprime, distinctement différent de 日 soleil). La composante supérieure 聿 représente le pinceau en action ; 曰 en bas représente les paroles fixées par l'écrit. Écrire, c'est fixer la parole par le pinceau.",
+    "mnemonic": "Le pinceau 聿 qui capture la parole 曰 — SHO (ショ) ! Attention : la partie basse est 曰 (yuē, 'dire') et non 日 (soleil). 書く (kaku) = écrire, c'est immortaliser les mots. Le pinceau transforme la voix en trace durable !",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "読",
+    "readings": {
+      "kun": "よ.む、-よ.み",
+      "on": "ドク、トク、トウ"
+    },
+    "meaning": "lire, lecture",
+    "etymology": "Combine 言 (parole) et 卖 (échange). Les paroles écrites qu'on déchiffre et partage.",
+    "mnemonic": "Les paroles 言 alignées sur la page - よ.む (yomu) = lire les mots qui vous chuchotent leurs secrets !",
+    "jlpt": "N5"
+  }
+]

@@ -1,0 +1,629 @@
+[
+  {
+    "kanji": "桜",
+    "readings": {
+      "kun": "さくら",
+      "on": "オウ"
+    },
+    "meaning": "cerisier, sakura",
+    "etymology": "Composition de 木 (arbre) et 嬰 (bébé/fragile). L'arbre fragile = le cerisier. Fleurs qui tombent vite = la vie éphémère.",
+    "mnemonic": "桜 = 木 (arbre) + 嬰 (fragile). L'arbre fragile qui fleurit = le cerisier.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "奨",
+    "readings": {
+      "kun": "すす",
+      "on": "ショウ"
+    },
+    "meaning": "encourager, recommander",
+    "etymology": "Composition de 将 (général, leader) et 大 (grand) et 犬 (chien/zèle). Le grand leader zélé = encourager avec vigueur.",
+    "mnemonic": "奨 = leader + zèle. Le zèle du leader = encourager fortement.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "礁",
+    "readings": {
+      "kun": "しょう",
+      "on": "ショウ"
+    },
+    "meaning": "récif, écueil",
+    "etymology": "Composition de 石 (pierre) et 焦 (brûler/cramé). La pierre brûlée par le soleil = le récif. L'écueil qui émerge = le danger sous-marin.",
+    "mnemonic": "礁 = 石 (pierre) + 焦 (brûlé). La pierre brûlée par le soleil = le récif.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鐘",
+    "readings": {
+      "kun": "かね",
+      "on": "ショウ"
+    },
+    "meaning": "cloche (temple)",
+    "etymology": "Composition de 金 (métal) et 童 (enfant/son). Le métal qui résonne comme un enfant = la cloche. Le son pur = la cloche du temple.",
+    "mnemonic": "鐘 = 金 (métal) + 童 (son pur). Le métal au son pur = la cloche du temple.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "浸",
+    "readings": {
+      "kun": "ひた、し",
+      "on": "シン"
+    },
+    "meaning": "tremper, s'imprégner",
+    "etymology": "Composition de 氵 (eau) et 侵 (envahir). L'eau qui envahit = tremper. S'imprégner = laisser l'eau envahir.",
+    "mnemonic": "浸 = 氵 (eau) + 侵 (envahir). L'eau qui envahit = tremper.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "侵",
+    "readings": {
+      "kun": "おか",
+      "on": "シン"
+    },
+    "meaning": "envahir, empiéter",
+    "etymology": "Composition de 人 (personne) et 侵 (avancer progressivement). La personne qui avance = l'invasion. Empiéter = avancer pas à pas.",
+    "mnemonic": "侵 = 人 (personne) + balai/avance. La personne qui avance dans le territoire = envahir.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "酔",
+    "readings": {
+      "kun": "よ",
+      "on": "スイ"
+    },
+    "meaning": "être ivre, se passionner",
+    "etymology": "Composition de 酉 (alcool) et 卒 (finir, soldat). Le soldat après l'alcool = ivre. Se passionner = perdre le contrôle.",
+    "mnemonic": "酔 = 酉 (alcool) + 卒 (finir). Après l'alcool, finir = ivre.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "遂",
+    "readings": {
+      "kun": "と",
+      "on": "スイ"
+    },
+    "meaning": "accomplir, finalement",
+    "etymology": "Composition de 辶 (marcher) et 遂 (avancer jusqu'au bout). Marcher jusqu'au bout = accomplir. Finalement = après avoir tout traversé.",
+    "mnemonic": "遂 = 辶 (marche) + bout. Marcher jusqu'au bout = accomplir.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "粋",
+    "readings": {
+      "kun": "いき",
+      "on": "スイ"
+    },
+    "meaning": "élégance, raffinement, quintessence",
+    "etymology": "Composition de 米 (riz) et 卒 (fin). Le riz purifié jusqu'à la fin = l'essence pure. L'élégance = la quintessence.",
+    "mnemonic": "粋 = 米 (riz) + 卒 (purifier jusqu'à la fin). La pureté du riz = l'élégance.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "添",
+    "readings": {
+      "kun": "そ",
+      "on": "テン"
+    },
+    "meaning": "ajouter, accompagner",
+    "etymology": "Composition de 氵 (eau) et 忝 (honteux/humble). L'eau ajoutée humblement = accompagner. L'ajout = se joindre humblement.",
+    "mnemonic": "添 = 氵 (eau) + 忝 (humblement). L'eau qu'on ajoute humblement = accompagner.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "沿",
+    "readings": {
+      "kun": "そ",
+      "on": "エン"
+    },
+    "meaning": "longer, suivre (un chemin/rivière)",
+    "etymology": "Composition de 氵 (eau) et 㕣 (rivière). Suivre la rivière = longer. Ce qui suit le cours d'eau.",
+    "mnemonic": "沿 = 氵 (eau) + rivière. Suivre la rivière = longer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "疎",
+    "readings": {
+      "kun": "うと",
+      "on": "ソ"
+    },
+    "meaning": "éloigné, clairsemé, négliger",
+    "etymology": "Composition de 疋 (pied) et 束 (lier). Les pieds liés clairsemés = éloigné. Ce qui est lâchement connecté.",
+    "mnemonic": "疎 = 疋 (pied) + 束 (lier). Les pieds liés lâchement = éloigné.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "租",
+    "readings": {
+      "kun": "そ",
+      "on": "ソ"
+    },
+    "meaning": "taxe foncière, louer",
+    "etymology": "Composition de 禾 (grain) et 且 (de plus, empilement). Le grain supplémentaire = l'impôt sur les récoltes. La taxe = le grain empilé.",
+    "mnemonic": "租 = 禾 (grain) + 且 (empilement). Le grain en plus = la taxe foncière.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "訴",
+    "readings": {
+      "kun": "うった.える",
+      "on": "ソ"
+    },
+    "meaning": "accuser, plaindre, recourir en justice",
+    "etymology": "訴 combine 言 (parole) et 素 (brut, essence). Parler brut, c'est dire la vérité sans détour — accuser, plaindre. L'idée : exprimer une accusation ou une plainte directe.",
+    "mnemonic": "Vous **言** (parlez) directement, sans détour (素) — vous **うったえる** (accusez, appelez à l'aide) ! C'est la parole brute d'une plainte. **訴** (appeal) : crier la vérité à la cour !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "阻",
+    "readings": {
+      "kun": "はば、さえぎ",
+      "on": "ソ"
+    },
+    "meaning": "bloquer, obstruer",
+    "etymology": "Composition de 阝 (rempart) et 且 (empilement). Les remparts empilés = l'obstruction. Bloquer = mettre des remparts les uns sur les autres.",
+    "mnemonic": "阻 = 阝 (rempart) + 且 (empiler). Les remparts empilés = bloquer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "促",
+    "readings": {
+      "kun": "うなが",
+      "on": "ソク"
+    },
+    "meaning": "presser, inciter, promouvoir",
+    "etymology": "Composition de 人 (personne) et 足 (pied). La personne qui accélère les pieds = presser. Inciter = pousser les pieds.",
+    "mnemonic": "促 = 人 (personne) + 足 (pied). Pousser les pieds = presser, inciter.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "俗",
+    "readings": {
+      "kun": "ぞく",
+      "on": "ゾク"
+    },
+    "meaning": "vulgaire, mondain",
+    "etymology": "La personne dans la vallée = le commun.",
+    "mnemonic": "俗 = personne dans la vallée = mondain.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "賊",
+    "readings": {
+      "kun": "ぞく",
+      "on": "ゾク"
+    },
+    "meaning": "bandit, ravageur",
+    "etymology": "Composition de 戈 (lance) et 贝 (monnaie). La lance sur la monnaie = voler avec violence. Le bandit = celui qui prend de force.",
+    "mnemonic": "賊 = 戈 (lance) + 貝 (monnaie). La lance sur l'argent = le bandit.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "痩",
+    "readings": {
+      "kun": "や",
+      "on": "ソウ"
+    },
+    "meaning": "maigrir, mince",
+    "etymology": "Composition de 疒 (maladie) et 叟 (vieillard). La maladie du vieillard = maigrir. La minceur pathologique.",
+    "mnemonic": "痩 = 疒 (maladie) + 叟 (vieillard). La maigreur de la maladie = maigrir.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "壮",
+    "readings": {
+      "kun": "さかん",
+      "on": "ソウ"
+    },
+    "meaning": "vigoureux, magnifique",
+    "etymology": "Composition de 士 (guerrier) et 爿 (planche). Le guerrier avec son bouclier = la vigueur. La magnificence = la force du guerrier.",
+    "mnemonic": "壮 = 士 (guerrier) + 爿 (bouclier). Le guerrier armé = vigoureux, magnifique.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "喪",
+    "readings": {
+      "kun": "も",
+      "on": "ソウ"
+    },
+    "meaning": "deuil",
+    "etymology": "Composition de 哭 (pleurer fort) et 木 (bois). Pleurer autour du bois (cercueil) = le deuil. La perte = les pleurs autour du bois.",
+    "mnemonic": "喪 = 哭 (pleurer) + 木 (bois/cercueil). Pleurer autour du cercueil = le deuil.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "遭",
+    "readings": {
+      "kun": "あ",
+      "on": "ソウ"
+    },
+    "meaning": "rencontrer (par hasard, souvent négatif)",
+    "etymology": "Composition de 辶 (marcher) et 曹 (groupe). En marchant rencontrer le groupe = tomber sur. La rencontre fortuite.",
+    "mnemonic": "遭 = 辶 (marche) + 曹 (groupe). Tomber sur un groupe en marchant = rencontrer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "曹",
+    "readings": {
+      "kun": "そう",
+      "on": "ソウ"
+    },
+    "meaning": "groupe, officier, prison",
+    "etymology": "Pictogramme de deux lances dans un même étui. Le groupe qui partage l'étui = les compagnons.",
+    "mnemonic": "曹 = deux lances dans l'étui. Le groupe de soldats = les officiers.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "粗",
+    "readings": {
+      "kun": "あら",
+      "on": "ソ"
+    },
+    "meaning": "grossier, brut, négligent",
+    "etymology": "Composition de 米 (riz) et 且 (empiler). Le riz non raffiné empilé = le brut. La grossièreté = ce qui n'est pas poli.",
+    "mnemonic": "粗 = 米 (riz) + 且 (non raffiné). Le riz non raffiné = grossier, brut.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "汰",
+    "readings": {
+      "kun": "おごり",
+      "on": "タ"
+    },
+    "meaning": "cribler, trier, luxe excessif",
+    "etymology": "Composition de 氵 (eau) et 太 (gros). L'eau qui trie = le crible. Le luxe excessif = l'eau qui déborde trop.",
+    "mnemonic": "汰 = 氵 (eau) + 太 (trop gros). L'eau qui trie le trop = cribler.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "怠",
+    "readings": {
+      "kun": "おこた、なま",
+      "on": "タイ"
+    },
+    "meaning": "paresse, négliger",
+    "etymology": "Composition de 台 (fondation) et 心 (cœur). Le cœur sur la fondation = se reposer trop. La paresse = le cœur qui s'installe.",
+    "mnemonic": "怠 = 台 (fondation) + 心 (cœur). Le cœur qui s'installe = la paresse.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "滞",
+    "readings": {
+      "kun": "とどこお",
+      "on": "タイ"
+    },
+    "meaning": "bloquer, séjourner trop longtemps",
+    "etymology": "Composition de 氵 (eau) et 帯 (ceinture). L'eau ceinturée = l'eau bloquée. Ce qui stagne = le retard.",
+    "mnemonic": "滞 = 氵 (eau) + 帯 (ceinture). L'eau ceinturée qui ne coule plus = stagner.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "但",
+    "readings": {
+      "kun": "ただ",
+      "on": "タン"
+    },
+    "meaning": "mais, cependant (condition)",
+    "etymology": "Composition de 人 (personne) et 旦 (aube). La personne à l'aube = le début d'une restriction. La condition = le mais qui commence.",
+    "mnemonic": "但 = 人 (personne) + 旦 (aube). La condition de départ = mais, cependant.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "脱",
+    "readings": {
+      "kun": "ぬ",
+      "on": "ダツ"
+    },
+    "meaning": "enlever, s'échapper, omettre",
+    "etymology": "Composition de 月 (corps) et 兌 (changer). Le corps qui change de peau = enlever. S'échapper = sortir de sa peau.",
+    "mnemonic": "脱 = 月 (corps) + 兌 (changer). Le corps qui change = enlever, s'échapper.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "誰",
+    "readings": {
+      "kun": "だれ",
+      "on": "スイ"
+    },
+    "meaning": "qui ?",
+    "etymology": "Composition de 言 (paroles) et 隹 (oiseau). L'oiseau qui parle = on ne sait pas qui. La question de l'identité.",
+    "mnemonic": "誰 = 言 (paroles) + 隹 (oiseau). L'oiseau sans identité qui parle = qui ?",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "端",
+    "readings": {
+      "kun": "はし、は",
+      "on": "タン"
+    },
+    "meaning": "bout, extrémité, commencer",
+    "etymology": "Composition de 立 (se lever) et 耑 (début, germe). Ce qui se lève au début = l'extrémité. Le bout = le début de quelque chose.",
+    "mnemonic": "端 = 立 (se lever) + 耑 (germe). Le germe qui se lève = l'extrémité, le début.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鍛",
+    "readings": {
+      "kun": "きた",
+      "on": "タン"
+    },
+    "meaning": "forger, s'entraîner",
+    "etymology": "Composition de 金 (métal) et 段 (étape). Le métal par étapes = forger. L'entraînement = se forger comme le métal.",
+    "mnemonic": "鍛 = 金 (métal) + 段 (étapes). Forger le métal étape par étape = s'entraîner.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "稚",
+    "readings": {
+      "kun": "おさな",
+      "on": "チ"
+    },
+    "meaning": "jeune enfant, immature",
+    "etymology": "Composition de 禾 (grain) et 隹 (oiseau). L'oiseau sur le grain = l'oisillon. Le jeune qui mange les grains = l'enfant.",
+    "mnemonic": "稚 = 禾 (grain) + 隹 (oiseau). L'oisillon sur le grain = l'enfant.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "棚",
+    "readings": {
+      "kun": "たな",
+      "on": "ホウ"
+    },
+    "meaning": "étagère, rayon",
+    "etymology": "Composition de 木 (bois) et 朋 (ensemble). Les planches en bois ensemble = l'étagère. Ce qui est côte à côte.",
+    "mnemonic": "棚 = 木 (bois) + 朋 (ensemble). Les planches ensemble = l'étagère.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "偵",
+    "readings": {
+      "kun": "てい",
+      "on": "テイ"
+    },
+    "meaning": "espionner, enquêter",
+    "etymology": "Composition de 人 (personne) et 貞 (droiture, regarder). La personne qui regarde droit = l'espion. L'enquêteur = celui qui regarde sans être vu.",
+    "mnemonic": "偵 = 人 (personne) + 貞 (regarder droit). La personne qui regarde en secret = espionner.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "貞",
+    "readings": {
+      "kun": "さだ",
+      "on": "テイ"
+    },
+    "meaning": "chasteté, fidélité, droiture",
+    "etymology": "Composition de 卜 (oracle) et 貝 (monnaie). L'oracle de la monnaie = la vérité. La droiture = ce que l'oracle révèle.",
+    "mnemonic": "貞 = 卜 (oracle) + 貝 (valeur). La valeur révélée par l'oracle = la droiture.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "逓",
+    "readings": {
+      "kun": "てい",
+      "on": "テイ"
+    },
+    "meaning": "relayer, transmettre graduellement",
+    "etymology": "Composition de 辶 (marcher) et 弟 (cadet). Passer le cadet = le relais. Transmettre = passer d'un à l'autre comme les cadets.",
+    "mnemonic": "逓 = 辶 (marche) + 弟 (cadet). Passer de cadet en cadet = le relais.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "的",
+    "readings": {
+      "kun": "まと",
+      "on": "テキ"
+    },
+    "meaning": "cible, -ique (suffixe)",
+    "etymology": "Le point blanc brillant = la cible.",
+    "mnemonic": "的 = point blanc = cible.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "溺",
+    "readings": {
+      "kun": "おぼ",
+      "on": "デキ"
+    },
+    "meaning": "se noyer, se perdre dans",
+    "etymology": "Composition de 氵 (eau) et 弱 (faible). L'eau sur le faible = se noyer. La faiblesse face à l'eau = se laisser engloutir.",
+    "mnemonic": "溺 = 氵 (eau) + 弱 (faible). Le faible dans l'eau = se noyer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "泥",
+    "readings": {
+      "kun": "どろ",
+      "on": "デイ"
+    },
+    "meaning": "boue",
+    "etymology": "Composition de 氵 (eau) et 尼 (moine, humble). L'eau humble et terreuse = la boue. Ce qui est au sol et mouillé.",
+    "mnemonic": "泥 = 氵 (eau) + 尼 (au sol). L'eau au sol = la boue.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "添",
+    "readings": {
+      "kun": "そ",
+      "on": "テン"
+    },
+    "meaning": "ajouter",
+    "etymology": "L'eau ajoutée humblement = accompagner.",
+    "mnemonic": "添 = eau + humilité = ajouter.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "殿",
+    "readings": {
+      "kun": "との、どの",
+      "on": "デン"
+    },
+    "meaning": "palais, seigneur (suffixe honorifique)",
+    "etymology": "Composition de 尸 (corps/espace) et 殳 (frapper). L'espace de la force = le palais. La salle de l'autorité.",
+    "mnemonic": "殿 = 尸 (espace) + 殳 (force). L'espace de la force = le palais.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "澱",
+    "readings": {
+      "kun": "おり",
+      "on": "デン"
+    },
+    "meaning": "sédiment, dépôt",
+    "etymology": "Composition de 氵 (eau) et 殿 (palais/fond). L'eau au fond du palais = le sédiment. Ce qui se dépose au fond.",
+    "mnemonic": "澱 = 氵 (eau) + 殿 (fond). L'eau qui se dépose au fond = le sédiment.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "騰",
+    "readings": {
+      "kun": "のぼ",
+      "on": "トウ"
+    },
+    "meaning": "monter (prix), sauter",
+    "etymology": "Composition de 月 (corps) et 馬 (cheval) et 水 (eau). Le cheval qui bondit dans l'eau = sauter. La hausse = le cheval qui monte.",
+    "mnemonic": "騰 = 馬 (cheval) + bond. Le cheval qui bondit = la hausse, sauter.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "匿",
+    "readings": {
+      "kun": "かく",
+      "on": "トク"
+    },
+    "meaning": "cacher, dissimuler",
+    "etymology": "Composition de 匚 (récipient) et 若 (si, plante). Cacher dans le récipient = dissimuler. Ce qu'on met dans la boîte = le secret.",
+    "mnemonic": "匿 = 匚 (récipient) + 若 (cacher). Mettre dans la boîte = dissimuler.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "篤",
+    "readings": {
+      "kun": "あつ",
+      "on": "トク"
+    },
+    "meaning": "sincère, profond, malade grave",
+    "etymology": "Composition de 竹 (bambou) et 馬 (cheval). Le cheval sur le bambou = la stabilité. La sincérité = le caractère stable comme le bambou.",
+    "mnemonic": "篤 = 竹 (bambou) + 馬 (cheval). La stabilité du bambou = sincère.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "凸",
+    "readings": {
+      "kun": "とつ",
+      "on": "トツ"
+    },
+    "meaning": "convexe, relief",
+    "etymology": "Forme bombée = convexe. Opposé de 凹.",
+    "mnemonic": "凸 = bosse. Convexe. Opposé de 凹 (creux).",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "突",
+    "readings": {
+      "kun": "つ.く",
+      "on": "トツ、カ"
+    },
+    "meaning": "percer, piquer, soudain",
+    "etymology": "突 combine 穴 (cavité, trou) et 發 (éclat, éclosion). Quelque chose qui jaillit d'un trou, qui perce soudainement. L'éclair qui sort de la cavité. D'où 'soudain', 'protubérant', 'piquer'.",
+    "mnemonic": "Quelque chose qui **つく** (perce) soudainement d'une **穴** (cavité) — 突 ! La charge de chevalier qui **突** traverse les lignes. **トツ** (sudden, stab) c'est l'action qui jaillit sans avertissement.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "拘",
+    "readings": {
+      "kun": "かかわ",
+      "on": "コウ"
+    },
+    "meaning": "s'accrocher, arrêter",
+    "etymology": "La main qui s'accroche = arrêter.",
+    "mnemonic": "拘 = main + accroche = arrêter.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "嘆",
+    "readings": {
+      "kun": "なげ",
+      "on": "タン"
+    },
+    "meaning": "soupirer, se lamenter",
+    "etymology": "Composition de 口 (bouche) et 難 (difficile). La bouche devant les difficultés = soupirer. La lamentation = la bouche face au dur.",
+    "mnemonic": "嘆 = 口 (bouche) + 難 (difficile). La bouche face au difficile = soupirer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "頓",
+    "readings": {
+      "kun": "とん",
+      "on": "トン"
+    },
+    "meaning": "soudain, s'arrêter, ranger",
+    "etymology": "Composition de 屯 (s'accumuler) et 頁 (tête). La tête qui s'accumule = soudain. Ce qui arrête la tête = ranger.",
+    "mnemonic": "頓 = 屯 (s'accumuler) + 頁 (tête). La tête qui s'arrête soudain = soudain.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "謄",
+    "readings": {
+      "kun": "うつ",
+      "on": "トウ"
+    },
+    "meaning": "copier, transcrire",
+    "etymology": "Composition de 言 (paroles) et 滕 (couler). Les paroles qui coulent = la transcription. Copier = faire couler les mots.",
+    "mnemonic": "謄 = 言 (paroles) + couler. Les paroles qui coulent sur le papier = copier.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "透",
+    "readings": {
+      "kun": "す",
+      "on": "トウ"
+    },
+    "meaning": "transparent, traverser",
+    "etymology": "Composition de 辶 (marcher) et 秀 (exceller). Marcher et exceller = traverser sans obstacle. La transparence = ce qui laisse passer.",
+    "mnemonic": "透 = 辶 (marche) + 秀 (exceller). Marcher à travers = transparent.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "塔",
+    "readings": {
+      "kun": "とう",
+      "on": "トウ"
+    },
+    "meaning": "tour, pagode",
+    "etymology": "Composition de 土 (terre) et 荅 (répondre, entasser). La terre entassée = la tour. Ce qui monte vers le ciel.",
+    "mnemonic": "塔 = 土 (terre) + 荅 (entasser). La terre entassée vers le ciel = la tour.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "痘",
+    "readings": {
+      "kun": "とう",
+      "on": "トウ"
+    },
+    "meaning": "variole, pustule",
+    "etymology": "Composition de 疒 (maladie) et 豆 (haricot). La maladie avec des pustules en forme de haricots = la variole.",
+    "mnemonic": "痘 = 疒 (maladie) + 豆 (haricot). La maladie aux pustules en haricots = la variole.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "洞",
+    "readings": {
+      "kun": "ほら",
+      "on": "ドウ"
+    },
+    "meaning": "grotte, caverne",
+    "etymology": "Composition de 氵 (eau) et 同 (identique). L'eau identique partout = la grotte humide. La caverne = l'espace creux.",
+    "mnemonic": "洞 = 氵 (eau) + 同 (partout). L'eau dans la grotte = la caverne.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "瞳",
+    "readings": {
+      "kun": "ひとみ",
+      "on": "ドウ"
+    },
+    "meaning": "pupille (œil)",
+    "etymology": "Composition de 目 (œil) et 童 (enfant). Le regard de l'enfant = la pupille. La pureté du regard.",
+    "mnemonic": "瞳 = 目 (œil) + 童 (enfant). L'œil de l'enfant = la pupille pure.",
+    "jlpt": "N2"
+  }
+]

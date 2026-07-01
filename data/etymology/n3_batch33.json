@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "浅",
+    "readings": {
+      "kun": "あさ.い",
+      "on": "セン"
+    },
+    "meaning": "peu profond, superficiel",
+    "etymology": "Le caractère réunit le radical de l'eau 氵 avec le composant 戔, lui-même formé de deux lances 戈 croisées qui évoquent quelque chose de petit, de divisé, de diminué. Ensemble, ils décrivent une étendue d'eau si réduite que deux lances plantées toucheraient le fond. Les formes anciennes insistent sur l'idée d'une eau insuffisante, coupée en deux.",
+    "mnemonic": "L'eau 氵 est tellement あさい que deux guerriers croisent leurs lances 戔 et raclent le fond ! Le professeur mime l'eau à ses chevilles : « Superficiel, セン ! Pas besoin de nager ici ! »",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "然",
+    "readings": {
+      "kun": "しか、しか.り、しか.し、さ",
+      "on": "ゼン、ネン"
+    },
+    "meaning": "ainsi, naturellement, tel quel",
+    "etymology": "Le caractère dépeint à l'origine de la viande de chien 犬 avec sa chair 月 (ici 月 représente 肉, la viande) rôtie sur des flammes 灬. Ce pictogramme culinaire formait le composé supérieur 肰. Le sens de « brûler, cuire » a été abandonné au profit d'un usage phonétique et philosophique pour exprimer « ainsi, naturellement, de soi-même ».",
+    "mnemonic": "Un chien 犬, sa viande 月 qui grésille sur le feu 灬 — bien sûr, ça cuit ゼン-timent, naturellement ! Le professeur lève les bras : « Voilà, c'est ainsi ! しかり — il en est naturellement ainsi ! »",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "束",
+    "readings": {
+      "kun": "たば、たば.ねる、つか、つか.ねる",
+      "on": "ソク"
+    },
+    "meaning": "fagot, botte, liasse, attacher en bottes",
+    "etymology": "Pictogramme ancien de tiges végétales ou de bois ligaturés en leur centre par une corde. Le 口 central représente le lien qui enserre le faisceau, tandis que les traits verticaux évoquent les tiges de 木. Les formes oracles montrent clairement un bouquet serré à la taille. Le sens de « contrôler, gérer » découle de la métaphore : tenir quelque chose solidement lié.",
+    "mnemonic": "Regardez bien : c'est un arbre 木 avec une ceinture 口 bien serrée autour du ventre — ソク, ligoté ! Le professeur mime un bouquet qu'on ficelle : « たばねる, on attache, on contrôle, ça tient ! »",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "卒",
+    "readings": {
+      "kun": "そっ.する、お.える、お.わる、ついに、にわか",
+      "on": "ソツ、シュツ"
+    },
+    "meaning": "diplômé, soldat, terminer, mourir",
+    "etymology": "Le caractère représentait à l'origine un vêtement 衣 portant des marques distinctives — les croix ou signes cousus sur l'uniforme des soldats d'infanterie. La forme simplifiée conserve 亠 en haut, des traits centraux et 十 en bas pour ces marques d'identification. De « soldat marqué », le sens a glissé vers « achever son service », puis vers « terminer, diplômer ».",
+    "mnemonic": "Le soldat a porté son uniforme marqué jusqu'au bout et finit par ソツ業 — diplômé, son service お.わった ! Le professeur salue militairement : « ついに, enfin ! C'est ソツ, la fin d'une époque ! »",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "孫",
+    "readings": {
+      "kun": "まご",
+      "on": "ソン"
+    },
+    "meaning": "petit-enfant, descendant",
+    "etymology": "Le caractère réunit 子 (enfant) et 系 (fil, lignée). Le composant 系 représente un fil de soie tordu, symbole de la continuité et de la transmission entre générations. Ensemble, ils désignent l'enfant qui prolonge et tient le fil de la famille. Les formes anciennes insistaient sur cette image de chaîne ininterrompue reliant ancêtres et descendants.",
+    "mnemonic": "Un enfant 子 solidement accroché au fil 系 de la famille — le まご, le petit-enfant qui perpétue la lignée ! Le professeur sourit : « ソン, c'est le maillon suivant du fil familial, l'enfant de vos enfants ! »",
+    "jlpt": "N3"
+  }
+]

@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "吉",
+    "readings": {
+      "kun": "よし",
+      "on": "キチ、キツ"
+    },
+    "meaning": "chance favorable, joie, félicitations",
+    "etymology": "Ce kanji représente à l'origine une bouche (口) au-dessus d'un outil ou d'une forme rectangulaire. Les anciens Chinois voyaient dans cette composition l'idée d'une bouche qui crie sa joie ou de bonnes paroles qui descendent. La forme évolua pour représenter quelque chose d'heureux et d'auspicieux.",
+    "mnemonic": "Imaginez une bouche ouverte (口) qui s'exclame de joie ! 吉 c'est quand une bonne nouvelle arrive et que vous ne pouvez pas vous empêcher de crier votre bonheur. Kiチ comme dans 'kireχ' — une belle exclamation heureuse !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "却",
+    "readings": {
+      "kun": "かえって、しりぞく、しりぞける",
+      "on": "キャク"
+    },
+    "meaning": "au contraire, plutôt, se retirer, reculer",
+    "etymology": "Ce kanji combine 卩 (une forme assise) et 却 (chute). L'idée originelle était de montrer quelqu'un qui se penche ou qui recule. Avec le temps, cela a pris le sens de 'reculer' ou 'd'aller à l'encontre', d'où 'au contraire'.",
+    "mnemonic": "却 — imaginez quelqu'un qui fait marche arrière ! Kyャク — vous penchez le corps 卩 en arrière pour vous retirer. Shirizoいくる : le mouvement qui refuse et recule.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "脚",
+    "readings": {
+      "kun": "あし",
+      "on": "キャク、キャ、カク"
+    },
+    "meaning": "jambe, partie inférieure, base",
+    "etymology": "Ce kanji combine 月 (viande, le radical de la chair) et 却 (reculer). Anciennement, 脚 représentait le radical 肉 (chair) avec des traits pour indiquer les jambes. La jambe est littéralement ce qui supporte le corps en le faisant 'reculer' dans la marche.",
+    "mnemonic": "脚 — 月 c'est la chair, et 却 c'est le recul ! Imaginez vos jambes (あし) qui font des mouvements de recul-avance-recul quand vous marchez. Kyャク : c'est vraiment 'l'infrastructure' du corps !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "虐",
+    "readings": {
+      "kun": "しいたげる",
+      "on": "ギャク"
+    },
+    "meaning": "tyrannie, oppression, maltraiter",
+    "etymology": "Ce kanji combine 虫 (insecte, créature) et 各 (chacun, différent). L'image originelle était celle d'un insecte qu'on foule ou qu'on tyrannise. Cela évolua pour signifier toute forme d'oppression ou de cruauté envers les êtres vivants.",
+    "mnemonic": "虐 — imaginez un petit insecte 虫 qu'on oppresse et qu'on traite différemment 各. Shiiたげる : cet acte horrible de tyranniser. Gyャク — la brutalité s'écrase sur les faibles !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "丘",
+    "readings": {
+      "kun": "おか",
+      "on": "キュウ"
+    },
+    "meaning": "colline, petit mont",
+    "etymology": "Ce kanji dérive d'une représentation picturale d'une colline ou d'une élévation du terrain. Le trait horizontal du bas (一) représente la terre, et les traits au-dessus figurent l'élévation. La forme ancienne ressemblait davantage à un monticule stylisé.",
+    "mnemonic": "丘 — c'est une petite montagne ! Kyュウ, et l'おか (petite colline) où vous pourriez vous asseoir pour admirer la vue. Pensez à une tombe ou un tumulus : une élévation douce de la terre.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "及",
+    "readings": {
+      "kun": "およぶ、および、およぼす",
+      "on": "キュウ"
+    },
+    "meaning": "atteindre, s'étendre, causer, exercer",
+    "etymology": "Ce kanji combine l'idée de main ou de bras (天 évoquant l'étendue) et 㐅 (trait). Historiquement, il représentait une main qui s'étend ou un bras qui atteint quelque chose. L'idée d'extension et d'atteinte en découle naturellement.",
+    "mnemonic": "及 — étendez votre bras pour atteindre ! Kyュウ — imaginez votre main qui s'tend 及ぶ pour toucher quelque chose. Oyoぼす : faire arriver l'influence de quelque chose jusqu'à une destination.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "朽",
+    "readings": {
+      "kun": "くちる",
+      "on": "キュウ"
+    },
+    "meaning": "pourriture, décomposition, vieillir",
+    "etymology": "Ce kanji combine 木 (bois, arbre) et 丂 (déclin). Le bois qui s'effondre, qui se décompose avec le temps. C'est une image très directe : un bois qui pourrit et se désagrège peu à peu.",
+    "mnemonic": "朽 — un arbre 木 qui vieillit et pourrit ! Kuチる : imaginez le bois (木) qui se décompose en poudre. Kyュウ — le temps qui détruit tout, même les choses qui semblent solides comme l'arbre.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "窮",
+    "readings": {
+      "kun": "きわめる、きわまる、きわまり",
+      "on": "キュウ、キョウ"
+    },
+    "meaning": "extrême pauvreté, détresse, être acculé",
+    "etymology": "Ce kanji combine 穴 (caverne, trou) et 弓 (arc). L'idée originelle était celle d'être dans une caverne sans issue, acculé comme quelqu'un tiré à l'arc dans tous les sens. C'est l'image du désespoir et de l'impasse.",
+    "mnemonic": "窮 — vous êtes dans une caverne 穴 et on vous tire à l'arc 弓 ! Kyュウ — l'extrême limite, le point où vous êtes coincé et sans ressources. Kiwamる : c'est atteindre le pire, l'absolu du malheur.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "糾",
+    "readings": {
+      "kun": "ただす",
+      "on": "キュウ"
+    },
+    "meaning": "tordre, s'enrouler, enquêter, vérifier",
+    "etymology": "Ce kanji combine 糸 (fil) et 九 (neuf, ou enroulement). Historiquement, il représentait des fils tordus ou entrelacés, d'où l'idée de tordre et d'enrouler. Par extension, cela signifiait aussi démêler ou enquêter pour trouver la vérité.",
+    "mnemonic": "糾 — des fils 糸 complètement emmêlés et tordus ! Kyュウ — enquêter c'est tordre les fils de la vérité pour les démêler. Tadaす : corriger en enquêtant, vérifier scrupuleusement.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "拠",
+    "readings": {
+      "kun": "よる",
+      "on": "キョ、コ"
+    },
+    "meaning": "point d'appui, fondement, base, s'appuyer sur",
+    "etymology": "Ce kanji combine 手 (main) et 居 (s'asseoir, rester). L'idée originelle était celle de la main qui s'agrippe ou qui s'appuie sur quelque chose de solide pour se tenir. De là vient le sens de 'base' ou 'fondement' sur lequel on s'appuie.",
+    "mnemonic": "拠 — une main 手 qui s'agrippe pour rester assis 居 ! Kyョ — c'est votre base, votre point d'appui. Yorる : s'appuyer sur, dépendre de quelque chose de solide.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "距",
+    "readings": {
+      "kun": "へだたる",
+      "on": "キョ"
+    },
+    "meaning": "distance, intervalle, loin",
+    "etymology": "Ce kanji combine 足 (jambe, pied) et 居 (s'asseoir). L'idée originelle était celle de la distance parcourue à pied, l'espace entre deux points. Les jambes mesurent la distance en marchant.",
+    "mnemonic": "距 — mesurez la distance 足 en marchant ! Kyョ — c'est l'espace qui vous sépare. Hedataる : être séparé par une distance, être loin de quelque chose.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "享",
+    "readings": {
+      "kun": "うける",
+      "on": "キョウ、コウ"
+    },
+    "meaning": "jouir, recevoir, subir, prendre",
+    "etymology": "Ce kanji représente à l'origine une main qui reçoit ou qui prend quelque chose. La forme évoque une main ouverte qui accueille un présent ou une bénédiction. C'est l'image du récepteur qui jouit de ce qu'il reçoit.",
+    "mnemonic": "享 — une main généreuse qui donne ! Kyョウ — imaginez recevoir une belle offrande. Ukenる : jouir de la vie, recevoir les fruits de son travail.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "恭",
+    "readings": {
+      "kun": "うやうやしい",
+      "on": "キョウ"
+    },
+    "meaning": "respect, révérence, dévouement",
+    "etymology": "Ce kanji combine 忄 (cœur) et 龔 (qui signifie commun ou ensemble). L'idée est celle d'un cœur qui se voue respectueusement aux autres, d'une attitude pieuse et humble envers ceux qui nous entourent.",
+    "mnemonic": "恭 — un cœur 忄 qui s'incline avec respect ! Kyョウ — c'est cette belle attitude de déférence. Uyaうやしい : être respectueux, montrer une révérence sincère.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "狂",
+    "readings": {
+      "kun": "くるう、くるおしい",
+      "on": "キョウ"
+    },
+    "meaning": "folie, aliénation, devenir fou",
+    "etymology": "Ce kanji combine 犭 (chien, animal) et 王 (roi). L'idée originelle était celle d'un animal sauvage incontrôlable ou d'une perte de contrôle royale. Cela évolua pour représenter la folie ou l'aliénation mentale.",
+    "mnemonic": "狂 — un chien 犭 devenu fou qui hurle à la lune ! Kyョウ — imaginez cette démence animale. Kuるう : devenir fou, perdre la tête, être saisi par la folie.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "響",
+    "readings": {
+      "kun": "ひびく",
+      "on": "キョウ"
+    },
+    "meaning": "écho, son, retentir, vibration",
+    "etymology": "Ce kanji combine 音 (son) et 響 (l'idée de sonorité). Historiquement, il représentait le son qui voyage et revient, l'écho dans une vallée. La vibration sonore qui se propage et résonne partout.",
+    "mnemonic": "響 — un son 音 qui se propage et résonne ! Kyョウ — imaginez votre voix dans une montagne qui revient en écho. Hibいく : le son qui vibre, qui retentit dans l'air et dans les cœurs.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "驚",
+    "readings": {
+      "kun": "おどろく、おどろかす",
+      "on": "キョウ"
+    },
+    "meaning": "surprise, peur, effroi, étonner",
+    "etymology": "Ce kanji combine 馬 (cheval) et 京 (capitale, grande ville). L'idée originelle était celle d'un cheval effrayé qui se cabre de peur. Le mouvement soudain de l'animal qui se dresse exprime l'effroi et la surprise.",
+    "mnemonic": "驚 — un cheval 馬 qui se cabre de peur ! Kyョウ — imaginez cette réaction de choc violent. Odoろく : être surpris, effrayé, étonné au-delà de toute attente.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "斤",
+    "readings": {
+      "kun": "",
+      "on": "キン"
+    },
+    "meaning": "hache, unité de poids, unité de longueur",
+    "etymology": "Ce kanji est la pictographie directe d'une hache ou d'un outil tranchant. Le trait horizontal représente le tranchant, et le reste représente le manche ou la lame. C'est l'une des représentations les plus anciennes d'un outil dans l'écriture chinoise.",
+    "mnemonic": "斤 — imaginez une hache ! Kin : c'est le radical des kanji liés à l'épée et au travail du bois. Une hache stylisée qui montre toujours sa puissance de coupe.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "琴",
+    "readings": {
+      "kun": "こと",
+      "on": "キン、ゴン"
+    },
+    "meaning": "harpe, koto, instrument de musique",
+    "etymology": "Ce kanji combine 王 (jade, précieux) et 今 (maintenant). L'idée était que le koto est un instrument précieux et noble, autrefois réservé aux moments importants. La combinaison de l'idée de 'précieux' et de 'présent' crée l'image d'un trésor musical.",
+    "mnemonic": "琴 — un instrument musical 王 (précieux) joué avec grâce ! Kin : c'est le koto, ce merveilleux instrument à cordes du Japon. Koto : imaginez les notes qui dansent comme le jade qui scintille.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "襟",
+    "readings": {
+      "kun": "えり",
+      "on": "キン"
+    },
+    "meaning": "col, collet, revers, sentiment intérieur",
+    "etymology": "Ce kanji combine 衤 (vêtement) et 禁 (interdire, limite). L'idée originelle était celle de la limite du vêtement, le col qui encercle le cou. C'est aussi le point de contact entre le vêtement et la peau, symbolisant l'intégrité personnelle.",
+    "mnemonic": "襟 — le col 衤 du vêtement qui entoure le cou ! Kin : c'est votre dignité, votre fierté. Eriり : le col qui nous dit qui nous sommes, le sentiment intérieur que nous portons en nous.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "駆",
+    "readings": {
+      "kun": "かける、かる",
+      "on": "ク"
+    },
+    "meaning": "galop, course, conduire, inspirer, chasser",
+    "etymology": "Ce kanji combine 馬 (cheval) et 区 (région, limite). L'idée originelle était celle du cheval qui se précipite, qui franchit les limites à la galope. Le mouvement du cheval qui se libère et qui court à toute vitesse.",
+    "mnemonic": "駆 — un cheval 馬 au galop qui franchit tous les obstacles ! Ku : c'est la fougue, l'énergie débridée. Kaけるる : courir à bride abattue, entraîner quelqu'un dans l'action !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "駒",
+    "readings": {
+      "kun": "こま",
+      "on": "ク"
+    },
+    "meaning": "poulain, cheval, pion",
+    "etymology": "Ce kanji combine 馬 (cheval) et 駒 (la notion de petit). Historiquement, c'était une représentation d'un jeune cheval ou d'un poulain. Par extension, cela devint un terme pour désigner les chevaux en général, et plus tard, les pions aux échecs.",
+    "mnemonic": "駒 — un petit cheval 馬 adorable, un poulain ! Ku : c'est votre monture fidèle. Koま : imaginez ce poulain qui grandit et devient votre compagnon de route.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "虞",
+    "readings": {
+      "kun": "おそれ、おもんぱかる",
+      "on": "グ"
+    },
+    "meaning": "peur, inquiétude, anxiété, souci, attente",
+    "etymology": "Ce kanji combine 虫 (insecte, créature) et 吳 (qui signifie 'encore'). L'idée originelle était celle d'une menace persistante, comme les insectes qui reviennent toujours. C'est l'image de l'inquiétude récurrente et de la peur qui demeure.",
+    "mnemonic": "虞 — une petite bête 虫 qui nous remplit de crainte ! Gu : c'est cette inquiétude sourde qui persiste. Osoreる : avoir peur, pressentir un danger, être plein de sollicitude.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "遇",
+    "readings": {
+      "kun": "あう",
+      "on": "グウ"
+    },
+    "meaning": "rencontre, rencontrer, traiter, recevoir",
+    "etymology": "Ce kanji combine 辶 (marche, déplacement) et 遇 (hasard, opportunité). L'idée originelle était celle de deux personnes qui se croisent par hasard sur un chemin. C'est le moment du destin où deux chemins convergent.",
+    "mnemonic": "遇 — deux chemins 辶 qui se croisent soudain ! Gu : c'est la rencontre fortuite, le destin. Aうう : se rencontrer face à face, croiser quelqu'un par hasard ou par chance.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "桑",
+    "readings": {
+      "kun": "くわ",
+      "on": "ソウ"
+    },
+    "meaning": "mûrier, mûre",
+    "etymology": "Ce kanji combine 木 (arbre) et 喪 (deuil). Mais l'étymologie réelle est plus simple : c'est une pictographie du mûrier avec ses feuilles dentelées. L'arbre que les vers à soie connaissent bien, symbole traditionnel du travail et de la soie.",
+    "mnemonic": "桑 — un arbre 木 avec de belles feuilles délicates ! So ou kuわ : c'est le mûrier sacré de la soie. Imaginez les feuilles que les vers à soie grignottent avec enthousiasme.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "薫",
+    "readings": {
+      "kun": "かおる",
+      "on": "クン"
+    },
+    "meaning": "parfum, fragrance, sentir bon, fumer",
+    "etymology": "Ce kanji combine 艹 (herbe, plante) et 勲 (mérite, odeur). L'idée originelle était celle des herbes aromatiques qui dégagent un parfum doux et agréable. C'est l'image des encens et des fleurs qui remplissent l'air de leurs senteurs.",
+    "mnemonic": "薫 — des herbes 艹 qui envoient des effluves parfumés ! Kun : c'est le kanji de la fragrance, du charme olfactif. Kaoるる : sentir bon, dégager une odeur délicieuse qui remplit tout l'espace autour de vous.",
+    "jlpt": "N2"
+  }
+]

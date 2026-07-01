@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "板",
+    "readings": {
+      "kun": "いた",
+      "on": "ハン、バン"
+    },
+    "meaning": "planche, panneau, plateau",
+    "etymology": "板 est un caractère phono-sémantique (形声文字) : à gauche, 木 (arbre, bois) indique la matière ; à droite, 反 (retourner, renverser) fournit la lecture ハン/バン. 反 représente une main qui retourne ou aplatis quelque chose, évoquant le geste du menuisier qui dégrossit le bois. Ensemble, ils décrivent du bois (木) que l'on retourne et que l'on travaille (反) pour obtenir une surface plane.",
+    "mnemonic": "Un charpentier prend un tronc d'arbre 木 et le retourne (反) encore et encore jusqu'à en faire une belle いた (planche) bien lisse ! ハン — c'est le son sourd de la hache qui s'abat sur le bois.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "悲",
+    "readings": {
+      "kun": "かな.しい、かな.しむ",
+      "on": "ヒ"
+    },
+    "meaning": "tristesse, chagrin, déplorer",
+    "etymology": "悲 associe 非 (négation, ce qui s'oppose, ce qui est contraire) en haut et 心 (cœur) en bas. 非 représente à l'origine deux ailes opposées, symbole de contradiction et de refus. Quand le cœur (心) se heurte à ce qui contredit ses désirs (非), il sombre dans la peine. Ce caractère illustre une conception ancienne de l'émotion : la tristesse naît d'un cœur en désaccord avec le monde qui l'entoure.",
+    "mnemonic": "Le cœur 心 crie 非 ! — « Ce n'est pas juste ! Ce n'est pas ainsi que ça devrait être ! » Voilà ce que signifie かなしい (être triste) : un cœur qui refuse la réalité. ヒ — comme un soupir de douleur qui s'échappe.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "美",
+    "readings": {
+      "kun": "うつく.しい",
+      "on": "ビ、ミ"
+    },
+    "meaning": "beauté, beau, magnifique",
+    "etymology": "美 combine 羊 (mouton, bélier) en haut et 大 (grand) en bas. Dans la Chine ancienne, un gros bélier bien gras symbolisait la prospérité et la réussite — la nourriture abondante incarnait ce qu'il y avait de plus désirable. Le grand mouton (羊 sur 大) représentait donc l'idéal de beauté matérielle. Le sens s'est ensuite élargi à toutes les formes de beauté, esthétique et morale.",
+    "mnemonic": "Un grand 大 bélier 羊 avec de majestueuses cornes courbées qui parade dans les collines — les anciens Chinois trouvaient ça うつくしい (magnifique) ! Et franchement, avec cette silhouette imposante, ビ-en sûr qu'il est beau !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "筆",
+    "readings": {
+      "kun": "ふで",
+      "on": "ヒツ"
+    },
+    "meaning": "pinceau, calligraphie, écriture",
+    "etymology": "筆 est formé de 竹 (bambou) en haut et de 聿 en bas. 聿 est lui-même un ancien pictogramme représentant une main (又) tenant fermement un instrument à écrire. Le bambou (竹) était le matériau de prédilection pour fabriquer les pinceaux et les stylets dans la Chine ancienne. Le caractère décrit donc littéralement un pinceau en bambou tenu dans la main — l'outil essentiel du calligraphe et du lettré.",
+    "mnemonic": "En haut les tiges de 竹 (bambou), en bas une main qui tient le manche : voilà le ふで (pinceau) du maître calligraphe ! Chaque trait laisse une trace ヒツ-oriquement élégante sur le papier. Le bambou choisit ses artistes !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "氷",
+    "readings": {
+      "kun": "こおり、ひ、こお.る",
+      "on": "ヒョウ"
+    },
+    "meaning": "glace, geler, congeler",
+    "etymology": "氷 est une évolution directe de 水 (eau) à laquelle on a ajouté 冫, le radical de la glace. Ce radical 冫représente des cristaux ou des stalactites de glace qui se forment en surface. Les deux petits traits supplémentaires symbolisent l'eau qui se solidifie et se cristallise par le froid. Le caractère montre ainsi visuellement la transformation de l'eau liquide en glace, marquée par l'apparition de ces pointes glacées.",
+    "mnemonic": "Regardez 水 (l'eau) avec ces deux petits traits pointus à gauche — ce sont les aiguilles de glace qui se forment quand l'eau こおる (gèle) ! ヒョウ — c'est le craquement sec de la glace sous vos pieds par un matin d'hiver.",
+    "jlpt": "N3"
+  }
+]

@@ -1,0 +1,827 @@
+[
+  {
+    "kanji": "慌",
+    "readings": {
+      "kun": "あわ",
+      "on": "コウ"
+    },
+    "meaning": "paniquer, être agité",
+    "etymology": "Composition de 忄 (cœur) et 荒 (sauvage). Le cœur sauvage = la panique. L'agitation = le cœur qui s'emballe.",
+    "mnemonic": "慌 = 忄 (cœur) + 荒 (sauvage). Le cœur sauvage = paniquer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "荒",
+    "readings": {
+      "kun": "あ",
+      "on": "コウ"
+    },
+    "meaning": "sauvage, dévasté",
+    "etymology": "Composition de 艹 (plantes) et 亡 (mort). Les plantes mortes = le désert. Le sauvage = ce qui est dévasté.",
+    "mnemonic": "荒 = 艹 (plantes) + 亡 (mort). Les plantes mortes = dévasté.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "候",
+    "readings": {
+      "kun": "そうろう",
+      "on": "コウ"
+    },
+    "meaning": "temps (météo), attendre",
+    "etymology": "Composition de 人 (personne) et 矦 (surveiller/archer). La personne qui surveille = attendre. Le temps = ce que le sentinelle regarde.",
+    "mnemonic": "候 = 人 (personne) + 矦 (surveiller). La personne qui surveille le temps = météo.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "較",
+    "readings": {
+      "kun": "かく",
+      "on": "カク"
+    },
+    "meaning": "comparer",
+    "etymology": "Composition de 車 (voiture) et 交 (croiser). Les voitures qui se croisent = comparer. Croiser = mesurer l'un contre l'autre.",
+    "mnemonic": "較 = 車 (voitures) + 交 (croiser). Les voitures qui se croisent = comparer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "懸",
+    "readings": {
+      "kun": "か",
+      "on": "ケン"
+    },
+    "meaning": "suspendre, préoccuper",
+    "etymology": "Le cœur qui pend en l'air = la préoccupation.",
+    "mnemonic": "懸 = cœur suspendu = préoccuper.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "顕",
+    "readings": {
+      "kun": "あきら",
+      "on": "ケン"
+    },
+    "meaning": "évident, manifeste",
+    "etymology": "La tête qui émerge = ce qui est évident.",
+    "mnemonic": "顕 = tête qui émerge = évident.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "嫌",
+    "readings": {
+      "kun": "いや、きら",
+      "on": "ケン、ゲン"
+    },
+    "meaning": "déplaire, répugner",
+    "etymology": "Composition de 女 (femme) et 兼 (en même temps). La femme qui fait deux choses à la fois = l'aversion. Répugner = ce qui est trop pour supporter.",
+    "mnemonic": "嫌 = 女 (femme) + 兼 (trop). Trop à la fois = déplaire.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "硬",
+    "readings": {
+      "kun": "かた",
+      "on": "コウ"
+    },
+    "meaning": "dur, rigide",
+    "etymology": "Composition de 石 (pierre) et 更 (changer de nouveau). La pierre qui ne change pas = dur. La rigidité = la pierre sans changement.",
+    "mnemonic": "硬 = 石 (pierre) + 更 (immuable). La pierre immuable = dur.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "控",
+    "readings": {
+      "kun": "ひか",
+      "on": "コウ"
+    },
+    "meaning": "se retenir, noter",
+    "etymology": "Composition de 手 (main) et 空 (vide). La main dans le vide = se retenir. Noter = garder une trace dans la main.",
+    "mnemonic": "控 = 手 (main) + 空 (vide). La main retenue dans le vide = se retenir.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "衡",
+    "readings": {
+      "kun": "こう",
+      "on": "コウ"
+    },
+    "meaning": "balance, équilibre",
+    "etymology": "Composition de 行 (marcher) et 魚 (poisson) et 大 (grand). Le grand poisson en marche = l'équilibre. La balance = ce qui doit rester droit en avançant.",
+    "mnemonic": "衡 = 行 (marche) + 大魚 (grand poisson). Garder l'équilibre en marchant = la balance.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "酵",
+    "readings": {
+      "kun": "こう",
+      "on": "コウ"
+    },
+    "meaning": "levure, fermentation",
+    "etymology": "Composition de 酉 (alcool/fermentation) et 孝 (piété filiale/vieux). L'alcool qui vieillit = la fermentation. La levure = ce qui transforme.",
+    "mnemonic": "酵 = 酉 (alcool) + 孝 (vieillir). L'alcool qui vieilli = la levure.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鉱",
+    "readings": {
+      "kun": "こう",
+      "on": "コウ"
+    },
+    "meaning": "minerai, mine",
+    "etymology": "Composition de 金 (métal) et 広 (large). Le métal dans la largeur de la terre = la mine. Le minerai = le métal étendu.",
+    "mnemonic": "鉱 = 金 (métal) + 広 (large/étendu). Le métal dans l'étendue = la mine.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "昆",
+    "readings": {
+      "kun": "こん",
+      "on": "コン"
+    },
+    "meaning": "insecte",
+    "etymology": "Composition de 日 (soleil) et 比 (comparer). Les petites créatures qui bougent ensemble sous le soleil = les insectes. Ce qui pullule = les insectes.",
+    "mnemonic": "昆 = 日 (soleil) + 比 (ensemble). Les créatures qui bougent ensemble sous le soleil = les insectes.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "梗",
+    "readings": {
+      "kun": "こう",
+      "on": "コウ"
+    },
+    "meaning": "blocage, infarctus",
+    "etymology": "Composition de 木 (bois/tige) et 更 (raidir). La tige rigide = le blocage. L'infarctus = ce qui se bloque.",
+    "mnemonic": "梗 = 木 (tige) + 更 (rigide). La tige bloquée = l'infarctus.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "礎",
+    "readings": {
+      "kun": "いしずえ",
+      "on": "ソ"
+    },
+    "meaning": "fondation, pierre fondamentale",
+    "etymology": "Composition de 石 (pierre) et 楚 (endroit bas). La pierre dans le fond = la fondation. La base = la pierre qui tient tout.",
+    "mnemonic": "礎 = 石 (pierre) + 楚 (fond). La pierre au fond = la fondation.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "礁",
+    "readings": {
+      "kun": "しょう",
+      "on": "ショウ"
+    },
+    "meaning": "récif, écueil",
+    "etymology": "La pierre sous l'eau = le récif.",
+    "mnemonic": "礁 = pierre sous l'eau = récif.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "遮",
+    "readings": {
+      "kun": "さえぎ",
+      "on": "シャ"
+    },
+    "meaning": "intercepter, obstruer",
+    "etymology": "Composition de 辶 (mouvement) et 庶 (commun). Le mouvement ordinaire bloqué = l'obstruction. Intercepter = arrêter la marche.",
+    "mnemonic": "遮 = 辶 (mouvement) + 庶 (bloquer). Le mouvement bloqué = intercepter.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "赦",
+    "readings": {
+      "kun": "ゆる",
+      "on": "シャ"
+    },
+    "meaning": "pardonner, gracier",
+    "etymology": "Composition de 赤 (rouge) et 攴 (frapper légèrement). Frapper légèrement sur le rouge = pardonner. La grâce = la punition douce.",
+    "mnemonic": "赦 = 赤 (rouge) + 攴 (frapper léger). La punition douce = pardonner.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "傑",
+    "readings": {
+      "kun": "すぐ",
+      "on": "ケツ"
+    },
+    "meaning": "remarquable, éminent",
+    "etymology": "Composition de 亻 (personne) et 桀 (élever haut). La personne qui s'élève haut = l'éminent. Le remarquable = celui qui dépasse les autres.",
+    "mnemonic": "傑 = 亻 (personne) + 桀 (élever). La personne qui s'élève = éminent.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "滴",
+    "readings": {
+      "kun": "しずく、したた",
+      "on": "テキ"
+    },
+    "meaning": "goutte (d'eau)",
+    "etymology": "Composition de 氵 (eau) et 啇 (tomber). L'eau qui tombe = la goutte. La petite quantité d'eau = ce qui tombe.",
+    "mnemonic": "滴 = 氵 (eau) + 啇 (tomber). L'eau qui tombe = la goutte.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "哲",
+    "readings": {
+      "kun": "てつ",
+      "on": "テツ"
+    },
+    "meaning": "sage, philosophie",
+    "etymology": "La bouche qui coupe les mots = la sagesse.",
+    "mnemonic": "哲 = bouche qui tranche = sage.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "析",
+    "readings": {
+      "kun": "さ",
+      "on": "セキ"
+    },
+    "meaning": "analyser, diviser",
+    "etymology": "Composition de 木 (bois) et 斤 (hache). La hache sur le bois = diviser. L'analyse = couper en parties.",
+    "mnemonic": "析 = 木 (bois) + 斤 (hache). La hache qui coupe = analyser.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "跡",
+    "readings": {
+      "kun": "あと",
+      "on": "セキ"
+    },
+    "meaning": "trace, vestige",
+    "etymology": "Composition de 足 (pied) et 亦 (aussi). Le pied aussi = la trace. Le vestige = la marque du pied.",
+    "mnemonic": "跡 = 足 (pied) + 亦 (aussi). La marque du pied = la trace.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "籍",
+    "readings": {
+      "kun": "",
+      "on": "セキ"
+    },
+    "meaning": "S'enregistrer, domiciliary register, adhésion",
+    "etymology": "Ce kanji combine 竹 (bambou) et 冊 (livres/registres). Le bambou était autrefois utilisé pour les registres et les documents officiels. La structure représente des tablettes de bambou empilées, symbolisant les registres administratifs où l'on s'inscrit.",
+    "mnemonic": "Au Japon ancien, on écrivait sur des tablettes de bambou (竹) pour tenir les registres. Pour être enregistré (籍), on devait être inscrit dans ces tablettes セキ - c'était votre preuve d'appartenance !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "繊",
+    "readings": {
+      "kun": "せん",
+      "on": "セン"
+    },
+    "meaning": "fibre, délicat",
+    "etymology": "Les fils fins = la fibre.",
+    "mnemonic": "繊 = fils fins = fibre.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "潜",
+    "readings": {
+      "kun": "もぐ、ひそ",
+      "on": "セン"
+    },
+    "meaning": "plonger, se cacher",
+    "etymology": "L'eau profonde où on se cache = plonger.",
+    "mnemonic": "潜 = eau profonde = plonger.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "扇",
+    "readings": {
+      "kun": "おうぎ、あお",
+      "on": "セン"
+    },
+    "meaning": "éventail",
+    "etymology": "Composition de 羽 (plumes) et 戸 (porte). Les plumes sur la porte = l'éventail. Ce qui bat comme des plumes de porte.",
+    "mnemonic": "扇 = 羽 (plumes) + 戸 (porte). Les plumes bougent = l'éventail.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "薦",
+    "readings": {
+      "kun": "すす",
+      "on": "セン"
+    },
+    "meaning": "recommander",
+    "etymology": "Composition de 艹 (herbe) et 廌 (bête mythique juste). L'herbe de la bête juste = recommander. La bête mythique choisit le bon = recommandation.",
+    "mnemonic": "薦 = 艹 + 廌 (bête juste). La bête juste choisit = recommander.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "煎",
+    "readings": {
+      "kun": "い",
+      "on": "セン"
+    },
+    "meaning": "infuser, frire",
+    "etymology": "Composition de 前 (devant) et 火 (feu). Le feu devant = chauffer. Infuser = mettre devant le feu.",
+    "mnemonic": "煎 = 前 (devant) + 火 (feu). Devant le feu = infuser, frire.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "洗",
+    "readings": {
+      "kun": "あら",
+      "on": "セン"
+    },
+    "meaning": "laver",
+    "etymology": "Composition de 氵 (eau) et 先 (avant/pied). L'eau sur les pieds = laver. Nettoyer = passer de l'eau devant.",
+    "mnemonic": "洗 = 氵 (eau) + 先 (pieds). L'eau sur les pieds = laver.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "染",
+    "readings": {
+      "kun": "そ",
+      "on": "セン"
+    },
+    "meaning": "teindre, se contaminer",
+    "etymology": "Composition de 水 (eau) et 木 (bois) et 九 (beaucoup). L'eau du bois en grande quantité = teindre. La contamination = la couleur qui se répand.",
+    "mnemonic": "染 = 水 (eau) + 木 (bois) + 九 (beaucoup). Beaucoup d'eau sur le bois = teindre.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "繕",
+    "readings": {
+      "kun": "つくろ",
+      "on": "ゼン"
+    },
+    "meaning": "réparer, raccommoder",
+    "etymology": "Composition de 糸 (fil) et 善 (bon). Le bon fil = raccommoder. Réparer = refaire avec un bon fil.",
+    "mnemonic": "繕 = 糸 (fil) + 善 (bon). Le bon fil = raccommoder.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "禅",
+    "readings": {
+      "kun": "ぜん",
+      "on": "ゼン"
+    },
+    "meaning": "zen, méditation bouddhiste",
+    "etymology": "Composition de 示 (religion) et 単 (simple). La religion simple = le zen. La méditation = la pratique simple.",
+    "mnemonic": "禅 = 示 (religion) + 単 (simple). La religion simple = le zen.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "漸",
+    "readings": {
+      "kun": "ようや",
+      "on": "ゼン"
+    },
+    "meaning": "peu à peu, progressivement",
+    "etymology": "L'eau qui coupe progressivement = peu à peu.",
+    "mnemonic": "漸 = eau progressivement = peu à peu.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "塑",
+    "readings": {
+      "kun": "そ",
+      "on": "ソ"
+    },
+    "meaning": "modeler (argile)",
+    "etymology": "Composition de 朔 (nouveau/creuser) et 土 (terre). Creuser la terre = modeler. La sculpture en argile = la terre creusée.",
+    "mnemonic": "塑 = 朔 (creuser) + 土 (terre). Creuser la terre = modeler.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "措",
+    "readings": {
+      "kun": "お",
+      "on": "ソ"
+    },
+    "meaning": "mettre de côté, laisser",
+    "etymology": "Composition de 手 (main) et 昔 (jadis). La main mise dans le passé = laisser de côté. Oublier = mettre dans l'ancien temps.",
+    "mnemonic": "措 = 手 (main) + 昔 (passé). La main dans le passé = mettre de côté.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "疎",
+    "readings": {
+      "kun": "うと",
+      "on": "ソ"
+    },
+    "meaning": "distant, négliger",
+    "etymology": "Le flux qui se sépare = la distance.",
+    "mnemonic": "疎 = flux séparé = distant.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "粗",
+    "readings": {
+      "kun": "あら",
+      "on": "ソ"
+    },
+    "meaning": "grossier, rugueux",
+    "etymology": "Composition de 米 (riz) et 且 (en plus). Le riz en gros grains = grossier. Le rugueux = le riz mal poli.",
+    "mnemonic": "粗 = 米 (riz) + 且 (en gros). Le riz en gros = grossier.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "訴",
+    "readings": {
+      "kun": "うった",
+      "on": "ソ"
+    },
+    "meaning": "porter plainte, accuser",
+    "etymology": "Les paroles de l'accusation = porter plainte.",
+    "mnemonic": "訴 = paroles d'accusation = porter plainte.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "操",
+    "readings": {
+      "kun": "みさお、あやつ.る",
+      "on": "ソウ、サン"
+    },
+    "meaning": "Manipuler, manœuvrer, opérer, chasteté",
+    "etymology": "Ce kanji combine 手 (main) et 曹 (ensemble, multitude). La main qui dirige une foule ou un groupe. Cela évoque l'image de quelqu'un utilisant ses mains pour contrôler et manipuler plusieurs choses à la fois.",
+    "mnemonic": "La manipulation (操) commence par la main (手) ! Un chef d'orchestre contrôle les musiciens avec ses gestes - c'est あやつ.る (manipuler). La puissance de diriger les choses avec finesse !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "藻",
+    "readings": {
+      "kun": "も",
+      "on": "ソウ"
+    },
+    "meaning": "algues",
+    "etymology": "Composition de 艹 (plante) et 澡 (baigner). La plante qui se baigne = les algues.",
+    "mnemonic": "藻 = 艹 (plante) + 澡 (bain). La plante aquatique = les algues.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "爽",
+    "readings": {
+      "kun": "さわ",
+      "on": "ソウ"
+    },
+    "meaning": "frais, vivifiant",
+    "etymology": "Composition de 大 (grand) et 爻 (entrecroisement). La grande fraîcheur entrecroisée = vivifiant. L'air frais = ce qui s'entrelace agréablement.",
+    "mnemonic": "爽 = 大 (grand) + entrecroisement. La grande fraîcheur = vivifiant.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "双",
+    "readings": {
+      "kun": "ふた、たぐい、ならぶ、ふたつ",
+      "on": "ソウ"
+    },
+    "meaning": "Paire, ensemble, comparaison",
+    "etymology": "Ce kanji représente deux mains ou deux entités. L'image de deux choses ensemble symbolise une paire ou un ensemble. C'est un radical symbolisant les choses qui vont de pair.",
+    "mnemonic": "Deux choses qui se mettent côte à côte - voilà l'essence de 双 (paire) ! Quand deux objets ならぶ (se mettent côte à côte), ils forment une ソウ - une entité double, complète !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "壮",
+    "readings": {
+      "kun": "さか",
+      "on": "ソウ"
+    },
+    "meaning": "vigoureux, grandiose",
+    "etymology": "Composition de 士 (guerrier) et 爿 (mur). Le guerrier contre le mur = vigoureux. La grandeur = la force du guerrier.",
+    "mnemonic": "壮 = 士 (guerrier) + 爿 (mur). Le guerrier vigoureux = grandiose.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "捜",
+    "readings": {
+      "kun": "さが.す",
+      "on": "ソウ、シュ、シュウ"
+    },
+    "meaning": "Chercher, rechercher, localiser",
+    "etymology": "Ce kanji combine 手 (main) et 叟 (vieillard, perspective). L'idée est d'utiliser ses mains pour chercher minutieusement, comme un vieillard expérimenté qui examine chaque détail. Cela représente l'acte de fouiller ou de scruter.",
+    "mnemonic": "Pour chercher (捜), vous utilisez vos mains (手) et vos yeux. Imaginez une grand-mère qui さが.す (cherche) ses lunettes - elle regarde partout avec soin ! C'est la ソウ de la détermination !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "遭",
+    "readings": {
+      "kun": "あ",
+      "on": "ソウ"
+    },
+    "meaning": "rencontrer (par hasard)",
+    "etymology": "La rencontre sur la route = croiser par hasard.",
+    "mnemonic": "遭 = route + rencontre = croiser par hasard.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "喪",
+    "readings": {
+      "kun": "も",
+      "on": "ソウ"
+    },
+    "meaning": "deuil, perte",
+    "etymology": "La bouche dans la perte = le deuil.",
+    "mnemonic": "喪 = bouche + perte = deuil.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "挿",
+    "readings": {
+      "kun": "さ",
+      "on": "ソウ"
+    },
+    "meaning": "insérer, greffer",
+    "etymology": "Composition de 手 (main) et 臿 (bêche). La main avec la bêche = insérer. Greffer = planter avec les mains.",
+    "mnemonic": "挿 = 手 (main) + 臿 (bêche). La main avec la bêche = insérer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "騒",
+    "readings": {
+      "kun": "さわ.ぐ、うれい、さわ.がしい",
+      "on": "ソウ"
+    },
+    "meaning": "Tapageur, faire du bruit, tumulte, perturber",
+    "etymology": "Ce kanji combine 馬 (cheval) et 声 (voix). Un cheval qui crie représente le bruit et le tumulte. Picturalement, cela évoque l'image d'un cheval excité qui hennit bruyamment, symbolisant le chaos et le désordre sonore.",
+    "mnemonic": "Un cheval (馬) qui crie (声) - imaginez le bruit ! Quand les chevaux さわ.ぐ (font du bruit), c'est du chaos bruyant. 騒 c'est le son d'une situation hors de contrôle !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "霜",
+    "readings": {
+      "kun": "しも",
+      "on": "ソウ"
+    },
+    "meaning": "givre",
+    "etymology": "Composition de 雨 (pluie) et 相 (mutuellement). La pluie qui se cristallise = le givre.",
+    "mnemonic": "霜 = 雨 (pluie) + 相 (cristalliser). La pluie cristallisée = le givre.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "奏",
+    "readings": {
+      "kun": "かな",
+      "on": "ソウ"
+    },
+    "meaning": "jouer (musique), présenter",
+    "etymology": "Les mains qui portent = jouer de la musique. Présenter = offrir avec les mains.",
+    "mnemonic": "奏 = mains qui portent = jouer de la musique.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "宰",
+    "readings": {
+      "kun": "つかさど",
+      "on": "サイ"
+    },
+    "meaning": "diriger, premier ministre",
+    "etymology": "Composition de 宀 (toit) et 辛 (peine). Celui qui supporte les peines sous le toit = le dirigeant. Le premier ministre = celui qui gère la maison.",
+    "mnemonic": "宰 = 宀 (toit) + 辛 (peine). Celui qui supporte sous le toit = diriger.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "彩",
+    "readings": {
+      "kun": "いろど",
+      "on": "サイ"
+    },
+    "meaning": "couleur, nuance",
+    "etymology": "Les griffes sur l'arbre = la couleur. Les teintes = ce qu'on griffe.",
+    "mnemonic": "彩 = griffes + arbre = couleur.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "裁",
+    "readings": {
+      "kun": "さば、た",
+      "on": "サイ"
+    },
+    "meaning": "juger, couper (tissu)",
+    "etymology": "Composition de 衣 (vêtement) et 才 (talent). Le talent sur le vêtement = couper. Juger = trancher avec le talent.",
+    "mnemonic": "裁 = 衣 (vêtement) + 才 (talent). Couper avec talent = juger.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "砕",
+    "readings": {
+      "kun": "くだ",
+      "on": "サイ"
+    },
+    "meaning": "écraser, briser",
+    "etymology": "La pierre brisée = l'écrasement.",
+    "mnemonic": "砕 = pierre brisée = écraser.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "冊",
+    "readings": {
+      "kun": "さつ",
+      "on": "サツ"
+    },
+    "meaning": "compteur de livres, livre",
+    "etymology": "Pictogramme de tablettes de bambou attachées ensemble = le livre.",
+    "mnemonic": "冊 = tablettes de bambou = livre.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "索",
+    "readings": {
+      "kun": "さく",
+      "on": "サク"
+    },
+    "meaning": "chercher, corde",
+    "etymology": "Composition de 糸 (fil) et 宀 (toit). Le fil sous le toit = la corde. Chercher = trouver le fil.",
+    "mnemonic": "索 = 糸 (fil) + 宀 (toit). Le fil enroulé = corde, chercher.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "錯",
+    "readings": {
+      "kun": "まじ",
+      "on": "サク"
+    },
+    "meaning": "erreur, s'emmêler",
+    "etymology": "Le métal emmêlé = l'erreur.",
+    "mnemonic": "錯 = métal emmêlé = erreur.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "撮",
+    "readings": {
+      "kun": "と",
+      "on": "サツ"
+    },
+    "meaning": "photographier, saisir",
+    "etymology": "Composition de 手 (main) et 最 (maximum). La main qui prend le maximum = saisir. Photographier = capturer l'image.",
+    "mnemonic": "撮 = 手 (main) + 最 (maximum). La main qui capture tout = photographier.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "賛",
+    "readings": {
+      "kun": "たす.ける、たた.える",
+      "on": "サン"
+    },
+    "meaning": "Approuver, louer, titre/inscription, assister, être d'accord",
+    "etymology": "Ce kanji combine 貝 (coquillage, valeur ancienne) et 兩 (paire). L'idée de donner deux choses précieuses pour montrer son approbation. Cela représente l'accord mutuel ou le support actif.",
+    "mnemonic": "Pour approuver (賛), vous donnez votre soutien - comme offrir quelque chose de valeur (貝) ! Quelqu'un qui たた.える (loue), c'est en サン qu'il montre son admiration !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "暫",
+    "readings": {
+      "kun": "しばら",
+      "on": "ザン"
+    },
+    "meaning": "temporaire, un moment",
+    "etymology": "La lame contre le temps = couper court. Le moment = la durée tranchée.",
+    "mnemonic": "暫 = lame + temps = un moment.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "酸",
+    "readings": {
+      "kun": "す.い",
+      "on": "サン"
+    },
+    "meaning": "Acide, amertume, aigre, piquant",
+    "etymology": "Ce kanji combine 酉 (alcool fermenté) et 算 (calcul). L'acide résulte de la fermentation, ce processus complexe de transformation. Le caractère évoque la nature piquante et transformatrice des acides.",
+    "mnemonic": "L'acidité (酸) naît de la fermentation ! Pensez à du vinaigre す.い (aigre) qui vient du vin fermenté. Le caractère 酉 (alcool) transformé devient acide - c'est サン la transformation !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "斬",
+    "readings": {
+      "kun": "き",
+      "on": "ザン"
+    },
+    "meaning": "trancher, décapiter",
+    "etymology": "Le char et l'épée = trancher.",
+    "mnemonic": "斬 = char + épée = trancher.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "惨",
+    "readings": {
+      "kun": "みじ",
+      "on": "サン"
+    },
+    "meaning": "horrible, misérable",
+    "etymology": "Composition de 忄 (cœur) et 参 (venir à trois). Le cœur brisé en trois = misérable. L'horrible = ce qui brise le cœur.",
+    "mnemonic": "惨 = 忄 (cœur) + 参 (trois). Le cœur brisé = horrible.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "傘",
+    "readings": {
+      "kun": "かさ",
+      "on": "サン"
+    },
+    "meaning": "parapluie",
+    "etymology": "Pictogramme d'un parapluie ouvert avec une poignée. Les branches qui couvrent = le parapluie.",
+    "mnemonic": "傘 = branches ouvertes avec poignée = parapluie.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "酢",
+    "readings": {
+      "kun": "す",
+      "on": "サク"
+    },
+    "meaning": "vinaigre",
+    "etymology": "Composition de 酉 (alcool) et 乍 (soudain). L'alcool transformé soudainement = le vinaigre.",
+    "mnemonic": "酢 = 酉 (alcool) + 乍 (soudain). L'alcool tourné = le vinaigre.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "債",
+    "readings": {
+      "kun": "さい",
+      "on": "サイ"
+    },
+    "meaning": "dette",
+    "etymology": "Composition de 亻 (personne) et 責 (blâmer). La personne blâmée = le débiteur. La dette = ce pour quoi on est blâmé.",
+    "mnemonic": "債 = 亻 (personne) + 責 (blâme). La personne blâmée = la dette.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "催",
+    "readings": {
+      "kun": "もよお",
+      "on": "サイ"
+    },
+    "meaning": "organiser, presser",
+    "etymology": "Composition de 亻 (personne) et 崔 (montagne haute). La personne sur la haute montagne = presser. Organiser = rassembler du haut.",
+    "mnemonic": "催 = 亻 (personne) + 崔 (montagne). Presser du haut = organiser.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "削",
+    "readings": {
+      "kun": "けず",
+      "on": "サク"
+    },
+    "meaning": "tailler, réduire",
+    "etymology": "Composition de 刀 (couteau) et 肖 (ressembler/diminuer). Le couteau qui diminue = tailler. Réduire = couper.",
+    "mnemonic": "削 = 刀 (couteau) + 肖 (diminuer). Le couteau qui diminue = tailler.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "拓",
+    "readings": {
+      "kun": "ひら",
+      "on": "タク"
+    },
+    "meaning": "défricher, étendre",
+    "etymology": "La main sur la pierre = défricher.",
+    "mnemonic": "拓 = main + pierre = défricher.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "架",
+    "readings": {
+      "kun": "か",
+      "on": "カ"
+    },
+    "meaning": "poser sur, chevalet",
+    "etymology": "Le bois en croix = le support.",
+    "mnemonic": "架 = bois en croix = poser sur.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "渦",
+    "readings": {
+      "kun": "うず",
+      "on": "カ"
+    },
+    "meaning": "tourbillon",
+    "etymology": "L'eau en spirale = le tourbillon.",
+    "mnemonic": "渦 = eau en spirale = tourbillon.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "菓",
+    "readings": {
+      "kun": "か",
+      "on": "カ"
+    },
+    "meaning": "confiserie, fruit",
+    "etymology": "Composition de 艹 (plante) et 果 (fruit). Le fruit de la plante = la confiserie. Le bonbon = le fruit transformé.",
+    "mnemonic": "菓 = 艹 (plante) + 果 (fruit). Le fruit de plante = confiserie.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "稼",
+    "readings": {
+      "kun": "かせ",
+      "on": "カ"
+    },
+    "meaning": "gagner de l'argent, cultiver",
+    "etymology": "Composition de 禾 (grain) et 家 (maison). Le grain de la maison = cultiver. Gagner = produire comme le grain.",
+    "mnemonic": "稼 = 禾 (grain) + 家 (maison). Le grain de la maison = gagner.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "嫁",
+    "readings": {
+      "kun": "よめ、とつ",
+      "on": "カ"
+    },
+    "meaning": "mariée, se marier (femme)",
+    "etymology": "Composition de 女 (femme) et 家 (maison). La femme dans la maison = la mariée. Entrer dans la maison = se marier.",
+    "mnemonic": "嫁 = 女 (femme) + 家 (maison). La femme dans la maison = la mariée.",
+    "jlpt": "N2"
+  }
+]

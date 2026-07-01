@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "共",
+    "readings": {
+      "kun": "とも、ともに、-ども",
+      "on": "キョウ"
+    },
+    "meaning": "ensemble, les deux, avec",
+    "etymology": "共 est un pictogramme montrant deux mains (廾, la partie inférieure) levées pour soutenir un objet en commun. La partie supérieure représente ce fardeau partagé. L'image fondamentale est celle de deux personnes coopérant, tenant quelque chose simultanément à deux mains. Ce geste de partage physique a évolué vers le sens abstrait de « ensemble » et « les deux ».",
+    "mnemonic": "Imaginez deux mains (廾) levées ensemble sous une charge — deux とも (amis) qui portent quelque chose de concert ! En japonais, とも signifie à la fois « ami » et « ensemble » : 共 capture ce double sens dans sa forme même. キョウ, キョウ — on coopère !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "景",
+    "readings": {
+      "kun": "",
+      "on": "ケイ"
+    },
+    "meaning": "paysage, vue, scène",
+    "etymology": "景 est composé de 日 (le soleil) en position haute et de 京 (la capitale, une grande cité sur une élévation) en dessous. Ensemble, ils évoquent le soleil brillant au-dessus d'un vaste territoire, créant une scène lumineuse et majestueuse. 京 apporte également la valeur phonétique du caractère (ケイ). Le sens de « vue » et « paysage » découle naturellement de cette image panoramique et illuminée.",
+    "mnemonic": "Le soleil 日 se lève sur la capitale 京 — quelle 景色 (けしき) magnifique ! ケイ, ケイ — c'est le paysage baigné de lumière au-dessus de la grande cité. Fermez les yeux et voyez ce panorama doré : voilà 景 !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "芸",
+    "readings": {
+      "kun": "うえる、のり、わざ",
+      "on": "ゲイ、ウン"
+    },
+    "meaning": "technique, art, talent, performance",
+    "etymology": "芸 est formé du radical 艹 (herbe, plante) en haut et de 云 (nuage) en bas. La forme ancienne était 藝, bien plus élaborée : elle montrait une personne agenouillée en train de planter un jeune arbre, symbolisant le soin méticuleux du cultivateur. Ce geste délicat de plantation — planter avec maîtrise — a étendu son sens vers toute forme de technique cultivée ou de talent développé. La simplification en 艹+云 condense cette image ancestrale.",
+    "mnemonic": "Un artiste qui plante (艹) ses idées jusque dans les nuages (云) — voilà le ゲイ de la performance ! Comme un acteur qui cultive son art patiemment, geste après geste, 芸 est le talent qu'on fait pousser. ゲイ, ゲイ — l'art s'acquiert comme une plante se cultive !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "欠",
+    "readings": {
+      "kun": "かける、かく",
+      "on": "ケツ、ケン"
+    },
+    "meaning": "manquer, lacune, défaut, bâillement",
+    "etymology": "欠 est un pictogramme représentant une personne assise ou agenouillée (la partie inférieure) avec la bouche grande ouverte (la courbe supérieure). Cette image évoque un bâillement ou un soupir — une bouche béante exprimant le vide et l'absence. De ce bâillement physique est née l'idée abstraite de lacune, de défaut, ou de ce qui fait défaut. C'est d'ailleurs le nom officiel du radical n°76 : le radical du bâillement.",
+    "mnemonic": "Regardez 欠 : une personne assise qui bâille à s'en décrocher la mâchoire — aaah ! Cette bouche grande ouverte dit tout : il MANQUE quelque chose ! か.ける, ケツ — dès que 欠 apparaît dans un mot, cherchez le manque ou la rupture. Bâillez et souvenez-vous !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "香",
+    "readings": {
+      "kun": "か、かおり、かおる",
+      "on": "コウ、キョウ"
+    },
+    "meaning": "parfum, encens, sentir bon",
+    "etymology": "香 est composé de 禾 (tige de céréale, riz ou millet) en haut et de 日 (soleil) en bas. L'image évoque des épis de céréales qui chauffent sous le soleil et dégagent un parfum doux et envoûtant. Certaines analyses traditionnelles y voient 黍 (millet) associé à 甘 (douceur), insistant sur la saveur et l'odeur sucrée du grain. Dans tous les cas, le caractère capture ce moment olfactif précis où la chaleur révèle le parfum naturel des plantes.",
+    "mnemonic": "Les épis 禾 chauffent sous le soleil 日 — et une odeur douce monte dans l'air. かおり, かおり — le parfum du champ au matin ! コウ, c'est le son de l'encens (香 est au cœur de 香道, la voie du parfum). Respirez profondément et laissez コウ s'ancrer dans votre mémoire olfactive !",
+    "jlpt": "N3"
+  }
+]

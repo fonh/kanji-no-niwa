@@ -1,0 +1,468 @@
+{
+  "_meta": {
+    "generated": "2026-06-30",
+    "method": "battle_idx derived from class_id (class_id == sprite_idx confirmed for all tested characters); overworld labels from NARC /a/0/8/1 internal names; party Pokémon cross-reference used to identify Rocket executives",
+    "battle_narc": "a/0/5/8 (trfgra.narc) — 129 sprites, stride-5 groups",
+    "trainer_data_narc": "a/0/5/5 — 738 entries, 20 bytes each; byte[1] = class_id = battle sprite index",
+    "overworld_narc": "a/0/8/1 — 3D model spritesheets named by internal label",
+    "note_gsleader_order": "gsleader1-8 = Johto gym leaders in badge order (Falkner→Clair); gsleader9-16 = Kanto leaders (Brock→Blue). Not visually verified — confirm against actual image files. NOTE: class_id order within Johto ≠ badge order (73=Pryce, 74=Jasmine, 75=Chuck — but badge order is Chuck 5th, Jasmine 6th, Pryce 7th).",
+    "source_verified": "pret/pokeheartgold include/constants/trainer_class.h — authoritative 0-128 index confirmed 2026-06-30",
+    "note_rkanbum_order": "rkanbum/rkanbum2/rkanbum3 = male Rocket executives (Archer, Proton, Petrel); visual order not confirmed. rkanbuw = Ariana. Verify images.",
+    "corrections_applied": [
+      "Silver: battle_idx 119→23 (class 119=PASSERBY was wrong, class 23=RIVAL is correct)",
+      "Blaine: battle_idx 82→108 (class 82=MEDIUM was wrong, class 108=LEADER_BLAINE is correct)",
+      "Barry idx 97: was TOWER_TYCOON=Palmer — file renamed 097_palmer.png",
+      "idx 60: 060_rocket_grunt_m → 060_school_kid_m (class 60=SCHOOL_KID_M)",
+      "idx 63: 063_rocket_grunt_m → 063_burglar (class 63=BURGLAR)",
+      "+13 other generic class renames applied to battle/ filenames",
+      "TRAINER_INDEX.md updated with 71 total corrections from pret/pokeheartgold"
+    ]
+  },
+  "protagonists": {
+    "ethan": {
+      "battle_idx": 0,
+      "battle_file": "trainers/battle/000_ethan.png",
+      "overworld_file": "trainers/overworld/hero.png",
+      "battle_confidence": "certain",
+      "class_id": 0,
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 0=PKMN_TRAINER_ETHAN) + visual"
+    },
+    "lyra": {
+      "battle_idx": 1,
+      "battle_file": "trainers/battle/001_lyra.png",
+      "overworld_file": "trainers/overworld/heroine.png",
+      "battle_confidence": "certain",
+      "class_id": 1,
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 1=PKMN_TRAINER_LYRA) + visual"
+    }
+  },
+  "johto_gym_leaders": {
+    "falkner": {
+      "battle_idx": 66,
+      "battle_file": "trainers/battle/066_falkner.png",
+      "overworld_file": "trainers/overworld/gsleader1.png",
+      "battle_confidence": "likely",
+      "class_id": 66,
+      "badge": "空の印",
+      "type": "Flying",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 66=LEADER_FALKNER) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader1-8 — visual verification recommended (class_id order ≠ badge order)"
+    },
+    "bugsy": {
+      "battle_idx": 67,
+      "battle_file": "trainers/battle/067_bugsy.png",
+      "overworld_file": "trainers/overworld/gsleader2.png",
+      "battle_confidence": "likely",
+      "class_id": 67,
+      "badge": "虫の印",
+      "type": "Bug",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 67=LEADER_BUGSY) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader1-8 — visual verification recommended (class_id order ≠ badge order)"
+    },
+    "whitney": {
+      "battle_idx": 70,
+      "battle_file": "trainers/battle/070_whitney.png",
+      "overworld_file": "trainers/overworld/gsleader3.png",
+      "battle_confidence": "certain",
+      "class_id": 70,
+      "badge": "美の印",
+      "type": "Normal",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 70=LEADER_WHITNEY) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader1-8 — visual verification recommended (class_id order ≠ badge order)"
+    },
+    "morty": {
+      "battle_idx": 72,
+      "battle_file": "trainers/battle/072_morty.png",
+      "overworld_file": "trainers/overworld/gsleader4.png",
+      "battle_confidence": "likely",
+      "class_id": 72,
+      "badge": "幽霊の印",
+      "type": "Ghost",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 72=LEADER_MORTY) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader1-8 — visual verification recommended (class_id order ≠ badge order)"
+    },
+    "chuck": {
+      "battle_idx": 75,
+      "battle_file": "trainers/battle/075_chuck.png",
+      "overworld_file": "trainers/overworld/gsleader5.png",
+      "battle_confidence": "certain",
+      "class_id": 75,
+      "badge": "闘の印",
+      "type": "Fighting",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 75=LEADER_CHUCK) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader1-8 — visual verification recommended (class_id order ≠ badge order)"
+    },
+    "jasmine": {
+      "battle_idx": 74,
+      "battle_file": "trainers/battle/074_jasmine.png",
+      "overworld_file": "trainers/overworld/gsleader6.png",
+      "battle_confidence": "likely",
+      "class_id": 74,
+      "badge": "金の印",
+      "type": "Steel",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 74=LEADER_JASMINE) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader1-8 — visual verification recommended (class_id order ≠ badge order)"
+    },
+    "pryce": {
+      "battle_idx": 73,
+      "battle_file": "trainers/battle/073_pryce.png",
+      "overworld_file": "trainers/overworld/gsleader7.png",
+      "battle_confidence": "certain",
+      "class_id": 73,
+      "badge": "氷の印",
+      "type": "Ice",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 73=LEADER_PRYCE) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader1-8 — visual verification recommended (class_id order ≠ badge order)"
+    },
+    "clair": {
+      "battle_idx": 76,
+      "battle_file": "trainers/battle/076_clair.png",
+      "overworld_file": "trainers/overworld/gsleader8.png",
+      "battle_confidence": "certain",
+      "class_id": 76,
+      "badge": "竜の印",
+      "type": "Dragon",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 76=LEADER_CLAIR) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader1-8 — visual verification recommended (class_id order ≠ badge order)"
+    }
+  },
+  "kanto_gym_leaders": {
+    "brock": {
+      "battle_idx": 98,
+      "battle_file": "trainers/battle/098_brock.png",
+      "overworld_file": "trainers/overworld/gsleader9.png",
+      "battle_confidence": "certain",
+      "class_id": 98,
+      "type": "Rock",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 98=LEADER_BROCK) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader9-16 — visual verification recommended"
+    },
+    "misty": {
+      "battle_idx": 103,
+      "battle_file": "trainers/battle/103_misty.png",
+      "overworld_file": "trainers/overworld/gsleader10.png",
+      "battle_confidence": "likely",
+      "class_id": 103,
+      "type": "Water",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 103=LEADER_MISTY) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader9-16 — visual verification recommended"
+    },
+    "lt_surge": {
+      "battle_idx": 104,
+      "battle_file": "trainers/battle/104_lt_surge.png",
+      "overworld_file": "trainers/overworld/gsleader11.png",
+      "battle_confidence": "certain",
+      "class_id": 104,
+      "type": "Electric",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 104=LEADER_LT_SURGE) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader9-16 — visual verification recommended"
+    },
+    "erika": {
+      "battle_idx": 105,
+      "battle_file": "trainers/battle/105_erika.png",
+      "overworld_file": "trainers/overworld/gsleader12.png",
+      "battle_confidence": "likely",
+      "class_id": 105,
+      "type": "Grass",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 105=LEADER_ERIKA) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader9-16 — visual verification recommended"
+    },
+    "janine": {
+      "battle_idx": 106,
+      "battle_file": "trainers/battle/106_janine.png",
+      "overworld_file": "trainers/overworld/gsleader13.png",
+      "battle_confidence": "likely",
+      "class_id": 106,
+      "type": "Poison",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 106=LEADER_JANINE) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader9-16 — visual verification recommended"
+    },
+    "sabrina": {
+      "battle_idx": 107,
+      "battle_file": "trainers/battle/107_sabrina.png",
+      "overworld_file": "trainers/overworld/gsleader14.png",
+      "battle_confidence": "likely",
+      "class_id": 107,
+      "type": "Psychic",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 107=LEADER_SABRINA) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader9-16 — visual verification recommended"
+    },
+    "blaine": {
+      "battle_idx": 108,
+      "battle_file": "trainers/battle/108_blaine.png",
+      "overworld_file": "trainers/overworld/gsleader15.png",
+      "battle_confidence": "certain",
+      "class_id": 108,
+      "type": "Fire",
+      "note": "class 108 = TRAINERCLASS_LEADER_BLAINE per pret/pokeheartgold. File was previously trainer_108.png (unidentified); renamed. class 82 = TRAINERCLASS_MEDIUM (corrected).",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 108=LEADER_BLAINE) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader9-16 — visual verification recommended"
+    },
+    "blue": {
+      "battle_idx": 110,
+      "battle_file": "trainers/battle/110_blue.png",
+      "overworld_file": "trainers/overworld/gsleader16.png",
+      "battle_confidence": "certain",
+      "class_id": 110,
+      "type": "Normal",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 110=LEADER_BLUE) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsleader9-16 — visual verification recommended"
+    }
+  },
+  "johto_elite_four": {
+    "will": {
+      "battle_idx": 87,
+      "battle_file": "trainers/battle/087_will.png",
+      "overworld_file": "trainers/overworld/gsbigfour1.png",
+      "battle_confidence": "likely",
+      "class_id": 87,
+      "type": "Psychic",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 87=ELITE_FOUR_WILL) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsbigfour1-4 — visual verification recommended"
+    },
+    "koga": {
+      "battle_idx": 89,
+      "battle_file": "trainers/battle/089_koga.png",
+      "overworld_file": "trainers/overworld/gsbigfour2.png",
+      "battle_confidence": "likely",
+      "class_id": 89,
+      "type": "Poison",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 89=ELITE_FOUR_KOGA) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsbigfour1-4 — visual verification recommended"
+    },
+    "bruno": {
+      "battle_idx": 112,
+      "battle_file": "trainers/battle/112_bruno.png",
+      "overworld_file": "trainers/overworld/gsbigfour3.png",
+      "battle_confidence": "certain",
+      "class_id": 112,
+      "type": "Fighting",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 112=ELITE_FOUR_BRUNO) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsbigfour1-4 — visual verification recommended"
+    },
+    "karen": {
+      "battle_idx": 88,
+      "battle_file": "trainers/battle/088_karen.png",
+      "overworld_file": "trainers/overworld/gsbigfour4.png",
+      "battle_confidence": "likely",
+      "class_id": 88,
+      "type": "Dark",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 88=ELITE_FOUR_KAREN) + visual",
+      "overworld_source": "NARC /a/0/8/1 gsbigfour1-4 — visual verification recommended"
+    }
+  },
+  "champion": {
+    "lance": {
+      "battle_idx": 86,
+      "battle_file": "trainers/battle/086_lance.png",
+      "overworld_file": "trainers/overworld/wataru.png",
+      "overworld_alt": "trainers/overworld/champion.png",
+      "battle_confidence": "certain",
+      "class_id": 86,
+      "type": "Dragon",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 86=CHAMPION) + visual",
+      "overworld_source": "NARC /a/0/8/1 — wataru.png (JP ワタル=Lance) — certain"
+    }
+  },
+  "rivals": {
+    "silver": {
+      "battle_idx": 23,
+      "battle_file": "trainers/battle/023_silver.png",
+      "overworld_file": "trainers/overworld/gsrivel.png",
+      "battle_confidence": "certain",
+      "class_id": 23,
+      "trainer_entries": [
+        495,
+        496,
+        497
+      ],
+      "note": "class 23 = TRAINERCLASS_RIVAL per pret/pokeheartgold. File renamed from trainer_023.png. class 119 = TRAINERCLASS_PASSERBY (was misidentified).",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 23=RIVAL) — CORRECTED from erroneous idx 119 (=PASSERBY)",
+      "overworld_source": "NARC /a/0/8/1 — gsrivel.png (gs+rival=Silver) — certain"
+    }
+  },
+  "special": {
+    "red": {
+      "battle_idx": 109,
+      "battle_file": "trainers/battle/109_red.png",
+      "overworld_file": "trainers/overworld/red.png",
+      "battle_confidence": "certain",
+      "class_id": 109,
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 109=PKMN_TRAINER_RED) + visual",
+      "overworld_source": "NARC /a/0/8/1 — red.png — certain"
+    },
+    "giovanni": {
+      "battle_idx": 124,
+      "battle_file": "trainers/battle/124_giovanni.png",
+      "overworld_file": "trainers/overworld/sakaki.png",
+      "battle_confidence": "likely",
+      "class_id": 124,
+      "note": "sakaki = Giovanni's Japanese name",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 124=ROCKET_BOSS) + visual",
+      "overworld_source": "NARC /a/0/8/1 — sakaki.png (JP サカキ=Giovanni) — certain"
+    }
+  },
+  "rocket": {
+    "archer": {
+      "battle_idx": 116,
+      "battle_file": "trainers/battle/116_rocket_executive.png",
+      "overworld_file": "trainers/overworld/rkanbum.png",
+      "battle_confidence": "confirmed_by_party",
+      "class_id": 116,
+      "party_evidence": "Houndour + Koffing + Houndoom (trainer[485], 1 main story battle)",
+      "trainer_entries": [
+        485
+      ],
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 116=EXECUTIVE_ARCHER) + ROM /a/0/5/6 party (Houndour+Houndoom)",
+      "overworld_source": "NARC /a/0/8/1 — rkanbum.png — visual order among rkanbum/2/3 not confirmed"
+    },
+    "proton": {
+      "battle_idx": 117,
+      "battle_file": "trainers/battle/trainer_117.png",
+      "overworld_file": "trainers/overworld/rkanbum2.png",
+      "battle_confidence": "confirmed_by_party",
+      "class_id": 117,
+      "party_evidence": "Zubat/Golbat + Koffing/Weezing (trainers[486,706] = Slowpoke Well + Radio Tower)",
+      "trainer_entries": [
+        486,
+        706
+      ],
+      "note_battle_sprite": "Sprite 117 described as 'teal hair, dark uniform, saluting' — matches Proton's teal/green hair",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 117=EXECUTIVE_PROTON) + ROM /a/0/5/6 party (Golbat+Weezing)",
+      "overworld_source": "NARC /a/0/8/1 — rkanbum2.png — visual order not confirmed"
+    },
+    "petrel": {
+      "battle_idx": 118,
+      "battle_file": "trainers/battle/trainer_118.png",
+      "overworld_file": "trainers/overworld/rkanbum3.png",
+      "battle_confidence": "confirmed_by_party",
+      "class_id": 118,
+      "party_evidence": "5× Koffing + Weezing (trainer[487]) — Petrel's signature all-Koffing team; trainer[488] = disguise battle",
+      "trainer_entries": [
+        487,
+        488
+      ],
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 118=EXECUTIVE_PETREL) + ROM /a/0/5/6 party (5×Koffing+Weezing)",
+      "overworld_source": "NARC /a/0/8/1 — rkanbum3.png — visual order not confirmed"
+    },
+    "ariana": {
+      "battle_idx": 114,
+      "battle_file": "trainers/battle/trainer_114.png",
+      "overworld_file": "trainers/overworld/rkanbuw.png",
+      "battle_confidence": "confirmed_by_party",
+      "class_id": 114,
+      "party_evidence": "Arbok + Vileplume + Murkrow (trainer[478] = Radio Tower; trainer[479] = Goldenrod Underground)",
+      "trainer_entries": [
+        478,
+        479
+      ],
+      "note_battle_sprite": "Sprite 114 described as 'red hair, white coat' — matches Ariana's red hair",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 114=EXECUTIVE_ARIANA) + ROM /a/0/5/6 party (Arbok+Vileplume+Murkrow)",
+      "overworld_source": "NARC /a/0/8/1 — rkanbuw.png (rkanbuw = Rocket kanbu woman = female exec = Ariana) — certain"
+    },
+    "grunt_m": {
+      "battle_idx": 55,
+      "battle_file": "trainers/battle/055_rocket_grunt_m.png",
+      "battle_file_alt": [
+        "trainers/battle/060_rocket_grunt_m.png",
+        "trainers/battle/063_rocket_grunt_m.png"
+      ],
+      "overworld_file": "trainers/overworld/rocketm.png",
+      "battle_confidence": "likely",
+      "class_id": 55,
+      "note": "3 male grunt sprites (55, 60, 63) — likely different grunt classes (plain, with ball, shouting)",
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 55=TEAM_ROCKET) + visual. NOTE: files 060/063 were misidentified as grunts — 060=SCHOOL_KID_M, 063=BURGLAR (both corrected)",
+      "overworld_source": "NARC /a/0/8/1 — rocketm.png — certain"
+    },
+    "grunt_f": {
+      "battle_idx": 62,
+      "battle_file": "trainers/battle/062_rocket_grunt_f.png",
+      "overworld_file": "trainers/overworld/rocketw.png",
+      "battle_confidence": "likely",
+      "class_id": 62,
+      "verification_source": "pret/pokeheartgold trainer_class.h (class 62=TEAM_ROCKET_F) + visual",
+      "overworld_source": "NARC /a/0/8/1 — rocketw.png — certain"
+    }
+  },
+  "kimono_girls": {
+    "_note": "All 5 Kimono Girls share battle sprite 47 (single class_id=47). Individual overworld sprites are in itako.png and seven1-5.png. Battle trainer entries vary by Eevee-evo team.",
+    "shared_battle_idx": 47,
+    "battle_file": "trainers/battle/047_kimono_girl.png",
+    "battle_confidence": "likely",
+    "class_id": 47,
+    "overworld_files": {
+      "kimono_1": "trainers/overworld/itako.png",
+      "kimono_2": "trainers/overworld/seven1.png",
+      "kimono_3": "trainers/overworld/seven2.png",
+      "kimono_4": "trainers/overworld/seven3.png",
+      "kimono_5": "trainers/overworld/seven4.png"
+    },
+    "note_names": "JP names: Zuki, Naoko, Sayo, Kuni, Miki. Exact label→name mapping not confirmed.",
+    "verification_source": "pret/pokeheartgold trainer_class.h (class 47=KIMONO_GIRL — single class, no individual IDs)",
+    "battle_differentiation": "IMPOSSIBLE — all 5 kimono girls share class 47 and battle sprite idx 47. Individual identification requires overworld sprites (itako.png, seven1-4.png) or party Pokémon (Espeon/Umbreon/Flareon/Vaporeon/Jolteon).",
+    "kimono_girl_names": [
+      "Zuki",
+      "Naomi",
+      "Kuni",
+      "Sayo",
+      "Meri"
+    ],
+    "overworld_source": "NARC /a/0/8/1 — itako.png + seven1-4.png; individual label→name mapping not visually verified"
+  },
+  "overworld_label_map": {
+    "_note": "Internal overworld label (filename without .png) → semantic key. Used to copy files into named subfolders.",
+    "hero": "protagonists/ethan_ow",
+    "heroine": "protagonists/lyra_ow",
+    "hero_213": "protagonists/ethan_ow_alt",
+    "heroine_214": "protagonists/lyra_ow_alt",
+    "red": "special/red_ow",
+    "redmama": "npcs/red_mama_ow",
+    "gsrivel": "rivals/silver_ow",
+    "wataru": "leaders/lance_ow",
+    "champion": "leaders/lance_ow_champion",
+    "sakaki": "rocket/giovanni_ow",
+    "gsleader1": "leaders/falkner_ow",
+    "gsleader2": "leaders/bugsy_ow",
+    "gsleader3": "leaders/whitney_ow",
+    "gsleader4": "leaders/morty_ow",
+    "gsleader5": "leaders/chuck_ow",
+    "gsleader6": "leaders/jasmine_ow",
+    "gsleader7": "leaders/pryce_ow",
+    "gsleader8": "leaders/clair_ow",
+    "gsleader9": "leaders/brock_ow",
+    "gsleader10": "leaders/misty_ow",
+    "gsleader11": "leaders/lt_surge_ow",
+    "gsleader12": "leaders/erika_ow",
+    "gsleader13": "leaders/janine_ow",
+    "gsleader14": "leaders/sabrina_ow",
+    "gsleader15": "leaders/blaine_ow",
+    "gsleader16": "leaders/blue_ow",
+    "gsbigfour1": "leaders/will_ow",
+    "gsbigfour2": "leaders/koga_ow",
+    "gsbigfour3": "leaders/bruno_ow",
+    "gsbigfour4": "leaders/karen_ow",
+    "rkanbum": "rocket/archer_ow",
+    "rkanbum2": "rocket/proton_ow",
+    "rkanbum3": "rocket/petrel_ow",
+    "rkanbuw": "rocket/ariana_ow",
+    "rocketm": "rocket/grunt_m_ow",
+    "rocketw": "rocket/grunt_f_ow",
+    "ookido": "npcs/prof_oak_ow",
+    "masaki": "npcs/bill_ow",
+    "minaki": "npcs/eusine_ow",
+    "gsmama": "npcs/ethan_mom_ow",
+    "itako": "npcs/kimono_girl_1_ow",
+    "nanami": "npcs/kimono_girl_nanami_ow",
+    "seven1": "npcs/kimono_girl_2_ow",
+    "seven2": "npcs/kimono_girl_3_ow",
+    "seven3": "npcs/kimono_girl_4_ow",
+    "seven4": "npcs/kimono_girl_5_ow",
+    "cameraman": "npcs/cameron_ow",
+    "doctor": "npcs/prof_elm_ow",
+    "gantetsu": "npcs/gantetsu_ow",
+    "chourou": "npcs/elder_ow",
+    "towerboss": "npcs/sprout_tower_elder_ow",
+    "mystery": "npcs/looker_ow",
+    "daigo": "npcs/daigo_ow"
+  }
+}

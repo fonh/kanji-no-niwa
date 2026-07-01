@@ -1,0 +1,398 @@
+[
+  {
+    "kanji": "際",
+    "readings": {
+      "kun": "きわ",
+      "on": "サイ"
+    },
+    "meaning": "bord, occasion",
+    "etymology": "Composition de 阝 (colline) et 祭 (festival). La colline du festival = l'occasion. Le bord = la limite entre deux moments.",
+    "mnemonic": "際 = 阝 (colline) + 祭 (festival). La colline du festival = l'occasion.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "際",
+    "readings": {
+      "kun": "さい",
+      "on": "サイ"
+    },
+    "meaning": "dans le cas de",
+    "etymology": "Le bord de la situation = l'occasion.",
+    "mnemonic": "際 = occasion = dans le cas de.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "材",
+    "readings": {
+      "kun": "ざい",
+      "on": "ザイ"
+    },
+    "meaning": "matériau, talent",
+    "etymology": "Composition de 木 (bois) et 才 (talent). Le bois avec talent = le matériau. La compétence = le bon bois.",
+    "mnemonic": "材 = 木 (bois) + 才 (talent). Le bois talentueux = matériau.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "才",
+    "readings": {
+      "kun": "",
+      "on": "サイ"
+    },
+    "meaning": "Génie, talent, ans (âge), shaku cubique",
+    "etymology": "Ce kanji est très simple - c'est un croisement de deux lignes représentant un éclat ou une étincelle. Originellement, il montrait une personne brillante ou du talent éclatant. C'est aussi utilisé comme compteur pour l'âge et les mesures.",
+    "mnemonic": "Une étincelle de génie ! 才 c'est le talent qui brille (サイ) comme une lumière. Quand quelqu'un a du potentiel, il a cette 才 - ce scintillement d'intelligence incarné !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "際",
+    "readings": {
+      "kun": "きわ",
+      "on": "サイ"
+    },
+    "meaning": "bord, limite",
+    "etymology": "La limite entre deux choses = le bord.",
+    "mnemonic": "際 = limite = bord.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "察",
+    "readings": {
+      "kun": "さつ",
+      "on": "サツ"
+    },
+    "meaning": "inspecter, déduire",
+    "etymology": "Composition de 宀 (toit) et 祭 (festival). La cérémonie sous le toit = inspecter. Déduire = observer le rituel.",
+    "mnemonic": "察 = 宀 (toit) + 祭 (festival). Observer le rituel = inspecter.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "雑",
+    "readings": {
+      "kun": "ざつ",
+      "on": "ザツ"
+    },
+    "meaning": "divers, mélangé",
+    "etymology": "Composition de 衣 (vêtement) et 集 (rassembler). Les vêtements rassemblés = le mélange. Le divers = ce qui est pêle-mêle.",
+    "mnemonic": "雑 = 衣 (vêtement) + 集 (rassembler). Les vêtements pêle-mêle = divers.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "残",
+    "readings": {
+      "kun": "のこ",
+      "on": "ザン"
+    },
+    "meaning": "rester, cruel",
+    "etymology": "Composition de 歹 (mort) et 戋 (peu). La mort avec peu = ce qui reste. Le résidu = les restes.",
+    "mnemonic": "残 = 歹 (mort) + 戋 (peu). Les restes de la mort = rester.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "散",
+    "readings": {
+      "kun": "ち",
+      "on": "サン"
+    },
+    "meaning": "se disperser",
+    "etymology": "Composition de 攴 (frapper) et 麻 (chanvre). Frapper le chanvre = disperser. La dispersion = les fibres qui partent.",
+    "mnemonic": "散 = 攴 (frapper) + 麻 (chanvre). Frapper le chanvre = disperser.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "昨",
+    "readings": {
+      "kun": "さく",
+      "on": "サク"
+    },
+    "meaning": "hier",
+    "etymology": "Composition de 日 (soleil) et 乍 (soudain). Le soleil soudainement passé = hier.",
+    "mnemonic": "昨 = 日 (soleil) + 乍 (soudain). Le soleil passé soudain = hier.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "昼",
+    "readings": {
+      "kun": "ひる",
+      "on": "チュウ"
+    },
+    "meaning": "midi, milieu de la journée",
+    "etymology": "Composition de 尺 (mesure) et 日 (soleil). La mesure du soleil = midi. Le milieu du jour = le soleil mesuré.",
+    "mnemonic": "昼 = 尺 (mesure) + 日 (soleil). Le soleil mesuré = midi.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "秘",
+    "readings": {
+      "kun": "ひ",
+      "on": "ヒ"
+    },
+    "meaning": "secret",
+    "etymology": "Composition de 禾 (céréale) et 比 (comparer). La céréale comparée = le secret. Ce qu'on cache = la graine précieuse.",
+    "mnemonic": "秘 = 禾 (céréale) + 比 (comparer). La céréale précieuse = secret.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "批",
+    "readings": {
+      "kun": "ひ",
+      "on": "ヒ"
+    },
+    "meaning": "critiquer",
+    "etymology": "Composition de 手 (main) et 比 (comparer). La main qui compare = la critique. Critiquer = comparer avec la main.",
+    "mnemonic": "批 = 手 (main) + 比 (comparer). La main qui compare = critiquer.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "飛",
+    "readings": {
+      "kun": "と.ぶ、と.ばす、-と.ばす",
+      "on": "ヒ"
+    },
+    "meaning": "Voler, sauter (pages), disperser, se répandre",
+    "etymology": "Ce kanji montre un oiseau stylisé avec des traits ondulants représentant le mouvement. L'image d'un oiseau qui s'envole rapidement, avec des traits qui représentent la vitesse et la liberté aérienne.",
+    "mnemonic": "Un oiseau qui s'envole (飛) rapidement ! Quand vous と.ぶ (volez), vous disparaissez dans le ciel. ヒ c'est la sensation de vitesse et de liberté incarnée !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "非",
+    "readings": {
+      "kun": "ひ",
+      "on": "ヒ"
+    },
+    "meaning": "non-, erreur",
+    "etymology": "Deux ailes opposées = la négation. Ce qui va en sens contraire = l'erreur.",
+    "mnemonic": "非 = ailes opposées = non, erreur.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "費",
+    "readings": {
+      "kun": "つい",
+      "on": "ヒ"
+    },
+    "meaning": "dépenser, frais",
+    "etymology": "Composition de 弗 (rejeter) et 貝 (monnaie). La monnaie rejetée = les frais.",
+    "mnemonic": "費 = 弗 (rejeter) + 貝 (monnaie). La monnaie rejetée = dépenser.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "否",
+    "readings": {
+      "kun": "いな",
+      "on": "ヒ"
+    },
+    "meaning": "non, refuser",
+    "etymology": "Composition de 丕 (grand) et 口 (bouche). La grande bouche qui dit non = refuser.",
+    "mnemonic": "否 = 丕 (grand) + 口 (bouche). La grande bouche = refuser.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "避",
+    "readings": {
+      "kun": "さ",
+      "on": "ヒ"
+    },
+    "meaning": "éviter",
+    "etymology": "Composition de 辶 (marche) et 辟 (roi). Marcher loin du roi = éviter.",
+    "mnemonic": "避 = 辶 (marche) + 辟 (roi). Marcher loin du roi = éviter.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "比",
+    "readings": {
+      "kun": "くら",
+      "on": "ヒ"
+    },
+    "meaning": "comparer",
+    "etymology": "Deux personnes côte à côte = comparer.",
+    "mnemonic": "比 = deux personnes côte à côte = comparer.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "夢",
+    "readings": {
+      "kun": "ゆめ",
+      "on": "ム"
+    },
+    "meaning": "rêve",
+    "etymology": "Composition de 夕 (soir) et 寢 (dormir). Le soir qui dort = le rêve.",
+    "mnemonic": "夢 = soir + dormir = rêve.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "望",
+    "readings": {
+      "kun": "のぞ",
+      "on": "ボウ"
+    },
+    "meaning": "espoir, regarder au loin",
+    "etymology": "Composition de 月 (lune) et 王 (roi) et 亡 (perdu). Le roi et la lune perdue = l'espoir.",
+    "mnemonic": "望 = 月 (lune) + 王 (roi) + 亡 (perdu). La lune du roi = l'espoir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "忘",
+    "readings": {
+      "kun": "わす",
+      "on": "ボウ"
+    },
+    "meaning": "oublier",
+    "etymology": "Composition de 亡 (perdu) et 心 (cœur). Le cœur perdu = oublier.",
+    "mnemonic": "忘 = 亡 (perdu) + 心 (cœur). Le cœur perdu = oublier.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "豊",
+    "readings": {
+      "kun": "ゆた",
+      "on": "ホウ"
+    },
+    "meaning": "abondant",
+    "etymology": "Composition de 豆 (haricot) et 山 (montagne). La montagne de haricots = l'abondance.",
+    "mnemonic": "豊 = 豆 (haricot) + 山 (montagne). La montagne de haricots = abondant.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "暴",
+    "readings": {
+      "kun": "あば",
+      "on": "ボウ"
+    },
+    "meaning": "violent, brutal",
+    "etymology": "Composition de 日 (soleil) et 出 (sortir) et 米 (riz) et 廾 (mains). Le riz qui explose sous le soleil = la violence.",
+    "mnemonic": "暴 = riz + soleil + exploser = violent.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "防",
+    "readings": {
+      "kun": "ふせ",
+      "on": "ボウ"
+    },
+    "meaning": "défendre, prévenir",
+    "etymology": "Composition de 阝 (colline) et 方 (direction). La colline en direction = défendre. Prévenir = mettre la colline en obstacle.",
+    "mnemonic": "防 = 阝 (colline) + 方 (direction). La colline en obstacle = défendre.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "亡",
+    "readings": {
+      "kun": "な.い、な.き-、ほろ.びる、ほろ.ぶ、ほろ.ぼす",
+      "on": "ボウ、モウ"
+    },
+    "meaning": "Décédé, le défunt, mourant, périr, perdre",
+    "etymology": "Ce kanji représente une personne qui s'efface ou disparaît. C'est un caractère pictographique montrant l'absence ou la disparition. Combiné avec d'autres caractères, il représente la mort ou la perte.",
+    "mnemonic": "Une personne qui disparaît (亡) - voilà ほろ.びる (périr) ! Quelqu'un qui est な.い (absent) a ボウ disparu. C'est la nature éphémère de la vie incarnée !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "忙",
+    "readings": {
+      "kun": "いそが",
+      "on": "ボウ"
+    },
+    "meaning": "occupé",
+    "etymology": "Composition de 忄 (cœur) et 亡 (perdu). Le cœur perdu = occupé. Être débordé = avoir le cœur qui s'enfuit.",
+    "mnemonic": "忙 = 忄 (cœur) + 亡 (perdu). Le cœur perdu = occupé.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "満",
+    "readings": {
+      "kun": "み",
+      "on": "マン"
+    },
+    "meaning": "plein",
+    "etymology": "Composition de 氵 (eau) et 萬 (dix mille). L'eau des dix mille = ce qui est plein.",
+    "mnemonic": "満 = 氵 (eau) + 萬 (dix mille). L'eau des dix mille = plein.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "末",
+    "readings": {
+      "kun": "すえ",
+      "on": "マツ"
+    },
+    "meaning": "extrémité, fin",
+    "etymology": "Composition de 木 (arbre) et une ligne en haut. La ligne en haut de l'arbre = l'extrémité.",
+    "mnemonic": "末 = ligne haute de l'arbre = fin, extrémité.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "未",
+    "readings": {
+      "kun": "いま",
+      "on": "ミ"
+    },
+    "meaning": "pas encore, non-",
+    "etymology": "Composition de 木 (arbre) avec une petite branche en plus. L'arbre avec un surplus = pas encore mûr.",
+    "mnemonic": "未 = arbre + petite branche = pas encore.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "毛",
+    "readings": {
+      "kun": "け",
+      "on": "モウ"
+    },
+    "meaning": "poil, fourrure",
+    "etymology": "Pictogramme de poils = les poils, la fourrure.",
+    "mnemonic": "毛 = pictogramme de poils.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "模",
+    "readings": {
+      "kun": "も",
+      "on": "モ"
+    },
+    "meaning": "modèle, imiter",
+    "etymology": "Composition de 木 (bois) et 莫 (sombre). Le bois sombre = le modèle. L'imitation = reproduire le bois.",
+    "mnemonic": "模 = 木 (bois) + 莫 (sombre). Le bois reproduit = imiter.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "脈",
+    "readings": {
+      "kun": "みゃく",
+      "on": "ミャク"
+    },
+    "meaning": "pouls, veine",
+    "etymology": "Composition de 月 (corps) et 𠂢 (dériver). Le dérivé du corps = le pouls. La veine = ce qui coule dans le corps.",
+    "mnemonic": "脈 = 月 (corps) + dériver. Ce qui coule = le pouls.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "密",
+    "readings": {
+      "kun": "みつ",
+      "on": "ミツ"
+    },
+    "meaning": "secret, dense",
+    "etymology": "La montagne sous le toit = le secret caché.",
+    "mnemonic": "密 = montagne + toit = secret dense.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "眠",
+    "readings": {
+      "kun": "ねむ",
+      "on": "ミン"
+    },
+    "meaning": "dormir",
+    "etymology": "Composition de 目 (œil) et 民 (peuple). L'œil du peuple = dormir. Fermer les yeux = dormir.",
+    "mnemonic": "眠 = 目 (œil) + 民 (peuple). L'œil fermé = dormir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "務",
+    "readings": {
+      "kun": "つと.める",
+      "on": "ム"
+    },
+    "meaning": "tâche, devoir, fonction",
+    "etymology": "務 combine la force (力) à droite avec un élément phonétique à gauche. Historiquement, ce caractère représentait l'obligation d'accomplir un travail physique, incarnant le devoir et la responsabilité. L'image originale évoquait la personne chargée d'une tâche, symbolisant l'effort exigé par une fonction.",
+    "mnemonic": "Imaginez quelqu'un qui 「つと.める」(se charge de) une tâche importante avec toute sa force! Le kanji montre cette charge de devoir sur les épaules de celui qui assume la fonction. C'est l'effort constant du travail responsable.",
+    "jlpt": "N3"
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "秒",
+    "readings": {
+      "kun": "",
+      "on": "ビョウ"
+    },
+    "meaning": "seconde (1/60 de minute)",
+    "etymology": "秒 réunit 禾 (la plante de riz, symbole des céréales) et 少 (peu, petit, infime). À l'origine, 秒 désignait les arêtes minuscules qui hérissent les épis de graminées — des filaments si ténus qu'on les remarque à peine. Par glissement sémantique, le mot en vint à désigner la plus petite unité de temps mesurable : la seconde. L'image du grain infime ancre durablement l'idée de quelque chose de bref et de fugace.",
+    "mnemonic": "Imaginez un grain de riz (禾) si minuscule (少) qu'il tombe en une fraction d'instant — voilà une **ビョウ** ! La seconde, c'est ce rien de temps, ce petit grain qui s'échappe avant même qu'on l'attrape.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "福",
+    "readings": {
+      "kun": "",
+      "on": "フク"
+    },
+    "meaning": "bénédiction, fortune, bonheur, richesse",
+    "etymology": "福 combine 示 (l'autel des divinités, radical du sacré) et 畐 (un vase pansu rempli à ras bord). Sur l'autel ancestral, un récipient débordant d'offrandes signifiait que les dieux étaient satisfaits et accordaient leur faveur. Ce kanji incarne donc la plénitude venue d'en haut, la richesse spirituelle et matérielle accordée par le ciel.",
+    "mnemonic": "Devant l'autel divin (示), un pot bien plein (畐) — les dieux ont exaucé vos vœux ! **フク** la fortune, **フク** le bonheur ! C'est ce kanji qu'on retourne et affiche sur les portes au Nouvel An japonais, pour que la chance tombe littéralement du ciel jusque dans la maison.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "返",
+    "readings": {
+      "kun": "かえ.す、-かえ.す、かえ.る、-かえ.る",
+      "on": "ヘン"
+    },
+    "meaning": "retourner, répondre, rembourser, rendre",
+    "etymology": "返 associe 辶 (le radical du déplacement, marcher, avancer) et 反 (renverser, l'opposé, faire volte-face). Le composant 反 représentait à l'origine une main retournant un objet à l'envers. Combiné au radical de mouvement, il décrit l'action de repartir dans la direction inverse : revenir sur ses pas, rendre ce qu'on a reçu, répondre en miroir à une action.",
+    "mnemonic": "Vous avancez (辶), puis vous faites demi-tour complet (反) — vous **かえります**, vous retournez à votre point de départ ! Le professeur **ヘン**d les copies corrigées — 返す, il vous les rend. Ce qu'on donne doit toujours **かえ**る à son propriétaire !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "面",
+    "readings": {
+      "kun": "おも、おもて、つら",
+      "on": "メン、ベン"
+    },
+    "meaning": "masque, visage, traits, surface",
+    "etymology": "面 est à l'origine un pictogramme représentant un visage humain vu de face : le grand contour extérieur trace l'ovale de la tête, tandis qu'au centre se loge 目 (l'œil), élément le plus saillant du visage. Ce schéma simple — un cadre avec un œil — a évolué pour désigner à la fois le visage, la surface de toute chose, et les masques du théâtre nô et kyôgen, ces visages de bois qui recouvrent les traits de l'acteur.",
+    "mnemonic": "Regardez bien 面 : un grand contour (le cadre du visage) avec 目, l'œil, tapi à l'intérieur — c'est littéralement un **おもて**, une face ! Au théâtre nô, on dit **メン** pour le masque ; ce visage figé dans le bois cache l'acteur et révèle le personnage. Toute **おも**te est une surface qui nous regarde.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "油",
+    "readings": {
+      "kun": "あぶら",
+      "on": "ユ、ユウ"
+    },
+    "meaning": "huile, graisse",
+    "etymology": "油 réunit 氵 (le radical de l'eau, symbole de tout liquide) et 由 (la source, l'origine, ce dont quelque chose découle). Le composant 由 représentait à l'origine un récipient allongé d'où un contenu s'échappe par le haut. Ensemble, ils décrivent un liquide qui s'écoule naturellement depuis sa source — comme l'huile qui suinte des graines pressées ou qui remonte des profondeurs de la terre.",
+    "mnemonic": "L'eau (氵) qui coule de sa source (由), mais dorée, lourde et grasse — c'est l'**あぶら** ! Imaginez l'huile d'olive s'écoulant lentement du pressoir : **ユ**、**ユウ** — ce liquide précieux qui naît de la nature et glisse entre les doigts.",
+    "jlpt": "N3"
+  }
+]

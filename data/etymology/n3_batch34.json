@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "単",
+    "readings": {
+      "kun": "ひとえ",
+      "on": "タン"
+    },
+    "meaning": "simple, unique, une seule couche",
+    "etymology": "À l'origine, 単 représentait une arme de jet à deux têtes — un bola de chasse — composée de deux masses lestées reliées à un manche. Le caractère montre deux parties arrondies en haut (les extrémités lestées) et une croix en bas (le manche). Cet outil conçu d'une seule pièce, sans complexité, a naturellement donné le sens de « simple, unique ». L'idée de « une seule couche » (ひとえ) découle directement de la nature unitaire de cet instrument.",
+    "mnemonic": "Imaginez un chasseur qui n'a qu'UN seul outil : son bola — タン (単) ! La forme du kanji montre exactement ce bola, avec ses deux boules en haut et son manche en bas. Simple, unique, une seule pièce — voilà 単 !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "置",
+    "readings": {
+      "kun": "お.く、-お.き",
+      "on": "チ"
+    },
+    "meaning": "poser, déposer, placer, laisser",
+    "etymology": "置 est composé de 罒 (filet de chasse, forme simplifiée de 网) en haut, et de 直 (droit, direct) en bas. L'image évoque l'acte de déposer un filet bien à plat et en ordre sur le sol. 直 apporte à la fois une valeur directrice — poser quelque chose de manière droite et précise — et une valeur phonétique. Ensemble, ils expriment l'idée d'installer ou de déposer intentionnellement quelque chose à un endroit défini.",
+    "mnemonic": "Un pêcheur POSE (置く) son filet (罒) bien DROIT (直) sur le sol avant de partir à la pêche — voilà l'image parfaite de チ ! お.く, c'est placer avec soin et méthode, comme on étale un filet centimètre par centimètre.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "仲",
+    "readings": {
+      "kun": "なか",
+      "on": "チュウ"
+    },
+    "meaning": "relation, intermédiaire, entente",
+    "etymology": "仲 associe le radical 亻 (personne) à gauche et 中 (milieu, centre) à droite. Le sens est transparent : une personne qui se tient au milieu entre deux parties, jouant le rôle de médiateur ou de lien affectif. Ce kanji désigne à la fois la figure de l'entremetteur et la qualité d'une relation — être au cœur d'un lien avec autrui.",
+    "mnemonic": "仲 = une personne (亻) placée au milieu (中) ! チュウ sonne comme « tchou » — imaginez deux amis qui se font la bise parce que VOUS, bien au milieu (なか), les avez présentés. Vous êtes la 仲 — le cœur vivant de la relation !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "兆",
+    "readings": {
+      "kun": "きざ.す、きざ.し",
+      "on": "チョウ"
+    },
+    "meaning": "présage, signe, symptôme, trillion (10¹²)",
+    "etymology": "兆 est l'un des pictogrammes les plus anciens de l'écriture chinoise : il reproduit les craquelures apparaissant sur une carapace de tortue ou un os chauffé lors des rituels divinatoires de la Chine antique. Les devins lisaient ces fissures symétriques comme des messages des esprits. Les deux motifs en miroir du caractère représentent exactement ces craquelures bilatérales. Le sens numérique de « trillion » (10¹²) est une extension ultérieure, les présages étant associés à des multitudes innombrables.",
+    "mnemonic": "Regardez 兆 : deux séries de fissures symétriques sur une carapace de tortue chauffée ! Les devins de l'Antiquité voyaient dans ces craquelures (きざし) les SIGNES du futur. チョウ — comme « show » — car les dieux vous font un show de présages à travers ces fractures ! Un trillion de questions pour un seul signe divin.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "底",
+    "readings": {
+      "kun": "そこ",
+      "on": "テイ"
+    },
+    "meaning": "fond, base, profondeur, semelle",
+    "etymology": "底 est formé du radical 广 (auvent, toit en surplomb d'une falaise) en partie supérieure, et du composant 氐 (base, niveau le plus bas) en dessous. 氐 représente quelque chose gisant au niveau le plus bas et sert également de phonétique au caractère. L'ensemble évoque le sol ou le fond d'un abri creusé sous une falaise — le point le plus bas d'un espace couvert, inaccessible à la lumière.",
+    "mnemonic": "テイ (底) — imaginez plonger dans une grotte sous une falaise (广), de plus en plus profond, jusqu'à toucher le そこ absolu, le fond (氐) de tout ! « Tei, t'es tout en bas ! » — quand on cherche le fond ultime, on trouve le テイ !",
+    "jlpt": "N3"
+  }
+]

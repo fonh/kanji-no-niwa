@@ -59,6 +59,12 @@ scripts/sources/jpn_sentences.tsv.bz2
 scripts/sources/links.csv
 scripts/sources/JMdict_e.gz
 scripts/sources/guidebook/
+scripts/sources/local-audio-yomichan/
+scripts/sources/jesc_filtered.json
+scripts/sources/tatoeba_jpn_eng.json
+
+# game ROM — local only, never commit (copyright)
+/ROM/
 
 # claude memory (personal, not project)
 .claude/

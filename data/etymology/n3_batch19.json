@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "君",
+    "readings": {
+      "kun": "きみ、-ぎみ",
+      "on": "クン"
+    },
+    "meaning": "vous, toi, monsieur, souverain, suffixe masculin",
+    "etymology": "君 associe 尹 (une main tenant un bâton de commandement, symbole d'autorité et de gouvernement) et 口 (bouche). Le composant 尹 représente celui qui dirige par la force du geste. L'ajout de 口 souligne que le souverain commande aussi par la parole. Ensemble, ils dépeignent un dirigeant qui exerce son autorité à la fois par l'action et par le discours.",
+    "mnemonic": "Imagine un seigneur (きみ) qui brandit son sceptre (尹) et crie ses ordres par la bouche (口) — « C'est MOI qui commande ! » En japonais, appeler quelqu'un きみ, c'est le traiter un peu comme son subordonné : à utiliser avec précaution !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "血",
+    "readings": {
+      "kun": "ち",
+      "on": "ケツ"
+    },
+    "meaning": "sang",
+    "etymology": "血 est un pictogramme représentant un vase rituel (皿, récipient plat) avec une goutte de sang à l'intérieur (le trait 丶 au centre supérieur). Dans l'Antiquité chinoise, le sang des animaux sacrifiés était recueilli dans des coupes lors des cérémonies religieuses. Le caractère original montrait clairement ces gouttes dans une coupe d'offrande.",
+    "mnemonic": "Regarde 血 comme un bol sacrificiel (皿) avec une goutte de sang qui tombe dedans (丶) — ち, ち, le sang qui s'égoutte ! Pense à ケツ comme au cri bref d'un samouraï blessé : une seule syllabe qui dit tout !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "庫",
+    "readings": {
+      "kun": "くら",
+      "on": "コ、ク"
+    },
+    "meaning": "entrepôt, remise, réserve",
+    "etymology": "庫 associe la clé 广 (un toit en appentis, symbole d'abri ou de bâtiment) et 車 (chariot, véhicule). À l'origine, 庫 désignait spécifiquement le bâtiment où l'on remisait les chars de combat. Le toit (广) protège ce qui est stocké à l'intérieur, et le chariot (車) indique la nature de cet entrepôt. Le sens s'est élargi à tout espace de stockage.",
+    "mnemonic": "Sous le grand toit (广), on range les chariots (車) à l'abri — c'est le garage de l'Antiquité ! くら, くら, la réserve bien gardée. コ comme « coffre » : dans cette 庫, tout est conservé précieusement à l'abri des intempéries !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "幸",
+    "readings": {
+      "kun": "さいわ.い、さち、しあわ.せ",
+      "on": "コウ"
+    },
+    "meaning": "bonheur, chance, bénédiction, fortune",
+    "etymology": "幸 dérive d'un pictogramme ancien représentant des menottes ou un instrument de punition (une forme de carcan). Par un renversement paradoxal, survivre à une punition ou échapper aux châtiments était considéré comme une immense chance. Ce kanji incarne l'idée que le bonheur naît souvent d'avoir évité le pire. Certains y voient également la forme d'un talisman protecteur.",
+    "mnemonic": "Imagine quelqu'un qui était censé être enchaîné (ces formes qui ressemblent à des menottes stylisées) mais qui est libéré au dernier instant — さいわい, quelle chance ! Le bonheur (しあわせ), c'est savoir qu'on aurait pu être malheureux. コウ comme « coup de chance » — un seul trait change tout !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "祭",
+    "readings": {
+      "kun": "まつ.る、まつ.り、まつり",
+      "on": "サイ"
+    },
+    "meaning": "rituel, offrande, fête, célébration, vénérer",
+    "etymology": "祭 se décompose en trois éléments : en haut à gauche 月 dans sa variante « chair/viande » (肉), en haut à droite 又 (une main), et en bas 示 (autel sacré, symbole du divin). La scène dépeint une main qui tient un morceau de viande au-dessus d'un autel pour l'offrir aux dieux. Ce geste d'offrande est le cœur même du rituel religieux antique dont découlent tous les festivals.",
+    "mnemonic": "Lis 祭 de haut en bas : une main (又) tient de la viande (月) qu'elle dépose sur l'autel des dieux (示) — l'offrande sacrée du まつり ! Chaque festival japonais (まつり) garde cette essence : on invite les divinités à festoyer avec nous. サイ, サイ — la fête qui unit les hommes et les dieux !",
+    "jlpt": "N3"
+  }
+]

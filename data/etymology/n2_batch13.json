@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "弓",
+    "readings": {
+      "kun": "ゆみ",
+      "on": "キュウ"
+    },
+    "meaning": "arc (archerie, violon)",
+    "etymology": "Pictogramme direct d'un arc avec sa corde tendue. La forme courbe stylisée représente l'arme de tir traditionnelle en position de repos. Les traits capturent la tension caractéristique entre l'arc et la corde.",
+    "mnemonic": "Imaginez l'arc (弓) d'un archer — voyez cette courbe parfaite, cette corde tendue prête à lâcher la flèche ! Le ゆみ du samouraï, ce symbol de précision et de grâce. Une forme simple qui vous rappellera à jamais cet instrument traditionnel.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "刀",
+    "readings": {
+      "kun": "かたな、そり",
+      "on": "トウ"
+    },
+    "meaning": "épée, sabre, couteau",
+    "etymology": "Pictogramme simple représentant une lame droite en profil. Le trait vertical symbolise la lame acérée (かたな), tandis que l'élément horizontal suggère la garde. Cette forme épurée capture l'essence même de l'épée guerrière.",
+    "mnemonic": "Voyez le katana (刀) du samuraï — ce trait tranchant et décisif ! Cette lame simple mais redoutable symbolise l'honneur et la détermination. Un seul coup et tout bascule — la かたな, l'arme qui a façonné le Japon féodal.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "里",
+    "readings": {
+      "kun": "さと",
+      "on": "リ"
+    },
+    "meaning": "village, demeure parentale, lieue",
+    "etymology": "Représentation d'un espace délimité contenant quatre champs (田). Le caractère symbolise un village organisé, circonscrit par ses limites territoriales. Cette structure régulière évoque l'ordre et la stabilité d'une communauté établie.",
+    "mnemonic": "La 里 (さと) — votre village natal, ce petit coin de paradis entouré de rizières ! Sentez cette chaleur du retour à la maison, ces champs organisés au-dessus desquels plane l'amour maternel. Le さと, c'est la sécurité de la communauté villageoise.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "宮",
+    "readings": {
+      "kun": "みや",
+      "on": "キュウ、グウ、ク、クウ"
+    },
+    "meaning": "sanctuaire shinto, palais, constellations",
+    "etymology": "Composé de 宀 (toit, demeure) coiffant 呂 (résonance, harmonie). Le toit représente la structure protectrice d'un bâtiment sacré ou royal. L'intérieur évoque la résonance spirituelle et le prestige. Ensemble, ils incarnent un lieu d'une grande dignité.",
+    "mnemonic": "La 宮 (みや) — ce sanctuaire shinto majestueux sous son toit sacré (宀) ! Imaginez cette demeure divine, ce palais où résident les dieux, ce lieu de purification spirituelle. Le みや, essence même du prestige et de la grâce cérémonielle japonnaise.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "詩",
+    "readings": {
+      "kun": "うた",
+      "on": "シ"
+    },
+    "meaning": "poème, poésie",
+    "etymology": "Composé de 言 (parole, langage) à gauche et 寺 (temple, profondeur) à droite. Le langage s'élève ici au-delà du commun, touchant à la spiritualité. Les paroles deviennent poésie, transcendance par le verbe. C'est le langage sacralisé.",
+    "mnemonic": "La 詩 (うた) — une chanson poétique qui s'élève comme une prière spirituelle ! Les paroles (言) touchent l'âme avec une beauté ineffable. Cette poésie résonne à travers les âges — c'est le うた intemporel qui relie le passé au présent.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "昭",
+    "readings": {
+      "kun": "",
+      "on": "ショウ"
+    },
+    "meaning": "brillant, lumineux",
+    "etymology": "Composé de 日 (soleil) et 召 (appel, manifestation). Le soleil lui-même brille et se manifeste dans le ciel. Le composant 召 accentue cette idée de clarté et de révélation. C'est la lumière qui se déploie majestueusement.",
+    "mnemonic": "Imaginez le soleil levant (日) qui brille de toute sa splendeur — c'est 昭 (ショウ) ! Ce kanji capture cet instant où la clarté jaillit, éblouissante et incontestable. Pur éclat, pureté lumineuse — le ショウ du jour nouveau qui chasse les ténèbres.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "笛",
+    "readings": {
+      "kun": "ふえ",
+      "on": "テキ"
+    },
+    "meaning": "flûte, clarinette, tuyau, sifflet",
+    "etymology": "Composé de 竹 (bambou) à gauche, matériau traditionnel pour les instruments à vent. Le composant droit 易 évoque la facilité et la légèreté. Le bambou creux devient le conduit parfait pour transformer le souffle en mélodie cristalline.",
+    "mnemonic": "La 笛 (ふえ) — une flûte en bambou (竹) qui chante comme un oiseau ! Imaginez le souffle qui traverse ce tuyau naturel, créant une mélodie céleste. Cette musique ancienne, cette pureté sonore — voilà ce que cette flûte évoque. Le ふえ, instrument de grâce.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "羊",
+    "readings": {
+      "kun": "ひつじ",
+      "on": "ヨウ"
+    },
+    "meaning": "mouton",
+    "etymology": "Pictogramme direct représentant la tête d'un mouton vue de face. Les deux traits supérieurs symbolisent les cornes caractéristiques. La silhouette globale reste hautement reconnaissable, capturant l'essence de cet animal domestique pacifique.",
+    "mnemonic": "Voilà le mouton (羊 - ひつじ) avec ses cornes pointant vers le ciel ! Voyez cet animal doux et laineux dans un pré verdoyant. Ce pictogramme simple vous rendra immédiatement ce ひつじ adorable, symbole de douceur et de paix rurale.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "井",
+    "readings": {
+      "kun": "い",
+      "on": "セイ、ショウ"
+    },
+    "meaning": "puits, puits fermé, ville, communauté",
+    "etymology": "Pictogramme simple représentant un puits vue de dessus. Le carré parfait symbolise la structure délimitée du puits traditionnel. Ce caractère capture le puits comme cœur nourricier de la communauté, source de vie et de rassemblement.",
+    "mnemonic": "Imaginez un puits (井 - い) vue de haut — ce carré parfait entouré de pierre ! Au Japon ancien, le い était le cœur du village, où tous venaient puiser l'eau de vie. Ce simple carré représente la fraîcheur, la communauté et la pérennité.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "芽",
+    "readings": {
+      "kun": "め",
+      "on": "ガ"
+    },
+    "meaning": "bourgeon, pousse, germe",
+    "etymology": "Composé de 艹 (herbe, végétation) au-dessus et 牙 (dent, pointe) dessous. L'herbe tendre jaillit de terre avec une petite pointe acérée. C'est le germe de la vie nouvelle, la promesse du printemps qui perce le sol.",
+    "mnemonic": "La 芽 (め) — un bourgeon minuscule qui pousse avec courage ! Voyez cette petite herbe verte (艹) qui sort de terre, sa pointe délicate et pleine d'espoir. C'est le germe de la transformation, le miracle du renouveau. Le め, essence du printemps japonnais.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "街",
+    "readings": {
+      "kun": "まち",
+      "on": "ガイ、カイ"
+    },
+    "meaning": "boulevard, rue, ville",
+    "etymology": "Composé de 行 (marcher, chemin) à gauche et 圭 (pointe, limite) à droite. Le mouvement des pieds sur le chemin crée le lieu de circulation. La pointe représente les limites de cette zone urbaine. Ensemble, c'est le boulevard vivant.",
+    "mnemonic": "La 街 (まち) — une rue animée où pulsent la vie et le commerce ! Imaginez ces gens qui marchent (行) sur le boulevard de votre quartier, ce cœur vibrant de la communauté. Le まち, c'est votre ville, votre rue natale, ce lieu de rencontres et d'aventures.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "潟",
+    "readings": {
+      "kun": "かた、-がた",
+      "on": "セキ"
+    },
+    "meaning": "lagon",
+    "etymology": "Composé de 水 (eau) à gauche et 舎 (refuge, abri) à droite. L'eau s'accumule dans un espace semi-fermé, protégée par une barrière naturelle. C'est un lagon — ce plan d'eau unique, ni tout à fait la mer, ni tout à fait un lac.",
+    "mnemonic": "La 潟 (かた) — un lagon paisible séparé du grand océan ! L'eau (水) danse doucement dans ce refuge naturel. Imaginez cette lagune paradisiaque où l'eau devient turquoise et tranquille — le かた, ce miracle de la géographie côtière.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "岐",
+    "readings": {
+      "kun": "",
+      "on": "キ、ギ"
+    },
+    "meaning": "bifurcation, embranchement, chemin qui se divise",
+    "etymology": "Composé de 山 (montagne) à gauche et 支 (branche, soutien) à droite. La montagne elle-même se divise, créant des chemins multiples. C'est l'image du carrefour montagneux où le voyageur doit choisir sa route.",
+    "mnemonic": "La 岐 (き) — un carrefour dramatique en montagne ! Imaginez-vous à cette bifurcation célèbre (岐路) où deux chemins divergent, chacun menant à une destinée différente. Ce moment de décision cruciale, ce choix de direction — c'est l'essence du き.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "旗",
+    "readings": {
+      "kun": "はた",
+      "on": "キ"
+    },
+    "meaning": "drapeau, bannière, étendard",
+    "etymology": "Composé de 方 (direction, carré) et 其 (ceci). Le drapeau est une surface carrée ou rectangulaire flottante attachée à une hampe. Le caractère capture cette forme distincte de tissu claquant au vent, symbole de pouvoir et d'identité.",
+    "mnemonic": "La 旗 (はた) — un drapeau qui claque fièrement au vent ! Imaginez cette bannière colorée flottant au-dessus de la forteresse, ce symbole de fierté nationale. Le はた japonnais qui ondule — ce caractère vous rappellera cette image puissante d'identité et de prestige.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "挙",
+    "readings": {
+      "kun": "あ.げる、あ.がる、こぞ.る",
+      "on": "キョ"
+    },
+    "meaning": "lever, soulever, projet, action",
+    "etymology": "Composé de 手 (main) à gauche et 举 (mouvement ascendant) à droite. La main qui soulève, qui élève, qui projette vers le haut. C'est l'action dynamique et intentionnelle, l'élan qui porte un projet ou une aspiration.",
+    "mnemonic": "La 挙 (あげる) — levez la main (手) vers les cieux ! Imaginez ce geste d'accomplissement, cette action puissante de soulever ou de lancer un projet. Le あげる, c'est cet élan ascendant, cette force qui transforme une idée en réalité.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "熊",
+    "readings": {
+      "kun": "くま",
+      "on": "ユウ"
+    },
+    "meaning": "ours",
+    "etymology": "Caractère complexe contenant des éléments suggérant une créature puissante et sauvage. La composition évoque la force brute et l'instinct. L'ours représente une force de la nature, respectée et crainte dans la culture japonnaise ancienne.",
+    "mnemonic": "La 熊 (くま) — ce géant des forêts qui impose le respect ! Imaginez cet animal massif émergeant de la brume forestière, ses griffes acérées et son grondement terrifiant. Le くま japonnais, symbole de puissance primitive et d'honneur sauvage.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "郡",
+    "readings": {
+      "kun": "こおり",
+      "on": "グン"
+    },
+    "meaning": "district, comté, région administrative",
+    "etymology": "Composé de 郶 (banlieue) contenant le concept de 君 (seigneur, autorité). La structure évoque une division administrative dirigée par un gouverneur local. C'est le système féodal japonnais, chaque district ayant son propre administration.",
+    "mnemonic": "La 郡 (ぐん) — une région administrative du Japon féodal ! Imaginez ces anciens districts, chacun avec son 郡守 (gouverneur) et ses lois propres. Le こおり, cette division géopolitique qui structurait le pouvoir. Ce caractère incarne l'organisation territoriale traditionnelle.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "径",
+    "readings": {
+      "kun": "みち、こみち、さしわたし、ただちに",
+      "on": "ケイ"
+    },
+    "meaning": "diamètre, chemin, sentier, méthode",
+    "etymology": "Composé de 彳 (marcher, chemin) à gauche et 巛 (cours d'eau, rivière) à droite. Les pieds qui marchent suivent naturellement le cours sinueux de l'eau. C'est le sentier qui relie deux points, le chemin direct ou la méthode efficace.",
+    "mnemonic": "La 径 (みち) — ce petit sentier secret qui traverse la montagne ! Imaginez ce raccourci merveilleux, ce chemin connu seulement des anciens. Le みち, c'est la méthode directe, le raccourci qui économise temps et effort. Une sente de beauté.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "功",
+    "readings": {
+      "kun": "いさお",
+      "on": "コウ、ク"
+    },
+    "meaning": "mérite, accomplissement, succès, honneur",
+    "etymology": "Composé de 力 (force, pouvoir) représentant l'effort physique ou mental. Le composant 工 suggère une action méthodique ou un travail. Ensemble, ils incarnent la force mise au travail, l'effort qui devient accomplissement et honneur.",
+    "mnemonic": "La 功 (こう) — cette sensation d'accomplissement quand vos efforts (力) portent leurs fruits ! Imaginez le いさお, cette gloire tranquille du travail bien fait, cet honneur mérité par la persévérance. C'est votre victoire personnelle, votre réussite.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "佐",
+    "readings": {
+      "kun": "",
+      "on": "サ"
+    },
+    "meaning": "assistant, aide, adjoint",
+    "etymology": "Composé de 人 (personne) à gauche et 左 (gauche, ouest) à droite. La personne positionnée à gauche du leader, celui qui soutient discrètement. C'est le rôle de l'assistant, celui qui aide sans chercher la gloire.",
+    "mnemonic": "La 佐 (さ) — l'assistant loyal toujours prêt à aider ! Imaginez cette personne de confiance positionnée à gauche du commandant, discrète mais essentielle. Le 佐官 (officier adjoint) qui fait tourner l'organisation avec efficacité silencieuse. Respect et dévouement.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "崎",
+    "readings": {
+      "kun": "さき、さい、みさき",
+      "on": "キ"
+    },
+    "meaning": "promontoire, cap, avancée côtière",
+    "etymology": "Composé de 山 (montagne) à gauche et 奇 (étrange, remarquable) à droite. Une formation géographique distinctive qui jaillit de la terre, se jetant majestueusement dans la mer. Le promontoire qui est remarquable par sa forme unique.",
+    "mnemonic": "La 崎 (さき) — ce cap rocheux grandiose qui s'avance dans la mer ! Imaginez cette formation de montagne si distinctive que les marins la reconnaissent de loin. Le misaki, ce promontoire sacré de la côte japonnaise — c'est la beauté sauvage et indomptable.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "氏",
+    "readings": {
+      "kun": "うじ、-うじ",
+      "on": "シ"
+    },
+    "meaning": "nom de famille, clan, lignée",
+    "etymology": "Caractère évoquant une personne ou une ligne de continuité. Historiquement, il représentait le clan ou la famille étendue partageant la même identité. C'est le concept de la descendance et de l'hérédité sacrée.",
+    "mnemonic": "La 氏 (うじ) — votre nom de famille, votre identité ancestrale ! Imaginez votre arbre généalogique remontant à travers les générations, tous portant le même うじ. Ce caractère est votre place dans l'histoire familiale, votre connexion au passé.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鹿",
+    "readings": {
+      "kun": "しか、か",
+      "on": "ロク"
+    },
+    "meaning": "cerf, daim",
+    "etymology": "Caractère complexe combinant des éléments évoquant une créature gracieuse aux bois ramifiés. Le composant 麋 suggère le mouvement rapide et l'élégance. C'est l'animal majestueux et fier des forêts japonnaises.",
+    "mnemonic": "Le 鹿 (しか) — ce cerf gracieux qui bondit dans la forêt ancienne ! Imaginez cet animal élancé aux bois spectaculaires, symbole de beauté naturelle et de liberté. Le しか japonnais, ce compagnon des sanctuaires shinto, essence de la nature sauvage.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "唱",
+    "readings": {
+      "kun": "とな.える",
+      "on": "ショウ"
+    },
+    "meaning": "chanter, réciter, proclamer, appeler",
+    "etymology": "Composé de 口 (bouche) à gauche et 昌 (clarté, luminosité) à droite. Les paroles sortent de la bouche avec clarté et force. C'est l'acte de proclamer haut et fort, de chanter avec conviction et puissance.",
+    "mnemonic": "La 唱 (となえる) — chanter ou proclamer à haute voix (口) ! Imaginez cette personne qui entonne un chant magnifique, dont la voix résonne à travers la vallée. Le となえる, cet appel joyeux et puissant, cette mélodie qui touche l'âme.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "松",
+    "readings": {
+      "kun": "まつ",
+      "on": "ショウ"
+    },
+    "meaning": "pin, sapin",
+    "etymology": "Composé de 木 (arbre) à gauche et 公 (public, noble) à droite. L'arbre noble et majestueux, symbole de durabilité et de dignité. Le pin persiste à travers les saisons, éternel et fidèle.",
+    "mnemonic": "Le 松 (まつ) — ce pin majestueux qui se dresse fièrement (木) ! Imaginez cet arbre noble des temples japonnais, ses aiguilles vertes éternelles, symbole de force et de persévérance. Le まつ, essence même de la beauté naturelle et de l'endurance.",
+    "jlpt": "N2"
+  }
+]

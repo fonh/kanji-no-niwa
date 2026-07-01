@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "冬",
+    "readings": {
+      "kun": "ふゆ",
+      "on": "トウ"
+    },
+    "meaning": "hiver",
+    "etymology": "Image originelle de deux fils suspendus (象形) symbolisant le froid glacial qui immobilise. Le caractère ancien ressemble à deux cordes gelées côte à côte. Évoque la contraction et l'arrêt caractéristiques de la saison la plus froide.",
+    "mnemonic": "En hiver (トウ), on gèle comme des fils figés ! Visualisez deux cordes penchées vers le bas, écrasées par le poids du froid — c'est l'essence de l'hiver nippon, rigide et immobile.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "答",
+    "readings": {
+      "kun": "こたえる、こたえ",
+      "on": "トウ"
+    },
+    "meaning": "réponse, solution",
+    "etymology": "Combinaison du radical 竹 (bambou, souplesse) et 合 (rencontre, union). Le bambou qui se plie pour « rencontrer » la question — symbolisant la flexibilité mentale nécessaire pour trouver une réponse.",
+    "mnemonic": "Un bambou (竹) qui 合 rencontre la question — comme si vous vous pliiez mentalement pour coller parfaitement à la question et en extraire la réponse (こたえ). Très zen !",
+    "jlpt": 4
+  },
+  {
+    "kanji": "頭",
+    "readings": {
+      "kun": "あたま、かしら、-がしら、かぶり",
+      "on": "トウ、ズ、ト"
+    },
+    "meaning": "tête, chef",
+    "etymology": "Le radical 頁 (tête) combiné avec 豆 (fève). Imagine une tête comme une fève ronde au sommet du corps. Le caractère pictographique ancien montrait explicitement une tête et des épaules.",
+    "mnemonic": "Votre 頭 (あたま, tête) est ronde comme une petite 豆 fève ! Placez cette fève en haut — c'est votre chef-d'œuvre cognitif, le sommet du corps.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "同",
+    "readings": {
+      "kun": "おなじ",
+      "on": "ドウ"
+    },
+    "meaning": "même, identique, accord",
+    "etymology": "Forme d'une personne (人) enfermée dans un carré (口). Deux personnes dans le même espace symbolisent l'unité et l'identité. Exprime littéralement « être dans la même boîte ».",
+    "mnemonic": "Deux personnes dans la même boîte carrée (口) — parfaitement identiques, sur la même longueur d'onde ! Elles partagent le même espace : おなじ, absolument pareil.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "売",
+    "readings": {
+      "kun": "うる、うれる",
+      "on": "バイ"
+    },
+    "meaning": "vendre",
+    "etymology": "Combine 士 (soldat, force) et 买 (acheter inversé). Imaginez un vendeur affrontant l'acheteur avec force de persuasion. Le mouvement énergétique de mettre en avant ses marchandises pour les vendre.",
+    "mnemonic": "Un soldat (士) montre sa force pour faire vendre (バイ) ses produits ! Imaginez-le avec ses marchandises en avant, criant うる, うる — vendez, vendez !",
+    "jlpt": 4
+  },
+  {
+    "kanji": "風",
+    "readings": {
+      "kun": "かぜ、かざ-",
+      "on": "フウ、フ"
+    },
+    "meaning": "vent, style, manière",
+    "etymology": "Le radical 風 anciennement écrit avec 虫 (insecte, mouvement) et 田 (champ). Le vent fait danser les insectes et courbe les récoltes du champ — pure image du mouvement invisible mais visible par ses effets.",
+    "mnemonic": "Visualisez le vent (フウ, かぜ) agitant les insectes dans les champs ! Ce mouvement gracieux des feuilles qui dansent, c'est le style nippon du vent — impalpable mais délicieux.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "歩",
+    "readings": {
+      "kun": "あるく、あゆむ",
+      "on": "ホ、ブ、フ"
+    },
+    "meaning": "marcher, pas, avancer",
+    "etymology": "Combine 止 (pied arrêté) et 少 (peu). Chaque pas est un arrêt momentané du pied avant le suivant. Image du mécanisme fondamental de la marche : une série d'arrêts fractionnés.",
+    "mnemonic": "Chaque pas (ホ, あるく) est un 止 arrêt minuscule du pied ! Peu à peu (少), vous avancez. La marche est une danse d'arrêts — stop et go, stop et go, c'est comme ça qu'on あゆむ progresse !",
+    "jlpt": 4
+  },
+  {
+    "kanji": "方",
+    "readings": {
+      "kun": "かた、-かた、-がた",
+      "on": "ホウ"
+    },
+    "meaning": "direction, côté, personne, manière",
+    "etymology": "Pictographe d'une personne de profil 人 avec un bâton pointant une direction. Image archaïque montrant quelqu'un qui s'oriente vers une direction spécifique — littéralement « celui qui va par là ».",
+    "mnemonic": "Une personne (人) pointant du doigt dans une direction (ホウ) — voilà la 方 direction ! C'est aussi votre コーチ coach, celui qui vous montre le chemin — かた, la personne-guide.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "妹",
+    "readings": {
+      "kun": "いもうと",
+      "on": "マイ"
+    },
+    "meaning": "sœur cadette",
+    "etymology": "Combine 女 (femme) et 末 (fin, extrémité). La femme de la fin, la dernière née, celle qui vient après — symbolise naturellement la plus jeune fille de la famille.",
+    "mnemonic": "Une 女 femme à la fin (末) de la lignée — votre いもうと, sœur cadette ! Elle est la 末妹, la plus jeune ; imaginez-la comme la « prolongation féminine » de la famille.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "門",
+    "readings": {
+      "kun": "かど、と",
+      "on": "モン"
+    },
+    "meaning": "porte, portail, domaine",
+    "etymology": "Pictographe direct d'une double porte vue de face. Deux battants de porte formant un cadre symétrique. L'image ancienne montre clairement l'entrée/sortie, le seuil entre deux mondes.",
+    "mnemonic": "Deux battants de porte face à vous (モン) — c'est la 門 ! Le かど, l'angle, le point de passage. Imaginez-la s'ouvrir majestueusement : クレーク... 門 s'ouvre, bienvenue !",
+    "jlpt": 4
+  },
+  {
+    "kanji": "夜",
+    "readings": {
+      "kun": "よ、よる",
+      "on": "ヤ"
+    },
+    "meaning": "nuit, soirée",
+    "etymology": "Combine 夕 (crépuscule) et 亦 (aussi, pareillement). Le moment du jour qui est « aussi » crépusculaire, prolongé — la transition vers l'obscurité totale. Exprime l'expansion de l'obscurité.",
+    "mnemonic": "Le crépuscule (夕) qui continue et continue (亦) — voilà la 夜 nuit (よ) ! L'obscurité qui s'étend dans le よる, la soirée profonde où les ombres gagnent du terrain.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "員",
+    "readings": {
+      "kun": "",
+      "on": "イン"
+    },
+    "meaning": "employé, membre, personne",
+    "etymology": "Combine 人 (personne) et 貝 (coquille, ressource). Chaque personne est une unité comptable, un élément distinct dans un ensemble. La coquille représente ici l'individualité précieuse de chaque membre.",
+    "mnemonic": "Une 人 personne (イン) dans une organisation — c'est un 員 membre ! Comptez-les : 1員, 2員, 3員 — chaque personne est un élément countable, une ressource précieuse.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "院",
+    "readings": {
+      "kun": "",
+      "on": "イン"
+    },
+    "meaning": "institution, temple, école, bâtiment",
+    "etymology": "Combine 阝 (colline/fortification) et 元 (source, début). Un lieu fortifié à la source, un refuge structuré — symbolise un espace protégé d'apprentissage ou de pratique spirituelle.",
+    "mnemonic": "Une forteresse (阝) à la source (元) de l'éducation — l'院 (イン) institution ! Pensez au temple bouddhiste, au lycée, à l'hôpital : tous des 院 lieux de refuge et de savoir.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "屋",
+    "readings": {
+      "kun": "や",
+      "on": "オク"
+    },
+    "meaning": "maison, toit, boutique, vendeur",
+    "etymology": "Combine 尸 (cadavre, forme humaine en position de repos) et 至 (arriver, apporter). Le toit qui apporte le repos, la maison où l'on se repose — image de l'abri fondamental.",
+    "mnemonic": "Un 尸 corps qui arrive (至) sous le toit — c'est votre 屋 maison (や) ! Le refuge ultime où vous posez votre tête fatiguée. Suffixe parfait pour les boutiques : 本屋 libraire, 魚屋 poissonnier.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "館",
+    "readings": {
+      "kun": "やかた、たて",
+      "on": "カン"
+    },
+    "meaning": "bâtiment, palais, manoir",
+    "etymology": "Combine 阝 (fortification) et 館 anciennement 貫 (passer, traverser). Un édifice fortifié où l'on traverse les espaces — suggère l'ampleur et la solennité d'une grande bâtisse.",
+    "mnemonic": "Une majestueuse fortification (阝) où circulent les visiteurs — la 館 (カン) palace, le manoir ! Imaginez-vous entrant solennellement dans ce やかた vaste bâtiment aristocratique.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "究",
+    "readings": {
+      "kun": "きわめる",
+      "on": "キュウ、ク"
+    },
+    "meaning": "recherche, étude, investigation",
+    "etymology": "Combine 穴 (caverne, creux) et 究 anciennement montrant une corde jusqu'au fond. Creuser profondément dans une caverne jusqu'au bout — image de l'investigation exhaustive.",
+    "mnemonic": "Descendre au fond de la caverne (穴) avec une corde — キュウ, c'est la 究 recherche profonde ! きわめる, vous allez jusqu'au bout, jusqu'à l'essence même de la connaissance.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "区",
+    "readings": {
+      "kun": "",
+      "on": "ク、オウ、コウ"
+    },
+    "meaning": "district, zone, ward, section",
+    "etymology": "Combine 匚 (boîte, espace délimité) et 玉 (perle, joyau). Un espace dessiné qui divise et organise — image de la partition territoriale en sections identifiables.",
+    "mnemonic": "Une boîte (匚) contenant des perles (玉) — chacune dans sa 区 zone propre ! C'est le district urbain (ク) où chaque quartier a sa petite place, bien séparé des autres.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "県",
+    "readings": {
+      "kun": "かける",
+      "on": "ケン"
+    },
+    "meaning": "préfecture",
+    "etymology": "Combine 目 (œil, vigilance) et 県 anciennement montrant un édifice administratif. L'œil du gouvernement surveille la région — image du contrôle préfectoral historique.",
+    "mnemonic": "L'œil (目) du préfet sur votre région — la 県 (ケン) préfecture ! Imaginez un administrateur qui 懸ける suspend son autorité, かける, sur toute une province.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "仕",
+    "readings": {
+      "kun": "つかえる",
+      "on": "シ、ジ"
+    },
+    "meaning": "servir, travail, emploi",
+    "etymology": "Combine 人 (personne) et 史 (histoire, enregistrement). Une personne enregistrant les ordres, servant en tant que scribe — image du rôle de serviteur fidèle.",
+    "mnemonic": "Une 人 personne servant (シ) — c'est le 仕事, le travail (つかえる) ! Imaginez un noble donnant des ordres et son serviteur exécutant : c'est l'essence du service.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "事",
+    "readings": {
+      "kun": "こと、つかう、つかえる",
+      "on": "ジ、ズ"
+    },
+    "meaning": "affaire, chose, fait, action",
+    "etymology": "Combine 亅 (bâton vertical, action) et 中 (intérieur). Une action à l'intérieur, un événement survenant — image générale de « quelque chose qui se passe ».",
+    "mnemonic": "Un bâton frappant au cœur (中) — boum ! — ジ, la 事 chose survient ! C'est le こと événement, l'affaire en cours. Chaque action est une 事 chose concrète qui se manifeste.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "写",
+    "readings": {
+      "kun": "うつす、うつる、うつ-、うつし",
+      "on": "シャ、ジャ"
+    },
+    "meaning": "copier, photographier, refléter, reproduire",
+    "etymology": "Combine 扌 (main) et 舎 (maison, demeurer). La main qui transfère l'image — comme la main du scribe recopiant, ou l'appareil photo capturant l'essence d'un lieu.",
+    "mnemonic": "Votre 手 main (扌) qui habite (舎) dans la 写 copie — うつす, vous reproduisez ! Imaginez un photographe transcrivant la réalité sur le film : シャッター, clic ! L'image うつります refléchit la scène.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "者",
+    "readings": {
+      "kun": "もの",
+      "on": "シャ"
+    },
+    "meaning": "personne, celui qui, -eur",
+    "etymology": "Combine 日 (soleil, jour, existence) et 耂 (vieux âge). Celui qui a vu le soleil se lever et se coucher — la personne qui persiste, qui a de l'expérience.",
+    "mnemonic": "Sous le soleil (日), la personne vieillit (耂) — voilà le 者 (シャ) quelqu'un, le もの personne ! Chaque 者 a traversé les jours : c'est un être d'expérience.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "主",
+    "readings": {
+      "kun": "ぬし、おも、あるじ",
+      "on": "シュ、ス、シュウ"
+    },
+    "meaning": "maître, seigneur, principal, chef",
+    "etymology": "Combine 丶 (point, essence) et 主 montrant une chandelle avec sa flamme. Le point lumineux principal, le cœur — symbolise celui qui est le foyer central, le maître.",
+    "mnemonic": "Une chandelle brillante (主) au cœur de la maison — c'est le 主 maître (ぬし), le chef ! L'essence principale est là, brillante : シュ, le seigneur, l'あるじ maître absolu.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "住",
+    "readings": {
+      "kun": "すむ、すまう、-ずまい",
+      "on": "ジュウ、ヂュウ、チュウ"
+    },
+    "meaning": "habiter, demeurer, résider",
+    "etymology": "Combine 亻 (personne) et 主 (principal, maître). La personne qui est le maître du lieu — celui qui habite, qui a établi son domaine principal.",
+    "mnemonic": "Une 人 personne établissant son 主 trône — voilà le 住 résider (ジュウ) ! Vous すむ habitez là, comme un vrai maître. Votre -ずまい logement devient votre terrain de jeu principal.",
+    "jlpt": 4
+  },
+  {
+    "kanji": "重",
+    "readings": {
+      "kun": "え、おもい、おもり、おもなう、かさねる、かさなる、おも",
+      "on": "ジュウ、チョウ"
+    },
+    "meaning": "lourd, important, empiler, superposer",
+    "etymology": "Combine 里 (village, masse) et anciennement montrait un poids au-dessus. L'idée d'accumulation — plusieurs couches de poids (車 + 車) s'empilant, créant la lourdeur et l'importance.",
+    "mnemonic": "Deux choses (重) s'empilent — おもい lourd ! Imaginez かさねる superposer des couches : la première, la deuxième, la troisième — chaque ajout rend le tout plus 重 important. ジュウ, l'empereur portant le poids de cent mille décisions !",
+    "jlpt": 4
+  }
+]

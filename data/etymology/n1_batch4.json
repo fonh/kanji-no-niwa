@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "茨",
+    "readings": {
+      "on": "シ、ジ",
+      "kun": "いばら、かや、くさぶき"
+    },
+    "meaning": "Ronce, épine",
+    "etymology": "Ce kanji combine 艹 (herbe) et 刺 (piqûre d'épée). L'image représente une herbe parsemée de piqûres — les ronces caractérisées par leurs épines acérées. Le composant 刺 rappelle l'action de piquer.",
+    "mnemonic": "Imaginez des ronces qui vous piquent — l'herbe 艹 au-dessus crie « attention, c'est une plante ! ». Le son シ rappelle le bruit sec des épines. Ces tiges épineuses sont les vraies ibaras du buisson hostile.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "阪",
+    "readings": {
+      "on": "ハン",
+      "kun": "さか"
+    },
+    "meaning": "Pente, élévation, hauteur",
+    "etymology": "Ce kanji combine 阜 (colline, radical 170) et 反 (retournement, inversion). L'image d'une pente qui monte puis redescend, inversant la direction du relief. La colline 阜 fournit le fondement géographique.",
+    "mnemonic": "Le radical 阜 montre une colline, et 反 c'est le « bounce » — une pente qui monte puis redescend ! ハン sounds like « han » — pensez à Osaka (大阪), ville célèbre avec ses pentes. La sakamichi monte et descend constamment.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "埼",
+    "readings": {
+      "on": "キ",
+      "kun": "さき、さい、みさき"
+    },
+    "meaning": "Cap, presqu'île, pointe terrestre",
+    "etymology": "Ce kanji combine 土 (terre) et 斤 (hache, outil pointu). L'image d'une pointe de terre qui s'avance dans l'eau comme la lame d'une hache. Historiquement, 埼 représente une proéminence géographique qui jaillit.",
+    "mnemonic": "Imaginez une presqu'île pointue (みさき) — c'est comme une hache 斤 plantée dans la terre 土. Le mot saki signifie « pointé en avant ». Cette cape jaillit fièrement dans l'océan comme une lame acérée.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "栃",
+    "readings": {
+      "on": "",
+      "kun": "とち"
+    },
+    "meaning": "Marronnier d'Inde",
+    "etymology": "Ce caractère kokuji (créé au Japon) combine 木 (arbre) avec un élément distinctif. Il représente l'arbre du marronnier, spécifique à la flore japonaise. C'est un arbre dont les fruits nourrissaient autrefois les chevaux en automne.",
+    "mnemonic": "栃 c'est un arbre 木 spécial — le marronnier (とち) ! C'est un kokuji créé uniquement pour cet arbre fondamental. Le radical 木 crie « c'est un arbre », et とち est le nom parfait dans la culture nippone. Très important en automne.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "阜",
+    "readings": {
+      "on": "フ、フウ",
+      "kun": ""
+    },
+    "meaning": "Colline, monticule, radical de relief",
+    "etymology": "阜 est un pictogramme primitif représentant deux collines ou terrasses empilées, symbolisant l'accumulation et l'élévation de terre. C'est le radical 170 qui apparaît dans tous les kanji relatifs au relief montagneux et aux formations géographiques.",
+    "mnemonic": "Deux monticules de terre empilés — c'est 阜 ! Vous voyez les deux petites « bosses » qui représentent les collines. Ce radical 170 apparaît partout : 阪 (pente), 阻 (bloquer). フ sounds like « fu » — les collines normales du Japon, partout !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "挨",
+    "readings": {
+      "on": "アイ",
+      "kun": "ひら.く"
+    },
+    "meaning": "S'approcher, pousser, ouvrir",
+    "etymology": "Ce kanji combine 扌 (main, radical 64) et 矣 (particule classique marquant direction/finalité). L'image d'une main qui pousse vers l'avant ou qui écarte. Le radical main montre que c'est une action manuelle d'ouverture.",
+    "mnemonic": "Une main 扌 qui pousse ! Hirakimashō (開きましょう) — ouvrez la porte ! Le radical main montre que c'est vous qui faites l'action. Imaginez écarter les portes du temple en poussant avec détermination — c'est l'approche (相逢) amicale.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "宛",
+    "readings": {
+      "on": "エン",
+      "kun": "あ.てる、-あて、-づつ、あたか.も"
+    },
+    "meaning": "Adresse, destinataire, comme, juste",
+    "etymology": "Ce kanji combine 宀 (maison, toit) et 夗 (anciennement « tranquille, paisible »). L'idée que une maison reçoit sa destinataire — la lettre trouvant sa demeure. Le sens s'étend à « adressé à » et « comme si ».",
+    "mnemonic": "Une maison 宀 qui reçoit une lettre — c'est l'adresse ! Aterimashō (当てましょう) — adressez-le à quelqu'un ! La petite maison reçoit votre paquet. Imaginez : 〇〇 様 宛 (à l'attention de...). Simple et efficace !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "闇",
+    "readings": {
+      "on": "アン、オン",
+      "kun": "やみ、くら.い"
+    },
+    "meaning": "Obscurité, ténèbres, chaos",
+    "etymology": "Ce kanji combine 門 (porte, barrière) et 音 (son, bruit). L'image d'une porte fermée dans le noir où résonnent des sons troublants et chaotiques. L'obscurité représente l'inconnu, le désordre et la peur.",
+    "mnemonic": "Imaginez une porte 門 complètement fermée dans le noir — yami (闇) ! Il n'y a que du bruit 音 et de la confusion à l'intérieur. Quand vous ouvrez, préparez-vous aux sons étranges. C'est sombre et inquiétant — un monde sans lumière.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "椅",
+    "readings": {
+      "on": "イ",
+      "kun": ""
+    },
+    "meaning": "Chaise, siège",
+    "etymology": "Ce kanji combine 木 (bois, arbre) et 奇 (étrange, rare, inusuel). À l'origine, les chaises étaient un meuble « étrange » et rare dans la Chine ancienne. C'est un caractère spécialisé créé pour représenter ce mobilier particulier en bois.",
+    "mnemonic": "Une chaise de bois 木 — imaginez vous asseoir dedans ! En Chine, c'était un meuble « étrange » 奇, d'où le kanji. Le radical bois crie « c'est du mobilier en bois ». イ sounds like « ii » — « ahhh » quand vous vous posez confortablement !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "萎",
+    "readings": {
+      "on": "イ",
+      "kun": "な、しお.れる、しな.びる、しぼ.む、な.える"
+    },
+    "meaning": "Flétrir, pencher, dépérir, s'affaiblir",
+    "etymology": "Ce kanji combine 艹 (herbe) et 委 (abandonner, déléguer, confier). L'image d'une herbe abandonnée qui flétrit progressivement. Le radical herbe montre qu'il s'agit d'une végétation qui se fane et perd sa vigueur.",
+    "mnemonic": "Une herbe 艹 qui s'abandonne — shiorereta (萎れた) ! Elle penche, elle se fane lentement. Imaginez une fleur qui reçoit l'ordre 委 « arrête de vivre » — elle se fane complètement. Le radical herbe dit « plante » — ce qui se dessèche.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "咽",
+    "readings": {
+      "on": "イン、エン、エツ",
+      "kun": "むせ.ぶ、むせ.る、のど、の.む"
+    },
+    "meaning": "Gorge, s'étouffer, être asphyxié",
+    "etymology": "Ce kanji combine 口 (bouche) et 因 (cause, chaîne de causalité). L'image d'une cause qui bloque la bouche — quelque chose qui étouffe la gorge. Le radical bouche indique le problème se situe à la gorge et la déglutition.",
+    "mnemonic": "Une bouche 口 qui s'étouffe — musebimashita (むせびました) ! Quelque chose cause 因 un blocage dans votre gorge (のど). Imaginez avaler quelque chose qui vous fait tousser et étouffer durement. Le radical bouche vous montre « c'est un problème de la gorge ! »",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "臼",
+    "readings": {
+      "on": "キュウ、グ",
+      "kun": "うす、うすづ.く"
+    },
+    "meaning": "Mortier, pilon, moudre",
+    "etymology": "臼 est un pictogramme ancien représentant un mortier (ustensile de cuisine creuse). Le caractère montre la forme d'un bol creux vu de dessus, avec ses contours distinctifs. C'est un instrument très ancien utilisé en Asie depuis des millénaires.",
+    "mnemonic": "Un mortier (うす) vu de haut — c'est 臼 ! Vous voyez la forme creuse et ronde du bol. キュウ sounds like « kyuu » — le bruit du pilon qui écrase les graines ! Imaginez moudre du riz ou des herbes dedans. Un outil essentiel de la cuisine ancestrale.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "餌",
+    "readings": {
+      "on": "ジ、ニ",
+      "kun": "え、えば、えさ、もち"
+    },
+    "meaning": "Appât, nourriture, pâture, proie",
+    "etymology": "Ce kanji combine 食 (nourriture) et 二 (deux). L'image de nourriture « double » ou prise entre deux états — comestible et séduisante. Le radical nourriture montre clairement qu'il s'agit de ce qu'on ingère ou qu'on offre aux animaux.",
+    "mnemonic": "De la nourriture 食 qui attire les poissons — c'est l'appât (えさ) ! Le poisson voit l'appât brillant et le mord instantanément. Imaginez les deux 二 types d'appâts : le riz et les vers. Quand vous lancez えさ à l'étang, les poissons arrivent en masse !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "怨",
+    "readings": {
+      "on": "エン、オン、ウン",
+      "kun": "うら.む、うらみ、うら.めしい"
+    },
+    "meaning": "Rancune, ressentiment, envie, jalousie",
+    "etymology": "Ce kanji combine 忄 (cœur, radical 61) et 元 (origine, source, racine). L'idée que la rancune prend racine profondément dans le cœur — un ressentiment qui persiste. Le radical cœur montre que c'est une émotion négative fondamentale.",
+    "mnemonic": "Un cœur 忄 qui garde une rancune depuis l'origine 元 — uramimashita (恨みました) ! Quand quelqu'un vous fait du mal, cette rancune s'enracine au fond de votre cœur pour toujours. エン sounds like « en » — l'écho du ressentiment qui résonne sans fin. Une vieille rivalité.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "臆",
+    "readings": {
+      "on": "オク、ヨク",
+      "kun": "むね、おくする"
+    },
+    "meaning": "Timidité, crainte, peur, lâcheté",
+    "etymology": "Ce kanji combine 月 (lune, mais aussi cœur/viscères) et 億 (un milliard, nombre énorme). L'idée que la peur dans le cœur se multiplie par millions. Le radical cœur indique une émotion viscérale profonde et irrationnelle.",
+    "mnemonic": "Un cœur 月 rempli de crainte — que vous pouvez compter en millions 億 ! Okuchikaku (臆病) means « cowardly ». Quand vous avez une grande peur, votre cœur se remplit de ces millions de petites peurs tremblantes. オク sounds « oku » — sombre comme 百万 peurs infinies.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "俺",
+    "readings": {
+      "on": "エン",
+      "kun": "おれ、われ"
+    },
+    "meaning": "Je, moi (familier, masculin)",
+    "etymology": "Ce kanji combine 人 (personne) et 我 (moi, ego, soi-même). L'idée de « une personne affirmant son propre ego » — d'où le pronom « ore » très masculin et désinvolte. C'est une forme plus brutale et directe que « watashi ».",
+    "mnemonic": "Un personne 人 qui crie « 俺だ ! » (c'est moi !) — très masculin et direct ! Ore (俺) est un pronom que les gars utilisent entre amis. Imaginez quelqu'un qui tape du poing et dit « 俺がやる ! » (je vais le faire !). L'affirmation de soi brute.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "苛",
+    "readings": {
+      "on": "カ",
+      "kun": "いじ.める、さいな.む、いらだ.つ、からい、こまかい"
+    },
+    "meaning": "Tourmenter, harceler, tracasser, fin",
+    "etymology": "Ce kanji combine 艹 (herbe) et 可 (pouvoir, possible). L'idée d'une herbe irritante ou piquante qui vous « peut » pas laisser tranquille. Le radical herbe indique une plante causant irritation ou douleur. Le sens s'étend à « traçasser » ou « menus ».",
+    "mnemonic": "Une herbe 艹 qui gratte et irrite — ijimemashita (いじめました) ! Quand quelqu'un vous « peut » pas (可能-impossibly) laisser tranquille, c'est du harcèlement pur. Imaginez vous écorcher les jambes avec des ronces — karai (�is = piquant). Le radical herbe montre la source irritante !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "牙",
+    "readings": {
+      "on": "ガ、ゲ",
+      "kun": "きば、は"
+    },
+    "meaning": "Défense, croc, fang, tusk",
+    "etymology": "牙 est un pictogramme ancien représentant une défense d'éléphant ou une longue dent pointue. Le caractère montre la forme d'une dent incurvée qui jaillit hors de la gueule. C'est un kanji très ancien dérivé des caractères ossualiens primitifs.",
+    "mnemonic": "Une grande dent pointue qui jaillit — 牙 (きば) ! Imaginez un tigre montrant ses crocs : ガ ! Ces énormes canines brillent dangereusement. Le caractère ressemble presque à une dent acérée qui pousse vers l'avant. Kiba (きば) est une arme naturelle terrifiante.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "崖",
+    "readings": {
+      "on": "ガイ、ゲ、ギ",
+      "kun": "がけ、きし、はて"
+    },
+    "meaning": "Falaise, escarpement, précipice",
+    "etymology": "Ce kanji combine 山 (montagne) et 涯 (rivage, limite, bord). L'image d'une montagne qui s'arrête brusquement à un bord abrupt — un précipice vertigineux. Le radical montagne indique le contexte géographique montagneux.",
+    "mnemonic": "Une montagne 山 qui s'arrête net à un bord abrupt — gake (崖) ! C'est un précipice qui fait peur. Imaginez marcher sur une montagne et soudain plus rien — la falaise ! ガイ sounds like « gai » — la limite extérieure (outside) du monde. Dangereux d'approcher !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "蓋",
+    "readings": {
+      "on": "ガイ、カイ、コウ",
+      "kun": "ふた、けだ.し、おお.う、かさ、かこう"
+    },
+    "meaning": "Couvercle, couverture, recouvrir, cacher",
+    "etymology": "Ce kanji combine 艹 (herbe) et 盖 (élément ancien signifiant « couvrir »). L'idée de couverture faite de feuilles ou branches entrelacées. Le radical herbe suggère un matériau naturel — les couvertures anciennes en paille tressée.",
+    "mnemonic": "Une couverture d'herbe 艹 posée dessus — futa (蓋, lid) ! Imaginez un couvercle de pot en paille tissée. ガイ sounds « gai » — vous entendez le bruit léger quand vous levez un couvercle. Quand vous « couvrez » (覆う) quelque chose, vous la cachez complètement.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "骸",
+    "readings": {
+      "on": "ガイ、カイ",
+      "kun": "むくろ"
+    },
+    "meaning": "Os, squelette, cadavre, dépouille",
+    "etymology": "Ce kanji combine 骨 (os, squelette) et 亥 (dernier rameau terrestre, symbolisant l'obscurité et la fin). L'idée de « os sans vie » ou « restes mortels ». Le radical os montre clairement la structure squelettique demeurant.",
+    "mnemonic": "Les os 骨 restants, le cadavre — mukuro (骸) ! C'est une image macabre mais importante. Imaginez les restes du squelette après que tout le reste ait disparu. ガイ sounds « gai » — le mot ancien pour « cadavre ». Les os ne mentent jamais sur la mort.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "柿",
+    "readings": {
+      "on": "シ",
+      "kun": "かき"
+    },
+    "meaning": "Kaki, plaqueminier, raisin de Chine",
+    "etymology": "Ce kanji combine 木 (arbre, bois) et 次 (ordre, séquence, suivant). L'idée que le plaqueminier est un arbre qui produit après les autres en automne. Le radical bois indique clairement qu'il s'agit d'un arbre fruitier vivace.",
+    "mnemonic": "Un arbre 木 qui produit un fruit délicieux — le kaki (柿) ! Après le printemps et l'été, c'est le tour du 柿 en automne. Le radical 木 crie « c'est un arbre ! ». Imaginez cueillir les kakis orange dans le verger en novembre — très sucré et délicieux.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "顎",
+    "readings": {
+      "on": "ガク",
+      "kun": "あご、あぎと"
+    },
+    "meaning": "Mâchoire, menton, branchie",
+    "etymology": "Ce kanji combine 頁 (tête, page) et 角 (coin, angle, corne). L'idée que la mâchoire est la partie pointue et anguleuse de la tête. Le radical tête indique clairement la localisation anatomique sur la tête.",
+    "mnemonic": "Une tête 頁 avec une mâchoire pointue en forme d'angle 角 — ago (顎, chin) ! Imaginez quelqu'un avec une très grosse mâchoire carrée. ガク sounds « gaku » — comme quand on serre les mâchoires très fort. Les poissons (魚) ont des branchies (えら) — c'est aussi une mâchoire !",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "葛",
+    "readings": {
+      "on": "カツ、カチ",
+      "kun": "つづら、くず"
+    },
+    "meaning": "Kudzu, fécule, vigneenvahissante",
+    "etymology": "Ce kanji combine 艹 (herbe) et 曷 (élément ancien signifiant « quand, lequel »). L'idée que c'est la plante qui couvre tout quand elle arrive au printemps. Le radical herbe indique une plante grimpante très vigoureuse.",
+    "mnemonic": "Une herbe 艹 qui pousse partout — kudzu (葛) ! C'est une vigne envahissante qui s'étend et couvre les arbres entiers. Imaginez une forêt complètement recouverte de cette plante verte grimpante. カツ sounds « katsu » — comme « to win » (勝つ) — cette plante gagne toujours ! Très problématique mais aussi utile.",
+    "jlpt": "N1"
+  },
+  {
+    "kanji": "釜",
+    "readings": {
+      "on": "フ",
+      "kun": "かま"
+    },
+    "meaning": "Chaudière, pot en fer, cuiseur de riz",
+    "etymology": "Ce kanji combine 釒 (métal, radical 167) et 罐 (pot, récipient). L'idée de « un pot en métal ». Le radical métal indique clairement qu'il s'agit d'un ustensile en fer forgé ou en cuivre. C'est un instrument de cuisine très ancien en Asie.",
+    "mnemonic": "Un pot en métal 釒 — kama (釜, kettle) ! Imaginez une vieille chaudière en fonte posée sur le feu, utilisée depuis des siècles. フ sounds « fu » — comme le son de la vapeur qui s'échappe ! Les kama sont essentielles — cultiver le riz dedans, symbole du Japon traditionnel.",
+    "jlpt": "N1"
+  }
+]

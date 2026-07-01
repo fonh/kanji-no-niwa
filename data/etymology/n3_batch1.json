@@ -1,0 +1,904 @@
+[
+  {
+    "kanji": "解",
+    "readings": {
+      "kun": "と、ほど",
+      "on": "カイ、ゲ"
+    },
+    "meaning": "défaire, comprendre, résoudre",
+    "etymology": "Composition de 角 (corne d'animal) et 刀 (couteau) et 牛 (bœuf). Le couteau qui sépare les cornes du bœuf = décomposer, analyser. Comprendre = démanteler pour voir l'intérieur.",
+    "mnemonic": "解 = couteau (刀) qui sépare les cornes (角) du bœuf (牛). Démonter = comprendre.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "格",
+    "readings": {
+      "kun": "",
+      "on": "カク、コウ"
+    },
+    "meaning": "rang, qualité, grammaire, règle",
+    "etymology": "Composition de 木 (bois) et 各 (chacun, séparé). Du bois taillé pour chaque usage = les montants d'une structure. La structure = les règles. La qualité = ce qui correspond aux règles.",
+    "mnemonic": "格 = 木 (bois) + 各 (chacun). Chaque pièce de bois à sa place = la structure = la règle.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "確",
+    "readings": {
+      "kun": "たし",
+      "on": "カク"
+    },
+    "meaning": "certain, confirmer",
+    "etymology": "Composition de 石 (pierre) et 隺 (grue — oiseau précis). La pierre sûre de l'oiseau précis = ce qu'on peut confirmer. La certitude = dure comme la pierre, précis comme la grue.",
+    "mnemonic": "確 = 石 (pierre/dur) + 隺 (précis). Aussi dur que la pierre, aussi précis = certain.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "快",
+    "readings": {
+      "kun": "こころよ",
+      "on": "カイ"
+    },
+    "meaning": "agréable, rapide, confortable",
+    "etymology": "Composition de 忄 (cœur) et 夬 (couper, libérer). Le cœur libéré de ses entraves = le plaisir, la légèreté. Ce qui libère le cœur = agréable.",
+    "mnemonic": "快 = 忄 (cœur) + 夬 (couper/libérer). Couper les entraves du cœur = le plaisir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "管",
+    "readings": {
+      "kun": "くだ",
+      "on": "カン"
+    },
+    "meaning": "tuyau, gérer, flûte",
+    "etymology": "Composition de 竹 (bambou) et 官 (officier, gestionnaire). Le tube de bambou de l'officier = la flûte de cérémonie. Par extension : tout ce qui canalise ou gère un flux.",
+    "mnemonic": "管 = 竹 (bambou/tube) + 官 (officier). Le tube de l'officier = la flûte, le tuyau, la gestion.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "関",
+    "readings": {
+      "kun": "せき",
+      "on": "カン"
+    },
+    "meaning": "rapport, barrière, concerner",
+    "etymology": "Composition de 門 (porte) et 関 (barre, verrou). La barre qui ferme la porte = le poste frontière. Ce qui relie ou bloque = un rapport.",
+    "mnemonic": "関 = porte (門) + barre (verrou). La barre de la porte = la barrière = le rapport entre deux choses.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "議",
+    "readings": {
+      "kun": "",
+      "on": "ギ"
+    },
+    "meaning": "délibérer, discuter",
+    "etymology": "Composition de 言 (paroles) et 義 (justice, sens). Les paroles justes = la délibération. Un débat équitable.",
+    "mnemonic": "議 = 言 (paroles) + 義 (justice). Des paroles justes = débattre équitablement.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "技",
+    "readings": {
+      "kun": "わざ",
+      "on": "ギ"
+    },
+    "meaning": "technique, art, compétence",
+    "etymology": "Composition de 手 (main) et 支 (soutenir, rameau). La main qui soutient et dirige = la technique. La compétence = la main qui brandit un outil avec maîtrise.",
+    "mnemonic": "技 = 手 (main) + 支 (diriger). La main qui maîtrise = la technique.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "境",
+    "readings": {
+      "kun": "さかい",
+      "on": "キョウ、ケイ"
+    },
+    "meaning": "frontière, situation, territoire",
+    "etymology": "Composition de 土 (terre) et 竟 (finir, extrémité). La terre à son extrémité = la frontière. La limite du territoire.",
+    "mnemonic": "境 = 土 (terre) + 竟 (fin). La fin de la terre = la frontière.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "均",
+    "readings": {
+      "kun": "ひと",
+      "on": "キン"
+    },
+    "meaning": "uniforme, égaliser",
+    "etymology": "Composition de 土 (terre) et 匀 (distribuer uniformément). Distribuer la terre uniformément = niveler, égaliser.",
+    "mnemonic": "均 = 土 (terre) + 匀 (uniformément). Niveler la terre = égal, uniforme.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "禁",
+    "readings": {
+      "kun": "きん",
+      "on": "キン"
+    },
+    "meaning": "interdire, prohibition",
+    "etymology": "Composition de 林 (bois, forêt) et 示 (sacré, tabou). La forêt sacrée interdite d'accès = la zone prohibée. Les tabous religieux sont devenus toutes les interdictions.",
+    "mnemonic": "禁 = 林 (forêt) + 示 (sacré). La forêt sacrée = zone interdite = prohibition.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "苦",
+    "readings": {
+      "kun": "くる、にが",
+      "on": "ク"
+    },
+    "meaning": "souffrir, amer",
+    "etymology": "Composition de 艹 (plante) et 古 (vieux, ancien). La vieille plante amère = la plante médicinale ancienne qui a mauvais goût. La souffrance = l'amertume.",
+    "mnemonic": "苦 = 艹 (plante) + 古 (vieux). La vieille plante amère = amertume = souffrance.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "句",
+    "readings": {
+      "kun": "",
+      "on": "ク"
+    },
+    "meaning": "phrase, vers, clause",
+    "etymology": "Composition de 句 (courber) et 口 (bouche). Ce que la bouche courbe = les groupes de sons qui forment une phrase. Un vers = un ensemble de sons courbé.",
+    "mnemonic": "句 = 口 (bouche) + courbure. Les sons qui s'enroulent forment une phrase.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "係",
+    "readings": {
+      "kun": "かかり、つな",
+      "on": "ケイ"
+    },
+    "meaning": "être lié à, responsable, relation",
+    "etymology": "Composition de 人 (personne) et 系 (fil, lien). Une personne liée par un fil = attachée à une responsabilité. Le responsable = celui qui est lié.",
+    "mnemonic": "係 = 人 (personne) + 系 (fil). La personne attachée par un fil = le responsable.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "型",
+    "readings": {
+      "kun": "かた",
+      "on": "ケイ"
+    },
+    "meaning": "moule, modèle, type",
+    "etymology": "Composition de 刑 (punir, former) et 土 (terre). La terre façonnée = le moule. Ce qui donne la forme = le modèle.",
+    "mnemonic": "型 = 刑 (former) + 土 (terre). Façonner la terre = le moule.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "激",
+    "readings": {
+      "kun": "はげ",
+      "on": "ゲキ"
+    },
+    "meaning": "intense, violent, agité",
+    "etymology": "Composition de 氵 (eau) et 敫 (jaillir, s'élancer). L'eau qui jaillit violemment = un courant déchaîné. L'intensité = l'eau en fureur.",
+    "mnemonic": "激 = 氵 (eau) + 敫 (jaillir). L'eau qui jaillit = violent, intense.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "現",
+    "readings": {
+      "kun": "あらわ",
+      "on": "ゲン"
+    },
+    "meaning": "présent, apparaître, actuel",
+    "etymology": "Composition de 王 (jade, précieux) et 見 (voir). Le jade qui apparaît = ce qui devient visible. Le présent = ce qu'on voit maintenant.",
+    "mnemonic": "現 = 王 (jade) + 見 (voir). Le jade rendu visible = apparaître = le présent.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "限",
+    "readings": {
+      "kun": "かぎ",
+      "on": "ゲン"
+    },
+    "meaning": "limite, restreindre",
+    "etymology": "Composition de 阝 (hauteur, côté) et 艮 (stable, s'arrêter). Ce qui s'arrête au flanc de la montagne = la limite. La paroi = la frontière.",
+    "mnemonic": "限 = 阝 (flanc) + 艮 (s'arrêter). Le flanc où on s'arrête = la limite.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "権",
+    "readings": {
+      "kun": "おもり",
+      "on": "ケン、ゴン"
+    },
+    "meaning": "droit, pouvoir, autorité",
+    "etymology": "Composition de 木 (arbre) et 雚 (grue, oiseau haut perché). L'oiseau qui domine du sommet de l'arbre = le pouvoir. L'autorité vient de la hauteur.",
+    "mnemonic": "権 = 木 (arbre) + 雚 (oiseau haut perché). Au sommet de l'arbre = le pouvoir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "効",
+    "readings": {
+      "kun": "き",
+      "on": "コウ"
+    },
+    "meaning": "efficace, effet",
+    "etymology": "Composition de 交 (croiser, échanger) et 攴 (frapper). Frapper jusqu'à l'échange = produire un effet. L'efficacité = ce qui produit un résultat.",
+    "mnemonic": "効 = 交 (échange) + 攴 (frapper). Frapper pour produire un effet = efficace.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "候",
+    "readings": {
+      "kun": "そうろう",
+      "on": "コウ"
+    },
+    "meaning": "temps (météo), saison, attendre (honorifique)",
+    "etymology": "Composition de 人 (personne) et 矦 (regarder au loin, sentinelle). La sentinelle qui observe = surveiller le temps. La météo = ce que la sentinelle observe.",
+    "mnemonic": "候 = sentinelle qui observe. La sentinelle regarde le ciel = la météo, les saisons.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "告",
+    "readings": {
+      "kun": "つ",
+      "on": "コク"
+    },
+    "meaning": "annoncer, informer",
+    "etymology": "Composition de 牛 (bœuf) et 口 (bouche). La bouche du bœuf = meugler, faire une annonce. L'annonce = un message qu'on ne peut pas manquer.",
+    "mnemonic": "告 = 牛 (bœuf) + 口 (bouche). Le bœuf qui meugle = une annonce que tout le monde entend.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "混",
+    "readings": {
+      "kun": "ま、こ",
+      "on": "コン"
+    },
+    "meaning": "mélanger, mêler",
+    "etymology": "Composition de 氵 (eau) et 昆 (ensemble, multitude d'insectes). L'eau avec une multitude = un mélange. Ce qui fond ensemble dans un liquide = mélanger.",
+    "mnemonic": "混 = 氵 (eau) + 昆 (multitude). Beaucoup de choses dans l'eau = mélange.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "採",
+    "readings": {
+      "kun": "と",
+      "on": "サイ"
+    },
+    "meaning": "cueillir, adopter, embaucher",
+    "etymology": "Composition de 手 (main) et 采 (cueillir, sélectionner). La main qui cueille = sélectionner. Adopter = choisir avec la main.",
+    "mnemonic": "採 = 手 (main) + 采 (cueillir). La main qui choisit = cueillir, embaucher.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "際",
+    "readings": {
+      "kun": "きわ",
+      "on": "サイ"
+    },
+    "meaning": "bord, occasion, lors de",
+    "etymology": "Composition de 阝 (côté, flanc) et 祭 (fête, cérémonie). Le flanc de la fête = le bord. L'occasion = le moment où quelque chose se passe au bord.",
+    "mnemonic": "際 = 阝 (bord) + 祭 (fête). Au bord de la fête = l'occasion, le moment.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "察",
+    "readings": {
+      "kun": "さっ",
+      "on": "サツ"
+    },
+    "meaning": "examiner, inspecter, déduire",
+    "etymology": "Composition de 宀 (toit) et 祭 (sacrifice/cérémonie). Observer les cérémonies sous le toit = les inspecter. Déduire = observer pour comprendre.",
+    "mnemonic": "察 = 宀 (abri/observation) + 祭 (cérémonie). Observer la cérémonie = inspecter, déduire.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "参",
+    "readings": {
+      "kun": "まい",
+      "on": "サン、シン"
+    },
+    "meaning": "participer, se rendre (au temple), se laisser abattre",
+    "etymology": "Pictogramme de trois étoiles alignées (Orion). Se rendre sous les étoiles = participer à un rituel nocturne. Par extension : se présenter, participer.",
+    "mnemonic": "参 = trois étoiles (Orion). Se rendre sous les étoiles = participer, se présenter.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "産",
+    "readings": {
+      "kun": "う、うぶ",
+      "on": "サン"
+    },
+    "meaning": "produire, naissance, propriété",
+    "etymology": "Composition de 生 (naissance) et 彦 (personne talentueuse) et 山. La naissance sur la montagne = la production naturelle. Ce qui naît = ce qui est produit.",
+    "mnemonic": "産 = 生 (naître) sur montagne. Ce qui naît = ce qui est produit, la propriété.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "支",
+    "readings": {
+      "kun": "ささ",
+      "on": "シ"
+    },
+    "meaning": "soutenir, branche, dépenser",
+    "etymology": "Composition de 十 (dix/croix) et 又 (main). Une main qui tient un piquet = soutenir. Le rameau = ce qui supporte.",
+    "mnemonic": "支 = 十 (piquet) + 又 (main). La main qui plante un piquet = soutenir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "資",
+    "readings": {
+      "kun": "",
+      "on": "シ"
+    },
+    "meaning": "ressources, fonds, qualités",
+    "etymology": "Composition de 次 (suivant, accumuler) et 貝 (monnaie). L'argent qui s'accumule = les ressources. Ce qu'on a de réserve.",
+    "mnemonic": "資 = 次 (s'accumuler) + 貝 (argent). L'argent accumulé = les ressources.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "示",
+    "readings": {
+      "kun": "しめ",
+      "on": "シ、ジ"
+    },
+    "meaning": "montrer, indiquer, sacré",
+    "etymology": "Pictogramme d'un autel avec des offrandes. La table des sacrifices = ce qui est montré aux dieux. Le sacré = ce qui se montre.",
+    "mnemonic": "示 = un autel avec des offrandes. Montrer aux dieux = indiquer, sacré.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "識",
+    "readings": {
+      "kun": "し",
+      "on": "シキ"
+    },
+    "meaning": "conscience, reconnaître, connaissance",
+    "etymology": "Composition de 言 (paroles) et 戠 (marquer, identifier). Les paroles qui identifient = reconnaître. La connaissance = ce qu'on peut nommer.",
+    "mnemonic": "識 = 言 (paroles) + 戠 (identifier). Nommer = reconnaître = avoir conscience de.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "射",
+    "readings": {
+      "kun": "い",
+      "on": "シャ"
+    },
+    "meaning": "tirer (flèche), injecter",
+    "etymology": "Composition de 身 (corps) et 寸 (mesure/doigt). Le corps qui mesure et vise = tirer avec précision. La flèche = le corps en extension vers la cible.",
+    "mnemonic": "射 = 身 (corps) + 寸 (mesure). Le corps qui prend ses mesures pour viser = tirer.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "宗",
+    "readings": {
+      "kun": "",
+      "on": "シュウ、ソウ"
+    },
+    "meaning": "secte, école, ancêtre",
+    "etymology": "Composition de 宀 (toit) et 示 (autel). L'autel sous le toit = le lieu de culte. La lignée = les ancêtres vénérés sous le même toit.",
+    "mnemonic": "宗 = 宀 (toit) + 示 (autel). L'autel de la maison = la tradition familiale, la secte.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "授",
+    "readings": {
+      "kun": "さず",
+      "on": "ジュ"
+    },
+    "meaning": "enseigner, conférer, transmettre",
+    "etymology": "Composition de 手 (main) et 受 (recevoir). La main qui donne à quelqu'un qui reçoit = transmettre. L'enseignement = la main qui passe le savoir.",
+    "mnemonic": "授 = 手 (main) + 受 (recevoir). La main qui donne ce qu'une autre reçoit = enseigner.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "術",
+    "readings": {
+      "kun": "すべ",
+      "on": "ジュツ"
+    },
+    "meaning": "art, technique, méthode",
+    "etymology": "Composition de 行 (carrefour, voie) et 术 (millet — symbole de technique agricole). Les techniques de la voie = les méthodes. L'art = ce qui s'apprend sur la voie.",
+    "mnemonic": "術 = 行 (voie) + 术 (technique). Les techniques de la voie = l'art.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "承",
+    "readings": {
+      "kun": "うけたまわ",
+      "on": "ショウ"
+    },
+    "meaning": "accepter, transmettre, continuer",
+    "etymology": "Composition de 了 (terminer, conclure) et 手 (mains). Plusieurs mains qui se passent quelque chose = relayer. Accepter = recevoir ce qui est passé.",
+    "mnemonic": "承 = mains (手) qui se relaient (了). Passer de main en main = transmettre, accepter.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "証",
+    "readings": {
+      "kun": "あかし",
+      "on": "ショウ"
+    },
+    "meaning": "preuve, témoigner",
+    "etymology": "Composition de 言 (paroles) et 正 (correct, juste). Les paroles correctes = la preuve. Le témoignage = des paroles justes.",
+    "mnemonic": "証 = 言 (paroles) + 正 (correct). Des paroles correctes = la preuve.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "状",
+    "readings": {
+      "kun": "",
+      "on": "ジョウ"
+    },
+    "meaning": "situation, lettre officielle, forme",
+    "etymology": "Composition de 爿 (lit/planche) et 犬 (chien). Le chien couché sur la planche = la situation au repos. Une description de situation = la lettre officielle.",
+    "mnemonic": "状 = planche + chien. La situation du chien couché = la situation actuelle, la lettre.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "深",
+    "readings": {
+      "kun": "ふか",
+      "on": "シン"
+    },
+    "meaning": "profond",
+    "etymology": "Composition de 氵 (eau) et 罙 (fouiller profondément). L'eau dans laquelle on fouille = la profondeur. Ce qu'on atteint en descendant.",
+    "mnemonic": "深 = 氵 (eau) + fouille. Fouiller dans l'eau = la profondeur.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "申",
+    "readings": {
+      "kun": "もう",
+      "on": "シン"
+    },
+    "meaning": "dire (humble), éclair, 9e heure",
+    "etymology": "Pictogramme d'un éclair dans les nuages. L'éclair qui descend = la parole divine. Dire humblement = se prosterner comme sous un éclair.",
+    "mnemonic": "申 = un éclair vertical dans les nuages. Parler humblement = comme si la foudre vous écrasait.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "制",
+    "readings": {
+      "kun": "",
+      "on": "セイ"
+    },
+    "meaning": "contrôler, système, fabriquer",
+    "etymology": "Composition de 未 (arbre non mûr) et 刀 (couteau). Tailler l'arbre à la bonne taille = le contrôler. Un système = des règles taillées précisément.",
+    "mnemonic": "制 = 未 (arbre) + 刀 (couteau). Tailler l'arbre = contrôler, établir des règles.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "税",
+    "readings": {
+      "kun": "",
+      "on": "ゼイ"
+    },
+    "meaning": "impôt, taxe",
+    "etymology": "Composition de 禾 (céréale) et 兌 (échanger, distribuer). Distribuer les céréales = l'impôt en nature. La taxe = la partie des céréales donnée à l'État.",
+    "mnemonic": "税 = 禾 (céréale) + 兌 (distribuer). Donner sa part de céréales = l'impôt.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "責",
+    "readings": {
+      "kun": "せ",
+      "on": "セキ"
+    },
+    "meaning": "responsabilité, blâmer",
+    "etymology": "Composition de 束 (lier, attacher) et 貝 (monnaie). Ce qui est attaché à l'argent = la dette, la responsabilité. On blâme = on réclame ce qui est dû.",
+    "mnemonic": "責 = 束 (lier) + 貝 (argent). La dette liée à l'argent = la responsabilité.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "績",
+    "readings": {
+      "kun": "",
+      "on": "セキ"
+    },
+    "meaning": "résultats, accomplissements",
+    "etymology": "Composition de 糸 (fil) et 責 (responsabilité). Les fils de la responsabilité accumulés = les résultats. Les accomplissements = les fils qu'on a tissés.",
+    "mnemonic": "績 = 糸 (fil) + 責 (responsabilité). Les fils de son travail = les résultats.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "積",
+    "readings": {
+      "kun": "つ",
+      "on": "セキ"
+    },
+    "meaning": "accumuler, empiler",
+    "etymology": "Composition de 木 (bois) et 責 (obligation). Le bois qu'on est obligé d'empiler = le stock. L'accumulation = l'empilement méthodique.",
+    "mnemonic": "積 = 木 (bois) + 責 (obligation). Empiler le bois = accumuler.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "接",
+    "readings": {
+      "kun": "つ",
+      "on": "セツ"
+    },
+    "meaning": "contacter, relier, accueillir",
+    "etymology": "Composition de 手 (main) et 妾 (concubine, proche). La main qui s'approche = le contact. Accueillir = tendre la main.",
+    "mnemonic": "接 = 手 (main) + 妾 (proche). La main qui touche = le contact.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "設",
+    "readings": {
+      "kun": "もう",
+      "on": "セツ"
+    },
+    "meaning": "établir, installer, créer",
+    "etymology": "Composition de 言 (paroles) et 殳 (bâton/outil). Les paroles avec un outil = énoncer en construisant. Établir = dire ce qu'on va créer.",
+    "mnemonic": "設 = 言 (paroles) + 殳 (outil). Parler en construisant = établir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "存",
+    "readings": {
+      "kun": "あ",
+      "on": "ソン、ゾン"
+    },
+    "meaning": "exister, conserver",
+    "etymology": "Composition de 才 (talent, jeune pousse) et 子 (enfant). La jeune pousse-enfant qui perdure = l'existence. Ce qui continue = ce qui est conservé.",
+    "mnemonic": "存 = 才 (jeune pousse) + 子 (enfant). La jeune vie qui perdure = exister.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "態",
+    "readings": {
+      "kun": "",
+      "on": "タイ"
+    },
+    "meaning": "posture, attitude, état",
+    "etymology": "Composition de 能 (capacité, ours) et 心 (cœur). Les capacités du cœur = l'état émotionnel. La posture = comment le cœur se montre.",
+    "mnemonic": "態 = 能 (capacité) + 心 (cœur). L'état du cœur qui se montre = l'attitude.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "達",
+    "readings": {
+      "kun": "た",
+      "on": "タツ"
+    },
+    "meaning": "atteindre, expert, pluriel (amis)",
+    "etymology": "Composition de 辶 (marcher) et 幸 (bonheur, arrivée). Marcher jusqu'au bonheur = atteindre. Celui qui est arrivé = l'expert.",
+    "mnemonic": "達 = 辶 (marche) + 幸 (bonheur). Marcher jusqu'au bonheur = atteindre le but.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "断",
+    "readings": {
+      "kun": "た",
+      "on": "ダン"
+    },
+    "meaning": "couper, décider, refuser",
+    "etymology": "Composition de 斤 (hache) et 糸 (fil). L'hache qui coupe le fil = trancher définitivement. La décision = couper entre deux options.",
+    "mnemonic": "断 = 斤 (hache) + 糸 (fil). L'hache qui tranche le fil = décider, refuser.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "値",
+    "readings": {
+      "kun": "ね、あたい",
+      "on": "チ"
+    },
+    "meaning": "valeur, prix",
+    "etymology": "Composition de 人 (personne) et 直 (droit, direct). La valeur directe de la personne = le prix. Ce qu'on donne directement en échange.",
+    "mnemonic": "値 = 人 (personne) + 直 (direct). La valeur directe = le prix.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "著",
+    "readings": {
+      "kun": "あらわ、いちじる",
+      "on": "チョ、ジャク"
+    },
+    "meaning": "remarquable, écrire un livre",
+    "etymology": "Composition de 艹 (plantes) et 者 (personne). La personne parmi les plantes = quelqu'un qui se distingue. Écrire = se distinguer par ses œuvres.",
+    "mnemonic": "著 = 艹 (plantes) + 者 (personne). Se distinguer parmi les plantes = remarquable, auteur.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "庁",
+    "readings": {
+      "kun": "",
+      "on": "チョウ"
+    },
+    "meaning": "bureau (gouvernemental), agence",
+    "etymology": "Forme simplifiée de 廳 : 广 (grand bâtiment) + 廳 (entendre, écouter). Le grand bâtiment où on écoute = le bureau officiel.",
+    "mnemonic": "庁 = 广 (grand bâtiment officiel). Le bâtiment où travaille l'administration.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "頂",
+    "readings": {
+      "kun": "いただ",
+      "on": "チョウ"
+    },
+    "meaning": "sommet, recevoir (humble)",
+    "etymology": "Composition de 丁 (clou, piquet) et 頁 (tête). Le piquet planté sur la tête = le sommet. Recevoir sur la tête = recevoir humblement.",
+    "mnemonic": "頂 = 丁 (piquet) sur 頁 (tête). Le piquet au sommet de la tête = le sommet.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "痛",
+    "readings": {
+      "kun": "いた",
+      "on": "ツウ"
+    },
+    "meaning": "douleur, douloureux",
+    "etymology": "Composition de 疒 (malade au lit) et 甬 (conduit, tuyau). La maladie qui coule dans les conduits du corps = la douleur. Ce qui circule comme un poison.",
+    "mnemonic": "痛 = 疒 (maladie) + 甬 (conduit). La maladie qui court dans le corps = la douleur.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "的",
+    "readings": {
+      "kun": "まと",
+      "on": "テキ"
+    },
+    "meaning": "cible, suffixe adjectival -ique",
+    "etymology": "Composition de 白 (blanc) et 勺 (mesurer). La cible blanche mesurée = la cible de tir à l'arc. Le blanc qui marque où viser.",
+    "mnemonic": "的 = 白 (blanc) + 勺 (mesure). La cible blanche = viser. Suffixe -ique = pointer vers un concept.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "程",
+    "readings": {
+      "kun": "ほど",
+      "on": "テイ"
+    },
+    "meaning": "degré, mesure, à peu près",
+    "etymology": "Composition de 禾 (céréale) et 呈 (présenter). Présenter les céréales mesurées = une quantité définie. Le degré = ce qu'on peut mesurer et présenter.",
+    "mnemonic": "程 = 禾 (céréale) + 呈 (présenter). Présenter une quantité mesurée = le degré.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "的",
+    "readings": {
+      "kun": "まと",
+      "on": "テキ"
+    },
+    "meaning": "cible, -ique (suffixe)",
+    "etymology": "Composition de 白 (blanc) et 勺 (petite mesure). Une petite tache blanche = la cible blanche de l'arc. Précis comme une cible.",
+    "mnemonic": "的 = blanc ciblé. La petite tache blanche = la cible. 的確 = précis.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "努",
+    "readings": {
+      "kun": "つと",
+      "on": "ド"
+    },
+    "meaning": "s'efforcer",
+    "etymology": "Composition de 奴 (esclave, force brute) et 力 (force). La force de l'esclave = travailler dur. S'efforcer = mettre toute sa force.",
+    "mnemonic": "努 = 奴 (force brute) + 力 (force). Doubler la force = s'efforcer.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "敗",
+    "readings": {
+      "kun": "やぶ",
+      "on": "ハイ"
+    },
+    "meaning": "être défait, échec",
+    "etymology": "Composition de 貝 (monnaie, coquillage) et 攴 (frapper). Frapper la monnaie = la briser, la dévaluer. La défaite = ce qui est brisé.",
+    "mnemonic": "敗 = 貝 (coquillage/valeur) + 攴 (frapper). Briser la valeur = l'échec, la défaite.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "背",
+    "readings": {
+      "kun": "せ、そむ",
+      "on": "ハイ"
+    },
+    "meaning": "dos, trahir, s'opposer",
+    "etymology": "Composition de 北 (dos à dos) et 肉/月 (corps). Le dos du corps = la partie qu'on ne voit pas. Tourner le dos = trahir.",
+    "mnemonic": "背 = 北 (dos) + 月 (corps). Le dos du corps = tourner le dos = trahir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "比",
+    "readings": {
+      "kun": "くら",
+      "on": "ヒ"
+    },
+    "meaning": "comparer",
+    "etymology": "Deux personnes (人×2) côte à côte. Mettre deux personnes ensemble = les comparer.",
+    "mnemonic": "比 = deux personnes côte à côte. La comparaison = voir qui est plus grand.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "非",
+    "readings": {
+      "kun": "あら",
+      "on": "ヒ"
+    },
+    "meaning": "faux, non-, préfixe négatif",
+    "etymology": "Pictogramme de deux ailes qui s'écartent dans des directions opposées. Ce qui part dans deux sens opposés = ce qui est contraire. La négation = l'opposé.",
+    "mnemonic": "非 = deux ailes qui s'opposent (↑←). Ce qui va dans le sens contraire = faux, non-.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "批",
+    "readings": {
+      "kun": "",
+      "on": "ヒ"
+    },
+    "meaning": "critiquer",
+    "etymology": "Composition de 手 (main) et 比 (comparer). Comparer avec la main = évaluer par comparaison = critiquer.",
+    "mnemonic": "批 = 手 (main) + 比 (comparer). Comparer en touchant = critiquer.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "評",
+    "readings": {
+      "kun": "ひょう",
+      "on": "ヒョウ"
+    },
+    "meaning": "critique, évaluation",
+    "etymology": "Composition de 言 (paroles) et 平 (plat, équitable). Des paroles équilibrées = une évaluation juste. La critique = ce qu'on dit équitablement.",
+    "mnemonic": "評 = 言 (paroles) + 平 (équilibré). Des paroles équitables = la critique.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "複",
+    "readings": {
+      "kun": "",
+      "on": "フク"
+    },
+    "meaning": "double, répété, complexe",
+    "etymology": "Composition de 衤 (vêtement) et 复 (retourner, répéter). Un vêtement avec un liseré répété = la doublure. Ce qui est doublé = le double, la répétition.",
+    "mnemonic": "複 = 衤 (vêtement) + 复 (répéter). La doublure du vêtement = double, complexe.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "仏",
+    "readings": {
+      "kun": "ほとけ",
+      "on": "ブツ、フツ"
+    },
+    "meaning": "bouddha, France",
+    "etymology": "Composition de 人 (personne) et 弗 (nier). La personne qui nie l'ego = le bouddha. Translittération phonétique pour 'France' (仏蘭西 Furansu).",
+    "mnemonic": "仏 = 人 (personne) + 弗 (nier). Nier l'ego = le bouddha. Et phonétiquement = France.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "防",
+    "readings": {
+      "kun": "ふせ",
+      "on": "ボウ"
+    },
+    "meaning": "défense, prévenir",
+    "etymology": "Composition de 阝 (rempart) et 方 (direction, carré). Un rempart dans toutes les directions = la défense. Prévenir = bloquer avant.",
+    "mnemonic": "防 = 阝 (rempart) + 方 (directions). Des remparts dans toutes les directions = défense.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "棒",
+    "readings": {
+      "kun": "ぼう",
+      "on": "ボウ"
+    },
+    "meaning": "bâton, tige",
+    "etymology": "Composition de 木 (bois) et 奉 (offrir respectueusement). Le bâton offert = le sceptre, l'objet de bois tenu droit. Un bâton = l'outil de bois tenu debout.",
+    "mnemonic": "棒 = 木 (bois) + 奉 (tenu haut). Le bois tenu droit = le bâton.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "望",
+    "readings": {
+      "kun": "のぞ",
+      "on": "モウ、ボウ"
+    },
+    "meaning": "espérer, désirer, regarder au loin",
+    "etymology": "Composition de 月 (lune) et 王 (roi) et 亡 (disparaître). Le roi qui regarde la lune disparaître = le désir de ce qui est loin. L'espoir = regarder vers ce qu'on ne peut pas atteindre.",
+    "mnemonic": "望 = roi (王) qui regarde la lune (月) s'en aller (亡). L'espoir = désirer ce qui s'éloigne.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "暮",
+    "readings": {
+      "kun": "く",
+      "on": "ボ"
+    },
+    "meaning": "crépuscule, vivre (une période)",
+    "etymology": "Composition de 草 (艹×2 — la végétation) et 日 (soleil). Le soleil qui descend sous la végétation = le coucher du soleil. La vie = vivre jusqu'au coucher.",
+    "mnemonic": "暮 = 艹 (herbe épaisse) + 日 (soleil) en bas. Le soleil qui se couche dans les herbes = le crépuscule.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "夢",
+    "readings": {
+      "kun": "ゆめ",
+      "on": "ム"
+    },
+    "meaning": "rêve",
+    "etymology": "Composition de 艹 (plantes), 罒 (filet), 夕 (soir) et 夂 (marcher lentement). Marcher lentement le soir à travers un filet de végétation = la vision nocturne, le rêve.",
+    "mnemonic": "夢 = végétation + filet + soir + marche lente. Se perdre dans la végétation la nuit = le rêve.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "迷",
+    "readings": {
+      "kun": "まよ",
+      "on": "メイ"
+    },
+    "meaning": "se perdre, hésiter",
+    "etymology": "Composition de 辶 (marcher) et 米 (riz, grains). Marcher dans les grains dispersés = se perdre. Le riz épars = les chemins qui divergent.",
+    "mnemonic": "迷 = 辶 (marche) + 米 (grains épars). Marcher parmi des grains dispersés = se perdre.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "命",
+    "readings": {
+      "kun": "いのち",
+      "on": "メイ、ミョウ"
+    },
+    "meaning": "vie, ordre, destin",
+    "etymology": "Composition de 口 (bouche, ordre) et 令 (commandement) et 亼 (réunion). L'ordre de se réunir = la convocation = l'appel de la vie. Le destin = l'ordre qu'on a reçu d'exister.",
+    "mnemonic": "命 = ordre (令) + bouche (口). L'ordre reçu d'exister = la vie, le destin.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "毛",
+    "readings": {
+      "kun": "け",
+      "on": "モウ"
+    },
+    "meaning": "poil, cheveu, laine",
+    "etymology": "Pictogramme de poils qui sortent de la peau — trois traits courbés qui s'élèvent. Un dessin simplifié de pelage ou de poils.",
+    "mnemonic": "毛 = trois poils qui sortent. Un animal (ou une tête) dont les poils se dressent.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "約",
+    "readings": {
+      "kun": "つづ",
+      "on": "ヤク"
+    },
+    "meaning": "accord, environ, abréger",
+    "etymology": "Composition de 糸 (fil) et 勺 (mesure). Mesurer le fil = une quantité définie. L'accord = lier des fils à une quantité précise.",
+    "mnemonic": "約 = 糸 (fil) + 勺 (mesure). Le fil mesuré = l'accord, environ.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "欲",
+    "readings": {
+      "kun": "ほっ",
+      "on": "ヨク"
+    },
+    "meaning": "désir, vouloir",
+    "etymology": "Composition de 谷 (vallée, creux) et 欠 (bouche ouverte). La bouche ouverte vers le vide = le désir. Ce qu'on veut remplir.",
+    "mnemonic": "欲 = 谷 (vide/vallée) + 欠 (bouche ouverte). La bouche ouverte vers le vide = le désir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "余",
+    "readings": {
+      "kun": "あま",
+      "on": "ヨ"
+    },
+    "meaning": "surplus, reste, moi (littéraire)",
+    "etymology": "Composition de 人 (personne) et 余 (ce qui dépasse). Ce qui dépasse la personne = le surplus. Ce qui reste en plus.",
+    "mnemonic": "余 = quelque chose qui dépasse. Le reste = ce qui dépasse la quantité nécessaire.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "与",
+    "readings": {
+      "kun": "あた",
+      "on": "ヨ"
+    },
+    "meaning": "donner, participer",
+    "etymology": "Pictogramme de deux mains qui se tendent vers un objet. Un côté donne, l'autre reçoit = l'échange de don.",
+    "mnemonic": "与 = deux mains tendues. Celle du haut donne, celle du bas reçoit = donner.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "養",
+    "readings": {
+      "kun": "やしな",
+      "on": "ヨウ"
+    },
+    "meaning": "nourrir, entretenir",
+    "etymology": "Composition de 羊 (mouton) et 食 (manger). Le mouton qui mange = nourrir. Entretenir = nourrir régulièrement.",
+    "mnemonic": "養 = 羊 (mouton) + 食 (manger). Nourrir le mouton = entretenir.",
+    "jlpt": "N3"
+  }
+]

@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "啓",
+    "readings": {
+      "kun": "ひら.く、さと.す",
+      "on": "ケイ"
+    },
+    "meaning": "disclose, open, say",
+    "etymology": "Ce kanji combine 口 (bouche, parole) avec 啓, représentant l'ouverture. L'image originelle évoque l'ouverture d'une porte pour parler ou communiquer. Cela symbolise l'action de révéler une connaissance ou de permettre au message de passer.",
+    "mnemonic": "Imaginez une PORTE qui s'OUVRE (ひら.く) pour laisser PARLER quelqu'un. 啓示 (keiji) signifie révélation - quand une porte s'ouvre pour révéler la vérité du cosmos!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "憩",
+    "readings": {
+      "kun": "いこ.い、いこ.う",
+      "on": "ケイ"
+    },
+    "meaning": "recess, rest, relax",
+    "etymology": "Le radical 心 (cœur, esprit) combiné avec 啓 (ouverture) crée l'idée d'ouvrir son cœur au repos. Cela évoque l'état de détente où le cœur se libère du stress quotidien et trouve la paix intérieure.",
+    "mnemonic": "Votre CŒUR (心) s'OUVRE (啓) pour trouver le repos! 憩う (いこう) c'est prendre une pause bien méritée où votre esprit peut enfin respirer et se régénérer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "掲",
+    "readings": {
+      "kun": "かか.げる",
+      "on": "ケイ"
+    },
+    "meaning": "put up, display, hoist, publish",
+    "etymology": "Combine 手 (main) avec 啓 (levée, ouverture). L'image originelle montrait une main qui soulève ou affiche quelque chose en hauteur. Représente l'action de montrer, d'exposer ou de publier quelque chose pour que tous le voient.",
+    "mnemonic": "Avec vos MAINS (手), vous LEVEZ (かか.げる) quelque chose HAUT pour le MONTRER à tous! Afficher une pancarte, c'est かか.げる - LEVEZ le drapeau de KEI!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "継",
+    "readings": {
+      "kun": "つ.ぐ、まま-",
+      "on": "ケイ"
+    },
+    "meaning": "inherit, succeed, continue",
+    "etymology": "Le radical 糸 (fil, soie) qui continue et se relie. L'image montre la continuité d'une ligne ou d'un fil qui se transmet de génération en génération. Symbolise la succession, l'héritage ininterrompu et la continuation dans le temps.",
+    "mnemonic": "Un FIL (糸) qu'on RELIE (つ.ぐ) - comme un héritage familial qu'on passe à la génération suivante! La lecturre KEI rappelle qu'on continue une lignée sans coupure!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "倹",
+    "readings": {
+      "kun": "つま.しい、つづまやか",
+      "on": "ケン"
+    },
+    "meaning": "frugal, economy, thrifty",
+    "etymology": "Combine 人 (personne) avec 兼 (double responsabilité, vigilance). L'idée d'une personne qui vit économiquement, sans excès. Représente l'efficacité et la parcimonie - faire plus avec moins, vivre sainement.",
+    "mnemonic": "Une PERSONNE (人) qui travaille avec VIGILANCE (兼) - vivre de façon つま.しい (économe, resserrée) c'est faire preuve de sagesse! Le KEN de la frugalité!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "兼",
+    "readings": {
+      "kun": "か.ねる、-か.ねる",
+      "on": "ケン"
+    },
+    "meaning": "concurrently, and, beforehand",
+    "etymology": "Littéralement représente l'idée de deux choses à la fois. L'image primitive montrait deux éléments combinés ou superposés. Symbolise le concept de faire plusieurs tâches simultanément, de combiner ou de cumuler des rôles.",
+    "mnemonic": "Ka.NERU (兼ねる) signifie FAIRE DEUX CHOSES À LA FOIS - être professeur ET guide! Imaginez un acteur CUMUL les rôles - c'est le KEN de la multiplicité!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "圏",
+    "readings": {
+      "kun": "かこ.い",
+      "on": "ケン"
+    },
+    "meaning": "sphere, circle, radius, range",
+    "etymology": "Combine 囗 (enclosure, cadre circulaire) avec 拳 (poing, limitation resserrée). Représente un domaine circulaire délimité, une zone d'influence définie par un rayon. Symbolise une sphère fermée avec des frontières claires.",
+    "mnemonic": "Un CERCLE (囗) qui ENFERME (KEN) - une zone de rayon délimité! La 経済圏 (sphere économique) est une FRONTIÈRE que vous TRACEZ - le cercle du pouvoir!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "堅",
+    "readings": {
+      "kun": "かた.い、-がた.い",
+      "on": "ケン"
+    },
+    "meaning": "strict, hard, solid, tough",
+    "etymology": "Combine 土 (terre) avec 兼 (solidité, fermeté). La terre est par nature solide et immobile. Représente quelque chose d'extrêmement dur, de rigide, qui ne peut pas être plié ou brisé facilement.",
+    "mnemonic": "KATAI (堅い) - la TERRE (土) est DURE comme la roche! KEN vous rend aussi solide qu'une montagne - immobile, inébranlable, fiable comme le granit!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "献",
+    "readings": {
+      "kun": "たてまつ.る",
+      "on": "ケン、コン"
+    },
+    "meaning": "offering, counter for drinks, present",
+    "etymology": "Combine le radical de l'animal avec 兼 (respect, offrande). Représente littéralement l'acte d'offrir quelque chose avec respect et dévotion. L'image évoque la soumission respectueuse lors d'une présentation.",
+    "mnemonic": "TATEMATSU.RU (献る) c'est OFFRIR avec RESPECT et HUMILITÉ! Imaginez un loyal servant qui présente son tribut - le KEN du cœur généreux!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "遣",
+    "readings": {
+      "kun": "つか.う、-つか.い、-づか.い、つか.わす、や.る",
+      "on": "ケン"
+    },
+    "meaning": "dispatch, send, give, donate",
+    "etymology": "Combine 辶 (chemin, voyage, mouvement) avec 遺 (transmission, héritage). Représente l'action d'envoyer quelque chose ou quelqu'un dans une direction. Symbolise la transmission par le mouvement et le déplacement.",
+    "mnemonic": "TSUKA.U (使う) - vous ENVOYEZ quelque chose sur le CHEMIN (辶)! KEN c'est dispatcher - envoyer quelqu'un accomplir une mission ou DONNER quelque chose à autrui!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "弦",
+    "readings": {
+      "kun": "つる",
+      "on": "ゲン"
+    },
+    "meaning": "bowstring, chord, hypotenuse",
+    "etymology": "Combine 弓 (arc) avec 玄 (mystère, tension). L'image montre littéralement une corde tendue sur un arc. Représente la fibre vibrante reliant deux extrémités, utilisée pour les arcs, les instruments de musique.",
+    "mnemonic": "TSURU (弦) - la CORDE d'un arc vibrant! Imaginez tendre ce TSURU qui vibre comme la musique - GEN résonne comme l'harmonie d'une corde pincée!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "玄",
+    "readings": {
+      "kun": "くろ、くろ.い",
+      "on": "ゲン"
+    },
+    "meaning": "mysterious, occultness, black, deep",
+    "etymology": "Combine 玉 (jade précieux) avec l'idée de profondeur insondable et d'obscurité. Le jade associé à quelque chose de caché ou de mystérieux. Représente la couleur noire et le caractère impénétrable.",
+    "mnemonic": "KURO.I (玄い) c'est NOIR - KUROGANE est le fer noir! GEN évoque le MYSTÈRE comme quelque chose de noir et profond, l'âme insondable du jade!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "弧",
+    "readings": {
+      "kun": "",
+      "on": "コ"
+    },
+    "meaning": "arc, arch, bow",
+    "etymology": "Combine 弓 (arc) avec 孤 (solitaire, seul). Représente un arc qui se tient seul, sans support. L'image primitive montrait une courbe autonome. Symbolise une forme courbée ou un arc architectural.",
+    "mnemonic": "Un ARC (弓) SOLITAIRE (孤) qui se courbe parfaitement! KO c'est la COURBE IDÉALE - comme l'arc du ciel, seul dans l'immensité du cosmos!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "虎",
+    "readings": {
+      "kun": "とら",
+      "on": "コ"
+    },
+    "meaning": "tiger, drunkard",
+    "etymology": "Combine 虍 (tête de tigre stylisée) avec 己 (soi). Représente littéralement l'animal féroce et majestueux. L'image primitive montrait un tigre reconnaissable par ses rayures et sa posture menaçante.",
+    "mnemonic": "TORA (虎) c'est le TIGRE royal et puissant! KO résonne comme un rugissement terrificateur - imaginez un tigre qui vous REGARDE de face avec toute sa force sauvage!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "顧",
+    "readings": {
+      "kun": "かえり.みる",
+      "on": "コ"
+    },
+    "meaning": "look back, review, examine oneself",
+    "etymology": "Combine 頁 (page, tête) avec 古 (ancien, passé). L'image montre une tête qui se retourne vers quelque chose d'ancien ou de lointain. Représente l'acte de regarder en arrière avec réflexion.",
+    "mnemonic": "KAERI.MIRU (顧みる) - votre TÊTE (頁) se TOURNE vers le PASSÉ (古)! KO c'est regarder EN ARRIÈRE avec sagesse - réfléchir sur ce qui fut pour comprendre le présent!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "呉",
+    "readings": {
+      "kun": "く.れる、くれ",
+      "on": "ゴ"
+    },
+    "meaning": "give, do something for",
+    "etymology": "Combine 口 (bouche, parole, action) avec 五 (cinq, complet, totalité). Représente l'acte de DONNER de bon cœur, de faire quelque chose entièrement pour autrui. Symbolise la générosité complète.",
+    "mnemonic": "KU.RERU (くれる) c'est DONNER! Imaginez quelqu'un qui PARLE (口) du cœur pour vous OFFRIR quelque chose de toute son âme - GO c'est la générosité sans réserve!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "悟",
+    "readings": {
+      "kun": "さと.る",
+      "on": "ゴ"
+    },
+    "meaning": "enlightenment, perceive, discern, realize",
+    "etymology": "Combine 心 (cœur, esprit) avec 五 (cinq, complet, sagesse infinie). Représente le moment où le cœur atteint la complétude spirituelle. Symbolise l'illumination soudaine et la compréhension profonde.",
+    "mnemonic": "SATO.RU (悟る) c'est avoir une ILLUMINATION soudaine! Votre CŒUR (心) trouve la SAGESSE complète - GO c'est l'instant où la lumière se fait dans votre esprit, comme l'aube!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "侯",
+    "readings": {
+      "kun": "",
+      "on": "コウ"
+    },
+    "meaning": "marquis, lord, daimyo",
+    "etymology": "Combine 人 (personne) avec 后 (arrière-plan royal, dignité). Représente une personne de haut rang occupant une position d'autorité et de pouvoir. Symbolise la noblesse et le statut aristocratique.",
+    "mnemonic": "Un PERSONNAGE de HAUTE DIGNITÉ et POUVOIR! KOU c'est le MARQUIS - une personne d'autorité suprême, détentrice du respect de tout le royaume!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "坑",
+    "readings": {
+      "kun": "",
+      "on": "コウ"
+    },
+    "meaning": "pit, hole",
+    "etymology": "Combine 土 (terre) avec 抗 (résistance, profondeur). Représente une excavation ou un trou dans le sol terrestre. L'image primitive montrait une fosse ou un puits creusé profondément dans la terre.",
+    "mnemonic": "Un TROU dans la TERRE (土)! KOU c'est creuser PROFOND - imaginez une FOSSE gaping que vous RÉSISTEZ à éviter - tomberiez-vous dans le puits du KOU?",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "孔",
+    "readings": {
+      "kun": "あな",
+      "on": "コウ、ク"
+    },
+    "meaning": "cavity, hole, slit, very, great",
+    "etymology": "Combine 子 (enfant, petit) avec 工 (outils, labeur). Représente un petit trou, une cavité ou une ouverture creusée. L'image montre une fente minuscule ou un passage étroit.",
+    "mnemonic": "ANA (孔) c'est un TROU, une CAVITÉ! Comme Confucius (孔子) qui explorait de petites OUVERTURES de sagesse - KOU c'est l'exploration des mystères par de petits trous!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "抗",
+    "readings": {
+      "kun": "あらが.う",
+      "on": "コウ"
+    },
+    "meaning": "confront, resist, defy, oppose",
+    "etymology": "Combine 手 (main) avec 亢 (opposition élevée, fierté). L'image montre une main levée en défi ou en résistance. Représente l'acte de s'opposer face-à-face avec une force égale.",
+    "mnemonic": "ARAGA.U (抗う) c'est RÉSISTER avec FIERTÉ! Avec vos MAINS (手), vous vous DRESSEZ contre l'adversité - KOU c'est dire NON avec force, affronter le destin!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "攻",
+    "readings": {
+      "kun": "せ.める",
+      "on": "コウ"
+    },
+    "meaning": "aggression, attack, criticize, polish",
+    "etymology": "Combine 手 (main) avec 工 (outils, armes, action). Représente la main armée ou prête à frapper. L'image primitive montrait une attaque offensive avec des outils ou des armes.",
+    "mnemonic": "SE.MERU (責める) c'est ATTAQUER ou CRITIQUER fortement! Votre MAIN (手) se lève pour FRAPPER - KOU c'est l'offensive guerrière ou la critique verbale pénétrante!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "江",
+    "readings": {
+      "kun": "え",
+      "on": "コウ"
+    },
+    "meaning": "creek, inlet, bay",
+    "etymology": "Combine 水 (eau) avec 工 (courbure, forme architecturale). Représente une petite rivière ou une baie sinueuse. L'image montre l'eau qui serpente à travers le paysage.",
+    "mnemonic": "E (江) c'est une PETITE RIVIÈRE TRANQUILLE! KOU c'est l'EAU (水) qui SERPENTE doucement - imaginez la baie paisible, la rivière 江戸 (Edo, l'ancien Tokyo)!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "洪",
+    "readings": {
+      "kun": "",
+      "on": "コウ"
+    },
+    "meaning": "deluge, flood, vast",
+    "etymology": "Combine 水 (eau) avec 弘 (grand, vaste, illimité). Représente une eau immense et débordante, un déluge catastrophique. Symbolise l'eau sans limites qui submerge tout.",
+    "mnemonic": "L'EAU (水) DÉFERLE en DÉLUGE massif! KOU c'est l'inondation apocalyptique - la rivière devient océan déchaîné, le torrent devient CATACLYSME dévastateur!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "甲",
+    "readings": {
+      "kun": "きのえ",
+      "on": "コウ、カン"
+    },
+    "meaning": "armor, high, A grade, first class",
+    "etymology": "Représente littéralement une carapace ou une armure protectrice. L'image primitive montrait une armure stylisée ou le dos d'une tortue blindée. Symbolise la protection, la solidité et le statut de première catégorie.",
+    "mnemonic": "KINOE (甲) c'est l'ARMURE royale! KOU ou KAN - la CARAPACE qui vous protège complètement! C'est la PREMIÈRE CATÉGORIE - le 'A' du classement suprême!",
+    "jlpt": "N2"
+  }
+]

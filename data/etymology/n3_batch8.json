@@ -1,0 +1,552 @@
+[
+  {
+    "kanji": "翌",
+    "readings": {
+      "kun": "よく",
+      "on": "ヨク"
+    },
+    "meaning": "le lendemain",
+    "etymology": "Composition de 羽 (ailes) et 立 (debout). Les ailes qui se lèvent = le lendemain. Demain = ce qui s'envole au matin suivant.",
+    "mnemonic": "翌 = 羽 (ailes) + 立 (debout). Les ailes qui se lèvent = le lendemain.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "欲",
+    "readings": {
+      "kun": "ほ",
+      "on": "ヨク"
+    },
+    "meaning": "désir, convoiter",
+    "etymology": "Composition de 谷 (vallée) et 欠 (manquer). La vallée qui manque = le désir. Convoiter = le vide qui veut être rempli.",
+    "mnemonic": "欲 = 谷 (vallée) + 欠 (manquer). La vallée vide = le désir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "容",
+    "readings": {
+      "kun": "い",
+      "on": "ヨウ"
+    },
+    "meaning": "contenir, apparence",
+    "etymology": "Composition de 宀 (toit) et 谷 (vallée). La vallée sous le toit = contenir. L'apparence = ce que la maison contient.",
+    "mnemonic": "容 = 宀 (toit) + 谷 (vallée). La vallée sous le toit = contenir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "誘",
+    "readings": {
+      "kun": "さそ",
+      "on": "ユウ"
+    },
+    "meaning": "inviter, séduire",
+    "etymology": "Composition de 言 (paroles) et 秀 (excellent). Les paroles excellentes = l'invitation. Séduire = les belles paroles.",
+    "mnemonic": "誘 = 言 (paroles) + 秀 (excellent). Les belles paroles = inviter.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "幼",
+    "readings": {
+      "kun": "おさな",
+      "on": "ヨウ"
+    },
+    "meaning": "jeune enfant",
+    "etymology": "Composition de 幺 (petit fil) et 力 (force). La petite force = l'enfant en bas âge.",
+    "mnemonic": "幼 = 幺 (petit) + 力 (force). La petite force = l'enfant.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "揺",
+    "readings": {
+      "kun": "ゆ.れる、ゆ.る、ゆ.らぐ、ゆ.るぐ、ゆ.する、ゆ.さぶる、ゆ.すぶる、うご.く",
+      "on": "ヨウ"
+    },
+    "meaning": "osciller, secouer, basculer, trembler, vibrer",
+    "etymology": "揺 combine le radical de la main (扌) avec 要 (principal, essentiel). Ce caractère représente le mouvement naturel et répétitif de la main qui bouge de haut en bas. Historiquement, il évoque le geste fondamental de secouer ou balancer quelque chose, d'où le sens d'oscillation et de vibration.",
+    "mnemonic": "La main en mouvement - 「ゆ.れる」(osciller)! Imaginez une main qui balance quelque chose d'avant en arrière, créant ce mouvement hypnotique de balancement. C'est ce mouvement naturel et répétitif du 揺 qui fait tout trembler!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "曜",
+    "readings": {
+      "kun": "よう",
+      "on": "ヨウ"
+    },
+    "meaning": "jour de la semaine",
+    "etymology": "Composition de 日 (soleil) et 翟 (faisan). Le jour du faisan sous le soleil = les jours de la semaine.",
+    "mnemonic": "曜 = 日 (soleil) + 翟 (faisan). Chaque jour sous le soleil = jour de la semaine.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "様",
+    "readings": {
+      "kun": "さま",
+      "on": "ヨウ"
+    },
+    "meaning": "manière, apparence, -sama",
+    "etymology": "Composition de 木 (arbre) et 羊 (mouton) et 水 (eau). L'eau du mouton sur l'arbre = la manière. L'apparence = la façon d'être.",
+    "mnemonic": "様 = eau + mouton + arbre = manière, apparence.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "腰",
+    "readings": {
+      "kun": "こし",
+      "on": "ヨウ"
+    },
+    "meaning": "taille (du corps), hanches",
+    "etymology": "Composition de 月 (corps) et 要 (essentiel). L'essentiel du corps = la taille.",
+    "mnemonic": "腰 = 月 (corps) + 要 (essentiel). L'essentiel du corps = la taille.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "余",
+    "readings": {
+      "kun": "あま",
+      "on": "ヨ"
+    },
+    "meaning": "excès, reste",
+    "etymology": "Composition de 人 (personne) et 余 (moi avec surplus). La personne avec en plus = le reste. L'excès = ce qui dépasse.",
+    "mnemonic": "余 = personne + surplus = le reste.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "預",
+    "readings": {
+      "kun": "あず",
+      "on": "ヨ"
+    },
+    "meaning": "déposer, confier",
+    "etymology": "Composition de 予 (moi/préavis) et 頁 (tête). La tête qui préavise = confier. Déposer = prévenir avant de laisser.",
+    "mnemonic": "預 = 予 (préavis) + 頁 (tête). La tête prévient = déposer.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "与",
+    "readings": {
+      "kun": "あた",
+      "on": "ヨ"
+    },
+    "meaning": "donner, participer",
+    "etymology": "Pictogramme de deux mains qui échangent = donner.",
+    "mnemonic": "与 = deux mains = donner.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "優",
+    "readings": {
+      "kun": "やさ、すぐ",
+      "on": "ユウ"
+    },
+    "meaning": "supérieur, doux",
+    "etymology": "Composition de 亻 (personne) et 憂 (tristesse). La personne dans la tristesse = la douceur. Le supérieur = celui qui reste doux même dans la tristesse.",
+    "mnemonic": "優 = 亻 (personne) + 憂 (tristesse). La douceur dans la tristesse = supérieur.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "勇",
+    "readings": {
+      "kun": "いさ",
+      "on": "ユウ"
+    },
+    "meaning": "courageux",
+    "etymology": "Composition de 甬 (sonner) et 力 (force). La force qui sonne = le courage.",
+    "mnemonic": "勇 = 甬 (sonner) + 力 (force). La force qui sonne = courageux.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "遊",
+    "readings": {
+      "kun": "あそ",
+      "on": "ユウ"
+    },
+    "meaning": "jouer, voyage",
+    "etymology": "Composition de 辶 (marche) et 斿 (drapeau qui flotte). La marche du drapeau qui flotte = le voyage. Jouer = flotter au vent.",
+    "mnemonic": "遊 = 辶 (marche) + 斿 (drapeau). La marche du drapeau = jouer, voyager.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "郵",
+    "readings": {
+      "kun": "ゆう",
+      "on": "ユウ"
+    },
+    "meaning": "poste, courrier",
+    "etymology": "Composition de 垂 (pendre) et 阝 (ville). La ville qui pend = le relais postal. La poste = les relais entre les villes.",
+    "mnemonic": "郵 = 垂 (pendre) + 阝 (ville). La ville qui pend = le courrier.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "輸",
+    "readings": {
+      "kun": "ゆ",
+      "on": "ユ"
+    },
+    "meaning": "transporter, exporter",
+    "etymology": "Composition de 車 (voiture) et 兪 (canal). La voiture sur le canal = transporter.",
+    "mnemonic": "輸 = 車 (voiture) + 兪 (canal). La voiture sur le canal = transporter.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "雄",
+    "readings": {
+      "kun": "おす、お",
+      "on": "ユウ"
+    },
+    "meaning": "mâle, héros",
+    "etymology": "Composition de 隹 (oiseau) et 厷 (muscle). L'oiseau musclé = le mâle. Le héros = la force de l'oiseau.",
+    "mnemonic": "雄 = 隹 (oiseau) + 厷 (muscle). L'oiseau musclé = mâle.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "有",
+    "readings": {
+      "kun": "あ.る",
+      "on": "ユウ、ウ"
+    },
+    "meaning": "posséder, avoir, exister, se produire",
+    "etymology": "有 montre originellement une main (又) tenant ou saisissant quelque chose (月/物). Ce pictogramme représente directement l'acte de possession - tenir quelque chose dans sa main. Le caractère a conservé ce sens fondamental à travers les siècles, symbolisant l'existence d'une chose en propriété ou en présence.",
+    "mnemonic": "Une main qui tient fermement quelque chose - c'est l'image de 「あ.る」(avoir)! Quand vous tenez quelque chose dans votre poing, vous le 「有」しているんです. C'est la possession concrète visualisée par ce kanji!",
+    "jlpt": "N4"
+  },
+  {
+    "kanji": "友",
+    "readings": {
+      "kun": "とも",
+      "on": "ユウ"
+    },
+    "meaning": "ami, camarade",
+    "etymology": "友 représente deux mains (又 répétées) se joignant ou s'unissant. Ce pictogramme symbolise la connexion et la solidarité entre deux personnes. Historiquement, le caractère évoque le geste d'amitié où deux individus se donnent la main, incarnant l'essence même de la fraternité et du lien social.",
+    "mnemonic": "Deux mains qui se rejoignent et se serrent - voilà l'image de 「とも」(ami)! C'est la connexion humaine la plus belle, la solidarité entre amis. Quand vos mains se joignent, vous trouvez votre 友!",
+    "jlpt": "N5"
+  },
+  {
+    "kanji": "由",
+    "readings": {
+      "kun": "よし、ゆ.る",
+      "on": "ユ、ユウ、ユイ"
+    },
+    "meaning": "raison, cause, origine, provenance",
+    "etymology": "由 montre un chemin ou une limite (囗) contenant l'essence ou le cœur (中). Ce caractère représente l'idée de ce qui se trouve au centre ou à l'origine d'une situation. Historiquement, il évoque l'émergence d'une raison ou d'une cause à partir du fond des choses, le pourquoi profond des événements.",
+    "mnemonic": "Au cœur de tout, il y a une raison - c'est le 「よし」(la raison)! Ce kanji contient l'essence même du 「pourquoi」. Quand vous cherchez l'origine ou la cause de quelque chose, vous cherchez sa 由, sa raison d'être profonde!",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "雪",
+    "readings": {
+      "kun": "ゆき",
+      "on": "セツ"
+    },
+    "meaning": "neige",
+    "etymology": "Composition de 雨 (pluie) et 彐 (balayer). La pluie qu'on balaye = la neige.",
+    "mnemonic": "雪 = 雨 (pluie) + 彐 (balayer). La pluie que l'on balaye = la neige.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "夕",
+    "readings": {
+      "kun": "ゆう",
+      "on": "セキ"
+    },
+    "meaning": "soir, crépuscule",
+    "etymology": "夕 est une simplification stylisée de 月 (lune). Ce caractère tire son sens du moment où la lune apparaît dans le ciel - le soir. Il représente l'essence du crépuscule, cette période transitoire entre jour et nuit marquée par l'apparition des astres nocturnes.",
+    "mnemonic": "Regardez ce kanji - c'est comme une lune déclinante! Le 「ゆう」(soir) arrive quand la lumière baisse et que les étoiles apparaissent. C'est le moment magique où le jour cède la place à la nuit.",
+    "jlpt": "N4"
+  },
+  {
+    "kanji": "訳",
+    "readings": {
+      "kun": "わけ",
+      "on": "ヤク"
+    },
+    "meaning": "raison, traduction",
+    "etymology": "Composition de 言 (paroles) et 睪 (mesurer). Les paroles mesurées = la traduction. La raison = les paroles qui expliquent.",
+    "mnemonic": "訳 = 言 (paroles) + 睪 (mesurer). Les paroles mesurées = traduire.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "役",
+    "readings": {
+      "kun": "えき",
+      "on": "ヤク"
+    },
+    "meaning": "rôle, service militaire",
+    "etymology": "Composition de 彳 (marche) et 殳 (arme). La marche avec l'arme = le service militaire. Le rôle = la mission à accomplir.",
+    "mnemonic": "役 = 彳 (marche) + 殳 (arme). Marcher avec l'arme = service, rôle.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "薬",
+    "readings": {
+      "kun": "くすり",
+      "on": "ヤク"
+    },
+    "meaning": "médicament",
+    "etymology": "Composition de 艹 (plante) et 楽 (joie). La plante de joie = le médicament. Guérir = retrouver la joie par les plantes.",
+    "mnemonic": "薬 = 艹 (plante) + 楽 (joie). La plante qui rend la joie = le médicament.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "矢",
+    "readings": {
+      "kun": "や",
+      "on": "シ"
+    },
+    "meaning": "flèche, trait, projectile",
+    "etymology": "矢 est le pictogramme direct d'une flèche - sa forme reproduit fidèlement l'objet réel avec la hampe principale et les plumes de stabilisation. Ce caractère a conservé sa ressemblance visuelle au fil du temps, restant un excellent exemple de l'origine pictographique des kanji. Il représente exactement ce qu'il signifie : une flèche prête à être tirée.",
+    "mnemonic": "Regardez la forme du kanji - c'est littéralement une 「や」(flèche) qui vole! La structure reproduit parfaitement l'objet : la tige centrale et les plumes de côté. C'est comme voir la flèche en vol traversant le ciel à grande vitesse!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "矛",
+    "readings": {
+      "kun": "ほこ",
+      "on": "ム"
+    },
+    "meaning": "lance",
+    "etymology": "Pictogramme d'une lance = la hallebarde.",
+    "mnemonic": "矛 = pictogramme de lance.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "盾",
+    "readings": {
+      "kun": "たて",
+      "on": "ジュン"
+    },
+    "meaning": "bouclier",
+    "etymology": "La protection en face = le bouclier.",
+    "mnemonic": "盾 = protection = bouclier.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "壊",
+    "readings": {
+      "kun": "こわ",
+      "on": "カイ"
+    },
+    "meaning": "détruire, casser",
+    "etymology": "Composition de 土 (terre) et 褱 (envelopper). La terre qui enveloppe et s'effondre = détruire.",
+    "mnemonic": "壊 = 土 (terre) + 褱 (envelopper). La terre effondrée = détruire.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "価",
+    "readings": {
+      "kun": "あたい",
+      "on": "カ"
+    },
+    "meaning": "valeur, prix",
+    "etymology": "Composition de 亻 (personne) et 賈 (marchand). La personne du marchand = la valeur. Le prix = ce qu'évalue l'homme.",
+    "mnemonic": "価 = 亻 (personne) + 賈 (marchand). L'évaluation du marchand = la valeur.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "仮",
+    "readings": {
+      "kun": "かり",
+      "on": "カ"
+    },
+    "meaning": "provisoire, emprunt",
+    "etymology": "Composition de 亻 (personne) et 叚 (emprunter). La personne qui emprunte = le provisoire.",
+    "mnemonic": "仮 = 亻 (personne) + 叚 (emprunter). La personne qui emprunte = provisoire.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "飢",
+    "readings": {
+      "kun": "う",
+      "on": "キ"
+    },
+    "meaning": "avoir faim",
+    "etymology": "Composition de 食 (manger) et 幾 (peu). Manger peu = avoir faim.",
+    "mnemonic": "飢 = 食 (manger) + 幾 (peu). Manger peu = avoir faim.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "脅",
+    "readings": {
+      "kun": "おど",
+      "on": "キョウ"
+    },
+    "meaning": "menacer",
+    "etymology": "Les trois forces = la menace. Être serré de toutes parts = la menace.",
+    "mnemonic": "脅 = trois forces = menacer.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "誓",
+    "readings": {
+      "kun": "ちか",
+      "on": "セイ"
+    },
+    "meaning": "jurer, promettre",
+    "etymology": "Composition de 折 (plier) et 言 (paroles). Les paroles pliées = la promesse. Jurer = les paroles qui plient.",
+    "mnemonic": "誓 = 折 (plier) + 言 (paroles). Les paroles pliées = jurer.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "拝",
+    "readings": {
+      "kun": "おが",
+      "on": "ハイ"
+    },
+    "meaning": "adorer, se prosterner",
+    "etymology": "Composition de 手 (main) et 下 (bas). La main vers le bas = se prosterner.",
+    "mnemonic": "拝 = 手 (main) + 下 (bas). La main vers le bas = se prosterner.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "敬",
+    "readings": {
+      "kun": "うやま",
+      "on": "ケイ"
+    },
+    "meaning": "respecter",
+    "etymology": "Composition de 苟 (sérieux) et 攴 (action). L'action sérieuse = le respect.",
+    "mnemonic": "敬 = 苟 (sérieux) + 攴 (action). L'action sérieuse = respecter.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "謙",
+    "readings": {
+      "kun": "けん",
+      "on": "ケン"
+    },
+    "meaning": "humilité",
+    "etymology": "Les paroles qui cèdent = l'humilité.",
+    "mnemonic": "謙 = paroles qui cèdent = humilité.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "縁",
+    "readings": {
+      "kun": "えん",
+      "on": "エン"
+    },
+    "meaning": "lien du destin",
+    "etymology": "Les fils du destin = le lien.",
+    "mnemonic": "縁 = fils du destin.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "恩",
+    "readings": {
+      "kun": "おん",
+      "on": "オン"
+    },
+    "meaning": "grâce, bienfait",
+    "etymology": "Composition de 因 (cause) et 心 (cœur). La cause du cœur = le bienfait. La grâce = ce qui cause la gratitude.",
+    "mnemonic": "恩 = 因 (cause) + 心 (cœur). La cause du cœur = le bienfait.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "怒",
+    "readings": {
+      "kun": "おこ",
+      "on": "ド"
+    },
+    "meaning": "colère",
+    "etymology": "Composition de 奴 (esclave) et 心 (cœur). Le cœur d'esclave = la colère. La rage = le cœur qui est maltraité.",
+    "mnemonic": "怒 = 奴 (esclave) + 心 (cœur). Le cœur maltraité = la colère.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "努",
+    "readings": {
+      "kun": "つと",
+      "on": "ド"
+    },
+    "meaning": "s'efforcer",
+    "etymology": "Composition de 奴 (esclave) et 力 (force). La force de l'esclave = l'effort.",
+    "mnemonic": "努 = 奴 (esclave) + 力 (force). La force malgré tout = s'efforcer.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "脳",
+    "readings": {
+      "kun": "のう",
+      "on": "ノウ"
+    },
+    "meaning": "cerveau",
+    "etymology": "Composition de 月 (corps) et 囟 (fontanelle). La fontanelle du corps = le cerveau.",
+    "mnemonic": "脳 = 月 (corps) + 囟 (fontanelle). La fontanelle = le cerveau.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "濃",
+    "readings": {
+      "kun": "こ",
+      "on": "ノウ"
+    },
+    "meaning": "épais, dense, concentré",
+    "etymology": "Composition de 氵 (eau) et 農 (agriculture). L'eau des champs = l'eau dense. La concentration = l'eau des moissons.",
+    "mnemonic": "濃 = 氵 (eau) + 農 (agriculture). L'eau des champs = épais.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "悩",
+    "readings": {
+      "kun": "なや",
+      "on": "ノウ"
+    },
+    "meaning": "souffrir, s'inquiéter",
+    "etymology": "Composition de 忄 (cœur) et 悩 (cervelle). Le cœur du cerveau = la souffrance. L'inquiétude = quand le cerveau et le cœur se confondent.",
+    "mnemonic": "悩 = 忄 (cœur) + 脳 (cerveau). Le cœur et le cerveau mélangés = souffrir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "鈍",
+    "readings": {
+      "kun": "にぶ",
+      "on": "ドン"
+    },
+    "meaning": "émousse, lent",
+    "etymology": "Composition de 金 (métal) et 屯 (rassembler). Le métal rassemblé = le métal émoussé. Le lent = ce qui ne tranche plus.",
+    "mnemonic": "鈍 = 金 (métal) + 屯 (émoussé). Le métal émoussé = lent.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "謎",
+    "readings": {
+      "kun": "なぞ",
+      "on": "メイ"
+    },
+    "meaning": "énigme",
+    "etymology": "Composition de 言 (paroles) et 迷 (se perdre). Les paroles perdues = l'énigme.",
+    "mnemonic": "謎 = 言 (paroles) + 迷 (se perdre). Les paroles qui se perdent = l'énigme.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "嘆",
+    "readings": {
+      "kun": "なげ",
+      "on": "タン"
+    },
+    "meaning": "soupirer, se lamenter",
+    "etymology": "La bouche qui s'exprime = le soupir.",
+    "mnemonic": "嘆 = bouche + expression = soupirer.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "握",
+    "readings": {
+      "kun": "にぎ",
+      "on": "アク"
+    },
+    "meaning": "saisir, tenir",
+    "etymology": "Composition de 手 (main) et 屋 (maison). La main dans la maison = saisir. Tenir = la main fermée.",
+    "mnemonic": "握 = 手 (main) + 屋 (maison). La main fermée = saisir.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "恵",
+    "readings": {
+      "kun": "めぐ",
+      "on": "ケイ"
+    },
+    "meaning": "grâce, bénédiction",
+    "etymology": "Composition de 恵 (cœur) et 惠 (bienfait). Le cœur du bienfait = la bénédiction.",
+    "mnemonic": "恵 = cœur + bienfait = grâce.",
+    "jlpt": "N3"
+  }
+]

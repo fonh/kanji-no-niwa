@@ -85,11 +85,21 @@ apparitions respectent les niveaux N4, N3, N3, N2, N2, N1 indépendamment de la 
 | indigo-plateau-bruno | Salle de Bruno | 1100–1200 | N1 | 60–100 chars |
 | indigo-plateau-karen | Salle de Karen | 1200–1350 | N1 | 65–110 chars |
 | indigo-plateau-lance | Trône de Lance | 1350–1500 | N1 | 65–110 chars |
-| mt-silver-route-28 | Route 28 | 1500–1700 | N1 | 65–110 chars |
-| mt-silver-base | Gris — Base | 1700–1900 | N1 | 70–120 chars |
-| mt-silver-lower | Gris — Versants inférieurs | 1900–2000 | N1 | 70–120 chars |
-| mt-silver-upper | Gris — Versants supérieurs | 2000–2100 | N1 | 70–130 chars |
-| mt-silver-summit | Gris — Sommet | 2100–2136 | N1 | silence ou 1 ligne |
+| vermilion-city | Vermeille City | 1500–1560 | N1 | 65–110 chars |
+| saffron-city | Safranville | 1560–1620 | N1 | 65–110 chars |
+| cerulean-city | Azuria City | 1620–1680 | N1 | 65–115 chars |
+| celadon-city | Céladia | 1680–1740 | N1 | 68–115 chars |
+| fuchsia-city | Fuchsia City | 1740–1800 | N1 | 68–115 chars |
+| pewter-city | Argenta City | 1800–1860 | N1 | 68–120 chars |
+| cinnabar-island | Île Braise | 1860–1920 | N1 | 70–120 chars |
+| viridian-city | Vertville | 1920–2000 | N1 | 70–120 chars |
+| mt-silver-route-28 | Route 28 | 2000–2030 | N1 | 70–120 chars |
+| mt-silver-base | Gris — Base | 2030–2060 | N1 | 70–120 chars |
+| mt-silver-lower | Gris — Versants inférieurs | 2060–2090 | N1 | 70–125 chars |
+| mt-silver-upper | Gris — Versants supérieurs | 2090–2120 | N1 | 70–130 chars |
+| mt-silver-summit | Gris — Sommet | 2120–2136 | N1 | silence ou 1 ligne |
+
+**Note (2026-07-01) — insertion de l'arc Kanto (8 gyms) :** Mont Gris couvrait auparavant 1500–2136 (5 zones, 636 kanji). L'ajout de Kanto entre Plateau Indigo et Mont Gris redistribue ce budget — Kanto couvre 1500–2000 (8 villes, 500 kanji), Mont Gris est compressé à 2000–2136 (136 kanji, ascension finale courte). Voir `PRD.md` § Kanto — 8 Gyms et `content/guidebook-adapted.md` § Kanto pour le sourcing (guide Prima Kanto, OCR — moins fiable que le texte natif du Johto, voir réserves méthodologiques).
 
 ---
 
@@ -147,6 +157,14 @@ PNJ nommé parle au niveau calibré de SA zone, point.
 | indigo-plateau-bruno | N1 | Bruno *(idem)* |
 | indigo-plateau-karen | N1 | Karen *(idem)* |
 | indigo-plateau-lance | N1 | Lance *(idem)* |
+| vermilion-city | N1 | Lt. Surge *(bio officielle absente du guide Kanto à ce stade — passe 1 seulement, voir note Kanto)* |
+| saffron-city | N1 | Sabrina *(idem)* |
+| cerulean-city | N1 | Misty *(idem)* |
+| celadon-city | N1 | Erika *(idem)* |
+| fuchsia-city | N1 | Janine *(idem)* |
+| pewter-city | N1 | Brock *(idem)* |
+| cinnabar-island | N1 | Blaine *(idem)* |
+| viridian-city | N1 | Blue *(rival historique de Red — dernier gym avant Mont Gris, idem sur l'absence de bio officielle à ce stade)* |
 | mt-silver-route-28 | N1 | L'Idole retraitée *(source web, passe 3)* |
 | mt-silver-base | N1 | *(Centre Pokémon, pas de PNJ-leçon)* |
 | mt-silver-lower | N1 | — |
@@ -518,27 +536,47 @@ concernait jusqu'ici que Dorado/Silver #5, mais elle s'applique en principe à t
 ## Format grammar_note de leçon
 
 Chaque batch de leçon dans la table `lessons` contient un champ `grammar_note` : un seul
-point de grammaire correspondant au niveau JLPT de la zone du batch. Ce champ est écrit
-par le AI batch generator et pointé vers une entrée précise du corpus Hanabira.
+point de grammaire correspondant au niveau JLPT de la zone du batch, pointé vers une
+entrée précise du corpus Hanabira.
+
+**Aucun français (2026-07-01)** : le corpus Hanabira source (`grammar_JLPT_N{1-5}.json`)
+contient déjà, en anglais, `short_explanation`, `long_explanation`, plusieurs `examples[]`
+(chacun avec `grammar_audio`) — bien plus riche que ce que l'ancien format `grammar_note`
+en tirait (un seul exemple, un champ `note_fr` inventé). Le nouveau format réutilise ces
+champs directement (copie, pas traduction) ; `note_fr` est supprimé, aucun champ n'est
+rédigé from scratch par l'IA — le seul travail du batch est de sélectionner l'entrée
+Hanabira adaptée au niveau/zone et de copier ses champs verbatim.
 
 **Format JSON du champ grammar_note :**
 ```json
 {
   "hanabira_title": "Verb てもらえませんか (～te moraemasen ka)",
   "formation": "Verb-て form + もらえませんか",
-  "example_jp": "この手紙を見てもらえませんか。",
-  "example_en": "Could you take a look at this letter for me?",
+  "short_explanation": "A polite way to ask someone to do something for you.",
+  "long_explanation": "Verb てもらえませんか is used to make a polite, indirect request...",
+  "examples": [
+    { "jp": "この手紙を見てもらえませんか。", "en": "Could you take a look at this letter for me?", "grammar_audio": "/audio/japanese/grammar/n4/....mp3" },
+    { "jp": "...", "en": "...", "grammar_audio": "..." }
+  ],
   "jlpt_level": "N4",
-  "note_fr": "Demande polie indirecte — plus respectueux que てください."
+  "distractors": [
+    "この手紙を見てくれませんか。",
+    "この手紙を見てもらいませんか。",
+    "この手紙を見でもらえませんか。"
+  ]
 }
 ```
 
-- `hanabira_title` : titre exact de l'entrée dans `grammar_JLPT_N{X}.json`. Le AI batch
-  generator doit copier ce titre verbatim depuis le JSON source — pas le reformuler.
-- `formation` : copié verbatim depuis le JSON source.
-- `example_jp` : copié depuis `examples[0].jp` du JSON source.
-- `example_en` : copié depuis `examples[0].en` du JSON source.
-- `note_fr` : 1 phrase en français expliquant la nuance à retenir. Seul champ rédigé par l'IA.
+- `hanabira_title` : titre exact de l'entrée dans `grammar_JLPT_N{X}.json`. Copié verbatim
+  — jamais reformulé.
+- `formation`, `short_explanation`, `long_explanation` : copiés verbatim depuis le JSON source.
+- `examples` : 2–3 entrées du tableau `examples[]` source (pas seulement `examples[0]`),
+  chacune avec son `grammar_audio` si présent en local (sinon champ omis, pas de fallback bruyant).
+- `distractors` (2026-07-01, nouveau) : 2–3 variantes incorrectes de l'exemple retenu — mauvaise
+  particule, verbe de base substitué, registre casual/formel inversé — générées **une seule fois
+  par batch IA** au pipeline de contenu (jamais au runtime), relues une fois par l'équipe de contenu.
+  Alimente directement les options du mode Grammaire en combat (voir `PRD.md` § garde d'activation).
+- Aucun champ en français. Aucun champ rédigé from scratch par l'IA sans relecture humaine — sélection + copie pour les champs Hanabira, génération encadrée pour `distractors` uniquement.
 
 **Règle d'attribution :** une leçon dans la zone X reçoit un `grammar_note` tiré du
 niveau de la zone X. Les batches de transition (N4/N3) alternent entre les deux niveaux
@@ -549,7 +587,7 @@ pour ne pas introduire tous les N3 d'un coup.
 ## Index Hanabira par niveau — titres exacts
 
 Liste des entrées Hanabira à utiliser en priorité pour les `grammar_note` et les
-`Frappe Grammaire`. Titres vérifiés contre les fichiers sources.
+questions de mode Grammaire/Conjugaison en combat. Titres vérifiés contre les fichiers sources.
 
 ### N5 (new-bark-town → cherrygrove-city)
 | Titre Hanabira | Formation abrégée |
@@ -612,7 +650,7 @@ Conséquence :
 - **Dialogues scriptés** : `だけに` peut être écrit à la main dans les fichiers de
   `content/dialogues/` — pas besoin de référence Hanabira pour les textes main-written.
 - **NPC dialogue** : permis pour les PNJ N2/N1 à condition d'être écrit manuellement.
-- **Frappe Grammaire** : `だけに` **ne peut pas** être une question Frappe Grammaire —
+- **Mode Grammaire en combat** : `だけに` **ne peut pas** être une question de ce mode —
   il n'y a pas d'entrée Hanabira à utiliser comme base. Utiliser `～にほかならない` ou
   `～ものの` à la place pour les battles N1.
 - **grammar_note de leçon** : utiliser une alternative Hanabira (`～にしたがって`,
@@ -622,22 +660,26 @@ Conséquence :
 
 ## Sources Hanabira utilisées
 
-Tous les `grammar_note` de leçons et les entrées de Frappe Grammaire sont tirés
-directement des fichiers `scripts/sources/grammar_JLPT_N{1-5}.json` (828 points au
-total : N5×136, N4×124, N3×132, N2×191, N1×245 — Hanabira.org, CC license).
+Tous les `grammar_note` de leçons et les questions de mode Grammaire/Conjugaison en
+combat sont tirés directement des fichiers `scripts/sources/grammar_JLPT_N{1-5}.json`
+(828 points au total : N5×136, N4×124, N3×132, N2×191, N1×245 — Hanabira.org, CC license).
 
-**Frappe Grammaire — garde d'activation :**
-`selectQuestionMode` n'active la Frappe Grammaire que si `encounteredGrammarCount ≥ 10`
-pour le niveau JLPT du combat. Ce compteur = nombre de points Hanabira référencés dans
-les `grammar_note` des leçons complétées par le joueur, filtrés par `jlpt_level`. Voir
-`getGrammarForBattle(battleJlptTier, grammarPool, encounteredGrammarIds)` dans
-`src/lib/progression-engine.ts`.
-
-En pratique, un joueur qui a complété toutes les leçons de sa zone courante dépasse
-toujours le seuil de 10 — le garde protège uniquement les joueurs ayant sauté des leçons.
+**Grammaire/Conjugaison — garde d'activation (révisée 2026-07-01) :** testable dès le
+tout premier combat suivant la leçon, pas après un stock de points. `selectQuestionMode`
+active ces deux modes dès que le point a été rencontré au moins une fois
+(`encounteredGrammarCount ≥ 1` pour ce point précis) — un point vu en leçon doit pouvoir
+être vérifié tout de suite en combat, pas des zones plus tard. **Ce qui change par
+rapport à l'ancien seuil (≥ 10) :** les 4 options de réponse ne sont plus tirées d'un pool
+de points de grammaire *différents* (qui exigeait un stock pour éviter un QCM trivial à
+3 options) mais générées comme variantes **incorrectes du même point** — mauvaise
+terminaison de conjugaison, particule erronée, registre casual/formel inversé, etc. Un
+seul point rencontré suffit donc à construire un QCM non trivial, sans dépendre de la
+diversité du pool. `getGrammarForBattle(battleJlptTier, grammarPool, encounteredGrammarIds)`
+garde son fallback au tier inférieur (calibrage de niveau uniquement, plus lié à la
+diversité de distracteurs).
 
 **Double usage de la même source :**
-`grammar_note` des leçons → exposition progressive en cours de jeu →
-`encounteredGrammarIds` alimenté → `Frappe Grammaire` activable en combat.
-Même fichier JSON, même entrée : cohérence garantie entre ce que le joueur a appris
-et ce qu'on lui demande de retrouver en combat.
+`grammar_note` des leçons → exposition en jeu → `encounteredGrammarIds` alimenté →
+mode Grammaire/Conjugaison activable au combat suivant. Même fichier JSON, même entrée :
+cohérence garantie entre ce que le joueur vient d'apprendre et ce qu'on lui demande de
+retrouver en combat, sans délai.

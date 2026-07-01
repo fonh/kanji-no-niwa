@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "滝",
+    "readings": {
+      "on": "ロウ",
+      "kun": "たき"
+    },
+    "meaning": "cascade, waterfall, rapids",
+    "etymology": "Composé de 水 (eau) et d'un élément phonétique. L'image d'eau qui tombe avec force du haut vers le bas, créant un spectacle impressionnant. Les traits du radical de l'eau 水 renforcent la notion de fluidité et de chute continue.",
+    "mnemonic": "Imaginez une cascade de 水 (eau) qui dégringole ! タキ—le son même du kanji suggère le bruit de l'eau qui tombe : ta-ki-ki ! Les trois traits de 水 vous montrent littéralement le flux qui dévale, apportant fraîcheur et puissance.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "卓",
+    "readings": {
+      "on": "タク",
+      "kun": ""
+    },
+    "meaning": "table, bureau, éminent, excellent",
+    "etymology": "Structure ancienne montrant une surface plane surélevée sur des pieds. La table elle-même symbolise l'élévation et l'importance. Cette position haute a ensuite pris le sens figuré d'excellence et d'éminence.",
+    "mnemonic": "Une テーブル (table) qui se dresse fièrement—ça c'est タク ! La table élève les choses vers le haut, d'où le sens d'« éminent ». Un meuble noble qui surplombe le sol. Pensez à une table de conférence—un lieu d'autorité !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "沢",
+    "readings": {
+      "on": "タク",
+      "kun": "さわ、うるお.い、うるお.す、つや"
+    },
+    "meaning": "marais, marécage, brillance, moiteur",
+    "etymology": "Composé de 水 (eau) et d'un élément phonétique. Représente l'accumulation d'eau dans les zones basses, créant des marais humides et brillants. L'eau stagnante mais lumineuse donne aussi l'idée de brillance et de lustre.",
+    "mnemonic": "Un さわ (marais) ? C'est rempli de 水 (eau) brillante ! Le kanji vous le montre—mouillé et scintillant. Imaginez le reflet du soleil sur une zone marécageuse. L'eau crée une brillance naturelle (つや) et hydrate tout ce qui l'entoure.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "託",
+    "readings": {
+      "on": "タク",
+      "kun": "かこつ.ける、かこ.つ、かこ.つける"
+    },
+    "meaning": "confier, demander, charger, prétendre",
+    "etymology": "Composé de 言 (parole, langage) et d'un élément phonétique. Signifie confier une tâche à quelqu'un par la parole ou par un accord verbal. L'acte de transférer une responsabilité par la communication.",
+    "mnemonic": "Vous 託す (confiez) quelque chose ? Utilisez vos 言葉 (paroles) ! Le kanji montre la parole 言 qui transmet une tâche. C'est dire « fais-moi ce service »—une demande verbale qui crée une obligation. Entièrement basé sur la confiance et la parole donnée.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "濁",
+    "readings": {
+      "on": "ダク、ジョク",
+      "kun": "にご.る、にご.す"
+    },
+    "meaning": "trouble, opacité, impureté, consonne sonore",
+    "etymology": "Composé de 水 (eau) et d'un élément phonétique. Représente l'eau troublée et souillée, opposée à l'eau claire et pure. Visuellement, l'eau devient opaque et sombre, d'où l'idée d'impureté.",
+    "mnemonic": "L'eau 水 qui nigoro-u (se trouble) ? Voilà la 濁 ! Quand la 水 perd sa clarté cristalline et devient opaque, elle nigoro-u (trouble). Le kanji montre l'eau qui se charge de particules. Pensez à de la boue dans l'eau—tout devient obscur et souillé !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "諾",
+    "readings": {
+      "on": "ダク",
+      "kun": ""
+    },
+    "meaning": "consentement, assentiment, accord, approbation",
+    "etymology": "Composé de 言 (parole) et d'un élément phonétique. Représente l'acte de dire « d'accord » ou de donner son consentement verbal. La parole 言 est le fondement du consentement—un accord exprimé par la voix.",
+    "mnemonic": "Quelqu'un vous demande et vous répondez par la 言葉 (parole) : « ダク ! » (d'accord !). Le kanji des 言葉 (paroles) d'assentiment—c'est juste dire « oui ». Un simple accord verbal qui crée un engagement mutuel.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "丹",
+    "readings": {
+      "on": "タン",
+      "kun": "に"
+    },
+    "meaning": "rouge vif, cinabre, sincérité, pilule",
+    "etymology": "Pictographie montrant une petite région marquée—le cinabre rouge, poudre précieuse utilisée en Chine ancienne. Le trait horizontal inférieur marque une limite, le trait central la concentration. La rareté et la pureté du cinabre symbolisent la sincérité.",
+    "mnemonic": "丹 ressemble à une petite boîte remplie de poudre rouge éclatante—du cinabre ! タン, du rouge pur, de la sincérité. Imaginez cette poudre coûteuse et précieuse—d'où le sens de « sincère » et « authentique ». Un trait au centre : concentré, sans impureté !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "旦",
+    "readings": {
+      "on": "タン、ダン",
+      "kun": "あさ、あした"
+    },
+    "meaning": "aube, matin, point du jour, lever du soleil",
+    "etymology": "Le kanji montre visuellement 日 (soleil) montant juste au-dessus d'une ligne d'horizon —. C'est la pictographie parfaite du lever du soleil : l'orbe solaire 日 qui émerge de l'horizon au moment de l'aube.",
+    "mnemonic": "Voyez-vous le 日 (soleil) qui monte juste au-dessus de la ligne ? C'est l'あさ (matin) ! La 旦 montre littéralement le soleil se levant—タン ! Chaque matin, le soleil 日 réapparaît pour annoncer un nouveau jour. L'image elle-même raconte l'histoire : aube, matin, renouveau !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "淡",
+    "readings": {
+      "on": "タン",
+      "kun": "あわ.い"
+    },
+    "meaning": "pâle, faible, léger, tenu, fugace",
+    "etymology": "Composé de 水 (eau) et d'un élément phonétique. Représente l'eau pâle ou diluée—l'eau devient translucide et faible. Visuellement, c'est comme verser une goutte de colorant dans l'eau, créant une teinte très légère et délicate.",
+    "mnemonic": "De l'eau 水 si pâle qu'elle est presque invisible—voilà l'あわい (faible, léger) ! La 淡 montre l'eau devenant délicate et évanescente. Imaginez un verre d'eau avec une goutte de couleur—si faible, si tenu. Utilisé pour les couleurs douces, les émotions éphémères, la beauté subtile.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "壇",
+    "readings": {
+      "on": "ダン、タン",
+      "kun": ""
+    },
+    "meaning": "estrade, podium, scène, plateforme, terasse",
+    "etymology": "Composé de 土 (terre) et d'un élément phonétique. Représente une plateforme surélevée en terre ou en pierre. L'idée d'une surface élevée où les événements importants se déroulent—autel, podium, scène de théâtre.",
+    "mnemonic": "Une 壇 (estrade) ? C'est de la 土 (terre) qu'on a soulevée bien haut ! ダン—le bruit du marteau plantant les piquets d'une plateforme. Imaginez un podium majestueux où les orateurs ou les acteurs se dressent au-dessus de la foule. Un lieu d'autorité et de prestige !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "痴",
+    "readings": {
+      "on": "チ",
+      "kun": "し.れる、おろか"
+    },
+    "meaning": "folie, bêtise, stupidité, obsession",
+    "etymology": "Composé de 疒 (maladie, infirmité) et d'un élément phonétique. La folie est traitée comme une « maladie » de l'esprit—une infirmité mentale qui rend quelqu'un incapable de penser clairement ou de se contrôler.",
+    "mnemonic": "La 痴 (folie) ? C'est une 疒 (maladie) du cerveau ! チ—le son bizarre de quelqu'un qui agit stupidement. Imaginez quelqu'un atteint d'une obsession qui le rend complètement incapable de raisonner. La folie est une infection mentale contagieuse !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "致",
+    "readings": {
+      "on": "チ",
+      "kun": "いた.す"
+    },
+    "meaning": "causer, entraîner, parvenir, envoyer, exercer",
+    "etymology": "Anciennement composé d'éléments montrant le mouvement et la direction. Représente l'action de faire parvenir quelque chose à un endroit ou une condition. Le geste de diriger, d'envoyer, de causer un résultat.",
+    "mnemonic": "Vous いたす (causez) quelque chose ? Vous la faites parvenir ! チ—la sonorité suggère l'action directe. Le kanji montre le mouvement et l'intention. Si vous envoyez un cadeau, vous l'いたす (faites parvenir). C'est transmettre et créer un effet.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "秩",
+    "readings": {
+      "on": "チツ",
+      "kun": ""
+    },
+    "meaning": "ordre, régularité, hiérarchie, salaire, discipline",
+    "etymology": "Composé de 禾 (grain, récolte) et d'un élément phonétique. Traditionnellement, l'ordre vient de l'organisation systématique des récoltes et du travail agricole. La hiérarchie sociale découle de l'organisation des champs et de la distribution des moissons.",
+    "mnemonic": "Les grains 禾 dans l'ordre parfait ? C'est l'秩 (ordre) ! チツ—comme si on rangeait chaque grain à sa place précise. Imaginez un champ organisé avec une précision militaire—chaque plant a sa place, chaque grain sa fonction. C'est cette structure qui crée l'harmonie sociale.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "嫡",
+    "readings": {
+      "on": "チャク、テキ",
+      "kun": ""
+    },
+    "meaning": "épouse légitime, enfant légitime, descendance directe",
+    "etymology": "Composé de 女 (femme, épouse) et d'un élément phonétique. Désigne la femme légalement épousée, par opposition aux concubines. Historiquement crucial : seuls les enfants de l'épouse légitime avaient droit de succession.",
+    "mnemonic": "La 女 (femme) officiellement mariée ? C'est l'嫡 (épouse légitime) ! チャク—le ton solennel et officiel du mariage légal. Autrefois, il y avait l'épouse principale et les concubines—la 嫡妻 était la seule vraie. Le caractère 女 vous dit tout : c'est une question de statut et de légitimité.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "弔",
+    "readings": {
+      "on": "チョウ",
+      "kun": "とむら.う、とぶら.う"
+    },
+    "meaning": "condoléances, deuil, enterrement, consolation",
+    "etymology": "Composé de 弓 (arc) et d'autres éléments évoquant le geste rituel de pleurer. Historiquement, le geste de se courber ou de plier (comme l'arc 弓 qui se plie) représentait le deuil et l'humilité—un geste de respect face à la mort.",
+    "mnemonic": "Vous とむらう (présentez vos condoléances) ? C'est un geste humble—comme un 弓 (arc) qui se plie sous le poids du chagrin. ChōU—le son grave et solennel des funérailles. Imaginez quelqu'un qui se courbe respectueusement pour honorer un défunt. C'est l'acte ultime d'honorer les morts.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "挑",
+    "readings": {
+      "on": "チョウ",
+      "kun": "いど.む"
+    },
+    "meaning": "défi, provocation, contendre, se battre contre",
+    "etymology": "Composé de 手 (main) et d'un élément phonétique. L'image des mains qui provoquent ou défient. Historiquement, le geste de pointer du doigt ou de faire signe avec la main était une provocation directe.",
+    "mnemonic": "Vous いどむ (défiez) quelqu'un ? Utilisez vos 手 (main) ! La 挑 montre la main qui pointe ou provoque. ChōU—imaginez quelqu'un qui sort les poings en disant « Je te défie ! » C'est le geste agressif du combat. Très concret : les mains s'affrontent dans l'arène !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "勅",
+    "readings": {
+      "on": "チョク",
+      "kun": "いまし.める、みことのり"
+    },
+    "meaning": "ordre impérial, décret, commandement du souverain",
+    "etymology": "Composé de 力 (force, pouvoir) et d'un élément phonétique. Représente un commandement armé de la force impériale derrière lui. L'ordre du 皇帝 (empereur) est absolut—c'est un décret avec tout le poids du pouvoir royal.",
+    "mnemonic": "Un みことのり (décret impérial) ? C'est un ordre soutenu par la 力 (force) ! ChōKu—le ton impératif et irrésistible du commandement royal. Imaginez l'empereur qui parle avec autorité absolue—sa parole devient loi. C'est un commandement qui ne peut pas être désobéi !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "朕",
+    "readings": {
+      "on": "チン",
+      "kun": ""
+    },
+    "meaning": "nous impérial, je (prononcé exclusivement par l'empereur)",
+    "etymology": "朕 combine 月/舟 (embarcation, barque) et un composant archaïque représentant deux mains tenant un outil à calfater. Le sens originel était 'boucher les fissures d'un bateau'. Par extension métaphorique, ce qui est intime et secret (les fissures cachées) devint le pronom impérial exclusif : le 'Je' que seul l'empereur peut prononcer.",
+    "mnemonic": "朕 — le 'Je' réservé au seul 天皇 (tennō, empereur) ! CHIN (チン). Originellement : les mains qui calfatent un bateau 舟, comblant les fissures secrètes. Sens impérial : l'intérieur intime du pouvoir absolu. Jamais un roturier n'oserait dire 朕 — c'est le 'nous de majesté' japonais !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "陳",
+    "readings": {
+      "on": "チン",
+      "kun": "ひ.ねる"
+    },
+    "meaning": "exposer, énumérer, exprimer, arranger, dérouler",
+    "etymology": "Composé de 阝 (colline, lieu) et d'un élément phonétique. L'idée d'arranger ou de disposer quelque chose dans un endroit—de mettre en avant et d'exposer publiquement. L'action de montrer et d'énumérer des faits.",
+    "mnemonic": "Vous 陳述 (exposez) vos idées ? C'est les arranger dans un 阝 (endroit) pour les montrer ! ChiN—l'action de déployer et de présenter. Imaginez un commerçant qui arrange ses produits dans sa 店 (boutique) pour les vendre—c'est la 陳. Vous déployez vos pensées.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "津",
+    "readings": {
+      "on": "シン",
+      "kun": "つ"
+    },
+    "meaning": "havre, port, gué, traversée, carrefour",
+    "etymology": "Composé de 水 (eau) et d'un élément phonétique. Représente un lieu où les rivières se croisent ou où on peut traverser l'eau—un gué naturel. Historiquement, lieux importants pour le commerce et les voyages.",
+    "mnemonic": "Une 津 (traversée d'eau) ? C'est où vous trouvez la 水 (eau) ! つ—le son court et clair du water crossing. Imaginez d'anciens voyageurs qui atteignent la 津 (port ou gué)—c'est un havre, un passage sûr. Ou un carrefour d'eau où les routes se rejoignent.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "椎",
+    "readings": {
+      "on": "ツイ、スイ",
+      "kun": "つち、う.つ"
+    },
+    "meaning": "épine dorsale, maillet, pieu, chinkapin (arbre)",
+    "etymology": "Composé de 木 (arbre, bois) et d'un élément phonétique. Un 椎 était historiquement un bois dur utilisé pour faire des maillets ou des clubs. Plus tard, le terme s'étend à l'épine dorsale—structure vertébrale ressemblant à un pilier ou maillet.",
+    "mnemonic": "Un maillet solide en 木 (bois) ? C'est une 椎 ! ツイ ou スイ—vous pouvez l'う.つ (frapper) avec force. Imaginez un ouvrier qui u-tsu (frappe) avec son maillet en bois dur—ツイ ! L'épine dorsale est comme ce pilier central—la structure maîtresse du corps.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "漬",
+    "readings": {
+      "on": "シ",
+      "kun": "つ.ける、つ.かる、-づ.け、-づけ"
+    },
+    "meaning": "saumure, marinade, pickles, tremper, macérer, conserve",
+    "etymology": "Composé de 水 (eau) et d'un élément phonétique. L'image de choses immergées et conservées dans l'eau—trempées, marinées, saumurées. La 水 (eau) ou saumure est essentielle au processus de conservation.",
+    "mnemonic": "Des légumes つける (à tremper) dans la 水 (eau) salée ? C'est la 漬け ! シ—le bruit délicieux de la fermentation. Imaginez les 漬物 (pickles) qui reposent dans leur saumure—つかる (tremper lentement). Tous les ingrédients baignent dans la 水 (eau), préservés et savoureux !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "坪",
+    "readings": {
+      "on": "ヘイ",
+      "kun": "つぼ"
+    },
+    "meaning": "unité de surface (tsubo, ~3,3 m²)",
+    "etymology": "Composé de 土 (terre, terrain) et d'un élément phonétique. Un つぼ est une ancienne unité de mesure pour les terres agricoles en Asie, équivalant à environ 3,3 mètres carrés. Le 土 (terre) marque l'idée de mesure d'espace.",
+    "mnemonic": "Une surface de 土 (terrain) d'一坪 (un tsubo) ? C'est つぼ ! ヘイ—le son de mesure, de calcul. Imaginez un fermier mesurant ses champs—坪 par 坪. Devenu un mot commun au Japon pour décrire la taille des pièces ou des propriétés. Simple et efficace !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "釣",
+    "readings": {
+      "on": "チョウ",
+      "kun": "つ.る、つ.り"
+    },
+    "meaning": "pêche à la ligne, appât, hameçon, attraper, séduire",
+    "etymology": "Composé de 釒 (métal, fer) et d'un élément phonétique. Historiquement, les hameçons et les lignes de pêche étaient en métal—d'où le radical 釒. L'image d'un hameçon métallique qui attrape les poissons.",
+    "mnemonic": "Un hameçon en 釒 (métal) pour つる (pêcher) ? C'est la 釣 ! ChōU—le son de l'eau. Imaginez le moment magique où vous つり (lancez votre ligne)—l'hameçon métallique descend dans l'eau. Un poisson mord et vous tira (pulled) : victoire ! La pêche est un art !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鶴",
+    "readings": {
+      "on": "カク",
+      "kun": "つる"
+    },
+    "meaning": "grue (oiseau), échasse",
+    "etymology": "Composé de 鳥 (oiseau) et d'un élément phonétique. La grue est particulièrement importante dans la culture asiatique—symbole de longévité et de bonheur. Le radical 鳥 (oiseau) identifie clairement la catégorie d'animal.",
+    "mnemonic": "Un つる (grue) ? C'est un oiseau élégant de la 鳥 (famille des oiseaux) ! KaKu—un son distingué et majestueux. Dans la mythologie, la 鶴 vit 1000 ans et apporte la bonne fortune. Imaginez sa silhouette gracieuse qui s'envole vers le ciel—l'oiseau sacré de la sérénité et de la longévité !",
+    "jlpt": "N2"
+  }
+]

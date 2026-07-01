@@ -1,0 +1,278 @@
+[
+  {
+    "kanji": "遍",
+    "readings": {
+      "kun": "あまね.く",
+      "on": "ヘン"
+    },
+    "meaning": "partout, entièrement, universellement",
+    "etymology": "Composé de 辺 (côté, bord) et du radical 偏 (pencher). L'idée originelle est « pencher de tous les côtés », c'est-à-dire s'étendre partout. Ce kanji capture l'idée d'une diffusion universelle dans toutes les directions.",
+    "mnemonic": "Imaginez une roue qui tourne et envoie des rayons dans TOUTES les directions — 遍 (へん) ! C'est le mouvement universel, la diffusion complète. Quand vous dites 「あまねく」(entièrement), le kanji se fond dans cette idée de totalité omnidirectionnelle.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "舗",
+    "readings": {
+      "kun": "",
+      "on": "ホ"
+    },
+    "meaning": "boutique, magasin, pavage",
+    "etymology": "Le radical 舛 (patte d'animal) combine avec 方 (direction, méthode). Originellement utilisé pour les comptoirs ou emplacements marchands où l'on « dirige » les clients. Évoque le placement stratégique d'une boutique.",
+    "mnemonic": "Une boutique 舗 (ほ) — imaginez le kanji comme l'entrée d'un magasin. La structure suggère un lieu structuré, organisé. Quand vous passez devant une 「店舗」(magasin), vous sentez l'ordre du commerce!",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "砲",
+    "readings": {
+      "kun": "",
+      "on": "ホウ"
+    },
+    "meaning": "canon, arme à feu",
+    "etymology": "Composé de 石 (pierre) et du radical 炮 (feu, explosion). Historiquement, les premiers canons tibétains étaient faits de pierre. Ce kanji fusionne l'idée de pierre projetée avec celle du feu explosif.",
+    "mnemonic": "Cannon—砲 (ほう) ! Voyez la structure : 石 (pierre) soumise à un explosion. BOUM ! Le kanji résonne avec l'impact brutal d'une pierre projetée. C'est l'arme lourde par excellence, la 「大砲」(taihou, grand canon).",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "芳",
+    "readings": {
+      "kun": "かんば.しい",
+      "on": "ホウ"
+    },
+    "meaning": "parfum, fragrance, délicieux, favorable",
+    "etymology": "Composé du radical 艹 (herbe) et de 方 (direction, manière). Les herbes aromatiques diffusent leur senteur dans une direction. Métaphoriquement, cela représente l'effet bénéfique et agréable d'une chose.",
+    "mnemonic": "Les herbes 艹 diffusent un parfum 芳 (ほう) qui vous enveloppe ! Dites 「かんばしい」(かんばしい = délicieux, odorant) et visualisez le nuage de senteur. C'est l'herbe qui chante sa fragrance.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "傍",
+    "readings": {
+      "kun": "かたわ.ら、わき、おか-、はた、そば",
+      "on": "ボウ"
+    },
+    "meaning": "à côté, près de, bord, tiers",
+    "etymology": "Composé de 人 (personne) et de 旁 (côté, flanc). Littéralement « la personne à côté ». Ce kanji représente celui qui se tient à proximité, observant depuis le bord plutôt que du centre.",
+    "mnemonic": "Une personne 人 se tient 傍 (ぼう) — « そば » (près) ! Voyez-la placée aux côtés. Quand quelqu'un est 「傍に」(そばに = à côté), il est juste là, observateur, témoin. C'est l'ami qui vous accompagne.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "房",
+    "readings": {
+      "kun": "ふさ",
+      "on": "ボウ"
+    },
+    "meaning": "chambre, pièce, touffe, frange",
+    "etymology": "Probablement dérivé de la pictographie d'une maison divisée en compartiments. Originellement représentait une « chambre fermée », puis s'est étendu à tout espace délimité. Le sens de touffe vient de la groupation d'éléments similaires.",
+    "mnemonic": "Une 房 (ぼう/ふさ) — une chambre avec ses replis, ou une touffe de cheveux ! Imaginez une 「房間」(chambre) où vous vous reposez, ou une 「ふさ」(houppe) qui danse. Le kanji enferme cette idée de regroupement cosy.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "某",
+    "readings": {
+      "kun": "それがし、なにがし",
+      "on": "ボウ"
+    },
+    "meaning": "untel, quelconque, un certain",
+    "etymology": "Combinaison de 木 (arbre/objet) et de 冂 (contour fermé). Suggère quelque chose d'indéfini, enfermé dans une zone floue d'identité. Exprime l'anonymat, l'indétermination volontaire.",
+    "mnemonic": "「某」(ぼう) — c'est UNTEL, ce type mystérieux ! Vous dites 「某大学」(telle ou telle université) sans la nommer précisément. Le kanji elle-même se cache : 木 en prison de 冂, anonyme et vague.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "冒",
+    "readings": {
+      "kun": "おか.す",
+      "on": "ボウ"
+    },
+    "meaning": "risquer, affronter, oser, usurper",
+    "etymology": "Composé de 冖 (couverture, voile) et de 目 (œil). Littéralement « couvrir les yeux » ou « avancer sans voir clairement ». Exprime l'idée de foncer malgré l'incertitude, de prendre un risque en bravant le danger.",
+    "mnemonic": "Couvrez votre 目 (oeil) et foncez — c'est 冒 (ぼう), « おかす »! Vous 「危険を冒す」(risquez le danger). C'est l'audace aveugle, le défi courageux. Imaginez quelqu'un qui ferme les yeux et avance.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "紡",
+    "readings": {
+      "kun": "つむ.ぐ",
+      "on": "ボウ"
+    },
+    "meaning": "filer, tisser, cardage",
+    "etymology": "Composé de 糸 (fil) et de 方 (direction, méthode). Représente l'action directionnelle de transformer des fibres en fil. Le kanji capture le mouvement rotatif et intentionnel du filage.",
+    "mnemonic": "Les 糸 (fils) tournent et dansent — 紡 (ぼう), « つむぐ » ! C'est la roue qui file, les doigts qui tordent. Visualisez la rotation hypnotique du rouet : le fil s'enroule, s'allonge, s'étire.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "肪",
+    "readings": {
+      "kun": "",
+      "on": "ボウ"
+    },
+    "meaning": "graisse, tissu adipeux, obésité",
+    "etymology": "Composé de 月 (viande, chair) et de 方 (direction, manière). Représente la matière grasse accumulée dans le corps. Le radical 月 (chair) est le clé identifiant ce kanji comme relevant de l'anatomie.",
+    "mnemonic": "La chair 月 qui s'accumule — c'est la 肪 (ぼう), la graisse! 「脂肪」(シボウ = gras) remplissez cette idée d'accumulation. Le kanji enveloppe littéralement le sens.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "僕",
+    "readings": {
+      "kun": "しもべ",
+      "on": "ボク"
+    },
+    "meaning": "moi, je (registre masculin), serviteur, valet",
+    "etymology": "Composé de 人 (personne) et de 卜 (prédire, diviner, servant). Historiquement, un serviteur était celui qui obéissait aux augures du maître. Le kanji exprime l'idée de soumission et de dépendance.",
+    "mnemonic": "Un 人 (personne) — le 僕 (ぼく) — c'est MOI le serviteur! Les garçons disent 「僕」pour dire « je », surtout en contexte informel. C'est humble, un peu espiègle : le kanji enferme la modestie virile.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "撲",
+    "readings": {
+      "kun": "",
+      "on": "ボク"
+    },
+    "meaning": "frapper, taper, cogner, battre",
+    "etymology": "Composé de 手 (main) et de 卜 (baguette, coup). Représente littéralement le coup de main donné. Le kanji visualise l'action physique d'impact.",
+    "mnemonic": "La 手 (main) qui cogne — POW! C'est 撲 (ぼく), frapper! 「撲殺」(frappé à mort) — le kanji vibre de violence contrôlée. Imaginez la paume qui s'abat.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "朴",
+    "readings": {
+      "kun": "ほう、ほお、えのき",
+      "on": "ボク"
+    },
+    "meaning": "simple, brut, rustre, candide",
+    "etymology": "Composé de 木 (arbre) et de 卜 (baguette primitive). Représente le bois à l'état brut, non travaillé. Métaphoriquement, évoque l'absence d'artifice, la simplicité naturelle.",
+    "mnemonic": "Le 木 (arbre) dans sa forme brute — 朴 (ほう/ぼく), simple et rustique! C'est un kanji honnête, sans ornement. Quand vous dites 「朴訥」(honnête et simple), vous sentez la naïveté sincère du bois non poli.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "睦",
+    "readings": {
+      "kun": "むつ.まじい、むつ.む、むつ.ぶ",
+      "on": "ボク、モク"
+    },
+    "meaning": "intime, amical, harmonieux, s'unir",
+    "etymology": "Composé de 目 (œil) et de 木 (arbre, croissance). Suggère deux êtres dont les regards (目) se croisent dans l'harmonie, enracinés ensemble comme des arbres. Exprime la convivialité et l'entente mutuelle.",
+    "mnemonic": "Deux 目 (yeux) qui se croisent avec tendresse — 睦 (ぼく/もく), c'est l'amitié! 「睦まじい」(むつまじい = intime, harmonieux) — le kanji chante la fraternité. Les yeux qui se rencontrent disent tout.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "堀",
+    "readings": {
+      "kun": "ほり",
+      "on": "クツ",
+      "on_alt": "ホリ"
+    },
+    "meaning": "fossé, douve, canal",
+    "etymology": "Composé de 土 (terre) et de 掘 (creuser). Littéralement la terre creusée. Représente l'action de creuser le sol pour créer une barrière défensive autour d'un château ou d'une ville.",
+    "mnemonic": "La 土 (terre) creusée — 堀 (ほり), le fossé! Imaginez les châteaux entourés de 「堀」— l'eau qui remplit la tranchée. Le kanji enferme cette idée d'excavation protectrice.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "盆",
+    "readings": {
+      "kun": "",
+      "on": "ボン"
+    },
+    "meaning": "bassin, plateau, fête des lanternes",
+    "etymology": "Composé de 皿 (plat, assiette) et de 分 (diviser). Représente un plateau servant à contenir et à distribuer. Évoque le rassemblement familial autour du plateau 「盆」lors du festival Obon.",
+    "mnemonic": "La 皿 (assiette) — c'est le 盆 (ぼん), le bassin! 「お盆」(Obon, fête des lanternes) — le kanji ramasse les souvenirs familiaux. C'est le plateau qui unit, le récipient de tradition.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "麻",
+    "readings": {
+      "kun": "あさ",
+      "on": "マ"
+    },
+    "meaning": "chanvre, lin, lin ordinaire, engourdi",
+    "etymology": "Kanji ancien représentant la plante de chanvre avec ses fibres. 麻 est l'une des plus anciennes cultures textiles. Le sens d'« engourdissement » vient de la sensation de la peau après le contact avec certaines plantes.",
+    "mnemonic": "Le 麻 (あさ/ま) — les fibres qui dansent! C'est le chanvre, le lin, la texture. Quand vos doigts deviennent 「麻痺」(engoudis), c'est comme si le kanji dormait sur votre peau.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "又",
+    "readings": {
+      "kun": "また、また-、また.の-",
+      "on": "ユウ"
+    },
+    "meaning": "de nouveau, encore, à la fois, main",
+    "etymology": "Kanji pictographique représentant deux branches ou deux mains se divisant. Symbolise la bifurcation, la dualité, et par extension « encore une fois ». L'idée de répétition vient de cette structure dédoublée.",
+    "mnemonic": "Deux voies qui se séparent — 又 (また) ! C'est « encore une fois », « de nouveau ». Vous dites 「また明日」(また あした = à demain) avec l'idée de bifurcation : une routes se divise, vous vous reverrez.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "抹",
+    "readings": {
+      "kun": "",
+      "on": "マツ"
+    },
+    "meaning": "effacer, supprimer, passer par-dessus, thé vert en poudre",
+    "etymology": "Composé de 手 (main) et de 末 (fin, pointe). Littéralement « main qui efface jusqu'à la fin ». Représente le geste de frotter ou d'étendre quelque chose, d'où le lien avec le thé vert moulu.",
+    "mnemonic": "La 手 (main) qui efface — 抹 (まつ)! 「抹茶」(matcha = thé vert en poudre) — le kanji broie le thé en poussière fine. C'est l'action de réduire, d'annuler, de passer par-dessus.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "繭",
+    "readings": {
+      "kun": "まゆ、きぬ",
+      "on": "ケン"
+    },
+    "meaning": "cocon de soie",
+    "etymology": "Composé de 糸 (fil) et de 虫 (insecte). Représente littéralement l'insecte producteur de fil — le ver à soie. Le cocon est la structure tissée par ce dernier.",
+    "mnemonic": "Le 虫 (insecte) qui tisse des 糸 (fils) — 繭 (けん/まゆ), le cocon! Imaginez le ver à soie enfermé dans sa prison dorée, tissant sans fin. C'est la magie de la transformation : ver → soie → kanji.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "岬",
+    "readings": {
+      "kun": "みさき",
+      "on": "コウ"
+    },
+    "meaning": "cap, promontoire, pointe côtière",
+    "etymology": "Composé de 山 (montagne) et de 甲 (armure, armure du crabe). Représente la montagne qui s'avance dans la mer, une formation rocheuse pointue. Le kanji capture l'idée d'une arête aiguë s'avançant dans les flots.",
+    "mnemonic": "La 山 (montagne) qui s'avance — 岬 (こう/みさき)! C'est le cap qui pointe dans l'océan. Dites 「岬」et voyez l'épée rocheuse qui déchire les vagues. Un promontoire altier et solitaire.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "妙",
+    "readings": {
+      "kun": "たえ",
+      "on": "ミョウ、ビョウ"
+    },
+    "meaning": "étrange, merveilleux, exquis, miraculeux",
+    "etymology": "Composé de 女 (femme) et de 少 (peu). Littéralement « peu de femme » ou « femme délicate ». Évoque la féminité subtile et l'essence rarifiée. Métaphoriquement, cela représente ce qui est fin, subtil, mystérieux.",
+    "mnemonic": "Une 女 (femme) subtile et délicate — 妙 (みょう)! C'est étrange, c'est merveilleux! 「妙な」(strange) — le kanji whisper mystère. La finesse féminine cache un secret magique, une essence rarissime.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "婿",
+    "readings": {
+      "kun": "むこ",
+      "on": "セイ"
+    },
+    "meaning": "gendre, marié",
+    "etymology": "Composé de 女 (femme) et de 息 (souffle, respiration, fils). Représente littéralement « le souffle de la femme » ou « le fils par la femme », c'est-à-dire l'homme qui entre dans la famille par le mariage.",
+    "mnemonic": "La 女 (femme) qui accueille son 息 (souffle) — 婿 (むこ), le gendre! C'est l'homme qui arrive et respire le même air que la famille. Imaginez le mariage : il devient 「婿」, porteur du nom nouveau.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "茂",
+    "readings": {
+      "kun": "しげ.る",
+      "on": "モ"
+    },
+    "meaning": "luxuriant, dense, proliférer, croître",
+    "etymology": "Composé du radical 艹 (herbe) et de 茂 (croissance abondante). Représente l'herbe qui pousse épaisse et verte, formant un dôme de verdure. Le kanji visualise la profusion végétale.",
+    "mnemonic": "L'herbe 艹 qui 「しげる」(茂) — elle explose! C'est la jungle, c'est dense, c'est verdoyant! 「茂った森」(forêt luxuriante) — le kanji frémit de vitalité verte. Les feuilles s'empilent, s'épaississent.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "網",
+    "readings": {
+      "kun": "あみ",
+      "on": "モウ"
+    },
+    "meaning": "filet, réseau, maille",
+    "etymology": "Kanji ancien représentant le filet de pêche, avec ses mailles entrecroisées. Le radical 网 (filet) est la clé identifiante. Métaphoriquement, s'étend à toute structure maillée ou réseau.",
+    "mnemonic": "Le filet 網 (あみ) — ses mailles qui s'entrelacent! 「漁網」(filet de pêche) — le kanji capture les fils croisés. Aujourd'hui, c'est aussi l'「インターネット」(réseau). Le kanji enferme l'idée de connexion.",
+    "jlpt": "N2"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "trainer_id": "youngster_route29_04",
+  "name": "Gamin Daiki",
+  "zone_id": "route-29",
+  "jlpt_level": "N5",
+  "state_rules": [
+    { "if": [{ "type": "npc_cleared", "npc_id": "youngster_route29_04" }], "state": "post_battle" },
+    { "default": true, "state": "battle_intro" }
+  ],
+  "dialogue_states": {
+    "battle_intro": {
+      "pages": [
+        { "jp": "ひとが　きた！", "en": "Someone came!" },
+        { "jp": "しょうぶ　しよう！", "en": "Let's battle!" }
+      ]
+    },
+    "post_battle": {
+      "pages": [
+        { "jp": "つよかった。", "en": "You were strong." },
+        { "jp": "また　あそぼうね。", "en": "Let's play again." }
+      ]
+    }
+  }
+}

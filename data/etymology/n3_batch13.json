@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "王",
+    "readings": {
+      "kun": "",
+      "on": "オウ、-ノウ"
+    },
+    "meaning": "roi, souverain, monarque",
+    "etymology": "王 est un pictogramme représentant trois lignes horizontales reliées par un trait vertical central. Ces trois lignes symbolisent le Ciel (en haut), l'Humanité (au milieu) et la Terre (en bas). Le trait vertical représente le souverain unique qui relie et unifie ces trois dimensions du cosmos. C'est l'un des caractères les plus anciens, attesté sur les os oraculaires de la dynastie Shang.",
+    "mnemonic": "Trois royaumes — le Ciel, les Hommes, la Terre — traversés d'un seul trait royal : voilà le ROI (オウ) ! Tracez ce caractère et imaginez le sceptre du monarque qui perce l'univers de haut en bas. On le retrouve dans 王様 (おうさま), « Sa Majesté » — le trait qui tient tout ensemble, c'est lui !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "貝",
+    "readings": {
+      "kun": "かい",
+      "on": "バイ"
+    },
+    "meaning": "coquillage, mollusque",
+    "etymology": "貝 est un pictogramme d'un coquillage cauri vu de face. La partie supérieure évoque 目 (œil), représentant l'ouverture luisante du coquillage, tandis que les deux traits inférieurs figurent les tentacules ou le pied de l'animal qui dépasse. Les cauris servaient de monnaie dans la Chine ancienne, ce qui explique pourquoi 貝 se retrouve en radical dans tous les kanji liés à l'argent et au commerce : 買 (acheter), 売 (vendre), 財 (richesse).",
+    "mnemonic": "Regardez 貝 : en haut, l'œil brillant (目) du coquillage, en bas ses deux petits pieds qui s'agitent — c'est votre かい ! Et retenez bien : les anciens Chinois payaient avec ces coquilles, donc 貝 se cache dans tous les kanji de l'argent. Le coquillage, c'est la carte bancaire de l'Antiquité !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "玉",
+    "readings": {
+      "kun": "たま、たま-、-だま",
+      "on": "ギョク"
+    },
+    "meaning": "joyau, gemme, boule, bille",
+    "etymology": "玉 ressemble presque trait pour trait à 王 (roi), mais avec un point distinctif ajouté sur le côté droit. À l'origine, il représentait trois perles de jade enfilées sur un cordon — les trois traits horizontaux étant les perles, le trait vertical le fil qui les relie. Ce point permettait de ne pas confondre le joyau avec le roi. Le jade était en Chine ancienne la pierre la plus précieuse, symbole de noblesse et de vertu.",
+    "mnemonic": "Vous reconnaissez 王 (le roi) ? Ajoutez un petit point à droite et voilà son JOYAU (たま, ギョク) ! Le roi sans son diamant n'est qu'un souverain — mais avec sa gemme, c'est toute la splendeur du palais. Ce minuscule point fait toute la différence : repérez-le, et vous ne confondrez plus jamais le trône et la pierre précieuse !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "糸",
+    "readings": {
+      "kun": "いと",
+      "on": "シ"
+    },
+    "meaning": "fil, filament, soie",
+    "etymology": "糸 est un pictogramme représentant un fil de soie. La partie supérieure montre le nœud ou le cocon enroulé, tandis que les traits inférieurs figurent les brins qui se déroulent vers le bas. C'est une version simplifiée de l'ancien caractère 絲, qui montrait deux bobines accolées. En tant que radical, 糸 apparaît dans de nombreux kanji liés au textile et aux liens : 紙 (papier), 結 (nouer), 絵 (peinture).",
+    "mnemonic": "Regardez 糸 de haut en bas : un nœud bien serré tout en haut, puis les brins de soie qui se déroulent librement — c'est いと, le fil ! Le son シ siffle comme le fil qu'on tire à travers le chas d'une aiguille... Chhhht, on file !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "石",
+    "readings": {
+      "kun": "いし",
+      "on": "セキ、シャク、コク"
+    },
+    "meaning": "pierre, roche",
+    "etymology": "石 combine 厂 (une falaise ou un surplomb rocheux, représenté par les traits supérieurs gauches) et 口 (un bloc carré symbolisant la roche au sol). L'ensemble représente un rocher tombé au pied d'une falaise — le surplomb au-dessus, le bloc en dessous. Ce pictogramme est attesté dès les inscriptions sur os oraculaires et carapaces de tortue de la dynastie Shang.",
+    "mnemonic": "Imaginez une falaise (le trait penché en haut à gauche) avec un gros bloc de granit (口) posé à sa base — voilà いし, la pierre ! セキ, シャク, コク : trois lectures pour une seule roche, aussi solide et immuable qu'elle l'a toujours été. La prochaine fois que vous verrez un rocher, dites-vous : « Ah, 石 ! »",
+    "jlpt": "N3"
+  }
+]

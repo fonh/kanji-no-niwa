@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "伝",
+    "readings": {
+      "kun": "つた.わる、つた.える、つた.う、つだ.う、-づた.い、つて",
+      "on": "デン、テン"
+    },
+    "meaning": "transmettre, tradition, légende",
+    "etymology": "Le caractère original 傳 associe 亻 (personne) et 尃 (répandre au loin). Dans la forme simplifiée moderne 伝, on trouve 亻 (personne) et 云 (nuage, mais aussi « dire »). L'image est celle d'une personne qui propage une parole ou une tradition de proche en proche. Le sens s'étend à tout ce qui passe de main en main : informations, légendes, coutumes.",
+    "mnemonic": "Une personne (亻) qui parle (云) à une autre — et la nouvelle circule de bouche en bouche, comme une légende ! デン, c'est le souffle qui transmet la tradition à travers les âges. つたわる : laissez le message se propager !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "灯",
+    "readings": {
+      "kun": "ひ、ほ-、ともしび、とも.す、あかり",
+      "on": "トウ"
+    },
+    "meaning": "lampe, lumière, bougie",
+    "etymology": "Le caractère traditionnel 燈 combinait 火 (feu) et 登 (monter), évoquant une flamme qui s'élève vers le haut. Dans la forme simplifiée 灯, on retrouve 火 (feu) à gauche et 丁 (cheville, piquet) à droite, rappelant la mèche fichée dans l'huile d'une lampe antique. L'essentiel reste le feu domestiqué, contrôlé pour éclairer l'obscurité.",
+    "mnemonic": "Le feu 火 planté sur sa petite mèche 丁 comme un piquet lumineux — トウ, la lampe qui veille dans la nuit et guide les pas perdus ! Allumez le ともしび et chassez les ténèbres !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "必",
+    "readings": {
+      "kun": "かなら.ず",
+      "on": "ヒツ"
+    },
+    "meaning": "inévitable, certainement, sans faute",
+    "etymology": "必 est analysé comme 心 (cœur) traversé de deux traits diagonaux, symbolisant un cœur saisi, étreint de toutes parts, sans possibilité de fuite. Certains étymologistes y voient plutôt un manche d'arme bifurqué que l'on ne lâche pas. Dans les deux cas, l'idée centrale est celle d'une contrainte inéluctable — ce qui ne peut pas ne pas arriver.",
+    "mnemonic": "Le cœur 心 pris en tenailles par deux lames croisées — il ne peut pas s'échapper ! ヒツ, かならず : c'est INÉVITABLE, certain à 100%, garanti sans la moindre exception. Aucune échappatoire !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "標",
+    "readings": {
+      "kun": "しるべ、しるし",
+      "on": "ヒョウ"
+    },
+    "meaning": "repère, marque, enseigne, cible, emblème",
+    "etymology": "標 combine 木 (arbre) et 票 (billet, étiquette affichée). 票 lui-même est composé de 覀 (couvercle) au-dessus de 示 (montrer, présenter), évoquant quelque chose d'exposé publiquement. Un arbre (木) portant une étiquette (票) visible de loin devient naturellement un panneau indicateur, un jalon posé dans le paysage pour orienter les voyageurs.",
+    "mnemonic": "Imaginez un grand arbre 木 auquel les voyageurs d'autrefois accrochaient un panneau 票 pour indiquer la route — ヒョウ, le repère qui crie « par ici ! ». Aujourd'hui encore, 目標 (もくひょう) est votre cible, votre étoile du Nord !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "付",
+    "readings": {
+      "kun": "つ.ける、-つ.ける、-づ.ける、つ.け、つ.け-、-つ.け、-づ.け、-づけ、つ.く、-づ.く、つ.き、-つ.き、-つき、-づ.き、-づき",
+      "on": "フ"
+    },
+    "meaning": "attacher, coller, joindre, annexer, remettre",
+    "etymology": "付 réunit 亻 (personne) et 寸 (pouce, main). 寸 représente originellement une main avec un point marquant la mesure d'un pouce, symbole du geste précis et contrôlé de la main. Une personne (亻) tendant la main (寸) pour remettre ou fixer quelque chose exprime l'idée fondamentale d'attacher, de joindre, d'ajouter à.",
+    "mnemonic": "Une personne (亻) qui tend la main (寸) pour coller une étiquette ou remettre un document — フ ! C'est le geste universel d'attacher quelque chose à autre chose. つける : accrochez-y une note, une pièce jointe, une condition — tout se fixe avec 付 !",
+    "jlpt": "N3"
+  }
+]

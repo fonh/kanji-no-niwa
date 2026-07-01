@@ -1,0 +1,24 @@
+{
+  "trainer_id": "lass_route29_01",
+  "name": "Fillette Yuki",
+  "zone_id": "route-29",
+  "jlpt_level": "N5",
+  "state_rules": [
+    { "if": [{ "type": "npc_cleared", "npc_id": "lass_route29_01" }], "state": "post_battle" },
+    { "default": true, "state": "battle_intro" }
+  ],
+  "dialogue_states": {
+    "battle_intro": {
+      "pages": [
+        { "jp": "あ、ひと！", "en": "Oh, a person!" },
+        { "jp": "わたしと　しょうぶしましょう！", "en": "Let's battle, shall we!" }
+      ]
+    },
+    "post_battle": {
+      "pages": [
+        { "jp": "つよいですね。", "en": "You're strong." },
+        { "jp": "また　あいましょうね。", "en": "Let's meet again." }
+      ]
+    }
+  }
+}

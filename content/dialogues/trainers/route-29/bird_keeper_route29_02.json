@@ -1,0 +1,24 @@
+{
+  "trainer_id": "bird_keeper_route29_02",
+  "name": "Oiselier Aoi",
+  "zone_id": "route-29",
+  "jlpt_level": "N5",
+  "state_rules": [
+    { "if": [{ "type": "npc_cleared", "npc_id": "bird_keeper_route29_02" }], "state": "post_battle" },
+    { "default": true, "state": "battle_intro" }
+  ],
+  "dialogue_states": {
+    "battle_intro": {
+      "pages": [
+        { "jp": "あおい　そらだね。", "en": "Blue sky, isn't it." },
+        { "jp": "とりが　だいすきです。しょうぶしましょう。", "en": "I love birds. Let's battle." }
+      ]
+    },
+    "post_battle": {
+      "pages": [
+        { "jp": "まけました。でも、たのしかった。", "en": "I lost. But, it was fun." },
+        { "jp": "またね。", "en": "See you." }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "npc_id": "mom_new_bark",
+    "zone_id": "new-bark-town",
+    "name": "Mom",
+    "tile_x": 5,
+    "tile_y": 3,
+    "position_status": "provisional — à fixer lors du design complet de la grille de new-bark-town",
+    "trigger_type": "talk",
+    "dialogue_ref": "npcs/new-bark-town/mom_new_bark"
+  },
+  {
+    "npc_id": "guide_gent_cherrygrove",
+    "zone_id": "cherrygrove-city",
+    "name": "Guide Gent",
+    "tile_x": 4,
+    "tile_y": 4,
+    "position_status": "provisional — à fixer lors du design complet de la grille de cherrygrove-city",
+    "trigger_type": "talk",
+    "dialogue_ref": "npcs/cherrygrove-city/guide_gent_cherrygrove"
+  }
+]

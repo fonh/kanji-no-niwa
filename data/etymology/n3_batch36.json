@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "想",
+    "readings": {
+      "kun": "おも.う",
+      "on": "ソウ、ソ"
+    },
+    "meaning": "Pensée, idée",
+    "etymology": "想 associe 木 (arbre) avec 相 (mutualité, regard). L'élément bois apporte la phonétique; 相 représente le regard mutuel. Ensemble, ils suggèrent l'esprit en réflexion — la base même de la pensée se manifestant dans la contemplation mutuelle.",
+    "mnemonic": "Imaginez un 木 (arbre) qui pense (想う - omou)... ses branches se déploient comme des pensées qui s'entrecroisent. La 相 (relation mutuelle) de ses racines et feuilles crée la 想像 (imagination) vivante.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "息",
+    "readings": {
+      "kun": "いき",
+      "on": "ソク"
+    },
+    "meaning": "Souffle, respiration",
+    "etymology": "息 montre 自 (nez, soi-même) combiné avec 心 (cœur). Le nez indique la respiration tandis que le cœur souligne la nature vitale. Ensemble ils incarnent la force de vie circulant entre la respiration et le cœur.",
+    "mnemonic": "Ton 自 (nez) et ton 心 (cœur) dansent ensemble... une 息 (いき - souffle) relie le corps à l'âme. Quand tu respires profondément (深呼吸), tu unifies 自心 en créant 息 (une respiration consciente).",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "他",
+    "readings": {
+      "kun": "ほか",
+      "on": "タ"
+    },
+    "meaning": "Autre, autrui",
+    "etymology": "他 combine 人 (personne) avec 它 (cela, l'autre). Le radical de personne permet de distinguer « cette personne-ci » de « cette autre personne »— la structure même repose sur la différenciation de l'altérité.",
+    "mnemonic": "Un 人 (personne) qui dit 它 — « c'est l'autre! » 他 (ほか - autre) c'est simple: il y a TOI, et puis il y a 他 — tout le monde d'autre. ソウ (altro) en son cœur veut dire « ce n'est pas moi ».",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "炭",
+    "readings": {
+      "kun": "すみ",
+      "on": "タン"
+    },
+    "meaning": "Charbon, charbon de bois",
+    "etymology": "炭 combine 火 (feu) avec des traces de matière combustible. Le radical du feu souligne l'état brûlé du carbone. Le charbon ancien (すみ) était fabriqué en brûlant le bois de manière contrôlée — fondamentalement un produit de la combustion partielle.",
+    "mnemonic": "Un morceau de 木 jeté dans le 火 (feu) se transforme en 炭 (すみ - charbon)... noir, chaud, magique! Le 炭 (charbon) porte en lui toute la puissance du 火 transformé.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "談",
+    "readings": {
+      "kun": "",
+      "on": "ダン"
+    },
+    "meaning": "Discuter, converser",
+    "etymology": "談 combine 言 (parole, mots) avec 炎 (flamme, énergie). Le radical de la parole indique la communication, tandis que 炎 ajoute l'intensité ou la passion — suggérant une conversation animée ou une discussion spirale. Ensemble, c'est la parole qui s'enflamme.",
+    "mnemonic": "Deux amis parlent avec 言 (mots) qui deviennent 炎 (flammes) — une 談 (ダン - discussion passionnée)! Quand les mots s'enflamment, c'est une vraie 談話 (conversation vivante).",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "夫",
+    "readings": {
+      "kun": "おっと、それ",
+      "on": "フ、フウ、ブ"
+    },
+    "meaning": "Mari, homme",
+    "etymology": "夫 montre 大 (grand, homme) avec un trait horizontal sur le sommet. Cela représente un homme adulte debout avec autorité ou statut. Le trait supérieur suggère un chapeau ou une marque de maturité, distinguant l'homme adulte du jeune homme.",
+    "mnemonic": "Un grand 大 (homme) qui se tient debout droit — c'est un 夫 (おっと - mari)! Ajoute ce petit 一 (trait) d'autorité et tu as un vrai 夫 — mature, responsable, le chef de famille.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "富",
+    "readings": {
+      "kun": "と.む、とみ",
+      "on": "フ、フウ"
+    },
+    "meaning": "Richesse, abondance",
+    "etymology": "富 combine 宀 (maison, toit) avec 畐 (abondant, plein). Le radical du toit suggère une demeure ou un magasin de réserves, tandis que 畐 représente la plénitude. Une maison pleine révèle la prospérité et la richesse.",
+    "mnemonic": "Imagine une 宀 (maison) remplie à ras bord de trésors... 富 (とみ - richesse)! Le 富む (とむ - s'enrichir) commence toujours par une 宀 pleine de ressources qui se multiplient.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "府",
+    "readings": {
+      "kun": "",
+      "on": "フ"
+    },
+    "meaning": "Préfecture, siège gouvernemental",
+    "etymology": "府 combine 宀 (maison, toit) avec 付 (attacher, donner). Le toit indique un bâtiment, tandis que 付 suggère que les choses s'accumulent et s'attachent là. Ensemble ils représentent un lieu central de rassemblement — un magasin ou centre administratif.",
+    "mnemonic": "Une 宀 (maison) où les choses s'accumulent et s'attachent (付く) — c'est la 府 (フ - préfecture)! Quand tu dis 京都府, c'est le siège du pouvoir, le cœur administratif.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "副",
+    "readings": {
+      "kun": "",
+      "on": "フク"
+    },
+    "meaning": "Adjoint, assistant, second",
+    "etymology": "副 combine 衣 (vêtement, couverture) avec 畐 (plein, abondant). Le radical du vêtement suggère les couches ou les recouvrements, tandis que 畐 indique la plénitude. Ensemble ils suggèrent quelque chose de secondaire ou supplémentaire — comme une couche supplémentaire.",
+    "mnemonic": "Le 副 (フク - adjoint) c'est toujours sous quelque chose — comme un 衣 (vêtement) qui couvre! La 副会長 (vice-président) est sous la 衣 (couche) du 会長 (président).",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "兵",
+    "readings": {
+      "kun": "つわもの",
+      "on": "ヘイ、ヒョウ"
+    },
+    "meaning": "Soldat, troupe, armée",
+    "etymology": "兵 combine 八 (huit, diviser) avec 丁 (clou, droit). 八 représente la division ou le rassemblement en formations, tandis que 丁 suggère la rectitude ou l'ordre. Ensemble, ils évoquent des groupes armés organisés — des soldats alignés en formation disciplinée.",
+    "mnemonic": "Une 八 (division, formation) de 丁 (guerriers droits) — voilà les 兵 (つわもの - soldats)! Imagine une armée alignée comme des 丁 en parfait 八 (formation).",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "変",
+    "readings": {
+      "kun": "か.わる、か.わり、か.える",
+      "on": "ヘン"
+    },
+    "meaning": "Changement, bizarre, transformer",
+    "etymology": "変 combine 亠 (couverture supérieure) avec 夂 (mouvement, pied). Le radical supérieur suggère une clôture ou une couverture, tandis que 夂 montre le mouvement. Ensemble, ils dépeignent quelque chose se mouvant dans les contraintes — la transformation ou le changement qui s'opère.",
+    "mnemonic": "Quelque chose sous un 亠 (toit) qui se met à bouger avec 夂 (mouvement) — c'est la 変 (へん - changement)! Le かわる (kawaru - se changer) c'est quand même les choses sous le toit bougent inévitablement.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "辺",
+    "readings": {
+      "kun": "あた.り、ほと.り、-べ",
+      "on": "ヘン"
+    },
+    "meaning": "Environs, voisinage, bord",
+    "etymology": "辺 combine 辶 (radical de marche, mouvement) avec 編 (tissage, entrelaçage). Le radical de mouvement suggère voyager autour, tandis que 編 représente les connexions ou le tissage. Ensemble, ils véhiculent l'idée de traverser des espaces connectés — la région environnante où tu te déplaces.",
+    "mnemonic": "Quand tu 辶 (marches) autour du 編 (tissage) — tu parcours la 辺 (あたり - environs)! Chaque 辺 (bordure) est connectée à la suivante comme un tissu continu sans fin.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "法",
+    "readings": {
+      "kun": "のり",
+      "on": "ホウ、ハッ、ホッ、フラン"
+    },
+    "meaning": "Méthode, loi, règle, principe",
+    "etymology": "法 combine 水 (eau) avec 去 (partir, aller). L'eau coule selon les lois naturelles, trouvant toujours le chemin le plus bas et avançant. Ce principe naturel du mouvement de l'eau devient une métaphore pour la loi et la méthode — suivre le chemin de la nature.",
+    "mnemonic": "L'eau (水) suit toujours sa 法 (のり - méthode/loi) — elle s'écoule avec 去 (mouvement naturel). La 法 (ホウ - loi) c'est comme la nature: fluide mais inévitable, comme l'eau cherchant sa voie.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "無",
+    "readings": {
+      "kun": "な.い",
+      "on": "ム、ブ"
+    },
+    "meaning": "Néant, rien, aucun",
+    "etymology": "無 combine 无 (non, néant) avec 月 (lune, corps). La base 无 représente la négation ou l'absence, tandis que 月 représente habituellement quelque chose de substantiel. Ensemble, ils suggèrent paradoxalement le néant substantiel — le concept philosophique du vide ou du vide existentiel.",
+    "mnemonic": "Il n'y a 无 (rien/pas) — pas même une 月 (lune) visible. C'est la 無 (ム - néant). Quand tu dis なし (nai - rien), tu invoques la 無 — le vide absolu et sans limites.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "利",
+    "readings": {
+      "kun": "き.く",
+      "on": "リ"
+    },
+    "meaning": "Profit, avantage, bénéfice",
+    "etymology": "利 combine 禾 (grain, moisson) avec 刀 (couteau). Le radical du grain suggère les cultures et la moisson, tandis que le couteau représente la coupe ou l'affûtage. Ensemble, ils dépeignent l'acte pratique de moissonner et préparer les cultures pour le profit — le gain du travail productif.",
+    "mnemonic": "Une 禾 (moisson/grain) coupée avec une 刀 (couteau) — c'est un travail qui 利く (きく - fonctionne, bénéficie)! La 利益 (profit) vient du travail efficace avec les bons outils.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "陸",
+    "readings": {
+      "kun": "おか",
+      "on": "リク、ロク"
+    },
+    "meaning": "Terre, terrain, continent",
+    "etymology": "陸 combine 阝 (radical de colline, terre) avec 六 (six). Le radical de colline souligne la terre ou l'élévation, tandis que 六 apporte le soutien phonétique. Le nombre six suggère les six directions — la couverture complète de l'espace terrestre.",
+    "mnemonic": "La 阝 (terre/colline) où tu marches — c'est la 陸 (おか - terre)! Pense à 六 (six) — six directions de la 陸, six points cardinaux couvrant toute la terre ferme.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "令",
+    "readings": {
+      "kun": "",
+      "on": "レイ"
+    },
+    "meaning": "Ordre, commandement, décret",
+    "etymology": "令 montre 亠 (couverture supérieure, autorité) au-dessus de 卩 (petit sceau, marque officielle). Ensemble, ils représentent l'autorité officielle — quelque chose d'ordonné d'en haut avec un sceau officiel. La forme suggère le sceau du commandement et de l'autorité.",
+    "mnemonic": "Un 亠 (toit/autorité) au-dessus d'un 卩 (sceau/marque officielle) — c'est une 令 (レイ - ordre)! Quand la 令 (order) tombe d'en haut, tout le monde doit obéir immédiatement.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "圧",
+    "readings": {
+      "kun": "お.す、へ.す、おさ.える、お.さえる",
+      "on": "アツ、エン、オウ"
+    },
+    "meaning": "Pression, écrasement, oppression",
+    "etymology": "圧 combine 囗 (enclosure, boîte) avec 厓 (falaise, hauteur). La boîte suggère l'enfermement, tandis que 厓 représente une chute abrupte ou un poids d'en haut. Ensemble, ils véhiculent la pression — un poids écrasant d'en haut dans un espace confiné, créant la compression.",
+    "mnemonic": "Un 囗 (enclosure) écrasé par une 厓 (falaise/poids) — tu sens la 圧 (アツ - pression)! Quand tu お.す (appuies), tu crées une 圧 — une force qui écrase tout sur son passage.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "囲",
+    "readings": {
+      "kun": "かこ.む、かこ.う、かこ.い",
+      "on": "イ"
+    },
+    "meaning": "Entourer, encercler, clôturer",
+    "etymology": "囲 montre 囗 (enclosure, boîte) avec 韋 (cuir, force) à l'intérieur. La boîte représente un périmètre ou une limite, tandis que 韋 suggère des limites flexibles mais solides. Ensemble, ils dépeignent l'enfermement de quelque chose dans des limites protectrices.",
+    "mnemonic": "Un 囗 (boîte/enclosure) qui かこ.む (entoure) quelque chose — c'est la 囲 (イ - entourer)! Imagine un mur de 囗 qui protège ce qu'il y a dedans — c'est une préservation sacrée.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "易",
+    "readings": {
+      "kun": "やさ.しい、やす.い",
+      "on": "エキ、イ"
+    },
+    "meaning": "Facile, simple, divination",
+    "etymology": "易 combine 日 (soleil, jour) avec 勿 (herbe, négligent). Le soleil suggère la clarté et la luminosité, tandis que 勿 signifiait originalement négligent ou décontracté. Ensemble, ils suggèrent la simplicité — facile comme la lumière du jour, aussi naturel qu'une observation décontractée. Cette simplicité se relie au rôle du I Ching comme méthode de divination à la fois simple et profonde.",
+    "mnemonic": "C'est aussi 易 (やすい - facile) que regarder le 日 (soleil) — pas besoin de compliqué! Les divinations de l'易 (エキ - I Ching) semblent simples mais révèlent la profondeur cachée.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "移",
+    "readings": {
+      "kun": "うつ.る、うつ.す",
+      "on": "イ"
+    },
+    "meaning": "Mouvement, déplacement, changement",
+    "etymology": "移 combine 辶 (radical de marche, mouvement) avec 多 (nombreux, augmentation). Le radical de mouvement montre le voyage, tandis que 多 suggère la multiplicité ou la progression. Ensemble, ils dépeignent le mouvement à travers de nombreux endroits ou la transition d'un état à un autre.",
+    "mnemonic": "Tu 辶 (marches) avec 多 (beaucoup d'étapes) — c'est la 移 (イ - mouvement)! Quand tu うつる (bouge), tu traverses 多 (many) positions successivement comme des vagues.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "営",
+    "readings": {
+      "kun": "いとな.む、いとな.み",
+      "on": "エイ"
+    },
+    "meaning": "Camp, opération, exploitation",
+    "etymology": "営 combine 宀 (maison, toit) avec des éléments montrant l'activité. Le toit suggère un établissement ou une demeure, tandis que la structure interne véhicule l'engagement actif ou le travail. Ensemble, ils suggèrent l'établissement et l'entretien des opérations — diriger un camp ou une entreprise.",
+    "mnemonic": "Une 宀 (maison/camp) qui いとなむ (fonctionne/opère) — c'est la 営 (エイ - opération)! La 営業 (ventes/opérations commerciales) commence par établir une 営 — un espace d'activité vivante.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "演",
+    "readings": {
+      "kun": "",
+      "on": "エン"
+    },
+    "meaning": "Performance, jeu, représentation",
+    "etymology": "演 combine 辶 (radical de marche, mouvement) avec 廷 (cour, officiel). Le radical de mouvement suggère la progression ou le déroulement, tandis que 廷 évoque des cadres formels ou officiels. Ensemble, ils dépeignent la progression de la performance formelle — le mouvement à travers un espace officiel.",
+    "mnemonic": "Un 辶 (mouvement) sur la scène 廷 (officielle/cour) — c'est la 演 (エン - performance)! Quand tu 演ずる (performs), tu fais un 辶 (voyage) à travers la fiction et l'imagination.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "可",
+    "readings": {
+      "kun": "-べ.き、-べ.し",
+      "on": "カ、コク"
+    },
+    "meaning": "Pouvoir, possible, approbation",
+    "etymology": "可 montre 口 (bouche, ouverture) avec 丶 (point, marque). La bouche représente l'ouverture ou la possibilité, tandis que le point souligne l'autorisation ou l'approbation. Ensemble, ils suggèrent l'ouverture à la possibilité — dire « oui, c'est possible ».",
+    "mnemonic": "Un 口 (bouche) qui dit oui (可) — c'est possible! Quand quelque chose est 可能 (かのう - possible), c'est parce que la 口 (voix/permission) l'approuve avec enthousiasme.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "河",
+    "readings": {
+      "kun": "かわ",
+      "on": "カ"
+    },
+    "meaning": "Rivière, fleuve",
+    "etymology": "河 combine 水 (eau) avec 可 (pouvoir, possible). L'eau coule où elle peut — suivant le chemin de la moindre résistance selon la loi naturelle. Le kanji dépeint l'essence des rivières: l'eau se mouvant librement selon la possibilité naturelle.",
+    "mnemonic": "De l'eau (水) qui coule où elle peut (可) — c'est une 河 (かわ - rivière)! La 河 (river) est simplement l'eau qui a trouvé sa 可能性 (possibility/chemin naturel) et s'y écoule éternellement.",
+    "jlpt": "N3"
+  }
+]

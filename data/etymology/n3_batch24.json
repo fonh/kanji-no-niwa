@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "配",
+    "readings": {
+      "kun": "くば.る",
+      "on": "ハイ"
+    },
+    "meaning": "distribuer, rationnement, époux",
+    "etymology": "配 associe 酉 (une jarre d'alcool, visible à gauche) et 己 (une personne agenouillée, à droite). L'image originale montre quelqu'un debout auprès d'une jarre, chargé de distribuer la boisson lors de rites ou de banquets. Le sens s'est étendu au rationnement de ressources, puis à l'idée d'attribuer une personne à une autre — d'où « époux/épouse ».",
+    "mnemonic": "Imaginez un majordome qui s'écrie « ハイ ! » en くばる le saké (酉) à la rangée d'invités agenouillés (己) : il distribue (配) avec le sourire parfait d'un serviteur dévoué !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "倍",
+    "readings": {
+      "kun": "",
+      "on": "バイ"
+    },
+    "meaning": "double, deux fois, fois",
+    "etymology": "倍 réunit le radical 亻 (personne) et 咅, lui-même formé de 不 (négation) et 口 (bouche) — l'image de quelqu'un qui recrache ou s'oppose. L'ensemble évoque une personne qui se retourne dos à dos avec une autre : deux entités symétriques, d'où « double ». La notion de « multiplier par » en découle naturellement.",
+    "mnemonic": "バイ — comme « buy one, get one » ! Une personne (亻) se retourne et se dédouble : voilà 倍, le double ! Retenez 二倍 (にバイ), deux fois, en imaginant deux jumeaux parfaitement symétriques, dos à dos.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "箱",
+    "readings": {
+      "kun": "はこ",
+      "on": "ソウ"
+    },
+    "meaning": "boîte, coffre, caisse",
+    "etymology": "箱 est formé du radical 竹 (bambou) en haut et de 相 en bas. 相 combine 木 (arbre) et 目 (œil) — un œil posé sur un arbre, évoquant une observation mutuelle, un face-à-face. Le bambou indique le matériau traditionnel, et 相 suggère un contenant où les objets se font face. Les premières boîtes étaient tressées de bambou pour ranger des offrandes ou des denrées précieuses.",
+    "mnemonic": "Du bambou (竹) tressé en contenant où les objets se regardent (相) — はこ, la boîte ! Votre professeur range ses trésors dans une belle boîte à bento en bambou en s'écriant « ソウ, exactement ça ! »",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "畑",
+    "readings": {
+      "kun": "はた、はたけ、-ばたけ",
+      "on": ""
+    },
+    "meaning": "champ sec, potager, spécialité",
+    "etymology": "畑 est un kokuji : un caractère inventé au Japon, sans origine chinoise. Il combine 火 (feu) et 田 (champ irrigué). Le feu représente la technique du brûlis — on brûlait la végétation pour défricher un terrain et le rendre cultivable à sec. Contrairement au 田 irrigué où pousse le riz, le 畑 est un champ sec réservé aux légumes, aux céréales sèches ou aux fleurs. C'est pourquoi « spécialité » fait partie de ses sens.",
+    "mnemonic": "Le feu (火) embrase la terre (田) pour créer le champ sec — はたけ ! C'est le seul kanji inventé de toutes pièces par les Japonais pour nommer leur agriculture sèche. Brûlez mentalement le rizière et regardez pousser vos carottes !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "反",
+    "readings": {
+      "kun": "そ.る、そ.らす、かえ.す、かえ.る、-かえ.る",
+      "on": "ハン、ホン、タン、ホ"
+    },
+    "meaning": "anti-, contre, opposition, se courber en arrière",
+    "etymology": "反 représente une main (又, en bas) poussant contre une paroi inclinée ou une falaise (厂, en haut). L'image originale est celle d'une force qui résiste à une surface, qui repousse ou se retourne. De là viennent à la fois le sens d'opposition et de rébellion (反対, 反乱) et celui de « se courber en arrière » (そ.る), comme un arc qui se cambre contre sa propre tension.",
+    "mnemonic": "Une main (又) qui pousse de toutes ses forces contre un mur incliné (厂) — c'est la révolte, le ハン ! Pensez à 反対 (はんたい), « l'opposition absolue » : la main qui dit NON. Et quand une planche そ.る (se cambre en arrière), elle fait de la ré-sis-tance !",
+    "jlpt": "N3"
+  }
+]

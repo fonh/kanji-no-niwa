@@ -1,0 +1,57 @@
+[
+  {
+    "kanji": "成",
+    "readings": {
+      "kun": "な.る、な.す、-な.す",
+      "on": "セイ、ジョウ"
+    },
+    "meaning": "devenir, accomplir, réussir",
+    "etymology": "成 est composé de 戊, une hallebarde ancienne à lame courbée, associée à un trait diagonal qui représente un outil fixé. Sur les os oraculaires, le caractère montrait l'achèvement d'un travail : l'arme frappe, l'ouvrage est terminé. L'idée centrale est celle d'un processus qui arrive à son terme, d'une transformation qui se complète. Par extension, 成 a pris le sens de « devenir ce qu'on devait être » et d' « accomplir ».",
+    "mnemonic": "Imaginez un forgeron qui frappe la lame avec sa hallebarde (戊) — *ding !* — l'épée est enfin terminée, elle est **devenue** ce qu'elle devait être ! Le forgeron crie « セイ ! » à chaque chef-d'œuvre achevé. なる (naru) : la lame brute *なる* une arme parfaite — elle accomplit sa destinée !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "清",
+    "readings": {
+      "kun": "きよ.い、きよ.まる、きよ.める",
+      "on": "セイ、ショウ、シン"
+    },
+    "meaning": "pur, clair, purifier",
+    "etymology": "清 associe le radical 氵 (eau, trois gouttes) à 青 (bleu-vert, la couleur du ciel dégagé et de l'herbe fraîche). 青 lui-même évoque la pousse nouvelle (生) vue sous le ciel lumineux. L'eau (氵) qui reflète le bleu pur (青) donne l'image d'une rivière limpide dont on voit le fond. De là, le sens s'étend à la pureté morale et à l'acte de purifier ce qui est souillé.",
+    "mnemonic": "L'eau (氵) est si **bleue et cristalline** (青) qu'on aperçoit chaque caillou au fond ! Le maître s'exclame : « きよい eau, c'est l'eau セイ — aussi claire que le ciel 青 qui s'y reflète ! » La dynastie Qing a même choisi 清 comme emblème : régner avec la pureté d'une source de montagne.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "静",
+    "readings": {
+      "kun": "しず-、しず.か、しず.まる、しず.める",
+      "on": "セイ、ジョウ"
+    },
+    "meaning": "calme, silencieux, tranquille",
+    "etymology": "静 (forme simplifiée de 靜) réunit 青 (bleu-vert, clarté, pureté) et 争 (querelle, dispute, lutte). L'idée originelle est celle d'une dispute (争) qui s'apaise jusqu'à retrouver la sérénité limpide (青) du calme. Quand le conflit cesse, le bruit s'éteint et la paix s'installe, comme une surface d'eau troublée qui retrouve son reflet bleu et immobile. 静 incarne l'état qui succède à la tension : le silence, la quiétude.",
+    "mnemonic": "Une dispute (争) éclate, les voix montent... puis soudain, tout redevient **bleu et immobile** (青) — しずか ! Le professeur chuchote avec un sourire : « Pour obtenir le vrai **calme** (静), il faut que la querelle (争) s'éteigne et que la clarté (青) revienne. セイ — silence ! » Le calme après la tempête, c'est exactement 静.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "席",
+    "readings": {
+      "kun": "むしろ",
+      "on": "セキ"
+    },
+    "meaning": "siège, place, natte, occasion",
+    "etymology": "席 est formé du radical 广 (toit, abri ouvert sur le côté, bâtiment adossé à une pente) et d'un élément représentant 巾 (tissu, linge) disposé en couches tressées. Le sens originel est celui d'une natte de bambou ou de paille placée sous un abri pour s'asseoir. Dans la Chine et le Japon anciens, on s'installait au sol sur ces nattes — la place assignée sur la natte définissait le rang social de chacun. De là vient le sens moderne de « siège » ou « place » dans tout contexte formel.",
+    "mnemonic": "Sous le toit protecteur (广), on déroule un beau tissu tressé (巾) sur le sol — voilà **votre place** ! セキ (seki), c'est votre siège réservé au théâtre, à la cérémonie du thé, en classe... La natte むしろ (mushiro) devient votre territoire personnel. « Prenez votre セキ — ne restez pas debout ! »",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "戦",
+    "readings": {
+      "kun": "いくさ、たたか.う、おのの.く、そよ.ぐ、わなな.く",
+      "on": "セン"
+    },
+    "meaning": "guerre, bataille, combat",
+    "etymology": "戦 (simplifié de 戰) associe 単 (à l'origine une représentation d'une arme de chasse à double pointe ou d'un filet) et 戈 (lance, hallebarde, l'arme de guerre par excellence en Chine ancienne). La forme traditionnelle 戰 redoublait l'élément 単 pour accentuer l'intensité du choc. L'image est celle de guerriers brandissant leurs lances (戈), l'affrontement entre forces opposées. Les lectures kun おのの.く et わなな.く (« trembler de peur ») rappellent que la guerre suscite autant la terreur que la bravoure.",
+    "mnemonic": "La lance (戈) s'entrechoque contre l'arme (単) — **c'est la guerre** ! セン (sen) résonne comme le fracas du métal : 戦争 (sensō, guerre), 戦闘 (sentō, combat). たたかう (tatakau) : on **combat** ! Mais souvenez-vous : おののく, « trembler de peur » — même les héros tremblent (わななく) avant la bataille. 戦 porte les deux visages du guerrier.",
+    "jlpt": "N3"
+  }
+]

@@ -32,14 +32,14 @@ Référence de production pour les auteurs de contenu, le pipeline de données, 
 6. **Aucune mécanique de jeu HGSS non listée dans le PRD** n'est à implémenter.
 7. **Déplacement à la DS** — l'avatar se déplace au D-pad (↑↓←→, une case par input). Sur mobile : D-pad virtuel à l'écran. Sur desktop : touches directionnelles ou WASD. Pas de tap-to-destination, pas de pathfinding. Bouton A = interagir avec un NPC/bâtiment adjacent.
 8. **Rencontre premier passage** — quand l'avatar entre dans le champ de vision d'un dresseur **pour la première fois**, le dresseur déclenche automatiquement le combat (même règle que dans la DS). Après ce premier combat, le dresseur ne déclenche plus jamais automatiquement. S'il affiche un "!" (carte SRS due), le joueur l'engage volontairement (marcher sur lui ou appuyer A).
-9. **Classes de dresseurs additionnelles** — le guidebook source contient davantage de classes que les 10 listées dans le PRD (§ Dresseurs de Route). Voir la table ci-dessous pour les thèmes proposés ; à valider avant intégration au pipeline de contenu.
+9. **Classes de dresseurs additionnelles** — ✅ adopté (2026-07-01) : les 16 classes ci-dessous ont rejoint les 10 du PRD (§ Dresseurs de Route), qui en liste maintenant 27 au total.
 10. **PNJ récurrents transversaux** — plusieurs PNJ du guidebook réapparaissent dans de nombreuses zones selon un calendrier ou une intrigue filée (voir section dédiée). Ils sont de bons candidats pour des dresseurs/PNJ récurrents dans 漢字の庭, mais leur adaptation est optionnelle (non spécifiée par le PRD v1).
 
 ---
 
-## Classes de dresseurs additionnelles (hors tableau PRD)
+## Classes de dresseurs additionnelles (fusionnées au tableau PRD le 2026-07-01)
 
-Le PRD ne couvre que 10 classes. Le guidebook en révèle davantage. Thèmes proposés (à valider par l'équipe contenu) :
+Le PRD ne couvrait à l'origine que 10 classes. Le guidebook en révèle 16 de plus, désormais intégrées (27 classes au total dans `.scratch/kanji-no-niwa/PRD.md` § Dresseurs de Route) :
 
 | Classe (VO) | Traduction proposée | Zones où elle apparaît | Thème kanji proposé |
 |---|---|---|---|
@@ -110,12 +110,12 @@ Bourg-en-Vol (starter, Pokégear) → Route 29 → Bourg-en-Côteau (Running Sho
 **Dans 漢字の庭 :**
 - ✅ **Dōjō de Fukuda** (remplace le labo Elm) — point de départ, écran d'onboarding, retour entre les leçons
 - ✅ **Maison de Fukuda** — tappable pour accéder à `/sensei`. Post-game : fenêtre allumée en permanence.
+- ✅ **Maison de Mom** — réintroduite (2026-07-01). ⚠️ **Corrige une incohérence** : la version précédente de cette section supprimait la maison du joueur ("la ville entière est le home narratif") tout en gardant Mom dans l'inventaire PNJ ci-dessous — elle n'avait alors plus aucun lieu où apparaître sur la carte. Mom y est un PNJ ambiant (`trigger_type: talk`, un seul état `intro` pour l'instant), première ligne de dialogue du jeu entier — voir `content/dialogues/npcs/new-bark-town/mom_new_bark.json`.
 - 🔄 **Panneau de départ** (Route 29 est) — tapable, montre la première leçon complétée. Apparaît uniquement post-Red.
-- ❌ Maison du joueur supprimée — la ville entière est le "home" narratif
 - 📍 Onboarding (Fukuda + leçon 一), événement seuil rank 4 (note de Fukuda sur la carte), Prof Elm apparition post-Lance
 - 🔒 Route 27 (est) → Plateau Indigo : accessible via 水 CS-Kanji (Surf sur la rivière)
 
-**Bâtiments sur la carte :** Dōjō Fukuda, Maison Fukuda, Panneau Route 29 (ouest), Accès Route 27 (est, 🔒水)
+**Bâtiments sur la carte :** Dōjō Fukuda, Maison Fukuda, Maison de Mom, Panneau Route 29 (ouest), Accès Route 27 (est, 🔒水)
 
 **Sourcé du guidebook — PNJ clés (rôle d'origine → matériau réutilisable) :**
 - **Mom** — premier PNJ parlé ; signale que "Elm a demandé après toi" → bon modèle pour la toute première ligne de dialogue de Fukuda.
@@ -445,9 +445,10 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - ❌ Puzzle Farfetch'd supprimé
 - ✅ Dresseurs de route (4–5 slots), classes Fillette, Insectologue
 - 🔒 Raccourci nord (vers Route 34 directe) → 力 CS-Kanji requis
+- 📍 **Kimono Girl #2 (Naoko)** dans la zone — 方向の道, kanji 方、向、道、来、帰、行 (thème invité pour combler le fait que sa leçon PRD est purement grammaticale — "Grammaire directionnelle 〜ていく/〜てくる" — sans pool kanji propre)
 
 **Sourcé du guidebook — confirmation Kimono Girl & sanctuaire :**
-- ⚠️ La Kimono Girl perdue en forêt s'appelle **Naoko** dans le texte source (et non un nom déjà utilisé ailleurs dans le PRD) — voir la section "Kimono Girls" en fin de document pour la liste complète corrigée et la divergence avec le PRD actuel.
+- ✅ **Résolu (2026-07-01)** — la Kimono Girl perdue en forêt s'appelle **Naoko** dans le texte source ; PRD mis à jour pour suivre fidèlement le guidebook (voir section "Kimono Girls" en fin de document).
 - 📍 **Sanctuaire de la forêt** : après avoir coupé l'arbre bloquant, le joueur découvre "un sanctuaire bâti en l'honneur du gardien de la forêt" — fort en thème pour une inscription/leçon sur le vocabulaire des kami/esprits protecteurs, cohérent avec l'esthétique "Kanji no Niwa" (jardin).
 - Un jeune homme sur une corniche enseigne une technique pour "secouer les arbres" (orig. Headbutt) — détail mineur, probablement sans équivalent utile ici.
 
@@ -492,13 +493,13 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - ❌ Game Corner supprimé
 - ❌ Lottery supprimée (feature non spécifiée, supprimée du scope v1)
 - ❌ Global Terminal supprimé
-- 📍 Kimono Girl #2 (Naomi) dans la ville — 読みの道, kanji 音訓読声言語
+- 📍 Kimono Girl #4 (Kuni) — Tunnel de Dorado, après la Card Key. Rencontre tardive (revisite de la ville pendant l'arc Tour Radio, ~560+ kanji — voir `curriculum-checkpoints.md` § "zones revisitées"), pas lors de la première visite pour le badge de Whitney. 読みの道, kanji 音訓読声言語
 
 **Bâtiments sur la carte :** Gym Whitney, Radio Tower, Pokémon Center, Librairie (NPC déco), Entrées routes 35 (nord) et 34 (sud)
 
 **Sourcé du guidebook — dresseurs Gym Whitney :** **Coquette Victoria**, **Fillette Carrie**, **Coquette Samantha** (🔍 possible doublon OCR Victoria/Samantha) gardent l'accès à Whitney.
 
-**⚠️ Divergence Kimono Girl :** dans le texte source, la Kimono Girl rencontrée à Goldenrod City (dans le tunnel, après obtention de la clé du sous-sol) s'appelle **Kuni**, pas "Naomi". Voir section "Kimono Girls" en fin de document pour la table complète corrigée — à arbitrer avec l'équipe avant de modifier le PRD.
+**✅ Résolu (2026-07-01)** — la Kimono Girl rencontrée à Goldenrod City (dans le tunnel, après obtention de la Card Key) s'appelle **Kuni**, pas "Naomi" ; corrigé ci-dessus. PRD suit fidèlement le guidebook (voir section "Kimono Girls" en fin de document).
 
 **Sourcé du guidebook — événement Team Rocket / Radio Tower (structure complète, plus riche que l'entrée actuelle du PRD) :**
 1. La tour est entièrement occupée — un Sbire bloque l'accès, seuls les membres de la Team Rocket passent.
@@ -601,7 +602,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - ✅ **Tour Embrasée** (Burned Tower) — bâtiment tappable → Événement Rocket #4
 - ✅ **Pokémon Center**
 - 📍 **Silver apparition #3** (devant Tour Jo, studied ≥ 550) : kanji 影、闇、忘、去、断、孤. ⚠️ Renuméroté de #2 à #3 (kanji inchangé, déjà correct) — voir `curriculum-checkpoints.md` § Règle de Silver.
-- 📍 **Kimono Girl #3 (Kuni)** dans la ville — 語源の道, kanji 古、源、形、象、原、文
+- 📍 **Kimono Girl #3 (Miki)** dans la ville — 語源の道, kanji 古、源、形、象、原、文
 - 📍 Événement collectif Kimono Girls (après toutes les 5 battues) — scène à Tour Jo
 - 📍 NPC quest N3 : aller à Tour Jo lire inscription → reward lettre Fukuda
 
@@ -609,7 +610,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Sourcé du guidebook — dresseurs Gym Morty :** quatre **Médiums** (Martha, Edith, Grace, Georgina) gardent Morty — classe parfaitement alignée avec le thème 影/esprit déjà choisi par le PRD pour ce gym ; bon réservoir de noms si le contenu veut des dresseurs-leçon nommés plutôt que génériques.
 
-**⚠️ Divergence Kimono Girl :** la Kimono Girl rencontrée au Théâtre de Danse d'Ecruteak (sauvée d'un Sbire Rocket) s'appelle **Miki** dans le texte source, pas "Kuni" — **Kuni** est en réalité rencontrée à Goldenrod City (voir plus haut). Voir section "Kimono Girls" en fin de document pour la table corrigée complète.
+**✅ Résolu (2026-07-01)** — la Kimono Girl rencontrée au Théâtre de Danse d'Ecruteak (sauvée d'un Sbire Rocket) s'appelle **Miki** dans le texte source, pas "Kuni" — **Kuni** est en réalité rencontrée à Goldenrod City (voir plus haut) ; corrigé ci-dessus.
 
 **Sourcé du guidebook — autres PNJ clés :**
 - **Bill** rencontré ici au Centre Pokémon (avant de repartir pour Dorado/Goldenrod, où il offrira plus tard un cadeau) — confirme le fil PNJ récurrent.
@@ -736,13 +737,13 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - ✅ **Pokémon Center**
 - ❌ Safari Zone Gate supprimée (Safari Zone hors scope)
 - ❌ Pharmacie supprimée
-- 📍 **Kimono Girl #5 (Meri)** dans la ville — 文脈の道, kanji 場、状、況、用、脈、流
+- ❌ Pas de Kimono Girl à Orsay City (résolu 2026-07-01 — voir note ci-dessous)
 
 **Note :** Chuck est 印 n°5 dans l'ordre narratif (après Jasmine n°6 dans l'ordre géographique). Le PRD conserve l'ordre original HGSS pour les Gyms (Falkner→Bugsy→Whitney→Morty→Chuck→Jasmine→Pryce→Clair).
 
 **Bâtiments sur la carte :** Gym Chuck, Pokémon Center
 
-**⚠️ Divergence Kimono Girl :** le texte source ne contient **aucune Kimono Girl à Cianwood City**. Les 5 Kimono Girls confirmées par le guidebook sont, dans l'ordre de rencontre habituel : Zuki (Violet City), Naoko (Ilex Forest), Kuni (Goldenrod Tunnel), Miki (Ecruteak Dance Theater), Sayo (Ice Path, juste avant Saupoudreville/Blackthorn). Il n'y a pas de 6e Kimono Girl nommée "Meri", et Cianwood/Orsay n'est pas un de leurs lieux de rencontre. Voir la table complète et la recommandation en fin de document — **divergence majeure à trancher par l'équipe** avant la prochaine passe de contenu, car elle touche aussi route-44/ice-path et blackthorn-city ci-dessous.
+**✅ Résolu (2026-07-01)** — le texte source ne contient **aucune Kimono Girl à Cianwood City**. Les 5 Kimono Girls confirmées par le guidebook sont, dans l'ordre de rencontre habituel : Zuki (Violet City), Naoko (Ilex Forest), Kuni (Goldenrod Tunnel), Miki (Ecruteak Dance Theater), Sayo (Ice Path, juste avant Saupoudreville/Blackthorn). Il n'y a pas de 6e Kimono Girl, et l'invention "Meri" est supprimée — le PRD suit fidèlement ces 5 lieux (villes et routes/donjons mélangés), voir la table en fin de document.
 
 **Sourcé du guidebook — la ville est en réalité un carrefour de plusieurs fils narratifs, pas seulement un Gym :**
 - **Pharmacie** (avant suppression dans le jeu) : remet la **Potion Secrète** pour Jasmine — confirme le lien Amaris ↔ Orsay déjà esquissé par le PRD pour le Phare.
@@ -861,10 +862,11 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - 🔄 Chemin Glacé → zone traversable, pas de puzzle de glace en v1 (traversée linéaire)
 - 📍 **Événement Rocket #7 — Retardataires** (optionnel) : kanji 孤、寒、凍、迷、忘. Reward : lore entry.
 - 📍 NPC quest N2 : "Mahogany" thème — quête express avec scroll caché dans la glace
+- 📍 **Kimono Girl #5 (Sayo)** dans la zone — 構成の道, kanji 組、合、成、部、品、構 (déplacé depuis Saupoudreville le 2026-07-01, thème/kanji conservés tels quels)
 
 **Sourcé du guidebook — dresseurs Route 44 :** **Pêcheur Wilton**, **Collectionneur Zach**, **Dresseur d'Oiseaux Vance**, **Voyant Phil**, **Pêcheur Edgar**, **Dresseur Ace Cybil**, **Dresseur Ace Allen**.
 
-**⚠️ Kimono Girl #5 à recaser ici, pas à Cianwood ni Blackthorn :** dans le texte source, la 5e et dernière Kimono Girl (**Sayo**) est rencontrée précisément dans le **Chemin Glacé**, coincée près de la sortie ("ses sandales collées à la glace") — le joueur la libère d'une glissade. C'est un moment décrit comme volontairement comique ("la Kimono Girl qui fait rire d'elle-même"). Recommandation : déplacer la Kimono Girl #5 du PRD (actuellement "Meri" à Orsay City) vers cette zone, sous le nom **Sayo**, avec ce beat précis — voir la table complète en fin de document.
+**✅ Résolu (2026-07-01)** — dans le texte source, la 5e et dernière Kimono Girl (**Sayo**) est rencontrée précisément dans le **Chemin Glacé**, coincée près de la sortie ("ses sandales collées à la glace") — le joueur la libère d'une glissade. Moment volontairement comique ("la Kimono Girl qui fait rire d'elle-même"). Déplacée ici depuis Saupoudreville et depuis l'invention "Meri" à Orsay City — voir la table complète en fin de document.
 
 **Sourcé du guidebook — structure du Chemin Glacé (si réactivé comme mini-puzzle en v2) :**
 - Trois étages de glace coulissante ; un puzzle "pousser des rochers dans des trous" relie les étages.
@@ -881,19 +883,19 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **HGSS original :** Clair Gym (Dragon). Dragon's Den au sud.
 
 **Dans 漢字の庭 :**
-- ✅ **Gym Clair** — Arène physique, 2 門弟 + 試練 竜の道, 印 n°8
+- ✅ **Gym Clair** — Arène physique, 2 門弟 + 試練 竜の道. ⚠️ Ne donne **pas** directement le 印 n°8 (résolu 2026-07-01, voir twist ci-dessous) — ouvre seulement l'accès à l'Antre du Dragon, qui est la vraie condition.
 - ✅ **Pokémon Center**
 - ✅ **Antre du Dragon** (tappable)
-- 📍 **Kimono Girl #4 (Sayo)** dans la ville — 構成の道, kanji 組、合、成、部、品、構
+- ❌ Pas de Kimono Girl à Saupoudreville (résolu 2026-07-01 — Sayo déplacée vers route-44/ice-path)
 
 **Bâtiments sur la carte :** Gym Clair, Pokémon Center, Entrée Antre du Dragon (sud)
 
-**⚠️ Voir la divergence Kimono Girl ci-dessus (route-44/ice-path) : "Sayo" doit être déplacée vers le Chemin Glacé.** À cet emplacement (Saupoudreville/Blackthorn proprement dit), le guidebook ne mentionne aucune Kimono Girl — la ville n'est, dans le texte source, qu'un point de passage Gym + Antre du Dragon.
+**✅ Résolu (2026-07-01)** — le guidebook ne mentionne aucune Kimono Girl à Saupoudreville proprement dit ; "Sayo" a été déplacée vers le Chemin Glacé (route-44/ice-path), son vrai lieu de rencontre. La ville n'est, dans le texte source, qu'un point de passage Gym + Antre du Dragon.
 
 **Sourcé du guidebook — dresseurs Gym Clair :** cinq **Dresseur Ace** (Mike, Fran, Cody, Lola, Paulo) gardent Clair — le plus grand roster de gardiens de tout le jeu, cohérent avec le statut de "dernier badge" de Clair dans le PRD.
 
-**Sourcé du guidebook — un twist narratif fort, absent du PRD actuel :**
-📍 **Même après avoir battu Clair, elle refuse de remettre le badge** et envoie le joueur à l'Antre du Dragon "faire ses preuves" auprès du Maître/Ancien — l'entrée de l'Antre reste d'ailleurs fermée tant que le combat de Gym n'est pas gagné. C'est un excellent ressort dramatique pour le PRD : le combat de Clair n'octroie pas directement le 印 n°8, c'est l'épreuve de l'Antre du Dragon qui le fait. Recommandation forte : faire de l'Antre du Dragon la condition réelle d'obtention du 印 n°8, Clair n'étant qu'un porte d'entrée, pas la juge finale.
+**✅ Adopté (2026-07-01) — twist narratif intégré au PRD :**
+📍 **Même après avoir battu Clair, elle refuse de remettre le badge** et envoie le joueur à l'Antre du Dragon "faire ses preuves" auprès du Maître/Ancien — l'entrée de l'Antre reste d'ailleurs fermée tant que le combat de Gym n'est pas gagné. Le combat de Clair n'octroie donc pas directement le 印 n°8 : c'est l'épreuve de l'Antre du Dragon qui le fait, recalibrée sur l'empathie/le respect (voir dragons-den ci-dessous) plutôt que la seule traduction littérale. Voir `.scratch/kanji-no-niwa/PRD.md` § "Système 道場" pour la note correspondante.
 - Une maison au nord de la ville récompense un compagnon "endurci au combat" d'un ruban — flavor, sans usage direct ici.
 - Un PNJ local explique que les "Dompteurs de Dragons" sont tous originaires de Saupoudreville — bonne justification diégétique pour la classe **Dresseur Ace** dominante ici, et pour pourquoi Clair (et Lance) en sont issus.
 
@@ -917,11 +919,12 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **HGSS original :** Dragon's Den — quiz du Dragon Maître pour valider si Clair te donnait le badge.
 
 **Dans 漢字の庭 :**
+- ✅ **Quiz du Maître — condition réelle du 印 n°8** (adopté 2026-07-01) : 5 questions axées sur l'empathie/le respect ("si j'étais à la place de l'autre, que ressentirais-je ?"), pas la seule traduction littérale. Réussite → Clair (surprise) remet le 印 n°8. Recalibre le "Quiz de traduction N1" déjà prévu au PRD plutôt que de l'ajouter en plus.
 - 📍 **Événement Rocket #8 — L'Émissaire** (optionnel) : pas de combat. Quiz de traduction d'une lettre en japonais. Reward : lore entry Dragon's Den + beat narratif.
 - 📍 NPC quest N1 : inscription au fond de l'antre, 4 lignes à traduire. Reward : lore entry + dialogue Fukuda.
 - ✅ Zone tappable depuis la carte de Saupoudreville
 
-**Sourcé du guidebook — confirmation forte du concept "quiz du Maître", avec le détail exact à réutiliser :**
+**Sourcé du guidebook — détail exact du quiz du Maître (adopté ci-dessus) :**
 - 📍 À l'intérieur du sanctuaire, le **Maître** (Ancien) "jauge" le joueur avec **cinq questions**, posées via un système tactile. L'indice du guide d'origine est limpide et directement transposable au PRD : *"si tu donnes les mauvaises réponses... la récompense finale sera incomplète. Pour choisir tes réponses, demande-toi : si j'étais à la place de [l'autre], que ressentirais-je ?"* — c'est-à-dire que les bonnes réponses sont celles qui témoignent d'empathie, pas de force ou de domination. **C'est le meilleur matériau source pour le "Quiz de traduction N1" déjà prévu au PRD** : il devrait porter sur des valeurs (empathie, respect, lien) plutôt que sur la seule traduction littérale.
 - Une fois le quiz réussi, **Clair fait irruption**, surprise que le joueur ait réussi ("elle ne s'attendait même pas à ce que tu réussisses le test !") — le Maître la corrige, et c'est seulement alors qu'elle remet le 印 final. Confirme la recommandation ci-dessus (blackthorn-city) : Clair n'est pas la juge, le Maître l'est.
 - 📍 **Révélation de lignée** : le Maître/Ancien de l'Antre est le grand-père de Clair, et **Lance est son frère aîné**. Ce lien Lance↔Clair↔Maître ferme élégamment la boucle ouverte au Lac Colère/Mahogany Town (où Lance accompagne le joueur) — fil à préserver si possible, par exemple via une ligne de dialogue du Maître ou de Fukuda qui le révèle.
@@ -1113,21 +1116,17 @@ Sources : [Bulbapedia — Walkthrough Part 28](https://bulbapedia.bulbagarden.ne
 
 ## Kimono Girls — Noms et lieux sourcés (correction complète)
 
-Le guidebook ne liste que **5 Kimono Girls**, toujours dans le même ordre de rencontre. Voici la table sourcée, comparée à ce que le PRD/doc actuel utilise aujourd'hui :
+Le guidebook ne liste que **5 Kimono Girls**, toujours dans le même ordre de rencontre.
 
-| # | Nom (guidebook) | Lieu de rencontre (guidebook) | Nom actuel au PRD | Lieu actuel au PRD | Écart |
-|---|---|---|---|---|---|
-| 1 | **Zuki** | Violet City (Cramola), devant le Mart | Zuki | Cramola | ✅ Aucun écart |
-| 2 | **Naoko** | Ilex Forest (Forêt Secte), perdue dans la forêt | *(absente du PRD)* | — | ⚠️ Kimono Girl manquante au PRD |
-| 3 | **Kuni** | Goldenrod Tunnel (Dorado City), après la clé de sous-sol | "Naomi" | Dorado City | ⚠️ Mauvais nom, lieu correct (ville) |
-| 4 | **Miki** | Ecruteak Dance Theater (Ecorosa), sauvée d'un Sbire Rocket | "Kuni" | Ecorosa City | ⚠️ Mauvais nom (le vrai "Kuni" est à Dorado) |
-| 5 | **Sayo** | Ice Path (Chemin Glacé), sandales coincées dans la glace | "Sayo" (bon nom, mauvais lieu) à Saupoudreville ; "Meri" (n'existe pas) à Orsay City | Saupoudreville / Orsay City | ⚠️ Sayo mal placée, "Meri" est une invention sans source |
+**✅ Décision adoptée (2026-07-01) :** Option 1 — fidèle au guidebook. Naoko déplacée en Forêt Secte, Kuni↔Dorado, Miki↔Ecorosa, Sayo↔Chemin Glacé, et Orsay City n'a pas de Kimono Girl (le guidebook n'en prévoit pas là — "Meri" était une invention sans source, supprimée). Toutes les sections de zone ci-dessus ont été corrigées en conséquence.
 
-**Recommandation :** le PRD utilise actuellement 5 noms répartis sur 5 *villes* (un par badge de Gym), ce qui est un choix de design défendable (une Kimono Girl par jalon de progression). Le guidebook, lui, les place sur un mélange de villes et de routes/donjons (Ilex Forest et Ice Path ne sont pas des villes). Deux options pour l'équipe :
-1. **Rester fidèle au guidebook** : déplacer Naoko en Forêt Secte, corriger Kuni→Dorado, Miki→Ecorosa, Sayo→Chemin Glacé, et trouver un nouveau 6e jalon pour Orsay City (ou laisser Orsay sans Kimono Girl).
-2. **Garder le choix actuel** (une par ville-badge) mais corriger au moins les noms pour qu'ils correspondent à des Kimono Girls réelles du jeu plutôt qu'à un nom inventé ("Meri" n'existe dans aucune source).
-
-Cette mise à jour ne tranche pas ce choix — elle documente l'écart pour que l'équipe contenu décide en connaissance de cause avant la prochaine passe sur le PRD.
+| # | Nom | Lieu de rencontre | Statut |
+|---|---|---|---|
+| 1 | **Zuki** | Violet City (Cramola), devant le Mart | ✅ Déjà correct au PRD |
+| 2 | **Naoko** | Ilex Forest (Forêt Secte), perdue dans la forêt | ✅ Ajoutée (était absente) |
+| 3 | **Miki** | Ecruteak Dance Theater (Ecorosa), sauvée d'un Sbire Rocket | ✅ Nom corrigé (était "Kuni" à cet endroit) |
+| 4 | **Kuni** | Goldenrod Tunnel (Dorado City), après la Card Key — revisite tardive | ✅ Nom corrigé (était "Naomi") |
+| 5 | **Sayo** | Ice Path (Chemin Glacé), sandales coincées dans la glace | ✅ Lieu corrigé (était Saupoudreville) ; Orsay City ("Meri") supprimée |
 
 **✅ Confirmation indépendante (passe 2) :** le guide contient une page récapitulative dédiée ("Kimono Girl Memories") qui reconfirme mot pour mot les 5 noms et lieux ci-dessus, avec une ligne de caractérisation pour chacune — matériau directement exploitable pour écrire leurs dialogues :
 - **Zuki** (1ère) — Cramola, devant le Mart. "Elle semblait inquiète pour l'œuf... une fois que tu l'as eu, elle est venue te parler."
@@ -1205,6 +1204,68 @@ Cette mise à jour ne tranche pas ce choix — elle documente l'écart pour que 
 
 ---
 
+## Kanto — 8 Gyms (ajouté 2026-07-01)
+
+**Décision adoptée :** après Plateau Indigo (Elite Four + Lance), le joueur traverse Kanto avant Mont Gris — 8 gyms supplémentaires, fidèles à la structure post-Hall of Fame du jeu d'origine (les 16 badges, Johto + Kanto, sont un prérequis pour affronter Red). Voir `PRD.md` § Kanto — 8 Gyms et `content/curriculum-checkpoints.md` pour la calibration kanji/grammaire (arc 1500→2000, Mont Gris compressé à 2000→2136 pour ne pas dépasser le budget total de 2136 kanji Jōyō).
+
+**⚠️ Méthode et limite de cette source (à la différence du Johto) :** le PDF `scripts/sources/guidebook/(Prima 2010) - Pokemon HeartGold & SoulSilver - Kanto` est un **scan sans couche de texte** (contrairement au PDF Johto, qui avait un vrai texte natif extractible via PyMuPDF — confirmé : 0 caractère extrait par page contre >2500 pour la page équivalente du Johto). L'extraction utilisée (`scripts/sources/guidebook/kanto-guide-fulltext.txt`, 1,36M caractères) vient d'un **OCR archive.org** — même source/méthode que la "passe 1" abandonnée pour Johto avant que le texte natif ne soit trouvé, avec les mêmes artefacts (confusions de caractères, mise en page de flowchart lue en désordre). L'ordre des gyms, les noms de villes et les repères ci-dessous sont fiables (recoupés avec une recherche web Bulbapedia indépendante — la numérotation interne du guide "Gym Battle 9" à "16" correspond exactement à l'ordre trouvé en ligne). **Une passe 2 partielle a été faite (2026-07-01)** — lecture directe des sections descriptives de chaque ville (plus fiables que la section flowchart "Recommended Route" du début du guide) — mais reste moins profonde que le Johto passe 2/3 (pas de roster de dresseurs de route exhaustif, pas de calendrier PNJ complet).
+
+**Ordre confirmé (recherche web + numérotation "Gym Battle 9–16" du guide) :**
+
+| # | Gym Leader | Ville (nom adapté) | Type / thème | Équipe du Gym Leader (source) |
+|---|---|---|---|---|
+| 9 | Lt. Surge | Vermeille City (Vermilion) | Électrik | Raichu, Electrode, Electrode, Magneton, Electabuzz |
+| 10 | Sabrina | Safranville (Saffron) | Psy | Espeon, Mr. Mime, Alakazam (Lv.55) + autres Psychic |
+| 11 | Misty | Azuria City (Cerulean) | Eau | *(non capturé dans cette passe — à compléter)* |
+| 12 | Erika | Céladia (Celadon) | Plante | *(non capturé dans cette passe — à compléter)* |
+| 13 | Janine | Fuchsia City | Poison | Crobat, Weezing, Ariados, Ariados, Venomoth |
+| 14 | Brock | Argenta City (Pewter) | Roche | *(non capturé dans cette passe — Rock-type confirmé)* |
+| 15 | Blaine | Île Braise (Cinnabar → gym relocalisé Seafoam Islands) | Feu | *(non capturé dans cette passe — Fire-type confirmé)* |
+| 16 | Blue | Vertville (Viridian) | Mixte (rival historique de Red) | Exeggutor (Lv.55), Rhydon (Lv.58), Machamp (Lv.56), Gyarados (Lv.52), Arcanine (Lv.58), Pidgeot (Lv.60) |
+
+### Repères confirmés par ville (passe 2 partielle)
+
+**Vermeille City (Lt. Surge)** — Pokémon Fan Club à l'ouest ; le président du club récompense qui écoute son histoire (bon modèle de PNJ-leçon "patience/politesse"). Gym au sud du Fan Club, un arbre à couper (力/Coupe) ouvre l'accès à la clôture. Intérieur du Gym : grille de poubelles cachant deux interrupteurs à trouver avant d'atteindre Lt. Surge (bon gabarit de mini-puzzle pour notre Gym). Quête transversale : Copycat (habite Safranville) a perdu sa poupée ici — le joueur la récupère et doit la rapporter à Safranville (quête filée sur 2 villes). Suicune/Eusine peut apparaître ici (cohérent avec le fil Eusine déjà établi côté Johto).
+
+**Safranville (Sabrina)** — Gare du Magnet Train (nécessite un pass non obtenu à ce stade — bon tease non-bloquant). Dojo d'arts martiaux juste à côté du Gym, mais le Karatéka résident est "parti s'entraîner au Mont Mortier, dans la région de Johto" — **callback direct vers une zone déjà existante côté Johto** (mt-mortar/Mont Mortier), à réutiliser tel quel pour donner de la cohérence au monde. Le Gym de Sabrina est un labyrinthe de 9 chambres reliées par téléportation — bon gabarit pour un Gym plus complexe que la moyenne, cohérent avec son thème 心/精神 (dédale mental).
+
+**Azuria City / Cerulean (Misty)** — repère confirmé dans l'OCR : un voleur est pourchassé dans l'arc de la pièce mécanique volée (Kanto Power Plant) ; Route 9/10 mènent au Rock Tunnel (traversée sombre, HM Flash nécessaire — pas d'équivalent HM dans notre jeu, à traiter comme un couloir sombre narratif si repris). Détail non exhaustif — ville à approfondir avant écriture de contenu détaillé.
+
+**Céladia / Celadon (Erika)** — Grand magasin (Celadon Department Store), Game Corner (casino — mécanique hors scope, à traiter comme décor), immeubles "Celadon Condominiums". Quête confirmée : un homme au sommet des Condominiums donne un objet uniquement de nuit (20h-4h) — bon modèle de PNJ à horaire fixe. **Callback confirmé vers Johto** : les masques (Turtwig/Chimchar/Piplup) obtenus ici sont utilisables au "Dress-Up Shop" du Tunnel de Dorado (Goldenrod Tunnel) déjà présent dans notre jeu — lien concret entre Kanto et Johto à exploiter narrativement.
+
+**Fuchsia City (Janine)** — Gym = labyrinthe de murs transparents (bon gabarit de Gym-puzzle, thème 毒/prudence — on ne voit pas le piège avant d'y être). Pal Park au nord (mécanique de transfert hors scope, mais le gardien est confirmé comme "le fils de Baoba" — **callback direct vers un PNJ Johto déjà documenté** dans "PNJ récurrents transversaux", bon fil filé à réutiliser). Volcan ayant coupé la route sud vers Île Braise (détour narratif tout trouvé).
+
+**Argenta City / Pewter (Brock)** — Musée des Sciences (restauration de fossiles) ; ville "calme, entourée de forêts et de montagnes". Un vieil homme sur la colline près du Poké Mart donne l'Aile Argent/Arc-en-ciel (objet légendaire Ho-Oh/Lugia — **callback direct** vers le climax Tour Jo déjà établi côté Johto, à réutiliser ou clin d'œil).
+
+**Île Braise / Cinnabar (Blaine)** — ⚠️ **Détail important trouvé en passe 2** : dans le jeu d'origine, Cinnabar Island a été dévastée par une éruption volcanique un an avant l'arrivée du joueur (seul le Centre Pokémon a survécu, population évacuée) — le vrai Gym de Blaine a été **relocalisé aux Seafoam Islands** (accessible depuis Cinnabar via Route 20/21, 12 dresseurs sur le trajet). Bon matériau dramatique : une île-décor avec un carrefour émotionnel plutôt qu'un simple gym de plus. Blue est rencontré ici (pas en combat) comme point de contrôle narratif — "il acceptera de se battre une fois que tu auras plus de badges Kanto" — **structure identique au fil Silver côté Johto** (rencontres répétées avant la confrontation finale). Après 7 badges Kanto, Blue repart vers Vertville où le vrai combat de Gym a lieu.
+
+**Vertville / Viridian (Blue)** — Dernier Gym, verrouillé jusqu'à la fin (le vieil homme devant la porte laisse passer seulement après Blaine + Blue rencontré à Île Braise). Sol du Gym = tuiles-flèches qui déplacent le joueur dans une direction fixe (autre gabarit de Gym-puzzle, cohérent avec 頂/rivalité — un terrain qu'on ne contrôle pas totalement). Après victoire : le Pr. Chen/Oak appelle immédiatement à la sortie du Gym.
+
+**Repères transversaux confirmés (non attribués à une ville précise) :** Kanto Power Plant (pièce mécanique volée, quête de livraison), Rock Tunnel, Route 25 (un vieil homme cherche son petit-fils — beat similaire aux quêtes de livraison déjà documentées côté Johto), Steven (Champion de Hoenn, cameo à Vermeille City sur le fil Latias/Latios — probablement à couper, hors scope narratif).
+
+### Rosters de dresseurs de route (passe 3, 2026-07-01)
+
+Noms et classes confirmés par lecture directe des sections de route du guide. Les classes suivent le même principe que côté Johto (thème kanji libre par classe, non contraint mécaniquement — voir note PRD "Suppression du mécanisme kanji_pool-par-classe"). ⚠️ Couverture partielle — plusieurs routes (5, 6, 9, 10, 14 à 21, 22 à 25) n'ont pas encore de roster confirmé dans cette passe.
+
+| Route | Dresseurs confirmés |
+|---|---|
+| Route 2 / Forêt Viridian | Bug Catcher Ed, Bug Catcher Abner, Bug Catcher Ellis, Bug Catcher Dane, Bug Catcher Stacey, Bug Catcher Dion |
+| Route 3 | Youngster Warren, Youngster Jimmy, Hiker Bruce, Firebreather Burt |
+| Route 4 | Youngster Regis, Double Team Zac & Jen *(duo)*, Firebreather Otis, Black Belt Manford, Black Belt Ander, Hiker Dwight, Picnicker Hope, Bird Keeper Hank, Picnicker Sharon |
+| Route 7 / 8 | Young Couple Moe & Lulu *(duo)*, Super Nerd Sam ; Route 8 réputée pour ses Bikers "turbulents" (non nommés) |
+| Route 11 | Psychic Fidel, Youngster Jason, Youngster Owen, Psychic Herman |
+| Route 12 *("Silence Bridge")* | Fishermen (génériques — le pont doit son nom au fait qu'ils marchent en silence pour ne pas effrayer les Pokémon ; bonne texture d'ambiance à reprendre telle quelle) |
+| Route 13 | Camper Clark, Hiker Kenny, Picnicker Ginger, Pokéfan Alex, Camper Tanner — 11 dresseurs au total confirmés par le texte (liste partielle) |
+| Route 20/21 (Cinnabar ↔ Fuchsia) | Swimmer Luis, Camper Pedro (partiel — 12 dresseurs confirmés au total sur ce trajet) |
+
+**Repère transversal confirmé :** le "Photographe itinérant" (Photographer Cameron) déjà documenté côté Johto dans "PNJ récurrents transversaux" réapparaît identique côté Kanto, avec un calendrier hebdomadaire par ville (ex. Safranville : lundi/mardi/mercredi près de la gare, vendredi/samedi près de Silph Co.) — confirme que c'est bien un personnage transrégional dans le jeu d'origine, bon fil à filer sur les deux régions dans 漢字の庭 si le studio adopte cette mécanique optionnelle.
+
+**Autre callback Johto confirmé :** Safranville a sa propre gare de Magnet Train reliant directement à Dorado City (Goldenrod) — la boutique de vélos de Azuria City (Cerulean) est explicitement "le magasin d'origine" dont la succursale de Dorado City s'est développée. Deux liens concrets supplémentaires entre les deux régions à exploiter narrativement.
+
+**À faire avant l'écriture de contenu Kanto détaillé :** compléter les rosters des routes non couvertes ci-dessus, les équipes de Misty/Erika/Brock/Blaine, PNJ secondaires additionnels. Priorité plus basse que le reste du jeu vu que Kanto est une extension de fin de partie (N1, ~1500-2000 kanji déjà maîtrisés par le joueur à ce stade).
+
+---
+
 ## Zones absentes du jeu (v1)
 
 Ces zones existent dans HGSS mais ne font pas partie des 49 zones de 漢字の庭. Leur absence est intentionnelle — le jeu simplifie la géographie pour réduire le scope de production.
@@ -1220,8 +1281,8 @@ Ces zones existent dans HGSS mais ne font pas partie des 49 zones de 漢字の�
 | **Mt. Mortar (intérieur)** | ❌ Décor seulement (mais voir note v2) | Entrée visible sur la carte depuis Route 42, aucun dungeon intérieur en v1. Le guidebook y documente un beat de "dojo caché" fort (voir section mt-mortar) — bon candidat de contenu pour une extension post-v1. |
 | **Routes 47/48, Cliff Cave, Safari Zone Gate** | ❌ Hors scope | Zone Safari Zone de Cianwood (HGSS), entièrement liée à une mécanique de capture absente du jeu. Aucun équivalent prévu. |
 | **Whirl Islands** | ❌ Hors scope (variante SoulSilver) | Chemin alternatif vers Lugia, exclusif à SoulSilver ; 漢字の庭 suit le chemin Bell Tower/Ho-Oh (déjà choisi via "Tour Jo" à Ecorosa), rendant les Whirl Islands sans objet. |
-| **Battle Frontier** | ❌ Hors scope | Contenu post-Hall of Fame sur Route 40 ; hors scope v1 (pas de post-game Kanto). |
+| **Battle Frontier** | ❌ Hors scope | Contenu post-Hall of Fame sur Route 40 ; reste hors scope même après l'ajout des 8 gyms Kanto (2026-07-01, voir § Kanto ci-dessus) — le Battle Frontier est un système de combat annexe distinct des gyms, pas repris. |
 
 ---
 
-*Dernière mise à jour : 2026-06-30 — enrichi en trois passes : passe 1 (OCR archive.org du guidebook Prima 2010), passe 2 (texte natif du PDF local, plus fiable, avec inventaire PNJ exhaustif par zone et bios officielles), passe 3 (recherche web Bulbapedia pour combler le seul trou réel — Mont Gris/Red, absent du guidebook local car celui-ci est un volume Johto uniquement).*
+*Dernière mise à jour : 2026-07-01 — enrichi en cinq passes : passe 1 (OCR archive.org du guidebook Prima 2010 Johto), passe 2 (texte natif du PDF local Johto, plus fiable, avec inventaire PNJ exhaustif par zone et bios officielles), passe 3 (recherche web Bulbapedia pour Mont Gris/Red, absent du guidebook Johto), passe 4 (ajout de l'arc Kanto — 8 gyms — structure et ordre sourcés par OCR archive.org du guide Prima Kanto, le PDF local étant un scan sans texte natif), passe 5 (lecture directe des sections descriptives par ville du guide Kanto — équipes de 4 des 8 Gym Leaders, callbacks Johto confirmés (Mont Mortier, Tunnel de Dorado, Tour Jo, Baoba), détail Cinnabar/Seafoam Islands et fil Blue ; dépouillement dresseurs de route encore à faire, voir § Kanto).*

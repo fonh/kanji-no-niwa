@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "飾",
+    "readings": {
+      "kun": "かざ.る、かざ.り",
+      "on": "ショク"
+    },
+    "meaning": "décorer, orner, embellir",
+    "etymology": "飾 combine 食 (nourriture) et 巾 (tissu). Historiquement, le kanji représente l'action d'ajouter des ornements de tissu à la nourriture lors des cérémonies. Cette association entre nourriture présentée et décoration s'est étendue au sens général de « décorer ».",
+    "mnemonic": "Imaginez le kanji 飾 comme un plat (食) enrobé d'un beau tissu (巾). Pour ショク, pensez à « décorer un plat magnifiquement » — quand vous かざります (kazan-masu), vous transformez quelque chose de simple en quelque chose de beau !",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "殖",
+    "readings": {
+      "kun": "ふ.える、ふ.やす",
+      "on": "ショク"
+    },
+    "meaning": "augmenter, multiplier, accroître",
+    "etymology": "殖 combine 殳 (outil) et 食 (nourriture/substance). Le caractère illustre l'idée de multiplier ou d'augmenter une substance, comme le ferait un outil pour transformer ou accumuler. L'élément 食 représente l'abondance qui se développe.",
+    "mnemonic": "Le kanji 殖 montre comment les outils (殳) multiplient la nourriture (食) ! Quand quelque chose ふえます (fuemasu), cela s'accroît comme une récolte qu'on cultive — le ショク résonne avec cette croissance prospère.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "辱",
+    "readings": {
+      "kun": "はずかし.める",
+      "on": "ジョク"
+    },
+    "meaning": "humilier, embarrasser, couvrir de honte",
+    "etymology": "辱 combine 辰 (posture baissée) et 寸 (mesure/contrôle). Le caractère évoque l'image d'une personne qui se voit mesurée ou contrôlée, forcée à baisser la tête. Cette posture exprime l'humiliation et la perte de dignité.",
+    "mnemonic": "Imaginez 辱 comme quelqu'un qui doit baisser la tête (辰) mesuré par d'autres (寸) — c'est l'humiliation ! はずかし.める (hazukashi-meru) signifie « faire honte à quelqu'un », et ジョク peint cette image d'une personne rabaissée.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "唇",
+    "readings": {
+      "kun": "くちびる",
+      "on": "シン"
+    },
+    "meaning": "lèvres",
+    "etymology": "唇 combine 口 (bouche) et 辰 (posture/forme courbe). Le 辰 suggère la forme courbe naturelle des lèvres qui encadrent la bouche. Ce caractère fut créé en combinant le radical de bouche avec un élément évoquant la courbe physiologique des lèvres.",
+    "mnemonic": "口 (la bouche) plus une courbe (辰) — voilà les lèvres ! くちびる (kuchibiru) évoque la bouche (くち) et les lèvres qui la définissent. シン fait référence à cette partie sensible du visage qui encadre votre parole.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "娠",
+    "readings": {
+      "kun": "",
+      "on": "シン"
+    },
+    "meaning": "grossesse, être enceinte",
+    "etymology": "娠 combine 女 (femme) et 辰 (le cycle, le moment). Ensemble, ces caractères expriment la transformation d'une femme durant un moment spécifique de sa vie. 辰 évoque aussi le cycle naturel et temporel de la grossesse qui dure environ neuf mois.",
+    "mnemonic": "Une femme (女) en train de connaître un moment (辰) spécial et transformateur — c'est la grossesse ! シン résonne avec cette transition majeure où le corps et la vie se renouvellent complètement.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "審",
+    "readings": {
+      "kun": "つまび.らか、つぶさ.に",
+      "on": "シン"
+    },
+    "meaning": "jugement, procès, audition",
+    "etymology": "審 combine 宀 (maison, espace fermé) et 神 (divinité). Le caractère suggère l'idée d'examiner attentivement quelque chose dans un lieu sacré ou une salle de jugement. Ce contexte évoque l'autorité et la révélation de la vérité par une force supérieure.",
+    "mnemonic": "Imaginez une salle de tribunal (宀) où intervient une autorité divine (神) pour juger — c'est l'essence de 審 ! Quand vous つまび.らか (tsumabiraka) examinez quelque chose, vous le scrutez comme un juge qui cherche la vérité absolue.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "慎",
+    "readings": {
+      "kun": "つつし.む、つつ.ましい、つつし、つつし.み",
+      "on": "シン"
+    },
+    "meaning": "prudence, humilité, discrétion, être attentif",
+    "etymology": "慎 combine 心 (cœur) et 真 (vérité). Le caractère exprime l'idée d'un cœur guidé par la vérité et l'honnêteté. Cette combination évoque la prudence qui naît de la sincérité intérieure et du respect des vraies valeurs.",
+    "mnemonic": "Un cœur (心) ancré dans la vérité (真) — c'est la prudence ! Quand vous つつし.む (tsutsushimu), vous agissez avec discrétion respectueuse, guidé par votre conscience sincère. シン résonne avec cette intégrité morale.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "振",
+    "readings": {
+      "kun": "ふ.る、ふ.れる、ふ.るう",
+      "on": "シン"
+    },
+    "meaning": "secouer, agiter, brandir, faire trembler",
+    "etymology": "振 combine 手 (main) et 辰 (posture, mouvement). Le caractère illustre l'action dynamique d'une main qui se meut ou qui secoue. 辰 implique un mouvement cyclique ou répété, créant l'image d'une agitation continue.",
+    "mnemonic": "Une main (手) qui bouge dans tous les sens (辰) — vous ふります (furimasu) ! Quand vous secouez quelque chose avec énergie, vous le bougez d'avant en arrière comme une main qui danse. シン peint cette image de mouvement vif.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "紳",
+    "readings": {
+      "kun": "",
+      "on": "シン"
+    },
+    "meaning": "ceinture honorable, monsieur, gentleman",
+    "etymology": "紳 combine 糸 (fil, tissu) et 辰 (forme, substance). Le caractère évoque une ceinture de tissu de qualité, symbole de distinction et de respectabilité. Historiquement, une belle ceinture marquait le statut social et la respectabilité d'une personne.",
+    "mnemonic": "Un fil précieux (糸) formant une ceinture élégante (辰) — symbole du monsieur respecté ! シン est le son d'un gentleman distingué, quelqu'un ceint d'une dignité aussi bien façonnée qu'une fine ceinture de soie.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "薪",
+    "readings": {
+      "kun": "たきぎ、まき",
+      "on": "シン"
+    },
+    "meaning": "bois de chauffage, bois à brûler, combustible",
+    "etymology": "薪 combine 艹 (herbe, plantes) et 辰 (accumulation, cycle). Le caractère représente des branches et du bois accumulés, prêts à être brûlés. Cette accumulation de matériel naturel symbolise le processus cyclique de récolte et de consommation du bois.",
+    "mnemonic": "De l'herbe (艹) devenant du bois sec (辰) — voilà le たきぎ (takigi) ! Imaginez une pile de bois attendant le feu. シン résonne avec cet entassement de branches qui crépiteront bientôt — le son du chauffage rustique.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "刃",
+    "readings": {
+      "kun": "は、やいば、き.る",
+      "on": "ジン、ニン"
+    },
+    "meaning": "lame, tranchant, épée, bord coupant",
+    "etymology": "刃 combine 刀 (sabre) et 仁 (humanité). Étonnamment, ce caractère ancien exprime l'idée d'une lame contrôlée par l'humanité et la vertu. La lame représente le pouvoir, tandis que 仁 rappelle que ce pouvoir doit être utilisé avec sagesse.",
+    "mnemonic": "Un couteau (刀) guidé par la bienveillance (仁) — la lame d'une épée noble ! は (ha) et やいば (yaiba) évoquent le tranchant brillant. ジン résonne avec cette idée d'une lame qui coupe net et avec intention.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "尋",
+    "readings": {
+      "kun": "たず.ねる、ひろ",
+      "on": "ジン"
+    },
+    "meaning": "enquêter, chercher, interroger, mesurer",
+    "etymology": "尋 combine 尸 (posture assise, personne) et 寻 (ancienne mesure de longueur, environ 2,4 mètres). Le caractère historiquement représentait l'acte de mesurer ou de parcourir une distance pour rechercher ou examiner quelque chose.",
+    "mnemonic": "Quelqu'un (尸) qui marche pour mesurer la distance (寻) — voilà たず.ねる (tazuneru) ! Imaginez quelqu'un qui parcourt une certaine distance pour trouver la réponse à sa question. ジン résonne avec cette quête du savoir.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "甚",
+    "readings": {
+      "kun": "はなは.だ、はなは.だしい",
+      "on": "ジン"
+    },
+    "meaning": "extrêmement, très, grandement, extraordinaire",
+    "etymology": "甚 combine 甘 (sucre, douceur) et 匕 (cuillère, instrument). Ensemble, ces éléments créent l'image de quelque chose de très doux ou intense. Par extension, cela évoque l'intensité extrême, l'excellence marquée et l'ampleur considérable.",
+    "mnemonic": "Du sucre (甘) empilé avec une cuillère (匕) — extrêmement doux et abondant ! はなは.だ (hanaha-da) signifie « extraordinaire », et ジン peint l'image de quelque chose d'intensément concentré, comme du sucre pur.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "尽",
+    "readings": {
+      "kun": "つ.きる、つ.くす、つ.かす、-づ.く、-ず.く、ことごと.く",
+      "on": "ジン、サン"
+    },
+    "meaning": "épuiser, consommer, finir, dédier, servir",
+    "etymology": "尽 combine 尸 (corps, personne complète) et 火 (feu). Le caractère illustre l'idée d'une personne qui se consume complètement, comme le feu qui dévore tout. Cela symbolise l'épuisement complet ou l'engagement total d'une personne.",
+    "mnemonic": "Un corps (尸) qui brûle entièrement (火) — voilà つ.きる (tsukiru) ! Quand quelque chose s'épuise, c'est comme un feu qui consume toute son essence. ジン résonne avec cette consommation totale et l'engagement absolu.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "迅",
+    "readings": {
+      "kun": "",
+      "on": "ジン"
+    },
+    "meaning": "rapide, prompt, véloce, swift",
+    "etymology": "迅 combine 辶 (marche, mouvement) et 刀 (lame, qui coupe rapidement). Le caractère exprime l'idée d'une progression qui se déplace aussi rapidement qu'une lame tranchante. Cette combinaison crée l'image d'une vitesse foudroyante.",
+    "mnemonic": "Une marche (辶) qui coupe comme une épée (刀) — c'est la rapidité extrême ! ジン résonne avec cette vélocité éclair, comme si vous aviez des ailes qui vous propulsent. L'image est celle d'un guerrier qui se meut avec une agilité sans égale.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "陣",
+    "readings": {
+      "kun": "",
+      "on": "ジン"
+    },
+    "meaning": "formation de bataille, camp, position militaire, moment bref",
+    "etymology": "陣 combine 阜 (colline) et 申 (déclaration, son). Le caractère évoque l'image d'une colline où l'on établit une position stratégique. Sur cette éminence, on crie des ordres militaires — c'est l'essence d'une formation de bataille organisée.",
+    "mnemonic": "Une colline (阜) où retentissent les ordres (申) — c'est la formation de bataille ! ジン résonne avec le fracas des camps militaires, les trompettes qui sonnent, les soldats qui s'organisent. C'est l'image d'une position fortifiée.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "帥",
+    "readings": {
+      "kun": "",
+      "on": "スイ"
+    },
+    "meaning": "commandant, chef militaire, général, gouverneur",
+    "etymology": "帥 combine 帛 (étoffe, tissu fin) et 率 (taux, proportion). Le caractère représente historiquement un chef revêtu de vêtements fins, symbole de son autorité et de son statut. La combinaison évoque celui qui mène les autres avec excellence et distinction.",
+    "mnemonic": "Un chef vêtu magnifiquement (帛) qui mène la procession (率) — voilà l'帥 ! スイ résonne avec l'autorité naturelle d'un commandant qui inspire et dirige ses troupes avec grâce et puissance.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "睡",
+    "readings": {
+      "kun": "ねむ.る、ねむ.い",
+      "on": "スイ"
+    },
+    "meaning": "somnolent, endormi, sommeil, mourir",
+    "etymology": "睡 combine 目 (œil) et 誰 (qui, quiconque). Le caractère illustre l'état d'un œil qui se ferme progressivement vers le sommeil. L'idée centrale est celle d'un œil qui ne voit plus car la personne s'endort profondément.",
+    "mnemonic": "Un œil (目) qui se ferme graduellement (誰) — voilà ねむ.る (nemuru) ! Imaginez vos paupières qui deviennent de plus en plus lourdes, vos yeux qui se ferment. スイ résonne avec ce poids du sommeil qui vous envahit progressivement.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "崇",
+    "readings": {
+      "kun": "あが.める",
+      "on": "スウ"
+    },
+    "meaning": "adorer, respecter, révérer, honorer",
+    "etymology": "崇 combine 山 (montagne) et 宗 (école, doctrine). Le caractère évoque une montagne sacrée où l'on pratique une doctrine religieuse. Les montagnards élèvent leur regard vers les pics — geste qui symbolise l'adoration et le respect envers le divin.",
+    "mnemonic": "Une montagne (山) sacrée (宗) que vous regardez avec révérence — c'est あが.める (agameru) ! Imaginez-vous levant les yeux vers un pic majestueux où logent les dieux. スウ résonne avec cette élévation de l'esprit vers le sacré.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "枢",
+    "readings": {
+      "kun": "とぼそ、からくり",
+      "on": "スウ、シュ"
+    },
+    "meaning": "gond, pivot, charnière, mécanisme secret, cœur des affaires",
+    "etymology": "枢 combine 木 (bois) et 隹 (oiseau, chose pointue). Le caractère représente un gond de bois qui pivote — le point central autour duquel toute chose tourne. Le 隹 évoque l'action pointue, précise du pivot en action.",
+    "mnemonic": "Un gond de bois (木) qui tourne sur un point précis (隹) — voilà la charnière ! C'est le からくり (karakuri), le mécanisme secret qui fait tourner le monde. スウ résonne avec ce mouvement central où tout s'articule.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "据",
+    "readings": {
+      "kun": "す.える、す.わる",
+      "on": "キョ"
+    },
+    "meaning": "installer, fonder, placer, poser, asseoir",
+    "etymology": "据 combine 扌 (main) et 居 (rester, habiter). Le caractère illustre l'acte de placer quelque chose avec la main et de l'installer durablement en un lieu. C'est l'image de la main qui pose et établit, créant ainsi une fondation stable.",
+    "mnemonic": "Une main (扌) qui pose quelque chose solidement (居) — voilà す.える (sueru) ! Quand vous installez un meuble, vous le posez d'une main ferme et le laissez là, immobilisé. キョ résonne avec cette stabilité qu'on établit.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "杉",
+    "readings": {
+      "kun": "すぎ",
+      "on": "サン"
+    },
+    "meaning": "cèdre du Japon, cryptomeria",
+    "etymology": "杉 combine 木 (bois, arbre) et 杉 lui-même est un arbre spécifique du Japon. Le kanji représente directement ce conifère caractéristique avec sa silhouette distinctive. Le 木 radical indique clairement qu'il s'agit d'un type d'arbre.",
+    "mnemonic": "Un arbre (木) pointu comme le cèdre japonais — voilà すぎ (sugi) ! Imaginez ces grands cèdres qui pointent vers le ciel dans les forêts japonaises anciennes. サン résonne avec leur majesté silencieuse.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "瀬",
+    "readings": {
+      "kun": "せ",
+      "on": "ライ"
+    },
+    "meaning": "rapides, courant, torrent, haut-fonds, banc de sable",
+    "etymology": "瀬 combine 水 (eau) et 世 (génération, cycle). Le caractère représente une section de rivière où l'eau s'accélère en passant sur des rochers. Cette accélération continue du cycle de l'eau crée les rapides visibles et audibles.",
+    "mnemonic": "L'eau (水) qui passe par un cycle de mouvement rapide (世) — voilà les rapides ! Imaginez le grondement de l'eau qui s'accélère, écume blanche et courant violent. せ (se) résonne avec ce fracas constant des eaux en mouvement.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "畝",
+    "readings": {
+      "kun": "せ、うね",
+      "on": "ボウ、ホ、モ、ム"
+    },
+    "meaning": "sillon, labour, trente tsubo, côte, nervure",
+    "etymology": "畝 combine 田 (champ de riz) et 禾 (tige de grain). Le caractère illustre les lignes parallèles du labour dans un champ, les sillons où poussent les cultures. Ces lignes régulières témoignent du travail systématique du paysan.",
+    "mnemonic": "Un champ (田) avec ses tiges de grain (禾) alignées en sillons — c'est うね (una) ! Imaginez les rangées parfaites de la terre labourée, chaque sillon attendant la graine. Le son résonne avec ce travail répétitif et ordonné.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "是",
+    "readings": {
+      "kun": "これ、この、ここ",
+      "on": "ゼ、シ"
+    },
+    "meaning": "ceci, celui-ci, c'est juste, c'est bien, justice",
+    "etymology": "是 combine 日 (soleil, lumière, clarté) et 止 (arrêt, décision). Le caractère évoque l'idée d'une lumière qui s'arrête, qui désigne clairement quelque chose. Cette clarification est le fondement de la justice — la lumière qui révèle ce qui est juste.",
+    "mnemonic": "La lumière du soleil (日) qui s'arrête sur quelque chose (止) pour le désigner — c'est これ (kore, ceci) ! Imaginez le soleil qui pointe exactement quelque chose, révélant sa nature. シ résonne avec cette décision ferme et cette justice.",
+    "jlpt": "N2"
+  }
+]

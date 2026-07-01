@@ -1,0 +1,277 @@
+[
+  {
+    "kanji": "煙",
+    "readings": {
+      "on": "エン",
+      "kun": "けむ.る、けむり、けむ.い"
+    },
+    "meaning": "fumée, vapeur",
+    "etymology": "Le radical 火 (feu) associé à 後 (arrière) symbolise la substance qui s'élève après un feu. Cette composition picturale représente visuellement le phénomène du feu produisant une vapeur montante. Le kanji relie le phénomène visible du combustion à son produit aérien et éphémère.",
+    "mnemonic": "Imaginez un grand 火 (feu) produisant une épaisse けむり (kemuir - fumée) ! Même sans jamais brûler de bois, le kanji vous rappellera cette scène classique : le 火 qui monte, puis la 煙 qui s'envole vers le ciel après un feu de camp.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "欧",
+    "readings": {
+      "on": "オウ",
+      "kun": "うた.う、は.く"
+    },
+    "meaning": "Europe, chanter",
+    "etymology": "Le radical 欠 (béance, respiration) combiné avec un composant phonétique crée 欧. Ce kanji s'utilise principalement comme caractère phonétique pour représenter « Europe » (オウロッパ). Historiquement, son association avec « chanter » vient de ses lectures kun anciennes.",
+    "mnemonic": "欧 pour Europe ! Pensez aux grandes cathédrales européennes et à leurs chœurs qui chantent. Le son オウ résonne comme une mélodie européenne. Quand vous voyez 欧州 (Europe), ce kanji « chante » littéralement le nom du continent.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "介",
+    "readings": {
+      "on": "カイ",
+      "kun": ""
+    },
+    "meaning": "intercalé, mollusque, intermédiaire",
+    "etymology": "Le kanji 介 adopte la forme compacte d'une coquille ou mollusque vue de profil. Visuellement, il représente quelque chose qui s'insère ou s'interpose entre deux espaces. Cette structure étroite évoque un objet dur et protecteur.",
+    "mnemonic": "介 = quelque chose qui s'intercale ! Imaginez une coquille (介) serrée entre deux pierres. Le kanji カイ vous rappellera cette notion d'interposition. Une huître dans sa coquille est un intermédiaire parfait entre l'océan et votre assiette !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "祈",
+    "readings": {
+      "on": "キ",
+      "kun": "いの.る"
+    },
+    "meaning": "prier, implorer, souhaiter",
+    "etymology": "Le radical 示 (autel, divinité) s'accompagne de 其 (cela, celui-ci) pour former 祈. Cette combinaison symbolise le geste de présenter ses vœux devant un autel sacré. Le radical 示 ancre le kanji dans la sphère du divin et de la communication spirituelle.",
+    "mnemonic": "祈 c'est prier ! Voyez le radical 示 (autel) : vous vous tenez debout, les mains jointes, et vous いの.る (inoru - priez). Le kanji キ capture cette attitude humble de celui qui implore une grâce auprès des dieux.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "喫",
+    "readings": {
+      "on": "キツ",
+      "kun": "の.む"
+    },
+    "meaning": "consommer, boire, fumer",
+    "etymology": "Le radical 口 (bouche) se combine avec 吸 (aspirer, inhaler) pour créer 喫. Cette composition évoque l'action de porter quelque chose à la bouche et de l'absorber ou l'inhaler. Le kanji représente l'acte physique de l'ingestion orale.",
+    "mnemonic": "喫 = manger, boire, fumer ! La 口 (bouche) est l'organe qui 喫 (kitssu) consomme ! Pensez à 喫煙 (kitsuen - fumer) : la fumée entre par la 口. Le kanji キツ colle parfaitement à cette action d'absorption.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "叫",
+    "readings": {
+      "on": "キョウ",
+      "kun": "さけ.ぶ"
+    },
+    "meaning": "crier, hurler, vociférer",
+    "etymology": "Le radical 口 (bouche) combiné avec 孑 suggère l'action violente et répétée de crier. La structure picturale représente le son émis forcément et bruyamment par la bouche. Cette composition évoque l'intensité et l'urgence vocale.",
+    "mnemonic": "叫 c'est crier très fort ! Imaginez la 口 (bouche) grande ouverte criant au maximum. Le kanji キョウ résonne comme un cri perçant. さけ.ぶ (sakebu - crier) vous rappellera ce kanji chaque fois que quelqu'un hurle de peur ou de joie.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "偶",
+    "readings": {
+      "on": "グウ",
+      "kun": "たま"
+    },
+    "meaning": "par hasard, pair, couple",
+    "etymology": "Le radical 人 (personne) associé à 禺 (dualité, crépuscule) crée 偶. Cette composition symbolise l'idée de deux personnes ensemble ou deux choses qui coïncident. Le kanji évoque l'accidentel ou la rencontre fortuite de deux éléments.",
+    "mnemonic": "偶 = une rencontre par hasard ! Deux 人 (personnes) qui se croisent グウ (gū) par chance. グウ pour couple ou nombre pair ! Pensez à 偶然 (guuzen - par hasard) : deux choses qui tombent ensemble, c'est du pur hasard !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "隅",
+    "readings": {
+      "on": "グウ",
+      "kun": "すみ"
+    },
+    "meaning": "coin, recoin, angle",
+    "etymology": "Le radical 隹 (oiseau) ou 土 (terre) combiné avec 禺 (angle, dualité) forme 隅. La composition picturale représente un angle ou un coin physique, comme un recoin secret. Cette forme évoque l'espace restreint et délimité.",
+    "mnemonic": "隅 = un coin caché ! Imaginez un petit oiseau caché dans le 隅 (sumi - coin) d'une pièce. グウ et すみ vous rappelleront les petits coins secrets de votre maison. Le kanji capture cette idée d'espace exigu et isolé.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "靴",
+    "readings": {
+      "on": "カ",
+      "kun": "くつ"
+    },
+    "meaning": "chaussure",
+    "etymology": "Le radical 革 (cuir) combiné avec 化 crée 靴. Cette composition ancre le kanji dans le domaine des vêtements faits de matière flexible et durable. Le 革 (cuir) est l'élément clé suggérant l'équipement de protection du pied.",
+    "mnemonic": "靴 c'est une chaussure ! Voyez le radical 革 (cuir) : c'est la matière première ! Les 靴 (kutsu) que vous portez sont faites de cuir robuste. Chaque matin vous enfilez vos くつ (kutsu) avant de sortir - le kanji révèle ce secret : une chaussure, c'est du cuir transformé !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "軒",
+    "readings": {
+      "on": "ケン",
+      "kun": "のき"
+    },
+    "meaning": "avant-toit, corniche, compteur de maisons",
+    "etymology": "Le radical 車 (véhicule) combiné avec 干 (bâton, arête) crée 軒. Cette composition originale suggère la structure de l'avant-toit qui s'étend comme une corniche protectrice. Le kanji capture l'élément architectural protégeant ce qui se trouve en-dessous.",
+    "mnemonic": "軒 = les avant-toits ! Sous un 軒 (noki - avant-toit), vous êtes protégé de la pluie. Imaginez des maisons en rangée : 5軒 (go-ken) = 5 maisons ! Le kanji ケン compte les maisons avec leurs élégants のき (noki) qui surplombent les portes.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "枯",
+    "readings": {
+      "on": "コ",
+      "kun": "か.れる、か.らす"
+    },
+    "meaning": "se dessécher, faner, devenir sec",
+    "etymology": "Le radical 木 (arbre) combiné avec 古 (ancien, vieux) crée 枯. Cette composition représente un arbre devenu vieux et desséché. L'idée centrale est celle du vieillissement et de la perte de vitalité. Le radical 木 ancre le kanji dans le domaine de la nature végétale.",
+    "mnemonic": "枯 = un arbre mort ! Regardez le 木 (arbre) : il devient 古 (ancien)... et voilà, il か.れる (kareru - se dessèche) ! Les feuilles tombent, l'arbre devient コ (sec et mort). Si vous voyez une branche 枯れた (kareta - desséchée), vous saurez que la vie l'a quittée.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "雇",
+    "readings": {
+      "on": "コ",
+      "kun": "やと.う"
+    },
+    "meaning": "employer, engager, recruter",
+    "etymology": "Le radical 雨 (pluie, ciel) combiné avec 呼 (appeler, crier) crée 雇. Cette composition évoque l'acte d'appeler quelqu'un pour un travail ou un service. Le radical 雨 symbolise l'abondance ou la multitude. Le kanji capture l'idée de solliciter ou recruter quelqu'un.",
+    "mnemonic": "雇 = embaucher quelqu'un ! Imaginez un patron qui crie 呼 (appelle) un travailleur pour le 雇 (koyo - embaucher). コ, c'est l'acte de やと.う (yatou - engager) quelqu'un. Dans les temps anciens, on appelait les gens pour travailler - c'est ce que ce kanji représente !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "御",
+    "readings": {
+      "on": "ギョ、ゴ",
+      "kun": "おん-、お-、み-"
+    },
+    "meaning": "honorable, vénérable, manipuler, gouverner",
+    "etymology": "Le radical 彳 (chemin, marcher) combiné avec 卸 crée 御. Cette composition historique représente l'idée de diriger ou d'accompagner avec respectabilité. Le radical 彳 suggère le mouvement et l'action. Le kanji évoque le respect et l'autorité.",
+    "mnemonic": "御 = honorable et de haut rang ! ご飯 (gohan - riz honorable) montre comment ご- rend les choses respectueuses. お母さん (okasan - mère honorable) utilise お-. Le kanji ギョ exprime l'idée de gouverner avec dignité. Quand vous dites ご覧ください (goran kudasai - regardez s'il vous plaît), vous montrez du respect avec cette 御 !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "更",
+    "readings": {
+      "on": "コウ",
+      "kun": "さら、さら.に、ふ.ける、ふ.かす"
+    },
+    "meaning": "renouveler, transformer, tard dans la nuit",
+    "etymology": "Le kanji 更 représente historiquement le passage du temps et la rotation des tours de garde nocturnes. Le kanji évoque l'alternance et le changement. Visuellement, il symbolise le renouvellement. La composition capture l'idée du temps qui passe et se transforme.",
+    "mnemonic": "更 = l'heure devient plus tard ! ふ.ける (fukeru - se faire tard) et ふ.かす (fukasu - prolonger). Plus tard : 夜が更ける (yo ga fukeru - la nuit avance). Ou さら.に (sarani - encore plus) : リンゴがさらに赤い (ringo ga sarani akai - la pomme devient encore plus rouge). Renouvellement complet : 更新 (koshin - refresh) !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "肯",
+    "readings": {
+      "on": "コウ",
+      "kun": "がえんじ.る"
+    },
+    "meaning": "consentement, accord, approbation",
+    "etymology": "Le radical 肉 (chair, corps) combiné avec 可 (pouvoir, convenable) crée 肯. Cette composition suggère le consentement sincère et corporel. L'idée est celle de dire oui avec le cœur entier. Le kanji évoque l'acceptation profonde et authentique.",
+    "mnemonic": "肯 = dire oui avec le cœur ! Imaginez quelqu'un qui dit コウ (ouï, d'accord) en mettant tout son 肉 (cœur/corps) dedans. C'est le kanji du oui sincère et de l'approbation authentique. 肯定 (kotei - affirmation) : vous engagez tout votre être dans votre accord. Un vrai コウ, pas un vague hochement de tête !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "歳",
+    "readings": {
+      "on": "サイ、セイ",
+      "kun": "とし、とせ、よわい"
+    },
+    "meaning": "année, âge, époque",
+    "etymology": "Le kanji 歳 combine historiquement le radical 歯 (dent) avec 戈 (lance). L'évocation des dents qui poussent symbolise la croissance et le vieillissement à travers les années. Le kanji capture l'accumulation du temps et les transformations physiques liées à l'âge.",
+    "mnemonic": "歳 = une année ! とし (toshi - année, âge) : chaque 歳 qui passe vous vieillit. Pensez aux dents : elles poussent et grandissent - 一歳 (ichi-sai - un an) ! Votre 歳 (sai - âge) augmente chaque année. Le kanji capture ce passage inexorable du temps, année après année.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "柔",
+    "readings": {
+      "on": "ジュウ、ニュウ",
+      "kun": "やわ.らか、やわ.らかい、やわ、やわ.ら"
+    },
+    "meaning": "mou, tendre, doux, gentil",
+    "etymology": "Le radical 木 (arbre) combiné avec un composant de flexibilité crée 柔. La composition montre un arbre jeune et flexible. Cette forme picturale évoque la capacité à se plier sans se briser. Le kanji représente la qualité contraire à la rigidité.",
+    "mnemonic": "柔 = mou et tendre ! Imaginez un petit 木 (jeune arbre) qui se plie gracieusement dans le vent : やわ.らか (yawaraka - souple) ! Pas cassant, pas rigide - ジュウ (juujuu) souple ! 柔道 (judo - voie de la souplesse) montre comment utiliser la douceur plutôt que la force brute. Le kanji capture cette beauté de la flexibilité.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "緒",
+    "readings": {
+      "on": "ショ、チョ",
+      "kun": "お、いとぐち"
+    },
+    "meaning": "commencement, début, cordon, fil",
+    "etymology": "Le radical 糸 (fil, soie) combiné avec 者 (personne, chose) crée 緒. Cette composition évoque le fil du commencement ou le début d'une histoire. Historiquement, 緒 représente le premier fil qui initie tout. Le kanji capture l'idée du point de départ absolu.",
+    "mnemonic": "緒 = le début du fil ! Imaginez une pelote de fil : いとぐち (itoguchi - le bout du fil) - c'est le 緒 (sho - commencement) ! Pour trouvez le début, trouvez le bout du fil - c'est votre いとぐち ! 緒についた (sho ni tsuita - cela a commencé) ! Tirez le fil et la trame entière de l'histoire se révèle.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "召",
+    "readings": {
+      "on": "ショウ",
+      "kun": "め.す"
+    },
+    "meaning": "appeler, commander, porter, attraper",
+    "etymology": "Le radical 大 (grand) combiné avec un composant de commandement crée 召. La forme évoque l'acte d'appeler quelqu'un avec autorité ou dignité. Le kanji représente le commandement et la convocation. L'idée centrale est celle de convoquer ou de demander respectueusement.",
+    "mnemonic": "召 = un appel royal ! め.す (mesu - appeler, porter, manger) : l'empereur 召し上がる (meshiagaru - prendre un repas honorablement). Quand un seigneur dit 召, on accourt ! 召し上がってください (meshiagate kudasai - mangez s'il vous plaît honorablement) - une invite respectueuse. Le kanji capture ce mélange d'autorité teintée de bienveillance.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "床",
+    "readings": {
+      "on": "ショウ",
+      "kun": "とこ、ゆか"
+    },
+    "meaning": "lit, sol, plancher, surface",
+    "etymology": "Le radical 广 (toit, demeure) combiné avec 木 (bois) crée 床. Cette composition représente la surface en bois sur laquelle on s'allonge ou on marche. L'idée est celle d'une structure solide en bois reposant sous un toit. Le kanji évoque le confort et la stabilité domestiques.",
+    "mnemonic": "床 = le lit ! Imaginez un lit en bois (木) sous un toit (广) : c'est votre とこ (toko - lit) ! ゆか (yuka - plancher) - où vous marchez confortablement dans votre maison. ショウ résonne comme l'endroit où vous vous reposez chaque nuit. 床暖房 (yuka danbo - chauffage par le sol) montre comment 床 crée du confort.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "畳",
+    "readings": {
+      "on": "ジョウ、チョウ",
+      "kun": "たた.む、たたみ、かさ.なる"
+    },
+    "meaning": "tapis tatami, plier, multiplier",
+    "etymology": "Le radical 畐 (abondance, plénitude) combiné avec 日 (jour, carré) crée 畳. Cette composition évoque l'idée de plier ou de superposer. Le kanji historiquement représentait la surface du tatami qui peut être pliée et rangée. L'idée centrale est celle de multiplier ou d'accumuler.",
+    "mnemonic": "畳 = le tapis tatami ! たたみ (tatami - le tapis traditionnel) que vous trouvez dans les maisons japonaises authentiques. たた.む (tataumu - plier) : vous pliez le tatami ! ジョウ ou チョウ pour compter les tatamis : 6畳 (roku-jo - 6 tatamis) = la taille de la pièce ! Le kanji capture cette essence du confort domestique nippon.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "伸",
+    "readings": {
+      "on": "シン",
+      "kun": "の.びる、の.ばす、の.べる、の.す"
+    },
+    "meaning": "s'étendre, s'allonger, grandir",
+    "etymology": "Le radical 人 (personne) combiné avec 申 (rapporter, se présenter) crée 伸. Cette composition montre une personne qui s'étend vers le haut ou vers l'avant. Le kanji représente l'acte de croissance et d'expansion physique. L'idée est celle de quelque chose qui se déploie ou s'allonge naturellement.",
+    "mnemonic": "伸 = grandir et s'étendre ! Une 人 (personne) qui la.びる (nobiru - grandir) : シン ! Chaque matin vous vous étendriez, の.ばす (nobasu - allonger) vos bras au réveil. Les bambous の.びる (nobiru - s'allongent) très rapidement. 成績が伸びる (seiseki ga nobiru - vos notes s'améliorent) montre comment ce kanji signifie la croissance générale. Visualisez quelqu'un qui grandit vers le ciel !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "寝",
+    "readings": {
+      "on": "シン",
+      "kun": "ね.る、ね.かす、い.ぬ、みたまや、や.める"
+    },
+    "meaning": "dormir, s'allonger, se coucher",
+    "etymology": "Le radical 宀 (demeure, maison) combiné avec 身 (corps) crée 寝. Cette composition montre un corps allongé dans un lit à l'intérieur d'une maison. Le kanji représente l'acte de repos et de sommeil. L'idée est celle du corps qui se repose dans une position horizontale.",
+    "mnemonic": "寝 = dormir ! ね.る (neru - dormir) : vous vous couchez et dormez profondément. お昼寝 (ohirune - sieste) : vous vous ね.かす (nekasu - vous endormez) l'après-midi. La nuit, vous traversez ね (ne) pour rejoindre le monde des rêves. 寝室 (shinshitsu - chambre) : où vous ね.る chaque nuit. Le kanji montre un corps qui s'allonge dans sa maison.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "辛",
+    "readings": {
+      "on": "シン",
+      "kun": "から.い、つら.い、-づら.い、かのと"
+    },
+    "meaning": "épicé, piquant, amer, difficile",
+    "etymology": "Le kanji 辛 représente historiquement une pointe ou une forme aiguë. Visuellement, il montre une silhouette avec une pointe ou une croix pointue. Le kanji capture l'idée de quelque chose qui pique ou qui est difficile à supporter. La composition évoque l'irritation sensorielle et émotionnelle.",
+    "mnemonic": "辛 = piquant et difficile ! から.い (karai - épicé) : un curry très シン (hot and spicy) qui brûle la langue ! つら.い (tsurai - difficile, amer) : la vie peut être 辛い (hard). 7辛のカレー (nana-kara - curry level 7 - très piquant) ! Imaginez le piment qui pique votre langue intensément. Le kanji 辛 capture cette sensation d'irritation - gustative ou émotionnelle.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "吹",
+    "readings": {
+      "on": "スイ",
+      "kun": "ふ.く"
+    },
+    "meaning": "souffler, émettre, exhaler",
+    "etymology": "Le radical 口 (bouche) combiné avec 欠 (manquer, béance, respiration) crée 吹. Cette composition montre l'acte de pousser l'air hors de la bouche avec force. Le kanji représente l'action de respirer intensément ou de souffler. L'idée est celle d'un flux d'air émis puissamment par la bouche.",
+    "mnemonic": "吹 = souffler fort ! ふ.く (fuku - souffler) : vous ふ.く (fuku) une trompette ou vous ふ.く un pissenlit ! La 口 (bouche) grande ouverte qui souffle : スイ résonne comme ce geste ! Un vent qui souffle : 風が吹く (kaze ga fuku - le vent souffle). 吹雪 (fubuki - tempête de neige) : la neige souffle partout intensément. Imaginez quelqu'un qui gonfle ses joues puis PFFFTTT !",
+    "jlpt": "N3"
+  }
+]

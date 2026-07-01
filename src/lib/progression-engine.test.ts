@@ -1,5 +1,9 @@
 import { describe, it, expect } from 'vitest'
-import { getTrainerRank, getLessonQueue, getAvailableKanji, type Lesson, type KanjiInfo } from './progression-engine'
+import {
+  getTrainerRank, getLessonQueue, getAvailableKanji,
+  selectQuestionMode, getDispositionChunks, BATTLE_WEIGHTS,
+  type Lesson, type KanjiInfo, type QuestionMode,
+} from './progression-engine'
 
 describe('getTrainerRank', () => {
   it('returns level 1 for 0 kanji studied', () => {
@@ -120,6 +124,108 @@ describe('getLessonQueue', () => {
   it('keeps non-queued order when no lesson contains queued kanji', () => {
     const result = getLessonQueue(['一', '二', '三', '四'], [], [lessonA, lessonB], ['五'])
     expect(result.map(l => l.id)).toEqual(['lesson-a', 'lesson-b'])
+  })
+})
+
+describe('BATTLE_WEIGHTS', () => {
+  it('route weights sum to 1', () => {
+    const sum = Object.values(BATTLE_WEIGHTS.route).reduce((s, w) => s + w, 0)
+    expect(sum).toBeCloseTo(1, 10)
+  })
+
+  it('boss weights sum to 1', () => {
+    const sum = Object.values(BATTLE_WEIGHTS.boss).reduce((s, w) => s + w, 0)
+    expect(sum).toBeCloseTo(1, 10)
+  })
+
+  it('boss Disposition weight is > route Disposition weight', () => {
+    expect(BATTLE_WEIGHTS.boss.disposition).toBeGreaterThan(BATTLE_WEIGHTS.route.disposition)
+  })
+
+  it('boss Disposition is the single dominant mode (> any other boss weight)', () => {
+    const { disposition, ...others } = BATTLE_WEIGHTS.boss
+    const maxOther = Math.max(...Object.values(others))
+    expect(disposition).toBeGreaterThan(maxOther)
+  })
+})
+
+describe('selectQuestionMode', () => {
+  const ALL_MODES: QuestionMode[] = [
+    'sens', 'lecture', 'ecriture', 'composition',
+    'grammaire', 'conjugaison', 'traduction', 'disposition',
+  ]
+
+  it('always returns a valid mode', () => {
+    for (let i = 0; i < 50; i++) {
+      const mode = selectQuestionMode('route', 10, true)
+      expect(ALL_MODES).toContain(mode)
+    }
+  })
+
+  it('never returns disposition when hasDispositionSentences is false', () => {
+    for (let i = 0; i < 200; i++) {
+      expect(selectQuestionMode('boss', 10, false)).not.toBe('disposition')
+    }
+  })
+
+  it('never returns grammaire or conjugaison when encounteredGrammarCount < 5', () => {
+    for (let i = 0; i < 200; i++) {
+      const mode = selectQuestionMode('boss', 4, true)
+      expect(mode).not.toBe('grammaire')
+      expect(mode).not.toBe('conjugaison')
+    }
+  })
+
+  it('still returns a valid mode when both grammar and disposition are unavailable', () => {
+    const remaining: QuestionMode[] = ['sens', 'lecture', 'ecriture', 'composition', 'traduction']
+    for (let i = 0; i < 100; i++) {
+      const mode = selectQuestionMode('boss', 0, false)
+      expect(remaining).toContain(mode)
+    }
+  })
+
+  it('disposition appears more often in boss than route battles (statistical)', () => {
+    const N = 1000
+    let routeDisp = 0
+    let bossDisp = 0
+    for (let i = 0; i < N; i++) {
+      if (selectQuestionMode('route', 10, true) === 'disposition') routeDisp++
+      if (selectQuestionMode('boss', 10, true) === 'disposition') bossDisp++
+    }
+    expect(bossDisp).toBeGreaterThan(routeDisp * 3)
+  })
+})
+
+describe('getDispositionChunks', () => {
+  it('returns the same elements regardless of order', () => {
+    const chunks = ['私は', 'リンゴを', '食べました']
+    const shuffled = getDispositionChunks(chunks)
+    expect(shuffled.sort()).toEqual([...chunks].sort())
+  })
+
+  it('does not mutate the input array', () => {
+    const chunks = ['彼女は', '本を', '読んでいます']
+    const copy = [...chunks]
+    getDispositionChunks(chunks)
+    expect(chunks).toEqual(copy)
+  })
+
+  it('returns a different order at least sometimes (statistical)', () => {
+    const chunks = ['A', 'B', 'C', 'D', 'E', 'F']
+    let differentCount = 0
+    for (let i = 0; i < 100; i++) {
+      const shuffled = getDispositionChunks(chunks)
+      if (shuffled.join('') !== chunks.join('')) differentCount++
+    }
+    expect(differentCount).toBeGreaterThan(80)
+  })
+
+  it('returns a single-element array unchanged', () => {
+    expect(getDispositionChunks(['一人で'])).toEqual(['一人で'])
+  })
+
+  it('returns empty array for empty input', () => {
+    expect(getDispositionChunks([])).toEqual([])
   })
 })
 

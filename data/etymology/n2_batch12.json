@@ -1,0 +1,662 @@
+[
+  {
+    "kanji": "威",
+    "readings": {
+      "kun": "い",
+      "on": "イ"
+    },
+    "meaning": "puissance, prestige",
+    "etymology": "Composition de 戌 (chien de garde) et 女 (femme). La femme du chien de garde = le prestige. La puissance = ce qui impose le respect.",
+    "mnemonic": "威 = 戌 (garde) + 女 (femme). La gardienne = le prestige.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "維",
+    "readings": {
+      "kun": "い",
+      "on": "イ"
+    },
+    "meaning": "maintenir, fibre",
+    "etymology": "Composition de 糸 (fil) et 隹 (oiseau). Le fil de l'oiseau = la fibre. Maintenir = le fil qui tient.",
+    "mnemonic": "維 = 糸 (fil) + 隹 (oiseau). Le fil de l'oiseau = maintenir.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "育",
+    "readings": {
+      "kun": "そだ",
+      "on": "イク"
+    },
+    "meaning": "élever, éduquer",
+    "etymology": "Composition de 子 (enfant) et 肉 (viande/nourrir). Nourrir l'enfant = élever.",
+    "mnemonic": "育 = 子 (enfant) + 肉 (nourrir). Nourrir l'enfant = élever.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "域",
+    "readings": {
+      "kun": "いき",
+      "on": "イキ"
+    },
+    "meaning": "zone, région",
+    "etymology": "Composition de 土 (terre) et 或 (délimiter). La terre délimitée = la zone.",
+    "mnemonic": "域 = 土 (terre) + 或 (délimiter). La terre délimitée = zone.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "陰",
+    "readings": {
+      "kun": "かげ",
+      "on": "イン"
+    },
+    "meaning": "ombre, négatif",
+    "etymology": "Composition de 阝 (colline) et 侌 (nuage). La colline dans le nuage = l'ombre. Le négatif = ce qui est à l'ombre.",
+    "mnemonic": "陰 = 阝 (colline) + 侌 (nuage). La colline nuageuse = ombre.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "隠",
+    "readings": {
+      "kun": "かく",
+      "on": "イン"
+    },
+    "meaning": "cacher, se dissimuler",
+    "etymology": "Composition de 阝 (colline) et 㥯 (cœur caché). Le cœur derrière la colline = se cacher.",
+    "mnemonic": "隠 = 阝 (colline) + cœur. Le cœur derrière la colline = cacher.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "宇",
+    "readings": {
+      "kun": "う",
+      "on": "ウ"
+    },
+    "meaning": "ciel, univers",
+    "etymology": "Composition de 宀 (toit) et 于 (espace). L'espace sous le toit = l'univers. Le ciel = l'espace sans limite.",
+    "mnemonic": "宇 = 宀 (toit) + 于 (espace). L'espace sous le toit = l'univers.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鬱",
+    "readings": {
+      "kun": "うつ",
+      "on": "ウツ"
+    },
+    "meaning": "dépression, oppressif",
+    "etymology": "Composition de 木 (arbres), 鬯 (vin parfumé) et 缶 (pot). La forêt dense où rien ne pénètre = la dépression.",
+    "mnemonic": "鬱 = forêt dense + fermentation = dépression oppressante.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "映",
+    "readings": {
+      "kun": "うつ.る、うつ.す、は.える、-ば.え",
+      "on": "エイ"
+    },
+    "meaning": "refléter, réfléchir, projection, briller",
+    "etymology": "日 (soleil, lumière) + 央 (centre, noyau). La lumière qui se réfléchit au centre, le soleil qui brille et crée l'image dupliquée. Le phénomène physique de la lumière rebondissante.",
+    "mnemonic": "« うつる » (utsuru) — l'image du soleil 日 se réfléchit dans le miroir! « エイ » — vous voyez le reflet briller magnifiquement! Parfait pour un miroir, une projection de film, ou l'écho visuel de la lumière dansante.",
+    "jlpt": "N4"
+  },
+  {
+    "kanji": "鋭",
+    "readings": {
+      "kun": "するど",
+      "on": "エイ"
+    },
+    "meaning": "acéré, perspicace",
+    "etymology": "Le métal transformé = le métal affilé.",
+    "mnemonic": "鋭 = métal affilé = acéré.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "塩",
+    "readings": {
+      "kun": "しお",
+      "on": "エン"
+    },
+    "meaning": "sel",
+    "etymology": "Composition de 土 (terre) et 鹵 (sel). La terre salée = le sel.",
+    "mnemonic": "塩 = 土 (terre) + 鹵 (sel). La terre salée = le sel.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "岡",
+    "readings": {
+      "kun": "おか",
+      "on": "コウ"
+    },
+    "meaning": "colline, promontoire",
+    "etymology": "Composition de 山 (montagne) et 冂 (enclos). La montagne encerclée = la colline.",
+    "mnemonic": "岡 = 山 (montagne) + 冂 (enclos). La montagne encerclée = la colline.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "沖",
+    "readings": {
+      "kun": "おき、おきつ",
+      "on": "チュウ"
+    },
+    "meaning": "haute mer, large",
+    "etymology": "沖 combine 水 (eau) et 中 (milieu). L'eau au milieu, loin du rivage, c'est la mer ouverte. L'idéogramme capture l'idée d'une grande étendue d'eau au centre, loin des terres.",
+    "mnemonic": "Pensez à 水 (eau) au 中 (milieu) — l'open sea, c'est l'eau bien au centre, loin de la côte. 沖 c'est là où les vagues roulent dans le bleu profond, **おき** on va loin.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "拡",
+    "readings": {
+      "kun": "ひろ",
+      "on": "カク"
+    },
+    "meaning": "élargir, étendre",
+    "etymology": "Composition de 手 (main) et 広 (large). La main large = élargir.",
+    "mnemonic": "拡 = 手 (main) + 広 (large). La main large = élargir.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "含",
+    "readings": {
+      "kun": "ふく",
+      "on": "ガン"
+    },
+    "meaning": "contenir, inclure",
+    "etymology": "Composition de 今 (maintenant) et 口 (bouche). La bouche qui retient maintenant = contenir. Inclure = avoir dans la bouche.",
+    "mnemonic": "含 = 今 (maintenant) + 口 (bouche). La bouche retenant = contenir.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "疑",
+    "readings": {
+      "kun": "うたが.う",
+      "on": "ギ"
+    },
+    "meaning": "doute, suspicion",
+    "etymology": "疑 associe 白 (blanc/clair) et 心 (cœur/esprit). Quand le cœur n'est pas clair sur quelque chose, on doute. La clarté mentale manque, d'où le doute et la suspicion.",
+    "mnemonic": "Votre 心 (cœur) voit quelque chose qui n'est pas 白 (clair) — c'est suspect ! On **うたがう** (doute), on questionne. La forme évoque un esprit troublé.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "偽",
+    "readings": {
+      "kun": "いつわ",
+      "on": "ギ"
+    },
+    "meaning": "faux, feindre",
+    "etymology": "Composition de 亻 (personne) et 為 (faire). La personne qui fait semblant = feindre. Le faux = ce qu'on fait paraître.",
+    "mnemonic": "偽 = 亻 (personne) + 為 (faire semblant). La personne qui fait semblant = faux.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "郷",
+    "readings": {
+      "kun": "さと",
+      "on": "キョウ"
+    },
+    "meaning": "village natal, patrie",
+    "etymology": "Composition de 郎 (homme) et 巷 (ruelle). L'homme de la ruelle = le village natal.",
+    "mnemonic": "郷 = 郎 (homme) + 巷 (ruelle). L'homme de la ruelle = village natal.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "筋",
+    "readings": {
+      "kun": "すじ",
+      "on": "キン"
+    },
+    "meaning": "muscle, raison",
+    "etymology": "Composition de 竹 (bambou) et 月 (corps) et 力 (force). La force du corps comme le bambou = le muscle.",
+    "mnemonic": "筋 = 竹 (bambou) + 月 (corps) + 力 (force). La force du corps = muscle.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "極",
+    "readings": {
+      "kun": "きわ",
+      "on": "キョク"
+    },
+    "meaning": "extrême, pôle",
+    "etymology": "Composition de 木 (bois) et 亟 (urgent). Le bois urgent = l'extrême. Le pôle = la limite de l'arbre.",
+    "mnemonic": "極 = 木 (bois) + 亟 (urgent). Le bois limite = extrême.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "骨",
+    "readings": {
+      "kun": "ほね",
+      "on": "コツ"
+    },
+    "meaning": "os, squelette",
+    "etymology": "骨 vient de l'image stylisée d'un os : la structure osseuse du crâne ou du squelette. Le radical 骨 lui-même désigne l'os — le caractère épouse la forme d'une colonne vertébrale avec ses articulations.",
+    "mnemonic": "Regardez la forme : 骨 ressemble à une colonne vertébrale ! L'effort sans **ほね** (os, travail acharné) ne mène nulle part. Le **コツ** (truc) d'une compétence ? Ça demande de la structure osseuse.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "項",
+    "readings": {
+      "kun": "うなじ",
+      "on": "コウ"
+    },
+    "meaning": "nuque, article (d'un texte)",
+    "etymology": "Composition de 工 (artisan) et 頁 (tête). La tête de l'artisan = la nuque. L'article = la tête du texte.",
+    "mnemonic": "項 = 工 (artisan) + 頁 (tête). La tête de l'artisan = la nuque.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "皇",
+    "readings": {
+      "kun": "おう",
+      "on": "コウ、オウ"
+    },
+    "meaning": "empereur",
+    "etymology": "Composition de 白 (blanc) et 王 (roi). Le roi blanc = l'empereur. La pureté royale.",
+    "mnemonic": "皇 = 白 (blanc) + 王 (roi). Le roi blanc = l'empereur.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "婚",
+    "readings": {
+      "kun": "こん",
+      "on": "コン"
+    },
+    "meaning": "mariage",
+    "etymology": "Composition de 女 (femme) et 昏 (soir). La femme du soir = le mariage. Les noces = la cérémonie du soir.",
+    "mnemonic": "婚 = 女 (femme) + 昏 (soir). La femme du soir = le mariage.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "刺",
+    "readings": {
+      "kun": "さ、とげ",
+      "on": "シ"
+    },
+    "meaning": "percer, carte de visite",
+    "etymology": "Composition de 朿 (épine) et 刀 (couteau). L'épine du couteau = percer. La carte = ce qui pique l'attention.",
+    "mnemonic": "刺 = 朿 (épine) + 刀 (couteau). L'épine du couteau = percer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "座",
+    "readings": {
+      "kun": "すわ",
+      "on": "ザ"
+    },
+    "meaning": "s'asseoir, siège",
+    "etymology": "Composition de 广 (abri) et 坐 (s'asseoir). S'asseoir sous l'abri = le siège.",
+    "mnemonic": "座 = 广 (abri) + 坐 (s'asseoir). S'asseoir sous l'abri = siège.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "細",
+    "readings": {
+      "kun": "ほそ",
+      "on": "サイ"
+    },
+    "meaning": "fin, détail",
+    "etymology": "Composition de 糸 (fil) et 田 (champ). Le fil du champ = fin. Le détail = le fil ténu.",
+    "mnemonic": "細 = 糸 (fil) + 田 (champ). Le fil ténu = fin.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "殺",
+    "readings": {
+      "kun": "ころ",
+      "on": "サツ"
+    },
+    "meaning": "tuer",
+    "etymology": "Composition de 殳 (arme) et 木 (bois) et 乂 (couper). L'arme sur le bois = tuer.",
+    "mnemonic": "殺 = 殳 (arme) + 乂 (couper). L'arme qui coupe = tuer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "刷",
+    "readings": {
+      "kun": "す",
+      "on": "サツ"
+    },
+    "meaning": "imprimer, balayer",
+    "etymology": "Composition de 刀 (couteau) et 刷 (brosse). Le couteau de la brosse = imprimer. Balayer = la brosse qui passe.",
+    "mnemonic": "刷 = 刀 (couteau) + brosse = imprimer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "砂",
+    "readings": {
+      "kun": "すな",
+      "on": "サ、シャ"
+    },
+    "meaning": "sable, grain",
+    "etymology": "石 (pierre) + 少 (petit). Littéralement les petites pierres: lorsque la pierre se désagrège en innombrables minuscules morceaux, elle devient sable. C'est la réduction de la roche massive en grains mobiles.",
+    "mnemonic": "« すな » — prononcez-le et sentez le sable glisser entre vos doigts ! 石 (pierre massive) cassée en 少 (petits) grains. Voilà le sable! Chaque grain est une infime partie de montagne.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "準",
+    "readings": {
+      "kun": "じゅん.じる、じゅん.ずる、なぞら.える",
+      "on": "ジュン"
+    },
+    "meaning": "semi-, conforme, proportion",
+    "etymology": "準 combine 水 (eau) et 隹 (oiseau). L'eau au niveau de l'oiseau — une équivalence de niveau. Le sens s'étend à 'correspond à', 'est en proportion avec'. Comme l'eau qui trouve son niveau.",
+    "mnemonic": "Imagine l'eau (水) qui atteint exactement le niveau d'un oiseau perché (隹) — une **準備** (préparation) ! Quand tout est au même niveau, c'est **ジュン** (conforme).",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "処",
+    "readings": {
+      "kun": "ところ",
+      "on": "ショ"
+    },
+    "meaning": "lieu, traiter",
+    "etymology": "Composition de 夂 (marche) et 几 (siège). La marche au siège = le lieu. Traiter = être à l'endroit approprié.",
+    "mnemonic": "処 = 夂 (marche) + 几 (siège). Marcher au siège = le lieu.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "諸",
+    "readings": {
+      "kun": "もろ",
+      "on": "ショ"
+    },
+    "meaning": "divers, tous",
+    "etymology": "Composition de 言 (paroles) et 者 (personne). Les paroles de tous = divers. Tous = chaque personne avec ses paroles.",
+    "mnemonic": "諸 = 言 (paroles) + 者 (personne). Toutes les personnes = divers.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "将",
+    "readings": {
+      "kun": "まさ",
+      "on": "ショウ"
+    },
+    "meaning": "général, futur",
+    "etymology": "Composition de 爿 (lit) et 肉 (viande) et 寸 (mesure). La mesure de la viande sur le lit = le général. Le futur = ce qui vient.",
+    "mnemonic": "将 = lit + viande + mesure = le général.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "賞",
+    "readings": {
+      "kun": "しょう",
+      "on": "ショウ"
+    },
+    "meaning": "récompense, apprécier",
+    "etymology": "Composition de 貝 (monnaie) et 尚 (estimé). La monnaie estimée = la récompense.",
+    "mnemonic": "賞 = 貝 (monnaie) + 尚 (estimé). La monnaie estimée = récompense.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "障",
+    "readings": {
+      "kun": "さわ",
+      "on": "ショウ"
+    },
+    "meaning": "obstacle, trouble",
+    "etymology": "Composition de 阝 (colline) et 章 (chapitre). La colline du chapitre = l'obstacle. Le trouble = la colline dans le chemin.",
+    "mnemonic": "障 = 阝 (colline) + 章 (chapitre). La colline dans le chemin = obstacle.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "情",
+    "readings": {
+      "kun": "なさ",
+      "on": "ジョウ"
+    },
+    "meaning": "sentiment, situation",
+    "etymology": "Composition de 忄 (cœur) et 青 (bleu/pur). Le cœur pur = le sentiment. La situation = l'état du cœur.",
+    "mnemonic": "情 = 忄 (cœur) + 青 (pur). Le cœur pur = le sentiment.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "植",
+    "readings": {
+      "kun": "う",
+      "on": "ショク"
+    },
+    "meaning": "planter",
+    "etymology": "Composition de 木 (arbre) et 直 (droit). L'arbre droit = planter. Planter = mettre l'arbre droit.",
+    "mnemonic": "植 = 木 (arbre) + 直 (droit). L'arbre droit = planter.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "触",
+    "readings": {
+      "kun": "さわ",
+      "on": "ショク"
+    },
+    "meaning": "toucher",
+    "etymology": "Composition de 角 (corne) et 蜀 (ver). La corne du ver = toucher. Le contact = l'antenne qui touche.",
+    "mnemonic": "触 = 角 (corne) + 蜀 (ver). L'antenne = toucher.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "身",
+    "readings": {
+      "kun": "み",
+      "on": "シン"
+    },
+    "meaning": "corps, personne, condition sociale",
+    "etymology": "身 représente le corps humain stylisé : les bras écartés, le tronc, les jambes. C'est l'idéogramme du corps entier, d'où l'extension au concept de personne et de station dans la vie.",
+    "mnemonic": "La forme de 身 c'est un corps debout — **み** (corps). De là, votre 'station in life' c'est votre place dans le corps social. Quand on parle d'une personne, on parle du **身** complet.",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "震",
+    "readings": {
+      "kun": "ふる",
+      "on": "シン"
+    },
+    "meaning": "tremblement (de terre)",
+    "etymology": "Composition de 雨 (pluie) et 辰 (dragon). La pluie du dragon = le tremblement.",
+    "mnemonic": "震 = 雨 (pluie) + 辰 (dragon). La pluie du dragon = tremblement.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "診",
+    "readings": {
+      "kun": "み",
+      "on": "シン"
+    },
+    "meaning": "examiner (médecin)",
+    "etymology": "Composition de 言 (paroles) et 㐱 (poils/sonder). Les paroles qui sondent = l'examen médical.",
+    "mnemonic": "診 = 言 (paroles) + sonder. Les paroles de sondage = examiner.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "信",
+    "readings": {
+      "kun": "しん",
+      "on": "シン"
+    },
+    "meaning": "confiance, foi",
+    "etymology": "Composition de 亻 (personne) et 言 (paroles). Les paroles de la personne = la confiance. La foi = les paroles qu'on croit.",
+    "mnemonic": "信 = 亻 (personne) + 言 (paroles). Les paroles de la personne = confiance.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "縮",
+    "readings": {
+      "kun": "ちぢ.む、ちぢ.まる、ちぢ.める",
+      "on": "シュク"
+    },
+    "meaning": "rétrécir, contracter",
+    "etymology": "縮 combine 糸 (fil) et 宿 (auberge, demeure). Quand les fils se contractent, ils se rapprochent, comme les gens qui se regroupent à l'auberge. L'idée : contraction, rétrécissement.",
+    "mnemonic": "Les **糸** (fils) se **宿** (rassemblent) — ils **ちぢむ** (rétrécissent) ! Imaginez un pull qui rétrécit au lavage : 縮 c'est le drame du tissu qui se contracte en boule.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "純",
+    "readings": {
+      "kun": "じゅん",
+      "on": "ジュン"
+    },
+    "meaning": "pur, simple",
+    "etymology": "Composition de 糸 (fil) et 屯 (rassembler). Le fil rassemblé = pur. La pureté = le fil sans mélange.",
+    "mnemonic": "純 = 糸 (fil) + 屯 (rassembler). Le fil pur = la pureté.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "暑",
+    "readings": {
+      "kun": "あつ",
+      "on": "ショ"
+    },
+    "meaning": "chaleur (estivale)",
+    "etymology": "Composition de 日 (soleil) et 者 (personne). Le soleil de la personne = la chaleur estivale.",
+    "mnemonic": "暑 = 日 (soleil) + 者 (personne). Le soleil sur la personne = chaleur.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "傷",
+    "readings": {
+      "kun": "きず",
+      "on": "ショウ"
+    },
+    "meaning": "blessure, blesser",
+    "etymology": "Composition de 亻 (personne) et 昜 (briller) et 爿 (lit). La personne brillante sur le lit = la blessure.",
+    "mnemonic": "傷 = 亻 (personne) + lit + briller = blessure.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "宣",
+    "readings": {
+      "kun": "せん",
+      "on": "セン"
+    },
+    "meaning": "déclarer, proclamer",
+    "etymology": "Composition de 宀 (toit) et 亘 (s'étendre). L'étendue sous le toit = la proclamation.",
+    "mnemonic": "宣 = 宀 (toit) + 亘 (s'étendre). L'étendue du toit = déclarer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "勢",
+    "readings": {
+      "kun": "いきお",
+      "on": "セイ"
+    },
+    "meaning": "puissance, influence",
+    "etymology": "Composition de 執 (tenir) et 力 (force). La force tenue = la puissance. L'influence = la force qu'on détient.",
+    "mnemonic": "勢 = 執 (tenir) + 力 (force). La force tenue = puissance.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "節",
+    "readings": {
+      "kun": "ふし",
+      "on": "セツ"
+    },
+    "meaning": "nœud, saison, modération",
+    "etymology": "Composition de 竹 (bambou) et 即 (immédiatement). Le bambou immédiat = le nœud. La saison = le nœud du temps.",
+    "mnemonic": "節 = 竹 (bambou) + 即 (immédiat). Le nœud du bambou = saison.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "帯",
+    "readings": {
+      "kun": "お",
+      "on": "タイ"
+    },
+    "meaning": "ceinture, zone, porter",
+    "etymology": "Composition de 巾 (tissu) et 帶 (ceindre). Le tissu qui ceint = la ceinture. La zone = l'étendue ceinte.",
+    "mnemonic": "帯 = 巾 (tissu) + ceindre. Le tissu qui ceint = ceinture.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "卵",
+    "readings": {
+      "kun": "たまご",
+      "on": "ラン"
+    },
+    "meaning": "œuf",
+    "etymology": "卵 structure un conteneur rond avec le radical de l'œuf. L'idéogramme repose sur la forme ronde et enveloppée de l'œuf. Le caractère épouse la silhouette ovale : un conteneur de vie.",
+    "mnemonic": "**たまご** (œuf) — le caractère 卵 ressemble à un œuf enveloppé, rond et complet. C'est un conteneur de vie. Le **ラン** (œuf, ovule) c'est le début de tout !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "遅",
+    "readings": {
+      "kun": "おそ",
+      "on": "チ"
+    },
+    "meaning": "lent, en retard",
+    "etymology": "Composition de 辶 (marche) et 犀 (rhinocéros). Marcher comme un rhinocéros = lent. En retard = marcher trop lentement.",
+    "mnemonic": "遅 = 辶 (marche) + 犀 (rhinocéros). Marcher comme un rhino = lent.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "賃",
+    "readings": {
+      "kun": "ちん",
+      "on": "チン"
+    },
+    "meaning": "loyer, salaire",
+    "etymology": "Composition de 任 (mission) et 貝 (monnaie). La monnaie de la mission = le loyer. Le salaire = la monnaie pour la tâche.",
+    "mnemonic": "賃 = 任 (mission) + 貝 (monnaie). La monnaie de la mission = le loyer.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "蔵",
+    "readings": {
+      "kun": "くら",
+      "on": "ゾウ"
+    },
+    "meaning": "entrepôt, stocker",
+    "etymology": "Composition de 艹 (herbe) et 臧 (cacher). L'herbe qui cache = l'entrepôt. Stocker = cacher sous l'herbe.",
+    "mnemonic": "蔵 = 艹 (herbe) + 臧 (cacher). L'herbe qui cache = l'entrepôt.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "坂",
+    "readings": {
+      "kun": "さか",
+      "on": "ハン"
+    },
+    "meaning": "pente, côte",
+    "etymology": "Composition de 土 (terre) et 反 (inverser). La terre inversée = la pente.",
+    "mnemonic": "坂 = 土 (terre) + 反 (inverser). La terre inversée = la pente.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "迫",
+    "readings": {
+      "kun": "せま",
+      "on": "ハク"
+    },
+    "meaning": "presser, approcher",
+    "etymology": "Composition de 辶 (marche) et 白 (blanc). La marche vers le blanc = approcher. Presser = venir de près.",
+    "mnemonic": "迫 = 辶 (marche) + 白 (blanc). Marcher vers = approcher.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "飯",
+    "readings": {
+      "kun": "めし",
+      "on": "ハン"
+    },
+    "meaning": "riz cuit, repas",
+    "etymology": "Composition de 食 (manger) et 反 (retourner). La nourriture retournée = le riz cuit. Le repas = la nourriture préparée.",
+    "mnemonic": "飯 = 食 (manger) + 反 (retourner). La nourriture retournée = le riz cuit.",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "減",
+    "readings": {
+      "kun": "へ.る、へ.らす",
+      "on": "ゲン"
+    },
+    "meaning": "diminuer, réduire",
+    "etymology": "減 combine 水 (eau) et 咸 (goût, plénitude). L'eau qui s'évapore = perte. Quand on enlève du sel de l'eau, le goût diminue. L'idée central : la diminution progressive.",
+    "mnemonic": "L'eau (水) dans 減 s'évapore — elle **へる** (diminue) ! Votre faim **へる** quand vous mangez. La **ゲン** (réduction) c'est juste la perte progressive — psshhh !",
+    "jlpt": "N3"
+  },
+  {
+    "kanji": "湯",
+    "readings": {
+      "kun": "ゆ",
+      "on": "トウ"
+    },
+    "meaning": "eau chaude",
+    "etymology": "L'eau brillante = l'eau chaude.",
+    "mnemonic": "湯 = eau brillante = eau chaude.",
+    "jlpt": "N2"
+  }
+]
