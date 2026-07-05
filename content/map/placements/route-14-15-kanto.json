@@ -1,0 +1,41 @@
+{
+  "zone_id": "route-14-15-kanto",
+  "npcs": [
+    {
+      "name": "Twins Kay & Tia, Pokéfan Eleanor, Enseignante Colette/Hillary, 2 Écoliers, Pokéfan Boone (Route 15)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_14",
+      "tile_x": 11,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Bird Keeper Josh/Roy, 5 Écoliers, 2 Pokéfans, Enseignante Clarice (Route 14)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_14",
+      "tile_x": 13,
+      "tile_y": 7,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fille dans les hautes herbes (Route 14, ouest)",
+      "role_origin": "Demande à voir un compagnon précis",
+      "item": "Objet porté rare",
+      "map_zone": "MAP_ROUTE_14",
+      "tile_x": 10,
+      "tile_y": 14,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

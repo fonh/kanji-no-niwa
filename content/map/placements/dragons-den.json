@@ -1,0 +1,53 @@
+{
+  "zone_id": "dragons-den",
+  "npcs": [
+    {
+      "name": "Ace Trainer Kobe, Piper ; Twins Clea & Gil",
+      "role_origin": "Dresseurs (B1F, avant le sanctuaire)",
+      "item": "—",
+      "map_zone": "MAP_DRAGONS_DEN_ENTRANCE",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Le Maître (Ancien)",
+      "role_origin": "Quiz d'empathie en 5 questions, condition réelle du 印 n°8 ; révèle être le grand-père de Clair/Lance",
+      "item": "Cadeau de \"successeur\"",
+      "map_zone": "MAP_DRAGONS_DEN",
+      "tile_x": 24,
+      "tile_y": 14,
+      "facing": "east",
+      "source": "rom_matched",
+      "matched_object_id": "obj_D44R0102_gsleader8",
+      "matched_sprite_id": "SPRITE_GSLEADER8"
+    },
+    {
+      "name": "\"Les autres vieillards du Sanctuaire\" (non nommés)",
+      "role_origin": "PNJ ambiants, corroborent la lignée Clair/Lance/Maître",
+      "item": "—",
+      "map_zone": "MAP_DRAGONS_DEN",
+      "tile_x": 53,
+      "tile_y": 2,
+      "facing": "south",
+      "source": "rom_matched",
+      "matched_object_id": "obj_D44R0102_gsleader8_2",
+      "matched_sprite_id": "SPRITE_GSLEADER8"
+    },
+    {
+      "name": "Clair",
+      "role_origin": "Fait irruption, surprise que le joueur ait réussi, remet le 印 final",
+      "item": "印 n°8",
+      "map_zone": "MAP_DRAGONS_DEN_SHRINE",
+      "tile_x": 1,
+      "tile_y": 1,
+      "facing": "east",
+      "source": "rom_matched",
+      "matched_object_id": "obj_D44R0103_gsleader8",
+      "matched_sprite_id": "SPRITE_GSLEADER8"
+    }
+  ]
+}

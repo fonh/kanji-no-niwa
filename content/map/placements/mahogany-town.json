@@ -1,0 +1,161 @@
+{
+  "zone_id": "mahogany-town",
+  "npcs": [
+    {
+      "name": "Vendeur RageCandyBar",
+      "role_origin": "Bloque la route est, vend la spécialité locale ; laisse passer une fois la Team Rocket vaincue",
+      "item": "— (vente)",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 12,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vendeur du magasin de souvenirs",
+      "role_origin": "\"Type louche\", détourne le regard du bruit suspect au sous-sol ; remplacé après la chute du QG",
+      "item": "— (vente)",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 19,
+      "tile_y": 8,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme devant le Gym",
+      "role_origin": "Évoque \"l'homme à la cape noire\" (Lance) enquêtant sur le signal brouillé",
+      "item": "—",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 7,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "PNJ à la grille de Route 43",
+      "role_origin": "Mentionne que Mr. Pokémon cherche une Écaille Rouge",
+      "item": "—",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 13,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Professeur Elm (appel)",
+      "role_origin": "Inquiet des émissions radio, juste après le 7e badge",
+      "item": "—",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 10,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Skier Jill, Diana ; Boarder Deandre, Gerardo, Patton",
+      "role_origin": "Gardiens avant Pryce",
+      "item": "—",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 0,
+      "tile_y": 15,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Scientist Gregg",
+      "role_origin": "Garde le PC qui coupe le système d'alarme du QG (B1F)",
+      "item": "—",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 25,
+      "tile_y": 15,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Scientist Ross, Mitch",
+      "role_origin": "Donnent les 2 mots de passe (B3F)",
+      "item": "—",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 21,
+      "tile_y": 16,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Rival (Silver)",
+      "role_origin": "QG Rocket B2F, déjà vaincu par Lance (Silver apparition #4, cameo — pas un combat)",
+      "item": "—",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 17,
+      "tile_y": 17,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Lance",
+      "role_origin": "Soigne l'équipe au B2F, affronte Ariana+Sbire en double avec le joueur (transmetteur)",
+      "item": "Objet de traversée d'eau (Whirlpool-équivalent)",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 3,
+      "tile_y": 19,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Executive Petrel (déguisé en \"Boss\")",
+      "role_origin": "Salle du chef, retournement narratif",
+      "item": "—",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 7,
+      "tile_y": 22,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Executive Ariana",
+      "role_origin": "Combat en double, aux côtés de Lance",
+      "item": "—",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 13,
+      "tile_y": 24,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Skier/Boarder (Gym)",
+      "role_origin": "Récompense finale du Gym Pryce",
+      "item": "Glacier Badge + TM07 Hail",
+      "map_zone": "MAP_MAHOGANY",
+      "tile_x": 16,
+      "tile_y": 25,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

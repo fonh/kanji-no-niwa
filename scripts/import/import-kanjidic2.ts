@@ -11,9 +11,9 @@ import { createReadStream } from 'fs'
 import { createGunzip } from 'zlib'
 import { join } from 'path'
 import { XMLParser } from 'fast-xml-parser'
-import { supabase } from './supabase'
+import { supabase } from '../lib/supabase'
 
-const SOURCES = join(import.meta.dirname, 'sources')
+const SOURCES = join(import.meta.dirname, '../sources')
 const BATCH_SIZE = 100
 
 const JLPT_MAP: Record<string, string> = { '4': 'N5', '3': 'N4', '2': 'N3', '1': 'N2' }

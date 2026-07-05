@@ -1,0 +1,77 @@
+{
+  "zone_id": "lake-of-rage",
+  "npcs": [
+    {
+      "name": "Poste-frontière Team Rocket (Route 43)",
+      "role_origin": "Rançonne pour passer ; redevient normal après la chute du QG",
+      "item": "TM36 Sludge Bomb (après)",
+      "map_zone": "MAP_LAKE_OF_RAGE",
+      "tile_x": 86,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Poké Maniac Ron/Ben/Brent, Picnicker Tiffany, Camper Spencer, Fisherman Marvin",
+      "role_origin": "Dresseurs (Route 43)",
+      "item": "—",
+      "map_zone": "MAP_LAKE_OF_RAGE",
+      "tile_x": 19,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fishing Guru",
+      "role_origin": "Concours du plus gros poisson-compagnon",
+      "item": "Ether (record battu)",
+      "map_zone": "MAP_LAKE_OF_RAGE",
+      "tile_x": 86,
+      "tile_y": 23,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Frère/sœur du jour Wesley (mercredi, post-QG)",
+      "role_origin": "PNJ calendaire",
+      "item": "Black Belt (objet à équiper)",
+      "map_zone": "MAP_LAKE_OF_RAGE",
+      "tile_x": 71,
+      "tile_y": 34,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fisherman Raymond, Andre ; Ace Trainer Aaron, Lois",
+      "role_origin": "Dresseurs post-événement Gyarados / mercredis",
+      "item": "—",
+      "map_zone": "MAP_LAKE_OF_RAGE",
+      "tile_x": 64,
+      "tile_y": 43,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Lance",
+      "role_origin": "Se présente au bord du lac après le combat, recrute le joueur pour Acajou Ville",
+      "item": "—",
+      "map_zone": "MAP_LAKE_OF_RAGE",
+      "tile_x": 48,
+      "tile_y": 51,
+      "facing": "north",
+      "source": "rom_matched",
+      "matched_object_id": "obj_T29_wataru",
+      "matched_sprite_id": "SPRITE_WATARU"
+    }
+  ]
+}

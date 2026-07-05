@@ -43,7 +43,7 @@ col.prepareLUTs()
 #  Paths
 # --------------------------------------------------------------------------- #
 HOME = os.path.expanduser("~")
-OUT = os.path.join(HOME, "Desktop", "sprites")
+OUT = os.environ.get("HGSS_SPRITE_OUT", os.path.join(HOME, "Desktop", "sprites"))
 
 # The Desktop entry the user pointed at is a macOS .textClipping, not the ROM.
 # Resolve the real .nds from a list of likely locations.

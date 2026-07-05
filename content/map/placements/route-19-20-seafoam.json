@@ -1,0 +1,41 @@
+{
+  "zone_id": "route-19-20-seafoam",
+  "npcs": [
+    {
+      "name": "Nageurs/Campeurs/Pique-niqueuses/Bird Keeper nommés (Route 20, 7-8)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_19",
+      "tile_x": 19,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "7 Nageurs nommés (Route 19)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_19",
+      "tile_x": 21,
+      "tile_y": 7,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Dresseurs postés (Seafoam B2F)",
+      "role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_19",
+      "tile_x": 19,
+      "tile_y": 9,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

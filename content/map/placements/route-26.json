@@ -1,0 +1,41 @@
+{
+  "zone_id": "route-26",
+  "npcs": [
+    {
+      "name": "Ace Trainer Gaven, Jamie, Jake, Joyce ; Fisherman Scott ; Psychic Vernon",
+      "role_origin": "Dresseurs de route",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_26",
+      "tile_x": 11,
+      "tile_y": 9,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Maison des Frères/sœurs du jour",
+      "role_origin": "Carnet-index listant les 7 emplacements/jours (hub du fil PNJ récurrent)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_26",
+      "tile_x": 8,
+      "tile_y": 22,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fille de la maison au nord",
+      "role_origin": "Soigne gratuitement l'équipe du joueur",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_26",
+      "tile_x": 28,
+      "tile_y": 35,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

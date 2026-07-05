@@ -1,0 +1,65 @@
+{
+  "zone_id": "route-30",
+  "npcs": [
+    {
+      "name": "Bug Catcher Wade",
+      "role_origin": "Dresseur de route",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_30",
+      "tile_x": 6,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Youngster Joey",
+      "role_origin": "Dresseur de route (personnage culte de la franchise, easter-egg possible)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_30",
+      "tile_x": 19,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme dans une maison (nord)",
+      "role_origin": "Donne l'Apricorn Box (objet-clé, débloque la cueillette d'Apricorns)",
+      "item": "Apricorn Box",
+      "map_zone": "MAP_ROUTE_30",
+      "tile_x": 23,
+      "tile_y": 23,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Mr. Pokémon",
+      "role_origin": "Confie un \"œuf mystère\" au joueur",
+      "item": "Mystery Egg (+ Exp. Share bien plus tard, contre l'Écaille du Lac Colère)",
+      "map_zone": "MAP_ROUTE_30",
+      "tile_x": 21,
+      "tile_y": 33,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Professeur Oak",
+      "role_origin": "Présent chez Mr. Pokémon, donne le Pokédex, anime ensuite une émission radio",
+      "item": "Pokédex",
+      "map_zone": "MAP_ROUTE_30",
+      "tile_x": 22,
+      "tile_y": 45,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

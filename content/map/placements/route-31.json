@@ -1,0 +1,53 @@
+{
+  "zone_id": "route-31",
+  "npcs": [
+    {
+      "name": "Bug Catcher Don",
+      "role_origin": "Dresseur de route",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_31",
+      "tile_x": 6,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Youngster Mikey",
+      "role_origin": "Dresseur de route",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_31",
+      "tile_x": 26,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Lyra/Ethan",
+      "role_origin": "Revue sur la route, donne le Vs. Recorder",
+      "item": "Vs. Recorder",
+      "map_zone": "MAP_ROUTE_31",
+      "tile_x": 32,
+      "tile_y": 15,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Jeune homme près de l'Apricorn noir",
+      "role_origin": "Quête de livraison (\"porte ce message à mon contact\", compagnon-courrier Kenya)",
+      "item": "TM44 Rest",
+      "map_zone": "MAP_ROUTE_31",
+      "tile_x": 15,
+      "tile_y": 17,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

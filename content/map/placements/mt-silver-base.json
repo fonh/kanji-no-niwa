@@ -1,0 +1,29 @@
+{
+  "zone_id": "mt-silver-base",
+  "npcs": [
+    {
+      "name": "Note du Prof Elm",
+      "role_origin": "Message laissé, pas un PNJ en personne à ce stade (\"full circle\")",
+      "item": "—",
+      "map_zone": "MAP_MOUNT_SILVER",
+      "tile_x": 11,
+      "tile_y": 4,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Centre Pokémon (jonction Route 28 / entrée Mont Gris)",
+      "role_origin": "Dernière occasion de se préparer avant l'ascension",
+      "item": "—",
+      "map_zone": "MAP_MOUNT_SILVER",
+      "tile_x": 11,
+      "tile_y": 8,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

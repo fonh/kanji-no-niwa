@@ -1,0 +1,65 @@
+{
+  "zone_id": "route-24-25-kanto",
+  "npcs": [
+    {
+      "name": "Sbire isolé (Route 24)",
+      "role_origin": "Combat scripté obligatoire (voleur de la pièce mécanique, dernier vestige de la Team Rocket \"dissoute\")",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_24",
+      "tile_x": 5,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "2 dresseurs supplémentaires (Route 24, zone d'attribution incertaine OCR)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_24",
+      "tile_x": 14,
+      "tile_y": 3,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Camper Lloyd, Fille Laura, Intello Pat, Écolier Joe, Fille Shannon, Ace Trainer Kevin (Route 25, gauntlet obligatoire de 6) + 1 dresseur non listé officiellement",
+      "role_origin": "Dresseurs",
+      "item": "Pépite (Kevin)",
+      "map_zone": "MAP_ROUTE_24",
+      "tile_x": 23,
+      "tile_y": 6,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Grand-père de Bill (Chaumière au bord de mer)",
+      "role_origin": "Montrer un compagnon précis → objet évolutif au choix",
+      "item": "Objet évolutif",
+      "map_zone": "MAP_ROUTE_24",
+      "tile_x": 8,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Misty (rendez-vous, bout de la route)",
+      "role_origin": "Scène climactique de poursuite de l'esprit légendaire, Eusine en commentateur",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_24",
+      "tile_x": 20,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

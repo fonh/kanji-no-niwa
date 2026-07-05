@@ -1,0 +1,53 @@
+{
+  "zone_id": "route-34",
+  "npcs": [
+    {
+      "name": "Camper Todd, Gamin Ian, Picnicker Gina, Pokéfan Brandon, Gamin Samuel",
+      "role_origin": "Dresseurs de route",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_34",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Policeman Keith",
+      "role_origin": "Combat uniquement nocturne (20h–4h), à l'ouest de la pension",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_34",
+      "tile_x": 11,
+      "tile_y": 6,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Trio Ace Trainer Jenn/Irene/Kate",
+      "role_origin": "Combat groupé après une traversée d'eau",
+      "item": "Power Herb",
+      "map_zone": "MAP_ROUTE_34",
+      "tile_x": 13,
+      "tile_y": 14,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Couple de la pension (grands-parents de Lyra/Ethan)",
+      "role_origin": "PNJ ambiant (Day Care supprimée dans 漢字の庭)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_34",
+      "tile_x": 16,
+      "tile_y": 29,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

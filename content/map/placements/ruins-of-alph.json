@@ -1,0 +1,41 @@
+{
+  "zone_id": "ruins-of-alph",
+  "npcs": [
+    {
+      "name": "Jeune homme (salle souterraine)",
+      "role_origin": "Admiratif du 1er puzzle résolu, remet un journal qui s'auto-remplit",
+      "item": "Rapport Unown",
+      "map_zone": "MAP_RUINS_OF_ALPH",
+      "tile_x": 14,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Chercheurs (PNJ ambiants)",
+      "role_origin": "Centre de Recherche des Ruines, discutent des découvertes",
+      "item": "—",
+      "map_zone": "MAP_RUINS_OF_ALPH",
+      "tile_x": 9,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Psychic Nathan",
+      "role_origin": "Dresseur de combat, bordure Centre de Recherche/Union Cave",
+      "item": "—",
+      "map_zone": "MAP_RUINS_OF_ALPH",
+      "tile_x": 10,
+      "tile_y": 21,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "zone_id": "route-38",
+  "npcs": [
+    {
+      "name": "School Kid Chad, Lass Dana, Beauty Valerie, Sailor Harry, Bird Keeper Toby",
+      "role_origin": "Dresseurs de route (répartition exacte Route 38 vs 39 incertaine dans l'OCR source)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_38",
+      "tile_x": 9,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

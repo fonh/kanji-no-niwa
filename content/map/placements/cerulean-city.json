@@ -1,0 +1,65 @@
+{
+  "zone_id": "cerulean-city",
+  "npcs": [
+    {
+      "name": "Sbire Rocket isolé",
+      "role_origin": "\"Seul membre étranger de la Team Rocket\", n'a jamais reçu le mémo de dissolution ; vole une pièce mécanique de la Centrale",
+      "item": "—",
+      "map_zone": "MAP_CERULEAN",
+      "tile_x": 45,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Gérant du magasin de vélos d'origine",
+      "role_origin": "Regrette la baisse de fréquentation, évoque \"un garçon et son vélo\" trois ans plus tôt (écho Red)",
+      "item": "—",
+      "map_zone": "MAP_CERULEAN",
+      "tile_x": 29,
+      "tile_y": 14,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Garçon récurrent (nord de la ville)",
+      "role_origin": "Indique où trouver Misty, puis signale une anomalie à la rivière",
+      "item": "—",
+      "map_zone": "MAP_CERULEAN",
+      "tile_x": 40,
+      "tile_y": 22,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Misty",
+      "role_origin": "Trouvée hors du Gym (point de vue) ; le Gym ne se peuple de ses 5 dresseurs qu'après l'avoir rencontrée",
+      "item": "—",
+      "map_zone": "MAP_CERULEAN",
+      "tile_x": 35,
+      "tile_y": 28,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Swimmer Briana, Parker (+ 3 non confirmés dans l'OCR)",
+      "role_origin": "Gardiens avant Misty (5 au total annoncés)",
+      "item": "—",
+      "map_zone": "MAP_CERULEAN",
+      "tile_x": 58,
+      "tile_y": 35,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

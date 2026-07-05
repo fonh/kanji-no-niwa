@@ -1,0 +1,65 @@
+{
+  "zone_id": "national-park",
+  "npcs": [
+    {
+      "name": "Magnus",
+      "role_origin": "Gérant du dôme Pokéathlon, fait visiter les lieux",
+      "item": "—",
+      "map_zone": "MAP_NATIONAL_PARK",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vieil homme retraité",
+      "role_origin": "Record de 998 sauts, défie le joueur de dépasser 1000",
+      "item": "—",
+      "map_zone": "MAP_NATIONAL_PARK",
+      "tile_x": 57,
+      "tile_y": 22,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vendeur du stand Aprijuice",
+      "role_origin": "Ouest du dôme",
+      "item": "Apriblender",
+      "map_zone": "MAP_NATIONAL_PARK",
+      "tile_x": 60,
+      "tile_y": 30,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Whitney (réapparition)",
+      "role_origin": "Accueil du Pokéathlon",
+      "item": "Maillot porté en épreuve",
+      "map_zone": "MAP_NATIONAL_PARK",
+      "tile_x": 24,
+      "tile_y": 38,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Enseignant (banc sud du parc)",
+      "role_origin": "PNJ-professeur, donne un objet de \"priorité au tour\"",
+      "item": "Quick Claw",
+      "map_zone": "MAP_NATIONAL_PARK",
+      "tile_x": 46,
+      "tile_y": 45,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

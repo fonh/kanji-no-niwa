@@ -19,7 +19,7 @@ import { existsSync, readFileSync } from 'fs'
 import { join } from 'path'
 import { createInterface } from 'readline'
 import kuromoji from 'kuromoji'
-import { supabase } from './supabase'
+import { supabase } from '../lib/supabase'
 
 const SOURCES = join(import.meta.dirname, '../sources')
 const BATCH_SIZE = 500

@@ -1,0 +1,65 @@
+{
+  "zone_id": "cinnabar-island",
+  "npcs": [
+    {
+      "name": "Blue (1ère rencontre)",
+      "role_origin": "Renvoie le joueur à plus tard (\"plus de badges Kanto\")",
+      "item": "—",
+      "map_zone": "MAP_CINNABAR_ISLAND",
+      "tile_x": 12,
+      "tile_y": 14,
+      "facing": "east",
+      "source": "rom_matched",
+      "matched_object_id": "obj_T09_gsleader16",
+      "matched_sprite_id": "SPRITE_GSLEADER16"
+    },
+    {
+      "name": "Blue (revisite tardive, post-Rock Climb)",
+      "role_origin": "Donne un objet porté",
+      "item": "Magmarizer",
+      "map_zone": "MAP_CINNABAR_ISLAND",
+      "tile_x": 6,
+      "tile_y": 2,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Panneau de relocalisation du Gym",
+      "role_origin": "Objet de décor, pointe vers Seafoam Islands",
+      "item": "—",
+      "map_zone": "MAP_CINNABAR_ISLAND",
+      "tile_x": 10,
+      "tile_y": 6,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Scientist Linden, Daniel ; Super Nerd Merle, Waldo, Cary",
+      "role_origin": "Gardiens avant Blaine (~5-6 annoncés, Seafoam Islands)",
+      "item": "—",
+      "map_zone": "MAP_CINNABAR_ISLAND",
+      "tile_x": 11,
+      "tile_y": 25,
+      "facing": "west",
+      "source": "rom_matched",
+      "matched_object_id": "obj_T09_gsleader15",
+      "matched_sprite_id": "SPRITE_GSLEADER15"
+    },
+    {
+      "name": "Blaine",
+      "role_origin": "師範 Feu, 15e badge (Gym relocalisé aux Seafoam Islands suite à l'éruption)",
+      "item": "—",
+      "map_zone": "MAP_CINNABAR_ISLAND",
+      "tile_x": 23,
+      "tile_y": 9,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

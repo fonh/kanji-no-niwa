@@ -1,0 +1,77 @@
+{
+  "zone_id": "new-bark-town",
+  "npcs": [
+    {
+      "name": "Mom",
+      "role_origin": "PNJ ambiant, rdc de la maison ; annonce qu'Elm demande le joueur, débloque sauvegarde/Sac/Carte",
+      "item": "Pokégear (après la 1ère course)",
+      "map_zone": "MAP_NEW_BARK",
+      "tile_x": 23,
+      "tile_y": 12,
+      "facing": "south",
+      "source": "rom_matched",
+      "matched_object_id": "obj_T20_gsmama",
+      "matched_sprite_id": "SPRITE_GSMAMA"
+    },
+    {
+      "name": "Lyra/Ethan (rival/mentor)",
+      "role_origin": "Voisin·e déjà dresseur·euse, laisse un mail motivant sur le PC du joueur",
+      "item": "—",
+      "map_zone": "MAP_NEW_BARK",
+      "tile_x": 10,
+      "tile_y": 7,
+      "facing": "east",
+      "source": "rom_matched",
+      "matched_object_id": "obj_T20_gsrivel",
+      "matched_sprite_id": "SPRITE_GSRIVEL"
+    },
+    {
+      "name": "Professeur Elm",
+      "role_origin": "Fait choisir un starter parmi 3, envoie en mission chez Mr. Pokémon, panique lors du cambriolage",
+      "item": "Everstone (après éclosion de l'œuf), Master Ball (après 8 badges)",
+      "map_zone": "MAP_NEW_BARK",
+      "tile_x": 31,
+      "tile_y": 0,
+      "facing": "north",
+      "source": "rom_matched",
+      "matched_object_id": "obj_T20_doctor",
+      "matched_sprite_id": "SPRITE_DOCTOR"
+    },
+    {
+      "name": "Policier",
+      "role_origin": "Enquête sur le cambriolage du labo, interroge sur le garçon roux",
+      "item": "—",
+      "map_zone": "MAP_NEW_BARK",
+      "tile_x": 19,
+      "tile_y": 6,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Rival (Silver)",
+      "role_origin": "Aperçu en train d'espionner le labo",
+      "item": "—",
+      "map_zone": "MAP_NEW_BARK",
+      "tile_x": 3,
+      "tile_y": 12,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Assistant du Pr. Elm",
+      "role_origin": "Comptoir du Mart, garde l'œuf mystère jusqu'au 1er badge",
+      "item": "—",
+      "map_zone": "MAP_NEW_BARK",
+      "tile_x": 4,
+      "tile_y": 14,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

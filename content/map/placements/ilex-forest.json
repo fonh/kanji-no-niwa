@@ -1,0 +1,41 @@
+{
+  "zone_id": "ilex-forest",
+  "npcs": [
+    {
+      "name": "Apprenti du Maître du Charbon",
+      "role_origin": "À l'entrée, enseigne la technique de capture des 2 fuyards",
+      "item": "—",
+      "map_zone": "MAP_ILEX_FOREST",
+      "tile_x": 32,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Kimono Girl Naoko",
+      "role_origin": "Plus au nord, perdue, demande le chemin de la sortie",
+      "item": "—",
+      "map_zone": "MAP_ILEX_FOREST",
+      "tile_x": 32,
+      "tile_y": 18,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Jeune homme sur une corniche",
+      "role_origin": "Enseigne la technique \"secouer les arbres\" (Headbutt)",
+      "item": "—",
+      "map_zone": "MAP_ILEX_FOREST",
+      "tile_x": 14,
+      "tile_y": 24,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

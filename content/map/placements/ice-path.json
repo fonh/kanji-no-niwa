@@ -1,0 +1,17 @@
+{
+  "zone_id": "ice-path",
+  "npcs": [
+    {
+      "name": "Kimono Girl Sayo",
+      "role_origin": "Coincée sur une plaque de glace près de la sortie, libérée en la poussant par derrière",
+      "item": "—",
+      "map_zone": "MAP_ICE_PATH_1F",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

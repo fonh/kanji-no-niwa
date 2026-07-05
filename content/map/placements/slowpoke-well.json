@@ -1,0 +1,41 @@
+{
+  "zone_id": "slowpoke-well",
+  "npcs": [
+    {
+      "name": "Kurt",
+      "role_origin": "Mène le joueur, se blesse au dos au pied de l'échelle, demande de continuer sans lui",
+      "item": "—",
+      "map_zone": "MAP_SLOWPOKE_WELL_ENTRANCE",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Sbires Rocket ×3",
+      "role_origin": "Combats de couloir, répartis B1F/B2F",
+      "item": "—",
+      "map_zone": "MAP_SLOWPOKE_WELL_ENTRANCE",
+      "tile_x": 27,
+      "tile_y": 3,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Executive Proton",
+      "role_origin": "Combat final ; confirme que la Team Rocket opère en sous-main pour Giovanni",
+      "item": "—",
+      "map_zone": "MAP_SLOWPOKE_WELL_B1F",
+      "tile_x": 42,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "rom_matched",
+      "matched_object_id": "obj_D26R0102_rocketm",
+      "matched_sprite_id": "SPRITE_ROCKETM"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "zone_id": "route-1-kanto",
+  "npcs": [
+    {
+      "name": "School Kid Sherman, Danny ; Ace Trainer French, Quinn",
+      "role_origin": "Dresseurs de route (4)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_1",
+      "tile_x": 12,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Photographe itinérant",
+      "role_origin": "Jours différents côté Vertville vs côté Bourg-Origine",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_1",
+      "tile_x": 5,
+      "tile_y": 9,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

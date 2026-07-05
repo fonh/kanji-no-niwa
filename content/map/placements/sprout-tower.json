@@ -1,0 +1,41 @@
+{
+  "zone_id": "sprout-tower",
+  "npcs": [
+    {
+      "name": "Sage Neal, Troy, Jin, Nico, Edmond, Chow",
+      "role_origin": "6 Sages répartis sur les 3 étages",
+      "item": "—",
+      "map_zone": "MAP_SPROUT_TOWER_1F",
+      "tile_x": 5,
+      "tile_y": 8,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Ancien Li",
+      "role_origin": "Sommet (3F), bat le joueur, explique la technique",
+      "item": "TM70 Flash",
+      "map_zone": "MAP_SPROUT_TOWER_1F",
+      "tile_x": 5,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Rival (Silver)",
+      "role_origin": "Présent au 3F, sermonné par l'Ancien Li sans écouter (scène, pas de combat)",
+      "item": "—",
+      "map_zone": "MAP_SPROUT_TOWER_3F",
+      "tile_x": 12,
+      "tile_y": 12,
+      "facing": "north",
+      "source": "rom_matched",
+      "matched_object_id": "obj_D15R0103_gsrivel",
+      "matched_sprite_id": "SPRITE_GSRIVEL"
+    }
+  ]
+}

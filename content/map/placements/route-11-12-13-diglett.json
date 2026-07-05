@@ -1,0 +1,77 @@
+{
+  "zone_id": "route-11-12-13-diglett",
+  "npcs": [
+    {
+      "name": "Psychic Fidel, Youngster Jason/Owen, Psychic Herman (Route 11)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_11",
+      "tile_x": 7,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Pêcheurs génériques (Route 12, marchent en silence pour ne pas effrayer les Pokémon)",
+      "role_origin": "Dresseurs (ambiance)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_11",
+      "tile_x": 39,
+      "tile_y": 7,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Camper Clark, Hiker Kenny, Picnicker Ginger, Pokéfan Alex, Camper Tanner (Route 13, 11 au total confirmés)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_11",
+      "tile_x": 39,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "PNJ de couleur locale (Grotte Diglett)",
+      "role_origin": "Surpris par les créatures qui surgissent du sol",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_11",
+      "tile_x": 29,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Portier (Grotte Diglett)",
+      "role_origin": "Remet un objet de quête confié par le Pr. Chen/Oak",
+      "item": "Objet de quête",
+      "map_zone": "MAP_ROUTE_11",
+      "tile_x": 28,
+      "tile_y": 15,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Maison voisine (Grotte Diglett)",
+      "role_origin": "—",
+      "item": "Pépite",
+      "map_zone": "MAP_ROUTE_11",
+      "tile_x": 17,
+      "tile_y": 17,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "zone_id": "saffron-city",
+  "npcs": [
+    {
+      "name": "Mr. Psychic",
+      "role_origin": "Donne une CT gratuitement",
+      "item": "CT",
+      "map_zone": "MAP_SAFFRON",
+      "tile_x": 20,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vigile du hall Silph Co.",
+      "role_origin": "Explique l'ascenseur en panne",
+      "item": "Amélioration (objet-souvenir)",
+      "map_zone": "MAP_SAFFRON",
+      "tile_x": 47,
+      "tile_y": 14,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Copycat",
+      "role_origin": "Imite instantanément le joueur à la rencontre (flavor)",
+      "item": "—",
+      "map_zone": "MAP_SAFFRON",
+      "tile_x": 14,
+      "tile_y": 19,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fille de la gare de Safranville",
+      "role_origin": "Explique qu'un Pass Train Aimant est requis",
+      "item": "—",
+      "map_zone": "MAP_SAFFRON",
+      "tile_x": 45,
+      "tile_y": 22,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Karatéka du dojo",
+      "role_origin": "Absent — parti s'entraîner au Mont Mortier, Johto (callback direct)",
+      "item": "—",
+      "map_zone": "MAP_SAFFRON",
+      "tile_x": 44,
+      "tile_y": 29,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Copycat (résolution)",
+      "role_origin": "Poupée rapportée depuis Vermeille → donne le Pass Train Aimant",
+      "item": "Pass Train Aimant",
+      "map_zone": "MAP_SAFFRON",
+      "tile_x": 44,
+      "tile_y": 33,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Steven (Silph Co., 1ère rencontre)",
+      "role_origin": "Répond à une question pour recevoir un compagnon-cadeau",
+      "item": "Compagnon-cadeau",
+      "map_zone": "MAP_SAFFRON",
+      "tile_x": 52,
+      "tile_y": 41,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Steven (Silph Co., revisite)",
+      "role_origin": "Propose un échange direct contre un compagnon différent",
+      "item": "Compagnon (échange)",
+      "map_zone": "MAP_SAFFRON",
+      "tile_x": 4,
+      "tile_y": 45,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Medium Darcy, Psychic Franklin, Jared, Medium Rebecca",
+      "role_origin": "Gardiens avant Sabrina (4 confirmés ; Gym en 9 chambres reliées par téléportation)",
+      "item": "—",
+      "map_zone": "MAP_SAFFRON",
+      "tile_x": 2,
+      "tile_y": 51,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Sabrina",
+      "role_origin": "師範 Psy, 10e badge",
+      "item": "—",
+      "map_zone": "MAP_SAFFRON",
+      "tile_x": 5,
+      "tile_y": 54,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

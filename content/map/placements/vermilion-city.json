@@ -1,0 +1,113 @@
+{
+  "zone_id": "vermilion-city",
+  "npcs": [
+    {
+      "name": "Grand-père paniqué (SS Aqua, arrivée)",
+      "role_origin": "Sa petite-fille a disparu du navire, retrouvée au sous-sol",
+      "item": "Manteau de Métal",
+      "map_zone": "MAP_VERMILION",
+      "tile_x": 25,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Marin du mess",
+      "role_origin": "Cherche un collègue endormi dans une cabine (déclenche un combat)",
+      "item": "—",
+      "map_zone": "MAP_VERMILION",
+      "tile_x": 22,
+      "tile_y": 8,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Capitaine",
+      "role_origin": "Héberge la petite-fille retrouvée, distribue des Plaques collectionnables",
+      "item": "Plaques (selon jour de la semaine)",
+      "map_zone": "MAP_VERMILION",
+      "tile_x": 38,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Président du Club des Fans",
+      "role_origin": "Récompense qui écoute son histoire jusqu'au bout",
+      "item": "Super Bonbon",
+      "map_zone": "MAP_VERMILION",
+      "tile_x": 20,
+      "tile_y": 16,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme du comptoir du Club des Fans",
+      "role_origin": "Détient l'objet perdu de Copycat, à livrer à Safranville",
+      "item": "Poupée de Copycat",
+      "map_zone": "MAP_VERMILION",
+      "tile_x": 26,
+      "tile_y": 20,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Steven (1ère apparition, cameo)",
+      "role_origin": "Intercepte le joueur, intrigué par une espèce hors-région",
+      "item": "—",
+      "map_zone": "MAP_VERMILION",
+      "tile_x": 47,
+      "tile_y": 23,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Eusine (cameo)",
+      "role_origin": "Aperçu sur la jetée en pleine chasse à Suicune",
+      "item": "—",
+      "map_zone": "MAP_VERMILION",
+      "tile_x": 40,
+      "tile_y": 26,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Gentleman Gregory, Guitarist Vincent, Juggler Horton",
+      "role_origin": "Gardiens avant Lt. Surge (3 confirmés)",
+      "item": "—",
+      "map_zone": "MAP_VERMILION",
+      "tile_x": 44,
+      "tile_y": 32,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Lt. Surge",
+      "role_origin": "師範 Électrik, 9e badge",
+      "item": "—",
+      "map_zone": "MAP_VERMILION",
+      "tile_x": 40,
+      "tile_y": 41,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "zone_id": "cianwood-city",
+  "npcs": [
+    {
+      "name": "Pharmacie",
+      "role_origin": "Remet la Potion Secrète au 1er passage (pour Jasmine)",
+      "item": "Potion Secrète",
+      "map_zone": "MAP_CIANWOOD",
+      "tile_x": 14,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Jeune homme (sud du Gym)",
+      "role_origin": "Confie temporairement un compagnon (Shuckle-analogue) ; révèle le passage de Silver",
+      "item": "Compagnon temporaire (Shuckle-analogue)",
+      "map_zone": "MAP_CIANWOOD",
+      "tile_x": 12,
+      "tile_y": 17,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Eusine",
+      "role_origin": "Défie le joueur après l'apparition fugace d'un esprit-kanji légendaire",
+      "item": "—",
+      "map_zone": "MAP_CIANWOOD",
+      "tile_x": 15,
+      "tile_y": 24,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme (Centre Pokémon)",
+      "role_origin": "Explique l'entraînement de Chuck sous une chute d'eau",
+      "item": "—",
+      "map_zone": "MAP_CIANWOOD",
+      "tile_x": 15,
+      "tile_y": 30,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Black Belt Nob, Yoshi, Lung, Lao",
+      "role_origin": "Gardiens avant Chuck",
+      "item": "—",
+      "map_zone": "MAP_CIANWOOD",
+      "tile_x": 29,
+      "tile_y": 35,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Femme de Chuck",
+      "role_origin": "Remet une récompense, commente la défaite de son mari avec tendresse",
+      "item": "HM Vol (Fly)",
+      "map_zone": "MAP_CIANWOOD",
+      "tile_x": 19,
+      "tile_y": 40,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "zone_id": "route-16-17-18-cycling-road",
+  "npcs": [
+    {
+      "name": "Biker Dale (Route 16)",
+      "role_origin": "Dresseur",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_16",
+      "tile_x": 10,
+      "tile_y": 18,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "PNJ récurrent (Route 16)",
+      "role_origin": "Enseigne \"un mot à la mode\" par jour à qui revient le voir",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_16",
+      "tile_x": 15,
+      "tile_y": 19,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "12 Motards dont Joel, Jacob, Aiden (Route 17)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_16",
+      "tile_x": 20,
+      "tile_y": 20,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "7 Motards nommés + 2 Bird Keeper (Route 18, 9 dresseurs)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_16",
+      "tile_x": 25,
+      "tile_y": 21,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

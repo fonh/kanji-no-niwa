@@ -1,0 +1,89 @@
+{
+  "zone_id": "route-32",
+  "npcs": [
+    {
+      "name": "Youngster Albert, Picnicker Liz, Camper Roland, Youngster Gordon, Fisherman Henry/Justin/Ralph, Bird Keeper Peter, Hiker Anthony",
+      "role_origin": "Dresseurs de route (plus de dix sur Routes 32/33 combinées)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_32",
+      "tile_x": 14,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Frère/sœur du jour Frieda (vendredi)",
+      "role_origin": "PNJ calendaire, chemin étroit derrière le Centre Pokémon",
+      "item": "Poison Barb",
+      "map_zone": "MAP_ROUTE_32",
+      "tile_x": 17,
+      "tile_y": 9,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme sur le chemin",
+      "role_origin": "Cadeau gratuit sans condition",
+      "item": "Graine Miracle",
+      "map_zone": "MAP_ROUTE_32",
+      "tile_x": 29,
+      "tile_y": 30,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Jeune homme près du Centre Pokémon",
+      "role_origin": "PNJ comique, tente de vendre une \"queue de Ramoloss\"",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_32",
+      "tile_x": 20,
+      "tile_y": 51,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Pêcheur (Centre Pokémon)",
+      "role_origin": "Donne la Vieille Canne",
+      "item": "Vieille Canne (Old Rod)",
+      "map_zone": "MAP_ROUTE_32",
+      "tile_x": 12,
+      "tile_y": 71,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme au-delà d'un point 力",
+      "role_origin": "Récompense une fois le CS débloqué",
+      "item": "TM05 Roar",
+      "map_zone": "MAP_ROUTE_32",
+      "tile_x": 4,
+      "tile_y": 90,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme près du pêcheur",
+      "role_origin": "Demande si le joueur collectionne les Apricorns",
+      "item": "2 Lure Balls",
+      "map_zone": "MAP_ROUTE_32",
+      "tile_x": 8,
+      "tile_y": 107,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

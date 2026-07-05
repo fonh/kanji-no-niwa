@@ -1,0 +1,17 @@
+{
+  "zone_id": "indigo-plateau-lance",
+  "npcs": [
+    {
+      "name": "Lance (Champion)",
+      "role_origin": "\"Dresseur de type Dragon\" — aucune personnalité officielle sourcée ; clôture le gauntlet Elite Four",
+      "item": "Dragon Scroll (cérémonie)",
+      "map_zone": "MAP_INDIGO_PLATEAU",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "zone_id": "violet-city",
+  "npcs": [
+    {
+      "name": "Bird Keeper Rod, Bird Keeper Abe",
+      "role_origin": "Gardiens avant Falkner",
+      "item": "—",
+      "map_zone": "MAP_VIOLET",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme à lunettes noires",
+      "role_origin": "Bloque l'entrée du Gym tant que Tour Grospignon n'est pas visitée",
+      "item": "—",
+      "map_zone": "MAP_VIOLET",
+      "tile_x": 42,
+      "tile_y": 16,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Earl",
+      "role_origin": "Instituteur ambulant de \"l'École Pokémon\", trouvé errant entre le Gym et le Mart",
+      "item": "—",
+      "map_zone": "MAP_VIOLET",
+      "tile_x": 40,
+      "tile_y": 23,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Garçon blond",
+      "role_origin": "Près du Centre Pokémon, échange des Éclats contre des lots de Baies",
+      "item": "Baies",
+      "map_zone": "MAP_VIOLET",
+      "tile_x": 13,
+      "tile_y": 31,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Garçon à lunettes",
+      "role_origin": "PNJ d'échange de compagnon (maison près du Centre Pokémon)",
+      "item": "—",
+      "map_zone": "MAP_VIOLET",
+      "tile_x": 16,
+      "tile_y": 35,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Garçon près du Mart",
+      "role_origin": "Agité, rapporte avoir vu \"un arbre qui bouge\" (teaser Sudowoodo/Route 36)",
+      "item": "—",
+      "map_zone": "MAP_VIOLET",
+      "tile_x": 46,
+      "tile_y": 37,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Teala",
+      "role_origin": "Sous-sol du Centre Pokémon, donne le Pal Pad après le 1er badge",
+      "item": "Pal Pad",
+      "map_zone": "MAP_VIOLET",
+      "tile_x": 41,
+      "tile_y": 40,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Kimono Girl Zuki",
+      "role_origin": "Devant le Mart, demande au joueur de prendre soin de l'œuf mystère",
+      "item": "—",
+      "map_zone": "MAP_VIOLET",
+      "tile_x": 60,
+      "tile_y": 45,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vendeur du Mart",
+      "role_origin": "Comptoir du fond",
+      "item": "Heal Ball, Net Ball, Tunnel Mail (vente)",
+      "map_zone": "MAP_VIOLET",
+      "tile_x": 48,
+      "tile_y": 50,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Bird Keeper Rod/Abe (Gym)",
+      "role_origin": "Récompense finale du Gym Falkner",
+      "item": "Zephyr Badge + TM51 Roost",
+      "map_zone": "MAP_VIOLET",
+      "tile_x": 24,
+      "tile_y": 54,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

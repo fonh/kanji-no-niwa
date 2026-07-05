@@ -1,0 +1,89 @@
+{
+  "zone_id": "azalea-town",
+  "npcs": [
+    {
+      "name": "Kurt",
+      "role_origin": "Artisan Apricorn → Boule : dépose des Apricorns, reçoit un objet en 24h",
+      "item": "Boule (selon couleur d'Apricorn apportée)",
+      "map_zone": "MAP_AZALEA",
+      "tile_x": 44,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Bug Catcher Al, Josh, Benny ; Twins Amy & May",
+      "role_origin": "Gardiens avant Bugsy",
+      "item": "—",
+      "map_zone": "MAP_AZALEA",
+      "tile_x": 10,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Rival (Silver)",
+      "role_origin": "Défi au portail ouest, vers Forêt Secte (Silver apparition #2)",
+      "item": "—",
+      "map_zone": "MAP_AZALEA",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "north",
+      "source": "rom_matched",
+      "matched_object_id": "obj_T23_gsrivel",
+      "matched_sprite_id": "SPRITE_GSRIVEL"
+    },
+    {
+      "name": "Charcoal Man",
+      "role_origin": "Ses Farfetch'd-analogues se sont enfuis en Forêt Secte ; remet le Charbon une fois résolu",
+      "item": "Charbon",
+      "map_zone": "MAP_AZALEA",
+      "tile_x": 26,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Sbire Rocket",
+      "role_origin": "Bloque l'entrée du Puits Ramoloss",
+      "item": "—",
+      "map_zone": "MAP_AZALEA",
+      "tile_x": 21,
+      "tile_y": 15,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vendeur du Mart",
+      "role_origin": "Comptoir du fond",
+      "item": "Bloom Mail, Heal Ball, Net Ball (vente)",
+      "map_zone": "MAP_AZALEA",
+      "tile_x": 12,
+      "tile_y": 17,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Bug Catcher Al/Josh/Benny, Twins (Gym)",
+      "role_origin": "Récompense finale du Gym Bugsy",
+      "item": "Hive Badge + TM89 U-turn",
+      "map_zone": "MAP_AZALEA",
+      "tile_x": 26,
+      "tile_y": 20,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

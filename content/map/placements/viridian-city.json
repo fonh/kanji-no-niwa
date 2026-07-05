@@ -1,0 +1,65 @@
+{
+  "zone_id": "viridian-city",
+  "npcs": [
+    {
+      "name": "Vieil homme devant le Gym",
+      "role_origin": "Bloque puis laisse passer une fois la condition remplie (Gym fermé au 1er passage)",
+      "item": "—",
+      "map_zone": "MAP_VIRIDIAN",
+      "tile_x": 29,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Trainer House",
+      "role_origin": "Un combat par jour (lieu, non personnifié dans le texte)",
+      "item": "—",
+      "map_zone": "MAP_VIRIDIAN",
+      "tile_x": 47,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Rumeur ambiante (Centre Pokémon)",
+      "role_origin": "Clients se demandant si le Gym d'Île Braise existe encore, pousse le joueur vers le sud",
+      "item": "—",
+      "map_zone": "MAP_VIRIDIAN",
+      "tile_x": 34,
+      "tile_y": 18,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Ace Trainer Bonita, Salma, Arabella",
+      "role_origin": "Gardiens avant Blue (3 confirmés ; sol à tuiles-flèches)",
+      "item": "—",
+      "map_zone": "MAP_VIRIDIAN",
+      "tile_x": 58,
+      "tile_y": 24,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Blue",
+      "role_origin": "師範 final Kanto, 16e badge ; Gym verrouillé jusqu'à la toute fin (1ère visite : Gym fermé — vrai combat calibré ~1920 kanji/N1, sur revisite après Île Braise)",
+      "item": "印/Badge (sur revisite)",
+      "map_zone": "MAP_VIRIDIAN",
+      "tile_x": 19,
+      "tile_y": 32,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

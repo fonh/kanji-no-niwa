@@ -1,0 +1,53 @@
+{
+  "zone_id": "burned-tower",
+  "npcs": [
+    {
+      "name": "Morty",
+      "role_origin": "Présent à l'arrivée avec Eusine, partage les découvertes sur les 3 esprits légendaires",
+      "item": "—",
+      "map_zone": "MAP_BURNED_TOWER_1F",
+      "tile_x": 23,
+      "tile_y": 26,
+      "facing": "east",
+      "source": "rom_matched",
+      "matched_object_id": "obj_D18R0101_gsleader4",
+      "matched_sprite_id": "SPRITE_GSLEADER4"
+    },
+    {
+      "name": "Eusine",
+      "role_origin": "Cherche spécifiquement le 3e esprit-kanji légendaire",
+      "item": "—",
+      "map_zone": "MAP_BURNED_TOWER_1F",
+      "tile_x": 5,
+      "tile_y": 6,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Firebreather Ned (1F), Richard (B1F)",
+      "role_origin": "Dresseurs de combat",
+      "item": "—",
+      "map_zone": "MAP_BURNED_TOWER_1F",
+      "tile_x": 23,
+      "tile_y": 7,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Rival (Silver)",
+      "role_origin": "Embuscade en haut de l'échelle vers B1F (Silver apparition #3, confirmé ici)",
+      "item": "—",
+      "map_zone": "MAP_BURNED_TOWER_1F",
+      "tile_x": 23,
+      "tile_y": 14,
+      "facing": "north",
+      "source": "rom_matched",
+      "matched_object_id": "obj_D18R0101_gsrivel",
+      "matched_sprite_id": "SPRITE_GSRIVEL"
+    }
+  ]
+}

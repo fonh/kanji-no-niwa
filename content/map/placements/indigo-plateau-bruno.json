@@ -1,0 +1,17 @@
+{
+  "zone_id": "indigo-plateau-bruno",
+  "npcs": [
+    {
+      "name": "Bruno",
+      "role_origin": "Membre du Conseil 4, \"Dresseur de type Combat\" — aucune personnalité officielle sourcée",
+      "item": "—",
+      "map_zone": "MAP_INDIGO_PLATEAU",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

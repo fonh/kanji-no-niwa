@@ -1,0 +1,101 @@
+{
+  "zone_id": "pallet-town",
+  "npcs": [
+    {
+      "name": "Photographe itinérant",
+      "role_origin": "Présent mercredi/jeudi/vendredi uniquement",
+      "item": "—",
+      "map_zone": "MAP_PALLET",
+      "tile_x": 14,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Daisy (sœur de Blue)",
+      "role_origin": "Toilette le compagnon du joueur tous les jours 15h–16h ; après 7 visites cumulées, donne le contact de Blue",
+      "item": "Contact de Blue (combat de revanche post-16-badges)",
+      "map_zone": "MAP_PALLET",
+      "tile_x": 22,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Mère de Red",
+      "role_origin": "Confirme que Red voyage, maison tenue en son absence",
+      "item": "—",
+      "map_zone": "MAP_PALLET",
+      "tile_x": 24,
+      "tile_y": 9,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Pr. Chen/Oak (PC)",
+      "role_origin": "Permet de lire un mail d'ambiance d'un collègue chercheur",
+      "item": "—",
+      "map_zone": "MAP_PALLET",
+      "tile_x": 10,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Pr. Chen/Oak (évaluation Pokédex)",
+      "role_origin": "Bilan périodique, en personne ou par téléphone",
+      "item": "—",
+      "map_zone": "MAP_PALLET",
+      "tile_x": 20,
+      "tile_y": 15,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Pr. Chen/Oak (1ère visite, juste après Vertville)",
+      "role_origin": "\"Reviens une fois tous les badges Kanto en poche\" — rien à donner encore",
+      "item": "—",
+      "map_zone": "MAP_PALLET",
+      "tile_x": 8,
+      "tile_y": 19,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Pr. Chen/Oak (2e visite, après Blue à Vertville)",
+      "role_origin": "Donne la permission d'accès au Mont Gris",
+      "item": "Permission Mont Gris",
+      "map_zone": "MAP_PALLET",
+      "tile_x": 15,
+      "tile_y": 22,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Pr. Chen/Oak (3e visite, après Red)",
+      "role_origin": "Choix de récompense symbolique, écho au tout premier choix de starter",
+      "item": "Cadeau au choix",
+      "map_zone": "MAP_PALLET",
+      "tile_x": 15,
+      "tile_y": 25,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

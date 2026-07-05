@@ -24,8 +24,13 @@ except ImportError:
     print("PIL absent — utilisation des dimensions tile_width/tile_height directement")
 
 ZONE_DATA  = Path("scripts/sources/zone-data.json")
+NAMES_FR   = Path("scripts/sources/zone-names-fr.json")
 MAPS_DIR   = Path("public/maps")
 OUT        = Path("src/data/zone-registry.json")
+
+names_fr: dict = json.load(open(NAMES_FR)) if NAMES_FR.exists() else {}
+if names_fr:
+    print(f"{len(names_fr)} noms français chargés depuis {NAMES_FR}")
 
 # ── Charger les données de zone ───────────────────────────────────────────────
 
@@ -108,6 +113,22 @@ def score_against(keywords: list[str], zone_name: str, prefix_len: int):
             best_path  = path
     return best_path
 
+# (keyword, generic capture filename) — order matters, first match wins.
+GENERIC_TEMPLATES = [
+    ("gatehouse", "Gate inside HGSS.png"),
+    ("pokecenter", "Pokémon Center inside HGSS.png"),
+    ("house", "Player House 1F HGSS.png"),
+]
+
+def find_generic_template(zone_name: str):
+    lname = zone_name.lower()
+    for keyword, filename in GENERIC_TEMPLATES:
+        if keyword in lname.replace("_", ""):
+            path = MAPS_DIR / filename
+            if path.exists():
+                return path
+    return None
+
 def find_screenshot(zone_name: str):
     keywords = zone_name_to_keywords(zone_name)
     if not keywords:
@@ -127,10 +148,25 @@ def get_dimensions(path: Path, tile_w: int, tile_h: int) -> tuple[int, int]:
 # ── Construire le registre ────────────────────────────────────────────────────
 
 TILE_UNIT = 32  # 1 unité de grille = 32px en coordonnées monde
+DEFAULT_SCALE = 12.0  # px/tile fallback for zones with no screenshot (~médiane observée)
 
 registry_zones = []
 matched   = 0
 unmatched = 0
+
+# Ascenseurs : les warps 4095 (0xFFF) sont "dynamiques" dans la ROM (la
+# destination est l'étage d'où l'on vient, stocké en RAM). On reconstruit la
+# liste des étages desservis = toutes les zones ayant un warp vers la zone
+# ascenseur, avec la tuile de ce warp comme point d'arrivée.
+elevator_names = {z["name"] for z in zones if any(w.get("header") == 4095 for w in z.get("warps", []))}
+floors_by_elevator: dict[str, list[dict]] = {name: [] for name in elevator_names}
+for z in zones:
+    for w in z.get("warps", []):
+        dest = w.get("header")
+        if dest in elevator_names and z["name"] not in elevator_names:
+            floors = floors_by_elevator[dest]
+            if not any(f["name"] == z["name"] for f in floors):
+                floors.append({"name": z["name"], "x": w.get("x", 0), "z": w.get("z", 0)})
 
 for z in zones:
     name       = z["name"]
@@ -148,13 +184,26 @@ for z in zones:
 
     # Screenshot
     screenshot_path = find_screenshot(name)
+    if not screenshot_path:
+        # No dedicated capture exists (small single-purpose rooms — random
+        # NPC houses, gatehouses — were never individually screenshotted by
+        # anyone). HGSS itself reuses one generic tileset for these, so a
+        # representative capture of that same generic room is a genuinely
+        # more accurate fallback than a blank box, not just a random guess.
+        screenshot_path = find_generic_template(name)
+
     if screenshot_path:
         matched += 1
         scr_w, scr_h = get_dimensions(screenshot_path, tile_w, tile_h)
         screenshot_url = "/" + str(screenshot_path.relative_to(Path("public")))
     else:
         unmatched += 1
-        scr_w, scr_h = tile_w, tile_h
+        # No screenshot asset — fall back to the median on-screen scale of
+        # zones that do have one (~12.5px/tile) instead of 1:1 tile_w/tile_h.
+        # Without this, these zones render at their raw tile-grid size (as
+        # small as 32x32 CSS px for a 1-room interior) — technically
+        # correct but practically unclickable.
+        scr_w, scr_h = round(tile_w * DEFAULT_SCALE), round(tile_h * DEFAULT_SCALE)
         screenshot_url = ""
 
     # Scale : pixels écran par unité monde
@@ -169,6 +218,13 @@ for z in zones:
             "x":         obj.get("x", 0),
             "z":         obj.get("z", 0),
             "eventFlag": obj.get("eventFlag", "FLAG_NOTHING"),
+            # Kept for future NPC behavior (patrol, sight cone) — currently
+            # unused by the renderer, but cheap to carry since it's already
+            # in the source data.
+            "facingDirection": obj.get("facingDirection", 0),
+            "movement":        obj.get("movement", 0),
+            "xRange":          obj.get("xRange", 0),
+            "yRange":          obj.get("yRange", 0),
         }
         for obj in objects
     ]
@@ -198,7 +254,18 @@ for z in zones:
         "world_origin_y": world_origin_y,
         "objects":        clean_objects,
         "warps":          clean_warps,
-        "walkable":       z.get("walkable", []),
+        # Un char par tuile ('#' mur, '.' sol, 'i' glace, 'w' eau, 'W'
+        # tourbillon, 'F' cascade) — remplace l'ancien tableau walkable
+        # (walkable dérivable : tout sauf '#' et 'F'), ~2× plus léger.
+        "terrain":        z.get("terrain", ""),
+        # [localX, localZ, dir] per ledge tile, DIR_* codes (0=N,1=S,2=W,3=E)
+        # — hopped over when moving in that direction, never stood on.
+        "ledges":         z.get("ledges", []),
+        # Étages desservis quand la zone est un ascenseur (warp 4095) :
+        # [{name, x, z}] — tuile d'arrivée = le warp de l'étage vers l'ascenseur.
+        "elevator_floors": floors_by_elevator.get(name, []),
+        "display_name":   names_fr.get(name),
+        "is_outdoor":     z.get("is_outdoor", False),
     })
 
 # ── Écrire ────────────────────────────────────────────────────────────────────

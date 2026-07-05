@@ -1,0 +1,41 @@
+{
+  "zone_id": "route-27",
+  "npcs": [
+    {
+      "name": "Ace Trainer Megan, Blake, Reena, Brian ; Bird Keeper Jose ; Psychic Eli",
+      "role_origin": "Dresseurs de route (Chutes de Tohjo)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_27",
+      "tile_x": 126,
+      "tile_y": 4,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme à la Porte de Réception de la Ligue",
+      "role_origin": "Bloque l'est (Kanto) et l'ouest (Mont Gris) ; seul le nord (Route Victoire) est ouvert à ce stade",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_27",
+      "tile_x": 77,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vieille dame (sortie est des Chutes de Tohjo)",
+      "role_origin": "Donne TM37 Sandstorm si affection élevée du compagnon en tête",
+      "item": "TM37 Sandstorm",
+      "map_zone": "MAP_ROUTE_27",
+      "tile_x": 182,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

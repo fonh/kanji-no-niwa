@@ -1,0 +1,53 @@
+{
+  "zone_id": "cherrygrove-city",
+  "npcs": [
+    {
+      "name": "Guide Gent (vieux monsieur)",
+      "role_origin": "Accueille le joueur à l'entrée, fait visiter la ville",
+      "item": "Running Shoes, Map Card",
+      "map_zone": "MAP_CHERRYGROVE",
+      "tile_x": 35,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Rival (Silver)",
+      "role_origin": "Nargue le joueur puis déclenche le 1er combat de rival (Silver apparition #1)",
+      "item": "—",
+      "map_zone": "MAP_CHERRYGROVE",
+      "tile_x": 63,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "rom_matched",
+      "matched_object_id": "obj_T21_gsrivel",
+      "matched_sprite_id": "SPRITE_GSRIVEL"
+    },
+    {
+      "name": "Vendeuse du Mart",
+      "role_origin": "Comptoir du fond",
+      "item": "Air Mail, Heal Ball (vente)",
+      "map_zone": "MAP_CHERRYGROVE",
+      "tile_x": 44,
+      "tile_y": 8,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Employé Centre Pokémon",
+      "role_origin": "Signature de carte dresseur au 2F",
+      "item": "—",
+      "map_zone": "MAP_CHERRYGROVE",
+      "tile_x": 57,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

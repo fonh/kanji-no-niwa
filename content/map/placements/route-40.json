@@ -1,0 +1,53 @@
+{
+  "zone_id": "route-40",
+  "npcs": [
+    {
+      "name": "Swimmer Simon, Elaine (R40) + Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie (R41, fusionnée dans cette zone)",
+      "role_origin": "Dresseurs maritimes",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_40",
+      "tile_x": 11,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Frère/sœur du jour Monica (lundi, plage)",
+      "role_origin": "PNJ calendaire",
+      "item": "Sharp Beak",
+      "map_zone": "MAP_ROUTE_40",
+      "tile_x": 29,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme (Maison du Photographe, nord d'Irisia)",
+      "role_origin": "Révèle que le photographe itinérant récurrent est de sa famille",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_40",
+      "tile_x": 24,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme (ouest du Centre Pokémon d'Irisia)",
+      "role_origin": "Raconte la légende des 4 îles créées par le gardien légendaire des tourbillons",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_40",
+      "tile_x": 29,
+      "tile_y": 12,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

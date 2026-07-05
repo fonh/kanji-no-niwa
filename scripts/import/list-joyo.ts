@@ -8,7 +8,7 @@ import { join } from 'path'
 import { XMLParser } from 'fast-xml-parser'
 import { writeFileSync } from 'fs'
 
-const SOURCES = join(import.meta.dirname, 'sources')
+const SOURCES = join(import.meta.dirname, '../sources')
 const JLPT_MAP: Record<string, string> = { '4': 'N5', '3': 'N4', '2': 'N3', '1': 'N2' }
 
 async function readGzip(path: string): Promise<string> {

@@ -1,0 +1,77 @@
+{
+  "zone_id": "route-39",
+  "npcs": [
+    {
+      "name": "Sailor Eugene, Pokéfan Derek, Pokéfan Ruth, Psychic Norman",
+      "role_origin": "Dresseurs de route",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_39",
+      "tile_x": 12,
+      "tile_y": 1,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fille (gauche du Miltank-analogue, ferme Moomoo)",
+      "role_origin": "Donne le Seal Case une fois le compagnon guéri",
+      "item": "Seal Case",
+      "map_zone": "MAP_ROUTE_39",
+      "tile_x": 10,
+      "tile_y": 9,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fille (droite, ferme Moomoo)",
+      "role_origin": "Donne 3 décorations gratuites",
+      "item": "Fire Seal A, Party Seal B, Flora Seal C",
+      "map_zone": "MAP_ROUTE_39",
+      "tile_x": 13,
+      "tile_y": 14,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fermière (ferme Moomoo)",
+      "role_origin": "Donne TM83 Natural Gift",
+      "item": "TM83 Natural Gift",
+      "map_zone": "MAP_ROUTE_39",
+      "tile_x": 22,
+      "tile_y": 19,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fermier (ferme Moomoo)",
+      "role_origin": "Vend une spécialité locale une fois la quête résolue",
+      "item": "— (vente)",
+      "map_zone": "MAP_ROUTE_39",
+      "tile_x": 20,
+      "tile_y": 26,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Baoba",
+      "role_origin": "Gardien itinérant, 1ère rencontre ; annonce l'ouverture d'une réserve à Irisia",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_39",
+      "tile_x": 22,
+      "tile_y": 33,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

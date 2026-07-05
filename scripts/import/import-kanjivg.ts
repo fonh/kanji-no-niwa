@@ -12,9 +12,9 @@ import { createGunzip } from 'zlib'
 import { join } from 'path'
 import { readdirSync } from 'fs'
 import { XMLParser } from 'fast-xml-parser'
-import { supabase } from './supabase'
+import { supabase } from '../lib/supabase'
 
-const SOURCES = join(import.meta.dirname, 'sources')
+const SOURCES = join(import.meta.dirname, '../sources')
 const BATCH_SIZE = 200
 
 async function readGzip(path: string): Promise<string> {

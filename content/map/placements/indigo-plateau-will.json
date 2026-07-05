@@ -1,0 +1,17 @@
+{
+  "zone_id": "indigo-plateau-will",
+  "npcs": [
+    {
+      "name": "Will",
+      "role_origin": "Membre du Conseil 4, \"Dresseur de type Psychique\" — aucune personnalité officielle sourcée, liberté totale du studio",
+      "item": "—",
+      "map_zone": "MAP_INDIGO_PLATEAU",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

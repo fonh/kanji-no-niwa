@@ -1,0 +1,53 @@
+{
+  "zone_id": "route-36",
+  "npcs": [
+    {
+      "name": "Jeune homme près d'un panneau (ouest)",
+      "role_origin": "Donne le CS Marteau-Piqueur (力), débloqué dès le badge de Falkner",
+      "item": "CS Marteau-Piqueur",
+      "map_zone": "MAP_ROUTE_36",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Psychic Mark, School Kid Alan",
+      "role_origin": "Dresseurs (cluster frontière Violet City)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_36",
+      "tile_x": 7,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Frère/sœur du jour Arthur (jeudi)",
+      "role_origin": "Nord des Ruines Arcaniques",
+      "item": "Hard Stone",
+      "map_zone": "MAP_ROUTE_36",
+      "tile_x": 6,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Obstacle Sudowoodo",
+      "role_origin": "Bloque la route vers Ecruteak, résolu via l'arrosoir de Floria (Doublonville)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_36",
+      "tile_x": 12,
+      "tile_y": 15,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

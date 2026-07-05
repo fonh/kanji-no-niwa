@@ -1,0 +1,125 @@
+{
+  "zone_id": "blackthorn-city",
+  "npcs": [
+    {
+      "name": "Tuteur Ultime",
+      "role_origin": "Enseigne la \"capacité ultime\" à la forme finale du starter du joueur",
+      "item": "—",
+      "map_zone": "MAP_BLACKTHORN",
+      "tile_x": 32,
+      "tile_y": 4,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Grand-mère Wilma",
+      "role_origin": "Enseigne la capacité Dragon la plus puissante à un compagnon-Dragon lié au joueur",
+      "item": "—",
+      "map_zone": "MAP_BLACKTHORN",
+      "tile_x": 34,
+      "tile_y": 25,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Maniaque des capacités",
+      "role_origin": "Contre une Écaille de Cœur, réapprend une capacité oubliée",
+      "item": "—",
+      "map_zone": "MAP_BLACKTHORN",
+      "tile_x": 25,
+      "tile_y": 29,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Effaceur de capacités",
+      "role_origin": "Fait oublier n'importe quelle capacité, y compris permanentes",
+      "item": "—",
+      "map_zone": "MAP_BLACKTHORN",
+      "tile_x": 52,
+      "tile_y": 34,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fille de la maison nord",
+      "role_origin": "Donne un Ruban d'Effort si le compagnon en tête est assez endurci",
+      "item": "Ruban d'Effort",
+      "map_zone": "MAP_BLACKTHORN",
+      "tile_x": 51,
+      "tile_y": 38,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Garçon local",
+      "role_origin": "Explique que les Dompteurs de Dragons sont tous nés à Ebènelle",
+      "item": "—",
+      "map_zone": "MAP_BLACKTHORN",
+      "tile_x": 50,
+      "tile_y": 41,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Frère/sœur du jour Santos (samedi)",
+      "role_origin": "PNJ calendaire",
+      "item": "Soft Sand",
+      "map_zone": "MAP_BLACKTHORN",
+      "tile_x": 11,
+      "tile_y": 44,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme bloquant l'Antre du Dragon",
+      "role_origin": "Refuse l'entrée tant que le badge de Gym n'est pas en poche",
+      "item": "—",
+      "map_zone": "MAP_BLACKTHORN",
+      "tile_x": 37,
+      "tile_y": 47,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Ace Trainer Mike, Fran, Cody, Lola, Paulo",
+      "role_origin": "Gardiens avant Clair (5, le plus grand roster de gardiens du jeu)",
+      "item": "—",
+      "map_zone": "MAP_BLACKTHORN",
+      "tile_x": 33,
+      "tile_y": 50,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Clair",
+      "role_origin": "Bat le joueur au Gym mais refuse explicitement de remettre le badge, envoie à l'Antre du Dragon",
+      "item": "印 n°8 — via l'Antre, pas directement au Gym",
+      "map_zone": "MAP_BLACKTHORN",
+      "tile_x": 7,
+      "tile_y": 53,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

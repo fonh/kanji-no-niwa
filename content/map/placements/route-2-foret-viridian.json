@@ -1,0 +1,17 @@
+{
+  "zone_id": "route-2-foret-viridian",
+  "npcs": [
+    {
+      "name": "Bug Catcher Ed, Abner, Ellis, Dane, Stacey, Dion",
+      "role_origin": "6 Insectophiles (thème de classe homogène)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_2",
+      "tile_x": 10,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

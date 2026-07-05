@@ -1,0 +1,149 @@
+{
+  "zone_id": "ecruteak-city",
+  "npcs": [
+    {
+      "name": "Medium Martha, Edith, Grace, Georgina",
+      "role_origin": "Gardiennes avant Morty",
+      "item": "—",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 18,
+      "tile_y": 14,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Bill",
+      "role_origin": "Centre Pokémon, repart pour Doublonville",
+      "item": "—",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 36,
+      "tile_y": 28,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme à l'énigme",
+      "role_origin": "Bonne réponse → détecteur d'objets ; la pièce contient un livre relatant la légende des 3 esprits",
+      "item": "Dowsing MCHN",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 30,
+      "tile_y": 32,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Sbire Rocket",
+      "role_origin": "Harcèle Kimono Girl Miki au Théâtre, combat de sauvetage",
+      "item": "—",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 19,
+      "tile_y": 36,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Kimono Girl Miki",
+      "role_origin": "3e Kimono Girl rencontrée (sauvée du Sbire)",
+      "item": "—",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 26,
+      "tile_y": 38,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Gentleman (public du Théâtre)",
+      "role_origin": "Témoin du sauvetage",
+      "item": "HM03 Surf",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 15,
+      "tile_y": 40,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Hommes du Poste-frontière",
+      "role_origin": "Racontent les légendes locales de Ho-Oh, bloquent l'accès à Tour Jo",
+      "item": "—",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 31,
+      "tile_y": 43,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme au nord du Gym",
+      "role_origin": "Signale que le gardien-phare d'Oliville est malade",
+      "item": "—",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 53,
+      "tile_y": 46,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vendeur du Mart",
+      "role_origin": "Comptoir du fond",
+      "item": "Air Mail, Heal Ball, Net Ball (vente)",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 62,
+      "tile_y": 48,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Rival (Silver)",
+      "role_origin": "Devant Tour Jo (Silver apparition #3)",
+      "item": "—",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 45,
+      "tile_y": 45,
+      "facing": "north",
+      "source": "rom_matched",
+      "matched_object_id": "obj_T27_gsrivel",
+      "matched_sprite_id": "SPRITE_GSRIVEL"
+    },
+    {
+      "name": "Gauntlet des 5 Kimono Girls (post-Master Ball)",
+      "role_origin": "Combat récapitulatif au Théâtre, \"test du lien avec ton équipe\"",
+      "item": "Clear Bell / Tidal Bell",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 51,
+      "tile_y": 51,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Medium Martha/Edith/Grace/Georgina (Gym)",
+      "role_origin": "Récompense finale du Gym Morty",
+      "item": "Fog Badge + TM30 Shadow Ball",
+      "map_zone": "MAP_ECRUTEAK",
+      "tile_x": 33,
+      "tile_y": 56,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

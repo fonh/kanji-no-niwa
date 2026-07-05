@@ -1,0 +1,41 @@
+{
+  "zone_id": "route-6-kanto",
+  "npcs": [
+    {
+      "name": "Twins Amy & Dani, Picnicker Selina, Camper Virgil",
+      "role_origin": "Dresseurs confirmés (Route 5/Route 6/Passage Souterrain)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_6",
+      "tile_x": 6,
+      "tile_y": 4,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vieille dame (Route 5)",
+      "role_origin": "Pressent un danger",
+      "item": "Talisman Anti-Combat",
+      "map_zone": "MAP_ROUTE_6",
+      "tile_x": 16,
+      "tile_y": 7,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "PNJ du Passage Souterrain",
+      "role_origin": "Échange une spécialité locale (RageCandyBar) contre une CT",
+      "item": "CT",
+      "map_zone": "MAP_ROUTE_6",
+      "tile_x": 11,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

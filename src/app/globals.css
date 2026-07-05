@@ -24,3 +24,42 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Overworld sprite sheets are always 8 columns of 32px — cycling only
+   background-position-x across a row with steps() gives a real walk/idle
+   animation. The Y offset (facing-direction row: 0=south, 1=north, 2=west,
+   3=east on 4-row sheets like the player's) is set inline per element and
+   must survive the animation, hence -x only. */
+@keyframes ow-sprite-cycle {
+  from { background-position-x: 0; }
+  to { background-position-x: -256px; }
+}
+
+.ow-sprite-walk {
+  animation: ow-sprite-cycle 0.4s steps(8) infinite;
+}
+
+.ow-sprite-idle {
+  animation: ow-sprite-cycle 2.4s steps(8) infinite;
+}
+
+/* Blocked-step feedback: a tiny nudge toward the wall and back. */
+@keyframes ow-bump {
+  0%, 100% { translate: 0 0; }
+  45% { translate: var(--bump-x, 0) var(--bump-y, 0); }
+}
+
+.ow-bump {
+  animation: ow-bump 0.16s ease-out;
+}
+
+/* Zone-name banner (HGSS-style), shown briefly after a zone change. */
+@keyframes zone-banner {
+  0% { opacity: 0; transform: translateY(-8px); }
+  12%, 82% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-8px); }
+}
+
+.zone-banner {
+  animation: zone-banner 1.8s ease both;
+}

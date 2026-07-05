@@ -1,0 +1,41 @@
+{
+  "zone_id": "indigo-plateau-antichambre",
+  "npcs": [
+    {
+      "name": "Rival (Silver)",
+      "role_origin": "Dernier combat avant le Plateau (Silver apparition #6) ; a \"vidé\" la route de tout dresseur",
+      "item": "—",
+      "map_zone": "MAP_INDIGO_PLATEAU",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vieil homme avec compagnon-télépathe (hall d'entrée)",
+      "role_origin": "PNJ ambiant, blague que son compagnon \"ne pourra pas te ramener à la maison\"",
+      "item": "—",
+      "map_zone": "MAP_INDIGO_PLATEAU",
+      "tile_x": 6,
+      "tile_y": 3,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Homme bloquant l'entrée de la Ligue",
+      "role_origin": "Laisse passer une fois interpellé, rappelle la règle \"pas de sortie sans défaite\"",
+      "item": "—",
+      "map_zone": "MAP_INDIGO_PLATEAU",
+      "tile_x": 2,
+      "tile_y": 7,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

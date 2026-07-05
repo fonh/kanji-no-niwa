@@ -1,0 +1,89 @@
+{
+  "zone_id": "olivine-city",
+  "npcs": [
+    {
+      "name": "Rival (Silver)",
+      "role_origin": "Sort du Gym juste avant le joueur, indique que Jasmine est au Phare",
+      "item": "—",
+      "map_zone": "MAP_OLIVINE",
+      "tile_x": 13,
+      "tile_y": 14,
+      "facing": "south",
+      "source": "rom_matched",
+      "matched_object_id": "obj_T26_gsrivel",
+      "matched_sprite_id": "SPRITE_GSRIVEL"
+    },
+    {
+      "name": "Pêcheur (maison nord du Centre Pokémon)",
+      "role_origin": "Donne la Bonne Canne",
+      "item": "Bonne Canne (Good Rod)",
+      "map_zone": "MAP_OLIVINE",
+      "tile_x": 19,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fille au Centre Pokémon",
+      "role_origin": "Demande l'avis du joueur puis défie en combat",
+      "item": "—",
+      "map_zone": "MAP_OLIVINE",
+      "tile_x": 22,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fille (maison nord du Mart)",
+      "role_origin": "Donne 3 décorations aléatoires par jour",
+      "item": "Décorations",
+      "map_zone": "MAP_OLIVINE",
+      "tile_x": 15,
+      "tile_y": 19,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Sailor Ernest, Terrell, Huey, Kent ; Gentleman Alfred, Preston ; Lass Connie ; Bird Keeper Denis, Theo",
+      "role_origin": "Roster complet du Phare (9 dresseurs, 1F au sommet)",
+      "item": "—",
+      "map_zone": "MAP_OLIVINE",
+      "tile_x": 23,
+      "tile_y": 25,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Jasmine",
+      "role_origin": "Veille le gardien malade au Phare ; demande la Potion Secrète d'Irisia ; combat de Gym après guérison",
+      "item": "Mineral Badge + TM23 Iron Tail (vrai combat calibré ~600 kanji/N2, voir note zones revisitées)",
+      "map_zone": "MAP_OLIVINE",
+      "tile_x": 49,
+      "tile_y": 31,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Baoba (appel téléphonique)",
+      "role_origin": "Prévient que la réserve d'Irisia est terminée, une fois la potion livrée",
+      "item": "—",
+      "map_zone": "MAP_OLIVINE",
+      "tile_x": 26,
+      "tile_y": 36,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

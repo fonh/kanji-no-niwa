@@ -1,0 +1,41 @@
+{
+  "zone_id": "route-37",
+  "npcs": [
+    {
+      "name": "Beauty Callie, Kassandra ; Twins Tori & Til",
+      "role_origin": "Dresseurs de route",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_37",
+      "tile_x": 6,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Psychic Greg",
+      "role_origin": "Dresseur, frontière Rosalia près des Apricorns",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_37",
+      "tile_x": 8,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Frère/sœur du jour Sunny (dimanche)",
+      "role_origin": "Nord de 3 arbres Apricorn",
+      "item": "Magnet",
+      "map_zone": "MAP_ROUTE_37",
+      "tile_x": 11,
+      "tile_y": 9,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

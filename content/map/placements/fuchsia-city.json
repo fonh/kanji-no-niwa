@@ -1,0 +1,89 @@
+{
+  "zone_id": "fuchsia-city",
+  "npcs": [
+    {
+      "name": "Fille au nord du Centre Pokémon",
+      "role_origin": "Explique que la Zone Safari a déménagé au Johto (lore)",
+      "item": "—",
+      "map_zone": "MAP_FUCHSIA",
+      "tile_x": 28,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fille à l'est du Gym",
+      "role_origin": "Mentionne que le grand-père de Bill est parti lui rendre visite",
+      "item": "—",
+      "map_zone": "MAP_FUCHSIA",
+      "tile_x": 45,
+      "tile_y": 21,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "PNJ troc \"Wadbutt\" (nord)",
+      "role_origin": "Troc récurrent : un fragment contre une baie thématique",
+      "item": "Baie (troc)",
+      "map_zone": "MAP_FUCHSIA",
+      "tile_x": 46,
+      "tile_y": 27,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Fils de Baoba",
+      "role_origin": "Gère le Pal Park (callback direct vers un PNJ Johto déjà documenté)",
+      "item": "—",
+      "map_zone": "MAP_FUCHSIA",
+      "tile_x": 31,
+      "tile_y": 32,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Visiteur du Pal Park au chapeau",
+      "role_origin": "Donne un accessoire cosmétique sous condition externe",
+      "item": "Accessoire cosmétique",
+      "map_zone": "MAP_FUCHSIA",
+      "tile_x": 29,
+      "tile_y": 39,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Picnicker Cindy, Camper Barry, Lass Alice, Linda",
+      "role_origin": "Gardiens avant Janine (4 confirmés)",
+      "item": "—",
+      "map_zone": "MAP_FUCHSIA",
+      "tile_x": 20,
+      "tile_y": 43,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Janine",
+      "role_origin": "師範 Poison, 13e badge (Gym-labyrinthe de murs transparents)",
+      "item": "—",
+      "map_zone": "MAP_FUCHSIA",
+      "tile_x": 4,
+      "tile_y": 51,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

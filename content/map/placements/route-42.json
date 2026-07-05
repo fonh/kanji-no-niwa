@@ -1,0 +1,41 @@
+{
+  "zone_id": "route-42",
+  "npcs": [
+    {
+      "name": "Fisherman Tully, Hiker Benjamin, Poké Maniac Shane",
+      "role_origin": "Dresseurs de route",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_42",
+      "tile_x": 50,
+      "tile_y": 4,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Hiker anonyme",
+      "role_origin": "Sortant de Mont Mortier, bouscule le joueur et s'excuse",
+      "item": "CS Force (力)",
+      "map_zone": "MAP_ROUTE_42",
+      "tile_x": 21,
+      "tile_y": 12,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Eusine",
+      "role_origin": "Réapparaît côté est (après Coupe), nouvel aperçu de l'esprit légendaire",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_42",
+      "tile_x": 86,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

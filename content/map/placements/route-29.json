@@ -1,0 +1,29 @@
+{
+  "zone_id": "route-29",
+  "npcs": [
+    {
+      "name": "Lyra/Ethan",
+      "role_origin": "Attend sur la route une fois l'œuf livré, apprend au joueur à attraper (tutoriel)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_29",
+      "tile_x": 64,
+      "tile_y": 2,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Frère/sœur du jour Tuscany",
+      "role_origin": "PNJ calendaire, visible uniquement le mardi (et après le badge de Mauville)",
+      "item": "TwistedSpoon",
+      "map_zone": "MAP_ROUTE_29",
+      "tile_x": 38,
+      "tile_y": 8,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

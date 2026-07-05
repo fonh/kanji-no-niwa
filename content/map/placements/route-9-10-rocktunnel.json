@@ -1,0 +1,41 @@
+{
+  "zone_id": "route-9-10-rocktunnel",
+  "npcs": [
+    {
+      "name": "Camper Sid, Hiker Eoin, Picnicker Heidi/Edna, Camper Dean, Hiker Sidney (Route 9)",
+      "role_origin": "Dresseurs (6)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_9",
+      "tile_x": 0,
+      "tile_y": 2,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "2 Randonneurs (Route 10, 2e nom incertain OCR)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_9",
+      "tile_x": 70,
+      "tile_y": 9,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Garçon (Centre Pokémon voisin)",
+      "role_origin": "Relaie le vol à la Centrale (indice pur)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_9",
+      "tile_x": 3,
+      "tile_y": 13,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

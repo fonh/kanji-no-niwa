@@ -1,0 +1,29 @@
+{
+  "zone_id": "mt-mortar",
+  "npcs": [
+    {
+      "name": "Super Nerd Hugh (2F), Marcus (1F fond) ; Poké Maniac Harrison (1F fond)",
+      "role_origin": "Dresseurs internes",
+      "item": "—",
+      "map_zone": "MAP_MOUNT_MORTAR_1F_ENTRANCE",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Black Belt Kiyo (\"Karate King\")",
+      "role_origin": "Médite tout au fond (B1F, accessible via traversée d'eau) ; combat-épreuve, offre un compagnon en cas de victoire",
+      "item": "Compagnon (récompense narrative)",
+      "map_zone": "MAP_MOUNT_MORTAR_1F_ENTRANCE",
+      "tile_x": 46,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

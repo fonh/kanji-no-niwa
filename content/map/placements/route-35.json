@@ -1,0 +1,17 @@
+{
+  "zone_id": "route-35",
+  "npcs": [
+    {
+      "name": "Bug Catcher Arnie, Firebreather Walt, Juggler Irwin, Policeman Dirk (nuit), Picnicker Kim, Camper Ivan, Bird Keeper Bryan, Picnicker Brooke & Camper Elliot (paire), Lass Krise, Pokéfan Beverly, School Kid Jack, Pokéfan William",
+      "role_origin": "Dresseurs de route (le guide précise \"neuf dresseurs sur Route 35\")",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_35",
+      "tile_x": 8,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

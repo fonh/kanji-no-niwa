@@ -137,25 +137,94 @@ gmif_data = gmif_off + 8
 print(f"Collision NARC: {file_count} model files")
 
 
-def get_walkable_grid(model_index: int) -> list[bool]:
-    """Returns list of 1024 bools (32x32, top-to-bottom left-to-right)."""
+# Ledge (hop-over) terrain types, keyed by the facing direction that clears
+# them — pokeheartgold constants/global_fieldmap.h DIR_* order (N,S,W,E) and
+# the jump table in asm/unk_0205CB48.s sub_0205DB68: walking DIR_NORTH hops
+# a 0x3A tile, DIR_SOUTH a 0x3B, DIR_WEST a 0x39, DIR_EAST a 0x38. The ledge
+# tile itself stays non-walkable; the player lands on the tile beyond it.
+LEDGE_DIRS = {0x3A: 0, 0x3B: 1, 0x39: 2, 0x38: 3}
+
+# Terrain classes the app needs to gate movement on. Sources (pokeheartgold):
+#  - surfable water = behaviors whose bit0 is set in the _020FCA74 table of
+#    src/metatile_behavior.c (0x10-0x15, 0x19, 0x2A, 0x50-0x53, 0x73, 0x78,
+#    0x7C — includes waterfall/whirlpool, split out below);
+#  - TILE_BEHAVIOR_WATERFALL = 19 (0x13), TILE_BEHAVIOR_WHIRLPOOL = 17 (0x11)
+#    from include/constants/metatile_behavior.h;
+#  - 0x20 = slippery ice: it appears exclusively in Ice Path, Seafoam
+#    Islands and the Mahogany (ice) Gym floors. (0x08, an earlier guess, is
+#    the generic cave/forest encounter floor — present in every cave.)
+# One char per tile: '#' solid, '.' walkable on foot, 'i' ice (walk + slide),
+# 'w' water (surf), 'W' whirlpool (surf), 'F' waterfall (surf; its blocked
+# bit is set in the ROM because crossing it needs the HM check, not walking).
+SURFABLE = {0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x19, 0x2A, 0x50, 0x51, 0x52, 0x53, 0x73, 0x78, 0x7C}
+
+
+def terrain_char(byte0: int, blocked: bool) -> str:
+    if byte0 == 0x13:
+        return "F"
+    if byte0 == 0x11:
+        return "W"
+    if blocked:
+        return "#"
+    if byte0 in SURFABLE:
+        return "w"
+    if byte0 == 0x20:
+        return "i"
+    return "."
+
+
+def get_walkable_grid(model_index: int) -> tuple[list[bool], list[int]]:
+    """Returns (walkable, terrain_type) lists of 1024 entries each
+    (32x32, top-to-bottom left-to-right)."""
     if model_index >= len(fat):
-        return [True] * 1024
+        return [True] * 1024, [0] * 1024
     s, e = fat[model_index]
     m = narc[gmif_data + s : gmif_data + e]
     if len(m) < 20 + 0x800:
-        return [True] * 1024
+        return [True] * 1024, [0] * 1024
     perm_size = struct.unpack_from("<I", m, 0)[0]
     if perm_size != 0x800:
+        return [True] * 1024, [0] * 1024
+    # HGSS land_data layout: 16 bytes of section sizes (perm, buildings,
+    # model, BDHC), then magic 0x1234 + u16 length of a variable-size
+    # extension block (soundplate rectangles), then the permission grid.
+    # 230 of the 676 files have a non-zero extension; reading the grid at a
+    # fixed offset 20 shifted those by ext_len/2 tiles (e.g. Route 31's east
+    # chunk, ext=8, appeared shifted 4 tiles right, so its south exit no
+    # longer faced Route 30's north exit).
+    perm_start = 20
+    if struct.unpack_from("<H", m, 16)[0] == 0x1234:
+        perm_start += struct.unpack_from("<H", m, 18)[0]
+    if len(m) < perm_start + 0x800:
         return [True] * 1024
-    perm = m[20 : 20 + 0x800]
-    # bottom-to-top → flip to top-to-bottom
-    result = []
-    for row in range(31, -1, -1):
+    perm = m[perm_start : perm_start + 0x800]
+    # Each tile is 2 bytes: byte0 is a terrain-type ID (0=normal, 2=grass,
+    # 6=wall/building, 0x38=ledge, ...) — NOT a simple walkable flag, e.g.
+    # grass (2) is walkable despite being non-zero. The actual "blocked"
+    # signal is bit 0x80 of byte1 (confirmed against the collision merge
+    # writeup for this exact Gen IV format: pokehacking.com/tutorials/
+    # collisionmerge/ — the engine checks the MSB of the full 2-byte value
+    # to decide hit/no-hit). Using byte0==0 as we originally did wrongly
+    # marked walkable terrain (grass, etc.) as solid — confirmed on Route 29,
+    # where it split the walkable area into two disconnected regions.
+    #
+    # Storage order: raw row 0 is the NORTH row, z grows southward. Ground
+    # truth is the game's own tile-attribute getter (pokeheartgold,
+    # asm/unk_02054648.s, sub_02054824): matrix cell = (z/32)*width + (x/32)
+    # and attribute index = (z%32)*32 + (x%32), with matrix row 0 at the top
+    # of the world map. An earlier version read rows bottom-to-top, which
+    # mirrored every chunk vertically — east-west zone borders survived the
+    # mirror (both sides flip identically) but every north-south border
+    # compared the wrong rows, disconnecting pairs like Cherrygrove↔Route 30.
+    walkable = []
+    terrain = []
+    for row in range(32):
         for col in range(32):
-            b0 = perm[(row * 32 + col) * 2]
-            result.append(b0 == 0x00)
-    return result
+            byte0 = perm[(row * 32 + col) * 2]
+            byte1 = perm[(row * 32 + col) * 2 + 1]
+            walkable.append(byte1 & 0x80 == 0)
+            terrain.append(byte0)
+    return walkable, terrain
 
 
 def parse_private_matrix(path: Path) -> tuple[int, int, list[int]]:
@@ -215,6 +284,8 @@ def extract_zone(name: str) -> dict | None:
 
     total_cols, total_rows = grid_w * 32, grid_h * 32
     walkable = [True] * (total_rows * total_cols)
+    terrain = ["."] * (total_rows * total_cols)
+    ledges: list[list[int]] = []  # [localX, localZ, dir] with DIR_* codes
     models_used: set[int] = set()
     for gr in range(grid_h):
         for gc in range(grid_w):
@@ -222,10 +293,16 @@ def extract_zone(name: str) -> dict | None:
             if model_idx is None:
                 continue
             models_used.add(model_idx)
-            tile_grid = get_walkable_grid(model_idx)
+            tile_grid, terrain_grid = get_walkable_grid(model_idx)
             for tr in range(32):
                 row_offset = (gr * 32 + tr) * total_cols + gc * 32
                 walkable[row_offset : row_offset + 32] = tile_grid[tr * 32 : tr * 32 + 32]
+                for tc in range(32):
+                    idx = tr * 32 + tc
+                    terrain[row_offset + tc] = terrain_char(terrain_grid[idx], not tile_grid[idx])
+                    dir_code = LEDGE_DIRS.get(terrain_grid[idx])
+                    if dir_code is not None:
+                        ledges.append([gc * 32 + tc, gr * 32 + tr, dir_code])
 
     event_path = EVENT_DIR / events_file
     objects, warps = [], []
@@ -245,8 +322,17 @@ def extract_zone(name: str) -> dict | None:
         "tile_width": total_cols,
         "tile_height": total_rows,
         "walkable": walkable,
+        "terrain": "".join(terrain),
+        "ledges": ledges,
         "objects": objects,
         "warps": warps,
+        # Outdoor zones share one continuous coordinate space (the
+        # EVERYWHERE matrix) — world_origin_x/y are directly comparable
+        # across them, so the map can detect "walked off this zone's edge
+        # into the next one". Interior zones each start their own private
+        # matrix at (0,0), so their world_origin is not comparable to
+        # anything else and must never be used for that lookup.
+        "is_outdoor": matrix_file == EVERYWHERE_MATRIX_FILE,
     }
 
 
