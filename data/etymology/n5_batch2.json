@@ -1,0 +1,690 @@
+[
+{
+"kanji": "高",
+"meaning": "tall, high",
+"components": [
+"tall tower"
+],
+"rtk_frame": 307,
+"rtk_keyword": "tall",
+"etymology": "Pictograph: a tall watchtower or gate-building — roof at the top, upper chamber, and the gateway below. 'High' in every later sense, including prices.",
+"mnemonic": "A pagoda drawn floor by floor: roof, window, gate — たかい. High building, high rank, high price: the tower charges admission.",
+"jlpt": "N5"
+},
+{
+"kanji": "週",
+"meaning": "week",
+"components": [
+"movement",
+"circuit"
+],
+"rtk_frame": 318,
+"rtk_keyword": "week",
+"etymology": "Phono-semantic: movement (辶) + 周 'circuit, all around' (phonetic シュウ) — going one full round. Applied to the seven-day cycle when Japan adopted the Western week.",
+"mnemonic": "Walk one full lap (周) around the calendar and you're back where you started: one week — シュウ. 毎週, every lap.",
+"jlpt": "N5"
+},
+{
+"kanji": "学",
+"meaning": "study, learning",
+"components": [
+"little crown",
+"child"
+],
+"rtk_frame": 324,
+"rtk_keyword": "study",
+"etymology": "Simplified from 學: a child (子) under a roof, with hands above passing knowledge down. The three little strokes on top are all that remain of those hands.",
+"mnemonic": "A child under a sparkling roof — sparks of knowledge raining down from the teacher's hands: to study, まなぶ. 学校 is where the sparks fly, ガッコウ.",
+"jlpt": "N5"
+},
+{
+"kanji": "書",
+"meaning": "write",
+"components": [
+"brush",
+"sun/tablet"
+],
+"rtk_frame": 327,
+"rtk_keyword": "write",
+"etymology": "Compound ideograph: a hand gripping a brush (聿) over a tablet (the 日-shaped block below) — the act of writing caught mid-stroke.",
+"mnemonic": "A hand pressing a brush down onto the page, line after line — かく. The stacked horizontals are the ruled lines of the notebook; 図書館 keeps what the brush leaves behind.",
+"jlpt": "N5"
+},
+{
+"kanji": "言",
+"meaning": "say, word",
+"components": [
+"sound lines",
+"mouth"
+],
+"rtk_frame": 335,
+"rtk_keyword": "say",
+"etymology": "Pictograph: a mouth (口) with sound waves rising from it — speech leaving the lips. As a left-side component it marks nearly everything said in the language.",
+"mnemonic": "Four sound waves stacked over a mouth: words on their way out — いう. Whenever 言 stands at the left of a kanji, somebody is talking.",
+"jlpt": "N5"
+},
+{
+"kanji": "話",
+"meaning": "tale, talk",
+"components": [
+"say",
+"tongue"
+],
+"rtk_frame": 344,
+"rtk_keyword": "tale",
+"etymology": "Phono-semantic: words (言) + tongue (舌, from an older phonetic) — the tongue shaping words into a story or conversation.",
+"mnemonic": "Words (言) rolled off a tongue (舌) and braided into a tale — はなし. Phone conversations are 電話: electric talk.",
+"jlpt": "N5"
+},
+{
+"kanji": "語",
+"meaning": "word, language",
+"components": [
+"say",
+"I (吾)"
+],
+"rtk_frame": 347,
+"rtk_keyword": "word",
+"etymology": "Phono-semantic: words (言) + 吾 'I, we' (phonetic ゴ) — speech exchanged between me and you: language.",
+"mnemonic": "My (吾) words (言) — the language I carry: ゴ. It closes the name of every tongue on earth: 日本語, フランス語, and yours next.",
+"jlpt": "N5"
+},
+{
+"kanji": "読",
+"meaning": "read",
+"components": [
+"say",
+"sell"
+],
+"rtk_frame": 348,
+"rtk_keyword": "read",
+"etymology": "Phono-semantic: words (言) + 売 'sell' (simplified from 賣, the old phonetic ドク/トク) — words offered up like wares, taken in by reading.",
+"mnemonic": "A street seller (売) hawking words (言) aloud — and you, reading the signboard: よむ. 読書 is buying stories with your eyes.",
+"jlpt": "N5"
+},
+{
+"kanji": "雨",
+"meaning": "rain",
+"components": [
+"sky canopy",
+"drops"
+],
+"rtk_frame": 422,
+"rtk_keyword": "rain",
+"etymology": "Pictograph: the vault of the sky as a canopy, with four drops falling inside it. As a crown component it governs all weather kanji (雪, 雲, 電).",
+"mnemonic": "A window pane in a storm: four drops caught mid-fall behind the glass — あめ. When 雨 sits on a kanji's head, look up: weather incoming.",
+"jlpt": "N5"
+},
+{
+"kanji": "天",
+"meaning": "heavens, sky",
+"components": [
+"one",
+"person spread wide"
+],
+"rtk_frame": 428,
+"rtk_keyword": "heavens",
+"etymology": "Ideograph: a line drawn above the big person (大) — that which stretches over every head: heaven, the sky.",
+"mnemonic": "The widest thing a person (大) can point at is the line above them: the heavens — てん. 天気 is the sky's mood today.",
+"jlpt": "N5"
+},
+{
+"kanji": "立",
+"meaning": "stand up",
+"components": [
+"person on ground line"
+],
+"rtk_frame": 431,
+"rtk_keyword": "stand up",
+"etymology": "Pictograph: a person standing squarely on the ground line, arms out for balance — the act of standing itself.",
+"mnemonic": "Feet planted on the floor line, arms out: stand up! — たつ. A lamp standing at attention on its base; it holds this pose inside 駅 platforms and 立入禁止 signs alike.",
+"jlpt": "N5"
+},
+{
+"kanji": "北",
+"meaning": "north",
+"components": [
+"two people back to back"
+],
+"rtk_frame": 445,
+"rtk_keyword": "north",
+"etymology": "Compound ideograph: two people sitting back to back — the origin of 背 'back'. In a south-facing culture, north is the direction at everyone's back.",
+"mnemonic": "Two travelers huddle back to back against the cold wind: they're facing away from the north — きた. 北海道 is where they huddle hardest.",
+"jlpt": "N5"
+},
+{
+"kanji": "毎",
+"meaning": "every",
+"components": [
+"hairpin",
+"mother"
+],
+"rtk_frame": 458,
+"rtk_keyword": "every",
+"etymology": "Originally the mother sign (母) crowned with a hairpin or sprout — fertile, ever-producing growth; borrowed early for 'every, each'.",
+"mnemonic": "A mother with a feather in her hair, up at dawn without fail: every single day — まい. 毎日, 毎週, 毎年: she never misses one.",
+"jlpt": "N5"
+},
+{
+"kanji": "東",
+"meaning": "east",
+"components": [
+"tree",
+"sun"
+],
+"rtk_frame": 504,
+"rtk_keyword": "east",
+"etymology": "Traditionally explained as the sun (日) rising behind a tree (木) — the east. Paleographers read the oldest form as a tied sack, borrowed for its sound; the sunrise story is what stuck.",
+"mnemonic": "The sun climbing up through the branches of a tree at dawn: look that way and you face east — ひがし. 東京: the capital of the east.",
+"jlpt": "N5"
+},
+{
+"kanji": "電",
+"meaning": "electricity",
+"components": [
+"rain",
+"lightning bolt"
+],
+"rtk_frame": 535,
+"rtk_keyword": "electricity",
+"etymology": "Compound: rain (雨) over a lightning bolt with a trailing tail (an old form of 申, itself a pictograph of forked lightning). First 'lightning', then 'electricity'.",
+"mnemonic": "Out of the storm cloud, a bolt with a hooked tail — raw electricity: デン. It powers the whole modern lexicon: 電気, 電車, 電話.",
+"jlpt": "N5"
+},
+{
+"kanji": "午",
+"meaning": "noon",
+"components": [
+"pestle"
+],
+"rtk_frame": 568,
+"rtk_keyword": "noon",
+"etymology": "Pictograph of a wooden pestle, borrowed for the zodiac sign of the Horse — whose hour straddles midday. Hence 'noon': 午前 before it, 午後 after it.",
+"mnemonic": "A pestle standing bolt upright, like the sun at the top of the sky: noon — ゴ. Morning is 午前, 'before the pestle'; afternoon 午後, 'after it'.",
+"jlpt": "N5"
+},
+{
+"kanji": "国",
+"meaning": "country",
+"components": [
+"borders",
+"jewel"
+],
+"rtk_frame": 581,
+"rtk_keyword": "country",
+"etymology": "Simplified from 國: a territory enclosed by borders (囗); the modern form places a jewel (玉) inside — the treasure a border exists to guard: a country.",
+"mnemonic": "A jewel locked inside four walls: the realm and its crown treasure — くに. Line them up: 中国, 外国, and your own 国.",
+"jlpt": "N5"
+},
+{
+"kanji": "店",
+"meaning": "store, shop",
+"components": [
+"canopy building",
+"occupy (占)"
+],
+"rtk_frame": 588,
+"rtk_keyword": "store",
+"etymology": "Phono-semantic: a building with a canopy (广) + 占 'occupy a spot' (phonetic テン) — a stall pitched under an awning that claimed its corner: a shop.",
+"mnemonic": "Under the awning, a fortune-teller (占) set up shop and never left — みせ. The 喫茶店 on the corner has occupied that spot forever.",
+"jlpt": "N5"
+},
+{
+"kanji": "手",
+"meaning": "hand",
+"components": [
+"hand"
+],
+"rtk_frame": 637,
+"rtk_keyword": "hand",
+"etymology": "Pictograph: an open hand seen palm-on — the central stroke is the middle finger, the horizontals the spread of the others. As a left-side component it becomes 扌.",
+"mnemonic": "Five fingers fanned from a wrist — て. Almost everything you do in Japanese is done 'by hand': 手紙 a letter, 上手 a skilled hand, 歌手 a singer 'of the hand(craft)'.",
+"jlpt": "N5"
+},
+{
+"kanji": "友",
+"meaning": "friend",
+"components": [
+"hand",
+"hand (again)"
+],
+"rtk_frame": 704,
+"rtk_keyword": "friend",
+"etymology": "Compound ideograph: two right hands reaching the same way — hands joined in common work: a friend.",
+"mnemonic": "Two hands stacked in a team huddle — とも. A 友だち is the hand that shows up when yours is full.",
+"jlpt": "N5"
+},
+{
+"kanji": "会",
+"meaning": "meeting, meet",
+"components": [
+"gathering roof",
+"cloud/steam"
+],
+"rtk_frame": 752,
+"rtk_keyword": "meeting",
+"etymology": "Simplified from 會: a lid closing over a layered steamer pot — things coming together as one: to meet.",
+"mnemonic": "A roof pulled down over rising steam: everyone gathered under one lid — あう. 会社 is where the lid closes on you every morning, カイシャ.",
+"jlpt": "N5"
+},
+{
+"kanji": "出",
+"meaning": "exit, leave",
+"components": [
+"foot leaving a hollow"
+],
+"rtk_frame": 767,
+"rtk_keyword": "exit",
+"etymology": "Oracle-bone ideograph: a foot stepping up and out of a pit or dwelling — going out. The later form looks like a sprout growing on past its first frame.",
+"mnemonic": "One mountain climbing out of another: whatever was inside is on its way out — でる. On every door in Japan: 出口, the way out.",
+"jlpt": "N5"
+},
+{
+"kanji": "山",
+"meaning": "mountain",
+"components": [
+"mountain"
+],
+"rtk_frame": 768,
+"rtk_keyword": "mountain",
+"etymology": "Pictograph: three peaks, the middle one highest. Unchanged in three thousand years.",
+"mnemonic": "Three peaks on the horizon — やま. Japan's favorite kanji: it caps 富士山 and half the family names in the country (山田, 山本).",
+"jlpt": "N5"
+},
+{
+"kanji": "入",
+"meaning": "enter",
+"components": [
+"wedge entering"
+],
+"rtk_frame": 779,
+"rtk_keyword": "enter",
+"etymology": "Pictograph: a wedge or arrowhead driving inward — or the flap of a tent parting as you step in. The mirror-twin of 人, but leaning the other way.",
+"mnemonic": "A tent flap pushed open inward: step in — はいる. Watch the lean: 人 walks by, 入 goes in. 入口 is where it happens.",
+"jlpt": "N5"
+},
+{
+"kanji": "分",
+"meaning": "part, minute",
+"components": [
+"divide",
+"sword"
+],
+"rtk_frame": 781,
+"rtk_keyword": "part",
+"etymology": "Compound ideograph: divide (八) + sword (刀) — a blade splitting something in two: a part. An hour cut into sixty parts gives the minute; a thing cut open gives understanding (分かる).",
+"mnemonic": "The sword slices the pie in two — one part for you, ブン. Slice the hour: minutes, フン. Slice a problem open: 分かった, got it!",
+"jlpt": "N5"
+},
+{
+"kanji": "耳",
+"meaning": "ear",
+"components": [
+"ear"
+],
+"rtk_frame": 818,
+"rtk_keyword": "ear",
+"etymology": "Pictograph: an ear with its outer rim and lobe — the horizontal strokes trace the folds of the ear itself.",
+"mnemonic": "An ear drawn in profile, lobe trailing off at the bottom stroke — みみ. Two of them frame your face; two strokes frame this kanji.",
+"jlpt": "N5"
+},
+{
+"kanji": "買",
+"meaning": "buy",
+"components": [
+"net",
+"shellfish/money"
+],
+"rtk_frame": 831,
+"rtk_keyword": "buy",
+"etymology": "Compound ideograph: a net (罒) over a cowrie shell (貝, ancient money) — netting goods with money: to buy.",
+"mnemonic": "Casting a net straight over the treasure shell: haul it in, it's yours — かう. 買い物: hunting with a wallet for a net.",
+"jlpt": "N5"
+},
+{
+"kanji": "男",
+"meaning": "man, male",
+"components": [
+"rice field",
+"power"
+],
+"rtk_frame": 859,
+"rtk_keyword": "man",
+"etymology": "Compound ideograph: rice field (田) + strength/plow (力) — the one whose muscle works the field: a man.",
+"mnemonic": "Strength (力) under the rice field (田): the farmhand flexing beneath his plot — おとこ. On restroom doors, he's the 男 with the heavy lifting.",
+"jlpt": "N5"
+},
+{
+"kanji": "行",
+"meaning": "going, journey",
+"components": [
+"crossroads"
+],
+"rtk_frame": 873,
+"rtk_keyword": "going",
+"etymology": "Pictograph: a crossroads seen from above — both halves are streets. To go is to be out where the roads cross; as a component it flanks kanji of movement.",
+"mnemonic": "Two street corners facing each other: you're standing in the intersection, already going — いく. 銀行, the bank, sits on the busiest crossroads in town, コウ/ギョウ/いく — a kanji with three lives, all on the move.",
+"jlpt": "N5"
+},
+{
+"kanji": "人",
+"meaning": "person",
+"components": [
+"person"
+],
+"rtk_frame": 951,
+"rtk_keyword": "person",
+"etymology": "Pictograph: a human figure in profile, mid-stride — two legs and a leaning body reduced to two strokes.",
+"mnemonic": "Two strokes leaning on each other — ひと. The oldest joke in kanji class is also true: people hold each other up. It leans left; its twin 入 (enter) leans in.",
+"jlpt": "N5"
+},
+{
+"kanji": "休",
+"meaning": "rest",
+"components": [
+"person",
+"tree"
+],
+"rtk_frame": 965,
+"rtk_keyword": "rest",
+"etymology": "Compound ideograph: a person (亻) leaning against a tree (木) — resting in its shade. One of the textbook examples of a meaning built from two pictures.",
+"mnemonic": "A hiker slumped against a tree trunk, hat over the eyes — やすむ. 休み is that tree-shade taken as a day off.",
+"jlpt": "N5"
+},
+{
+"kanji": "何",
+"meaning": "what",
+"components": [
+"person",
+"possible (可)"
+],
+"rtk_frame": 1012,
+"rtk_keyword": "what",
+"etymology": "Phono-semantic: person (亻) + 可 (phonetic カ). Originally 'to shoulder a load' (the ancestor of 荷); borrowed since antiquity for the question word 'what'.",
+"mnemonic": "A person stopped by a strange box with a hook: 'What is that?' — なに. The kanji of every beginner's sentence: 何ですか.",
+"jlpt": "N5"
+},
+{
+"kanji": "年",
+"meaning": "year",
+"components": [
+"person",
+"grain"
+],
+"rtk_frame": 1036,
+"rtk_keyword": "year",
+"etymology": "Oracle-bone ideograph: a person carrying home the ripened grain (禾) — one harvest, one year. The strokes fused over time into the modern form.",
+"mnemonic": "A farmer bent under a sheaf of rice: another harvest carried home, another year gone — とし. 今年, this crop; 来年, the next.",
+"jlpt": "N5"
+},
+{
+"kanji": "社",
+"meaning": "company, shrine",
+"components": [
+"altar",
+"soil"
+],
+"rtk_frame": 1092,
+"rtk_keyword": "company",
+"etymology": "Compound ideograph: altar (示, compressed to ネ) + soil (土) — the shrine of the local earth god, where the community gathered. From 'gathered community' came 'society' and 'company'.",
+"mnemonic": "An altar planted in the village soil: the whole community assembles there — シャ. Today the assembly wears suits: 会社. The gods kept the original office: 神社.",
+"jlpt": "N5"
+},
+{
+"kanji": "半",
+"meaning": "half",
+"components": [
+"divide",
+"ox"
+],
+"rtk_frame": 1202,
+"rtk_keyword": "half",
+"etymology": "Compound ideograph: divide (八) atop an ox (牛) — an ox split down the middle for sharing: half.",
+"mnemonic": "The ox chopped clean in two — each side gets half, はん. Clock language lives here: 三時半, half past three.",
+"jlpt": "N5"
+},
+{
+"kanji": "父",
+"meaning": "father",
+"components": [
+"hand holding axe"
+],
+"rtk_frame": 1274,
+"rtk_keyword": "father",
+"etymology": "Pictograph: a hand gripping a stone axe — the provider and protector of the household: father.",
+"mnemonic": "Crossed arms holding two axes: dad guarding the door — ちち. Address him gently and he softens to お父さん.",
+"jlpt": "N5"
+},
+{
+"kanji": "校",
+"meaning": "school",
+"components": [
+"tree",
+"crossing (交)"
+],
+"rtk_frame": 1278,
+"rtk_keyword": "exam",
+"etymology": "Phono-semantic: tree/wood (木) + 交 'to cross' (phonetic コウ). Originally wooden frames and fetters; settled on the wooden halls where paths cross — the school.",
+"mnemonic": "A wooden building (木) where a thousand lives crisscross (交) every morning — コウ, the school of 学校. Also the place your test gets 'crossed' with red ink.",
+"jlpt": "N5"
+},
+{
+"kanji": "足",
+"meaning": "leg, foot; enough",
+"components": [
+"kneecap",
+"foot"
+],
+"rtk_frame": 1279,
+"rtk_keyword": "leg",
+"etymology": "Pictograph: the kneecap (the box) above a foot (an old form of 止) — the whole leg. 'To suffice' is an ancient borrowed sense of the same character.",
+"mnemonic": "A knee, a shin, a foot planted flat — あし. Two of them are plenty: 足りる, 'that's enough legs to stand on'.",
+"jlpt": "N5"
+},
+{
+"kanji": "空",
+"meaning": "empty, sky",
+"components": [
+"hole",
+"craft (工)"
+],
+"rtk_frame": 1317,
+"rtk_keyword": "empty",
+"etymology": "Phono-semantic: hole (穴) + 工 (phonetic クウ) — a hollowed-out space: empty; and the greatest hollow of all, the open sky.",
+"mnemonic": "Dig through the cave roof (穴) with your tools (工) and break into the biggest empty room there is: the sky — そら. 空港: the harbor of the sky.",
+"jlpt": "N5"
+},
+{
+"kanji": "後",
+"meaning": "behind, after",
+"components": [
+"step",
+"thread",
+"dragging foot"
+],
+"rtk_frame": 1379,
+"rtk_keyword": "behind",
+"etymology": "Compound ideograph: a step (彳) hobbled by a small thread (幺) and a dragging foot (夂) — falling behind on the road; hence 'behind' in space and 'after' in time.",
+"mnemonic": "Shoelace tangled (幺), foot dragging (夂): you fall behind the group — うしろ, and you'll arrive after them — あと, ゴ (午後, the afternoon limping in after noon).",
+"jlpt": "N5"
+},
+{
+"kanji": "食",
+"meaning": "eat, food",
+"components": [
+"lid",
+"full vessel"
+],
+"rtk_frame": 1472,
+"rtk_keyword": "eat",
+"etymology": "Pictograph: a lid (𠆢) over a full food vessel on its stand — a covered dish waiting to be eaten. The component form 飠 fronts most kanji of eating.",
+"mnemonic": "Lift the lid: dinner is served — たべる. Everything under that little roof is on the menu; 食べ物 is whatever the lid was hiding.",
+"jlpt": "N5"
+},
+{
+"kanji": "飲",
+"meaning": "drink",
+"components": [
+"food/vessel",
+"gaping mouth (欠)"
+],
+"rtk_frame": 1474,
+"rtk_keyword": "drink",
+"etymology": "Compound: the food vessel (飠) + 欠, a person with mouth stretched wide open — head tipped back, pouring it down: to drink.",
+"mnemonic": "Head thrown back (欠) over the covered jar (飠): glug, glug — のむ. 飲み物 is anything that disappears that way.",
+"jlpt": "N5"
+},
+{
+"kanji": "新",
+"meaning": "new",
+"components": [
+"hazel/standing tree (亲)",
+"axe"
+],
+"rtk_frame": 1502,
+"rtk_keyword": "new",
+"etymology": "Phono-semantic: 亲 (a standing tree, phonetic シン) + axe (斤) — wood at the instant the axe cuts it: fresh, new.",
+"mnemonic": "The axe bites and the pale fresh grain gleams where the bark fell away: brand-new — あたらしい. 新聞: the news, cut fresh every morning.",
+"jlpt": "N5"
+},
+{
+"kanji": "生",
+"meaning": "life, birth",
+"components": [
+"sprout",
+"soil"
+],
+"rtk_frame": 1555,
+"rtk_keyword": "life",
+"etymology": "Pictograph: a young plant breaking out of the soil — life emerging. Its dozen readings (いきる, うまれる, なま, セイ…) all grow from this one sprout.",
+"mnemonic": "A seedling standing up out of the ground line — life itself, せい. Raw (なま) like a fresh shoot, born (うまれる) like a first leaf: every reading is this sprout at another age. The 先生 has simply been growing longer.",
+"jlpt": "N5"
+},
+{
+"kanji": "今",
+"meaning": "now",
+"components": [
+"gathering roof",
+"closing mark"
+],
+"rtk_frame": 1587,
+"rtk_keyword": "now",
+"etymology": "Ideograph: a cover coming down over something — the instant caught and held under the lid: now.",
+"mnemonic": "A lid snapping shut on the present moment before it escapes — いま. 今日 is today under the lid; 今 is the only kanji you can never write yesterday.",
+"jlpt": "N5"
+},
+{
+"kanji": "西",
+"meaning": "west",
+"components": [
+"bird settling into nest"
+],
+"rtk_frame": 1602,
+"rtk_keyword": "west",
+"etymology": "Traditionally: a bird settling into its nest — which birds do at sundown, in the direction of the setting sun: west. The oldest forms show a woven nest or basket.",
+"mnemonic": "A bird folding itself into a basket-nest as the sun drops behind it: face that glow and you face west — にし. 関西 lies that way from Tokyo.",
+"jlpt": "N5"
+},
+{
+"kanji": "南",
+"meaning": "south",
+"components": [
+"enclosure open to warmth"
+],
+"rtk_frame": 1613,
+"rtk_keyword": "south",
+"etymology": "Origin debated — the oldest forms show a hanging bell or a tent; the classic account reads it as a shelter whose opening faces the warm side. Whatever the picture, it has meant 'south' for three millennia.",
+"mnemonic": "A greenhouse with its door thrown open to the sun's warm side: plants crowding toward the south — みなみ. 東南アジア: where that warmth lives year-round.",
+"jlpt": "N5"
+},
+{
+"kanji": "間",
+"meaning": "interval, space",
+"components": [
+"gate",
+"sun"
+],
+"rtk_frame": 1620,
+"rtk_keyword": "interval",
+"etymology": "Compound ideograph: originally moonlight (月) shining through the crack of a gate (門) — later the sun (日) took the moon's place. The gap itself: interval, in space or time.",
+"mnemonic": "Sunlight slicing through the gap between two gate doors: that sliver is the interval — あいだ. 時間 measures it in hours, 一週間 in laps of the week.",
+"jlpt": "N5"
+},
+{
+"kanji": "聞",
+"meaning": "hear, ask",
+"components": [
+"gate",
+"ear"
+],
+"rtk_frame": 1626,
+"rtk_keyword": "hear",
+"etymology": "Phono-semantic: ear (耳) inside gate (門, phonetic モン→ブン) — an ear pressed to the gate: to hear; and, in Japanese, to ask.",
+"mnemonic": "An ear flattened against the gate, catching every word from the other side — きく. To hear is half of it; the nosy half is to ask. 新聞: everything the ear at the gate collected, printed by morning.",
+"jlpt": "N5"
+},
+{
+"kanji": "円",
+"meaning": "circle, yen",
+"components": [
+"enclosure",
+"bar"
+],
+"rtk_frame": 1811,
+"rtk_keyword": "circle",
+"etymology": "Simplified from 圓: an enclosure (囗) around the phonetic 員. The perfect round shape — chosen in 1871 as the name of Japan's round coin: the yen.",
+"mnemonic": "A coin standing upright in its slot — まる, the circle; エン, the yen it became. Every price tag in Japan ends in this little window: 百円, 千円.",
+"jlpt": "N5"
+},
+{
+"kanji": "来",
+"meaning": "come",
+"components": [
+"wheat plant"
+],
+"rtk_frame": 1884,
+"rtk_keyword": "come",
+"etymology": "Simplified from 來, the pictograph of a ripened wheat plant. Legend held that wheat 'came from heaven' — so the grain sign was borrowed for 'to come' and never given back.",
+"mnemonic": "A wheat stalk waving you over from the field's edge: come! — くる. What is on its way is 来る; next year, 来年, is already walking toward you.",
+"jlpt": "N5"
+},
+{
+"kanji": "気",
+"meaning": "spirit, energy",
+"components": [
+"rising vapor",
+"curl (from 米 rice)"
+],
+"rtk_frame": 1885,
+"rtk_keyword": "spirit",
+"etymology": "Simplified from 氣: vapor (气) rising from cooking rice (米) — steam, breath, and by extension the invisible energy of weather and mood.",
+"mnemonic": "Steam curling off a pot of rice: invisible, but it moves everything — き. The sky's steam is 天気, yours is 元気. When both are good, life is too.",
+"jlpt": "N5"
+},
+{
+"kanji": "長",
+"meaning": "long, leader",
+"components": [
+"long hair",
+"staff"
+],
+"rtk_frame": 1920,
+"rtk_keyword": "long",
+"etymology": "Pictograph: an elder with long flowing hair leaning on a staff — long in hair, long in years; and the eldest leads, hence 'chief'.",
+"mnemonic": "Hair so long it takes six strokes, and a cane to match — ながい. The one who's been here longest sits at the head of the table: 社長, 校長.",
+"jlpt": "N5"
+},
+{
+"kanji": "駅",
+"meaning": "station",
+"components": [
+"horse",
+"measure (尺)"
+],
+"rtk_frame": 1984,
+"rtk_keyword": "station",
+"etymology": "Simplified from 驛: horse (馬) + a phonetic (originally 睪, trimmed to 尺). The relay post of the imperial roads, where riders changed horses — reborn as the railway station.",
+"mnemonic": "Where travelers once measured out (尺) a fresh horse (馬), they now measure out a train — えき. Same spot on the map, two thousand years apart: 駅前 is still the busiest corner in town.",
+"jlpt": "N5"
+}
+]

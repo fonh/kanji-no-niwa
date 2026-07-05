@@ -1,277 +1,51 @@
 [
-  {
-    "kanji": "火",
-    "readings": {
-      "kun": "ひ、-び、ほ-",
-      "on": "カ"
-    },
-    "meaning": "feu",
-    "etymology": "Pictogramme de flammes montantes. Les trois traits courbes représentent les flammes qui dansent et crépitent vers le ciel.",
-    "mnemonic": "Imaginez les trois traits qui dansent comme des flammes - ひ (hi) c'est le son du feu qui crépite ! La 火 est l'âme ardente.",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "学",
-    "readings": {
-      "kun": "まな.ぶ",
-      "on": "ガク"
-    },
-    "meaning": "étude, apprentissage",
-    "etymology": "Combine 子 (enfant) et 冖 (toit). Représente un enfant apprenant sous la protection et guidance d'un maître.",
-    "mnemonic": "Un enfant 子 assis sous un toit 冖 qui apprend - まな.ぶ (manabu) = étudier avec concentra tion !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "気",
-    "readings": {
-      "kun": "いき、き",
-      "on": "キ、ケ"
-    },
-    "meaning": "esprit, air, atmosphère, humeur",
-    "etymology": "Originellement vapeur invisible montant du sol. L'énergie vitale et l'atmosphère qui imprègne toute chose.",
-    "mnemonic": "Sentez le souffle invisible - いき (iki) = respirer, et キ (ki) c'est l'énergie vitale qui anime tout !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "空",
-    "readings": {
-      "kun": "そら、あ.く、あ.き、あ.ける、から、す.く、す.かす、むな.しい",
-      "on": "クウ"
-    },
-    "meaning": "vide, ciel, espace vacant",
-    "etymology": "Combine 穴 (cavité) et 工 (construction). Représente l'espace vide et l'immensité du ciel infini.",
-    "mnemonic": "Un grand trou béant 穴 ouvert - そら (sora) = le ciel bleu infini qui s'étend sans limite !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "月",
-    "readings": {
-      "kun": "つき",
-      "on": "ゲツ、ガツ"
-    },
-    "meaning": "lune, mois",
-    "etymology": "Pictogramme direct de la lune. Un carré avec un croissant intérieur représentant le disque lunaire luminescent.",
-    "mnemonic": "Regardez simplement la forme - c'est un croissant de lune ! つき (tsuki) = la lune qui marque les mois.",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "見",
-    "readings": {
-      "kun": "み.る、み.える、み.せる",
-      "on": "ケン"
-    },
-    "meaning": "voir, regarder",
-    "etymology": "Combine 目 (œil) et 人 (personne). Littéralement l'œil de la personne qui regarde vers l'avant.",
-    "mnemonic": "Un grand œil 目 sur une jambe 人 - み.る (miru) = voir clairement avec les yeux grands ouverts !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "口",
-    "readings": {
-      "kun": "くち",
-      "on": "コウ、ク"
-    },
-    "meaning": "bouche",
-    "etymology": "Pictogramme direct et simple d'une bouche. Un carré représentant l'ouverture buccale par laquelle on parle.",
-    "mnemonic": "C'est littéralement une bouche carrée qui s'ouvre ! くち (kuchi) = la bouche qui parle et savoure.",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "山",
-    "readings": {
-      "kun": "やま",
-      "on": "サン、セン"
-    },
-    "meaning": "montagne",
-    "etymology": "Pictogramme de trois pics montagneux. Les trois traits pointus représentent les sommets d'une chaîne.",
-    "mnemonic": "Trois pics qui s'élèvent haut ! やま (yama) = les montagnes majestueuses du Japon qui percent les nuages.",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "耳",
-    "readings": {
-      "kun": "みみ",
-      "on": "ジ"
-    },
-    "meaning": "oreille",
-    "etymology": "Pictogramme stylisé d'une oreille humaine. Montre les replis caractéristiques avec le canal auditif.",
-    "mnemonic": "C'est une oreille complète avec ses détails ! みみ (mimi) = le redoublement du même son, comme l'écho.",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "小",
-    "readings": {
-      "kun": "ちい.さい、こ-、お-、さ-",
-      "on": "ショウ"
-    },
-    "meaning": "petit, minuscule",
-    "etymology": "Pictogramme de trois traits rapprochés et compressés. Représente des choses réduites et pressées ensemble.",
-    "mnemonic": "Trois points minuscules pressés ! ちい.さい (chiisai) = si petit que vous devez plisser les yeux !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "人",
-    "readings": {
-      "kun": "ひと、-り、-と",
-      "on": "ジン、ニン"
-    },
-    "meaning": "personne",
-    "etymology": "Pictogramme stylisé d'une personne debout. Deux jambes écartées et un torse droit représentant un humain.",
-    "mnemonic": "Regardez les deux jambes et le torse - ひと (hito) = une personne qui marche avec confiance !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "水",
-    "readings": {
-      "kun": "みず、みず-",
-      "on": "スイ"
-    },
-    "meaning": "eau",
-    "etymology": "Pictogramme de l'eau coulante avec trois traits. Les traits représentent le courant et les ondulations.",
-    "mnemonic": "Les trois traits ressemblent à des vagues ! みず (mizu) = l'eau douce qui coule librement.",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "川",
-    "readings": {
-      "kun": "かわ",
-      "on": "セン"
-    },
-    "meaning": "rivière, fleuve",
-    "etymology": "Pictogramme simplifié d'une rivière vue de haut. Trois traits parallèles représentant le cours d'eau.",
-    "mnemonic": "Deux berges encadrant l'eau qui coule - かわ (kawa) = la rivière qui serpente à travers la vallée !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "足",
-    "readings": {
-      "kun": "あし、た.りる、た.る、た.す",
-      "on": "ソク"
-    },
-    "meaning": "jambe, pied",
-    "etymology": "Combine 止 (arrêt) et des traits représentant la jambe. Le pied qui s'arrête et supporte le corps.",
-    "mnemonic": "Les traits du bas ressemblent à des orteils - あし (ashi) = la jambe qui nous porte à travers le monde !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "大",
-    "readings": {
-      "kun": "おお-、おお.きい、-おお.いに",
-      "on": "ダイ、タイ"
-    },
-    "meaning": "grand, immense",
-    "etymology": "Pictogramme d'une personne 人 avec les bras écartés en grand. Représente l'immensité et l'ouverture.",
-    "mnemonic": "Un homme les bras grand ouverts vers le ciel ! おお.きい (ookii) = c'est GRAND, vraiment impressionnant !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "土",
-    "readings": {
-      "kun": "つち",
-      "on": "ド、ト"
-    },
-    "meaning": "terre, sol",
-    "etymology": "Pictogramme du sol et de la terre. Un carré avec un trait au centre représentant un champ fertile.",
-    "mnemonic": "Le carré 土 représente un champ de terre - つち (tsuchi) = la terre nourricière sous nos pieds !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "日",
-    "readings": {
-      "kun": "ひ、-び、-か",
-      "on": "ニチ、ジツ"
-    },
-    "meaning": "jour, soleil",
-    "etymology": "Pictogramme direct du soleil. Un carré avec un point central représentant le disque solaire luminescent.",
-    "mnemonic": "C'est un soleil carré avec un point rayonnant - ひ (hi) = le jour où le soleil brille intensément !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "年",
-    "readings": {
-      "kun": "とし",
-      "on": "ネン"
-    },
-    "meaning": "année, an",
-    "etymology": "Représente une personne 人 moissonnant les récoltes 禾 chaque cycle. Le rythme annuel du travail agricole.",
-    "mnemonic": "Une personne qui moisonne chaque année - とし (toshi) = l'année qui passe et revient encore !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "白",
-    "readings": {
-      "kun": "しろ、しら-、しろ.い",
-      "on": "ハク、ビャク"
-    },
-    "meaning": "blanc",
-    "etymology": "Pictogramme d'une surface blanc pur. Un carré avec un point lumineux au centre montrant la blancheur éclatante.",
-    "mnemonic": "Imaginez la pureté absolue - しろ (shiro) = la couleur blanche comme la neige fraîchement tombée !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "本",
-    "readings": {
-      "kun": "もと",
-      "on": "ホン"
-    },
-    "meaning": "livre, racine, origine",
-    "etymology": "Combine 木 (arbre) et un trait de racine. Représente l'arbre enraciné, d'où l'idée d'origine.",
-    "mnemonic": "Un arbre 木 avec une racine puissante - ほん (hon) = le livre qui nous enracine dans le savoir !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "木",
-    "readings": {
-      "kun": "き、こ-",
-      "on": "ボク、モク"
-    },
-    "meaning": "arbre, bois",
-    "etymology": "Pictogramme direct d'un arbre. Trois traits formant un tronc avec des branches s'ouvrant vers le ciel.",
-    "mnemonic": "Regardez simplement l'arbre - き (ki) = l'arbre vert qui se balance au vent !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "言",
-    "readings": {
-      "kun": "い.う、こと",
-      "on": "ゲン、ゴン"
-    },
-    "meaning": "dire, parole, mot",
-    "etymology": "言 est composé de 辛 (une épingle/aiguille pointue, symbole de précision) au-dessus de 口 (bouche). L'épingle pointe vers la bouche pour indiquer les paroles prononcées avec soin. Ce pictogramme composite évoque la précision de la parole — les mots qui sortent de la bouche comme des pointes aiguisées.",
-    "mnemonic": "Une aiguille pointée vers la bouche 口 — GEN/GON (ゲン/ゴン), les paroles ! 言葉 (kotoba), les mots sont comme des pointes : ils pénètrent l'esprit. Quand vous dites 言う (iu), vous lancez des mots précis. Parler c'est viser juste !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "時",
-    "readings": {
-      "kun": "とき、-どき",
-      "on": "ジ"
-    },
-    "meaning": "heure, moment, temps",
-    "etymology": "Combine 日 (soleil) et 寺 (temple). Le temps mesuré par le mouvement du soleil dans le ciel.",
-    "mnemonic": "Le soleil 日 qui se déplace - とき (toki) = le moment où le temps s'écoule comme l'eau !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "書",
-    "readings": {
-      "kun": "か.く、-が.き、-がき",
-      "on": "ショ"
-    },
-    "meaning": "écrire, écrit",
-    "etymology": "書 combine 聿 (pinceau tenu à la main, pictogramme d'un pinceau) et 曰 (bouche qui s'exprime, distinctement différent de 日 soleil). La composante supérieure 聿 représente le pinceau en action ; 曰 en bas représente les paroles fixées par l'écrit. Écrire, c'est fixer la parole par le pinceau.",
-    "mnemonic": "Le pinceau 聿 qui capture la parole 曰 — SHO (ショ) ! Attention : la partie basse est 曰 (yuē, 'dire') et non 日 (soleil). 書く (kaku) = écrire, c'est immortaliser les mots. Le pinceau transforme la voix en trace durable !",
-    "jlpt": "N5"
-  },
-  {
-    "kanji": "読",
-    "readings": {
-      "kun": "よ.む、-よ.み",
-      "on": "ドク、トク、トウ"
-    },
-    "meaning": "lire, lecture",
-    "etymology": "Combine 言 (parole) et 卖 (échange). Les paroles écrites qu'on déchiffre et partage.",
-    "mnemonic": "Les paroles 言 alignées sur la page - よ.む (yomu) = lire les mots qui vous chuchotent leurs secrets !",
-    "jlpt": "N5"
-  }
+{"kanji":"一","meaning":"one","components":["one"],"rtk_frame":1,"rtk_keyword":"one","etymology":"Pure ideograph (指事): a single horizontal stroke — one counting rod laid on the ground. The simplest possible written sign, unchanged since oracle-bone script.","mnemonic":"One stroke, one finger laid flat, one horizon. Everything in the writing system is built on top of this line — it is the floor the other kanji stand on.","jlpt":"N5"},
+{"kanji":"二","meaning":"two","components":["one","one"],"rtk_frame":2,"rtk_keyword":"two","etymology":"Ideograph: two counting rods. The upper stroke is slightly shorter, as when two rods are laid neatly one above the other.","mnemonic":"Two shelves: a short one on top, a long one below. Count them out loud — に, に — like knocking twice on a door.","jlpt":"N5"},
+{"kanji":"三","meaning":"three","components":["one","two"],"rtk_frame":3,"rtk_keyword":"three","etymology":"Ideograph: three counting rods. Heaven, humankind and earth in the old Chinese reading of the three lines — top, middle, bottom.","mnemonic":"Three floors of a building seen from the side. The middle floor is the smallest — the child between two parents.","jlpt":"N5"},
+{"kanji":"四","meaning":"four","components":["enclosure","legs"],"rtk_frame":4,"rtk_keyword":"four","etymology":"Originally written as four stacked bars (亖); the current form — breath dispersing from a mouth, drawn as legs inside a box — was borrowed for its sound over 2,000 years ago.","mnemonic":"A window (the box) with a pair of legs dangling out of it: four legs in all if you count the window's own two sides. よん — the yawn of someone climbing out of that window.","jlpt":"N5"},
+{"kanji":"五","meaning":"five","components":["crossing lines"],"rtk_frame":5,"rtk_keyword":"five","etymology":"Ideograph: originally an X between two horizontal lines — a tally device marking the halfway point of ten. The X 'crosses over' at five.","mnemonic":"The tally-keeper's shortcut: when you reach five, you stop drawing sticks and cross them off — ご! Four strokes that mean one full hand of fingers.","jlpt":"N5"},
+{"kanji":"六","meaning":"six","components":["lid","animal legs"],"rtk_frame":6,"rtk_keyword":"six","etymology":"Originally the pictograph of a small hut with a roof; the word for 'six' was written with it purely for its sound (rebus borrowing).","mnemonic":"A tiny hut: pointed roof on top, two legs for walls. Six people are crammed inside — ろく, they groan, as the roof creaks.","jlpt":"N5"},
+{"kanji":"七","meaning":"seven","components":["cut line"],"rtk_frame":7,"rtk_keyword":"seven","etymology":"Originally a picture of a line being cut crosswise — it was the first way of writing 切 'to cut'. Borrowed early on for the number seven.","mnemonic":"An upside-down seven with a hook. A knife slicing diagonally through a line: cut a cake into seven pieces — しち slices.","jlpt":"N5"},
+{"kanji":"八","meaning":"eight","components":["divide"],"rtk_frame":8,"rtk_keyword":"eight","etymology":"Ideograph: two strokes leaning away from each other — the act of dividing something in two. Eight is the number you reach by halving three times (2·2·2).","mnemonic":"Two ski tracks parting on the slope. Divide, divide, divide: 2, 4, 8 — はち. The strokes never touch, like a pie split for sharing.","jlpt":"N5"},
+{"kanji":"九","meaning":"nine","components":["bent arm"],"rtk_frame":9,"rtk_keyword":"nine","etymology":"Originally a pictograph of a bent elbow with a hand reaching in — borrowed for the number nine since oracle-bone times.","mnemonic":"A baseball pitcher's arm frozen mid-throw, elbow bent, wrist hooked: nine innings, きゅう. The hook at the end is the ball leaving the hand.","jlpt":"N5"},
+{"kanji":"十","meaning":"ten","components":["cross"],"rtk_frame":10,"rtk_keyword":"ten","etymology":"Originally a single vertical stroke (a needle — the ancestor of 針); a dot, later a crossbar, was added to distinguish it. Borrowed for 'ten': one full crossing of both hands' fingers.","mnemonic":"A perfect cross: all ten fingers of two open hands meeting at right angles. じゅう — the intersection where the count is complete.","jlpt":"N5"},
+{"kanji":"口","meaning":"mouth","components":["mouth"],"rtk_frame":11,"rtk_keyword":"mouth","etymology":"Pictograph (象形): an open mouth, squared off by the brush. One of the most productive components in the writing system — anything spoken, eaten or shouted tends to contain it.","mnemonic":"A wide-open mouth turned into a square frame. Every time you spot this box in a kanji, someone is talking, eating or shouting — くち.","jlpt":"N5"},
+{"kanji":"日","meaning":"day, sun","components":["sun"],"rtk_frame":12,"rtk_keyword":"day","etymology":"Pictograph: the sun — originally a circle with a dot at its center, squared by the brush into a rectangle with a bar. One sun crossing the sky = one day.","mnemonic":"A window with the blind half-drawn: through it, the sun. One sunrise per day — ひ, the sun; にち, the day it makes.","jlpt":"N5"},
+{"kanji":"月","meaning":"month, moon","components":["moon"],"rtk_frame":13,"rtk_keyword":"month","etymology":"Pictograph: the crescent moon with two shading strokes inside. One full cycle of the moon = one month.","mnemonic":"The sun's window (日) grew legs and slimmed down for the night shift: the moon. It waxes and wanes once a month — つき / ゲツ, as in 月曜日, the moon's own day.","jlpt":"N5"},
+{"kanji":"目","meaning":"eye","components":["eye"],"rtk_frame":15,"rtk_keyword":"eye","etymology":"Pictograph: an eye with its pupil, drawn horizontally on the oracle bones and later stood upright by the brush.","mnemonic":"An eye standing on end: the two inner bars are the iris and pupil. Stack it next to 日 and 月 — sun, moon, and the め that watches them both.","jlpt":"N5"},
+{"kanji":"古","meaning":"old","components":["ten","mouth"],"rtk_frame":16,"rtk_keyword":"old","etymology":"Compound ideograph (会意) by the classic account: ten (十) mouths (口) — a story that has passed through ten generations of tellers is old indeed.","mnemonic":"Ten mouths have told this tale before yours: it is ancient — ふるい. Picture a weathered cross planted over a stone box, standing there for centuries.","jlpt":"N5"},
+{"kanji":"白","meaning":"white","components":["drop","sun"],"rtk_frame":37,"rtk_keyword":"white","etymology":"Origin debated: commonly explained as a ray of light breaking from the sun (日 with a spark on top), or as a white acorn. Its 'bright, plain' sense is ancient.","mnemonic":"The first drop of daylight hitting the sun's window at dawn: everything bleaches white — しろ. A sunbeam with the brightness turned all the way up.","jlpt":"N5"},
+{"kanji":"百","meaning":"hundred","components":["one","white"],"rtk_frame":38,"rtk_keyword":"hundred","etymology":"Phono-semantic (形声): one (一) on top for the count, white (白) beneath lending the ancient sound. One 'white' = one hundred.","mnemonic":"One (一) white (白) hair — the first of a hundred to come, says your grandmother. ひゃく! Count to one hundred and you've earned exactly one white hair.","jlpt":"N5"},
+{"kanji":"中","meaning":"in, middle","components":["line through center"],"rtk_frame":39,"rtk_keyword":"in","etymology":"Ideograph: a pole planted through the exact center of a camp or banner — dead middle. Oracle-bone forms show a flagpole with streamers.","mnemonic":"An arrow through the bullseye of a target box: right in the middle — なか. In compounds it means 'inside' or 'throughout': 中国, the Middle Country.","jlpt":"N5"},
+{"kanji":"千","meaning":"thousand","components":["drop","ten"],"rtk_frame":40,"rtk_keyword":"thousand","etymology":"Formed in oracle-bone script from person (人) + one (一) as a phonetic-numeric device: 'one (unit of) persons' = a thousand.","mnemonic":"A ten (十) wearing a swept hat: promoted a hundred ranks overnight — せん, one thousand. The hat is the zero-multiplier.","jlpt":"N5"},
+{"kanji":"上","meaning":"above, up","components":["line","mark above"],"rtk_frame":49,"rtk_keyword":"above","etymology":"Pure ideograph: a short mark placed above a base line. Its twin 下 puts the mark below. Among the oldest abstract signs in the script.","mnemonic":"A little flag planted on top of the ground line: up, above — うえ. The vertical stroke grows upward like a sapling; nothing hangs below the line.","jlpt":"N5"},
+{"kanji":"下","meaning":"below, down","components":["line","mark below"],"rtk_frame":50,"rtk_keyword":"below","etymology":"Pure ideograph: a short mark placed under a base line — the mirror of 上. The pair appears together on the oldest oracle bones.","mnemonic":"A root and a drop hanging under the ground line: down, below — した. Flip 上 in a mirror along the ground and it falls to become 下.","jlpt":"N5"},
+{"kanji":"見","meaning":"see","components":["eye","legs"],"rtk_frame":57,"rtk_keyword":"see","etymology":"Compound ideograph: an eye (目) set on human legs (儿) — a person shown as nothing but their looking. To see is to walk your eye over to something.","mnemonic":"An eyeball that grew legs and runs around looking at things — みる. When you 'go see' a friend, this little creature is what you send ahead.","jlpt":"N5"},
+{"kanji":"万","meaning":"ten thousand","components":["scorpion (simplified)"],"rtk_frame":64,"rtk_keyword":"ten thousand","etymology":"Simplification of 萬, originally the pictograph of a scorpion, borrowed since antiquity for the number 10,000.","mnemonic":"A scorpion with its tail curled — count its swarm of eggs: ten thousand, まん. In prices it swings that tail through your wallet: 一万円.","jlpt":"N5"},
+{"kanji":"左","meaning":"left","components":["hand","craft"],"rtk_frame":77,"rtk_keyword":"left","etymology":"Compound ideograph: a left hand (𠂇) holding a carpenter's tool (工). The left hand steadies the work while the right one acts.","mnemonic":"The hand that holds the ruler (工) while the other draws: your left — ひだり. Stroke tip: here the horizontal goes first, then the sweep — the mirror of 右.","jlpt":"N5"},
+{"kanji":"右","meaning":"right","components":["hand","mouth"],"rtk_frame":78,"rtk_keyword":"right","etymology":"Compound ideograph: a hand (𠂇) over a mouth (口) — the right hand, the one you eat with and raise to speak or swear.","mnemonic":"The hand that carries food to the mouth: your right — みぎ. Stroke tip: the sweep goes first here, then the horizontal — mirror etiquette to 左.","jlpt":"N5"},
+{"kanji":"子","meaning":"child","components":["child"],"rtk_frame":95,"rtk_keyword":"child","etymology":"Pictograph: a swaddled baby — big head, arms spread wide, legs bound together in the wrapping cloth.","mnemonic":"A baby with arms flung out and its legs still wrapped in a blanket — こ. Girls' names end with it (花子), and it hides in 好き: a woman with her child, fondness itself.","jlpt":"N5"},
+{"kanji":"女","meaning":"woman","components":["woman"],"rtk_frame":98,"rtk_keyword":"woman","etymology":"Pictograph: a figure kneeling with hands crossed — the posture of a woman in ancient formal dress. The three strokes still trace the crossed arms and folded legs.","mnemonic":"A dancer mid-curtsy, arms crossing her body — おんな. In compounds she signals the feminine: 女の子, girl; 彼女, she.","jlpt":"N5"},
+{"kanji":"母","meaning":"mother","components":["woman","two dots"],"rtk_frame":101,"rtk_keyword":"mama","etymology":"Pictograph: the woman sign (女) with two dots added for the breasts — a nursing mother. One of the most transparent kanji in the script.","mnemonic":"A woman with two dots: the mother who nursed you — はは. The frame around the dots is her embrace; every stroke leans inward, protective.","jlpt":"N5"},
+{"kanji":"小","meaning":"little, small","components":["three drops"],"rtk_frame":105,"rtk_keyword":"little","etymology":"Ideograph: three tiny points — grains of sand or slivers falling away from a blade. Smallness shown by sheer lack of material.","mnemonic":"A hook with two shy drops hiding on either side: something so small it barely exists — ちいさい. The vertical stroke is a needle; the drops, its parings.","jlpt":"N5"},
+{"kanji":"少","meaning":"few, a little","components":["small","slash"],"rtk_frame":106,"rtk_keyword":"few","etymology":"Derived from 小 (small) with an extra stroke shaving something off — smaller still in quantity: few, scarce.","mnemonic":"Take 'small' (小) and slice one more piece off with a diagonal cut: now there's hardly any left — すこし, すくない.","jlpt":"N5"},
+{"kanji":"大","meaning":"large, big","components":["person with arms spread"],"rtk_frame":107,"rtk_keyword":"large","etymology":"Pictograph: a person standing with arms and legs stretched wide — the human body making itself as big as it can.","mnemonic":"'How big was the fish?' — arms flung wide: THIS big! おおきい. A stick figure showing off maximum size with its whole body.","jlpt":"N5"},
+{"kanji":"多","meaning":"many","components":["evening","evening"],"rtk_frame":108,"rtk_keyword":"many","etymology":"Compound ideograph: two evenings (夕) stacked — night after night after night. Repetition itself made visible: many.","mnemonic":"Two crescent moons piled up like plates after a feast: one evening wasn't enough, there were many — おおい. Stack anything twice in kanji and it multiplies.","jlpt":"N5"},
+{"kanji":"外","meaning":"outside","components":["evening","divination"],"rtk_frame":111,"rtk_keyword":"outside","etymology":"Compound ideograph: evening (夕) + divination crack (卜). Divination performed at evening, outside the proper morning ritual — hence 'outside, other'.","mnemonic":"At dusk (夕) the fortune-teller reads cracks (卜) in a bone by the city gate — outside the walls, where the wild things are: そと, 外国 the lands outside.","jlpt":"N5"},
+{"kanji":"名","meaning":"name","components":["evening","mouth"],"rtk_frame":112,"rtk_keyword":"name","etymology":"Compound ideograph: evening (夕) + mouth (口). In the dark you cannot be seen — so you call out your name to be known.","mnemonic":"Too dark to see faces at dusk, so a mouth calls into the night: 'It's me!' — your name, なまえ. The password that works when eyes don't.","jlpt":"N5"},
+{"kanji":"川","meaning":"stream, river","components":["flowing water"],"rtk_frame":127,"rtk_keyword":"stream","etymology":"Pictograph: three lines of flowing water between two banks — a river drawn exactly as it looks from a hill.","mnemonic":"Three currents running side by side downhill — かわ. The outer strokes are the banks, the middle one the fast water. Found in half the place-names of Japan (小川, 川口).","jlpt":"N5"},
+{"kanji":"水","meaning":"water","components":["water"],"rtk_frame":130,"rtk_keyword":"water","etymology":"Pictograph: a central current with droplets splashing to both sides. As a left-side component it compresses into the three drops of 氵.","mnemonic":"A river seen head-on: the main stream down the middle, spray flying left and right — みず. Its on-reading スイ flows through 水曜日, Wednesday, the water day.","jlpt":"N5"},
+{"kanji":"土","meaning":"soil, earth","components":["soil"],"rtk_frame":150,"rtk_keyword":"soil","etymology":"Pictograph: a mound of earth raised on the ground line — the altar of the soil god in its oldest form.","mnemonic":"A little pile of dirt on the ground with a sprout's cross planted in it — つち. Saturday, 土曜日, is the day you dig in the garden.","jlpt":"N5"},
+{"kanji":"時","meaning":"time, hour","components":["sun","temple"],"rtk_frame":159,"rtk_keyword":"time","etymology":"Phono-semantic: sun (日) gives the meaning — time measured by the sun — while 寺 (temple) lends the reading ジ. Temples were the timekeepers, ringing the hours.","mnemonic":"The temple bell tolls as the sun moves: that is how you know the hour — とき, ジ. 何時ですか — 'what time is it?' asks the sun of the temple.","jlpt":"N5"},
+{"kanji":"安","meaning":"relax, cheap","components":["roof","woman"],"rtk_frame":190,"rtk_keyword":"relax","etymology":"Compound ideograph: a woman (女) at rest under a roof (宀) — peace, safety, ease. 'Cheap' grew later from 'easy on the purse'.","mnemonic":"Home at last, under her own roof, she finally relaxes — やすい. And relax your wallet too: this shop is 安い, reassuringly cheap.","jlpt":"N5"},
+{"kanji":"木","meaning":"tree, wood","components":["tree"],"rtk_frame":195,"rtk_keyword":"tree","etymology":"Pictograph: a tree — trunk, spreading branches, roots below. Doubled it becomes a wood (林), tripled a forest (森).","mnemonic":"Trunk up the middle, branches out, roots down — き. Thursday, 木曜日, is the tree's day. Wherever wood is worked, this kanji stands at the left of the character.","jlpt":"N5"},
+{"kanji":"本","meaning":"book, origin","components":["tree","line at root"],"rtk_frame":211,"rtk_keyword":"book","etymology":"Ideograph: a tree (木) with a stroke marking its base — the root, the origin. Books came later: the 'root' of knowledge, and paper from the tree itself.","mnemonic":"Mark the root of the tree: that is where everything begins — もと. From that root comes paper, and from paper the ほん you're reading. 日本: the land at the sun's root.","jlpt":"N5"},
+{"kanji":"先","meaning":"before, ahead","components":["footprint","legs"],"rtk_frame":248,"rtk_keyword":"before","etymology":"Compound ideograph: a foot (止, worn to a slanted form) above walking legs (儿) — a footprint out in front of the walker: whoever went ahead, before.","mnemonic":"Fresh footprints ahead of you on the trail: someone went before — さき. The 先生 is simply the one 'born before' you, walking the path first.","jlpt":"N5"},
+{"kanji":"金","meaning":"gold, money","components":["cover","earth","nuggets"],"rtk_frame":269,"rtk_keyword":"gold","etymology":"By the classic account: nuggets (the two dots) buried in layered earth (土) under a cover (𠆢) — metal in the mine. Later 'metal' in general, then gold and money.","mnemonic":"Under a little roof, in the earth, two nuggets gleam — かね, gold, money. Friday, 金曜日, is payday: the day the nuggets reach your pocket.","jlpt":"N5"},
+{"kanji":"道","meaning":"road, way","components":["movement","head"],"rtk_frame":277,"rtk_keyword":"road-way","etymology":"Compound ideograph: movement (辶) + head (首) — walking with your head leading you: the road you follow, and figuratively the Way (as in 柔道, 茶道).","mnemonic":"Your head out in front, feet rolling beneath it down the path — みち. Every martial art ends in this kanji: the road you walk your whole life, ドウ.","jlpt":"N5"},
+{"kanji":"車","meaning":"car, vehicle","components":["cart"],"rtk_frame":286,"rtk_keyword":"car","etymology":"Pictograph: a cart seen from above — the axle running vertically, the wheel-body in the middle, crossbars at each end.","mnemonic":"Bird's-eye view of a chariot: axle, cabin, two wheels — くるま. Two millennia later it still parks inside 電車 and 自転車 without a scratch.","jlpt":"N5"},
+{"kanji":"前","meaning":"in front, before","components":["horns","moon/boat","blade"],"rtk_frame":290,"rtk_keyword":"in front","etymology":"Originally a foot aboard a boat gliding forward — 'to advance'; the blade (刂) entered the character early as a graphic-phonetic addition. 'In front, before' is the settled meaning.","mnemonic":"On the prow of the boat, blade in hand, cutting the water ahead: everything in front of you — まえ. 名前 puts your name out front for the world.","jlpt":"N5"},
+{"kanji":"火","meaning":"fire","components":["fire"],"rtk_frame":173,"rtk_keyword":"fire","etymology":"Pictograph: a flame rising from a burning pile, sparks flying off both sides. As a bottom component it flattens into four dots (灬).","mnemonic":"A campfire: the central blaze and two sparks leaping away — ひ. Tuesday, 火曜日, is fire's day. Keep it away from 木 unless you want ashes.","jlpt":"N5"},
+{"kanji":"花","meaning":"flower","components":["grass crown","change"],"rtk_frame":1009,"rtk_keyword":"flower","etymology":"Phono-semantic: the grass crown (艹) gives the meaning — a plant — while 化 'change, transform' lends the reading カ. The plant transformed into its loveliest state: a flower.","mnemonic":"Under the grass crown, a plant works its transformation (化) — and blooms: はな. 花見 is the festival of watching that magic happen.","jlpt":"N5"},
+{"kanji":"魚","meaning":"fish","components":["fish"],"rtk_frame":180,"rtk_keyword":"fish","etymology":"Pictograph: a whole fish — head at the top (𠂊), scaled body (田), and a tail that later flattened into four dots (灬).","mnemonic":"Head, scaly belly, flick of a tail: a fish drawn head-up as if hauled from the water — さかな. The four dots are drops still falling from its fins.","jlpt":"N5"}
 ]

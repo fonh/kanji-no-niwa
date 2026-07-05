@@ -1,0 +1,528 @@
+[
+{
+"kanji": "茨",
+"meaning": "briar, thorn",
+"components": [
+"grass crown",
+"next (次)"
+],
+"rtk_frame": 472,
+"rtk_keyword": "briar",
+"etymology": "Phono-semantic: plants (艹) + 次 (phonetic シ) — the thorn bush: briar; Ibaraki's first kanji.",
+"mnemonic": "The hedge that bites back — いばら. 茨城: thorn-castle prefecture.",
+"jlpt": "N1"
+},
+{
+"kanji": "岡",
+"meaning": "hill, mount",
+"components": [
+"ridge frame (冂+丄)",
+"mountain"
+],
+"rtk_frame": 1961,
+"rtk_keyword": "Mount",
+"etymology": "Pictograph: the ridge line — hill; a place-name workhorse (岡山, 福岡, 静岡).",
+"mnemonic": "The hill three prefectures share — おか. 福岡: lucky hill.",
+"jlpt": "N1"
+},
+{
+"kanji": "阪",
+"meaning": "slope (Osaka)",
+"components": [
+"mound (阝)",
+"anti/flip (反)"
+],
+"rtk_frame": 1294,
+"rtk_keyword": "Heights",
+"etymology": "Phono-semantic: mound (阝) + 反 (phonetic ハン) — 坂's place-name twin: the 阪 of 大阪.",
+"mnemonic": "The slope with takoyaki at the bottom — ハン. 大阪: the big slope itself.",
+"jlpt": "N1"
+},
+{
+"kanji": "埼",
+"meaning": "cape (Saitama)",
+"components": [
+"soil",
+"strange (奇)"
+],
+"rtk_frame": 153,
+"rtk_keyword": "cape",
+"etymology": "Phono-semantic: earth (土) + 奇 (phonetic キ) — the jutting land: cape; Saitama's opener.",
+"mnemonic": "崎's inland cousin — さい. 埼玉: cape-jewel prefecture.",
+"jlpt": "N1"
+},
+{
+"kanji": "栃",
+"meaning": "horse chestnut",
+"components": [
+"tree",
+"cliff + ten thousand (万)"
+],
+"rtk_frame": 514,
+"rtk_keyword": "horse chestnut",
+"etymology": "A kokuji — made in Japan: the tochi tree: horse chestnut; Tochigi's namesake.",
+"mnemonic": "The tree Japan had to invent a kanji for — とち. 栃木: chestnut-tree prefecture.",
+"jlpt": "N1"
+},
+{
+"kanji": "阜",
+"meaning": "hill, mound",
+"components": [
+"stacked mound (pictograph)"
+],
+"rtk_frame": null,
+"rtk_keyword": "hill",
+"etymology": "Pictograph: the terraced mound — the left-side 阝's full form; Gifu's second kanji.",
+"mnemonic": "The 阝 radical, standing alone at last — フ. 岐阜: fork-hill.",
+"jlpt": "N1"
+},
+{
+"kanji": "挨",
+"meaning": "approach (greeting)",
+"components": [
+"hand (扌)",
+"plow-figure (矣)"
+],
+"rtk_frame": null,
+"rtk_keyword": "approach",
+"etymology": "Phono-semantic: hand (扌) + a phonetic (アイ) — pressing close; surviving almost solely in 挨拶.",
+"mnemonic": "The nudge into contact — アイ. 挨拶: the greeting — this kanji's entire job.",
+"jlpt": "N1"
+},
+{
+"kanji": "宛",
+"meaning": "address to",
+"components": [
+"roof",
+"bend (夗)"
+],
+"rtk_frame": 1417,
+"rtk_keyword": "address",
+"etymology": "Phono-semantic: roof (宀) + 夗 (phonetic エン) — directed to the house: addressed to (宛先).",
+"mnemonic": "The envelope's target roof — あて. 宛名: the name on the front.",
+"jlpt": "N1"
+},
+{
+"kanji": "闇",
+"meaning": "darkness",
+"components": [
+"gate",
+"sound (音)"
+],
+"rtk_frame": null,
+"rtk_keyword": "get dark",
+"etymology": "Compound: sound (音) inside the shut gate (門) — where you hear but cannot see: darkness.",
+"mnemonic": "Behind the closed gate, only sounds — やみ. 闇: night markets and dark webs.",
+"jlpt": "N1"
+},
+{
+"kanji": "椅",
+"meaning": "chair",
+"components": [
+"tree",
+"strange (奇)"
+],
+"rtk_frame": null,
+"rtk_keyword": "chair",
+"etymology": "Phono-semantic: wood (木) + 奇 (phonetic イ) — the seat with a back: chair.",
+"mnemonic": "The odd (奇) tree you sit on — イ. 椅子: the chair, at last a kanji.",
+"jlpt": "N1"
+},
+{
+"kanji": "畏",
+"meaning": "awe, fear",
+"components": [
+"field-head figure with claws"
+],
+"rtk_frame": null,
+"rtk_keyword": "fear",
+"etymology": "Pictograph: a demon-masked figure — dread mixed with reverence: awe.",
+"mnemonic": "Fear that bows — おそれる. 畏敬: awe — the mountain-shrine feeling.",
+"jlpt": "N1"
+},
+{
+"kanji": "萎",
+"meaning": "wither, droop",
+"components": [
+"grass crown",
+"entrust (委)"
+],
+"rtk_frame": null,
+"rtk_keyword": "wither",
+"etymology": "Phono-semantic: plants (艹) + 委 'bending' (phonetic イ) — the plant folding: to wilt.",
+"mnemonic": "The bouquet giving up — なえる. 萎える: plants and motivation.",
+"jlpt": "N1"
+},
+{
+"kanji": "咽",
+"meaning": "throat",
+"components": [
+"mouth",
+"cause (因)"
+],
+"rtk_frame": null,
+"rtk_keyword": "throat",
+"etymology": "Phono-semantic: mouth (口) + 因 (phonetic イン) — the passage below the mouth: throat.",
+"mnemonic": "Where every 口's business goes next — イン. 咽喉: the ENT's territory.",
+"jlpt": "N1"
+},
+{
+"kanji": "淫",
+"meaning": "lewd, excess",
+"components": [
+"water",
+"claw + burden-pole (㸒)"
+],
+"rtk_frame": null,
+"rtk_keyword": "lewdness",
+"etymology": "Phono-semantic: water (氵) + a phonetic (イン) — overflowing bounds: excess, licentious.",
+"mnemonic": "The overflow nobody mentions at dinner — イン. 淫ら: the censor's kanji.",
+"jlpt": "N1"
+},
+{
+"kanji": "臼",
+"meaning": "mortar",
+"components": [
+"mortar bowl (pictograph)"
+],
+"rtk_frame": null,
+"rtk_keyword": "mortar",
+"etymology": "Pictograph: the grinding mortar with its notched rim — mortar.",
+"mnemonic": "The bowl mochi is punished in — うす. 臼: December's workout equipment.",
+"jlpt": "N1"
+},
+{
+"kanji": "餌",
+"meaning": "bait, feed",
+"components": [
+"food (飠)",
+"ear (耳)"
+],
+"rtk_frame": null,
+"rtk_keyword": "food",
+"etymology": "Phono-semantic: food (飠) + 耳 (phonetic ジ) — food set out for animals: bait, feed.",
+"mnemonic": "Dinner with a hook in it — えさ. 餌: the aquarium's schedule.",
+"jlpt": "N1"
+},
+{
+"kanji": "怨",
+"meaning": "grudge",
+"components": [
+"bend (夗)",
+"heart"
+],
+"rtk_frame": 1420,
+"rtk_keyword": "grudge",
+"etymology": "Phono-semantic: 夗 (phonetic エン) + heart (心) — the heart bent double: resentment.",
+"mnemonic": "The heart that keeps receipts — うらみ. 怨霊: the grudge with an afterlife — J-horror's engine.",
+"jlpt": "N1"
+},
+{
+"kanji": "臆",
+"meaning": "timidity",
+"components": [
+"flesh (月)",
+"idea (意)"
+],
+"rtk_frame": null,
+"rtk_keyword": "timidity",
+"etymology": "Phono-semantic: flesh (月) + 意 (phonetic オク) — the chest where nerve lives (or fails): timidity; conjecture (臆測).",
+"mnemonic": "The chest that hesitates — オク. 臆病: cowardice, anatomically filed.",
+"jlpt": "N1"
+},
+{
+"kanji": "俺",
+"meaning": "I (rough male)",
+"components": [
+"person",
+"cover suddenly (奄)"
+],
+"rtk_frame": null,
+"rtk_keyword": "I, myself",
+"etymology": "Phono-semantic: person (亻) + 奄 (phonetic エン→おれ) — the blunt first person: ore.",
+"mnemonic": "The pronoun with its sleeves rolled — おれ. 俺: 僕's tougher brother.",
+"jlpt": "N1"
+},
+{
+"kanji": "苛",
+"meaning": "torment",
+"components": [
+"grass crown",
+"possible (可)"
+],
+"rtk_frame": null,
+"rtk_keyword": "torment",
+"etymology": "Phono-semantic: 艹 + 可 (phonetic カ) — stinging like nettles: harsh; to torment (苛める).",
+"mnemonic": "The nettle patch of words — いじめる. 苛立つ: nettled — irritation itself.",
+"jlpt": "N1"
+},
+{
+"kanji": "牙",
+"meaning": "tusk, fang",
+"components": [
+"interlocked fangs (pictograph)"
+],
+"rtk_frame": 1904,
+"rtk_keyword": "tusk",
+"etymology": "Pictograph: interlocking tusks — fang.",
+"mnemonic": "The bite drawn mid-clench — きば. 牙を剝く: baring them.",
+"jlpt": "N1"
+},
+{
+"kanji": "崖",
+"meaning": "cliff",
+"components": [
+"mountain",
+"cliff-edge (厓)"
+],
+"rtk_frame": null,
+"rtk_keyword": "cliff",
+"etymology": "Phono-semantic: mountain (山) + 厓 (phonetic ガイ) — the sheer face: cliff.",
+"mnemonic": "The mountain's abrupt opinion — がけ. 崖っぷち: the brink, career included.",
+"jlpt": "N1"
+},
+{
+"kanji": "蓋",
+"meaning": "cover, lid",
+"components": [
+"grass crown",
+"go/vessel (去皿)"
+],
+"rtk_frame": null,
+"rtk_keyword": "cover",
+"etymology": "Compound: the vessel (皿) covered over — the lid.",
+"mnemonic": "What keeps the pot honest — ふた. 蓋を開ける: finding out for real.",
+"jlpt": "N1"
+},
+{
+"kanji": "骸",
+"meaning": "bones, remains",
+"components": [
+"skeleton (骨)",
+"boar (亥)"
+],
+"rtk_frame": null,
+"rtk_keyword": "bone",
+"etymology": "Phono-semantic: bone (骨) + 亥 (phonetic ガイ) — what remains: the skeleton, remains.",
+"mnemonic": "The frame after the story ends — ガイ. 残骸: wreckage — machines' 骸.",
+"jlpt": "N1"
+},
+{
+"kanji": "柿",
+"meaning": "persimmon",
+"components": [
+"tree",
+"market-form (市)"
+],
+"rtk_frame": null,
+"rtk_keyword": "persimmon",
+"etymology": "Phono-semantic: tree (木) + a phonetic — the autumn fruit tree: persimmon.",
+"mnemonic": "The orange lanterns of November — かき. 柿: temple-roof orchards.",
+"jlpt": "N1"
+},
+{
+"kanji": "顎",
+"meaning": "jaw, chin",
+"components": [
+"startled mouths (咢)",
+"head (頁)"
+],
+"rtk_frame": null,
+"rtk_keyword": "jaw",
+"etymology": "Phono-semantic: a phonetic + head (頁) — the head's hinge: jaw.",
+"mnemonic": "The part that drops in surprise — あご. 顎が外れる: laughing too hard.",
+"jlpt": "N1"
+},
+{
+"kanji": "葛",
+"meaning": "kudzu",
+"components": [
+"grass crown",
+"beggar/stop (曷)"
+],
+"rtk_frame": null,
+"rtk_keyword": "kudzu",
+"etymology": "Phono-semantic: plants (艹) + 曷 (phonetic カツ) — the smothering vine: kudzu; tangled conflict (葛藤).",
+"mnemonic": "The vine that wins every negotiation — くず. 葛藤: inner kudzu.",
+"jlpt": "N1"
+},
+{
+"kanji": "釜",
+"meaning": "kettle, cauldron",
+"components": [
+"father (父)",
+"metal-form (金-base)"
+],
+"rtk_frame": null,
+"rtk_keyword": "kettle",
+"etymology": "Phono-semantic: 父 (phonetic フ) + 金 — the rice cauldron: kettle.",
+"mnemonic": "Dad's iron pot — かま. 釜飯: dinner cooked in the kanji.",
+"jlpt": "N1"
+},
+{
+"kanji": "瓦",
+"meaning": "tile",
+"components": [
+"interlocked roof tiles (pictograph)"
+],
+"rtk_frame": 1031,
+"rtk_keyword": "tile",
+"etymology": "Pictograph: roof tiles overlapping — tile; the gram, once.",
+"mnemonic": "The roof's fish scales — かわら. 瓦屋根: temple headwear.",
+"jlpt": "N1"
+},
+{
+"kanji": "韓",
+"meaning": "Korea",
+"components": [
+"banner sunrise (龺)",
+"tanned leather (韋)"
+],
+"rtk_frame": 1647,
+"rtk_keyword": "Korea",
+"etymology": "Phono-semantic: the old state name — Korea (韓国).",
+"mnemonic": "The neighbor across the strait — カン. 韓国: K- everything's homeland.",
+"jlpt": "N1"
+},
+{
+"kanji": "玩",
+"meaning": "play with",
+"components": [
+"jewel (王)",
+"beginning (元)"
+],
+"rtk_frame": null,
+"rtk_keyword": "play",
+"etymology": "Phono-semantic: jade (王) + 元 (phonetic ガン) — the treasured plaything: toy (玩具).",
+"mnemonic": "The gem you're allowed to touch — ガン. 玩具: the toy aisle's formal sign.",
+"jlpt": "N1"
+},
+{
+"kanji": "畿",
+"meaning": "capital region",
+"components": [
+"threads + halberd (幾)",
+"rice field"
+],
+"rtk_frame": null,
+"rtk_keyword": "capital",
+"etymology": "Phono-semantic: 幾 (phonetic キ) + 田 — the fields around the throne: the capital region: Kinki (近畿).",
+"mnemonic": "The emperor's home farmland — キ. 近畿: the Kansai region's formal name.",
+"jlpt": "N1"
+},
+{
+"kanji": "僅",
+"meaning": "a wee bit",
+"components": [
+"person",
+"clay/hardship (堇-form)"
+],
+"rtk_frame": null,
+"rtk_keyword": "a wee bit",
+"etymology": "Phono-semantic: person (亻) + 堇 (phonetic キン) — barely any: merely.",
+"mnemonic": "The margin you could exhale through — わずか. 僅か: victory by this much.",
+"jlpt": "N1"
+},
+{
+"kanji": "巾",
+"meaning": "cloth, towel",
+"components": [
+"hanging cloth (pictograph)"
+],
+"rtk_frame": null,
+"rtk_keyword": "towel",
+"etymology": "Pictograph: cloth hanging from a belt — the cloth radical, finally solo: towel.",
+"mnemonic": "The component clocking in as itself — キン. 布巾: the dish towel; 頭巾: the hood.",
+"jlpt": "N1"
+},
+{
+"kanji": "串",
+"meaning": "skewer",
+"components": [
+"two things on a stick (pictograph)"
+],
+"rtk_frame": 603,
+"rtk_keyword": "shish kebab",
+"etymology": "Pictograph: items pierced on a spit — the skewer, drawn exactly.",
+"mnemonic": "The kanji you can order grilled — くし. 串カツ: Osaka's fried proof.",
+"jlpt": "N1"
+},
+{
+"kanji": "窟",
+"meaning": "cavern",
+"components": [
+"hole (穴)",
+"bend/yield (屈)"
+],
+"rtk_frame": null,
+"rtk_keyword": "cavern",
+"etymology": "Phono-semantic: hole (穴) + 屈 (phonetic クツ) — the bent-into hollow: cave.",
+"mnemonic": "The hole you stoop into — クツ. 洞窟: the full spelunking pair.",
+"jlpt": "N1"
+},
+{
+"kanji": "稽",
+"meaning": "practice, consider",
+"components": [
+"grain (禾)",
+"utmost-form (旨-core)"
+],
+"rtk_frame": null,
+"rtk_keyword": "think",
+"etymology": "Phono-semantic: 禾 + a phonetic (ケイ) — checking against the past: to consider; drilled repetition: 稽古.",
+"mnemonic": "The dojo's word for homework — ケイ. お稽古: practice, with a bow.",
+"jlpt": "N1"
+},
+{
+"kanji": "詣",
+"meaning": "temple visit",
+"components": [
+"say",
+"utmost/delicious (旨)"
+],
+"rtk_frame": null,
+"rtk_keyword": "visit a temple",
+"etymology": "Phono-semantic: words (言) + 旨 (phonetic ケイ) — arriving to pay respects: pilgrimage (参詣).",
+"mnemonic": "The new year's first walk — もうでる. 初詣: January 1st, nationwide.",
+"jlpt": "N1"
+},
+{
+"kanji": "隙",
+"meaning": "crevice, gap",
+"components": [
+"mound (阝)",
+"small sun small (𡭴)"
+],
+"rtk_frame": null,
+"rtk_keyword": "crevice",
+"etymology": "Compound: light through the wall's crack — the gap: opening.",
+"mnemonic": "Where the light and the draft agree — すき. 隙間: the gap; 隙がない: no openings, fencer's praise.",
+"jlpt": "N1"
+},
+{
+"kanji": "桁",
+"meaning": "beam, digit",
+"components": [
+"tree",
+"going (行)"
+],
+"rtk_frame": null,
+"rtk_keyword": "beam",
+"etymology": "Phono-semantic: wood (木) + 行 (phonetic コウ→けた) — the crossbeam; the abacus rod: digit, order of magnitude.",
+"mnemonic": "The beam that carries place value — けた. 桁違い: off by a whole beam.",
+"jlpt": "N1"
+},
+{
+"kanji": "鍵",
+"meaning": "key",
+"components": [
+"metal (金)",
+"build (建)"
+],
+"rtk_frame": null,
+"rtk_keyword": "key",
+"etymology": "Phono-semantic: metal (金) + 建 (phonetic ケン) — the turning bolt: key.",
+"mnemonic": "The metal that builds the door shut and open — かぎ. 鍵: pockets everywhere, checked twice.",
+"jlpt": "N1"
+}
+]
