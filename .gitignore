@@ -68,3 +68,6 @@ scripts/sources/tatoeba_jpn_eng.json
 
 # claude memory (personal, not project)
 .claude/
+
+# japanese learning books (PDFs, copyright) — local only
+scripts/sources/japanse books/
