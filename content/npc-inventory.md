@@ -531,7 +531,7 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 | Super Nerd Hugh (2F), Marcus (1F fond) ; Poké Maniac Harrison (1F fond) | Dresseurs internes | — | |
 | Black Belt Kiyo ("Karate King") | Médite tout au fond (B1F, accessible via traversée d'eau) ; combat-épreuve, offre un compagnon en cas de victoire | Compagnon (récompense narrative) | |
 
-**Side quests dans cette zone** : 0 (décor uniquement en v1, candidat mini-donjon dōjō pour une extension post-v1)
+**Side quests dans cette zone** : 1 — mini-donjon dōjō du Karate King Kiyo, réintégré v1 (2026-07-06, décision « aucune v2 », chiffrage audit 09 ; voir `content/side-content-inventory.md` § E1)
 **Objets à aller chercher dans cette zone** : 1 (compagnon offert par Kiyo)
 
 ---

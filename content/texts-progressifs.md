@@ -319,12 +319,26 @@ Strength, Waterfall, Whirlpool).
    PNJ/événement précis soit celui qui remet ou révèle le texte.
 2. **Tous les textes (`tier` obligatoire et secondaire) dont `zone_id ∈ unlocked_zones[]` sont présents
    dans `text_completions`** — réutilise l'état déjà tracké (`user_map_state.unlocked_zones[]`,
-   `text_completions`), aucune nouvelle table nécessaire.
+   `text_completions`), aucune nouvelle table nécessaire. *(Corrigé 2026-07-06, audit 02, finding
+   02-C2 : cette condition est désormais un vrai type du modèle — `Condition.all_texts_read`, sans
+   paramètre, recalculé à chaque évaluation, jamais stocké. Aucun des 6 types d'origine ne savait
+   exprimer une comparaison ensembliste à périmètre dynamique.)*
 
 Si la condition 1 est vraie mais pas la 2, le PNJ délivre une ligne de blocage (même mécanique
 `sight_auto`/`block` que le blocage d'ordre des leçons) plutôt que le texte — voir § Déclenchement
 ci-dessus. Le joueur sait exactement quoi lire pour débloquer la suite grâce au menu ci-dessous, jamais
 une frustration "je ne sais pas ce qu'il me manque".
+
+**Invariant de placement anti-deadlock (ajouté 2026-07-06, audit 02) :** un texte doit être
+atteignable **sans aucun CS-Kanji** au moment où sa zone se débloque — exception tolérée uniquement
+si le CS requis pour l'atteindre est obtenu strictement avant le déblocage de cette zone. Sans cette
+règle, un texte placé derrière un obstacle CS (plan d'eau, arbre à couper, rocher) dans une zone
+débloquée tôt rendrait `all_texts_read` insatisfiable : impossible de lire le texte sans le CS,
+impossible d'obtenir le CS sans avoir tout lu — jeu bloqué définitivement. La règle s'impose à la
+passe de placement des textes (les emplacements précis ne sont pas encore choisis, voir § Sources) et
+se vérifie mécaniquement à la production : croiser chaque `npc_ref`/`found_object_ref` avec les
+`map_obstacles` de sa zone (table ajoutée au schéma par l'audit 02, voir `PRD.md` § Implémentation)
+et l'ordre d'obtention des CS-Kanji. Vivier de placement : `content/side-content-inventory.md`.
 
 **Pourquoi ce modèle plutôt que l'ancien** : la maîtrise FSRS d'un seul kanji est un événement ponctuel et
 individuel (peut arriver n'importe quand, sans lien avec ce que le joueur a réellement parcouru) ; "avoir

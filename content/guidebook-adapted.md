@@ -65,13 +65,13 @@ Le PRD ne couvrait à l'origine que 10 classes. Le guidebook en révèle 16 de p
 
 ## PNJ récurrents transversaux (sourcés du guidebook)
 
-Ces personnages traversent plusieurs zones dans le jeu original. Adaptation optionnelle (non requise par le PRD v1) mais documentée ici car réutilisable pour des quêtes filées multi-zones.
+Ces personnages traversent plusieurs zones dans le jeu original. Documentés ici car réutilisables pour des quêtes filées multi-zones — les cas calendaires (photographe, frères/sœurs du jour) sont v1 via `Condition.time_window` (tranché 2026-07-06, audit 02).
 
 - **"Photographe itinérant"** (orig. Photographer Cameron) — apparaît dans une dizaine de zones différentes selon un calendrier hebdomadaire fixe (ex. mardi/jeudi/samedi sur telle route, lundi/mercredi ailleurs), seulement après le badge de Doublonville/Goldenrod. Bon candidat pour un PNJ "carnet de voyage" qui débloque des fragments de lore/texte au fil des jours.
 - **"Le chasseur de légende"** (orig. Eusine) — rencontré à Tour Embrasée (Ecruteak/Burned Tower), Irisia (Cianwood) et Route 42. Obsédé par la poursuite d'un kanji-esprit légendaire (orig. Suicune) ; tient le mystère non résolu de "qui est son grand-père" — un fil narratif multi-zones jamais bouclé dans le jeu original, réutilisable comme quête de lore ouverte.
 - **"Le gardien de réserve"** (orig. Baoba) — rencontré Route 39, rappelle plus tard par téléphone, puis revu à l'entrée de la Safari Zone (zone hors-scope dans 漢字の庭, donc ce fil est probablement à couper ou à transformer en simple PNJ ambiant).
 - **Bill** (déjà cité dans le PRD comme inventeur du PC) — rencontré au Centre Pokémon d'Ecruteak puis revu à Goldenrod ; structure "rencontré ici, payoff ailleurs" réutilisable pour un PNJ de leçon différée.
-- **Frères/sœurs du jour** (orig. Day-of-the-Week Siblings) — 7 PNJ dispersés à travers Johto (Route 32 ×2, Route 29, Route 36, Route 40, Lac Colère, Ebènelle), chacun visible un seul jour de la semaine, donnant un objet à la première rencontre. Une maison sur Route 26 contient un carnet qui les liste tous. **Mécanique optionnelle v2** : pourrait devenir un système de "leçon hebdomadaire" calé sur le jour réel (cohérent avec la boucle quotidienne SRS du PRD), mais n'est pas dans le scope v1.
+- **Frères/sœurs du jour** (orig. Day-of-the-Week Siblings) — 7 PNJ dispersés à travers Johto (Route 32 ×2, Route 29, Route 36, Route 40, Lac Colère, Ebènelle), chacun visible un seul jour de la semaine, donnant un objet à la première rencontre. Une maison sur Route 26 contient un carnet qui les liste tous. **Mécanique v1 (tranché 2026-07-06, audit 02 — décision « aucune v2 ») :** modélisée par `Condition.time_window` (jour de semaine réel), cohérente avec la boucle quotidienne SRS du PRD — un jeu ouvert chaque jour peut avoir des PNJ qui n'existent que le mardi.
 - **Kurt** — voir azalea-town ci-dessous pour le système Apricorn → Boule complet (sourcé et corrigé).
 - **Lance** — fil narratif majeur : rencontré au Lac Colère (après l'événement Gyarados rouge) → accompagne le joueur au QG Rocket de Mahogany Town → réapparaît à l'Antre du Dragon où l'on apprend qu'il est le petit-fils du Maître du Dragon et le frère aîné de Clair. Cette parenté Lance/Clair/Maître est un fil filé sur 3 zones, à préserver si possible dans l'adaptation (déjà esquissé par le PRD via le double combat Lance+joueur vs Ariana).
 
@@ -201,7 +201,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ✅ Positions dresseurs sur les deux routes (5–6 par route)
-- 🔄 Dark Cave (entrée sur Route 31) → **Grotte Sombre** sur la carte, décor uniquement en v1, intérieur non jouable
+- 🔄 Dark Cave (entrée sur Route 31) → **Grotte Sombre** sur la carte — réintégration v1 actée (2026-07-06, « aucune v2 », chiffrage audit 09), voir section route-45/dark-cave
 - 📍 Route 31 : Lyra/Ethan (NPC fixe) donne un item d'accueil une seule fois
 - Classe dresseurs : Gamin, Campeur, Fillette, puis dès R31 : Sage (NPC ambiant)
 
@@ -215,7 +215,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 - **Professeur Oak** — présent chez Mr. Pokémon, anime ensuite une émission radio de conseils ; figure de mentor à distance.
 - Route 31 : **un jeune homme près d'un Apricorn noir** confie une quête de livraison ("porte ce message à mon contact") contre récompense — modèle de quête-courrier simple.
 - "Lisez les panneaux" est un conseil explicite du guide — bon hook pour des leçons de lecture environnementale.
-- Grotte Sombre (Dark Cave) : entrée confirmée précisément sur Route 31 ; zone à deux entrées (Violet City / Ebènelle) traversée par un long tunnel — gating à deux temps (1ère traversée demande peu, 2e traversée demande plus) → bon modèle pour un "retour avec nouvelles connaissances" si jamais réactivé en v2.
+- Grotte Sombre (Dark Cave) : entrée confirmée précisément sur Route 31 ; zone à deux entrées (Violet City / Ebènelle) traversée par un long tunnel — gating à deux temps (1ère traversée demande peu, 2e traversée demande plus) → bon modèle pour un "retour avec nouvelles connaissances". **Réintégration v1 actée (2026-07-06, décision « aucune v2 ») — périmètre exact chiffré à l'audit 09** (impact sur les comptes de progression de l'audit 01).
 
 **Inventaire PNJ exhaustif (passe 2, source PDF — corrige et précise la passe 1) :**
 - **Dresseurs confirmés** : Route 30 = **Bug Catcher Wade**, **Youngster Joey** ; Route 31 = **Bug Catcher Don**, **Youngster Mikey** (la passe 1 avait l'attribution inversée et incertaine — corrigé ici par lecture directe du texte propre).
@@ -411,7 +411,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - **Rival (Silver)** — défi au portail ouest de la ville, vers Forêt Secte (Battle 2).
 - **Charcoal Man** — sa maison : ses Farfetch'd-analogues se sont enfuis en forêt ; son apprenti part les chercher.
 - **Mart** (comptoir du fond) : Bloom Mail, Heal Ball, Net Ball.
-- **Table complète des Frères/sœurs du jour** (confirmée par recoupement multi-zones, utile pour une éventuelle mécanique calendaire v2) : Monica (Route 40, lundi), Wesley (Lac Colère, mercredi), Frieda (Route 32, vendredi), Sunny (Route 37, dimanche), Tuscany (Route 29, mardi), Arthur (Route 36, jeudi), Santos (Ebènelle, samedi). Tous donnent un objet à la 1ère rencontre, puis un ruban-collection une fois les 7 rencontrés. Leur maison-index commune est sur Route 26.
+- **Table complète des Frères/sœurs du jour** (confirmée par recoupement multi-zones — mécanique calendaire v1 via `time_window`, tranché 2026-07-06, audit 02) : Monica (Route 40, lundi), Wesley (Lac Colère, mercredi), Frieda (Route 32, vendredi), Sunny (Route 37, dimanche), Tuscany (Route 29, mardi), Arthur (Route 36, jeudi), Santos (Ebènelle, samedi). Tous donnent un objet à la 1ère rencontre, puis un ruban-collection une fois les 7 rencontrés. Leur maison-index commune est sur Route 26.
 
 ---
 
@@ -581,7 +581,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Sourcé du guidebook — confirmation du puzzle Sudowoodo :**
 - Le teaser ("un arbre qui bouge") est posé par un PNJ à Violet City (voir section violet-city), payé ici par un arbre immobile bloquant la route ; la résolution passe par un objet-arrosoir obtenu à Doublonville/Goldenrod, donné par la fleuriste après le badge de Gym. Séquence à 3 temps (teaser → blocage → résolution avec objet d'une autre ville) directement réutilisable pour l'Obstacle 1 du PRD.
-- **Floria**, la fleuriste, remet des **Pots à Baies** en remerciement une fois l'obstacle résolu — anecdote, probablement sans usage direct (le jeu n'a pas de mécanique de jardinage), mais cohérente avec le thème "jardin" du titre si le projet veut une mini-feature de "soin" en v2.
+- **Floria**, la fleuriste, remet des **Pots à Baies** en remerciement une fois l'obstacle résolu — cohérente avec le thème "jardin" du titre — **mini-feature de "soin" réintégrée v1 (2026-07-06, décision « aucune v2 », chiffrage audit 09)** : les Pots à Baies nourrissent la quête de la ferme Moomoo (route-38/39), voir `content/side-content-inventory.md` § E10.
 - 🔍 Couleurs d'Apricorns confirmées "sur les Routes 36/37" dans le texte source mais sans détail de couleur précis dans cette zone OCR — les couleurs Rouge (R37) / Bleu (R36) actuelles du doc restent une approximation à vérifier (voir section Apricorns finale).
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
@@ -640,7 +640,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 6. **Toit** : les 5 Kimono Girls accomplissent une danse rituelle traditionnelle ; la cloche/objet du joueur entre en résonance avec la cloche de la tour. Scène décrite comme "un moment de merveille et de beauté" — bonne base pour la "scène collective Kimono Girls" déjà prévue par le PRD.
 7. L'être légendaire (Ho-Oh) descend, attiré par la danse et le son de cloche ; combat au sommet.
 8. Possibilité de rejouer la rencontre après la fin du jeu si échouée la première fois.
-- **Recommandation forte pour le PRD** : cette séquence en 8 temps (gardien → sentier → ascension à étages avec mini-puzzles → toit → danse rituelle → apparition) est un matériau bien plus riche que "bâtiment tappable, scène collective" — candidat naturel pour devenir un vrai mini-donjon de fin d'arc Kimono Girls en v2, avec la danse comme climax visuel.
+- **Recommandation forte pour le PRD** : cette séquence en 8 temps (gardien → sentier → ascension à étages avec mini-puzzles → toit → danse rituelle → apparition) est un matériau bien plus riche que "bâtiment tappable, scène collective" — **mini-donjon de fin d'arc Kimono Girls réintégré v1 (2026-07-06, décision « aucune v2 », chiffrage audit 09)**, avec la danse comme climax visuel.
 
 ---
 
@@ -772,13 +772,13 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ Positions dresseurs R42 (5–6 slots)
-- 🔄 Mont Mortier → bâtiment/entrée de cave décoratif, pas de dungeon intérieur en v1
+- 🔄 Mont Mortier → intérieur réintégré v1 (2026-07-06, « aucune v2 », chiffrage audit 09) : mini-donjon dōjō, voir note Karate King ci-dessous
 - 🔒 Chemin montagneux court-circuité → 力 CS-Kanji pour passer les boulders
 
 **Sourcé du guidebook — dresseurs :** **Pêcheur Tully**, **Randonneur Benjamin**, **Collectionneur Shane** (Route 42) ; à Mont Mortier : **Intello Hugh**, **Intello Marcus**, **Collectionneur Harrison**, **Karatéka Kiyo**.
 
 **Sourcé du guidebook — Mont Mortier a un beat de "dojo caché" fort, même s'il reste décoratif en v1 :**
-📍 Un **maître méditant** (orig. "Karate King") se trouve tout au fond de la grotte, accessible seulement après une traversée d'eau. Il engage le combat si on lui parle ; en cas de victoire, il offre un compagnon "en reconnaissance de la victoire". C'est le matériau idéal si le projet veut, en v2, transformer "l'entrée de cave décorative" en un vrai mini-donjon dōjō avec un combat-épreuve final et une récompense narrative — cohérent avec l'identité Sensei/Dōjō du jeu. Recommandation : noter comme candidat fort pour une extension post-v1.
+📍 Un **maître méditant** (orig. "Karate King") se trouve tout au fond de la grotte, accessible seulement après une traversée d'eau. Il engage le combat si on lui parle ; en cas de victoire, il offre un compagnon "en reconnaissance de la victoire". C'est le matériau idéal pour transformer "l'entrée de cave décorative" en un vrai mini-donjon dōjō avec un combat-épreuve final et une récompense narrative — cohérent avec l'identité Sensei/Dōjō du jeu. **Réintégration v1 actée (2026-07-06, décision « aucune v2 », chiffrage audit 09).**
 - 🍎 Apricorns confirmés sur Route 42 : **Vert, Rose et Jaune** (trois couleurs sur la même route) — voir section Apricorns finale pour la version consolidée.
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
@@ -840,7 +840,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - ✅ L'événement "créature rouge légendaire au centre du lac" est confirmé tel quel dans le texte source (orig. Red Gyarados) — bonne fidélité du PRD sur ce point. Qu'on la batte, la capture ou la laisse fuir, le joueur obtient toujours un objet-clé (orig. Écaille Rouge) — donc le combat ne peut pas être "raté" en v1, juste gagné de façons différentes ; bon principe à transposer pour l'HP battle 怒 (toujours une récompense, peu importe l'issue précise au-delà de victoire/défaite).
 - **Lance apparaît ici**, pas à Mahogany Town : juste après le combat, près d'un panneau au bord du lac, il se présente et recrute le joueur pour enquêter à Acajou Ville — c'est le vrai point de départ du fil Lance, à corriger si le doc/PRD le placent ailleurs.
 - L'écaille/objet obtenu se ramène ensuite à **Mr. Pokémon (Route 30)** contre une récompense (Exp. Share) — boucle complète avec un PNJ déjà rencontré au tout début du jeu, bon modèle de "callback" à longue distance.
-- Ambiance : pluie permanente sur le lac sauf un jour de la semaine (orig. mercredi), qui fait aussi baisser le niveau de l'eau et révèle de nouveaux passages/dresseurs — mécanique optionnelle "jour spécial" cohérente avec le fil PNJ récurrent documenté plus haut, mais non requise pour v1.
+- Ambiance : pluie permanente sur le lac sauf un jour de la semaine (orig. mercredi), qui fait aussi baisser le niveau de l'eau et révèle de nouveaux passages/dresseurs — mécanique "jour spécial" v1 via `Condition.time_window` (tranché 2026-07-06, audit 02), cohérente avec le fil PNJ récurrent documenté plus haut.
 - 🍎 Un **Apricorn Noir**, accessible uniquement à la nage au milieu du lac (caché, invisible depuis la rive) — bon candidat pour la localisation réelle de l'Apricorn Noir actuellement mal placé à Route 33 (voir section Apricorns finale).
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
@@ -859,7 +859,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ Positions dresseurs R44 (5–6 slots)
-- 🔄 Chemin Glacé → zone traversable, pas de puzzle de glace en v1 (traversée linéaire)
+- 🔄 Chemin Glacé → zone traversable **avec puzzle de glace (corrigé 2026-07-06, audit 02 : l'ancienne mention « pas de puzzle en v1, traversée linéaire » contredisait la condition d'obtention de 滝, qui dépend du puzzle — voir structure sourcée ci-dessous)**
 - 📍 **Événement Rocket #7 — Retardataires** (optionnel) : kanji 孤、寒、凍、迷、忘. Reward : lore entry.
 - 📍 NPC quest N2 : "Mahogany" thème — quête express avec scroll caché dans la glace
 - 📍 **Kimono Girl #5 (Sayo)** dans la zone — 構成の道, kanji 組、合、成、部、品、構 (déplacé depuis Ebènelle le 2026-07-01, thème/kanji conservés tels quels)
@@ -868,7 +868,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **✅ Résolu (2026-07-01)** — dans le texte source, la 5e et dernière Kimono Girl (**Sayo**) est rencontrée précisément dans le **Chemin Glacé**, coincée près de la sortie ("ses sandales collées à la glace") — le joueur la libère d'une glissade. Moment volontairement comique ("la Kimono Girl qui fait rire d'elle-même"). Déplacée ici depuis Ebènelle et depuis l'invention "Meri" à Irisia — voir la table complète en fin de document.
 
-**Sourcé du guidebook — structure du Chemin Glacé (si réactivé comme mini-puzzle en v2) :**
+**Sourcé du guidebook — structure du Chemin Glacé (v1 — corrigé 2026-07-06, audit 02, trace obsolète : le CS-Kanji 滝 dépend déjà de ce puzzle via `event_cleared(ice_path_puzzle_solved)`, voir `content/texts-progressifs.md` § CS-Kanji — un puzzle porteur d'un CS de traversée obligatoire ne peut pas être optionnel) :**
 - Trois étages de glace coulissante ; un puzzle "pousser des rochers dans des trous" relie les étages.
 - Un objet permettant de traverser l'eau profonde (orig. HM Waterfall) est caché derrière une séquence de glissades coordonnées — bon modèle de "petit puzzle de logique" si le Chemin Glacé doit un jour devenir davantage qu'une simple traversée linéaire.
 
@@ -944,7 +944,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ Positions dresseurs R45 (4 slots)
-- 🔄 Grotte Sombre → décor uniquement, entrée visible sur la carte, pas de dungeon
+- 🔄 Grotte Sombre → réintégration v1 actée (2026-07-06, « aucune v2 », chiffrage audit 09) : tunnel à 2 entrées, gating à deux temps, homme aux BlackGlasses au fond (post-Antre du Dragon)
 
 **Sourcé du guidebook — dresseurs Route 45 :** **Karatéka Kenji**, **Randonneur Timothy**, **Randonneur Michael**, **Campeur Ted**, **Pique-niqueuse Erin**, **Randonneur Bailey**, **Dresseur Ace Ryan**, **Dresseur Ace Kelly**, **Randonneur Parry** — un roster dense (9 dresseurs), cohérent avec une route tardive de fin de parcours.
 
@@ -1419,8 +1419,8 @@ Ces zones existent dans HGSS mais ne font pas partie des 49 zones de 漢字の�
 | **Route 43** | ❌ Absente | Relie Mahogany Town au Lac Colère dans HGSS. Dans le jeu, Lac Colère est une zone directement adjacente à Acajou Ville (accès direct, pas de route séparée). Le guidebook y recense un poste de péage Team Rocket et un Apricorn Noir caché — voir section Apricorns (le Noir a été réattribué au Lac Colère). |
 | **Route 46** | ❌ Absente | Petit connecteur au nord de Route 29, bloqué par un rebord à sens unique dans HGSS ; un seul dresseur (Randonneur) y est recensé. Non repris — Route 29 garde son tease visuel de grille fermée sans zone jouable derrière. |
 | **Ruins of Alph (intérieur)** | ⚠️ Partiel | Les 4 salles intérieures avec puzzles Unown sont hors scope. Seule la zone extérieure est jouable (inscriptions + Rocket event). |
-| **Dark Cave (intérieur)** | ❌ Décor seulement | Entrée visible sur la carte, mais l'intérieur n'est pas jouable en v1. |
-| **Mt. Mortar (intérieur)** | ❌ Décor seulement (mais voir note v2) | Entrée visible sur la carte depuis Route 42, aucun dungeon intérieur en v1. Le guidebook y documente un beat de "dojo caché" fort (voir section mt-mortar) — bon candidat de contenu pour une extension post-v1. |
+| **Dark Cave (intérieur)** | 🔄 Réintégration v1 actée (2026-07-06, « aucune v2 ») | Entrée visible sur la carte ; tunnel à 2 entrées, gating à deux temps. Périmètre exact chiffré à l'audit 09. |
+| **Mt. Mortar (intérieur)** | 🔄 Réintégration v1 actée (2026-07-06, « aucune v2 ») | Entrée visible sur la carte depuis Route 42. Le guidebook y documente un beat de "dojo caché" fort (voir section mt-mortar : Karate King Kiyo + 3 dresseurs). Périmètre exact chiffré à l'audit 09 (impact progression). |
 | **Routes 47/48, Cliff Cave, Safari Zone Gate** | ❌ Hors scope | Zone Safari Zone de Cianwood (HGSS), entièrement liée à une mécanique de capture absente du jeu. Aucun équivalent prévu. |
 | **Whirl Islands** | ❌ Hors scope (variante SoulSilver) | Chemin alternatif vers Lugia, exclusif à SoulSilver ; 漢字の庭 suit le chemin Bell Tower/Ho-Oh (déjà choisi via "Tour Jo" à Rosalia), rendant les Whirl Islands sans objet. |
 | **Battle Frontier** | ❌ Hors scope | Contenu post-Hall of Fame sur Route 40 ; reste hors scope même après l'ajout des 8 gyms Kanto (2026-07-01, voir § Kanto ci-dessus) — le Battle Frontier est un système de combat annexe distinct des gyms, pas repris. |

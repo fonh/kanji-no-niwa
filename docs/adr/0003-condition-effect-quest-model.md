@@ -24,3 +24,61 @@ A full read of `content/guidebook-adapted.md` (1228 lines, all 49 zones) surface
 - `.scratch/kanji-no-niwa/PRD.md`: `map_npcs` table's `min_kanji_studied`/`blocks_until` replaced with `unlock_conditions` (`Condition[]`); new `quests` and `npc_quest_progress` tables added; `user_map_state` gained `inventory[]`.
 - `content/map/npcs.json` / `content/dialogues/npcs/.../mom_new_bark.json` updated to match (dropped the now-redundant always-true `min_kanji_studied: 0`; added an explicit `state_rules: [{ default: true, state: "intro" }]`).
 - Supersedes the ad hoc `min_kanji_studied`/`blocks_until` fields from [ADR-0001](./0001-npc-interaction-and-dialogue-state-model.md); the trigger model itself (talk-by-default, Sight Cone, `battle`/`block` results) is unchanged.
+
+## Amendment (2026-07-06, audit 02)
+
+Audit 02 walked every narrative case in `content/guidebook-adapted.md` through the model and found
+five gaps. The fixes below keep the philosophy intact (conditions are monotone, effects fire
+explicitly, `Condition[]` is a pure AND) while making previously inexpressible cases first-class:
+
+`kanji_count` is generalized to `count(metric, threshold)` — same comparison logic, parameterized
+counter (`kanji_studied`, `grammar_n5_encountered`, `kimono_met`, …). One type now covers the
+grammar gates that existed only as PRD prose (Falkner "15 N5 points seen") and Clair's "4 of 5
+Kimono Girls met" — a threshold over an unordered set, inexpressible as an AND of 4 fixed
+`npc_cleared` since the meeting order varies by route. Existing `kanji_count(N)` data reads as
+`count(kanji_studied, N)`. Because a `count` is structured data (metric, threshold, current value),
+unmet conditions are UI-renderable as progress ("512/550") for free.
+
+New `all_texts_read` (no parameters): true when every text whose `zone_id ∈ unlocked_zones[]` is in
+`text_completions`. Recomputed at evaluation time, never stored — the only condition with a dynamic
+scope (it grows as zones unlock). Carries CS-Kanji activation; comes with a content-placement
+invariant (a text must be reachable without any CS-Kanji when its zone unlocks) to prevent
+deadlocks, enforced by a production script against `map_obstacles` — see
+`content/texts-progressifs.md`.
+
+New `time_window(days_of_week?, hour_range?)`: evaluated client-side against the real clock, never
+stored. Carries the calendar NPCs (day-of-week siblings, roving photographer, Condominiums man,
+Daisy) — kept in v1 per the 2026-07-06 "no v2" decision. Multi-day visit counters (Daisy ×7, Moomoo
+farm) are ordinary Quests whose `advance_quest` is allowed once per time window — a frequency
+constraint, not a new Effect.
+
+New `map_obstacles` table (`obstacle_id, zone_id, tile_x, tile_y, unlock_conditions: Condition[]`):
+terrain obstacles (Sudowoodo, Snorlax, Indigo door, CS-Kanji tiles) had no table to carry their
+conditions — the only structural schema hole found. This is where 水's grant-vs-usability split
+lives (sea tile: `[item_owned(水), badge_earned(morty)]`).
+
+The daily SRS gate stays **outside** the model (a deliberate non-extension): every Condition is
+monotone — once true, forever true — and the engine relies on it. A `srs_done_today` condition
+would reset each morning, silently breaking the invariant for one type out of seven. It remains the
+dedicated `getDailySRSStatus` helper, gating only entry into a *new* zone.
+
+Any `Condition` accepts an optional `negate: true` modifier that inverts its evaluation — not a new
+type, a boolean on the existing shape. Audit 02 (finding 02-D1) found that "present **until** X is
+resolved" (Rocket HQ B1F alarm grunt, the lone grunt in Misty's empty gym) was inexpressible:
+[ADR-0004](./0004-multi-npc-set-pieces-need-no-new-model.md) said "two registry entries with
+complementary `unlock_conditions` (present if the alarm is active, absent otherwise)" but no type
+could write the "present if NOT cleared" half. `Condition[]` stays a pure AND; `negate` applies per
+condition — no OR, no grouping.
+
+`grant_item` idempotency is scoped by the item's `item_kind` (`unique` | `fungible`, defined in the
+new `items` table): `unique` keeps the strict rule ("already owned → no-op"); `fungible` increments
+a quantity on every valid trigger. Audit 02 (finding 02-A2): the universal rule as originally
+written broke Kurt's Apricorn→Ball loop (one ball per batch, indefinitely) and the Moomoo farm's
+berry feeding.
+
+New `Effect.remove_item`, symmetric to `grant_item` (audit 02, finding 02-D2): removes a `unique`
+item or decrements a `fungible` quantity. Needed everywhere the player hands an item over — the
+Rocket disguise (taken off when Silver blows the cover, as in the source game), every fetch-quest
+delivery (Copycat's doll, the machine part, the Secret Potion, the Red Scale, the mail), and
+Apricorns consumed by Kurt's batches. Without it no Effect could take an item back, and the Bag
+would accumulate already-delivered quest items forever.
