@@ -30,8 +30,11 @@ de méthode de ce fichier pour le détail), ce document a été enrichi de plusi
 ## Les deux règles absolues
 
 **Règle kanji :** un PNJ/panneau/inscription ne peut utiliser que les kanji que le joueur a déjà étudiés,
-plus **2 kanji inconnus maximum** (présentés en contexte lisible). Les kanji inconnus peuvent être
-affichés avec furigana — ils deviennent un moment de découverte, pas un mur.
+plus **2 kanji inconnus maximum par dialogue entier** — tous états (`dialogue_states`) et pages confondus,
+pas par page ni par phrase *(unité précisée 2026-07-06, audit 04, finding 04-A2 : trois docs portaient
+trois lectures différentes ; tranché au grill — la définition du Kanji Budget de `CONTEXT.md` fait foi,
+`PRD.md` § Silver reformulé en conséquence)*. Les kanji inconnus sont présentés en contexte lisible,
+lecture inline révélable (bouton Y) — ils deviennent un moment de découverte, pas un mur.
 
 **Règle grammaire :** chaque zone appartient à un niveau JLPT. Les structures grammaticales utilisées
 dans cette zone doivent venir du niveau indiqué (et des niveaux précédents). Les structures des niveaux
@@ -545,7 +548,9 @@ Avant d'écrire une ligne de japonais pour un PNJ, vérifier :
 4. **La phrase est-elle dans la longueur cible ?** → Voir colonne "Longueur phrase".
 5. **Les furigana sont-ils fournis pour tous les kanji du texte ?** → Oui, systématiquement en base (le joueur les révèle ou non via le bouton Y — voir note révisée sur le furigana à la demande). Ce qui compte pour l'écriture reste la règle 2 : ne pas dépasser 2 kanji inconnus, furigana ou pas.
 
-**Règle du PNJ secondaire :** les PNJ sans quête (type `trainer_fixed`) peuvent utiliser
+**Règle du PNJ secondaire :** les PNJ sans quête — PNJ ambiants et dresseurs de route sans rôle
+narratif *(« type `trainer_fixed` » purgé 2026-07-06, audit 04, finding 04-E4 : vocabulaire d'un
+modèle disparu, aucune autre occurrence dans le corpus)* — peuvent utiliser
 un niveau inférieur à la zone — ils sont là pour l'ambiance, pas pour la difficulté.
 Un Pêcheur sur la Route 32 peut parler N5 même si la zone est N4.
 

@@ -69,7 +69,7 @@ Ces personnages traversent plusieurs zones dans le jeu original. Documentés ici
 
 - **"Photographe itinérant"** (orig. Photographer Cameron) — apparaît dans une dizaine de zones différentes selon un calendrier hebdomadaire fixe (ex. mardi/jeudi/samedi sur telle route, lundi/mercredi ailleurs), seulement après le badge de Doublonville/Goldenrod. Bon candidat pour un PNJ "carnet de voyage" qui débloque des fragments de lore/texte au fil des jours.
 - **"Le chasseur de légende"** (orig. Eusine) — rencontré à Tour Embrasée (Ecruteak/Burned Tower), Irisia (Cianwood) et Route 42. Obsédé par la poursuite d'un kanji-esprit légendaire (orig. Suicune) ; tient le mystère non résolu de "qui est son grand-père" — un fil narratif multi-zones jamais bouclé dans le jeu original, réutilisable comme quête de lore ouverte.
-- **"Le gardien de réserve"** (orig. Baoba) — rencontré Route 39, rappelle plus tard par téléphone, puis revu à l'entrée de la Safari Zone (zone hors-scope dans 漢字の庭, donc ce fil est probablement à couper ou à transformer en simple PNJ ambiant).
+- **"Le gardien de réserve"** (orig. Baoba) — rencontré Route 39, rappelle plus tard par téléphone, puis revu à l'entrée de la Safari Zone. **Fil complet conservé (tranché 2026-07-06, audit 04, finding 04-D3)** : le rappel téléphonique est porté par le Pokégear-Téléphone HGSS complet (rétabli audit 04, voir PRD § Pokégear) et la Safari Zone est réintégrée en zone adaptée (on y attrape des contenus de lecture — mangas, textes — au lieu de Pokémon, voir § Zones absentes réintégrées). L'ancien « fil probablement à couper » est caduc.
 - **Bill** (déjà cité dans le PRD comme inventeur du PC) — rencontré au Centre Pokémon d'Ecruteak puis revu à Goldenrod ; structure "rencontré ici, payoff ailleurs" réutilisable pour un PNJ de leçon différée.
 - **Frères/sœurs du jour** (orig. Day-of-the-Week Siblings) — 7 PNJ dispersés à travers Johto (Route 32 ×2, Route 29, Route 36, Route 40, Lac Colère, Ebènelle), chacun visible un seul jour de la semaine, donnant un objet à la première rencontre. Une maison sur Route 26 contient un carnet qui les liste tous. **Mécanique v1 (tranché 2026-07-06, audit 02 — décision « aucune v2 ») :** modélisée par `Condition.time_window` (jour de semaine réel), cohérente avec la boucle quotidienne SRS du PRD — un jeu ouvert chaque jour peut avoir des PNJ qui n'existent que le mardi.
 - **Kurt** — voir azalea-town ci-dessous pour le système Apricorn → Boule complet (sourcé et corrigé).
@@ -156,7 +156,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **Sourcé du guidebook :**
 - Pas de dresseur nommé sur cette route dans le texte d'origine (trop tôt — pas encore de Poké Balls) ; les 8–10 dresseurs-combat seraient donc inventés (sort reporté à la synthèse, audit 01 ; « SRS » purgé, audit 03).
 - **Frère/sœur du jour Tuscany** (mardi) — PNJ spécial, pas un dresseur de classe standard. Bon candidat pour un dresseur-leçon "calendaire" optionnel (voir section PNJ récurrents).
-- 🔍 Une grille au milieu de la route mène vers "Route 46" (zone hors-scope, voir Zones absentes), bloquée par un rebord infranchissable — beat "reviens plus tard" réutilisable comme tease visuel non bloquant.
+- 🔍 Une grille au milieu de la route mène vers "Route 46" (réintégrée 2026-07-06, audit 04 — voir Zones absentes), bloquée par un rebord à sens unique comme dans HGSS — le beat "reviens plus tard" devient un vrai accès différé, plus un simple tease visuel.
 - Tagline tutoriel d'origine : "élève tes kanji pour qu'ils soient forts", "ramasse les objets en chemin" — déjà couvert par le tutoriel de marche du PRD.
 
 **Objets HGSS à garder en lore :** le panneau d'entrée de Johto ("Vous entrez dans Johto") → texte de panneau lisible par le joueur (N5, hiragana, tutoriel lecture).
@@ -255,7 +255,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Homme à lunettes noires** — bloque l'entrée du Gym tant que Tour Grospignon n'est pas visitée.
 - **Earl** — instituteur de "l'École Pokémon", trouvé errant entre le Gym et le Mart plutôt qu'à son école ; le joueur doit le ramener pour "commencer les cours".
-- **Garçon blond** — près du Centre Pokémon, échange des Éclats (obtenus au Marteau-Piqueur sur des rochers) contre des lots de 3 Baies.
+- **Garçon blond** — près du Centre Pokémon, échange des Éclats (obtenus en brisant des rochers fissurés, CS 砕 Éclate-Roc) contre des lots de 3 Baies.
 - **Garçon côté est de l'École** — invite à former un "groupe" (fonctionnalité Union Room).
 - **Jeune homme en haut de l'escalator ouest** (Centre Pokémon) — personnalisation de l'avatar Wi-Fi.
 - **Garçon à lunettes** — maison près du Centre Pokémon, PNJ d'échange (Bellsprout-analogue contre Onix-analogue) — un des 4 échanges de Johto.
@@ -353,7 +353,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 - ✅ 4–5 positions dresseurs
 - Classe : Marin, Campeur
 - 🍎 Apricorn **Noir** ×1 (tile au sud vers Azalea) — donne à Kurt → Boule de Rappel
-- ❌ Union Cave (HGSS) — cette grotte relie Azalea à Goldenrod dans HGSS mais **n'est pas dans les 49 zones**. La traversée Azalea→Ilex Forest→Route 34 remplace ce segment. Voir section "Zones absentes (v1)".
+- 🔄 Union Cave (HGSS) — relie Azalea à Goldenrod dans HGSS ; **réintégrée (2026-07-06, audit 04)**, voir section « Zones absentes » (réintégration générale). Budget et insertion chiffrés à la synthèse.
 
 **OST :** Disc 1 / 33 — Azalea Town (continuation)
 
@@ -585,7 +585,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - 🔍 Couleurs d'Apricorns confirmées "sur les Routes 36/37" dans le texte source mais sans détail de couleur précis dans cette zone OCR — les couleurs Rouge (R37) / Bleu (R36) actuelles du doc restent une approximation à vérifier (voir section Apricorns finale).
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
-- **Jeune homme près d'un panneau** (Route 36, ouest) — donne le CS Marteau-Piqueur (力, débloqué dès le badge de Falkner).
+- **Jeune homme près d'un panneau** (Route 36, ouest) — donne le CS Éclate-Roc (砕, débloqué dès le badge de Falkner) *(corrigé 2026-07-06, audit 04, finding 04-A3 : « Marteau-Piqueur (力) » contredisait les deux autres mentions de ce document (L572 et table CS) et attribuait 力 deux fois — 力 = Force, Hiker Route 42)*.
 - **Dresseurs confirmés** : Beauty Callie, Beauty Kassandra, Twins Tori & Til, Psychic Mark, School Kid Alan (cluster Route 36/37 frontière Violet City) ; Psychic Greg (frontière Rosalia, près des Apricorns).
 - **Frère/sœur du jour Sunny** (dimanche, Route 37, nord de 3 arbres Apricorn) — donne Magnet.
 - **Frère/sœur du jour Arthur** (jeudi, Route 36, nord des Ruines Arcaniques) — donne Hard Stone.
@@ -735,7 +735,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - 🔒 Toute la zone Route 40 (mer complète jusqu'à Cianwood) → accessible via 水 CS-Kanji
 - ✅ **Gym Chuck** — Arène physique, 2 門弟 + 試練 力の道, 印 n°5
 - ✅ **Pokémon Center**
-- ❌ Safari Zone Gate supprimée (Safari Zone hors scope)
+- 🔄 Safari Zone Gate réintégrée (2026-07-06, audit 04 — Safari Zone adaptée : contenus de lecture à attraper, voir § Zones absentes)
 - ❌ Pharmacie supprimée
 - ❌ Pas de Kimono Girl à Irisia (résolu 2026-07-01 — voir note ci-dessous)
 
@@ -792,7 +792,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **HGSS original :** Pryce Gym (Ice), Team Rocket HQ (caché sous le magasin de souvenirs). Route 43 relie Mahogany au Lac Colère au nord.
 
-**Note :** Route 43 n'est pas dans les 49 zones du jeu. Le Lac Colère est accessible directement depuis Mahogany Town comme zone adjacente (pas de route intermédiaire séparée). Voir section "Zones absentes (v1)".
+**Note :** Route 43 est **réintégrée (2026-07-06, audit 04)** — voir section « Zones absentes » (réintégration générale) ; l'Apricorn Noir réattribué au Lac Colère peut retrouver sa cachette d'origine à la passe contenu.
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Pryce** — Arène physique, 2 門弟 + 試練 氷の道, 印 n°7
@@ -966,7 +966,7 @@ La route se divise explicitement en un chemin est et un chemin ouest, impossible
 
 **Dans 漢字の庭 :**
 - ✅ Positions dresseurs R26 (4 slots), R27 (4 slots)
-- 📍 **Obstacle 2 — Ronflex** : kanji 眠. ⚠️ Corrigé 2026-07-03 : il n'est **pas** sur Route 27 — la ROM et le guide le placent **devant la Grotte Taupiqueur** (cellules Routes 11/12, côté Kanto, désormais au scope depuis le 2026-07-01). Bloquant, réveillé par l'émission Flûte Poké de la radio améliorée (carte EXPN, quête de la Centrale Kanto) — comme en jeu. Tapper avant → il dort profondément (animation courte + message Fukuda).
+- 📍 **Obstacle 2 — Ronflex** : kanji 眠. ⚠️ Corrigé 2026-07-03 : il n'est **pas** sur Route 27 — la ROM et le guide le placent **devant la Grotte Taupiqueur** (cellules Routes 11/12, côté Kanto, désormais au scope depuis le 2026-07-01). Bloquant, réveillé par l'émission Flûte Poké de la radio améliorée (carte EXPN, remise par le **directeur de la station radio de Lavender Town** après la quête de la Centrale Kanto — donneur précisé 2026-07-06, audit 04, finding 04-B1, Lavender réintégrée) — comme en jeu. Tapper avant → il dort profondément (animation courte + message Fukuda).
 - 🔒 Route 27 depuis New Bark Town est : nécessite 水 CS-Kanji
 
 **Sourcé du guidebook — dresseurs :** Route 26 : **Dresseur Ace Jamie**, **Dresseur Ace Jake**, **Dresseur Ace Joyce**, **Voyant Vernon**, **Pêcheur Scott**. Route 27 (côté est / Chutes de Tohjo) : **Dresseur Ace Megan**, **Dresseur Ace Blake**, **Dresseur Ace Brian**, **Voyant Eli**, **Dresseur Ace Reena**.
@@ -1184,7 +1184,8 @@ au même moment narratif que le CS/HM du jeu d'origine** (vérifié dans le text
 
 **Objets-clés distincts des CS-Kanji (comme en jeu) :** l'**Arrosoir** (Boutique de Fleurs, Doublonville,
 après le badge de Whitney) déloge le Simularbre de la Route 36 ; la **radio améliorée** (carte EXPN,
-Kanto, après la quête de la Centrale) réveille le Ronflex devant la Grotte Taupiqueur.
+remise par le directeur de la station radio de Lavender Town après la quête de la Centrale — précisé
+2026-07-06, audit 04) réveille le Ronflex devant la Grotte Taupiqueur.
 
 **Hors scope v1 :** HM08 Escalade (Prof Chen, post-16-badges) — parois d'escalade non exportées en type
 de terrain ; à trancher avec l'arc Mont Gris.
@@ -1347,7 +1348,7 @@ Les repères ci-dessus (passe 2) s'arrêtaient au contenu directement lié au Gy
 
 ### Kanto — Routes et donjons (passe 7, 2026-07-02 — ✅ formalisées en zones le 2026-07-02)
 
-Complète les rosters de dresseurs de route déjà partiels (Routes 2/3/4/7-8/11/12/13/20-21) avec toutes les zones de transit et donjons non encore couverts. Comme pour les villes, cette passe ne change aucune décision d'adaptation (les CS-Kanji restent 飛/水/力 uniquement, pas d'équivalent pour Flash/Cut/Strength/Rock Climb/Surf listés ci-dessous — cités seulement comme repère "pourquoi cette zone est verrouillée dans le jeu d'origine"). **Chaque entrée a désormais un `zone_id` et une ligne dans `content/curriculum-checkpoints.md`** (voir la table de calibration pour le budget kanji exact de chacune).
+Complète les rosters de dresseurs de route déjà partiels (Routes 2/3/4/7-8/11/12/13/20-21) avec toutes les zones de transit et donjons non encore couverts. Comme pour les villes, cette passe ne change aucune décision d'adaptation *(phrase corrigée 2026-07-06, audit 04, finding 04-A4 : la version précédente disait « les CS-Kanji restent 飛/水/力 uniquement, pas d'équivalent pour Flash/Cut/Strength/Rock Climb/Surf » — auto-contradictoire (力 est Strength, 水 est Surf) et périmée depuis le modèle à 7 CS du 2026-07-03)* : les 7 CS-Kanji (飛/水/力/切/砕/滝/渦, voir L29 et la table § CS-Kanji) couvrent Cut/Fly/Surf/Strength/Rock Smash/Waterfall/Whirlpool ; seuls **Flash** et **Rock Climb** n'ont pas d'équivalent (Flash = couloir sombre narratif, Rock Climb = hors scope jusqu'à l'arc Mont Gris, décision PRD 2026-07-03) — les mentions 🔒 ci-dessous servent de repère « pourquoi cette zone est verrouillée dans le jeu d'origine ». **Chaque entrée a désormais un `zone_id` et une ligne dans `content/curriculum-checkpoints.md`** (voir la table de calibration pour le budget kanji exact de chacune).
 
 - **`route-1-kanto`** — Route 1 (Vertville ↔ Bourg-Origine) : 4 dresseurs (Écolier Sherman, Écolier Danny, Dresseur Ace French, Dresseur Ace Quinn). Photographe itinérant en jours différents côté Vertville vs côté Bourg-Origine. Aucun obstacle.
 - **`route-6-kanto`** — Route 5 / Route 6 / Passage Souterrain (Azuria–Safranville–Vermeille) : dresseurs confirmés (Jumeaux Amy & Dani, Pique-niqueuse Selina, Campeur Virgil). Vieille dame Route 5 donne un Talisman Anti-Combat pressentant un danger. PNJ du Passage Souterrain échange une spécialité locale (RageCandyBar) contre une CT. 🔒 Passage fermé tant que la Centrale Électrique n'est pas relancée.
@@ -1406,23 +1407,23 @@ Noms et classes confirmés par lecture directe des sections de route du guide. L
 
 ---
 
-## Zones absentes du jeu (v1)
+## Zones absentes du jeu (v1) — **table caduque : réintégration générale (2026-07-06, audit 04)**
 
-Ces zones existent dans HGSS mais ne font pas partie des 49 zones de 漢字の庭. Leur absence est intentionnelle — le jeu simplifie la géographie pour réduire le scope de production.
+**✅ Décision tranchée au grill de l'audit 04 (2026-07-06) :** toute la **géographie traversable** de HGSS est réintégrée — « le vrai jeu, comme un émulateur » + « aucune v2 ». Sont réintégrées : Union Cave, Routes 41/43/46, intérieur des Ruines d'Alph, Îles Tourbillon (donjon optionnel — seul vrai terrain du CS 渦), **la Safari Zone en zone adaptée** (au lieu de Pokémon, on y attrape des contenus de lecture à collectionner — mangas, textes ; design détaillé à la synthèse), plus les zones **oubliées sans décision** par la passe Kanto : **Lavender Town** (et sa station radio — le directeur remet la carte EXPN après la quête de la Centrale, finding 04-B1) et **Routes 5/8/22**. **Seul le Battle Frontier reste hors scope** (système de combat annexe sans équivalent dans le jeu). Budgets kanji et insertion dans la table de calibration chiffrés à la synthèse (audit 09), même modèle que les réintégrations Grotte Sombre/Mont Mortier ci-dessous. La table d'origine est conservée pour référence de sourcing (dresseurs recensés par zone) :
 
 **✅ Décision tranchée (2026-07-02) — option (b) adoptée :** "je veux que ce soit le vrai jeu, comme un émulateur" — les routes/donjons Kanto sourcés § "Kanto — Routes et donjons" ci-dessus ont reçu de vrais `zone_id` et une ligne dans `content/curriculum-checkpoints.md` (14 nouvelles zones, insérées dans l'ordre réel du jeu entre les 8 gates de badge déjà fixés). Le Kanto porte désormais 900→2136 kanji *(recalibré 2026-07-05, audit 01 — Ligue plate, Mont Gris plateau bonus, voir `content/curriculum-checkpoints.md` § Recalibrage majeur)* — voir la table complète et la note associée dans `curriculum-checkpoints.md`. Seule **Grotte Azuria (Cerulean Cave)** reste un donjon post-16-badges optionnel, hors séquence principale, même statut que Grotte Sombre/Ruines d'Alph intérieur côté Johto.
 
 | Zone HGSS | Statut dans 漢字の庭 | Traitement |
 |-----------|-------------------|------------|
-| **Union Cave** | ❌ Hors scope | Relie Azalea Town à Goldenrod via Ilex Forest dans HGSS. Dans le jeu, la traversée passe directement par Ilex Forest → Route 34 sans grotte. Aucun décor Union Cave sur la carte. Le guidebook y recense 7 dresseurs nommés (Randonneurs, Maniaques, Dresseurs Ace) — non repris, hors scope confirmé. |
-| **Route 41** | ❌ Fusionnée dans Route 40 | Route maritime entre Route 40 et Cianwood. Dans le jeu, Route 40 couvre l'ensemble de la traversée en mer vers Irisia. Le guidebook y recense ~10 Nageurs supplémentaires, fusionnés conceptuellement dans le pool Route 40. |
-| **Route 43** | ❌ Absente | Relie Mahogany Town au Lac Colère dans HGSS. Dans le jeu, Lac Colère est une zone directement adjacente à Acajou Ville (accès direct, pas de route séparée). Le guidebook y recense un poste de péage Team Rocket et un Apricorn Noir caché — voir section Apricorns (le Noir a été réattribué au Lac Colère). |
-| **Route 46** | ❌ Absente | Petit connecteur au nord de Route 29, bloqué par un rebord à sens unique dans HGSS ; un seul dresseur (Randonneur) y est recensé. Non repris — Route 29 garde son tease visuel de grille fermée sans zone jouable derrière. |
-| **Ruins of Alph (intérieur)** | ⚠️ Partiel | Les 4 salles intérieures avec puzzles Unown sont hors scope. Seule la zone extérieure est jouable (inscriptions + Rocket event). |
+| **Union Cave** | 🔄 Réintégrée (2026-07-06, audit 04) | Relie Azalea Town à Goldenrod via Ilex Forest dans HGSS. Dans le jeu, la traversée passe directement par Ilex Forest → Route 34 sans grotte. Aucun décor Union Cave sur la carte. Le guidebook y recense 7 dresseurs nommés (Randonneurs, Maniaques, Dresseurs Ace) — non repris, hors scope confirmé. |
+| **Route 41** | 🔄 Réintégrée (2026-07-06, audit 04 — défusionnée de Route 40) | Route maritime entre Route 40 et Cianwood. Dans le jeu, Route 40 couvre l'ensemble de la traversée en mer vers Irisia. Le guidebook y recense ~10 Nageurs supplémentaires, fusionnés conceptuellement dans le pool Route 40. |
+| **Route 43** | 🔄 Réintégrée (2026-07-06, audit 04) | Relie Mahogany Town au Lac Colère dans HGSS. Dans le jeu, Lac Colère est une zone directement adjacente à Acajou Ville (accès direct, pas de route séparée). Le guidebook y recense un poste de péage Team Rocket et un Apricorn Noir caché — voir section Apricorns (le Noir a été réattribué au Lac Colère). |
+| **Route 46** | 🔄 Réintégrée (2026-07-06, audit 04) | Petit connecteur au nord de Route 29, bloqué par un rebord à sens unique dans HGSS ; un seul dresseur (Randonneur) y est recensé. Non repris — Route 29 garde son tease visuel de grille fermée sans zone jouable derrière. |
+| **Ruins of Alph (intérieur)** | 🔄 Réintégré (2026-07-06, audit 04) | Les 4 salles intérieures rejoignent la zone extérieure (inscriptions + Rocket event) ; l'adaptation des puzzles Unown (mécanique de capture absente) est à designer à la synthèse. |
 | **Dark Cave (intérieur)** | 🔄 Réintégration v1 actée (2026-07-06, « aucune v2 ») | Entrée visible sur la carte ; tunnel à 2 entrées, gating à deux temps. Périmètre exact chiffré à l'audit 09. |
 | **Mt. Mortar (intérieur)** | 🔄 Réintégration v1 actée (2026-07-06, « aucune v2 ») | Entrée visible sur la carte depuis Route 42. Le guidebook y documente un beat de "dojo caché" fort (voir section mt-mortar : Karate King Kiyo + 3 dresseurs). Périmètre exact chiffré à l'audit 09 (impact progression). |
-| **Routes 47/48, Cliff Cave, Safari Zone Gate** | ❌ Hors scope | Zone Safari Zone de Cianwood (HGSS), entièrement liée à une mécanique de capture absente du jeu. Aucun équivalent prévu. |
-| **Whirl Islands** | ❌ Hors scope (variante SoulSilver) | Chemin alternatif vers Lugia, exclusif à SoulSilver ; 漢字の庭 suit le chemin Bell Tower/Ho-Oh (déjà choisi via "Tour Jo" à Rosalia), rendant les Whirl Islands sans objet. |
+| **Routes 47/48, Cliff Cave, Safari Zone Gate** | 🔄 Réintégrées, Safari **adaptée** (2026-07-06, audit 04) | La mécanique de capture est remplacée : on y « attrape » des contenus de lecture à collectionner (mangas, textes — design détaillé à la synthèse). Redonne son payoff au fil Baoba (voir § PNJ récurrents transversaux). |
+| **Whirl Islands** | 🔄 Réintégrées en donjon optionnel (2026-07-06, audit 04) | Le chemin principal reste Bell Tower/Ho-Oh (Tour Jo, Rosalia) ; les Îles Tourbillon deviennent un donjon optionnel type Grotte Azuria — seul vrai terrain d'usage du CS 渦 (qui n'ouvrait sinon presque rien). |
 | **Battle Frontier** | ❌ Hors scope | Contenu post-Hall of Fame sur Route 40 ; reste hors scope même après l'ajout des 8 gyms Kanto (2026-07-01, voir § Kanto ci-dessus) — le Battle Frontier est un système de combat annexe distinct des gyms, pas repris. |
 
 ---

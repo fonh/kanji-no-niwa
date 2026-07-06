@@ -15,6 +15,14 @@ routes/donjons avec leur propre `zone_id` et budget kanji), au même titre que J
 séparée pour les routes Kanto "pas encore officielles" : tout est absorbé dans le corps principal
 ci-dessous, dans l'ordre réel de traversée du jeu.
 
+**Note (2026-07-06, audit 04) — zones réintégrées, sections à sourcer** : la géographie HGSS complète
+est réintégrée (tranché au grill, voir PRD § Géographie complète) : **Lavender Town** (station radio →
+carte EXPN), **Routes 5/8/22**, **Union Cave**, **Routes 41/43/46**, **intérieur des Ruines d'Alph**,
+**Îles Tourbillon**, **Safari Zone adaptée** (on y attrape des contenus de lecture — mangas, textes —
+au lieu de Pokémon). Seul le Battle Frontier reste hors scope. Leurs sections d'inventaire PNJ restent
+à sourcer du guidebook (même méthode que le reste du document) une fois les budgets chiffrés à la
+synthèse (audit 09).
+
 **Note (2026-07-05, audit 01) — recalibrage majeur + zéro invention** : budgets Ligue/Kanto/Mont Gris
 recalibrés (Ligue plate 870–900, Kanto porte 900→2136 en leçons poussées de 8-12 kanji, Mont Gris
 plateau bonus à 2136 — voir `content/curriculum-checkpoints.md` § Recalibrage majeur). Politique
@@ -346,13 +354,13 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Jeune homme près d'un panneau (ouest) | Donne le CS Marteau-Piqueur (力), débloqué dès le badge de Falkner | CS Marteau-Piqueur | |
+| Jeune homme près d'un panneau (ouest) | Donne le CS Éclate-Roc (砕), débloqué dès le badge de Falkner *(corrigé 2026-07-06, audit 04, finding 04-A3 : « CS Marteau-Piqueur (力) » était un double contresens — 力 = Force, déjà remis par le Hiker de la Route 42, et « Marteau-Piqueur » n'est le nom d'aucun des 7 CS-Kanji ; voir PRD § CS-Kanji et guidebook-adapted L572/1177)* | CS Éclate-Roc (砕) | |
 | Psychic Mark, School Kid Alan | Dresseurs (cluster frontière Violet City) | — | |
 | Frère/sœur du jour Arthur (jeudi) | Nord des Ruines Arcaniques | Hard Stone | |
 | Obstacle Sudowoodo | Bloque la route vers Ecruteak, résolu via l'arrosoir de Floria (Doublonville) | — | |
 
 **Side quests dans cette zone** : 0
-**Objets à aller chercher dans cette zone** : 2 (CS Marteau-Piqueur, Hard Stone)
+**Objets à aller chercher dans cette zone** : 2 (CS Éclate-Roc, Hard Stone)
 
 ---
 

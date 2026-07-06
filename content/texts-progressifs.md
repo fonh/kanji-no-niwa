@@ -306,12 +306,14 @@ débloquées.
 | 飛 (Vol) | La femme de Chuck | Après la victoire sur Chuck (Irisia) |
 | 水 (Surf) | Le Gentleman du Théâtre | Après le sauvetage de Miki, Kimono Girl #3 (Rosalia) |
 | 力 (Force) | Le Hiker anonyme | Route 42, après Mont Mortier |
-| 切 (Coupe) | Kurt (Maître du Charbon) | Après la quête Farfetch'd de Forêt Secte (Ecorcia) — séquence déjà documentée : un apprenti enseigne la technique, le joueur capture 2 Farfetch'd fuyards, retourne voir Kurt, reçoit l'objet de coupe |
+| 切 (Coupe) | Le Maître du Charbon (Charcoal Man) *(corrigé 2026-07-06, audit 04, finding 04-E2 : « Kurt (Maître du Charbon) » fusionnait deux PNJ distincts d'Ecorcia — correction déjà actée au PRD le 2026-07-03)* | Après la quête Farfetch'd de Forêt Secte (Ecorcia) — séquence déjà documentée : un apprenti enseigne la technique, le joueur capture 2 Farfetch'd fuyards, retourne voir le Maître du Charbon, reçoit l'objet de coupe |
+| 砕 (Éclate-Roc) *(ligne ajoutée 2026-07-06, audit 04, finding 04-E2 — manquait depuis l'ajout du 7ᵉ CS le 2026-07-03)* | Un garçon, Route 36 (guide p. 80) | Avant même le Simularbre, dès le badge de Falkner — comme en jeu |
 | 滝 (Cascade) | Aucun PNJ dans le jeu d'origine | `event_cleared` sur le puzzle de glissades coordonnées du Chemin Glacé — l'objet y est caché, pas remis en main propre. Le "texte obligatoire" est donc trouvé (objet, `found_object_ref`), pas reçu d'un PNJ — le modèle tolère les deux, § Déclenchement le prévoit déjà (talk pour un PNJ, sight_auto/block pour un passage verrouillé par un puzzle/objet) |
 | 渦 (Tourbillon) | Lance | Au QG Rocket (Repaire de Mékanos, Acajou), juste après la double victoire Ariana+Lance |
 
-Les 6 CS-Kanji couvrent désormais l'intégralité des CS/HM de traversée du jeu d'origine (Cut, Fly, Surf,
-Strength, Waterfall, Whirlpool).
+Les **7** CS-Kanji couvrent l'intégralité des CS/HM de traversée du jeu d'origine (Cut, Fly, Surf,
+Strength, Rock Smash, Waterfall, Whirlpool) *(compte corrigé 2026-07-06, audit 04, finding 04-E2 —
+« 6 » et la table sans 砕 dataient d'avant l'ajout de Rock Smash le 2026-07-03)*.
 
 **Condition d'activation** : `Condition` composite —
 1. Le joueur a atteint le moment narratif (`npc_cleared`/`event_cleared`, ex. `chuck_defeated` ou

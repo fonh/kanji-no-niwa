@@ -28,12 +28,12 @@ _Avoid_: blocking NPC, guard
 The named variant of what an NPC or Trainer currently says, selected by the player's progress (e.g. `intro`, `post_battle`, `blocked`). A character's line is never fixed for the whole game — it changes as the story moves forward.
 _Avoid_: dialogue line, script
 
-**Adaptive Furigana**:
-The per-kanji choice to show or hide an already-authored inline reading, based on whether the player has studied that kanji yet. The reading itself is always written by hand by the content author — never computed at runtime from a dictionary.
-_Avoid_: auto-furigana, computed furigana
+**Inline Reading** *(renamed from "Adaptive Furigana" 2026-07-06, audit 04 — the adaptive per-kanji display was abolished 2026-07-01; readings are now always hidden by default and toggled page-wide by the Y button)*:
+A hand-authored reading written directly in the `jp` string, in full-width parentheses immediately after the kanji run it covers (`道場（どうじょう）`) — never computed at runtime from a dictionary. Format norm: ADR-0002.
+_Avoid_: auto-furigana, computed furigana, adaptive furigana
 
 **Kanji Budget**:
-The calibration rule that a single dialogue — across all its Dialogue States and pages combined — may use at most 2 kanji the player hasn't studied yet, on top of kanji already known. Applies per dialogue, not per page or sentence. Character names are exempt and always shown with Adaptive Furigana regardless of mastery.
+The calibration rule that a single dialogue — across all its Dialogue States and pages combined — may use at most 2 kanji the player hasn't studied yet, on top of kanji already known. Applies per dialogue, not per page or sentence *(confirmed as the authoritative unit 2026-07-06, audit 04, finding 04-A2)*. Character names are exempt from the budget; their Inline Readings follow the same Y-button reveal as everything else.
 _Avoid_: unknown kanji limit (per line)
 
 **Condition**:
