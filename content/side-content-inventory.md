@@ -89,7 +89,7 @@ quotidienne SRS de l'app.
 | C12 | Fille aux 3 décorations gratuites par jour | olivine-city | L719 | Quotidien |
 | C13 | Pluie permanente au Lac Colère sauf le mercredi (niveau d'eau baissé → nouveaux passages/dresseurs Aaron & Lois) | lake-of-rage | L843, L851 | Hebdo — variante météo/terrain calendaire |
 | C14 | Personnel rotatif du Tunnel de Doublonville (Salon, Herboriste, Discount) | goldenrod-city | L517 | Hebdo ; faible valeur narrative, noté pour exhaustivité |
-| C15 | Concours d'insectes du Parc National (mar/jeu/sam dans la source ; supprimé du scope — mécanique de capture) | national-park | L537, L541, L561 | Noté pour mémoire : créneau réutilisable si le Pokéathlon veut un événement calendaire |
+| C15 | Concours du Parc National (mar/jeu/sam) — **réintégré, adapté (2026-07-06, audit 04 session 4, doctrine « tout utilisable » — remplace « supprimé du scope »)** : collecte/lecture chronométrée sur le modèle de la Safari adaptée, classement contre des concurrents sourcés ; design à la synthèse | national-park | L537, L541, L561 | Créneau calendaire de la source conservé tel quel |
 
 ## D. Fils narratifs multi-zones (PNJ récurrents)
 

@@ -110,9 +110,9 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ✅ **Dōjō de Fukuda** (remplace le labo Elm) — point de départ, écran d'onboarding, retour entre les leçons
-- ✅ **Maison de Fukuda** — tappable → ouvre l'écran de Fukuda (dōjō) *(« accéder à `/sensei` » purgé 2026-07-06, chasse aux reliques audit 04 : chemin d'URL d'un ancien design web-app, aucune route de ce nom dans l'app)*. Post-game : fenêtre allumée en permanence.
+- ✅ **Maison de Fukuda** — intérieur réel navigable ; Fukuda s'y trouve, lui parler ouvre l'écran du dōjō *(« tappable → ouvre l'écran » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » ; « accéder à `/sensei` » purgé plus tôt le même jour : chemin d'URL d'un ancien design web-app)*. Post-game : fenêtre allumée en permanence.
 - ✅ **Maison de Mom** — réintroduite (2026-07-01). ⚠️ **Corrige une incohérence** : la version précédente de cette section supprimait la maison du joueur ("la ville entière est le home narratif") tout en gardant Mom dans l'inventaire PNJ ci-dessous — elle n'avait alors plus aucun lieu où apparaître sur la carte. Mom y est un PNJ ambiant (`trigger_type: talk`, un seul état `intro` pour l'instant), première ligne de dialogue du jeu entier — voir `content/dialogues/npcs/new-bark-town/mom_new_bark.json`.
-- 🔄 **Panneau de départ** (Route 29 est) — tapable, montre la première leçon complétée. Apparaît uniquement post-Red.
+- 🔄 **Panneau de départ** (Route 29 est) — entrée `kind: sign` du registre, lecture via bouton A (finding 04-C3) ; montre la première leçon complétée. Apparaît uniquement post-Red.
 - 📍 Onboarding (Fukuda + leçon 一), Prof Elm apparition post-Lance *(« événement seuil rank 4 (note de Fukuda sur la carte) » purgé 2026-07-06, audit 03, finding 03-E1 — aucun système de « rank » n'existe dans les docs actuels ; si une note de Fukuda sur la carte est souhaitée, son déclencheur se redéfinira en synthèse sur les compteurs réels : kanji étudiés, badges, quêtes)*
 - 🔒 Route 27 (est) → Plateau Indigo : accessible via 水 CS-Kanji (Surf sur la rivière)
 
@@ -174,7 +174,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ✅ **Pokémon Center** — point d'entrée alternatif de la session SRS quotidienne ("Commencer la session" — même session/file/✓ que Fukuda/Pokégear, adopté 2026-07-06, audit 03, finding 03-E3), soin narratif *(« Mode Direct (Start Session) » et « accès `/library` » purgés — vocabulaire d'un ancien design)*
-- ❌ Pokémart simplifié — pas de système d'achat dans le jeu
+- 🔄 **Pokémart** — bâtiment réel à intérieur navigable, vendeur sourcé *(« simplifié, pas de système d'achat » révisé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » : la fonction d'achat dépend de la question monnaie — tension déjà relevée en session 3 (jetons Game Corner, `monnaie` fongible de l'audit 02, « Heal Ball (vente) ») — à trancher à la synthèse, candidat #6)*
 - 🔒 Accès mer (Route 40 direction) → nécessite 水 CS-Kanji, débloqué bien plus tard
 - Trainers de route : Route 29 continue, classes Gamin/Fillette
 
@@ -272,10 +272,10 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **HGSS original :** tour à 3 étages avec Sages. Bellsprout géant au centre.
 
 **Dans 漢字の庭 :**
-- 🔄 Bâtiment tappable depuis la carte de Mauville
+- ✅ **Intérieur réel multi-étages 1F→3F** (un `zone_id` par étage, ADR-0004) *(« bâtiment tappable » et « scène narrative statique » corrigés 2026-07-06, audit 04 session 4, doctrine « tout utilisable » — aligné sur la section violet-city déjà corrigée à la session 3)*
 - ✅ **Inscription ancienne** lisible en japonais (niveau N5/N4) — quête NPC Violet City "aller lire l'inscription"
 - 📍 Lore : les Sages de la tour gardent les premiers kanji cursifs de Johto
-- Pas de trainers internes en v1 (l'intérieur est une scène narrative statique)
+- ✅ **Dresseurs internes** : les 6 Sages nommés (Neal, Troy, Jin, Nico, Edmond, Chow) + l'Ancien Li au sommet, Silver en scène passive au 3F (inventaire F24 — « pas de trainers internes » contredisait ce roster déjà sourcé)
 
 **Sourcé du guidebook :**
 - Dresseurs internes (3 étages) : **Sage Troy**, **Sage Jin**, **Sage Nico**, puis au sommet **Ancien Li** qui bat le joueur et révèle que Silver est présent au même étage, en train de se faire sermonner sans écouter — bon modèle pour une rencontre Silver "passive" (il est là pour la même raison que le joueur, mais ne l'affronte pas).
@@ -325,11 +325,11 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **Dans 漢字の庭 :**
 - 🔄 Zone accessible après avoir battu l'événement Rocket Éclaireurs sur Route 32
 - 📍 **Événement Rocket #2 — Pillage des Inscriptions** (optionnel) : kanji 文、字、古、記、史
-- ✅ **Inscriptions Unown** : 5 panneaux lisibles en japonais (N4, furigana sur kanji non étudiés). Tapper → lore entry sur l'écriture ancienne.
+- ✅ **Inscriptions Unown** : 5 panneaux lisibles en japonais (N4, Lectures Inline révélées par Y — « furigana sur kanji non étudiés » datait du mécanisme adaptatif aboli le 2026-07-01), entrées `kind: sign` dans les salles intérieures réintégrées, lecture via bouton A → lore entry sur l'écriture ancienne *(« tapper » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*.
 - ❌ Chasse aux Unown supprimée — les Ruines sont une zone narrative, pas de mécanique de capture *(reformulé 2026-07-06, audit 04 : l'ancien libellé « Zone Safari supprimée » prêtait à confusion avec la Safari Zone de Cianwood, réintégrée par ailleurs ; l'adaptation des salles intérieures réintégrées est à designer à la synthèse)*
 - **Reward Rocket #2 :** lore entry "L'écriture avant les kanji"
 
-**Bâtiments sur la carte :** Entrée Ruines (depuis Route 32), 5 inscriptions Unown tappables
+**Bâtiments sur la carte :** Entrée Ruines (depuis Route 32), 5 inscriptions Unown (`kind: sign`) dans les salles intérieures
 
 **Sourcé du guidebook — confirmation forte du concept :**
 - Le mécanisme d'origine est **exactement** un puzzle de glyphes : 4 entrées, chacune avec un panneau-énigme décrivant un être par ses traits ("des yeux dans le dos", "volait dans les cieux anciens sans rien craindre", "ailes arc-en-ciel", "dix bras, se nourrissait de plancton"), puis un second panneau inscrit en **lettres Unown** (un alphabet-image de 26 lettres + ! et ?) qui indique l'objet/la capacité nécessaire pour avancer. C'est un calque presque parfait du concept "inscription ancienne en script de kanji" déjà esquissé au PRD — à utiliser comme référence directe pour écrire les 5 inscriptions.
@@ -372,7 +372,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Bugsy** — Arène physique, 2 門弟 + 試練 虫の道, 印 n°2
-- ✅ **Maison de Kurt** — Artisan Poké Ball. Bâtiment tappable : dépose des Apricorns → reçoit une **Boule de collection** après 24h (Kurt "fabrique" l'objet) *(corrigé 2026-07-06, audit 03, finding 03-C2 — « item d'effet SRS » purgé : aucun objet n'a d'effet sur le SRS, tranché au grill (intégrité FSRS) ; les 7 Boules sont des objets de collection du Sac (`item_kind: fungible`, audit 02), avec le texte savoureux de Kurt du tableau couleur→Boule ci-dessous ; l'intérêt est le rituel quotidien du dépôt/retrait en 24h et le complétionnisme)*
+- ✅ **Maison de Kurt** — Artisan Poké Ball. Intérieur réel ; parler à Kurt pour déposer des Apricorns → reçoit une **Boule de collection** après 24h (Kurt "fabrique" l'objet) *(« bâtiment tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)* *(corrigé 2026-07-06, audit 03, finding 03-C2 — « item d'effet SRS » purgé : aucun objet n'a d'effet sur le SRS, tranché au grill (intégrité FSRS) ; les 7 Boules sont des objets de collection du Sac (`item_kind: fungible`, audit 02), avec le texte savoureux de Kurt du tableau couleur→Boule ci-dessous ; l'intérêt est le rituel quotidien du dépôt/retrait en 24h et le complétionnisme)*
 - ✅ **Pokémon Center**
 - 📍 **Silver apparition #2** (Ecorcia, porte ouest, après Proton/Puits Ramoloss) : kanji 強、越、勝、誇、傲、鋼. ⚠️ Renuméroté/recorrigé (voir note dans cherrygrove-city et `curriculum-checkpoints.md`).
 - 📍 Événement Rocket #3 (Slowpoke Well) débloque le Gym Bugsy
@@ -421,7 +421,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - 📍 **Événement Rocket #3 — Proton — Opération Ramoloss** : kanji 捕、縛、操、支、制. Bloque l'accès au Gym Bugsy. HP battle avec Executive Proton.
-- Bâtiment tappable depuis la carte de Ecorcia → ouvre l'écran de combat Rocket
+- **Intérieur réel du puits** (la zone `slowpoke-well` existe déjà) — l'événement Rocket #3 y est composé en `map_trainers`/`map_npcs` (ADR-0004), Proton au fond *(« tappable → ouvre l'écran de combat » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 
 **Sourcé du guidebook — structure complète de l'événement :**
 - **Kurt accompagne le joueur** mais se blesse au dos en chemin et ne peut continuer — le joueur prend sa place pour la suite. Bon modèle pour transformer le combat en "le joueur agit à la place d'un mentor blessé/empêché".
@@ -442,8 +442,8 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **HGSS original :** forêt avec puzzle "attraper le Farfetch'd". CS Coupe nécessaire pour le raccourci.
 
 **Dans 漢字の庭 :**
-- ✅ Décor uniquement — zone atmosphérique entre Azalea et Goldenrod
-- ❌ Puzzle Farfetch'd supprimé
+- ✅ Zone traversable réelle entre Ecorcia et Doublonville *(« décor uniquement » corrigé 2026-07-06, audit 04 session 4 : l'étiquette contredisait le contenu déjà listé — dresseurs, Naoko, sanctuaire, raccourci 切)*
+- 🔄 **Puzzle Farfetch'd réintégré, adapté** (2026-07-06, audit 04 session 4, doctrine « tout utilisable » — remplace « supprimé ») : guider l'oiseau égaré de l'apprenti charbonnier à travers la forêt — puzzle spatial de guidage transposable tel quel (aucune mécanique de capture) ; articulation avec la remise du CS 切 et design à la synthèse
 - ✅ Dresseurs de route (4–5 slots), classes Fillette, Insectologue
 - 🔒 Raccourci nord (vers Route 34 directe) → 切 CS-Kanji requis (arbre à couper — corrigé 2026-07-03, c'était "力" du temps du modèle à 3 CS)
 - 📍 **Kimono Girl #2 (Naoko)** dans la zone — 方向の道, kanji 方、向、道、来、帰、行 (thème invité pour combler le fait que sa leçon PRD est purement grammaticale — "Grammaire directionnelle 〜ていく/〜てくる" — sans pool kanji propre)
@@ -468,12 +468,12 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Dans 漢字の庭 :**
 - ✅ 5–6 positions dresseurs
 - 📍 NPC quest N4 niveau : livraison de lettre à la poste de Goldenrod
-- ❌ Day Care supprimé (pas de mécanique d'élevage)
+- ✅ **Pension (Day Care)** — bâtiment réel + couple sourcé (grands-parents de Lyra/Ethan) ; **mécanique adaptée à designer à la synthèse** *(révisé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » — remplace le « aucune mécanique d'élevage » de la session 3 : boucle pédagogique de dépôt/maturation dans l'esprit de l'original, dépendante du concept « compagnon » (R10))*
 
 **Sourcé du guidebook — dresseurs :** **Campeur Todd**, **Policier Keith** (combat uniquement la nuit, 20h–4h — bon modèle pour un dresseur-leçon "nocturne"), **Gamin Ian**, **Pique-niqueuse Gina**, **Pokéfan Brandon**, **Gamin Samuel**, et un trio **Dresseur Ace Jenn/Irene/Kate** ("Kate et ses deux sœurs") qui attaque ensemble après une traversée d'eau — bon modèle pour un combat de groupe optionnel/caché.
 
 **Sourcé du guidebook — PNJ clés :**
-- La **pension (Day Care) est réintégrée en bâtiment de la Route 34 (tranché 2026-07-06, chasse aux reliques audit 04)** : le couple — en réalité les **grands-parents de Lyra/Ethan** — redevient des PNJ sourcés ordinaires, utilisables comme PNJ-leçon/texte par l'équipe contenu. Aucune mécanique d'élevage (même logique que la Safari : géographie fidèle, mécanique absente ou adaptée). L'ancien « supprimée dans 漢字の庭 » datait d'avant la doctrine de géographie complète.
+- La **pension (Day Care) est réintégrée en bâtiment de la Route 34 (tranché 2026-07-06, chasse aux reliques audit 04)** : le couple — en réalité les **grands-parents de Lyra/Ethan** — redevient des PNJ sourcés ordinaires, utilisables comme PNJ-leçon/texte par l'équipe contenu. **Mécanique adaptée plutôt qu'absente (révisé 2026-07-06, audit 04 session 4, doctrine « tout utilisable ») :** comme la Safari et le Game Corner, la pension reçoit une boucle pédagogique de dépôt/maturation (design à la synthèse, lié au concept « compagnon », R10). L'ancien « supprimée dans 漢字の庭 » datait d'avant la doctrine de géographie complète.
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Policeman Keith** — confirmé combat uniquement nocturne (20h–4h), à l'ouest de la pension.
@@ -488,15 +488,15 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Whitney** — Arène physique, 2 門弟 + 試練 常の道, 印 n°3
-- ✅ **Radio Tower** — Bâtiment tappable. Buena's Password — émission radio quotidienne à 11h00, à écouter via l'onglet Radio du Pokégear, comme en jeu *(« push notification » purgé 2026-07-06, chasse aux reliques audit 04)*. Événement Rocket #6 (prise de contrôle par Petrel + Archer). Post-Rocket : diffuse le Prof Oak Kanji Swarm.
+- ✅ **Radio Tower** — intérieur réel multi-étages, 1F→5F + plateforme d'observation (un `zone_id` par étage, set-piece ADR-0004) *(« bâtiment tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*. Buena's Password — émission radio quotidienne à 11h00, à écouter via l'onglet Radio du Pokégear, comme en jeu *(« push notification » purgé 2026-07-06, chasse aux reliques audit 04)*. Événement Rocket #6 (prise de contrôle par Petrel + Archer). Post-Rocket : diffuse le Prof Oak Kanji Swarm.
 - ✅ **Pokémon Center**
-- 🔄 **Department Store** → **Librairie de Doublonville** — bâtiment décoratif, NPC ambiant (vendeuse parle en N4)
-- ❌ Game Corner supprimé
-- ❌ Lottery supprimée (feature non spécifiée, supprimée du scope v1)
-- ❌ Global Terminal supprimé
+- ✅ **Department Store** → **Librairie de Doublonville** — intérieur réel multi-étages (6 niveaux + sous-sol, un `zone_id` par étage) avec ses PNJ sourcés (vendeuse N4, Black Belt du sous-sol, fille du 5F le dimanche) *(« bâtiment décoratif, NPC ambiant » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
+- ✅ **Game Corner** — mini-jeu de kanji contre jetons, Coin Case fonctionnel, intérieur réel *(« supprimé » corrigé 2026-07-06, audit 04 session 4 — reliquat non répercuté de R8, tranché à la session 3 ; design du mini-jeu à la synthèse)*
+- ✅ **Loterie** (Tour Radio 1F) — tirage quotidien *(« supprimée » corrigé 2026-07-06, audit 04 session 4 — reliquat non répercuté de R9, tranché à la session 3 ; mécanisme/récompense à la synthèse)*
+- 🔄 **Global Terminal** — bâtiment réel réintégré *(2026-07-06, audit 04 session 4, doctrine « tout utilisable » — remplace « supprimé » ; l'échange mondial n'a pas d'équivalent : fonction adaptée à designer à la synthèse, candidat naturel = hub des collections/textes)*
 - 📍 Kimono Girl #4 (Kuni) — Tunnel de Doublonville, après la Card Key. Rencontre tardive (revisite de la ville pendant l'arc Tour Radio, ~560+ kanji — voir `curriculum-checkpoints.md` § "zones revisitées"), pas lors de la première visite pour le badge de Whitney. 読みの道, kanji 音訓読声言語
 
-**Bâtiments sur la carte :** Gym Whitney, Radio Tower, Pokémon Center, Librairie (NPC déco), Entrées routes 35 (nord) et 34 (sud)
+**Bâtiments sur la carte :** Gym Whitney, Radio Tower (Loterie au 1F), Pokémon Center, Librairie, Game Corner, Global Terminal, Magasin de vélos, Tunnel de Doublonville, Entrées routes 35 (nord) et 34 (sud)
 
 **Sourcé du guidebook — dresseurs Gym Whitney :** **Coquette Victoria**, **Fillette Carrie**, **Coquette Samantha** (🔍 possible doublon OCR Victoria/Samantha) gardent l'accès à Whitney.
 
@@ -538,7 +538,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ **Pokéathlon Dome** — Hub mini-jeux, accessible après Whitney. 4 disciplines : Reading Blitz, Word Forge, Kanji Sprint, Chasse au Trésor. Prize Shop rotatif.
-- ❌ Bug Catching Contest supprimé (aucune mécanique Pokémon dans le jeu)
+- 🔄 **Concours du Parc réintégré, adapté** *(2026-07-06, audit 04 session 4, doctrine « tout utilisable » — remplace « Bug Catching Contest supprimé »)* : concours calendaire mar/jeu/sam sur le modèle de la Safari adaptée (collecte/lecture chronométrée dans le parc, classement contre des concurrents sourcés) ; design à la synthèse, créneau calendaire C15 conservé
 - 📍 Condition Chuck 試練 : `pokéathlon_score(⚙250)` — thématiquement lié aux épreuves athlétiques
 - ✅ Positions dresseurs sur Route 35 (5–6 slots)
 - Classe dresseurs R35 : Campeur, Marin, Jongleur
@@ -651,7 +651,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Dans 漢字の庭 :**
 - 📍 **Événement Rocket #4 — Traque des Bêtes Sacrées** (optionnel) : kanji 炎、雷、洪、猛、霊
 - Reward : lettre Fukuda sur les kanji sacrés
-- Bâtiment tappable → scène de combat Rocket + lore entry
+- Intérieur réel (rez + sous-sol, aligné sur la section ecruteak corrigée à la session 3) — l'événement Rocket #4 y est composé en `map_trainers`/`map_npcs` (ADR-0004) *(« bâtiment tappable → scène » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 
 **Sourcé du guidebook — confirmation du beat Silver & des trois esprits :**
 - À l'arrivée, le joueur aperçoit par un trou dans le sol trois créatures légendaires — confirmé comme leur lieu d'origine ; quand le joueur s'approche, les trois prennent la fuite et deviennent ensuite des "présences mobiles" trackées sur la carte du Pokégear — mécanique directement transposable pour les trois Légendaires-grammaire du PRD (Raikou/Entei/Suicune → conjonctions/expressions/registre classique).
@@ -698,7 +698,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Dans 漢字の庭 :**
 - ✅ **Gym Jasmine** — Arène physique, 2 門弟 + 試練 鋼の道, 印 n°6
 - ✅ **Phare d'Oliville** — **montée réelle multi-étages** (roster sourcé de 9 dresseurs 1F→sommet, Amphy et la quête Jasmine/Secret Potion en haut) *(« bâtiment décoratif, NPC ambiant en haut » corrigé 2026-07-06, chasse aux reliques audit 04 : l'étiquette contredisait le roster du Phare déjà inventorié et la quête Jasmine/Amphy ; un `zone_id` par étage, tile-authoring à la synthèse)*
-- ✅ **Quai SS Aqua** — visible sur la carte. Bâtiment tappable → décor/atmosphère uniquement en v1 *(« Kanto hors scope » purgé 2026-07-06, audit 04 — trace d'avant l'adoption du Kanto le 2026-07-01 ; le rôle du SS Aqua comme traversée Oliville↔Vermeille reste à trancher à la synthèse, avec les zones réintégrées)*.
+- ✅ **Quai SS Aqua** — quai et navire en intérieurs réels navigables (couloir de cabines : quête de la petite-fille disparue B6, capitaine distributeur de Plaques C9), **traversée Oliville↔Vermeille fonctionnelle comme en jeu** *(« décor/atmosphère uniquement » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » ; « Kanto hors scope » purgé plus tôt le même jour ; jours/fréquence de traversée à caler à la synthèse)*.
 - ✅ **Pokémon Center**
 - 🔒 Route 40 (mer) → nécessite 水 CS-Kanji
 
@@ -736,17 +736,17 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - ✅ **Gym Chuck** — Arène physique, 2 門弟 + 試練 力の道, 印 n°5
 - ✅ **Pokémon Center**
 - 🔄 Safari Zone Gate réintégrée (2026-07-06, audit 04 — Safari Zone adaptée : contenus de lecture à attraper, voir § Zones absentes)
-- ❌ Pharmacie supprimée
+- ✅ **Pharmacie réintégrée** *(2026-07-06, audit 04 session 4, doctrine « tout utilisable » — remplace « supprimée », qui contredisait la quête B3 déjà à l'inventaire)* : intérieur réel, le pharmacien remet la **Potion Secrète** exigée par la quête du Phare (Jasmine/Amphy)
 - ❌ Pas de Kimono Girl à Irisia (résolu 2026-07-01 — voir note ci-dessous)
 
 **Note :** Chuck est 印 n°5 dans l'ordre narratif (après Jasmine n°6 dans l'ordre géographique). Le PRD conserve l'ordre original HGSS pour les Gyms (Falkner→Bugsy→Whitney→Morty→Chuck→Jasmine→Pryce→Clair).
 
-**Bâtiments sur la carte :** Gym Chuck, Pokémon Center
+**Bâtiments sur la carte :** Gym Chuck, Pokémon Center, Pharmacie, Porte de la Safari Zone
 
 **✅ Résolu (2026-07-01)** — le texte source ne contient **aucune Kimono Girl à Cianwood City**. Les 5 Kimono Girls confirmées par le guidebook sont, dans l'ordre de rencontre habituel : Zuki (Violet City), Naoko (Ilex Forest), Kuni (Goldenrod Tunnel), Miki (Ecruteak Dance Theater), Sayo (Ice Path, juste avant Ebènelle/Blackthorn). Il n'y a pas de 6e Kimono Girl, et l'invention "Meri" est supprimée — le PRD suit fidèlement ces 5 lieux (villes et routes/donjons mélangés), voir la table en fin de document.
 
 **Sourcé du guidebook — la ville est en réalité un carrefour de plusieurs fils narratifs, pas seulement un Gym :**
-- **Pharmacie** (avant suppression dans le jeu) : remet la **Potion Secrète** pour Jasmine — confirme le lien Oliville ↔ Irisia déjà esquissé par le PRD pour le Phare.
+- **Pharmacie** *(réintégrée 2026-07-06, audit 04 session 4 — voir liste ci-dessus)* : remet la **Potion Secrète** pour Jasmine — confirme le lien Oliville ↔ Irisia déjà esquissé par le PRD pour le Phare.
 - **Un jeune homme**, dans une maison au sud du Gym, confie temporairement un compagnon (orig. Shuckle) au joueur, et révèle au passage qu'un "garçon aux cheveux roux" (Silver) est déjà passé et a pris un objet précieux — bon fil narratif pour une "trace de Silver" sans confrontation directe.
 - **"Le chasseur de légende"** (Eusine) défie le joueur ici après l'apparition fugace d'un esprit-kanji légendaire au nord de la ville — cohérent avec le fil "PNJ récurrent" documenté plus haut.
 - **La femme de Chuck**, après le combat, remet une récompense et commente avec tendresse la défaite de son mari ("c'est une bonne leçon pour lui") — joli contrepoint de caractérisation, réutilisable pour humaniser un 師範 vaincu.
@@ -777,7 +777,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Sourcé du guidebook — dresseurs :** **Pêcheur Tully**, **Randonneur Benjamin**, **Collectionneur Shane** (Route 42) ; à Mont Mortier : **Intello Hugh**, **Intello Marcus**, **Collectionneur Harrison**, **Karatéka Kiyo**.
 
-**Sourcé du guidebook — Mont Mortier a un beat de "dojo caché" fort, même s'il reste décoratif en v1 :**
+**Sourcé du guidebook — Mont Mortier a un beat de "dojo caché" fort *(« même s'il reste décoratif en v1 » purgé 2026-07-06, audit 04 session 4 : la réintégration v1 est actée en fin de paragraphe)* :**
 📍 Un **maître méditant** (orig. "Karate King") se trouve tout au fond de la grotte, accessible seulement après une traversée d'eau. Il engage le combat si on lui parle ; en cas de victoire, il offre un compagnon "en reconnaissance de la victoire". C'est le matériau idéal pour transformer "l'entrée de cave décorative" en un vrai mini-donjon dōjō avec un combat-épreuve final et une récompense narrative — cohérent avec l'identité Sensei/Dōjō du jeu. **Réintégration v1 actée (2026-07-06, décision « aucune v2 », chiffrage audit 09).**
 - 🍎 Apricorns confirmés sur Route 42 : **Vert, Rose et Jaune** (trois couleurs sur la même route) — voir section Apricorns finale pour la version consolidée.
 
@@ -796,11 +796,11 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Pryce** — Arène physique, 2 門弟 + 試練 氷の道, 印 n°7
-- ✅ **Repaire de Mékanos** (Rocket HQ) — tappable depuis la carte → Événement Rocket #5
+- ✅ **Repaire de Mékanos** (Rocket HQ) — intérieur réel 3 étages sous le magasin de souvenirs (B1F→B3F, un `zone_id` par étage, set-piece ADR-0004), Événement Rocket #5 composé en `map_trainers`/`map_npcs` *(« tappable depuis la carte » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 - ✅ **Pokémon Center**
 - 📍 **Silver apparition #4** (QG Rocket B2F, après Ariana) : kanji 変、知、疑、惜、寂、遅. ⚠️ Renuméroté et kanji corrigé (l'ancien jeu de kanji 強越勝誇傲鋼 appartient en réalité à l'apparition #2/Ecorcia, voir `curriculum-checkpoints.md`). Pour mémoire, dans le jeu d'origine ce n'est **pas un combat** : Silver est déjà vaincu par Lance, simple cameo frustré.
 
-**Bâtiments sur la carte :** Gym Pryce, Repaire Rocket (tappable), Pokémon Center
+**Bâtiments sur la carte :** Gym Pryce, Magasin de souvenirs (entrée du Repaire Rocket au sous-sol), Pokémon Center
 
 **Sourcé du guidebook — la ville entière est construite comme un mystère, bon matériau pour l'ambiance :**
 - Tagline/ambiance d'origine : "Acajou Ville est une retraite ninja… il n'y a qu'une seule boutique en ville, et celui qui la tient est le plus louche de tous." Le vendeur du magasin de souvenirs détourne le regard quand un bruit suspect provient du sous-sol (= le QG Rocket, juste en dessous).
@@ -885,7 +885,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Dans 漢字の庭 :**
 - ✅ **Gym Clair** — Arène physique, 2 門弟 + 試練 竜の道. ⚠️ Ne donne **pas** directement le 印 n°8 (résolu 2026-07-01, voir twist ci-dessous) — ouvre seulement l'accès à l'Antre du Dragon, qui est la vraie condition.
 - ✅ **Pokémon Center**
-- ✅ **Antre du Dragon** (tappable)
+- ✅ **Antre du Dragon** — grotte et sanctuaire en intérieurs réels navigables (entrée sud de la ville) *(« tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 - ❌ Pas de Kimono Girl à Ebènelle (résolu 2026-07-01 — Sayo déplacée vers route-44/ice-path)
 
 **Bâtiments sur la carte :** Gym Clair, Pokémon Center, Entrée Antre du Dragon (sud)
@@ -922,7 +922,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - ✅ **Quiz du Maître — condition réelle du 印 n°8** (adopté 2026-07-01) : 5 questions axées sur l'empathie/le respect ("si j'étais à la place de l'autre, que ressentirais-je ?"), pas la seule traduction littérale. Réussite → Clair (surprise) remet le 印 n°8. Recalibre le "Quiz de traduction N1" déjà prévu au PRD plutôt que de l'ajouter en plus.
 - 📍 **Événement Rocket #8 — L'Émissaire** (optionnel) : pas de combat. Quiz de traduction d'une lettre en japonais. Reward : lore entry Dragon's Den + beat narratif.
 - 📍 NPC quest N1 : inscription au fond de l'antre, 4 lignes à traduire. Reward : lore entry + dialogue Fukuda.
-- ✅ Zone tappable depuis la carte de Ebènelle
+- ✅ Accès réel depuis Ebènelle (entrée sud, gardée tant que le Gym Clair n'est pas vaincu) — grotte navigable, sanctuaire du Maître à l'intérieur *(« zone tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 
 **Sourcé du guidebook — détail exact du quiz du Maître (adopté ci-dessus) :**
 - 📍 À l'intérieur du sanctuaire, le **Maître** (Ancien) "jauge" le joueur avec **cinq questions**, posées via un système tactile. L'indice du guide d'origine est limpide et directement transposable au PRD : *"si tu donnes les mauvaises réponses... la récompense finale sera incomplète. Pour choisir tes réponses, demande-toi : si j'étais à la place de [l'autre], que ressentirais-je ?"* — c'est-à-dire que les bonnes réponses sont celles qui témoignent d'empathie, pas de force ou de domination. **C'est le meilleur matériau source pour le "Quiz de traduction N1" déjà prévu au PRD** : il devrait porter sur des valeurs (empathie, respect, lien) plutôt que sur la seule traduction littérale.
@@ -1088,11 +1088,10 @@ Sources : [Bulbapedia — Walkthrough Part 28](https://bulbapedia.bulbagarden.ne
 
 ### Pokémon Center (dans chaque ville)
 - **Fonction dans le jeu :** point d'entrée alternatif de la session SRS quotidienne — strictement la même session/file/✓ que l'appel de Fukuda et Pokégear → Téléphone (adopté 2026-07-06, audit 03, finding 03-E3 ; « Mode Direct »/« queue linéaire » purgés, vocabulaire d'un ancien design)
-- **Tapper :** ouvre le menu "Commencer la session" (ou l'état du jour si ✓ déjà posé)
-- **NPC intérieur (optionnel) :** une infirmière NPC avec dialogue ambiant simple
+- **Intérieur réel** ; parler à l'**infirmière au comptoir** ouvre le menu "Commencer la session" (ou l'état du jour si ✓ déjà posé) *(« Tapper → menu » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » — l'infirmière passe d'« optionnelle » à porteuse de la fonction)*
 
 ### Gyms (villes avec 師範)
-- **Façade :** tappable depuis la carte de la ville
+- **Entrée :** porte réelle sur la carte de la ville — on entre en marchant (warp), comme tout bâtiment *(« façade tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 - **Intérieur :** 2 门弟 (NPC dresseurs gardiens) → porte de la 師範 (locked until conditions met) → 試練 screen → 印 ceremony
 - **Condition visuelle :** porte du Gym barrée si conditions non remplies, ouverte sinon
 - **Sourcé du guidebook :** le nombre réel de gardiens varie selon le Gym dans le jeu d'origine (2 à 5 selon la ville — Falkner et Bugsy en ont 2, Whitney et Morty en ont jusqu'à 4, Clair en a 5). Le PRD fixe une structure uniforme à 2 門弟 pour tous les gyms — choix de simplification cohérent, à garder tel quel ; le détail ci-dessus est juste documenté pour mémoire si jamais le studio veut varier la difficulté d'un gym à l'autre.

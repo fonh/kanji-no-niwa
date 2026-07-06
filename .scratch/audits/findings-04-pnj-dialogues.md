@@ -367,3 +367,39 @@ même traitement que la Master Ball (adaptation pédagogique) à décider à la 
 7. **Pokégear-Téléphone HGSS complet**, espace contenu `content/dialogues/calls/`,
    invariant combat⊥SRS préservé (04-D3 — revirement partiel sur 03-C1).
 8. **Fil Baoba conservé en entier** (04-D3).
+
+## Session 4 (2026-07-06) — doctrine « tout utilisable, comme dans le jeu »
+
+Décision produit (verbatim : « je veux tout utilisable, comme dans le jeu ») qui clôt les deux
+questions restées ouvertes après la session 3 : le sort des intérieurs « décoratifs/tappables »
+et l'adaptation des mini-jeux. Norme ajoutée au PRD § La Carte de Johto :
+
+1. **Aucun bâtiment décoratif, aucune interaction « tap façade → écran »** : tout bâtiment à
+   porte de HGSS a un intérieur réel navigable (un `zone_id` par pièce/étage, généralisation
+   d'ADR-0004), entrée en marchant (warp), fonctions portées par les PNJ intérieurs.
+2. **Toute mécanique sans équivalent direct est adaptée en boucle pédagogique, jamais
+   supprimée** — étend le précédent Safari/Game Corner à tout le monde du jeu. Hors scope
+   résiduels : Battle Frontier (04-B1) et les mécaniques de capture telles quelles.
+
+Application (grep systématique tappable/décoratif/supprimé) :
+
+| # | Item | Décision |
+|---|------|----------|
+| U1 | Maison de Fukuda, maison de Kurt (dépôt Apricorns via Talk), Centres Pokémon (infirmière → session SRS), Gyms (porte réelle) | Intérieurs réels, fonctions sur les PNJ |
+| U2 | Sprout Tower (section dédiée), Tour Embrasée (section dédiée), Tour Radio, Repaire Rocket d'Acajou (sous le magasin de souvenirs), Puits Ramoloss, Antre du Dragon | Reliquats « tappable » non répercutés des corrections session 3/ADR-0004 — alignés (intérieurs multi-étages réels) |
+| U3 | Librairie de Doublonville (ex-Dept Store) | « Décoratif » → intérieur réel 6 niveaux + sous-sol, PNJ sourcés |
+| U4 | Game Corner / Loterie / lignes « supprimé » de la section goldenrod | Reliquats non répercutés de R8/R9 — alignés |
+| U5 | Global Terminal | Réintégré (bâtiment réel) ; fonction adaptée à designer à la synthèse |
+| U6 | Pension Route 34 | Révision de R7 : mécanique adaptée (dépôt/maturation, liée au concept « compagnon » R10), design à la synthèse — plus « aucune mécanique » |
+| U7 | Bug Catching Contest (Parc National) | Réintégré adapté : concours calendaire mar/jeu/sam de collecte/lecture, modèle Safari ; C15 aligné |
+| U8 | Puzzle Farfetch'd (Forêt Secte) | Réintégré adapté (guidage spatial) ; articulation avec la remise du CS 切 à la synthèse |
+| U9 | Pharmacie d'Irisia | Réintégrée — « supprimée » contredisait la quête B3 (Potion Secrète/Phare) déjà à l'inventaire |
+| U10 | SS Aqua | « Décor/atmosphère » → traversée réelle Oliville↔Vermeille, navire navigable (quêtes B6/C9) ; jours/fréquence à la synthèse |
+| U11 | Inscriptions Unown, panneau de départ Route 29 | Normalisés en entrées `kind: sign` (04-C3) ; « furigana sur kanji non étudiés » (relique du mécanisme adaptatif aboli) purgé au passage |
+| U12 | Mont Mortier « reste décoratif en v1 », Forêt Secte « décor uniquement » | Étiquettes fossiles purgées (contredisaient des réintégrations déjà actées) |
+| U13 | Pokémart « pas de système d'achat » (cherrygrove) | Bâtiment réel navigable, vendeur sourcé ; la fonction d'achat dépend de la décision monnaie (candidat #6, session 3) → synthèse |
+
+**Renvois à la synthèse (audit 09) ouverts par cette session :** design des boucles adaptées
+(Game Corner, Loterie, pension, concours du Parc, Safari, Global Terminal, puzzle Farfetch'd),
+modalités SS Aqua, tile-authoring et budgets des intérieurs convertis (le compte de zones
+`zone_id` va croître substantiellement — chaque maison/étage en ajoute).
