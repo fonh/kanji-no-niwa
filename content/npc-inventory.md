@@ -44,13 +44,13 @@ ci-dessous ont été mises à jour en conséquence.
 |---|---|---|---|
 | Mom | PNJ ambiant, rdc de la maison ; annonce qu'Elm demande le joueur, débloque sauvegarde/Sac/Carte | Pokégear (après la 1ère course) | |
 | Lyra/Ethan (rival/mentor) | Voisin·e déjà dresseur·euse, laisse un mail motivant sur le PC du joueur | — | |
-| Professeur Elm | Fait choisir un starter parmi 3, envoie en mission chez Mr. Pokémon, panique lors du cambriolage | Everstone (après éclosion de l'œuf), Master Ball (après 8 badges) | |
+| Professeur Elm | Fait choisir un starter parmi 3, envoie en mission chez Mr. Pokémon, panique lors du cambriolage | Everstone (après éclosion de l'œuf), **grand texte d'Elm** (après 8 badges — « Master Ball » corrigé 2026-07-07, passe de vérification : reliquat de R11) | |
 | Policier | Enquête sur le cambriolage du labo, interroge sur le garçon roux | — | |
 | Rival (Silver) | Aperçu en train d'espionner le labo | — | |
 | Assistant du Pr. Elm | Comptoir du Mart, garde l'œuf mystère jusqu'au 1er badge | — | |
 
 **Side quests dans cette zone** : 0 (zone d'onboarding pure, pas de quête distincte)
-**Objets à aller chercher (remis par un PNJ, pas juste trouvés au sol) dans cette zone** : 2 (Pokégear via Mom, Master Ball/objet narratif final via Elm)
+**Objets à aller chercher (remis par un PNJ, pas juste trouvés au sol) dans cette zone** : 2 (Pokégear via Mom, grand texte d'Elm via Elm — « Master Ball/objet narratif » corrigé 2026-07-07, passe de vérification)
 
 ---
 
@@ -290,7 +290,7 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 |---|---|---|---|
 | Beauty Victoria, Samantha ; Lass Carrie, Cathy | Gardiennes avant Whitney | — | |
 | Bill | Centre Pokémon (absent, parti à Rosalia) puis sa maison | Compagnon rare (Eevee-analogue) | |
-| Mr. Game | Game Corner (feature hors-scope) | Coin Case | |
+| Mr. Game | Game Corner — mini-jeu de kanji contre jetons, tables Kanji Flip + kanji jumeaux (« feature hors-scope » corrigé 2026-07-07, passe de vérification — adapté R8/I-3) | Coin Case | |
 | Gérant du magasin de vélos | Prête une Bicyclette gratuitement, puis l'offre définitivement | Bicyclette | |
 | Fille évaluatrice d'affection | Maison au nord du Dept Store, évalue le lien avec le compagnon en tête | — | |
 | Réceptionniste Tour Radio | Quiz de 5 questions | Radio Card | |

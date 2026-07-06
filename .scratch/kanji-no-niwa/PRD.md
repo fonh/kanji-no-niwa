@@ -374,8 +374,9 @@ question, pas de passage forcé ; scaffolding après un 2ᵉ échec sur les ques
 document détaillé). **Pas de verrou de temps** : c'est le quiz qui force une vraie lecture, pas une
 minuterie.
 
-- **Textes obligatoires** (~20-21 sur tout le jeu — un par badge de gym, plus les 3 lieux Rocket, l'Antre
-  du Dragon, et Red) : réussir le quiz est une `Condition` requise pour l'`Effect.advance_quest`/
+- **Textes obligatoires** (~28-29 sur tout le jeu — un par badge de gym, les 3 lieux Rocket, l'Antre
+  du Dragon, Red, et les 8 remises de CS-Kanji ; « ~20-21 » corrigé 2026-07-07, passe de vérification —
+  reliquat de P-2) : réussir le quiz est une `Condition` requise pour l'`Effect.advance_quest`/
   `unlock_zone`/`badge_earned` suivant — bloque la progression principale, modèle `Condition`/`Effect`
   déjà établi.
 - **Textes secondaires** (~70-100, cible large répartie sur les 72 zones, 2026-07-02 — inchangée malgré l'ajout des routes/donjons Kanto : plusieurs des nouvelles zones sont de simples routes de transit, cf. densité "0-1" déjà prévue pour ce type de zone) : **remplacent les side quests
@@ -391,16 +392,21 @@ débloquées, pas seulement ceux déjà lus** (2026-07-02) : les non-lus apparai
 un indice sur le PNJ/objet qui les porte — voir `content/texts-progressifs.md` § Menu "tous les textes".
 
 **CS-Kanji : la lecture donne le pouvoir, plus la maîtrise (2026-07-02, étendu 2026-07-03)** — les
-capacités de déplacement (飛・水・力・切・砕・滝・渦) ne sont **jamais** débloquées par la maîtrise FSRS ni
+capacités de déplacement (飛・水・力・切・砕・滝・渦・登 — 登 ajouté 2026-07-07, passe de vérification,
+reliquat de R6) ne sont **jamais** débloquées par la maîtrise FSRS ni
 par l'apprentissage d'un kanji dans le SRS. Chaque CS-Kanji est remis par le même PNJ et au même moment
 narratif que le CS/HM équivalent du jeu d'origine (ou trouvé au même endroit, pour 滝), mais son texte n'a
-d'effet que si **tous les textes des zones déjà débloquées ont été lus** — voir § La Carte de Johto et
+d'effet que si le **seuil de textes lus de ce CS est atteint** (`count(texts_read, N)` — « tous les
+textes des zones débloquées lus » corrigé 2026-07-07, passe de vérification : reliquat du modèle
+`all_texts_read` retiré la veille) — voir § La Carte de Johto et
 `content/texts-progressifs.md` § CS-Kanji pour le détail complet et la table sourcée guidebook.
 
 **Sources** : plus vivantes que l'ancienne liste centrée sur Aozora Bunko (littérature Meiji/Taishō,
 registre daté) — Watanoc et Matcha Easy Japanese ajoutés pour du contenu contemporain N4-N3, NHK Web Easy
-conservé (actualité réelle), textes officiels japonais de Pokémon envisagés pour le N1 (thématiquement
-cohérent avec le fan-projet). Aozora Bunko conservé uniquement pour les moments où l'archaïsme sert la
+conservé (actualité réelle) ; pour le N1 : éditoriaux/articles d'opinion réels et extraits de light
+novels/manga modernes — **le contenu Pokémon officiel a été écarté comme source N1** (2026-07-02, voir
+`content/texts-progressifs.md` § Sources ; « envisagés » corrigé 2026-07-07, passe de vérification —
+ce résumé contredisait le retrait acté). Aozora Bunko conservé uniquement pour les moments où l'archaïsme sert la
 fiction (Ruines Arcaniques, Antre du Dragon), jamais comme repère de "japonais courant" de fin de jeu.
 Détail complet et sélection précise des textes : `content/texts-progressifs.md`.
 
@@ -501,7 +507,7 @@ désormais « post-remise du grand texte d'Elm ».
 **Concept « compagnon » — à spécifier à la synthèse (tranché 2026-07-06, chasse aux reliques audit 04) :**
 le gauntlet ci-dessus (« un seul compagnon par combat »), la rencontre Naoko (« le compagnon du joueur
 lui montre la sortie »), le starter d'Elm, l'œuf mystère, et les compagnons offerts/prêtés/montrés du
-guidebook (Eevee de Bill, Shuckle prêté à Irisia, grand-père de Bill, Daisy, Karate King, ID Loterie)
+guidebook (Eevee de Bill, Shuckle prêté à Irisia, grand-père de Bill, Daisy, Karate King — « ID Loterie » retiré de cette liste 2026-07-07, passe de vérification : la Loterie « kanji du jour » (I-4) ne dépend plus du concept compagnon)
 reposent tous sur un concept **jamais défini** dans un jeu sans Pokémon ni capture. Décision : le concept
 doit être designé à la synthèse (audit 09) — **aucun contenu ne s'écrit sur ces beats avant** ; les
 mentions restent en l'état comme matériau sourcé.
@@ -767,7 +773,10 @@ tenu par l'inverse : les trophées ont un lieu visible qui se remplit sur toute 
 **Garde-fous** : les jetons du Game Corner restent une devise séparée non convertible (pas d'achat
 de jetons, I-3) ; aucun gate de progression ne dépend des ¥ ; rien ne touche le SRS ni les combats.
 `monnaie` est un `item_kind: fungible` ordinaire (audit 02). Montants/prix chiffrés à la synthèse ;
-écran de la chambre : audit 08.
+écran de la chambre : audit 08. **Stocks des Marts (noté 2026-07-07, passe de vérification)** : les
+inventaires sourcés (Heal Ball, Net Ball, Mails… — npc-inventory/placements) sont la couche source
+du jeu d'origine, sans fonction ici — à adapter en catalogue cosmétique/collection à la passe
+contenu, même traitement que la spécialité Moomoo.
 
 ---
 
@@ -864,7 +873,7 @@ TypeScript pur, sans I/O :
 - `isZoneClear(zoneId, trainers, defeatedSet)` — tous les dresseurs de la zone battus
 - `checkCurriculumGate(cityId, playerStats)` — bool + conditions non remplies
 - `getDailySRSStatus(srsReviews, dueCards, today)` — { sessionDone, cardsPending } *(signature précisée 2026-07-06, audit 03 : lit la table `srs_reviews` ; `sessionDone` = file du jour vidée OU plafond de rattrapage (200) atteint ce jour calendaire local — voir § Boucle Quotidienne)*
-- `getCSKanjiAbilities(unlockedZones, textCompletions, narrativeFlags)` *(signature changée 2026-07-02, remplace `masteredSet`)* — capacités de carte actives ; un CS-Kanji est actif si son PNJ-donneur a été atteint (`narrativeFlags`, ex. Chuck battu) ET si tous les textes des zones débloquées sont dans `textCompletions` — voir § CS-Kanji et `content/texts-progressifs.md`
+- `getCSKanjiAbilities(textsReadCount, narrativeFlags)` *(signature rechangée 2026-07-07, passe de vérification — le paramètre `unlockedZones` n'a plus de raison d'être depuis le retrait d'`all_texts_read` (périmètre dynamique disparu) : un simple compte de `text_completions` suffit ; 2026-07-02 avait remplacé `masteredSet`)* — capacités de carte actives ; un CS-Kanji est actif si son PNJ-donneur a été atteint (`narrativeFlags`, ex. Chuck battu) ET si `textsReadCount ≥ N` (seuil propre au CS) — voir § CS-Kanji et `content/texts-progressifs.md`
 - `getLessonQueue(availableKanji, completedLessons)` — helper d'affichage en lecture seule (menu START → Leçons) ; liste les leçons déjà rencontrées sur le chemin mais pas encore complétées, dans l'ordre où le joueur les a croisées. N'assigne aucun contenu — chaque PNJ-leçon porte son kanji/grammaire fixé à l'écriture (voir § Leçons)
 
 ### Pipeline de Données

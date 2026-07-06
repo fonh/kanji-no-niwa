@@ -312,6 +312,39 @@ Tous ces mécanismes respectent les invariants : aucun n'écrit dans le SRS, auc
 (porteurs sourcés uniquement), pas de tracé de kanji, pas de micro, contenus des boucles
 répétables hors `texts` (P-15).
 
+## Passe de vérification post-implémentation (2026-07-07)
+
+Grep systématique après application de tout (session 4, P-x, I-1→I-14, revue pédagogique).
+Reliquats trouvés et corrigés :
+
+| # | Reliquat | Fix |
+|---|----------|-----|
+| V-1 | PRD § Textes Progressifs : « ~20-21 », condition « tous les textes lus », liste CS 飛…渦 sans 登 — le résumé du PRD n'avait pas suivi P-2, la refonte des seuils, ni R6 | ~28-29 + 8 remises CS ; `count(texts_read, N)` ; 登 ajouté |
+| V-2 | PRD § Textes Progressifs (Sources) : « textes officiels Pokémon envisagés pour le N1 » — contredisait le retrait acté le 2026-07-02 dans texts-progressifs | Aligné (éditoriaux/light novels ; Pokémon écarté) |
+| V-3 | `getCSKanjiAbilities(unlockedZones, textCompletions, …)` — signature du modèle `all_texts_read` retiré | → `getCSKanjiAbilities(textsReadCount, narrativeFlags)` |
+| V-4 | PRD § compagnon : « ID Loterie » encore listé comme dépendance | Retiré (I-4 ne dépend plus du compagnon) |
+| V-5 | npc-inventory : Mr. Game « Game Corner (feature hors-scope) » ; Elm « Master Ball » ×2 | Alignés (R8/I-3 ; grand texte d'Elm, R11) |
+| V-6 | guidebook L130 « Master Ball → item narratif (diplôme/sceau) » + itinéraire L99 « Bourg Geon (Master Ball) » — contredisaient R11 (texte de lecture, pas trophée) | → grand texte d'Elm ×2 |
+| V-7 | `placements/ecruteak-city.json` (« post-Master Ball ») et `placements/new-bark-town.json` (« Master Ball (après 8 badges) ») | → grand texte d'Elm ; JSON revalidés |
+| V-8 | guidebook B6 « Grand-père paniqué (SS Aqua, arrivée) » vs quête jouée à bord (I-1) | Annoté « à bord de la 1ʳᵉ traversée » |
+
+**Vérifié sans correction nécessaire :** intégrité des tables markdown éditées (comptes de
+cellules conformes aux en-têtes — gates, CS, légendaires, Pokégear, side-content), JSON de données
+valides, numérotation Rocket 1/3–3/3 cohérente partout (y compris story-beats/placements), plus
+aucune occurrence active de tappable/décoratif/« hors scope » fossile/« Hint token »/« dépôt/
+maturation » hors mentions historiques, § Menu des textes toujours cohérent avec les seuils,
+invariants tenus (aucun mini-jeu n'écrit dans le SRS, aucun PNJ inventé, jetons non convertibles).
+
+**Flags relevés (→ synthèse), non corrigés ici :**
+- **« Trophée Antre du Dragon »** : utilisé par 3 gates (Suicune, Mont Gris, Red) sans définition
+  formelle — est-ce le texte obligatoire/quiz d'empathie du 印 n°8, ou la quête N1 de l'inscription
+  du fond ? À définir avant d'écrire les Conditions.
+- **Stocks sourcés des Marts** (Heal Ball, Net Ball, Mails — guidebook ×4, npc-inventory ×4,
+  placements ×4) : couche source sans fonction adaptée — catalogue cosmétique/collection à la
+  passe contenu (note ajoutée au PRD § Monnaie).
+- **Vitesse ×2 de la Bicyclette** (I-11) vs « D-pad : un tile par input » (PRD § Mouvement) —
+  détail d'implémentation du déplacement à préciser (audit 08).
+
 ## Renvois
 
 - Synthèse (audit 09) : P-13 (plages des zones réintégrées + intérieurs), designs I-3→I-8 chiffrés,
