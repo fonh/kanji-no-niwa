@@ -234,33 +234,43 @@ depuis la session 4 — qui devient la vitrine des décorations/collections (ré
 servent les décorations » de C12/Moomoo/Seal Case). Zéro impact SRS/combat ; jetons du Game
 Corner restent une devise séparée, comme en jeu.
 
-### I-9 — Dowsing MCHN = détecteur de textes non découverts
+### I-9 — ✅ ADOPTÉ (2026-07-06) — Dowsing MCHN = détecteur de textes non découverts
+
+*Appliqué : guidebook § ecruteak (homme à l'énigme), side-content F4.*
 
 L'objet sourcé de Rosalia (homme à l'énigme, F4) devient un « chaud/froid » sur la carte pour les
 `found_object_ref` non découverts de la zone courante. Synergie directe avec `all_texts_read` :
 c'est l'outil de confort qui rend la condition CS juste sur le terrain (en plus du Journal).
 
-### I-10 — Global Terminal = salle des collections + échange de doublons
+### I-10 — ✅ ADOPTÉ (2026-07-06) — Global Terminal = salle des collections + échange de doublons
+
+*Appliqué : guidebook § goldenrod.*
 
 Vue des collections (Boules, Plaques, décorations, prises Safari, scores) + **échange des
 doublons** contre jetons/¥ — une fonction réelle sans nouveau système lourd, cohérente avec
 « pas de trophée décoratif ».
 
-### I-11 — Bicyclette = objet-clé de la Cycling Road
+### I-11 — ✅ ADOPTÉ (2026-07-06) — Bicyclette = objet-clé de la Cycling Road (clôt le candidat #3)
+
+*Appliqué : guidebook § goldenrod (gérant) + § route-16-17-18 (gate confirmé).*
 
 Prêtée par le gérant de Doublonville (sourcé, « bonne publicité »), `item_owned` gate de la
 Cycling Road (fidèle : le garde refuse sans vélo) + vitesse ×2 sur la carte. Résout le candidat
 #3 sans rien coupler.
 
-### I-12 — La Radio comme tableau du jour
+### I-12 — ✅ ADOPTÉ (2026-07-06) — La Radio comme tableau du jour
+
+*Appliqué : PRD § Pokégear (onglet Radio).*
 
 L'onglet Radio (émissions d'Oak, Buena 11h) **annonce le contenu calendaire du jour** : frère/sœur
 du jour, concours mar/jeu/sam, photographe, mercredi sec du Lac Colère. Façon diégétique de
 surfacer les `time_window` sans nouveau menu — la radio d'HGSS faisait exactement ça.
 
-### I-13 — Blue Card : comptoir d'échange des points Buena (cosmétiques), comme en jeu.
+### I-13 — ✅ ADOPTÉ (2026-07-06) — Blue Card : comptoir d'échange des points Buena (cosmétiques), comme en jeu.
 
-### I-14 — Ne PAS généraliser les gates de side quests
+*Appliqué : guidebook § goldenrod (Buena), side-content C8.*
+
+### I-14 — ✅ ACTÉ (2026-07-06, non-action) — Ne PAS généraliser les gates de side quests
 
 Le système CS/`all_texts_read` force déjà la lecture de tout le contenu secondaire aux 8 remises
 de CS — ajouter des comptes de quêtes aux gates de badges doublonnerait la pression. Garder les

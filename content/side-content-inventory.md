@@ -85,7 +85,7 @@ quotidienne SRS de l'app.
 | C5 | **Ferme Moomoo** — nourrir le Miltank malade avec 7 baies sur plusieurs visites ; récompenses multiples (Seal Case, décorations, TM, spécialité en vente) | route-38/39 | L684, L689 | Multi-visites ; consomme les baies des Pots à Baies (§ E10) ; « une visite par jour » recommandé par le guide adapté |
 | C6 | PNJ « un mot à la mode par jour » — **PNJ-leçon quotidien tout trouvé** | route-16-17-18 | L1360 | Quotidien, visites répétées — le gabarit le plus proche d'une leçon SRS quotidienne |
 | C7 | Trainer House — un combat par jour | Vertville | L1287 | Quotidien |
-| C8 | Buena — mot de passe radio quotidien à deviner, points cumulés (Blue Card) | goldenrod-city (Tour Radio 2F) | L522 | Quotidien ; lié à la Radio Card (quiz réceptionniste, § F) |
+| C8 | Buena — mot de passe **entendu à l'émission de 11h** (exercice d'écoute adopté), points Blue Card échangés contre cosmétiques (**I-13, 2026-07-06**) | goldenrod-city (Tour Radio 2F) | L522 | Quotidien ; lié à la Radio Card (quiz réceptionniste, § F) |
 | C9 | Capitaine du SS Aqua — distribue des Plaques collectionnables certains jours | Quai SS Aqua | L1334 | Hebdo |
 | C10 | Fille du 5F du grand magasin — TM27 si affection élevée | goldenrod-city | L527 | Dimanche uniquement |
 | C11 | Dresseurs nocturnes : Policier Keith (R34), Policier Dirk (R35) | route-34, route-35 | L473, L479, L548, L556 | 20h–4h — dresseurs-leçon « nocturnes » potentiels |
@@ -143,7 +143,7 @@ pédagogique exact est fixé à l'écriture (jamais dynamique, PRD § Leçons).
 | F1 | Earl, instituteur de l'École Pokémon (à ramener, § B10) | violet-city | L250, L257 | PNJ-leçon littéral dans la source |
 | F2 | Enseignant du banc sud du Parc National | national-park | L553, L560 | « Professeur qui enseigne une astuce plutôt qu'un objet » |
 | F3 | Guide Gent — fait visiter la ville, Running Shoes + Map Card | cherrygrove-city | L186, L190 | Vocabulaire des lieux (建物、駅、店…) |
-| F4 | Homme à l'énigme (bonne réponse → Dowsing MCHN) | ecruteak-city | L617, L623 | Question/réponse = format quiz naturel ; sa maison contient A2 |
+| F4 | Homme à l'énigme (bonne réponse → Dowsing MCHN — **détecteur de textes non découverts, adopté 2026-07-06, I-9**) | ecruteak-city | L617, L623 | Question/réponse = format quiz naturel ; sa maison contient A2 |
 | F5 | Mr. Psychic — CT gratuite | Safranville | L1323 | Donneur simple |
 | F6 | Président du Club des Fans — récompense qui écoute son histoire **jusqu'au bout** | Vermeille | L1254, L1335 | Patience/politesse — l'écoute comme épreuve |
 | F7 | **Maison du Tuteur/Effaceur** : 4 PNJ nommés dans la même pièce (Tuteur Ultime, Grand-mère Wilma, Maniaque des capacités, Effaceur) | blackthorn-city | L903-907 | 4 dresseurs-leçon spécialisés sous un même toit |
