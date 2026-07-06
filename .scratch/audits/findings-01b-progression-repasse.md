@@ -199,7 +199,10 @@ mini-Disposition/repérage. Le chrono est l'identité des mini-jeux — la règl
 Recommandation P-1 : **garder le gate Chuck 250** — unique pont mini-jeu→progression, sourcé
 thématiquement, non punitif.
 
-### I-6 — Concours du Parc (mar/jeu/sam) : la Safari en format compétition
+### I-6 — ✅ ADOPTÉ (2026-07-06) — Concours du Parc (mar/jeu/sam) : la Safari en format compétition
+
+*Appliqué : guidebook § national-park (design complet), side-content C15. Détail d'origine
+ci-dessous :*
 
 Épreuve chronométrée (20 min dans l'original) : trouver des mots/kanji cachés dans les hautes
 herbes du parc, score jugé contre des concurrents sourcés ; paliers de récompense (baies,
