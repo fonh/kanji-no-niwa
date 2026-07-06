@@ -254,7 +254,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Homme à lunettes noires** — bloque l'entrée du Gym tant que Tour Grospignon n'est pas visitée.
-- **Earl** — instituteur de "l'École Pokémon", trouvé errant entre le Gym et le Mart plutôt qu'à son école ; le joueur doit le ramener pour "commencer les cours".
+- **Earl** — instituteur de "l'École Pokémon", trouvé errant entre le Gym et le Mart plutôt qu'à son école ; le joueur doit le ramener pour "commencer les cours". **Rôle adopté (2026-07-06, revue pédagogique #2) : l'École devient la salle de dictée** — écouter une phrase (audio existant) → la taper (clavier romaji→kana existant), niveaux croissants sur revisites ; candidate aussi comme lieu de remise du Carnet des compteurs (voir PRD § Kanjidex). Design à la synthèse.
 - **Garçon blond** — près du Centre Pokémon, échange des Éclats (obtenus en brisant des rochers fissurés, CS 砕 Éclate-Roc) contre des lots de 3 Baies.
 - **Garçon côté est de l'École** — invite à former un "groupe" (fonctionnalité Union Room).
 - **Jeune homme en haut de l'escalator ouest** (Centre Pokémon) — personnalisation de l'avatar Wi-Fi.
@@ -310,7 +310,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 - **Dresseurs confirmés** : Youngster Albert, Picnicker Liz, Camper Roland, Youngster Gordon, Fisherman Henry, Fisherman Justin, Fisherman Ralph, Bird Keeper Peter, Hiker Anthony.
 - **Frère/sœur du jour Frieda** (vendredi) — chemin étroit au sud, derrière le Centre Pokémon ; donne Poison Barb.
 - **Homme sur le chemin** — donne une Graine Miracle (objet à équiper).
-- **Jeune homme près du Centre Pokémon (Route 33 côté)** — tente de vendre une "queue de Ramoloss savoureuse" pour ¥1 000 000 — PNJ comique, le joueur décline.
+- **Jeune homme près du Centre Pokémon (Route 33 côté)** — tente de vendre une "queue de Ramoloss savoureuse" pour ¥1 000 000 — PNJ comique, le joueur décline. **Rôle adopté (2026-07-06, revue pédagogique #5) : exercice de refus poli** — décliner l'arnaque correctement (ちょっと…／また今度…), pragmatique du non-dit japonais ; sert aussi de leçon sur les grands nombres (万).
 - **Pêcheur dans le Centre Pokémon** — donne la Vieille Canne.
 - **Homme au-delà d'un point coupable** — donne TM05 Roar une fois 力 débloqué.
 - **Homme près du pêcheur** — demande si le joueur collectionne les Apricorns ; répond oui → 2 Lure Balls.
@@ -326,7 +326,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 - 🔄 Zone accessible après avoir battu l'événement Rocket Éclaireurs sur Route 32
 - 📍 **Quête Rocket — Pillage des Inscriptions** (optionnelle) : kanji 文、字、古、記、史 *(ex-« Événement #2 », renuméroté 2026-07-06, P-7)*
 - ✅ **Inscriptions Unown** : 5 panneaux lisibles en japonais (N4, Lectures Inline révélées par Y — « furigana sur kanji non étudiés » datait du mécanisme adaptatif aboli le 2026-07-01), entrées `kind: sign` dans les salles intérieures réintégrées, lecture via bouton A → lore entry sur l'écriture ancienne *(« tapper » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*.
-- ❌ Chasse aux Unown supprimée — les Ruines sont une zone narrative, pas de mécanique de capture *(reformulé 2026-07-06, audit 04 : l'ancien libellé « Zone Safari supprimée » prêtait à confusion avec la Safari Zone de Cianwood, réintégrée par ailleurs ; l'adaptation des salles intérieures réintégrées est à designer à la synthèse)*
+- ❌ Chasse aux Unown supprimée — les Ruines sont une zone narrative, pas de mécanique de capture *(reformulé 2026-07-06, audit 04 : l'ancien libellé « Zone Safari supprimée » prêtait à confusion avec la Safari Zone de Cianwood, réintégrée par ailleurs)*. **Direction adoptée pour les salles intérieures (2026-07-06, revue pédagogique #3) : puzzles d'assemblage de kanji par composants** — les tuiles-image de l'original deviennent des radicaux à assembler (氵＋木＋…) ; les données composants du Kanjidex existent déjà, détail à la synthèse
 - **Reward de la quête Pillage des Inscriptions :** lore entry "L'écriture avant les kanji"
 
 **Bâtiments sur la carte :** Entrée Ruines (depuis Route 32), 5 inscriptions Unown (`kind: sign`) dans les salles intérieures
@@ -491,7 +491,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - ✅ **Radio Tower** — intérieur réel multi-étages, 1F→5F + plateforme d'observation (un `zone_id` par étage, set-piece ADR-0004) *(« bâtiment tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*. Buena's Password — émission radio quotidienne à 11h00, à écouter via l'onglet Radio du Pokégear, comme en jeu *(« push notification » purgé 2026-07-06, chasse aux reliques audit 04)*. Événement Rocket 3/3 (prise de contrôle par Petrel + Archer — ex-« #6 », renuméroté 2026-07-06, P-7). Post-Rocket : diffuse le Prof Oak Kanji Swarm.
 - ✅ **Pokémon Center**
 - ✅ **Department Store** → **Librairie de Doublonville** — intérieur réel multi-étages (6 niveaux + sous-sol, un `zone_id` par étage) avec ses PNJ sourcés (vendeuse N4, Black Belt du sous-sol, fille du 5F le dimanche) *(« bâtiment décoratif, NPC ambiant » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
-- ✅ **Game Corner** — mini-jeu de kanji contre jetons, Coin Case fonctionnel, intérieur réel *(« supprimé » corrigé 2026-07-06, audit 04 session 4 — reliquat non répercuté de R8, tranché à la session 3 ; design du mini-jeu à la synthèse)*
+- ✅ **Game Corner** — mini-jeu de kanji contre jetons, Coin Case fonctionnel, intérieur réel *(« supprimé » corrigé 2026-07-06, audit 04 session 4 — reliquat non répercuté de R8, tranché à la session 3 ; design du mini-jeu à la synthèse)*. Tables candidates (revue pédagogique 2026-07-06) : **discrimination de kanji jumeaux** (未/末、待/持… — adoptée, #6) et **Kanji Flip** (adaptation de Voltorb Flip, proposition I-3 — à griller)
 - ✅ **Loterie** (Tour Radio 1F) — tirage quotidien *(« supprimée » corrigé 2026-07-06, audit 04 session 4 — reliquat non répercuté de R9, tranché à la session 3 ; mécanisme/récompense à la synthèse)*
 - 🔄 **Global Terminal** — bâtiment réel réintégré *(2026-07-06, audit 04 session 4, doctrine « tout utilisable » — remplace « supprimé » ; l'échange mondial n'a pas d'équivalent : fonction adaptée à designer à la synthèse, candidat naturel = hub des collections/textes)*
 - 📍 Kimono Girl #4 (Kuni) — Tunnel de Doublonville, après la Card Key. Rencontre tardive (revisite de la ville pendant l'arc Tour Radio, ~560+ kanji — voir `curriculum-checkpoints.md` § "zones revisitées"), pas lors de la première visite pour le badge de Whitney. 読みの道, kanji 音訓読声言語
@@ -900,7 +900,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - Un PNJ local explique que les "Dompteurs de Dragons" sont tous originaires de Ebènelle — bonne justification diégétique pour la classe **Dresseur Ace** dominante ici, et pour pourquoi Clair (et Lance) en sont issus.
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
-- **Maison du Tuteur/Effaceur de capacités** (à côté du Mart) — 4 PNJ nommés dans la même pièce, excellent matériau pour 4 dresseurs-leçon spécialisés dans un même bâtiment :
+- **Maison du Tuteur/Effaceur de capacités** (à côté du Mart) — 4 PNJ nommés dans la même pièce. **Rôle adopté (2026-07-06, revue pédagogique #4) : les spécialistes de la paraphrase (言い換え)** — reformulation, nuance, mot juste, collocations : l'épreuve N2/N1 réelle du JLPT, pile dans la plage N2 d'Ebènelle ; répartition entre les 4 PNJ à la passe contenu. Rôles d'origine :
   - **Tuteur Ultime** — enseigne la "capacité ultime" à la forme finale du starter du joueur.
   - **Grand-mère Wilma** (nommée) — enseigne la capacité Dragon la plus puissante à un compagnon-Dragon ayant un lien fort avec le joueur.
   - **Maniaque des capacités** — contre une Écaille de Cœur, réapprend une capacité oubliée.

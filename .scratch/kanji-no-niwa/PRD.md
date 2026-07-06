@@ -76,9 +76,9 @@ Quatre onglets, structure identique à HGSS :
 
 | Onglet    | Contenu                                                 |
 | --------- | ------------------------------------------------------- |
-| Téléphone | **Mécanique HGSS complète (révisé 2026-07-06, audit 04 — revient partiellement sur 03-C1, tranché au grill)** : (1) Fukuda — lancer le SRS, unique canal SRS du jeu ; (2) appels scénarisés sourcés (Elm, Lyra, Mom, Baoba…) aux beats narratifs ; (3) registre de dresseurs enregistrables, appels entrants et re-matchs comme dans le jeu d'origine (un re-match pioche `studiedSet` comme tout combat — zéro couplage SRS). **Invariant préservé de l'audit 03 : aucun appel ne parle jamais de cartes dues** — ce qui avait été purgé en 03-C1 était le couplage dresseur↔SRS, pas les appels eux-mêmes. Contenu des appels : espace dédié `content/dialogues/calls/<caller_id>.json`, même format `dialogue_states`/`state_rules`/pages que les PNJ. Périmètre exact (dresseurs enregistrables, fréquence) chiffré à la synthèse. |
+| Téléphone | **Mécanique HGSS complète (révisé 2026-07-06, audit 04 — revient partiellement sur 03-C1, tranché au grill)** : (1) Fukuda — lancer le SRS, unique canal SRS du jeu ; (2) appels scénarisés sourcés (Elm, Lyra, Mom, Baoba…) aux beats narratifs ; (3) registre de dresseurs enregistrables, appels entrants et re-matchs comme dans le jeu d'origine (un re-match pioche `studiedSet` comme tout combat — zéro couplage SRS). **Invariant préservé de l'audit 03 : aucun appel ne parle jamais de cartes dues** — ce qui avait été purgé en 03-C1 était le couplage dresseur↔SRS, pas les appels eux-mêmes. Contenu des appels : espace dédié `content/dialogues/calls/<caller_id>.json`, même format `dialogue_states`/`state_rules`/pages que les PNJ. Périmètre exact (dresseurs enregistrables, fréquence) chiffré à la synthèse. **Exercice de réplique naturelle — 即時応答 (adopté 2026-07-06, revue pédagogique #1)** : certains appels entrants proposent de choisir la réponse naturelle parmi 3 — calque de l'épreuve d'écoute du JLPT réel, la compétence conversationnelle qu'aucun des 9 modes ne teste ; 10 secondes de pragmatique par appel, design avec le périmètre téléphone à la synthèse. |
 | Carte     | Carte Johto complète, vue globale                       |
-| Radio     | Émissions d'Oak, radio d'ambiance                       |
+| Radio     | Émissions d'Oak, radio d'ambiance. **Écoute adoptée à deux formats (2026-07-06, revue pédagogique) :** court quotidien — le mot de passe de Buena (11h00) devient un vrai exercice d'écoute (entendre → retenir → restituer au studio 2F) ; long hebdomadaire (#7) — émission d'Oak de 2-3 min avec quiz optionnel, courbe N5→N1, disponible post-Tour Radio. Designs à la synthèse. |
 | Grammaire *(remplace Textes, 2026-07-01)* | Glossaire des points de grammaire rencontrés (`grammar_encounters`) — formation, exemple, note, tirés du même `grammar_note` que les leçons. Comble un manque : cette donnée existait déjà en base sans aucune vue joueur. |
 
 ---
@@ -678,6 +678,16 @@ Accessible depuis START → 図鑑 (Kanjidex), et en tapant n'importe quel kanji
 - Doré = maîtrisé (stabilité FSRS ≥ 30 jours)
 
 Filtres : JLPT N5 / N4 / N3 / N2 / N1, statut (tous / étudiés / maîtrisés).
+
+**Carnet des compteurs — 助数詞 (adopté 2026-07-06, revue pédagogique, idée Henri) :** le japonais ne
+compte pas l'argent (円) comme les personnes (人／ひとり・ふたり), les petits animaux (匹), les objets
+plats (枚), longs (本), les livres (冊), les machines (台), les étages (階)… — des dizaines de
+classificateurs à long terme, exactement le savoir qui se collectionne. Un **dictionnaire à compléter
+sur toute la partie**, famille visuelle du Kanjidex : une entrée par compteur (usage, exceptions de
+lecture 一本／三本, exemples), débloquée à la première rencontre en contexte — leçons nombres
+multi-niveaux (prix N5, horaires N3, dates d'ère et grands nombres N1), Mart, dictées de l'École de
+Mauville (candidate pour la remise du carnet). Emplacement d'écran (onglet Kanjidex ou entrée Sac) :
+audit 08 ; contenu : passe contenu.
 
 **Fiche individuelle** (tap sur un tile) :
 

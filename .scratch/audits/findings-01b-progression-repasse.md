@@ -254,7 +254,26 @@ sourcé. Verdicts du premier passage :
 | Keigo / politesse en situation | ✅ OK sur le principe (politesse = important) | Prolonge la leçon « registre formel » de Miki (déjà au PRD) |
 | Noms propres / lectures nanori (Name Rater) | ✅ D'accord | Micro-leçon Doublonville |
 
-*(2ᵉ passage d'idées « comme un prof » présenté dans la conversation — verdicts à reporter ici.)*
+**2ᵉ passage — tous validés par Henri (2026-07-06), annotés aux points d'ancrage :**
+
+| # | Idée | Ancre sourcée (annotée) | Doc |
+|---|------|------------------------|-----|
+| 1 | Réplique naturelle 即時応答 (choisir la réponse naturelle, épreuve JLPT réelle) | Appels entrants du Pokégear | PRD § Pokégear |
+| 2 | Dictée (audio → clavier romaji→kana) | École Pokémon de Mauville (Earl) | guidebook § violet-city |
+| 3 | Assemblage de kanji par composants/radicaux | Puzzles intérieurs des Ruines Arcaniques (les tuiles-image de l'original) | guidebook § ruins-of-alph |
+| 4 | Paraphrase 言い換え (nuance, mot juste, collocations — épreuve N2/N1) | Maison du Tuteur, Ebènelle (4 spécialistes, F7) | guidebook § blackthorn |
+| 5 | Refus poli (pragmatique du non-dit) + grands nombres | Vendeur de queue de Ramoloss ¥1M (F14) | guidebook § route-32 |
+| 6 | Discrimination de kanji jumeaux (未/末…) | Table du Game Corner (adoptée ; Kanji Flip I-3 reste à griller) | guidebook § goldenrod |
+| 7 | Écoute longue hebdo (émission d'Oak 2-3 min + quiz) — complète l'écoute courte Buena 11h validée au 1er passage | Onglet Radio du Pokégear | PRD § Pokégear |
+| + | **Échelle des nombres multi-niveaux** (prix N5 → horaires/durées N3 (情報検索 : horaires SS Aqua/Magnet Train) → grands nombres/stats/dates d'ère N1 sur les inscriptions anciennes) **et Carnet des compteurs 助数詞** (idée Henri : dictionnaire à compléter toute la partie — une entrée par classificateur, débloquée à la rencontre) | Mart/vendeur ¥1M/horaires/inscriptions ; carnet remis à l'École de Mauville (candidate) | PRD § Kanjidex |
+
+Keigo (validé au 1er passage) : exercices « même intention, trois interlocuteurs », prolonge la
+leçon « registre formel » de Miki ; porteurs candidats — Président du Fan Club, réceptionnistes
+Silph Co. Design à la synthèse avec le reste.
+
+Tous ces mécanismes respectent les invariants : aucun n'écrit dans le SRS, aucun PNJ inventé
+(porteurs sourcés uniquement), pas de tracé de kanji, pas de micro, contenus des boucles
+répétables hors `texts` (P-15).
 
 ## Renvois
 
