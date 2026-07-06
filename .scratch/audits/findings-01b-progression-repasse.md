@@ -209,7 +209,10 @@ herbes du parc, score jugé contre des concurrents sourcés ; paliers de récomp
 Apricorns, décoration rare au 1er prix). Réutilise le créneau C15 et le modèle de collecte
 Safari — un seul design pour deux features.
 
-### I-7 — Pension Route 34 : le feuilleton des grands-parents
+### I-7 — ✅ ADOPTÉ (2026-07-06) — Pension Route 34 : le feuilleton des grands-parents
+
+*Appliqué : guidebook § route-34 (design complet), PRD § doctrine « tout utilisable ». Option
+dépôt/maturation maintenue au dossier synthèse (concept compagnon). Détail d'origine ci-dessous :*
 
 Plutôt que d'attendre le concept compagnon : chaque jour de visite, les grands-parents de Lyra
 racontent **l'épisode suivant d'une série graduée** (les serials Tadoku existent exactement pour
