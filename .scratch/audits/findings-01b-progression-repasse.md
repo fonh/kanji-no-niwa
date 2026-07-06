@@ -150,7 +150,10 @@ Train** débloqué par la quête Copycat (B1 : poupée → Pass) = le voyage rap
 la récompense d'une side quest, exactement comme en HGSS. 飛 (Vol) reste intra-région pour
 préserver cette valeur (à confirmer).
 
-### I-2 — Suicune × Eusine, et recâblage Entei (résout P-6)
+### I-2 — ✅ ADOPTÉ (2026-07-06) — Suicune × Eusine, et recâblage Entei (résout P-6)
+
+*Appliqué : PRD § Légendaires (condition Suicune = quête Eusine dernière étape + trophée Antre),
+side-content D1 (fil = la quête Suicune). Entei déjà recâblé en P-6. Détail d'origine ci-dessous :*
 
 Suicune suit le fil D1 sourcé : apparitions trackées (Irisia → Route 42 → cameos Kanto) et
 **combat final Route 25 après la rencontre Misty**, comme en HGSS — condition = étapes de la
