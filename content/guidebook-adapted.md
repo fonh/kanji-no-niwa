@@ -28,10 +28,10 @@ Référence de production pour les auteurs de contenu, le pipeline de données, 
 2. **Les objets HGSS** deviennent des récompenses de quêtes NPC ou des prix Pokéathlon — ils ne se ramassent pas par walk-over.
 3. **Les CS (HMs)** sont remplacés par les 7 CS-Kanji : 飛 (vol), 水 (surf), 力 (force), 切 (coupe), 砕 (éclate-roc), 滝 (cascade), 渦 (tourbillon) — chacun **remis par le même PNJ / trouvé au même endroit que le HM d'origine** (voir § CS-Kanji — Obtention, réécrit 2026-07-03 ; jamais débloqué via le SRS). Le Simularbre et le Ronflex s'ouvrent par objet-clé (Arrosoir, radio), pas par CS.
 4. **Les Gyms** fonctionnent comme dans le PRD (2 門弟 + 師範), pas comme dans HGSS (trainers de salle + leader).
-5. **Le Pokégear** existe dans le jeu pour les push notifications / rappels des dresseurs de route. La radio existe via Radio Tower.
+5. **Le Pokégear** porte l'appel quotidien de Fukuda et le rappel de la session SRS non faite (voir `PRD.md` § Boucle Quotidienne) *(corrigé 2026-07-06, audit 03, finding 03-C1 — « push notifications / rappels des dresseurs de route » purgé : trace d'un ancien design dresseur↔SRS, jamais spécifié ; combat et SRS sont indépendants)*. La radio existe via Radio Tower.
 6. **Aucune mécanique de jeu HGSS non listée dans le PRD** n'est à implémenter.
 7. **Déplacement à la DS** — l'avatar se déplace au D-pad (↑↓←→, une case par input). Sur mobile : D-pad virtuel à l'écran. Sur desktop : touches directionnelles ou WASD. Pas de tap-to-destination, pas de pathfinding. Bouton A = interagir avec un NPC/bâtiment adjacent.
-8. **Rencontre premier passage** — quand l'avatar entre dans le champ de vision d'un dresseur **pour la première fois**, le dresseur déclenche automatiquement le combat (même règle que dans la DS). Après ce premier combat, le dresseur ne déclenche plus jamais automatiquement. S'il affiche un "!" (carte SRS due), le joueur l'engage volontairement (marcher sur lui ou appuyer A).
+8. **Rencontre premier passage** — quand l'avatar entre dans le champ de vision d'un dresseur **pour la première fois**, le dresseur déclenche automatiquement le combat (même règle que dans la DS). Après ce premier combat, le dresseur ne déclenche plus jamais automatiquement — il redevient `talk` pur avec sa ligne `post_battle` (voir `PRD.md` § Implémentation) *(corrigé 2026-07-06, audit 03, finding 03-A3 — « s'il affiche un "!" (carte SRS due), le joueur l'engage volontairement » purgé : mécanisme d'un ancien design jamais spécifié ; un combat ne lit ni ne note jamais une carte FSRS, tranché au grill)*.
 9. **Classes de dresseurs additionnelles** — ✅ adopté (2026-07-01) : les 16 classes ci-dessous ont rejoint les 10 du PRD (§ Dresseurs de Route), qui en liste maintenant 27 au total.
 10. **PNJ récurrents transversaux** — plusieurs PNJ du guidebook réapparaissent dans de nombreuses zones selon un calendrier ou une intrigue filée (voir section dédiée). Ils sont de bons candidats pour des dresseurs/PNJ récurrents dans 漢字の庭, mais leur adaptation est optionnelle (non spécifiée par le PRD v1).
 11. **Kanji « signature » (Silver, Kimono Girls)** — les jeux de 6 kanji cités par apparition sont un motif narratif d'écriture uniquement *(précisé 2026-07-05, audit 01)* : jamais un pool de combat (les combats piochent `studiedSet`), et jamais plus de 2 de ces kanji affichés comme inconnus sur une même page de dialogue (règle des 2 inconnus max de `curriculum-checkpoints.md`).
@@ -113,7 +113,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 - ✅ **Maison de Fukuda** — tappable pour accéder à `/sensei`. Post-game : fenêtre allumée en permanence.
 - ✅ **Maison de Mom** — réintroduite (2026-07-01). ⚠️ **Corrige une incohérence** : la version précédente de cette section supprimait la maison du joueur ("la ville entière est le home narratif") tout en gardant Mom dans l'inventaire PNJ ci-dessous — elle n'avait alors plus aucun lieu où apparaître sur la carte. Mom y est un PNJ ambiant (`trigger_type: talk`, un seul état `intro` pour l'instant), première ligne de dialogue du jeu entier — voir `content/dialogues/npcs/new-bark-town/mom_new_bark.json`.
 - 🔄 **Panneau de départ** (Route 29 est) — tapable, montre la première leçon complétée. Apparaît uniquement post-Red.
-- 📍 Onboarding (Fukuda + leçon 一), événement seuil rank 4 (note de Fukuda sur la carte), Prof Elm apparition post-Lance
+- 📍 Onboarding (Fukuda + leçon 一), Prof Elm apparition post-Lance *(« événement seuil rank 4 (note de Fukuda sur la carte) » purgé 2026-07-06, audit 03, finding 03-E1 — aucun système de « rank » n'existe dans les docs actuels ; si une note de Fukuda sur la carte est souhaitée, son déclencheur se redéfinira en synthèse sur les compteurs réels : kanji étudiés, badges, quêtes)*
 - 🔒 Route 27 (est) → Plateau Indigo : accessible via 水 CS-Kanji (Surf sur la rivière)
 
 **Bâtiments sur la carte :** Dōjō Fukuda, Maison Fukuda, Maison de Mom, Panneau Route 29 (ouest), Accès Route 27 (est, 🔒水)
@@ -145,16 +145,16 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **HGSS original :** première route, va de New Bark Town à Cherrygrove City.
 
 **Dans 漢字の庭 :**
-- ✅ Route principale avec 8–10 positions de dresseurs (trainers SRS)
+- ✅ Route principale avec 8–10 positions de dresseurs-combat inventés *(« trainers SRS » renommé 2026-07-06, audit 03 — le qualificatif « SRS » relevait de l'ancien design dresseur↔review purgé (finding 03-A3) ; le sort de ces dresseurs inventés reste reporté à la synthèse, audit 01)*
 - 📍 Tutoriel de marche avec Fukuda (premiers 3 mouvements de l'avatar)
-- 📍 Événement seuil rank 7 : Silver lettre 2 apparaît au Pokémon Center de la zone suivante
 - Classe de dresseurs : Gamin, Fillette, Oiselier (classes les plus simples)
-- Dresseur spécial (1 sur 5) : actif dès la première session
+
+*(Purgé 2026-07-06, audit 03, findings 03-E1/03-E2 : « Événement seuil rank 7 : Silver lettre 2 apparaît au Pokémon Center » — ni système de « rank » ni « lettres de Silver » n'existent (les lettres sont de Fukuda, Silver = 6 rencontres physiques) ; « Dresseur spécial (1 sur 5) : actif dès la première session » — mécanisme d'aucun doc actuel. Traces d'un design antérieur.)*
 
 **Accès :** libre depuis New Bark Town (ouest). Pas de CS requis.
 
 **Sourcé du guidebook :**
-- Pas de dresseur nommé sur cette route dans le texte d'origine (trop tôt — pas encore de Poké Balls) ; le PRD peut donc librement inventer les 8–10 dresseurs SRS.
+- Pas de dresseur nommé sur cette route dans le texte d'origine (trop tôt — pas encore de Poké Balls) ; les 8–10 dresseurs-combat seraient donc inventés (sort reporté à la synthèse, audit 01 ; « SRS » purgé, audit 03).
 - **Frère/sœur du jour Tuscany** (mardi) — PNJ spécial, pas un dresseur de classe standard. Bon candidat pour un dresseur-leçon "calendaire" optionnel (voir section PNJ récurrents).
 - 🔍 Une grille au milieu de la route mène vers "Route 46" (zone hors-scope, voir Zones absentes), bloquée par un rebord infranchissable — beat "reviens plus tard" réutilisable comme tease visuel non bloquant.
 - Tagline tutoriel d'origine : "élève tes kanji pour qu'ils soient forts", "ramasse les objets en chemin" — déjà couvert par le tutoriel de marche du PRD.
@@ -164,7 +164,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Lyra/Ethan** — attend sur la route une fois l'œuf mystère livré ; apprend au joueur à attraper (premier tutoriel de capture).
 - **Frère/sœur du jour Tuscany** — visible uniquement le mardi, et seulement après le badge de Mauville ; donne TwistedSpoon (objet à équiper).
-- Aucun dresseur nommé sur cette route dans le texte source (zone trop précoce — pas encore de Poké Balls). Le PRD peut inventer librement les 8–10 dresseurs SRS.
+- Aucun dresseur nommé sur cette route dans le texte source (zone trop précoce — pas encore de Poké Balls). Les 8–10 dresseurs-combat seraient donc inventés (sort reporté à la synthèse, audit 01 ; « SRS » purgé, audit 03).
 
 ---
 
@@ -173,7 +173,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **HGSS original :** première ville avec Pokémon Center, Mart, accès mer.
 
 **Dans 漢字の庭 :**
-- ✅ **Pokémon Center** — Mode Direct (Start Session), soin narratif, accès `/library`
+- ✅ **Pokémon Center** — point d'entrée alternatif de la session SRS quotidienne ("Commencer la session" — même session/file/✓ que Fukuda/Pokégear, adopté 2026-07-06, audit 03, finding 03-E3), soin narratif *(« Mode Direct (Start Session) » et « accès `/library` » purgés — vocabulaire d'un ancien design)*
 - ❌ Pokémart simplifié — pas de système d'achat dans le jeu
 - 🔒 Accès mer (Route 40 direction) → nécessite 水 CS-Kanji, débloqué bien plus tard
 - Trainers de route : Route 29 continue, classes Gamin/Fillette
@@ -234,7 +234,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Falkner** — Arène physique, 2 門弟 + 試練 空の道, 印 n°1
-- ✅ **Pokémon Center** — Mode Direct
+- ✅ **Pokémon Center** — point d'entrée alternatif de la session SRS (voir cherrygrove-city ; « Mode Direct » purgé 2026-07-06, audit 03)
 - ✅ **Sprout Tower** — bâtiment tappable (accès narratif, pas de second dungeon)
 - 📍 Kimono Girl #1 (Zuki) dans la ville — 意味の道, kanji 意味感知思解
 - 📍 NPC Hiker N5/N4 : "山の上に赤い石があります。とってきてください！" → fetch quest vers Sprout Tower
@@ -372,7 +372,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Bugsy** — Arène physique, 2 門弟 + 試練 虫の道, 印 n°2
-- ✅ **Maison de Kurt** — Artisan Poké Ball. Bâtiment tappable : dépose des Apricorns → reçoit une item d'effet SRS après 24h (Kurt "fabrique" l'item)
+- ✅ **Maison de Kurt** — Artisan Poké Ball. Bâtiment tappable : dépose des Apricorns → reçoit une **Boule de collection** après 24h (Kurt "fabrique" l'objet) *(corrigé 2026-07-06, audit 03, finding 03-C2 — « item d'effet SRS » purgé : aucun objet n'a d'effet sur le SRS, tranché au grill (intégrité FSRS) ; les 7 Boules sont des objets de collection du Sac (`item_kind: fungible`, audit 02), avec le texte savoureux de Kurt du tableau couleur→Boule ci-dessous ; l'intérêt est le rituel quotidien du dépôt/retrait en 24h et le complétionnisme)*
 - ✅ **Pokémon Center**
 - 📍 **Silver apparition #2** (Ecorcia, porte ouest, après Proton/Puits Ramoloss) : kanji 強、越、勝、誇、傲、鋼. ⚠️ Renuméroté/recorrigé (voir note dans cherrygrove-city et `curriculum-checkpoints.md`).
 - 📍 Événement Rocket #3 (Slowpoke Well) débloque le Gym Bugsy
@@ -1087,8 +1087,8 @@ Sources : [Bulbapedia — Walkthrough Part 28](https://bulbapedia.bulbagarden.ne
 ## Bâtiments récurrents (toutes zones)
 
 ### Pokémon Center (dans chaque ville)
-- **Fonction dans le jeu :** Mode Direct (Start Session) — lance toutes les reviews en queue linéaire
-- **Tapper :** ouvre le menu "Commencer une session" ou "Voir la file"
+- **Fonction dans le jeu :** point d'entrée alternatif de la session SRS quotidienne — strictement la même session/file/✓ que l'appel de Fukuda et Pokégear → Téléphone (adopté 2026-07-06, audit 03, finding 03-E3 ; « Mode Direct »/« queue linéaire » purgés, vocabulaire d'un ancien design)
+- **Tapper :** ouvre le menu "Commencer la session" (ou l'état du jour si ✓ déjà posé)
 - **NPC intérieur (optionnel) :** une infirmière NPC avec dialogue ambiant simple
 
 ### Gyms (villes avec 師範)
@@ -1366,7 +1366,7 @@ Complète les rosters de dresseurs de route déjà partiels (Routes 2/3/4/7-8/11
 
 **Repère transversal confirmé (passe 7) :** Steven (Champion visiteur d'une autre région) forme un fil en 3 étapes traversant 3 villes — 1ère rencontre à Vermeille (déclenche une rencontre légendaire ailleurs), 2ᵉ rencontre silencieuse à Argenta (simple flag), résolution à Safranville (don ou échange). Bon gabarit de "PNJ visiteur récurrent" si le studio veut un fil similaire côté kanji (ex. un chercheur itinérant qui pose une question différente à chaque rencontre).
 
-**Dresseurs de Gym (avant le 師範) — ✅ nouveau, passe 6, lecture directe des sections de gym :** absent des passes précédentes, qui n'avaient que l'équipe du 師範 lui-même. Nombre et rareté des dresseurs "gardiens" avant le combat de Gym varient beaucoup d'une ville à l'autre — utile pour calibrer combien de dresseurs SRS placer par Gym Kanto dans le pipeline de contenu :
+**Dresseurs de Gym (avant le 師範) — ✅ nouveau, passe 6, lecture directe des sections de gym :** absent des passes précédentes, qui n'avaient que l'équipe du 師範 lui-même. Nombre et rareté des dresseurs "gardiens" avant le combat de Gym varient beaucoup d'une ville à l'autre — utile pour calibrer combien de dresseurs-combat placer par Gym Kanto dans le pipeline de contenu (« SRS » purgé, audit 03) :
 
 | Ville | Dresseurs avant le 師範 (nombre, noms si confirmés) |
 |---|---|
