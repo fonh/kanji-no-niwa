@@ -698,11 +698,11 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Dans 漢字の庭 :**
 - ✅ **Gym Jasmine** — Arène physique, 2 門弟 + 試練 鋼の道, 印 n°6
 - ✅ **Phare d'Oliville** — **montée réelle multi-étages** (roster sourcé de 9 dresseurs 1F→sommet, Amphy et la quête Jasmine/Secret Potion en haut) *(« bâtiment décoratif, NPC ambiant en haut » corrigé 2026-07-06, chasse aux reliques audit 04 : l'étiquette contredisait le roster du Phare déjà inventorié et la quête Jasmine/Amphy ; un `zone_id` par étage, tile-authoring à la synthèse)*
-- ✅ **Quai SS Aqua** — quai et navire en intérieurs réels navigables (couloir de cabines : quête de la petite-fille disparue B6, capitaine distributeur de Plaques C9), **traversée Oliville↔Vermeille fonctionnelle comme en jeu** *(« décor/atmosphère uniquement » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » ; « Kanto hors scope » purgé plus tôt le même jour ; jours/fréquence de traversée à caler à la synthèse)*.
+- ✅ **Quai SS Aqua** — quai et navire en intérieurs réels navigables (couloir de cabines : quête de la petite-fille disparue B6, capitaine distributeur de Plaques C9), **traversée Oliville↔Vermeille fonctionnelle comme en jeu** *(« décor/atmosphère uniquement » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » ; « Kanto hors scope » purgé plus tôt le même jour)*. **Modalités adoptées (2026-07-06, I-1)** : 1ʳᵉ traversée = la transition Johto→Kanto (billet remis par Elm après la Ligue, quête B6 jouée à bord) ; navettes régulières ensuite (jours de semaine, Plaques C9) ; horaires précis à la passe contenu.
 - ✅ **Pokémon Center**
 - 🔒 Route 40 (mer) → nécessite 水 CS-Kanji
 
-**Bâtiments sur la carte :** Gym Jasmine, Phare, Quai SS Aqua (déco), Pokémon Center, Accès Route 40 (🔒水)
+**Bâtiments sur la carte :** Gym Jasmine, Phare, Quai SS Aqua, Pokémon Center, Accès Route 40 (🔒水) *(« (déco) » purgé 2026-07-06, I-1 — le quai est fonctionnel)*
 
 **Sourcé du guidebook — le Phare est un mini-arc à part entière, pas un simple décor :**
 ⚠️ Dans le texte source, **Jasmine n'est pas au Gym** à l'arrivée du joueur — elle est au Phare, en train de veiller un être-gardien malade (orig. Ampharos "Amphy") qui alimente la lumière du phare. Le Gym est fermé tant que la quête n'est pas résolue. Structure complète :

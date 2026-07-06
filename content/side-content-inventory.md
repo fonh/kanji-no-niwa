@@ -57,12 +57,12 @@ PNJ payoff → récompense. Chaque ligne est un squelette de quête complet.
 
 | # | Quête | Zones reliées | Réf. | Mécanique source |
 |---|---|---|---|---|
-| B1 | Poupée de Copycat : trouvée au comptoir du Club des Fans, rendue à Copycat contre le Pass Train Aimant | Vermeille → Safranville | L1254, L1329, L1336 | Quête filée sur 2 villes ; le Pass ouvre le Magnet Train (callback Doublonville) |
+| B1 | Poupée de Copycat : trouvée au comptoir du Club des Fans, rendue à Copycat contre le Pass Train Aimant | Vermeille → Safranville | L1254, L1329, L1336 | Quête filée sur 2 villes ; le Pass ouvre le Magnet Train — **= déblocage du voyage rapide inter-régions (adopté 2026-07-06, I-1 : 飛 reste intra-région)** |
 | B2 | Pièce mécanique volée : Sbire isolé d'Azuria (combat scripté Route 24) → restitution → Centrale relancée → passage souterrain R5/R6 rouvert | Azuria → kanto-power-plant | L1258, L1301, L1355, L1364 | Le Sbire « n'a jamais reçu le mémo de dissolution » — écho comique du Grunt Solitaire |
 | B3 | Potion Secrète pour le gardien malade du Phare (Jasmine absente du Gym, tous ses dresseurs au Phare) | Oliville ↔ Irisia | L707-713, L720-722, L749, L760 | Mini-arc en 3 temps avec 9 dresseurs nommés dans le Phare ; « Gym vide jusqu'à condition » |
 | B4 | Écaille Rouge du Lac Colère → rapportée à Mr. Pokémon contre l'Exp. Share | lake-of-rage → route-30 | L222, L840, L842 | Callback longue distance vers un PNJ du tout début ; l'objet est garanti quelle que soit l'issue du combat |
 | B5 | Courrier « Kenya » à livrer (compagnon-courrier confié) | route-31 | L216, L225 | Quête-courrier simple contre TM44 |
-| B6 | Petite-fille disparue du SS Aqua : grand-père paniqué → cache-cache au sous-sol → Manteau de Métal | Quai SS Aqua (Vermeille) | L1334 | 3 PNJ (grand-père, marin endormi à réveiller = combat, capitaine) |
+| B6 | Petite-fille disparue du SS Aqua : grand-père paniqué → cache-cache au sous-sol → Manteau de Métal | Quai SS Aqua (Vermeille) | L1334 | 3 PNJ (grand-père, marin endormi à réveiller = combat, capitaine) — **jouée à bord pendant la 1ʳᵉ traversée post-Ligue (adopté 2026-07-06, I-1)** |
 | B7 | Quête courrier de la grille nord (objet porté par un oiseau sauvage, HP Up au retour) | goldenrod-city | L525 | — |
 | B8 | Fetch « pierre rouge au sommet » (Hiker N5/N4, déjà au PRD) | violet-city → sprout-tower | L240 | Payoff = lecture de l'inscription A6 |
 | B9 | Parchemin caché dans la glace (quête express N2, thème « Mahogany ») | ice-path | L864 | Déjà au PRD |

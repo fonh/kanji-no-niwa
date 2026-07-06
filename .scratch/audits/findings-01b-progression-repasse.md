@@ -136,7 +136,11 @@ mini-jeu à la synthèse.
 
 ## Propositions d'intégration (I-x) — à griller
 
-### I-1 — SS Aqua = transition canonique Johto→Kanto (résout P-10)
+### I-1 — ✅ ADOPTÉ (2026-07-06) — SS Aqua = transition canonique Johto→Kanto (résout P-10)
+
+*Appliqué : PRD § ordre des zones (modalités) + § CS-Kanji (飛 intra-région), guidebook § olivine
+(quai fonctionnel, 1ʳᵉ traversée post-Ligue), side-content B1 (Magnet Train = voyage rapide
+inter-régions) et B6 (quête jouée à bord). Détail d'origine ci-dessous :*
 
 Comme en jeu : après la Ligue, **Elm remet le billet SS Aqua** (appel Pokégear sourcé), le joueur
 embarque à Oliville → arrivée Vermeille. La quête de la petite-fille (B6) se joue à bord pendant
