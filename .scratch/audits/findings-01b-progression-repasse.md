@@ -162,7 +162,10 @@ tardif (ex. 25 points N2 — post-Ligue/début Kanto) pour rester « chassable �
 le joueur revient en Johto ; Raikou inchangé (15 N2, fin de Johto). L'escalade 45/52/60 questions
 suit alors l'ordre réel de résolution (Raikou → Entei → Suicune).
 
-### I-3 — Game Corner = « Kanji Flip » (adaptation de Voltorb Flip)
+### I-3 — ✅ ADOPTÉ (2026-07-06) — Game Corner = « Kanji Flip » (adaptation de Voltorb Flip)
+
+*Appliqué : guidebook § goldenrod (design complet, 2 tables) + § Céladia (mises N2/N1). Détail
+d'origine ci-dessous :*
 
 Le Game Corner HGSS européen **est** Voltorb Flip — le calque le plus fidèle possible. Grille
 5×5 ; retourner une tuile demande lecture ou sens d'un kanji du `studiedSet` (pioche comme un
