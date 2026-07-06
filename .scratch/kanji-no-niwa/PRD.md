@@ -744,6 +744,33 @@ Pas de boucliers. Simple : rater un jour = streak réinitialisé. Affiché dans 
 
 ---
 
+## Monnaie ¥ & la chambre du joueur (adopté 2026-07-06, I-8 — résout le candidat #6 de l'audit 04)
+
+**Gagner** : les victoires contre les dresseurs rapportent des ¥ (fidèle à la série), montants
+croissants avec la zone ; quelques quêtes en donnent aussi. Aucune autre source.
+
+**Dépenser — pur cosmétique/collection, jamais du gameplay** : Pokémarts (décorations, objets de
+flaveur locaux), spécialité de la ferme Moomoo (collectionnable — l'« objet de soin » sans fonction
+est résolu, P-12), RageCandyBar d'Acajou, Salon/styliste du Tunnel de Doublonville (tenues d'avatar).
+Les prix affichés en japonais alimentent l'échelle des nombres (revue pédagogique) et le Carnet des
+compteurs.
+
+**Mom épargne (mécanisme HGSS authentique)** : le joueur peut verser un pourcentage de ses gains à
+Mom ; elle appelle de temps en temps au Pokégear (téléphone rétabli, audit 04) pour annoncer une
+surprise — une décoration rare qui apparaît à la maison.
+
+**La chambre du joueur** (Maison de Mom, intérieur réel depuis la session 4) est **la vitrine des
+collections** : décorations achetées, gagnées (concours du Parc, Prize Shop du Pokéathlon, Loterie,
+Seals de Moomoo, fille d'Oliville) et offertes par Mom s'y affichent. « Pas de trophée décoratif »
+tenu par l'inverse : les trophées ont un lieu visible qui se remplit sur toute la partie.
+
+**Garde-fous** : les jetons du Game Corner restent une devise séparée non convertible (pas d'achat
+de jetons, I-3) ; aucun gate de progression ne dépend des ¥ ; rien ne touche le SRS ni les combats.
+`monnaie` est un `item_kind: fungible` ordinaire (audit 02). Montants/prix chiffrés à la synthèse ;
+écran de la chambre : audit 08.
+
+---
+
 ## Achievements
 
 Ensemble simplifié — seulement les jalons significatifs :

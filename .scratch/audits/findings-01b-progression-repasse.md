@@ -220,7 +220,11 @@ racontent **l'épisode suivant d'une série graduée** (les serials Tadoku exist
 `all_texts_read` (P-15). L'option « dépôt/maturation liée au compagnon » reste possible en plus,
 à la synthèse.
 
-### I-8 — Monnaie ¥ + la chambre du joueur comme vitrine (résout candidat #6 et P-12)
+### I-8 — ✅ ADOPTÉ (2026-07-06) — Monnaie ¥ + la chambre du joueur comme vitrine (résout candidat #6 et P-12)
+
+*Appliqué : nouvelle section PRD § Monnaie ¥ & la chambre du joueur ; guidebook § cherrygrove
+(Pokémart actif), § route-38/39 (spécialité Moomoo collectionnable), § new-bark (Mom épargne +
+chambre-vitrine). Détail d'origine ci-dessous :*
 
 ¥ gagnés aux victoires de dresseurs (fidèle HGSS), dépensés en **pur cosmétique/collection** :
 Mart (décorations, objets de flaveur), spécialité Moomoo, RageCandyBar (rituel d'Acajou),

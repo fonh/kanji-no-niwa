@@ -111,7 +111,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **Dans 漢字の庭 :**
 - ✅ **Dōjō de Fukuda** (remplace le labo Elm) — point de départ, écran d'onboarding, retour entre les leçons
 - ✅ **Maison de Fukuda** — intérieur réel navigable ; Fukuda s'y trouve, lui parler ouvre l'écran du dōjō *(« tappable → ouvre l'écran » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » ; « accéder à `/sensei` » purgé plus tôt le même jour : chemin d'URL d'un ancien design web-app)*. Post-game : fenêtre allumée en permanence.
-- ✅ **Maison de Mom** — réintroduite (2026-07-01). ⚠️ **Corrige une incohérence** : la version précédente de cette section supprimait la maison du joueur ("la ville entière est le home narratif") tout en gardant Mom dans l'inventaire PNJ ci-dessous — elle n'avait alors plus aucun lieu où apparaître sur la carte. Mom y est un PNJ ambiant (`trigger_type: talk`, un seul état `intro` pour l'instant), première ligne de dialogue du jeu entier — voir `content/dialogues/npcs/new-bark-town/mom_new_bark.json`.
+- ✅ **Maison de Mom** — réintroduite (2026-07-01). ⚠️ **Corrige une incohérence** : la version précédente de cette section supprimait la maison du joueur ("la ville entière est le home narratif") tout en gardant Mom dans l'inventaire PNJ ci-dessous — elle n'avait alors plus aucun lieu où apparaître sur la carte. Mom y est un PNJ ambiant (`trigger_type: talk`, un seul état `intro` pour l'instant), première ligne de dialogue du jeu entier — voir `content/dialogues/npcs/new-bark-town/mom_new_bark.json`. **Rôles ajoutés (2026-07-06, I-8)** : Mom épargne un pourcentage des gains si le joueur le souhaite et offre des décorations surprises (annoncées par appel Pokégear) ; **la chambre du joueur à l'étage = vitrine des décorations/collections** (voir PRD § Monnaie ¥ & la chambre).
 - 🔄 **Panneau de départ** (Route 29 est) — entrée `kind: sign` du registre, lecture via bouton A (finding 04-C3) ; montre la première leçon complétée. Apparaît uniquement post-Red.
 - 📍 Onboarding (Fukuda + leçon 一), Prof Elm apparition post-Lance *(« événement seuil rank 4 (note de Fukuda sur la carte) » purgé 2026-07-06, audit 03, finding 03-E1 — aucun système de « rank » n'existe dans les docs actuels ; si une note de Fukuda sur la carte est souhaitée, son déclencheur se redéfinira en synthèse sur les compteurs réels : kanji étudiés, badges, quêtes)*
 - 🔒 Route 27 (est) → Plateau Indigo : accessible via 水 CS-Kanji (Surf sur la rivière)
@@ -174,7 +174,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ✅ **Pokémon Center** — point d'entrée alternatif de la session SRS quotidienne ("Commencer la session" — même session/file/✓ que Fukuda/Pokégear, adopté 2026-07-06, audit 03, finding 03-E3), soin narratif *(« Mode Direct (Start Session) » et « accès `/library` » purgés — vocabulaire d'un ancien design)*
-- 🔄 **Pokémart** — bâtiment réel à intérieur navigable, vendeur sourcé *(« simplifié, pas de système d'achat » révisé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » : la fonction d'achat dépend de la question monnaie — tension déjà relevée en session 3 (jetons Game Corner, `monnaie` fongible de l'audit 02, « Heal Ball (vente) ») — à trancher à la synthèse, candidat #6)*
+- ✅ **Pokémart** — bâtiment réel à intérieur navigable, vendeur sourcé, **achat actif en ¥ (tranché 2026-07-06, I-8 — clôt le candidat #6)** : décorations et objets de flaveur locaux, pur cosmétique/collection ; prix affichés en japonais (échelle des nombres, Carnet des compteurs). Voir PRD § Monnaie ¥ & la chambre du joueur.
 - 🔒 Accès mer (Route 40 direction) → nécessite 水 CS-Kanji, débloqué bien plus tard
 - Trainers de route : Route 29 continue, classes Gamin/Fillette
 
@@ -686,7 +686,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Dresseurs confirmés** : Route 38 = School Kid Chad, Lass Dana, Beauty Valerie, Sailor Harry, Bird Keeper Toby ; Route 39 = Sailor Eugene, Pokéfan Derek, Pokéfan Ruth, Psychic Norman.
-- **Ferme Moomoo, détail complet** : fille à gauche du Miltank-analogue donne le Seal Case une fois guéri ; fille à droite donne 3 décorations gratuites (Fire Seal A, Party Seal B, Flora Seal C) ; fermière donne TM83 Natural Gift ; fermier se met à vendre une spécialité locale *(« objet de soin, 500 chacun » : fonction et prix suspendus à la décision monnaie — candidat #6, noté 2026-07-06, repasse progression P-12)*.
+- **Ferme Moomoo, détail complet** : fille à gauche du Miltank-analogue donne le Seal Case une fois guéri ; fille à droite donne 3 décorations gratuites (Fire Seal A, Party Seal B, Flora Seal C) ; fermière donne TM83 Natural Gift ; fermier se met à vendre une spécialité locale *(résolu 2026-07-06, I-8 : spécialité **collectionnable** vendue en ¥ — l'« objet de soin » sans fonction est adapté, P-12 clos)*.
 - **Baoba** — Route 39, annonce l'ouverture d'une nouvelle réserve à Irisia (Cianwood) ; échange de contact pour rappel ultérieur.
 
 ---
