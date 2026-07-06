@@ -6,7 +6,7 @@
       "beats": [
         {
           "type": "threshold",
-          "text": "Onboarding (Fukuda + leçon 一), événement seuil rank 4 (note de Fukuda sur la carte), Prof Elm apparition post-Lance"
+          "text": "Onboarding (Fukuda + leçon 一), Prof Elm apparition post-Lance (« événement seuil rank 4 » purgé 2026-07-06, audit 03/04 — aucun système de rank)"
         }
       ],
       "locks": [
@@ -20,10 +20,6 @@
         {
           "type": "event",
           "text": "Tutoriel de marche avec Fukuda (premiers 3 mouvements de l'avatar)"
-        },
-        {
-          "type": "rival",
-          "text": "Événement seuil rank 7 : Silver lettre 2 apparaît au Pokémon Center de la zone suivante"
         }
       ],
       "locks": []
@@ -308,7 +304,7 @@
       "beats": [
         {
           "type": "event",
-          "text": "Un **maître méditant** (orig. \"Karate King\") se trouve tout au fond de la grotte, accessible seulement après une traversée d'eau. Il engage le combat si on lui parle ; en cas de victoire, il offre un compagnon \"en reconnaissance de la victoire\". C'est le matériau idéal si le projet veut, en v2, transformer \"l'entrée de cave décorative\" en un vrai mini-donjon dōjō avec un combat-épreuve final et une récompense narrative — cohérent avec l'identité Sensei/Dōjō du jeu. Recommandation : noter comme candidat fort pour une extension post-v1."
+          "text": "Un **maître méditant** (orig. \"Karate King\") se trouve tout au fond de la grotte, accessible seulement après une traversée d'eau. Il engage le combat si on lui parle ; en cas de victoire, il offre un compagnon \"en reconnaissance de la victoire\" (concept « compagnon » à spécifier à la synthèse). Mini-donjon dōjō avec combat-épreuve final — réintégration v1 actée (2026-07-06, décision « aucune v2 »), chiffrage audit 09. Cohérent avec l'identité Sensei/Dōjō du jeu."
         }
       ],
       "locks": [

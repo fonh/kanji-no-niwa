@@ -36,12 +36,12 @@ _Avoid_: auto-furigana, computed furigana, adaptive furigana
 The calibration rule that a single dialogue — across all its Dialogue States and pages combined — may use at most 2 kanji the player hasn't studied yet, on top of kanji already known. Applies per dialogue, not per page or sentence *(confirmed as the authoritative unit 2026-07-06, audit 04, finding 04-A2)*. Character names are exempt from the budget; their Inline Readings follow the same Y-button reveal as everything else.
 _Avoid_: unknown kanji limit (per line)
 
-**Condition**:
-A single gating predicate against the player's current state (`kanji_count`, `item_owned`, `quest_step`, `npc_cleared`, `event_cleared`, `badge_earned`). A `Condition[]` array is an AND of all its members. The one gating vocabulary used everywhere a door exists: NPC/Trainer unlock (gates *presence* on the map, not just dialogue content — an entity whose Conditions aren't met doesn't exist on the tile that day), Gym door, CS-Kanji zone lock, Quest Step, Dialogue State selection.
-_Avoid_: gate, requirement, unlock rule
+**Condition** *(type list updated 2026-07-06, audit 04 relic hunt — was stale since audit 02)*:
+A single gating predicate against the player's current state (`count(metric, threshold)` — generalizes the old `kanji_count`, `item_owned`, `quest_step`, `npc_cleared`, `event_cleared`, `badge_earned`, `all_texts_read`, `time_window`), each optionally inverted with the `negate` modifier. A `Condition[]` array is an AND of all its members. The one gating vocabulary used everywhere a door exists: NPC/Trainer unlock (gates *presence* on the map, not just dialogue content — an entity whose Conditions aren't met doesn't exist on the tile that day), Gym door, CS-Kanji zone lock, Quest Step, Dialogue State selection. The daily SRS gate is deliberately NOT a Condition (it would violate the monotonicity invariant — see PRD § Boucle Quotidienne).
+_Avoid_: gate, requirement, unlock rule, kanji_count
 
-**Effect**:
-A single one-shot change to the player's state, attached to a Dialogue State (`advance_quest`, `grant_item`, `unlock_lesson`, `unlock_zone`). Fires when that Dialogue State is reached — never inferred or recomputed.
+**Effect** *(type list updated 2026-07-06, audit 04 relic hunt — was stale since audit 02)*:
+A single one-shot change to the player's state, attached to a Dialogue State (`advance_quest`, `grant_item`, `remove_item`, `unlock_lesson`, `unlock_zone`, `unlock_text`). Fires when that Dialogue State is reached — never inferred or recomputed. All Effects are idempotent; `grant_item` idempotency is driven by `item_kind` (`unique` — inert if owned; `fungible` — increments a quantity).
 _Avoid_: reward, side effect, trigger action
 
 **State Rule**:

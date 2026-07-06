@@ -318,7 +318,7 @@ périmètre du jeu via les modes Écriture/Disposition/Grammaire-saisie (product
 
 - production de phrases complètes (mode Disposition = proxy d'expression)
 - production des conjugaisons (générateur déterministe du pipeline, mode Conjugaison)
-- saisie kana/IME (clavier romaji→kana, mode Écriture)
+- saisie kana/IME (clavier romaji→kana, mode Saisie — « mode Écriture » renommé, audit 03 ; corrigé ici 2026-07-06, chasse aux reliques audit 04)
 - lecture à voix basse / rythme de lecture (textes progressifs avec quiz)
 - l'écriture manuscrite des kanji est **explicitement hors scope** (décision PRD : pas de tracé).
 

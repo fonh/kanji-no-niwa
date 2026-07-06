@@ -146,11 +146,14 @@ fonctionnalité "menu de tous les textes avec indices sur les non-découverts" :
 | 砕 (Éclate-Roc) *(nouveau 2026-07-03 — HM06 Rock Smash avait été oublié du modèle "6 CS")* | Un garçon sur la Route 36 (guide p. 80), avant même le Simularbre — comme en jeu | Briser les roches fissurées (103 sur la carte extraite : Mont Mortier, Routes de montagne, cavernes) |
 | 滝 (Cascade) *(nouveau 2026-07-02)* | Pas de PNJ dans le jeu d'origine — trouvé au Chemin Glacé (guide p. 154) ; `event_cleared` sur le puzzle de glissades coordonnées (l'objet y est caché, pas remis) | Franchir les cascades (Chutes de Tohjo, Chemin Glacé, Antre du Dragon, Kanto) |
 | 渦 (Tourbillon) *(nouveau 2026-07-02)* | Lance, au QG Rocket (Repaire de Mékanos, Acajou), après la double victoire Ariana+Lance | Traverser les tourbillons (Îles Tourbillon/Whirl Islands, passages d'eau agitée) |
+| 登 (Escalade) *(réintégré 2026-07-06, chasse aux reliques audit 04 — HM08 Rock Climb, ex-« hors scope v1 »)* | Le Prof Chen/Oak, à Bourg-Origine, après les 16 badges — comme en jeu | Gravir les parois rocheuses (Mont Gris, fin de jeu). Les parois restent à exporter comme type de terrain — chiffrage à la synthèse avec l'arc Mont Gris |
 
-Les 7 CS-Kanji couvrent les CS/HM de traversée du jeu d'origine (Cut, Fly, Surf, Strength, Whirlpool,
-Rock Smash, Waterfall). **Reste hors scope v1 (décision 2026-07-03)** : HM08 Escalade/Rock Climb (donné
-par le Prof Chen après les 16 badges, sert aux parois rocheuses de fin de jeu — les parois ne sont pas
-encore exportées comme type de terrain distinct) ; à trancher quand l'arc Mont Gris sera implémenté.
+Les **8** CS-Kanji couvrent désormais l'intégralité des CS/HM de traversée du jeu d'origine (Cut, Fly,
+Surf, Strength, Whirlpool, Rock Smash, Waterfall, Rock Climb) *(corrigé 2026-07-06, chasse aux reliques
+audit 04 : l'ancien « Reste hors scope v1… à trancher quand l'arc Mont Gris sera implémenté » était une
+indécision fossile — « v1 » n'existe plus (aucune v2) et la géographie complète est actée ; tranché au
+grill : 登 réintégré, dernier CS du jeu, remis par le Prof Chen comme en jeu)*. Seul **Flash** n'a pas
+d'équivalent (grottes sombres = couloirs sombres narratifs, jamais un gate).
 
 **Obstacles à objet-clé (pas des CS-Kanji — corrigé 2026-07-03, sourcé guide) :** deux bloqueurs
 d'histoire s'ouvrent avec un objet/événement, exactement comme en jeu, jamais par un kanji :
@@ -245,7 +248,7 @@ La longueur (nombre de questions) n'est plus une valeur fixe par catégorie de c
 | 師範 (8 gyms) | Falkner : 24 | Bugsy 31, Whitney 38, Morty 45, Chuck 51, Jasmine 58, Pryce 65 | Clair : 72 | 3 → 8 |
 | Silver (6 rencontres) | #1 Ville Griotte : 12 | #2 15, #3 18, #4 20, #5 22 | #6 Route Victoire : 24 | 2 → 3 |
 | Exécutifs Rocket (3 événements) | Proton (Puits Ramoloss) : 24 | Ariana (Mahogany) : 36 | Gauntlet Tour Radio : 48 | 3 → 5 |
-| Kimono Girls (gauntlet collectif post-Master Ball uniquement — les 5 rencontres individuelles sont des scènes/leçons, pas des combats, corrigé 2026-07-05, audit 01) | Zuki : 24 | Naoko 30, Miki 36, Kuni 42 | Sayo : 48 | 3 → 5 |
+| Kimono Girls (gauntlet collectif post-remise du grand texte d'Elm uniquement — « post-Master Ball » adapté 2026-07-06, audit 04, voir § Kimono Girls ; les 5 rencontres individuelles sont des scènes/leçons, pas des combats, corrigé 2026-07-05, audit 01) | Zuki : 24 | Naoko 30, Miki 36, Kuni 42 | Sayo : 48 | 3 → 5 |
 | Légendaires (3 : Raikou/Entei/Suicune) | Raikou : 45 | Entei : 52 | Suicune : 60 | 5 → 6 |
 | Elite Four (Will, Koga, Bruno, Karen) | — | — | 70 fixe (chacun) | 7 |
 | Lance | — | — | 80 fixe | 8 |
@@ -478,11 +481,26 @@ fois (OCR + texte natif du PDF) :
 
 **Statut des 5 rencontres individuelles — scènes/leçons, pas des combats (corrigé 2026-07-05, audit 01) :** fidèle au narratif ci-dessus et au jeu d'origine (aucun combat individuel contre une Kimono Girl ; seule la rencontre de Miki implique un combat — contre le Sbire Rocket, pas contre elle). Les seuls combats Kimono sont ceux du **gauntlet collectif** ci-dessous (5 combats, longueurs 24→48, voir table § Système de Combat). Conséquences mécaniques : gate de Clair = « 4/5 rencontrées », achievement = « les 5 rencontrées + gauntlet vaincu », `kimono_progress.cleared_at` = scène/leçon complétée, lettres de Fukuda déclenchées par les rencontres (nombre inchangé : 5).
 
-**Événement collectif (post-Master Ball)** : les 5 Kimono Girls se réunissent à l'Rosalia Dance Theater
+**Événement collectif (post-remise du grand texte d'Elm — voir note Master Ball ci-dessous)** : les 5 Kimono Girls se réunissent à l'Rosalia Dance Theater
 pour un gauntlet — un combat chacune, un seul compagnon par combat, "test du lien avec ton équipe".
 Victoire → Clear Bell/Tidal Bell, condition requise pour faire apparaître l'esprit légendaire au sommet
 de Tour Jo (Bell Tower) — où les 5 girls exécutent une danse rituelle qui fait résonner la cloche et
 attire l'esprit. Trophée de texte légendaire débloqué à cette occasion.
+
+**Master Ball → grand texte d'Elm (tranché 2026-07-06, chasse aux reliques audit 04) :** l'objet remis
+par Elm à Bourg Geon après les 8 badges Johto (Master Ball dans le jeu d'origine — objet de capture sans
+fonction ici) devient **un texte de lecture majeur** (manga, dictionnaire, magazine… — support exact
+choisi à la passe contenu, cohérent avec l'économie des textes progressifs et la Safari Zone « attraper
+des contenus de lecture »). Même PNJ, même moment narratif ; le jalon « post-Master Ball » se lit
+désormais « post-remise du grand texte d'Elm ».
+
+**Concept « compagnon » — à spécifier à la synthèse (tranché 2026-07-06, chasse aux reliques audit 04) :**
+le gauntlet ci-dessus (« un seul compagnon par combat »), la rencontre Naoko (« le compagnon du joueur
+lui montre la sortie »), le starter d'Elm, l'œuf mystère, et les compagnons offerts/prêtés/montrés du
+guidebook (Eevee de Bill, Shuckle prêté à Irisia, grand-père de Bill, Daisy, Karate King, ID Loterie)
+reposent tous sur un concept **jamais défini** dans un jeu sans Pokémon ni capture. Décision : le concept
+doit être designé à la synthèse (audit 09) — **aucun contenu ne s'écrit sur ces beats avant** ; les
+mentions restent en l'état comme matériau sourcé.
 
 _(Note : la 4e rencontre dans l'ordre de la table récap du guidebook lui-même liste Kuni en position 4
 malgré une rencontre chronologique réelle légèrement différente selon le chemin emprunté — la

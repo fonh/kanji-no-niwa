@@ -397,7 +397,7 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 | Homme au nord du Gym | Signale que le gardien-phare d'Oliville est malade | — | |
 | Vendeur du Mart | Comptoir du fond | Air Mail, Heal Ball, Net Ball (vente) | |
 | Rival (Silver) | Devant Tour Jo (Silver apparition #3) | — | |
-| Gauntlet des 5 Kimono Girls (post-Master Ball) | Combat récapitulatif au Théâtre, "test du lien avec ton équipe" | Clear Bell / Tidal Bell | |
+| Gauntlet des 5 Kimono Girls (post-remise du grand texte d'Elm — « post-Master Ball » adapté 2026-07-06, audit 04) | Combat récapitulatif au Théâtre, "test du lien avec ton équipe" | Clear Bell / Tidal Bell | |
 | Medium Martha/Edith/Grace/Georgina (Gym) | Récompense finale du Gym Morty | Fog Badge + TM30 Shadow Ball | |
 
 **Side quests dans cette zone** : 1 (résoudre l'énigme de l'homme à l'ouest du Centre Pokémon)

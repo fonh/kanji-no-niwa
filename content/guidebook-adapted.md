@@ -26,7 +26,7 @@ Référence de production pour les auteurs de contenu, le pipeline de données, 
 
 1. **Les Pokémon n'apparaissent pas** dans 漢字の庭 — les "créatures" remplacées par des kanji personnifiés ou des dresseurs. Exceptions (corrigé 2026-07-03) : le Simularbre (Route 36) et le Ronflex (devant la Grotte Taupiqueur, Kanto — la ROM le place sur les cellules Routes 11/12, pas Route 27) restent comme obstacles bloquants ouverts par objet-clé, comme en jeu.
 2. **Les objets HGSS** deviennent des récompenses de quêtes NPC ou des prix Pokéathlon — ils ne se ramassent pas par walk-over.
-3. **Les CS (HMs)** sont remplacés par les 7 CS-Kanji : 飛 (vol), 水 (surf), 力 (force), 切 (coupe), 砕 (éclate-roc), 滝 (cascade), 渦 (tourbillon) — chacun **remis par le même PNJ / trouvé au même endroit que le HM d'origine** (voir § CS-Kanji — Obtention, réécrit 2026-07-03 ; jamais débloqué via le SRS). Le Simularbre et le Ronflex s'ouvrent par objet-clé (Arrosoir, radio), pas par CS.
+3. **Les CS (HMs)** sont remplacés par les **8 CS-Kanji** : 飛 (vol), 水 (surf), 力 (force), 切 (coupe), 砕 (éclate-roc), 滝 (cascade), 渦 (tourbillon), 登 (escalade — HM08 Rock Climb réintégré 2026-07-06, chasse aux reliques audit 04) — chacun **remis par le même PNJ / trouvé au même endroit que le HM d'origine** (voir § CS-Kanji — Obtention, réécrit 2026-07-03 ; jamais débloqué via le SRS). Le Simularbre et le Ronflex s'ouvrent par objet-clé (Arrosoir, radio), pas par CS. Seul Flash n'a pas d'équivalent (couloirs sombres narratifs).
 4. **Les Gyms** fonctionnent comme dans le PRD (2 門弟 + 師範), pas comme dans HGSS (trainers de salle + leader).
 5. **Le Pokégear** porte l'appel quotidien de Fukuda et le rappel de la session SRS non faite (voir `PRD.md` § Boucle Quotidienne) *(corrigé 2026-07-06, audit 03, finding 03-C1 — « push notifications / rappels des dresseurs de route » purgé : trace d'un ancien design dresseur↔SRS, jamais spécifié ; combat et SRS sont indépendants)*. La radio existe via Radio Tower.
 6. **Aucune mécanique de jeu HGSS non listée dans le PRD** n'est à implémenter.
@@ -110,7 +110,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ✅ **Dōjō de Fukuda** (remplace le labo Elm) — point de départ, écran d'onboarding, retour entre les leçons
-- ✅ **Maison de Fukuda** — tappable pour accéder à `/sensei`. Post-game : fenêtre allumée en permanence.
+- ✅ **Maison de Fukuda** — tappable → ouvre l'écran de Fukuda (dōjō) *(« accéder à `/sensei` » purgé 2026-07-06, chasse aux reliques audit 04 : chemin d'URL d'un ancien design web-app, aucune route de ce nom dans l'app)*. Post-game : fenêtre allumée en permanence.
 - ✅ **Maison de Mom** — réintroduite (2026-07-01). ⚠️ **Corrige une incohérence** : la version précédente de cette section supprimait la maison du joueur ("la ville entière est le home narratif") tout en gardant Mom dans l'inventaire PNJ ci-dessous — elle n'avait alors plus aucun lieu où apparaître sur la carte. Mom y est un PNJ ambiant (`trigger_type: talk`, un seul état `intro` pour l'instant), première ligne de dialogue du jeu entier — voir `content/dialogues/npcs/new-bark-town/mom_new_bark.json`.
 - 🔄 **Panneau de départ** (Route 29 est) — tapable, montre la première leçon complétée. Apparaît uniquement post-Red.
 - 📍 Onboarding (Fukuda + leçon 一), Prof Elm apparition post-Lance *(« événement seuil rank 4 (note de Fukuda sur la carte) » purgé 2026-07-06, audit 03, finding 03-E1 — aucun système de « rank » n'existe dans les docs actuels ; si une note de Fukuda sur la carte est souhaitée, son déclencheur se redéfinira en synthèse sur les compteurs réels : kanji étudiés, badges, quêtes)*
@@ -126,7 +126,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 - Tagline d'origine : *"The Town Where the Winds of a New Beginning Blow"* — bon residu pour la tagline française de Bourg Geon.
 
 **Items HGSS conservés comme référence narrative :**
-- Pokégear → donné par Fukuda au début (onboarding), sert aux push notifications
+- Pokégear → donné par Fukuda au début (onboarding) ; porte l'appel quotidien de Fukuda et les appels entrants du téléphone HGSS complet *(« sert aux push notifications » purgé 2026-07-06, chasse aux reliques audit 04 — vocabulaire web d'un ancien design)*
 - Master Ball → remplacée par un item narratif (diplôme/sceau) donné par Elm après les 8 印
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
@@ -235,7 +235,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **Dans 漢字の庭 :**
 - ✅ **Gym Falkner** — Arène physique, 2 門弟 + 試練 空の道, 印 n°1
 - ✅ **Pokémon Center** — point d'entrée alternatif de la session SRS (voir cherrygrove-city ; « Mode Direct » purgé 2026-07-06, audit 03)
-- ✅ **Sprout Tower** — bâtiment tappable (accès narratif, pas de second dungeon)
+- ✅ **Sprout Tower** — intérieur réel multi-étages (1F→3F, Ancien Li au sommet — la zone `sprout-tower` existe déjà) *(« bâtiment tappable, pas de second dungeon » corrigé 2026-07-06, chasse aux reliques audit 04 : étiquette d'avant le modèle « un zone_id par étage » d'ADR-0004)*
 - 📍 Kimono Girl #1 (Zuki) dans la ville — 意味の道, kanji 意味感知思解
 - 📍 NPC Hiker N5/N4 : "山の上に赤い石があります。とってきてください！" → fetch quest vers Sprout Tower
 - Accès nord : Route 36 (débloquée après 試練 Falkner)
@@ -473,7 +473,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Sourcé du guidebook — dresseurs :** **Campeur Todd**, **Policier Keith** (combat uniquement la nuit, 20h–4h — bon modèle pour un dresseur-leçon "nocturne"), **Gamin Ian**, **Pique-niqueuse Gina**, **Pokéfan Brandon**, **Gamin Samuel**, et un trio **Dresseur Ace Jenn/Irene/Kate** ("Kate et ses deux sœurs") qui attaque ensemble après une traversée d'eau — bon modèle pour un combat de groupe optionnel/caché.
 
 **Sourcé du guidebook — PNJ clés :**
-- Le couple de la pension (Day Care, supprimée dans 漢字の庭) est en réalité les **grands-parents de Lyra/Ethan** — détail de lore sans usage direct ici puisque la pension est coupée, mais pourrait inspirer un PNJ-grand-parent ambiant si le projet veut humaniser la route.
+- La **pension (Day Care) est réintégrée en bâtiment de la Route 34 (tranché 2026-07-06, chasse aux reliques audit 04)** : le couple — en réalité les **grands-parents de Lyra/Ethan** — redevient des PNJ sourcés ordinaires, utilisables comme PNJ-leçon/texte par l'équipe contenu. Aucune mécanique d'élevage (même logique que la Safari : géographie fidèle, mécanique absente ou adaptée). L'ancien « supprimée dans 漢字の庭 » datait d'avant la doctrine de géographie complète.
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Policeman Keith** — confirmé combat uniquement nocturne (20h–4h), à l'ouest de la pension.
@@ -488,7 +488,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Whitney** — Arène physique, 2 門弟 + 試練 常の道, 印 n°3
-- ✅ **Radio Tower** — Bâtiment tappable. Buena's Password (push notification 11h00). Événement Rocket #6 (prise de contrôle par Petrel + Archer). Post-Rocket : diffuse le Prof Oak Kanji Swarm.
+- ✅ **Radio Tower** — Bâtiment tappable. Buena's Password — émission radio quotidienne à 11h00, à écouter via l'onglet Radio du Pokégear, comme en jeu *(« push notification » purgé 2026-07-06, chasse aux reliques audit 04)*. Événement Rocket #6 (prise de contrôle par Petrel + Archer). Post-Rocket : diffuse le Prof Oak Kanji Swarm.
 - ✅ **Pokémon Center**
 - 🔄 **Department Store** → **Librairie de Doublonville** — bâtiment décoratif, NPC ambiant (vendeuse parle en N4)
 - ❌ Game Corner supprimé
@@ -513,12 +513,12 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) — ville très dense, ~30 PNJ/rôles :**
 - **Bill** — Centre Pokémon (absent, parti à Rosalia) puis sa maison (donne un compagnon rare, Eevee-analogue, après l'avoir rencontré à Rosalia) ; sa petite sœur donne son numéro.
-- **Mr. Game** — Game Corner, donne le Coin Case (feature de jeu d'argent hors-scope, PNJ adaptable en autre chose).
+- **Mr. Game** — Game Corner, donne le Coin Case. **Game Corner adapté en mini-jeu de kanji contre jetons (tranché 2026-07-06, chasse aux reliques audit 04 — remplace l'indécision « PNJ adaptable en autre chose »)** : les deux Game Corners (Doublonville, Céladia) deviennent des salles de mini-jeu pédagogique, le Coin Case retrouve sa fonction (porter les jetons) ; design du mini-jeu chiffré à la synthèse.
 - **Personnel du Tunnel** (rotatif par jour) — Salon Pokémon (styliste sénior/junior), Herboriste, Boutique Discount — mécanique de rotation hebdomadaire, faible valeur narrative.
 - **Gérant du magasin de vélos** — prête une Bicyclette gratuitement ("bonne publicité"), mentionne que la chaîne est née à Cerulean City (Kanto) ; rappelle plus tard pour offrir le vélo définitivement.
 - **Fille évaluatrice d'affection** — maison au nord du Dept Store, évalue le lien avec le compagnon en tête d'équipe.
 - **Réceptionniste Tour Radio** — quiz de 5 questions, réussite → Radio Card.
-- **Stand Loterie** (Tour Radio 1F) — tirage quotidien contre le numéro ID du compagnon.
+- **Stand Loterie** (Tour Radio 1F) — tirage quotidien. **Réintégrée (tranché 2026-07-06, chasse aux reliques audit 04)** : cohérente avec la boucle quotidienne (SRS, Boules de Kurt en 24h, PNJ calendaires) et le Game Corner adapté ; le numéro tiré dans l'original est l'ID du compagnon — mécanisme de remplacement et récompense à designer à la synthèse (dépend du concept « compagnon », lui aussi à spécifier).
 - **Buena** — studio radio (Tour Radio 2F), donne la Blue Card, mot de passe quotidien à deviner pour gagner des points.
 - **Name Rater** — maison nord de la ville, renomme les surnoms (sauf échangés).
 - **Fleuriste** (Floria) — donne le SquirtBottle une fois le badge de Gym vu.
@@ -598,8 +598,8 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Morty** — Arène physique, 2 門弟 + 試練 影の道, 印 n°4
-- ✅ **Tour Jo** (Bell Tower) — bâtiment tappable, scène collective Kimono Girls (after all 5 beaten)
-- ✅ **Tour Embrasée** (Burned Tower) — bâtiment tappable → Événement Rocket #4
+- ✅ **Tour Jo** (Bell Tower) — **ascension réelle 1F→10F + toit** (séquence complète sourcée § Tour Jo ci-dessous, modèle set-piece ADR-0004 : un `zone_id` par palier ; danse rituelle des 5 Kimono Girls au sommet) *(« bâtiment tappable » corrigé 2026-07-06, chasse aux reliques audit 04 ; tile-authoring et budgets à la synthèse, section d'inventaire PNJ à sourcer)*
+- ✅ **Tour Embrasée** (Burned Tower) — intérieur réel (rez + sous-sol, Silver #3 en haut de l'échelle — la zone `burned-tower` existe déjà) → Événement Rocket #4 *(« bâtiment tappable » corrigé 2026-07-06, chasse aux reliques audit 04)*
 - ✅ **Pokémon Center**
 - 📍 **Silver apparition #3** (devant Tour Jo, studied ≥ 550) : kanji 影、闇、忘、去、断、孤. ⚠️ Renuméroté de #2 à #3 (kanji inchangé, déjà correct) — voir `curriculum-checkpoints.md` § Règle de Silver.
 - 📍 **Kimono Girl #3 (Miki)** dans la ville — 語源の道, kanji 古、源、形、象、原、文
@@ -628,7 +628,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - **Homme au nord du Gym** — signale que le gardien-phare d'Oliville est malade (amorce la quête du Phare).
 - Mart (comptoir du fond) : Air Mail, Heal Ball, Net Ball.
 - **Gym Morty — dresseurs** : Medium Martha, Medium Edith, Medium Grace, Medium Georgina avant Morty (Gastly/Haunter×2/Gengar). Récompense : Fog Badge (Surf en exploration, échangés jusqu'au niv. 50 obéissent) + TM30 Shadow Ball.
-- **Gauntlet des 5 Kimono Girls** (post-Master Ball, toutes réunies au Théâtre) — un combat chacune, un seul compagnon chacune, "test du lien avec ton équipe". Récompense : Clear Bell/Tidal Bell.
+- **Gauntlet des 5 Kimono Girls** (post-remise du grand texte d'Elm — « Master Ball » adapté en texte de lecture majeur, 2026-07-06, audit 04, voir PRD § Kimono Girls ; toutes réunies au Théâtre) — un combat chacune, un seul compagnon chacune (concept « compagnon » à spécifier à la synthèse), "test du lien avec ton équipe". Récompense : Clear Bell/Tidal Bell.
 
 **Sourcé du guidebook — Tour Jo (Bell Tower), séquence complète retrouvée (passe 2) :**
 📍 Le guide confirme une vraie ascension de tour (et non un simple bâtiment tappable) : 1F→10F + Toit, avec une mécanique différente par paliers. Séquence intégrale, directement réutilisable si le projet veut enrichir Tour Jo au-delà d'un "tappable" :
@@ -697,7 +697,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Jasmine** — Arène physique, 2 門弟 + 試練 鋼の道, 印 n°6
-- ✅ **Phare d'Oliville** — bâtiment décoratif, NPC ambiant en haut (N3)
+- ✅ **Phare d'Oliville** — **montée réelle multi-étages** (roster sourcé de 9 dresseurs 1F→sommet, Amphy et la quête Jasmine/Secret Potion en haut) *(« bâtiment décoratif, NPC ambiant en haut » corrigé 2026-07-06, chasse aux reliques audit 04 : l'étiquette contredisait le roster du Phare déjà inventorié et la quête Jasmine/Amphy ; un `zone_id` par étage, tile-authoring à la synthèse)*
 - ✅ **Quai SS Aqua** — visible sur la carte. Bâtiment tappable → décor/atmosphère uniquement en v1 *(« Kanto hors scope » purgé 2026-07-06, audit 04 — trace d'avant l'adoption du Kanto le 2026-07-01 ; le rôle du SS Aqua comme traversée Oliville↔Vermeille reste à trancher à la synthèse, avec les zones réintégrées)*.
 - ✅ **Pokémon Center**
 - 🔒 Route 40 (mer) → nécessite 水 CS-Kanji
@@ -1181,6 +1181,7 @@ au même moment narratif que le CS/HM du jeu d'origine** (vérifié dans le text
 | 飛 (vol) | La femme de Chuck, Irisia, après la victoire sur Chuck | Voyage rapide vers toute ville visitée |
 | 渦 (tourbillon) | Lance, QG Rocket d'Acajou, après le double combat Ariana | Tourbillons (Îles Tourbillon, eaux agitées) |
 | 滝 (cascade) | Trouvé au Chemin Glacé (p. 154) — adapté en récompense du puzzle de glissades | Cascades (Chutes de Tohjo, Antre du Dragon, Kanto) |
+| 登 (escalade) *(réintégré 2026-07-06, chasse aux reliques audit 04 — HM08 Rock Climb)* | Le Prof Chen/Oak, Bourg-Origine, après les 16 badges | Parois rocheuses (Mont Gris — terrain à exporter, chiffrage à la synthèse) |
 
 **Objets-clés distincts des CS-Kanji (comme en jeu) :** l'**Arrosoir** (Boutique de Fleurs, Doublonville,
 après le badge de Whitney) déloge le Simularbre de la Route 36 ; la **radio améliorée** (carte EXPN,
@@ -1260,7 +1261,7 @@ pour que 力 (ou 飛) serve aussi à "rattraper" les dresseurs manqués d'un pre
 
 **📍 Nouveau fil narratif confirmé passe 6 — le pont manquant entre Johto et Kanto pour l'arc du Rival :** en sortant de Route 3 (juste après Argenta/Pewter) vers la grotte du Mont Lune (Mt. Moon, hors scope en tant que donjon jouable), le Rival (Silver) tend une embuscade au joueur — sa première réapparition depuis le Hall of Fame. Le texte source le décrit reconnaissant enfin la valeur du joueur tout en voulant encore se battre. C'est ce combat qui, dans le jeu d'origine, précède et motive directement le combat en duo (joueur + Lance contre le Rival) déjà documenté côté Johto à l'Antre du Dragon/Blackthorn ("Tag Battle") — jusqu'ici cette section ne savait pas *pourquoi* le Rival se retrouvait mêlé à cette scène côté Johto ; cette embuscade Kanto en est l'origine chronologique. Si le studio garde une septième apparition de Silver hors PRD (au-delà des 6 officielles), ce Mont Lune est le lieu le plus fidèle à proposer — sinon, ce fil peut simplement enrichir en creux la caractérisation de l'Antre du Dragon déjà écrite (Silver y arrive après avoir déjà, hors-écran, cherché le combat une fois de plus).
 
-**Céladia / Celadon (Erika)** — Grand magasin (Celadon Department Store), Game Corner (casino — mécanique hors scope, à traiter comme décor), immeubles "Celadon Condominiums". Quête confirmée : un homme au sommet des Condominiums donne un objet uniquement de nuit (20h-4h) — bon modèle de PNJ à horaire fixe. **Callback confirmé vers Johto** : les masques (Turtwig/Chimchar/Piplup) obtenus ici sont utilisables au "Dress-Up Shop" du Tunnel de Doublonville (Goldenrod Tunnel) déjà présent dans notre jeu — lien concret entre Kanto et Johto à exploiter narrativement.
+**Céladia / Celadon (Erika)** — Grand magasin (Celadon Department Store), Game Corner (casino — **adapté en mini-jeu de kanji contre jetons, aligné sur Doublonville/Mr. Game, tranché 2026-07-06, chasse aux reliques audit 04** ; remplace « à traiter comme décor »), immeubles "Celadon Condominiums". Quête confirmée : un homme au sommet des Condominiums donne un objet uniquement de nuit (20h-4h) — bon modèle de PNJ à horaire fixe. **Callback confirmé vers Johto** : les masques (Turtwig/Chimchar/Piplup) obtenus ici sont utilisables au "Dress-Up Shop" du Tunnel de Doublonville (Goldenrod Tunnel) déjà présent dans notre jeu — lien concret entre Kanto et Johto à exploiter narrativement.
 
 **Fuchsia City (Janine)** — Gym = labyrinthe de murs transparents (bon gabarit de Gym-puzzle, thème 毒/prudence — on ne voit pas le piège avant d'y être). Pal Park au nord (mécanique de transfert hors scope, mais le gardien est confirmé comme "le fils de Baoba" — **callback direct vers un PNJ Johto déjà documenté** dans "PNJ récurrents transversaux", bon fil filé à réutiliser). Volcan ayant coupé la route sud vers Île Braise (détour narratif tout trouvé).
 
@@ -1270,7 +1271,7 @@ pour que 力 (ou 飛) serve aussi à "rattraper" les dresseurs manqués d'un pre
 
 **Vertville / Viridian (Blue)** — Dernier Gym, verrouillé jusqu'à la fin (le vieil homme devant la porte laisse passer seulement après Blaine + Blue rencontré à Île Braise). Sol du Gym = tuiles-flèches qui déplacent le joueur dans une direction fixe (autre gabarit de Gym-puzzle, cohérent avec 頂/rivalité — un terrain qu'on ne contrôle pas totalement). Après victoire : le Pr. Chen/Oak appelle immédiatement à la sortie du Gym.
 
-**Bourg-Origine / Pallet Town (Pr. Chen/Oak) — ✅ nouvelle entrée, passe 6 :** absente des passes précédentes alors qu'elle encadre tout l'arc Kanto. C'est le point d'arrivée réel (après Vertville/Blue) et le point de retour après Red — voir la note "après la défaite de Red" ajoutée § mt-silver-summit ci-dessus. Plus petite ville du jeu (pas de Centre Pokémon ni de Poké Mart) : seulement le labo du Pr. Chen/Oak, et les maisons du héros et de son/sa rival(e) historique (Blue). Trois visites distinctes confirmées par le texte : (1) première visite, juste après Vertville — Oak n'a encore rien à donner, "reviens une fois tous les badges Kanto en poche" (bon écho pour un Fukuda qui renverrait le joueur au terrain plutôt que de le récompenser prématurément) ; (2) après avoir vaincu Blue à Vertville — Oak donne la permission d'accès à Mont Gris (voir passe 6 § mt-silver-summit) ; (3) après Red — choix de récompense symbolique. Détail de caractérisation trouvé dans la maison du rival : sa mère/sœur (Daisy dans l'original) toilette le compagnon du joueur quotidiennement sur un créneau fixe (bon gabarit de PNJ à horaire fixe, dans la veine de la Loterie/Boutique Bonheur déjà au PRD) et finit par transmettre un contact pour un combat de revanche post-16-badges.
+**Bourg-Origine / Pallet Town (Pr. Chen/Oak) — ✅ nouvelle entrée, passe 6 :** absente des passes précédentes alors qu'elle encadre tout l'arc Kanto. C'est le point d'arrivée réel (après Vertville/Blue) et le point de retour après Red — voir la note "après la défaite de Red" ajoutée § mt-silver-summit ci-dessus. Plus petite ville du jeu (pas de Centre Pokémon ni de Poké Mart) : seulement le labo du Pr. Chen/Oak, et les maisons du héros et de son/sa rival(e) historique (Blue). Trois visites distinctes confirmées par le texte : (1) première visite, juste après Vertville — Oak n'a encore rien à donner, "reviens une fois tous les badges Kanto en poche" (bon écho pour un Fukuda qui renverrait le joueur au terrain plutôt que de le récompenser prématurément) ; (2) après avoir vaincu Blue à Vertville — Oak donne la permission d'accès à Mont Gris (voir passe 6 § mt-silver-summit) ; (3) après Red — choix de récompense symbolique. Détail de caractérisation trouvé dans la maison du rival : sa mère/sœur (Daisy dans l'original) toilette le compagnon du joueur quotidiennement sur un créneau fixe (bon gabarit de PNJ à horaire fixe, `Condition.time_window` — *cross-réf « Loterie/Boutique Bonheur déjà au PRD » corrigée 2026-07-06, chasse aux reliques audit 04 : ni l'une ni l'autre n'étaient au PRD ; la Loterie est désormais réintégrée, voir § goldenrod-city*) et finit par transmettre un contact pour un combat de revanche post-16-badges.
 
 ### Inventaire PNJ exhaustif complémentaire par ville (passe 7, 2026-07-02)
 
@@ -1348,7 +1349,7 @@ Les repères ci-dessus (passe 2) s'arrêtaient au contenu directement lié au Gy
 
 ### Kanto — Routes et donjons (passe 7, 2026-07-02 — ✅ formalisées en zones le 2026-07-02)
 
-Complète les rosters de dresseurs de route déjà partiels (Routes 2/3/4/7-8/11/12/13/20-21) avec toutes les zones de transit et donjons non encore couverts. Comme pour les villes, cette passe ne change aucune décision d'adaptation *(phrase corrigée 2026-07-06, audit 04, finding 04-A4 : la version précédente disait « les CS-Kanji restent 飛/水/力 uniquement, pas d'équivalent pour Flash/Cut/Strength/Rock Climb/Surf » — auto-contradictoire (力 est Strength, 水 est Surf) et périmée depuis le modèle à 7 CS du 2026-07-03)* : les 7 CS-Kanji (飛/水/力/切/砕/滝/渦, voir L29 et la table § CS-Kanji) couvrent Cut/Fly/Surf/Strength/Rock Smash/Waterfall/Whirlpool ; seuls **Flash** et **Rock Climb** n'ont pas d'équivalent (Flash = couloir sombre narratif, Rock Climb = hors scope jusqu'à l'arc Mont Gris, décision PRD 2026-07-03) — les mentions 🔒 ci-dessous servent de repère « pourquoi cette zone est verrouillée dans le jeu d'origine ». **Chaque entrée a désormais un `zone_id` et une ligne dans `content/curriculum-checkpoints.md`** (voir la table de calibration pour le budget kanji exact de chacune).
+Complète les rosters de dresseurs de route déjà partiels (Routes 2/3/4/7-8/11/12/13/20-21) avec toutes les zones de transit et donjons non encore couverts. Comme pour les villes, cette passe ne change aucune décision d'adaptation *(phrase corrigée 2026-07-06, audit 04, finding 04-A4 : la version précédente disait « les CS-Kanji restent 飛/水/力 uniquement, pas d'équivalent pour Flash/Cut/Strength/Rock Climb/Surf » — auto-contradictoire (力 est Strength, 水 est Surf) et périmée depuis le modèle à 7 CS du 2026-07-03)* : les 8 CS-Kanji (飛/水/力/切/砕/滝/渦/登, voir L29 et la table § CS-Kanji) couvrent Cut/Fly/Surf/Strength/Rock Smash/Waterfall/Whirlpool/Rock Climb *(登 réintégré 2026-07-06, chasse aux reliques audit 04)* ; seul **Flash** n'a pas d'équivalent (couloir sombre narratif) — les mentions 🔒 ci-dessous servent de repère « pourquoi cette zone est verrouillée dans le jeu d'origine ». **Chaque entrée a désormais un `zone_id` et une ligne dans `content/curriculum-checkpoints.md`** (voir la table de calibration pour le budget kanji exact de chacune).
 
 - **`route-1-kanto`** — Route 1 (Vertville ↔ Bourg-Origine) : 4 dresseurs (Écolier Sherman, Écolier Danny, Dresseur Ace French, Dresseur Ace Quinn). Photographe itinérant en jours différents côté Vertville vs côté Bourg-Origine. Aucun obstacle.
 - **`route-6-kanto`** — Route 5 / Route 6 / Passage Souterrain (Azuria–Safranville–Vermeille) : dresseurs confirmés (Jumeaux Amy & Dani, Pique-niqueuse Selina, Campeur Virgil). Vieille dame Route 5 donne un Talisman Anti-Combat pressentant un danger. PNJ du Passage Souterrain échange une spécialité locale (RageCandyBar) contre une CT. 🔒 Passage fermé tant que la Centrale Électrique n'est pas relancée.

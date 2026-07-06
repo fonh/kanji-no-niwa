@@ -310,10 +310,12 @@ débloquées.
 | 砕 (Éclate-Roc) *(ligne ajoutée 2026-07-06, audit 04, finding 04-E2 — manquait depuis l'ajout du 7ᵉ CS le 2026-07-03)* | Un garçon, Route 36 (guide p. 80) | Avant même le Simularbre, dès le badge de Falkner — comme en jeu |
 | 滝 (Cascade) | Aucun PNJ dans le jeu d'origine | `event_cleared` sur le puzzle de glissades coordonnées du Chemin Glacé — l'objet y est caché, pas remis en main propre. Le "texte obligatoire" est donc trouvé (objet, `found_object_ref`), pas reçu d'un PNJ — le modèle tolère les deux, § Déclenchement le prévoit déjà (talk pour un PNJ, sight_auto/block pour un passage verrouillé par un puzzle/objet) |
 | 渦 (Tourbillon) | Lance | Au QG Rocket (Repaire de Mékanos, Acajou), juste après la double victoire Ariana+Lance |
+| 登 (Escalade) *(réintégré 2026-07-06, chasse aux reliques audit 04 — HM08 Rock Climb, ex-« hors scope v1 »)* | Le Prof Chen/Oak | Bourg-Origine, après les 16 badges — dernier CS du jeu, ouvre les parois du Mont Gris |
 
-Les **7** CS-Kanji couvrent l'intégralité des CS/HM de traversée du jeu d'origine (Cut, Fly, Surf,
-Strength, Rock Smash, Waterfall, Whirlpool) *(compte corrigé 2026-07-06, audit 04, finding 04-E2 —
-« 6 » et la table sans 砕 dataient d'avant l'ajout de Rock Smash le 2026-07-03)*.
+Les **8** CS-Kanji couvrent l'intégralité des CS/HM de traversée du jeu d'origine (Cut, Fly, Surf,
+Strength, Rock Smash, Waterfall, Whirlpool, Rock Climb) *(compte corrigé 2026-07-06, audit 04 : « 6 »
+et la table sans 砕 dataient d'avant l'ajout de Rock Smash le 2026-07-03 — finding 04-E2 ; puis 登/Rock
+Climb réintégré à la chasse aux reliques, même jour)*.
 
 **Condition d'activation** : `Condition` composite —
 1. Le joueur a atteint le moment narratif (`npc_cleared`/`event_cleared`, ex. `chuck_defeated` ou

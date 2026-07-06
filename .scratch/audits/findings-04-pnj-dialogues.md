@@ -310,6 +310,50 @@ hors mentions correctives, boucle quotidienne PRD:89 compatible avec le téléph
 - `content/map/story-beats.json` et `placements/` couvrent 49 zones — les zones réintégrées
   n'y ont pas d'entrée (attendu : données produites après chiffrage à la synthèse).
 
+## Chasse aux reliques (session 3, 2026-07-06) — 12 items grillés
+
+Grep systématique du corpus (vocabulaire d'anciens designs, mécaniques Pokémon non adaptées
+dans les couches adaptées, indécisions fossiles). Décisions :
+
+| # | Relique | Décision | Appliqué |
+|---|---------|----------|----------|
+| R1 | `story-beats.json` : « rank 4 », « rank 7/Silver lettre 2 », « en v2 » (Karate King) — purges audit 03 non répercutées dans les données | Supprimer/aligner | ✅ |
+| R2 | « mode Écriture » (`jlpt-language-syllabus.md:321`) | Renommé « Saisie » | ✅ |
+| R3 | `/sensei` (`guidebook:113`) — chemin d'URL d'un ancien design web-app, route inexistante | Reformulé « écran de Fukuda » | ✅ |
+| R4 | « push notifications » (`guidebook:129`, `:491` Buena) | Reformulés (appels entrants ; émission radio 11h00) | ✅ |
+| R5 | `CONTEXT.md` Condition/Effect périmés (kanji_count, types manquants) | Alignés sur l'audit 02, sans attendre la synthèse | ✅ |
+| R6 | Rock Climb « hors scope v1, à trancher plus tard » (`PRD:151-153`) | **Réintégré : 8ᵉ CS-Kanji 登 (Escalade)**, Prof Chen après 16 badges ; parois Mont Gris = terrain à exporter, chiffrage synthèse. Seul Flash reste sans équivalent | ✅ (PRD, guidebook ×3, texts-progressifs) |
+| R7 | Day Care « supprimée » (`guidebook:476`) | **Réintégrée** : bâtiment Route 34 + couple (grands-parents de Lyra) en PNJ sourcés ; aucune mécanique d'élevage | ✅ |
+| R8 | Game Corner « PNJ adaptable en autre chose » (`guidebook:516`) / « décor » (Céladia) | **Adaptés en mini-jeu de kanji contre jetons** (les deux) ; Coin Case fonctionnel ; design à la synthèse | ✅ |
+| R9 | Loterie « supprimée du scope » + fausse cross-ref « déjà au PRD » (`guidebook:1273`) | **Réintégrée** (tirage quotidien, Tour Radio 1F) ; mécanisme/récompense à la synthèse ; cross-ref corrigée | ✅ |
+| R10 | Concept « compagnon » jamais défini (~54 mentions : gauntlet Kimono, Naoko, starter, œuf mystère, Eevee de Bill, Shuckle, Daisy, Karate King, ID Loterie) | **À designer à la synthèse** — aucun contenu ne s'écrit sur ces beats avant ; note normative ajoutée au PRD § Kimono Girls | ✅ |
+| R11 | Master Ball = objet de capture sans fonction, utilisé comme jalon (« post-Master Ball ») | **Adaptée : « grand texte d'Elm »** — texte de lecture majeur (manga/dictionnaire/magazine, support choisi à la passe contenu) ; jalon renommé partout (PRD ×2, guidebook, npc-inventory) | ✅ |
+| R12 | Bâtiments « tappables/décoratifs » d'avant ADR-0004 : Tour Jo, Tour Embrasée, Sprout Tower, Phare | **Vrais intérieurs multi-étages** (un zone_id par étage) ; Tour Jo = ascension 1F→10F+toit (résout le résidu de la passe 2) ; tile-authoring/budgets à la synthèse | ✅ |
+
+## Candidats d'adaptation relevés pendant la chasse (→ synthèse)
+
+Autres éléments du monde Pokémon présents dans les couches adaptées, sans fonction définie —
+même traitement que la Master Ball (adaptation pédagogique) à décider à la synthèse :
+
+1. **Objets de combat/équipement** sans mécanique : Exp. Share, TwistedSpoon, Hard Stone,
+   HP Up, Everstone, les CT/TM restantes (TM44 Rest, TM70 Flash de l'Ancien Li, CT de la
+   Centrale) — candidats « objets de lecture/collection ».
+2. **Cannes à pêche** (Old/Good/Super Rod) — pas de pêche ; « pêcher des textes » ?
+3. **Bicyclette + Cycling Road** (routes 16-18 existent comme zone) — la descente à vélo est
+   dans la géographie, l'objet Bicyclette n'a pas de mécanique.
+4. **Dowsing MCHN** (Rosalia) — candidat fort : détecteur de textes/objets cachés (s'articule
+   avec le menu « textes non découverts » de texts-progressifs).
+5. **Blue Card / points Buena** — récompense d'écoute de l'émission de 11h (R4), cohérente
+   boucle quotidienne ; à spécifier.
+6. **Économie/monnaie** : tension non résolue — « Pokémart simplifié, pas de système d'achat »
+   (guidebook cherrygrove) vs `monnaie` citée comme `fungible` (audit 02) vs jetons du
+   Game Corner (R8) vs « Heal Ball (vente) » dans l'inventaire. Faut-il une monnaie ?
+7. **Pokéathlon** (Parc National : Magnus, Apriblender, jersey) — `pokeathlon_score` cité en
+   exemple de métrique `count` (audit 02) mais l'activité n'est définie nulle part.
+8. **Pokédex remis par Oak** (Route 30) vs Kanjidex natif du menu START — que remet Oak dans
+   le jeu adapté (le Kanjidex ? la Carte Mot ? un déblocage) ?
+9. **SS Aqua** (traversée Oliville↔Vermeille) — déjà flaggé à la passe 2.
+
 ## Décisions du grill (récapitulatif, 2026-07-06)
 
 1. **Bouton X jamais retiré** — les dialogues ne « graduent » pas ; le mécanisme A ne vise
