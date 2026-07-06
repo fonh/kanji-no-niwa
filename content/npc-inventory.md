@@ -484,7 +484,7 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Swimmer Simon, Elaine (R40) + Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie (R41, fusionnée dans cette zone) | Dresseurs maritimes | — | |
+| Swimmer Simon, Elaine (R40) + Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie (R41 — défusionnée 2026-07-06, audit 04 : les nageurs R41 retourneront à leur section route-41 quand elle sera sourcée, voir note de tête) | Dresseurs maritimes | — | |
 | Frère/sœur du jour Monica (lundi, plage) | PNJ calendaire | Sharp Beak | |
 | Homme (Maison du Photographe, nord d'Irisia) | Révèle que le photographe itinérant récurrent est de sa famille | — | |
 | Homme (ouest du Centre Pokémon d'Irisia) | Raconte la légende des 4 îles créées par le gardien légendaire des tourbillons | — | |

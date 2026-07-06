@@ -184,7 +184,7 @@ PNJ nommé parle au niveau calibré de SA zone, point.
 | goldenrod-city | N4 | Bill, Buena, Name Rater, Mr. Game, Whitney, fleuriste |
 | route-35 | N4/N3 | Magnus (Pokéathlon), vieil homme du dôme |
 | national-park | N4/N3 | Enseignant du banc sud |
-| route-36 | N3 | Jeune homme du Marteau-Piqueur, Frère/sœur du jour Arthur (jeudi) |
+| route-36 | N3 | Jeune homme de l'Éclate-Roc (砕 — « Marteau-Piqueur » corrigé 2026-07-06, audit 04, finding 04-A3), Frère/sœur du jour Arthur (jeudi) |
 | route-37 | N3 | Frère/sœur du jour Sunny (dimanche) |
 | ecruteak-city | N3 | Bill, Kimono Girl Miki, vieil homme conteur (légende Ho-Oh), Sages du Poste-frontière |
 | burned-tower | N3 | Morty, Eusine |

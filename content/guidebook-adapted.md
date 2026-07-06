@@ -55,7 +55,7 @@ Le PRD ne couvrait à l'origine que 10 classes. Le guidebook en révèle 16 de p
 | Skier / Boarder | Skieur / Surfeur des neiges | Mahogany Gym | Glace, vitesse, montagne |
 | Swimmer | Nageur/Nageuse | Route 40/41 | Mer, endurance, traversée |
 | Scientist | Scientifique | Team Rocket HQ (Mahogany) | Recherche, machine, secret |
-| Poké Maniac | Collectionneur | Union Cave (hors scope), Route 42/43, Mt. Mortar | Collection, curiosité |
+| Poké Maniac | Collectionneur | Union Cave (réintégrée 2026-07-06, audit 04), Route 42/43, Mt. Mortar | Collection, curiosité |
 | Super Nerd | Intello | Goldenrod, Mt. Mortar | Connaissance, logique |
 | Gentleman | Gentleman | Lighthouse, Goldenrod | Politesse, fortune, élégance |
 | Twins | Jumeaux/Jumelles | Route 37, Dragon's Den | Duo, miroir, symétrie |
@@ -96,7 +96,7 @@ Le guide consacre une double-page "Heroes and Allies" à de courts portraits-per
 
 Le guide présente l'intégralité du jeu comme un itinéraire numéroté de 79 étapes, chaque étape listant les beats clés (objets, PNJ, combats de rival, badges). C'est l'ossature narrative complète du jeu original — utile comme **check-list de cohérence** pour s'assurer qu'aucun beat majeur n'est oublié dans l'adaptation. Résumé (étapes regroupées par zone, détail complet dans les sections zone par zone ci-dessous) :
 
-Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Map Card) → Route 30 (Apricorn Box, Mystery Egg, Pokédex) → Ville Griotte (rival #1) → Bourg Geon (mom, vol révélé) → Route 29 (Poké Balls) → Route 31 (Vs. Recorder) → Mauville (Sprout Tower) → Tour Grospignon (Elder, TM70 Flash) → Grotte Sombre → Mauville (Egg, Kimono Girl #1 Zuki, **Gym 1 Falkner**) → Route 36 (Rock Smash) → Ruines Arcaniques (puzzle 1) → Route 32 (Old Rod) → Union Cave (hors scope) → Route 33 → Ecorcia (Team Rocket, Kurt) → Puits Ramoloss (Proton) → Ecorcia (Apricorn Ball, rival #2, **Gym 2 Bugsy**) → Forêt Secte (Farfetch'd, Cut, Kimono Girl #2 Naoko) → Route 34 (Day Care) → Doublonville (Fashion Case, Coin Case, Bicycle, Radio Card, Blue Card, SquirtBottle, **Gym 3 Whitney**) → Route 35/Parc National/Pokéathlon (Magnus, Apriblender, jersey) → Route 36 (Sudowoodo, Berry Pots) → Rosalia (Bill, Dowsing MCHN, Kimono Girl #3 Miki, Surf) → Tour Embrasée (rival #3, Raikou/Entei/Suicune libérés) → Rosalia (**Gym 4 Morty**) → *carrefour Acajou/Oliville* → Route 38/39 (Baoba, Moomoo Farm) → Oliville (Good Rod) → Phare (quête Jasmine/Amphy) → Route 40 → Irisia (Secret Potion, Suicune/Eusine, HM Fly, **Gym 5 Chuck**) → Doublonville (Eevee de Bill) → Phare (potion livrée) → Oliville (**Gym 6 Jasmine**) → Route 42 (HM Strength, Eusine) → Mont Mortier → Acajou Ville (RageCandyBar) → Lac Colère (Gyarados rouge, Lance) → Route 30 (Exp. Share) → Acajou Ville (escalier caché) → Repaire de Mékanos (Petrel, Ariana+Lance, Whirlpool) → Ebènelle (**Gym 7 Pryce, Gym 8 Clair**) → Doublonville (déguisement Rocket) → Tour Radio (rival, Petrel, Basement Key) → Tunnel de Doublonville (Kimono Girl #4 Kuni, rival, Card Key) → Tour Radio (Proton, Ariana, Archer, Rainbow Wing) → Acajou Ville → Route 44/Chemin Glacé (HM Waterfall, Kimono Girl #5 Sayo) → Antre du Dragon (quiz du Maître, Rising Badge, Dratini) → Bourg Geon (Master Ball) → Mont Mortier (Karate King) → Rosalia (gauntlet des 5 Kimono Girls, Clear Bell) → Tour Jo (Ho-Oh) → Route 27/Chutes de Tohjo/Route 26 → Route de la Victoire (rival #5) → Plateau Indigo (Conseil 4 + Lance, Hall of Fame).
+Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Map Card) → Route 30 (Apricorn Box, Mystery Egg, Pokédex) → Ville Griotte (rival #1) → Bourg Geon (mom, vol révélé) → Route 29 (Poké Balls) → Route 31 (Vs. Recorder) → Mauville (Sprout Tower) → Tour Grospignon (Elder, TM70 Flash) → Grotte Sombre → Mauville (Egg, Kimono Girl #1 Zuki, **Gym 1 Falkner**) → Route 36 (Rock Smash) → Ruines Arcaniques (puzzle 1) → Route 32 (Old Rod) → Union Cave (réintégrée 2026-07-06, audit 04) → Route 33 → Ecorcia (Team Rocket, Kurt) → Puits Ramoloss (Proton) → Ecorcia (Apricorn Ball, rival #2, **Gym 2 Bugsy**) → Forêt Secte (Farfetch'd, Cut, Kimono Girl #2 Naoko) → Route 34 (Day Care) → Doublonville (Fashion Case, Coin Case, Bicycle, Radio Card, Blue Card, SquirtBottle, **Gym 3 Whitney**) → Route 35/Parc National/Pokéathlon (Magnus, Apriblender, jersey) → Route 36 (Sudowoodo, Berry Pots) → Rosalia (Bill, Dowsing MCHN, Kimono Girl #3 Miki, Surf) → Tour Embrasée (rival #3, Raikou/Entei/Suicune libérés) → Rosalia (**Gym 4 Morty**) → *carrefour Acajou/Oliville* → Route 38/39 (Baoba, Moomoo Farm) → Oliville (Good Rod) → Phare (quête Jasmine/Amphy) → Route 40 → Irisia (Secret Potion, Suicune/Eusine, HM Fly, **Gym 5 Chuck**) → Doublonville (Eevee de Bill) → Phare (potion livrée) → Oliville (**Gym 6 Jasmine**) → Route 42 (HM Strength, Eusine) → Mont Mortier → Acajou Ville (RageCandyBar) → Lac Colère (Gyarados rouge, Lance) → Route 30 (Exp. Share) → Acajou Ville (escalier caché) → Repaire de Mékanos (Petrel, Ariana+Lance, Whirlpool) → Ebènelle (**Gym 7 Pryce, Gym 8 Clair**) → Doublonville (déguisement Rocket) → Tour Radio (rival, Petrel, Basement Key) → Tunnel de Doublonville (Kimono Girl #4 Kuni, rival, Card Key) → Tour Radio (Proton, Ariana, Archer, Rainbow Wing) → Acajou Ville → Route 44/Chemin Glacé (HM Waterfall, Kimono Girl #5 Sayo) → Antre du Dragon (quiz du Maître, Rising Badge, Dratini) → Bourg Geon (Master Ball) → Mont Mortier (Karate King) → Rosalia (gauntlet des 5 Kimono Girls, Clear Bell) → Tour Jo (Ho-Oh) → Route 27/Chutes de Tohjo/Route 26 → Route de la Victoire (rival #5) → Plateau Indigo (Conseil 4 + Lance, Hall of Fame).
 
 **Lecture utile pour le contenu :** la structure narrative originale a exactement **5 combats de rival** (Ville Griotte, Ecorcia, Tour Embrasée, Tunnel de Doublonville, Route de la Victoire) — le PRD en prévoit 6 ("Silver — 6 Rencontres"). Ce n'est pas une erreur à corriger : le PRD ajoute déjà une rencontre supplémentaire (#6, post-Red, optionnelle) qui n'a pas d'équivalent dans le jeu d'origine — cohérent avec l'intention narrative de prolonger l'arc Silver au-delà du jeu de base.
 
@@ -326,7 +326,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 - 🔄 Zone accessible après avoir battu l'événement Rocket Éclaireurs sur Route 32
 - 📍 **Événement Rocket #2 — Pillage des Inscriptions** (optionnel) : kanji 文、字、古、記、史
 - ✅ **Inscriptions Unown** : 5 panneaux lisibles en japonais (N4, furigana sur kanji non étudiés). Tapper → lore entry sur l'écriture ancienne.
-- ❌ Zone Safari supprimée — les Ruines sont une zone narrative, pas de mécanique de capture
+- ❌ Chasse aux Unown supprimée — les Ruines sont une zone narrative, pas de mécanique de capture *(reformulé 2026-07-06, audit 04 : l'ancien libellé « Zone Safari supprimée » prêtait à confusion avec la Safari Zone de Cianwood, réintégrée par ailleurs ; l'adaptation des salles intérieures réintégrées est à designer à la synthèse)*
 - **Reward Rocket #2 :** lore entry "L'écriture avant les kanji"
 
 **Bâtiments sur la carte :** Entrée Ruines (depuis Route 32), 5 inscriptions Unown tappables
@@ -698,7 +698,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Dans 漢字の庭 :**
 - ✅ **Gym Jasmine** — Arène physique, 2 門弟 + 試練 鋼の道, 印 n°6
 - ✅ **Phare d'Oliville** — bâtiment décoratif, NPC ambiant en haut (N3)
-- ✅ **Quai SS Aqua** — visible sur la carte. Bâtiment tappable → décor/atmosphère uniquement en v1. Kanto hors scope.
+- ✅ **Quai SS Aqua** — visible sur la carte. Bâtiment tappable → décor/atmosphère uniquement en v1 *(« Kanto hors scope » purgé 2026-07-06, audit 04 — trace d'avant l'adoption du Kanto le 2026-07-01 ; le rôle du SS Aqua comme traversée Oliville↔Vermeille reste à trancher à la synthèse, avec les zones réintégrées)*.
 - ✅ **Pokémon Center**
 - 🔒 Route 40 (mer) → nécessite 水 CS-Kanji
 
@@ -729,7 +729,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **HGSS original :** Route 40 = mer. Route 41 = mer (suite). Cianwood = Chuck Gym (Fighting), Pharmacy, Safari Zone Gate.
 
-**Note :** Route 41 n'est pas dans les 49 zones — elle est absorbée dans Route 40 (zone maritime unique Olivine→Cianwood).
+**Note :** Route 41 est **défusionnée de Route 40 (2026-07-06, audit 04 — réintégration générale, voir § Zones absentes)** : elle redevient une zone maritime propre entre Route 40 et Irisia ; ses ~10 Nageurs (listés ci-dessous) lui reviennent à la passe contenu.
 
 **Dans 漢字の庭 :**
 - 🔒 Toute la zone Route 40 (mer complète jusqu'à Cianwood) → accessible via 水 CS-Kanji
@@ -752,7 +752,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - **La femme de Chuck**, après le combat, remet une récompense et commente avec tendresse la défaite de son mari ("c'est une bonne leçon pour lui") — joli contrepoint de caractérisation, réutilisable pour humaniser un 師範 vaincu.
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
-- **Nageurs/Nageuses** (Route 40) — 4 dresseurs dont Swimmer Simon, Swimmer Elaine ; (Route 41, fusionnée) — ~10 dont Swimmer Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie. Les nageurs de Route 41 "ont des tas d'histoires à raconter" sur le gardien légendaire des Îles Tourbillon — bon réservoir de lore orale pour des PNJ-conteurs en mer.
+- **Nageurs/Nageuses** (Route 40) — 4 dresseurs dont Swimmer Simon, Swimmer Elaine ; (Route 41, défusionnée 2026-07-06, audit 04 — redevient zone propre) — ~10 dont Swimmer Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie. Les nageurs de Route 41 "ont des tas d'histoires à raconter" sur le gardien légendaire des Îles Tourbillon — bon réservoir de lore orale pour des PNJ-conteurs en mer.
 - **Frère/sœur du jour Monica** (lundi, plage Route 40) — donne Sharp Beak.
 - **Homme bloquant l'accès au Battle Frontier** (Route 40 ouest) — hors scope (post-Ligue), juste flavor.
 - **Homme de la Maison du Photographe** (nord d'Irisia) — révèle que le "photographe itinérant" récurrent (Cameron) est de sa famille.
@@ -954,7 +954,7 @@ La route se divise explicitement en un chemin est et un chemin ouest, impossible
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Dresseurs confirmés (Route 45)** : Black Belt Kenji, Hiker Timothy, Hiker Michael, Camper Ted, Picnicker Erin, Hiker Bailey, Ace Trainer Ryan, Ace Trainer Kelly, Hiker Parry, Hiker Erik (10 au total, certains côté est, certains côté ouest selon le fork de route).
-- **Route 46** : Hiker Erik également listé ici (PNJ partagé entre les deux pages de la route) — Route 46 reste hors-scope (voir Zones absentes) mais confirme qu'un seul dresseur y existait dans l'original.
+- **Route 46** : Hiker Erik également listé ici (PNJ partagé entre les deux pages de la route) — Route 46 réintégrée (2026-07-06, audit 04, voir Zones absentes) ; confirme qu'un seul dresseur y existait dans l'original.
 - **Grotte Sombre, côté Route 45** — un homme tout au fond (accessible seulement après l'Antre du Dragon) donne BlackGlasses ; confirmé sans autre PNJ.
 
 ---

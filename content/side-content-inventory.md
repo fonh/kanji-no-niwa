@@ -127,7 +127,7 @@ par l'audit 09 (synthèse). Le puzzle du Chemin Glacé (E4) était déjà obliga
 | E8 | **Grotte Azuria** — donjon solo optionnel post-16-badges, aucun dresseur, gardien à l'entrée jusqu'aux 8 badges Kanto | cerulean-cave | L1365 | Même statut que Grotte Sombre |
 | E9 | **Puzzle des électroménagers** (Silph Co. sous-sol) — examiner micro-ondes/ventilateur/frigo/lave-linge/tondeuse change la forme d'un esprit-appareil | Safranville | L1325 | Mini-puzzle d'exploration sans combat ni PNJ parlant |
 | E10 | **Pots à Baies** de Floria (remerciement post-Simularbre) — mini-feature de jardinage/soin | route-36 → usage route-38/39 | L584 | Nourrit la ferme Moomoo (C5) ; cohérente avec le thème « jardin » du titre |
-| E11 | Grille Route 29 → Route 46 : tease visuel « reviens plus tard » (rebord infranchissable, zone restée hors scope) | route-29 | L159, L1420 | Non bloquant, pur tease — noté pour mémoire |
+| E11 | Grille Route 29 → Route 46 : « reviens plus tard » (rebord à sens unique — Route 46 réintégrée 2026-07-06, audit 04 : le tease devient un vrai accès différé) | route-29 | L159, L1420 | Non bloquant |
 | E12 | Route 45 scindée en chemins est/ouest impossibles en une traversée → revisite via 飛 | route-45 | L952, L1192 | Illustration concrète de l'utilité de 飛 |
 
 ## F. PNJ-leçon potentiels & donneurs simples

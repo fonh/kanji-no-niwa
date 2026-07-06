@@ -273,6 +273,43 @@ L'entrée Condition liste encore `kanji_count` et 6 types (manquent `count` gén
 - **Périmètre du téléphone HGSS** (04-D3) : combien de dresseurs enregistrables, fréquence
   des appels entrants, schéma de données des appels — à croiser avec l'audit 08 (menus/DB).
 
+## Passe de vérification post-corrections (2026-07-06, même session)
+
+Grep systématique du corpus après application des corrections. Reliquats trouvés et corrigés :
+
+- `curriculum-checkpoints.md` (table PNJ sourcés) : « Jeune homme du Marteau-Piqueur » → Éclate-Roc (砕) — dernière occurrence du vocabulaire fantôme de 04-A3.
+- **Défusion Route 41 non répercutée** (implication de la réintégration) : `PRD.md` § Ordre des zones (« Route 40 (inclut Route 41) » + note audit 01), `guidebook-adapted.md` §
+  cianwood (note « absorbée dans Route 40 », liste des Nageurs), `npc-inventory.md` § route-40
+  (ligne Swimmers R41) — tous annotés ; les nageurs R41 retourneront à leur section quand elle
+  sera sourcée.
+- « Hors scope » périmés sur zones réintégrées : `guidebook-adapted.md` table des classes
+  (Union Cave), itinéraire 79 étapes (Union Cave), § route-45 (Route 46),
+  `side-content-inventory.md` E11 (Route 46).
+- `guidebook-adapted.md` § oliville : « Kanto hors scope » (Quai SS Aqua) — trace d'avant
+  l'adoption du Kanto (2026-07-01), purgée ; rôle du SS Aqua → synthèse.
+- `guidebook-adapted.md` § ruins-of-alph : « Zone Safari supprimée » reformulé « Chasse aux
+  Unown supprimée » (collision de nom avec la Safari Zone réintégrée).
+- `PRD.md` § Volume PNJ-leçon : annotation « comptes de zones hors réintégrations, recalcul à
+  la synthèse ».
+
+Vérifié sans correction nécessaire : table CS de `texts-progressifs.md` (7 lignes, ordre OK),
+échappement des pipes dans la ligne `map_npcs` du schéma PRD (table intacte), aucune occurrence
+restante de « messages des dresseurs » / « Les 6 CS » / `trainer_fixed` / « Adaptive Furigana »
+hors mentions correctives, boucle quotidienne PRD:89 compatible avec le téléphone rétabli.
+
+**Résidus signalés (non corrigés — hors décision de cette session) :**
+- **Tour Jo : « bâtiment tappable » (guidebook-adapted.md § ecruteak) vs l'ascension complète
+  documentée (§ Tour Jo, passe 2) et le traitement set-piece d'ADR-0004 (Bell Tower, un
+  `zone_id` par étage)** — trois lectures qui coexistent, et aucune section `bell-tower` dans
+  `npc-inventory.md` alors que l'itinéraire exige « Tour Jo (Ho-Oh) ». Avec « aucune v2 » +
+  la fidélité HGSS tranchée à cet audit, la réponse probable est l'ascension réelle — mais
+  c'est une décision de design non grillée ici → **synthèse**.
+- `guidebook-adapted.md` § new-bark (L129) : « le Pokégear sert aux push notifications » —
+  formulation floue d'avant l'audit 03 ; redevient partiellement pertinente avec les appels
+  entrants rétablis, à harmoniser à la synthèse avec le périmètre téléphone.
+- `content/map/story-beats.json` et `placements/` couvrent 49 zones — les zones réintégrées
+  n'y ont pas d'entrée (attendu : données produites après chiffrage à la synthèse).
+
 ## Décisions du grill (récapitulatif, 2026-07-06)
 
 1. **Bouton X jamais retiré** — les dialogues ne « graduent » pas ; le mécanisme A ne vise
