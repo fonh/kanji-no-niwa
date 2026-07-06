@@ -240,6 +240,22 @@ de CS — ajouter des comptes de quêtes aux gates de badges doublonnerait la pr
 gates ponctuels existants (Whitney 3 quêtes, Chuck Phare + Pokéathlon si P-1 adopté), rien de
 plus.
 
+## Pistes pédagogiques nouvelles (revue avec Henri, 2026-07-06) — verdicts
+
+Compétences de langue non couvertes par les 9 modes/leçons/textes, chacune ancrée sur un porteur
+sourcé. Verdicts du premier passage :
+
+| Piste | Verdict Henri | Note |
+|---|---|---|
+| Nombres & argent (Mart/¥, vendeur ¥1M) | ✅ OK — « mais c'est du N5, penser aux autres niveaux » | Échelle multi-niveaux proposée (horaires N3, dates d'ère N1, stats N1 — voir 2ᵉ passage) |
+| Écoute quotidienne (Buena 11h : entendre → retenir → restituer) | ✅ Très d'accord | Design à la synthèse avec la Radio |
+| Pitch accent (patrons 高低 des Cartes Mot) | ❌ Abandonné | — |
+| Onomatopées (rayon Librairie / photos Cameron) | 🤔 Pas convaincu | En attente, ne pas pousser |
+| Keigo / politesse en situation | ✅ OK sur le principe (politesse = important) | Prolonge la leçon « registre formel » de Miki (déjà au PRD) |
+| Noms propres / lectures nanori (Name Rater) | ✅ D'accord | Micro-leçon Doublonville |
+
+*(2ᵉ passage d'idées « comme un prof » présenté dans la conversation — verdicts à reporter ici.)*
+
 ## Renvois
 
 - Synthèse (audit 09) : P-13 (plages des zones réintégrées + intérieurs), designs I-3→I-8 chiffrés,
