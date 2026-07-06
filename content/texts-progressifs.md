@@ -95,8 +95,10 @@ Densité cible (à ajuster par l'équipe de contenu, pas un quota strict) :
 | Donjon majeur (Tour Grospignon, Forêt Secte, Tour Embrasée, Mont Mortier, Chemin Glacé, Antre du Dragon, Tour Radio, QG Rocket) | 2–3 |
 | Ville Kanto (8 villes) | 2–4 |
 
-Sur 57 zones, ça donne un ordre de grandeur de **~70-100 textes secondaires** — cible volontairement
-large ("plein de textes partout"), à affiner en écrivant zone par zone plutôt qu'à figer ici.
+Sur ~72 zones (« 57 » corrigé 2026-07-06, repasse progression — chiffre d'avant les 14 routes/donjons
+Kanto ; les réintégrations du 2026-07-06 et les intérieurs multi-étages feront encore croître ce compte,
+recompte à la synthèse), ça donne un ordre de grandeur de **~70-100 textes secondaires** — cible
+volontairement large ("plein de textes partout"), à affiner en écrivant zone par zone plutôt qu'à figer ici.
 
 **Vérification de faisabilité (2026-07-02, lecture complète de `guidebook-adapted.md`)** — cette densité
 est en fait **conservative** : Doublonville seule a "~30 PNJ/rôles" documentés, les 8 villes Kanto sont
@@ -107,11 +109,12 @@ carnet des Frères/sœurs du jour Route 26, inscription à traduire dans l'Antre
 pauvres en PNJ (`found_object_ref` par défaut, cohérent avec § Priorité d'attribution) : Route 33, Route
 de la Victoire/Antichambre, Vertville, Azuria/Cerulean, Route 22/28 (Kanto).
 
-**Kanto reste compressé (2026-07-02)** — les 8 villes Kanto s'enchaînent toujours sans zone route
-intermédiaire (contrairement au Johto), malgré le contenu de route Kanto très riche documenté dans
-`guidebook-adapted.md` (Route 14/15, Rock Tunnel, Grotte Diglett, Seafoam...). Ce contenu reste une
-réserve pour une extension future, pas utilisé pour cette passe — les textes secondaires Kanto se
-concentrent donc dans les 8 villes (déjà largement assez denses pour la cible 2-4/ville).
+**Kanto complet (corrigé 2026-07-06, repasse progression — remplace « Kanto reste compressé » du
+2026-07-02)** : les 14 routes/donjons Kanto sont dans la table de calibration depuis le 2026-07-02
+même, et la géographie HGSS est intégralement réintégrée (04-B1, « aucune v2 ») — l'ancien paragraphe
+(« réserve pour une extension future ») était un fossile d'une décision annulée le jour où elle a été
+écrite. Les textes secondaires Kanto se répartissent donc villes **et** routes/donjons (Route 14/15,
+Rock Tunnel, Grotte Diglett, Seafoam… — densités de la table ci-dessus) ; recompte global à la synthèse.
 
 **Priorité d'attribution des PNJ (2026-07-02)** — trois usages revendiquent maintenant le même vivier de
 PNJ sourcés guidebook par zone (dresseur-combat, PNJ-leçon, PNJ-texte) alors que plusieurs zones sont déjà
@@ -306,7 +309,7 @@ débloquées.
 | 飛 (Vol) | La femme de Chuck | Après la victoire sur Chuck (Irisia) |
 | 水 (Surf) | Le Gentleman du Théâtre | Après le sauvetage de Miki, Kimono Girl #3 (Rosalia) |
 | 力 (Force) | Le Hiker anonyme | Route 42, après Mont Mortier |
-| 切 (Coupe) | Le Maître du Charbon (Charcoal Man) *(corrigé 2026-07-06, audit 04, finding 04-E2 : « Kurt (Maître du Charbon) » fusionnait deux PNJ distincts d'Ecorcia — correction déjà actée au PRD le 2026-07-03)* | Après la quête Farfetch'd de Forêt Secte (Ecorcia) — séquence déjà documentée : un apprenti enseigne la technique, le joueur capture 2 Farfetch'd fuyards, retourne voir le Maître du Charbon, reçoit l'objet de coupe |
+| 切 (Coupe) | Le Maître du Charbon (Charcoal Man) *(corrigé 2026-07-06, audit 04, finding 04-E2 : « Kurt (Maître du Charbon) » fusionnait deux PNJ distincts d'Ecorcia — correction déjà actée au PRD le 2026-07-03)* | Après la quête Farfetch'd de Forêt Secte (Ecorcia) — séquence déjà documentée : un apprenti enseigne la technique, le joueur **guide** les 2 Farfetch'd fuyards à travers la forêt (puzzle spatial adapté, aucune capture — « capture » corrigé 2026-07-06, repasse progression, aligné sur la réintégration U8 de la session 4), retourne voir le Maître du Charbon, reçoit l'objet de coupe |
 | 砕 (Éclate-Roc) *(ligne ajoutée 2026-07-06, audit 04, finding 04-E2 — manquait depuis l'ajout du 7ᵉ CS le 2026-07-03)* | Un garçon, Route 36 (guide p. 80) | Avant même le Simularbre, dès le badge de Falkner — comme en jeu |
 | 滝 (Cascade) | Aucun PNJ dans le jeu d'origine | `event_cleared` sur le puzzle de glissades coordonnées du Chemin Glacé — l'objet y est caché, pas remis en main propre. Le "texte obligatoire" est donc trouvé (objet, `found_object_ref`), pas reçu d'un PNJ — le modèle tolère les deux, § Déclenchement le prévoit déjà (talk pour un PNJ, sight_auto/block pour un passage verrouillé par un puzzle/objet) |
 | 渦 (Tourbillon) | Lance | Au QG Rocket (Repaire de Mékanos, Acajou), juste après la double victoire Ariana+Lance |
