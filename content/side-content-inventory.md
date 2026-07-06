@@ -181,7 +181,7 @@ aux objets narratifs uniques — finding 02-A2).
 | G3 | **Pokéathlon** — 4 disciplines + Prize Shop rotatif ; maillot de Whitney ; Apriblender (Aprijuice) | national-park | L540, L551, L558-559 | Hub mini-jeux déjà au PRD ; condition de Chuck (`pokéathlon_score ≥ 250`) L542 |
 | G4 | Concours de pêche du Fishing Guru (record → Ether) | lake-of-rage | L849 | Accessible post-QG, à la nage |
 | G5 | Trocs récurrents : fragments→baies (Fuchsia L1318), éclats→baies (Mauville L258), ouvrier de la Centrale (L1355), Passage Souterrain RageCandyBar→CT (L1353) | diverses | — | Micro-économies locales |
-| G6 | Stand Loterie de la Tour Radio (tirage quotidien) — **réintégrée (2026-07-06, chasse aux reliques audit 04, remplace « supprimée du scope »)** ; mécanisme de tirage et récompense à designer à la synthèse (l'original tire sur l'ID du compagnon — concept à spécifier) | goldenrod-city | L521 | Boucle quotidienne |
+| G6 | Stand Loterie de la Tour Radio — **design « kanji du jour » adopté (2026-07-06, I-4)** : tirage quotidien d'un kanji pondéré autour de la progression ; étudié → jetons, maîtrisé (doré) → décoration rare, inconnu → consolation + fiche Kanjidex ; lecture seule du SRS, ne dépend plus du concept « compagnon » | goldenrod-city | L521 | Boucle quotidienne |
 
 ---
 

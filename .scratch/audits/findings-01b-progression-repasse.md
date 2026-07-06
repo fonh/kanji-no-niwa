@@ -174,7 +174,10 @@ du tableau ; indices de lignes/colonnes comme dans l'original (raisonnement + r�
 dans le Coin Case, prix : cosmétiques, décorations (→ I-8), gros paliers de collection. Jamais
 d'achat de jetons (pédagogiquement gagnés). Aucun gate de progression ne dépend des jetons.
 
-### I-4 — Loterie = « le kanji du jour »
+### I-4 — ✅ ADOPTÉ (2026-07-06) — Loterie = « le kanji du jour »
+
+*Appliqué : guidebook § goldenrod (design complet, tirage pondéré + 3 issues), side-content G6.
+Détail d'origine ci-dessous :*
 
 Tirage quotidien d'un kanji Jōyō (Tour Radio 1F). Dans le `studiedSet` → prix ; **maîtrisé**
 (stabilité ≥ 30j, le « doré » du Kanjidex) → gros prix ; inconnu → lot de consolation + lien vers
