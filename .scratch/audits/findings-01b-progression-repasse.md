@@ -1,11 +1,34 @@
 # Findings — Repasse progression + intégration side quests/mini-jeux
 
 Date : 2026-07-06 (après la session 4 de l'audit 04, doctrine « tout utilisable »). **Statut :
-Phase 1 terminée** — incohérences relevées (P-x), corrections sûres appliquées (reliquats de
-décisions déjà actées, marquées `(corrigé 2026-07-06, repasse progression)`), **propositions
-d'intégration (I-x) à griller avec Henri** avant application. Docs audités : PRD,
-curriculum-checkpoints, texts-progressifs, side-content-inventory, guidebook-adapted,
-findings-01 (pour non-régression).
+Phases 1-2 terminées** — incohérences relevées (P-x) et **toutes corrigées** (décisions du grill
+ci-dessous) ; **propositions d'intégration (I-x) en cours de revue une par une avec Henri**.
+Docs audités : PRD, curriculum-checkpoints, texts-progressifs, side-content-inventory,
+guidebook-adapted, findings-01 (pour non-régression).
+
+## Décisions du grill (2026-07-06, même jour) — appliquées
+
+1. **`all_texts_read` retiré — « trop exigeant » (décision Henri, dépasse le P-15 initial)** :
+   l'activation de chaque CS-Kanji passe de « tous les textes des zones débloquées lus » à un
+   **seuil monotone `count(texts_read, N)`** (N par CS, croissant, calibré à la synthèse à
+   ~50-60 % du corpus atteignable sans CS ; marge anti-famine ~40 %). Le type disparaît du modèle
+   (PRD § Implémentation, CONTEXT.md, ADR-0003 annoté) ; l'invariant anti-deadlock devient une
+   contrainte de calibration ; la ligne de blocage du PNJ affiche le compte manquant. Le joueur
+   choisit ~la moitié de ses lectures — les textes secondaires redeviennent réellement optionnels.
+2. **P-15 appliqué** : les contenus de lecture des boucles répétables (Safari, feuilleton pension,
+   prix Game Corner/Loterie, concours du Parc) ne sont jamais des lignes de `texts` — collection
+   du Sac, hors `texts_read` (norme dans texts-progressifs + side-content règle 3).
+3. **P-1 appliqué** : gate de Chuck aligné — `pokéathlon_score ≥ 250` ajouté à la table du PRD.
+4. **P-2 appliqué** : ~28-29 textes obligatoires (les 8 remises CS comptées + taguées grammaire).
+5. **P-6 appliqué (partiel)** : Entei recâblé « 25 points N2 » (fossile du remapping corrigé) ;
+   Suicune annoté (tension fil Eusine) — recâblage complet = I-2, à griller.
+6. **P-7 appliqué** : 3 lieux canoniques renumérotés « Événement Rocket 1/3–3/3 » (Puits, Repaire,
+   Tour Radio, seuls à écrire `rocket_progress`) ; #1/#2/#4/#7/#8/#9 → « Quête Rocket » ordinaires.
+   Répercuté guidebook + npc-inventory + story-beats.json + placements.
+7. **P-9 appliqué** : « Hint token » purgé (récompense de l'exemple → décoration cosmétique).
+8. **P-10 appliqué (cœur)** : la traversée SS Aqua (billet d'Elm post-Ligue) documentée comme
+   transition canonique Johto→Kanto dans l'ordre des zones du PRD — modalités : I-1, à griller.
+9. **P-12 appliqué** : spécialité Moomoo annotée (fonction/prix suspendus à la décision monnaie).
 
 ## Vérifications OK (aucune correction)
 

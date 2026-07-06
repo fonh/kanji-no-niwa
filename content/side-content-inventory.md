@@ -15,9 +15,12 @@ Kanto passes 5-7 OCR) ou Bulbapedia (passe 3, Mont Gris uniquement).
    dans les zones pauvres (`texts-progressifs.md` § Priorité d'attribution).
 2. **Les textes secondaires remplacent les side quests classiques** — cette liste est donc leur
    matière première directe, pas un supplément.
-3. **Invariant de placement anti-deadlock (audit 02, 2026-07-06)** : un texte doit être atteignable
-   **sans aucun CS-Kanji** au moment où sa zone se débloque (exception : CS obtenu strictement
-   avant le déblocage de la zone). Vérification automatisable contre `map_obstacles` à la production.
+3. **Placement anti-famine (révisé 2026-07-06, repasse progression — ex-« invariant anti-deadlock »
+   de l'audit 02)** : les CS-Kanji gatent désormais sur un **seuil** `count(texts_read, N)` (~50-60 %
+   du corpus atteignable sans CS), plus sur « tout lu » — un texte inatteignable ne bloque plus le
+   jeu. La vérification contre `map_obstacles` reste (elle calcule le corpus atteignable qui calibre
+   N). Les contenus des boucles répétables (Safari, feuilleton pension, prix de mini-jeux) ne sont
+   **jamais** des `texts` (finding P-15) — collection du Sac, hors compteurs.
 4. **Aucune v2** (décision 2026-07-06) : les contenus ex-« v2/post-v1 » listés en § E sont du
    scope v1 — leur réintégration chiffrée (impact progression) est instruite par l'audit 09.
 5. Aucun français dans le produit ; anglais selon PRD § Langue du Jeu.

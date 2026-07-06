@@ -296,7 +296,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ✅ Positions dresseurs (6–8 slots)
-- 📍 **Événement Rocket #1 — Éclaireurs** : bloque la descente vers les Ruines d'Alph jusqu'à être battu. Kanji N5 basics (日、本、人、字、語). Gate : bloque l'accès aux Ruines Arcaniques.
+- 📍 **Quête Rocket — Éclaireurs** (combat scripté bloquant) : bloque la descente vers les Ruines d'Alph jusqu'à être battu. Kanji N5 basics (日、本、人、字、語). Gate : bloque l'accès aux Ruines Arcaniques. *(Renuméroté 2026-07-06, repasse progression P-7 : l'ancienne numérotation « Événement Rocket #1–#9 » impliquait un système de 9 événements que le PRD ne définit pas — seuls les 3 lieux canoniques (Puits Ramoloss, Repaire de Mékanos, Tour Radio) écrivent `rocket_progress` et déclenchent les lettres de Fukuda, notés « Événement Rocket 1/3–3/3 » ; tout le reste devient « Quête Rocket », des `Quest` ordinaires sans table dédiée.)*
 - Classe dresseurs : Gamin, Campeur, Marin (à partir d'ici)
 
 **Sourcé du guidebook — dresseurs :** **Pêcheur Henry**, **Pêcheur Justin**, **Pêcheur Ralph**, **Dresseur d'Oiseaux Peter** ; 🔍 **Frère/sœur du jour Frieda** (vendredi). Le guide dit "plus de dix dresseurs sur les Routes 32 et 33 combinées" — cohérent avec les "6-8 slots" déjà prévus au PRD pour cette seule route.
@@ -324,10 +324,10 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - 🔄 Zone accessible après avoir battu l'événement Rocket Éclaireurs sur Route 32
-- 📍 **Événement Rocket #2 — Pillage des Inscriptions** (optionnel) : kanji 文、字、古、記、史
+- 📍 **Quête Rocket — Pillage des Inscriptions** (optionnelle) : kanji 文、字、古、記、史 *(ex-« Événement #2 », renuméroté 2026-07-06, P-7)*
 - ✅ **Inscriptions Unown** : 5 panneaux lisibles en japonais (N4, Lectures Inline révélées par Y — « furigana sur kanji non étudiés » datait du mécanisme adaptatif aboli le 2026-07-01), entrées `kind: sign` dans les salles intérieures réintégrées, lecture via bouton A → lore entry sur l'écriture ancienne *(« tapper » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*.
 - ❌ Chasse aux Unown supprimée — les Ruines sont une zone narrative, pas de mécanique de capture *(reformulé 2026-07-06, audit 04 : l'ancien libellé « Zone Safari supprimée » prêtait à confusion avec la Safari Zone de Cianwood, réintégrée par ailleurs ; l'adaptation des salles intérieures réintégrées est à designer à la synthèse)*
-- **Reward Rocket #2 :** lore entry "L'écriture avant les kanji"
+- **Reward de la quête Pillage des Inscriptions :** lore entry "L'écriture avant les kanji"
 
 **Bâtiments sur la carte :** Entrée Ruines (depuis Route 32), 5 inscriptions Unown (`kind: sign`) dans les salles intérieures
 
@@ -375,7 +375,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 - ✅ **Maison de Kurt** — Artisan Poké Ball. Intérieur réel ; parler à Kurt pour déposer des Apricorns → reçoit une **Boule de collection** après 24h (Kurt "fabrique" l'objet) *(« bâtiment tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)* *(corrigé 2026-07-06, audit 03, finding 03-C2 — « item d'effet SRS » purgé : aucun objet n'a d'effet sur le SRS, tranché au grill (intégrité FSRS) ; les 7 Boules sont des objets de collection du Sac (`item_kind: fungible`, audit 02), avec le texte savoureux de Kurt du tableau couleur→Boule ci-dessous ; l'intérêt est le rituel quotidien du dépôt/retrait en 24h et le complétionnisme)*
 - ✅ **Pokémon Center**
 - 📍 **Silver apparition #2** (Ecorcia, porte ouest, après Proton/Puits Ramoloss) : kanji 強、越、勝、誇、傲、鋼. ⚠️ Renuméroté/recorrigé (voir note dans cherrygrove-city et `curriculum-checkpoints.md`).
-- 📍 Événement Rocket #3 (Slowpoke Well) débloque le Gym Bugsy
+- 📍 Événement Rocket 1/3 (Slowpoke Well) débloque le Gym Bugsy *(renuméroté 2026-07-06, P-7)*
 
 **Apricorns disponibles près de la ville (map tiles) — ⚠️ voir correction complète en fin de fichier (section Apricorns) :**
 - 赤 (rouge) : Route 33 N, Route 37
@@ -420,8 +420,8 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **HGSS original :** Slowpoke Well — Rocket HQ locale avec Proton.
 
 **Dans 漢字の庭 :**
-- 📍 **Événement Rocket #3 — Proton — Opération Ramoloss** : kanji 捕、縛、操、支、制. Bloque l'accès au Gym Bugsy. HP battle avec Executive Proton.
-- **Intérieur réel du puits** (la zone `slowpoke-well` existe déjà) — l'événement Rocket #3 y est composé en `map_trainers`/`map_npcs` (ADR-0004), Proton au fond *(« tappable → ouvre l'écran de combat » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
+- 📍 **Événement Rocket 1/3 — Proton — Opération Ramoloss** *(ex-« #3 », renuméroté 2026-07-06, P-7 — 1er des 3 lieux canoniques de `rocket_progress`)* : kanji 捕、縛、操、支、制. Bloque l'accès au Gym Bugsy. HP battle avec Executive Proton.
+- **Intérieur réel du puits** (la zone `slowpoke-well` existe déjà) — l'événement Rocket 1/3 y est composé en `map_trainers`/`map_npcs` (ADR-0004), Proton au fond *(« tappable → ouvre l'écran de combat » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 
 **Sourcé du guidebook — structure complète de l'événement :**
 - **Kurt accompagne le joueur** mais se blesse au dos en chemin et ne peut continuer — le joueur prend sa place pour la suite. Bon modèle pour transformer le combat en "le joueur agit à la place d'un mentor blessé/empêché".
@@ -488,7 +488,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Whitney** — Arène physique, 2 門弟 + 試練 常の道, 印 n°3
-- ✅ **Radio Tower** — intérieur réel multi-étages, 1F→5F + plateforme d'observation (un `zone_id` par étage, set-piece ADR-0004) *(« bâtiment tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*. Buena's Password — émission radio quotidienne à 11h00, à écouter via l'onglet Radio du Pokégear, comme en jeu *(« push notification » purgé 2026-07-06, chasse aux reliques audit 04)*. Événement Rocket #6 (prise de contrôle par Petrel + Archer). Post-Rocket : diffuse le Prof Oak Kanji Swarm.
+- ✅ **Radio Tower** — intérieur réel multi-étages, 1F→5F + plateforme d'observation (un `zone_id` par étage, set-piece ADR-0004) *(« bâtiment tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*. Buena's Password — émission radio quotidienne à 11h00, à écouter via l'onglet Radio du Pokégear, comme en jeu *(« push notification » purgé 2026-07-06, chasse aux reliques audit 04)*. Événement Rocket 3/3 (prise de contrôle par Petrel + Archer — ex-« #6 », renuméroté 2026-07-06, P-7). Post-Rocket : diffuse le Prof Oak Kanji Swarm.
 - ✅ **Pokémon Center**
 - ✅ **Department Store** → **Librairie de Doublonville** — intérieur réel multi-étages (6 niveaux + sous-sol, un `zone_id` par étage) avec ses PNJ sourcés (vendeuse N4, Black Belt du sous-sol, fille du 5F le dimanche) *(« bâtiment décoratif, NPC ambiant » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 - ✅ **Game Corner** — mini-jeu de kanji contre jetons, Coin Case fonctionnel, intérieur réel *(« supprimé » corrigé 2026-07-06, audit 04 session 4 — reliquat non répercuté de R8, tranché à la session 3 ; design du mini-jeu à la synthèse)*
@@ -599,7 +599,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Dans 漢字の庭 :**
 - ✅ **Gym Morty** — Arène physique, 2 門弟 + 試練 影の道, 印 n°4
 - ✅ **Tour Jo** (Bell Tower) — **ascension réelle 1F→10F + toit** (séquence complète sourcée § Tour Jo ci-dessous, modèle set-piece ADR-0004 : un `zone_id` par palier ; danse rituelle des 5 Kimono Girls au sommet) *(« bâtiment tappable » corrigé 2026-07-06, chasse aux reliques audit 04 ; tile-authoring et budgets à la synthèse, section d'inventaire PNJ à sourcer)*
-- ✅ **Tour Embrasée** (Burned Tower) — intérieur réel (rez + sous-sol, Silver #3 en haut de l'échelle — la zone `burned-tower` existe déjà) → Événement Rocket #4 *(« bâtiment tappable » corrigé 2026-07-06, chasse aux reliques audit 04)*
+- ✅ **Tour Embrasée** (Burned Tower) — intérieur réel (rez + sous-sol, Silver #3 en haut de l'échelle — la zone `burned-tower` existe déjà) → quête Rocket optionnelle (Traque des Bêtes Sacrées — renumérotée 2026-07-06, P-7) *(« bâtiment tappable » corrigé 2026-07-06, chasse aux reliques audit 04)*
 - ✅ **Pokémon Center**
 - 📍 **Silver apparition #3** (devant Tour Jo, studied ≥ 550) : kanji 影、闇、忘、去、断、孤. ⚠️ Renuméroté de #2 à #3 (kanji inchangé, déjà correct) — voir `curriculum-checkpoints.md` § Règle de Silver.
 - 📍 **Kimono Girl #3 (Miki)** dans la ville — 語源の道, kanji 古、源、形、象、原、文
@@ -649,9 +649,9 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **HGSS original :** Tour Embrasée — Entei, Raikou, Suicune se dispersent ici.
 
 **Dans 漢字の庭 :**
-- 📍 **Événement Rocket #4 — Traque des Bêtes Sacrées** (optionnel) : kanji 炎、雷、洪、猛、霊
+- 📍 **Quête Rocket — Traque des Bêtes Sacrées** (optionnelle) : kanji 炎、雷、洪、猛、霊 *(ex-« Événement #4 », renuméroté 2026-07-06, P-7)*
 - Reward : lettre Fukuda sur les kanji sacrés
-- Intérieur réel (rez + sous-sol, aligné sur la section ecruteak corrigée à la session 3) — l'événement Rocket #4 y est composé en `map_trainers`/`map_npcs` (ADR-0004) *(« bâtiment tappable → scène » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
+- Intérieur réel (rez + sous-sol, aligné sur la section ecruteak corrigée à la session 3) — la quête Rocket optionnelle (Traque des Bêtes Sacrées) y est composée en `map_trainers`/`map_npcs` (ADR-0004) *(« bâtiment tappable → scène » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 
 **Sourcé du guidebook — confirmation du beat Silver & des trois esprits :**
 - À l'arrivée, le joueur aperçoit par un trou dans le sol trois créatures légendaires — confirmé comme leur lieu d'origine ; quand le joueur s'approche, les trois prennent la fuite et deviennent ensuite des "présences mobiles" trackées sur la carte du Pokégear — mécanique directement transposable pour les trois Légendaires-grammaire du PRD (Raikou/Entei/Suicune → conjonctions/expressions/registre classique).
@@ -686,7 +686,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Dresseurs confirmés** : Route 38 = School Kid Chad, Lass Dana, Beauty Valerie, Sailor Harry, Bird Keeper Toby ; Route 39 = Sailor Eugene, Pokéfan Derek, Pokéfan Ruth, Psychic Norman.
-- **Ferme Moomoo, détail complet** : fille à gauche du Miltank-analogue donne le Seal Case une fois guéri ; fille à droite donne 3 décorations gratuites (Fire Seal A, Party Seal B, Flora Seal C) ; fermière donne TM83 Natural Gift ; fermier se met à vendre une spécialité locale (objet de soin, 500 chacun).
+- **Ferme Moomoo, détail complet** : fille à gauche du Miltank-analogue donne le Seal Case une fois guéri ; fille à droite donne 3 décorations gratuites (Fire Seal A, Party Seal B, Flora Seal C) ; fermière donne TM83 Natural Gift ; fermier se met à vendre une spécialité locale *(« objet de soin, 500 chacun » : fonction et prix suspendus à la décision monnaie — candidat #6, noté 2026-07-06, repasse progression P-12)*.
 - **Baoba** — Route 39, annonce l'ouverture d'une nouvelle réserve à Irisia (Cianwood) ; échange de contact pour rappel ultérieur.
 
 ---
@@ -796,7 +796,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ **Gym Pryce** — Arène physique, 2 門弟 + 試練 氷の道, 印 n°7
-- ✅ **Repaire de Mékanos** (Rocket HQ) — intérieur réel 3 étages sous le magasin de souvenirs (B1F→B3F, un `zone_id` par étage, set-piece ADR-0004), Événement Rocket #5 composé en `map_trainers`/`map_npcs` *(« tappable depuis la carte » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
+- ✅ **Repaire de Mékanos** (Rocket HQ) — intérieur réel 3 étages sous le magasin de souvenirs (B1F→B3F, un `zone_id` par étage, set-piece ADR-0004), Événement Rocket 2/3 composé en `map_trainers`/`map_npcs` *(« tappable depuis la carte » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 - ✅ **Pokémon Center**
 - 📍 **Silver apparition #4** (QG Rocket B2F, après Ariana) : kanji 変、知、疑、惜、寂、遅. ⚠️ Renuméroté et kanji corrigé (l'ancien jeu de kanji 強越勝誇傲鋼 appartient en réalité à l'apparition #2/Ecorcia, voir `curriculum-checkpoints.md`). Pour mémoire, dans le jeu d'origine ce n'est **pas un combat** : Silver est déjà vaincu par Lance, simple cameo frustré.
 
@@ -832,7 +832,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **HGSS original :** Lake of Rage — Red Gyarados, Lance aide le joueur contre Rocket.
 
 **Dans 漢字の庭 :**
-- 📍 **Événement Rocket #5 — Ariana — Repaire de Mékanos** : lié au Lac Colère. Kanji 欺、偽、惑、騙、詐. Bloque l'accès à Pryce's Gym.
+- 📍 **Événement Rocket 2/3 — Ariana — Repaire de Mékanos** *(ex-« #5 », renuméroté 2026-07-06, P-7)* : lié au Lac Colère. Kanji 欺、偽、惑、騙、詐. Bloque l'accès à Pryce's Gym.
 - 📍 **Rencontre Shiny garantie** : un kanji avec shimmer rouge (怒) attend au centre du lac. HP battle kanji 怒、激、憤、烈、猛、狂. Reward : badge Shiny rouge sur 怒 + message Fukuda.
 - ✅ Zone accessible après Mahogany Town
 
@@ -860,7 +860,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Dans 漢字の庭 :**
 - ✅ Positions dresseurs R44 (5–6 slots)
 - 🔄 Chemin Glacé → zone traversable **avec puzzle de glace (corrigé 2026-07-06, audit 02 : l'ancienne mention « pas de puzzle en v1, traversée linéaire » contredisait la condition d'obtention de 滝, qui dépend du puzzle — voir structure sourcée ci-dessous)**
-- 📍 **Événement Rocket #7 — Retardataires** (optionnel) : kanji 孤、寒、凍、迷、忘. Reward : lore entry.
+- 📍 **Quête Rocket — Retardataires** (optionnelle) : kanji 孤、寒、凍、迷、忘. Reward : lore entry. *(Ex-« Événement #7 », renuméroté 2026-07-06, P-7)*
 - 📍 NPC quest N2 : "Mahogany" thème — quête express avec scroll caché dans la glace
 - 📍 **Kimono Girl #5 (Sayo)** dans la zone — 構成の道, kanji 組、合、成、部、品、構 (déplacé depuis Ebènelle le 2026-07-01, thème/kanji conservés tels quels)
 
@@ -920,7 +920,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - ✅ **Quiz du Maître — condition réelle du 印 n°8** (adopté 2026-07-01) : 5 questions axées sur l'empathie/le respect ("si j'étais à la place de l'autre, que ressentirais-je ?"), pas la seule traduction littérale. Réussite → Clair (surprise) remet le 印 n°8. Recalibre le "Quiz de traduction N1" déjà prévu au PRD plutôt que de l'ajouter en plus.
-- 📍 **Événement Rocket #8 — L'Émissaire** (optionnel) : pas de combat. Quiz de traduction d'une lettre en japonais. Reward : lore entry Dragon's Den + beat narratif.
+- 📍 **Quête Rocket — L'Émissaire** (optionnelle) : pas de combat. Quiz de traduction d'une lettre en japonais. Reward : lore entry Dragon's Den + beat narratif. *(Ex-« Événement #8 », renuméroté 2026-07-06, P-7)*
 - 📍 NPC quest N1 : inscription au fond de l'antre, 4 lignes à traduire. Reward : lore entry + dialogue Fukuda.
 - ✅ Accès réel depuis Ebènelle (entrée sud, gardée tant que le Gym Clair n'est pas vaincu) — grotte navigable, sanctuaire du Maître à l'intérieur *(« zone tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 
@@ -1052,7 +1052,7 @@ Le texte source intégral de Koga/Bruno/Karen a été retrouvé via le PDF (qui 
 **Dans 漢字の庭 :**
 - 📍 **Silver apparition bonus A** (Route 28, studied ≥ 2000) : Il admet sans mots qu'il avait tort. ⚠️ Ne fait pas partie des "6 Rencontres" officielles du PRD (qui se terminent à Route Victoire, apparition #6) — c'est un ajout narratif du studio sans équivalent dans le jeu d'origine. Kanji à définir par l'équipe contenu (ne pas réutiliser 悔認謝恥赦和, désormais assigné à l'apparition #5/Tunnel de Doublonville — voir `curriculum-checkpoints.md` § Règle de Silver).
 - 📍 Note du Prof Elm (Gris Base) — full circle
-- 📍 **Événement Rocket #9 — Le Grunt Solitaire** (Versants supérieurs) : pas de combat. Dialogue N2 : lui dire que Team Rocket s'est dissous. L'obstacle le plus mélancolique du jeu.
+- 📍 **Quête Rocket — Le Grunt Solitaire** (Versants supérieurs, optionnelle) : pas de combat. Dialogue N2 : lui dire que Team Rocket s'est dissous. L'obstacle le plus mélancolique du jeu. *(Ex-« Événement #9 », renuméroté 2026-07-06, P-7)*
 - 📍 **Red** (Sommet) : 50 questions, silence, neige, aucun dialogue. Red nod uniquement. Confirmé par recherche web (passe 3) : tempête de grêle au combat, silence total, disparition immédiate après défaite — voir `curriculum-checkpoints.md` pour le détail complet.
 - 📍 **Silver apparition bonus B** (Versants, optionnel post-Red) : Il est monté voir par lui-même. Rien n'est dit. ⚠️ Idem ci-dessus — bonus hors PRD, kanji à définir (ne pas réutiliser 静空終別礼去, désormais assigné à l'apparition #6/Route Victoire).
 

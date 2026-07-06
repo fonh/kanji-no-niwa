@@ -2,7 +2,7 @@
   "zone_id": "mt-silver-upper",
   "npcs": [
     {
-      "name": "Le Grunt Solitaire (Événement Rocket #9)",
+      "name": "Le Grunt Solitaire (quête Rocket optionnelle)",
       "role_origin": "Attend Giovanni, pas de combat — dialogue mélancolique (\"Team Rocket s'est dissous\")",
       "item": "—",
       "map_zone": "MAP_MOUNT_SILVER",

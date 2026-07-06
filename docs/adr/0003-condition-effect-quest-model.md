@@ -46,6 +46,15 @@ invariant (a text must be reachable without any CS-Kanji when its zone unlocks) 
 deadlocks, enforced by a production script against `map_obstacles` — see
 `content/texts-progressifs.md`.
 
+**Update (2026-07-06, progression re-pass, same day):** `all_texts_read` is **retired** — "everything
+read" was ruled too demanding at the grill (a completionist requirement repeated 8 times). CS-Kanji
+activation now uses an ordinary monotone `count(texts_read, N)` threshold (N per CS, calibrated at
+synthesis to ~50-60% of the corpus reachable without any CS at that point). Side benefit: the model's
+one dynamic-scope exception disappears, and the placement invariant softens into a calibration
+constraint (N must fit under the CS-free reachable corpus with ~40% margin). Repeatable-loop reading
+content (Safari catches, day-care serial, mini-game prizes) never enters the `texts` table, so it can
+never inflate or grind these counters — see `content/texts-progressifs.md` § CS-Kanji.
+
 New `time_window(days_of_week?, hour_range?)`: evaluated client-side against the real clock, never
 stored. Carries the calendar NPCs (day-of-week siblings, roving photographer, Condominiums man,
 Daisy) — kept in v1 per the 2026-07-06 "no v2" decision. Multi-day visit counters (Daisy ×7, Moomoo

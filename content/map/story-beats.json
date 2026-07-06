@@ -86,7 +86,7 @@
       "beats": [
         {
           "type": "rocket",
-          "text": "**Événement Rocket #1 — Éclaireurs** : bloque la descente vers les Ruines d'Alph jusqu'à être battu. Kanji N5 basics (日、本、人、字、語). Gate : bloque l'accès aux Ruines Arcaniques."
+          "text": "**Quête Rocket — Éclaireurs** : bloque la descente vers les Ruines d'Alph jusqu'à être battu. Kanji N5 basics (日、本、人、字、語). Gate : bloque l'accès aux Ruines Arcaniques."
         }
       ],
       "locks": []
@@ -97,7 +97,7 @@
       "beats": [
         {
           "type": "rocket",
-          "text": "**Événement Rocket #2 — Pillage des Inscriptions** (optionnel) : kanji 文、字、古、記、史"
+          "text": "**Quête Rocket — Pillage des Inscriptions** (optionnel) : kanji 文、字、古、記、史"
         }
       ],
       "locks": []
@@ -118,7 +118,7 @@
         },
         {
           "type": "rocket",
-          "text": "Événement Rocket #3 (Slowpoke Well) débloque le Gym Bugsy"
+          "text": "Événement Rocket 1/3 (Slowpoke Well) débloque le Gym Bugsy"
         }
       ],
       "locks": []
@@ -129,7 +129,7 @@
       "beats": [
         {
           "type": "rocket",
-          "text": "**Événement Rocket #3 — Proton — Opération Ramoloss** : kanji 捕、縛、操、支、制. Bloque l'accès au Gym Bugsy. HP battle avec Executive Proton."
+          "text": "**Événement Rocket 1/3 — Proton — Opération Ramoloss** : kanji 捕、縛、操、支、制. Bloque l'accès au Gym Bugsy. HP battle avec Executive Proton."
         }
       ],
       "locks": []
@@ -244,7 +244,7 @@
       "beats": [
         {
           "type": "rocket",
-          "text": "**Événement Rocket #4 — Traque des Bêtes Sacrées** (optionnel) : kanji 炎、雷、洪、猛、霊"
+          "text": "**Quête Rocket — Traque des Bêtes Sacrées** (optionnel) : kanji 炎、雷、洪、猛、霊"
         }
       ],
       "locks": []
@@ -328,7 +328,7 @@
       "beats": [
         {
           "type": "rocket",
-          "text": "**Événement Rocket #5 — Ariana — Repaire de Mékanos** : lié au Lac Colère. Kanji 欺、偽、惑、騙、詐. Bloque l'accès à Pryce's Gym."
+          "text": "**Événement Rocket 2/3 — Ariana — Repaire de Mékanos** : lié au Lac Colère. Kanji 欺、偽、惑、騙、詐. Bloque l'accès à Pryce's Gym."
         },
         {
           "type": "gym",
@@ -349,7 +349,7 @@
       "beats": [
         {
           "type": "rocket",
-          "text": "**Événement Rocket #7 — Retardataires** (optionnel) : kanji 孤、寒、凍、迷、忘. Reward : lore entry."
+          "text": "**Quête Rocket — Retardataires** (optionnel) : kanji 孤、寒、凍、迷、忘. Reward : lore entry."
         },
         {
           "type": "event",
@@ -379,7 +379,7 @@
       "beats": [
         {
           "type": "rocket",
-          "text": "**Événement Rocket #8 — L'Émissaire** (optionnel) : pas de combat. Quiz de traduction d'une lettre en japonais. Reward : lore entry Dragon's Den + beat narratif."
+          "text": "**Quête Rocket — L'Émissaire** (optionnel) : pas de combat. Quiz de traduction d'une lettre en japonais. Reward : lore entry Dragon's Den + beat narratif."
         },
         {
           "type": "event",
@@ -531,7 +531,7 @@
         },
         {
           "type": "rocket",
-          "text": "**Événement Rocket #9 — Le Grunt Solitaire** (Versants supérieurs) : pas de combat. Dialogue N2 : lui dire que Team Rocket s'est dissous. L'obstacle le plus mélancolique du jeu."
+          "text": "**Quête Rocket — Le Grunt Solitaire** (Versants supérieurs) : pas de combat. Dialogue N2 : lui dire que Team Rocket s'est dissous. L'obstacle le plus mélancolique du jeu."
         },
         {
           "type": "event",

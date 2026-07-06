@@ -266,7 +266,7 @@ Noun + から + Noun + まで
 **PNJ exemple (Route 29) :**
 ```
 「あの木（き）に ひらがなが 書（か）いてあります。読（よ）んでください。」
-→ Récompense : Hint token
+→ Récompense : décoration (cosmétique, catalogue des textes secondaires) *(« Hint token » purgé 2026-07-06, repasse progression P-9 — concept jamais défini nulle part)*
 ```
 
 **PNJ exemple (Cherrygrove) :**

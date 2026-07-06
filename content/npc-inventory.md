@@ -417,7 +417,7 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 | Firebreather Ned (1F), Richard (B1F) | Dresseurs de combat | — | |
 | Rival (Silver) | Embuscade en haut de l'échelle vers B1F (Silver apparition #3, confirmé ici) | — | |
 
-**Side quests dans cette zone** : 0 (événement narratif, Rocket #4 optionnel)
+**Side quests dans cette zone** : 0 (événement narratif, quête Rocket optionnelle — Traque des Bêtes Sacrées)
 **Objets à aller chercher dans cette zone** : 0
 
 ---
@@ -1289,7 +1289,7 @@ Aucun PNJ nommé confirmé — traversée d'exploration pure (grotte à la nage,
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Le Grunt Solitaire (Événement Rocket #9) | Attend Giovanni, pas de combat — dialogue mélancolique ("Team Rocket s'est dissous") | — | |
+| Le Grunt Solitaire (quête Rocket optionnelle) | Attend Giovanni, pas de combat — dialogue mélancolique ("Team Rocket s'est dissous") | — | |
 | Silver (apparition bonus B, optionnel post-Red, hors "6 Rencontres" officielles) | Monté voir par lui-même, rien n'est dit | — | |
 
 **Side quests dans cette zone** : 0

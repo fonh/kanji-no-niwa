@@ -17,8 +17,10 @@ l'équipe produit :
 - **Volume massif requis** — pas 8 textes sur tout le jeu, mais des dizaines, répartis sur (quasiment)
   toutes les zones. Les textes secondaires remplacent les side quests classiques du jeu.
 - **Les CS-Kanji ne sont plus liés à la maîtrise FSRS (2026-07-02)** — remplacés par une condition de
-  lecture complète (tous les textes des zones débloquées lus), le donneur et le moment narratif restant
-  sourcés du jeu d'origine. Voir § CS-Kanji.
+  lecture, le donneur et le moment narratif restant sourcés du jeu d'origine. Voir § CS-Kanji.
+  *(Révisé 2026-07-06, repasse progression : la « lecture complète » — tous les textes des zones
+  débloquées — a été jugée trop exigeante au grill ; remplacée par un **seuil de textes lus** par CS,
+  voir § CS-Kanji, Condition d'activation.)*
 
 ---
 
@@ -42,9 +44,12 @@ Placement : **un texte obligatoire par badge de gym** (16 : 8 Johto + 8 Kanto �
 noté comme gate curriculaire de Falkner dans `PRD.md` § Système 道場 devient donc la règle générale, pas
 une exception), plus les jalons narratifs majeurs qui n'ont pas de gym associé : les 3 lieux Team Rocket,
 l'Antre du Dragon (le "quiz d'empathie du Maître, 5 questions" déjà prévu pour le 印 de Clair EST cette
-mécanique — pas un système à part, juste son application au cas Clair), et le texte final face à Red
-(déjà spécifié : chapitre de manga + lettre de Fukuda, score ≥ 80% requis pour débloquer le combat).
-Total : **~20-21 textes obligatoires** sur tout le jeu.
+mécanique — pas un système à part, juste son application au cas Clair), le texte final face à Red
+(déjà spécifié : chapitre de manga + lettre de Fukuda, score ≥ 80% requis pour débloquer le combat),
+**et les 8 textes de remise des CS-Kanji** (7 remis par PNJ + 滝 trouvé — voir § CS-Kanji ; comptés
+ici depuis le 2026-07-06, repasse progression, finding P-2 : ils étaient définis comme « textes
+obligatoires » sans figurer au total).
+Total : **~28-29 textes obligatoires** sur tout le jeu *(« ~20-21 » corrigé 2026-07-06, P-2)*.
 
 ### Textes secondaires (side-quest)
 
@@ -252,8 +257,9 @@ maintenir.
 
 `grammar_encounters` (`PRD.md` § Système de Combat) se nourrit de "dialogue NPC, leçon ou texte" — mais
 taguer automatiquement ~70-100 articles externes (NHK/Watanoc/Matcha) contre les 828 points Hanabira
-serait fragile et coûteux pour un gain marginal. **Scope réduit** : seuls les **~20-21 textes
-obligatoires** (écrits/sélectionnés à la main, faible volume) sont tagués avec leur(s) point(s) Hanabira
+serait fragile et coûteux pour un gain marginal. **Scope réduit** : seuls les **~28-29 textes
+obligatoires** *(« ~20-21 » corrigé 2026-07-06, repasse progression P-2 — textes de remise CS-Kanji
+inclus)* (écrits/sélectionnés à la main, faible volume) sont tagués avec leur(s) point(s) Hanabira
 au moment de l'écriture — même geste que le `grammar_note` d'une leçon, coût quasi nul. Les textes
 secondaires sourcés en externe **n'alimentent pas** `grammar_encounters` : ils comptent pour la lecture et
 le vocabulaire, pas pour le pool Grammaire/Conjugaison en combat, qui reste déjà alimenté par NPC/leçon/
@@ -295,12 +301,13 @@ qu'on aura déterminé combien ils sont et quand ils sont dans l'aventure".
 ## CS-Kanji — la lecture donne le pouvoir, pas la maîtrise (2026-07-02)
 
 **Changement de principe** : l'ancien modèle liait chaque CS-Kanji (飛/水/力) à la maîtrise FSRS d'un
-kanji ("maîtriser le kanji te donne un pouvoir"). Ce principe est abandonné — remplacé par un principe
-différent mais tout aussi fort thématiquement : **avoir tout lu jusqu'ici te donne un pouvoir**. Chaque
-CS-Kanji est désormais remis par le **même PNJ, au même moment narratif que le CS/HM équivalent dans le
-jeu d'origine** (sourcé `content/guidebook-adapted.md`) — mais la remise passe par un texte obligatoire,
-et ce texte n'a d'effet que si le joueur a lu tous les textes (obligatoires + secondaires) des zones déjà
-débloquées.
+kanji ("maîtriser le kanji te donne un pouvoir"). Ce principe est abandonné — remplacé par : **avoir
+beaucoup lu te donne un pouvoir**. Chaque CS-Kanji est remis par le **même PNJ, au même moment narratif
+que le CS/HM équivalent dans le jeu d'origine** (sourcé `content/guidebook-adapted.md`) — mais la remise
+passe par un texte obligatoire, et ce texte n'a d'effet que si le joueur a atteint le **seuil de textes
+lus** de ce CS. *(Révisé 2026-07-06, repasse progression — l'intermédiaire « avoir TOUT lu » (condition
+`all_texts_read`, audit 02) a été jugé trop exigeant au grill : une exigence complétionniste répétée 8
+fois, qui transformait chaque texte secondaire en obligation. Voir Condition d'activation ci-dessous.)*
 
 **Table sourcée guidebook** (voir `PRD.md` § La Carte de Johto pour la table CS-Kanji résumée) :
 
@@ -324,36 +331,46 @@ Climb réintégré à la chasse aux reliques, même jour)*.
 1. Le joueur a atteint le moment narratif (`npc_cleared`/`event_cleared`, ex. `chuck_defeated` ou
    `ice_path_puzzle_solved` pour 滝) — inchangé par rapport au jeu d'origine, c'est ce qui justifie que ce
    PNJ/événement précis soit celui qui remet ou révèle le texte.
-2. **Tous les textes (`tier` obligatoire et secondaire) dont `zone_id ∈ unlocked_zones[]` sont présents
-   dans `text_completions`** — réutilise l'état déjà tracké (`user_map_state.unlocked_zones[]`,
-   `text_completions`), aucune nouvelle table nécessaire. *(Corrigé 2026-07-06, audit 02, finding
-   02-C2 : cette condition est désormais un vrai type du modèle — `Condition.all_texts_read`, sans
-   paramètre, recalculé à chaque évaluation, jamais stocké. Aucun des 6 types d'origine ne savait
-   exprimer une comparaison ensembliste à périmètre dynamique.)*
+2. **`count(texts_read, N)` — N textes lus au total** (obligatoires et secondaires confondus, quiz
+   réussi = ligne dans `text_completions`), **seuil N propre à chaque CS-Kanji**, croissant avec l'ordre
+   d'obtention, calibré à la synthèse à **~50-60 % du corpus atteignable sans CS** au moment de la
+   remise. *(Révisé 2026-07-06, repasse progression — remplace `Condition.all_texts_read` (audit 02,
+   02-C2), jugé trop exigeant au grill. Bénéfice de modèle en prime : `count` sur `texts_read` est
+   **monotone** (un texte lu le reste, le compte ne descend jamais) — la seule condition à périmètre
+   dynamique du modèle disparaît, l'invariant de monotonie redevient sans exception. Le type
+   `all_texts_read` est retiré du modèle ; `PRD.md` § Implémentation et `CONTEXT.md` mis à jour.)*
 
 Si la condition 1 est vraie mais pas la 2, le PNJ délivre une ligne de blocage (même mécanique
-`sight_auto`/`block` que le blocage d'ordre des leçons) plutôt que le texte — voir § Déclenchement
-ci-dessus. Le joueur sait exactement quoi lire pour débloquer la suite grâce au menu ci-dessous, jamais
+`sight_auto`/`block` que le blocage d'ordre des leçons) plutôt que le texte — avec **le compte
+manquant affiché** (« il te reste 4 textes à lire ») ; le menu ci-dessous dit où chercher, jamais
 une frustration "je ne sais pas ce qu'il me manque".
 
-**Invariant de placement anti-deadlock (ajouté 2026-07-06, audit 02) :** un texte doit être
-atteignable **sans aucun CS-Kanji** au moment où sa zone se débloque — exception tolérée uniquement
-si le CS requis pour l'atteindre est obtenu strictement avant le déblocage de cette zone. Sans cette
-règle, un texte placé derrière un obstacle CS (plan d'eau, arbre à couper, rocher) dans une zone
-débloquée tôt rendrait `all_texts_read` insatisfiable : impossible de lire le texte sans le CS,
-impossible d'obtenir le CS sans avoir tout lu — jeu bloqué définitivement. La règle s'impose à la
-passe de placement des textes (les emplacements précis ne sont pas encore choisis, voir § Sources) et
-se vérifie mécaniquement à la production : croiser chaque `npc_ref`/`found_object_ref` avec les
-`map_obstacles` de sa zone (table ajoutée au schéma par l'audit 02, voir `PRD.md` § Implémentation)
-et l'ordre d'obtention des CS-Kanji. Vivier de placement : `content/side-content-inventory.md`.
+**Placement anti-famine (révisé 2026-07-06, repasse progression — remplace l'« invariant
+anti-deadlock » de l'audit 02) :** avec un seuil N < corpus total, un texte individuellement
+inatteignable ne bloque plus le jeu — le deadlock strict disparaît. La règle devient une **contrainte
+de calibration** : pour chaque CS, N ≤ ~60 % des textes atteignables **sans aucun CS** au moment de la
+remise (marge de ~40 %). La vérification à la production reste la même (croiser
+`npc_ref`/`found_object_ref` avec `map_obstacles` et l'ordre des CS) — elle alimente désormais le
+calcul du « corpus atteignable » plutôt qu'une interdiction de placement par texte. Vivier :
+`content/side-content-inventory.md`.
 
-**Pourquoi ce modèle plutôt que l'ancien** : la maîtrise FSRS d'un seul kanji est un événement ponctuel et
-individuel (peut arriver n'importe quand, sans lien avec ce que le joueur a réellement parcouru) ; "avoir
-tout lu jusqu'ici" est un vrai jalon de parcours, cohérent avec le rôle que les textes secondaires
-doivent jouer ("remplacent les side quests classiques du jeu", § Modèle) — et ça résout directement le
-problème initial ("comment influencer le joueur à lire les side-quests ?") : les CS-Kanji sont des
-capacités de traversée réellement nécessaires pour avancer sur la carte, pas un bonus cosmétique qu'on
-peut ignorer.
+**Pourquoi ce modèle plutôt que les anciens** : la maîtrise FSRS d'un seul kanji est un événement
+ponctuel et individuel (peut arriver n'importe quand, sans lien avec ce que le joueur a réellement
+parcouru) ; « avoir beaucoup lu » est un vrai jalon de parcours, cohérent avec le rôle des textes
+secondaires ("remplacent les side quests classiques", § Modèle) — les CS-Kanji restent des capacités
+de traversée réellement nécessaires, donc la lecture reste réellement motivée ; mais le joueur
+**choisit lesquels** de ses textes lire (~la moitié), au lieu d'une collecte complétionniste imposée
+8 fois. Les textes délaissés restent visibles (menu ci-dessous) et récompensés (statut doré,
+récompenses du catalogue) — optionnels au vrai sens du mot.
+
+**Contenus de lecture des boucles répétables — hors `texts` (ajouté 2026-07-06, repasse progression,
+finding P-15) :** les lectures produites par les boucles adaptées et mini-jeux — prises de la Safari
+Zone, feuilleton de la pension, prix du Game Corner/de la Loterie, concours du Parc — ne sont **jamais
+des lignes de la table `texts`** : elles vivent dans une **collection du Sac** (même famille que les
+Boules de Kurt — `grant_item` de collection), n'incrémentent pas `texts_read`, n'apparaissent pas dans
+le Journal de lecture gaté. Sans cette règle, un contenu renouvelable entrerait dans le compte des
+seuils CS (grind optimal) et, du temps d'`all_texts_read`, aurait rendu la condition insatisfiable.
+Les seuils N ne comptent que le corpus éditorial fixe placé zone par zone.
 
 ---
 
