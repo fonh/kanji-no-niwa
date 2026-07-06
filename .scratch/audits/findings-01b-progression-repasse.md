@@ -185,7 +185,11 @@ sa fiche Kanjidex (découverte). Lecture seule de l'état SRS (comme `studiedSet
 aucune écriture — l'invariant tient. Remplace « l'ID du compagnon » de l'original sans attendre
 le concept compagnon.
 
-### I-5 — Pokéathlon : mapping des 4 disciplines (et P-1)
+### I-5 — ✅ ADOPTÉ (2026-07-06) — Pokéathlon : mapping des 4 disciplines (et P-1)
+
+*Appliqué : guidebook § national-park (4 disciplines détaillées), PRD § combat (précision « aucun
+chrono » = loi des combats, Pokéathlon = exception assumée), side-content G3. Détail d'origine
+ci-dessous :*
 
 Les noms existent déjà (guidebook) ; proposition de contenu : **Reading Blitz** = lecture rapide
 chronométrée (mots du studiedSet, choisir la lecture) ; **Word Forge** = Composition en rafale
