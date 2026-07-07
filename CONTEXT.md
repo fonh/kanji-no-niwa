@@ -40,6 +40,14 @@ _Avoid_: batch (retired word), lesson queue, lesson menu
 The Bag screen listing every text whose zone is unlocked: read texts open for re-reading, unread ones appear greyed with a who-carries-it hint. Status colors — white = read (quiz passed, retry-until-correct), gold = one flawless quiz pass, earnable anytime by re-reading (quiz reshuffled). Same white/gold semantics as Kanjidex tiles.
 _Avoid_: library, trophy shelf, and never confuse with the Lesson Book (the lesson menu)
 
+**Adventure Journal** (ぼうけんノート) *(added 2026-07-07, synthesis)*:
+The START-menu screen listing in-progress Quests: name, current-step line, target zone (Japanese, X = English). Complements — never replaces — the ◎ markers on the Pokégear map. Its existence is why `quests.name`/`steps[].label` are displayed bilingual text, not internal notes.
+_Avoid_: quest log, mission list, and never confuse with the Reading Journal
+
+**Radio Library** *(added 2026-07-07, synthesis)*:
+The ラジオ-tab screen listing Oak's long-listening shows, mirroring the Reading Journal: undiscovered shows masked 「???」, discovered ones replayable, gold = one flawless pass of the optional 3-question listening quiz. Backed by `radio_shows`/`radio_show_completions` (mirror of `texts`/`text_completions`, no score field).
+_Avoid_: podcast list, and never confuse with the Reading Journal (texts) — same semantics, different medium
+
 **Dialogue State**:
 The named variant of what an NPC or Trainer currently says, selected by the player's progress (e.g. `intro`, `post_battle`, `blocked`). A character's line is never fixed for the whole game — it changes as the story moves forward.
 _Avoid_: dialogue line, script

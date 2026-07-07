@@ -217,7 +217,7 @@
       "beats": [
         {
           "type": "rival",
-          "text": "**Silver apparition #3** (devant Tour Jo, studied ≥ 550) : kanji 影、闇、忘、去、断、孤. ⚠️ Renuméroté de #2 à #3 (kanji inchangé, déjà correct) — voir `curriculum-checkpoints.md` § Règle de Silver."
+          "text": "**Silver apparition #3** (Tour Embrasée, haut de l'échelle vers le sous-sol — « devant Tour Jo, studied ≥ 550 » corrigé 2026-07-07, synthèse, aligné V-15 audit 07 : la table PRD et le guidebook placent #3 à la Tour Embrasée, zone burned-tower) : kanji 影、闇、忘、去、断、孤. Voir `curriculum-checkpoints.md` § Règle de Silver."
         },
         {
           "type": "kimono",
@@ -304,7 +304,7 @@
       "beats": [
         {
           "type": "event",
-          "text": "Un **maître méditant** (orig. \"Karate King\") se trouve tout au fond de la grotte, accessible seulement après une traversée d'eau. Il engage le combat si on lui parle ; en cas de victoire, il offre un compagnon \"en reconnaissance de la victoire\" (concept « compagnon » à spécifier à la synthèse). Mini-donjon dōjō avec combat-épreuve final — réintégration v1 actée (2026-07-06, décision « aucune v2 »), chiffrage audit 09. Cohérent avec l'identité Sensei/Dōjō du jeu."
+          "text": "Un **maître méditant** (orig. \"Karate King\") se trouve tout au fond de la grotte, accessible seulement après une traversée d'eau. Il engage le combat si on lui parle ; en cas de victoire, il offre un objet de collection \"en reconnaissance de la victoire\" (« compagnon offert » adapté 2026-07-07, synthèse : le compagnon du joueur est un Pikachu unique et cosmétique, PRD § Compagnon — les dons de compagnons deviennent des objets de collection). Mini-donjon dōjō avec combat-épreuve final — réintégration v1 actée (2026-07-06, décision « aucune v2 »), chiffrage audit 09. Cohérent avec l'identité Sensei/Dōjō du jeu."
         }
       ],
       "locks": [
@@ -522,10 +522,6 @@
       "order": 48,
       "beats": [
         {
-          "type": "rival",
-          "text": "**Silver apparition bonus A** (Route 28, studied ≥ 2000) : Il admet sans mots qu'il avait tort. ⚠️ Ne fait pas partie des \"6 Rencontres\" officielles du PRD (qui se terminent à Route Victoire, apparition #6) — c'est un ajout narratif du studio sans équivalent dans le jeu d'origine. Kanji à définir par l'équipe contenu (ne pas réutiliser 悔認謝恥赦和, désormais assigné à l'apparition #5/Tunnel de Doublonville — voir `curriculum-checkpoints.md` § Règle de Silver)."
-        },
-        {
           "type": "event",
           "text": "Note du Prof Elm (Gris Base) — full circle"
         },
@@ -535,11 +531,7 @@
         },
         {
           "type": "event",
-          "text": "**Red** (Sommet) : 50 questions, silence, neige, aucun dialogue. Red nod uniquement. Confirmé par recherche web (passe 3) : tempête de grêle au combat, silence total, disparition immédiate après défaite — voir `curriculum-checkpoints.md` pour le détail complet."
-        },
-        {
-          "type": "rival",
-          "text": "**Silver apparition bonus B** (Versants, optionnel post-Red) : Il est monté voir par lui-même. Rien n'est dit. ⚠️ Idem ci-dessus — bonus hors PRD, kanji à définir (ne pas réutiliser 静空終別礼去, désormais assigné à l'apparition #6/Route Victoire)."
+          "text": "**Red** (Sommet) : 100 questions (50→100 corrigé 2026-07-07, synthèse — aligné audit 01, A-4), silence, neige, aucun dialogue. Red nod uniquement. Confirmé par recherche web (passe 3) : tempête de grêle au combat, silence total, disparition immédiate après défaite — voir `curriculum-checkpoints.md` pour le détail complet."
         }
       ],
       "locks": []

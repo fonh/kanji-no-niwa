@@ -21,8 +21,9 @@ de méthode de ce fichier pour le détail), ce document a été enrichi de plusi
    manquant vers la Tag Battle de l'Antre du Dragon déjà documentée côté Johto — voir
    `content/guidebook-adapted.md` § Kanto pour le détail ; il reste hors des "6 Rencontres" officielles.
 3. **Insertion de l'arc Kanto (8 villes/gyms)** — la table de calibration ci-dessous couvre désormais
-   72 zones (49 Johto/Mont Gris + 22 Kanto + Grotte Azuria postgame) *(chiffre corrigé 2026-07-05,
-   audit 01 — l'ancien « 57 » datait d'avant l'ajout des 14 routes/donjons Kanto du 2026-07-02)*.
+   **83 zones** (56 Johto/Mont Gris + 26 Kanto + Grotte Azuria postgame) *(« 72 » recompté 2026-07-07,
+   synthèse — 11 zones réintégrées ajoutées, voir la note « Redistribution » sous la table ; l'ancien
+   « 57 » datait d'avant l'ajout des 14 routes/donjons Kanto du 2026-07-02)*.
    Voir la note « Recalibrage majeur » sous la table (Ligue plate, Kanto 900→2136, Mont Gris plateau).
 
 ---
@@ -72,9 +73,10 @@ table corrigée — aligné 2026-07-05, audit 01).
 | route-31 | Route 31 | 70–100 | N5/N4 | 20–30 chars |
 | violet-city | Mauville | 80–130 | N5/N4 | 20–35 chars |
 | sprout-tower | Tour Grospignon | 90–140 | N5/N4 | 20–35 chars |
-| route-32 | Route 32 | 110–170 | N4 | 25–40 chars |
+| route-32 | Route 32 | 110–160 *(était 110–170 — redistribution synthèse 2026-07-07 : Union Cave insérée)* | N4 | 25–40 chars |
 | ruins-of-alph | Ruines Arcaniques | 120–180 | N4 | 25–40 chars |
-| route-33 | Route 33 | 150–190 | N4 | 25–40 chars |
+| union-cave | Union Cave *(réintégrée — porte de la croissance, chemin critique ; ajoutée 2026-07-07, synthèse)* | 140–175 | N4 | 25–40 chars |
+| route-33 | Route 33 | 160–195 *(était 150–190 — redistribution synthèse)* | N4 | 25–40 chars |
 | azalea-town | Ecorcia | 160–210 | N4 | 28–45 chars |
 | slowpoke-well | Puits Ramoloss | 170–220 | N4 | 28–45 chars |
 | ilex-forest | Forêt Secte | 200–240 | N4 | 30–45 chars |
@@ -89,11 +91,16 @@ table corrigée — aligné 2026-07-05, audit 01).
 | route-38 | Route 38 | 400–445 | N3 | 40–60 chars |
 | route-39 | Route 39 | 420–460 | N3 | 42–60 chars |
 | olivine-city | Oliville | 440–490 | N3 | 42–65 chars |
-| route-40 | Route 40 | 460–505 | N3 | 42–65 chars |
+| route-40 | Route 40 | 460–485 *(était 460–505 — redistribution synthèse : Route 41 défusionnée porte la suite)* | N3 | 42–65 chars |
+| route-41 | Route 41 *(défusionnée de route-40 — chemin critique ; ajoutée 2026-07-07, synthèse)* | 480–510 | N3 | 42–65 chars |
+| whirl-islands | Îles Tourbillon *(donjon optionnel 渦 — plateau, zéro croissance requise ; ajoutée 2026-07-07, synthèse)* | ~560 (plateau, accès post-渦/Repaire de Mékanos) | N2 | 45–70 chars |
 | cianwood-city | Irisia | 480–520 | N3 | 45–65 chars |
+| route-47-48-cliff-cave | Routes 47/48 / Cliff Cave *(optionnelles — accès Safari ; plateau ; ajoutées 2026-07-07, synthèse)* | 480–520 (plateau) | N3 | 45–65 chars |
+| safari-zone | Safari Zone *(adaptée : collection de lecture — optionnelle, plateau ; ajoutée 2026-07-07, synthèse)* | 480–520 (plateau) | N3 | 45–65 chars |
 | route-42 | Route 42 | 500–535 | N3/N2 | 45–65 chars |
 | mt-mortar | Mont Mortier | 510–545 | N3/N2 | 45–68 chars |
 | mahogany-town | Acajou Ville | 530–560 | N3/N2 | 45–70 chars |
+| route-43 | Route 43 *(réintégrée — chemin critique vers le Lac Colère ; ajoutée 2026-07-07, synthèse)* | 535–565 | N3/N2 | 45–70 chars |
 | lake-of-rage | Lac Colère | 540–570 | N3/N2 | 48–70 chars |
 | route-44 | Route 44 | 555–590 | N2 | 50–72 chars |
 | ice-path | Chemin Glacé | 570–610 | N2 | 50–75 chars |
@@ -101,6 +108,7 @@ table corrigée — aligné 2026-07-05, audit 01).
 | dragons-den | Antre du Dragon | 640–720 | N2/N1 | 55–90 chars |
 | route-45 | Route 45 | 680–740 | N2 | 50–75 chars |
 | dark-cave | Grotte Sombre | 700–760 | N2 | 50–75 chars |
+| route-46 | Route 46 *(optionnelle — accès Grotte Sombre ; bande sud visible dès la Route 29 ; plateau ; ajoutée 2026-07-07, synthèse)* | 700–760 (plateau) | N2 | 50–75 chars |
 | route-26 | Route 26 | 740–800 | N2 | 52–78 chars |
 | route-27 | Route 27 | 760–830 | N2 | 52–78 chars |
 | indigo-plateau-antichambre | Antichambre | 800–870 | N2/N1 | 58–85 chars |
@@ -113,8 +121,11 @@ table corrigée — aligné 2026-07-05, audit 01).
 | route-6-kanto | Route 6 (Kanto) | 1050–1060 | N2 | 65–110 chars |
 | saffron-city | Safranville | 1060–1200 | N2 | 65–110 chars |
 | route-9-10-rocktunnel | Routes 9-10 / Rock Tunnel | 1200–1220 | N2 | 65–115 chars |
-| kanto-power-plant | Centrale Électrique | 1220–1235 | N2 | 65–115 chars |
-| cerulean-city | Azuria City | 1220–1350 | N2 | 65–115 chars |
+| lavender-town | Lavender Town *(réintégrée — chemin critique : carte EXPN → Flûte Poké ; ajoutée 2026-07-07, synthèse)* | 1220–1240 | N2 | 65–115 chars |
+| route-8-kanto | Route 8 (Kanto) *(optionnelle — Safranville↔Lavender ; plateau ; ajoutée 2026-07-07, synthèse)* | ~1220 (plateau) | N2 | 65–115 chars |
+| kanto-power-plant | Centrale Électrique | 1235–1250 *(était 1220–1235 — redistribution synthèse : Lavender insérée avant)* | N2 | 65–115 chars |
+| cerulean-city | Azuria City | 1240–1350 *(était 1220–1350 — redistribution synthèse)* | N2 | 65–115 chars |
+| route-5-kanto | Route 5 (Kanto) *(optionnelle — Safranville↔Azuria ; plateau ; ajoutée 2026-07-07, synthèse)* | ~1350 (plateau) | N2 | 65–115 chars |
 | route-24-25-kanto | Routes 24-25 (Kanto) | 1350–1370 | N2 | 65–115 chars |
 | route-7-kanto | Route 7 (Kanto) | 1370–1380 | N2 | 68–115 chars |
 | celadon-city | Céladia | 1380–1500 | N2 | 68–115 chars |
@@ -126,6 +137,7 @@ table corrigée — aligné 2026-07-05, audit 01).
 | mont-lune-route-3-4 | Mont Lune / Routes 3-4 | 1800–1820 | N1 | 68–120 chars |
 | route-2-foret-viridian | Route 2 / Forêt Viridian | 1820–1835 | N1 | 70–120 chars |
 | viridian-city | Vertville (1ʳᵉ visite, Gym fermé) | 1835–1845 | N1 | 70–120 chars |
+| route-22-kanto | Route 22 (Kanto) *(optionnelle — ouest de Vertville ; plateau ; ajoutée 2026-07-07, synthèse)* | ~1835 (plateau) | N1 | 70–120 chars |
 | route-1-kanto | Route 1 (Kanto) | 1845–1855 | N1 | 70–120 chars |
 | pallet-town | Bourg-Origine | 1855–1870 | N1 | 70–120 chars |
 | route-21-kanto | Route 21 (Kanto) | 1870–1885 | N1 | 70–120 chars |
@@ -139,6 +151,8 @@ table corrigée — aligné 2026-07-05, audit 01).
 | mt-silver-summit | Gris — Sommet | 2136 | N1 | silence ou 1 ligne |
 
 **Note (2026-07-02, remplace la version "8 villes" du 2026-07-01) — Kanto avec routes/donjons complet :** sur demande explicite ("je veux que ce soit le vrai jeu, comme un émulateur"), le Kanto n'est plus 8 villes bout à bout — 14 routes/donjons sourcés dans `content/guidebook-adapted.md` § Kanto — Routes et donjons rejoignent la table, insérés dans l'ordre réel du jeu entre les 8 gates de badge. Chevauchements volontaires entre route et ville d'arrivée (ex. kanto-power-plant 1220–1235 chevauche cerulean-city 1220–1350, aller-retour réel du jeu) — même logique de plage souple que partout ailleurs dans cette table.
+
+**Redistribution des zones réintégrées (2026-07-07, synthèse, tranché au grill — solde P-13) :** les zones réintégrées depuis les audits 04-08 ont désormais leur ligne. Règle appliquée : (a) les zones réintégrées **du chemin critique** (Union Cave, Route 41 défusionnée, Route 43, Lavender Town) portent de la vraie croissance kanji — leurs voisines ont été resserrées en conséquence, **aucun gate n'a bougé** ; (b) les zones **optionnelles** (Îles Tourbillon, Safari + Routes 47/48/Cliff Cave, Routes 46, 5, 8, 22) sont des **plateaux** — zéro nouveau kanji requis, textes secondaires et leçons de révision seulement — imposé par l'invariant anti-famine (audit 02) : aucune croissance obligatoire ne peut vivre derrière un détour optionnel. (c) Les **intérieurs** (étages de tours, QG, Librairie, navire, intérieur des Ruines…) n'ont pas de ligne propre : ils héritent de la fenêtre de leur zone d'accès (même logique que la règle 03-D5 — le gate SRS ne s'applique qu'aux zones extérieures). La densité moyenne de croissance du Kanto passe de ~56 à ~50 kanji/zone — les leçons « poussées » de 8-12 kanji restent la norme N1, avec un peu plus d'air.
 
 **⚠️ Recalibrage majeur (corrigé 2026-07-05, audit 01) :** l'audit de progression a montré que l'ancienne répartition ne fermait pas le compte : (a) 700 kanji (800→1500) étaient portés par les 5 salles de la Ligue — qui n'ont aucun PNJ-leçon et d'où l'on ne sort pas (« pas de sortie sans défaite ») ; (b) un trou de 80 kanji restait entre la fin du Kanto (1920) et Mont Gris (2000). Décisions (grill 2026-07-05) : **la Ligue devient plate** (Antichambre 800–870, les 5 salles 870–900 — calibration de langue N1 uniquement, aucune croissance kanji dedans) ; **le Kanto porte 900→2136** (~56 kanji/zone : leçons « poussées » de 8-12 kanji au niveau N1, personnages sourcés recatégorisés en dresseurs-leçon — aucun PNJ inventé) ; **Mont Gris devient un plateau bonus à 2136** (révision, leçons poussées, textes N1 difficiles — plus aucun nouveau kanji requis). Gates Kanto recalibrés dans `PRD.md` : Surge 1050 · Sabrina 1200 · Misty 1350 · Erika 1500 · Janine 1650 · Brock 1800 · Blaine 1950 (Seafoam) · Blue 2100 (revisite Vertville). La traversée retour post-Blaine (revisites Vertville puis Bourg-Origine 2ᵉ visite, calibrées sur l'avancement réel) porte 1950→2100→2136 : les 2136 kanji sont tous étudiés **avant** l'entrée à Mont Gris, ce qui rend atteignable le gate Red (2136) déjà fixé au PRD.
 
@@ -588,24 +602,22 @@ langue calibré (absent du PRD, qui ne traite que la géographie) :
 | 5 | Tunnel de Doublonville B2F *(« Tour Radio B2F » aligné sur la table PRD corrigée — 2026-07-07, audit 07, V-13)* | goldenrod-city *(revisite tardive)* | N2 *(pas le N4 de 1ère visite — voir note)* | N2/N1 | ⚠️ Précision de lieu : dans le jeu d'origine, c'est au **Tunnel de Doublonville B2F** (la Tour Radio n'est que le lieu où le déguisement est démasqué) que Silver combat (Battle 4 sur 5). Niveau de langue calculé sur l'avancement réel du joueur à ce stade de l'histoire (post-Mahogany, ~560-600 kanji), pas sur le niveau N4 de la zone goldenrod-city en première visite — Doublonville est une ville revisitée plusieurs fois à des stades narratifs différents, voir note "zones revisitées" ci-dessous. |
 | 6 | Route Victoire | indigo-plateau-antichambre *(= Victory Road dans ce projet)* | N2/N1 | N1 | ✅ Confirmé : dernier combat avant le Plateau, le jeu vide volontairement la route de tout autre dresseur pour ce face-à-face. |
 
-**Apparitions bonus post-Red (hors des "6 Rencontres" officielles du PRD)** : `guidebook-adapted.md`
-documente deux apparitions Silver supplémentaires à Mont Gris (Route 28, avant Red ; Versants, après
-Red) — ce sont des ajouts narratifs du studio sans équivalent dans le jeu d'origine (le jeu original n'a
-que 5 vrais combats + 1 cameo, soit les 6 ci-dessus). Si le PRD les conserve, elles se situent en zone
-`mt-silver-route-28` et `mt-silver-upper`, toutes deux N1 — Silver y parle au plus simple (N1 sobre,
-phrases courtes) puisque l'arc dramatique veut qu'il s'ouvre/s'apaise, pas qu'il complexifie son discours.
+**Apparitions bonus post-Red — supprimées (2026-07-07, synthèse, tranché au grill)** : les deux
+apparitions Silver de Mont Gris (Route 28 / Versants) étaient des ajouts narratifs du studio sans
+équivalent dans le jeu d'origine (le jeu original n'a que 5 vrais combats + 1 cameo, soit les 6
+ci-dessus) — purgées par la politique zéro-invention. L'arc post-Johto de Silver est entièrement
+porté par le sourcé, voir ci-dessous.
 
-**Point de contact supplémentaire trouvé côté Kanto (2026-07-01)** : le guide Kanto documente une
-embuscade de Silver près du Mont Lune (zone `mont-lune-route-3-4`, 1800–1820 kanji, N1 — « zone
-pewter-city… non jouable en tant que donjon » corrigé 2026-07-07, passe de vérification globale V-12 :
-le Mont Lune est une zone jouable de la table de calibration depuis le 2026-07-02, fossile d'avant),
-qui motive dans le jeu d'origine la Tag Battle déjà présente à l'Antre du Dragon
-(`dragons-den`). Ce n'est **pas** une 7ᵉ "Rencontre" officielle — plutôt le chaînon manquant qui explique
-pourquoi Silver se retrouve mêlé à l'Antre du Dragon. Si le studio l'adopte comme scène jouable
-(à trancher à la synthèse), elle se
-calibrerait au niveau de `mont-lune-route-3-4` (N1), cohérent avec le reste du contenu Kanto ; sinon elle
-peut rester un simple fait de continuité qui enrichit l'écriture de la scène Antre du Dragon déjà prévue,
-sans zone dédiée. Voir `content/guidebook-adapted.md` § Kanto pour le détail complet.
+**Arc Kanto de Silver — adopté comme combats sourcés (2026-07-07, synthèse, tranché au grill ;
+mécanique canonique HGSS vérifiée par recherche web)** : à la première entrée dans le Mont Lune
+(zone `mont-lune-route-3-4`, 1800–1820 kanji, N1 — « zone pewter-city… non jouable en tant que
+donjon » corrigé 2026-07-07, passe de vérification globale V-12), Silver tend une embuscade —
+**vrai combat de 26 questions, N1** (continuité de la courbe 12→24 des 6 Rencontres). Sa victoire
+déclenche la **Tag Battle de l'Antre du Dragon** (joueur + Silver contre Lance + Clair, 26 questions),
+puis les **revanches hebdomadaires au Plateau Indigo** (lundi/mercredi, `time_window`, répétables,
+26 questions). Hors des « 6 Rencontres » officielles (l'achievement et `silver_progress` restent sur
+1–6) : l'arc vit dans une `Quest` ordinaire `silver-kanto`. Voir PRD § Silver — arc Kanto et
+`content/guidebook-adapted.md` § Kanto pour le détail complet.
 
 **✅ Deuxième cas confirmé (2026-07-02) — Oliville/Jasmine :** même schéma que Doublonville/Silver #5.
 `guidebook-adapted.md` confirme que Jasmine n'est pas à son gym au 1ᵉʳ passage (elle veille un

@@ -1,6 +1,25 @@
 # Audits de cohérence du PRD — mode d'emploi
 
-**Objectif de la phase actuelle :** rendre le PRD et les docs de référence 100% cohérents
+## Statut final (2026-07-07, audit 09 — synthèse)
+
+**PRD prêt pour l'écriture du contenu : OUI.** Les 9 audits sont terminés. Tous les reportés
+sont soldés, les 11 dernières décisions de design ont été tranchées au grill de la synthèse
+(dresseurs inventés abandonnés, arc Silver Kanto sourcé, trophée Antre défini, compagnon =
+Pikachu cosmétique, périmètre téléphone/radio, F-A/F-B/F-C, redistribution des 83 zones,
+keigo en mini-jeu — détail : `findings-09-synthese.md` § 5), et les chiffrages sont posés
+(table de calibration à 83 zones, seuils N des CS-Kanji, ¥, pool audio, tirage pondéré).
+
+**Restes connus (n'empêchent pas d'écrire le contenu — liste complète : findings-09 § 6)** :
+la **passe contenu** (scripts radio, lettres Fukuda, micro-lignes de quêtes, dénombrements
+guidebook, sections npc-inventory des 11 zones réintégrées, re-calcul des seuils N au
+placement réel), la **passe assets** (tile-authoring, sprite follower Pikachu, mapping
+musique identité, batch VOICEVOX), et 2 points de code/data (prompt français de
+generate-etymology.py, 3 kanji sans audio). Explicitement hors v1 : Battle Frontier et la
+fonction de transfert du Pal Park — rien d'autre.
+
+---
+
+**Objectif de la phase (atteint) :** rendre le PRD et les docs de référence 100% cohérents
 **avant** d'écrire le contenu, et bien avant tout code ou issue tracker.
 
 ## Lancement

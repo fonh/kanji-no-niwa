@@ -22,7 +22,9 @@ Kanto passes 5-7 OCR) ou Bulbapedia (passe 3, Mont Gris uniquement).
    N). Les contenus des boucles répétables (Safari, feuilleton pension, prix de mini-jeux) ne sont
    **jamais** des `texts` (finding P-15) — collection du Sac, hors compteurs.
 4. **Aucune v2** (décision 2026-07-06) : les contenus ex-« v2/post-v1 » listés en § E sont du
-   scope v1 — leur réintégration chiffrée (impact progression) est instruite par l'audit 09.
+   scope v1 — réintégration **chiffrée le 2026-07-07 (audit 09)** : chaque zone a sa ligne dans la
+   table de calibration (`curriculum-checkpoints.md` § Redistribution), les intérieurs héritent de
+   leur zone d'accès.
 5. Aucun français dans le produit ; anglais selon PRD § Langue du Jeu.
 
 ---
@@ -102,7 +104,7 @@ Squelettes de quêtes filées : plusieurs rencontres, un payoff. Se modélisent 
 | # | Fil | Étapes sourcées | Réf. |
 |---|---|---|---|
 | D1 | **Eusine, chasseur de légende** — le fil optionnel le plus long du jeu | Tour Embrasée (avec Morty) → Irisia (défi en combat après apparition de l'esprit) → Route 42 est (nouvel aperçu) → cameos Kanto : jetée de Vermeille, Route 14/15 (1ère apparition à pied), Route 25 (scène climactique de poursuite, Eusine commentateur) ; mystère jamais bouclé de « qui est son grand-père » — **devenu la quête Suicune (adopté 2026-07-06, I-2)** : chaque étape sourcée = un step de la `Quest`, combat final de Suicune Route 25 (voir PRD § Légendaires) ; le mystère du grand-père reste non bouclé, comme dans la source | L71, L91, L662-663, L751, L786, L1338, L1359, L1364 |
-| D2 | **Steven** (Champion visiteur) en 3 étapes | Vermeille (intercepte le joueur, déclenche une rencontre légendaire ailleurs) → Argenta (cameo silencieux à l'expo minérale, simple flag) → Safranville Silph Co. (question → compagnon-cadeau ; revisite → échange) | L1295, L1330-1331, L1337, L1367 |
+| D2 | **Steven** (Champion visiteur) en 3 étapes — **✅ adopté (2026-07-07, synthèse, F-A) : fil sourcé conservé, déclenché post-Red, récompense finale = objet de collection rare** (`Quest` `steven-fil` ; « compagnon-cadeau » sans objet — compagnon unique, PRD § Compagnon) | Vermeille (intercepte le joueur, déclenche une rencontre légendaire ailleurs) → Argenta (cameo silencieux à l'expo minérale, simple flag) → Safranville Silph Co. (résolution) | L1295, L1330-1331, L1337, L1367 |
 | D3 | **Baoba** et son fils | Route 39 (1ère rencontre, échange de contact) → rappels téléphoniques → annonce de la réserve d'Irisia ; son **fils** gère le Pal Park de Fuchsia | L72, L685, L690, L722, L1319 |
 | D4 | **Bill** et sa famille | Rosalia (Centre Pokémon, inventeur du PC) → Doublonville (cadeau Eevee-analogue ; petite sœur donne son numéro) → grand-père (Chaumière Route 25 : montrer un compagnon précis → objet évolutif au choix) ; indice à Fuchsia (« le grand-père de Bill est parti lui rendre visite ») | L73, L515, L616, L622, L1317, L1364 |
 | D5 | **Trace de Silver à Irisia** — le jeune homme au Shuckle confié raconte le passage du « garçon roux qui a pris un objet précieux » | cianwood-city | L750, L761 |
@@ -114,9 +116,10 @@ Squelettes de quêtes filées : plusieurs rencontres, un payoff. Se modélisent 
 
 ## E. Mini-donjons & puzzles — ex-« v2 » réintégrés v1 (décision 2026-07-06)
 
-Étiquettes « v2/post-v1 » supprimées (décision « aucune v2 »). La réintégration chiffrée
-(impact sur les comptes de progression de l'audit 01 : zones, distribution kanji) est instruite
-par l'audit 09 (synthèse). Le puzzle du Chemin Glacé (E4) était déjà obligatoire de fait.
+Étiquettes « v2/post-v1 » supprimées (décision « aucune v2 »). La réintégration a été **chiffrée le
+2026-07-07 (audit 09, synthèse)** : table de calibration à 83 zones, redistribution sur le chemin
+critique, plateaux pour l'optionnel — voir `curriculum-checkpoints.md` § Redistribution. Le puzzle
+du Chemin Glacé (E4) était déjà obligatoire de fait.
 
 | # | Contenu | Zone | Réf. | Détail source |
 |---|---|---|---|---|

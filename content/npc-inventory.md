@@ -27,13 +27,17 @@ routes/donjons avec leur propre `zone_id` et budget kanji), au même titre que J
 séparée pour les routes Kanto "pas encore officielles" : tout est absorbé dans le corps principal
 ci-dessous, dans l'ordre réel de traversée du jeu.
 
-**Note (2026-07-06, audit 04) — zones réintégrées, sections à sourcer** : la géographie HGSS complète
+**Note (2026-07-06, audit 04 ; budgets chiffrés 2026-07-07, synthèse) — zones réintégrées, sections à sourcer** : la géographie HGSS complète
 est réintégrée (tranché au grill, voir PRD § Géographie complète) : **Lavender Town** (station radio →
 carte EXPN), **Routes 5/8/22**, **Union Cave**, **Routes 41/43/46**, **intérieur des Ruines d'Alph**,
 **Îles Tourbillon**, **Safari Zone adaptée** (on y attrape des contenus de lecture — mangas, textes —
-au lieu de Pokémon). Seul le Battle Frontier reste hors scope. Leurs sections d'inventaire PNJ restent
-à sourcer du guidebook (même méthode que le reste du document) une fois les budgets chiffrés à la
-synthèse (audit 09).
+au lieu de Pokémon). Seul le Battle Frontier reste hors scope (+ la fonction de transfert du Pal Park, synthèse).
+**Les budgets sont désormais chiffrés** — chaque zone a sa ligne dans la table de calibration
+(`curriculum-checkpoints.md` § Redistribution : Union Cave 140–175, Route 41 480–510, Route 43 535–565,
+Lavender 1220–1240 portent de la croissance ; Îles Tourbillon, Safari/47/48/Cliff Cave, Routes 46/5/8/22
+sont des plateaux sans croissance requise). Leurs **sections d'inventaire PNJ restent à sourcer du
+guidebook à la passe contenu** (même méthode que le reste du document) — c'est le seul travail restant
+sur ces zones.
 
 **Note (2026-07-05, audit 01) — recalibrage majeur + zéro invention** : budgets Ligue/Kanto/Mont Gris
 recalibrés (Ligue plate 870–900, Kanto porte 900→2136 en leçons poussées de 8-12 kanji, Mont Gris
@@ -84,7 +88,7 @@ mêmes leçons du dōjō (allers-retours).
 | Lyra/Ethan | Attend sur la route une fois l'œuf livré, apprend au joueur à attraper (tutoriel) | — | |
 | Frère/sœur du jour Tuscany | PNJ calendaire, visible uniquement le mardi (et après le badge de Mauville) | TwistedSpoon | |
 
-Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone trop précoce, pas encore de Poké Balls). *(Note 2026-07-05, audit 01 : politique « zéro PNJ-leçon inventé » adoptée — les « 8-10 dresseurs SRS » qu'on prévoyait d'inventer seraient des dresseurs-combat ; leur sort exact est reporté à la synthèse des audits.)*
+Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone trop précoce, pas encore de Poké Balls). *(Note 2026-07-05, audit 01 : politique « zéro PNJ-leçon inventé » adoptée. **Soldé 2026-07-07, synthèse, au grill — fidélité stricte : les « 8-10 dresseurs » sont abandonnés, la Route 29 se traverse sans combat comme dans HGSS ; les 10 prototypes de `trainers.json` supprimés.)*
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 1 (TwistedSpoon, Tuscany)
@@ -374,7 +378,7 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Jeune homme près d'un panneau (ouest) | Donne le CS Éclate-Roc (砕), débloqué dès le badge de Falkner *(corrigé 2026-07-06, audit 04, finding 04-A3 : « CS Marteau-Piqueur (力) » était un double contresens — 力 = Force, déjà remis par le Hiker de la Route 42, et « Marteau-Piqueur » n'est le nom d'aucun des 7 CS-Kanji ; voir PRD § CS-Kanji et guidebook-adapted L572/1177)* | CS Éclate-Roc (砕) | |
+| Jeune homme près d'un panneau (ouest) | Donne le CS Éclate-Roc (砕), débloqué dès le badge de Falkner *(corrigé 2026-07-06, audit 04, finding 04-A3 : « CS Marteau-Piqueur (力) » était un double contresens — 力 = Force, déjà remis par le Hiker de la Route 42, et « Marteau-Piqueur » n'est le nom d'aucun des 8 CS-Kanji (« 7 » corrigé 2026-07-07, synthèse — 登 réintégré depuis) ; voir PRD § CS-Kanji et guidebook-adapted L572/1177)* | CS Éclate-Roc (砕) | |
 | Psychic Mark, School Kid Alan | Dresseurs (cluster frontière Violet City) | — | |
 | Frère/sœur du jour Arthur (jeudi) | Nord des Ruines Arcaniques | Hard Stone | |
 | Obstacle Sudowoodo | Bloque la route vers Ecruteak, résolu via l'arrosoir de Floria (Doublonville) | — | |
@@ -559,7 +563,7 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 | Super Nerd Hugh (2F), Marcus (1F fond) ; Poké Maniac Harrison (1F fond) | Dresseurs internes | — | |
 | Black Belt Kiyo ("Karate King") | Médite tout au fond (B1F, accessible via traversée d'eau) ; combat-épreuve, offre un compagnon en cas de victoire | Compagnon (récompense narrative) | |
 
-**Side quests dans cette zone** : 1 — mini-donjon dōjō du Karate King Kiyo, réintégré v1 (2026-07-06, décision « aucune v2 », chiffrage audit 09 ; voir `content/side-content-inventory.md` § E1)
+**Side quests dans cette zone** : 1 — mini-donjon dōjō du Karate King Kiyo, réintégré v1 (2026-07-06, décision « aucune v2 » ; chiffré 2026-07-07, synthèse : intérieur, hérite de la fenêtre mt-mortar 510–545 ; voir `content/side-content-inventory.md` § E1)
 **Objets à aller chercher dans cette zone** : 1 (compagnon offert par Kiyo)
 
 ---
@@ -1107,7 +1111,7 @@ Aucun dresseur devant le Gym — Brock est explicitement le seul 師範 Kanto sa
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Petit comptoir marchand (Mont Lune) | Au milieu de la traversée | — (vente) | |
-| Rival (Silver, embuscade — chaînon manquant hors "6 Rencontres" officielles, Mont Lune) | Motive la Tag Battle de l'Antre du Dragon déjà documentée côté Johto | — | |
+| Rival (Silver, embuscade Mont Lune — **vrai combat adopté 2026-07-07, synthèse** : 26 questions N1, quête `silver-kanto`, hors "6 Rencontres" ; déclenche la Tag Battle de l'Antre puis les revanches hebdo au Plateau Indigo — voir PRD § Silver — arc Kanto) | Motive la Tag Battle de l'Antre du Dragon déjà documentée côté Johto | — | |
 | Youngster Warren, Jimmy ; Hiker Bruce ; Firebreather Burt (Route 3) | Dresseurs | — | |
 | Youngster Regis, Double Team Zac & Jen, Firebreather Otis, Black Belt Manford/Ander, Hiker Dwight, Picnicker Hope/Sharon, Bird Keeper Hank (Route 4) | Dresseurs | — | |
 
@@ -1267,7 +1271,6 @@ Donjon solo post-16-badges, aucun dresseur. Gardien à l'entrée jusqu'aux 8 bad
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Silver (apparition bonus A, hors "6 Rencontres" officielles) | Admet sans mots qu'il avait tort | — | |
 | L'Idole retraitée | Trouvée via une coupe d'arbre depuis l'extérieur du Mont Gris ; demande le silence du joueur sur sa cachette | TM47 Acier Aile | |
 
 **Side quests dans cette zone** : 0
@@ -1310,7 +1313,6 @@ Aucun PNJ nommé confirmé — traversée d'exploration pure (grotte à la nage,
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Le Grunt Solitaire (quête Rocket optionnelle) | Attend Giovanni, pas de combat — dialogue mélancolique ("Team Rocket s'est dissous") | — | |
-| Silver (apparition bonus B, optionnel post-Red, hors "6 Rencontres" officielles) | Monté voir par lui-même, rien n'est dit | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0

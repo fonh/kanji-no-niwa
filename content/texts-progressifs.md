@@ -84,7 +84,7 @@ qui est désormais une couche de qualité comme les tuiles dorées du Kanjidex, 
 
 | Tier de récompense | Exemples | Fréquence |
 |---|---|---|
-| **Cosmétique** (`grant_item`, type cosmétique) | Skins d'avatar, palette de l'écran-livre/lecture, teintes de dialogue box, variantes de sprite du buddy Pokémon, titre de profil affiché ("Lecteur assidu de Doublonville") | Le gros du volume — zéro risque d'équilibre, à distribuer généreusement sur les 70-100 textes |
+| **Cosmétique** (`grant_item`, type cosmétique) | Skins d'avatar, palette de l'écran-livre/lecture, teintes de dialogue box, variantes de sprite du buddy Pokémon, titre de profil affiché ("Lecteur assidu de Doublonville") | Le gros du volume — zéro risque d'équilibre, à distribuer généreusement sur les ~85-115 textes |
 | **Confort contextuel** (`grant_item` ou `Condition` locale) | Un point d'ancrage de voyage rapide propre à ce texte précis (pas un CS-Kanji générique), un indice caché (position d'un dresseur non repéré, astuce mnémotechnique bonus pour un kanji difficile de la zone) | Fréquent, mais toujours local à une zone, jamais un pouvoir global |
 | **Lore/narratif** (`unlock_text` + `advance_quest` sur une quête d'arc) | Compléter tous les textes secondaires d'une zone/arc débloque une scène bonus, une lettre rare de Fukuda, un easter egg | Par zone ou arc entier, pas par texte individuel |
 
@@ -115,10 +115,12 @@ Densité cible (à ajuster par l'équipe de contenu, pas un quota strict) :
 | Donjon majeur (Tour Grospignon, Forêt Secte, Tour Embrasée, Mont Mortier, Chemin Glacé, Antre du Dragon, Tour Radio, QG Rocket) | 2–3 |
 | Ville Kanto (8 villes) | 2–4 |
 
-Sur ~72 zones (« 57 » corrigé 2026-07-06, repasse progression — chiffre d'avant les 14 routes/donjons
-Kanto ; les réintégrations du 2026-07-06 et les intérieurs multi-étages feront encore croître ce compte,
-recompte à la synthèse), ça donne un ordre de grandeur de **~70-100 textes secondaires** — cible
-volontairement large ("plein de textes partout"), à affiner en écrivant zone par zone plutôt qu'à figer ici.
+Sur **83 zones** *(recompté 2026-07-07, synthèse : 11 zones réintégrées ajoutées à la table de
+calibration — voir `curriculum-checkpoints.md` § Redistribution ; les intérieurs héritent de leur zone
+d'accès, pas de ligne propre)*, ça donne un ordre de grandeur de **~85-115 textes secondaires**
+*(« ~70-100 » recompté en proportion — les 11 nouvelles zones sont surtout des routes/donjons à densité
+0-2)* — cible volontairement large ("plein de textes partout"), à affiner en écrivant zone par zone
+plutôt qu'à figer ici.
 
 **Vérification de faisabilité (2026-07-02, lecture complète de `guidebook-adapted.md`)** — cette densité
 est en fait **conservative** : Doublonville seule a "~30 PNJ/rôles" documentés, les 8 villes Kanto sont
@@ -134,7 +136,7 @@ de la Victoire/Antichambre, Vertville, Azuria/Cerulean, Route 22/28 (Kanto).
 même, et la géographie HGSS est intégralement réintégrée (04-B1, « aucune v2 ») — l'ancien paragraphe
 (« réserve pour une extension future ») était un fossile d'une décision annulée le jour où elle a été
 écrite. Les textes secondaires Kanto se répartissent donc villes **et** routes/donjons (Route 14/15,
-Rock Tunnel, Grotte Diglett, Seafoam… — densités de la table ci-dessus) ; recompte global à la synthèse.
+Rock Tunnel, Grotte Diglett, Seafoam… — densités de la table ci-dessus) ; recompte fait 2026-07-07, synthèse : 83 zones, ~85-115 secondaires.
 
 **Priorité d'attribution des PNJ (2026-07-02)** — trois usages revendiquent maintenant le même vivier de
 PNJ sourcés guidebook par zone (dresseur-combat, PNJ-leçon, PNJ-texte) alors que plusieurs zones sont déjà
@@ -386,12 +388,21 @@ Climb réintégré à la chasse aux reliques, même jour)*.
    PNJ/événement précis soit celui qui remet ou révèle le texte.
 2. **`count(texts_read, N)` — N textes lus au total** (obligatoires et secondaires confondus, quiz
    réussi = ligne dans `text_completions`), **seuil N propre à chaque CS-Kanji**, croissant avec l'ordre
-   d'obtention, calibré à la synthèse à **~50-60 % du corpus de référence** de ce CS (base définie
+   d'obtention, calibré à **~50-60 % du corpus de référence** de ce CS — valeurs initiales posées au bloc « Seuils N » ci-dessous (2026-07-07, synthèse ; base définie
    au § Placement anti-famine ci-dessous — précisée 2026-07-07, audit 05, finding 05-D2). *(Révisé 2026-07-06, repasse progression — remplace `Condition.all_texts_read` (audit 02,
    02-C2), jugé trop exigeant au grill. Bénéfice de modèle en prime : `count` sur `texts_read` est
    **monotone** (un texte lu le reste, le compte ne descend jamais) — la seule condition à périmètre
    dynamique du modèle disparaît, l'invariant de monotonie redevient sans exception. Le type
    `all_texts_read` est retiré du modèle ; `PRD.md` § Implémentation et `CONTEXT.md` mis à jour.)*
+
+**Seuils N — calibration initiale (2026-07-07, synthèse — solde le « calibré à la synthèse » ci-dessus ;
+proposition à re-vérifier quand les textes seront réellement placés, méthode 05-D2 inchangée)** : dans
+l'ordre d'obtention — **砕 6 · 切 12 · 水 20 · 飛 26 · 力 29 · 渦 32 · 滝 35 · 登 60**. Base de calcul :
+corpus de référence estimé à chaque jalon depuis les 83 zones de la table de calibration (densités du
+§ ci-dessus : ~2 textes/zone critique en moyenne, obligatoires compris), N ≈ 50-55 % du corpus estimé,
+monotone croissant. Exemple : à la remise de 水 (Rosalia, post-Morty), ~23 zones critiques traversées
+→ corpus ≈ 38 → N = 20. La passe contenu re-calcule chaque N avec les comptes réels au moment du
+placement — la contrainte dure reste **N ≤ 60 % du corpus de référence**.
 
 Si la condition 1 est vraie mais pas la 2, le PNJ délivre une ligne de blocage (même mécanique
 `sight_auto`/`block` que le blocage d'ordre des leçons) plutôt que le texte — avec **le compte
