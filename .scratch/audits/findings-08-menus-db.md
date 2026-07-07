@@ -298,6 +298,19 @@ Corrections appliquées le 2026-07-07 : PRD (Menu Principal, Pokégear, Navigati
 
 ---
 
+## Passe de vérification post-implémentation (2026-07-07)
+
+Relecture intégrale des 20+ édits (PRD, guidebook, texts-progressifs, CONTEXT.md) + croisement avec les docs non touchés (curriculum-checkpoints, side-content, npc-inventory, ADR-0001/0003/0004). 4 reliquats corrigés :
+
+- **V-1** — La ligne `words` du schéma référençait une « étape 3/4quater » inexistante (l'étape ajoutée s'appelle 4ter). Corrigé.
+- **V-2** — « Radio Card : quiz de la réceptionniste, Tour Radio **2F** » était faux : le quiz est au comptoir du **1F**, le studio de Buena au 2F (vérifié Bulbapedia + `side-content-inventory.md` F12/C8). Corrigé.
+- **V-3 ⚠️ vrai trou** — Le « calendrier de présence » du Profil (et le streak + record + achievements 7/30/100/365) était déclaré calculable depuis `srs_reviews` (note 03-B2), mais un jour ✓ obtenu par « aucune carte due » (Boucle Quotidienne, point 6) n'écrit **aucune ligne** dans `srs_reviews` — indiscernable d'un jour sans lancement, streak incalculable. Table `daily_status` (user_id, date, path session \| no_cards_due) ajoutée ; note 03-B2 amendée ; sources du calendrier et du § Streak mises à jour.
+- **V-4** — L'édit 08-B12 (gauntlet Kimono) mélangeait `completed_quests[]` et `Condition.quest_step` ; reformulé : progression dans `npc_quest_progress.current_step` comme toute quête, gates en `quest_step(kimono-gauntlet, dernière étape)`.
+
+Vérifié sain en passe : labels japonais cohérents entre Menu/Pokégear/CS-Kanji/Textes ; nouvelle sémantique doré réconciliée aux 5 occurrences de texts-progressifs (+ entrée « Reading Journal » ajoutée à CONTEXT.md, précédent Lesson Book) ; `items.category` ↔ poches du Sac ↔ énumération du slot バッグ ; `user_settings` ↔ liste fermée d'Options champ à champ ; zones.json cohérent entre § Audio, pipeline 15 et note guidebook ; ordre pipeline 4/4bis/4ter/5 ; les 36 lettres (16+6+3+5+3+3) ; CONTEXT.md/ADR sans référence périmée ; aucune assignation « audit 08 » restante dans les docs. *(Compte réel des findings : 33 — 3 A, 17 B, 3 C, 8 D, 2 E ; le message du commit initial disait « 30 » par erreur.)*
+
+---
+
 ## Reporté à la synthèse
 
 - Contenus des émissions Radio (liste, scripts, quiz d'Oak) et périmètre téléphone (dresseurs enregistrables, fréquence d'appels, 即時応答) — déjà actés « à la synthèse », confirmés ici.

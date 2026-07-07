@@ -36,6 +36,10 @@ _Avoid_: lesson screen, book view, and never confuse with the Lesson Book (the m
 The START-menu screen (slot レッスン): the table of contents of the player's lesson history — chapters = visited zones with completion counters; per zone: completed lessons (tap to re-read on the Book Screen, read-only), the next lesson shown as who-and-where only, later ones masked as ???. Computed read-only by `getLessonBook` from existing state; no "encountered" tracking exists.
 _Avoid_: batch (retired word), lesson queue, lesson menu
 
+**Reading Journal** (どくしょノート) *(added 2026-07-07, audit 08)*:
+The Bag screen listing every text whose zone is unlocked: read texts open for re-reading, unread ones appear greyed with a who-carries-it hint. Status colors — white = read (quiz passed, retry-until-correct), gold = one flawless quiz pass, earnable anytime by re-reading (quiz reshuffled). Same white/gold semantics as Kanjidex tiles.
+_Avoid_: library, trophy shelf, and never confuse with the Lesson Book (the lesson menu)
+
 **Dialogue State**:
 The named variant of what an NPC or Trainer currently says, selected by the player's progress (e.g. `intro`, `post_battle`, `blocked`). A character's line is never fixed for the whole game — it changes as the story moves forward.
 _Avoid_: dialogue line, script
