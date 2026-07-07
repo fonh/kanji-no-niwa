@@ -69,19 +69,18 @@ Optionnels pour progresser — le joueur peut finir le jeu sans les avoir tous l
 est **requis pour recevoir la récompense** : pas de "passage forcé" ni de correction affichée, comme les
 textes obligatoires.
 
-**Deux `Effect` possibles (2026-07-02, réconcilié avec `PRD.md` § Implémentation)** — `unlock_text`
-existe déjà dans l'énumération `Effect` : c'est lui qui marque le texte "doré" dans le Journal de lecture
-(Sac → Textes, même famille visuelle que les tuiles du Kanjidex ; sémantique corrigée 2026-07-07,
-audit 05, finding 05-A2 — le quiz étant obligatoire et retry-jusqu'à-correct, « lu » implique « quiz
-réussi », l'ancienne formule « Blanc = lu, Doré = quiz réussi » était vide : **Blanc = lu** (textes
-obligatoires, et secondaires récompensés par `grant_item` seul — ils restent blancs, c'est voulu),
-**Doré = l'`Effect.unlock_text` a marqué le texte** comme récompense).
-`grant_item` reste utilisé quand la récompense est un objet concret. Les deux sont idempotents, aucun
-nouveau type `Effect` nécessaire.
+**Deux `Effect` possibles (2026-07-02, réconcilié avec `PRD.md` § Implémentation)** — `grant_item`
+quand la récompense est un objet (cosmétique ou narratif, voir catalogue ci-dessous), `unlock_text`
+quand la récompense est un autre contenu de lecture (scène bonus, lettre rare — tier Lore). Les deux
+sont idempotents, aucun nouveau type `Effect` nécessaire. **Le doré n'est plus une récompense
+(redéfini 2026-07-07, audit 08, finding 08-D8 — remplace la sémantique 05-A2 « Doré = marqué par
+`unlock_text` ») : c'est une couche de qualité transverse à tous les textes** — doré = une passe de
+quiz sans faute, obtenable à tout moment en relisant (quiz remélangé), stockée dans
+`text_completions.gold_at`. Voir § Menu "tous les textes" ci-dessous et PRD § Textes Progressifs.
 
-**⚠️ Le statut "doré" seul reste un trophée décoratif s'il n'a aucun effet en aval** — contradiction
-avec le principe fondateur du système ("pas de trophée décoratif", 2026-07-01). Catalogue de vraies
-récompenses (`grant_item` généralisé aux cosmétiques, pas seulement aux objets narratifs) :
+**Catalogue de vraies récompenses** (`grant_item` généralisé aux cosmétiques, pas seulement aux objets
+narratifs — le principe « pas de trophée décoratif » est servi par ce catalogue, plus par le doré,
+qui est désormais une couche de qualité comme les tuiles dorées du Kanjidex, finding 08-D8) :
 
 | Tier de récompense | Exemples | Fréquence |
 |---|---|---|
@@ -89,9 +88,9 @@ récompenses (`grant_item` généralisé aux cosmétiques, pas seulement aux obj
 | **Confort contextuel** (`grant_item` ou `Condition` locale) | Un point d'ancrage de voyage rapide propre à ce texte précis (pas un CS-Kanji générique), un indice caché (position d'un dresseur non repéré, astuce mnémotechnique bonus pour un kanji difficile de la zone) | Fréquent, mais toujours local à une zone, jamais un pouvoir global |
 | **Lore/narratif** (`unlock_text` + `advance_quest` sur une quête d'arc) | Compléter tous les textes secondaires d'une zone/arc débloque une scène bonus, une lettre rare de Fukuda, un easter egg | Par zone ou arc entier, pas par texte individuel |
 
-Le statut "doré" seul (sans récompense du tableau ci-dessus) reste réservé aux textes qui n'ont
-narrativement aucun lien avec un objet/lieu/personnage assez fort pour justifier une des lignes
-ci-dessus — un filet, pas le cas par défaut.
+*(L'ancien filet « statut doré seul comme récompense » disparaît avec la redéfinition 08-D8 : un texte
+secondaire sans ligne du tableau ci-dessus n'a simplement pas de récompense matérielle — la chasse au
+doré, transverse à tous les textes, reste son incitation légère.)*
 
 **Les CS-Kanji ne sont plus une récompense de texte individuel — voir § CS-Kanji ci-dessous.** Décision
 2026-07-02 : la lecture n'accorde plus les capacités de déplacement au cas par cas (ce qui aurait
@@ -420,8 +419,8 @@ parcouru) ; « avoir beaucoup lu » est un vrai jalon de parcours, cohérent ave
 secondaires ("remplacent les side quests classiques", § Modèle) — les CS-Kanji restent des capacités
 de traversée réellement nécessaires, donc la lecture reste réellement motivée ; mais le joueur
 **choisit lesquels** de ses textes lire (~la moitié), au lieu d'une collecte complétionniste imposée
-8 fois. Les textes délaissés restent visibles (menu ci-dessous) et récompensés (statut doré,
-récompenses du catalogue) — optionnels au vrai sens du mot.
+8 fois. Les textes délaissés restent visibles (menu ci-dessous) et récompensés (récompenses du
+catalogue ; doré chasseable en plus, finding 08-D8) — optionnels au vrai sens du mot.
 
 **Contenus de lecture des boucles répétables — hors `texts` (ajouté 2026-07-06, repasse progression,
 finding P-15) :** les lectures produites par les boucles adaptées et mini-jeux — prises de la Safari
@@ -440,7 +439,13 @@ Nécessaire pour que la condition CS-Kanji ci-dessus soit **juste** (le joueur d
 qu'il lui manque, jamais deviner) : le Journal de lecture (Sac → Textes) liste **tous les textes dont la
 zone est déjà débloquée** (`zone_id ∈ unlocked_zones[]`), pas seulement ceux déjà lus.
 
-- **Texte déjà lu** : affichage normal, statut lu (blanc) ou doré (quiz réussi avec récompense) — inchangé.
+- **Texte déjà lu** : affichage normal, statut lu (blanc) ou doré — **doré = une passe de quiz sans
+  faute, obtenable à tout moment en relisant (quiz remélangé)** *(redéfini 2026-07-07, audit 08, finding
+  08-D8, tranché au grill — l'ancien « quiz réussi avec récompense » était indécidable sous
+  retry-jusqu'à-correct : tout texte fini a son quiz réussi. Même sémantique que les tuiles du Kanjidex
+  (blanc = fait, doré = maîtrisé), généralise le mécanisme relecture + quiz remélangé déjà acté pour le
+  texte de Red ; stocké dans `text_completions.gold_at`, le `score` première-tentative de 05-A1 reste
+  purement statistique)*.
 - **Texte pas encore lu, zone débloquée** : entrée **grisée** dans la liste (titre masqué ou "???"). Tap
   dessus → fenêtre d'indice légère (même famille visuelle que le popup de mot des leçons/textes, § UI/UX
   du PRD) révélant **qui/quoi porte ce texte** (`npc_ref` ou `found_object_ref`, nouveau champ sur la
@@ -474,6 +479,6 @@ furigana des textes. Décisions :
 Trouver le texte sur la carte (PNJ qui le remet, ou objet trouvé : parchemin, lettre, panneau,
 inscription) → fenêtre de lecture dédiée, furigana masqués par défaut (bouton Y pour révéler) → quiz de
 compréhension (3–5 questions, taxonomie ci-dessus, retry avec scaffolding après 2 échecs sur les
-questions non factuelles) → `Effect` déclenché (progression réelle si obligatoire, objet ou statut
-"doré" si secondaire) → texte archivé dans le Journal de lecture (Sac → Textes), avec son statut
-(lu / doré).
+questions non factuelles) → `Effect` déclenché (progression réelle si obligatoire, récompense du
+catalogue si secondaire) → texte archivé dans le Journal de lecture (バッグ → どくしょノート), avec son
+statut (lu / doré — doré = passe sans faute, rejouable en relecture, finding 08-D8).

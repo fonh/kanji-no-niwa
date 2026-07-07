@@ -1187,8 +1187,10 @@ après le badge de Whitney) déloge le Simularbre de la Route 36 ; la **radio am
 remise par le directeur de la station radio de Lavender Town après la quête de la Centrale — précisé
 2026-07-06, audit 04) réveille le Ronflex devant la Grotte Taupiqueur.
 
-**Hors scope v1 :** HM08 Escalade (Prof Chen, post-16-badges) — parois d'escalade non exportées en type
-de terrain ; à trancher avec l'arc Mont Gris.
+*(La note « Hors scope v1 : HM08 Escalade » supprimée 2026-07-07, audit 08, finding 08-E1 — elle
+contredisait la ligne 登 du tableau ci-dessus, réintégrée le 2026-07-06 : reliquat de la chasse aux
+reliques de l'audit 04, corrigée au PRD mais pas ici. Les parois restent à exporter comme type de
+terrain — chiffrage à la synthèse avec l'arc Mont Gris, comme au PRD.)*
 
 Note Route 45 : des rebords à sens unique empêchent de revenir en arrière sans raccourci — bon argument
 pour que 力 (ou 飛) serve aussi à "rattraper" les dresseurs manqués d'un premier passage (voir route-45).
@@ -1207,7 +1209,8 @@ pour que 力 (ou 飛) serve aussi à "rattraper" les dresseurs manqués d'un pre
 | sprout-tower | Disc 1 / 23 — Sprout Tower |
 | ruins-of-alph | Disc 1 / 30 — Ruins of Alph |
 | azalea-town | Disc 1 / 33 — Azalea Town |
-| ilex-forest | Disc 1 / 28 — Union Cave *(faute de mieux — Union Cave n'existe pas dans le jeu, mais sa piste de grotte correspond à l'atmosphère boisée/sombre d'Ilex)* |
+| ilex-forest | Disc 1 / 28 — Union Cave *(faute de mieux — sa piste de grotte correspond à l'atmosphère boisée/sombre d'Ilex ; « Union Cave n'existe pas dans le jeu » supprimé 2026-07-07, audit 08, finding 08-E2 : la zone est réintégrée depuis le 2026-07-06 (audit 04) et reçoit sa propre ligne ci-dessous)* |
+| union-cave *(réintégrée 2026-07-06)* | Disc 1 / 28 — Union Cave |
 | route-34 | Disc 1 / 36 — Route 34 |
 | goldenrod-city | Disc 1 / 41 — Goldenrod City |
 | national-park | Disc 1 / 60 — National Park |
@@ -1226,6 +1229,15 @@ pour que 力 (ou 飛) serve aussi à "rattraper" les dresseurs manqués d'un pre
 | mt-silver-* | Disc 2 / 76 — Victory Road |
 
 **Nuit :** pour toutes les zones, ajouter un filtre audio (réduction de volume + légère distorsion grave) sur la piste de jour pour simuler la variante nocturne en v1 (pas de pistes séparées nuit requises).
+
+**⚠️ Mapping partiel (noté 2026-07-07, audit 08, finding 08-E2) :** cette table s'arrête à la géographie
+d'avant les réintégrations du 2026-07-06 — manquent les zones réintégrées (Lavender Town, Routes
+5/8/22/32/33/35/36/37/40/41/43/44/45/46, Îles Tourbillon, Safari Zone, Routes 47/48/Cliff Cave, Puits
+Ramoloss, intérieurs Tour Radio/QG Rocket/Tour Jo…), les 22 zones Kanto, le SS Aqua et les intérieurs
+récurrents (Centre Pokémon, Gym, Game Corner). **À compléter à la synthèse avec les budgets des zones
+réintégrées** (même régime que le reste). Côté mécanisme, ce mapping alimente désormais
+`content/map/zones.json.music_ref` — voir PRD § Audio (corrigé audit 08 : l'ancienne table PRD à
+3 tranches contredisait ce mapping, il fait foi).
 
 ---
 
