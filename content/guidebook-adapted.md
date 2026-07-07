@@ -27,39 +27,39 @@ Référence de production pour les auteurs de contenu, le pipeline de données, 
 1. **Les Pokémon n'apparaissent pas** dans 漢字の庭 — les "créatures" remplacées par des kanji personnifiés ou des dresseurs. Exceptions (corrigé 2026-07-03) : le Simularbre (Route 36) et le Ronflex (devant la Grotte Taupiqueur, Kanto — la ROM le place sur les cellules Routes 11/12, pas Route 27) restent comme obstacles bloquants ouverts par objet-clé, comme en jeu.
 2. **Les objets HGSS** deviennent des récompenses de quêtes NPC ou des prix Pokéathlon — ils ne se ramassent pas par walk-over.
 3. **Les CS (HMs)** sont remplacés par les **8 CS-Kanji** : 飛 (vol), 水 (surf), 力 (force), 切 (coupe), 砕 (éclate-roc), 滝 (cascade), 渦 (tourbillon), 登 (escalade — HM08 Rock Climb réintégré 2026-07-06, chasse aux reliques audit 04) — chacun **remis par le même PNJ / trouvé au même endroit que le HM d'origine** (voir § CS-Kanji — Obtention, réécrit 2026-07-03 ; jamais débloqué via le SRS). Le Simularbre et le Ronflex s'ouvrent par objet-clé (Arrosoir, radio), pas par CS. Seul Flash n'a pas d'équivalent (couloirs sombres narratifs).
-4. **Les Gyms** fonctionnent comme dans le PRD (2 門弟 + 師範), pas comme dans HGSS (trainers de salle + leader).
+4. **Les Gyms** fonctionnent comme dans le PRD : puzzle spatial HGSS conservé (pure navigation, jamais un gate de langue) + 2 門弟 sourcés postés sur le parcours (0 chez Brock — seul gym sans garde dans le jeu d'origine) + combat du 師範 au **format examen à sections 試練** *(structure complétée 2026-07-07, audit 07 — voir PRD § 道場 et § Jalons-examens)*.
 5. **Le Pokégear** porte l'appel quotidien de Fukuda et le rappel de la session SRS non faite (voir `PRD.md` § Boucle Quotidienne) *(corrigé 2026-07-06, audit 03, finding 03-C1 — « push notifications / rappels des dresseurs de route » purgé : trace d'un ancien design dresseur↔SRS, jamais spécifié ; combat et SRS sont indépendants)*. La radio existe via Radio Tower.
 6. **Aucune mécanique de jeu HGSS non listée dans le PRD** n'est à implémenter.
 7. **Déplacement à la DS** — l'avatar se déplace au D-pad (↑↓←→, une case par input). Sur mobile : D-pad virtuel à l'écran. Sur desktop : touches directionnelles ou WASD. Pas de tap-to-destination, pas de pathfinding. Bouton A = interagir avec un NPC/bâtiment adjacent.
 8. **Rencontre premier passage** — quand l'avatar entre dans le champ de vision d'un dresseur **pour la première fois**, le dresseur déclenche automatiquement le combat (même règle que dans la DS). Après ce premier combat, le dresseur ne déclenche plus jamais automatiquement — il redevient `talk` pur avec sa ligne `post_battle` (voir `PRD.md` § Implémentation) *(corrigé 2026-07-06, audit 03, finding 03-A3 — « s'il affiche un "!" (carte SRS due), le joueur l'engage volontairement » purgé : mécanisme d'un ancien design jamais spécifié ; un combat ne lit ni ne note jamais une carte FSRS, tranché au grill)*.
-9. **Classes de dresseurs additionnelles** — ✅ adopté (2026-07-01) : les 16 classes ci-dessous ont rejoint les 10 du PRD (§ Dresseurs de Route), qui en liste maintenant 27 au total.
+9. **Classes de dresseurs additionnelles** — ✅ adopté (2026-07-01) : les 16 classes ci-dessous complètent les 10 historiques — **matériau de sourcing factuel uniquement** (qui existe dans le jeu d'origine, comment nommer les dresseurs) : la table « 27 classes » du PRD a été **retirée** le 2026-07-01 avec le mécanisme kanji_pool-par-classe, la référence croisée était morte *(corrigé 2026-07-07, audit 07, finding 07-E3)*.
 10. **PNJ récurrents transversaux** — plusieurs PNJ du guidebook réapparaissent dans de nombreuses zones selon un calendrier ou une intrigue filée (voir section dédiée). Ils sont de bons candidats pour des dresseurs/PNJ récurrents dans 漢字の庭, mais leur adaptation est optionnelle (non spécifiée par le PRD v1).
-11. **Kanji « signature » (Silver, Kimono Girls)** — les jeux de 6 kanji cités par apparition sont un motif narratif d'écriture uniquement *(précisé 2026-07-05, audit 01)* : jamais un pool de combat (les combats piochent `studiedSet`), et jamais plus de 2 de ces kanji affichés comme inconnus sur une même page de dialogue (règle des 2 inconnus max de `curriculum-checkpoints.md`).
+11. **Kanji « signature » (Silver, Kimono Girls, Exécutifs Rocket — Rocket ajouté 2026-07-07, audit 07, finding 07-A2)** — les jeux de kanji cités par apparition/événement sont un motif narratif d'écriture uniquement *(précisé 2026-07-05, audit 01)* : jamais un pool de combat (les combats piochent les items étudiés — kanji + mots, tirage pondéré récent, audit 07), et jamais plus de 2 de ces kanji affichés comme inconnus sur un même dialogue (règle des 2 inconnus max de `curriculum-checkpoints.md` — « par page » corrigé en « par dialogue » par l'audit 04, aligné ici V-9, audit 07).
 
 ---
 
 ## Classes de dresseurs additionnelles (fusionnées au tableau PRD le 2026-07-01)
 
-Le PRD ne couvrait à l'origine que 10 classes. Le guidebook en révèle 16 de plus, désormais intégrées (27 classes au total dans `.scratch/kanji-no-niwa/PRD.md` § Dresseurs de Route) :
+Le PRD ne couvrait à l'origine que 10 classes. Le guidebook en révèle 16 de plus — matériau de sourcing factuel (nommage, présence par zone), rien de mécanique. *(Colonne « Thème kanji proposé » supprimée 2026-07-07, audit 07, finding 07-E3 : trace directe du mécanisme kanji_pool-par-classe retiré le 2026-07-01 — aucun dresseur n'a de thème kanji, tout combat pioche le pool commun.)*
 
-| Classe (VO) | Traduction proposée | Zones où elle apparaît | Thème kanji proposé |
-|---|---|---|---|
-| Camper / Picnicker | Campeur / Pique-niqueuse | Route 30, 35, National Park, Route 38/45 | Nature, plein air, repas |
-| Pokéfan | Passionné | Route 34, 35 | Passion, collection, admiration |
-| Beauty | Coquette | Goldenrod, Lighthouse, Route 37 | Apparence, élégance, mode |
-| School Kid | Écolier | Route 38/39 | Étude, école, savoir |
-| Psychic | Voyant | National Park, Route 26/39 | Esprit, intuition, mystère |
-| Black Belt | Karatéka | Cianwood Gym, Mt. Mortar, Route 45 | Force, discipline, arts martiaux |
-| Sage | Sage | Sprout Tower | Sagesse, méditation, ancien |
-| Medium | Médium | Ecruteak Gym | Esprits, au-delà, divination |
-| Skier / Boarder | Skieur / Surfeur des neiges | Mahogany Gym | Glace, vitesse, montagne |
-| Swimmer | Nageur/Nageuse | Route 40/41 | Mer, endurance, traversée |
-| Scientist | Scientifique | Team Rocket HQ (Mahogany) | Recherche, machine, secret |
-| Poké Maniac | Collectionneur | Union Cave (réintégrée 2026-07-06, audit 04), Route 42/43, Mt. Mortar | Collection, curiosité |
-| Super Nerd | Intello | Goldenrod, Mt. Mortar | Connaissance, logique |
-| Gentleman | Gentleman | Lighthouse, Goldenrod | Politesse, fortune, élégance |
-| Twins | Jumeaux/Jumelles | Route 37, Dragon's Den | Duo, miroir, symétrie |
-| Ace Trainer (déjà au PRD) | Dresseur Ace | Toutes zones avancées | Tier JLPT de la zone, N3+ |
+| Classe (VO) | Traduction proposée | Zones où elle apparaît |
+|---|---|---|
+| Camper / Picnicker | Campeur / Pique-niqueuse | Route 30, 35, National Park, Route 38/45 |
+| Pokéfan | Passionné | Route 34, 35 |
+| Beauty | Coquette | Goldenrod, Lighthouse, Route 37 |
+| School Kid | Écolier | Route 38/39 |
+| Psychic | Voyant | National Park, Route 26/39 |
+| Black Belt | Karatéka | Cianwood Gym, Mt. Mortar, Route 45 |
+| Sage | Sage | Sprout Tower |
+| Medium | Médium | Ecruteak Gym |
+| Skier / Boarder | Skieur / Surfeur des neiges | Mahogany Gym |
+| Swimmer | Nageur/Nageuse | Route 40/41 |
+| Scientist | Scientifique | Team Rocket HQ (Mahogany) |
+| Poké Maniac | Collectionneur | Union Cave (réintégrée 2026-07-06, audit 04), Route 42/43, Mt. Mortar |
+| Super Nerd | Intello | Goldenrod, Mt. Mortar |
+| Gentleman | Gentleman | Lighthouse, Goldenrod |
+| Twins | Jumeaux/Jumelles | Route 37, Dragon's Den |
+| Ace Trainer (déjà au PRD) | Dresseur Ace | Toutes zones avancées |
 
 ---
 
@@ -98,7 +98,7 @@ Le guide présente l'intégralité du jeu comme un itinéraire numéroté de 79 
 
 Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Map Card) → Route 30 (Apricorn Box, Mystery Egg, Pokédex) → Ville Griotte (rival #1) → Bourg Geon (mom, vol révélé) → Route 29 (Poké Balls) → Route 31 (Vs. Recorder) → Mauville (Sprout Tower) → Tour Grospignon (Elder, TM70 Flash) → Grotte Sombre → Mauville (Egg, Kimono Girl #1 Zuki, **Gym 1 Falkner**) → Route 36 (Rock Smash) → Ruines Arcaniques (puzzle 1) → Route 32 (Old Rod) → Union Cave (réintégrée 2026-07-06, audit 04) → Route 33 → Ecorcia (Team Rocket, Kurt) → Puits Ramoloss (Proton) → Ecorcia (Apricorn Ball, rival #2, **Gym 2 Bugsy**) → Forêt Secte (Farfetch'd, Cut, Kimono Girl #2 Naoko) → Route 34 (Day Care) → Doublonville (Fashion Case, Coin Case, Bicycle, Radio Card, Blue Card, SquirtBottle, **Gym 3 Whitney**) → Route 35/Parc National/Pokéathlon (Magnus, Apriblender, jersey) → Route 36 (Sudowoodo, Berry Pots) → Rosalia (Bill, Dowsing MCHN, Kimono Girl #3 Miki, Surf) → Tour Embrasée (rival #3, Raikou/Entei/Suicune libérés) → Rosalia (**Gym 4 Morty**) → *carrefour Acajou/Oliville* → Route 38/39 (Baoba, Moomoo Farm) → Oliville (Good Rod) → Phare (quête Jasmine/Amphy) → Route 40 → Irisia (Secret Potion, Suicune/Eusine, HM Fly, **Gym 5 Chuck**) → Doublonville (Eevee de Bill) → Phare (potion livrée) → Oliville (**Gym 6 Jasmine**) → Route 42 (HM Strength, Eusine) → Mont Mortier → Acajou Ville (RageCandyBar) → Lac Colère (Gyarados rouge, Lance) → Route 30 (Exp. Share) → Acajou Ville (escalier caché) → Repaire de Mékanos (Petrel, Ariana+Lance, Whirlpool) → Ebènelle (**Gym 7 Pryce, Gym 8 Clair**) → Doublonville (déguisement Rocket) → Tour Radio (rival, Petrel, Basement Key) → Tunnel de Doublonville (Kimono Girl #4 Kuni, rival, Card Key) → Tour Radio (Proton, Ariana, Archer, Rainbow Wing) → Acajou Ville → Route 44/Chemin Glacé (HM Waterfall, Kimono Girl #5 Sayo) → Antre du Dragon (quiz du Maître, Rising Badge, Dratini) → Bourg Geon (grand texte d'Elm — ex-Master Ball, R11) → Mont Mortier (Karate King) → Rosalia (gauntlet des 5 Kimono Girls, Clear Bell) → Tour Jo (Ho-Oh) → Route 27/Chutes de Tohjo/Route 26 → Route de la Victoire (rival #5) → Plateau Indigo (Conseil 4 + Lance, Hall of Fame).
 
-**Lecture utile pour le contenu :** la structure narrative originale a exactement **5 combats de rival** (Ville Griotte, Ecorcia, Tour Embrasée, Tunnel de Doublonville, Route de la Victoire) — le PRD en prévoit 6 ("Silver — 6 Rencontres"). Ce n'est pas une erreur à corriger : le PRD ajoute déjà une rencontre supplémentaire (#6, post-Red, optionnelle) qui n'a pas d'équivalent dans le jeu d'origine — cohérent avec l'intention narrative de prolonger l'arc Silver au-delà du jeu de base.
+**Lecture utile pour le contenu :** la structure narrative originale a exactement **5 combats de rival** (Ville Griotte, Ecorcia, Tour Embrasée, Tunnel de Doublonville, Route de la Victoire) — le PRD prévoit « 6 Rencontres ». Ce n'est pas une erreur à corriger : la rencontre ajoutée par le PRD est la **#4 (QG Rocket d'Acajou — un cameo sans combat, Silver déjà vaincu par Lance)**, intercalée entre les 5 combats du jeu d'origine ; les 6 rencontres = 5 combats + 1 cameo, toutes pré-Ligue *(corrigé 2026-07-07, audit 07, finding 07-A5 — l'ancienne note décrivait « une rencontre #6, post-Red, optionnelle » qui n'existe dans aucun document ; la #6 du PRD est le combat de Route Victoire du jeu d'origine)*.
 
 ---
 
@@ -200,7 +200,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **HGSS original :** routes verticales menant à Violet City. Route 31 a Dark Cave (grotte).
 
 **Dans 漢字の庭 :**
-- ✅ Positions dresseurs sur les deux routes (5–6 par route)
+- ✅ Positions dresseurs sur les deux routes — **2 nommés sourcés par route** (R30 : Joey/Wade ; R31 : Mikey/Don) + des dresseurs génériques mentionnés sans décompte par le guide *(« 5–6 par route » corrigé 2026-07-07, audit 07, finding 07-B2 : chiffre d'un ancien texte, non sourcé ; le nombre final de slots par route précoce est tranché à la synthèse, avec le sort des 8-10 dresseurs inventés de Route 29 — audit 01)*
 - 🔄 Dark Cave (entrée sur Route 31) → **Grotte Sombre** sur la carte — réintégration v1 actée (2026-07-06, « aucune v2 », chiffrage audit 09), voir section route-45/dark-cave
 - 📍 Route 31 : Lyra/Ethan (NPC fixe) donne un item d'accueil une seule fois
 - Classe dresseurs : Gamin, Campeur, Fillette, puis dès R31 : Sage (NPC ambiant)
@@ -508,7 +508,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 3. Au 5e étage, le "Directeur" se révèle être **l'Exécutif Petrel déguisé** — sa défaite donne une **clé de sous-sol**.
 4. Cette clé permet de délivrer le **vrai Directeur**, retenu en otage dans le sous-sol du Tunnel ; il remet une **Carte-clé**.
 5. Au sommet de la tour (plateforme d'observation), affrontement final contre **l'Exécutif Ariana** puis **l'Exécutif Archer**, qui révèle que toute l'opération visait à diffuser un appel à leur ancien chef disparu (**Giovanni**) pour qu'il revienne.
-6. ✅ **Séquence confirmée (passe 2)** : Proton **apparaît bien en combat à la Tour Radio**, mais sur le 3F (après obtention de la Card Key), aux côtés de la 2e apparition de Petrel (déguisé, tout-Poison). La passe 1 n'avait pas retrouvé cette scène (perdue dans l'OCR). Séquence Tour Radio complète et confirmée : 1F (Sbire bloque, déguisement nécessaire) → rival démasque le déguisement en chemin vers 2F (il cherche en fait Lance, pas la Team Rocket) → 3F porte verrouillée (Card Key requise, obtenue via Tunnel de Doublonville) → 5F "Directeur" = **Petrel déguisé** (Zubat/Koffing/Raticate), sa défaite donne la Basement Key → Tunnel de Doublonville B2F : vrai Directeur captif, énigme d'interrupteurs (rouge/bleu/vert, indice "vert en dernier"), **rival (📍 Silver apparition #5 — PRD : "Tour Radio B2F", lieu réel : Tunnel de Doublonville B2F)** → retour Tour Radio 3F avec la Card Key : **Proton** (Golbat/Weezing) puis re-**Petrel** (5x Koffing + Weezing, tout Lévitation) → plateforme d'observation : **Ariana** (Arbok/Murkrow/Vileplume) puis **Archer** (Houndour/Houndoom/Koffing, révèle l'objectif = rappeler Giovanni) → le vrai Directeur arrive, donne la Plume Arc-en-ciel/Argentée.
+6. ✅ **Séquence confirmée (passe 2)** : Proton **apparaît bien en combat à la Tour Radio**, mais sur le 3F (après obtention de la Card Key), aux côtés de la 2e apparition de Petrel (déguisé, tout-Poison). La passe 1 n'avait pas retrouvé cette scène (perdue dans l'OCR). Séquence Tour Radio complète et confirmée : 1F (Sbire bloque, déguisement nécessaire) → rival démasque le déguisement en chemin vers 2F (il cherche en fait Lance, pas la Team Rocket) → 3F porte verrouillée (Card Key requise, obtenue via Tunnel de Doublonville) → 5F "Directeur" = **Petrel déguisé** (Zubat/Koffing/Raticate), sa défaite donne la Basement Key → Tunnel de Doublonville B2F : vrai Directeur captif, énigme d'interrupteurs (rouge/bleu/vert, indice "vert en dernier"), **rival (📍 Silver apparition #5 — Tunnel de Doublonville B2F, aligné avec la table PRD corrigée ; l'ancienne mention « PRD : Tour Radio B2F » était périmée, V-17, audit 07)** → retour Tour Radio 3F avec la Card Key : **Proton** (Golbat/Weezing) puis re-**Petrel** (5x Koffing + Weezing, tout Lévitation) → plateforme d'observation : **Ariana** (Arbok/Murkrow/Vileplume) puis **Archer** (Houndour/Houndoom/Koffing, révèle l'objectif = rappeler Giovanni) → le vrai Directeur arrive, donne la Plume Arc-en-ciel/Argentée.
 - Récompense finale : une **Plume Arc-en-ciel** ("liée à un kanji légendaire") — bon point d'ancrage pour le trophée de fin d'arc Team Rocket.
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) — ville très dense, ~30 PNJ/rôles :**
@@ -518,7 +518,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - **Gérant du magasin de vélos** — prête une Bicyclette gratuitement ("bonne publicité"), mentionne que la chaîne est née à Cerulean City (Kanto) ; rappelle plus tard pour offrir le vélo définitivement. **Fonction adoptée (2026-07-06, I-11, clôt le candidat #3)** : la Bicyclette est l'objet-clé (`item_owned`) de la Cycling Road (gate sourcé) et double la vitesse de déplacement sur la carte.
 - **Fille évaluatrice d'affection** — maison au nord du Dept Store, évalue le lien avec le compagnon en tête d'équipe.
 - **Réceptionniste Tour Radio** — quiz de 5 questions, réussite → Radio Card.
-- **Stand Loterie** (Tour Radio 1F) — tirage quotidien. **Design adopté (2026-07-06, I-4 — « kanji du jour », remplace le tirage sur ID du compagnon, ne dépend plus de ce concept)** : tirage quotidien d'un kanji, pondéré autour de la progression du joueur ; kanji **étudié** → jetons de Game Corner ; **maîtrisé** (doré, stabilité ≥ 30 j) → décoration rare/cosmétique exclusif ; **inconnu** → lot de consolation + lien vers sa fiche Kanjidex. Lecture seule de l'état SRS (comme `studiedSet` en combat), aucune écriture. Barème chiffré à la synthèse.
+- **Stand Loterie** (Tour Radio 1F) — tirage quotidien. **Design adopté (2026-07-06, I-4 — « kanji du jour », remplace le tirage sur ID du compagnon, ne dépend plus de ce concept)** : tirage quotidien d'un kanji, pondéré autour de la progression du joueur ; kanji **étudié** → jetons de Game Corner ; **maîtrisé** (doré, stabilité ≥ 14 j — seuil aligné 2026-07-07, audit 07) → décoration rare/cosmétique exclusif ; **inconnu** → lot de consolation + lien vers sa fiche Kanjidex. Lecture seule de l'état SRS (comme `studiedSet` en combat), aucune écriture. Barème chiffré à la synthèse.
 - **Buena** — studio radio (Tour Radio 2F), donne la Blue Card, mot de passe quotidien à deviner pour gagner des points. **Boucle adoptée (2026-07-06, I-13 + revue pédagogique)** : le mot de passe s'entend à l'émission de 11h00 (exercice d'écoute : entendre → retenir → restituer au studio) ; les points de la Blue Card s'échangent au comptoir contre des cosmétiques, comme en jeu.
 - **Name Rater** — maison nord de la ville, renomme les surnoms (sauf échangés).
 - **Fleuriste** (Floria) — donne le SquirtBottle une fois le badge de Gym vu.
@@ -601,9 +601,9 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - ✅ **Tour Jo** (Bell Tower) — **ascension réelle 1F→10F + toit** (séquence complète sourcée § Tour Jo ci-dessous, modèle set-piece ADR-0004 : un `zone_id` par palier ; danse rituelle des 5 Kimono Girls au sommet) *(« bâtiment tappable » corrigé 2026-07-06, chasse aux reliques audit 04 ; tile-authoring et budgets à la synthèse, section d'inventaire PNJ à sourcer)*
 - ✅ **Tour Embrasée** (Burned Tower) — intérieur réel (rez + sous-sol, Silver #3 en haut de l'échelle — la zone `burned-tower` existe déjà) → quête Rocket optionnelle (Traque des Bêtes Sacrées — renumérotée 2026-07-06, P-7) *(« bâtiment tappable » corrigé 2026-07-06, chasse aux reliques audit 04)*
 - ✅ **Pokémon Center**
-- 📍 **Silver apparition #3** (devant Tour Jo, studied ≥ 550) : kanji 影、闇、忘、去、断、孤. ⚠️ Renuméroté de #2 à #3 (kanji inchangé, déjà correct) — voir `curriculum-checkpoints.md` § Règle de Silver.
+- 📍 **Silver apparition #3** (Tour Embrasée, en haut de l'échelle vers B1F — voir section burned-tower) : kanji 影、闇、忘、去、断、孤. ⚠️ Renuméroté de #2 à #3 (kanji inchangé, déjà correct) — voir `curriculum-checkpoints.md` § Règle de Silver. *(« devant Tour Jo, studied ≥ 550 » corrigé 2026-07-07, audit 07, passe de vérification V-15 : contredisait la section burned-tower du même fichier, la table PRD (#3 = Tour Embrasée) et la calibration N3 de la zone — le seuil 550 était un fossile.)*
 - 📍 **Kimono Girl #3 (Miki)** dans la ville — 語源の道, kanji 古、源、形、象、原、文
-- 📍 Événement collectif Kimono Girls (après toutes les 5 battues) — scène à Tour Jo
+- 📍 Événement collectif Kimono Girls (post-remise du grand texte d'Elm — les 5 rencontres individuelles sont des scènes/leçons, pas des combats ; « après toutes les 5 battues » corrigé 2026-07-07, audit 07, V-16, reliquat d'avant l'audit 01) — gauntlet au Théâtre de Danse, puis danse rituelle à Tour Jo
 - 📍 NPC quest N3 : aller à Tour Jo lire inscription → reward lettre Fukuda
 
 **Bâtiments sur la carte :** Gym Morty, Tour Jo (nord), Tour Embrasée (ouest), Pokémon Center
@@ -1092,9 +1092,9 @@ Sources : [Bulbapedia — Walkthrough Part 28](https://bulbapedia.bulbagarden.ne
 
 ### Gyms (villes avec 師範)
 - **Entrée :** porte réelle sur la carte de la ville — on entre en marchant (warp), comme tout bâtiment *(« façade tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
-- **Intérieur :** 2 门弟 (NPC dresseurs gardiens) → porte de la 師範 (locked until conditions met) → 試練 screen → 印 ceremony
+- **Intérieur *(complété 2026-07-07, audit 07, findings 07-C3/07-D7)* :** le **puzzle spatial HGSS d'origine est conservé** (pure navigation D-pad, jamais un gate de langue — chemin invisible de Morty, téléporteurs de Sabrina, glace de Pryce, tuiles-flèches de Blue… ; tile-authoring chiffré à la synthèse) → 2 門弟 postés sur le parcours (dresseurs gardiens **sourcés** du gym) → porte du 師範 (verrouillée tant que les conditions ne sont pas remplies) → **試練 = l'examen à sections du 師範** (page de garde façon mini-JLPT, sections 文字・語彙 → 文法 → 読解 → 聴解 — enfin défini, voir PRD § Jalons-examens ; les intitulés 試練・空の道 etc. des fiches de zone sont les noms d'épreuve affichés sur cette page de garde) → relevé de notes → 印 ceremony
 - **Condition visuelle :** porte du Gym barrée si conditions non remplies, ouverte sinon
-- **Sourcé du guidebook :** le nombre réel de gardiens varie selon le Gym dans le jeu d'origine (2 à 5 selon la ville — Falkner et Bugsy en ont 2, Whitney et Morty en ont jusqu'à 4, Clair en a 5). Le PRD fixe une structure uniforme à 2 門弟 pour tous les gyms — choix de simplification cohérent, à garder tel quel ; le détail ci-dessus est juste documenté pour mémoire si jamais le studio veut varier la difficulté d'un gym à l'autre.
+- **Sourcé du guidebook :** le nombre réel de gardiens varie selon le Gym dans le jeu d'origine (2 à 5 selon la ville — Falkner et Bugsy en ont 2, Whitney et Morty en ont jusqu'à 4, Clair en a 5). Le PRD fixe une structure uniforme à 2 門弟 pour tous les gyms — choix de simplification cohérent, gardé tel quel, **avec une exception sourcée : Argenta/Brock, 0 門弟** (seul gym du jeu d'origine sans le moindre garde — tranché 2026-07-07, audit 07, plutôt que d'inventer 2 personnages) ; le détail ci-dessus est documenté pour mémoire.
 
 ---
 
@@ -1367,7 +1367,7 @@ Complète les rosters de dresseurs de route déjà partiels (Routes 2/3/4/7-8/11
 
 **Repère transversal confirmé (passe 7) :** Steven (Champion visiteur d'une autre région) forme un fil en 3 étapes traversant 3 villes — 1ère rencontre à Vermeille (déclenche une rencontre légendaire ailleurs), 2ᵉ rencontre silencieuse à Argenta (simple flag), résolution à Safranville (don ou échange). Bon gabarit de "PNJ visiteur récurrent" si le studio veut un fil similaire côté kanji (ex. un chercheur itinérant qui pose une question différente à chaque rencontre).
 
-**Dresseurs de Gym (avant le 師範) — ✅ nouveau, passe 6, lecture directe des sections de gym :** absent des passes précédentes, qui n'avaient que l'équipe du 師範 lui-même. Nombre et rareté des dresseurs "gardiens" avant le combat de Gym varient beaucoup d'une ville à l'autre — utile pour calibrer combien de dresseurs-combat placer par Gym Kanto dans le pipeline de contenu (« SRS » purgé, audit 03) :
+**Dresseurs de Gym (avant le 師範) — ✅ nouveau, passe 6, lecture directe des sections de gym :** absent des passes précédentes, qui n'avaient que l'équipe du 師範 lui-même. Nombre et rareté des dresseurs "gardiens" avant le combat de Gym varient beaucoup d'une ville à l'autre — ce roster sert à **choisir les 2 門弟 sourcés** de chaque gym Kanto (structure uniforme du PRD, pas un nombre à calibrer par gym ; Brock = 0, exception sourcée — aligné 2026-07-07, audit 07, finding 07-D7 ; « SRS » purgé, audit 03) :
 
 | Ville | Dresseurs avant le 師範 (nombre, noms si confirmés) |
 |---|---|
@@ -1384,7 +1384,7 @@ Complète les rosters de dresseurs de route déjà partiels (Routes 2/3/4/7-8/11
 
 ### Rosters de dresseurs de route (passe 3, 2026-07-01)
 
-Noms et classes confirmés par lecture directe des sections de route du guide. Les classes suivent le même principe que côté Johto (thème kanji libre par classe, non contraint mécaniquement — voir note PRD "Suppression du mécanisme kanji_pool-par-classe"). ⚠️ Couverture partielle — plusieurs routes (5, 6, 9, 10, 14 à 21, 22 à 25) n'ont pas encore de roster confirmé dans cette passe.
+Noms et classes confirmés par lecture directe des sections de route du guide. Les classes sont du sourcing factuel pur (aucun thème kanji — voir note PRD "Suppression du mécanisme kanji_pool-par-classe" ; « thème kanji libre par classe » reformulé 2026-07-07, audit 07). *(⚠️ de couverture supprimé 2026-07-07, audit 07, finding 07-E5 : les routes 5, 6, 9, 10, 14 à 21 et 22 à 25 listées ici comme « sans roster » ont toutes reçu le leur à la passe 7 — voir § Kanto — Routes et donjons ci-dessus.)*
 
 | Route | Dresseurs confirmés |
 |---|---|
@@ -1403,7 +1403,7 @@ Noms et classes confirmés par lecture directe des sections de route du guide. L
 
 **✅ Ordre de zone confirmé, passe 6 :** en plus de l'ordre des 8 badges (déjà confirmé ci-dessus), le texte descriptif donne l'enchaînement effectif des villes/routes, utile pour l'ordre d'apparition sur la carte : Vermeille (arrivée par bateau) → Safranville (première visite, Gym ouvert d'emblée) → boucle Rock Tunnel/Centrale Électrique → Azuria → retour Safranville → Céladia → Fuchsia → Argenta (via Route 3/Mont Lune, voir embuscade Silver ci-dessus) → Vertville (Gym fermé au 1ᵉʳ passage, "le leader est absent") → Bourg-Origine (1ère visite, rien à faire) → Île Braise (Gym relocalisé Seafoam) → retour Vertville (Gym enfin ouvert) → retour Bourg-Origine (permission Mont Gris). Confirme et affine l'ordre déjà déduit par la passe 2/web ; aucune contradiction avec le tableau de badges ci-dessus, juste plus de détail sur les allers-retours.
 
-**À faire avant l'écriture de contenu Kanto détaillé :** les rosters de dresseurs *avant chaque 師範* sont désormais couverts (voir tableau ci-dessus) ; restent à compléter : les équipes Pokémon de Misty/Erika/Brock/Blaine (hors-sujet pour l'adaptation — kanji/PNJ uniquement, cf. règles d'adaptation globales — donc faible priorité), les rosters des routes encore non couvertes (5, 6, 9, 10, 14 à 21, 22 à 25), et un calendrier PNJ complet équivalent à l'inventaire exhaustif du Johto. Priorité plus basse que le reste du jeu vu que Kanto est une extension de fin de partie (N1, ~1500-2000 kanji déjà maîtrisés par le joueur à ce stade).
+**À faire avant l'écriture de contenu Kanto détaillé :** les rosters de dresseurs *avant chaque 師範* sont couverts (tableau ci-dessus), et les rosters de routes le sont aussi depuis la passe 7 (§ Kanto — Routes et donjons ; « routes 5, 6, 9, 10, 14 à 21, 22 à 25 non couvertes » supprimé 2026-07-07, audit 07, finding 07-E5 — note d'avant la passe 7) ; restent à compléter : les équipes Pokémon de Misty/Erika/Brock/Blaine (hors-sujet pour l'adaptation — kanji/PNJ uniquement, cf. règles d'adaptation globales — donc faible priorité) et un calendrier PNJ complet équivalent à l'inventaire exhaustif du Johto. Priorité plus basse que le reste du jeu vu que Kanto est une extension de fin de partie (N1, ~1500-2000 kanji déjà maîtrisés par le joueur à ce stade).
 
 ---
 
@@ -1415,10 +1415,10 @@ Noms et classes confirmés par lecture directe des sections de route du guide. L
 
 | Zone HGSS | Statut dans 漢字の庭 | Traitement |
 |-----------|-------------------|------------|
-| **Union Cave** | 🔄 Réintégrée (2026-07-06, audit 04) | Relie Azalea Town à Goldenrod via Ilex Forest dans HGSS. Dans le jeu, la traversée passe directement par Ilex Forest → Route 34 sans grotte. Aucun décor Union Cave sur la carte. Le guidebook y recense 7 dresseurs nommés (Randonneurs, Maniaques, Dresseurs Ace) — non repris, hors scope confirmé. |
-| **Route 41** | 🔄 Réintégrée (2026-07-06, audit 04 — défusionnée de Route 40) | Route maritime entre Route 40 et Cianwood. Dans le jeu, Route 40 couvre l'ensemble de la traversée en mer vers Irisia. Le guidebook y recense ~10 Nageurs supplémentaires, fusionnés conceptuellement dans le pool Route 40. |
+| **Union Cave** | 🔄 Réintégrée (2026-07-06, audit 04) | Relie Route 32 à Route 33/Ecorcia dans HGSS — zone jouable réintégrée, budget à la synthèse. Le guidebook y recense **7 dresseurs nommés** (Randonneurs, Maniaques, Dresseurs Ace) — **roster à reprendre** *(« aucun décor sur la carte / non repris, hors scope confirmé » supprimé 2026-07-07, audit 07, finding 07-E4 : le texte de traitement datait d'avant la réintégration et contredisait le statut de sa propre ligne)*. |
+| **Route 41** | 🔄 Réintégrée (2026-07-06, audit 04 — défusionnée de Route 40) | Route maritime entre Route 40 et Cianwood, zone jouable à part entière depuis la défusion. Le guidebook y recense **~10 Nageurs** — roster propre à la Route 41 *(« fusionnés conceptuellement dans le pool Route 40 » supprimé 2026-07-07, audit 07, finding 07-E4 : contredisait la défusion actée sur la même ligne)*. |
 | **Route 43** | 🔄 Réintégrée (2026-07-06, audit 04) | Relie Mahogany Town au Lac Colère dans HGSS. Dans le jeu, Lac Colère est une zone directement adjacente à Acajou Ville (accès direct, pas de route séparée). Le guidebook y recense un poste de péage Team Rocket et un Apricorn Noir caché — voir section Apricorns (le Noir a été réattribué au Lac Colère). |
-| **Route 46** | 🔄 Réintégrée (2026-07-06, audit 04) | Petit connecteur au nord de Route 29, bloqué par un rebord à sens unique dans HGSS ; un seul dresseur (Randonneur) y est recensé. Non repris — Route 29 garde son tease visuel de grille fermée sans zone jouable derrière. |
+| **Route 46** | 🔄 Réintégrée (2026-07-06, audit 04) | Petit connecteur au nord de Route 29, bloqué par un rebord à sens unique dans HGSS ; un seul dresseur (Randonneur) y est recensé — repris avec la zone. La grille de Route 29 devient un vrai accès différé (déjà noté § route-29) *(« Non repris — tease visuel sans zone jouable derrière » supprimé 2026-07-07, audit 07, finding 07-E4 : contredisait la réintégration et la note déjà corrigée de la section route-29)*. |
 | **Ruins of Alph (intérieur)** | 🔄 Réintégré (2026-07-06, audit 04) | Les 4 salles intérieures rejoignent la zone extérieure (inscriptions + Rocket event) ; l'adaptation des puzzles Unown (mécanique de capture absente) est à designer à la synthèse. |
 | **Dark Cave (intérieur)** | 🔄 Réintégration v1 actée (2026-07-06, « aucune v2 ») | Entrée visible sur la carte ; tunnel à 2 entrées, gating à deux temps. Périmètre exact chiffré à l'audit 09. |
 | **Mt. Mortar (intérieur)** | 🔄 Réintégration v1 actée (2026-07-06, « aucune v2 ») | Entrée visible sur la carte depuis Route 42. Le guidebook y documente un beat de "dojo caché" fort (voir section mt-mortar : Karate King Kiyo + 3 dresseurs). Périmètre exact chiffré à l'audit 09 (impact progression). |

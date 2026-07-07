@@ -152,7 +152,7 @@ table corrigée — aligné 2026-07-05, audit 01).
 
 ## Cartes mots par palier JLPT (ajouté 2026-07-01)
 
-Le SRS est unifié (une seule file, `card_type` distingue kanji/mot — voir `PRD.md` § Système SRS), donc pas de règle de couverture séparée à écrire pour le contenu. Ceci dit, il est utile d'avoir un repère du **volume total de cartes mots qui devient disponible à chaque palier**, pour calibrer les fiches Carte Mot, les exemples de phrases, et les questions Sens/Traduction en combat.
+Le SRS est unifié (une seule file — `item_type` distingue kanji/mot et `facet` sens/lecture, schéma `srs_cards` corrigé par l'audit 03 ; « card_type » aligné 2026-07-07, audit 07, passe de vérification V-12), donc pas de règle de couverture séparée à écrire pour le contenu. Ceci dit, il est utile d'avoir un repère du **volume total de cartes mots qui devient disponible à chaque palier**, pour calibrer les fiches Carte Mot, les exemples de phrases, et les questions Sens/Traduction en combat.
 
 Chiffres réels tirés de `scripts/sources/yomitan-jlpt/` (8 113 mots JLPT au total, cf. `PRD.md` § Pipeline de Données — filtré à 7 836 après recoupement JMdict, écart de 277 mots sans correspondance) :
 
@@ -575,7 +575,7 @@ donnée par Fukuda.
 apparition. ⚠️ **Cette table remplace une version antérieure incohérente** : l'ancienne table plaçait les
 6 apparitions à Azalea/Ecruteak/Mahogany/Antichambre/Route 28/Mt. Silver, ce qui ne correspondait ni aux
 lieux confirmés par le guidebook, ni à la table officielle du PRD (`PRD.md`, § "Silver — 6 Rencontres" :
-Ville Griotte/Ecorcia/Tour Embrasée/QG Rocket/Tour Radio/Route Victoire). Le guidebook source confirme
+Ville Griotte/Ecorcia/Tour Embrasée/QG Rocket/Tunnel de Doublonville/Route Victoire — « Tour Radio » aligné sur la table PRD corrigée, 2026-07-07, audit 07, V-13). Le guidebook source confirme
 que la table du PRD est la bonne — la table ci-dessous reprend ses 6 lieux et y ajoute le niveau de
 langue calibré (absent du PRD, qui ne traite que la géographie) :
 
@@ -584,8 +584,8 @@ langue calibré (absent du PRD, qui ne traite que la géographie) :
 | 1 | Ville Griotte (retour du chemin) | cherrygrove-city | N5 | N5/N4 | ✅ Confirmé : 1er combat de rival du jeu, juste après la visite à Mr. Pokémon. |
 | 2 | Ecorcia, porte ouest | azalea-town | N4 | N4/N3 | ✅ Confirmé : ambuscade après l'événement Proton/Puits Ramoloss. |
 | 3 | Tour Embrasée | burned-tower / ecruteak-city | N3 | N3/N2 | ✅ Confirmé : en haut de l'échelle menant au sous-sol. |
-| 4 | QG Rocket B2F | mahogany-town | N3/N2 | N2 | ⚠️ Dans le jeu d'origine, **ce n'est pas un combat** — Silver est déjà vaincu par Lance, juste un cameo frustré ("pas assez d'affection pour ses compagnons"). À garder en tête si le PRD veut un vrai combat ici plutôt qu'une scène. |
-| 5 | Tour Radio B2F (Doublonville) | goldenrod-city *(revisite tardive)* | N2 *(pas le N4 de 1ère visite — voir note)* | N2/N1 | ⚠️ Précision de lieu : dans le jeu d'origine, c'est au **Tunnel de Doublonville B2F** (pas la Tour Radio elle-même) que Silver démasque le déguisement et combat (Battle 4 sur 5). Niveau de langue calculé sur l'avancement réel du joueur à ce stade de l'histoire (post-Mahogany, ~560-600 kanji), pas sur le niveau N4 de la zone goldenrod-city en première visite — Doublonville est une ville revisitée plusieurs fois à des stades narratifs différents, voir note "zones revisitées" ci-dessous. |
+| 4 | QG Rocket B2F | mahogany-town | N3/N2 | N2 | ✅ **Pas un combat — cameo acté** (Silver déjà vaincu par Lance, "pas assez d'affection pour ses compagnons") : le PRD a tranché, `silver_progress.outcome = cameo` (audit 02) et l'achievement teste les 6 rencontres quel que soit l'outcome. *(« À garder en tête si le PRD veut un vrai combat » retiré 2026-07-07, audit 07, V-14 — l'hésitation était périmée.)* |
+| 5 | Tunnel de Doublonville B2F *(« Tour Radio B2F » aligné sur la table PRD corrigée — 2026-07-07, audit 07, V-13)* | goldenrod-city *(revisite tardive)* | N2 *(pas le N4 de 1ère visite — voir note)* | N2/N1 | ⚠️ Précision de lieu : dans le jeu d'origine, c'est au **Tunnel de Doublonville B2F** (la Tour Radio n'est que le lieu où le déguisement est démasqué) que Silver combat (Battle 4 sur 5). Niveau de langue calculé sur l'avancement réel du joueur à ce stade de l'histoire (post-Mahogany, ~560-600 kanji), pas sur le niveau N4 de la zone goldenrod-city en première visite — Doublonville est une ville revisitée plusieurs fois à des stades narratifs différents, voir note "zones revisitées" ci-dessous. |
 | 6 | Route Victoire | indigo-plateau-antichambre *(= Victory Road dans ce projet)* | N2/N1 | N1 | ✅ Confirmé : dernier combat avant le Plateau, le jeu vide volontairement la route de tout autre dresseur pour ce face-à-face. |
 
 **Apparitions bonus post-Red (hors des "6 Rencontres" officielles du PRD)** : `guidebook-adapted.md`
