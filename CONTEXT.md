@@ -33,7 +33,7 @@ A hand-authored reading written directly in the `jp` string, in full-width paren
 _Avoid_: auto-furigana, computed furigana, adaptive furigana
 
 **Kanji Budget**:
-The calibration rule that a single dialogue — across all its Dialogue States and pages combined — may use at most 2 kanji the player hasn't studied yet, on top of kanji already known. Applies per dialogue, not per page or sentence *(confirmed as the authoritative unit 2026-07-06, audit 04, finding 04-A2)*. Character names are exempt from the budget; their Inline Readings follow the same Y-button reveal as everything else.
+The calibration rule that a single dialogue — across all its Dialogue States and pages combined — may use at most 2 kanji the player hasn't studied yet, on top of kanji already known. Applies per dialogue, not per page or sentence *(confirmed as the authoritative unit 2026-07-06, audit 04, finding 04-A2)*. For Progressive Texts the budget is proportional instead: ~2 unknown kanji per 100 characters, capped at 8–10 distinct unknowns per text *(2026-07-07, audit 05, finding 05-D1 — same ~98% readability contract, adapted to length)*. Character names are exempt from the budget; their Inline Readings follow the same Y-button reveal as everything else.
 _Avoid_: unknown kanji limit (per line)
 
 **Condition** *(type list updated 2026-07-06 twice: audit 04 relic hunt, then progression re-pass — `all_texts_read` retired: "everything read" was ruled too demanding; CS-Kanji now gate on a monotone `count(texts_read, N)` threshold, so the model has no dynamic-perimeter condition left)*:

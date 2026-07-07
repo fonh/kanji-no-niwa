@@ -1107,7 +1107,7 @@ Aucun dresseur nommé au Mont Lune (contrairement aux Routes 3/4 alentour) — l
 |---|---|---|---|
 | Bug Catcher Ed, Abner, Ellis, Dane, Stacey, Dion | 6 Insectophiles (thème de classe homogène) | — | |
 
-🔒 飛/Coupe pour l'arbre côté Argenta ; scavenger-hunt de zone encouragé par le texte source.
+🔒 切/Coupe pour l'arbre côté Argenta *(« 飛 » corrigé 2026-07-07, passe de vérification globale V-13 — coquille : l'arbre se coupe, 切, il ne se survole pas)* ; scavenger-hunt de zone encouragé par le texte source.
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0

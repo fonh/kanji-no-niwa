@@ -1,37 +1,93 @@
 {
-  "npc_id": "guide_gent_cherrygrove",
-  "name": "Guide Gent",
-  "zone_id": "cherrygrove-city",
-  "jlpt_level": "N5",
-  "state_rules": [
-    { "if": [{ "type": "quest_step", "quest_id": "cherrygrove_welcome", "step": "shoes_given" }], "state": "farewell" },
-    { "default": true, "state": "intro" }
-  ],
-  "dialogue_states": {
-    "intro": {
-      "pages": [
-        { "jp": "ようこそ！", "en": "Welcome!" },
-        { "jp": "ここは　町（まち）です。", "en": "This is a town." },
-        { "jp": "店（みせ）が　あります。", "en": "There is a shop." },
-        { "jp": "くつを　あげます。", "en": "I'll give you shoes." },
-        { "jp": "どうぞ。", "en": "Here you go." }
-      ],
-      "effects": [
-        { "type": "grant_item", "item_id": "running_shoes" },
-        { "type": "advance_quest", "quest_id": "cherrygrove_welcome", "step_id": "shoes_given" }
-      ]
-    },
-    "farewell": {
-      "pages": [
-        { "jp": "また　きましたね。", "en": "You came again, huh." },
-        { "jp": "これを　どうぞ。", "en": "Here, take this." },
-        { "jp": "ちずです。", "en": "It's a map." },
-        { "jp": "きを　つけてね。", "en": "Take care." }
-      ],
-      "effects": [
-        { "type": "grant_item", "item_id": "map_card" },
-        { "type": "advance_quest", "quest_id": "cherrygrove_welcome", "step_id": "map_given" }
-      ]
+ "npc_id": "guide_gent_cherrygrove",
+ "name": {
+  "jp": "あんないじいさん",
+  "en": "Guide Gent"
+ },
+ "zone_id": "cherrygrove-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "cherrygrove_welcome",
+     "step": "shoes_given"
     }
+   ],
+   "state": "farewell"
+  },
+  {
+   "default": true,
+   "state": "intro"
   }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    {
+     "jp": "ようこそ！",
+     "en": "Welcome!"
+    },
+    {
+     "jp": "ここは　町（まち）です。",
+     "en": "This is a town."
+    },
+    {
+     "jp": "店（みせ）が　あります。",
+     "en": "There is a shop."
+    },
+    {
+     "jp": "くつを　あげます。",
+     "en": "I'll give you shoes."
+    },
+    {
+     "jp": "どうぞ。",
+     "en": "Here you go."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "running_shoes"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "cherrygrove_welcome",
+     "step_id": "shoes_given"
+    }
+   ]
+  },
+  "farewell": {
+   "pages": [
+    {
+     "jp": "また　きましたね。",
+     "en": "You came again, huh."
+    },
+    {
+     "jp": "これを　どうぞ。",
+     "en": "Here, take this."
+    },
+    {
+     "jp": "ちずです。",
+     "en": "It's a map."
+    },
+    {
+     "jp": "きを　つけてね。",
+     "en": "Take care."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "map_card"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "cherrygrove_welcome",
+     "step_id": "map_given"
+    }
+   ]
+  }
+ }
 }

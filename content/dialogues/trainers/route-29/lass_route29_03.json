@@ -1,24 +1,50 @@
 {
-  "trainer_id": "lass_route29_03",
-  "name": "Fillette Rin",
-  "zone_id": "route-29",
-  "jlpt_level": "N5",
-  "state_rules": [
-    { "if": [{ "type": "npc_cleared", "npc_id": "lass_route29_03" }], "state": "post_battle" },
-    { "default": true, "state": "battle_intro" }
-  ],
-  "dialogue_states": {
-    "battle_intro": {
-      "pages": [
-        { "jp": "あなたは　だれ？", "en": "Who are you?" },
-        { "jp": "しょうぶ　しませんか？", "en": "Won't you battle with me?" }
-      ]
-    },
-    "post_battle": {
-      "pages": [
-        { "jp": "じょうずですね。", "en": "You're skilled." },
-        { "jp": "さようなら。", "en": "Goodbye." }
-      ]
+ "trainer_id": "lass_route29_03",
+ "name": {
+  "jp": "ミニスカートの リン",
+  "en": "Lass Rin"
+ },
+ "zone_id": "route-29",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "npc_cleared",
+     "npc_id": "lass_route29_03"
     }
+   ],
+   "state": "post_battle"
+  },
+  {
+   "default": true,
+   "state": "battle_intro"
   }
+ ],
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "あなたは　だれ？",
+     "en": "Who are you?"
+    },
+    {
+     "jp": "しょうぶ　しませんか？",
+     "en": "Won't you battle with me?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "じょうずですね。",
+     "en": "You're skilled."
+    },
+    {
+     "jp": "さようなら。",
+     "en": "Goodbye."
+    }
+   ]
+  }
+ }
 }

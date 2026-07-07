@@ -591,11 +591,14 @@ que 5 vrais combats + 1 cameo, soit les 6 ci-dessus). Si le PRD les conserve, el
 phrases courtes) puisque l'arc dramatique veut qu'il s'ouvre/s'apaise, pas qu'il complexifie son discours.
 
 **Point de contact supplémentaire trouvé côté Kanto (2026-07-01)** : le guide Kanto documente une
-embuscade de Silver près du Mont Lune (zone `pewter-city`, entre Argenta et le Mont Lune, non jouable en
-tant que donjon), qui motive dans le jeu d'origine la Tag Battle déjà présente à l'Antre du Dragon
+embuscade de Silver près du Mont Lune (zone `mont-lune-route-3-4`, 1800–1820 kanji, N1 — « zone
+pewter-city… non jouable en tant que donjon » corrigé 2026-07-07, passe de vérification globale V-12 :
+le Mont Lune est une zone jouable de la table de calibration depuis le 2026-07-02, fossile d'avant),
+qui motive dans le jeu d'origine la Tag Battle déjà présente à l'Antre du Dragon
 (`dragons-den`). Ce n'est **pas** une 7ᵉ "Rencontre" officielle — plutôt le chaînon manquant qui explique
-pourquoi Silver se retrouve mêlé à l'Antre du Dragon. Si le studio l'adopte comme scène jouable, elle se
-calibrerait au niveau `pewter-city` (N1) déjà utilisé pour tout le reste du contenu Kanto ; sinon elle
+pourquoi Silver se retrouve mêlé à l'Antre du Dragon. Si le studio l'adopte comme scène jouable
+(à trancher à la synthèse), elle se
+calibrerait au niveau de `mont-lune-route-3-4` (N1), cohérent avec le reste du contenu Kanto ; sinon elle
 peut rester un simple fait de continuité qui enrichit l'écriture de la scène Antre du Dragon déjà prévue,
 sans zone dédiée. Voir `content/guidebook-adapted.md` § Kanto pour le détail complet.
 

@@ -1,24 +1,50 @@
 {
-  "trainer_id": "bird_keeper_route29_01",
-  "name": "Oiselier Sora",
-  "zone_id": "route-29",
-  "jlpt_level": "N5",
-  "state_rules": [
-    { "if": [{ "type": "npc_cleared", "npc_id": "bird_keeper_route29_01" }], "state": "post_battle" },
-    { "default": true, "state": "battle_intro" }
-  ],
-  "dialogue_states": {
-    "battle_intro": {
-      "pages": [
-        { "jp": "そら、きれいだね。", "en": "The sky is pretty, isn't it." },
-        { "jp": "とりと　いっしょに　しょうぶだ！", "en": "Battle time, together with my bird!" }
-      ]
-    },
-    "post_battle": {
-      "pages": [
-        { "jp": "まけました…", "en": "I lost..." },
-        { "jp": "また　れんしゅうするよ。", "en": "I'll practice again." }
-      ]
+ "trainer_id": "bird_keeper_route29_01",
+ "name": {
+  "jp": "とりつかいの ソラ",
+  "en": "Bird Keeper Sora"
+ },
+ "zone_id": "route-29",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "npc_cleared",
+     "npc_id": "bird_keeper_route29_01"
     }
+   ],
+   "state": "post_battle"
+  },
+  {
+   "default": true,
+   "state": "battle_intro"
   }
+ ],
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "そら、きれいだね。",
+     "en": "The sky is pretty, isn't it."
+    },
+    {
+     "jp": "とりと　いっしょに　しょうぶだ！",
+     "en": "Battle time, together with my bird!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まけました…",
+     "en": "I lost..."
+    },
+    {
+     "jp": "また　れんしゅうするよ。",
+     "en": "I'll practice again."
+    }
+   ]
+  }
+ }
 }

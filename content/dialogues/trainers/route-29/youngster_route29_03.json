@@ -1,24 +1,50 @@
 {
-  "trainer_id": "youngster_route29_03",
-  "name": "Gamin Shin",
-  "zone_id": "route-29",
-  "jlpt_level": "N5",
-  "state_rules": [
-    { "if": [{ "type": "npc_cleared", "npc_id": "youngster_route29_03" }], "state": "post_battle" },
-    { "default": true, "state": "battle_intro" }
-  ],
-  "dialogue_states": {
-    "battle_intro": {
-      "pages": [
-        { "jp": "おい！", "en": "Hey!" },
-        { "jp": "ぼくに　かてないよ！", "en": "You can't beat me!" }
-      ]
-    },
-    "post_battle": {
-      "pages": [
-        { "jp": "うわあ、まけた。", "en": "Whoa, I lost." },
-        { "jp": "つよいね！", "en": "You're strong!" }
-      ]
+ "trainer_id": "youngster_route29_03",
+ "name": {
+  "jp": "たんパンこぞうの シン",
+  "en": "Youngster Shin"
+ },
+ "zone_id": "route-29",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "npc_cleared",
+     "npc_id": "youngster_route29_03"
     }
+   ],
+   "state": "post_battle"
+  },
+  {
+   "default": true,
+   "state": "battle_intro"
   }
+ ],
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "おい！",
+     "en": "Hey!"
+    },
+    {
+     "jp": "ぼくに　かてないよ！",
+     "en": "You can't beat me!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うわあ、まけた。",
+     "en": "Whoa, I lost."
+    },
+    {
+     "jp": "つよいね！",
+     "en": "You're strong!"
+    }
+   ]
+  }
+ }
 }

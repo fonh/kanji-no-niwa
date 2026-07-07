@@ -1,9 +1,17 @@
 {
-  "quest_id": "cherrygrove_welcome",
-  "name": "Accueil de Bourg-en-Côteau",
-  "zone_ids": ["cherrygrove-city"],
-  "steps": [
-    { "step_id": "shoes_given", "label": "Guide Gent a offert les chaussures de course" },
-    { "step_id": "map_given", "label": "Guide Gent a offert la carte, prêt à partir vers Route 30" }
-  ]
+ "quest_id": "cherrygrove_welcome",
+ "name": "Cherrygrove Welcome",
+ "zone_ids": [
+  "cherrygrove-city"
+ ],
+ "steps": [
+  {
+   "step_id": "shoes_given",
+   "label": "Guide Gent gave the Running Shoes"
+  },
+  {
+   "step_id": "map_given",
+   "label": "Guide Gent gave the Map Card, ready to head to Route 30"
+  }
+ ]
 }

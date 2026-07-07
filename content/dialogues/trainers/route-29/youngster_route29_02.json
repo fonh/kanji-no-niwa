@@ -1,24 +1,50 @@
 {
-  "trainer_id": "youngster_route29_02",
-  "name": "Gamin Taro",
-  "zone_id": "route-29",
-  "jlpt_level": "N5",
-  "state_rules": [
-    { "if": [{ "type": "npc_cleared", "npc_id": "youngster_route29_02" }], "state": "post_battle" },
-    { "default": true, "state": "battle_intro" }
-  ],
-  "dialogue_states": {
-    "battle_intro": {
-      "pages": [
-        { "jp": "やあ！", "en": "Hey!" },
-        { "jp": "ぼくも　つよいんだ！", "en": "I'm strong too!" }
-      ]
-    },
-    "post_battle": {
-      "pages": [
-        { "jp": "つよいなあ。", "en": "Wow, you're strong." },
-        { "jp": "もっと　れんしゅうする。", "en": "I'll practice more." }
-      ]
+ "trainer_id": "youngster_route29_02",
+ "name": {
+  "jp": "たんパンこぞうの タロウ",
+  "en": "Youngster Taro"
+ },
+ "zone_id": "route-29",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "npc_cleared",
+     "npc_id": "youngster_route29_02"
     }
+   ],
+   "state": "post_battle"
+  },
+  {
+   "default": true,
+   "state": "battle_intro"
   }
+ ],
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "やあ！",
+     "en": "Hey!"
+    },
+    {
+     "jp": "ぼくも　つよいんだ！",
+     "en": "I'm strong too!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "つよいなあ。",
+     "en": "Wow, you're strong."
+    },
+    {
+     "jp": "もっと　れんしゅうする。",
+     "en": "I'll practice more."
+    }
+   ]
+  }
+ }
 }
