@@ -72,7 +72,7 @@ Correspondance CECR↔JLPT (cf. `jlpt-language-syllabus.md`) : A1=N5 · A2=N4 ·
 | Ligue (plate) | 870–900 | N2/N1 *(remappé 2026-07-05)* | — (calibration de langue seulement, pas de leçons — voulu, audit 01) | ✅ par design |
 | Kanto — Vermeille → Céladia | 900–1500 | N2 *(remappé 2026-07-05)* | ❌ aucun livre — c'est exactement le créneau de Shin Kanzen Master N2 (manquement n°1) | 🔴 voir Manquements |
 | Kanto — Cycling Road → Routes 14-15 | 1500–1670 | N2/N1 | ❌ idem (transition) | 🔴 |
-| Kanto — Grotte Diglett → Seafoam + revisites | 1670–2136 | N1 | ❌ aucun livre — créneau Shin Kanzen Master N1 ; relais textes par NHK, Matcha, Aozora brut, textes officiels Pokémon | 🔴 voir Manquements |
+| Kanto — Grotte Diglett → Seafoam + revisites | 1670–2136 | N1 | ❌ aucun livre — créneau Shin Kanzen Master N1 ; relais textes par NHK, Matcha, Aozora brut *(« textes officiels Pokémon » retiré 2026-07-07, audit 05, finding 05-A3 : source écartée du N1 le 2026-07-02, `texts-progressifs.md` § Sources — fossile de rédaction)* | 🔴 voir Manquements |
 | Mont Gris (plateau 2136) | 2136 | N1 | ❌ idem — textes N1 durs prévus par `texts-progressifs.md` (Aozora brut, chapitre de manga pour Red, lettre finale de Fukuda) | 🔴 voir Manquements |
 | Transversal (tout le jeu) | 0–2136 | — | Heisig RTK 1 (mnémotechniques, pipeline 7) ; syllabus JLPT comme référentiel | ✅ |
 

@@ -33,6 +33,15 @@ correct** (même mécanique que le mini-quiz de leçon — mauvaise réponse →
 de correction affichée puis passage forcé). Ce qui distingue les deux tiers, c'est uniquement **ce que
 la réussite du quiz débloque** :
 
+**Pendant le quiz, le texte reste consultable à tout moment** (bascule libre question ↔ texte, sans
+pénalité, tous types de questions — ajouté 2026-07-07, audit 05, finding 05-C2 : comme au JLPT réel, la
+compréhension écrite teste la lecture, pas la mémorisation ; retourner chercher une info dans le texte
+est une compétence en soi, 情報検索). Chaque passage enregistre un **score en première tentative** — le
+% de questions réussies du premier coup, définition du champ `text_completions.score` *(précisée
+2026-07-07, audit 05, finding 05-A1 : sous retry-jusqu'à-correct, tout joueur finit à 100 % — seul le
+score en première tentative a un sens)*. Ce score est purement statistique pour tous les textes du jeu
+sauf un : le texte final de Red (voir § Textes obligatoires).
+
 ### Textes obligatoires (story-gating)
 
 Réussir le quiz est une `Condition` requise pour l'`Effect.advance_quest` / `unlock_zone` / `badge_earned`
@@ -45,7 +54,10 @@ noté comme gate curriculaire de Falkner dans `PRD.md` § Système 道場 devien
 une exception), plus les jalons narratifs majeurs qui n'ont pas de gym associé : les 3 lieux Team Rocket,
 l'Antre du Dragon (le "quiz d'empathie du Maître, 5 questions" déjà prévu pour le 印 de Clair EST cette
 mécanique — pas un système à part, juste son application au cas Clair), le texte final face à Red
-(déjà spécifié : chapitre de manga + lettre de Fukuda, score ≥ 80% requis pour débloquer le combat),
+(déjà spécifié : chapitre de manga + lettre de Fukuda — **score en première tentative ≥ 80 % requis
+pour débloquer le combat** ; précisé 2026-07-07, audit 05, finding 05-A1 : le quiz reste
+retry-jusqu'à-correct comme partout, mais tant que le score en première tentative est < 80 %, le
+combat reste verrouillé — le joueur peut relire et repasser le quiz, questions remélangées),
 **et les 8 textes de remise des CS-Kanji** (7 remis par PNJ + 滝 trouvé — voir § CS-Kanji ; comptés
 ici depuis le 2026-07-06, repasse progression, finding P-2 : ils étaient définis comme « textes
 obligatoires » sans figurer au total).
@@ -59,7 +71,11 @@ textes obligatoires.
 
 **Deux `Effect` possibles (2026-07-02, réconcilié avec `PRD.md` § Implémentation)** — `unlock_text`
 existe déjà dans l'énumération `Effect` : c'est lui qui marque le texte "doré" dans le Journal de lecture
-(Sac → Textes, même logique de couleur que les tuiles du Kanjidex : Blanc = lu, Doré = quiz réussi).
+(Sac → Textes, même famille visuelle que les tuiles du Kanjidex ; sémantique corrigée 2026-07-07,
+audit 05, finding 05-A2 — le quiz étant obligatoire et retry-jusqu'à-correct, « lu » implique « quiz
+réussi », l'ancienne formule « Blanc = lu, Doré = quiz réussi » était vide : **Blanc = lu** (textes
+obligatoires, et secondaires récompensés par `grant_item` seul — ils restent blancs, c'est voulu),
+**Doré = l'`Effect.unlock_text` a marqué le texte** comme récompense).
 `grant_item` reste utilisé quand la récompense est un objet concret. Les deux sont idempotents, aucun
 nouveau type `Effect` nécessaire.
 
@@ -184,13 +200,22 @@ précis du jeu. Sans vérification, un article "réel et vivant" peut contenir 1
 de 2, recassant le principe i+1 que le reste du jeu respecte scrupuleusement — pire que l'ancien problème
 Aozora (trop littéraire, mais au moins choisi passage par passage).
 
+**Budget kanji des textes (tranché 2026-07-07, audit 05, finding 05-D1)** — la règle des dialogues
+(« 2 inconnus max par dialogue entier », audit 04) reste inchangée pour les dialogues, mais ne
+s'applique pas telle quelle à un texte de 300–1200 caractères (intenable : chaque article réel serait
+à réécrire). Pour les Textes Progressifs, elle devient **proportionnelle : ~2 kanji inconnus par
+tranche de 100 caractères, plafonnés à 8–10 kanji inconnus *distincts* par texte entier, tous paliers**.
+Même contrat de lisibilité (~98 % de couverture — le seuil de confort documenté par la recherche en
+lecture extensive, philosophie Tadoku), adapté à la longueur. Les inconnus gardent furigana révélable
+(bouton Y) et popup de mot — des moments de découverte, pas des murs.
+
 **Étape de production ajoutée** : avant qu'un article candidat entre dans la table `texts`, un script
 compare son vocabulaire kanji au `studiedSet` théorique du palier visé (repère : bornes de
-`content/curriculum-checkpoints.md`) et ne retient que les candidats proches de la règle des 2 inconnus.
+`content/curriculum-checkpoints.md`) et ne retient que les candidats dans le budget ci-dessus.
 Deux issues possibles :
 - **Accepté tel quel** si l'écart est déjà dans la marge.
 - **Édité avant insertion** si l'article est pédagogiquement bon mais dépasse l'écart (remplacer un mot
-  rare par un synonyme déjà étudié, ou l'accepter comme un des "2 inconnus" si le mot est central au
+  rare par un synonyme déjà étudié, ou l'accepter dans le budget d'inconnus si le mot est central au
   sens). Toujours une passe humaine, jamais un filtre qui rejette silencieusement du bon contenu.
 
 Cette étape s'ajoute à la sélection déjà prévue (`content/texts-progressifs.md` § Sources) — elle ne la
@@ -223,7 +248,7 @@ cible par palier, en plus du plancher :
 
 | Palier | Composition cible |
 |---|---|
-| N5 / N4 | Quasi exclusivement factuel + vocabulaire en contexte. Inférence/référence rares voire absentes — trop tôt pour ce niveau de charge cognitive en L2. |
+| N5 / N4 | Plancher (1 idée générale + 1 vocabulaire en contexte), le reste **factuel uniquement — inférence et résolution de référence interdites**, trop tôt pour ce niveau de charge cognitive en L2. *(Reformulé 2026-07-07, audit 05, finding 05-D3 : « quasi exclusivement factuel » contredisait arithmétiquement le plancher universel sur un quiz de 3 questions — une question « de quoi parle ce texte ? » sur un billet de 80 caractères n'est pas une charge lourde, c'est l'inférence que la courbe voulait exclure.)* |
 | N3 | Plancher standard (1 idée générale + 1 vocabulaire), 1 inférence simple introduite. |
 | N2 / N1 | Inférence et résolution de référence dominantes (au moins 2 des 3-5 questions) — ce sont les compétences réellement testées aux paliers hauts du JLPT réel. Le factuel devient optionnel, pas garanti. |
 
@@ -236,11 +261,20 @@ simplement cliquer les options restantes une par une jusqu'à tomber juste, sans
 compris le texte — contrairement à une question factuelle simple, où retenter la même question a un
 vrai effet pédagogique (relire pour retrouver l'info).
 
-**Recommandation adoptée** : après un **2ᵉ échec** sur une question qui n'est pas de type "détail
-factuel", le jeu surligne automatiquement le passage du texte contenant la réponse (scroll + highlight,
-même texte, même fenêtre de lecture) avant d'autoriser une 3ᵉ tentative. Force une relecture ciblée
-plutôt qu'une élimination d'options à l'aveugle. Les questions factuelles n'ont pas ce scaffolding — un
-2ᵉ échec y reste un simple retry sans aide, l'info étant déjà explicite dans le texte.
+**Mécanique adoptée (révisée 2026-07-07, audit 05, finding 05-C2 — le texte étant désormais
+consultable à tout moment pendant le quiz, § Modèle, le scaffolding devient un *ciblage*, pas un
+accès)** : après un **2ᵉ échec**,
+- **question inférence ou résolution de référence** : le jeu ouvre le texte **déjà scrollé et
+  surligné** sur le passage-réponse avant d'autoriser une 3ᵉ tentative. L'ancrage est porté par un
+  champ **`answer_span`** (intervalle de caractères dans `jp_text`) sur chaque question de
+  `questions[]` — obligatoire pour ces deux types, généré avec le quiz à l'étape 12ter et relu à la
+  passe humaine ;
+- **question idée générale/résumé** : pas de passage unique à surligner (la réponse, c'est tout le
+  texte) — le jeu ouvre simplement le texte au début, relecture libre, avant la 3ᵉ tentative ;
+  `answer_span` absent ;
+- **question factuelle** : aucun scaffolding automatique — la consultation libre suffit, l'info est
+  explicite dans le texte ; `answer_span` absent.
+Force une relecture ciblée plutôt qu'une élimination d'options à l'aveugle.
 
 **Pas de réduction du nombre d'options après un échec (tranché 2026-07-02)** : une option envisagée
 était de retirer l'option choisie à tort de la liste après chaque échec (4→3→2), pour empêcher un joueur
@@ -283,6 +317,26 @@ actuelle). Objectif de cette refonte : du contenu **vivant**, pas seulement "lib
 | N2 | NHK Web Easy (registre le plus dense du site), Matcha (version standard non simplifiée), articles d'actualité réels sélectionnés à la main | Contemporain, plus dense |
 | N1 | Éditoriaux/articles d'opinion réels, extraits de light novels/manga modernes | Authentique, dense, actuel |
 | Cas spécial narratif | **Aozora Bunko** — conservé, mais réservé aux moments où l'archaïsme *sert la fiction* (parchemins des Ruines Arcaniques, inscriptions de l'Antre du Dragon) — jamais présenté comme repère du "japonais courant" de fin de jeu | Volontairement daté, assumé comme tel |
+
+**Obtention — sélection manuelle assumée (tranché 2026-07-07, audit 05, findings 05-B1/05-B2)** —
+l'audit a constaté que le cœur N4-N2 « vivant » promis n'avait **aucune donnée exploitable en local** :
+le stock nhkore (`scripts/sources/nhkore/core/`, 3 555 articles 2020→2025) ne contient **que titres,
+URL et fréquences de mots — aucun corps d'article**, et NHK dépublie les anciens articles (URL 2020
+testée : 404) ; Watanoc et Matcha n'ont ni fichier local ni mécanisme d'obtention (Watanoc vérifié
+vivant en ligne, 2026-07-07). Décision : **pas d'import automatisé** — les ~100-130 textes du jeu
+seront choisis **un par un à la passe de contenu** : articles *récents* de NHK Web Easy (re-scrape
+nhkore au fil de l'eau — le stock existant est déclassé en simple index de titres/vocabulaire), copie
+manuelle article par article depuis Watanoc/Matcha, recueils PDF déjà cartographiés
+(`content/japanese-books-mapping.md`, ~30 histoires), Aozora local (16 951 œuvres, cas archaïque).
+Les étapes 10-11 du pipeline (`PRD.md`) se lisent désormais « sélection manuelle + vetting 12bis »,
+pas « parseur ». Cohérent avec la volumétrie (une centaine de slots sur tout le jeu) et avec la
+décision déjà actée de choisir les textes à la fin, texte par texte.
+
+**Audio — optionnel par texte (tranché 2026-07-07, audit 05, finding 05-C3)** : l'audio des sources
+(NHK, Watanoc, Tadoku) n'est plus une promesse implicite — champ **`audio_ref` nullable** sur la table
+`texts`, bouton lecture dans la fenêtre de lecture **uniquement si renseigné**. En sélection manuelle,
+récupérer le fichier audio avec l'article ne coûte presque rien ; les textes maison/PDF restent sans
+audio, sans bouton. Aucune obligation de couverture, pas de TTS.
 
 **Retrait du contenu Pokémon officiel comme source N1 (2026-07-02)** : envisagé un temps (thématiquement
 séduisant), écarté sur deux points — pédagogiquement, les entrées Pokédex/dialogues de jeu font 1-3
@@ -333,8 +387,8 @@ Climb réintégré à la chasse aux reliques, même jour)*.
    PNJ/événement précis soit celui qui remet ou révèle le texte.
 2. **`count(texts_read, N)` — N textes lus au total** (obligatoires et secondaires confondus, quiz
    réussi = ligne dans `text_completions`), **seuil N propre à chaque CS-Kanji**, croissant avec l'ordre
-   d'obtention, calibré à la synthèse à **~50-60 % du corpus atteignable sans CS** au moment de la
-   remise. *(Révisé 2026-07-06, repasse progression — remplace `Condition.all_texts_read` (audit 02,
+   d'obtention, calibré à la synthèse à **~50-60 % du corpus de référence** de ce CS (base définie
+   au § Placement anti-famine ci-dessous — précisée 2026-07-07, audit 05, finding 05-D2). *(Révisé 2026-07-06, repasse progression — remplace `Condition.all_texts_read` (audit 02,
    02-C2), jugé trop exigeant au grill. Bénéfice de modèle en prime : `count` sur `texts_read` est
    **monotone** (un texte lu le reste, le compte ne descend jamais) — la seule condition à périmètre
    dynamique du modèle disparaît, l'invariant de monotonie redevient sans exception. Le type
@@ -348,11 +402,17 @@ une frustration "je ne sais pas ce qu'il me manque".
 **Placement anti-famine (révisé 2026-07-06, repasse progression — remplace l'« invariant
 anti-deadlock » de l'audit 02) :** avec un seuil N < corpus total, un texte individuellement
 inatteignable ne bloque plus le jeu — le deadlock strict disparaît. La règle devient une **contrainte
-de calibration** : pour chaque CS, N ≤ ~60 % des textes atteignables **sans aucun CS** au moment de la
-remise (marge de ~40 %). La vérification à la production reste la même (croiser
-`npc_ref`/`found_object_ref` avec `map_obstacles` et l'ordre des CS) — elle alimente désormais le
-calcul du « corpus atteignable » plutôt qu'une interdiction de placement par texte. Vivier :
-`content/side-content-inventory.md`.
+de calibration**, avec une base de calcul définie (**corpus de référence** d'un CS, tranché
+2026-07-07, audit 05, finding 05-D2) : **tous les textes — obligatoires et secondaires — des zones
+traversées par le chemin critique guidebook jusqu'au jalon narratif de la remise, intérieurs compris,
+en excluant** (a) les textes derrière un obstacle CS (`map_obstacles`), (b) les textes derrière un
+`time_window` ou une étape de quête non garantie à ce stade du chemin critique. Base délibérément
+conservatrice : tout joueur arrivé au jalon a *au moins* ce corpus à disposition — aucun chemin ne
+peut famine. Contrainte : pour chaque CS, **N ≤ 60 % de son corpus de référence** (viser 50-60, jamais
+dépasser 60 — l'ancienne coexistence « cible ~50-60 % » / « borne ~60 % » est unifiée ainsi). La
+vérification à la production reste la même (croiser `npc_ref`/`found_object_ref` avec `map_obstacles`
+et l'ordre des CS) — elle alimente le calcul du corpus de référence plutôt qu'une interdiction de
+placement par texte. Vivier : `content/side-content-inventory.md`.
 
 **Pourquoi ce modèle plutôt que les anciens** : la maîtrise FSRS d'un seul kanji est un événement
 ponctuel et individuel (peut arriver n'importe quand, sans lien avec ce que le joueur a réellement
@@ -391,6 +451,21 @@ zone est déjà débloquée** (`zone_id ∈ unlocked_zones[]`), pas seulement ce
 
 Aucune nouvelle table : ce menu est une lecture combinée de `texts` (filtré par `zone_id ∈
 unlocked_zones[]`) et `text_completions` (pour distinguer lu/pas lu), déjà toutes deux prévues au schéma.
+
+---
+
+## Furigana — format et production (précisé 2026-07-07, audit 05, finding 05-C1)
+
+Le bouton Y (révéler les lectures) était promis sans qu'aucun champ ni étape ne produise les
+furigana des textes. Décisions :
+- **Format** : la même convention inline que les dialogues — `漢字（かんじ）` dans `jp_text`
+  (constatée dans `content/dialogues/`, ex. `mom_new_bark.json`) — un seul format de lectures dans
+  tout le jeu, un seul renderer (masqué par défaut, révélé par Y).
+- **Production** : étape pipeline explicite — pré-annotation **kuromoji** (déjà utilisé pour
+  `sentences`, étape 4) sur chaque texte retenu, puis **relecture humaine** des lectures (kuromoji se
+  trompe sur les noms propres et lectures contextuelles) au moment de la passe 12bis/12ter. Pour les
+  articles NHK Web Easy sélectionnés, les furigana natifs de la source servent de référence de
+  relecture.
 
 ---
 

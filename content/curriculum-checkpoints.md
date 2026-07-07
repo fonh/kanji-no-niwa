@@ -41,7 +41,13 @@ dans cette zone doivent venir du niveau indiqué (et des niveaux précédents). 
 supérieurs sont interdites — elles rendraient le dialogue incompréhensible même si les kanji sont connus.
 
 Ces deux règles s'appliquent à tout le japonais du jeu : PNJ, panneaux, inscriptions de grottes,
-dialogues de boss, messages Pokégear.
+dialogues de boss, messages Pokégear, **et Textes Progressifs** *(ajouté 2026-07-07, audit 05,
+finding 05-D1 — la liste omettait les textes alors que `texts-progressifs.md` s'en réclamait)*.
+**Pour les Textes Progressifs uniquement, le budget kanji est proportionnel** : ~2 kanji inconnus par
+tranche de 100 caractères, plafonnés à 8–10 inconnus distincts par texte entier — « 2 par dialogue
+entier » est intenable sur un texte de 300–1200 caractères ; même contrat de lisibilité (~98 % de
+couverture), adapté à la longueur. Détail : `content/texts-progressifs.md` § Vetting. La règle des
+dialogues, elle, ne change pas.
 
 **Exception :** Silver parle toujours légèrement au-dessus du niveau attendu — c'est voulu. Ses 6
 apparitions parlent aux niveaux N5/N4, N4/N3, N3/N2, N2, N2/N1, N1 (résumé de la table « Règle de
