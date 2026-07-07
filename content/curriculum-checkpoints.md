@@ -49,6 +49,11 @@ entier » est intenable sur un texte de 300–1200 caractères ; même contrat d
 couverture), adapté à la longueur. Détail : `content/texts-progressifs.md` § Vetting. La règle des
 dialogues, elle, ne change pas.
 
+**Pour les phrases affichées dans une leçon (ajouté 2026-07-07, audit 06)** : les phrases d'exemple
+des pages kanji suivent une règle stricte — les kanji de la leçon en cours comptent comme connus,
+**zéro autre kanji inconnu** ; les exemples Hanabira de la page grammaire (corpus figé) suivent une
+règle de **sélection**, pas d'édition — voir § Format grammar_note plus bas.
+
 **Exception :** Silver parle toujours légèrement au-dessus du niveau attendu — c'est voulu. Ses 6
 apparitions parlent aux niveaux N5/N4, N4/N3, N3/N2, N2, N2/N1, N1 (résumé de la table « Règle de
 Silver » en bas de document ; l'ancien résumé « N4, N3, N3, N2, N2, N1 » ne correspondait plus à la
@@ -629,9 +634,14 @@ table de calibration ci-dessus.
 
 ## Format grammar_note de leçon
 
-Chaque batch de leçon dans la table `lessons` contient un champ `grammar_note` : un seul
-point de grammaire correspondant au niveau JLPT de la zone du batch, pointé vers une
-entrée précise du corpus Hanabira.
+**Ce format décrit une entrée de la table `grammar` (corrigé 2026-07-07, audit 06, finding
+06-A3 — l'ancienne phrase « chaque batch de leçon dans la table `lessons` contient un champ
+`grammar_note` » contredisait le schéma du PRD : la table `lessons` ne porte qu'une référence
+`grammar_id`, rien n'est embarqué par leçon ; le mot « batch » est purgé, voir PRD § Menu
+START).** Une leçon porte au plus un point de grammaire, correspondant au niveau JLPT de sa
+zone : son `grammar_id` pointe vers une entrée précise du corpus Hanabira, dont les champs
+ci-dessous sont ceux de la table `grammar` — également consommés par le Pokégear → onglet
+Grammaire et le mode Grammaire en combat.
 
 **Aucun français (2026-07-01)** : le corpus Hanabira source (`grammar_JLPT_N{1-5}.json`)
 contient déjà, en anglais, `short_explanation`, `long_explanation`, plusieurs `examples[]`
@@ -641,7 +651,7 @@ champs directement (copie, pas traduction) ; `note_fr` est supprimé, aucun cham
 rédigé from scratch par l'IA — le seul travail du batch est de sélectionner l'entrée
 Hanabira adaptée au niveau/zone et de copier ses champs verbatim.
 
-**Format JSON du champ grammar_note :**
+**Format JSON d'une entrée de la table `grammar` (« format grammar_note » — libellé « du champ » corrigé 2026-07-07, audit 06) :**
 ```json
 {
   "hanabira_title": "Verb てもらえませんか (～te moraemasen ka)",
@@ -680,9 +690,19 @@ Hanabira adaptée au niveau/zone et de copier ses champs verbatim.
   pattern-matching identifié en audit combat, voir `PRD.md` § Pool de grammaire).
 - Aucun champ en français. Aucun champ rédigé from scratch par l'IA sans relecture humaine — sélection + copie pour les champs Hanabira, génération encadrée pour les `distractors` de chaque variante uniquement.
 
-**Règle d'attribution :** une leçon dans la zone X reçoit un `grammar_note` tiré du
-niveau de la zone X. Les batches de transition (N4/N3) alternent entre les deux niveaux
+**Règle d'attribution :** une leçon dans la zone X reçoit un point de grammaire tiré du
+niveau de la zone X. Les leçons de transition (N4/N3) alternent entre les deux niveaux
 pour ne pas introduire tous les N3 d'un coup.
+
+**Règle de sélection des exemples affichés en leçon (ajoutée 2026-07-07, audit 06, finding
+06-D5)** : les exemples Hanabira sont un corpus figé (audio pré-enregistré) — jamais réécrits.
+Le critère s'applique **au pipeline (étape 14), au moment de choisir quelles 2-3 entrées du
+tableau `examples[]` source (~4 par point) deviennent les `example_variants` stockés** : retenir
+les mieux couvertes par le `studiedSet` théorique du palier de la zone où le point est enseigné ;
+les kanji inconnus résiduels sont tolérés (furigana via Y). Les phrases d'exemple des **pages
+kanji**, elles, sont produites sur mesure et suivent une règle stricte : kanji de la leçon en
+cours = connus, **zéro autre kanji inconnu** (vérifiée mécaniquement au pipeline — voir PRD
+§ Leçons, « Phrases d'exemple des pages kanji »).
 
 ---
 

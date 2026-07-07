@@ -9,7 +9,7 @@ A full read of `content/guidebook-adapted.md` (1228 lines, all 49 zones) surface
 **Decision:**
 
 - A single `Condition` type replaces every ad hoc gate field (`kanji_count`, `item_owned`, `quest_step`, `npc_cleared`, `event_cleared`, `badge_earned`). `Condition[]` is an AND. Used uniformly for: NPC unlock (`map_npcs.unlock_conditions`), Roadblock NPC unblocking, Gym doors, CS-Kanji zone locks, Quest Step completion gates, and Dialogue State selection.
-- A symmetric `Effect` type (`advance_quest`, `grant_item`, `unlock_lesson`, `unlock_zone`) attaches to a Dialogue State and fires once when that state is reached. Quest progress is always advanced **explicitly** by an `advance_quest` Effect — never recomputed by re-checking Conditions. This keeps "what state is the quest in" a single source of truth (`npc_quest_progress.current_step`) instead of a derived value that could disagree with itself across NPCs.
+- A symmetric `Effect` type (`advance_quest`, `grant_item`, `unlock_zone`; `unlock_lesson` retired — see 2026-07-07 amendment) attaches to a Dialogue State and fires once when that state is reached. Quest progress is always advanced **explicitly** by an `advance_quest` Effect — never recomputed by re-checking Conditions. This keeps "what state is the quest in" a single source of truth (`npc_quest_progress.current_step`) instead of a derived value that could disagree with itself across NPCs.
 - Which Dialogue State an NPC shows is chosen by an ordered list of **State Rules** (`Condition[] → state`, first match wins, ending in a `default`) — generalizes the single-state shape from ADR-0001 (`mom_new_bark` only needed a `default` rule).
 - A **Quest** is its own file (`content/quests/<quest_id>.json`: ordered Quest Steps, mostly for human reference and as the target of `Condition.quest_step`), independent of any one NPC. Every NPC involved in the quest references it independently through its own `state_rules`/`effects` — there is no central "quest engine" object that owns the NPCs.
 
@@ -91,3 +91,17 @@ Rocket disguise (taken off when Silver blows the cover, as in the source game), 
 delivery (Copycat's doll, the machine part, the Secret Potion, the Red Scale, the mail), and
 Apricorns consumed by Kurt's batches. Without it no Effect could take an item back, and the Bag
 would accumulate already-delivered quest items forever.
+
+## Amendment (2026-07-07, audit 06)
+
+`Effect.unlock_lesson` is **retired**. It appeared in the original type list but was never defined
+and never used by any document: lesson content is fixed at authoring time (never unlocked
+dynamically), lesson ordering is driven by `quest_step` conditions and `advance_quest` effects on
+the implicit `lessons-<zone_id>` quests, and lesson-NPC availability is carried by ordinary
+`unlock_conditions`. It was a fossil of a pre-audit design. Also removed from `CONTEXT.md` and the
+PRD's Effect list.
+
+Same audit, related clarification: the "lesson or block" check on a lesson NPC is a single derived
+engine rule — compare the lesson's `sequence_index` against `npc_quest_progress` for
+`lessons-<zone_id>`. It is **not** carried by `unlock_conditions`, which keep their single meaning
+(presence gating): a lesson NPC ahead of the player's order is present, visible, and blocking.

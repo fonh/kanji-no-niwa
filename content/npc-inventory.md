@@ -6,6 +6,18 @@ Sert à assigner ensuite le type de chaque PNJ (leçon / combat / texte / ambian
 chaque zone peut mécaniquement supporter. La colonne "Type assigné" est volontairement vide — à remplir
 par l'équipe contenu.
 
+**Format de la colonne « Type assigné » (défini 2026-07-07, audit 06, finding 06-C3 — sans format
+commun, chaque rédacteur inventerait le sien) :**
+
+- PNJ non-leçon : un mot — `combat`, `texte`, `ambiant`.
+- PNJ-leçon : `leçon #<n> — 漢字: <liste> — 文法: <titre Hanabira exact | —>` où `#<n>` est le
+  `sequence_index` dans la quête `lessons-<zone_id>` (ordre intra-zone strict, PRD § Leçons),
+  la liste de kanji devient `lessons.kanji_ids[]` (groupés par affinité entre eux, jamais par thème
+  du PNJ), et le titre Hanabira (optionnel, un seul par leçon) devient `lessons.grammar_id`.
+  Exemple : `leçon #3 — 漢字: 日・月・火・水 — 文法: Verb てください (〜te kudasai)`.
+- L'assignation est fixée à l'écriture, jamais dynamique (PRD § Assignation) ; la somme des kanji
+  assignés dans une zone doit couvrir la plage de son budget (table de calibration).
+
 **Comment lire ce document** : chaque zone liste son budget (repris de curriculum-checkpoints.md), puis
 tous les PNJ sourcés du jeu d'origine pour cette zone (repris de guidebook-adapted.md), avec leur rôle
 d'origine, ce qu'ils remettent (objet/quête), et une colonne vide pour l'assignation future.
@@ -48,6 +60,14 @@ ci-dessous ont été mises à jour en conséquence.
 | Policier | Enquête sur le cambriolage du labo, interroge sur le garçon roux | — | |
 | Rival (Silver) | Aperçu en train d'espionner le labo | — | |
 | Assistant du Pr. Elm | Comptoir du Mart, garde l'œuf mystère jusqu'au 1er badge | — | |
+
+**Note leçons (ajoutée 2026-07-07, passe de vérification audit 06)** : les leçons de cette zone ne
+sont **pas** portées par les PNJ du tableau ci-dessus mais par **Sensei Fukuda au dōjō** — seule
+exception actée à la politique « zéro PNJ-leçon inventé » (le dōjō est 100% hors guidebook, PRD
+§ Leçons, bootstrap). Assignation : **~7 leçons (~30 kanji fondamentaux, ordre `getAvailableKanji`)**,
+`lessons-new-bark-town` #1→#7 ; sortie de la ville possible dès ~2-3 leçons, seuil de 30 exigé à
+l'entrée de Ville Griotte. Route 29 n'a aucun PNJ-leçon : sa croissance 10→50 est portée par ces
+mêmes leçons du dōjō (allers-retours).
 
 **Side quests dans cette zone** : 0 (zone d'onboarding pure, pas de quête distincte)
 **Objets à aller chercher (remis par un PNJ, pas juste trouvés au sol) dans cette zone** : 2 (Pokégear via Mom, grand texte d'Elm via Elm — « Master Ball/objet narratif » corrigé 2026-07-07, passe de vérification)

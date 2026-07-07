@@ -24,6 +24,18 @@ _Avoid_: vision, detection radius
 An NPC whose Sight Cone triggers an interception instead of a battle: it walks toward the player, delivers a line, and pushes the player back one tile. Re-fires on every approach until its unblock condition clears — unlike a Trainer's one-time battle trigger.
 _Avoid_: blocking NPC, guard
 
+**Lesson NPC** (PNJ-leçon) *(added 2026-07-07, audit 06)*:
+A map character (NPC or Trainer, `role: lesson`) whose interaction opens a lesson on the Book Screen. Its content (`kanji_ids[]` + optional `grammar_id`) is fixed at authoring time. Whether it opens the lesson or blocks is a **derived engine rule** — its lesson's `sequence_index` vs the `lessons-<zone_id>` quest progress — never carried by `unlock_conditions` (which keep their single meaning: presence). When blocking: Sight-Cone Lesson NPCs intercept and push back like a Roadblock NPC; Talk-only ones just deliver a blocked line, no push-back.
+_Avoid_: lesson trainer vs lesson NPC as separate mechanics (one mechanic, two origins)
+
+**Book Screen** (écran-livre) *(added 2026-07-07, audit 06)*:
+The full-screen open-book view where a lesson plays: one kanji per double-page spread (left = identity: character, reading, English keyword, concept icon, audio; right = usage: 1-2 example sentences with audio), then paginated grammar pages, then the proportional mini-quiz (1 question per kanji + 1 if grammar). Fixed page content, page-turn transitions, never scrolls.
+_Avoid_: lesson screen, book view, and never confuse with the Lesson Book (the menu)
+
+**Lesson Book** (Carnet de leçons) *(added 2026-07-07, audit 06)*:
+The START-menu screen (slot レッスン): the table of contents of the player's lesson history — chapters = visited zones with completion counters; per zone: completed lessons (tap to re-read on the Book Screen, read-only), the next lesson shown as who-and-where only, later ones masked as ???. Computed read-only by `getLessonBook` from existing state; no "encountered" tracking exists.
+_Avoid_: batch (retired word), lesson queue, lesson menu
+
 **Dialogue State**:
 The named variant of what an NPC or Trainer currently says, selected by the player's progress (e.g. `intro`, `post_battle`, `blocked`). A character's line is never fixed for the whole game — it changes as the story moves forward.
 _Avoid_: dialogue line, script
@@ -40,8 +52,8 @@ _Avoid_: unknown kanji limit (per line)
 A single gating predicate against the player's current state (`count(metric, threshold)` — generalizes the old `kanji_count`, `item_owned`, `quest_step`, `npc_cleared`, `event_cleared`, `badge_earned`, `time_window`), each optionally inverted with the `negate` modifier. A `Condition[]` array is an AND of all its members. The one gating vocabulary used everywhere a door exists: NPC/Trainer unlock (gates *presence* on the map, not just dialogue content — an entity whose Conditions aren't met doesn't exist on the tile that day), Gym door, CS-Kanji zone lock, Quest Step, Dialogue State selection. The daily SRS gate is deliberately NOT a Condition (it would violate the monotonicity invariant — see PRD § Boucle Quotidienne).
 _Avoid_: gate, requirement, unlock rule, kanji_count
 
-**Effect** *(type list updated 2026-07-06, audit 04 relic hunt — was stale since audit 02)*:
-A single one-shot change to the player's state, attached to a Dialogue State (`advance_quest`, `grant_item`, `remove_item`, `unlock_lesson`, `unlock_zone`, `unlock_text`). Fires when that Dialogue State is reached — never inferred or recomputed. All Effects are idempotent; `grant_item` idempotency is driven by `item_kind` (`unique` — inert if owned; `fungible` — increments a quantity).
+**Effect** *(type list updated 2026-07-06, audit 04 relic hunt; `unlock_lesson` retired 2026-07-07, audit 06 — never defined or used anywhere: lesson content is fixed at authoring time, lesson order is driven by `quest_step`/`advance_quest` on `lessons-<zone_id>`)*:
+A single one-shot change to the player's state, attached to a Dialogue State (`advance_quest`, `grant_item`, `remove_item`, `unlock_zone`, `unlock_text`). Fires when that Dialogue State is reached — never inferred or recomputed. All Effects are idempotent; `grant_item` idempotency is driven by `item_kind` (`unique` — inert if owned; `fungible` — increments a quantity).
 _Avoid_: reward, side effect, trigger action
 
 **State Rule**:
