@@ -11,6 +11,7 @@
     "import:kanjidic2": "tsx --env-file=.env.local scripts/import/import-kanjidic2.ts",
     "import:kanjivg": "tsx --env-file=.env.local scripts/import/import-kanjivg.ts",
     "import:kradfile": "tsx --env-file=.env.local scripts/import/import-kradfile.ts",
+    "import:jmdict": "tsx --env-file=.env.local scripts/import/import-jmdict.ts",
     "import:tatoeba": "tsx --env-file=.env.local scripts/import/import-tatoeba.ts",
     "build:vocab-audio": "python3 scripts/build/download-vocab-audio.py",
     "prune": "tsx scripts/import/prune-parasites.ts"
@@ -19,7 +20,6 @@
     "@neondatabase/serverless": "^1.1.0",
     "next": "16.2.9",
     "next-auth": "5.0.0-beta.31",
-    "next-pwa": "^5.6.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "ts-fsrs": "^5.4.1"

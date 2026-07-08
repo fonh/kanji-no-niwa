@@ -1,90 +1,62 @@
 # Feuille de route pré-code — 漢字の庭
 
 Écrite le 2026-07-08, après la passe de vérification post-synthèse (findings-09 § 7).
-Mise à jour le 2026-07-08 après l'audit 10 (charnières + grill). **Où on en est** : les 10
-audits sont clos, le PRD et les docs de contenu sont cohérents, toutes les décisions de design
-sont prises — y compris les deux pivots soulevés pendant le grill de l'audit 10 (suppression de
-Fukuda, stockage local). **Ce qui suit est le chemin entre « PRD prêt » et « on peut coder »**,
-ordonné — chaque étape rend la suivante moins risquée.
+Mise à jour le 2026-07-08 après l'audit 10 (charnières + grill) puis après le remplacement du
+pivot stockage par Neon + Auth.js (même jour, hors périmètre des audits — voir
+`docs/adr/0005-data-storage-neon-authjs.md`).
+
+## Statut : Étape 1 soldée. Prochaine étape → Étape 2, point 1 ci-dessous.
+
+Toutes les décisions de design sont prises et écrites dans le PRD. Le stockage/auth est déjà
+migré et commité (Neon, Auth.js — code en place, rien à refaire). **Ce qui suit est le chemin
+entre « PRD prêt » et « on peut coder le jeu »**, ordonné — chaque étape rend la suivante moins
+risquée. Pour reprendre dans un nouveau terminal : commencer par Étape 2, point 1
+(l'assignation kanji → zone) — c'est la colonne vertébrale dont tout le reste de l'étape 2 et
+toute l'étape 3 dépendent.
 
 ---
 
-## Étape 1 — Les surfaces jamais auditées (dernières décisions de design) — ✅ SOLDÉE 2026-07-08
+## Étape 1 — Les surfaces jamais auditées — ✅ SOLDÉE 2026-07-08
 
-Les 9 audits ont couvert les *systèmes* (progression, SRS, combat, menus…). L'audit 10
-(`.scratch/audits/prompt-10-charnieres.md` → `findings-10-charnieres.md`) a couvert les
-**charnières** — ce qui se passe entre les systèmes — et deux décisions plus larges soulevées
-pendant le grill. Toutes les décisions de design sont désormais prises, écrites dans le PRD.
+Détail complet des 10 décisions (séquence d'ouverture, défaite/interruption, typographie,
+chaînes système, accessibilité, cérémonies, fin de partie, flag FV-1) dans
+`findings-10-charnieres.md`. Deux décisions plus larges émergées au grill, déjà écrites dans le
+PRD : **suppression de Fukuda** (rôle de mentor repris par Elm puis Pr. Chen/Oak) et
+**compagnon rouvert** (choix parmi 3 au lieu d'un Pikachu imposé).
 
-**Les 10 charnières, décidées et écrites (2026-07-08, audit 10, tranché au grill) :**
-1. **Séquence d'ouverture** (PRD § Séquence d'ouverture) : écran-titre à chaque lancement,
-   avatar garçon/fille sourcé, **nom saisi en kana** via le clavier romaji→kana déjà prévu pour
-   le mode Saisie (champ vide, pas de suggestion), choix du compagnon parmi 3 (voir ci-dessous).
-   Bootstrap restructuré : Elm donne les premières leçons **en deux temps calqués sur
-   l'aller-retour réel du jeu** (Elm → course chez Mr. Pokémon → retour), pas un enfermement
-   au labo (PRD § Leçons, « bootstrap Elm »).
-2. **Défaite et interruption** (PRD § Système de Combat) : écran de défaite bref sans bilan ;
-   les combats-examens (師範/E4/Lance/Red) recommencent intégralement en cas de défaite (pas de
-   checkpoint par section) ; fermer l'app en plein combat annule le combat, aucun état
-   sauvegardé.
-3. **Typographie** (PRD § Interface) : `DotGothic16` (chrome/overworld) + `BIZ UDGothic`
-   (lecture — dialogues/leçons/textes), plancher furigana 10px partout.
-5. **Chaînes système** (PRD § Langue du Jeu) : japonais seul, pas de bouton X (aligné sur les
-   labels de menu), `content/ui-strings.json`.
-6. **Sauvegarde et synchronisation** (PRD § Implémentation) — **pivot d'architecture** : voir
-   ci-dessous.
-7. **Accessibilité** (PRD § Kanjidex, § Menu Principal, § Système de Combat) : repère
-   non-coloré sur les tuiles dorées (daltonisme), réglage de taille de texte (3 crans) dans
-   せってい, mode Écoute rejouable à volonté (aligné sur Disposition).
-8. **Cérémonies** (PRD § Cérémonies, nouvelle section) : deux paliers — majeur (badge/CS-Kanji/
-   victoires rares, écran dédié bref) et mineur (achievement/tuile dorée, bandeau non-bloquant).
-9. **Fin de partie** (PRD § Kanto, note "Fin de partie") : séquence assemblée à partir du
-   guidebook (3 visites à Bourg-Origine), écran de générique dédié après la 3ème visite d'Oak.
-10. **Flag FV-1 soldé** (`findings-09-synthese.md` § 7) : pic de difficulté Suicune assumé tel
-    quel, aucun changement à l'ordre Raikou→Entei→Suicune.
-
-**Deux décisions plus larges, soulevées pendant le grill et écrites dans tout le PRD :**
-- **Suppression de Fukuda** (PRD § Mentors) : personnage inventé retiré. Le rôle quotidien
-  (appel matinal SRS + 36 lettres) est repris par **Elm (tout l'arc Johto) puis le Pr. Chen/Oak
-  (tout l'arc Kanto)** — relais à la traversée SS Aqua, personnalités canoniques des jeux
-  d'origine, aucun arc personnel inventé. Le « dōjō » n'existait déjà que comme redécoration du
-  labo d'Elm — aucune géographie perdue.
-- **Pivot d'architecture — stockage local pour la progression uniquement** (PRD § Implémentation)
-  : Supabase **reste le domicile du contenu statique et de l'auth** (code déjà en place —
-  `scripts/lib/supabase.ts`, `src/lib/supabase/`, `src/proxy.ts` — aucune réécriture nécessaire).
-  Seule **la progression du joueur** (SRS, badges, quêtes, inventaire…) est scindée vers
-  **IndexedDB local** (source de vérité) + **export JSON périodique vers le Google Drive
-  personnel du joueur** (filet de secours, réutilise l'OAuth déjà en place — évite le piège de
-  la pause après 7 jours d'inactivité du plan gratuit Supabase pour la progression). Risque
-  résiduel assumé : l'auth elle-même peut se mettre en pause après 7+ jours sans ouverture de
-  l'app (reconnexion nécessitant une relance manuelle du tableau de bord) — la progression
-  reste jouable en local même si l'auth est cassée. Un seul appareil actif à la fois pour la
-  progression, zéro conflit par construction. Horloge locale de confiance (pas de vérification
-  serveur).
-- **Compagnon rouvert** (PRD § Compagnon) : retour à un choix parmi 3 compagnons (Pikachu + 2
-  autres à sourcer) au tout début, plutôt que « Elm confie son Pikachu, pas de choix » —
-  écho en fin de partie (3ème visite d'Oak, objet cosmétique assorti).
+**Stockage — traité séparément de l'audit 10, soldé aussi :** l'audit 10 avait d'abord proposé
+un pivot vers du stockage local (IndexedDB + filet Google Drive) pour éviter la pause Supabase
+après 7 jours d'inactivité. Remplacé le même jour par une décision différente : **Neon
+(Postgres) + Auth.js**, une base cloud qui n'a pas ce problème de pause, gardant contenu et
+progression dans un seul domicile, sans renoncer à une base unique. Détail et raisonnement :
+`docs/adr/0005-data-storage-neon-authjs.md`. **Code déjà migré, revu (8 angles + corrections)
+et commité** : `db/migrations/001_initial_schema.sql`, `src/lib/auth.ts`, `src/lib/db.ts`,
+Server Actions par route (`src/app/*/actions.ts`).
 
 ## Étape 2 — Compléter la couche de données (mécanique, aucun talent d'écriture requis)
 
-Tout est spécifié ; il faut produire les données. Scriptable en grande partie, relecture humaine.
+Tout est spécifié ; il faut produire les données. Scriptable en grande partie, relecture
+humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
 
-1. **Registre des zones** : champ `name {jp, en}` (les noms officiels VO — dépouillement
+1. **L'assignation kanji → zone — À FAIRE EN PREMIER, colonne vertébrale de tout le contenu** :
+   produire la liste ordonnée des 2136 kanji (`getAvailableKanji` : ordre JLPT + prérequis
+   composants), la découper selon les fenêtres de la table de calibration, script de
+   proposition + relecture. Idem **grammaire** : 828 points Hanabira → paliers → zones. Sans
+   ça, impossible de savoir quels kanji une leçon de telle zone doit enseigner — tout le reste
+   de cette étape et toute l'étape 3 en dépendent.
+2. **Registre des zones** : champ `name {jp, en}` (les noms officiels VO — dépouillement
    Bulbapedia, ~83 entrées), résolution du **mapping musique identité** (tracklist OST HGSS →
    une piste par zone, les arbitrages seuls restant en table).
-2. **`story-beats.json` : couvrir Kanto + les 11 zones réintégrées** (flag FV-2 — le fichier
+3. **`story-beats.json` : couvrir Kanto + les 11 zones réintégrées** (flag FV-2 — le fichier
    s'arrête à Mont Gris) et **`placements/` : générer les ~14 fichiers manquants** (FV-3,
    dont route-33 et mont-lune). Même méthode que l'existant.
-3. **Dénombrements guidebook** (décisions prises, comptes à faire) : les donneurs de numéro
+4. **Dénombrements guidebook** (décisions prises, comptes à faire) : les donneurs de numéro
    de téléphone (registre fermé), les dresseurs génériques par route (fidélité stricte),
    les **sections npc-inventory des 11 zones réintégrées** (Lavender, Union Cave, Safari…).
-4. **L'assignation kanji → zone** — la colonne vertébrale de tout le contenu : produire la
-   liste ordonnée des 2136 kanji (`getAvailableKanji` : ordre JLPT + prérequis composants),
-   la découper selon les fenêtres de la table de calibration, script de proposition +
-   relecture. Idem **grammaire** : 828 points Hanabira → paliers → zones.
 5. **La colonne « Type assigné » de npc-inventory** : distribuer leçon / texte / combat sur
-   les PNJ sourcés, zone par zone. C'est la dernière décision « lourde » (elle fixe qui
-   enseigne quoi, où) — mais elle se prend zone par zone, pas d'un bloc.
+   les PNJ sourcés, zone par zone — dépend du point 1 (l'assignation kanji doit exister pour
+   savoir ce qu'un PNJ-leçon enseigne). C'est la dernière décision « lourde » (elle fixe qui
+   enseigne quoi, où) mais elle se prend zone par zone, pas d'un bloc.
 6. Migration `{jp, en}` des quêtes existantes (FV-4) et micro-lignes du Journal de quêtes.
 
 ## Étape 3 — Gabarits + tranche verticale (le test qui évite d'industrialiser dans le vide)

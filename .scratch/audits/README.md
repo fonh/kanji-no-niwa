@@ -15,13 +15,17 @@ d'ouverture, défaite/interruption, typographie jp, chaînes système, sauvegard
 accessibilité, cérémonies, fin de partie, flag FV-1) — voir `findings-10-charnieres.md`
 pour le détail des 10 décisions. Deux décisions plus larges ont émergé pendant le grill et
 ont été écrites dans la même session : **suppression de Fukuda** (le rôle de mentor
-quotidien est repris par Elm puis le Pr. Chen/Oak, personnages déjà sourcés) et **pivot
-d'architecture pour la progression du joueur uniquement** (IndexedDB local + filet Google
-Drive ; Supabase reste le domicile du contenu statique et de l'auth, code déjà en place,
-aucune réécriture). Le chemin complet jusqu'au premier jalon de code est détaillé dans
-`roadmap-pre-code.md` (Étape 1 soldée ; couche de données, gabarits + tranche verticale,
-passe contenu industrielle, petits restes techniques épars restent à faire). Hors v1,
-définitivement : Battle Frontier et la fonction de transfert du Pal Park — rien d'autre.
+quotidien est repris par Elm puis le Pr. Chen/Oak, personnages déjà sourcés) et un premier
+pivot de stockage vers du local (IndexedDB + filet Google Drive). **Ce pivot stockage a été
+remplacé le même jour (2026-07-08, décision distincte hors périmètre des audits, voir
+`docs/adr/0005-data-storage-neon-authjs.md`)** : Neon (Postgres) remplace Supabase comme
+base unique (contenu + progression), Auth.js (Google, sessions JWT) remplace l'auth
+Supabase — connexion réseau requise, pas de mode hors-ligne. Code déjà migré et commité
+(`db/migrations/`, `src/lib/auth.ts`, `src/lib/db.ts`). Le chemin complet jusqu'au premier
+jalon de code est détaillé dans `roadmap-pre-code.md` (Étape 1 soldée ; couche de données,
+gabarits + tranche verticale, passe contenu industrielle, petits restes techniques épars
+restent à faire). Hors v1, définitivement : Battle Frontier et la fonction de transfert du
+Pal Park — rien d'autre.
 
 ---
 
