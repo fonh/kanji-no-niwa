@@ -2,18 +2,6 @@
   "zone_id": "mt-silver-route-28",
   "npcs": [
     {
-      "name": "Silver (apparition bonus A, hors \"6 Rencontres\" officielles)",
-      "role_origin": "Admet sans mots qu'il avait tort",
-      "item": "—",
-      "map_zone": "MAP_MOUNT_SILVER",
-      "tile_x": 11,
-      "tile_y": 4,
-      "facing": "south",
-      "source": "generated",
-      "matched_object_id": null,
-      "matched_sprite_id": null
-    },
-    {
       "name": "L'Idole retraitée",
       "role_origin": "Trouvée via une coupe d'arbre depuis l'extérieur du Mont Gris ; demande le silence du joueur sur sa cachette",
       "item": "TM47 Acier Aile",

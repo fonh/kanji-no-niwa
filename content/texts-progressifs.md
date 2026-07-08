@@ -84,7 +84,7 @@ qui est désormais une couche de qualité comme les tuiles dorées du Kanjidex, 
 
 | Tier de récompense | Exemples | Fréquence |
 |---|---|---|
-| **Cosmétique** (`grant_item`, type cosmétique) | Skins d'avatar, palette de l'écran-livre/lecture, teintes de dialogue box, variantes de sprite du buddy Pokémon, titre de profil affiché ("Lecteur assidu de Doublonville") | Le gros du volume — zéro risque d'équilibre, à distribuer généreusement sur les ~85-115 textes |
+| **Cosmétique** (`grant_item`, type cosmétique) | Skins d'avatar, palette de l'écran-livre/lecture, teintes de dialogue box, variantes de palette du compagnon (Pikachu — synthèse), titre de profil affiché ("Lecteur assidu de Doublonville") | Le gros du volume — zéro risque d'équilibre, à distribuer généreusement sur les ~85-115 textes |
 | **Confort contextuel** (`grant_item` ou `Condition` locale) | Un point d'ancrage de voyage rapide propre à ce texte précis (pas un CS-Kanji générique), un indice caché (position d'un dresseur non repéré, astuce mnémotechnique bonus pour un kanji difficile de la zone) | Fréquent, mais toujours local à une zone, jamais un pouvoir global |
 | **Lore/narratif** (`unlock_text` + `advance_quest` sur une quête d'arc) | Compléter tous les textes secondaires d'une zone/arc débloque une scène bonus, une lettre rare de Fukuda, un easter egg | Par zone ou arc entier, pas par texte individuel |
 
@@ -291,7 +291,7 @@ maintenir.
 ## Tagging grammaire — scope limité aux textes obligatoires (2026-07-02)
 
 `grammar_encounters` (`PRD.md` § Système de Combat) se nourrit de "dialogue NPC, leçon ou texte" — mais
-taguer automatiquement ~70-100 articles externes (NHK/Watanoc/Matcha) contre les 828 points Hanabira
+taguer automatiquement ~85-115 articles externes (NHK/Watanoc/Matcha) contre les 828 points Hanabira
 serait fragile et coûteux pour un gain marginal. **Scope réduit** : seuls les **~28-29 textes
 obligatoires** *(« ~20-21 » corrigé 2026-07-06, repasse progression P-2 — textes de remise CS-Kanji
 inclus)* (écrits/sélectionnés à la main, faible volume) sont tagués avec leur(s) point(s) Hanabira

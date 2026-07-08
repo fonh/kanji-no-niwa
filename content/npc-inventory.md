@@ -188,7 +188,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 
 ## route-32 — Route 32
 
-**Budget** : 110–170 kanji étudiés | N4 | 25–40 chars
+**Budget** : 110–160 kanji étudiés *(était 110–170 — redistribution synthèse 2026-07-07, Union Cave insérée)* | N4 | 25–40 chars
 **Grammaire nouvellement disponible à ce palier** : N4 — ～てもらえますか/てもらえませんか, ～ながら, ～ことにしている, ～ことになっている, ～ようになる/ようになった, ～ないほうがいい, ～んだけど, ～のに, ～ても/でも, ～から (Hanabira : Verb てもらえませんか, Verb ながら, ～ことにしている, ～ようになる, ～のに)
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
@@ -224,7 +224,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 
 ## route-33 — Route 33
 
-**Budget** : 150–190 kanji étudiés | N4 | 25–40 chars
+**Budget** : 160–195 kanji étudiés *(était 150–190 — redistribution synthèse 2026-07-07)* | N4 | 25–40 chars
 **Grammaire nouvellement disponible à ce palier** : N4 (inchangé)
 
 Aucun PNJ nommé confirmé — route de transit pure (pluie permanente sur toute la route). Le guidebook rattache tous les noms du bloc combiné "Routes 32/33" à Route 32 uniquement (confirmé passe 2) ; Route 33 n'a aucun PNJ ou dresseur attribuable spécifiquement.
@@ -503,7 +503,7 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 
 ## route-40 — Route 40
 
-**Budget** : 460–505 kanji étudiés | N3 | 42–65 chars
+**Budget** : 460–485 kanji étudiés *(était 460–505 — redistribution synthèse 2026-07-07, Route 41 défusionnée porte la suite)* | N3 | 42–65 chars
 **Grammaire nouvellement disponible à ce palier** : N3 (inchangé)
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
@@ -912,7 +912,7 @@ Aucun dresseur dans Rock Tunnel — donjon d'exploration pure plongé dans le no
 
 ## kanto-power-plant — Centrale Électrique
 
-**Budget** : 1220–1235 kanji étudiés | N2 | 65–115 chars
+**Budget** : 1235–1250 kanji étudiés *(était 1220–1235 — redistribution synthèse 2026-07-07, Lavender insérée avant)* | N2 | 65–115 chars
 **Grammaire nouvellement disponible à ce palier** : N2 (inchangé)
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
@@ -930,7 +930,7 @@ Vrai hub de la quête "pièce volée" qui déverrouille aussi le Passage Souterr
 
 ## cerulean-city — Azuria City
 
-**Budget** : 1220–1350 kanji étudiés | N2 | 65–115 chars
+**Budget** : 1240–1350 kanji étudiés *(était 1220–1350 — redistribution synthèse 2026-07-07, Lavender insérée avant)* | N2 | 65–115 chars
 **Grammaire nouvellement disponible à ce palier** : N2 (inchangé)
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |

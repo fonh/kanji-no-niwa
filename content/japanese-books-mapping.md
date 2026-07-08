@@ -45,7 +45,7 @@ Correspondance CECR↔JLPT (cf. `jlpt-language-syllabus.md`) : A1=N5 · A2=N4 ·
 - **ごいちょう A1** → *priorisation du vocabulaire N5* : ses ~1 000 mots par topic disent lesquels des
   705 mots N5 (yomitan) mettre en avant dans les premières Cartes Mots et exemples de leçons.
 - **Recueils d'histoires (8-11)** → *vivier de la table `texts`* (Textes Progressifs, tiers
-  secondaire surtout) : candidats à adapter (vetting 12bis) pour les ~70-100 textes secondaires des
+  secondaire surtout) : candidats à adapter (vetting 12bis) pour les ~85-115 textes secondaires des
   zones N5→N2. Le vol. 2 de You Can Read Japanese! est un précédent direct de notre méthode : il fait
   exactement ce que prévoit le pipeline (simplifier de l'Aozora au niveau du lecteur).
 - **Heisig RTK 1** → *pipeline étape 7 uniquement* (batch IA étymologie + mnémotechnique des 2 136
@@ -95,7 +95,7 @@ Correspondance CECR↔JLPT (cf. `jlpt-language-syllabus.md`) : A1=N5 · A2=N4 ·
 3. **🟡 Starter A1 : un seul coursebook présent** — Marugoto existe toujours en paire かつどう (activités)
    + りかい (grammaire). Le PDF présent est un seul des deux (non identifiable à coup sûr, scan sans
    texte). Si c'est le かつどう, il manque le りかい A1 (séquençage grammatical N5) et inversement.
-4. **🟡 Textes secondaires : ~30 histoires candidates pour ~70-100 slots.** Les 4 recueils fournissent
+4. **🟡 Textes secondaires : ~30 histoires candidates pour ~85-115 slots.** Les 4 recueils fournissent
    environ 30 textes N5→N2 — un excellent démarrage, pas une couverture complète. Le complément vient
    des sources déjà actées (Tadoku libre, Watanoc, NHK Easy, Matcha) — cohérent avec
    `texts-progressifs.md`, rien à changer.

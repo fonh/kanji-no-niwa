@@ -204,3 +204,42 @@ CONTEXT.md (entrées Adventure Journal + Radio Library).
    Phare) ; sprite follower du Pikachu (planche à vérifier dans le dump) ; résolution du mapping
    musique identité ; audio pool Disposition (batch VOICEVOX).
 3. **Code/data** : prompt français de `generate-etymology.py` (06-B3) ; 3 kanji sans audio.
+
+---
+
+## 7. Passe de vérification post-synthèse (2026-07-08)
+
+Relecture systématique de tout ce que la synthèse a écrit, croisée avec l'ensemble du corpus
+(docs + JSON de données). **10 reliquats corrigés (SV-1→SV-10), 5 flags consignés.**
+
+| # | Reliquat | Correction |
+|---|---|---|
+| SV-1 | **5 budgets `npc-inventory` sur les anciennes fenêtres** (route-32 110–170, route-33 150–190, route-40 460–505, cerulean 1220–1350, power-plant 1220–1235) — la redistribution avait mis à jour la table de calibration mais pas les sections d'inventaire qui la dupliquent | Alignés sur les nouvelles fenêtres, annotés |
+| SV-2 | « 22 zones Kanto » ×2 (PRD § Ordre des zones, guidebook § musique) | → 26 |
+| SV-3 | « ~70-100 textes » ×5 survivants (texts-progressifs pipeline, side-content ×2, japanese-books-mapping ×2) | → ~85-115 |
+| SV-4 | PRD:537 (gauntlet Kimono) disait encore « un seul compagnon par combat » — corrigé côté guidebook mais pas côté PRD | → flaveur de dialogue, renvoi § Compagnon |
+| SV-5 | Scènes d'Elm « fait choisir parmi 3 Poké Balls » ×2 (guidebook) — non alignées sur la décision Pikachu | → remise du Pikachu, compagnon unique |
+| SV-6 | « variantes de sprite du buddy Pokémon » (texts-progressifs, catalogue cosmétique) | → variantes de palette du compagnon (Pikachu) |
+| SV-7 | **`placements/mt-silver-route-28.json` et `mt-silver-upper.json` portaient encore les 2 apparitions Silver bonus purgées** | Entrées supprimées (2→1 npc chacun) |
+| SV-8 | **10 fichiers de dialogue orphelins** `content/dialogues/trainers/route-29/*.json` (les dresseurs supprimés par la décision 1) | Supprimés, dossier retiré |
+| SV-9 | ADR-0003 décrivait les Quest Steps comme « for human reference » — périmé depuis le Journal de quêtes | Amendement ajouté (name/label affichés, {jp, en}) |
+| SV-10 | side-content A5 (inscription de l'Antre) ne mentionnait pas sa nouvelle récompense | → Trophée Antre du Dragon |
+
+**Vérifié sain** : tous les JSON valides ; 0 table markdown malformée (vérif. mécanique des comptes
+de cellules sur les 6 gros fichiers) ; nombres canoniques uniformes ; « Silver ×9 » reste juste
+(6 Rencontres + Mont Lune + Antre + Plateau = 9 zones) ; aucun « à la synthèse » non soldé ;
+route-29 : placements et npcs.json ne contenaient que du sourcé (rien d'autre à purger).
+
+**Flags consignés (pas des erreurs — à traiter aux passes suivantes, repris dans la roadmap)** :
+- **FV-1** : le gate Suicune exige le trophée (lecture N1 en registre classique) vers ~1350 kanji
+  (mi-Kanto, avant le palier N1 à ~1670) — pic de difficulté à assumer ou à amortir à l'écriture
+  de l'inscription (furigana Y + retry existent déjà).
+- **FV-2** : `story-beats.json` ne couvre que Johto + Mont Gris (48 zones) — aucun beat pour les
+  26 zones Kanto ni les 11 réintégrées (dépouillement guidebook à la passe contenu).
+- **FV-3** : `placements/` manque ~14 zones (dont route-33 et mont-lune-route-3-4, pourtant
+  anciennes) — génération à la passe contenu.
+- **FV-4** : `quests/*.json` : `name`/`labels` encore monolingues anglais — migration `{jp, en}`
+  actée, à faire à la passe contenu.
+- **FV-5** : fil Steven, étape 1 : « déclenche une rencontre légendaire ailleurs » est un fait
+  source sans adaptation définie — à trancher à l'écriture de la scène (simple ligne de dialogue
+  suffit).

@@ -2,7 +2,7 @@
 
 Document interne — non visible par le joueur. Créé le 2026-07-06 (audit 02, phase 2, à la demande
 de l'équipe produit) : recense **tout le contenu optionnel sourcé du guidebook** (hors gyms et
-combats obligatoires du chemin critique), comme vivier pour le placement des ~70-100 textes
+combats obligatoires du chemin critique), comme vivier pour le placement des ~85-115 textes
 secondaires (`content/texts-progressifs.md` § Textes secondaires) et des PNJ-leçon.
 
 **Source unique :** `content/guidebook-adapted.md` (réfs de ligne indiquées par item, état du
@@ -40,7 +40,7 @@ Candidats prioritaires pour `found_object_ref` ou remise par PNJ existant.
 | A2 | Livre de la légende des trois esprits et des deux tours | ecruteak-city | L617, L623 | Dans la maison de l'homme à l'énigme (Dowsing MCHN), à l'ouest du Centre Pokémon |
 | A3 | Rapport Unown (journal de fouille qui s'auto-remplit) + 5 inscriptions | ruins-of-alph | L328, L336, L341, L344 | Remis après le 1er puzzle ; les 4 entrées d'origine sont séquencées en difficulté croissante (aucun objet → Coupe → … → Force) — calque direct pour étaler les 5 inscriptions |
 | A4 | Carnet des Frères/sœurs du jour (maison-index des 7 emplacements/jours) | route-26 | L74, L414, L976, L982 | Objet de quête-index ; lie la mécanique calendaire § C |
-| A5 | Inscription au fond de l'antre, 4 lignes à traduire (N1) | dragons-den | L924 | Déjà au PRD (NPC quest N1) ; reward lore + dialogue Fukuda |
+| A5 | Inscription au fond de l'antre, 4 lignes à traduire (N1, registre classique) | dragons-den | L924 | Déjà au PRD (NPC quest N1) ; **reward = Trophée Antre du Dragon** (item `unique` `trophee-antre` lu par les gates Suicune/Mont Gris/Red — défini 2026-07-07, synthèse) + lore + dialogue Fukuda |
 | A6 | Inscription ancienne de la Tour Grospignon (N5/N4) | sprout-tower | L276, L240 | Cible de la fetch quest du Hiker de Mauville |
 | A7 | Panneau « Vous entrez dans Johto » (N5, hiragana) | route-29 | L162 | Tutoriel de lecture environnementale ; le guide dit explicitement « lisez les panneaux » (L217) |
 | A8 | Sanctuaire du gardien de la forêt (kami/esprits protecteurs) | ilex-forest | L453 | Découvert après l'arbre coupé ; cohérent avec l'esthétique « jardin » du titre |
@@ -192,7 +192,7 @@ aux objets narratifs uniques — finding 02-A2).
 
 ~75 contenus optionnels sourcés : 15 textes tout trouvés (A), 12 squelettes de quêtes fetch (B),
 15 mécaniques calendaires/répétées (C), 10 fils multi-zones (D), 12 mini-donjons/puzzles (E),
-28+ PNJ-leçon/donneurs (F), 6 systèmes répétables (G). La cible de ~70-100 textes secondaires
+28+ PNJ-leçon/donneurs (F), 6 systèmes répétables (G). La cible de ~85-115 textes secondaires (recomptée 2026-07-08)
 (`texts-progressifs.md`) est couverte par le seul contenu sourcé, sans inventer un seul PNJ.
 
 **Prochaines étapes qui consomment ce document :**

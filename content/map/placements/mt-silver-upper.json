@@ -12,18 +12,6 @@
       "source": "generated",
       "matched_object_id": null,
       "matched_sprite_id": null
-    },
-    {
-      "name": "Silver (apparition bonus B, optionnel post-Red, hors \"6 Rencontres\" officielles)",
-      "role_origin": "Monté voir par lui-même, rien n'est dit",
-      "item": "—",
-      "map_zone": "MAP_MOUNT_SILVER",
-      "tile_x": 11,
-      "tile_y": 8,
-      "facing": "south",
-      "source": "generated",
-      "matched_object_id": null,
-      "matched_sprite_id": null
     }
   ]
 }

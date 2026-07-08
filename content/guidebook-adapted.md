@@ -120,7 +120,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Sourcé du guidebook — PNJ clés (rôle d'origine → matériau réutilisable) :**
 - **Mom** — premier PNJ parlé ; signale que "Elm a demandé après toi" → bon modèle pour la toute première ligne de dialogue de Fukuda.
-- **Professeur Elm** — fait choisir un starter parmi 3 Poké Balls (n'a pas d'équivalent direct ici, mais le moment "choix initial" est un bon modèle pour l'onboarding) ; envoie en mission vers "Mr. Pokémon" (= analogue possible de Fukuda recevant un mystérieux paquet) ; appelle paniqué quand son labo est cambriolé par un garçon roux (= graine du fil Silver).
+- **Professeur Elm** — fait choisir un starter parmi 3 Poké Balls — **adapté (2026-07-08, passe de vérification, aligné sur la décision compagnon de la synthèse) : Elm confie son Pikachu, compagnon unique et cosmétique, pas de choix** (le moment "remise initiale" est conservé comme scène d'ouverture, bon modèle pour l'onboarding) ; envoie en mission vers "Mr. Pokémon" (= analogue possible de Fukuda recevant un mystérieux paquet) ; appelle paniqué quand son labo est cambriolé par un garçon roux (= graine du fil Silver).
 - **Lyra/Ethan** (rival/mentor) — voisin·e, laisse un mail dans le PC pour motiver l'aventure ; revu Route 29 puis Route 31.
 - **Policier** — enquête sur le cambriolage, demande au joueur de décrire le garçon roux (Silver).
 - Tagline d'origine : *"The Town Where the Winds of a New Beginning Blow"* — bon residu pour la tagline française de Bourg Geon.
@@ -132,7 +132,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Mom** — rdc de la maison. Annonce qu'Elm demande après le joueur ; débloque sauvegarde/Sac/Carte Dresseur. Donne le Pokégear après la 1ère course. Plus tard propose de gérer une épargne sur les gains de combat.
 - **Lyra/Ethan** — 2F de sa maison, avec Marill. Déjà dresseur·euse, joue les mentors. Laisse un mail sur le PC du joueur ("tu as du courrier", motivant, tampon Marill). Revue Route 29 (apprend à attraper), Route 31 (donne le Vs. Recorder).
-- **Professeur Elm** — explique l'intérêt de laisser un compagnon hors de sa Ball ; fait choisir parmi 3 Poké Balls ; envoie en mission chez Mr. Pokémon. Sort paniqué du labo pour vérifier son numéro dans le Pokégear avant Route 29. Reçoit l'œuf mystère, conseille de défier les Gyms. Donne l'Everstone après éclosion de Togepi, le **grand texte de lecture** après les 8 badges *(« la Master Ball » corrigé 2026-07-07, passe de vérification globale V-9 — reliquat de l'adaptation R11, chasse aux reliques audit 04 : voir PRD § Kimono Girls, note Master Ball → grand texte d'Elm)*. Mentionne plus tard les Kimono Girls à Rosalia.
+- **Professeur Elm** — explique l'intérêt de laisser un compagnon hors de sa Ball ; **remet son Pikachu** (« choisir parmi 3 » adapté 2026-07-08, passe de vérification — compagnon unique, synthèse) ; envoie en mission chez Mr. Pokémon. Sort paniqué du labo pour vérifier son numéro dans le Pokégear avant Route 29. Reçoit l'œuf mystère, conseille de défier les Gyms. Donne l'Everstone après éclosion de Togepi, le **grand texte de lecture** après les 8 badges *(« la Master Ball » corrigé 2026-07-07, passe de vérification globale V-9 — reliquat de l'adaptation R11, chasse aux reliques audit 04 : voir PRD § Kimono Girls, note Master Ball → grand texte d'Elm)*. Mentionne plus tard les Kimono Girls à Rosalia.
 - **Policier** — présent au labo après le vol ; demande le nom du garçon roux une fois le joueur revenu de son premier affrontement avec lui.
 - **Rival (Silver)** — aperçu en train d'espionner le labo (vol) ; confronté plus tard sur Route 29/Ville Griotte.
 - **Assistant du Pr. Elm** — comptoir du Mart, garde l'œuf mystère en sécurité jusqu'au 1er badge.
@@ -1243,7 +1243,7 @@ d'accès).
 **⚠️ Mapping partiel (noté 2026-07-07, audit 08, finding 08-E2) :** cette table s'arrête à la géographie
 d'avant les réintégrations du 2026-07-06 — manquent les zones réintégrées (Lavender Town, Routes
 5/8/22/32/33/35/36/37/40/41/43/44/45/46, Îles Tourbillon, Safari Zone, Routes 47/48/Cliff Cave, Puits
-Ramoloss, intérieurs Tour Radio/QG Rocket/Tour Jo…), les 22 zones Kanto, le SS Aqua et les intérieurs
+Ramoloss, intérieurs Tour Radio/QG Rocket/Tour Jo…), les 26 zones Kanto (recompté 2026-07-08, passe de vérification), le SS Aqua et les intérieurs
 récurrents (Centre Pokémon, Gym, Game Corner). **Budgets posés (2026-07-07, synthèse — table des 83 zones, `curriculum-checkpoints.md` § Redistribution) ; l'export des tiles se fait à la passe assets, zone par zone** (même régime que le reste). Côté mécanisme, ce mapping alimente désormais
 `content/map/zones.json.music_ref` — voir PRD § Audio (corrigé audit 08 : l'ancienne table PRD à
 3 tranches contredisait ce mapping, il fait foi).
