@@ -12,7 +12,8 @@ et « on peut coder »**, ordonné — chaque étape rend la suivante moins risq
 Les 9 audits ont couvert les *systèmes* (progression, SRS, combat, menus…). Personne n'a
 jamais audité les **charnières** — ce qui se passe entre les systèmes. C'est le seul endroit
 où il reste de vraies décisions à prendre ; tout le reste de cette roadmap est de l'exécution.
-Format recommandé : un **audit 10** sur le modèle des 9 premiers (lecture → grill → correction).
+**À lancer : `.scratch/audits/prompt-10-charnieres.md`** (même méthode que les 9 premiers —
+lecture → grill → correction — un nouveau terminal, session vierge).
 
 1. **Séquence d'ouverture, minute par minute.** Écran titre → « nouvelle partie » → choix de
    l'avatar (garçon/fille — Ethan/Lyra, comme HGSS) → **saisie du nom du joueur** (question
@@ -92,11 +93,40 @@ Tout est spécifié ; il faut produire les données. Scriptable en grande partie
 
 ## Étape 4 — Passe contenu industrielle
 
-Zone par zone, dans l'ordre de la table de calibration, avec l'outillage de l'étape 3 en CI :
-dialogues, leçons, placement des textes (sélection des sources réelles + vetting 12bis),
-scripts radio, lettres de Fukuda, Carnet des compteurs. Les seuils N sont re-calculés au fil
-du placement. **C'est seulement à la fin de l'étape 3 qu'on sait combien de temps celle-ci
-prendra** — c'est tout l'intérêt de la tranche verticale.
+Zone par zone, dans l'ordre de la table de calibration (83 zones), avec l'outillage de
+l'étape 3 en CI : dialogues, leçons (**≈290-385** au total, réintégrations comprises),
+placement des textes secondaires (**~85-115**, sélection des sources réelles + vetting
+12bis), scripts radio, 36 lettres de Fukuda, Carnet des compteurs. Les seuils N des 8
+CS-Kanji sont re-calculés au fil du placement réel (valeurs actuelles de calibration :
+砕 6 · 切 12 · 水 20 · 飛 26 · 力 29 · 渦 32 · 滝 35 · 登 60). **C'est seulement à la fin
+de l'étape 3 qu'on sait combien de temps celle-ci prendra** — c'est tout l'intérêt de la
+tranche verticale.
+
+## Étape 5 — Petits restes techniques épars
+
+Ne bloquent aucune étape ci-dessus ; à faire quand on y passe (souvent en même temps que
+l'étape 2 ou 4, zone par zone), listés ici pour ne rien perdre :
+
+1. **FV-5** (`findings-09-synthese.md` § 7) : fil Steven, étape 1 — « déclenche une
+   rencontre légendaire ailleurs » est un fait source sans adaptation définie ; une
+   simple ligne de dialogue suffit, à écrire à la passe contenu de la zone concernée.
+2. **`scripts/build/generate-etymology.py`** : le prompt du batch IA étymologie/
+   mnémotechnique est encore en français (finding 06-B3) — à traduire/adapter avant le
+   prochain run de génération.
+3. **3 kanji sans audio** (finding 06-B3) — identifier lesquels, combler via le même
+   pipeline VOICEVOX que le reste.
+4. **Tile-authoring** : les 16 intérieurs de gym + les zones réintégrées (Lavender,
+   Union Cave, Route 43, Îles Tourbillon, Safari, Routes 46/5/8/22/47/48, Cliff Cave,
+   Puits Ramoloss, intérieurs Tour Radio/QG Rocket/Tour Jo…) n'ont pas encore de tiles
+   produites — inventaire de production, pas un chiffrage.
+5. **Sprite follower du Pikachu** (compagnon cosmétique, décision synthèse) — vérifier
+   qu'une planche exploitable existe dans le dump d'assets HGSS, sinon la produire.
+6. **Résolution du mapping musique « identité »** : chaque zone HGSS garde sa piste
+   d'origine (règle posée à la synthèse) — reste à résoudre piste-par-fichier-asset à
+   la passe assets ; seuls les arbitrages (zones sans équivalent direct) restent en
+   table dans `content/guidebook-adapted.md` § Musique.
+7. **Pool audio Disposition** : ~600 phrases (~120/palier), ~25-35 Mo opus — batch
+   VOICEVOX à lancer, chargement par palier à implémenter côté build.
 
 ## Puis : le code
 
@@ -106,5 +136,6 @@ jalon de code naturel : le moteur de carte + dialogue sur la tranche verticale e
 
 ---
 
-*Restes déjà connus et suivis ailleurs : findings-09 § 6 (passe contenu/assets/code) et § 7
-(flags FV-1→FV-5). Hors v1, définitivement : Battle Frontier, fonction de transfert du Pal Park.*
+*Hors v1, définitivement, et rien d'autre : Battle Frontier, fonction de transfert du Pal
+Park (décision F-A, synthèse — Pal Park reste un intérieur réel navigable, seule la
+fonction de transfert est coupée).*
