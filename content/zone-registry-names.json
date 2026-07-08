@@ -1,0 +1,1083 @@
+{
+  "zones": [
+    {
+      "zone_id": "new-bark-town",
+      "name": {
+        "jp": "ワカバタウン",
+        "en": "New Bark Town"
+      },
+      "music_track": {
+        "jp": "ワカバタウン",
+        "en": "New Bark Town"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-29",
+      "name": {
+        "jp": "29ばんどうろ",
+        "en": "Route 29"
+      },
+      "music_track": {
+        "jp": "29ばんどうろ",
+        "en": "Route 29"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "cherrygrove-city",
+      "name": {
+        "jp": "ヨシノシティ",
+        "en": "Cherrygrove City"
+      },
+      "music_track": {
+        "jp": "ヨシノシティ",
+        "en": "Cherrygrove City"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-30",
+      "name": {
+        "jp": "30ばんどうろ",
+        "en": "Route 30"
+      },
+      "music_track": {
+        "jp": "30ばんどうろ",
+        "en": "Route 30"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-31",
+      "name": {
+        "jp": "３１ばんどうろ",
+        "en": "Route 31"
+      },
+      "music_track": {
+        "jp": "30ばんどうろ",
+        "en": "Route 30"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : le thème officiel « Route 30 » couvre les routes 30 à 33 (source : Bulbapedia, List of overworld music themes)."
+    },
+    {
+      "zone_id": "violet-city",
+      "name": {
+        "jp": "キキョウシティ",
+        "en": "Violet City"
+      },
+      "music_track": {
+        "jp": "キキョウシティ",
+        "en": "Violet City"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "sprout-tower",
+      "name": {
+        "jp": "マダツボミのとう",
+        "en": "Sprout Tower"
+      },
+      "music_track": {
+        "jp": "マダツボミのとう",
+        "en": "Sprout Tower"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-32",
+      "name": {
+        "jp": "３２ばんどうろ",
+        "en": "Route 32"
+      },
+      "music_track": {
+        "jp": "30ばんどうろ",
+        "en": "Route 30"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Route 30 » (routes 30-33)."
+    },
+    {
+      "zone_id": "ruins-of-alph",
+      "name": {
+        "jp": "アルフのいせき",
+        "en": "Ruins of Alph"
+      },
+      "music_track": {
+        "jp": "アルフのいせき",
+        "en": "Ruins of Alph"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "union-cave",
+      "name": {
+        "jp": "つながりのどうくつ",
+        "en": "Union Cave"
+      },
+      "music_track": {
+        "jp": "つながりのどうくつ",
+        "en": "Union Cave"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-33",
+      "name": {
+        "jp": "３３ばんどうろ",
+        "en": "Route 33"
+      },
+      "music_track": {
+        "jp": "30ばんどうろ",
+        "en": "Route 30"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Route 30 » (routes 30-33)."
+    },
+    {
+      "zone_id": "azalea-town",
+      "name": {
+        "jp": "ヒワダタウン",
+        "en": "Azalea Town"
+      },
+      "music_track": {
+        "jp": "ヒワダタウン",
+        "en": "Azalea Town"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "slowpoke-well",
+      "name": {
+        "jp": "ヤドンのいど",
+        "en": "Slowpoke Well"
+      },
+      "music_track": {
+        "jp": "つながりのどうくつ",
+        "en": "Union Cave"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Union Cave », qui couvre aussi Ruines Arcaniques, Forêt Ubame, Mont Mortier, Îles Tourbillon, Tohjo Falls, Mt. Moon, Embedded Tower (source : Bulbapedia, List of overworld music themes)."
+    },
+    {
+      "zone_id": "ilex-forest",
+      "name": {
+        "jp": "ウバメの森",
+        "en": "Ilex Forest"
+      },
+      "music_track": {
+        "jp": "つながりのどうくつ",
+        "en": "Union Cave"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Union Cave »."
+    },
+    {
+      "zone_id": "route-34",
+      "name": {
+        "jp": "34ばんどうろ",
+        "en": "Route 34"
+      },
+      "music_track": {
+        "jp": "34ばんどうろ",
+        "en": "Route 34"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "name": {
+        "jp": "コガネシティ",
+        "en": "Goldenrod City"
+      },
+      "music_track": {
+        "jp": "コガネシティ",
+        "en": "Goldenrod City"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-35",
+      "name": {
+        "jp": "３５ばんどうろ",
+        "en": "Route 35"
+      },
+      "music_track": {
+        "jp": "34ばんどうろ",
+        "en": "Route 34"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : le thème officiel « Route 34 » couvre les routes 34-37, 40-41, 45-46 et le Pokéathlon Dome (source : Bulbapedia, List of overworld music themes)."
+    },
+    {
+      "zone_id": "national-park",
+      "name": {
+        "jp": "しぜんこうえん",
+        "en": "National Park"
+      },
+      "music_track": {
+        "jp": "しぜんこうえん",
+        "en": "National Park"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-36",
+      "name": {
+        "jp": "３６ばんどうろ",
+        "en": "Route 36"
+      },
+      "music_track": {
+        "jp": "34ばんどうろ",
+        "en": "Route 34"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Route 34 » (routes 34-37, 40-41, 45-46)."
+    },
+    {
+      "zone_id": "route-37",
+      "name": {
+        "jp": "３７ばんどうろ",
+        "en": "Route 37"
+      },
+      "music_track": {
+        "jp": "34ばんどうろ",
+        "en": "Route 34"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Route 34 » (routes 34-37, 40-41, 45-46)."
+    },
+    {
+      "zone_id": "ecruteak-city",
+      "name": {
+        "jp": "エンジュシティ",
+        "en": "Ecruteak City"
+      },
+      "music_track": {
+        "jp": "エンジュシティ",
+        "en": "Ecruteak City"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "burned-tower",
+      "name": {
+        "jp": "やけたとう",
+        "en": "Burned Tower"
+      },
+      "music_track": {
+        "jp": "やけたとう",
+        "en": "Burned Tower"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-38",
+      "name": {
+        "jp": "38ばんどうろ",
+        "en": "Route 38"
+      },
+      "music_track": {
+        "jp": "38ばんどうろ",
+        "en": "Route 38"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-39",
+      "name": {
+        "jp": "３９ばんどうろ",
+        "en": "Route 39"
+      },
+      "music_track": {
+        "jp": "38ばんどうろ",
+        "en": "Route 38"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : le thème officiel « Route 38 » couvre les routes 38 et 39 (source : Bulbapedia, List of overworld music themes)."
+    },
+    {
+      "zone_id": "olivine-city",
+      "name": {
+        "jp": "アサギシティ",
+        "en": "Olivine City"
+      },
+      "music_track": {
+        "jp": "キキョウシティ",
+        "en": "Violet City"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : le thème officiel « Violet City » couvre aussi Olivine City (source : Bulbapedia, List of overworld music themes). Attention : Olivine Lighthouse (アサギのとうだい) est une zone/piste distincte, non concernée ici."
+    },
+    {
+      "zone_id": "route-40",
+      "name": {
+        "jp": "４０ばんすいどう",
+        "en": "Route 40"
+      },
+      "music_track": {
+        "jp": "34ばんどうろ",
+        "en": "Route 34"
+      },
+      "arbitrage": null,
+      "note": "Nom japonais littéral « Water Route 40 » (voie maritime) ; nom anglais officiel du jeu reste « Route 40 ». Musique partagée : thème « Route 34 »."
+    },
+    {
+      "zone_id": "route-41",
+      "name": {
+        "jp": "４１ばんすいどう",
+        "en": "Route 41"
+      },
+      "music_track": {
+        "jp": "34ばんどうろ",
+        "en": "Route 34"
+      },
+      "arbitrage": null,
+      "note": "Nom japonais littéral « Water Route 41 » (voie maritime) ; nom anglais officiel du jeu reste « Route 41 ». Musique partagée : thème « Route 34 »."
+    },
+    {
+      "zone_id": "whirl-islands",
+      "name": {
+        "jp": "うずまき島",
+        "en": "Whirl Islands"
+      },
+      "music_track": {
+        "jp": "つながりのどうくつ",
+        "en": "Union Cave"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Union Cave »."
+    },
+    {
+      "zone_id": "cianwood-city",
+      "name": {
+        "jp": "タンバシティ",
+        "en": "Cianwood City"
+      },
+      "music_track": {
+        "jp": "タンバシティ",
+        "en": "Cianwood City"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-47-48-cliff-cave",
+      "name": {
+        "jp": "４７ばんどうろ",
+        "en": "Route 47"
+      },
+      "music_track": {
+        "jp": "４７ばんどうろ",
+        "en": "Route 47"
+      },
+      "arbitrage": "merged",
+      "note": "Zone fusionnant 3 lieux réels partageant le même thème musical officiel « Route 47 » (source : Bulbapedia, List of overworld music themes) : Route 47 (４７ばんどうろ / Route 47), Route 48 (４８ばんどうろ / Route 48), Cliff Cave (だんがいのどうくつ / Cliff Cave). Route 47 retenue comme représentant."
+    },
+    {
+      "zone_id": "safari-zone",
+      "name": {
+        "jp": "サファリゾーン",
+        "en": "Safari Zone"
+      },
+      "music_track": {
+        "jp": "サファリゾーン",
+        "en": "Safari Zone"
+      },
+      "arbitrage": null,
+      "note": "Bulbapedia désambiguïse la page sous « Johto Safari Zone » (le thème musical « Safari Zone » couvre aussi Pal Park en post-jeu, hors scope Johto)."
+    },
+    {
+      "zone_id": "route-42",
+      "name": {
+        "jp": "42ばんどうろ",
+        "en": "Route 42"
+      },
+      "music_track": {
+        "jp": "42ばんどうろ",
+        "en": "Route 42"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "mt-mortar",
+      "name": {
+        "jp": "スリバチやま",
+        "en": "Mt. Mortar"
+      },
+      "music_track": {
+        "jp": "つながりのどうくつ",
+        "en": "Union Cave"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Union Cave »."
+    },
+    {
+      "zone_id": "mahogany-town",
+      "name": {
+        "jp": "チョウジタウン",
+        "en": "Mahogany Town"
+      },
+      "music_track": {
+        "jp": "ヨシノシティ",
+        "en": "Cherrygrove City"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : le thème officiel « Cherrygrove City » couvre aussi Mahogany Town (source : Bulbapedia, List of overworld music themes)."
+    },
+    {
+      "zone_id": "route-43",
+      "name": {
+        "jp": "４３ばんどうろ",
+        "en": "Route 43"
+      },
+      "music_track": {
+        "jp": "42ばんどうろ",
+        "en": "Route 42"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : le thème officiel « Route 42 » couvre les routes 42-44 et le Lac Colère (source : Bulbapedia, List of overworld music themes)."
+    },
+    {
+      "zone_id": "lake-of-rage",
+      "name": {
+        "jp": "いかりのみずうみ",
+        "en": "Lake of Rage"
+      },
+      "music_track": {
+        "jp": "42ばんどうろ",
+        "en": "Route 42"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Route 42 » (routes 42-44 + Lac Colère). Nom alternatif rencontré : ギャラドスこ (Gyarados Lake)."
+    },
+    {
+      "zone_id": "route-44",
+      "name": {
+        "jp": "４４ばんどうろ",
+        "en": "Route 44"
+      },
+      "music_track": {
+        "jp": "42ばんどうろ",
+        "en": "Route 42"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Route 42 » (routes 42-44 + Lac Colère)."
+    },
+    {
+      "zone_id": "ice-path",
+      "name": {
+        "jp": "こおりのぬけみち",
+        "en": "Ice Path"
+      },
+      "music_track": {
+        "jp": "こおりのぬけみち",
+        "en": "Ice Path"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "name": {
+        "jp": "フスベシティ",
+        "en": "Blackthorn City"
+      },
+      "music_track": {
+        "jp": "ヒワダタウン",
+        "en": "Azalea Town"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : le thème officiel « Azalea Town » couvre aussi Blackthorn City (source : Bulbapedia, List of overworld music themes). La tour aux cloches (スズのとう / Bell Tower) est une zone/piste distincte, non concernée ici."
+    },
+    {
+      "zone_id": "dragons-den",
+      "name": {
+        "jp": "りゅうのあな",
+        "en": "Dragon's Den"
+      },
+      "music_track": {
+        "jp": "りゅうのあな",
+        "en": "Dragon's Den"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-45",
+      "name": {
+        "jp": "４５ばんどうろ",
+        "en": "Route 45"
+      },
+      "music_track": {
+        "jp": "34ばんどうろ",
+        "en": "Route 34"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Route 34 » (routes 34-37, 40-41, 45-46). Nom alternatif rencontré : マウンテンロード (Mountain Road)."
+    },
+    {
+      "zone_id": "dark-cave",
+      "name": {
+        "jp": "くらやみのほらあな",
+        "en": "Dark Cave"
+      },
+      "music_track": {
+        "jp": "こおりのぬけみち",
+        "en": "Ice Path"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : le thème officiel « Ice Path » couvre aussi Dark Cave et Seafoam Islands (source : Bulbapedia, List of overworld music themes)."
+    },
+    {
+      "zone_id": "route-46",
+      "name": {
+        "jp": "４６ばんどうろ",
+        "en": "Route 46"
+      },
+      "music_track": {
+        "jp": "34ばんどうろ",
+        "en": "Route 34"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : thème « Route 34 » (routes 34-37, 40-41, 45-46)."
+    },
+    {
+      "zone_id": "route-26",
+      "name": {
+        "jp": "26ばんどうろ",
+        "en": "Route 26"
+      },
+      "music_track": {
+        "jp": "26ばんどうろ",
+        "en": "Route 26"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-27",
+      "name": {
+        "jp": "２７ばんどうろ",
+        "en": "Route 27"
+      },
+      "music_track": {
+        "jp": "26ばんどうろ",
+        "en": "Route 26"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée : le thème officiel « Route 26 » couvre les routes 26-27 et le Pokemon League Reception Gate (source : Bulbapedia, List of overworld music themes)."
+    },
+    {
+      "zone_id": "indigo-plateau-antichambre",
+      "name": {
+        "jp": "チャンピオンロード",
+        "en": "Victory Road"
+      },
+      "music_track": {
+        "jp": "チャンピオンロード",
+        "en": "Victory Road"
+      },
+      "arbitrage": "split",
+      "note": "Antichambre = fin de la Victory Road (Kanto) menant à la Ligue. Bulbapedia (List of overworld music themes, table Gen IV/HGSS) : ligne 'Victory Road' = Victory Road (Kanto) uniquement, thème distinct de 'The Pokémon League'."
+    },
+    {
+      "zone_id": "indigo-plateau-will",
+      "name": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "music_track": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "arbitrage": "split",
+      "note": "Intérieur du bâtiment de la Ligue Pokémon (salle de Will). Bulbapedia : ligne 'The Pokémon League' regroupe Indigo Plateau, Route 28 et Mt. Silver (extérieur) — thème distinct de Victory Road."
+    },
+    {
+      "zone_id": "indigo-plateau-koga",
+      "name": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "music_track": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "arbitrage": "split",
+      "note": "Intérieur du bâtiment de la Ligue Pokémon (salle de Koga). Même thème que les autres salles internes, cf. note indigo-plateau-will."
+    },
+    {
+      "zone_id": "indigo-plateau-bruno",
+      "name": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "music_track": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "arbitrage": "split",
+      "note": "Intérieur du bâtiment de la Ligue Pokémon (salle de Bruno). Même thème que les autres salles internes, cf. note indigo-plateau-will."
+    },
+    {
+      "zone_id": "indigo-plateau-karen",
+      "name": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "music_track": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "arbitrage": "split",
+      "note": "Intérieur du bâtiment de la Ligue Pokémon (salle de Karen). Même thème que les autres salles internes, cf. note indigo-plateau-will."
+    },
+    {
+      "zone_id": "indigo-plateau-lance",
+      "name": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "music_track": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "arbitrage": "split",
+      "note": "Intérieur du bâtiment de la Ligue Pokémon (trône de Lance). Même thème que les autres salles internes, cf. note indigo-plateau-will."
+    },
+    {
+      "zone_id": "vermilion-city",
+      "name": {
+        "jp": "クチバシティ",
+        "en": "Vermilion City"
+      },
+      "music_track": {
+        "jp": "クチバシティ",
+        "en": "Vermilion City"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-6-kanto",
+      "name": {
+        "jp": "６番道路",
+        "en": "Route 6"
+      },
+      "music_track": {
+        "jp": "3ばんどうろ",
+        "en": "Route 3"
+      },
+      "arbitrage": null,
+      "note": "Nom du lieu propre à Route 6, mais Bulbapedia (List of overworld music themes, table HGSS) indique que les Routes 2–10, 16 et 18–22 partagent toutes le thème 'Route 3' (piste OST officielle 'Route 3', disc 2 track 108)."
+    },
+    {
+      "zone_id": "saffron-city",
+      "name": {
+        "jp": "ヤマブキシティ",
+        "en": "Saffron City"
+      },
+      "music_track": {
+        "jp": "ニビシティ",
+        "en": "Pewter City"
+      },
+      "arbitrage": null,
+      "note": "Bulbapedia (List of overworld music themes, table HGSS, ligne 'Pewter City') : Viridian City, Pewter City, Saffron City et Kanto Power Plant partagent toutes le thème 'Pewter City'."
+    },
+    {
+      "zone_id": "route-9-10-rocktunnel",
+      "name": {
+        "jp": "9ばんどうろ",
+        "en": "Route 9"
+      },
+      "music_track": {
+        "jp": "3ばんどうろ",
+        "en": "Route 3"
+      },
+      "arbitrage": "merged",
+      "note": "zone_id fusionne Route 9, Route 10 et Rock Tunnel ; représentant = premier lieu cité (Route 9). Musique : Routes 2–10 partagent le thème 'Route 3' (Route 10 aussi). Rock Tunnel (dernier segment, non retenu comme représentant) a sa propre piste 'Rock Tunnel' (イワヤマトンネル), déjà connue par ailleurs et partagée avec Cerulean Cave."
+    },
+    {
+      "zone_id": "lavender-town",
+      "name": {
+        "jp": "シオンタウン",
+        "en": "Lavender Town"
+      },
+      "music_track": {
+        "jp": "シオンタウン",
+        "en": "Lavender Town"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-8-kanto",
+      "name": {
+        "jp": "8ばんどうろ",
+        "en": "Route 8"
+      },
+      "music_track": {
+        "jp": "3ばんどうろ",
+        "en": "Route 3"
+      },
+      "arbitrage": null,
+      "note": "Thème partagé 'Route 3' (Routes 2–10, 16, 18–22), cf. note route-6-kanto."
+    },
+    {
+      "zone_id": "kanto-power-plant",
+      "name": {
+        "jp": "はつでんしょ",
+        "en": "Kanto Power Plant"
+      },
+      "music_track": {
+        "jp": "ニビシティ",
+        "en": "Pewter City"
+      },
+      "arbitrage": null,
+      "note": "Nom japonais générique ('Power Plant') confirmé sur la page Bulbapedia dédiée ; pas de nom propre distinctif comme les villes. Musique partagée 'Pewter City' (cf. note saffron-city)."
+    },
+    {
+      "zone_id": "cerulean-city",
+      "name": {
+        "jp": "ハナダシティ",
+        "en": "Cerulean City"
+      },
+      "music_track": {
+        "jp": "ハナダシティ",
+        "en": "Cerulean City"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-5-kanto",
+      "name": {
+        "jp": "5ばんどうろ",
+        "en": "Route 5"
+      },
+      "music_track": {
+        "jp": "3ばんどうろ",
+        "en": "Route 3"
+      },
+      "arbitrage": null,
+      "note": "Thème partagé 'Route 3' (Routes 2–10, 16, 18–22), cf. note route-6-kanto."
+    },
+    {
+      "zone_id": "route-24-25-kanto",
+      "name": {
+        "jp": "24ばんどうろ",
+        "en": "Route 24"
+      },
+      "music_track": {
+        "jp": "24ばんどうろ",
+        "en": "Route 24"
+      },
+      "arbitrage": "merged",
+      "note": "zone_id fusionne Route 24 et Route 25 ; représentant = premier lieu cité (Route 24), déjà connu (nom = piste). Route 24 et 25 partagent historiquement le même thème depuis Gen I/III, reconduit en HGSS."
+    },
+    {
+      "zone_id": "route-7-kanto",
+      "name": {
+        "jp": "7ばんどうろ",
+        "en": "Route 7"
+      },
+      "music_track": {
+        "jp": "3ばんどうろ",
+        "en": "Route 3"
+      },
+      "arbitrage": null,
+      "note": "Thème partagé 'Route 3' (Routes 2–10, 16, 18–22), cf. note route-6-kanto."
+    },
+    {
+      "zone_id": "celadon-city",
+      "name": {
+        "jp": "タマムシシティ",
+        "en": "Celadon City"
+      },
+      "music_track": {
+        "jp": "タマムシシティ",
+        "en": "Celadon City"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-16-17-18-cycling-road",
+      "name": {
+        "jp": "16ばんどうろ",
+        "en": "Route 16"
+      },
+      "music_track": {
+        "jp": "3ばんどうろ",
+        "en": "Route 3"
+      },
+      "arbitrage": "merged",
+      "note": "zone_id fusionne Routes 16, 17 (Cycling Road) et 18 ; représentant = premier lieu cité (Route 16), qui partage le thème 'Route 3'. IMPORTANT : Route 17 (segment Cycling Road proprement dit) est EXCLU de ce groupe sur Bulbapedia et utilise un thème distinct dit 'Bicycle' (non re-vérifié en détail JP faute de nécessité pour la zone représentante) — à garder en tête si la zone doit un jour être scindée. Route 18 fait partie du groupe 'Route 3'."
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "name": {
+        "jp": "セキチクシティ",
+        "en": "Fuchsia City"
+      },
+      "music_track": {
+        "jp": "ハナダシティ",
+        "en": "Cerulean City"
+      },
+      "arbitrage": null,
+      "note": "Bulbapedia (List of overworld music themes, table HGSS, ligne 'Cerulean City') : Cerulean City et Fuchsia City partagent le même thème, reconduit depuis Gen I/III."
+    },
+    {
+      "zone_id": "route-14-15-kanto",
+      "name": {
+        "jp": "14ばんどうろ",
+        "en": "Route 14"
+      },
+      "music_track": {
+        "jp": "11ばんどうろ",
+        "en": "Route 11"
+      },
+      "arbitrage": "merged",
+      "note": "zone_id fusionne Route 14 et Route 15 ; représentant = premier lieu cité (Route 14). Musique : Bulbapedia indique que les Routes 11–15 partagent toutes le thème 'Route 11' (piste OST 'Route 11', déjà connue)."
+    },
+    {
+      "zone_id": "route-11-12-13-diglett",
+      "name": {
+        "jp": "11ばんどうろ",
+        "en": "Route 11"
+      },
+      "music_track": {
+        "jp": "11ばんどうろ",
+        "en": "Route 11"
+      },
+      "arbitrage": "merged",
+      "note": "zone_id fusionne Route 11, Route 12 et Route 13 (Diglett's Cave) ; représentant = premier lieu cité (Route 11), déjà connu (nom = piste). Routes 11–15 partagent toutes ce thème selon Bulbapedia."
+    },
+    {
+      "zone_id": "pewter-city",
+      "name": {
+        "jp": "ニビシティ",
+        "en": "Pewter City"
+      },
+      "music_track": {
+        "jp": "ニビシティ",
+        "en": "Pewter City"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "mont-lune-route-3-4",
+      "name": {
+        "jp": "おつきみやま",
+        "en": "Mt. Moon"
+      },
+      "music_track": {
+        "jp": "おつきみやま",
+        "en": "Mt. Moon"
+      },
+      "arbitrage": "merged",
+      "note": "zone_id fusionne Mt. Moon et Route 3-4 ; représentant = premier lieu cité (Mont Lune / Mt. Moon), déjà connu (nom = piste). Route 4 fait partie du groupe partagé 'Route 3' (non retenu ici car Mt. Moon est le représentant choisi)."
+    },
+    {
+      "zone_id": "route-2-foret-viridian",
+      "name": {
+        "jp": "2ばんどうろ",
+        "en": "Route 2"
+      },
+      "music_track": {
+        "jp": "3ばんどうろ",
+        "en": "Route 3"
+      },
+      "arbitrage": "merged",
+      "note": "zone_id fusionne Route 2 et Forêt Viridian ; représentant = premier lieu cité (Route 2), qui partage le thème 'Route 3' (Routes 2–10, 16, 18–22). Forêt Viridian (Viridian Forest, non retenue comme représentant) a sa propre piste distincte 'Viridian Forest' (トキワのもり), déjà connue par ailleurs."
+    },
+    {
+      "zone_id": "viridian-city",
+      "name": {
+        "jp": "トキワシティ",
+        "en": "Viridian City"
+      },
+      "music_track": {
+        "jp": "ニビシティ",
+        "en": "Pewter City"
+      },
+      "arbitrage": null,
+      "note": "Musique partagée 'Pewter City' (cf. note saffron-city) : Viridian City, Pewter City, Saffron City et Kanto Power Plant utilisent le même thème en HGSS."
+    },
+    {
+      "zone_id": "route-22-kanto",
+      "name": {
+        "jp": "22ばんどうろ",
+        "en": "Route 22"
+      },
+      "music_track": {
+        "jp": "3ばんどうろ",
+        "en": "Route 3"
+      },
+      "arbitrage": null,
+      "note": "Thème partagé 'Route 3' (Routes 2–10, 16, 18–22), cf. note route-6-kanto."
+    },
+    {
+      "zone_id": "route-1-kanto",
+      "name": {
+        "jp": "1ばんどうろ",
+        "en": "Route 1"
+      },
+      "music_track": {
+        "jp": "1ばんどうろ",
+        "en": "Route 1"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "pallet-town",
+      "name": {
+        "jp": "マサラタウン",
+        "en": "Pallet Town"
+      },
+      "music_track": {
+        "jp": "マサラタウン",
+        "en": "Pallet Town"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-21-kanto",
+      "name": {
+        "jp": "21番水道",
+        "en": "Route 21"
+      },
+      "music_track": {
+        "jp": "3ばんどうろ",
+        "en": "Route 3"
+      },
+      "arbitrage": null,
+      "note": "Route maritime ('Sea Route 21' / Water Route 21 dans certaines versions plus anciennes). Thème partagé 'Route 3' (inclut les Routes 18–22), cf. note route-6-kanto."
+    },
+    {
+      "zone_id": "cinnabar-island",
+      "name": {
+        "jp": "グレンじま",
+        "en": "Cinnabar Island"
+      },
+      "music_track": {
+        "jp": "グレンじま",
+        "en": "Cinnabar Island"
+      },
+      "arbitrage": null,
+      "note": null
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "name": {
+        "jp": "19番水道",
+        "en": "Route 19"
+      },
+      "music_track": {
+        "jp": "3ばんどうろ",
+        "en": "Route 3"
+      },
+      "arbitrage": "merged",
+      "note": "zone_id fusionne Route 19 (route maritime, 'Sea Route 19'), Route 20 et Seafoam Islands ; représentant = premier lieu cité (Route 19), qui partage le thème 'Route 3' (inclut Routes 18–22). Seafoam Islands en tant que donjon intérieur n'a pas été vérifié séparément (non retenu comme représentant)."
+    },
+    {
+      "zone_id": "cerulean-cave",
+      "name": {
+        "jp": "ハナダの洞窟",
+        "en": "Cerulean Cave"
+      },
+      "music_track": {
+        "jp": "イワヤマトンネル",
+        "en": "Rock Tunnel"
+      },
+      "arbitrage": null,
+      "note": "Lieu distinct de Cerulean City, vérifié séparément comme demandé. Bulbapedia (List of overworld music themes, table HGSS, ligne 'Rock Tunnel') : Underground Path 5-6, Diglett's Cave, Rock Tunnel et Cerulean Cave partagent toutes le même thème 'Rock Tunnel'."
+    },
+    {
+      "zone_id": "mt-silver-route-28",
+      "name": {
+        "jp": "28ばんどうろ",
+        "en": "Route 28"
+      },
+      "music_track": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "arbitrage": null,
+      "note": "Route distincte du massif Mt. Silver, vérifiée séparément comme demandé. Bulbapedia (List of overworld music themes, table HGSS, ligne 'The Pokémon League') confirme littéralement : 'Indigo Plateau, Route 28 and Mt. Silver (exterior)' partagent ce thème."
+    },
+    {
+      "zone_id": "mt-silver-base",
+      "name": {
+        "jp": "シロガネ山",
+        "en": "Mt. Silver"
+      },
+      "music_track": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "arbitrage": "split",
+      "note": "4 subdivisions internes (base/versants inf./versants sup./sommet) d'un seul lieu réel, Mt. Silver. Bulbapedia ne distingue PAS ces 4 niveaux musicalement ; il distingue seulement 'extérieur' (thème 'The Pokémon League', partagé avec Indigo Plateau et Route 28) vs 'intérieur/grotte' (thème 'Olivine Lighthouse', アサギのとうだい). Les 4 zones base/lower/upper/summit sont traitées comme extérieures par défaut et reçoivent donc toutes le même thème 'The Pokémon League' ; si une zone de grotte intérieure existe dans le découpage HGSS, elle devrait plutôt utiliser 'Olivine Lighthouse'."
+    },
+    {
+      "zone_id": "mt-silver-lower",
+      "name": {
+        "jp": "シロガネ山",
+        "en": "Mt. Silver"
+      },
+      "music_track": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "arbitrage": "split",
+      "note": "Cf. note détaillée sur mt-silver-base : pas de distinction musicale interne base/versants/sommet sur Bulbapedia, seulement extérieur vs intérieur/grotte."
+    },
+    {
+      "zone_id": "mt-silver-upper",
+      "name": {
+        "jp": "シロガネ山",
+        "en": "Mt. Silver"
+      },
+      "music_track": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "arbitrage": "split",
+      "note": "Cf. note détaillée sur mt-silver-base : pas de distinction musicale interne base/versants/sommet sur Bulbapedia, seulement extérieur vs intérieur/grotte."
+    },
+    {
+      "zone_id": "mt-silver-summit",
+      "name": {
+        "jp": "シロガネ山",
+        "en": "Mt. Silver"
+      },
+      "music_track": {
+        "jp": "ポケモンリーグ",
+        "en": "The Pokémon League"
+      },
+      "arbitrage": "split",
+      "note": "Cf. note détaillée sur mt-silver-base : pas de distinction musicale interne base/versants/sommet sur Bulbapedia, seulement extérieur vs intérieur/grotte (thème 'Olivine Lighthouse' pour l'intérieur, non appliqué ici par défaut)."
+    }
+  ]
+}

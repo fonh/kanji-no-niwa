@@ -5,7 +5,7 @@ Mise à jour le 2026-07-08 après l'audit 10 (charnières + grill) puis après l
 pivot stockage par Neon + Auth.js (même jour, hors périmètre des audits — voir
 `docs/adr/0005-data-storage-neon-authjs.md`).
 
-## Statut : Étape 1 soldée. Étape 2 point 1 (kanji) fait 2026-07-09. Prochaine étape → Étape 2, point 2.
+## Statut : Étape 1 soldée. Étape 2 points 1 (kanji/grammaire) et 2 (registre des zones) faits 2026-07-09. Prochaine étape → Étape 2, point 3.
 
 Toutes les décisions de design sont prises et écrites dans le PRD. Le stockage/auth est déjà
 migré et commité (Neon, Auth.js — code en place, rien à refaire). **Ce qui suit est le chemin
@@ -51,9 +51,18 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    à corriger zone par zone à l'étape 2 point 5, pas maintenant) ; le bloc des 5 salles Elite
    Four (870–900 partagée, seule Will récupère les 30 kanji) — cohérent avec le PRD (« la
    Ligue plate … ne porte aucune leçon obligatoire »), pas une anomalie.
-2. **Registre des zones** : champ `name {jp, en}` (les noms officiels VO — dépouillement
-   Bulbapedia, ~83 entrées), résolution du **mapping musique identité** (tracklist OST HGSS →
-   une piste par zone, les arbitrages seuls restant en table).
+2. **✅ FAIT 2026-07-09 — Registre des zones** : `content/zone-registry-names.json`, 83/83
+   zones résolues (dépouillement Bulbapedia via deux passes de recherche parallèles) — champ
+   `name {jp, en}` officiel et **mapping musique identité** (piste OST HGSS par zone, avec
+   `note` documentant les thèmes partagés entre zones — comportement normal des OST Gen
+   II/HGSS). Rapport : `.scratch/audits/zone-registry-names-report.md`. **19 zones à
+   arbitrage** (8 fusions de zone_id multi-lieux, 11 éclatements d'un lieu en plusieurs
+   zone_id) documentées dans le champ `note` de chaque entrée, acceptées telles quelles.
+   **1 point resté ouvert** : les 4 subdivisions de Mont Gris (base/versants/sommet) reçoivent
+   toutes par défaut le thème extérieur « The Pokémon League », faute de savoir laquelle est
+   réellement la grotte intérieure (thème « Olivine Lighthouse ») dans le découpage de ce
+   projet — à trancher à la passe assets (étape 5 point 6, où les arbitrages doivent de toute
+   façon migrer vers `content/guidebook-adapted.md` § Musique).
 3. **`story-beats.json` : couvrir Kanto + les 11 zones réintégrées** (flag FV-2 — le fichier
    s'arrête à Mont Gris) et **`placements/` : générer les ~14 fichiers manquants** (FV-3,
    dont route-33 et mont-lune). Même méthode que l'existant.
