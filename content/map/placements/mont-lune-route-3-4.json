@@ -1,0 +1,53 @@
+{
+  "zone_id": "mont-lune-route-3-4",
+  "npcs": [
+    {
+      "name": "Petit comptoir marchand (Mont Lune)",
+      "role_origin": "Au milieu de la traversée",
+      "item": "— (vente)",
+      "map_zone": "MAP_ROUTE_3",
+      "tile_x": 9,
+      "tile_y": 2,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Rival (Silver, embuscade Mont Lune — **vrai combat adopté 2026-07-07, synthèse** : 26 questions N1, quête `silver-kanto`, hors \"6 Rencontres\" ; déclenche la Tag Battle de l'Antre puis les revanches hebdo au Plateau Indigo — voir PRD § Silver — arc Kanto)",
+      "role_origin": "Motive la Tag Battle de l'Antre du Dragon déjà documentée côté Johto",
+      "item": "—",
+      "map_zone": "MAP_MOUNT_MOON",
+      "tile_x": 10,
+      "tile_y": 4,
+      "facing": "west",
+      "source": "rom_matched",
+      "matched_object_id": "obj_D02R0101_gsrivel",
+      "matched_sprite_id": "SPRITE_GSRIVEL"
+    },
+    {
+      "name": "Youngster Warren, Jimmy ; Hiker Bruce ; Firebreather Burt (Route 3)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_3",
+      "tile_x": 15,
+      "tile_y": 7,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Youngster Regis, Double Team Zac & Jen, Firebreather Otis, Black Belt Manford/Ander, Hiker Dwight, Picnicker Hope/Sharon, Bird Keeper Hank (Route 4)",
+      "role_origin": "Dresseurs",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_3",
+      "tile_x": 19,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

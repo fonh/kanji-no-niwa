@@ -27,17 +27,17 @@ routes/donjons avec leur propre `zone_id` et budget kanji), au même titre que J
 séparée pour les routes Kanto "pas encore officielles" : tout est absorbé dans le corps principal
 ci-dessous, dans l'ordre réel de traversée du jeu.
 
-**Note (2026-07-06, audit 04 ; budgets chiffrés 2026-07-07, synthèse) — zones réintégrées, sections à sourcer** : la géographie HGSS complète
-est réintégrée (tranché au grill, voir PRD § Géographie complète) : **Lavender Town** (station radio →
-carte EXPN), **Routes 5/8/22**, **Union Cave**, **Routes 41/43/46**, **intérieur des Ruines d'Alph**,
-**Îles Tourbillon**, **Safari Zone adaptée** (on y attrape des contenus de lecture — mangas, textes —
-au lieu de Pokémon). Seul le Battle Frontier reste hors scope (+ la fonction de transfert du Pal Park, synthèse).
+**Note (2026-07-06, audit 04 ; budgets chiffrés 2026-07-07, synthèse ; sections sourcées 2026-07-09,
+étape 2 point 3) — zones réintégrées** : la géographie HGSS complète est réintégrée (tranché au grill,
+voir PRD § Géographie complète) : **Lavender Town** (station radio → carte EXPN), **Routes 5/8/22**,
+**Union Cave**, **Routes 41/43/46**, **intérieur des Ruines d'Alph**, **Îles Tourbillon**, **Safari
+Zone adaptée** (on y attrape des contenus de lecture — mangas, textes — au lieu de Pokémon). Seul le
+Battle Frontier reste hors scope (+ la fonction de transfert du Pal Park, synthèse).
 **Les budgets sont désormais chiffrés** — chaque zone a sa ligne dans la table de calibration
 (`curriculum-checkpoints.md` § Redistribution : Union Cave 140–175, Route 41 480–510, Route 43 535–565,
 Lavender 1220–1240 portent de la croissance ; Îles Tourbillon, Safari/47/48/Cliff Cave, Routes 46/5/8/22
-sont des plateaux sans croissance requise). Leurs **sections d'inventaire PNJ restent à sourcer du
-guidebook à la passe contenu** (même méthode que le reste du document) — c'est le seul travail restant
-sur ces zones.
+sont des plateaux sans croissance requise). **Leurs sections d'inventaire PNJ sont désormais sourcées**
+(voir leurs entrées ci-dessous, dans l'ordre réel de traversée — 83/83 zones couvertes).
 
 **Note (2026-07-05, audit 01) — recalibrage majeur + zéro invention** : budgets Ligue/Kanto/Mont Gris
 recalibrés (Ligue plate 870–900, Kanto porte 900→2136 en leçons poussées de 8-12 kanji, Mont Gris
@@ -217,6 +217,25 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 
 **Side quests dans cette zone** : 0 (puzzle environnemental, pas une quête PNJ à proprement parler)
 **Objets à aller chercher dans cette zone** : 1 (Rapport Unown)
+
+---
+
+## union-cave — Union Cave
+
+**Budget** : 140–175 kanji étudiés (chemin critique, entre Route 32 et Route 33) | N4 | 25–40 chars
+**Grammaire nouvellement disponible à ce palier** : N4 (inchangé)
+
+| PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
+|---|---|---|---|
+| Randonneurs, Maniaques, Dresseurs Ace (7 dresseurs au total, noms individuels non détaillés par le guide) | Dresseurs de combat | — | |
+| Psychic Nathan | Dresseur de combat — 🔍 attribution Union Cave vs. bordure Route 32/Centre de Recherche incertaine dans le guide, à trancher à la passe contenu | — | |
+
+Séquence du puzzle de la grotte confirmée en 4 temps (une entrée par point cardinal, chaque entrée
+nécessitant un objet/CS-Kanji différent pour être atteinte dans l'ordre : aucun objet → Coupe →
+Union Cave → Force) — verrou d'exploration, pas un PNJ.
+
+**Side quests dans cette zone** : 0
+**Objets à aller chercher dans cette zone** : 0
 
 ---
 
@@ -506,13 +525,43 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Swimmer Simon, Elaine (R40) + Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie (R41 — défusionnée 2026-07-06, audit 04 : les nageurs R41 retourneront à leur section route-41 quand elle sera sourcée, voir note de tête) | Dresseurs maritimes | — | |
+| Swimmer Simon, Swimmer Elaine | Dresseurs maritimes | — | |
 | Frère/sœur du jour Monica (lundi, plage) | PNJ calendaire | Sharp Beak | |
 | Homme (Maison du Photographe, nord d'Irisia) | Révèle que le photographe itinérant récurrent est de sa famille | — | |
 | Homme (ouest du Centre Pokémon d'Irisia) | Raconte la légende des 4 îles créées par le gardien légendaire des tourbillons | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 1 (Sharp Beak)
+
+---
+
+## route-41 — Route 41
+
+**Budget** : 480–510 kanji étudiés (défusionnée de Route 40, 2026-07-06, audit 04) | N3 | 42–65 chars
+**Grammaire nouvellement disponible à ce palier** : N3 (inchangé)
+
+| PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
+|---|---|---|---|
+| Swimmer Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie (~10 nageurs) | Dresseurs maritimes | — | |
+
+Les nageurs de Route 41 « ont des tas d'histoires à raconter » sur le gardien légendaire des Îles
+Tourbillon — réservoir de lore orale, bon matériau de PNJ-conteurs en mer.
+
+**Side quests dans cette zone** : 0
+**Objets à aller chercher dans cette zone** : 0
+
+---
+
+## whirl-islands — Îles Tourbillon
+
+**Budget** : ~560 kanji étudiés (plateau, accès post-渦/Repaire de Mékanos — zéro croissance requise) | N2 | 45–70 chars
+**Grammaire nouvellement disponible à ce palier** : N2 (inchangé)
+
+Aucun PNJ nommé confirmé — donjon optionnel d'exploration pure, seul vrai terrain d'usage du
+CS-Kanji 渦 (Tourbillon).
+
+**Side quests dans cette zone** : 0
+**Objets à aller chercher dans cette zone** : 0
 
 ---
 
@@ -532,6 +581,40 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 
 **Side quests dans cette zone** : 0 (le mini-arc Phare/Potion Secrète est comptabilisé côté olivine-city)
 **Objets à aller chercher dans cette zone** : 2 (Potion Secrète, HM Vol)
+
+---
+
+## route-47-48-cliff-cave — Routes 47/48 / Cliff Cave
+
+**Budget** : 480–520 kanji étudiés (plateau, zéro croissance requise) | N3 | 45–65 chars
+**Grammaire nouvellement disponible à ce palier** : N3 (inchangé)
+
+Aucun PNJ individuel nommé sourcé pour ces routes/ce donjon — approche menant à la porte de la
+Safari Zone (voir section safari-zone pour le détail de la mécanique adaptée). Pas de dresseur de
+combat classique recensé sur ce tronçon.
+
+**Side quests dans cette zone** : 0
+**Objets à aller chercher dans cette zone** : 0
+
+---
+
+## safari-zone — Safari Zone
+
+**Budget** : 480–520 kanji étudiés (plateau, zéro croissance requise) | N3 | 45–65 chars
+**Grammaire nouvellement disponible à ce palier** : N3 (inchangé)
+
+| PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
+|---|---|---|---|
+| Le gardien de réserve (orig. Baoba) | Rencontré Route 39, rappelle par téléphone, revu à l'entrée de la Safari Zone (fil complet, Pokégear-Téléphone) | — | |
+
+**Mécanique adaptée (design 2026-07-07, synthèse)** : au lieu de Pokémon, on y « attrape » des
+contenus de lecture à collectionner (mangas, textes) — objets-lecture apparaissant chaque jour à
+des emplacements semi-aléatoires, ~3 prises par visite quotidienne (économie de rareté du Safari
+original transposée). Les prises rejoignent la collection du Sac (règle P-15 : jamais des lignes de
+`texts`), doublons échangeables au Global Terminal.
+
+**Side quests dans cette zone** : 0
+**Objets à aller chercher dans cette zone** : 0
 
 ---
 
@@ -589,6 +672,28 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 
 **Side quests dans cette zone** : 0 (arc principal scripté)
 **Objets à aller chercher dans cette zone** : 2 (spécialité locale en vente, objet de traversée d'eau via Lance)
+
+---
+
+## route-43 — Route 43
+
+**Budget** : 535–565 kanji étudiés | N3/N2 | 45–70 chars
+**Grammaire nouvellement disponible à ce palier** : N3/N2 (inchangé)
+
+| PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
+|---|---|---|---|
+| PNJ à la grille de Route 43 | Mentionne que Mr. Pokémon cherche une Écaille Rouge | — | |
+| Poste-frontière Team Rocket (milieu de route) | Rançonne le passage (1000 ¥) tant que le QG Rocket d'Acajou n'est pas tombé ; redevient un poste normal ensuite | TM36 Sludge Bomb (après la chute du QG) | |
+| Poké Maniac Ron, Poké Maniac Ben, Poké Maniac Brent | Dresseurs | — | |
+| Picnicker Tiffany | Dresseuse | — | |
+| Camper Spencer | Dresseur | — | |
+| Fisherman Marvin | Dresseur | — | |
+
+L'Apricorn Noir originellement rattaché à cette route a été réattribué au Lac Colère (voir section
+Apricorns) — ne pas le dupliquer ici.
+
+**Side quests dans cette zone** : 0
+**Objets à aller chercher dans cette zone** : 1 (TM36 Sludge Bomb)
 
 ---
 
@@ -704,6 +809,22 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 1 (BlackGlasses)
+
+---
+
+## route-46 — Route 46
+
+**Budget** : 700–760 kanji étudiés (plateau, zéro croissance requise) | N2 | 50–75 chars
+**Grammaire nouvellement disponible à ce palier** : N2 (inchangé)
+
+| PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
+|---|---|---|---|
+| Hiker Erik | Seul dresseur confirmé sur cette route (roster partagé avec Route 45 dans le guide, confirmé propre à Route 46) | — | |
+
+Connecteur bloqué par un rebord à sens unique côté Route 29 (accès différé, voir section route-29).
+
+**Side quests dans cette zone** : 0
+**Objets à aller chercher dans cette zone** : 0
 
 ---
 
@@ -908,6 +1029,34 @@ Aucun dresseur dans Rock Tunnel — donjon d'exploration pure plongé dans le no
 
 ---
 
+## lavender-town — Lavender Town
+
+**Budget** : 1220–1240 kanji étudiés | N2 | 65–115 chars
+**Grammaire nouvellement disponible à ce palier** : N2 (inchangé)
+
+| PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
+|---|---|---|---|
+| Directeur de la station radio de Lavender Town | Remet la carte EXPN une fois la quête de la Centrale Électrique de Kanto résolue (finding 04-B1) | Carte EXPN | |
+
+**Side quests dans cette zone** : 1 (livrer la pièce mécanique volée à la Centrale avant de revenir ici)
+**Objets à aller chercher dans cette zone** : 1 (carte EXPN)
+
+---
+
+## route-8-kanto — Route 8 (Kanto)
+
+**Budget** : ~1220 kanji étudiés (plateau, optionnelle — Safranville↔Lavender, zéro croissance requise) | N2 | 65–115 chars
+**Grammaire nouvellement disponible à ce palier** : N2 (inchangé)
+
+Aucun PNJ propre sourcé pour cette route — son contenu (Bikers « turbulents » non nommés) est déjà
+recensé sous la section route-7-kanto (roster Route 7/8 fusionné dans le guide d'origine) ; ne pas
+dupliquer ici.
+
+**Side quests dans cette zone** : 0
+**Objets à aller chercher dans cette zone** : 0
+
+---
+
 ## kanto-power-plant — Centrale Électrique
 
 **Budget** : 1235–1250 kanji étudiés *(était 1220–1235 — redistribution synthèse 2026-07-07, Lavender insérée avant)* | N2 | 65–115 chars
@@ -943,6 +1092,20 @@ Vrai hub de la quête "pièce volée" qui déverrouille aussi le Passage Souterr
 
 **Side quests dans cette zone** : 1 (récupérer la pièce mécanique volée, relance la Centrale Électrique)
 **Objets à aller chercher dans cette zone** : 0 (la pièce est rendue à la Centrale, pas remise au joueur)
+
+---
+
+## route-5-kanto — Route 5 (Kanto)
+
+**Budget** : ~1350 kanji étudiés (plateau, optionnelle — Safranville↔Azuria, zéro croissance requise) | N2 | 65–115 chars
+**Grammaire nouvellement disponible à ce palier** : N2 (inchangé)
+
+Aucun PNJ propre sourcé pour cette route — son contenu (vieille dame donnant un Talisman
+Anti-Combat) est déjà recensé sous la section route-6-kanto (roster Route 5/6/Passage Souterrain
+fusionné dans le guide d'origine) ; ne pas dupliquer ici.
+
+**Side quests dans cette zone** : 0
+**Objets à aller chercher dans cette zone** : 0
 
 ---
 
@@ -1150,6 +1313,20 @@ Aucun dresseur nommé au Mont Lune (contrairement aux Routes 3/4 alentour) — l
 | Blue | 師範 final Kanto, 16e badge ; Gym verrouillé jusqu'à la toute fin (1ère visite : Gym fermé — vrai combat calibré ~1920 kanji/N1, sur revisite après Île Braise) | 印/Badge (sur revisite) | |
 
 ⚠️ **Zone revisitée** (même schéma que Doublonville/Silver #5 et Oliville/Jasmine, voir `curriculum-checkpoints.md` § Note zones revisitées) : cette ligne couvre uniquement la 1ère visite (Gym fermé, le 師範 est absent). Le vrai combat contre Blue reste gaté à 1920 kanji (déjà fixé au PRD), sur la revisite après Île Braise.
+
+**Side quests dans cette zone** : 0
+**Objets à aller chercher dans cette zone** : 0
+
+---
+
+## route-22-kanto — Route 22 (Kanto)
+
+**Budget** : ~1835 kanji étudiés (plateau, optionnelle — ouest de Vertville, zéro croissance requise) | N1 | 70–120 chars
+**Grammaire nouvellement disponible à ce palier** : N1 (inchangé)
+
+Aucun PNJ nommé confirmé — corridor de transition vers le Mont Gris, décrit par le guide comme
+« délibérément vide » (même source que mt-silver-route-28, voir cette section pour la seule
+trouvaille du secteur : l'Idole retraitée).
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0

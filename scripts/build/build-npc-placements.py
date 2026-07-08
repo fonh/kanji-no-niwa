@@ -41,12 +41,26 @@ def normalize_map_name(map_name: str) -> str:
     return re.sub(r"\bmount-", "mt-", norm)
 
 
+# zone_id whose name doesn't share a recognizable prefix with its ROM map
+# name (translated names, renamed groupings) — matched by explicit ROM
+# name-prefix instead of the automatic heuristic below.
+ZONE_ID_ALIASES: dict[str, list[str]] = {
+    "kanto-power-plant": ["route-10-power-plant"],
+    "mont-lune-route-3-4": ["mt-moon", "route-3", "route-4"],
+}
+
+
 # Every zone_id that appears as a "## zone_id — Name" heading, matched
 # against MAP_* names the same way src/lib/npcs.ts does at runtime.
 def map_zones_for_inventory_id(zone_id: str) -> list[dict]:
+    aliases = ZONE_ID_ALIASES.get(zone_id)
     matches = []
     for z in zones:
         norm = normalize_map_name(z["name"])
+        if aliases is not None:
+            if any(norm == a or norm.startswith(a + "-") for a in aliases):
+                matches.append(z)
+            continue
         if (
             norm == zone_id
             or zone_id.startswith(norm + "-")  # zone_id is a specific sub-area, e.g. "new-bark-town" ⊇ "new-bark"
@@ -75,8 +89,11 @@ for section in sections:
         if not name or name.startswith("---") or "PNJ / rôle" in name:
             continue
         entries.append((name, role.strip(), item.strip()))
-    if entries:
-        inventory[zone_id] = entries
+    # Zones vraiment vides (routes de transit pures, cf. "Aucun PNJ nommé
+    # confirmé") gardent leur entrée à [] plutôt que d'être ignorées — un
+    # placements/<zone_id>.json vide et explicite vaut mieux qu'un fichier
+    # absent, ambigu entre "pas de PNJ" et "pas encore traité".
+    inventory[zone_id] = entries
 
 print(f"Parsed {sum(len(v) for v in inventory.values())} PNJ across {len(inventory)} zones from {NPC_INVENTORY}")
 

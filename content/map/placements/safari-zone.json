@@ -1,0 +1,17 @@
+{
+  "zone_id": "safari-zone",
+  "npcs": [
+    {
+      "name": "Le gardien de réserve (orig. Baoba)",
+      "role_origin": "Rencontré Route 39, rappelle par téléphone, revu à l'entrée de la Safari Zone (fil complet, Pokégear-Téléphone)",
+      "item": "—",
+      "map_zone": "MAP_SAFARI_ZONE_GATE",
+      "tile_x": 0,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

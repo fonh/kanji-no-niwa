@@ -19,10 +19,21 @@ function normalizeMapName(mapName: string): string {
   return mapName.replace(/^MAP_/, '').toLowerCase().replace(/_/g, '-')
 }
 
+// zone_ids whose ROM map name shares no recognizable prefix with the slug
+// (translated name, renamed grouping) — mirrors ZONE_ID_ALIASES in
+// scripts/build/build-npc-placements.py, kept in sync by hand.
+const ZONE_ID_ALIASES: Record<string, string> = {
+  'route-10-power-plant': 'kanto-power-plant',
+  'mt-moon': 'mont-lune-route-3-4',
+}
+
 // Same matching as src/lib/npcs.ts: story-beat zone_ids are human slugs
 // ("new-bark-town"), registry names are ROM map names ("MAP_NEW_BARK").
 function zoneIdForMapName(mapName: string): string | undefined {
   const normalized = normalizeMapName(mapName)
+  for (const [prefix, zoneId] of Object.entries(ZONE_ID_ALIASES)) {
+    if (normalized === prefix || normalized.startsWith(`${prefix}-`)) return zoneId
+  }
   return knownZoneIds.find(zoneId => zoneId === normalized || zoneId.startsWith(`${normalized}-`))
 }
 

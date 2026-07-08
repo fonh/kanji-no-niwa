@@ -1,0 +1,41 @@
+{
+  "zone_id": "kanto-power-plant",
+  "npcs": [
+    {
+      "name": "Directeur",
+      "role_origin": "Furieux du vol d'une pièce mécanique, la récupère et donne une CT une fois rendue",
+      "item": "CT",
+      "map_zone": "MAP_ROUTE_10_POWER_PLANT_REPAIRED",
+      "tile_x": 22,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Vigile",
+      "role_origin": "Relaie un indice vers Azuria",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_10_POWER_PLANT_REPAIRED",
+      "tile_x": 16,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Ouvrier",
+      "role_origin": "Propose un troc simple",
+      "item": "Objet (troc)",
+      "map_zone": "MAP_ROUTE_10_POWER_PLANT_REPAIRED",
+      "tile_x": 3,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

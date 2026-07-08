@@ -1,0 +1,17 @@
+{
+  "zone_id": "route-46",
+  "npcs": [
+    {
+      "name": "Hiker Erik",
+      "role_origin": "Seul dresseur confirmé sur cette route (roster partagé avec Route 45 dans le guide, confirmé propre à Route 46)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_46",
+      "tile_x": 26,
+      "tile_y": 8,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

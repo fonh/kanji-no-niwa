@@ -1,0 +1,17 @@
+{
+  "zone_id": "lavender-town",
+  "npcs": [
+    {
+      "name": "Directeur de la station radio de Lavender Town",
+      "role_origin": "Remet la carte EXPN une fois la quête de la Centrale Électrique de Kanto résolue (finding 04-B1)",
+      "item": "Carte EXPN",
+      "map_zone": "MAP_LAVENDER",
+      "tile_x": 17,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

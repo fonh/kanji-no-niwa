@@ -7,7 +7,7 @@
       "item": "TM47 Acier Aile",
       "map_zone": "MAP_MOUNT_SILVER",
       "tile_x": 11,
-      "tile_y": 8,
+      "tile_y": 4,
       "facing": "south",
       "source": "generated",
       "matched_object_id": null,

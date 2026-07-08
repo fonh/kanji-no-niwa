@@ -1,0 +1,17 @@
+{
+  "zone_id": "route-41",
+  "npcs": [
+    {
+      "name": "Swimmer Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie (~10 nageurs)",
+      "role_origin": "Dresseurs maritimes",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_41",
+      "tile_x": 46,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

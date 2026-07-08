@@ -1,0 +1,29 @@
+{
+  "zone_id": "union-cave",
+  "npcs": [
+    {
+      "name": "Randonneurs, Maniaques, Dresseurs Ace (7 dresseurs au total, noms individuels non détaillés par le guide)",
+      "role_origin": "Dresseurs de combat",
+      "item": "—",
+      "map_zone": "MAP_UNION_CAVE_1F",
+      "tile_x": 10,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Psychic Nathan",
+      "role_origin": "Dresseur de combat — 🔍 attribution Union Cave vs. bordure Route 32/Centre de Recherche incertaine dans le guide, à trancher à la passe contenu",
+      "item": "—",
+      "map_zone": "MAP_UNION_CAVE_1F",
+      "tile_x": 31,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
+}

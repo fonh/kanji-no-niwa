@@ -344,6 +344,17 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 ---
 
+### union-cave — Union Cave
+
+**HGSS original :** Grotte reliant Route 32 à Route 33/Ecorcia, puzzle en 4 entrées cardinales.
+
+**Dans 漢字の庭 :**
+- 📍 7 dresseurs (Randonneurs, Maniaques, Dresseurs Ace) traversent la grotte, dont Psychic Nathan (frontière avec Route 32 incertaine dans le guide).
+- 📍 Puzzle en 4 temps : chaque entrée cardinale (NE/SE/NO/SO) nécessite un objet ou CS-Kanji différent pour être atteinte dans l'ordre.
+- 🔒 Coupe (切) pour l'une des entrées, Force (力) pour une autre.
+
+---
+
 ### route-33 — Route 33
 
 **HGSS original :** courte route entre Ruins of Alph et Azalea.
@@ -724,6 +735,25 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 ---
 
 ### route-40 — Route 40
+### route-41 — Route 41
+
+**HGSS original :** Route maritime entre Route 40 et Cianwood (défusionnée de Route 40, 2026-07-06, audit 04).
+
+**Dans 漢字の庭 :**
+- 📍 ~10 nageurs (Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie) racontent la légende du gardien des Îles Tourbillon.
+
+---
+
+### whirl-islands — Îles Tourbillon
+
+**HGSS original :** Donjon optionnel, seul terrain d'usage du HM Whirlpool.
+
+**Dans 漢字の庭 :**
+- 📍 Donjon optionnel d'exploration pure — seul vrai terrain d'usage du CS-Kanji 渦 (Tourbillon), qui n'ouvrait sinon presque rien.
+- 🔒 渦 (Tourbillon) requis pour les eaux agitées.
+
+---
+
 ### cianwood-city — Irisia
 
 **HGSS original :** Route 40 = mer. Route 41 = mer (suite). Cianwood = Chuck Gym (Fighting), Pharmacy, Safari Zone Gate.
@@ -761,6 +791,25 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - **Homme du Centre Pokémon** — explique que Chuck s'entraîne sous une chute d'eau, concentration totale, "il faut le battre pour rompre sa concentration" ; remarque l'absence du PNJ récurrent "homme à lunettes de soleil" (habituellement présent à chaque Gym), qui évite "les voyous" du Gym de Cianwood et conseille plutôt au Centre Pokémon.
 - **Gym Chuck — dresseurs** : Black Belt Nob, Black Belt Yoshi, Black Belt Lung, Black Belt Lao avant Chuck (Primeape/Poliwrath). Récompense : Storm Badge + TM01 Focus Punch.
 - **Femme de Chuck** — sortie du Gym, donne HM Vol après la défaite de Chuck.
+
+---
+
+### route-47-48-cliff-cave — Routes 47/48 / Cliff Cave
+
+**HGSS original :** Approche de la Safari Zone.
+
+**Dans 漢字の庭 :**
+- 📍 Approche vers la porte de la Safari Zone (voir section safari-zone) — aucun dresseur individuel nommé recensé sur ce tronçon.
+
+---
+
+### safari-zone — Safari Zone
+
+**HGSS original :** Zone de capture Pokémon à Cianwood.
+
+**Dans 漢字の庭 :**
+- 📍 Le gardien de réserve (orig. Baoba) accueille à l'entrée — fil amorcé Route 39, porté par le Pokégear-Téléphone.
+- 📍 Mécanique adaptée : contenus de lecture à collectionner (mangas, textes) à la place de Pokémon, ~3 prises par visite quotidienne (économie de rareté du Safari original transposée).
 
 ---
 
@@ -823,6 +872,18 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - **Professeur Elm** (appel) — inquiet des émissions radio, juste après le 7e badge.
 - **Gym Pryce — dresseurs** : Skier Jill, Skier Diana, Boarder Deandre, Boarder Gerardo, Boarder Patton avant Pryce (Seel/Piloswine/Dewgong, puzzle de blocs de glace). Récompense : Glacier Badge (Whirlpool en exploration) + TM07 Hail.
 - **QG Rocket — détail complet confirmé** : B1F statues-alarmes Persian (déclenchent des duos de Sbires), Scientist Gregg garde le PC qui coupe le système ; case-piège au sol contournable par l'est ; B2F Lance soigne et révèle l'emplacement verrouillé du transmetteur, rival croisé (déjà battu par Lance) ; B3F Scientist Ross, Scientist Mitch + 2 Sbires donnant les 2 mots de passe ; salle du chef = Petrel déguisé en "Boss" (Zubat/Koffing/Raticate), un Murkrow imite sa voix pour donner le mot de passe suivant ("Suis ce Murkrow !") ; salle du transmetteur = Ariana + Sbire en double face à Lance+joueur (Arbok/Drowzee/Murkrow/Gloom/Grimer) ; après sa défaite, 3 Electrode à neutraliser ; sortie par dalle de téléportation près de l'escalier B1F.
+
+---
+
+### route-43 — Route 43
+
+**HGSS original :** Relie Mahogany Town au Lac Colère, poste-frontière Team Rocket.
+
+**Dans 漢字の庭 :**
+- 📍 PNJ à la grille : Mr. Pokémon cherche une Écaille Rouge.
+- 📍 Poste-frontière Team Rocket au milieu de la route — rançonne le passage (1000 ¥) tant que le QG d'Acajou n'est pas tombé, redevient un poste normal ensuite (donne alors TM36 Sludge Bomb).
+- 📍 Dresseurs : Poké Maniac Ron/Ben/Brent, Picnicker Tiffany, Camper Spencer, Fisherman Marvin.
+- 🔒 Passage bloqué par le poste Rocket jusqu'à la chute du QG d'Acajou.
 
 ---
 
@@ -958,6 +1019,16 @@ La route se divise explicitement en un chemin est et un chemin ouest, impossible
 
 ---
 
+### route-46 — Route 46
+
+**HGSS original :** Petit connecteur au nord de Route 29, bloqué par un rebord à sens unique.
+
+**Dans 漢字の庭 :**
+- 📍 Hiker Erik, seul dresseur confirmé de la route.
+- 🔒 Rebord à sens unique côté Route 29 — accès différé (voir section route-29).
+
+---
+
 ### route-26 — Route 26
 ### route-27 — Route 27
 
@@ -1037,6 +1108,314 @@ Le texte source intégral de Koga/Bruno/Karen a été retrouvé via le PDF (qui 
 **Sourcé du guidebook — PNJ exhaustif de l'Antichambre/HQ de la Ligue (passe 2) :**
 - **Vieil homme avec son compagnon-télépathe** (hall d'entrée) — blague que son compagnon "ne pourra pas te ramener à la maison si tu te décourages à la Ligue".
 - **Homme bloquant l'entrée de la Ligue** — laisse passer une fois interpellé ; rappelle la règle "pas de sortie sans défaite, sinon retour au 1er membre".
+
+---
+
+### vermilion-city — Vermeille City
+
+**HGSS original :** Lt. Surge Gym (Électrik), Pokémon Fan Club, port du SS Aqua.
+
+**Dans 漢字の庭 :**
+- 📍 **Gym Lt. Surge** — 9e badge Kanto, thème Électrik, 3 門弟 (Gentleman Gregory, Guitarist Vincent, Juggler Horton) ; un arbre à couper ouvre l'accès à la clôture, intérieur à grille de poubelles cachant deux interrupteurs.
+- 📍 **Salon du keigo** (Président du Club des Fans) — mini-jeu « même intention, trois interlocuteurs » (ami/commerçant/supérieur), contenu gradué N4→N2.
+- 📍 **SS Aqua** — grand-père paniqué (petite-fille disparue, retrouvée au sous-sol) ; marin endormi (déclenche un combat) ; Capitaine distribue des Plaques collectionnables selon le jour.
+- 📍 **Steven (1ère apparition, cameo)** — intercepte le joueur devant le Club, intrigué par une espèce hors-région ; déclenche une rencontre légendaire ailleurs.
+- 📍 **Eusine (cameo)** — aperçu sur la jetée en pleine chasse à Suicune.
+- 🔒 Coupe (切) pour l'accès au Gym.
+
+---
+
+### route-6-kanto — Route 6 (Kanto)
+
+**HGSS original :** Route 5 / Route 6 / Passage Souterrain (Azuria–Safranville–Vermeille).
+
+**Dans 漢字の庭 :**
+- 📍 Dresseurs : Jumeaux Amy & Dani, Pique-niqueuse Selina, Campeur Virgil.
+- 📍 Vieille dame (Route 5) donne un Talisman Anti-Combat, pressentant un danger.
+- 📍 PNJ du Passage Souterrain échange une spécialité locale (RageCandyBar) contre une CT.
+- 🔒 Passage Souterrain fermé tant que la Centrale Électrique n'est pas relancée.
+
+---
+
+### saffron-city — Safranville
+
+**HGSS original :** Sabrina Gym (Psy), Silph Co., gare du Magnet Train, Dojo.
+
+**Dans 漢字の庭 :**
+- 📍 **Gym Sabrina** — 10e badge Kanto, labyrinthe de 9 chambres reliées par téléportation (thème 心/精神), 4 門弟 (Medium Darcy, Psychic Franklin, Psychic Jared, Medium Rebecca).
+- 📍 Karatéka du dojo absent — parti s'entraîner au Mont Mortier (callback Johto) ; le dojo devient un hub de revanche 師範 post-16-badges.
+- 📍 **Steven (Silph Co., 1ère rencontre)** — répond à une question, reçoit un compagnon-cadeau d'une autre région.
+- 📍 **Steven (Silph Co., revisite)** — propose un échange direct contre un compagnon différent, conclut le fil Steven.
+- 📍 **Copycat** — imite le joueur ; sa poupée perdue (livrée depuis Vermeille) donne le Pass Train Aimant.
+- 📍 Puzzle d'appareils électroménagers (Silph Co. sous-sol) — mini-gimmick d'exploration sans combat.
+
+---
+
+### route-9-10-rocktunnel — Routes 9-10 / Rock Tunnel
+
+**HGSS original :** Route 9, Route 10, Rock Tunnel (traversée sombre, HM Flash).
+
+**Dans 漢字の庭 :**
+- 📍 Dresseurs Route 9 : Campeur Sid, Randonneur Eoin, Pique-niqueuses Heidi/Edna, Campeur Dean, Randonneur Sidney.
+- 📍 Route 10 : au moins 2 Randonneurs.
+- 📍 Garçon au Centre Pokémon voisin relaie le vol de la pièce mécanique à la Centrale (indice).
+- 🔒 Rock Tunnel plongé dans le noir (Flash, couloir narratif) ; 2 objets accessibles seulement après Force (力).
+
+---
+
+### lavender-town — Lavender Town
+
+**HGSS original :** Station radio, tour (contenu narratif hors-scope pour l'adaptation kanji).
+
+**Dans 漢字の庭 :**
+- 📍 Le directeur de la station radio remet la carte EXPN une fois la quête de la Centrale Électrique de Kanto résolue (finding 04-B1).
+- 🔒 Carte EXPN nécessaire en amont pour débloquer l'émission qui réveille le Ronflex bloquant (Routes 11/12, côté Kanto).
+
+---
+
+### route-8-kanto — Route 8 (Kanto)
+
+**HGSS original :** Route optionnelle Safranville↔Lavender.
+
+**Dans 漢字の庭 :**
+- 📍 Route optionnelle (plateau, zéro croissance requise) — contenu déjà rattaché à route-7-kanto (roster Route 7/8 fusionné dans le guide) : Bikers « turbulents » non nommés.
+
+---
+
+### kanto-power-plant — Centrale Électrique
+
+**HGSS original :** Kanto Power Plant, vol de pièce mécanique.
+
+**Dans 漢字の庭 :**
+- 📍 Directeur furieux du vol d'une pièce mécanique — la récupère et donne une CT une fois la pièce rendue.
+- 📍 Vigile relaie un indice vers Azuria.
+- 📍 Ouvrier propose un troc simple.
+- 📍 Vrai hub de la quête « pièce volée » qui déverrouille aussi le Passage Souterrain.
+
+---
+
+### cerulean-city — Azuria City
+
+**HGSS original :** Misty Gym (Eau), boutique de vélos.
+
+**Dans 漢字の庭 :**
+- 📍 Gym trouvé vide à l'arrivée — un Sbire Rocket isolé (dernier vestige de la Team Rocket dissoute) y est surpris, poursuivi jusqu'à un pont de route puis affronté ; avoue avoir volé la pièce mécanique de la Centrale, cachée dans le Gym.
+- 📍 **Gym Misty** — 11e badge Kanto, trouvée hors du Gym (point de vue) avant que le Gym ne se peuple de ses 5 门弟 (dont Swimmer Briana, Swimmer Parker) — structure « Gym fermé jusqu'à trouver le leader ailleurs », déjà utilisée pour Jasmine côté Johto.
+- 📍 Gérant du magasin de vélos évoque « un garçon et son vélo » trois ans plus tôt (résonance avec le lore Red).
+- 📍 Garçon récurrent au nord indique où trouver Misty, puis signale une anomalie à la rivière.
+
+---
+
+### route-5-kanto — Route 5 (Kanto)
+
+**HGSS original :** Route optionnelle Safranville↔Azuria.
+
+**Dans 漢字の庭 :**
+- 📍 Route optionnelle (plateau, zéro croissance requise) — contenu déjà rattaché à route-6-kanto (roster Route 5/6/Passage Souterrain fusionné dans le guide) : vieille dame donnant un Talisman Anti-Combat.
+
+---
+
+### route-24-25-kanto — Routes 24-25 (Kanto)
+
+**HGSS original :** Route 24 (Azuria), Route 25 (Cap d'Azuria).
+
+**Dans 漢字の庭 :**
+- 📍 Route 24 : combat scripté obligatoire contre le voleur de la pièce mécanique (Sbire isolé, dernier vestige de la Team Rocket « dissoute »).
+- 📍 Route 25 : gauntlet obligatoire de 6 dresseurs en ligne (Campeur Lloyd, Fille Laura, Intello Pat, Écolier Joe, Fille Shannon, Dresseur Ace Kevin, ce dernier remet une Pépite), plus un 7e dresseur en embuscade.
+- 📍 Grand-père de Bill (chaumière au bord de mer) — objet évolutif au choix contre présentation d'un compagnon précis.
+- 📍 Misty trouvée en rendez-vous au bout de la route ; scène de poursuite du kanji-esprit légendaire avec Eusine en commentateur.
+- 🔒 Coupe (切) et Surf (水) requis.
+
+---
+
+### route-7-kanto — Route 7 (Kanto)
+
+**HGSS original :** Route reliant Céladia à Safranville.
+
+**Dans 漢字の庭 :**
+- 📍 Dresseurs : Young Couple Moe & Lulu, Super Nerd Sam.
+
+---
+
+### celadon-city — Céladia
+
+**HGSS original :** Erika Gym (Plante), Grand magasin (Celadon Department Store), Game Corner.
+
+**Dans 漢字の庭 :**
+- 📍 **Gym Erika** — 12e badge Kanto, 4 門弟 (Picnicker Tanya, Beauty Julia, Twins Jo & Zoe, Lass Michelle).
+- 📍 Game Corner adapté en mini-jeu de kanji contre jetons — mêmes tables Kanji Flip + kanji jumeaux que Doublonville, difficulté N2/N1.
+- 📍 Homme au sommet des Condominiums, objet uniquement visible 20h-4h.
+- 📍 Masques (Turtwig/Chimchar/Piplup) — callback vers le Dress-Up Shop du Tunnel de Doublonville.
+- 📍 « Réalisateur » GAME FREAK — quête à 2 paliers sur le Kanjidex (`count(kanji_studied, 1000)` puis `2136`).
+
+---
+
+### route-16-17-18-cycling-road — Routes 16-18 / Cycling Road
+
+**HGSS original :** Route 16, Route 17 (Cycling Road), Route 18.
+
+**Dans 漢字の庭 :**
+- 📍 Route 16 : Motard Dale + PNJ récurrent qui enseigne « un mot à la mode » par jour à qui revient le voir.
+- 📍 Route 17 (descente à vélo dédiée) : 12 Motards au fil du parcours (3 nommés : Joel, Jacob, Aiden) — première occasion d'« échanger les numéros » pour un système de revanche.
+- 📍 Route 18 : 9 dresseurs (7 Motards nommés + 2 Dresseurs d'Oiseaux).
+- 🔒 Bicyclette obligatoire pour passer la porte suivante (prêtée par le gérant de Doublonville) ; Coupe (切) pour l'ensemble du secteur.
+
+---
+
+### fuchsia-city — Fuchsia City
+
+**HGSS original :** Janine Gym (Poison), Pal Park, volcan au sud.
+
+**Dans 漢字の庭 :**
+- 📍 **Gym Janine** — 13e badge Kanto, labyrinthe de murs transparents (thème 毒/prudence), 4 門弟 (Picnicker Cindy, Camper Barry, Lass Alice, Lass Linda).
+- 📍 Pal Park au nord — bâtiment à intérieur réel mais sans fonction de transfert (coupe assumée, même statut que le Battle Frontier) ; le gardien est confirmé comme le fils de Baoba (callback Johto).
+- 📍 Fille au nord du Centre Pokémon explique que la Zone Safari a déménagé au Johto — lore uniquement.
+- 🔒 Route sud vers Île Braise coupée par un volcan (détour narratif).
+
+---
+
+### route-14-15-kanto — Routes 14-15 (Kanto)
+
+**HGSS original :** Route 14, Route 15.
+
+**Dans 漢字の庭 :**
+- 📍 18 dresseurs confirmés au total (Jumeaux Kay & Tia, Passionnée Eleanor, Enseignante Colette, 2 Écoliers, Enseignante Hillary, Passionné Boone côté R15 ; Dresseur d'Oiseaux Josh, 5 Écoliers, 2 Passionnés, Enseignante Clarice, Dresseur d'Oiseaux Roy côté R14).
+- 📍 Fille dans les hautes herbes (R14 ouest) demande à voir un compagnon précis contre un objet porté rare.
+- 📍 Première apparition à pied du kanji-esprit légendaire (Suicune-analogue), Eusine en poursuite, oriente le joueur vers Route 25.
+- 🔒 Coupe (切) requis ; rebords à sens unique imposant un ordre de traversée précis.
+
+---
+
+### route-11-12-13-diglett — Routes 11-13 / Grotte Diglett
+
+**HGSS original :** Route 11, Route 12 (« Silence Bridge »), Route 13, Grotte Diglett.
+
+**Dans 漢字の庭 :**
+- 📍 Route 12 : Pêcheurs génériques — le pont doit son nom au fait qu'ils marchent en silence pour ne pas effrayer les Pokémon.
+- 📍 Route 13 : Camper Clark, Hiker Kenny, Picnicker Ginger, Pokéfan Alex, Camper Tanner (11 dresseurs au total confirmés).
+- 📍 Grotte Diglett : PNJ de couleur locale surpris par les créatures qui surgissent du sol ; portier remet un objet de quête confié par le Pr. Chen/Oak ; une maison voisine donne une Pépite.
+- 🔒 Passages nécessitant Force (力) pour un accès complet (donjon « à revisiter »).
+
+---
+
+### pewter-city — Argenta City
+
+**HGSS original :** Brock Gym (Roche), Musée des Sciences.
+
+**Dans 漢字の庭 :**
+- 📍 **Gym Brock** — 14e badge Kanto, seul Gym Kanto sans garde (0 門弟, exception sourcée) — on peut marcher droit jusqu'à Brock.
+- 📍 Musée des Sciences (restauration de fossiles) — les panneaux d'exposition deviennent 3-4 textes secondaires N1 (fossiles/espace).
+- 📍 Steven (cameo) — Champion visiteur absorbé dans une expo minérale ; prérequis silencieux pour son fil, résolu à Safranville.
+- 📍 Vieil homme sur la colline près du Poké Mart donne l'Aile Argent/Arc-en-ciel (callback vers le climax de Tour Jo).
+
+---
+
+### mont-lune-route-3-4 — Mont Lune / Routes 3-4
+
+**HGSS original :** Mt. Moon, Route 3, Route 4.
+
+**Dans 漢字の庭 :**
+- 📍 **Embuscade Silver** — 1ère réapparition du Rival depuis le Hall of Fame : vrai combat (26 questions, N1, zone 1800–1820), quête `silver-kanto` ; motive la Tag Battle de l'Antre du Dragon (joueur + Silver contre Lance + Clair) puis les revanches hebdomadaires au Plateau Indigo (lundi/mercredi).
+- 📍 Dresseurs Route 3 : Youngster Warren, Youngster Jimmy, Hiker Bruce, Firebreather Burt.
+- 📍 Dresseurs Route 4 : Youngster Regis, Double Team Zac & Jen, Firebreather Otis, Black Belt Manford, Black Belt Ander, Hiker Dwight, Picnicker Hope, Bird Keeper Hank, Picnicker Sharon.
+- 📍 Petit comptoir marchand au milieu de la traversée du Mont Lune ; lore de météorites à l'énergie étrange, aucun dresseur nommé dans la grotte elle-même.
+
+---
+
+### route-2-foret-viridian — Route 2 / Forêt Viridian
+
+**HGSS original :** Route 2 et Forêt Viridian (complète la Route 2 déjà partielle côté Johto).
+
+**Dans 漢字の庭 :**
+- 📍 5 Insectophiles supplémentaires à l'intérieur de la forêt (thème de classe homogène, 100% Insectophiles).
+- 📍 Le texte source encourage explicitement la fouille systématique de la zone (objets perdus dans la pénombre) — bon gabarit de scavenger-hunt de zone.
+- 🔒 Coupe (切) pour l'arbre côté Argenta.
+
+---
+
+### viridian-city — Vertville (1ʳᵉ visite, Gym fermé)
+
+**HGSS original :** Blue Gym (Mixte), Trainer House.
+
+**Dans 漢字の庭 :**
+- 📍 **Gym Blue** — dernier Gym (16e badge Kanto), verrouillé jusqu'à la fin (le vieil homme devant la porte laisse passer seulement après Blaine + Blue rencontré à Île Braise) ; sol à tuiles-flèches qui déplacent le joueur dans une direction fixe.
+- 📍 Trainer House — un combat par jour, structure « défi quotidien ».
+- 📍 Rumeur ambiante au Centre Pokémon pousse le joueur vers Île Braise.
+- 📍 Après victoire sur Blue : le Pr. Chen/Oak appelle immédiatement à la sortie du Gym.
+
+---
+
+### route-22-kanto — Route 22 (Kanto)
+
+**HGSS original :** Route ouest de Vertville, menant vers le Mont Gris.
+
+**Dans 漢字の庭 :**
+- 📍 Corridor de transition vers le Mont Gris, décrit par le guide comme « délibérément vide » — même source que mt-silver-route-28, voir cette section pour la seule trouvaille du secteur (l'Idole retraitée).
+
+---
+
+### route-1-kanto — Route 1 (Kanto)
+
+**HGSS original :** Route Vertville ↔ Bourg-Origine.
+
+**Dans 漢字の庭 :**
+- 📍 4 dresseurs (Écolier Sherman, Écolier Danny, Dresseur Ace French, Dresseur Ace Quinn) ; aucun obstacle.
+
+---
+
+### pallet-town — Bourg-Origine
+
+**HGSS original :** Labo du Pr. Chen/Oak, maisons du héros et de Blue — plus petite ville du jeu (pas de Centre Pokémon ni de Poké Mart).
+
+**Dans 漢字の庭 :**
+- 📍 **Trois visites distinctes** : (1) première visite, juste après Vertville — Oak n'a encore rien à donner, « reviens une fois tous les badges Kanto en poche » ; (2) après avoir vaincu Blue à Vertville — Oak donne la permission d'accès à Mont Gris ; (3) après Red — choix de récompense symbolique.
+- 📍 **Daisy** (sœur de Blue) toilette le compagnon du joueur tous les jours 15h-16h ; au bout de 7 visites cumulées, donne le contact de Blue pour un combat de revanche post-16-badges.
+- 📍 Pr. Chen/Oak évalue le Kanjidex — commente le nombre de kanji étudiés/maîtrisés par paliers de phrases.
+- 📍 Photographe itinérant — présent mer/jeu/ven uniquement.
+
+---
+
+### route-21-kanto — Route 21 (Kanto)
+
+**HGSS original :** Route Bourg-Origine ↔ Île Braise, eau ouverte semée de bancs de sable.
+
+**Dans 漢字の庭 :**
+- 📍 5 dresseurs nommés (Nageurs/Pêcheurs/Dresseur d'Oiseaux) ; l'éruption volcanique d'Île Braise y est également mentionnée.
+- 🔒 Surf (水) ; objet bonus accessible seulement après Force (力).
+
+---
+
+### cinnabar-island — Île Braise
+
+**HGSS original :** Cinnabar Island, dévastée par une éruption volcanique un an avant l'arrivée du joueur.
+
+**Dans 漢字の庭 :**
+- 📍 Île sinistrée — seul le Centre Pokémon a survécu, population évacuée ; le vrai Gym de Blaine a été relocalisé aux Seafoam Islands (accessible via Route 20/21).
+- 📍 **Blue (1ère rencontre)** — au nord du Centre Pokémon, renvoie à plus tard.
+- 📍 **Blue (revisite tardive, post-Rock Climb)** — donne un objet porté (Magmarizer).
+- 📍 Panneau de relocalisation du Gym, pointe vers Seafoam.
+
+---
+
+### route-19-20-seafoam — Routes 19-20 / Seafoam Islands
+
+**HGSS original :** Route 19, Route 20, Seafoam Islands — Gym de Blaine relocalisé.
+
+**Dans 漢字の庭 :**
+- 📍 Route 20 (Île Braise ↔ Seafoam) : 7-8 dresseurs (Nageurs/Campeurs/Pique-niqueuses/Dresseurs d'Oiseaux nommés).
+- 📍 Route 19 (Seafoam ↔ Fuchsia) : 7 Nageurs nommés.
+- 📍 **Gym Blaine relocalisé ici** — classes de dresseurs à thème hivernal (Surfeur des neiges/Skieuse) ; puzzle B1F (blocs à pousser) et sol de glace glissant B2F où les dresseurs postés servent de « freins » pour stopper la glissade.
+- 🔒 Route 19 fermée narrativement tant que Seafoam n'est pas résolu (« travaux ») ; Surf (水), Force (力) et un CS supplémentaire (sans équivalent) pour l'ensemble.
+
+---
+
+### cerulean-cave — Grotte Azuria (postgame optionnel)
+
+**HGSS original :** Cerulean Cave, donjon solo post-16-badges.
+
+**Dans 漢字の庭 :**
+- 📍 Donjon solo post-16-badges optionnel (hors séquence principale, même statut que Grotte Sombre/Ruines d'Alph intérieur côté Johto) — aucun dresseur.
+- 🔒 Gardien à l'entrée jusqu'aux 8 badges Kanto complets (s'efface définitivement une fois rencontré) ; Flash (grotte plongée dans le noir), Surf (水) + Force (力) pour la traversée complète.
 
 ---
 

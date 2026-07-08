@@ -28,7 +28,7 @@
     {
       "name": "Professeur Elm",
       "role_origin": "Fait choisir un starter parmi 3, envoie en mission chez Mr. Pokémon, panique lors du cambriolage",
-      "item": "Everstone (après éclosion de l'œuf), grand texte d'Elm (après 8 badges)",
+      "item": "Everstone (après éclosion de l'œuf), **grand texte d'Elm** (après 8 badges — « Master Ball » corrigé 2026-07-07, passe de vérification : reliquat de R11)",
       "map_zone": "MAP_NEW_BARK",
       "tile_x": 31,
       "tile_y": 0,

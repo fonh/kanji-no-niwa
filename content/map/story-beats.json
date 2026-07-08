@@ -5,8 +5,8 @@
       "order": 0,
       "beats": [
         {
-          "type": "threshold",
-          "text": "Onboarding (Elm + leçon 一), Prof Elm apparition post-Lance (« événement seuil rank 4 » purgé 2026-07-06, audit 03/04 — aucun système de rank ; Fukuda supprimé 2026-07-08, audit 10, tranché au grill — voir PRD § Mentors)"
+          "type": "event",
+          "text": "Onboarding (Elm + leçon 一), Prof Elm apparition post-Lance"
         }
       ],
       "locks": [
@@ -86,7 +86,7 @@
       "beats": [
         {
           "type": "rocket",
-          "text": "**Quête Rocket — Éclaireurs** : bloque la descente vers les Ruines d'Alph jusqu'à être battu. Kanji N5 basics (日、本、人、字、語). Gate : bloque l'accès aux Ruines Arcaniques."
+          "text": "**Quête Rocket — Éclaireurs** (combat scripté bloquant) : bloque la descente vers les Ruines d'Alph jusqu'à être battu. Kanji N5 basics (日、本、人、字、語). Gate : bloque l'accès aux Ruines Arcaniques. *(Renuméroté 2026-07-06, repasse progression P-7 : l'ancienne numérotation « Événement Rocket #1–#9 » impliquait un système de 9 événements que le PRD ne définit pas — seuls les 3 lieux canoniques (Puits Ramoloss, Repaire de Mékanos, Tour Radio) écrivent `rocket_progress` et déclenchent les lettres du mentor, notés « Événement Rocket 1/3–3/3 » ; tout le reste devient « Quête Rocket », des `Quest` ordinaires sans table dédiée.)*"
         }
       ],
       "locks": []
@@ -97,20 +97,37 @@
       "beats": [
         {
           "type": "rocket",
-          "text": "**Quête Rocket — Pillage des Inscriptions** (optionnel) : kanji 文、字、古、記、史"
+          "text": "**Quête Rocket — Pillage des Inscriptions** (optionnelle) : kanji 文、字、古、記、史 *(ex-« Événement #2 », renuméroté 2026-07-06, P-7)*"
         }
       ],
       "locks": []
     },
+    "union-cave": {
+      "display_name": "Union Cave",
+      "order": 9,
+      "beats": [
+        {
+          "type": "event",
+          "text": "7 dresseurs (Randonneurs, Maniaques, Dresseurs Ace) traversent la grotte, dont Psychic Nathan (frontière avec Route 32 incertaine dans le guide)."
+        },
+        {
+          "type": "event",
+          "text": "Puzzle en 4 temps : chaque entrée cardinale (NE/SE/NO/SO) nécessite un objet ou CS-Kanji différent pour être atteinte dans l'ordre."
+        }
+      ],
+      "locks": [
+        "Coupe (切) pour l'une des entrées, Force (力) pour une autre."
+      ]
+    },
     "route-33": {
       "display_name": "Route 33",
-      "order": 9,
+      "order": 10,
       "beats": [],
       "locks": []
     },
     "azalea-town": {
       "display_name": "Ecorcia",
-      "order": 10,
+      "order": 11,
       "beats": [
         {
           "type": "rival",
@@ -118,25 +135,25 @@
         },
         {
           "type": "rocket",
-          "text": "Événement Rocket 1/3 (Slowpoke Well) débloque le Gym Bugsy"
+          "text": "Événement Rocket 1/3 (Slowpoke Well) débloque le Gym Bugsy *(renuméroté 2026-07-06, P-7)*"
         }
       ],
       "locks": []
     },
     "slowpoke-well": {
       "display_name": "Puits Ramoloss",
-      "order": 11,
+      "order": 12,
       "beats": [
         {
           "type": "rocket",
-          "text": "**Événement Rocket 1/3 — Proton — Opération Ramoloss** : kanji 捕、縛、操、支、制. Bloque l'accès au Gym Bugsy. HP battle avec Executive Proton."
+          "text": "**Événement Rocket 1/3 — Proton — Opération Ramoloss** *(ex-« #3 », renuméroté 2026-07-06, P-7 — 1er des 3 lieux canoniques de `rocket_progress`)* : kanji 捕、縛、操、支、制. Bloque l'accès au Gym Bugsy. HP battle avec Executive Proton."
         }
       ],
       "locks": []
     },
     "ilex-forest": {
       "display_name": "Forêt Secte",
-      "order": 12,
+      "order": 13,
       "beats": [
         {
           "type": "kimono",
@@ -153,7 +170,7 @@
     },
     "route-34": {
       "display_name": "Route 34",
-      "order": 13,
+      "order": 14,
       "beats": [
         {
           "type": "event",
@@ -164,7 +181,7 @@
     },
     "goldenrod-city": {
       "display_name": "Doublonville",
-      "order": 14,
+      "order": 15,
       "beats": [
         {
           "type": "kimono",
@@ -175,13 +192,13 @@
     },
     "route-35": {
       "display_name": "Route 35",
-      "order": 15,
+      "order": 16,
       "beats": [],
       "locks": []
     },
     "national-park": {
       "display_name": "Parc National",
-      "order": 16,
+      "order": 17,
       "beats": [
         {
           "type": "event",
@@ -192,13 +209,13 @@
     },
     "route-36": {
       "display_name": "Route 36",
-      "order": 17,
+      "order": 18,
       "beats": [],
       "locks": []
     },
     "route-37": {
       "display_name": "Route 37",
-      "order": 18,
+      "order": 19,
       "beats": [
         {
           "type": "event",
@@ -213,11 +230,11 @@
     },
     "ecruteak-city": {
       "display_name": "Rosalia",
-      "order": 19,
+      "order": 20,
       "beats": [
         {
           "type": "rival",
-          "text": "**Silver apparition #3** (Tour Embrasée, haut de l'échelle vers le sous-sol — « devant Tour Jo, studied ≥ 550 » corrigé 2026-07-07, synthèse, aligné V-15 audit 07 : la table PRD et le guidebook placent #3 à la Tour Embrasée, zone burned-tower) : kanji 影、闇、忘、去、断、孤. Voir `curriculum-checkpoints.md` § Règle de Silver."
+          "text": "**Silver apparition #3** (Tour Embrasée, en haut de l'échelle vers B1F — voir section burned-tower) : kanji 影、闇、忘、去、断、孤. ⚠️ Renuméroté de #2 à #3 (kanji inchangé, déjà correct) — voir `curriculum-checkpoints.md` § Règle de Silver. *(« devant Tour Jo, studied ≥ 550 » corrigé 2026-07-07, audit 07, passe de vérification V-15 : contredisait la section burned-tower du même fichier, la table PRD (#3 = Tour Embrasée) et la calibration N3 de la zone — le seuil 550 était un fossile.)*"
         },
         {
           "type": "kimono",
@@ -225,7 +242,7 @@
         },
         {
           "type": "kimono",
-          "text": "Événement collectif Kimono Girls (après toutes les 5 battues) — scène à Tour Jo"
+          "text": "Événement collectif Kimono Girls (post-remise du grand texte d'Elm — les 5 rencontres individuelles sont des scènes/leçons, pas des combats ; « après toutes les 5 battues » corrigé 2026-07-07, audit 07, V-16, reliquat d'avant l'audit 01) — gauntlet au Théâtre de Danse, puis danse rituelle à Tour Jo"
         },
         {
           "type": "event",
@@ -240,24 +257,24 @@
     },
     "burned-tower": {
       "display_name": "Tour Embrasée",
-      "order": 20,
+      "order": 21,
       "beats": [
         {
           "type": "rocket",
-          "text": "**Quête Rocket — Traque des Bêtes Sacrées** (optionnel) : kanji 炎、雷、洪、猛、霊"
+          "text": "**Quête Rocket — Traque des Bêtes Sacrées** (optionnelle) : kanji 炎、雷、洪、猛、霊 *(ex-« Événement #4 », renuméroté 2026-07-06, P-7)*"
         }
       ],
       "locks": []
     },
     "route-38": {
       "display_name": "Route 38",
-      "order": 21,
+      "order": 22,
       "beats": [],
       "locks": []
     },
     "route-39": {
       "display_name": "Route 39",
-      "order": 22,
+      "order": 23,
       "beats": [
         {
           "type": "event",
@@ -272,7 +289,7 @@
     },
     "olivine-city": {
       "display_name": "Oliville",
-      "order": 23,
+      "order": 24,
       "beats": [],
       "locks": [
         "Route 40 (mer) → nécessite 水 CS-Kanji"
@@ -280,31 +297,81 @@
     },
     "route-40": {
       "display_name": "Route 40",
-      "order": 24,
+      "order": 25,
       "beats": [],
       "locks": []
     },
+    "route-41": {
+      "display_name": "Route 41",
+      "order": 26,
+      "beats": [
+        {
+          "type": "event",
+          "text": "~10 nageurs (Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie) racontent la légende du gardien des Îles Tourbillon."
+        }
+      ],
+      "locks": []
+    },
+    "whirl-islands": {
+      "display_name": "Îles Tourbillon",
+      "order": 27,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Donjon optionnel d'exploration pure — seul vrai terrain d'usage du CS-Kanji 渦 (Tourbillon), qui n'ouvrait sinon presque rien."
+        }
+      ],
+      "locks": [
+        "渦 (Tourbillon) requis pour les eaux agitées."
+      ]
+    },
     "cianwood-city": {
       "display_name": "Irisia",
-      "order": 25,
+      "order": 28,
       "beats": [],
       "locks": [
         "Toute la zone Route 40 (mer complète jusqu'à Cianwood) → accessible via 水 CS-Kanji"
       ]
     },
+    "route-47-48-cliff-cave": {
+      "display_name": "Routes 47/48 / Cliff Cave",
+      "order": 29,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Approche vers la porte de la Safari Zone (voir section safari-zone) — aucun dresseur individuel nommé recensé sur ce tronçon."
+        }
+      ],
+      "locks": []
+    },
+    "safari-zone": {
+      "display_name": "Safari Zone",
+      "order": 30,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Le gardien de réserve (orig. Baoba) accueille à l'entrée — fil amorcé Route 39, porté par le Pokégear-Téléphone."
+        },
+        {
+          "type": "event",
+          "text": "Mécanique adaptée : contenus de lecture à collectionner (mangas, textes) à la place de Pokémon, ~3 prises par visite quotidienne (économie de rareté du Safari original transposée)."
+        }
+      ],
+      "locks": []
+    },
     "route-42": {
       "display_name": "Route 42",
-      "order": 26,
+      "order": 31,
       "beats": [],
       "locks": []
     },
     "mt-mortar": {
       "display_name": "Mont Mortier",
-      "order": 27,
+      "order": 32,
       "beats": [
         {
           "type": "event",
-          "text": "Un **maître méditant** (orig. \"Karate King\") se trouve tout au fond de la grotte, accessible seulement après une traversée d'eau. Il engage le combat si on lui parle ; en cas de victoire, il offre un objet de collection \"en reconnaissance de la victoire\" (« compagnon offert » adapté 2026-07-07, synthèse : le compagnon du joueur est un Pikachu unique et cosmétique, PRD § Compagnon — les dons de compagnons deviennent des objets de collection). Mini-donjon dōjō avec combat-épreuve final — réintégration v1 actée (2026-07-06, décision « aucune v2 »), chiffrage audit 09. Cohérent avec l'identité Sensei/Dōjō du jeu."
+          "text": "Un **maître méditant** (orig. \"Karate King\") se trouve tout au fond de la grotte, accessible seulement après une traversée d'eau. Il engage le combat si on lui parle ; en cas de victoire, il offre un compagnon \"en reconnaissance de la victoire\". C'est le matériau idéal pour transformer \"l'entrée de cave décorative\" en un vrai mini-donjon dōjō avec un combat-épreuve final et une récompense narrative — cohérent avec l'identité Sensei/Dōjō du jeu. **Réintégration v1 actée (2026-07-06, décision « aucune v2 », chiffrage audit 09).**"
         }
       ],
       "locks": [
@@ -313,7 +380,7 @@
     },
     "mahogany-town": {
       "display_name": "Acajou Ville",
-      "order": 28,
+      "order": 33,
       "beats": [
         {
           "type": "rival",
@@ -322,13 +389,34 @@
       ],
       "locks": []
     },
+    "route-43": {
+      "display_name": "Route 43",
+      "order": 34,
+      "beats": [
+        {
+          "type": "event",
+          "text": "PNJ à la grille : Mr. Pokémon cherche une Écaille Rouge."
+        },
+        {
+          "type": "rocket",
+          "text": "Poste-frontière Team Rocket au milieu de la route — rançonne le passage (1000 ¥) tant que le QG d'Acajou n'est pas tombé, redevient un poste normal ensuite (donne alors TM36 Sludge Bomb)."
+        },
+        {
+          "type": "event",
+          "text": "Dresseurs : Poké Maniac Ron/Ben/Brent, Picnicker Tiffany, Camper Spencer, Fisherman Marvin."
+        }
+      ],
+      "locks": [
+        "Passage bloqué par le poste Rocket jusqu'à la chute du QG d'Acajou."
+      ]
+    },
     "lake-of-rage": {
       "display_name": "Lac Colère",
-      "order": 29,
+      "order": 35,
       "beats": [
         {
           "type": "rocket",
-          "text": "**Événement Rocket 2/3 — Ariana — Repaire de Mékanos** : lié au Lac Colère. Kanji 欺、偽、惑、騙、詐. Bloque l'accès à Pryce's Gym."
+          "text": "**Événement Rocket 2/3 — Ariana — Repaire de Mékanos** *(ex-« #5 », renuméroté 2026-07-06, P-7)* : lié au Lac Colère. Kanji 欺、偽、惑、騙、詐. Bloque l'accès à Pryce's Gym."
         },
         {
           "type": "gym",
@@ -339,17 +427,17 @@
     },
     "route-44": {
       "display_name": "Route 44",
-      "order": 30,
+      "order": 36,
       "beats": [],
       "locks": []
     },
     "ice-path": {
       "display_name": "Chemin Glacé",
-      "order": 31,
+      "order": 37,
       "beats": [
         {
           "type": "rocket",
-          "text": "**Quête Rocket — Retardataires** (optionnel) : kanji 孤、寒、凍、迷、忘. Reward : lore entry."
+          "text": "**Quête Rocket — Retardataires** (optionnelle) : kanji 孤、寒、凍、迷、忘. Reward : lore entry. *(Ex-« Événement #7 », renuméroté 2026-07-06, P-7)*"
         },
         {
           "type": "event",
@@ -364,7 +452,7 @@
     },
     "blackthorn-city": {
       "display_name": "Ebènelle",
-      "order": 32,
+      "order": 38,
       "beats": [
         {
           "type": "gym",
@@ -375,15 +463,15 @@
     },
     "dragons-den": {
       "display_name": "Antre du Dragon",
-      "order": 33,
+      "order": 39,
       "beats": [
         {
           "type": "rocket",
-          "text": "**Quête Rocket — L'Émissaire** (optionnel) : pas de combat. Quiz de traduction d'une lettre en japonais. Reward : lore entry Dragon's Den + beat narratif."
+          "text": "**Quête Rocket — L'Émissaire** (optionnelle) : pas de combat. Quiz de traduction d'une lettre en japonais. Reward : lore entry Dragon's Den + beat narratif. *(Ex-« Événement #8 », renuméroté 2026-07-06, P-7)*"
         },
         {
-          "type": "event",
-          "text": "NPC quest N1 : inscription au fond de l'antre, 4 lignes à traduire. Reward : lore entry + dialogue du mentor."
+          "type": "gym",
+          "text": "NPC quest N1 : inscription au fond de l'antre, 4 lignes à traduire (registre classique). **Reward = le « Trophée Antre du Dragon » (défini 2026-07-07, synthèse, tranché au grill)** : item `unique` `trophee-antre` + lore entry + dialogue du mentor — c'est **cette quête optionnelle de lecture N1** (pas le quiz du Maître, qui est sur le chemin critique du 印 n°8) que testent les 3 gates `item_owned(trophee-antre)` : Suicune Route 25, accès Mont Gris, combat Red. Quête accomplissable en revisite fin de Kanto (lecture N1 requise) — l'Antre gagne sa raison de re-visite endgame."
         },
         {
           "type": "event",
@@ -398,29 +486,42 @@
     },
     "route-45": {
       "display_name": "Route 45",
-      "order": 34,
+      "order": 40,
       "beats": [],
       "locks": []
     },
     "dark-cave": {
       "display_name": "Grotte Sombre",
-      "order": 35,
+      "order": 41,
       "beats": [],
       "locks": []
     },
+    "route-46": {
+      "display_name": "Route 46",
+      "order": 42,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Hiker Erik, seul dresseur confirmé de la route."
+        }
+      ],
+      "locks": [
+        "Rebord à sens unique côté Route 29 — accès différé (voir section route-29)."
+      ]
+    },
     "route-26": {
       "display_name": "Route 26",
-      "order": 36,
+      "order": 43,
       "beats": [],
       "locks": []
     },
     "route-27": {
       "display_name": "Route 27",
-      "order": 37,
+      "order": 44,
       "beats": [
         {
           "type": "event",
-          "text": "**Obstacle 2 — Ronflex** : kanji 眠. ⚠️ Corrigé 2026-07-03 : il n'est **pas** sur Route 27 — la ROM et le guide le placent **devant la Grotte Taupiqueur** (cellules Routes 11/12, côté Kanto, désormais au scope depuis le 2026-07-01). Bloquant, réveillé par l'émission Flûte Poké de la radio améliorée (carte EXPN, quête de la Centrale Kanto) — comme en jeu. Tapper avant → il dort profondément (animation courte + message du mentor)."
+          "text": "**Obstacle 2 — Ronflex** : kanji 眠. ⚠️ Corrigé 2026-07-03 : il n'est **pas** sur Route 27 — la ROM et le guide le placent **devant la Grotte Taupiqueur** (cellules Routes 11/12, côté Kanto, désormais au scope depuis le 2026-07-01). Bloquant, réveillé par l'émission Flûte Poké de la radio améliorée (carte EXPN, remise par le **directeur de la station radio de Lavender Town** après la quête de la Centrale Kanto — donneur précisé 2026-07-06, audit 04, finding 04-B1, Lavender réintégrée) — comme en jeu. Tapper avant → il dort profondément (animation courte + message du mentor)."
         }
       ],
       "locks": [
@@ -429,7 +530,7 @@
     },
     "indigo-plateau-antichambre": {
       "display_name": "Antichambre de la Ligue",
-      "order": 38,
+      "order": 45,
       "beats": [
         {
           "type": "gym",
@@ -444,31 +545,31 @@
     },
     "indigo-plateau-will": {
       "display_name": "Salle de Will",
-      "order": 39,
+      "order": 46,
       "beats": [],
       "locks": []
     },
     "indigo-plateau-koga": {
       "display_name": "Salle de Koga",
-      "order": 40,
+      "order": 47,
       "beats": [],
       "locks": []
     },
     "indigo-plateau-bruno": {
       "display_name": "Salle de Bruno",
-      "order": 41,
+      "order": 48,
       "beats": [],
       "locks": []
     },
     "indigo-plateau-karen": {
       "display_name": "Salle de Karen",
-      "order": 42,
+      "order": 49,
       "beats": [],
       "locks": []
     },
     "indigo-plateau-lance": {
       "display_name": "Trône de Lance",
-      "order": 43,
+      "order": 50,
       "beats": [
         {
           "type": "event",
@@ -493,33 +594,564 @@
       ],
       "locks": []
     },
+    "vermilion-city": {
+      "display_name": "Vermeille City",
+      "order": 51,
+      "beats": [
+        {
+          "type": "gym",
+          "text": "**Gym Lt. Surge** — 9e badge Kanto, thème Électrik, 3 門弟 (Gentleman Gregory, Guitarist Vincent, Juggler Horton) ; un arbre à couper ouvre l'accès à la clôture, intérieur à grille de poubelles cachant deux interrupteurs."
+        },
+        {
+          "type": "event",
+          "text": "**Salon du keigo** (Président du Club des Fans) — mini-jeu « même intention, trois interlocuteurs » (ami/commerçant/supérieur), contenu gradué N4→N2."
+        },
+        {
+          "type": "event",
+          "text": "**SS Aqua** — grand-père paniqué (petite-fille disparue, retrouvée au sous-sol) ; marin endormi (déclenche un combat) ; Capitaine distribue des Plaques collectionnables selon le jour."
+        },
+        {
+          "type": "event",
+          "text": "**Steven (1ère apparition, cameo)** — intercepte le joueur devant le Club, intrigué par une espèce hors-région ; déclenche une rencontre légendaire ailleurs."
+        },
+        {
+          "type": "event",
+          "text": "**Eusine (cameo)** — aperçu sur la jetée en pleine chasse à Suicune."
+        }
+      ],
+      "locks": [
+        "Coupe (切) pour l'accès au Gym."
+      ]
+    },
+    "route-6-kanto": {
+      "display_name": "Route 6 (Kanto)",
+      "order": 52,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Dresseurs : Jumeaux Amy & Dani, Pique-niqueuse Selina, Campeur Virgil."
+        },
+        {
+          "type": "event",
+          "text": "Vieille dame (Route 5) donne un Talisman Anti-Combat, pressentant un danger."
+        },
+        {
+          "type": "event",
+          "text": "PNJ du Passage Souterrain échange une spécialité locale (RageCandyBar) contre une CT."
+        }
+      ],
+      "locks": [
+        "Passage Souterrain fermé tant que la Centrale Électrique n'est pas relancée."
+      ]
+    },
+    "saffron-city": {
+      "display_name": "Safranville",
+      "order": 53,
+      "beats": [
+        {
+          "type": "gym",
+          "text": "**Gym Sabrina** — 10e badge Kanto, labyrinthe de 9 chambres reliées par téléportation (thème 心/精神), 4 門弟 (Medium Darcy, Psychic Franklin, Psychic Jared, Medium Rebecca)."
+        },
+        {
+          "type": "gym",
+          "text": "Karatéka du dojo absent — parti s'entraîner au Mont Mortier (callback Johto) ; le dojo devient un hub de revanche 師範 post-16-badges."
+        },
+        {
+          "type": "event",
+          "text": "**Steven (Silph Co., 1ère rencontre)** — répond à une question, reçoit un compagnon-cadeau d'une autre région."
+        },
+        {
+          "type": "event",
+          "text": "**Steven (Silph Co., revisite)** — propose un échange direct contre un compagnon différent, conclut le fil Steven."
+        },
+        {
+          "type": "event",
+          "text": "**Copycat** — imite le joueur ; sa poupée perdue (livrée depuis Vermeille) donne le Pass Train Aimant."
+        },
+        {
+          "type": "event",
+          "text": "Puzzle d'appareils électroménagers (Silph Co. sous-sol) — mini-gimmick d'exploration sans combat."
+        }
+      ],
+      "locks": []
+    },
+    "route-9-10-rocktunnel": {
+      "display_name": "Routes 9-10 / Rock Tunnel",
+      "order": 54,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Dresseurs Route 9 : Campeur Sid, Randonneur Eoin, Pique-niqueuses Heidi/Edna, Campeur Dean, Randonneur Sidney."
+        },
+        {
+          "type": "event",
+          "text": "Route 10 : au moins 2 Randonneurs."
+        },
+        {
+          "type": "event",
+          "text": "Garçon au Centre Pokémon voisin relaie le vol de la pièce mécanique à la Centrale (indice)."
+        }
+      ],
+      "locks": [
+        "Rock Tunnel plongé dans le noir (Flash, couloir narratif) ; 2 objets accessibles seulement après Force (力)."
+      ]
+    },
+    "lavender-town": {
+      "display_name": "Lavender Town",
+      "order": 55,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Le directeur de la station radio remet la carte EXPN une fois la quête de la Centrale Électrique de Kanto résolue (finding 04-B1)."
+        }
+      ],
+      "locks": [
+        "Carte EXPN nécessaire en amont pour débloquer l'émission qui réveille le Ronflex bloquant (Routes 11/12, côté Kanto)."
+      ]
+    },
+    "route-8-kanto": {
+      "display_name": "Route 8 (Kanto)",
+      "order": 56,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Route optionnelle (plateau, zéro croissance requise) — contenu déjà rattaché à route-7-kanto (roster Route 7/8 fusionné dans le guide) : Bikers « turbulents » non nommés."
+        }
+      ],
+      "locks": []
+    },
+    "kanto-power-plant": {
+      "display_name": "Centrale Électrique",
+      "order": 57,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Directeur furieux du vol d'une pièce mécanique — la récupère et donne une CT une fois la pièce rendue."
+        },
+        {
+          "type": "event",
+          "text": "Vigile relaie un indice vers Azuria."
+        },
+        {
+          "type": "event",
+          "text": "Ouvrier propose un troc simple."
+        },
+        {
+          "type": "event",
+          "text": "Vrai hub de la quête « pièce volée » qui déverrouille aussi le Passage Souterrain."
+        }
+      ],
+      "locks": []
+    },
+    "cerulean-city": {
+      "display_name": "Azuria City",
+      "order": 58,
+      "beats": [
+        {
+          "type": "rocket",
+          "text": "Gym trouvé vide à l'arrivée — un Sbire Rocket isolé (dernier vestige de la Team Rocket dissoute) y est surpris, poursuivi jusqu'à un pont de route puis affronté ; avoue avoir volé la pièce mécanique de la Centrale, cachée dans le Gym."
+        },
+        {
+          "type": "gym",
+          "text": "**Gym Misty** — 11e badge Kanto, trouvée hors du Gym (point de vue) avant que le Gym ne se peuple de ses 5 门弟 (dont Swimmer Briana, Swimmer Parker) — structure « Gym fermé jusqu'à trouver le leader ailleurs », déjà utilisée pour Jasmine côté Johto."
+        },
+        {
+          "type": "event",
+          "text": "Gérant du magasin de vélos évoque « un garçon et son vélo » trois ans plus tôt (résonance avec le lore Red)."
+        },
+        {
+          "type": "event",
+          "text": "Garçon récurrent au nord indique où trouver Misty, puis signale une anomalie à la rivière."
+        }
+      ],
+      "locks": []
+    },
+    "route-5-kanto": {
+      "display_name": "Route 5 (Kanto)",
+      "order": 59,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Route optionnelle (plateau, zéro croissance requise) — contenu déjà rattaché à route-6-kanto (roster Route 5/6/Passage Souterrain fusionné dans le guide) : vieille dame donnant un Talisman Anti-Combat."
+        }
+      ],
+      "locks": []
+    },
+    "route-24-25-kanto": {
+      "display_name": "Routes 24-25 (Kanto)",
+      "order": 60,
+      "beats": [
+        {
+          "type": "rocket",
+          "text": "Route 24 : combat scripté obligatoire contre le voleur de la pièce mécanique (Sbire isolé, dernier vestige de la Team Rocket « dissoute »)."
+        },
+        {
+          "type": "event",
+          "text": "Route 25 : gauntlet obligatoire de 6 dresseurs en ligne (Campeur Lloyd, Fille Laura, Intello Pat, Écolier Joe, Fille Shannon, Dresseur Ace Kevin, ce dernier remet une Pépite), plus un 7e dresseur en embuscade."
+        },
+        {
+          "type": "event",
+          "text": "Grand-père de Bill (chaumière au bord de mer) — objet évolutif au choix contre présentation d'un compagnon précis."
+        },
+        {
+          "type": "event",
+          "text": "Misty trouvée en rendez-vous au bout de la route ; scène de poursuite du kanji-esprit légendaire avec Eusine en commentateur."
+        }
+      ],
+      "locks": [
+        "Coupe (切) et Surf (水) requis."
+      ]
+    },
+    "route-7-kanto": {
+      "display_name": "Route 7 (Kanto)",
+      "order": 61,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Dresseurs : Young Couple Moe & Lulu, Super Nerd Sam."
+        }
+      ],
+      "locks": []
+    },
+    "celadon-city": {
+      "display_name": "Céladia",
+      "order": 62,
+      "beats": [
+        {
+          "type": "gym",
+          "text": "**Gym Erika** — 12e badge Kanto, 4 門弟 (Picnicker Tanya, Beauty Julia, Twins Jo & Zoe, Lass Michelle)."
+        },
+        {
+          "type": "event",
+          "text": "Game Corner adapté en mini-jeu de kanji contre jetons — mêmes tables Kanji Flip + kanji jumeaux que Doublonville, difficulté N2/N1."
+        },
+        {
+          "type": "event",
+          "text": "Homme au sommet des Condominiums, objet uniquement visible 20h-4h."
+        },
+        {
+          "type": "event",
+          "text": "Masques (Turtwig/Chimchar/Piplup) — callback vers le Dress-Up Shop du Tunnel de Doublonville."
+        },
+        {
+          "type": "event",
+          "text": "« Réalisateur » GAME FREAK — quête à 2 paliers sur le Kanjidex (`count(kanji_studied, 1000)` puis `2136`)."
+        }
+      ],
+      "locks": []
+    },
+    "route-16-17-18-cycling-road": {
+      "display_name": "Routes 16-18 / Cycling Road",
+      "order": 63,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Route 16 : Motard Dale + PNJ récurrent qui enseigne « un mot à la mode » par jour à qui revient le voir."
+        },
+        {
+          "type": "event",
+          "text": "Route 17 (descente à vélo dédiée) : 12 Motards au fil du parcours (3 nommés : Joel, Jacob, Aiden) — première occasion d'« échanger les numéros » pour un système de revanche."
+        },
+        {
+          "type": "event",
+          "text": "Route 18 : 9 dresseurs (7 Motards nommés + 2 Dresseurs d'Oiseaux)."
+        }
+      ],
+      "locks": [
+        "Bicyclette obligatoire pour passer la porte suivante (prêtée par le gérant de Doublonville) ; Coupe (切) pour l'ensemble du secteur."
+      ]
+    },
+    "fuchsia-city": {
+      "display_name": "Fuchsia City",
+      "order": 64,
+      "beats": [
+        {
+          "type": "gym",
+          "text": "**Gym Janine** — 13e badge Kanto, labyrinthe de murs transparents (thème 毒/prudence), 4 門弟 (Picnicker Cindy, Camper Barry, Lass Alice, Lass Linda)."
+        },
+        {
+          "type": "event",
+          "text": "Pal Park au nord — bâtiment à intérieur réel mais sans fonction de transfert (coupe assumée, même statut que le Battle Frontier) ; le gardien est confirmé comme le fils de Baoba (callback Johto)."
+        },
+        {
+          "type": "event",
+          "text": "Fille au nord du Centre Pokémon explique que la Zone Safari a déménagé au Johto — lore uniquement."
+        }
+      ],
+      "locks": [
+        "Route sud vers Île Braise coupée par un volcan (détour narratif)."
+      ]
+    },
+    "route-14-15-kanto": {
+      "display_name": "Routes 14-15 (Kanto)",
+      "order": 65,
+      "beats": [
+        {
+          "type": "event",
+          "text": "18 dresseurs confirmés au total (Jumeaux Kay & Tia, Passionnée Eleanor, Enseignante Colette, 2 Écoliers, Enseignante Hillary, Passionné Boone côté R15 ; Dresseur d'Oiseaux Josh, 5 Écoliers, 2 Passionnés, Enseignante Clarice, Dresseur d'Oiseaux Roy côté R14)."
+        },
+        {
+          "type": "event",
+          "text": "Fille dans les hautes herbes (R14 ouest) demande à voir un compagnon précis contre un objet porté rare."
+        },
+        {
+          "type": "event",
+          "text": "Première apparition à pied du kanji-esprit légendaire (Suicune-analogue), Eusine en poursuite, oriente le joueur vers Route 25."
+        }
+      ],
+      "locks": [
+        "Coupe (切) requis ; rebords à sens unique imposant un ordre de traversée précis."
+      ]
+    },
+    "route-11-12-13-diglett": {
+      "display_name": "Routes 11-13 / Grotte Diglett",
+      "order": 66,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Route 12 : Pêcheurs génériques — le pont doit son nom au fait qu'ils marchent en silence pour ne pas effrayer les Pokémon."
+        },
+        {
+          "type": "event",
+          "text": "Route 13 : Camper Clark, Hiker Kenny, Picnicker Ginger, Pokéfan Alex, Camper Tanner (11 dresseurs au total confirmés)."
+        },
+        {
+          "type": "event",
+          "text": "Grotte Diglett : PNJ de couleur locale surpris par les créatures qui surgissent du sol ; portier remet un objet de quête confié par le Pr. Chen/Oak ; une maison voisine donne une Pépite."
+        }
+      ],
+      "locks": [
+        "Passages nécessitant Force (力) pour un accès complet (donjon « à revisiter »)."
+      ]
+    },
+    "pewter-city": {
+      "display_name": "Argenta City",
+      "order": 67,
+      "beats": [
+        {
+          "type": "gym",
+          "text": "**Gym Brock** — 14e badge Kanto, seul Gym Kanto sans garde (0 門弟, exception sourcée) — on peut marcher droit jusqu'à Brock."
+        },
+        {
+          "type": "event",
+          "text": "Musée des Sciences (restauration de fossiles) — les panneaux d'exposition deviennent 3-4 textes secondaires N1 (fossiles/espace)."
+        },
+        {
+          "type": "event",
+          "text": "Steven (cameo) — Champion visiteur absorbé dans une expo minérale ; prérequis silencieux pour son fil, résolu à Safranville."
+        },
+        {
+          "type": "event",
+          "text": "Vieil homme sur la colline près du Poké Mart donne l'Aile Argent/Arc-en-ciel (callback vers le climax de Tour Jo)."
+        }
+      ],
+      "locks": []
+    },
+    "mont-lune-route-3-4": {
+      "display_name": "Mont Lune / Routes 3-4",
+      "order": 68,
+      "beats": [
+        {
+          "type": "rival",
+          "text": "**Embuscade Silver** — 1ère réapparition du Rival depuis le Hall of Fame : vrai combat (26 questions, N1, zone 1800–1820), quête `silver-kanto` ; motive la Tag Battle de l'Antre du Dragon (joueur + Silver contre Lance + Clair) puis les revanches hebdomadaires au Plateau Indigo (lundi/mercredi)."
+        },
+        {
+          "type": "event",
+          "text": "Dresseurs Route 3 : Youngster Warren, Youngster Jimmy, Hiker Bruce, Firebreather Burt."
+        },
+        {
+          "type": "event",
+          "text": "Dresseurs Route 4 : Youngster Regis, Double Team Zac & Jen, Firebreather Otis, Black Belt Manford, Black Belt Ander, Hiker Dwight, Picnicker Hope, Bird Keeper Hank, Picnicker Sharon."
+        },
+        {
+          "type": "event",
+          "text": "Petit comptoir marchand au milieu de la traversée du Mont Lune ; lore de météorites à l'énergie étrange, aucun dresseur nommé dans la grotte elle-même."
+        }
+      ],
+      "locks": []
+    },
+    "route-2-foret-viridian": {
+      "display_name": "Route 2 / Forêt Viridian",
+      "order": 69,
+      "beats": [
+        {
+          "type": "event",
+          "text": "5 Insectophiles supplémentaires à l'intérieur de la forêt (thème de classe homogène, 100% Insectophiles)."
+        },
+        {
+          "type": "event",
+          "text": "Le texte source encourage explicitement la fouille systématique de la zone (objets perdus dans la pénombre) — bon gabarit de scavenger-hunt de zone."
+        }
+      ],
+      "locks": [
+        "Coupe (切) pour l'arbre côté Argenta."
+      ]
+    },
+    "viridian-city": {
+      "display_name": "Vertville (1ʳᵉ visite, Gym fermé)",
+      "order": 70,
+      "beats": [
+        {
+          "type": "gym",
+          "text": "**Gym Blue** — dernier Gym (16e badge Kanto), verrouillé jusqu'à la fin (le vieil homme devant la porte laisse passer seulement après Blaine + Blue rencontré à Île Braise) ; sol à tuiles-flèches qui déplacent le joueur dans une direction fixe."
+        },
+        {
+          "type": "event",
+          "text": "Trainer House — un combat par jour, structure « défi quotidien »."
+        },
+        {
+          "type": "event",
+          "text": "Rumeur ambiante au Centre Pokémon pousse le joueur vers Île Braise."
+        },
+        {
+          "type": "gym",
+          "text": "Après victoire sur Blue : le Pr. Chen/Oak appelle immédiatement à la sortie du Gym."
+        }
+      ],
+      "locks": []
+    },
+    "route-22-kanto": {
+      "display_name": "Route 22 (Kanto)",
+      "order": 71,
+      "beats": [
+        {
+          "type": "rival",
+          "text": "Corridor de transition vers le Mont Gris, décrit par le guide comme « délibérément vide » — même source que mt-silver-route-28, voir cette section pour la seule trouvaille du secteur (l'Idole retraitée)."
+        }
+      ],
+      "locks": []
+    },
+    "route-1-kanto": {
+      "display_name": "Route 1 (Kanto)",
+      "order": 72,
+      "beats": [
+        {
+          "type": "event",
+          "text": "4 dresseurs (Écolier Sherman, Écolier Danny, Dresseur Ace French, Dresseur Ace Quinn) ; aucun obstacle."
+        }
+      ],
+      "locks": []
+    },
+    "pallet-town": {
+      "display_name": "Bourg-Origine",
+      "order": 73,
+      "beats": [
+        {
+          "type": "gym",
+          "text": "**Trois visites distinctes** : (1) première visite, juste après Vertville — Oak n'a encore rien à donner, « reviens une fois tous les badges Kanto en poche » ; (2) après avoir vaincu Blue à Vertville — Oak donne la permission d'accès à Mont Gris ; (3) après Red — choix de récompense symbolique."
+        },
+        {
+          "type": "gym",
+          "text": "**Daisy** (sœur de Blue) toilette le compagnon du joueur tous les jours 15h-16h ; au bout de 7 visites cumulées, donne le contact de Blue pour un combat de revanche post-16-badges."
+        },
+        {
+          "type": "event",
+          "text": "Pr. Chen/Oak évalue le Kanjidex — commente le nombre de kanji étudiés/maîtrisés par paliers de phrases."
+        },
+        {
+          "type": "event",
+          "text": "Photographe itinérant — présent mer/jeu/ven uniquement."
+        }
+      ],
+      "locks": []
+    },
+    "route-21-kanto": {
+      "display_name": "Route 21 (Kanto)",
+      "order": 74,
+      "beats": [
+        {
+          "type": "event",
+          "text": "5 dresseurs nommés (Nageurs/Pêcheurs/Dresseur d'Oiseaux) ; l'éruption volcanique d'Île Braise y est également mentionnée."
+        }
+      ],
+      "locks": [
+        "Surf (水) ; objet bonus accessible seulement après Force (力)."
+      ]
+    },
+    "cinnabar-island": {
+      "display_name": "Île Braise",
+      "order": 75,
+      "beats": [
+        {
+          "type": "gym",
+          "text": "Île sinistrée — seul le Centre Pokémon a survécu, population évacuée ; le vrai Gym de Blaine a été relocalisé aux Seafoam Islands (accessible via Route 20/21)."
+        },
+        {
+          "type": "event",
+          "text": "**Blue (1ère rencontre)** — au nord du Centre Pokémon, renvoie à plus tard."
+        },
+        {
+          "type": "event",
+          "text": "**Blue (revisite tardive, post-Rock Climb)** — donne un objet porté (Magmarizer)."
+        },
+        {
+          "type": "gym",
+          "text": "Panneau de relocalisation du Gym, pointe vers Seafoam."
+        }
+      ],
+      "locks": []
+    },
+    "route-19-20-seafoam": {
+      "display_name": "Routes 19-20 / Seafoam Islands",
+      "order": 76,
+      "beats": [
+        {
+          "type": "event",
+          "text": "Route 20 (Île Braise ↔ Seafoam) : 7-8 dresseurs (Nageurs/Campeurs/Pique-niqueuses/Dresseurs d'Oiseaux nommés)."
+        },
+        {
+          "type": "event",
+          "text": "Route 19 (Seafoam ↔ Fuchsia) : 7 Nageurs nommés."
+        },
+        {
+          "type": "gym",
+          "text": "**Gym Blaine relocalisé ici** — classes de dresseurs à thème hivernal (Surfeur des neiges/Skieuse) ; puzzle B1F (blocs à pousser) et sol de glace glissant B2F où les dresseurs postés servent de « freins » pour stopper la glissade."
+        }
+      ],
+      "locks": [
+        "Route 19 fermée narrativement tant que Seafoam n'est pas résolu (« travaux ») ; Surf (水), Force (力) et un CS supplémentaire (sans équivalent) pour l'ensemble."
+      ]
+    },
+    "cerulean-cave": {
+      "display_name": "Grotte Azuria (postgame optionnel)",
+      "order": 77,
+      "beats": [
+        {
+          "type": "gym",
+          "text": "Donjon solo post-16-badges optionnel (hors séquence principale, même statut que Grotte Sombre/Ruines d'Alph intérieur côté Johto) — aucun dresseur."
+        }
+      ],
+      "locks": [
+        "Gardien à l'entrée jusqu'aux 8 badges Kanto complets (s'efface définitivement une fois rencontré) ; Flash (grotte plongée dans le noir), Surf (水) + Force (力) pour la traversée complète."
+      ]
+    },
     "mt-silver-route-28": {
       "display_name": "Route 28",
-      "order": 44,
+      "order": 78,
       "beats": [],
       "locks": []
     },
     "mt-silver-base": {
       "display_name": "Gris — Base",
-      "order": 45,
+      "order": 79,
       "beats": [],
       "locks": []
     },
     "mt-silver-lower": {
       "display_name": "Gris — Versants inférieurs",
-      "order": 46,
+      "order": 80,
       "beats": [],
       "locks": []
     },
     "mt-silver-upper": {
       "display_name": "Gris — Versants supérieurs",
-      "order": 47,
+      "order": 81,
       "beats": [],
       "locks": []
     },
     "mt-silver-summit": {
       "display_name": "Gris — Sommet",
-      "order": 48,
+      "order": 82,
       "beats": [
         {
           "type": "event",
@@ -527,11 +1159,11 @@
         },
         {
           "type": "rocket",
-          "text": "**Quête Rocket — Le Grunt Solitaire** (Versants supérieurs) : pas de combat. Dialogue N2 : lui dire que Team Rocket s'est dissous. L'obstacle le plus mélancolique du jeu."
+          "text": "**Quête Rocket — Le Grunt Solitaire** (Versants supérieurs, optionnelle) : pas de combat. Dialogue N2 : lui dire que Team Rocket s'est dissous. L'obstacle le plus mélancolique du jeu. *(Ex-« Événement #9 », renuméroté 2026-07-06, P-7)*"
         },
         {
           "type": "event",
-          "text": "**Red** (Sommet) : 100 questions (50→100 corrigé 2026-07-07, synthèse — aligné audit 01, A-4), silence, neige, aucun dialogue. Red nod uniquement. Confirmé par recherche web (passe 3) : tempête de grêle au combat, silence total, disparition immédiate après défaite — voir `curriculum-checkpoints.md` pour le détail complet."
+          "text": "**Red** (Sommet) : 100 questions *(« 50 » corrigé 2026-07-07, synthèse — aligné audit 01, A-4)*, silence, neige, aucun dialogue. Red nod uniquement. Confirmé par recherche web (passe 3) : tempête de grêle au combat, silence total, disparition immédiate après défaite — voir `curriculum-checkpoints.md` pour le détail complet."
         }
       ],
       "locks": []

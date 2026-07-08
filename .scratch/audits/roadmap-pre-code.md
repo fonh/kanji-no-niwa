@@ -5,7 +5,7 @@ Mise à jour le 2026-07-08 après l'audit 10 (charnières + grill) puis après l
 pivot stockage par Neon + Auth.js (même jour, hors périmètre des audits — voir
 `docs/adr/0005-data-storage-neon-authjs.md`).
 
-## Statut : Étape 1 soldée. Étape 2 points 1 (kanji/grammaire) et 2 (registre des zones) faits 2026-07-09. Prochaine étape → Étape 2, point 3.
+## Statut : Étape 1 soldée. Étape 2 points 1, 2 et 3 faits 2026-07-09 (point 4 partiellement fait — reste les dénombrements téléphone/dresseurs génériques). Prochaine étape → Étape 2, point 4 (reste) ou point 5.
 
 Toutes les décisions de design sont prises et écrites dans le PRD. Le stockage/auth est déjà
 migré et commité (Neon, Auth.js — code en place, rien à refaire). **Ce qui suit est le chemin
@@ -63,12 +63,21 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    réellement la grotte intérieure (thème « Olivine Lighthouse ») dans le découpage de ce
    projet — à trancher à la passe assets (étape 5 point 6, où les arbitrages doivent de toute
    façon migrer vers `content/guidebook-adapted.md` § Musique).
-3. **`story-beats.json` : couvrir Kanto + les 11 zones réintégrées** (flag FV-2 — le fichier
-   s'arrête à Mont Gris) et **`placements/` : générer les ~14 fichiers manquants** (FV-3,
-   dont route-33 et mont-lune). Même méthode que l'existant.
+3. **✅ FAIT 2026-07-09 — `story-beats.json` (Kanto + 11 zones réintégrées, flag FV-2 soldé)
+   et `placements/` (FV-3 soldé)** : 34 nouvelles sections `### zone_id` ajoutées à
+   `guidebook-adapted.md` (23 Kanto + 11 réintégrées), insérées dans l'ordre réel de parcours
+   — corrige au passage l'ordre `order` des zones Mont Gris, qui suivaient à tort directement
+   le Plateau Indigo. `story-beats.json` : 83/83 zones, 140 beats, 24 verrous.
+   `placements/` : 83/83 fichiers (était 67) — 2 bugs de correspondance ROM corrigés dans
+   `build-npc-placements.py` (`kanto-power-plant`, `mont-lune-route-3-4` : noms fr/en sans
+   préfixe commun avec la carte ROM, alias ajoutés + miroir dans `src/lib/story-beats.ts`) et
+   les zones à 0 PNJ (route-33, cerulean-cave, mt-silver-lower) émettent désormais un fichier
+   vide au lieu d'être ignorées silencieusement. Effet de bord utile : les **sections
+   npc-inventory des 11 zones réintégrées** du point 4 ci-dessous sont aussi faites (mêmes
+   sources), 83/83 zones dans `npc-inventory.md`.
 4. **Dénombrements guidebook** (décisions prises, comptes à faire) : les donneurs de numéro
-   de téléphone (registre fermé), les dresseurs génériques par route (fidélité stricte),
-   les **sections npc-inventory des 11 zones réintégrées** (Lavender, Union Cave, Safari…).
+   de téléphone (registre fermé), les dresseurs génériques par route (fidélité stricte).
+   ~~Sections npc-inventory des 11 zones réintégrées~~ — faites au point 3 ci-dessus.
 5. **La colonne « Type assigné » de npc-inventory** : distribuer leçon / texte / combat sur
    les PNJ sourcés, zone par zone — dépend du point 1 (l'assignation kanji doit exister pour
    savoir ce qu'un PNJ-leçon enseigne). C'est la dernière décision « lourde » (elle fixe qui

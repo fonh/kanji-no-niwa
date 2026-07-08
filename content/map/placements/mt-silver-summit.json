@@ -3,7 +3,7 @@
   "npcs": [
     {
       "name": "Red",
-      "role_origin": "50 questions (HP battle), silence total, tempête de grêle permanente ; disparaît immédiatement après défaite",
+      "role_origin": "100 questions (HP battle — « 50 » corrigé 2026-07-05, audit 01, aligné PRD), silence total, tempête de grêle permanente ; disparaît immédiatement après défaite",
       "item": "Ruban de Légende",
       "map_zone": "MAP_MOUNT_SILVER",
       "tile_x": 11,

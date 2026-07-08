@@ -3,8 +3,8 @@
   "npcs": [
     {
       "name": "Jeune homme près d'un panneau (ouest)",
-      "role_origin": "Donne le CS Marteau-Piqueur (力), débloqué dès le badge de Falkner",
-      "item": "CS Marteau-Piqueur",
+      "role_origin": "Donne le CS Éclate-Roc (砕), débloqué dès le badge de Falkner *(corrigé 2026-07-06, audit 04, finding 04-A3 : « CS Marteau-Piqueur (力) » était un double contresens — 力 = Force, déjà remis par le Hiker de la Route 42, et « Marteau-Piqueur » n'est le nom d'aucun des 8 CS-Kanji (« 7 » corrigé 2026-07-07, synthèse — 登 réintégré depuis) ; voir PRD § CS-Kanji et guidebook-adapted L572/1177)*",
+      "item": "CS Éclate-Roc (砕)",
       "map_zone": "MAP_ROUTE_36",
       "tile_x": 0,
       "tile_y": 0,
