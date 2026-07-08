@@ -65,13 +65,11 @@ ci-dessous ont été mises à jour en conséquence.
 | Rival (Silver) | Aperçu en train d'espionner le labo | — | |
 | Assistant du Pr. Elm | Comptoir du Mart, garde l'œuf mystère jusqu'au 1er badge | — | |
 
-**Note leçons (ajoutée 2026-07-07, passe de vérification audit 06)** : les leçons de cette zone ne
-sont **pas** portées par les PNJ du tableau ci-dessus mais par **Sensei Fukuda au dōjō** — seule
-exception actée à la politique « zéro PNJ-leçon inventé » (le dōjō est 100% hors guidebook, PRD
-§ Leçons, bootstrap). Assignation : **~7 leçons (~30 kanji fondamentaux, ordre `getAvailableKanji`)**,
-`lessons-new-bark-town` #1→#7 ; sortie de la ville possible dès ~2-3 leçons, seuil de 30 exigé à
+**Note leçons (ajoutée 2026-07-07, passe de vérification audit 06 ; mentor mis à jour 2026-07-08, audit 10, tranché au grill — Fukuda supprimé)** : les leçons de cette zone ne
+sont **pas** portées par les PNJ du tableau ci-dessus mais par **le Pr. Elm, dans son labo** (bâtiment HGSS d'origine, aucune géographie inventée — voir PRD § bootstrap Elm). Assignation : **~7 leçons (~30 kanji fondamentaux, ordre `getAvailableKanji`)**,
+`lessons-new-bark-town` #1→#7, réparties en deux passages calqués sur l'aller-retour narratif réel (Elm → course chez Mr. Pokémon → retour) : ~2-3 leçons (~10 kanji) avant le départ, le reste au retour. Seuil de 30 exigé à
 l'entrée de Ville Griotte. Route 29 n'a aucun PNJ-leçon : sa croissance 10→50 est portée par ces
-mêmes leçons du dōjō (allers-retours).
+mêmes leçons du labo d'Elm (allers-retours).
 
 **Side quests dans cette zone** : 0 (zone d'onboarding pure, pas de quête distincte)
 **Objets à aller chercher (remis par un PNJ, pas juste trouvés au sol) dans cette zone** : 2 (Pokégear via Mom, grand texte d'Elm via Elm — « Master Ball/objet narratif » corrigé 2026-07-07, passe de vérification)

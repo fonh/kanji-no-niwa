@@ -7,7 +7,7 @@
 
 76 full-color CG background images (256×192 pixels each, 256 colors) used as backdrop art during story events, dialogue sequences, letters, and cutscenes. In-game, character sprites and text boxes are overlaid on top of these backgrounds.
 
-These correspond to locations referenced in the PRD as used in: Fukuda's letter events, Team Rocket hideout scenes, legendary Pokémon encounter areas, gym interiors, and story milestones.
+These correspond to locations referenced in the PRD as used in: mentor letter events (Elm/Oak — see PRD § Mentors), Team Rocket hideout scenes, legendary Pokémon encounter areas, gym interiors, and story milestones.
 
 **Format:** Raw 256×192 unique-tile images — each of the 768 tiles in the NCGR is unique (no tile reuse), making this essentially a direct 8bpp pixel image stored in DS tile format.
 

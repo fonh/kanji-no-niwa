@@ -54,7 +54,7 @@ noté comme gate curriculaire de Falkner dans `PRD.md` § Système 道場 devien
 une exception), plus les jalons narratifs majeurs qui n'ont pas de gym associé : les 3 lieux Team Rocket,
 l'Antre du Dragon (le "quiz d'empathie du Maître, 5 questions" déjà prévu pour le 印 de Clair EST cette
 mécanique — pas un système à part, juste son application au cas Clair), le texte final face à Red
-(déjà spécifié : chapitre de manga + lettre de Fukuda — **score en première tentative ≥ 80 % requis
+(déjà spécifié : chapitre de manga + lettre du mentor — **score en première tentative ≥ 80 % requis
 pour débloquer le combat** ; précisé 2026-07-07, audit 05, finding 05-A1 : le quiz reste
 retry-jusqu'à-correct comme partout, mais tant que le score en première tentative est < 80 %, le
 combat reste verrouillé — le joueur peut relire et repasser le quiz, questions remélangées),
@@ -86,7 +86,7 @@ qui est désormais une couche de qualité comme les tuiles dorées du Kanjidex, 
 |---|---|---|
 | **Cosmétique** (`grant_item`, type cosmétique) | Skins d'avatar, palette de l'écran-livre/lecture, teintes de dialogue box, variantes de palette du compagnon (Pikachu — synthèse), titre de profil affiché ("Lecteur assidu de Doublonville") | Le gros du volume — zéro risque d'équilibre, à distribuer généreusement sur les ~85-115 textes |
 | **Confort contextuel** (`grant_item` ou `Condition` locale) | Un point d'ancrage de voyage rapide propre à ce texte précis (pas un CS-Kanji générique), un indice caché (position d'un dresseur non repéré, astuce mnémotechnique bonus pour un kanji difficile de la zone) | Fréquent, mais toujours local à une zone, jamais un pouvoir global |
-| **Lore/narratif** (`unlock_text` + `advance_quest` sur une quête d'arc) | Compléter tous les textes secondaires d'une zone/arc débloque une scène bonus, une lettre rare de Fukuda, un easter egg | Par zone ou arc entier, pas par texte individuel |
+| **Lore/narratif** (`unlock_text` + `advance_quest` sur une quête d'arc) | Compléter tous les textes secondaires d'une zone/arc débloque une scène bonus, une lettre rare du mentor, un easter egg | Par zone ou arc entier, pas par texte individuel |
 
 *(L'ancien filet « statut doré seul comme récompense » disparaît avec la redéfinition 08-D8 : un texte
 secondaire sans ligne du tableau ci-dessus n'a simplement pas de récompense matérielle — la chasse au
@@ -141,7 +141,7 @@ Rock Tunnel, Grotte Diglett, Seafoam… — densités de la table ci-dessus) ; r
 **Priorité d'attribution des PNJ (2026-07-02)** — trois usages revendiquent maintenant le même vivier de
 PNJ sourcés guidebook par zone (dresseur-combat, PNJ-leçon, PNJ-texte) alors que plusieurs zones sont déjà
 documentées comme pauvres en PNJ nommés (`curriculum-checkpoints.md` § PNJ sourcés par zone : route-33
-"aucun", route-38/44/45 "pas de nom sourcé", Route 29 "aucun dresseur nommé" — bootstrap Fukuda déjà
+"aucun", route-38/44/45 "pas de nom sourcé", Route 29 "aucun dresseur nommé" — bootstrap Elm déjà
 nécessaire rien que pour les leçons). Ordre de priorité explicite pour éviter les conflits d'attribution à
 l'écriture : **leçons d'abord** sur le vivier guidebook (déjà la règle en place), **PNJ-texte ensuite**
 sur ce qui reste, **objet trouvé par défaut** (pas en exception) dans les zones déjà identifiées comme

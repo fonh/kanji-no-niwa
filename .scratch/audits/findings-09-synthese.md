@@ -231,9 +231,12 @@ de cellules sur les 6 gros fichiers) ; nombres canoniques uniformes ; « Silver 
 route-29 : placements et npcs.json ne contenaient que du sourcé (rien d'autre à purger).
 
 **Flags consignés (pas des erreurs — à traiter aux passes suivantes, repris dans la roadmap)** :
-- **FV-1** : le gate Suicune exige le trophée (lecture N1 en registre classique) vers ~1350 kanji
-  (mi-Kanto, avant le palier N1 à ~1670) — pic de difficulté à assumer ou à amortir à l'écriture
-  de l'inscription (furigana Y + retry existent déjà).
+- ~~**FV-1**~~ **Soldé 2026-07-08, audit 10, point 10, tranché au grill** : le pic de difficulté
+  (trophée Suicune, lecture N1 en registre classique, ~1350 kanji, avant le palier N1 normal
+  ~1670) est **assumé tel quel**, sans changement à l'ordre Raikou→Entei→Suicune (I-2) — cohérent
+  avec l'Antre du Dragon déjà pensé comme un lieu à part (combat de Clair déjà une exception),
+  amorti par les filets existants (furigana Y, retry illimité). Détail : `PRD.md` § Légendaires
+  — Boss de Grammaire.
 - **FV-2** : `story-beats.json` ne couvre que Johto + Mont Gris (48 zones) — aucun beat pour les
   26 zones Kanto ni les 11 réintégrées (dépouillement guidebook à la passe contenu).
 - **FV-3** : `placements/` manque ~14 zones (dont route-33 et mont-lune-route-3-4, pourtant

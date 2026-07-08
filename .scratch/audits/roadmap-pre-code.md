@@ -1,54 +1,69 @@
 # Feuille de route pré-code — 漢字の庭
 
 Écrite le 2026-07-08, après la passe de vérification post-synthèse (findings-09 § 7).
-**Où on en est** : les 9 audits sont clos, le PRD et les 7 docs de contenu sont cohérents,
-toutes les décisions de design sont prises. **Ce qui suit est le chemin entre « PRD prêt »
-et « on peut coder »**, ordonné — chaque étape rend la suivante moins risquée.
+Mise à jour le 2026-07-08 après l'audit 10 (charnières + grill). **Où on en est** : les 10
+audits sont clos, le PRD et les docs de contenu sont cohérents, toutes les décisions de design
+sont prises — y compris les deux pivots soulevés pendant le grill de l'audit 10 (suppression de
+Fukuda, stockage local). **Ce qui suit est le chemin entre « PRD prêt » et « on peut coder »**,
+ordonné — chaque étape rend la suivante moins risquée.
 
 ---
 
-## Étape 1 — Les surfaces jamais auditées (dernières décisions de design)
+## Étape 1 — Les surfaces jamais auditées (dernières décisions de design) — ✅ SOLDÉE 2026-07-08
 
-Les 9 audits ont couvert les *systèmes* (progression, SRS, combat, menus…). Personne n'a
-jamais audité les **charnières** — ce qui se passe entre les systèmes. C'est le seul endroit
-où il reste de vraies décisions à prendre ; tout le reste de cette roadmap est de l'exécution.
-**À lancer : `.scratch/audits/prompt-10-charnieres.md`** (même méthode que les 9 premiers —
-lecture → grill → correction — un nouveau terminal, session vierge).
+Les 9 audits ont couvert les *systèmes* (progression, SRS, combat, menus…). L'audit 10
+(`.scratch/audits/prompt-10-charnieres.md` → `findings-10-charnieres.md`) a couvert les
+**charnières** — ce qui se passe entre les systèmes — et deux décisions plus larges soulevées
+pendant le grill. Toutes les décisions de design sont désormais prises, écrites dans le PRD.
 
-1. **Séquence d'ouverture, minute par minute.** Écran titre → « nouvelle partie » → choix de
-   l'avatar (garçon/fille — Ethan/Lyra, comme HGSS) → **saisie du nom du joueur** (question
-   piégeuse : en quel alphabet ? le nom apparaît ensuite dans les dialogues japonais — kana
-   imposés ? romaji converti ?) → réveil dans la chambre → Mom → Elm → remise du Pikachu →
-   dōjō Fukuda → première leçon → première session SRS → Route 29. Des morceaux existent
-   (bootstrap Fukuda, tutoriel de marche) mais l'enchaînement bout à bout n'a jamais été écrit,
-   et c'est **le quart d'heure le plus important d'un jeu d'apprentissage** (c'est là qu'on
-   perd ou garde un joueur).
-2. **La défaite et l'interruption.** Que voit-on quand on perd un combat (vies épuisées) ?
-   HGSS fait un « blackout » vers le Centre Pokémon ; nous, les combats sont rejouables sans
-   cooldown — mais l'écran/le flux de défaite n'est décrit nulle part. Et surtout : **le combat
-   de Red fait 100 questions (~30-45 min)** — fermer l'app en plein milieu fait quoi ?
-   Reprise ? Abandon ? Pause autorisée ? Idem pour l'Elite Four (70 questions × 4 + Lance).
-3. **Typographie japonaise** (le plus gros trou technique jamais mentionné) : une police
-   pixel rétro ne peut pas rendre un kanji N1 complexe (鬱, 響…) ni des furigana lisibles.
-   Il faut une stratégie à deux fontes — pixel japonaise (Misaki/PixelMplus) pour l'ambiance
-   overworld, fonte lisible pour dialogues/leçons/lecture — et une taille minimale de furigana.
-   À trancher avant tout mockup.
-4. **Le clavier romaji→kana** : les cas limites (ん vs な-ligne, っ, ゃゅょ, ー, nn, correction
-   en cours de frappe) — c'est le composant du mode Saisie, de la dictée et du Kanji Sprint ;
-   sa spec mérite une page.
-5. **Les chaînes système** : はい／いいえ, confirmations, messages d'erreur, écrans de
-   sauvegarde — une string table UI à part (jp + en via X ? jp seul ?), distincte des dialogues.
-6. **Sauvegarde et synchronisation** : PWA = offline-first ? Le compte Google implique une
-   sync multi-appareils — conflits (jouer sur 2 appareils le même jour), backup/export,
-   triche d'horloge (le jour calendaire local pilote le SRS, le streak et les time_window).
-7. **Accessibilité minimale** : distinction blanc/doré pour daltoniens (forme + couleur),
-   taille de texte, comportement des modes audio (Écoute, Radio, Buena) téléphone en silencieux.
-8. **Cérémonies** : écran de remise de badge, fanfare CS-Kanji, achievement, passage doré —
-   des micro-scènes à formater une fois (gabarit commun), pas 16 fois.
-9. **Fin de partie** : Hall of Fame, crédits, écran post-Red, choix de récompense chez Oak
-   (3ᵉ visite documentée) — l'épilogue n'a pas de séquence écrite.
-10. *(Flag FV-1 à traiter au passage)* : le trophée de l'Antre (lecture N1) exigé par Suicune
-    à ~1350 kanji — assumer le pic ou amortir à l'écriture de l'inscription.
+**Les 10 charnières, décidées et écrites (2026-07-08, audit 10, tranché au grill) :**
+1. **Séquence d'ouverture** (PRD § Séquence d'ouverture) : écran-titre à chaque lancement,
+   avatar garçon/fille sourcé, **nom saisi en kana** via le clavier romaji→kana déjà prévu pour
+   le mode Saisie (champ vide, pas de suggestion), choix du compagnon parmi 3 (voir ci-dessous).
+   Bootstrap restructuré : Elm donne les premières leçons **en deux temps calqués sur
+   l'aller-retour réel du jeu** (Elm → course chez Mr. Pokémon → retour), pas un enfermement
+   au labo (PRD § Leçons, « bootstrap Elm »).
+2. **Défaite et interruption** (PRD § Système de Combat) : écran de défaite bref sans bilan ;
+   les combats-examens (師範/E4/Lance/Red) recommencent intégralement en cas de défaite (pas de
+   checkpoint par section) ; fermer l'app en plein combat annule le combat, aucun état
+   sauvegardé.
+3. **Typographie** (PRD § Interface) : `DotGothic16` (chrome/overworld) + `BIZ UDGothic`
+   (lecture — dialogues/leçons/textes), plancher furigana 10px partout.
+5. **Chaînes système** (PRD § Langue du Jeu) : japonais seul, pas de bouton X (aligné sur les
+   labels de menu), `content/ui-strings.json`.
+6. **Sauvegarde et synchronisation** (PRD § Implémentation) — **pivot d'architecture** : voir
+   ci-dessous.
+7. **Accessibilité** (PRD § Kanjidex, § Menu Principal, § Système de Combat) : repère
+   non-coloré sur les tuiles dorées (daltonisme), réglage de taille de texte (3 crans) dans
+   せってい, mode Écoute rejouable à volonté (aligné sur Disposition).
+8. **Cérémonies** (PRD § Cérémonies, nouvelle section) : deux paliers — majeur (badge/CS-Kanji/
+   victoires rares, écran dédié bref) et mineur (achievement/tuile dorée, bandeau non-bloquant).
+9. **Fin de partie** (PRD § Kanto, note "Fin de partie") : séquence assemblée à partir du
+   guidebook (3 visites à Bourg-Origine), écran de générique dédié après la 3ème visite d'Oak.
+10. **Flag FV-1 soldé** (`findings-09-synthese.md` § 7) : pic de difficulté Suicune assumé tel
+    quel, aucun changement à l'ordre Raikou→Entei→Suicune.
+
+**Deux décisions plus larges, soulevées pendant le grill et écrites dans tout le PRD :**
+- **Suppression de Fukuda** (PRD § Mentors) : personnage inventé retiré. Le rôle quotidien
+  (appel matinal SRS + 36 lettres) est repris par **Elm (tout l'arc Johto) puis le Pr. Chen/Oak
+  (tout l'arc Kanto)** — relais à la traversée SS Aqua, personnalités canoniques des jeux
+  d'origine, aucun arc personnel inventé. Le « dōjō » n'existait déjà que comme redécoration du
+  labo d'Elm — aucune géographie perdue.
+- **Pivot d'architecture — stockage local pour la progression uniquement** (PRD § Implémentation)
+  : Supabase **reste le domicile du contenu statique et de l'auth** (code déjà en place —
+  `scripts/lib/supabase.ts`, `src/lib/supabase/`, `src/proxy.ts` — aucune réécriture nécessaire).
+  Seule **la progression du joueur** (SRS, badges, quêtes, inventaire…) est scindée vers
+  **IndexedDB local** (source de vérité) + **export JSON périodique vers le Google Drive
+  personnel du joueur** (filet de secours, réutilise l'OAuth déjà en place — évite le piège de
+  la pause après 7 jours d'inactivité du plan gratuit Supabase pour la progression). Risque
+  résiduel assumé : l'auth elle-même peut se mettre en pause après 7+ jours sans ouverture de
+  l'app (reconnexion nécessitant une relance manuelle du tableau de bord) — la progression
+  reste jouable en local même si l'auth est cassée. Un seul appareil actif à la fois pour la
+  progression, zéro conflit par construction. Horloge locale de confiance (pas de vérification
+  serveur).
+- **Compagnon rouvert** (PRD § Compagnon) : retour à un choix parmi 3 compagnons (Pikachu + 2
+  autres à sourcer) au tout début, plutôt que « Elm confie son Pikachu, pas de choix » —
+  écho en fin de partie (3ème visite d'Oak, objet cosmétique assorti).
 
 ## Étape 2 — Compléter la couche de données (mécanique, aucun talent d'écriture requis)
 
@@ -78,7 +93,7 @@ Tout est spécifié ; il faut produire les données. Scriptable en grande partie
    pas encore en exemple), un texte avec quiz + `answer_span`, une émission radio, un appel
    即時応答, une session keigo — chacun validé contre le schéma du PRD.
 2. **Écrire LA tranche verticale : Bourg Geon → Ville Griotte** (zones 0-3 + l'ouverture de
-   l'étape 1) : tous les dialogues jp/en, les ~7 leçons du dōjō, les 2-4 premiers textes, la
+   l'étape 1) : tous les dialogues jp/en, les ~7 leçons du bootstrap Elm, les 2-4 premiers textes, la
    quête d'accueil, Silver #1. Objectif : vérifier **en vrai** que la règle des 2 inconnus
    par dialogue tient, que les lectures inline s'écrivent vite, et mesurer le coût réel
    d'écriture d'une zone → extrapoler le budget des 83.
@@ -96,7 +111,7 @@ Tout est spécifié ; il faut produire les données. Scriptable en grande partie
 Zone par zone, dans l'ordre de la table de calibration (83 zones), avec l'outillage de
 l'étape 3 en CI : dialogues, leçons (**≈290-385** au total, réintégrations comprises),
 placement des textes secondaires (**~85-115**, sélection des sources réelles + vetting
-12bis), scripts radio, 36 lettres de Fukuda, Carnet des compteurs. Les seuils N des 8
+12bis), scripts radio, 36 lettres des mentors (Elm/Oak), Carnet des compteurs. Les seuils N des 8
 CS-Kanji sont re-calculés au fil du placement réel (valeurs actuelles de calibration :
 砕 6 · 切 12 · 水 20 · 飛 26 · 力 29 · 渦 32 · 滝 35 · 登 60). **C'est seulement à la fin
 de l'étape 3 qu'on sait combien de temps celle-ci prendra** — c'est tout l'intérêt de la
@@ -119,8 +134,9 @@ l'étape 2 ou 4, zone par zone), listés ici pour ne rien perdre :
    Union Cave, Route 43, Îles Tourbillon, Safari, Routes 46/5/8/22/47/48, Cliff Cave,
    Puits Ramoloss, intérieurs Tour Radio/QG Rocket/Tour Jo…) n'ont pas encore de tiles
    produites — inventaire de production, pas un chiffrage.
-5. **Sprite follower du Pikachu** (compagnon cosmétique, décision synthèse) — vérifier
-   qu'une planche exploitable existe dans le dump d'assets HGSS, sinon la produire.
+5. **Sprites follower des 3 compagnons** (Pikachu + 2 autres à déterminer — compagnon cosmétique,
+   choix rouvert 2026-07-08, audit 10) — vérifier qu'une planche exploitable existe pour chacun
+   dans le dump d'assets HGSS, sinon les produire ; trancher les 2 compagnons additionnels.
 6. **Résolution du mapping musique « identité »** : chaque zone HGSS garde sa piste
    d'origine (règle posée à la synthèse) — reste à résoudre piste-par-fichier-asset à
    la passe assets ; seuls les arbitrages (zones sans équivalent direct) restent en

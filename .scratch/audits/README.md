@@ -1,22 +1,27 @@
 # Audits de cohérence du PRD — mode d'emploi
 
-## Statut (2026-07-08, après la passe de vérification post-synthèse)
+## Statut (2026-07-08, après l'audit 10 et son grill)
 
-**Les systèmes sont cohérents, les charnières entre systèmes restent à trancher.**
-Les audits 01-09 ont rendu le PRD et les docs de référence 100% cohérents
+**Toutes les décisions de design sont prises — le PRD est prêt pour la couche de données
+et le contenu.** Les audits 01-09 ont rendu le PRD et les docs de référence 100% cohérents
 **système par système** (progression, SRS, combat, menus, PNJ, textes, leçons, modèle
 de données) — tous les reportés soldés, les 11 décisions de design de la synthèse
 tranchées, les chiffrages posés (table de calibration à 83 zones, seuils N des
 CS-Kanji, ¥, pool audio, tirage pondéré), la passe de vérification post-synthèse
 appliquée (10 reliquats corrigés, `findings-09-synthese.md` § 7).
 
-Reste **un audit supplémentaire avant d'écrire le contenu** : les enchaînements
-*entre* les systèmes (séquence d'ouverture, écran de défaite, typographie jp,
-clavier romaji→kana, sauvegarde/sync, accessibilité, cérémonies, fin de partie —
-`prompt-10-charnieres.md`). Puis le chemin complet jusqu'au premier jalon de code est
-détaillé dans `roadmap-pre-code.md` (couche de données, gabarits + tranche verticale,
-passe contenu industrielle, petits restes techniques épars). Hors v1, définitivement :
-Battle Frontier et la fonction de transfert du Pal Park — rien d'autre.
+**L'audit 10** a soldé les enchaînements *entre* les systèmes jamais couverts (séquence
+d'ouverture, défaite/interruption, typographie jp, chaînes système, sauvegarde/sync,
+accessibilité, cérémonies, fin de partie, flag FV-1) — voir `findings-10-charnieres.md`
+pour le détail des 10 décisions. Deux décisions plus larges ont émergé pendant le grill et
+ont été écrites dans la même session : **suppression de Fukuda** (le rôle de mentor
+quotidien est repris par Elm puis le Pr. Chen/Oak, personnages déjà sourcés) et **pivot
+d'architecture pour la progression du joueur uniquement** (IndexedDB local + filet Google
+Drive ; Supabase reste le domicile du contenu statique et de l'auth, code déjà en place,
+aucune réécriture). Le chemin complet jusqu'au premier jalon de code est détaillé dans
+`roadmap-pre-code.md` (Étape 1 soldée ; couche de données, gabarits + tranche verticale,
+passe contenu industrielle, petits restes techniques épars restent à faire). Hors v1,
+définitivement : Battle Frontier et la fonction de transfert du Pal Park — rien d'autre.
 
 ---
 

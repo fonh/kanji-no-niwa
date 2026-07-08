@@ -60,7 +60,7 @@ Correspondance CECR↔JLPT (cf. `jlpt-language-syllabus.md`) : A1=N5 · A2=N4 ·
 
 | Segment du jeu | Kanji | Niveau | Ressources du dossier | Couverture |
 |---|---|---|---|---|
-| Bourg Geon → Ville Griotte (bootstrap Fukuda, premières routes) | 0–60 | N5 pur | Marugoto Starter A1 + ごいちょう ; YCRJ L1 Vol. 1 (premiers textes) | ✅ solide |
+| Bourg Geon → Ville Griotte (bootstrap Elm, premières routes) | 0–60 | N5 pur | Marugoto Starter A1 + ごいちょう ; YCRJ L1 Vol. 1 (premiers textes) | ✅ solide |
 | Routes 30-31 → Mauville, Tour Grospignon | 50–140 | N5/N4 | Marugoto Starter A1 (fin) ; YCRJ Vol. 1-2 ; JSS for Beginners (à vetter) | ✅ solide |
 | Route 32 → Forêt Secte | 110–240 | N4 | ⚠️ **Marugoto Élémentaire 1 (A2-1) ABSENT** — début N4 sans manuel ; YCRJ Vol. 2, JSS for Beginners en textes | 🟡 trou manuel |
 | Route 34 → Doublonville | 220–290 | N4 | Marugoto A2-2 かつどう+りかい | ✅ solide |
@@ -73,7 +73,7 @@ Correspondance CECR↔JLPT (cf. `jlpt-language-syllabus.md`) : A1=N5 · A2=N4 ·
 | Kanto — Vermeille → Céladia | 900–1500 | N2 *(remappé 2026-07-05)* | ❌ aucun livre — c'est exactement le créneau de Shin Kanzen Master N2 (manquement n°1) | 🔴 voir Manquements |
 | Kanto — Cycling Road → Routes 14-15 | 1500–1670 | N2/N1 | ❌ idem (transition) | 🔴 |
 | Kanto — Grotte Diglett → Seafoam + revisites | 1670–2136 | N1 | ❌ aucun livre — créneau Shin Kanzen Master N1 ; relais textes par NHK, Matcha, Aozora brut *(« textes officiels Pokémon » retiré 2026-07-07, audit 05, finding 05-A3 : source écartée du N1 le 2026-07-02, `texts-progressifs.md` § Sources — fossile de rédaction)* | 🔴 voir Manquements |
-| Mont Gris (plateau 2136) | 2136 | N1 | ❌ idem — textes N1 durs prévus par `texts-progressifs.md` (Aozora brut, chapitre de manga pour Red, lettre finale de Fukuda) | 🔴 voir Manquements |
+| Mont Gris (plateau 2136) | 2136 | N1 | ❌ idem — textes N1 durs prévus par `texts-progressifs.md` (Aozora brut, chapitre de manga pour Red, lettre finale du mentor) | 🔴 voir Manquements |
 | Transversal (tout le jeu) | 0–2136 | — | Heisig RTK 1 (mnémotechniques, pipeline 7) ; syllabus JLPT comme référentiel | ✅ |
 
 ---

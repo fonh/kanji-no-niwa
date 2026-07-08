@@ -512,7 +512,7 @@ dans les dialogues de boss (pas les PNJ ambiants).
 ### N1 — Kanto tardif (≈1670+) et Mont Gris ; à la Ligue et en 1500–1670, structures N1 réservées aux boss *(recalé 2026-07-05, remapping Kanto)*
 
 **Principe :** les rares PNJ présents parlent comme des textes classiques. Phrases longues,
-structure SOV stricte, constructions littéraires. Fukuda à ce niveau parle de manière plus
+structure SOV stricte, constructions littéraires. Le mentor (Oak à ce stade, voir PRD § Mentors) parle de manière plus
 personnelle et vulnérable — pas plus complexe grammaticalement, mais plus dense émotionnellement.
 Red ne parle pas.
 
@@ -583,7 +583,7 @@ Un Pêcheur sur la Route 32 peut parler N5 même si la zone est N4.
 grottes, plaques) utilisent toujours le niveau de la zone ou le niveau inférieur.
 Ils ne dépassent jamais. Les inscriptions des Ruines Arcaniques font exception : elles
 sont écrites en japonais archaïque délibérément opaque, avec traduction partielle
-donnée par Fukuda.
+donnée par le mentor.
 
 **Règle de Silver (corrigée, 2026-06-30) :** Silver parle **un niveau au-dessus de la zone** à chaque
 apparition. ⚠️ **Cette table remplace une version antérieure incohérente** : l'ancienne table plaçait les

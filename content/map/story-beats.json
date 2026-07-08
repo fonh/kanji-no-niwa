@@ -6,7 +6,7 @@
       "beats": [
         {
           "type": "threshold",
-          "text": "Onboarding (Fukuda + leçon 一), Prof Elm apparition post-Lance (« événement seuil rank 4 » purgé 2026-07-06, audit 03/04 — aucun système de rank)"
+          "text": "Onboarding (Elm + leçon 一), Prof Elm apparition post-Lance (« événement seuil rank 4 » purgé 2026-07-06, audit 03/04 — aucun système de rank ; Fukuda supprimé 2026-07-08, audit 10, tranché au grill — voir PRD § Mentors)"
         }
       ],
       "locks": [
@@ -19,7 +19,7 @@
       "beats": [
         {
           "type": "event",
-          "text": "Tutoriel de marche avec Fukuda (premiers 3 mouvements de l'avatar)"
+          "text": "Tutoriel de marche avec Elm (premiers 3 mouvements de l'avatar)"
         }
       ],
       "locks": []
@@ -202,7 +202,7 @@
       "beats": [
         {
           "type": "event",
-          "text": "**Obstacle 1 — Simularbre/Sudowoodo (Route 36)** : kanji-monstre 木. Délogé en l'**arrosant avec l'Arrosoir** (SquirtBottle) reçu à la Boutique de Fleurs de Doublonville — comme en jeu (corrigé 2026-07-03 ; l'ancienne version \"CS-Kanji 水 mastérisé\" mélangeait deux mécanismes faux : ce n'est ni Surf, ni de la maîtrise SRS). Fukuda: \"Ce qui ressemble à une force peut être une illusion. L'eau le sait.\""
+          "text": "**Obstacle 1 — Simularbre/Sudowoodo (Route 36)** : kanji-monstre 木. Délogé en l'**arrosant avec l'Arrosoir** (SquirtBottle) reçu à la Boutique de Fleurs de Doublonville — comme en jeu (corrigé 2026-07-03 ; l'ancienne version \"CS-Kanji 水 mastérisé\" mélangeait deux mécanismes faux : ce n'est ni Surf, ni de la maîtrise SRS). Le mentor : \"Ce qui ressemble à une force peut être une illusion. L'eau le sait.\""
         },
         {
           "type": "event",
@@ -229,7 +229,7 @@
         },
         {
           "type": "event",
-          "text": "NPC quest N3 : aller à Tour Jo lire inscription → reward lettre Fukuda"
+          "text": "NPC quest N3 : aller à Tour Jo lire inscription → reward lettre du mentor"
         },
         {
           "type": "event",
@@ -332,7 +332,7 @@
         },
         {
           "type": "gym",
-          "text": "**Rencontre Shiny garantie** : un kanji avec shimmer rouge (怒) attend au centre du lac. HP battle kanji 怒、激、憤、烈、猛、狂. Reward : badge Shiny rouge sur 怒 + message Fukuda."
+          "text": "**Rencontre Shiny garantie** : un kanji avec shimmer rouge (怒) attend au centre du lac. HP battle kanji 怒、激、憤、烈、猛、狂. Reward : badge Shiny rouge sur 怒 + message du mentor."
         }
       ],
       "locks": []
@@ -383,7 +383,7 @@
         },
         {
           "type": "event",
-          "text": "NPC quest N1 : inscription au fond de l'antre, 4 lignes à traduire. Reward : lore entry + dialogue Fukuda."
+          "text": "NPC quest N1 : inscription au fond de l'antre, 4 lignes à traduire. Reward : lore entry + dialogue du mentor."
         },
         {
           "type": "event",
@@ -391,7 +391,7 @@
         },
         {
           "type": "event",
-          "text": "**Révélation de lignée** : le Maître/Ancien de l'Antre est le grand-père de Clair, et **Lance est son frère aîné**. Ce lien Lance↔Clair↔Maître ferme élégamment la boucle ouverte au Lac Colère/Mahogany Town (où Lance accompagne le joueur) — fil à préserver si possible, par exemple via une ligne de dialogue du Maître ou de Fukuda qui le révèle."
+          "text": "**Révélation de lignée** : le Maître/Ancien de l'Antre est le grand-père de Clair, et **Lance est son frère aîné**. Ce lien Lance↔Clair↔Maître ferme élégamment la boucle ouverte au Lac Colère/Mahogany Town (où Lance accompagne le joueur) — fil à préserver si possible, par exemple via une ligne de dialogue du Maître ou du mentor qui le révèle."
         }
       ],
       "locks": []
@@ -420,7 +420,7 @@
       "beats": [
         {
           "type": "event",
-          "text": "**Obstacle 2 — Ronflex** : kanji 眠. ⚠️ Corrigé 2026-07-03 : il n'est **pas** sur Route 27 — la ROM et le guide le placent **devant la Grotte Taupiqueur** (cellules Routes 11/12, côté Kanto, désormais au scope depuis le 2026-07-01). Bloquant, réveillé par l'émission Flûte Poké de la radio améliorée (carte EXPN, quête de la Centrale Kanto) — comme en jeu. Tapper avant → il dort profondément (animation courte + message Fukuda)."
+          "text": "**Obstacle 2 — Ronflex** : kanji 眠. ⚠️ Corrigé 2026-07-03 : il n'est **pas** sur Route 27 — la ROM et le guide le placent **devant la Grotte Taupiqueur** (cellules Routes 11/12, côté Kanto, désormais au scope depuis le 2026-07-01). Bloquant, réveillé par l'émission Flûte Poké de la radio améliorée (carte EXPN, quête de la Centrale Kanto) — comme en jeu. Tapper avant → il dort profondément (animation courte + message du mentor)."
         }
       ],
       "locks": [
@@ -488,7 +488,7 @@
         },
         {
           "type": "event",
-          "text": "Lance : Dragon Scroll ceremony → le rouleau contient le poème caché de Fukuda"
+          "text": "Lance : Dragon Scroll ceremony → le rouleau contient le poème caché du mentor"
         }
       ],
       "locks": []

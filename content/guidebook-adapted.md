@@ -28,7 +28,7 @@ Référence de production pour les auteurs de contenu, le pipeline de données, 
 2. **Les objets HGSS** deviennent des récompenses de quêtes NPC ou des prix Pokéathlon — ils ne se ramassent pas par walk-over.
 3. **Les CS (HMs)** sont remplacés par les **8 CS-Kanji** : 飛 (vol), 水 (surf), 力 (force), 切 (coupe), 砕 (éclate-roc), 滝 (cascade), 渦 (tourbillon), 登 (escalade — HM08 Rock Climb réintégré 2026-07-06, chasse aux reliques audit 04) — chacun **remis par le même PNJ / trouvé au même endroit que le HM d'origine** (voir § CS-Kanji — Obtention, réécrit 2026-07-03 ; jamais débloqué via le SRS). Le Simularbre et le Ronflex s'ouvrent par objet-clé (Arrosoir, radio), pas par CS. Seul Flash n'a pas d'équivalent (couloirs sombres narratifs).
 4. **Les Gyms** fonctionnent comme dans le PRD : puzzle spatial HGSS conservé (pure navigation, jamais un gate de langue) + 2 門弟 sourcés postés sur le parcours (0 chez Brock — seul gym sans garde dans le jeu d'origine) + combat du 師範 au **format examen à sections 試練** *(structure complétée 2026-07-07, audit 07 — voir PRD § 道場 et § Jalons-examens)*.
-5. **Le Pokégear** porte l'appel quotidien de Fukuda et le rappel de la session SRS non faite (voir `PRD.md` § Boucle Quotidienne) *(corrigé 2026-07-06, audit 03, finding 03-C1 — « push notifications / rappels des dresseurs de route » purgé : trace d'un ancien design dresseur↔SRS, jamais spécifié ; combat et SRS sont indépendants)*. La radio existe via Radio Tower.
+5. **Le Pokégear** porte l'appel quotidien du mentor et le rappel de la session SRS non faite (voir `PRD.md` § Boucle Quotidienne) *(corrigé 2026-07-06, audit 03, finding 03-C1 — « push notifications / rappels des dresseurs de route » purgé : trace d'un ancien design dresseur↔SRS, jamais spécifié ; combat et SRS sont indépendants)*. La radio existe via Radio Tower.
 6. **Aucune mécanique de jeu HGSS non listée dans le PRD** n'est à implémenter.
 7. **Déplacement à la DS** — l'avatar se déplace au D-pad (↑↓←→, une case par input). Sur mobile : D-pad virtuel à l'écran. Sur desktop : touches directionnelles ou WASD. Pas de tap-to-destination, pas de pathfinding. Bouton A = interagir avec un NPC/bâtiment adjacent.
 8. **Rencontre premier passage** — quand l'avatar entre dans le champ de vision d'un dresseur **pour la première fois**, le dresseur déclenche automatiquement le combat (même règle que dans la DS). Après ce premier combat, le dresseur ne déclenche plus jamais automatiquement — il redevient `talk` pur avec sa ligne `post_battle` (voir `PRD.md` § Implémentation) *(corrigé 2026-07-06, audit 03, finding 03-A3 — « s'il affiche un "!" (carte SRS due), le joueur l'engage volontairement » purgé : mécanisme d'un ancien design jamais spécifié ; un combat ne lit ni ne note jamais une carte FSRS, tranché au grill)*.
@@ -90,7 +90,7 @@ Le guide consacre une double-page "Heroes and Allies" à de courts portraits-per
 | **Kurt** | "Un artisan de Poké Balls qui vit à Azalea Town. Apporte-lui des Apricorns, et chaque jour il te fabriquera une Poké Ball de haute qualité." |
 | **Eusine** | "Un dresseur qui parcourt la région de Johto à la recherche du Pokémon Légendaire Suicune." |
 
-**Note pour l'équipe contenu :** ces 6 bios sont le matériau le plus direct pour calibrer le **ton** des personnages équivalents dans 漢字の庭 (Fukuda ↔ aucun équivalent direct, mais le ton "mesuré, observateur" du PRD est cohérent avec l'absence de blurb pour les figures d'autorité gardées en retrait ; Silver ↔ Rival ; Kurt reste Kurt ; Eusine ↔ "le chasseur de légende"). Les Champions d'arène/Conseil 4/Exécutifs Rocket n'ayant aucune bio officielle, leur personnalité dans 漢字の庭 est entièrement à la discrétion de l'équipe — rien à "trahir" en restant libre sur ce point.
+**Note pour l'équipe contenu :** ces 6 bios sont le matériau le plus direct pour calibrer le **ton** des personnages équivalents dans 漢字の庭 (les mentors Elm/Oak ↔ déjà caractérisés dans les jeux d'origine, pas de bio HGSS spécifique à chercher — voir PRD § Mentors ; Silver ↔ Rival ; Kurt reste Kurt ; Eusine ↔ "le chasseur de légende"). Les Champions d'arène/Conseil 4/Exécutifs Rocket n'ayant aucune bio officielle, leur personnalité dans 漢字の庭 est entièrement à la discrétion de l'équipe — rien à "trahir" en restant libre sur ce point.
 
 ### Itinéraire de référence (Recommended Route, 79 étapes — condensé)
 
@@ -109,30 +109,29 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **HGSS original :** ville de départ. Maison du joueur, labo du Professeur Elm, maison de Lyra/Ethan.
 
 **Dans 漢字の庭 :**
-- ✅ **Dōjō de Fukuda** (remplace le labo Elm) — point de départ, écran d'onboarding, retour entre les leçons
-- ✅ **Maison de Fukuda** — intérieur réel navigable ; Fukuda s'y trouve, lui parler ouvre l'écran du dōjō *(« tappable → ouvre l'écran » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » ; « accéder à `/sensei` » purgé plus tôt le même jour : chemin d'URL d'un ancien design web-app)*. Post-game : fenêtre allumée en permanence.
+- ✅ **Labo du Pr. Elm** (bâtiment HGSS d'origine, inchangé — plus de « dōjō » ni de « Maison de Fukuda » : personnage supprimé, 2026-07-08, audit 10, tranché au grill, voir PRD § Mentors) — point de départ, écran d'onboarding (remise du compagnon, premières leçons), retour entre les leçons. Post-game : fenêtre allumée en permanence.
 - ✅ **Maison de Mom** — réintroduite (2026-07-01). ⚠️ **Corrige une incohérence** : la version précédente de cette section supprimait la maison du joueur ("la ville entière est le home narratif") tout en gardant Mom dans l'inventaire PNJ ci-dessous — elle n'avait alors plus aucun lieu où apparaître sur la carte. Mom y est un PNJ ambiant (`trigger_type: talk`, un seul état `intro` pour l'instant), première ligne de dialogue du jeu entier — voir `content/dialogues/npcs/new-bark-town/mom_new_bark.json`. **Rôles ajoutés (2026-07-06, I-8)** : Mom épargne un pourcentage des gains si le joueur le souhaite et offre des décorations surprises (annoncées par appel Pokégear) ; **la chambre du joueur à l'étage = vitrine des décorations/collections** (voir PRD § Monnaie ¥ & la chambre).
 - 🔄 **Panneau de départ** (Route 29 est) — entrée `kind: sign` du registre, lecture via bouton A (finding 04-C3) ; montre la première leçon complétée. Apparaît uniquement post-Red.
-- 📍 Onboarding (Fukuda + leçon 一), Prof Elm apparition post-Lance *(« événement seuil rank 4 (note de Fukuda sur la carte) » purgé 2026-07-06, audit 03, finding 03-E1 — aucun système de « rank » n'existe dans les docs actuels ; si une note de Fukuda sur la carte est souhaitée, son déclencheur se redéfinira en synthèse sur les compteurs réels : kanji étudiés, badges, quêtes)*
+- 📍 Onboarding (Elm + leçon 一), Prof Elm apparition post-Lance
 - 🔒 Route 27 (est) → Plateau Indigo : accessible via 水 CS-Kanji (Surf sur la rivière)
 
-**Bâtiments sur la carte :** Dōjō Fukuda, Maison Fukuda, Maison de Mom, Panneau Route 29 (ouest), Accès Route 27 (est, 🔒水)
+**Bâtiments sur la carte :** Labo du Pr. Elm, Maison de Mom, Maison de Lyra/Ethan, Panneau Route 29 (ouest), Accès Route 27 (est, 🔒水)
 
 **Sourcé du guidebook — PNJ clés (rôle d'origine → matériau réutilisable) :**
-- **Mom** — premier PNJ parlé ; signale que "Elm a demandé après toi" → bon modèle pour la toute première ligne de dialogue de Fukuda.
-- **Professeur Elm** — fait choisir un starter parmi 3 Poké Balls — **adapté (2026-07-08, passe de vérification, aligné sur la décision compagnon de la synthèse) : Elm confie son Pikachu, compagnon unique et cosmétique, pas de choix** (le moment "remise initiale" est conservé comme scène d'ouverture, bon modèle pour l'onboarding) ; envoie en mission vers "Mr. Pokémon" (= analogue possible de Fukuda recevant un mystérieux paquet) ; appelle paniqué quand son labo est cambriolé par un garçon roux (= graine du fil Silver).
+- **Mom** — premier PNJ parlé ; signale que "Elm a demandé après toi", débloque sauvegarde/Sac/Carte Dresseur, remet le Pokégear au retour de la course chez Mr. Pokémon.
+- **Professeur Elm** — fait choisir un starter parmi 3 Poké Balls — **conservé tel quel (rouvert 2026-07-08, audit 10, point 9, tranché au grill — annule « compagnon unique, pas de choix » du 2026-07-08 passe de vérification) : Elm propose 3 compagnons (Pikachu + 2 autres à déterminer) et le joueur en choisit un**, cosmétique, jamais changé ensuite (voir PRD § Compagnon) ; envoie en mission vers "Mr. Pokémon" ; appelle paniqué quand son labo est cambriolé par un garçon roux (= graine du fil Silver).
 - **Lyra/Ethan** (rival/mentor) — voisin·e, laisse un mail dans le PC pour motiver l'aventure ; revu Route 29 puis Route 31.
 - **Policier** — enquête sur le cambriolage, demande au joueur de décrire le garçon roux (Silver).
 - Tagline d'origine : *"The Town Where the Winds of a New Beginning Blow"* — bon residu pour la tagline française de Bourg Geon.
 
 **Items HGSS conservés comme référence narrative :**
-- Pokégear → donné par Fukuda au début (onboarding) ; porte l'appel quotidien de Fukuda et les appels entrants du téléphone HGSS complet *(« sert aux push notifications » purgé 2026-07-06, chasse aux reliques audit 04 — vocabulaire web d'un ancien design)*
+- Pokégear → remis par Mom au retour de la course chez Mr. Pokémon (voir PRD § Séquence d'ouverture) ; porte l'appel quotidien du mentor actif (Elm puis Oak, voir PRD § Mentors) et les appels entrants du téléphone HGSS complet *(« sert aux push notifications » purgé 2026-07-06, chasse aux reliques audit 04 — vocabulaire web d'un ancien design)*
 - Master Ball → **le grand texte d'Elm** — texte de lecture majeur (manga/dictionnaire/magazine, support choisi à la passe contenu) donné par Elm après les 8 印 *(« item narratif (diplôme/sceau) » corrigé 2026-07-07, passe de vérification — contredisait la décision R11 (chasse aux reliques) qui en fait un texte de lecture, pas un trophée)*
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Mom** — rdc de la maison. Annonce qu'Elm demande après le joueur ; débloque sauvegarde/Sac/Carte Dresseur. Donne le Pokégear après la 1ère course. Plus tard propose de gérer une épargne sur les gains de combat.
 - **Lyra/Ethan** — 2F de sa maison, avec Marill. Déjà dresseur·euse, joue les mentors. Laisse un mail sur le PC du joueur ("tu as du courrier", motivant, tampon Marill). Revue Route 29 (apprend à attraper), Route 31 (donne le Vs. Recorder).
-- **Professeur Elm** — explique l'intérêt de laisser un compagnon hors de sa Ball ; **remet son Pikachu** (« choisir parmi 3 » adapté 2026-07-08, passe de vérification — compagnon unique, synthèse) ; envoie en mission chez Mr. Pokémon. Sort paniqué du labo pour vérifier son numéro dans le Pokégear avant Route 29. Reçoit l'œuf mystère, conseille de défier les Gyms. Donne l'Everstone après éclosion de Togepi, le **grand texte de lecture** après les 8 badges *(« la Master Ball » corrigé 2026-07-07, passe de vérification globale V-9 — reliquat de l'adaptation R11, chasse aux reliques audit 04 : voir PRD § Kimono Girls, note Master Ball → grand texte d'Elm)*. Mentionne plus tard les Kimono Girls à Rosalia.
+- **Professeur Elm** — explique l'intérêt de laisser un compagnon hors de sa Ball ; **propose 3 compagnons au choix** (voir ci-dessus) ; envoie en mission chez Mr. Pokémon. Sort paniqué du labo pour vérifier son numéro dans le Pokégear avant Route 29. Reçoit l'œuf mystère, conseille de défier les Gyms. Donne l'Everstone après éclosion de Togepi, le **grand texte de lecture** après les 8 badges *(« la Master Ball » corrigé 2026-07-07, passe de vérification globale V-9 — reliquat de l'adaptation R11, chasse aux reliques audit 04 : voir PRD § Kimono Girls, note Master Ball → grand texte d'Elm)*. Mentionne plus tard les Kimono Girls à Rosalia. **Porte le mentorat quotidien (appel matinal SRS + lettres) pour tout l'arc Johto** (2026-07-08, audit 10, voir PRD § Mentors) — relais au Pr. Chen/Oak à la traversée SS Aqua vers le Kanto.
 - **Policier** — présent au labo après le vol ; demande le nom du garçon roux une fois le joueur revenu de son premier affrontement avec lui.
 - **Rival (Silver)** — aperçu en train d'espionner le labo (vol) ; confronté plus tard sur Route 29/Ville Griotte.
 - **Assistant du Pr. Elm** — comptoir du Mart, garde l'œuf mystère en sécurité jusqu'au 1er badge.
@@ -146,10 +145,10 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ❌ Route principale **sans dresseur** *(les « 8–10 positions inventées » sont abandonnées — tranché 2026-07-07, synthèse, au grill : fidélité stricte, comme dans HGSS ; « trainers SRS » avait déjà été renommé par l'audit 03)*
-- 📍 Tutoriel de marche avec Fukuda (premiers 3 mouvements de l'avatar)
+- 📍 Tutoriel de marche avec Elm (premiers 3 mouvements de l'avatar)
 - Classe de dresseurs : Gamin, Fillette, Oiselier (classes les plus simples)
 
-*(Purgé 2026-07-06, audit 03, findings 03-E1/03-E2 : « Événement seuil rank 7 : Silver lettre 2 apparaît au Pokémon Center » — ni système de « rank » ni « lettres de Silver » n'existent (les lettres sont de Fukuda, Silver = 6 rencontres physiques) ; « Dresseur spécial (1 sur 5) : actif dès la première session » — mécanisme d'aucun doc actuel. Traces d'un design antérieur.)*
+*(Purgé 2026-07-06, audit 03, findings 03-E1/03-E2 : « Événement seuil rank 7 : Silver lettre 2 apparaît au Pokémon Center » — ni système de « rank » ni « lettres de Silver » n'existent (les lettres sont du mentor, Silver = 6 rencontres physiques) ; « Dresseur spécial (1 sur 5) : actif dès la première session » — mécanisme d'aucun doc actuel. Traces d'un design antérieur.)*
 
 **Accès :** libre depuis New Bark Town (ouest). Pas de CS requis.
 
@@ -173,7 +172,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **HGSS original :** première ville avec Pokémon Center, Mart, accès mer.
 
 **Dans 漢字の庭 :**
-- ✅ **Pokémon Center** — point d'entrée alternatif de la session SRS quotidienne ("Commencer la session" — même session/file/✓ que Fukuda/Pokégear, adopté 2026-07-06, audit 03, finding 03-E3), soin narratif *(« Mode Direct (Start Session) » et « accès `/library` » purgés — vocabulaire d'un ancien design)*
+- ✅ **Pokémon Center** — point d'entrée alternatif de la session SRS quotidienne ("Commencer la session" — même session/file/✓ que le mentor/Pokégear, adopté 2026-07-06, audit 03, finding 03-E3), soin narratif *(« Mode Direct (Start Session) » et « accès `/library` » purgés — vocabulaire d'un ancien design)*
 - ✅ **Pokémart** — bâtiment réel à intérieur navigable, vendeur sourcé, **achat actif en ¥ (tranché 2026-07-06, I-8 — clôt le candidat #6)** : décorations et objets de flaveur locaux, pur cosmétique/collection ; prix affichés en japonais (échelle des nombres, Carnet des compteurs). Voir PRD § Monnaie ¥ & la chambre du joueur.
 - 🔒 Accès mer (Route 40 direction) → nécessite 水 CS-Kanji, débloqué bien plus tard
 - Trainers de route : Route 29 continue, classes Gamin/Fillette
@@ -296,7 +295,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 
 **Dans 漢字の庭 :**
 - ✅ Positions dresseurs (6–8 slots)
-- 📍 **Quête Rocket — Éclaireurs** (combat scripté bloquant) : bloque la descente vers les Ruines d'Alph jusqu'à être battu. Kanji N5 basics (日、本、人、字、語). Gate : bloque l'accès aux Ruines Arcaniques. *(Renuméroté 2026-07-06, repasse progression P-7 : l'ancienne numérotation « Événement Rocket #1–#9 » impliquait un système de 9 événements que le PRD ne définit pas — seuls les 3 lieux canoniques (Puits Ramoloss, Repaire de Mékanos, Tour Radio) écrivent `rocket_progress` et déclenchent les lettres de Fukuda, notés « Événement Rocket 1/3–3/3 » ; tout le reste devient « Quête Rocket », des `Quest` ordinaires sans table dédiée.)*
+- 📍 **Quête Rocket — Éclaireurs** (combat scripté bloquant) : bloque la descente vers les Ruines d'Alph jusqu'à être battu. Kanji N5 basics (日、本、人、字、語). Gate : bloque l'accès aux Ruines Arcaniques. *(Renuméroté 2026-07-06, repasse progression P-7 : l'ancienne numérotation « Événement Rocket #1–#9 » impliquait un système de 9 événements que le PRD ne définit pas — seuls les 3 lieux canoniques (Puits Ramoloss, Repaire de Mékanos, Tour Radio) écrivent `rocket_progress` et déclenchent les lettres du mentor, notés « Événement Rocket 1/3–3/3 » ; tout le reste devient « Quête Rocket », des `Quest` ordinaires sans table dédiée.)*
 - Classe dresseurs : Gamin, Campeur, Marin (à partir d'ici)
 
 **Sourcé du guidebook — dresseurs :** **Pêcheur Henry**, **Pêcheur Justin**, **Pêcheur Ralph**, **Dresseur d'Oiseaux Peter** ; 🔍 **Frère/sœur du jour Frieda** (vendredi). Le guide dit "plus de dix dresseurs sur les Routes 32 et 33 combinées" — cohérent avec les "6-8 slots" déjà prévus au PRD pour cette seule route.
@@ -404,7 +403,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Sourcé du guidebook — autres PNJ :**
 - **Le Maître du Charbon** (orig. Charcoal Man) — ses Farfetch'd-analogues se sont enfuis en Forêt Secte ; son apprenti part les chercher. Une fois la quête résolue en forêt, retour ici pour recevoir le **Charbon**. Confirme le lien Azalea ↔ Ilex Forest déjà esquissé.
 - Un Sbire Rocket bloque l'entrée du Puits Ramoloss dès l'arrivée du joueur en ville — bon déclencheur visuel pour l'icône "porte verrouillée" du PRD.
-- ⚠️ Lore d'origine : "C'est un garçon nommé Red qui a démantelé la Team Rocket il y a trois ans" — élément qui pourrait enrichir la confrontation finale avec Red au Mont Gris (Red aurait, dans le canon d'origine, déjà vaincu une organisation criminelle) ; à intégrer ou non selon la direction narrative voulue pour Fukuda/Red.
+- ⚠️ Lore d'origine : "C'est un garçon nommé Red qui a démantelé la Team Rocket il y a trois ans" — élément qui pourrait enrichir la confrontation finale avec Red au Mont Gris (Red aurait, dans le canon d'origine, déjà vaincu une organisation criminelle) ; à intégrer ou non selon la direction narrative voulue pour la confrontation avec Red.
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
 - **Gym Bugsy — dresseurs** : Bug Catcher Al, Bug Catcher Josh, Bug Catcher Benny, Twins Amy & May, avant Bugsy (Kakuna/Metapod/Scyther). Récompense : Hive Badge (Cut en exploration, échangés jusqu'au niv. 30 obéissent) + TM89 U-turn.
@@ -568,7 +567,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **HGSS original :** Routes vers Ecruteak. Route 36 a Sudowoodo (bloque vers Ecruteak).
 
 **Dans 漢字の庭 :**
-- 📍 **Obstacle 1 — Simularbre/Sudowoodo (Route 36)** : kanji-monstre 木. Délogé en l'**arrosant avec l'Arrosoir** (SquirtBottle) reçu à la Boutique de Fleurs de Doublonville — comme en jeu (corrigé 2026-07-03 ; l'ancienne version "CS-Kanji 水 mastérisé" mélangeait deux mécanismes faux : ce n'est ni Surf, ni de la maîtrise SRS). Fukuda: "Ce qui ressemble à une force peut être une illusion. L'eau le sait."
+- 📍 **Obstacle 1 — Simularbre/Sudowoodo (Route 36)** : kanji-monstre 木. Délogé en l'**arrosant avec l'Arrosoir** (SquirtBottle) reçu à la Boutique de Fleurs de Doublonville — comme en jeu (corrigé 2026-07-03 ; l'ancienne version "CS-Kanji 水 mastérisé" mélangeait deux mécanismes faux : ce n'est ni Surf, ni de la maîtrise SRS). Le mentor : "Ce qui ressemble à une force peut être une illusion. L'eau le sait."
 - 📍 **CS-Kanji 砕 (Éclate-Roc)** donné par un garçon sur la Route 36 (guide p. 80) — première capacité d'obstacle du jeu, avant même le Simularbre
 - ✅ Positions dresseurs R36 (4–5), R37 (4–5)
 - Classe dresseurs : Marin, Jongleur
@@ -604,7 +603,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 - 📍 **Silver apparition #3** (Tour Embrasée, en haut de l'échelle vers B1F — voir section burned-tower) : kanji 影、闇、忘、去、断、孤. ⚠️ Renuméroté de #2 à #3 (kanji inchangé, déjà correct) — voir `curriculum-checkpoints.md` § Règle de Silver. *(« devant Tour Jo, studied ≥ 550 » corrigé 2026-07-07, audit 07, passe de vérification V-15 : contredisait la section burned-tower du même fichier, la table PRD (#3 = Tour Embrasée) et la calibration N3 de la zone — le seuil 550 était un fossile.)*
 - 📍 **Kimono Girl #3 (Miki)** dans la ville — 語源の道, kanji 古、源、形、象、原、文
 - 📍 Événement collectif Kimono Girls (post-remise du grand texte d'Elm — les 5 rencontres individuelles sont des scènes/leçons, pas des combats ; « après toutes les 5 battues » corrigé 2026-07-07, audit 07, V-16, reliquat d'avant l'audit 01) — gauntlet au Théâtre de Danse, puis danse rituelle à Tour Jo
-- 📍 NPC quest N3 : aller à Tour Jo lire inscription → reward lettre Fukuda
+- 📍 NPC quest N3 : aller à Tour Jo lire inscription → reward lettre du mentor
 
 **Bâtiments sur la carte :** Gym Morty, Tour Jo (nord), Tour Embrasée (ouest), Pokémon Center
 
@@ -615,7 +614,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Sourcé du guidebook — autres PNJ clés :**
 - **Bill** rencontré ici au Centre Pokémon (avant de repartir pour Doublonville/Goldenrod, où il offrira plus tard un cadeau) — confirme le fil PNJ récurrent.
 - Un homme à l'ouest du Centre Pokémon récompense une bonne réponse à une question par un détecteur d'objets cachés ; la même pièce contient un livre relatant la légende des trois esprits-kanji et des deux tours de la ville — bonne source de "texte de lore" pour la bibliothèque.
-- Un vieil homme, croisé à l'entrée du Gym puis à la sortie de la Tour Embrasée, raconte en deux temps la légende d'un être arc-en-ciel ayant ranimé trois créatures mortes dans un incendie — modèle direct pour un PNJ-conteur qui livre une légende en plusieurs fragments à travers la zone (cohérent avec le rôle de "lettres de Fukuda" du PRD).
+- Un vieil homme, croisé à l'entrée du Gym puis à la sortie de la Tour Embrasée, raconte en deux temps la légende d'un être arc-en-ciel ayant ranimé trois créatures mortes dans un incendie — modèle direct pour un PNJ-conteur qui livre une légende en plusieurs fragments à travers la zone (cohérent avec le rôle de "lettres du mentor" du PRD).
 - Tagline d'origine : *"A Historical City"* — "le meilleur du passé est encore préservé".
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) :**
@@ -650,7 +649,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - 📍 **Quête Rocket — Traque des Bêtes Sacrées** (optionnelle) : kanji 炎、雷、洪、猛、霊 *(ex-« Événement #4 », renuméroté 2026-07-06, P-7)*
-- Reward : lettre Fukuda sur les kanji sacrés
+- Reward : lettre du mentor sur les kanji sacrés
 - Intérieur réel (rez + sous-sol, aligné sur la section ecruteak corrigée à la session 3) — la quête Rocket optionnelle (Traque des Bêtes Sacrées) y est composée en `map_trainers`/`map_npcs` (ADR-0004) *(« bâtiment tappable → scène » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 
 **Sourcé du guidebook — confirmation du beat Silver & des trois esprits :**
@@ -810,7 +809,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Sourcé du guidebook — structure interne du Repaire de Mékanos (QG Rocket), plus détaillée que l'entrée actuelle du PRD :**
 - **B1F** : alarmes déguisées en statues, déclenchent des duos de Sbires si on passe devant ; un ordinateur gardé par un Scientifique permet de couper tout le système d'alarme (mécanique "infiltration furtive ou frontale", au choix du joueur).
-- **B2F** : Lance attend au pied des escaliers et soigne l'équipe du joueur ; le rival y est croisé, déjà vaincu par Lance, qui lui reproche de "ne pas avoir assez d'affection pour ses compagnons" — beau levier thématique pour une réplique de Fukuda sur le lien avec l'apprentissage.
+- **B2F** : Lance attend au pied des escaliers et soigne l'équipe du joueur ; le rival y est croisé, déjà vaincu par Lance, qui lui reproche de "ne pas avoir assez d'affection pour ses compagnons" — beau levier thématique pour une réplique du mentor sur le lien avec l'apprentissage.
 - **B3F** : il faut deux mots de passe (obtenus en battant des Sbires) pour atteindre la salle du chef.
 - **Salle du chef** : le joueur s'attend à affronter le grand chef (Giovanni) mais découvre **l'Exécutif Petrel déguisé** — retournement direct, cohérent avec le PRD qui prévoit déjà Petrel comme un personnage "déguisé" à la Tour Radio ; ici, c'est sa première apparition costumée.
 - Après sa fuite, un indice sonore mène à la salle du transmetteur où **l'Exécutif Ariana** affronte le joueur **en double, aux côtés de Lance** (combat 2v2 Lance+joueur vs Ariana+Sbire) — confirme exactement le PRD ("Exécutif : Ariana (double combat avec Lance)").
@@ -833,7 +832,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 
 **Dans 漢字の庭 :**
 - 📍 **Événement Rocket 2/3 — Ariana — Repaire de Mékanos** *(ex-« #5 », renuméroté 2026-07-06, P-7)* : lié au Lac Colère. Kanji 欺、偽、惑、騙、詐. Bloque l'accès à Pryce's Gym.
-- 📍 **Rencontre Shiny garantie** : un kanji avec shimmer rouge (怒) attend au centre du lac. HP battle kanji 怒、激、憤、烈、猛、狂. Reward : badge Shiny rouge sur 怒 + message Fukuda.
+- 📍 **Rencontre Shiny garantie** : un kanji avec shimmer rouge (怒) attend au centre du lac. HP battle kanji 怒、激、憤、烈、猛、狂. Reward : badge Shiny rouge sur 怒 + message du mentor.
 - ✅ Zone accessible après Mahogany Town
 
 **Sourcé du guidebook — confirmation forte + extension :**
@@ -921,13 +920,13 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **Dans 漢字の庭 :**
 - ✅ **Quiz du Maître — condition réelle du 印 n°8** (adopté 2026-07-01) : 5 questions axées sur l'empathie/le respect ("si j'étais à la place de l'autre, que ressentirais-je ?"), pas la seule traduction littérale. Réussite → Clair (surprise) remet le 印 n°8. Recalibre le "Quiz de traduction N1" déjà prévu au PRD plutôt que de l'ajouter en plus.
 - 📍 **Quête Rocket — L'Émissaire** (optionnelle) : pas de combat. Quiz de traduction d'une lettre en japonais. Reward : lore entry Dragon's Den + beat narratif. *(Ex-« Événement #8 », renuméroté 2026-07-06, P-7)*
-- 📍 NPC quest N1 : inscription au fond de l'antre, 4 lignes à traduire (registre classique). **Reward = le « Trophée Antre du Dragon » (défini 2026-07-07, synthèse, tranché au grill)** : item `unique` `trophee-antre` + lore entry + dialogue Fukuda — c'est **cette quête optionnelle de lecture N1** (pas le quiz du Maître, qui est sur le chemin critique du 印 n°8) que testent les 3 gates `item_owned(trophee-antre)` : Suicune Route 25, accès Mont Gris, combat Red. Quête accomplissable en revisite fin de Kanto (lecture N1 requise) — l'Antre gagne sa raison de re-visite endgame.
+- 📍 NPC quest N1 : inscription au fond de l'antre, 4 lignes à traduire (registre classique). **Reward = le « Trophée Antre du Dragon » (défini 2026-07-07, synthèse, tranché au grill)** : item `unique` `trophee-antre` + lore entry + dialogue du mentor — c'est **cette quête optionnelle de lecture N1** (pas le quiz du Maître, qui est sur le chemin critique du 印 n°8) que testent les 3 gates `item_owned(trophee-antre)` : Suicune Route 25, accès Mont Gris, combat Red. Quête accomplissable en revisite fin de Kanto (lecture N1 requise) — l'Antre gagne sa raison de re-visite endgame.
 - ✅ Accès réel depuis Ebènelle (entrée sud, gardée tant que le Gym Clair n'est pas vaincu) — grotte navigable, sanctuaire du Maître à l'intérieur *(« zone tappable » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable »)*
 
 **Sourcé du guidebook — détail exact du quiz du Maître (adopté ci-dessus) :**
 - 📍 À l'intérieur du sanctuaire, le **Maître** (Ancien) "jauge" le joueur avec **cinq questions**, posées via un système tactile. L'indice du guide d'origine est limpide et directement transposable au PRD : *"si tu donnes les mauvaises réponses... la récompense finale sera incomplète. Pour choisir tes réponses, demande-toi : si j'étais à la place de [l'autre], que ressentirais-je ?"* — c'est-à-dire que les bonnes réponses sont celles qui témoignent d'empathie, pas de force ou de domination. **C'est le meilleur matériau source pour le "Quiz de traduction N1" déjà prévu au PRD** : il devrait porter sur des valeurs (empathie, respect, lien) plutôt que sur la seule traduction littérale.
 - Une fois le quiz réussi, **Clair fait irruption**, surprise que le joueur ait réussi ("elle ne s'attendait même pas à ce que tu réussisses le test !") — le Maître la corrige, et c'est seulement alors qu'elle remet le 印 final. Confirme la recommandation ci-dessus (blackthorn-city) : Clair n'est pas la juge, le Maître l'est.
-- 📍 **Révélation de lignée** : le Maître/Ancien de l'Antre est le grand-père de Clair, et **Lance est son frère aîné**. Ce lien Lance↔Clair↔Maître ferme élégamment la boucle ouverte au Lac Colère/Mahogany Town (où Lance accompagne le joueur) — fil à préserver si possible, par exemple via une ligne de dialogue du Maître ou de Fukuda qui le révèle.
+- 📍 **Révélation de lignée** : le Maître/Ancien de l'Antre est le grand-père de Clair, et **Lance est son frère aîné**. Ce lien Lance↔Clair↔Maître ferme élégamment la boucle ouverte au Lac Colère/Mahogany Town (où Lance accompagne le joueur) — fil à préserver si possible, par exemple via une ligne de dialogue du Maître ou du mentor qui le révèle.
 - Après l'épreuve réussie, le Maître propose un cadeau de "successeur" — bon modèle pour le "trophée de texte légendaire" déjà prévu par le PRD à ce stade.
 
 **Inventaire PNJ exhaustif (passe 2, source PDF) — confirme et précise le quiz du Maître :**
@@ -966,7 +965,7 @@ La route se divise explicitement en un chemin est et un chemin ouest, impossible
 
 **Dans 漢字の庭 :**
 - ✅ Positions dresseurs R26 (4 slots), R27 (4 slots)
-- 📍 **Obstacle 2 — Ronflex** : kanji 眠. ⚠️ Corrigé 2026-07-03 : il n'est **pas** sur Route 27 — la ROM et le guide le placent **devant la Grotte Taupiqueur** (cellules Routes 11/12, côté Kanto, désormais au scope depuis le 2026-07-01). Bloquant, réveillé par l'émission Flûte Poké de la radio améliorée (carte EXPN, remise par le **directeur de la station radio de Lavender Town** après la quête de la Centrale Kanto — donneur précisé 2026-07-06, audit 04, finding 04-B1, Lavender réintégrée) — comme en jeu. Tapper avant → il dort profondément (animation courte + message Fukuda).
+- 📍 **Obstacle 2 — Ronflex** : kanji 眠. ⚠️ Corrigé 2026-07-03 : il n'est **pas** sur Route 27 — la ROM et le guide le placent **devant la Grotte Taupiqueur** (cellules Routes 11/12, côté Kanto, désormais au scope depuis le 2026-07-01). Bloquant, réveillé par l'émission Flûte Poké de la radio améliorée (carte EXPN, remise par le **directeur de la station radio de Lavender Town** après la quête de la Centrale Kanto — donneur précisé 2026-07-06, audit 04, finding 04-B1, Lavender réintégrée) — comme en jeu. Tapper avant → il dort profondément (animation courte + message du mentor).
 - 🔒 Route 27 depuis New Bark Town est : nécessite 水 CS-Kanji
 
 **Sourcé du guidebook — dresseurs :** Route 26 : **Dresseur Ace Jamie**, **Dresseur Ace Jake**, **Dresseur Ace Joyce**, **Voyant Vernon**, **Pêcheur Scott**. Route 27 (côté est / Chutes de Tohjo) : **Dresseur Ace Megan**, **Dresseur Ace Blake**, **Dresseur Ace Brian**, **Voyant Eli**, **Dresseur Ace Reena**.
@@ -1018,7 +1017,7 @@ La route se divise explicitement en un chemin est et un chemin ouest, impossible
 - 📍 Koga : line sur l'oubli délibéré (Silver reference)
 - 📍 Bruno : effortlessness vs. preparation (Red reference)
 - 📍 Karen : lettre → Red n'en a pas laissé
-- 📍 Lance : Dragon Scroll ceremony → le rouleau contient le poème caché de Fukuda
+- 📍 Lance : Dragon Scroll ceremony → le rouleau contient le poème caché du mentor
 - ✅ Dernier Pokémon Center avant Mont Gris (dans Salle de Lance ou juste avant)
 
 **Sourcé du guidebook (passe 1) :**
@@ -1033,7 +1032,7 @@ Le texte source intégral de Koga/Bruno/Karen a été retrouvé via le PDF (qui 
 - **Karen** — "Dresseur de Pokémon de type Ténèbres."
 - **Lance** (Champion) — "Dresseur de Pokémon de type Dragon."
 
-**Conséquence pour le contenu :** toute personnalité prêtée à ces 5 figures dans 漢字の庭 (les répliques déjà esquissées par le PRD : "le dresseur silencieux", "l'oubli délibéré", "effortlessness vs. preparation", "Red n'a pas laissé de lettre", le rouleau-poème de Fukuda) est **entièrement une invention du studio** — ce qui est très bien, puisqu'il n'y a rien à "trahir" dans la source ; aucune caractérisation officielle n'existe à contredire.
+**Conséquence pour le contenu :** toute personnalité prêtée à ces 5 figures dans 漢字の庭 (les répliques déjà esquissées par le PRD : "le dresseur silencieux", "l'oubli délibéré", "effortlessness vs. preparation", "Red n'a pas laissé de lettre", le rouleau-poème du mentor) est **entièrement une invention du studio** — ce qui est très bien, puisqu'il n'y a rien à "trahir" dans la source ; aucune caractérisation officielle n'existe à contredire.
 
 **Sourcé du guidebook — PNJ exhaustif de l'Antichambre/HQ de la Ligue (passe 2) :**
 - **Vieil homme avec son compagnon-télépathe** (hall d'entrée) — blague que son compagnon "ne pourra pas te ramener à la maison si tu te décourages à la Ligue".
@@ -1069,7 +1068,7 @@ Le texte source intégral de Koga/Bruno/Karen a été retrouvé via le PDF (qui 
 - **Un Centre Pokémon se trouve exactement à la jonction Route 28 / entrée du Mont Gris** — présenté comme la dernière occasion de se préparer avant l'ascension, confirmant (cette fois par la source primaire, pas seulement le web) le "Dernier Pokémon Center" déjà esquissé par le PRD.
 - **Structure interne confirmée** : grotte (chambre centrale → chambre ouest) → versant extérieur → intérieur enneigé (1) → intérieur enneigé (2) → sommet — un jalonnement en 5 temps cohérent avec les 4 zones déjà découpées par le PRD (Route 28 / Base / Versants inférieurs / Versants supérieurs) + le Sommet.
 - **Tempête de grêle au sommet — désormais confirmée par deux sources indépendantes** (web passe 3 + guidebook Kanto passe 6) : le combat contre Red s'ouvre avec un climat de grêle permanent. Détail supplémentaire de la source primaire : c'est présenté comme la météo par défaut du sommet, pas un effet spécial propre au combat — un vrai trait du lieu, pas seulement de l'affrontement. Renforce l'idée d'un effet visuel/sonore de blizzard **continu dès l'arrivée au sommet**, pas seulement pendant les 50 questions du combat.
-- **Après la défaite de Red — nouveau beat, absent de la version précédente de cette section :** le jeu d'origine ne s'arrête pas au générique de victoire. Le joueur est ramené à sa chambre de départ, puis invité à recontacter la figure qui avait donné la permission d'accès (Pr. Chen/Oak) pour lui annoncer la victoire — qui **récompense l'exploit en laissant le joueur choisir un cadeau** (dans l'original : un starter Kanto). Ce choix fait écho au tout premier choix de starter du jeu — bon matériau pour une boucle narrative de fin de partie (ex. Fukuda ou le Pr. Elm proposant un choix symbolique qui fait écho à la toute première scène d'onboarding), mais c'est un enrichissement optionnel à trancher par l'équipe narrative, pas une correction du PRD actuel (qui s'arrête déjà, à raison, au trophée "Red perfect").
+- **Après la défaite de Red :** le jeu d'origine ne s'arrête pas au générique de victoire. Le joueur est ramené à sa chambre de départ, puis invité à recontacter la figure qui avait donné la permission d'accès (Pr. Chen/Oak) pour lui annoncer la victoire — qui récompense l'exploit en laissant le joueur choisir un cadeau (dans l'original : un starter Kanto). **Adapté et tranché (2026-07-08, audit 10, point 9, au grill)** : Oak remet le Ruban de Légende (trophée sourcé, § mt-silver-summit ci-dessus) et un objet cosmétique assorti au compagnon choisi par le joueur au tout début du jeu (voir PRD § Compagnon) — l'écho au premier vrai choix du jeu, plutôt qu'un nouveau choix inédit à cette étape. Un écran de générique dédié suit cette scène (PRD § Fin de partie), puis retour en free-roam post-game.
 - Détail mineur de navigation (non narratif) : Route 28 ne se traverse pas d'un bout à l'autre au premier passage — il faut entrer dans Mont Gris puis en ressortir pour atteindre sa moitié nord, où se trouve la maison de l'Idole/TM Acier Aile déjà documentée passe 3 (cohérent avec "accessible uniquement via une coupe d'arbre depuis l'extérieur du Mont Gris" — confirme un aller-retour, pas un raccourci manqué par la passe 3).
 
 **Sourcé du web — passe 3 (2026-06-30, Bulbapedia, hors guidebook Prima local) — toujours valide, recoupé et complété ci-dessus par la source primaire :**
@@ -1086,7 +1085,7 @@ Sources : [Bulbapedia — Walkthrough Part 28](https://bulbapedia.bulbagarden.ne
 ## Bâtiments récurrents (toutes zones)
 
 ### Pokémon Center (dans chaque ville)
-- **Fonction dans le jeu :** point d'entrée alternatif de la session SRS quotidienne — strictement la même session/file/✓ que l'appel de Fukuda et Pokégear → Téléphone (adopté 2026-07-06, audit 03, finding 03-E3 ; « Mode Direct »/« queue linéaire » purgés, vocabulaire d'un ancien design)
+- **Fonction dans le jeu :** point d'entrée alternatif de la session SRS quotidienne — strictement la même session/file/✓ que l'appel du mentor et Pokégear → Téléphone (adopté 2026-07-06, audit 03, finding 03-E3 ; « Mode Direct »/« queue linéaire » purgés, vocabulaire d'un ancien design)
 - **Intérieur réel** ; parler à l'**infirmière au comptoir** ouvre le menu "Commencer la session" (ou l'état du jour si ✓ déjà posé) *(« Tapper → menu » corrigé 2026-07-06, audit 04 session 4, doctrine « tout utilisable » — l'infirmière passe d'« optionnelle » à porteuse de la fonction)*
 
 ### Gyms (villes avec 師範)
@@ -1291,7 +1290,7 @@ récurrents (Centre Pokémon, Gym, Game Corner). **Budgets posés (2026-07-07, s
 
 **Vertville / Viridian (Blue)** — Dernier Gym, verrouillé jusqu'à la fin (le vieil homme devant la porte laisse passer seulement après Blaine + Blue rencontré à Île Braise). Sol du Gym = tuiles-flèches qui déplacent le joueur dans une direction fixe (autre gabarit de Gym-puzzle, cohérent avec 頂/rivalité — un terrain qu'on ne contrôle pas totalement). Après victoire : le Pr. Chen/Oak appelle immédiatement à la sortie du Gym.
 
-**Bourg-Origine / Pallet Town (Pr. Chen/Oak) — ✅ nouvelle entrée, passe 6 :** absente des passes précédentes alors qu'elle encadre tout l'arc Kanto. C'est le point d'arrivée réel (après Vertville/Blue) et le point de retour après Red — voir la note "après la défaite de Red" ajoutée § mt-silver-summit ci-dessus. Plus petite ville du jeu (pas de Centre Pokémon ni de Poké Mart) : seulement le labo du Pr. Chen/Oak, et les maisons du héros et de son/sa rival(e) historique (Blue). Trois visites distinctes confirmées par le texte : (1) première visite, juste après Vertville — Oak n'a encore rien à donner, "reviens une fois tous les badges Kanto en poche" (bon écho pour un Fukuda qui renverrait le joueur au terrain plutôt que de le récompenser prématurément) ; (2) après avoir vaincu Blue à Vertville — Oak donne la permission d'accès à Mont Gris (voir passe 6 § mt-silver-summit) ; (3) après Red — choix de récompense symbolique. Détail de caractérisation trouvé dans la maison du rival : sa mère/sœur (Daisy dans l'original) toilette le compagnon du joueur quotidiennement sur un créneau fixe (bon gabarit de PNJ à horaire fixe, `Condition.time_window` — *cross-réf « Loterie/Boutique Bonheur déjà au PRD » corrigée 2026-07-06, chasse aux reliques audit 04 : ni l'une ni l'autre n'étaient au PRD ; la Loterie est désormais réintégrée, voir § goldenrod-city*) et finit par transmettre un contact pour un combat de revanche post-16-badges.
+**Bourg-Origine / Pallet Town (Pr. Chen/Oak) — ✅ nouvelle entrée, passe 6 :** absente des passes précédentes alors qu'elle encadre tout l'arc Kanto. C'est le point d'arrivée réel (après Vertville/Blue) et le point de retour après Red — voir la note "après la défaite de Red" ajoutée § mt-silver-summit ci-dessus. Plus petite ville du jeu (pas de Centre Pokémon ni de Poké Mart) : seulement le labo du Pr. Chen/Oak, et les maisons du héros et de son/sa rival(e) historique (Blue). Trois visites distinctes confirmées par le texte : (1) première visite, juste après Vertville — Oak n'a encore rien à donner, "reviens une fois tous les badges Kanto en poche" (bon écho pour un mentor qui renverrait le joueur au terrain plutôt que de le récompenser prématurément) ; (2) après avoir vaincu Blue à Vertville — Oak donne la permission d'accès à Mont Gris (voir passe 6 § mt-silver-summit) ; (3) après Red — choix de récompense symbolique. Détail de caractérisation trouvé dans la maison du rival : sa mère/sœur (Daisy dans l'original) toilette le compagnon du joueur quotidiennement sur un créneau fixe (bon gabarit de PNJ à horaire fixe, `Condition.time_window` — *cross-réf « Loterie/Boutique Bonheur déjà au PRD » corrigée 2026-07-06, chasse aux reliques audit 04 : ni l'une ni l'autre n'étaient au PRD ; la Loterie est désormais réintégrée, voir § goldenrod-city*) et finit par transmettre un contact pour un combat de revanche post-16-badges.
 
 ### Inventaire PNJ exhaustif complémentaire par ville (passe 7, 2026-07-02)
 
