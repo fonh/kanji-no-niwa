@@ -5,7 +5,7 @@ Mise à jour le 2026-07-08 après l'audit 10 (charnières + grill) puis après l
 pivot stockage par Neon + Auth.js (même jour, hors périmètre des audits — voir
 `docs/adr/0005-data-storage-neon-authjs.md`).
 
-## Statut : Étape 1 soldée. Prochaine étape → Étape 2, point 1 ci-dessous.
+## Statut : Étape 1 soldée. Étape 2 point 1 (kanji) fait 2026-07-09. Prochaine étape → Étape 2, point 2.
 
 Toutes les décisions de design sont prises et écrites dans le PRD. Le stockage/auth est déjà
 migré et commité (Neon, Auth.js — code en place, rien à refaire). **Ce qui suit est le chemin
@@ -38,12 +38,19 @@ Server Actions par route (`src/app/*/actions.ts`).
 Tout est spécifié ; il faut produire les données. Scriptable en grande partie, relecture
 humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
 
-1. **L'assignation kanji → zone — À FAIRE EN PREMIER, colonne vertébrale de tout le contenu** :
-   produire la liste ordonnée des 2136 kanji (`getAvailableKanji` : ordre JLPT + prérequis
-   composants), la découper selon les fenêtres de la table de calibration, script de
-   proposition + relecture. Idem **grammaire** : 828 points Hanabira → paliers → zones. Sans
-   ça, impossible de savoir quels kanji une leçon de telle zone doit enseigner — tout le reste
-   de cette étape et toute l'étape 3 en dépendent.
+1. **✅ FAIT 2026-07-09 — L'assignation kanji → zone, colonne vertébrale de tout le contenu** :
+   `scripts/build/build-kanji-zone-assignment.py` produit `content/kanji-zone-assignment.json`
+   (ordre canonique des 2136 kanji, 0 deadlock de composants, partition chaînée sur les bornes
+   hautes des 83 zones — Option A : la borne basse des fenêtres qui se chevauchent devient
+   informative, pas de découpe). Idem **grammaire** :
+   `scripts/build/build-grammar-zone-assignment.py` → `content/grammar-zone-assignment.json`
+   (828 points Hanabira, tous assignés, réutilise la table déjà publiée « Repère kanji
+   cumulé »). Rapport de relecture : `.scratch/audits/kanji-zone-assignment-report.md`.
+   **3 zones à 0 kanji trouvées et acceptées telles quelles pour l'instant** (revue
+   2026-07-09) : union-cave et route-40 (fenêtres non-monotones dans la table — de vrais trous
+   à corriger zone par zone à l'étape 2 point 5, pas maintenant) ; le bloc des 5 salles Elite
+   Four (870–900 partagée, seule Will récupère les 30 kanji) — cohérent avec le PRD (« la
+   Ligue plate … ne porte aucune leçon obligatoire »), pas une anomalie.
 2. **Registre des zones** : champ `name {jp, en}` (les noms officiels VO — dépouillement
    Bulbapedia, ~83 entrées), résolution du **mapping musique identité** (tracklist OST HGSS →
    une piste par zone, les arbitrages seuls restant en table).

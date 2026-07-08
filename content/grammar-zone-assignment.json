@@ -1,0 +1,4574 @@
+{
+  "zones": [
+    {
+      "zone_id": "new-bark-town",
+      "niveau": "N5 pur",
+      "grammar_ids": [
+        "N5-001",
+        "N5-002",
+        "N5-003",
+        "N5-004",
+        "N5-005",
+        "N5-006",
+        "N5-007",
+        "N5-008",
+        "N5-009",
+        "N5-010",
+        "N5-011",
+        "N5-012",
+        "N5-013",
+        "N5-014",
+        "N5-015",
+        "N5-016",
+        "N5-017",
+        "N5-018",
+        "N5-019",
+        "N5-020",
+        "N5-021",
+        "N5-022",
+        "N5-023",
+        "N5-024",
+        "N5-025",
+        "N5-026",
+        "N5-027",
+        "N5-028",
+        "N5-029",
+        "N5-030",
+        "N5-031"
+      ]
+    },
+    {
+      "zone_id": "route-29",
+      "niveau": "N5",
+      "grammar_ids": [
+        "N5-032",
+        "N5-033",
+        "N5-034",
+        "N5-035",
+        "N5-036",
+        "N5-037",
+        "N5-038",
+        "N5-039",
+        "N5-040",
+        "N5-041",
+        "N5-042",
+        "N5-043",
+        "N5-044",
+        "N5-045",
+        "N5-046",
+        "N5-047",
+        "N5-048",
+        "N5-049",
+        "N5-050",
+        "N5-051",
+        "N5-052"
+      ]
+    },
+    {
+      "zone_id": "cherrygrove-city",
+      "niveau": "N5",
+      "grammar_ids": [
+        "N5-053",
+        "N5-054",
+        "N5-055",
+        "N5-056",
+        "N5-057",
+        "N5-058",
+        "N5-059",
+        "N5-060",
+        "N5-061",
+        "N5-062",
+        "N5-063"
+      ]
+    },
+    {
+      "zone_id": "route-30",
+      "niveau": "N5",
+      "grammar_ids": [
+        "N5-064",
+        "N5-065",
+        "N5-066",
+        "N5-067",
+        "N5-068",
+        "N5-069",
+        "N5-070",
+        "N5-071",
+        "N5-072",
+        "N5-073",
+        "N5-074",
+        "N5-075",
+        "N5-076",
+        "N5-077",
+        "N5-078",
+        "N5-079",
+        "N5-080",
+        "N5-081",
+        "N5-082",
+        "N5-083",
+        "N5-084"
+      ]
+    },
+    {
+      "zone_id": "route-31",
+      "niveau": "N5/N4",
+      "grammar_ids": [
+        "N5-085",
+        "N5-086",
+        "N5-087",
+        "N5-088",
+        "N5-089",
+        "N5-090",
+        "N5-091",
+        "N5-092",
+        "N5-093",
+        "N5-094",
+        "N5-095",
+        "N5-096",
+        "N5-097",
+        "N5-098",
+        "N5-099",
+        "N5-100",
+        "N5-101",
+        "N5-102",
+        "N5-103",
+        "N5-104",
+        "N5-105"
+      ]
+    },
+    {
+      "zone_id": "violet-city",
+      "niveau": "N5/N4",
+      "grammar_ids": [
+        "N5-106",
+        "N5-107",
+        "N5-108",
+        "N5-109",
+        "N5-110",
+        "N5-111",
+        "N5-112",
+        "N5-113",
+        "N5-114",
+        "N5-115",
+        "N5-116",
+        "N5-117",
+        "N5-118",
+        "N5-119",
+        "N5-120",
+        "N5-121",
+        "N5-122",
+        "N5-123",
+        "N5-124",
+        "N5-125",
+        "N5-126",
+        "N5-127",
+        "N5-128",
+        "N5-129",
+        "N5-130",
+        "N5-131",
+        "N5-132",
+        "N5-133",
+        "N5-134",
+        "N5-135",
+        "N5-136"
+      ]
+    },
+    {
+      "zone_id": "sprout-tower",
+      "niveau": "N5/N4",
+      "grammar_ids": [
+        "N4-001",
+        "N4-002",
+        "N4-003",
+        "N4-004",
+        "N4-005",
+        "N4-006",
+        "N4-007",
+        "N4-008"
+      ]
+    },
+    {
+      "zone_id": "route-32",
+      "niveau": "N4",
+      "grammar_ids": [
+        "N4-009",
+        "N4-010",
+        "N4-011",
+        "N4-012",
+        "N4-013",
+        "N4-014",
+        "N4-015",
+        "N4-016",
+        "N4-017",
+        "N4-018",
+        "N4-019",
+        "N4-020",
+        "N4-021",
+        "N4-022",
+        "N4-023"
+      ]
+    },
+    {
+      "zone_id": "ruins-of-alph",
+      "niveau": "N4",
+      "grammar_ids": [
+        "N4-024",
+        "N4-025",
+        "N4-026",
+        "N4-027",
+        "N4-028",
+        "N4-029",
+        "N4-030",
+        "N4-031",
+        "N4-032",
+        "N4-033",
+        "N4-034",
+        "N4-035",
+        "N4-036",
+        "N4-037",
+        "N4-038",
+        "N4-039"
+      ]
+    },
+    {
+      "zone_id": "union-cave",
+      "niveau": "N4",
+      "grammar_ids": []
+    },
+    {
+      "zone_id": "route-33",
+      "niveau": "N4",
+      "grammar_ids": [
+        "N4-040",
+        "N4-041",
+        "N4-042",
+        "N4-043",
+        "N4-044",
+        "N4-045",
+        "N4-046",
+        "N4-047",
+        "N4-048",
+        "N4-049",
+        "N4-050"
+      ]
+    },
+    {
+      "zone_id": "azalea-town",
+      "niveau": "N4",
+      "grammar_ids": [
+        "N4-051",
+        "N4-052",
+        "N4-053",
+        "N4-054",
+        "N4-055",
+        "N4-056",
+        "N4-057",
+        "N4-058",
+        "N4-059",
+        "N4-060",
+        "N4-061",
+        "N4-062"
+      ]
+    },
+    {
+      "zone_id": "slowpoke-well",
+      "niveau": "N4",
+      "grammar_ids": [
+        "N4-063",
+        "N4-064",
+        "N4-065",
+        "N4-066",
+        "N4-067",
+        "N4-068",
+        "N4-069",
+        "N4-070"
+      ]
+    },
+    {
+      "zone_id": "ilex-forest",
+      "niveau": "N4",
+      "grammar_ids": [
+        "N4-071",
+        "N4-072",
+        "N4-073",
+        "N4-074",
+        "N4-075",
+        "N4-076",
+        "N4-077",
+        "N4-078",
+        "N4-079",
+        "N4-080",
+        "N4-081",
+        "N4-082",
+        "N4-083",
+        "N4-084",
+        "N4-085"
+      ]
+    },
+    {
+      "zone_id": "route-34",
+      "niveau": "N4",
+      "grammar_ids": [
+        "N4-086",
+        "N4-087",
+        "N4-088",
+        "N4-089",
+        "N4-090",
+        "N4-091",
+        "N4-092",
+        "N4-093",
+        "N4-094",
+        "N4-095",
+        "N4-096",
+        "N4-097"
+      ]
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "niveau": "N4",
+      "grammar_ids": [
+        "N4-098",
+        "N4-099",
+        "N4-100",
+        "N4-101",
+        "N4-102",
+        "N4-103",
+        "N4-104",
+        "N4-105",
+        "N4-106",
+        "N4-107",
+        "N4-108",
+        "N4-109",
+        "N4-110",
+        "N4-111",
+        "N4-112",
+        "N4-113",
+        "N4-114",
+        "N4-115",
+        "N4-116",
+        "N4-117",
+        "N4-118",
+        "N4-119",
+        "N4-120",
+        "N4-121",
+        "N4-122",
+        "N4-123",
+        "N4-124"
+      ]
+    },
+    {
+      "zone_id": "route-35",
+      "niveau": "N4/N3",
+      "grammar_ids": [
+        "N3-001",
+        "N3-002",
+        "N3-003",
+        "N3-004",
+        "N3-005",
+        "N3-006",
+        "N3-007",
+        "N3-008",
+        "N3-009",
+        "N3-010",
+        "N3-011"
+      ]
+    },
+    {
+      "zone_id": "national-park",
+      "niveau": "N4/N3",
+      "grammar_ids": [
+        "N3-012",
+        "N3-013",
+        "N3-014",
+        "N3-015",
+        "N3-016",
+        "N3-017",
+        "N3-018",
+        "N3-019",
+        "N3-020",
+        "N3-021",
+        "N3-022",
+        "N3-023"
+      ]
+    },
+    {
+      "zone_id": "route-36",
+      "niveau": "N3",
+      "grammar_ids": [
+        "N3-024",
+        "N3-025",
+        "N3-026",
+        "N3-027",
+        "N3-028",
+        "N3-029",
+        "N3-030",
+        "N3-031",
+        "N3-032",
+        "N3-033",
+        "N3-034",
+        "N3-035",
+        "N3-036",
+        "N3-037"
+      ]
+    },
+    {
+      "zone_id": "route-37",
+      "niveau": "N3",
+      "grammar_ids": [
+        "N3-038",
+        "N3-039",
+        "N3-040",
+        "N3-041",
+        "N3-042",
+        "N3-043",
+        "N3-044",
+        "N3-045",
+        "N3-046"
+      ]
+    },
+    {
+      "zone_id": "ecruteak-city",
+      "niveau": "N3",
+      "grammar_ids": [
+        "N3-047",
+        "N3-048",
+        "N3-049",
+        "N3-050",
+        "N3-051",
+        "N3-052",
+        "N3-053",
+        "N3-054",
+        "N3-055",
+        "N3-056",
+        "N3-057",
+        "N3-058",
+        "N3-059",
+        "N3-060",
+        "N3-061",
+        "N3-062",
+        "N3-063",
+        "N3-064",
+        "N3-065",
+        "N3-066",
+        "N3-067",
+        "N3-068",
+        "N3-069"
+      ]
+    },
+    {
+      "zone_id": "burned-tower",
+      "niveau": "N3",
+      "grammar_ids": [
+        "N3-070",
+        "N3-071",
+        "N3-072",
+        "N3-073",
+        "N3-074",
+        "N3-075",
+        "N3-076",
+        "N3-077",
+        "N3-078",
+        "N3-079",
+        "N3-080"
+      ]
+    },
+    {
+      "zone_id": "route-38",
+      "niveau": "N3",
+      "grammar_ids": [
+        "N3-081",
+        "N3-082",
+        "N3-083",
+        "N3-084",
+        "N3-085",
+        "N3-086",
+        "N3-087",
+        "N3-088",
+        "N3-089"
+      ]
+    },
+    {
+      "zone_id": "route-39",
+      "niveau": "N3",
+      "grammar_ids": [
+        "N3-090",
+        "N3-091",
+        "N3-092",
+        "N3-093",
+        "N3-094",
+        "N3-095",
+        "N3-096",
+        "N3-097",
+        "N3-098"
+      ]
+    },
+    {
+      "zone_id": "olivine-city",
+      "niveau": "N3",
+      "grammar_ids": [
+        "N3-099",
+        "N3-100",
+        "N3-101",
+        "N3-102",
+        "N3-103",
+        "N3-104",
+        "N3-105",
+        "N3-106",
+        "N3-107",
+        "N3-108",
+        "N3-109",
+        "N3-110",
+        "N3-111",
+        "N3-112",
+        "N3-113",
+        "N3-114",
+        "N3-115"
+      ]
+    },
+    {
+      "zone_id": "route-40",
+      "niveau": "N3",
+      "grammar_ids": []
+    },
+    {
+      "zone_id": "route-41",
+      "niveau": "N3",
+      "grammar_ids": [
+        "N3-116",
+        "N3-117",
+        "N3-118",
+        "N3-119",
+        "N3-120",
+        "N3-121",
+        "N3-122",
+        "N3-123",
+        "N3-124",
+        "N3-125",
+        "N3-126"
+      ]
+    },
+    {
+      "zone_id": "cianwood-city",
+      "niveau": "N3",
+      "grammar_ids": [
+        "N3-127",
+        "N3-128",
+        "N3-129",
+        "N3-130",
+        "N3-131",
+        "N3-132"
+      ]
+    },
+    {
+      "zone_id": "route-42",
+      "niveau": "N3/N2",
+      "grammar_ids": [
+        "N2-001",
+        "N2-002",
+        "N2-003",
+        "N2-004",
+        "N2-005",
+        "N2-006",
+        "N2-007",
+        "N2-008"
+      ]
+    },
+    {
+      "zone_id": "mt-mortar",
+      "niveau": "N3/N2",
+      "grammar_ids": [
+        "N2-009",
+        "N2-010",
+        "N2-011",
+        "N2-012",
+        "N2-013"
+      ]
+    },
+    {
+      "zone_id": "mahogany-town",
+      "niveau": "N3/N2",
+      "grammar_ids": [
+        "N2-014",
+        "N2-015",
+        "N2-016",
+        "N2-017",
+        "N2-018",
+        "N2-019",
+        "N2-020"
+      ]
+    },
+    {
+      "zone_id": "route-43",
+      "niveau": "N3/N2",
+      "grammar_ids": [
+        "N2-021",
+        "N2-022",
+        "N2-023"
+      ]
+    },
+    {
+      "zone_id": "lake-of-rage",
+      "niveau": "N3/N2",
+      "grammar_ids": [
+        "N2-024",
+        "N2-025"
+      ]
+    },
+    {
+      "zone_id": "route-44",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N2-026",
+        "N2-027",
+        "N2-028",
+        "N2-029",
+        "N2-030",
+        "N2-031",
+        "N2-032",
+        "N2-033",
+        "N2-034",
+        "N2-035"
+      ]
+    },
+    {
+      "zone_id": "ice-path",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N2-036",
+        "N2-037",
+        "N2-038",
+        "N2-039",
+        "N2-040",
+        "N2-041",
+        "N2-042",
+        "N2-043",
+        "N2-044",
+        "N2-045"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N2-046",
+        "N2-047",
+        "N2-048",
+        "N2-049",
+        "N2-050",
+        "N2-051",
+        "N2-052",
+        "N2-053",
+        "N2-054",
+        "N2-055",
+        "N2-056",
+        "N2-057",
+        "N2-058",
+        "N2-059",
+        "N2-060",
+        "N2-061",
+        "N2-062",
+        "N2-063",
+        "N2-064",
+        "N2-065",
+        "N2-066",
+        "N2-067",
+        "N2-068",
+        "N2-069",
+        "N2-070"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "niveau": "N2/N1",
+      "grammar_ids": [
+        "N2-071",
+        "N2-072",
+        "N2-073",
+        "N2-074",
+        "N2-075",
+        "N2-076",
+        "N2-077",
+        "N2-078",
+        "N2-079",
+        "N2-080",
+        "N2-081",
+        "N2-082",
+        "N2-083",
+        "N2-084",
+        "N2-085",
+        "N2-086",
+        "N2-087",
+        "N2-088",
+        "N2-089",
+        "N2-090",
+        "N2-091",
+        "N2-092",
+        "N2-093",
+        "N2-094",
+        "N2-095",
+        "N2-096",
+        "N2-097",
+        "N2-098",
+        "N2-099",
+        "N2-100",
+        "N2-101"
+      ]
+    },
+    {
+      "zone_id": "route-45",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N2-102",
+        "N2-103",
+        "N2-104",
+        "N2-105",
+        "N2-106",
+        "N2-107",
+        "N2-108",
+        "N2-109",
+        "N2-110",
+        "N2-111"
+      ]
+    },
+    {
+      "zone_id": "dark-cave",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N2-112",
+        "N2-113",
+        "N2-114",
+        "N2-115",
+        "N2-116",
+        "N2-117",
+        "N2-118",
+        "N2-119",
+        "N2-120",
+        "N2-121"
+      ]
+    },
+    {
+      "zone_id": "route-26",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N2-122",
+        "N2-123",
+        "N2-124",
+        "N2-125",
+        "N2-126",
+        "N2-127",
+        "N2-128",
+        "N2-129",
+        "N2-130",
+        "N2-131",
+        "N2-132",
+        "N2-133",
+        "N2-134",
+        "N2-135",
+        "N2-136",
+        "N2-137",
+        "N2-138",
+        "N2-139",
+        "N2-140",
+        "N2-141"
+      ]
+    },
+    {
+      "zone_id": "route-27",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N2-142",
+        "N2-143",
+        "N2-144",
+        "N2-145",
+        "N2-146",
+        "N2-147",
+        "N2-148",
+        "N2-149",
+        "N2-150",
+        "N2-151",
+        "N2-152",
+        "N2-153",
+        "N2-154",
+        "N2-155",
+        "N2-156"
+      ]
+    },
+    {
+      "zone_id": "indigo-plateau-antichambre",
+      "niveau": "N2/N1",
+      "grammar_ids": [
+        "N2-157",
+        "N2-158",
+        "N2-159",
+        "N2-160",
+        "N2-161",
+        "N2-162",
+        "N2-163",
+        "N2-164",
+        "N2-165",
+        "N2-166",
+        "N2-167",
+        "N2-168",
+        "N2-169",
+        "N2-170",
+        "N2-171",
+        "N2-172",
+        "N2-173",
+        "N2-174",
+        "N2-175",
+        "N2-176"
+      ]
+    },
+    {
+      "zone_id": "indigo-plateau-will",
+      "niveau": "N2/N1",
+      "grammar_ids": [
+        "N2-177",
+        "N2-178",
+        "N2-179",
+        "N2-180",
+        "N2-181",
+        "N2-182",
+        "N2-183",
+        "N2-184",
+        "N2-185",
+        "N2-186",
+        "N2-187",
+        "N2-188",
+        "N2-189",
+        "N2-190",
+        "N2-191"
+      ]
+    },
+    {
+      "zone_id": "indigo-plateau-koga",
+      "niveau": "N2/N1",
+      "grammar_ids": []
+    },
+    {
+      "zone_id": "indigo-plateau-bruno",
+      "niveau": "N2/N1",
+      "grammar_ids": []
+    },
+    {
+      "zone_id": "indigo-plateau-karen",
+      "niveau": "N2/N1",
+      "grammar_ids": []
+    },
+    {
+      "zone_id": "indigo-plateau-lance",
+      "niveau": "N2/N1",
+      "grammar_ids": []
+    },
+    {
+      "zone_id": "vermilion-city",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N1-001",
+        "N1-002",
+        "N1-003",
+        "N1-004",
+        "N1-005",
+        "N1-006",
+        "N1-007",
+        "N1-008",
+        "N1-009",
+        "N1-010",
+        "N1-011",
+        "N1-012",
+        "N1-013",
+        "N1-014",
+        "N1-015",
+        "N1-016",
+        "N1-017",
+        "N1-018",
+        "N1-019",
+        "N1-020",
+        "N1-021",
+        "N1-022",
+        "N1-023",
+        "N1-024",
+        "N1-025",
+        "N1-026",
+        "N1-027",
+        "N1-028",
+        "N1-029",
+        "N1-030",
+        "N1-031",
+        "N1-032",
+        "N1-033",
+        "N1-034",
+        "N1-035"
+      ]
+    },
+    {
+      "zone_id": "route-6-kanto",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N1-036",
+        "N1-037"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N1-038",
+        "N1-039",
+        "N1-040",
+        "N1-041",
+        "N1-042",
+        "N1-043",
+        "N1-044",
+        "N1-045",
+        "N1-046",
+        "N1-047",
+        "N1-048",
+        "N1-049",
+        "N1-050",
+        "N1-051",
+        "N1-052",
+        "N1-053",
+        "N1-054",
+        "N1-055",
+        "N1-056",
+        "N1-057",
+        "N1-058",
+        "N1-059",
+        "N1-060",
+        "N1-061",
+        "N1-062",
+        "N1-063",
+        "N1-064",
+        "N1-065",
+        "N1-066",
+        "N1-067",
+        "N1-068",
+        "N1-069",
+        "N1-070"
+      ]
+    },
+    {
+      "zone_id": "route-9-10-rocktunnel",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N1-071",
+        "N1-072",
+        "N1-073",
+        "N1-074",
+        "N1-075"
+      ]
+    },
+    {
+      "zone_id": "lavender-town",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N1-076",
+        "N1-077",
+        "N1-078",
+        "N1-079"
+      ]
+    },
+    {
+      "zone_id": "kanto-power-plant",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N1-080",
+        "N1-081",
+        "N1-082"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N1-083",
+        "N1-084",
+        "N1-085",
+        "N1-086",
+        "N1-087",
+        "N1-088",
+        "N1-089",
+        "N1-090",
+        "N1-091",
+        "N1-092",
+        "N1-093",
+        "N1-094",
+        "N1-095",
+        "N1-096",
+        "N1-097",
+        "N1-098",
+        "N1-099",
+        "N1-100",
+        "N1-101",
+        "N1-102",
+        "N1-103",
+        "N1-104",
+        "N1-105"
+      ]
+    },
+    {
+      "zone_id": "route-24-25-kanto",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N1-106",
+        "N1-107",
+        "N1-108",
+        "N1-109",
+        "N1-110"
+      ]
+    },
+    {
+      "zone_id": "route-7-kanto",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N1-111",
+        "N1-112"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "niveau": "N2",
+      "grammar_ids": [
+        "N1-113",
+        "N1-114",
+        "N1-115",
+        "N1-116",
+        "N1-117",
+        "N1-118",
+        "N1-119",
+        "N1-120",
+        "N1-121",
+        "N1-122",
+        "N1-123",
+        "N1-124",
+        "N1-125",
+        "N1-126",
+        "N1-127",
+        "N1-128",
+        "N1-129",
+        "N1-130",
+        "N1-131",
+        "N1-132",
+        "N1-133",
+        "N1-134",
+        "N1-135",
+        "N1-136",
+        "N1-137",
+        "N1-138",
+        "N1-139",
+        "N1-140"
+      ]
+    },
+    {
+      "zone_id": "route-16-17-18-cycling-road",
+      "niveau": "N2/N1",
+      "grammar_ids": [
+        "N1-141",
+        "N1-142",
+        "N1-143",
+        "N1-144",
+        "N1-145"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "niveau": "N2/N1",
+      "grammar_ids": [
+        "N1-146",
+        "N1-147",
+        "N1-148",
+        "N1-149",
+        "N1-150",
+        "N1-151",
+        "N1-152",
+        "N1-153",
+        "N1-154",
+        "N1-155",
+        "N1-156",
+        "N1-157",
+        "N1-158",
+        "N1-159",
+        "N1-160",
+        "N1-161",
+        "N1-162",
+        "N1-163",
+        "N1-164",
+        "N1-165",
+        "N1-166",
+        "N1-167",
+        "N1-168",
+        "N1-169",
+        "N1-170",
+        "N1-171",
+        "N1-172",
+        "N1-173",
+        "N1-174",
+        "N1-175"
+      ]
+    },
+    {
+      "zone_id": "route-14-15-kanto",
+      "niveau": "N2/N1",
+      "grammar_ids": [
+        "N1-176",
+        "N1-177",
+        "N1-178",
+        "N1-179",
+        "N1-180"
+      ]
+    },
+    {
+      "zone_id": "route-11-12-13-diglett",
+      "niveau": "N1",
+      "grammar_ids": [
+        "N1-181",
+        "N1-182",
+        "N1-183"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "niveau": "N1",
+      "grammar_ids": [
+        "N1-184",
+        "N1-185",
+        "N1-186",
+        "N1-187",
+        "N1-188",
+        "N1-189",
+        "N1-190",
+        "N1-191",
+        "N1-192",
+        "N1-193",
+        "N1-194",
+        "N1-195",
+        "N1-196",
+        "N1-197",
+        "N1-198",
+        "N1-199",
+        "N1-200",
+        "N1-201",
+        "N1-202",
+        "N1-203",
+        "N1-204",
+        "N1-205",
+        "N1-206",
+        "N1-207",
+        "N1-208",
+        "N1-209",
+        "N1-210"
+      ]
+    },
+    {
+      "zone_id": "mont-lune-route-3-4",
+      "niveau": "N1",
+      "grammar_ids": [
+        "N1-211",
+        "N1-212",
+        "N1-213",
+        "N1-214",
+        "N1-215"
+      ]
+    },
+    {
+      "zone_id": "route-2-foret-viridian",
+      "niveau": "N1",
+      "grammar_ids": [
+        "N1-216",
+        "N1-217",
+        "N1-218"
+      ]
+    },
+    {
+      "zone_id": "viridian-city",
+      "niveau": "N1",
+      "grammar_ids": [
+        "N1-219",
+        "N1-220"
+      ]
+    },
+    {
+      "zone_id": "route-1-kanto",
+      "niveau": "N1",
+      "grammar_ids": [
+        "N1-221",
+        "N1-222",
+        "N1-223"
+      ]
+    },
+    {
+      "zone_id": "pallet-town",
+      "niveau": "N1",
+      "grammar_ids": [
+        "N1-224",
+        "N1-225",
+        "N1-226"
+      ]
+    },
+    {
+      "zone_id": "route-21-kanto",
+      "niveau": "N1",
+      "grammar_ids": [
+        "N1-227",
+        "N1-228",
+        "N1-229",
+        "N1-230"
+      ]
+    },
+    {
+      "zone_id": "cinnabar-island",
+      "niveau": "N1",
+      "grammar_ids": [
+        "N1-231",
+        "N1-232",
+        "N1-233",
+        "N1-234",
+        "N1-235",
+        "N1-236",
+        "N1-237",
+        "N1-238"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "niveau": "N1",
+      "grammar_ids": [
+        "N1-239",
+        "N1-240",
+        "N1-241",
+        "N1-242",
+        "N1-243",
+        "N1-244",
+        "N1-245"
+      ]
+    }
+  ],
+  "grammar_points": {
+    "N5": [
+      {
+        "id": "N5-001",
+        "title": "A が いちばん～ (A ga ichiban～)"
+      },
+      {
+        "id": "N5-002",
+        "title": "A。けれども、～B。(A. Keredomo,~ B.)"
+      },
+      {
+        "id": "N5-003",
+        "title": "A。しかし、～B。 (A. Shikashi, ~B.)"
+      },
+      {
+        "id": "N5-004",
+        "title": "A。じゃ、～B。(A. Ja, ~B.)"
+      },
+      {
+        "id": "N5-005",
+        "title": "A。それじゃ、～B。(A. Soreja,~B.)"
+      },
+      {
+        "id": "N5-006",
+        "title": "A。それでは、～B。(A. Soredewa,~B.)"
+      },
+      {
+        "id": "N5-007",
+        "title": "A。 では、～B。 (A. Dewa, ~B)"
+      },
+      {
+        "id": "N5-008",
+        "title": "A。でも、～B。(A. Demo, ~B)"
+      },
+      {
+        "id": "N5-009",
+        "title": "Aと Bと どちら～ (A to B to dochira~)"
+      },
+      {
+        "id": "N5-010",
+        "title": "AとBと どっち〜 (A to B to docchi〜)"
+      },
+      {
+        "id": "N5-011",
+        "title": "A は B が〜 (A wa B ga〜)"
+      },
+      {
+        "id": "N5-012",
+        "title": "A は B より～ (A wa B yori～)"
+      },
+      {
+        "id": "N5-013",
+        "title": "A より B のほうが～ (A yori B no hou ga ～)"
+      },
+      {
+        "id": "N5-014",
+        "title": "い-Adjective く + Verb (i-Adjective + ku + Verb)"
+      },
+      {
+        "id": "N5-015",
+        "title": "い-Adjective く します (i-Adjective ku shimasu)"
+      },
+      {
+        "id": "N5-016",
+        "title": "い-Adjective: Negative Polite Form"
+      },
+      {
+        "id": "N5-017",
+        "title": "い-Adjective て (i-Adjective + te~)"
+      },
+      {
+        "id": "N5-018",
+        "title": "な-Adjective に + Verb"
+      },
+      {
+        "id": "N5-019",
+        "title": "な-Adjective で～ (na-Adjective de~)"
+      },
+      {
+        "id": "N5-020",
+        "title": "な-Adjective に します (na-Adjective ni shimasu)"
+      },
+      {
+        "id": "N5-021",
+        "title": "な-Adjective に なります (na-Adjective ni narimasu)"
+      },
+      {
+        "id": "N5-022",
+        "title": "Noun か Noun か～ (Noun ka Noun ka～)"
+      },
+      {
+        "id": "N5-023",
+        "title": "Noun が できます (Noun ga dekimasu)"
+      },
+      {
+        "id": "N5-024",
+        "title": "Noun がほしいです (〜ga hoshii desu)"
+      },
+      {
+        "id": "N5-025",
+        "title": "Noun から Noun まで (Noun kara Noun made)"
+      },
+      {
+        "id": "N5-026",
+        "title": "Noun くらい～ (Noun kurai～)"
+      },
+      {
+        "id": "N5-027",
+        "title": "Noun ぐらい～ (Noun gurai～)"
+      },
+      {
+        "id": "N5-028",
+        "title": "Noun ごろ～ (Noun + goro～)"
+      },
+      {
+        "id": "N5-029",
+        "title": "Noun だけ〜 (〜dake)"
+      },
+      {
+        "id": "N5-030",
+        "title": "Nounで～ (Noun de ~)"
+      },
+      {
+        "id": "N5-031",
+        "title": "Noun と～ (Noun to～)"
+      },
+      {
+        "id": "N5-032",
+        "title": "Noun に～ (Noun ni～)"
+      },
+      {
+        "id": "N5-033",
+        "title": "Noun に 帰ります (Noun ni kaerimasu)"
+      },
+      {
+        "id": "N5-034",
+        "title": "Noun に します (Noun ni shimasu)"
+      },
+      {
+        "id": "N5-035",
+        "title": "Noun に なります (Noun ni narimasu)"
+      },
+      {
+        "id": "N5-036",
+        "title": "Noun に 来ます (Noun ni kimasu)"
+      },
+      {
+        "id": "N5-037",
+        "title": "Noun に 行きます (Noun ni ikimasu)"
+      },
+      {
+        "id": "N5-038",
+        "title": "Noun の あとで (Noun no atode)"
+      },
+      {
+        "id": "N5-039",
+        "title": "Noun の 前に (Noun no mae ni)"
+      },
+      {
+        "id": "N5-040",
+        "title": "Noun は～ (Noun wa〜)"
+      },
+      {
+        "id": "N5-041",
+        "title": "Noun も〜 (Noun mo~)"
+      },
+      {
+        "id": "N5-042",
+        "title": "Noun や Noun など～ (Noun ya Noun nado)"
+      },
+      {
+        "id": "N5-043",
+        "title": "Noun を〜 (Noun wo〜)"
+      },
+      {
+        "id": "N5-044",
+        "title": "Verb た あとで (ta ato de)"
+      },
+      {
+        "id": "N5-045",
+        "title": "Verb たいです (taidesu)"
+      },
+      {
+        "id": "N5-046",
+        "title": "Verb て～ (Verb + te～)"
+      },
+      {
+        "id": "N5-047",
+        "title": "Verb て います (Verb te imasu)"
+      },
+      {
+        "id": "N5-048",
+        "title": "Verb てから～ (〜te kara)"
+      },
+      {
+        "id": "N5-049",
+        "title": "Verb て ください (Verb-te kudasai)"
+      },
+      {
+        "id": "N5-050",
+        "title": "Verb ないで ください (〜naide kudasai)"
+      },
+      {
+        "id": "N5-051",
+        "title": "Noun に 戻ります (Noun ni modorimasu)"
+      },
+      {
+        "id": "N5-052",
+        "title": "Verb に 来ます (Verb ni kimasu)"
+      },
+      {
+        "id": "N5-053",
+        "title": "Verb に 行きます (Verb ni ikimasu)"
+      },
+      {
+        "id": "N5-054",
+        "title": "Verb ましょう (mashou)"
+      },
+      {
+        "id": "N5-055",
+        "title": "Verb ましょうか。 (〜mashou ka.)"
+      },
+      {
+        "id": "N5-056",
+        "title": "Verb ませんか。 (Verb-masenka)"
+      },
+      {
+        "id": "N5-057",
+        "title": "Verb ること～ (〜ru koto)"
+      },
+      {
+        "id": "N5-058",
+        "title": "Verb る こと が できます (ru koto ga dekimasu)"
+      },
+      {
+        "id": "N5-059",
+        "title": "Verb る こと ができる (ru koto ga dekiru)"
+      },
+      {
+        "id": "N5-060",
+        "title": "Verb る の～ (Verb + ru + no~)"
+      },
+      {
+        "id": "N5-061",
+        "title": "Verb る 前に (ru mae ni)"
+      },
+      {
+        "id": "N5-062",
+        "title": "あまり～ありません (amari ~ arimasen)"
+      },
+      {
+        "id": "N5-063",
+        "title": "あまり～ないです (amari ~ nai desu)"
+      },
+      {
+        "id": "N5-064",
+        "title": "～あります (〜arimasu)"
+      },
+      {
+        "id": "N5-065",
+        "title": "～いかがですか。 (〜ikaga desu ka.)"
+      },
+      {
+        "id": "N5-066",
+        "title": "いくつ～ (ikutsu~)"
+      },
+      {
+        "id": "N5-067",
+        "title": "いつか～ (itsuka～)"
+      },
+      {
+        "id": "N5-068",
+        "title": "いつでも～ (itsudemo～)"
+      },
+      {
+        "id": "N5-069",
+        "title": "いつも～ (itsumo～)"
+      },
+      {
+        "id": "N5-070",
+        "title": "～て います (～te imasu)"
+      },
+      {
+        "id": "N5-071",
+        "title": "～が (〜ga)"
+      },
+      {
+        "id": "N5-072",
+        "title": "～が、～ (〜ga, 〜)"
+      },
+      {
+        "id": "N5-073",
+        "title": "～から、～ (〜kara、～)"
+      },
+      {
+        "id": "N5-074",
+        "title": "～からです (〜kara desu)"
+      },
+      {
+        "id": "N5-075",
+        "title": "～から もらいます (〜kara moraimasu)"
+      },
+      {
+        "id": "N5-076",
+        "title": "～が 私に くれます (〜ga watashi ni kuremasu)"
+      },
+      {
+        "id": "N5-077",
+        "title": "～けど、～ (〜kedo、～)"
+      },
+      {
+        "id": "N5-078",
+        "title": "～けれど、～ (〜keredo、～)"
+      },
+      {
+        "id": "N5-079",
+        "title": "こちら～ (kochira～)"
+      },
+      {
+        "id": "N5-080",
+        "title": "さっき～ (sakki～)"
+      },
+      {
+        "id": "N5-081",
+        "title": "すぐに～ (sugu ni～)"
+      },
+      {
+        "id": "N5-082",
+        "title": "ぜんぜん～ (zenzen～)"
+      },
+      {
+        "id": "N5-083",
+        "title": "そして、～ (soshite、～)"
+      },
+      {
+        "id": "N5-084",
+        "title": "そちら～ (sochira～)"
+      },
+      {
+        "id": "N5-085",
+        "title": "それから、～ (sorekara、～)"
+      },
+      {
+        "id": "N5-086",
+        "title": "だいたい〜 (daitai〜)"
+      },
+      {
+        "id": "N5-087",
+        "title": "たいてい～ (taitei～)"
+      },
+      {
+        "id": "N5-088",
+        "title": "だから、～ (dakara、～)"
+      },
+      {
+        "id": "N5-089",
+        "title": "～たり、～たり します (〜tari, 〜tari shimasu)"
+      },
+      {
+        "id": "N5-090",
+        "title": "だれ～ (dare～)"
+      },
+      {
+        "id": "N5-091",
+        "title": "だれか〜 (dareka〜)"
+      },
+      {
+        "id": "N5-092",
+        "title": "だれでも～ (dare demo～)"
+      },
+      {
+        "id": "N5-093",
+        "title": "だれも～ないです (dare mo ~ nai desu)"
+      },
+      {
+        "id": "N5-094",
+        "title": "だれも～ません (daremo ~masen)"
+      },
+      {
+        "id": "N5-095",
+        "title": "～どう しますか。 (～dou shimasu ka.)"
+      },
+      {
+        "id": "N5-096",
+        "title": "～どうですか。 (〜dou desu ka.)"
+      },
+      {
+        "id": "N5-097",
+        "title": "どうやって～ (douyatte～)"
+      },
+      {
+        "id": "N5-098",
+        "title": "～どう 言いますか。 (〜dou iimasu ka.)"
+      },
+      {
+        "id": "N5-099",
+        "title": "～とき (〜toki)"
+      },
+      {
+        "id": "N5-100",
+        "title": "ときどき～ (tokidoki～)"
+      },
+      {
+        "id": "N5-101",
+        "title": "どこ～ (doko～)"
+      },
+      {
+        "id": "N5-102",
+        "title": "どこか～ (dokoka～)"
+      },
+      {
+        "id": "N5-103",
+        "title": "どこでも～ (dokodemo～)"
+      },
+      {
+        "id": "N5-104",
+        "title": "どこにも + Verb + ないです (doko ni mo + Verb + nai desu)"
+      },
+      {
+        "id": "N5-105",
+        "title": "どこにも + Verb + ません (doko ni mo + Verb + masen)"
+      },
+      {
+        "id": "N5-106",
+        "title": "どこへも Verb ないです (doko e mo + Verb + nai desu)"
+      },
+      {
+        "id": "N5-107",
+        "title": "どこへも Verb ません (doko e mo + Verb + masen)"
+      },
+      {
+        "id": "N5-108",
+        "title": "どこも Verb ないです (dokomo + Verb + naidesu)"
+      },
+      {
+        "id": "N5-109",
+        "title": "どこも Verb ません (dokomo + Verb + masen)"
+      },
+      {
+        "id": "N5-110",
+        "title": "どちら～ (dochira～)"
+      },
+      {
+        "id": "N5-111",
+        "title": "どなた～ (donata～)"
+      },
+      {
+        "id": "N5-112",
+        "title": "どの Noun (dono Noun)"
+      },
+      {
+        "id": "N5-113",
+        "title": "どれでも～ (dore demo～)"
+      },
+      {
+        "id": "N5-114",
+        "title": "どんな Noun (donna)"
+      },
+      {
+        "id": "N5-115",
+        "title": "なに～ (nani~)"
+      },
+      {
+        "id": "N5-116",
+        "title": "なにか～ (nanika～)"
+      },
+      {
+        "id": "N5-117",
+        "title": "なにも～ないです (nani mo~nai desu)"
+      },
+      {
+        "id": "N5-118",
+        "title": "なにも～ません (nanimo~masen)"
+      },
+      {
+        "id": "N5-119",
+        "title": "なん～ (nan~)"
+      },
+      {
+        "id": "N5-120",
+        "title": "なんで～ (nande～)"
+      },
+      {
+        "id": "N5-121",
+        "title": "なんでも～ (nandemo～)"
+      },
+      {
+        "id": "N5-122",
+        "title": "～なんと 言いますか。 (〜nan to iimasu ka.)"
+      },
+      {
+        "id": "N5-123",
+        "title": "～に あげます (〜 ni agemasu)"
+      },
+      {
+        "id": "N5-124",
+        "title": "～に もらいます (〜ni moraimasu)"
+      },
+      {
+        "id": "N5-125",
+        "title": "～の (〜no)"
+      },
+      {
+        "id": "N5-126",
+        "title": "～はたいへんです (〜wa taihen desu)"
+      },
+      {
+        "id": "N5-127",
+        "title": "ほとんど〜 (hotondo〜)"
+      },
+      {
+        "id": "N5-128",
+        "title": "まあまあ～ (maa maa～)"
+      },
+      {
+        "id": "N5-129",
+        "title": "まだ〜 (mada〜)"
+      },
+      {
+        "id": "N5-130",
+        "title": "まだ〜ないです (mada 〜 nai desu)"
+      },
+      {
+        "id": "N5-131",
+        "title": "まだ～ません (mada ~masen)"
+      },
+      {
+        "id": "N5-132",
+        "title": "もう～ (mou～)"
+      },
+      {
+        "id": "N5-133",
+        "title": "もうすぐ〜 (mou sugu~)"
+      },
+      {
+        "id": "N5-134",
+        "title": "もっと〜 (motto〜)"
+      },
+      {
+        "id": "N5-135",
+        "title": "よく～ (yoku ~)"
+      },
+      {
+        "id": "N5-136",
+        "title": "～（場所）に～があります (〜basho ni 〜 ga arimasu)"
+      }
+    ],
+    "N4": [
+      {
+        "id": "N4-001",
+        "title": "A とか B とか"
+      },
+      {
+        "id": "N4-002",
+        "title": "A は B ほど～ありません (A wa B hodo ～ arimasen)"
+      },
+      {
+        "id": "N4-003",
+        "title": "A は B ほど～ない (A wa B hodo ~ nai)"
+      },
+      {
+        "id": "N4-004",
+        "title": "A より B のほうが〜 (A yori B no hou ga 〜)"
+      },
+      {
+        "id": "N4-005",
+        "title": "い-Adjective く する/なる (i-Adjective kusuru/naru)"
+      },
+      {
+        "id": "N4-006",
+        "title": "な-adjective に する/なる"
+      },
+      {
+        "id": "N4-007",
+        "title": "Noun しか～ない (Noun shika~nai)"
+      },
+      {
+        "id": "N4-008",
+        "title": "Noun に する (Noun ni suru)"
+      },
+      {
+        "id": "N4-009",
+        "title": "Noun に なる (Noun ni naru)"
+      },
+      {
+        "id": "N4-010",
+        "title": "のために (no tame ni)"
+      },
+      {
+        "id": "N4-011",
+        "title": "Noun の 間に (〜no aida ni)"
+      },
+      {
+        "id": "N4-012",
+        "title": "Noun ばかり (〜bakari)"
+      },
+      {
+        "id": "N4-013",
+        "title": "Noun を あげる (Noun wo ageru)"
+      },
+      {
+        "id": "N4-014",
+        "title": "Nounをいただく (Noun wo itadaku)"
+      },
+      {
+        "id": "N4-015",
+        "title": "Nounをくださる"
+      },
+      {
+        "id": "N4-016",
+        "title": "Noun を くれる (Noun wo kureru)"
+      },
+      {
+        "id": "N4-017",
+        "title": "Noun を さしあげる (Noun wo sashiageru)"
+      },
+      {
+        "id": "N4-018",
+        "title": "Noun もらう (Noun wo morau)"
+      },
+      {
+        "id": "N4-019",
+        "title": "Noun + 中 (Noun + ちゅう)"
+      },
+      {
+        "id": "N4-020",
+        "title": "Verb させられる (Verb-saserareru)"
+      },
+      {
+        "id": "N4-021",
+        "title": "Verb させる (Verb-saseru)"
+      },
+      {
+        "id": "N4-022",
+        "title": "Verb た ことがある (Verb ta koto ga aru)"
+      },
+      {
+        "id": "N4-023",
+        "title": "Verb た ときに (Verb た ときに)"
+      },
+      {
+        "id": "N4-024",
+        "title": "Verb た ところ (Verb ta tokoro)"
+      },
+      {
+        "id": "N4-025",
+        "title": "Verb たほうがいい (〜ta hou ga ii)"
+      },
+      {
+        "id": "N4-026",
+        "title": "Verb ために (tame ni)"
+      },
+      {
+        "id": "N4-027",
+        "title": "Verb つもり (〜tsumori)"
+      },
+      {
+        "id": "N4-028",
+        "title": "Verb てあげる (Verb te ageru)"
+      },
+      {
+        "id": "N4-029",
+        "title": "Verb て ある (Verb-te aru)"
+      },
+      {
+        "id": "N4-030",
+        "title": "Verb て いく (Verb-te iku)"
+      },
+      {
+        "id": "N4-031",
+        "title": "Verb ていただきたい (te itadakitai)"
+      },
+      {
+        "id": "N4-032",
+        "title": "Verb ていただく (〜te itadaku)"
+      },
+      {
+        "id": "N4-033",
+        "title": "Verb て いただけませんか (Verb te itadakemasen ka)"
+      },
+      {
+        "id": "N4-034",
+        "title": "Verb て いる (Verb-te iru)"
+      },
+      {
+        "id": "N4-035",
+        "title": "Verb て いる ところ (Verb te iru tokoro)"
+      },
+      {
+        "id": "N4-036",
+        "title": "Verb ている間に (te iru aida ni)"
+      },
+      {
+        "id": "N4-037",
+        "title": "Verb ておく (〜te oku)"
+      },
+      {
+        "id": "N4-038",
+        "title": "Verb て くださいませんか (Verb-te kudasaimasen ka)"
+      },
+      {
+        "id": "N4-039",
+        "title": "Verb て くださる (Verb-te kudasaru)"
+      },
+      {
+        "id": "N4-040",
+        "title": "Verb て くる (Verb te kuru)"
+      },
+      {
+        "id": "N4-041",
+        "title": "Verb てくれませんか (〜te kuremasen ka)"
+      },
+      {
+        "id": "N4-042",
+        "title": "Verb て くれる (Verb-te kureru)"
+      },
+      {
+        "id": "N4-043",
+        "title": "Verb て + さしあげる (Verb TE sashiageru)"
+      },
+      {
+        "id": "N4-044",
+        "title": "Verb てしまう (〜te shimau)"
+      },
+      {
+        "id": "N4-045",
+        "title": "Verb て ほしい (Verb-te hoshii)"
+      },
+      {
+        "id": "N4-046",
+        "title": "Verb てみる (〜te miru)"
+      },
+      {
+        "id": "N4-047",
+        "title": "Verb てもらいたい (～te moraitai)"
+      },
+      {
+        "id": "N4-048",
+        "title": "Verb て もらう (Verb-te morau)"
+      },
+      {
+        "id": "N4-049",
+        "title": "Verb てもらえませんか (～te moraemasen ka)"
+      },
+      {
+        "id": "N4-050",
+        "title": "Verb ない ことがある (Verb-nai koto ga aru)"
+      },
+      {
+        "id": "N4-051",
+        "title": "Verb ない + ことにする (Verb nai koto ni suru)"
+      },
+      {
+        "id": "N4-052",
+        "title": "Verb ない ことになる (Verb nai koto ni naru)"
+      },
+      {
+        "id": "N4-053",
+        "title": "Verb ないほうがいい (Verb nai hou ga ii)"
+      },
+      {
+        "id": "N4-054",
+        "title": "Verb ながら (〜nagara)"
+      },
+      {
+        "id": "N4-055",
+        "title": "Verb なさい (〜nasai)"
+      },
+      {
+        "id": "N4-056",
+        "title": "Verb にくい (〜nikui)"
+      },
+      {
+        "id": "N4-057",
+        "title": "Verb やすい (〜yasui)"
+      },
+      {
+        "id": "N4-058",
+        "title": "Verb ようと思う (Verb-you to omou)"
+      },
+      {
+        "id": "N4-059",
+        "title": "Verb ように (〜you ni)"
+      },
+      {
+        "id": "N4-060",
+        "title": "Verb ようにする (Verb ~you ni suru)"
+      },
+      {
+        "id": "N4-061",
+        "title": "Verb ようになる (〜you ni naru)"
+      },
+      {
+        "id": "N4-062",
+        "title": "Verb ように言う (Verb-you ni iu)"
+      },
+      {
+        "id": "N4-063",
+        "title": "Verb られる (〜rareru)"
+      },
+      {
+        "id": "N4-064",
+        "title": "Verb る ことがある (〜ru koto ga aru)"
+      },
+      {
+        "id": "N4-065",
+        "title": "Verb ることができる (〜ru koto ga dekiru)"
+      },
+      {
+        "id": "N4-066",
+        "title": "Verb ることにする (〜ru koto ni suru)"
+      },
+      {
+        "id": "N4-067",
+        "title": "Verb る ことになる (〜ru koto ni naru)"
+      },
+      {
+        "id": "N4-068",
+        "title": "Verb るときに (〜ru toki ni)"
+      },
+      {
+        "id": "N4-069",
+        "title": "Verb る ところ (Verb-ru tokoro)"
+      },
+      {
+        "id": "N4-070",
+        "title": "Verb 出す (~dasu)"
+      },
+      {
+        "id": "N4-071",
+        "title": "Verb 方 (〜hou)"
+      },
+      {
+        "id": "N4-072",
+        "title": "Verb 終わる (〜owaru)"
+      },
+      {
+        "id": "N4-073",
+        "title": "Verb + 続ける (つづける, tsuzukeru)"
+      },
+      {
+        "id": "N4-074",
+        "title": "～かしら (〜kashira)"
+      },
+      {
+        "id": "N4-075",
+        "title": "～かどうか (〜ka dou ka)"
+      },
+      {
+        "id": "N4-076",
+        "title": "～かなあ (〜kanaa)"
+      },
+      {
+        "id": "N4-077",
+        "title": "～かもしれない (〜kamoshirenai)"
+      },
+      {
+        "id": "N4-078",
+        "title": "～から (〜kara)"
+      },
+      {
+        "id": "N4-079",
+        "title": "～けれど (〜keredo)"
+      },
+      {
+        "id": "N4-080",
+        "title": "～させてください (〜sasete kudasai)"
+      },
+      {
+        "id": "N4-081",
+        "title": "～し、～し、～ (〜shi, 〜shi, 〜)"
+      },
+      {
+        "id": "N4-082",
+        "title": "～すぎる (〜sugiru)"
+      },
+      {
+        "id": "N4-083",
+        "title": "～ずつ (〜zutsu)"
+      },
+      {
+        "id": "N4-084",
+        "title": "～そうだ (〜sou da)"
+      },
+      {
+        "id": "N4-085",
+        "title": "そんな (sonna) + Noun"
+      },
+      {
+        "id": "N4-086",
+        "title": "そんなに～ (sonna ni〜)"
+      },
+      {
+        "id": "N4-087",
+        "title": "～たらいい (〜tara ii)"
+      },
+      {
+        "id": "N4-088",
+        "title": "～たら いかがですか (〜tara ikaga desu ka)"
+      },
+      {
+        "id": "N4-089",
+        "title": "～たら どうですか (〜tara doudesuka)"
+      },
+      {
+        "id": "N4-090",
+        "title": "～たり～たり (〜tari 〜tari)"
+      },
+      {
+        "id": "N4-091",
+        "title": "～だろう (〜darou)"
+      },
+      {
+        "id": "N4-092",
+        "title": "～っていう (〜tte iu)"
+      },
+      {
+        "id": "N4-093",
+        "title": "～で (〜de)"
+      },
+      {
+        "id": "N4-094",
+        "title": "～でしょう (〜deshou)"
+      },
+      {
+        "id": "N4-095",
+        "title": "～てはいけない (〜te wa ikenai)"
+      },
+      {
+        "id": "N4-096",
+        "title": "～てもいい (〜temo ii)"
+      },
+      {
+        "id": "N4-097",
+        "title": "～ても/でも (〜te mo/demo)"
+      },
+      {
+        "id": "N4-098",
+        "title": "～といい (〜to ii)"
+      },
+      {
+        "id": "N4-099",
+        "title": "～という (〜to iu) Noun"
+      },
+      {
+        "id": "N4-100",
+        "title": "どういう Noun (dou iu Noun)"
+      },
+      {
+        "id": "N4-101",
+        "title": "～と思う (〜to omou)"
+      },
+      {
+        "id": "N4-102",
+        "title": "～という (〜to iu)"
+      },
+      {
+        "id": "N4-103",
+        "title": "～ないといけない (〜nai to ikenai)"
+      },
+      {
+        "id": "N4-104",
+        "title": "～なきゃいけない (〜nakya ikenai)"
+      },
+      {
+        "id": "N4-105",
+        "title": "～なくちゃいけない (〜naku cha ikenai)"
+      },
+      {
+        "id": "N4-106",
+        "title": "～なくてはいけない (〜nakute wa ikenai)"
+      },
+      {
+        "id": "N4-107",
+        "title": "～なくてもいい (〜nakutemo ii)"
+      },
+      {
+        "id": "N4-108",
+        "title": "～なければ ならない (〜nakereba naranai)"
+      },
+      {
+        "id": "N4-109",
+        "title": "～に (〜ni)"
+      },
+      {
+        "id": "N4-110",
+        "title": "～ので (〜node)"
+      },
+      {
+        "id": "N4-111",
+        "title": "～のです (〜no desu)"
+      },
+      {
+        "id": "N4-112",
+        "title": "～のに (〜no ni)"
+      },
+      {
+        "id": "N4-113",
+        "title": "～ばいい (〜ba ii)"
+      },
+      {
+        "id": "N4-114",
+        "title": "～まで (〜made)"
+      },
+      {
+        "id": "N4-115",
+        "title": "～までに (〜made ni)"
+      },
+      {
+        "id": "N4-116",
+        "title": "～まま (〜mama)"
+      },
+      {
+        "id": "N4-117",
+        "title": "～みたいだ (〜mitai da)"
+      },
+      {
+        "id": "N4-118",
+        "title": "～も (〜mo)"
+      },
+      {
+        "id": "N4-119",
+        "title": "～ようだ (〜you da)"
+      },
+      {
+        "id": "N4-120",
+        "title": "～んです (〜n desu)"
+      },
+      {
+        "id": "N4-121",
+        "title": "文A。そのうえ 文B。"
+      },
+      {
+        "id": "N4-122",
+        "title": "文A。それで 文B (Bun A. Sorede Bun B)"
+      },
+      {
+        "id": "N4-123",
+        "title": "文A。それに 文B (Bun A. Soreni Bun B)"
+      },
+      {
+        "id": "N4-124",
+        "title": "文A。だから 文B (Bun A. Dakara Bun B)"
+      }
+    ],
+    "N3": [
+      {
+        "id": "N3-001",
+        "title": "A その上 B (A sono ue B)"
+      },
+      {
+        "id": "N3-002",
+        "title": "～うちに (〜uchi ni)"
+      },
+      {
+        "id": "N3-003",
+        "title": "～うとした (〜uto shita)"
+      },
+      {
+        "id": "N3-004",
+        "title": "～おかげで (〜okagede)"
+      },
+      {
+        "id": "N3-005",
+        "title": "～かけ (〜kake)"
+      },
+      {
+        "id": "N3-006",
+        "title": "～かなあ (〜kanaa)"
+      },
+      {
+        "id": "N3-007",
+        "title": "～ないで (〜naide)"
+      },
+      {
+        "id": "N3-008",
+        "title": "～から～にかけて (〜kara 〜ni kakete)"
+      },
+      {
+        "id": "N3-009",
+        "title": "～かわりに (〜kawari ni)"
+      },
+      {
+        "id": "N3-010",
+        "title": "～きり (〜kiri)"
+      },
+      {
+        "id": "N3-011",
+        "title": "～くせに (〜kuse ni)"
+      },
+      {
+        "id": "N3-012",
+        "title": "～くらい (〜kurai)"
+      },
+      {
+        "id": "N3-013",
+        "title": "～くらい～は～ない (〜kurai 〜wa 〜nai)"
+      },
+      {
+        "id": "N3-014",
+        "title": "～こそ (〜koso)"
+      },
+      {
+        "id": "N3-015",
+        "title": "～こと (〜koto)"
+      },
+      {
+        "id": "N3-016",
+        "title": "～ことだ (〜koto da)"
+      },
+      {
+        "id": "N3-017",
+        "title": "～ことにしている (〜koto ni shite iru)"
+      },
+      {
+        "id": "N3-018",
+        "title": "～ことになっている (〜koto ni natte iru)"
+      },
+      {
+        "id": "N3-019",
+        "title": "～ことは…が (～koto wa... ga)"
+      },
+      {
+        "id": "N3-020",
+        "title": "～ことはない (〜koto wa nai)"
+      },
+      {
+        "id": "N3-021",
+        "title": "～さ (〜sa)"
+      },
+      {
+        "id": "N3-022",
+        "title": "～さえ (～sae)"
+      },
+      {
+        "id": "N3-023",
+        "title": "～しかない (〜shika nai)"
+      },
+      {
+        "id": "N3-024",
+        "title": "すこしも〜ない (sukoshimo~nai)"
+      },
+      {
+        "id": "N3-025",
+        "title": "～ずに (〜zu ni)"
+      },
+      {
+        "id": "N3-026",
+        "title": "～せいで (〜sei de)"
+      },
+      {
+        "id": "N3-027",
+        "title": "～せてください (〜sete kudasai)"
+      },
+      {
+        "id": "N3-028",
+        "title": "～そのために (〜sono tame ni)"
+      },
+      {
+        "id": "N3-029",
+        "title": "～その結果 (〜sono kekka)"
+      },
+      {
+        "id": "N3-030",
+        "title": "～それと～ (〜sore to〜)"
+      },
+      {
+        "id": "N3-031",
+        "title": "～？それとも～？ (～? sore tomo ～?)"
+      },
+      {
+        "id": "N3-032",
+        "title": "～だけしか (～dake shika)"
+      },
+      {
+        "id": "N3-033",
+        "title": "だけど (dakedo)"
+      },
+      {
+        "id": "N3-034",
+        "title": "～たて (～tate)"
+      },
+      {
+        "id": "N3-035",
+        "title": "～たとえ～ても (〜tatoe〜temo)"
+      },
+      {
+        "id": "N3-036",
+        "title": "～たところ (〜ta tokoro)"
+      },
+      {
+        "id": "N3-037",
+        "title": "～たとたん (〜ta totan)"
+      },
+      {
+        "id": "N3-038",
+        "title": "～たびに (〜tabi ni)"
+      },
+      {
+        "id": "N3-039",
+        "title": "～だものだ (〜da mono da)"
+      },
+      {
+        "id": "N3-040",
+        "title": "～ちゃった (〜chatta)"
+      },
+      {
+        "id": "N3-041",
+        "title": "～ついでに (〜tsuide ni)"
+      },
+      {
+        "id": "N3-042",
+        "title": "～っけ？ (〜kke?)"
+      },
+      {
+        "id": "N3-043",
+        "title": "～っぱい (〜ppai)"
+      },
+      {
+        "id": "N3-044",
+        "title": "～っぱなし (〜ppanashi)"
+      },
+      {
+        "id": "N3-045",
+        "title": "～つまり (〜tsumari)"
+      },
+      {
+        "id": "N3-046",
+        "title": "～つもりでした (〜tsumori deshita)"
+      },
+      {
+        "id": "N3-047",
+        "title": "～てくれと (〜te kureto)"
+      },
+      {
+        "id": "N3-048",
+        "title": "～てごらん (〜te goran)"
+      },
+      {
+        "id": "N3-049",
+        "title": "ですから～ (desu kara)"
+      },
+      {
+        "id": "N3-050",
+        "title": "～てはじめて (〜te hajimete)"
+      },
+      {
+        "id": "N3-051",
+        "title": "～てほしい (〜te hoshii)"
+      },
+      {
+        "id": "N3-052",
+        "title": "～ても (〜temo)"
+      },
+      {
+        "id": "N3-053",
+        "title": "～といいなあ (〜to ii naa)"
+      },
+      {
+        "id": "N3-054",
+        "title": "～という (〜to iu)"
+      },
+      {
+        "id": "N3-055",
+        "title": "～ということだ (〜to iu koto da)"
+      },
+      {
+        "id": "N3-056",
+        "title": "～というと (〜to iu to)"
+      },
+      {
+        "id": "N3-057",
+        "title": "～というの～ (〜to iu no〜)"
+      },
+      {
+        "id": "N3-058",
+        "title": "～というのは (〜to iu no wa)"
+      },
+      {
+        "id": "N3-059",
+        "title": "～というより (〜to iu yori)"
+      },
+      {
+        "id": "N3-060",
+        "title": "～といっても (〜to ittemo)"
+      },
+      {
+        "id": "N3-061",
+        "title": "～とおり (〜toori)"
+      },
+      {
+        "id": "N3-062",
+        "title": "～とく (〜toku)"
+      },
+      {
+        "id": "N3-063",
+        "title": "～ところが (〜tokoro ga)"
+      },
+      {
+        "id": "N3-064",
+        "title": "～ところだった (〜tokoro datta)"
+      },
+      {
+        "id": "N3-065",
+        "title": "ところで (tokorode)"
+      },
+      {
+        "id": "N3-066",
+        "title": "～としたら (〜to shitara)"
+      },
+      {
+        "id": "N3-067",
+        "title": "～として (〜to shite)"
+      },
+      {
+        "id": "N3-068",
+        "title": "～どんなに～ことか (〜donna ni〜koto ka)"
+      },
+      {
+        "id": "N3-069",
+        "title": "どんなに～ても (donna ni ~ temo)"
+      },
+      {
+        "id": "N3-070",
+        "title": "～ないことはない (〜nai koto wa nai)"
+      },
+      {
+        "id": "N3-071",
+        "title": "～ないと (〜nai to)"
+      },
+      {
+        "id": "N3-072",
+        "title": "～なぜなら (〜nazenara)"
+      },
+      {
+        "id": "N3-073",
+        "title": "～など (〜nado)"
+      },
+      {
+        "id": "N3-074",
+        "title": "～なんか (〜nanka)"
+      },
+      {
+        "id": "N3-075",
+        "title": "～において (〜ni oite)"
+      },
+      {
+        "id": "N3-076",
+        "title": "～にかわって (〜ni kawatte)"
+      },
+      {
+        "id": "N3-077",
+        "title": "～にしては (〜ni shite wa)"
+      },
+      {
+        "id": "N3-078",
+        "title": "～にしても (〜ni shitemo)"
+      },
+      {
+        "id": "N3-079",
+        "title": "～について (〜ni tsuite)"
+      },
+      {
+        "id": "N3-080",
+        "title": "～にとって (〜ni totte)"
+      },
+      {
+        "id": "N3-081",
+        "title": "～によって (〜ni yotte)"
+      },
+      {
+        "id": "N3-082",
+        "title": "～によれば (〜ni yoreba)"
+      },
+      {
+        "id": "N3-083",
+        "title": "～に対して (～ni taishite)"
+      },
+      {
+        "id": "N3-084",
+        "title": "～に比べて (〜ni kurabete)"
+      },
+      {
+        "id": "N3-085",
+        "title": "～に関して (〜ni kanshite)"
+      },
+      {
+        "id": "N3-086",
+        "title": "～の～ (〜no 〜)"
+      },
+      {
+        "id": "N3-087",
+        "title": "～ばかり (〜bakari)"
+      },
+      {
+        "id": "N3-088",
+        "title": "～ばかりか (〜bakarika) ～も (mo)"
+      },
+      {
+        "id": "N3-089",
+        "title": "～はずだ (〜hazu da)"
+      },
+      {
+        "id": "N3-090",
+        "title": "～ば～のに (〜ba 〜noni)"
+      },
+      {
+        "id": "N3-091",
+        "title": "～ば～ほど (〜ba 〜hodo)"
+      },
+      {
+        "id": "N3-092",
+        "title": "～はもちろん～も (〜wa mochiron 〜mo)"
+      },
+      {
+        "id": "N3-093",
+        "title": "～ばよかった (〜ba yokatta)"
+      },
+      {
+        "id": "N3-094",
+        "title": "～ふりをする (〜furi wo suru)"
+      },
+      {
+        "id": "N3-095",
+        "title": "～べきだ (〜beki da)"
+      },
+      {
+        "id": "N3-096",
+        "title": "～ほど～ (〜hodo〜)"
+      },
+      {
+        "id": "N3-097",
+        "title": "～ますように (〜masu you ni)"
+      },
+      {
+        "id": "N3-098",
+        "title": "まったく～ない (mattaku ~nai)"
+      },
+      {
+        "id": "N3-099",
+        "title": "～まで (〜made)"
+      },
+      {
+        "id": "N3-100",
+        "title": "～まま (〜mama)"
+      },
+      {
+        "id": "N3-101",
+        "title": "まるで～よう (maru de ~ you)"
+      },
+      {
+        "id": "N3-102",
+        "title": "～てみる (〜te miru)"
+      },
+      {
+        "id": "N3-103",
+        "title": "～みたいだ (〜mitai da)"
+      },
+      {
+        "id": "N3-104",
+        "title": "～めったに～ない (〜metta ni 〜nai)"
+      },
+      {
+        "id": "N3-105",
+        "title": "～めったにない (〜metta ni nai)"
+      },
+      {
+        "id": "N3-106",
+        "title": "もしかすると〜かもしれない (moshikasuru to 〜kamoshirenai)"
+      },
+      {
+        "id": "N3-107",
+        "title": "もし～たなら (moshi ~ tanara)"
+      },
+      {
+        "id": "N3-108",
+        "title": "もし～ても (moshi ~ temo)"
+      },
+      {
+        "id": "N3-109",
+        "title": "もしも～なら (moshimo ~ nara)"
+      },
+      {
+        "id": "N3-110",
+        "title": "～ようとしない (〜you to shinai)"
+      },
+      {
+        "id": "N3-111",
+        "title": "～ようと思う (〜you to omou)"
+      },
+      {
+        "id": "N3-112",
+        "title": "～ように (〜you ni)"
+      },
+      {
+        "id": "N3-113",
+        "title": "～ように (〜you ni)"
+      },
+      {
+        "id": "N3-114",
+        "title": "～ように (〜you ni)"
+      },
+      {
+        "id": "N3-115",
+        "title": "～ようにしましょう (〜you ni shimashou)"
+      },
+      {
+        "id": "N3-116",
+        "title": "～ようになった (〜you ni natta)"
+      },
+      {
+        "id": "N3-117",
+        "title": "～ように言う (〜you ni iu)"
+      },
+      {
+        "id": "N3-118",
+        "title": "～らしい (〜rashii)"
+      },
+      {
+        "id": "N3-119",
+        "title": "～られた (〜rareta)"
+      },
+      {
+        "id": "N3-120",
+        "title": "～ている (〜te iru)"
+      },
+      {
+        "id": "N3-121",
+        "title": "～わけがない (〜wake ga nai)"
+      },
+      {
+        "id": "N3-122",
+        "title": "～わけだ (〜wake da)"
+      },
+      {
+        "id": "N3-123",
+        "title": "～わけではない (〜wake dewa nai)"
+      },
+      {
+        "id": "N3-124",
+        "title": "～わけにはいかない (〜wake ni wa ikanai)"
+      },
+      {
+        "id": "N3-125",
+        "title": "～わりには (〜wari ni wa)"
+      },
+      {
+        "id": "N3-126",
+        "title": "～んだって (〜n datte)"
+      },
+      {
+        "id": "N3-127",
+        "title": "～んだもん (〜nda mon)"
+      },
+      {
+        "id": "N3-128",
+        "title": "～上げる (〜ageru)"
+      },
+      {
+        "id": "N3-129",
+        "title": "～切れない (～kirenai)"
+      },
+      {
+        "id": "N3-130",
+        "title": "必ずしも～とは限らない (kanarazushimo ～ towa kagiranai)"
+      },
+      {
+        "id": "N3-131",
+        "title": "～最中に (～saichuu ni)"
+      },
+      {
+        "id": "N3-132",
+        "title": "決して～ない (kesshite ~ nai)"
+      }
+    ],
+    "N2": [
+      {
+        "id": "N2-001",
+        "title": "A あるいは B (A aruiwa B)"
+      },
+      {
+        "id": "N2-002",
+        "title": "A。おまけに B。(~omake ni)"
+      },
+      {
+        "id": "N2-003",
+        "title": "A。さて B。(A. Sate B.)"
+      },
+      {
+        "id": "N2-004",
+        "title": "A。しかも B。(A. Shikamo B.)"
+      },
+      {
+        "id": "N2-005",
+        "title": "A。したがって B。(A. Shitagatte B.)"
+      },
+      {
+        "id": "N2-006",
+        "title": "A すなわち B。 (A sunawachi B)"
+      },
+      {
+        "id": "N2-007",
+        "title": "A。すると B。(~suruto)"
+      },
+      {
+        "id": "N2-008",
+        "title": "A。そういえば B。(~souieba)"
+      },
+      {
+        "id": "N2-009",
+        "title": "A。そこで B。(~sokode)"
+      },
+      {
+        "id": "N2-010",
+        "title": "A。それがB。(~sorega)"
+      },
+      {
+        "id": "N2-011",
+        "title": "A。それで B。 (~sore de)"
+      },
+      {
+        "id": "N2-012",
+        "title": "A。それでも B。(~sore demo)"
+      },
+      {
+        "id": "N2-013",
+        "title": "A。それなのに B。(~sorenanoni)"
+      },
+      {
+        "id": "N2-014",
+        "title": "A。それなら B。(A. Sore nara B.)"
+      },
+      {
+        "id": "N2-015",
+        "title": "A それはそうと B。 (A Sore wa sou to B)"
+      },
+      {
+        "id": "N2-016",
+        "title": "A。だが B。(~daga)"
+      },
+      {
+        "id": "N2-017",
+        "title": "A。ただB。(~tada)"
+      },
+      {
+        "id": "N2-018",
+        "title": "A。ただしB。 (A. Tadashi B)"
+      },
+      {
+        "id": "N2-019",
+        "title": "A。だって B。(Datte~)"
+      },
+      {
+        "id": "N2-020",
+        "title": "A。ちなみに B。(A. Chinamini B.)"
+      },
+      {
+        "id": "N2-021",
+        "title": "A。ということは B。 (A. To iu koto wa B.)"
+      },
+      {
+        "id": "N2-022",
+        "title": "A。というのは B。(Toiu no wa~)"
+      },
+      {
+        "id": "N2-023",
+        "title": "A。なおB。(A. Nao B.)"
+      },
+      {
+        "id": "N2-024",
+        "title": "A。もっとも B。(Motto mo ~)"
+      },
+      {
+        "id": "N2-025",
+        "title": "A。要するに B。(A. Yousuru ni B.)"
+      },
+      {
+        "id": "N2-026",
+        "title": "Noun につき (〜ni tsuki)"
+      },
+      {
+        "id": "N2-027",
+        "title": "Noun にて (Noun nite)"
+      },
+      {
+        "id": "N2-028",
+        "title": "Noun の ことだから (Noun no koto dakara)"
+      },
+      {
+        "id": "N2-029",
+        "title": "Noun を はじめ (Noun wo hajime)"
+      },
+      {
+        "id": "N2-030",
+        "title": "Noun を はじめとして (Noun wo hajime to shite)"
+      },
+      {
+        "id": "N2-031",
+        "title": "Noun を はじめとする Noun (Noun o hajime to suru Noun)"
+      },
+      {
+        "id": "N2-032",
+        "title": "Noun を めぐって (Noun wo megutte)"
+      },
+      {
+        "id": "N2-033",
+        "title": "Noun を めぐる Noun (Noun o meguru Noun)"
+      },
+      {
+        "id": "N2-034",
+        "title": "Noun を もとに (Noun o moto ni)"
+      },
+      {
+        "id": "N2-035",
+        "title": "Noun を もとにして (Noun wo moto ni shite)"
+      },
+      {
+        "id": "N2-036",
+        "title": "Verb ことなく (~kotonaku)"
+      },
+      {
+        "id": "N2-037",
+        "title": "Verb ないことには Verb ない (~nai koto ni wa ~ nai)"
+      },
+      {
+        "id": "N2-038",
+        "title": "～あげく (~ageku)"
+      },
+      {
+        "id": "N2-039",
+        "title": "～あまり (〜amari)"
+      },
+      {
+        "id": "N2-040",
+        "title": "～うちに (〜uchi ni)"
+      },
+      {
+        "id": "N2-041",
+        "title": "～がい (〜gai)"
+      },
+      {
+        "id": "N2-042",
+        "title": "～かいがあって (〜kaiga atte)"
+      },
+      {
+        "id": "N2-043",
+        "title": "～かいもなく (〜kai mo naku)"
+      },
+      {
+        "id": "N2-044",
+        "title": "～かける (〜kakeru)"
+      },
+      {
+        "id": "N2-045",
+        "title": "～がち (〜gachi)"
+      },
+      {
+        "id": "N2-046",
+        "title": "～か～ないかのうちに (〜ka〜naika no uchi ni)"
+      },
+      {
+        "id": "N2-047",
+        "title": "～かねない (〜kane nai)"
+      },
+      {
+        "id": "N2-048",
+        "title": "～かねる (〜kaneru)"
+      },
+      {
+        "id": "N2-049",
+        "title": "～かのようだ (〜ka no you da)"
+      },
+      {
+        "id": "N2-050",
+        "title": "～か～まいか (〜ka 〜maika)"
+      },
+      {
+        "id": "N2-051",
+        "title": "～からこそ (〜kara koso)"
+      },
+      {
+        "id": "N2-052",
+        "title": "〜からして (〜kara shite)"
+      },
+      {
+        "id": "N2-053",
+        "title": "～からすると (〜kara suru to)"
+      },
+      {
+        "id": "N2-054",
+        "title": "～からといって (〜kara to itte)"
+      },
+      {
+        "id": "N2-055",
+        "title": "～から～にかけて (〜kara 〜ni kakete)"
+      },
+      {
+        "id": "N2-056",
+        "title": "～からには (〜kara niwa)"
+      },
+      {
+        "id": "N2-057",
+        "title": "～から見ると (〜kara miru to)"
+      },
+      {
+        "id": "N2-058",
+        "title": "～から言うと (〜kara iuto)"
+      },
+      {
+        "id": "N2-059",
+        "title": "～くせに (〜kuse ni)"
+      },
+      {
+        "id": "N2-060",
+        "title": "～ことから (〜koto kara)"
+      },
+      {
+        "id": "N2-061",
+        "title": "～ことに (〜koto ni)"
+      },
+      {
+        "id": "N2-062",
+        "title": "～ことになっている (〜koto ni natte iru)"
+      },
+      {
+        "id": "N2-063",
+        "title": "～さえ～ば (〜sae ~ba)"
+      },
+      {
+        "id": "N2-064",
+        "title": "～ざるを得ない (〜zaru wo enai)"
+      },
+      {
+        "id": "N2-065",
+        "title": "～ずにはいられない (〜zu ni wa irarenai)"
+      },
+      {
+        "id": "N2-066",
+        "title": "～そうにない (〜sou ni nai)"
+      },
+      {
+        "id": "N2-067",
+        "title": "～たかと思ったら (〜ta ka to omottara)"
+      },
+      {
+        "id": "N2-068",
+        "title": "～たきり (〜takiri)"
+      },
+      {
+        "id": "N2-069",
+        "title": "～だけあって (〜dake atte)"
+      },
+      {
+        "id": "N2-070",
+        "title": "～だけましだ (〜dake mashi da)"
+      },
+      {
+        "id": "N2-071",
+        "title": "～たところ (〜ta tokoro)"
+      },
+      {
+        "id": "N2-072",
+        "title": "～たとたん (〜ta totan)"
+      },
+      {
+        "id": "N2-073",
+        "title": "～だらけ (〜darake)"
+      },
+      {
+        "id": "N2-074",
+        "title": "～っこない (〜kkonai)"
+      },
+      {
+        "id": "N2-075",
+        "title": "～つつ (〜tsutsu)"
+      },
+      {
+        "id": "N2-076",
+        "title": "～つつある (〜tsutsu aru)"
+      },
+      {
+        "id": "N2-077",
+        "title": "～っぱなし (〜ppanashi)"
+      },
+      {
+        "id": "N2-078",
+        "title": "～っぽい (〜ppoi)"
+      },
+      {
+        "id": "N2-079",
+        "title": "～ていられない (〜te irarenai)"
+      },
+      {
+        "id": "N2-080",
+        "title": "～てかなわない (〜te kanawanai)"
+      },
+      {
+        "id": "N2-081",
+        "title": "～てからでないと (〜te kara denai to)"
+      },
+      {
+        "id": "N2-082",
+        "title": "～てこそ (〜te koso)"
+      },
+      {
+        "id": "N2-083",
+        "title": "～でしょうがない (〜deshou ga nai)"
+      },
+      {
+        "id": "N2-084",
+        "title": "～でたまらない (〜de tamaranai)"
+      },
+      {
+        "id": "N2-085",
+        "title": "～でならない (〜de naranai)"
+      },
+      {
+        "id": "N2-086",
+        "title": "～でばかりはいられない (〜de bakari wa irarenai)"
+      },
+      {
+        "id": "N2-087",
+        "title": "～ではないか (〜de wa nai ka)"
+      },
+      {
+        "id": "N2-088",
+        "title": "～てはならない (〜te wa naranai)"
+      },
+      {
+        "id": "N2-089",
+        "title": "～てまで (〜te made)"
+      },
+      {
+        "id": "N2-090",
+        "title": "～て当然だ (〜te tōzen da)"
+      },
+      {
+        "id": "N2-091",
+        "title": "～というものだ (〜to iu mono da)"
+      },
+      {
+        "id": "N2-092",
+        "title": "どうにか～ないものか (dō ni ka ~ nai mono ka)"
+      },
+      {
+        "id": "N2-093",
+        "title": "～とおり (〜toori)"
+      },
+      {
+        "id": "N2-094",
+        "title": "～とか (〜to ka)"
+      },
+      {
+        "id": "N2-095",
+        "title": "～ところ (〜tokoro)"
+      },
+      {
+        "id": "N2-096",
+        "title": "～どころか (〜dokoro ka)"
+      },
+      {
+        "id": "N2-097",
+        "title": "～どころではない (〜dokoro de wa nai)"
+      },
+      {
+        "id": "N2-098",
+        "title": "～としたら (〜to shitara)"
+      },
+      {
+        "id": "N2-099",
+        "title": "～としても (〜to shite mo)"
+      },
+      {
+        "id": "N2-100",
+        "title": "～と～ともに (〜to 〜tomoni)"
+      },
+      {
+        "id": "N2-101",
+        "title": "～とは限らない (〜to wa kagiranai)"
+      },
+      {
+        "id": "N2-102",
+        "title": "～ないことはない (〜nai koto wa nai)"
+      },
+      {
+        "id": "N2-103",
+        "title": "～ないこともない (〜nai koto mo nai)"
+      },
+      {
+        "id": "N2-104",
+        "title": "～ないではいられない (〜nai de wa irarenai)"
+      },
+      {
+        "id": "N2-105",
+        "title": "～ながら (〜nagara)"
+      },
+      {
+        "id": "N2-106",
+        "title": "～にあたり (〜ni atari)"
+      },
+      {
+        "id": "N2-107",
+        "title": "～において (〜ni oite)"
+      },
+      {
+        "id": "N2-108",
+        "title": "～にかかわらず (〜ni kakawarazu)"
+      },
+      {
+        "id": "N2-109",
+        "title": "～にかけては (〜ni kakete wa)"
+      },
+      {
+        "id": "N2-110",
+        "title": "～にしたがって (〜ni shitagatte)"
+      },
+      {
+        "id": "N2-111",
+        "title": "～にしたら (〜ni shitara)"
+      },
+      {
+        "id": "N2-112",
+        "title": "～にしろ～にしろ (〜ni shiro 〜ni shiro)"
+      },
+      {
+        "id": "N2-113",
+        "title": "～につけ～につけ (〜ni tsuke 〜ni tsuke)"
+      },
+      {
+        "id": "N2-114",
+        "title": "～につれて (〜ni tsurete)"
+      },
+      {
+        "id": "N2-115",
+        "title": "～にともなって (〜ni tomonatte)"
+      },
+      {
+        "id": "N2-116",
+        "title": "～にほかならない (〜ni hoka naranai)"
+      },
+      {
+        "id": "N2-117",
+        "title": "～にもかかわらず (〜ni mo kakawarazu)"
+      },
+      {
+        "id": "N2-118",
+        "title": "～により (〜ni yori)"
+      },
+      {
+        "id": "N2-119",
+        "title": "～にわたって (〜ni watatte)"
+      },
+      {
+        "id": "N2-120",
+        "title": "～に先立ち (〜ni sakidachi)"
+      },
+      {
+        "id": "N2-121",
+        "title": "～に反して (〜ni hanshite)"
+      },
+      {
+        "id": "N2-122",
+        "title": "～に基づいて (〜ni motozuite)"
+      },
+      {
+        "id": "N2-123",
+        "title": "～に対して (〜ni taishite)"
+      },
+      {
+        "id": "N2-124",
+        "title": "～に応えて (〜ni kotaete)"
+      },
+      {
+        "id": "N2-125",
+        "title": "～に応じて (〜ni oujite)"
+      },
+      {
+        "id": "N2-126",
+        "title": "～に決まっている (〜ni kimatte iru)"
+      },
+      {
+        "id": "N2-127",
+        "title": "～に沿って (〜ni sotte)"
+      },
+      {
+        "id": "N2-128",
+        "title": "～に過ぎない (〜ni suginai)"
+      },
+      {
+        "id": "N2-129",
+        "title": "～に関わって (〜ni kakawatte)"
+      },
+      {
+        "id": "N2-130",
+        "title": "～に限り (〜ni kagiri)"
+      },
+      {
+        "id": "N2-131",
+        "title": "～に際して (〜ni saishite)"
+      },
+      {
+        "id": "N2-132",
+        "title": "～ねばならない (〜neba naranai)"
+      },
+      {
+        "id": "N2-133",
+        "title": "～のみならず～も (〜nomi narazu 〜mo)"
+      },
+      {
+        "id": "N2-134",
+        "title": "～のももっともだ (〜no mo mottomo da)"
+      },
+      {
+        "id": "N2-135",
+        "title": "〜の上では (〜no ue de wa)"
+      },
+      {
+        "id": "N2-136",
+        "title": "～の下で (〜no shita de)"
+      },
+      {
+        "id": "N2-137",
+        "title": "～ばかりか〜も (〜bakari ka 〜 mo)"
+      },
+      {
+        "id": "N2-138",
+        "title": "～ばかりだ (〜bakari da)"
+      },
+      {
+        "id": "N2-139",
+        "title": "～ばかりに (〜bakari ni)"
+      },
+      {
+        "id": "N2-140",
+        "title": "～ば～というものでもない (〜ba 〜to iu mono demo nai)"
+      },
+      {
+        "id": "N2-141",
+        "title": "～はともかく～は (〜wa tomokaku 〜wa)"
+      },
+      {
+        "id": "N2-142",
+        "title": "～はまだしも (〜wa mada shimo)"
+      },
+      {
+        "id": "N2-143",
+        "title": "～はもとより (〜wa moto yori)"
+      },
+      {
+        "id": "N2-144",
+        "title": "～は抜きにして (〜wa nuki ni shite)"
+      },
+      {
+        "id": "N2-145",
+        "title": "～べきではない (〜beki dewa nai)"
+      },
+      {
+        "id": "N2-146",
+        "title": "～まい (〜mai)"
+      },
+      {
+        "id": "N2-147",
+        "title": "～まで～て (〜made 〜te)"
+      },
+      {
+        "id": "N2-148",
+        "title": "～ままに (〜mama ni)"
+      },
+      {
+        "id": "N2-149",
+        "title": "～もかまわず (〜mo kamawazu)"
+      },
+      {
+        "id": "N2-150",
+        "title": "～ものか (〜mono ka)"
+      },
+      {
+        "id": "N2-151",
+        "title": "～ものがある (〜mono ga aru)"
+      },
+      {
+        "id": "N2-152",
+        "title": "～ものだ (〜mono da)"
+      },
+      {
+        "id": "N2-153",
+        "title": "～ものだから (〜mono dakara)"
+      },
+      {
+        "id": "N2-154",
+        "title": "～ものではない (〜mono dewa nai)"
+      },
+      {
+        "id": "N2-155",
+        "title": "～ものなら (〜mono nara)"
+      },
+      {
+        "id": "N2-156",
+        "title": "～ものの、～ (〜mono no、～)"
+      },
+      {
+        "id": "N2-157",
+        "title": "～も～ば～も～ (〜mo〜ba〜mo〜)"
+      },
+      {
+        "id": "N2-158",
+        "title": "～も同然だ (〜mo douzen da)"
+      },
+      {
+        "id": "N2-159",
+        "title": "～やら～やら (〜yara〜yara)"
+      },
+      {
+        "id": "N2-160",
+        "title": "～ようがない (〜you ga nai)"
+      },
+      {
+        "id": "N2-161",
+        "title": "～よりほかない (〜yori hoka nai)"
+      },
+      {
+        "id": "N2-162",
+        "title": "～わけがない (〜wake ga nai)"
+      },
+      {
+        "id": "N2-163",
+        "title": "～わけだ (〜wake da)"
+      },
+      {
+        "id": "N2-164",
+        "title": "～わけではない (〜wake dewa nai)"
+      },
+      {
+        "id": "N2-165",
+        "title": "～わけにはいかない (〜wake ni wa ikanai)"
+      },
+      {
+        "id": "N2-166",
+        "title": "～をきっかけに (〜wo kikkake ni)"
+      },
+      {
+        "id": "N2-167",
+        "title": "～を～として (〜wo〜toshite)"
+      },
+      {
+        "id": "N2-168",
+        "title": "～を中心に (〜wo chuushin ni)"
+      },
+      {
+        "id": "N2-169",
+        "title": "～を問わず (〜wo towazu)"
+      },
+      {
+        "id": "N2-170",
+        "title": "～を込めて (〜wo komete)"
+      },
+      {
+        "id": "N2-171",
+        "title": "～を通じて (〜wo tsuujite)"
+      },
+      {
+        "id": "N2-172",
+        "title": "～を頼りに (〜wo tayori ni)"
+      },
+      {
+        "id": "N2-173",
+        "title": "～一方 (〜ippou)"
+      },
+      {
+        "id": "N2-174",
+        "title": "～一方だ (〜ippou da)"
+      },
+      {
+        "id": "N2-175",
+        "title": "～上で (〜ue de)"
+      },
+      {
+        "id": "N2-176",
+        "title": "～上に (〜ue ni)"
+      },
+      {
+        "id": "N2-177",
+        "title": "～上は (～ue wa)"
+      },
+      {
+        "id": "N2-178",
+        "title": "～以上 (〜ijou)"
+      },
+      {
+        "id": "N2-179",
+        "title": "～以来 (〜irai)"
+      },
+      {
+        "id": "N2-180",
+        "title": "～切る (〜kiru)"
+      },
+      {
+        "id": "N2-181",
+        "title": "～反面 (〜hanmen)"
+      },
+      {
+        "id": "N2-182",
+        "title": "～向け (〜muke)"
+      },
+      {
+        "id": "N2-183",
+        "title": "～恐れがある (〜osore ga aru)"
+      },
+      {
+        "id": "N2-184",
+        "title": "～折には (〜ori ni wa)"
+      },
+      {
+        "id": "N2-185",
+        "title": "～末 (～sue)"
+      },
+      {
+        "id": "N2-186",
+        "title": "～次第 (〜shidai)"
+      },
+      {
+        "id": "N2-187",
+        "title": "～次第で (〜shidai de)"
+      },
+      {
+        "id": "N2-188",
+        "title": "～次第です (〜shidai desu)"
+      },
+      {
+        "id": "N2-189",
+        "title": "～気味 (〜gimi)"
+      },
+      {
+        "id": "N2-190",
+        "title": "～限り (〜kagiri)"
+      },
+      {
+        "id": "N2-191",
+        "title": "～際に (〜sai ni)"
+      }
+    ],
+    "N1": [
+      {
+        "id": "N1-001",
+        "title": "A うが B うが (A uga B uga)"
+      },
+      {
+        "id": "N1-002",
+        "title": "A うと B うと (A uto B uto)"
+      },
+      {
+        "id": "N1-003",
+        "title": "A かたわら B (A katawara B)"
+      },
+      {
+        "id": "N1-004",
+        "title": "A かれ B かれ (A kare B kare)"
+      },
+      {
+        "id": "N1-005",
+        "title": "A だの B だの (A dano B dano)"
+      },
+      {
+        "id": "N1-006",
+        "title": "A であれ B であれ (A deare B deare)"
+      },
+      {
+        "id": "N1-007",
+        "title": "A というか B というか (A to iu ka B to iu ka)"
+      },
+      {
+        "id": "N1-008",
+        "title": "A とも B とも (A tomo B tomo)"
+      },
+      {
+        "id": "N1-009",
+        "title": "A にしろ B にしろ (A nishiro B nishiro)"
+      },
+      {
+        "id": "N1-010",
+        "title": "A にせよ B にせよ (A ni seyo B ni seyo)"
+      },
+      {
+        "id": "N1-011",
+        "title": "A につけ B につけ (A ni tsuke B ni tsuke)"
+      },
+      {
+        "id": "N1-012",
+        "title": "A のやら B のやら (A no yara B no yara)"
+      },
+      {
+        "id": "N1-013",
+        "title": "Noun1 が Noun1 なら、 Noun2 も Noun2 だ (A ga A nara, B mo B da)"
+      },
+      {
+        "id": "N1-014",
+        "title": "Noun1 も Noun1 なら、Noun2 も Noun2 だ (A mo A nara, B mo B da)"
+      },
+      {
+        "id": "N1-015",
+        "title": "Noun + あっての + Noun (A atte no B)"
+      },
+      {
+        "id": "N1-016",
+        "title": "Noun かたがた (Noun kata gata)"
+      },
+      {
+        "id": "N1-017",
+        "title": "Noun がてら (Noun gatera)"
+      },
+      {
+        "id": "N1-018",
+        "title": "Noun からある (〜kara aru)"
+      },
+      {
+        "id": "N1-019",
+        "title": "Noun からする (Noun kara suru)"
+      },
+      {
+        "id": "N1-020",
+        "title": "Noun からの (~kara no)"
+      },
+      {
+        "id": "N1-021",
+        "title": "Noun から言わせれば (~kara iwasereba)"
+      },
+      {
+        "id": "N1-022",
+        "title": "Noun + ぐるみ (〜gurumi)"
+      },
+      {
+        "id": "N1-023",
+        "title": "Noun こそあれ (~koso are)"
+      },
+      {
+        "id": "N1-024",
+        "title": "Noun こそ～が (~koso~ga)"
+      },
+      {
+        "id": "N1-025",
+        "title": "Noun こそすれ (~koso sure)"
+      },
+      {
+        "id": "N1-026",
+        "title": "Noun ごとき / Noun ごとく (〜gotoki/〜gotoku)"
+      },
+      {
+        "id": "N1-027",
+        "title": "Noun じゃあるまいし (~ja aru mai shi)"
+      },
+      {
+        "id": "N1-028",
+        "title": "Noun ずくめ (~zukume)"
+      },
+      {
+        "id": "N1-029",
+        "title": "Noun だけではすまない (Noun dake dewa sumanai)"
+      },
+      {
+        "id": "N1-030",
+        "title": "Noun たりとも～ない (~tari tomo ~nai)"
+      },
+      {
+        "id": "N1-031",
+        "title": "Noun たる Noun (~taru~)"
+      },
+      {
+        "id": "N1-032",
+        "title": "Noun ですら (~desura)"
+      },
+      {
+        "id": "N1-033",
+        "title": "Noun でなくてなんだろう (〜de nakute nandarou)"
+      },
+      {
+        "id": "N1-034",
+        "title": "Noun ではあるまいし (~dewa aru maishi)"
+      },
+      {
+        "id": "N1-035",
+        "title": "Noun と Noun を兼ねて (Noun to Noun o kanete)"
+      },
+      {
+        "id": "N1-036",
+        "title": "Noun といい Noun といい (〜to ii〜to ii)"
+      },
+      {
+        "id": "N1-037",
+        "title": "Noun という Noun (~to iu~)"
+      },
+      {
+        "id": "N1-038",
+        "title": "Noun というところだ (Noun to iu tokoro da)"
+      },
+      {
+        "id": "N1-039",
+        "title": "Noun + というもの (~ to iu mono)"
+      },
+      {
+        "id": "N1-040",
+        "title": "Noun といったところだ (Noun to itta tokoro da)"
+      },
+      {
+        "id": "N1-041",
+        "title": "Noun といわず Noun といわず (A to iwazu B to iwazu)"
+      },
+      {
+        "id": "N1-042",
+        "title": "Noun + ときたら (〜tokitara)"
+      },
+      {
+        "id": "N1-043",
+        "title": "Noun とは比べものにならない (~to wa kurabemono ni naranai)"
+      },
+      {
+        "id": "N1-044",
+        "title": "Noun + ともあろう + Noun (~tomoarou~)"
+      },
+      {
+        "id": "N1-045",
+        "title": "Noun ともなると (〜to mo naru to)"
+      },
+      {
+        "id": "N1-046",
+        "title": "Noun ともなれば (〜to mo nareba)"
+      },
+      {
+        "id": "N1-047",
+        "title": "Noun と相まって (~ to aimatte)"
+      },
+      {
+        "id": "N1-048",
+        "title": "Noun なくして～はない (Noun nakushite ~ wa nai)"
+      },
+      {
+        "id": "N1-049",
+        "title": "Noun なしでは～ない (Noun nashi de wa ~nai)"
+      },
+      {
+        "id": "N1-050",
+        "title": "Noun なしには～ない (Noun nashi ni wa ~nai)"
+      },
+      {
+        "id": "N1-051",
+        "title": "Noun ならいざ知らず (~nara izashirazu)"
+      },
+      {
+        "id": "N1-052",
+        "title": "Noun + ならでは (~nara de wa)"
+      },
+      {
+        "id": "N1-053",
+        "title": "Noun なり Noun なり (A nari B nari)"
+      },
+      {
+        "id": "N1-054",
+        "title": "Noun なりとも (~nari tomo)"
+      },
+      {
+        "id": "N1-055",
+        "title": "Noun に Noun を重ねて (A ni B wo kasanete)"
+      },
+      {
+        "id": "N1-056",
+        "title": "Noun にあっては (Noun ni atte ha)"
+      },
+      {
+        "id": "N1-057",
+        "title": "Noun にあるまじき Noun (Noun ni aru majiki Noun)"
+      },
+      {
+        "id": "N1-058",
+        "title": "Noun にして (Noun ni shite)"
+      },
+      {
+        "id": "N1-059",
+        "title": "Noun にして初めて (Noun nishite hajimete)"
+      },
+      {
+        "id": "N1-060",
+        "title": "Noun にすら (〜ni sura)"
+      },
+      {
+        "id": "N1-061",
+        "title": "Noun にとどまらず～も (~ ni todomarazu ~ mo)"
+      },
+      {
+        "id": "N1-062",
+        "title": "Noun にひきかえ Noun は (~ni hikikae ~ wa)"
+      },
+      {
+        "id": "N1-063",
+        "title": "Noun にもまして (〜ni mo mashite)"
+      },
+      {
+        "id": "N1-064",
+        "title": "Noun によらず (～ni yorazu)"
+      },
+      {
+        "id": "N1-065",
+        "title": "Noun に先駆けて (〜ni saki gakete)"
+      },
+      {
+        "id": "N1-066",
+        "title": "Noun に即した Noun (A ni sokushita B)"
+      },
+      {
+        "id": "N1-067",
+        "title": "Noun に即して Verb (〜ni soku shite ~)"
+      },
+      {
+        "id": "N1-068",
+        "title": "Noun に言わせれば (Noun ni iwasereba)"
+      },
+      {
+        "id": "N1-069",
+        "title": "Noun に限ったことではない (〜ni kagitta koto dewa nai)"
+      },
+      {
+        "id": "N1-070",
+        "title": "Noun に限ったことでもない (~ni kagitta koto demo nai)"
+      },
+      {
+        "id": "N1-071",
+        "title": "Noun に限る (~ni kagiru)"
+      },
+      {
+        "id": "N1-072",
+        "title": "Noun ぬいた Noun (A nuita B)"
+      },
+      {
+        "id": "N1-073",
+        "title": "Noun + ぬいて（~nuite)"
+      },
+      {
+        "id": "N1-074",
+        "title": " ～ぬく (~nuku)"
+      },
+      {
+        "id": "N1-075",
+        "title": "Noun+のいかんだ (Noun no ikan da)"
+      },
+      {
+        "id": "N1-076",
+        "title": "Noun のいかんでは (Noun no ikan de wa)"
+      },
+      {
+        "id": "N1-077",
+        "title": "Noun のいかんにかかわらず (Noun no ikan ni kakawarazu)"
+      },
+      {
+        "id": "N1-078",
+        "title": "Noun のいかんによっては (Noun no ikan ni yotte wa)"
+      },
+      {
+        "id": "N1-079",
+        "title": "Noun のいかんによらず (~ no ikan ni yorazu)"
+      },
+      {
+        "id": "N1-080",
+        "title": "Noun のごとき Noun (A no gotoki B)"
+      },
+      {
+        "id": "N1-081",
+        "title": "Noun のことだから (〜no koto dakara)"
+      },
+      {
+        "id": "N1-082",
+        "title": "Noun の 嫌いがある (Noun no kirai ga aru)"
+      },
+      {
+        "id": "N1-083",
+        "title": "Noun の手前 (~no temae)"
+      },
+      {
+        "id": "N1-084",
+        "title": "Noun の極み (〜no kiwami)"
+      },
+      {
+        "id": "N1-085",
+        "title": "Noun の 至り (~no itari)"
+      },
+      {
+        "id": "N1-086",
+        "title": "Noun はいざ知らず (~ wa iza shirazu)"
+      },
+      {
+        "id": "N1-087",
+        "title": "Noun はおろか～すら (Noun wa oroka ～sura)"
+      },
+      {
+        "id": "N1-088",
+        "title": "Noun はおろか～まで (~wa oroka ~made)"
+      },
+      {
+        "id": "N1-089",
+        "title": "Noun はおろか～も (Noun wa oroka ～ mo)"
+      },
+      {
+        "id": "N1-090",
+        "title": "Noun はさておき (~ wa sateoki)"
+      },
+      {
+        "id": "N1-091",
+        "title": "Noun + はどうであれ (~ wa dou de are)"
+      },
+      {
+        "id": "N1-092",
+        "title": "Noun まみれ (~mamire)"
+      },
+      {
+        "id": "N1-093",
+        "title": "Noun もさることながら Noun も (A mo saru koto nagara B mo)"
+      },
+      {
+        "id": "N1-094",
+        "title": "Noun も兼ねて (~mo kanete)"
+      },
+      {
+        "id": "N1-095",
+        "title": "Noun も相まって (~mo aimatte)"
+      },
+      {
+        "id": "N1-096",
+        "title": "Noun を おいて他に Verb ない (〜wo oite hoka ni〜nai)"
+      },
+      {
+        "id": "N1-097",
+        "title": "Noun をもって (~wo motte)"
+      },
+      {
+        "id": "N1-098",
+        "title": "Noun をものともせずに (Noun wo mono tomo sezu ni)"
+      },
+      {
+        "id": "N1-099",
+        "title": "Noun をよそに (~wo yoso ni)"
+      },
+      {
+        "id": "N1-100",
+        "title": "Noun を余儀なくされる (Noun wo yogi naku sareru)"
+      },
+      {
+        "id": "N1-101",
+        "title": "Noun を前提として (Noun wo zentei toshite)"
+      },
+      {
+        "id": "N1-102",
+        "title": "Noun を前提にして (Noun wo zentei ni shite)"
+      },
+      {
+        "id": "N1-103",
+        "title": "Noun を境にして (Noun wo sakai ni shite)"
+      },
+      {
+        "id": "N1-104",
+        "title": "Noun を機にして (~wo ki ni shite)"
+      },
+      {
+        "id": "N1-105",
+        "title": "Noun を皮切りに / を皮切りにして (Noun wo kawakiri ni / wo kawakiri ni shite)"
+      },
+      {
+        "id": "N1-106",
+        "title": "Noun を皮切りにして (Noun wo kawakiri ni shite)"
+      },
+      {
+        "id": "N1-107",
+        "title": "Noun を禁じ得ない (〜wo kinjienai)"
+      },
+      {
+        "id": "N1-108",
+        "title": "Noun を経て (〜wo hete)"
+      },
+      {
+        "id": "N1-109",
+        "title": "Noun を踏まえて (〜wo fumaete)"
+      },
+      {
+        "id": "N1-110",
+        "title": "Noun を限りに (Noun wo kagiri ni)"
+      },
+      {
+        "id": "N1-111",
+        "title": "Noun 並み (~nami)"
+      },
+      {
+        "id": "N1-112",
+        "title": "Noun + 前提で (Noun + zentei de)"
+      },
+      {
+        "id": "N1-113",
+        "title": "Verbる / Noun(である) + 限り(は) (kagiri (wa))"
+      },
+      {
+        "id": "N1-114",
+        "title": "Verb がてら (~ gatera)"
+      },
+      {
+        "id": "N1-115",
+        "title": "Verb こそすれ (~koso sure)"
+      },
+      {
+        "id": "N1-116",
+        "title": "Verb させられる (~saserareru)"
+      },
+      {
+        "id": "N1-117",
+        "title": "Verb ざるを得ない (~ zaru wo enai)"
+      },
+      {
+        "id": "N1-118",
+        "title": "Verb ずじまい (~zu jimai)"
+      },
+      {
+        "id": "N1-119",
+        "title": "Verb ずとも (〜zu tomo)"
+      },
+      {
+        "id": "N1-120",
+        "title": "Verb ずにはおかない (~zuni wa okanai)"
+      },
+      {
+        "id": "N1-121",
+        "title": "Verb ずにはすまない (Verb zuni wa sumanai)"
+      },
+      {
+        "id": "N1-122",
+        "title": "Verb そうにない (Verb sou ni nai)"
+      },
+      {
+        "id": "N1-123",
+        "title": "Verb そうもない (〜sou mo nai)"
+      },
+      {
+        "id": "N1-124",
+        "title": "Verb そばから (〜soba kara)"
+      },
+      {
+        "id": "N1-125",
+        "title": "Verb たが最後 (〜ta ga saigo)"
+      },
+      {
+        "id": "N1-126",
+        "title": "Verb たことにしてください (~ ta koto ni shite kudasai)"
+      },
+      {
+        "id": "N1-127",
+        "title": "Verb たら Verb たで (~ tara ~ tade)"
+      },
+      {
+        "id": "N1-128",
+        "title": "Verb たら きりがない (Verb tara kiri ga nai)"
+      },
+      {
+        "id": "N1-129",
+        "title": "Verb たら最後 (〜tara saigo)"
+      },
+      {
+        "id": "N1-130",
+        "title": "Verb つ Verb つ (Verb tsu Verb tsu)"
+      },
+      {
+        "id": "N1-131",
+        "title": "Verb てからというもの (Verb te kara to iu mono)"
+      },
+      {
+        "id": "N1-132",
+        "title": "Verb てこそ (Verb te koso)"
+      },
+      {
+        "id": "N1-133",
+        "title": "Verb ては (～te wa)"
+      },
+      {
+        "id": "N1-134",
+        "title": "Verb ては Verb (~ te wa ~)"
+      },
+      {
+        "id": "N1-135",
+        "title": "Verb てまでも (~ temademo)"
+      },
+      {
+        "id": "N1-136",
+        "title": "Verb てみせる (Verb te miseru)"
+      },
+      {
+        "id": "N1-137",
+        "title": "Verb てやまない (Verb te yamanai)"
+      },
+      {
+        "id": "N1-138",
+        "title": "Verb ないではおかない (~ nai de wa okanai)"
+      },
+      {
+        "id": "N1-139",
+        "title": "Verb ないではすまない (Verb nai dewa sumanai)"
+      },
+      {
+        "id": "N1-140",
+        "title": "Verb ないまでも (Verb nai made mo)"
+      },
+      {
+        "id": "N1-141",
+        "title": "Verb ないものだろうか (Verb nai mono darou ka)"
+      },
+      {
+        "id": "N1-142",
+        "title": "Verb ないものでもない (Verb nai mono demo nai)"
+      },
+      {
+        "id": "N1-143",
+        "title": "Verb の ない Noun (~ no nai ~)"
+      },
+      {
+        "id": "N1-144",
+        "title": "Verb ば きりがない (〜ba kiri ga nai)"
+      },
+      {
+        "id": "N1-145",
+        "title": "Verb もしないで (~ mo shinai de)"
+      },
+      {
+        "id": "N1-146",
+        "title": "Verb やしない (~ yashinai)"
+      },
+      {
+        "id": "N1-147",
+        "title": "Verb よう (~ you / ~ you ni)"
+      },
+      {
+        "id": "N1-148",
+        "title": "Verb ようか Verbるまいか (Verb you ka Verb ru mai ka)"
+      },
+      {
+        "id": "N1-149",
+        "title": "Verb ようが Verb るまいが (Verb you ga Verb ru mai ga)"
+      },
+      {
+        "id": "N1-150",
+        "title": "Verb ようがない (〜you ga nai)"
+      },
+      {
+        "id": "N1-151",
+        "title": "Verb ようと Verbる まいと (Verb you to Verb ru mai to)"
+      },
+      {
+        "id": "N1-152",
+        "title": "Verb ようにも (〜you ni mo)"
+      },
+      {
+        "id": "N1-153",
+        "title": "Verb ようにも Verb れない (〜you ni mo 〜renai)"
+      },
+      {
+        "id": "N1-154",
+        "title": "Verb ようもない (~you mo nai)"
+      },
+      {
+        "id": "N1-155",
+        "title": "Verbる がままに (〜ga mama ni)"
+      },
+      {
+        "id": "N1-156",
+        "title": "Verbる が早いか (verb-ru ga hayai ka)"
+      },
+      {
+        "id": "N1-157",
+        "title": "Verbる くらいなら (〜ru kurai nara)"
+      },
+      {
+        "id": "N1-158",
+        "title": "Verbる こと なし に (Verb-ru koto nashi ni)"
+      },
+      {
+        "id": "N1-159",
+        "title": "Verbる ことのないように (Verb-ru koto no nai you ni)"
+      },
+      {
+        "id": "N1-160",
+        "title": "Verbる ときりがない (verb-ru to kiri ga nai)"
+      },
+      {
+        "id": "N1-161",
+        "title": "Verbる ともなく Verb (Verb-ru tomonaku Verb)"
+      },
+      {
+        "id": "N1-162",
+        "title": "Verbる ともなしに Verb (Verb-ru tomonashi ni Verb)"
+      },
+      {
+        "id": "N1-163",
+        "title": "Verbる なり (Verb-ru nari)"
+      },
+      {
+        "id": "N1-164",
+        "title": "Verbる にとどまらず～も (Verb-ru ni todomarazu ~ mo)"
+      },
+      {
+        "id": "N1-165",
+        "title": "Verbる にはあたらない (Verb-ru ni wa ataranai)"
+      },
+      {
+        "id": "N1-166",
+        "title": "Verbる にも (Verb-ru ni mo)"
+      },
+      {
+        "id": "N1-167",
+        "title": "Verbる にも Verb れない (Verb-ru ni mo Verb-re nai)"
+      },
+      {
+        "id": "N1-168",
+        "title": "Verbる べからざる Noun (Verb-ru bekara zaru Noun)"
+      },
+      {
+        "id": "N1-169",
+        "title": "Verbる べからず (〜ru bekara zu)"
+      },
+      {
+        "id": "N1-170",
+        "title": "Verbる べく (Verb-ru beku)"
+      },
+      {
+        "id": "N1-171",
+        "title": "Verbる べくもない (Verb-ru beku mo nai)"
+      },
+      {
+        "id": "N1-172",
+        "title": "Verbる までもない (〜ru made mo nai)"
+      },
+      {
+        "id": "N1-173",
+        "title": "Verbる ものとする (〜ru mono to suru)"
+      },
+      {
+        "id": "N1-174",
+        "title": "Verbる や否や (Verb-ru ya ina ya)"
+      },
+      {
+        "id": "N1-175",
+        "title": "Verbる 始末だ (〜ru shimatsu da)"
+      },
+      {
+        "id": "N1-176",
+        "title": "Verbる 嫌いがある (～ru kirai ga aru)"
+      },
+      {
+        "id": "N1-177",
+        "title": "いつまで～のやら (itsumade ~ no yara)"
+      },
+      {
+        "id": "N1-178",
+        "title": "～が Verb られる (〜ga Verb rareru)"
+      },
+      {
+        "id": "N1-179",
+        "title": "～かと思いきや (〜ka to omoikiya)"
+      },
+      {
+        "id": "N1-180",
+        "title": "～がゆえに (～ga yue ni)"
+      },
+      {
+        "id": "N1-181",
+        "title": "～がゆえの Noun (〜ga yue no Noun)"
+      },
+      {
+        "id": "N1-182",
+        "title": "～から Noun に 至る まで (〜kara 〜ni itaru made)"
+      },
+      {
+        "id": "N1-183",
+        "title": "～ごとく (〜gotoku)"
+      },
+      {
+        "id": "N1-184",
+        "title": "～こととて (〜koto tote)"
+      },
+      {
+        "id": "N1-185",
+        "title": "～ずにすんだ (〜zuni sunda)"
+      },
+      {
+        "id": "N1-186",
+        "title": "～だろうとなかろうと (〜darou to nakarou to)"
+      },
+      {
+        "id": "N1-187",
+        "title": "～つもりだ (〜tsumori da)"
+      },
+      {
+        "id": "N1-188",
+        "title": "～つもりで (〜tsumori de)"
+      },
+      {
+        "id": "N1-189",
+        "title": "～ではすまない (〜dewa sumanai)"
+      },
+      {
+        "id": "N1-190",
+        "title": "～とあって (〜to atte)"
+      },
+      {
+        "id": "N1-191",
+        "title": "～とあれば (〜to areba)"
+      },
+      {
+        "id": "N1-192",
+        "title": "～といえども (〜to iedomo)"
+      },
+      {
+        "id": "N1-193",
+        "title": "～といったらありはしない (〜to ittara ari wa shinai)"
+      },
+      {
+        "id": "N1-194",
+        "title": "～といったらありゃしない (〜to ittara arya shinai)"
+      },
+      {
+        "id": "N1-195",
+        "title": "～といったらない (〜to ittara nai)"
+      },
+      {
+        "id": "N1-196",
+        "title": "～ときている (〜to kite iru)"
+      },
+      {
+        "id": "N1-197",
+        "title": "～ところを (〜tokoro wo)"
+      },
+      {
+        "id": "N1-198",
+        "title": "～とされる (〜to sareru)"
+      },
+      {
+        "id": "N1-199",
+        "title": "～としたところで (〜to shita tokoro de)"
+      },
+      {
+        "id": "N1-200",
+        "title": "～とすると (〜to suru to)"
+      },
+      {
+        "id": "N1-201",
+        "title": "～とすれば (～to sureba)"
+      },
+      {
+        "id": "N1-202",
+        "title": "～となったら (〜to nattara)"
+      },
+      {
+        "id": "N1-203",
+        "title": "～となると (〜to naru to)"
+      },
+      {
+        "id": "N1-204",
+        "title": "～となれば (〜to nareba)"
+      },
+      {
+        "id": "N1-205",
+        "title": "～とのことだ (〜to no koto da)"
+      },
+      {
+        "id": "N1-206",
+        "title": "～とはいえ (～to wa ie)"
+      },
+      {
+        "id": "N1-207",
+        "title": "～とみえて (〜to miete)"
+      },
+      {
+        "id": "N1-208",
+        "title": "～とみられる (～to mirareru)"
+      },
+      {
+        "id": "N1-209",
+        "title": "～とみると (〜to miru to)"
+      },
+      {
+        "id": "N1-210",
+        "title": "どんなに～うが (donna ni ～ u ga)"
+      },
+      {
+        "id": "N1-211",
+        "title": "～と言わんばかりに (〜to iwan bakari ni)"
+      },
+      {
+        "id": "N1-212",
+        "title": "～と言わんばかりの Noun (～to iwan bakari no Noun)"
+      },
+      {
+        "id": "N1-213",
+        "title": "～ながらに (～nagara ni)"
+      },
+      {
+        "id": "N1-214",
+        "title": "～ながらの Noun (〜nagara no Noun)"
+      },
+      {
+        "id": "N1-215",
+        "title": "～ながらも (〜nagara mo)"
+      },
+      {
+        "id": "N1-216",
+        "title": "～なくはない (〜naku wa nai)"
+      },
+      {
+        "id": "N1-217",
+        "title": "～なくもない (〜naku mo nai)"
+      },
+      {
+        "id": "N1-218",
+        "title": "～なら～なりに"
+      },
+      {
+        "id": "N1-219",
+        "title": "～には及ばない (〜ni wa oyobanai)"
+      },
+      {
+        "id": "N1-220",
+        "title": "～に堪えない (～ni taenai)"
+      },
+      {
+        "id": "N1-221",
+        "title": "～に堪える (～ni taeru)"
+      },
+      {
+        "id": "N1-222",
+        "title": "～に耐える (～ni taeru)"
+      },
+      {
+        "id": "N1-223",
+        "title": "～に至った (〜ni itatta)"
+      },
+      {
+        "id": "N1-224",
+        "title": "～に越したことはない (〜ni koshita koto wa nai)"
+      },
+      {
+        "id": "N1-225",
+        "title": "～に難くない (～ni katakunai)"
+      },
+      {
+        "id": "N1-226",
+        "title": "～のは Noun ぐらいのものだ (〜no wa Noun gurai no mono da)"
+      },
+      {
+        "id": "N1-227",
+        "title": "～ば～ものを (～ba～mono o)"
+      },
+      {
+        "id": "N1-228",
+        "title": "～びた (～bita)"
+      },
+      {
+        "id": "N1-229",
+        "title": "～びる (〜biru)"
+      },
+      {
+        "id": "N1-230",
+        "title": "～ぶった (～butta)"
+      },
+      {
+        "id": "N1-231",
+        "title": "～ぶって (〜butte)"
+      },
+      {
+        "id": "N1-232",
+        "title": "～ぶり (〜buri)"
+      },
+      {
+        "id": "N1-233",
+        "title": "～ぶる (〜buru)"
+      },
+      {
+        "id": "N1-234",
+        "title": "～までだ (～made da)"
+      },
+      {
+        "id": "N1-235",
+        "title": "～もなんでもない (〜mo nandemonai)"
+      },
+      {
+        "id": "N1-236",
+        "title": "～ものとして (～mono to shite)"
+      },
+      {
+        "id": "N1-237",
+        "title": "～んがために (〜n ga tame ni)"
+      },
+      {
+        "id": "N1-238",
+        "title": "～んばかりに (〜n bakari ni)"
+      },
+      {
+        "id": "N1-239",
+        "title": "～差し支えない (〜sashitsukaenai)"
+      },
+      {
+        "id": "N1-240",
+        "title": "～折に (〜ori ni)"
+      },
+      {
+        "id": "N1-241",
+        "title": "～極まりない (〜kiwamarinai)"
+      },
+      {
+        "id": "N1-242",
+        "title": "～極まる (〜kiwamaru)"
+      },
+      {
+        "id": "N1-243",
+        "title": "～足りない (～tarinai)"
+      },
+      {
+        "id": "N1-244",
+        "title": "～足る Noun (〜taru Noun)"
+      },
+      {
+        "id": "N1-245",
+        "title": "～限りだ (〜kagiri da)"
+      }
+    ]
+  },
+  "total_points": 828,
+  "warnings": [
+    "N1: recouvrement réel 1050/1236 (écart dû aux zones sans croissance assignée côté kanji — voir kanji-zone-assignment-report.md)"
+  ]
+}
