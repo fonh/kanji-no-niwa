@@ -1,43 +1,26 @@
-import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
+import { auth } from '@/lib/auth'
+import { sql } from '@/lib/db'
 
 export async function proxy(request: NextRequest) {
-  let supabaseResponse = NextResponse.next({ request })
-
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        getAll() { return request.cookies.getAll() },
-        setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value))
-          supabaseResponse = NextResponse.next({ request })
-          cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options)
-          )
-        },
-      },
-    }
-  )
-
-  // Refresh session cookie — no network call, reads from cookie only
-  const { data: { user } } = await supabase.auth.getUser()
-
+  const session = await auth()
   const { pathname } = request.nextUrl
 
   // Unauthenticated → sign-in page
-  if (!user && pathname !== '/' && !pathname.startsWith('/auth')) {
+  if (!session?.user && pathname !== '/' && !pathname.startsWith('/api/auth')) {
     return NextResponse.redirect(new URL('/', request.url))
   }
 
-  // Authenticated on sign-in page → dashboard
-  // (trainer_name check is done inside each page, not here)
-  if (user && pathname === '/') {
-    return NextResponse.redirect(new URL('/dashboard', request.url))
+  // Authenticated on sign-in page → onboarding (no trainer name yet) or dashboard.
+  // Only queried here, once, on the single "just landed on /" transition —
+  // not on every request.
+  if (session?.user && pathname === '/') {
+    const [profile] = await sql`select trainer_name from users where id = ${session.user.id}`
+    const dest = profile?.trainer_name ? '/dashboard' : '/onboarding'
+    return NextResponse.redirect(new URL(dest, request.url))
   }
 
-  return supabaseResponse
+  return NextResponse.next()
 }
 
 export const config = {

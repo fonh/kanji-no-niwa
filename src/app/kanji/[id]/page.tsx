@@ -1,6 +1,7 @@
 import { redirect, notFound } from 'next/navigation'
 import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
+import { auth } from '@/lib/auth'
+import { sql } from '@/lib/db'
 import QueueButton from './QueueButton'
 import kanjiContent from '@/data/kanji-content.json'
 
@@ -11,54 +12,45 @@ interface Props {
 export default async function KanjiCardPage({ params }: Props) {
   const { id } = await params
   const character = decodeURIComponent(id)
-  const supabase = await createClient()
+  const session = await auth()
+  if (!session?.user) redirect('/')
+  const userId = session.user.id
 
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/')
-
-  const { data: kanji } = await supabase
-    .from('kanji')
-    .select('id, character, meanings, on_readings, kun_readings, jlpt_level, grade, stroke_count')
-    .eq('id', character)
-    .single()
+  // None of these four depend on each other's results — fetch concurrently.
+  const [[kanji], componentEdges, userCards, [profile]] = await Promise.all([
+    sql`
+      select id, character, meanings, on_readings, kun_readings, jlpt_level, grade, stroke_count
+      from kanji where id = ${character}
+    `,
+    sql`
+      select c.component_id, k.character, k.jlpt_level
+      from kanji_components c
+      join kanji k on k.id = c.component_id
+      where c.parent_id = ${character}
+    `,
+    sql`select kanji_id, card_type, fsrs_state from cards where user_id = ${userId}`,
+    sql`select queued_kanji from users where id = ${userId}`,
+  ])
 
   const content = (kanjiContent as Record<string, { etymology: string; mnemonic: string }>)[character]
 
   if (!kanji) notFound()
 
-  // Components of this kanji
-  const { data: componentEdges } = await supabase
-    .from('kanji_components')
-    .select('component_id, kanji!kanji_components_component_id_fkey(id, character, jlpt_level)')
-    .eq('parent_id', character)
-
-  // User's studied set and queued kanji
-  const { data: userCards } = await supabase
-    .from('cards')
-    .select('kanji_id, card_type, fsrs_state')
-    .eq('user_id', user.id)
-
-  const { data: profile } = await supabase
-    .from('users')
-    .select('queued_kanji')
-    .eq('id', user.id)
-    .single()
-
-  const studiedSet = new Set((userCards ?? []).map(c => c.kanji_id))
+  const studiedSet = new Set(userCards.map(c => c.kanji_id))
   const queuedKanji: string[] = profile?.queued_kanji ?? []
 
   // Derive status of this kanji
-  const meaningStability = (userCards ?? []).find(c => c.kanji_id === character && c.card_type === 'meaning')?.fsrs_state?.stability ?? 0
-  const readingStability = (userCards ?? []).find(c => c.kanji_id === character && c.card_type === 'reading')?.fsrs_state?.stability ?? 0
+  const meaningStability = userCards.find(c => c.kanji_id === character && c.card_type === 'meaning')?.fsrs_state?.stability ?? 0
+  const readingStability = userCards.find(c => c.kanji_id === character && c.card_type === 'reading')?.fsrs_state?.stability ?? 0
   const status: 'unseen' | 'studied' | 'mastered' =
     meaningStability >= 30 && readingStability >= 30 ? 'mastered'
     : studiedSet.has(character) ? 'studied'
     : 'unseen'
 
   // Which component prerequisites are missing?
-  const components = (componentEdges ?? []).map(e => ({
+  const components = componentEdges.map(e => ({
     id: e.component_id,
-    character: (Array.isArray(e.kanji) ? e.kanji[0] : e.kanji)?.character ?? e.component_id,
+    character: e.character ?? e.component_id,
     studied: studiedSet.has(e.component_id),
   }))
   const missingPrereqs = components.filter(c => !c.studied).map(c => c.character)
@@ -139,7 +131,6 @@ export default async function KanjiCardPage({ params }: Props) {
       {status === 'unseen' && (
         <QueueButton
           kanjiId={character}
-          userId={user.id}
           missingPrereqs={missingPrereqs}
           isQueued={isQueued}
         />

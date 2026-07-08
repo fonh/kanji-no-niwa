@@ -12,7 +12,7 @@ import { createGunzip } from 'zlib'
 import { join } from 'path'
 import { readdirSync } from 'fs'
 import { XMLParser } from 'fast-xml-parser'
-import { supabase } from '../lib/supabase'
+import { getKnownKanjiIds, upsertBatch } from '../lib/db'
 
 const SOURCES = join(import.meta.dirname, '../sources')
 const BATCH_SIZE = 200
@@ -53,8 +53,7 @@ async function main() {
   const kanjiNodes: Record<string, unknown>[] = doc.kanjivg?.kanji ?? []
 
   // Fetch all known kanji IDs from DB
-  const { data: knownRows } = await supabase.from('kanji').select('id')
-  const known = new Set((knownRows ?? []).map(r => r.id as string))
+  const known = await getKnownKanjiIds()
 
   const edges: { parent_id: string; component_id: string; source: string }[] = []
 
@@ -77,8 +76,7 @@ async function main() {
   let inserted = 0
   for (let i = 0; i < edges.length; i += BATCH_SIZE) {
     const batch = edges.slice(i, i + BATCH_SIZE)
-    const { error } = await supabase.from('kanji_components').upsert(batch, { onConflict: 'parent_id,component_id,source', ignoreDuplicates: true })
-    if (error) { console.error('Batch error:', error.message); process.exit(1) }
+    await upsertBatch('kanji_components', batch, ['parent_id', 'component_id', 'source'], { ignoreDuplicates: true })
     inserted += batch.length
     process.stdout.write(`\r  ${inserted}/${edges.length}`)
   }

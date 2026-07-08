@@ -11,7 +11,7 @@ import { createReadStream } from 'fs'
 import { createGunzip } from 'zlib'
 import { join } from 'path'
 import { XMLParser } from 'fast-xml-parser'
-import { supabase } from '../lib/supabase'
+import { upsertBatch } from '../lib/db'
 
 const SOURCES = join(import.meta.dirname, '../sources')
 const BATCH_SIZE = 100
@@ -75,9 +75,8 @@ async function main() {
 
   let inserted = 0
   for (let i = 0; i < joyo.length; i += BATCH_SIZE) {
-    const batch = joyo.slice(i, i + BATCH_SIZE)
-    const { error } = await supabase.from('kanji').upsert(batch, { onConflict: 'id' })
-    if (error) { console.error('Batch error:', error.message); process.exit(1) }
+    const batch = joyo.slice(i, i + BATCH_SIZE).map(k => ({ ...k, meanings: JSON.stringify(k.meanings) }))
+    await upsertBatch('kanji', batch, ['id'])
     inserted += batch.length
     process.stdout.write(`\r  ${inserted}/${joyo.length}`)
   }

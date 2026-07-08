@@ -1,16 +1,15 @@
 'use client'
 
 import { useState } from 'react'
-import { createClient } from '@/lib/supabase/client'
+import { toggleQueuedKanji } from './actions'
 
 interface Props {
   kanjiId: string
-  userId: string
   missingPrereqs: string[]
   isQueued: boolean
 }
 
-export default function QueueButton({ kanjiId, userId, missingPrereqs, isQueued: initialQueued }: Props) {
+export default function QueueButton({ kanjiId, missingPrereqs, isQueued: initialQueued }: Props) {
   const [queued, setQueued] = useState(initialQueued)
   const [loading, setLoading] = useState(false)
 
@@ -30,19 +29,7 @@ export default function QueueButton({ kanjiId, userId, missingPrereqs, isQueued:
 
   const handleToggle = async () => {
     setLoading(true)
-    const supabase = createClient()
-    const { data: profile } = await supabase
-      .from('users')
-      .select('queued_kanji')
-      .eq('id', userId)
-      .single()
-
-    const current: string[] = profile?.queued_kanji ?? []
-    const updated = queued
-      ? current.filter(k => k !== kanjiId)
-      : [...current, kanjiId]
-
-    await supabase.from('users').update({ queued_kanji: updated }).eq('id', userId)
+    await toggleQueuedKanji(kanjiId, queued)
     setQueued(!queued)
     setLoading(false)
   }

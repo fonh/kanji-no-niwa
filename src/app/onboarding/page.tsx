@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/client'
+import { saveTrainerName } from './actions'
 
 export default function OnboardingPage() {
   const router = useRouter()
@@ -17,28 +17,20 @@ export default function OnboardingPage() {
 
     setSaving(true)
     setError('')
-    const supabase = createClient()
-    const { data: { user } } = await supabase.auth.getUser()
-    if (!user) { router.push('/'); return }
 
-    const { error: dbError } = await supabase
-      .from('users')
-      .update({ trainer_name: name })
-      .eq('id', user.id)
-
-    if (dbError) {
+    try {
+      await saveTrainerName(name)
+      router.push('/onboarding/mentor-intro')
+    } catch {
       setError('Could not save trainer name. Try again.')
       setSaving(false)
-      return
     }
-
-    router.push('/onboarding/fukuda-intro')
   }
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-4">
       <h2 className="text-2xl font-bold mb-2">Choose your trainer name</h2>
-      <p className="text-gray-400 mb-8 text-sm">Sensei Fukuda will address you by this name.</p>
+      <p className="text-gray-400 mb-8 text-sm">Prof. Elm will address you by this name.</p>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-xs">
         <input
           type="text"

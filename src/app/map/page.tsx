@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation'
-import { createClient } from '@/lib/supabase/server'
+import { auth } from '@/lib/auth'
+import { sql } from '@/lib/db'
 import { getAllZones, getZoneByName, getZoneNames } from '@/lib/zones'
 import { getNpcsForZone } from '@/lib/npcs'
 import { getTrainersForZone } from '@/lib/trainers'
@@ -10,26 +11,13 @@ const DEFAULT_ZONE = 'MAP_NEW_BARK'
 const DEFAULT_POS: PlayerPos = { world_x: 695, world_z: 396 }
 
 export default async function MapPage() {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/')
+  const session = await auth()
+  if (!session?.user) redirect('/')
+  const userId = session.user.id
 
-  // map_progress arrives with migration 006 — fall back to a narrower
-  // select (and default progress) if the column isn't deployed yet, so an
-  // un-migrated database degrades to a static map instead of a crash.
-  let { data: userRow } = await supabase
-    .from('users')
-    .select('map_zone, map_x, map_z, map_progress')
-    .eq('id', user.id)
-    .single()
-  if (!userRow) {
-    const fallback = await supabase
-      .from('users')
-      .select('map_zone, map_x, map_z')
-      .eq('id', user.id)
-      .single()
-    userRow = fallback.data ? { ...fallback.data, map_progress: {} } : null
-  }
+  const [userRow] = await sql`
+    select map_zone, map_x, map_z, map_progress from users where id = ${userId}
+  `
 
   const zoneName = userRow?.map_zone ?? DEFAULT_ZONE
   const zone = getZoneByName(zoneName) ?? getAllZones()[0]
@@ -40,7 +28,6 @@ export default async function MapPage() {
 
   return (
     <MapClient
-      userId={user.id}
       zone={zone}
       npcs={getNpcsForZone(zone)}
       trainers={getTrainersForZone(zone)}

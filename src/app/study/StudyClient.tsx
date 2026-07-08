@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/client'
+import { submitReview } from './actions'
 import { fsrs, generatorParameters, Rating, type Card, type Grade } from 'ts-fsrs'
 
 const RATING_LABELS: { label: string; rating: Rating; style: string }[] = [
@@ -31,17 +31,15 @@ interface DueCard {
 
 interface Props {
   cards: DueCard[]
-  userId: string
 }
 
-export default function StudyClient({ cards, userId }: Props) {
+export default function StudyClient({ cards }: Props) {
   const router = useRouter()
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [reviewed, setReviewed] = useState(0)
 
   const f = fsrs(generatorParameters())
-  const supabase = createClient()
 
   const current = cards[index]
 
@@ -53,20 +51,7 @@ export default function StudyClient({ cards, userId }: Props) {
     const item = f.next(current.fsrs_state, now, rating as Grade)
     const newCard = item.card
 
-    await supabase
-      .from('cards')
-      .update({
-        fsrs_state: newCard,
-        next_review_at: newCard.due.toISOString(),
-      })
-      .eq('id', current.id)
-
-    await supabase.from('reviews').insert({
-      user_id: userId,
-      card_id: current.id,
-      rating,
-      new_fsrs_state: newCard,
-    })
+    await submitReview(current.id, newCard, newCard.due.toISOString(), rating)
 
     setReviewed(r => r + 1)
     setRevealed(false)

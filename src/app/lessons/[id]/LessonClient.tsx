@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/client'
+import { upsertLessonCards } from './actions'
 import { createEmptyCard, fsrs, generatorParameters, Rating, type Grade } from 'ts-fsrs'
 
 // FSRS rating values: 1=Again, 2=Hard, 3=Good, 4=Easy
@@ -21,7 +21,7 @@ interface QuizQuestion {
   answer: string
 }
 
-interface Lesson {
+export interface Lesson {
   id: string
   title: string
   body_markdown: string
@@ -34,10 +34,9 @@ type Phase = 'reading' | 'quiz' | 'done'
 
 interface Props {
   lesson: Lesson
-  userId: string
 }
 
-export default function LessonClient({ lesson, userId }: Props) {
+export default function LessonClient({ lesson }: Props) {
   const router = useRouter()
   const [phase, setPhase] = useState<Phase>('reading')
   const [quizIndex, setQuizIndex] = useState(0)
@@ -69,30 +68,29 @@ export default function LessonClient({ lesson, userId }: Props) {
 
   const handleQuizComplete = async (finalRatings: typeof ratings) => {
     setSaving(true)
-    const supabase = createClient()
     const f = fsrs(generatorParameters())
     const now = new Date()
 
     // Create FSRS cards for each unique kanji×cardType pair
-    for (const kanjiId of lesson.kanji_ids) {
-      for (const cardType of ['meaning', 'reading'] as const) {
+    const cardsToSave = lesson.kanji_ids.flatMap(kanjiId =>
+      (['meaning', 'reading'] as const).map(cardType => {
         const quizRating = finalRatings.find(r => r.kanjiId === kanjiId && r.cardType === cardType)
         const rating = quizRating?.rating ?? Rating.Good
 
         const emptyCard = createEmptyCard(now)
         const item = f.next(emptyCard, now, rating as Grade)
         const fsrsState = item.card
-        const nextReviewAt = fsrsState.due
 
-        await supabase.from('cards').upsert({
-          user_id: userId,
-          kanji_id: kanjiId,
-          card_type: cardType,
-          fsrs_state: fsrsState,
-          next_review_at: nextReviewAt.toISOString(),
-        }, { onConflict: 'user_id,kanji_id,card_type' })
-      }
-    }
+        return {
+          kanjiId,
+          cardType,
+          fsrsState,
+          nextReviewAt: fsrsState.due.toISOString(),
+        }
+      })
+    )
+
+    await upsertLessonCards(cardsToSave)
 
     setSaving(false)
     setPhase('done')

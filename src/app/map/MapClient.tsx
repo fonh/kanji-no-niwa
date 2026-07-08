@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { createClient } from '@/lib/supabase/client'
+import { saveMapProgress, saveMapPosition } from './actions'
 import {
   canTraverse,
   terrainAt,
@@ -49,7 +49,6 @@ interface ActiveDialogue {
 }
 
 interface Props {
-  userId: string
   zone: Zone
   npcs: ZoneNpc[]
   trainers: ZoneTrainer[]
@@ -144,7 +143,7 @@ function CollisionCanvas({ zone }: { zone: Zone }) {
   )
 }
 
-export default function MapClient({ userId, zone: initialZone, npcs: initialNpcs, trainers: initialTrainers, initialPos, initialProgress, allZoneNames }: Props) {
+export default function MapClient({ zone: initialZone, npcs: initialNpcs, trainers: initialTrainers, initialPos, initialProgress, allZoneNames }: Props) {
   const [zone, setZone] = useState(initialZone)
   const [npcs, setNpcs] = useState(initialNpcs)
   const [trainers, setTrainers] = useState(initialTrainers)
@@ -216,8 +215,6 @@ export default function MapClient({ userId, zone: initialZone, npcs: initialNpcs
     [displayNameByZone]
   )
 
-  const supabase = useRef(createClient()).current
-
   useEffect(() => {
     const update = () => setViewSize({ w: window.innerWidth, h: window.innerHeight })
     update()
@@ -234,20 +231,12 @@ export default function MapClient({ userId, zone: initialZone, npcs: initialNpcs
         progressRef.current = next
         if (persistProgressTimeoutRef.current) clearTimeout(persistProgressTimeoutRef.current)
         persistProgressTimeoutRef.current = setTimeout(() => {
-          supabase
-            .from('users')
-            .update({ map_progress: next })
-            .eq('id', userId)
-            .then(({ error }) => {
-              // Column missing = migration 006 not applied yet; progress
-              // then only lives for this session (see map/page.tsx).
-              if (error) console.warn('Failed to save map progress', error.message)
-            })
+          saveMapProgress(next).catch(err => console.warn('Failed to save map progress', err))
         }, 800)
         return next
       })
     },
-    [supabase, userId]
+    []
   )
 
   const markVisited = useCallback(
@@ -267,16 +256,10 @@ export default function MapClient({ userId, zone: initialZone, npcs: initialNpcs
     (zoneName: string, x: number, z: number) => {
       if (persistTimeoutRef.current) clearTimeout(persistTimeoutRef.current)
       persistTimeoutRef.current = setTimeout(() => {
-        supabase
-          .from('users')
-          .update({ map_zone: zoneName, map_x: x, map_z: z })
-          .eq('id', userId)
-          .then(({ error }) => {
-            if (error) console.error('Failed to save map position', error)
-          })
+        saveMapPosition(zoneName, x, z).catch(err => console.error('Failed to save map position', err))
       }, 400)
     },
-    [supabase, userId]
+    []
   )
 
   const worldToPixel = useCallback(

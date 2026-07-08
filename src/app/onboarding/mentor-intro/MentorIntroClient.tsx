@@ -7,13 +7,13 @@ interface Props {
   firstLessonId: string
 }
 
-export default function FukudaIntroClient({ dialogueText, firstLessonId }: Props) {
+export default function MentorIntroClient({ dialogueText, firstLessonId }: Props) {
   const router = useRouter()
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-4">
       <div className="max-w-md w-full bg-gray-800 rounded-2xl p-8 border border-gray-700">
-        <p className="text-xs text-amber-400 uppercase tracking-widest mb-4">Sensei Fukuda</p>
+        <p className="text-xs text-amber-400 uppercase tracking-widest mb-4">Prof. Elm</p>
         {/* Dialogue box styled like a Pokémon game */}
         <div className="border-2 border-white rounded-lg p-6 mb-8 text-lg leading-relaxed">
           {dialogueText}

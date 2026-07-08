@@ -1,33 +1,40 @@
 import { redirect } from 'next/navigation'
-import { createClient } from '@/lib/supabase/server'
+import { auth } from '@/lib/auth'
+import { sql } from '@/lib/db'
 import StudyClient from './StudyClient'
 import kanjiContent from '@/data/kanji-content.json'
 
 export default async function StudyPage() {
-  const supabase = await createClient()
-
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) redirect('/')
+  const session = await auth()
+  if (!session?.user) redirect('/')
+  const userId = session.user.id
 
   // Load cards due now, joined with kanji for display
-  const now = new Date().toISOString()
-  const { data: rawCards } = await supabase
-    .from('cards')
-    .select('id, kanji_id, card_type, fsrs_state, kanji(character, meanings, on_readings, kun_readings)')
-    .eq('user_id', user.id)
-    .lte('next_review_at', now)
-    .order('next_review_at', { ascending: true })
+  const rawCards = await sql`
+    select
+      c.id, c.kanji_id, c.card_type, c.fsrs_state,
+      k.character, k.meanings, k.on_readings, k.kun_readings
+    from cards c
+    join kanji k on k.id = c.kanji_id
+    where c.user_id = ${userId} and c.next_review_at <= now()
+    order by c.next_review_at asc
+  `
 
   const allContent = kanjiContent as Record<string, { etymology: string; mnemonic: string }>
 
-  // Supabase returns joined rows as arrays; normalise to a single object and merge content
-  const dueCards = (rawCards ?? []).map(c => {
-    const kanji = Array.isArray(c.kanji) ? c.kanji[0] : c.kanji
-    return {
-      ...c,
-      kanji: { ...kanji, ...allContent[kanji?.character ?? ''] },
-    }
-  })
+  const dueCards = rawCards.map(c => ({
+    id: c.id,
+    kanji_id: c.kanji_id,
+    card_type: c.card_type,
+    fsrs_state: c.fsrs_state,
+    kanji: {
+      character: c.character,
+      meanings: c.meanings,
+      on_readings: c.on_readings,
+      kun_readings: c.kun_readings,
+      ...allContent[c.character ?? ''],
+    },
+  }))
 
-  return <StudyClient cards={dueCards} userId={user.id} />
+  return <StudyClient cards={dueCards} />
 }

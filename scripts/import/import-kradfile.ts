@@ -10,7 +10,7 @@
 
 import { readFileSync } from 'fs'
 import { join } from 'path'
-import { supabase } from '../lib/supabase'
+import { sql, getKnownKanjiIds, upsertBatch } from '../lib/db'
 
 const SOURCES = join(import.meta.dirname, '../sources')
 const BATCH_SIZE = 200
@@ -42,14 +42,12 @@ async function main() {
   }
 
   // Fetch all known kanji IDs and existing kanjivg edges to avoid duplicating them
-  const { data: knownRows } = await supabase.from('kanji').select('id')
-  const known = new Set((knownRows ?? []).map(r => r.id as string))
+  const known = await getKnownKanjiIds()
 
-  const { data: existingRows } = await supabase
-    .from('kanji_components')
-    .select('parent_id, component_id')
-    .eq('source', 'kanjivg')
-  const existingEdges = new Set((existingRows ?? []).map(r => `${r.parent_id}:${r.component_id}`))
+  const existingRows = (await sql.query(
+    `select parent_id, component_id from kanji_components where source = 'kanjivg'`
+  )) as { parent_id: string; component_id: string }[]
+  const existingEdges = new Set(existingRows.map(r => `${r.parent_id}:${r.component_id}`))
 
   const edges: { parent_id: string; component_id: string; source: string }[] = []
 
@@ -67,8 +65,7 @@ async function main() {
   let inserted = 0
   for (let i = 0; i < edges.length; i += BATCH_SIZE) {
     const batch = edges.slice(i, i + BATCH_SIZE)
-    const { error } = await supabase.from('kanji_components').upsert(batch, { onConflict: 'parent_id,component_id,source', ignoreDuplicates: true })
-    if (error) { console.error('Batch error:', error.message); process.exit(1) }
+    await upsertBatch('kanji_components', batch, ['parent_id', 'component_id', 'source'], { ignoreDuplicates: true })
     inserted += batch.length
     process.stdout.write(`\r  ${inserted}/${edges.length}`)
   }

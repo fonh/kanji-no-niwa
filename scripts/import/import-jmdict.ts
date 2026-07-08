@@ -11,7 +11,7 @@ import { createReadStream } from 'fs'
 import { createGunzip } from 'zlib'
 import { join } from 'path'
 import { XMLParser } from 'fast-xml-parser'
-import { supabase } from '../lib/supabase'
+import { upsertBatch } from '../lib/db'
 import { readFileSync } from 'fs'
 
 const SOURCES = join(import.meta.dirname, '../sources')
@@ -95,10 +95,14 @@ async function main() {
 
   let imported = 0
   for (let i = 0; i < rows.length; i += BATCH_SIZE) {
-    const batch = rows.slice(i, i + BATCH_SIZE)
-    const { error } = await supabase.from('vocabulary').upsert(batch, { onConflict: 'id' })
-    if (error) { console.error(`Batch ${i / BATCH_SIZE + 1} error:`, error.message); continue }
-    imported += batch.length
+    const batch = rows.slice(i, i + BATCH_SIZE).map(r => ({ ...r, meanings: JSON.stringify(r.meanings) }))
+    try {
+      await upsertBatch('vocabulary', batch, ['id'])
+      imported += batch.length
+    } catch (err) {
+      console.error(`Batch ${i / BATCH_SIZE + 1} error:`, err)
+      continue
+    }
     process.stdout.write(`\r${imported}/${rows.length} imported…`)
   }
   console.log(`\nDone. ${imported} vocabulary entries imported.`)
