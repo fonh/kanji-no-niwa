@@ -12,23 +12,45 @@ Licences : usage app privée jamais publiée — même statut que Tadoku/Watanoc
 
 ## Inventaire identifié (vérifié en ouvrant chaque PDF)
 
+**⚠️ Mise à jour 2026-07-09** : cet inventaire datait du 5 juillet et ratait 6 fichiers déjà
+présents dans le dossier au moment de sa rédaction (probablement ajoutés le même jour, jamais
+recensés). Trouvés en auditant `content/lessons-proposal.json` contre cette carte — voir
+« Manquements » ci-dessous, largement recalculé suite à cette découverte.
+
 | # | Fichier | Identité réelle | Niveau | Nature |
 |---|---|---|---|---|
 | 1 | `Marugoto…Starter A1 Coursebook…` | Marugoto Starter (A1) — coursebook | A1 | Manuel officiel JF (can-do) |
 | 2 | `…MARUGOTO_A1_GOICHOU` | Marugoto ごいちょう A1 — lexique officiel ~1 000 mots par topic (700 かつどう/りかい + 300) | A1 | Vocabulaire thématique |
-| 3 | `marugoto-elementary-2-a2-katsudo…` | Marugoto Élémentaire 2 (A2-2) かつどう | A2 | Manuel — activités/oral |
-| 4 | `marugoto-a2-2-rikai…` | Marugoto Élémentaire 2 (A2-2) りかい | A2 | Manuel — grammaire/structures |
-| 5 | `…MARUGOTO_A2B1` | Marugoto Pré-intermédiaire (A2/B1) | A2/B1 | Manuel (volume unique) |
-| 6 | `…MARUGOTO_B1` | Marugoto Intermédiaire 1 (B1) 中級1 | B1 | Manuel (volume unique) |
-| 7 | `marugoto-b1-2…` | Marugoto Intermédiaire 2 (B1) 中級2 — confirmé par la préface | B1 | Manuel — dernier volume de la série |
-| 8 | `901725816-Short-Stories…Vol-1` | **You Can Read Japanese! Level 1 Vol. 1** (Yumi Nishino, 2023) — gradué selon les niveaux NPO Tadoku | Tadoku L1 ≈ N5 | Recueil ~10 histoires illustrées |
-| 9 | `935733020-Short-Stories…` | **You Can Read Japanese! Level 1 Vol. 2** (2023) — inclut des classiques Aozora simplifiés (Niimi Nankichi, Ogawa Mimei) | Tadoku L1 ≈ N5/N4 | Recueil ~8 histoires |
-| 10 | `japanese-short-stories-for-beginners…` | **Japanese Short Stories for Beginners** (The Language Academy / Hiromi Zeid, 2016) — 9 histoires + vocab | ≈ N5/N4 | Recueil (romaji présent — qualité à vérifier avant usage) |
-| 11 | `Japanese Stories for Language Learners…` | **Japanese Stories for Language Learners** (Tuttle — McNulty/Sato) — Urashima Tarō, Yuki-onna, Le Fil de l'araignée (Akutagawa)… bilingue + audio, difficulté croissante | ≈ N4 → N2 | 5 contes bilingues longs, découpés en pistes |
-| 12 | `James W. Heisig - Remembering the Kanji, Vol. 1` | **RTK 1** (éd. 2007-2008) — 2 200 kanji, décomposition en primitives + mnémotechniques | transversal | Méthode kanji (ordre NON-JLPT) |
+| 3 | `marugoto-a1_compress` | Marugoto Starter (A1) — second volume (かつどう ou りかい, pairing du #1 ; 149p vs 99p pour le #1, donc bien un fichier distinct) — identité かつどう/りかい exacte non confirmée (scan sans texte) | A1 | Manuel officiel JF |
+| 4 | `marugoto-elementary-1-a2-katsudou…` | **Marugoto Élémentaire 1 (A2-1) かつどう** — comble le trou précédemment signalé | A2 | Manuel — activités/oral |
+| 5 | `marugoto-elementary-1-a2-rikai…` | **Marugoto Élémentaire 1 (A2-1) りかい** — comble le trou précédemment signalé | A2 | Manuel — grammaire/structures |
+| 6 | `marugoto-elementary-2-a2-katsudo…` | Marugoto Élémentaire 2 (A2-2) かつどう | A2 | Manuel — activités/oral |
+| 7 | `marugoto-a2-2-rikai…` | Marugoto Élémentaire 2 (A2-2) りかい | A2 | Manuel — grammaire/structures |
+| 8 | `…MARUGOTO_A2B1` | Marugoto Pré-intermédiaire (A2/B1) | A2/B1 | Manuel (volume unique) |
+| 9 | `…MARUGOTO_B1` | Marugoto Intermédiaire 1 (B1) 中級1 | B1 | Manuel (volume unique) |
+| 10 | `marugoto-b1-2…` | Marugoto Intermédiaire 2 (B1) 中級2 — confirmé par la préface | B1 | Manuel — dernier volume de la série |
+| 11 | `marugoto-b1-vocabulary_compress` | Marugoto B1 — lexique thématique. **Seul fichier du dossier avec texte extractible** (118k caractères, testé pymupdf) — les 17 autres PDF sont des scans image purs, 0 caractère extractible | B1 | Vocabulaire thématique |
+| 12 | `901725816-Short-Stories…Vol-1` | **You Can Read Japanese! Level 1 Vol. 1** (Yumi Nishino, 2023) — gradué selon les niveaux NPO Tadoku | Tadoku L1 ≈ N5 | Recueil ~10 histoires illustrées |
+| 13 | `935733020-Short-Stories…` | **You Can Read Japanese! Level 1 Vol. 2** (2023) — inclut des classiques Aozora simplifiés (Niimi Nankichi, Ogawa Mimei) | Tadoku L1 ≈ N5/N4 | Recueil ~8 histoires |
+| 14 | `japanese-short-stories-for-beginners…` | **Japanese Short Stories for Beginners** (The Language Academy / Hiromi Zeid, 2016) — 9 histoires + vocab | ≈ N5/N4 | Recueil (romaji présent — qualité à vérifier avant usage) |
+| 15 | `Japanese Stories for Language Learners…` | **Japanese Stories for Language Learners** (Tuttle — McNulty/Sato) — Urashima Tarō, Yuki-onna, Le Fil de l'araignée (Akutagawa)… bilingue + audio, difficulté croissante | ≈ N4 → N2 | 5 contes bilingues longs, découpés en pistes |
+| 16 | `James W. Heisig - Remembering the Kanji, Vol. 1` | **RTK 1** (éd. 2007-2008) — 2 200 kanji, décomposition en primitives + mnémotechniques | transversal | Méthode kanji (ordre NON-JLPT) |
+| 17 | `[studyjapanese.net]_Shin_Kanzen_Masuta_N2-Dokkai` | **Shin Kanzen Master N2 読解** (lecture) | N2 | Manuel JLPT — lecture |
+| 18 | `shin-kanzen-master-n1-bunpou_compress` | **Shin Kanzen Master N1 文法** (grammaire) | N1 | Manuel JLPT — grammaire |
+| 19 | `shin-kanzen-master-n1-dokkai_compress` | **Shin Kanzen Master N1 読解** (lecture) | N1 | Manuel JLPT — lecture |
+| 20 | `shin-kanzen-master-n2-goipdf_compress` | **Shin Kanzen Master N2 語彙** (vocabulaire) — bonus, pas demandé mais utile | N2 | Manuel JLPT — vocabulaire |
 
 Correspondance CECR↔JLPT (cf. `jlpt-language-syllabus.md`) : A1=N5 · A2=N4 · B1=N3 · B2=N2 · C1=N1.
 **La série Marugoto s'arrête à B1** — c'est une limite de la collection, pas un oubli.
+
+**Blocage pratique découvert 2026-07-09** : 17 des 18 PDF Marugoto/Shin Kanzen Master sont des
+scans image sans aucune couche de texte (0 caractère extractible, testé page par page avec
+pymupdf sur les 6 nouveaux fichiers + spot-check des anciens). Aucun OCR n'est installé sur cette
+machine (`tesseract` absent). Donc même les livres « présents » ne sont pas exploitables par un
+script tant qu'ils n'ont pas été OCRisés (ou lus visuellement page à page) — c'est un blocage
+d'outillage, pas seulement un manquement d'inventaire. Décision 2026-07-09 : **différé à la passe
+contenu dédiée** (Étape 3-4), pas avant — l'assignation grammaire↔zone reste sur Hanabira
+(`grammar-zone-assignment.json`, déjà en place) pour la structuration des leçons (Point 5).
 
 ---
 
@@ -62,7 +84,7 @@ Correspondance CECR↔JLPT (cf. `jlpt-language-syllabus.md`) : A1=N5 · A2=N4 ·
 |---|---|---|---|---|
 | Bourg Geon → Ville Griotte (bootstrap Elm, premières routes) | 0–60 | N5 pur | Marugoto Starter A1 + ごいちょう ; YCRJ L1 Vol. 1 (premiers textes) | ✅ solide |
 | Routes 30-31 → Mauville, Tour Grospignon | 50–140 | N5/N4 | Marugoto Starter A1 (fin) ; YCRJ Vol. 1-2 ; JSS for Beginners (à vetter) | ✅ solide |
-| Route 32 → Forêt Secte | 110–240 | N4 | ⚠️ **Marugoto Élémentaire 1 (A2-1) ABSENT** — début N4 sans manuel ; YCRJ Vol. 2, JSS for Beginners en textes | 🟡 trou manuel |
+| Route 32 → Forêt Secte | 110–240 | N4 | Marugoto Élémentaire 1 (A2-1) かつどう+りかい — **trouvé présent 2026-07-09** (l'inventaire précédent le disait absent) ; YCRJ Vol. 2, JSS for Beginners en textes | 🟡 présent mais non-OCR, voir Manquements |
 | Route 34 → Doublonville | 220–290 | N4 | Marugoto A2-2 かつどう+りかい | ✅ solide |
 | Route 35 → Parc National | 270–330 | N4/N3 | Marugoto A2-2 (fin) + A2/B1 (début) ; Tuttle (1ers contes : Urashima Tarō) | ✅ |
 | Routes 36-37 → Rosalia → Irisia | 310–520 | N3 | Marugoto A2/B1 puis B1 (中級1) ; Tuttle (milieu) | ✅ |
@@ -70,31 +92,35 @@ Correspondance CECR↔JLPT (cf. `jlpt-language-syllabus.md`) : A1=N5 · A2=N4 ·
 | Route 44 → Routes 26-27 | 555–830 | N2 | Marugoto B1-2 (dernier volume — s'épuise ici) ; Tuttle (fin : Le Fil de l'araignée, vrai Akutagawa simplifié) | 🟡 fin de collection |
 | Antre du Dragon, Antichambre | 640–870 | N2/N1 | Tuttle (registre littéraire, dernier usage) ; rien d'autre | 🟡 |
 | Ligue (plate) | 870–900 | N2/N1 *(remappé 2026-07-05)* | — (calibration de langue seulement, pas de leçons — voulu, audit 01) | ✅ par design |
-| Kanto — Vermeille → Céladia | 900–1500 | N2 *(remappé 2026-07-05)* | ❌ aucun livre — c'est exactement le créneau de Shin Kanzen Master N2 (manquement n°1) | 🔴 voir Manquements |
-| Kanto — Cycling Road → Routes 14-15 | 1500–1670 | N2/N1 | ❌ idem (transition) | 🔴 |
-| Kanto — Grotte Diglett → Seafoam + revisites | 1670–2136 | N1 | ❌ aucun livre — créneau Shin Kanzen Master N1 ; relais textes par NHK, Matcha, Aozora brut *(« textes officiels Pokémon » retiré 2026-07-07, audit 05, finding 05-A3 : source écartée du N1 le 2026-07-02, `texts-progressifs.md` § Sources — fossile de rédaction)* | 🔴 voir Manquements |
-| Mont Gris (plateau 2136) | 2136 | N1 | ❌ idem — textes N1 durs prévus par `texts-progressifs.md` (Aozora brut, chapitre de manga pour Red, lettre finale du mentor) | 🔴 voir Manquements |
+| Kanto — Vermeille → Céladia | 900–1500 | N2 *(remappé 2026-07-05)* | Shin Kanzen Master N2 読解 + 語彙 **trouvés présents 2026-07-09** ; N2 文法 (l'étalon de séquençage grammatical) toujours absent | 🟡 partiel, voir Manquements |
+| Kanto — Cycling Road → Routes 14-15 | 1500–1670 | N2/N1 | idem (transition) | 🟡 |
+| Kanto — Grotte Diglett → Seafoam + revisites | 1670–2136 | N1 | Shin Kanzen Master N1 文法 + 読解 **trouvés présents 2026-07-09** ; relais textes par NHK, Matcha, Aozora brut *(« textes officiels Pokémon » retiré 2026-07-07, audit 05, finding 05-A3 : source écartée du N1 le 2026-07-02, `texts-progressifs.md` § Sources — fossile de rédaction)* | 🟡 présent mais non-OCR, voir Manquements |
+| Mont Gris (plateau 2136) | 2136 | N1 | idem — textes N1 durs prévus par `texts-progressifs.md` (Aozora brut, chapitre de manga pour Red, lettre finale du mentor) | 🟡 |
 | Transversal (tout le jeu) | 0–2136 | — | Heisig RTK 1 (mnémotechniques, pipeline 7) ; syllabus JLPT comme référentiel | ✅ |
 
 ---
 
 ## Manquements identifiés (l'essentiel du document)
 
-1. **🔴 N1 / arc Kanto (900→2136) — aucun livre.** C'est le plus gros segment du jeu depuis le
-   recalibrage (~60 % du budget kanji) et la bibliothèque s'arrête à B1/N2. Structurel (Marugoto
-   n'existe pas au-delà de B1), et partiellement couvert par les sources web du PRD — mais il n'y a
-   aucun étalon « manuel » pour séquencer la grammaire N2→N1 des zones Kanto, ni de vivier de textes
-   longs N1. **Candidats si tu veux compléter la bibliothèque** (décision à toi, rien n'est requis) :
-   Shin Kanzen Master N2/N1 (grammaire + lecture — l'étalon de séquençage qui manque), Tobira (pont
-   N3→N2), et pour les textes : romans graded readers niveaux 4-5, Aozora déjà en local
-   (`aozorabunko-clean.jsonl.gz`).
-2. **🟡 Marugoto Élémentaire 1 (A2-1) absent** (かつどう et りかい) — la collection saute de Starter A1
-   à Élémentaire 2. Trou de manuel sur Route 32 → Forêt Secte (110–240 kanji, début N4) : le séquençage
-   grammatical de ce segment devra s'appuyer sur le syllabus + Hanabira seuls, ou tu ajoutes les 2 PDF
-   A2-1 pour fermer la série.
-3. **🟡 Starter A1 : un seul coursebook présent** — Marugoto existe toujours en paire かつどう (activités)
-   + りかい (grammaire). Le PDF présent est un seul des deux (non identifiable à coup sûr, scan sans
-   texte). Si c'est le かつどう, il manque le りかい A1 (séquençage grammatical N5) et inversement.
+**🔄 Recalculé 2026-07-09** — 6 fichiers déjà présents sur disque n'avaient pas été recensés en
+juillet (Shin Kanzen Master ×4, Marugoto Élémentaire 1 ×2, + un 2e volume Starter A1 non identifié).
+Ça ferme la plupart des trous d'*inventaire* ci-dessous, mais **révèle un trou d'*outillage*** : 17
+des 18 PDF Marugoto/Shin Kanzen Master sont des scans sans texte extractible, et il n'y a pas d'OCR
+installé sur la machine — donc « présent sur disque » ≠ « exploitable par un script ou une relecture
+rapide » tant que ce blocage n'est pas levé.
+
+1. **🟡 N1-N2 / arc Kanto (900→2136) — 3 des 4 volumes Shin Kanzen Master demandés sont présents**
+   (N2 読解, N1 文法, N1 読解, + N2 語彙 en bonus non demandé) mais aucun n'a de texte extractible.
+   **Il manque toujours Shin Kanzen Master N2 文法** (l'étalon de séquençage grammatical pour
+   Vermeille → Céladia, 900–1500) — c'est la seule vraie case vide restante de la liste
+   d'acquisition d'origine. Pour les 3 volumes présents : utilisables seulement après OCR ou
+   lecture visuelle page à page (aucun des deux fait à ce stade — **décision 2026-07-09 : différé
+   à la passe contenu**, cf. `roadmap-pre-code.md` Étape 2 point 5).
+2. **✅ Marugoto Élémentaire 1 (A2-1) trouvé présent** (かつどう et りかい) — referme le trou
+   Route 32 → Forêt Secte signalé en juillet. Même blocage OCR que le reste.
+3. **🟡 Starter A1 : second volume probable trouvé** (`marugoto-a1_compress.pdf`, 149p, distinct du
+   fichier `#1` par le nombre de pages) mais identité かつどう/りかい non confirmée (scan sans texte,
+   pas de préface lisible sans OCR/lecture visuelle).
 4. **🟡 Textes secondaires : ~30 histoires candidates pour ~85-115 slots.** Les 4 recueils fournissent
    environ 30 textes N5→N2 — un excellent démarrage, pas une couverture complète. Le complément vient
    des sources déjà actées (Tadoku libre, Watanoc, NHK Easy, Matcha) — cohérent avec
@@ -110,26 +136,25 @@ Correspondance CECR↔JLPT (cf. `jlpt-language-syllabus.md`) : A1=N5 · A2=N4 ·
 
 La progression du joueur (audit 01) est fermée sans ces livres : kanji 0→2136, gates, grammaire
 comptée sur Hanabira, textes sourcés web. Cette bibliothèque est une **couche de qualité éditoriale**
-(situations authentiques, séquençage éprouvé, textes prêts à adapter) — ses trous (N1, A2-1) sont des
-trous de *confort d'écriture*, pas des trous de *progression*. Le seul segment où l'absence de support
-livre coïncide avec une zone déjà tendue est le Kanto N1 (leçons poussées de 8-12 kanji à écrire sans
-étalon) — d'où la recommandation Kanzen Master en manquement n°1.
+(situations authentiques, séquençage éprouvé, textes prêts à adapter) — ses trous restants (N2 文法,
+blocage OCR) sont des trous de *confort d'écriture*, pas des trous de *progression*. L'assignation
+grammaire↔zone du Point 5 (`grammar-zone-assignment.json`) reste sur Hanabira, indépendamment de
+l'avancement de cette bibliothèque.
 
-## Liste d'acquisition (demandée 2026-07-05 — ce qui manque, par priorité)
+## Liste d'acquisition / OCR (recalculée 2026-07-09 — ce qui manque vraiment, par priorité)
 
-**Prioritaire (trous rouges — arc Kanto) :**
-1. Shin Kanzen Master N2 文法 — étalon de séquençage grammatical pour Kanto 900–1500 (Vermeille → Céladia)
-2. Shin Kanzen Master N2 読解 — vivier de textes N2 pour les mêmes zones
-3. Shin Kanzen Master N1 文法 — Kanto 1670+ (Brock/Blaine/Blue) et Mont Gris
-4. Shin Kanzen Master N1 読解 — textes N1 durs du plateau Mont Gris
+**Reste à acquérir :**
+1. Shin Kanzen Master N2 文法 — seul volume demandé encore absent (Kanto 900–1500, Vermeille → Céladia)
 
-**Compléter Marugoto (trous jaunes) :**
-5. Marugoto Élémentaire 1 (A2-1) りかい + かつどう — ferme le trou Route 32 → Forêt Secte
-6. Le second volume du Starter A1 (かつどう ou りかい selon celui déjà présent — à identifier sur la couverture)
+**Présents mais bloqués par l'absence d'OCR (différé à la passe contenu, pas maintenant) :**
+- Shin Kanzen Master N2 読解, N1 文法, N1 読解, N2 語彙
+- Marugoto Élémentaire 1 (A2-1) かつどう + りかい
+- Tous les autres PDF Marugoto sauf `marugoto-b1-vocabulary_compress.pdf` (seul à avoir du texte
+  extractible nativement)
 
 **Confort (pas bloquant) :**
-7. Tobira ou TRY! N2 — pont N3→N2, fin de Johto (Route 44 → Routes 26-27)
-8. Read Real Japanese (Fiction/Essays) ou Breaking into Japanese Literature — textes authentiques N2/N1
+2. Tobira ou TRY! N2 — pont N3→N2, fin de Johto (Route 44 → Routes 26-27)
+3. Read Real Japanese (Fiction/Essays) ou Breaking into Japanese Literature — textes authentiques N2/N1
    avec traduction en regard, entre le Tuttle (trop facile en fin de jeu) et l'Aozora brut
 
 **À ne PAS ajouter (redondant)** : recueils débutants supplémentaires (4 déjà là), manuels N5/N4
