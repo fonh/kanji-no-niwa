@@ -136,22 +136,31 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    les PNJ sourcés, zone par zone — dépend du point 1 (l'assignation kanji doit exister pour
    savoir ce qu'un PNJ-leçon enseigne). C'est la dernière décision « lourde » (elle fixe qui
    enseigne quoi, où) mais elle se prend zone par zone, pas d'un bloc.
-   **🚧 EN COURS 2026-07-09** : `combat` tagué sur 124 lignes (regex sur le texte de rôle,
-   2 passes + 6 corrections manuelles de 師範/Gym Leaders qui n'étaient pas taguées — Lt.
-   Surge, Sabrina, Erika, Janine, Blaine, Clair). Simplifications actées par l'utilisateur :
-   groupement kanji **par ordre JLPT pur** (pas par radicaux), **taille de leçon libre**
-   (l'ancienne règle 4-5 Johto/8-12 Kanto est supprimée), recatégorisation large des PNJ
-   ambiants inutilisés en PNJ-leçon autorisée. `scripts/build/build-lessons-proposal.py`
-   génère une proposition pilote (`content/lessons-proposal.json`, non encore fusionnée dans
-   npc-inventory.md) : denylist des personnages récurrents/boss (mentors, rival, 8 Champions
-   d'arène + Elite 4, cameos Steven/Maylene/Wake), exception bootstrap Pr. Elm (seul PNJ-leçon
-   de Bourg Geon, ~7 leçons), report en cascade du pool kanji des zones sans PNJ éligible vers
-   la zone suivante mieux fournie (12 cas), cyclage round-robin d'un même PNJ sur plusieurs
-   leçons consécutives, 1 point de grammaire max par leçon. **344 leçons sur 48 zones (sur 64
-   zones de croissance), 1950/1950 kanji couverts** — cohérent avec l'estimation PRD indépendante
-   (280-370). Reste à faire : relecture d'un plus large échantillon, validation utilisateur,
-   fusion dans la colonne Type assigné, tag `ambiant` par défaut sur le reste. Rapport :
-   `.scratch/audits/lessons-proposal-report.md`.
+   **✅ FAIT 2026-07-09 pour combat + leçon, reste texte/ambiant** : `combat` tagué sur 130
+   lignes (regex sur le texte de rôle, 2 passes + 6 corrections manuelles de 師範/Gym Leaders
+   qui n'étaient pas taguées — Lt. Surge, Sabrina, Erika, Janine, Blaine, Clair). Simplifications
+   actées par l'utilisateur : groupement kanji **par ordre JLPT pur** (pas par radicaux),
+   **taille de leçon libre** (l'ancienne règle 4-5 Johto/8-12 Kanto est supprimée), recatégorisation
+   large des PNJ ambiants inutilisés en PNJ-leçon autorisée. `scripts/build/build-lessons-proposal.py`
+   génère la proposition (`content/lessons-proposal.json`) : denylist des personnages
+   récurrents/boss (mentors, rival, 8 Champions d'arène + Elite 4, cameos Steven/Maylene/Wake),
+   exclusion des groupes fonctionnels non-dialoguants (obstacles, panneaux, dresseurs postés en
+   mécanique de puzzle), exception bootstrap Pr. Elm (seul PNJ-leçon de Bourg Geon, 5 leçons),
+   report en cascade du pool kanji des zones sans PNJ éligible vers la zone suivante mieux
+   fournie (12 cas), cyclage round-robin d'un même PNJ sur plusieurs leçons consécutives
+   (jusqu'à 14×, ex. Mont Argenté qui absorbe 4 zones), 1 point de grammaire max par leçon.
+   **344 leçons sur 48 zones (sur 64 zones de croissance), 1950/1950 kanji couverts** — cohérent
+   avec l'estimation PRD indépendante (280-370). `scripts/build/apply-lessons-to-npc-inventory.py`
+   a fusionné les 344 leçons dans 117 lignes du tableau (un PNJ multi-leçons garde une seule
+   ligne sourcée, cellule concaténée en `<br>` plutôt que lignes dupliquées, pour ne pas gonfler
+   le document ni contredire la politique zéro-PNJ-inventé). Cross-check fait contre
+   `japanese-books-mapping.md` (paliers/manuels) : rien d'incohérent trouvé ; ce document a été
+   corrigé au passage (6 livres présents mais non recensés — Marugoto Élémentaire 1, 4 volumes
+   Shin Kanzen Master — trouvés, seul Shin Kanzen Master N2 文法 manque encore réellement ;
+   17/18 PDF Marugoto/Kanzen Master sont des scans sans OCR, exploitation différée à la passe
+   contenu Étape 3-4). **Reste à faire** : tag `ambiant` par défaut sur les PNJ non-combat/non-leçon
+   restants, catégorie `texte` (différée jusqu'à la rédaction du contenu, décision utilisateur).
+   Rapport : `.scratch/audits/lessons-proposal-report.md`.
 6. Migration `{jp, en}` des quêtes existantes (FV-4) et micro-lignes du Journal de quêtes.
 
 ## Étape 3 — Gabarits + tranche verticale (le test qui évite d'industrialiser dans le vide)

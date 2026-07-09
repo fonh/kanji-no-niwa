@@ -15,7 +15,7 @@
 - dark-cave: absorbe le pool de route-45 (20 kanji reportés)
 - vermilion-city: absorbe le pool de indigo-plateau-will, indigo-plateau-koga, indigo-plateau-bruno, indigo-plateau-karen, indigo-plateau-lance (30 kanji reportés)
 - celadon-city: absorbe le pool de route-24-25-kanto, route-7-kanto (30 kanji reportés)
-- route-19-20-seafoam: absorbe le pool de route-21-kanto, cinnabar-island (50 kanji reportés)
+- mt-silver-route-28: absorbe le pool de route-21-kanto, cinnabar-island, route-19-20-seafoam, cerulean-cave (80 kanji reportés)
 
 ## Écarts de capacité restants (zone pauvre en PNJ éligibles vs. pool de kanji, après report)
 
@@ -117,5 +117,7 @@
 - pallet-town: 1 PNJ éligibles pour 3 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
 - route-21-kanto: 0 PNJ éligible pour 15 kanji — reporté sur la zone suivante
 - cinnabar-island: 0 PNJ éligible pour 50 kanji — reporté sur la zone suivante
-- route-19-20-seafoam: 1 PNJ éligibles pour 14 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
-- route-19-20-seafoam: 19 points de grammaire pour 14 leçons — 5 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-19-20-seafoam: 0 PNJ éligible pour 80 kanji — reporté sur la zone suivante
+- cerulean-cave: 0 PNJ éligible pour 80 kanji — reporté sur la zone suivante
+- mt-silver-route-28: 1 PNJ éligibles pour 14 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- mt-silver-route-28: 19 points de grammaire pour 14 leçons — 5 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)

@@ -59,7 +59,7 @@ STORY_DENYLIST = {
 NON_PNJ_PATTERNS = [
     r"^Aucun\b", r"^Séquence\b", r"^\d+ dresseurs?\b(?!.*\w{3,})",
     r"^Psychic Nathan \(bordure", r"^Approche\b",
-    r"^Obstacle\b", r"^Panneau\b",
+    r"^Obstacle\b", r"^Panneau\b", r"^Dresseurs?\b",
 ]
 
 # Motifs de NOM signalant un pur bloqueur de passage (le trait définissant
