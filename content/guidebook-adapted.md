@@ -349,7 +349,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **HGSS original :** Grotte reliant Route 32 à Route 33/Ecorcia, puzzle en 4 entrées cardinales.
 
 **Dans 漢字の庭 :**
-- 📍 7 dresseurs (Randonneurs, Maniaques, Dresseurs Ace) traversent la grotte, dont Psychic Nathan (frontière avec Route 32 incertaine dans le guide).
+- 📍 7 dresseurs (Randonneurs, Maniaques, Dresseurs Ace) traversent la grotte (Psychic Nathan, à la frontière avec Route 32, reste recensé sous ruins-of-alph — vérification croisée 2026-07-09, ne pas dupliquer).
 - 📍 Puzzle en 4 temps : chaque entrée cardinale (NE/SE/NO/SO) nécessite un objet ou CS-Kanji différent pour être atteinte dans l'ordre.
 - 🔒 Coupe (切) pour l'une des entrées, Force (力) pour une autre.
 

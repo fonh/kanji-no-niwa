@@ -228,7 +228,10 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Randonneurs, Maniaques, Dresseurs Ace (7 dresseurs au total, noms individuels non détaillés par le guide) | Dresseurs de combat | — | |
-| Psychic Nathan | Dresseur de combat — 🔍 attribution Union Cave vs. bordure Route 32/Centre de Recherche incertaine dans le guide, à trancher à la passe contenu | — | |
+
+Psychic Nathan (bordure Centre de Recherche/Union Cave) est déjà recensé dans la section
+ruins-of-alph — ne pas dupliquer ici (vérification croisée 2026-07-09 : doublon trouvé et
+retiré, le PNJ n'a qu'une seule attribution de zone dans le guide).
 
 Séquence du puzzle de la grotte confirmée en 4 temps (une entrée par point cardinal, chaque entrée
 nécessitant un objet/CS-Kanji différent pour être atteinte dans l'ordre : aucun objet → Coupe →

@@ -111,11 +111,11 @@
         "en": "Ruins of Alph"
       },
       "music_track": {
-        "jp": "アルフのいせき",
-        "en": "Ruins of Alph"
+        "jp": "つながりのどうくつ",
+        "en": "Union Cave"
       },
-      "arbitrage": null,
-      "note": null
+      "arbitrage": "split",
+      "note": "Corrigé 2026-07-09 (vérification croisée) : Bulbapedia (List of overworld music themes) distingue Ruins of Alph extérieur/chambres-puzzle (thème « Union Cave ») du sous-sol/salle souterraine (thème « Ruins of Alph » propre). Recherche complémentaire (walkthroughs) : résoudre un puzzle de chambre fait tomber le joueur dans la salle souterraine — les deux sous-zones sont connectées dans une même traversée. Ce projet ne semble pas séparer les deux en zone_id distincts (« les 4 salles intérieures rejoignent la zone extérieure », guidebook-adapted.md) ; représentant retenu = extérieur/chambres (Union Cave, la majorité du contenu), la salle souterraine restant un sous-lieu narratif à l'intérieur de cette même zone. À reverser en thème « Ruins of Alph » si le studio préfère calibrer sur le moment du sous-sol plutôt que sur les chambres."
     },
     {
       "zone_id": "union-cave",
@@ -354,7 +354,7 @@
     {
       "zone_id": "whirl-islands",
       "name": {
-        "jp": "うずまき島",
+        "jp": "うずまきれっとう",
         "en": "Whirl Islands"
       },
       "music_track": {
@@ -362,7 +362,7 @@
         "en": "Union Cave"
       },
       "arbitrage": null,
-      "note": "Musique partagée : thème « Union Cave »."
+      "note": "Musique partagée : thème « Union Cave ». Nom jp corrigé 2026-07-09 (vérification croisée) : うずまきれっとう (« archipel du tourbillon », forme officielle) plutôt que うずまき島, une variante informelle trouvée en 1ère passe."
     },
     {
       "zone_id": "cianwood-city",
@@ -891,11 +891,11 @@
         "en": "Mt. Moon"
       },
       "music_track": {
-        "jp": "おつきみやま",
-        "en": "Mt. Moon"
+        "jp": "つながりのどうくつ",
+        "en": "Union Cave"
       },
       "arbitrage": "merged",
-      "note": "zone_id fusionne Mt. Moon et Route 3-4 ; représentant = premier lieu cité (Mont Lune / Mt. Moon), déjà connu (nom = piste). Route 4 fait partie du groupe partagé 'Route 3' (non retenu ici car Mt. Moon est le représentant choisi)."
+      "note": "zone_id fusionne Mt. Moon et Route 3-4 ; représentant = premier lieu cité (Mont Lune / Mt. Moon) pour le nom. Musique corrigée 2026-07-09 (vérification croisée) : contrairement à la 1ʳᵉ passe qui avait pris « Mt. Moon » pour un titre de piste, Bulbapedia (List of overworld music themes + page Mt. Moon) confirme qu'aucun thème « Mt. Moon » distinct n'existe en HGSS — le thème Gen II « Rock Tunnel » a été explicitement remplacé par celui d'Union Cave (つながりのどうくつ) pour cette zone. Route 4 fait partie du groupe partagé 'Route 3' (non retenu, Mt. Moon reste le représentant du nom)."
     },
     {
       "zone_id": "route-2-foret-viridian",
