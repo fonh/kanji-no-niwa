@@ -158,9 +158,13 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    corrigé au passage (6 livres présents mais non recensés — Marugoto Élémentaire 1, 4 volumes
    Shin Kanzen Master — trouvés, seul Shin Kanzen Master N2 文法 manque encore réellement ;
    17/18 PDF Marugoto/Kanzen Master sont des scans sans OCR, exploitation différée à la passe
-   contenu Étape 3-4). **Reste à faire** : tag `ambiant` par défaut sur les PNJ non-combat/non-leçon
-   restants, catégorie `texte` (différée jusqu'à la rédaction du contenu, décision utilisateur).
-   Rapport : `.scratch/audits/lessons-proposal-report.md`.
+   contenu Étape 3-4). **✅ Colonne « Type assigné » intégralement remplie 2026-07-09** : dernier
+   passage sur les 94 lignes encore vides avant de les taguer `ambiant` par défaut — a débusqué
+   7 combats manqués par les passes regex précédentes (signal dans le champ NOM plutôt que RÔLE,
+   ou vocabulaire non testé : Petrel déguisé ×2, Lance en double combat, Silver ×2, Red). **136
+   combat / 117 leçon / 88 ambiant sur 341 lignes PNJ.** `texte` reste hors scope, différé
+   jusqu'à la rédaction du contenu (décision utilisateur). Rapport :
+   `.scratch/audits/lessons-proposal-report.md`.
 6. Migration `{jp, en}` des quêtes existantes (FV-4) et micro-lignes du Journal de quêtes.
 
 ## Étape 3 — Gabarits + tranche verticale (le test qui évite d'industrialiser dans le vide)
