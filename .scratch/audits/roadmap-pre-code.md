@@ -58,11 +58,18 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    II/HGSS). Rapport : `.scratch/audits/zone-registry-names-report.md`. **19 zones à
    arbitrage** (8 fusions de zone_id multi-lieux, 11 éclatements d'un lieu en plusieurs
    zone_id) documentées dans le champ `note` de chaque entrée, acceptées telles quelles.
-   **1 point resté ouvert** : les 4 subdivisions de Mont Gris (base/versants/sommet) reçoivent
-   toutes par défaut le thème extérieur « The Pokémon League », faute de savoir laquelle est
-   réellement la grotte intérieure (thème « Olivine Lighthouse ») dans le découpage de ce
-   projet — à trancher à la passe assets (étape 5 point 6, où les arbitrages doivent de toute
-   façon migrer vers `content/guidebook-adapted.md` § Musique).
+   **✅ Point ouvert résolu 2026-07-09 — musique remplacée par la donnée exacte ROM** :
+   `scripts/build/build-rom-music-mapping.py` lit `src/data/map_headers.h`
+   (`~/pokeheartgold`) — chaque zone gagne `music_rom_seq` (constante SEQ_ exacte) et
+   `music_shared_with` (zones partageant réellement la même piste). 83/83 zones couvertes.
+   Mont Gris : base/versants = « Olivine Lighthouse » (confirmé), **sommet = thème unique
+   « silence total », pas « The Pokémon League »**. ~40 corrections trouvées au passage (la
+   plupart des « thèmes partagés » Bulbapedia se révèlent être des variantes propres à chaque
+   zone ; Route 40/41 partagent authentiquement le thème de la Safari Zone). Rapport :
+   `.scratch/audits/rom-music-mapping-report.md`. **Limite connue** : les champs `note`
+   existants ne sont pas rafraîchis automatiquement (certains mentionnent encore l'ancien
+   regroupement Bulbapedia) — `music_rom_seq`/`music_shared_with` font foi en cas de
+   divergence, nettoyage des `note` en petite passe si besoin, sans urgence.
 3. **✅ FAIT 2026-07-09 — `story-beats.json` (Kanto + 11 zones réintégrées, flag FV-2 soldé)
    et `placements/` (FV-3 soldé)** : 34 nouvelles sections `### zone_id` ajoutées à
    `guidebook-adapted.md` (23 Kanto + 11 réintégrées), insérées dans l'ordre réel de parcours

@@ -123,7 +123,47 @@ DIRECT_MAP_TO_ZONE = {
     "MAP_ROUTE_25": "route-24-25-kanto",
     "MAP_ROUTE_2_EAST": "route-2-foret-viridian",
     "MAP_VIRIDIAN_FOREST": "route-2-foret-viridian",
+    # Plateau Indigo : le jeu nomme ces cartes "Pokemon League"/"Victory Road",
+    # pas "Indigo Plateau" (convention de nommage du projet) — aucun préfixe
+    # commun avec les zone_id indigo-plateau-*, découvert via l'extraction
+    # musique (2026-07-09) qui a révélé 0 couverture sur ces 5 zones.
+    "MAP_VICTORY_ROAD_1F": "indigo-plateau-antichambre",
+    "MAP_VICTORY_ROAD_2F": "indigo-plateau-antichambre",
+    "MAP_VICTORY_ROAD_3F": "indigo-plateau-antichambre",
+    "MAP_POKEMON_LEAGUE_ENTRANCE": "indigo-plateau-will",
+    "MAP_POKEMON_LEAGUE_WILL_ROOM": "indigo-plateau-will",
+    "MAP_POKEMON_LEAGUE_KOGA_ROOM": "indigo-plateau-koga",
+    "MAP_POKEMON_LEAGUE_BRUNO_ROOM": "indigo-plateau-bruno",
+    "MAP_POKEMON_LEAGUE_KAREN_ROOM": "indigo-plateau-karen",
+    "MAP_POKEMON_LEAGUE_LANCE_ROOM": "indigo-plateau-lance",
+    # Mont Gris : "cave" dans le nom ROM casse le préfixe "mt-silver-upper"/
+    # "mt-silver-lower" (même découverte). Sous-sol/entrée regroupés sur
+    # mt-silver-base (aucun de ces zone_id n'existait avant la synthèse du
+    # 2026-07-08, donc aucune donnée à écraser).
+    "MAP_MOUNT_SILVER_CAVE_1F": "mt-silver-base",
+    "MAP_MOUNT_SILVER_CAVE_2F": "mt-silver-base",
+    "MAP_MOUNT_SILVER_CAVE_3F": "mt-silver-base",
+    "MAP_MOUNT_SILVER_CAVE_MOLTRES_CHAMBER": "mt-silver-base",
+    "MAP_MOUNT_SILVER_CAVE_EXPERT_BELT_CHAMBER": "mt-silver-base",
+    "MAP_MOUNT_SILVER_POKECENTER_1F": "mt-silver-base",
+    "MAP_MOUNT_SILVER_POKECENTER_B1F": "mt-silver-base",
+    "MAP_MOUNT_SILVER_CAVE_UPPER_MOUNTAINSIDE": "mt-silver-upper",
+    "MAP_MOUNT_SILVER_CAVE_LOWER_MOUNTAINSIDE": "mt-silver-lower",
+    "MAP_MOUNT_SILVER_CAVE_SUMMIT": "mt-silver-summit",
+    # Rock Tunnel et Diglett's Cave sont le vrai contenu de ces deux zones
+    # fusionnées (littéralement dans leur nom) mais leur nom ROM ne partage
+    # aucun préfixe avec "route-9-10-rocktunnel"/"route-11-12-13-diglett" --
+    # découvert via l'extraction musique (2026-07-09), absents jusque-là de
+    # DIRECT_MAP_TO_ZONE et donc de l'extraction dresseurs aussi.
+    "MAP_ROCK_TUNNEL_1F": "route-9-10-rocktunnel",
+    "MAP_ROCK_TUNNEL_B1F": "route-9-10-rocktunnel",
+    "MAP_DIGLETT_CAVE": "route-11-12-13-diglett",
 }
+
+# Thèmes universels non spécifiques à une zone (partagés par toutes les
+# cartes d'une même catégorie de bâtiment) -- à ne jamais retenir comme
+# piste d'identité d'une zone si un autre thème est disponible pour elle.
+GENERIC_MUSIC_SEQ = {"SEQ_GS_GYM", "SEQ_GS_POKESEN"}
 
 
 def load_trainer_index():
