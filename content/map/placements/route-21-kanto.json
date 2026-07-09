@@ -2,8 +2,8 @@
   "zone_id": "route-21-kanto",
   "npcs": [
     {
-      "name": "Nageurs/Pêcheurs/Bird Keeper (5 nommés)",
-      "role_origin": "Dresseurs",
+      "name": "Fisherman Arnold, Murphy, Liam, Gideon ; Swimmer Nikki, Chelan, Kendra, Tyson, Esteban, Duane ; Bird Keeper Easton, Kinsley",
+      "role_origin": "Dresseurs — roster complet (12) trouvé par extraction ROM (2026-07-09), remplace le placeholder « 5 nommés » sans noms",
       "item": "—",
       "map_zone": "MAP_ROUTE_21",
       "tile_x": 14,

@@ -14,8 +14,8 @@
       "matched_sprite_id": null
     },
     {
-      "name": "Bird Keeper Josh/Roy, 5 Écoliers dont Torin, 2 Pokéfans, Enseignante Clarice (Route 14)",
-      "role_origin": "Dresseurs — Torin ajouté par recoupement registre téléphonique (source Serebii, 2026-07-09), classe non confirmée par cette source, un des 5 Écoliers jusque-là non nommés",
+      "name": "Bird Keeper Josh/Roy, School Kid Torin/Connor/Travis, Pokéfan Trevor/Carter, Enseignante Clarice (Route 14)",
+      "role_origin": "Dresseurs — roster complet (8) confirmé par extraction ROM (2026-07-09), classe School Kid confirmée pour Torin (précédemment ajouté sans classe via le registre téléphonique)",
       "item": "—",
       "map_zone": "MAP_ROUTE_14",
       "tile_x": 13,

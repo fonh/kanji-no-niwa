@@ -2,8 +2,8 @@
   "zone_id": "route-40",
   "npcs": [
     {
-      "name": "Swimmer Simon, Swimmer Elaine",
-      "role_origin": "Dresseurs maritimes",
+      "name": "Swimmer Simon, Swimmer Elaine, Swimmer Randall, Swimmer Paula",
+      "role_origin": "Dresseurs maritimes — Randall/Paula ajoutés 2026-07-09 (extraction ROM), déplacés depuis route-41 où ils étaient mal attribués",
       "item": "—",
       "map_zone": "MAP_ROUTE_40",
       "tile_x": 11,

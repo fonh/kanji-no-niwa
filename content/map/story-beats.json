@@ -108,7 +108,7 @@
       "beats": [
         {
           "type": "event",
-          "text": "8 dresseurs (Hiker Daniel/Russell, Poké Maniac Andrew/Calvin/Larry, Ace Trainer Nick/Gwen/Emma — noms trouvés par recherche web 2026-07-09) traversent la grotte (Psychic Nathan, à la frontière avec Route 32, reste recensé sous ruins-of-alph — vérification croisée 2026-07-09, ne pas dupliquer)."
+          "text": "12 dresseurs répartis sur 3 étages (Hiker Daniel/Russell/Phillip/Leonard, Firebreather Bill/Ray, Poké Maniac Larry/Andrew/Calvin, Ace Trainer Nick/Gwen/Emma — roster exact confirmé par extraction ROM 2026-07-09) traversent la grotte (Psychic Nathan, à la frontière avec Route 32, reste recensé sous ruins-of-alph — vérification croisée 2026-07-09, ne pas dupliquer)."
         },
         {
           "type": "event",
@@ -339,7 +339,7 @@
       "beats": [
         {
           "type": "event",
-          "text": "Approche vers la porte de la Safari Zone (voir section safari-zone) — aucun dresseur individuel nommé recensé sur ce tronçon."
+          "text": "4 dresseurs (Double Team Thom & Kae, Camper Grant, Young Couple Duff & Eda, Hiker Devin — roster trouvé par extraction ROM 2026-07-09) sur l'approche vers la porte de la Safari Zone (voir section safari-zone)."
         }
       ],
       "locks": []
@@ -846,15 +846,15 @@
       "beats": [
         {
           "type": "event",
-          "text": "Route 16 : Motard Dale + PNJ récurrent qui enseigne « un mot à la mode » par jour à qui revient le voir."
+          "text": "Route 16 : PNJ récurrent qui enseigne « un mot à la mode » par jour à qui revient le voir — aucun dresseur trouvé sur cette route par extraction ROM (2026-07-09)."
         },
         {
           "type": "event",
-          "text": "Route 17 (descente à vélo dédiée) : 12 Motards au fil du parcours (3 nommés : Joel, Jacob, Aiden) — première occasion d'« échanger les numéros » pour un système de revanche."
+          "text": "Route 17 (descente à vélo dédiée) : 11 Motards au fil du parcours (roster exact confirmé par extraction ROM : Reese, Joel, Markey, Dale, Jacob, Aiden, Dan, Theron, Glenn, Teddy, Ernest — Dale déplacé depuis Route 16) — première occasion d'« échanger les numéros » pour un système de revanche."
         },
         {
           "type": "event",
-          "text": "Route 18 : 9 dresseurs (7 Motards nommés + 2 Dresseurs d'Oiseaux)."
+          "text": "Route 18 : 3 dresseurs (Bird Keeper Bob/Boris, Biker Charles — roster exact confirmé par extraction ROM, corrige fortement le « 9 » du guidebook Prima)."
         }
       ],
       "locks": [

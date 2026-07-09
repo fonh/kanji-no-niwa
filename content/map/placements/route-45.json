@@ -2,8 +2,8 @@
   "zone_id": "route-45",
   "npcs": [
     {
-      "name": "Black Belt Kenji, Hiker Timothy/Michael/Bailey/Parry/Erik, Camper Ted, Picnicker Erin, Ace Trainer Ryan/Kelly",
-      "role_origin": "Dresseurs de route (10 au total, répartis sur les chemins est/ouest)",
+      "name": "Black Belt Kenji, Hiker Timothy/Michael/Erik/Parry, Ace Trainer Ryan/Kelly",
+      "role_origin": "Dresseurs de route — 7 confirmés propres à Route 45 (extraction ROM 2026-07-09, résout le « 10 au total » : Bailey/Ted/Erin déplacés vers route-46, Erik reste bien ici)",
       "item": "—",
       "map_zone": "MAP_ROUTE_45",
       "tile_x": 22,

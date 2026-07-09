@@ -2,8 +2,8 @@
   "zone_id": "route-9-10-rocktunnel",
   "npcs": [
     {
-      "name": "Camper Sid, Hiker Eoin, Picnicker Heidi/Edna, Camper Dean, Hiker Sidney (Route 9)",
-      "role_origin": "Dresseurs (6)",
+      "name": "Camper Sid, Hiker Eoin, Picnicker Heidi/Edna, Camper Dean, Hiker Clarke (Route 9)",
+      "role_origin": "Dresseurs (6, confirmés par extraction ROM 2026-07-09 — « Hiker Sidney » était une coquille pour « Hiker Clarke »)",
       "item": "—",
       "map_zone": "MAP_ROUTE_9",
       "tile_x": 0,

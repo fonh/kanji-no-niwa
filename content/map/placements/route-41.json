@@ -2,7 +2,7 @@
   "zone_id": "route-41",
   "npcs": [
     {
-      "name": "Swimmer Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie (~10 nageurs)",
+      "name": "Swimmer Denise, Kara, Ronald, Berke, Kaylee, Matthew, Charlie, George, Wendy, Susie (10 nageurs confirmés par extraction ROM 2026-07-09 ; Paula/Randall retirés, ils appartiennent à route-40)",
       "role_origin": "Dresseurs maritimes",
       "item": "—",
       "map_zone": "MAP_ROUTE_41",

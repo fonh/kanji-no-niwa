@@ -1,4 +1,17 @@
 {
   "zone_id": "route-33",
-  "npcs": []
+  "npcs": [
+    {
+      "name": "Hiker Anthony",
+      "role_origin": "Dresseur de route — résolu 2026-07-09 par extraction ROM (`~/pokeheartgold`) : le guidebook rattachait tout le bloc combiné « Routes 32/33 » à Route 32 sans distinguer, Anthony est le seul dresseur réellement placé sur la carte Route 33",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_33",
+      "tile_x": 23,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
 }

@@ -2,8 +2,8 @@
   "zone_id": "route-16-17-18-cycling-road",
   "npcs": [
     {
-      "name": "Biker Dale (Route 16)",
-      "role_origin": "Dresseur",
+      "name": "PNJ récurrent (Route 16)",
+      "role_origin": "Enseigne \"un mot à la mode\" par jour à qui revient le voir",
       "item": "—",
       "map_zone": "MAP_ROUTE_16",
       "tile_x": 10,
@@ -14,8 +14,8 @@
       "matched_sprite_id": null
     },
     {
-      "name": "PNJ récurrent (Route 16)",
-      "role_origin": "Enseigne \"un mot à la mode\" par jour à qui revient le voir",
+      "name": "Biker Reese, Joel, Markey, Dale, Jacob, Aiden, Dan, Theron, Glenn, Teddy, Ernest (Route 17, 11 confirmés)",
+      "role_origin": "Dresseurs — roster exact confirmé par extraction ROM (2026-07-09) : Dale déplacé depuis Route 16 (aucun dresseur trouvé sur Route 16 dans la ROM) ; « 12 Motards » du guidebook corrigé à 11",
       "item": "—",
       "map_zone": "MAP_ROUTE_16",
       "tile_x": 15,
@@ -26,24 +26,12 @@
       "matched_sprite_id": null
     },
     {
-      "name": "12 Motards dont Joel, Jacob, Aiden, Reese (Route 17)",
-      "role_origin": "Dresseurs — Reese ajouté par recoupement registre téléphonique (source Serebii, 2026-07-09), un des 9 motards jusque-là non nommés",
+      "name": "Bird Keeper Bob, Bird Keeper Boris, Biker Charles (Route 18, 3 confirmés)",
+      "role_origin": "Dresseurs — roster exact confirmé par extraction ROM (2026-07-09), corrige fortement le « 9 dresseurs (7 Motards + 2 Bird Keeper) » du guidebook Prima (sous-comptage web déjà repéré confirmé faux dans l'autre sens)",
       "item": "—",
       "map_zone": "MAP_ROUTE_16",
       "tile_x": 20,
       "tile_y": 20,
-      "facing": "south",
-      "source": "generated",
-      "matched_object_id": null,
-      "matched_sprite_id": null
-    },
-    {
-      "name": "7 Motards nommés + 2 Bird Keeper (Route 18, 9 dresseurs)",
-      "role_origin": "Dresseurs",
-      "item": "—",
-      "map_zone": "MAP_ROUTE_16",
-      "tile_x": 25,
-      "tile_y": 21,
       "facing": "south",
       "source": "generated",
       "matched_object_id": null,

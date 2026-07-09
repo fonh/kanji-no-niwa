@@ -2,8 +2,8 @@
   "zone_id": "route-46",
   "npcs": [
     {
-      "name": "Hiker Erik",
-      "role_origin": "Seul dresseur confirmé sur cette route (roster partagé avec Route 45 dans le guide, confirmé propre à Route 46)",
+      "name": "Hiker Bailey, Camper Ted, Picnicker Erin",
+      "role_origin": "Dresseurs de route — corrigé 2026-07-09 (extraction ROM) : Erik (précédemment attribué ici) appartient en fait à Route 45 ; Bailey/Ted/Erin sont les 3 vrais dresseurs de Route 46, mal comptés dans le « 10 au total » de route-45",
       "item": "—",
       "map_zone": "MAP_ROUTE_46",
       "tile_x": 26,

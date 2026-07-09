@@ -85,14 +85,21 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    génériques manquants trouvés et ajoutés à npc-inventory.md** (Route 2 : Rob/Doug ; Route 12 :
    Kyle/Kyler ; Route 13 : Tim & Sue ; Route 14 : Torin ; Route 15 : Billy ; Route 17 : Reese).
    Rapport : `.scratch/audits/phone-registry-report.md`.
-   **🔶 PARTIEL 2026-07-09 — dresseurs génériques par route (fidélité stricte)** : scan
-   systématique de `npc-inventory.md` (marqueurs d'incomplétude + comptes déclarés vs. noms
-   listés) → 9 zones flaggées. **1 résolue** (union-cave : 8 dresseurs identifiés et confirmés
-   par deux sources web indépendantes concordantes). **8 restent ouvertes** — les tableaux de
-   dresseurs Bulbapedia/StrategyWiki pour Kanto (Routes 18/19/20/Seafoam notamment) tronquent
-   systématiquement au fetch ; une divergence réelle trouvée sur Route 18 (guidebook dit 9
-   dresseurs, une source web n'en trouve que 3) reste **non tranchée** plutôt que devinée.
-   Rapport détaillé, zone par zone : `.scratch/audits/generic-trainers-report.md`.
+   **✅ FAIT 2026-07-09 — dresseurs génériques par route (fidélité stricte)**, en deux passes :
+   une passe web (partielle, limitée par des tableaux Bulbapedia/StrategyWiki tronqués au
+   fetch — 1/9 zones résolue) puis une **extraction directe de la décompilation ROM**
+   `pret/pokeheartgold` (dispo en local, `~/pokeheartgold` — bien plus fiable : chaque objet de
+   combat porte `std_trainer(TRAINER_XXX)`, résolu via `trainers.json`, 738 dresseurs).
+   `scripts/build/build-rom-trainer-roster.py` → `content/rom-trainer-roster.json` (39/83
+   zones, 200 dresseurs). Tous les écarts détectés sont résolus : dresseurs manquants ajoutés
+   (union-cave passe de 8 à 12 réels, route-21-kanto de 5 à 12 noms, route-18 de 9 à 3 — la
+   passe web s'était trompée dans l'autre sens), **9 inversions entre zones voisines**
+   corrigées (Route 30↔31, 32→33, 40↔41, 45→46, 35→national-park, 7→8-kanto, 16→17), et
+   **6 coquilles OCR** corrigées (Marcus→Markus, Norman→Nelson, Ben→Beckett, Amy→Day,
+   Sidney→Clarke, Aaron→Alton). Rapport complet : `.scratch/audits/rom-trainer-roster-report.md`
+   (limites de couverture — 44/83 zones non rattachées, gyms + quelques zones fusionnées à
+   numérotation non contiguë — documentées dedans). Historique de la phase web (dépassée) :
+   `.scratch/audits/generic-trainers-report.md`.
 5. **La colonne « Type assigné » de npc-inventory** : distribuer leçon / texte / combat sur
    les PNJ sourcés, zone par zone — dépend du point 1 (l'assignation kanji doit exister pour
    savoir ce qu'un PNJ-leçon enseigne). C'est la dernière décision « lourde » (elle fixe qui

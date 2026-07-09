@@ -2,8 +2,8 @@
   "zone_id": "route-39",
   "npcs": [
     {
-      "name": "Sailor Eugene, Pokéfan Derek, Pokéfan Ruth, Psychic Norman",
-      "role_origin": "Dresseurs de route",
+      "name": "Sailor Eugene, Pokéfan Derek, Pokéfan Ruth, Psychic Nelson",
+      "role_origin": "Dresseurs de route — « Norman » corrigé en « Nelson » 2026-07-09 (extraction ROM, coquille OCR probable)",
       "item": "—",
       "map_zone": "MAP_ROUTE_39",
       "tile_x": 12,

@@ -1,4 +1,17 @@
 {
   "zone_id": "route-47-48-cliff-cave",
-  "npcs": []
+  "npcs": [
+    {
+      "name": "Double Team Thom & Kae, Camper Grant, Young Couple Duff & Eda, Hiker Devin",
+      "role_origin": "Dresseurs — roster trouvé par extraction ROM (2026-07-09), corrige « aucun dresseur recensé sur ce tronçon »",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_47",
+      "tile_x": 37,
+      "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
 }

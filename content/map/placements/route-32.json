@@ -2,8 +2,8 @@
   "zone_id": "route-32",
   "npcs": [
     {
-      "name": "Youngster Albert, Picnicker Liz, Camper Roland, Youngster Gordon, Fisherman Henry/Justin/Ralph, Bird Keeper Peter, Hiker Anthony",
-      "role_origin": "Dresseurs de route (plus de dix sur Routes 32/33 combinées)",
+      "name": "Youngster Albert, Picnicker Liz, Camper Roland, Youngster Gordon, Fisherman Henry/Justin/Ralph, Bird Keeper Peter",
+      "role_origin": "Dresseurs de route — 8 confirmés propres à Route 32 (extraction ROM 2026-07-09, résout l'ancien bloc combiné 32/33 : Hiker Anthony déplacé vers route-33)",
       "item": "—",
       "map_zone": "MAP_ROUTE_32",
       "tile_x": 14,

@@ -2,8 +2,8 @@
   "zone_id": "union-cave",
   "npcs": [
     {
-      "name": "Hiker Daniel, Hiker Russell (B1F)",
-      "role_origin": "Dresseurs de combat — noms trouvés par recherche web ciblée (StrategyWiki + Bulbapedia, 2026-07-09, deux sources indépendantes concordantes), le guidebook Prima ne les détaillait pas",
+      "name": "Hiker Daniel, Hiker Russell, Firebreather Bill, Firebreather Ray, Poké Maniac Larry (1F)",
+      "role_origin": "Dresseurs de combat — roster exact confirmé par extraction ROM (`~/pokeheartgold`, 2026-07-09) ; Bill/Ray ajoutés (absents de la 1ʳᵉ passe web)",
       "item": "—",
       "map_zone": "MAP_UNION_CAVE_1F",
       "tile_x": 10,
@@ -14,7 +14,7 @@
       "matched_sprite_id": null
     },
     {
-      "name": "Poké Maniac Andrew, Poké Maniac Calvin, Poké Maniac Larry (B1F sud)",
+      "name": "Hiker Phillip, Hiker Leonard, Poké Maniac Andrew, Poké Maniac Calvin (B1F)",
       "role_origin": "Dresseurs de combat — idem",
       "item": "—",
       "map_zone": "MAP_UNION_CAVE_1F",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Ace Trainer Nick, Ace Trainer Gwen, Ace Trainer Emma (B2F)",
-      "role_origin": "Dresseurs de combat — idem, 8 dresseurs au total (le « 7 » du guidebook Prima était une approximation)",
+      "role_origin": "Dresseurs de combat — idem, 12 dresseurs au total sur les 3 étages (le « 7 » du guidebook Prima était une forte sous-estimation)",
       "item": "—",
       "map_zone": "MAP_UNION_CAVE_1F",
       "tile_x": 2,

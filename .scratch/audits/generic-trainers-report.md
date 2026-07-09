@@ -1,4 +1,10 @@
-# Rapport — dresseurs génériques par route (fidélité stricte)
+# Rapport — dresseurs génériques par route (fidélité stricte, phase web)
+
+**⚠️ Dépassé — voir `.scratch/audits/rom-trainer-roster-report.md`** : cette phase (recherche
+web) a trouvé ses limites (tableaux tronqués, une divergence non tranchée) documentées
+ci-dessous ; la phase suivante, le même jour, a extrait les données directement de la
+décompilation ROM (`~/pokeheartgold`) et résolu tous les écarts trouvés, y compris ceux non
+résolus ici. Conservé pour l'historique de la démarche.
 
 Scan systématique de `npc-inventory.md` (marqueurs 🔍/« non détaillé »/« générique » + comptage
 numérique déclaré vs. noms effectivement listés) : **9 zones flaggées** sur 83.

@@ -2,8 +2,8 @@
   "zone_id": "route-6-kanto",
   "npcs": [
     {
-      "name": "Twins Amy & Dani, Picnicker Selina, Camper Virgil",
-      "role_origin": "Dresseurs confirmés (Route 5/Route 6/Passage Souterrain)",
+      "name": "Twins Day & Dani, Picnicker Selina, Camper Virgil",
+      "role_origin": "Dresseurs confirmés (Route 5/Route 6/Passage Souterrain) — « Amy » corrigé en « Day » 2026-07-09 (extraction ROM, coquille OCR probable)",
       "item": "—",
       "map_zone": "MAP_ROUTE_6",
       "tile_x": 6,

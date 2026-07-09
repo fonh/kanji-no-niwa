@@ -349,7 +349,7 @@ Bourg Geon (starter, Pokégear) → Route 29 → Ville Griotte (Running Shoes/Ma
 **HGSS original :** Grotte reliant Route 32 à Route 33/Ecorcia, puzzle en 4 entrées cardinales.
 
 **Dans 漢字の庭 :**
-- 📍 8 dresseurs (Hiker Daniel/Russell, Poké Maniac Andrew/Calvin/Larry, Ace Trainer Nick/Gwen/Emma — noms trouvés par recherche web 2026-07-09) traversent la grotte (Psychic Nathan, à la frontière avec Route 32, reste recensé sous ruins-of-alph — vérification croisée 2026-07-09, ne pas dupliquer).
+- 📍 12 dresseurs répartis sur 3 étages (Hiker Daniel/Russell/Phillip/Leonard, Firebreather Bill/Ray, Poké Maniac Larry/Andrew/Calvin, Ace Trainer Nick/Gwen/Emma — roster exact confirmé par extraction ROM 2026-07-09) traversent la grotte (Psychic Nathan, à la frontière avec Route 32, reste recensé sous ruins-of-alph — vérification croisée 2026-07-09, ne pas dupliquer).
 - 📍 Puzzle en 4 temps : chaque entrée cardinale (NE/SE/NO/SO) nécessite un objet ou CS-Kanji différent pour être atteinte dans l'ordre.
 - 🔒 Coupe (切) pour l'une des entrées, Force (力) pour une autre.
 
@@ -799,7 +799,7 @@ Kurt est bien le forgeron d'Apricorns ; il fabrique un objet par lot (un seul ty
 **HGSS original :** Approche de la Safari Zone.
 
 **Dans 漢字の庭 :**
-- 📍 Approche vers la porte de la Safari Zone (voir section safari-zone) — aucun dresseur individuel nommé recensé sur ce tronçon.
+- 📍 4 dresseurs (Double Team Thom & Kae, Camper Grant, Young Couple Duff & Eda, Hiker Devin — roster trouvé par extraction ROM 2026-07-09) sur l'approche vers la porte de la Safari Zone (voir section safari-zone).
 
 ---
 
@@ -1255,9 +1255,9 @@ Le texte source intégral de Koga/Bruno/Karen a été retrouvé via le PDF (qui 
 **HGSS original :** Route 16, Route 17 (Cycling Road), Route 18.
 
 **Dans 漢字の庭 :**
-- 📍 Route 16 : Motard Dale + PNJ récurrent qui enseigne « un mot à la mode » par jour à qui revient le voir.
-- 📍 Route 17 (descente à vélo dédiée) : 12 Motards au fil du parcours (3 nommés : Joel, Jacob, Aiden) — première occasion d'« échanger les numéros » pour un système de revanche.
-- 📍 Route 18 : 9 dresseurs (7 Motards nommés + 2 Dresseurs d'Oiseaux).
+- 📍 Route 16 : PNJ récurrent qui enseigne « un mot à la mode » par jour à qui revient le voir — aucun dresseur trouvé sur cette route par extraction ROM (2026-07-09).
+- 📍 Route 17 (descente à vélo dédiée) : 11 Motards au fil du parcours (roster exact confirmé par extraction ROM : Reese, Joel, Markey, Dale, Jacob, Aiden, Dan, Theron, Glenn, Teddy, Ernest — Dale déplacé depuis Route 16) — première occasion d'« échanger les numéros » pour un système de revanche.
+- 📍 Route 18 : 3 dresseurs (Bird Keeper Bob/Boris, Biker Charles — roster exact confirmé par extraction ROM, corrige fortement le « 9 » du guidebook Prima).
 - 🔒 Bicyclette obligatoire pour passer la porte suivante (prêtée par le gérant de Doublonville) ; Coupe (切) pour l'ensemble du secteur.
 
 ---

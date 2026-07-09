@@ -1,4 +1,53 @@
 {
   "zone_id": "route-8-kanto",
-  "npcs": []
+  "npcs": [
+    {
+      "name": "Biker Dwayne, Biker Harris, Biker Zeke",
+      "role_origin": "Dresseurs — roster complet trouvé par extraction ROM (2026-07-09), remplace le placeholder « fusionné avec route-7-kanto » (le guide d'origine ne distinguait pas Route 7 de Route 8)",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_8",
+      "tile_x": 13,
+      "tile_y": 7,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Super Nerd Sam, Super Nerd Tyrone",
+      "role_origin": "Dresseurs — idem",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_8",
+      "tile_x": 51,
+      "tile_y": 9,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Young Couple Moe & Lulu",
+      "role_origin": "Dresseurs — idem",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_8",
+      "tile_x": 42,
+      "tile_y": 12,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Gentleman Milton",
+      "role_origin": "Dresseur — idem",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_8",
+      "tile_x": 63,
+      "tile_y": 14,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    }
+  ]
 }

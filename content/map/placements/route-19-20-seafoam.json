@@ -3,7 +3,7 @@
   "npcs": [
     {
       "name": "Nageurs/Campeurs/Pique-niqueuses/Bird Keeper nommés (Route 20, 7-8)",
-      "role_origin": "Dresseurs",
+      "role_origin": "Dresseurs — non confirmés par extraction ROM (2026-07-09) : la carte Route 20 n'a pas pu être rattachée automatiquement à cette zone (limite technique de l'extraction sur ce zone_id fusionné), compte du guidebook conservé tel quel",
       "item": "—",
       "map_zone": "MAP_ROUTE_19",
       "tile_x": 19,
@@ -14,8 +14,8 @@
       "matched_sprite_id": null
     },
     {
-      "name": "7 Nageurs nommés (Route 19)",
-      "role_origin": "Dresseurs",
+      "name": "Swimmer Jerome, Harold, Tucker, Debbie (Route 19)",
+      "role_origin": "Dresseurs — 4 confirmés par extraction ROM (2026-07-09) ; le guidebook en annonçait 7, seuls ces 4 ont pu être localisés avec certitude, écart non résolu",
       "item": "—",
       "map_zone": "MAP_ROUTE_19",
       "tile_x": 21,

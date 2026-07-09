@@ -117,8 +117,9 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Bug Catcher Wade | Dresseur de route | — | |
+| Bug Catcher Don | Dresseur de route — corrigé 2026-07-09 (extraction ROM `~/pokeheartgold`, source de vérité) : Don appartient à Route 30, pas Route 31 (inversion trouvée dans le dépouillement d'origine) | — | |
 | Youngster Joey | Dresseur de route (personnage culte de la franchise, easter-egg possible) | — | |
+| Youngster Mikey | Dresseur de route — corrigé 2026-07-09 (extraction ROM), même inversion que Don | — | |
 | Homme dans une maison (nord) | Donne l'Apricorn Box (objet-clé, débloque la cueillette d'Apricorns) | Apricorn Box | |
 | Mr. Pokémon | Confie un "œuf mystère" au joueur | Mystery Egg (+ Exp. Share bien plus tard, contre l'Écaille du Lac Colère) | |
 | Professeur Oak | Présent chez Mr. Pokémon, donne le Pokédex, anime ensuite une émission radio | Pokédex | |
@@ -135,8 +136,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Bug Catcher Don | Dresseur de route | — | |
-| Youngster Mikey | Dresseur de route | — | |
+| Bug Catcher Wade | Dresseur de route — corrigé 2026-07-09 (extraction ROM) : Wade appartient à Route 31, pas Route 30 (inversion trouvée dans le dépouillement d'origine, Don/Mikey déplacés vers route-30) | — | |
 | Lyra/Ethan | Revue sur la route, donne le Vs. Recorder | Vs. Recorder | |
 | Jeune homme près de l'Apricorn noir | Quête de livraison ("porte ce message à mon contact", compagnon-courrier Kenya) | TM44 Rest | |
 
@@ -191,7 +191,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Youngster Albert, Picnicker Liz, Camper Roland, Youngster Gordon, Fisherman Henry/Justin/Ralph, Bird Keeper Peter, Hiker Anthony | Dresseurs de route (plus de dix sur Routes 32/33 combinées) | — | |
+| Youngster Albert, Picnicker Liz, Camper Roland, Youngster Gordon, Fisherman Henry/Justin/Ralph, Bird Keeper Peter | Dresseurs de route — 8 confirmés propres à Route 32 (extraction ROM 2026-07-09, résout l'ancien bloc combiné 32/33 : Hiker Anthony déplacé vers route-33) | — | |
 | Frère/sœur du jour Frieda (vendredi) | PNJ calendaire, chemin étroit derrière le Centre Pokémon | Poison Barb | |
 | Homme sur le chemin | Cadeau gratuit sans condition | Graine Miracle | |
 | Jeune homme près du Centre Pokémon | PNJ comique, tente de vendre une "queue de Ramoloss" | — | |
@@ -227,9 +227,9 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Hiker Daniel, Hiker Russell (B1F) | Dresseurs de combat — noms trouvés par recherche web ciblée (StrategyWiki + Bulbapedia, 2026-07-09, deux sources indépendantes concordantes), le guidebook Prima ne les détaillait pas | — | |
-| Poké Maniac Andrew, Poké Maniac Calvin, Poké Maniac Larry (B1F sud) | Dresseurs de combat — idem | — | |
-| Ace Trainer Nick, Ace Trainer Gwen, Ace Trainer Emma (B2F) | Dresseurs de combat — idem, 8 dresseurs au total (le « 7 » du guidebook Prima était une approximation) | — | |
+| Hiker Daniel, Hiker Russell, Firebreather Bill, Firebreather Ray, Poké Maniac Larry (1F) | Dresseurs de combat — roster exact confirmé par extraction ROM (`~/pokeheartgold`, 2026-07-09) ; Bill/Ray ajoutés (absents de la 1ʳᵉ passe web) | — | |
+| Hiker Phillip, Hiker Leonard, Poké Maniac Andrew, Poké Maniac Calvin (B1F) | Dresseurs de combat — idem | — | |
+| Ace Trainer Nick, Ace Trainer Gwen, Ace Trainer Emma (B2F) | Dresseurs de combat — idem, 12 dresseurs au total sur les 3 étages (le « 7 » du guidebook Prima était une forte sous-estimation) | — | |
 
 Psychic Nathan (bordure Centre de Recherche/Union Cave) est déjà recensé dans la section
 ruins-of-alph — ne pas dupliquer ici (vérification croisée 2026-07-09 : doublon trouvé et
@@ -249,7 +249,9 @@ Union Cave → Force) — verrou d'exploration, pas un PNJ.
 **Budget** : 160–195 kanji étudiés *(était 150–190 — redistribution synthèse 2026-07-07)* | N4 | 25–40 chars
 **Grammaire nouvellement disponible à ce palier** : N4 (inchangé)
 
-Aucun PNJ nommé confirmé — route de transit pure (pluie permanente sur toute la route). Le guidebook rattache tous les noms du bloc combiné "Routes 32/33" à Route 32 uniquement (confirmé passe 2) ; Route 33 n'a aucun PNJ ou dresseur attribuable spécifiquement.
+| PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
+|---|---|---|---|
+| Hiker Anthony | Dresseur de route — résolu 2026-07-09 par extraction ROM (`~/pokeheartgold`) : le guidebook rattachait tout le bloc combiné « Routes 32/33 » à Route 32 sans distinguer, Anthony est le seul dresseur réellement placé sur la carte Route 33 | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0
@@ -368,7 +370,7 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Bug Catcher Arnie, Firebreather Walt, Juggler Irwin, Policeman Dirk (nuit), Picnicker Kim, Camper Ivan, Bird Keeper Bryan, Picnicker Brooke & Camper Elliot (paire), Lass Krise, Pokéfan Beverly, School Kid Jack, Pokéfan William | Dresseurs de route (le guide précise "neuf dresseurs sur Route 35") | — | |
+| Bug Catcher Arnie, Firebreather Walt, Juggler Irwin, Policeman Dirk (nuit), Picnicker Kim, Camper Ivan, Bird Keeper Bryan, Picnicker Brooke & Camper Elliot (paire) | Dresseurs de route — 9 confirmés propres à Route 35 par extraction ROM (2026-07-09), correspond exactement au « neuf dresseurs » du guide ; Krise/Beverly/Jack/William retirés, ils appartiennent en fait à national-park | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0
@@ -383,6 +385,7 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Magnus | Gérant du dôme Pokéathlon, fait visiter les lieux | — | |
+| Pokéfan Beverly, Lass Krise, Pokéfan William, School Kid Jack | Dresseurs de route — ajoutés 2026-07-09 (extraction ROM), déplacés depuis route-35 où ils étaient mal attribués | — | |
 | Vieil homme retraité | Record de 998 sauts, défie le joueur de dépasser 1000 | — | |
 | Vendeur du stand Aprijuice | Ouest du dôme | Apriblender | |
 | Whitney (réapparition) | Accueil du Pokéathlon | Maillot porté en épreuve | |
@@ -491,7 +494,7 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Sailor Eugene, Pokéfan Derek, Pokéfan Ruth, Psychic Norman | Dresseurs de route | — | |
+| Sailor Eugene, Pokéfan Derek, Pokéfan Ruth, Psychic Nelson | Dresseurs de route — « Norman » corrigé en « Nelson » 2026-07-09 (extraction ROM, coquille OCR probable) | — | |
 | Fille (gauche du Miltank-analogue, ferme Moomoo) | Donne le Seal Case une fois le compagnon guéri | Seal Case | |
 | Fille (droite, ferme Moomoo) | Donne 3 décorations gratuites | Fire Seal A, Party Seal B, Flora Seal C | |
 | Fermière (ferme Moomoo) | Donne TM83 Natural Gift | TM83 Natural Gift | |
@@ -530,7 +533,7 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Swimmer Simon, Swimmer Elaine | Dresseurs maritimes | — | |
+| Swimmer Simon, Swimmer Elaine, Swimmer Randall, Swimmer Paula | Dresseurs maritimes — Randall/Paula ajoutés 2026-07-09 (extraction ROM), déplacés depuis route-41 où ils étaient mal attribués | — | |
 | Frère/sœur du jour Monica (lundi, plage) | PNJ calendaire | Sharp Beak | |
 | Homme (Maison du Photographe, nord d'Irisia) | Révèle que le photographe itinérant récurrent est de sa famille | — | |
 | Homme (ouest du Centre Pokémon d'Irisia) | Raconte la légende des 4 îles créées par le gardien légendaire des tourbillons | — | |
@@ -547,7 +550,7 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Swimmer Denise, Kara, Ronald, Berke, Kaylee, Paula, Matthew, Randall, Charlie, George, Wendy, Susie (~10 nageurs) | Dresseurs maritimes | — | |
+| Swimmer Denise, Kara, Ronald, Berke, Kaylee, Matthew, Charlie, George, Wendy, Susie (10 nageurs confirmés par extraction ROM 2026-07-09 ; Paula/Randall retirés, ils appartiennent à route-40) | Dresseurs maritimes | — | |
 
 Les nageurs de Route 41 « ont des tas d'histoires à raconter » sur le gardien légendaire des Îles
 Tourbillon — réservoir de lore orale, bon matériau de PNJ-conteurs en mer.
@@ -594,9 +597,12 @@ CS-Kanji 渦 (Tourbillon).
 **Budget** : 480–520 kanji étudiés (plateau, zéro croissance requise) | N3 | 45–65 chars
 **Grammaire nouvellement disponible à ce palier** : N3 (inchangé)
 
-Aucun PNJ individuel nommé sourcé pour ces routes/ce donjon — approche menant à la porte de la
-Safari Zone (voir section safari-zone pour le détail de la mécanique adaptée). Pas de dresseur de
-combat classique recensé sur ce tronçon.
+| PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
+|---|---|---|---|
+| Double Team Thom & Kae, Camper Grant, Young Couple Duff & Eda, Hiker Devin | Dresseurs — roster trouvé par extraction ROM (2026-07-09), corrige « aucun dresseur recensé sur ce tronçon » | — | |
+
+Approche menant à la porte de la Safari Zone (voir section safari-zone pour le détail de la
+mécanique adaptée).
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0
@@ -646,7 +652,7 @@ original transposée). Les prises rejoignent la collection du Sac (règle P-15 :
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Super Nerd Hugh (2F), Marcus (1F fond) ; Poké Maniac Harrison (1F fond) | Dresseurs internes | — | |
+| Super Nerd Hugh (2F), Markus (1F fond) ; Poké Maniac Harrison (1F fond) | Dresseurs internes — « Marcus » corrigé en « Markus » 2026-07-09 (extraction ROM, coquille OCR probable) | — | |
 | Black Belt Kiyo ("Karate King") | Médite tout au fond (B1F, accessible via traversée d'eau) ; combat-épreuve, offre un compagnon en cas de victoire | Compagnon (récompense narrative) | |
 
 **Side quests dans cette zone** : 1 — mini-donjon dōjō du Karate King Kiyo, réintégré v1 (2026-07-06, décision « aucune v2 » ; chiffré 2026-07-07, synthèse : intérieur, hérite de la fenêtre mt-mortar 510–545 ; voir `content/side-content-inventory.md` § E1)
@@ -689,7 +695,7 @@ original transposée). Les prises rejoignent la collection du Sac (règle P-15 :
 |---|---|---|---|
 | PNJ à la grille de Route 43 | Mentionne que Mr. Pokémon cherche une Écaille Rouge | — | |
 | Poste-frontière Team Rocket (milieu de route) | Rançonne le passage (1000 ¥) tant que le QG Rocket d'Acajou n'est pas tombé ; redevient un poste normal ensuite | TM36 Sludge Bomb (après la chute du QG) | |
-| Poké Maniac Ron, Poké Maniac Ben, Poké Maniac Brent | Dresseurs | — | |
+| Poké Maniac Ron, Poké Maniac Beckett, Poké Maniac Brent | Dresseurs — « Ben » corrigé en « Beckett » 2026-07-09 (extraction ROM, coquille OCR probable) | — | |
 | Picnicker Tiffany | Dresseuse | — | |
 | Camper Spencer | Dresseur | — | |
 | Fisherman Marvin | Dresseur | — | |
@@ -713,7 +719,7 @@ Apricorns) — ne pas le dupliquer ici.
 | Poké Maniac Ron/Ben/Brent, Picnicker Tiffany, Camper Spencer, Fisherman Marvin | Dresseurs (Route 43) | — | |
 | Fishing Guru | Concours du plus gros poisson-compagnon | Ether (record battu) | |
 | Frère/sœur du jour Wesley (mercredi, post-QG) | PNJ calendaire | Black Belt (objet à équiper) | |
-| Fisherman Raymond, Andre ; Ace Trainer Aaron, Lois | Dresseurs post-événement Gyarados / mercredis | — | |
+| Fisherman Raymond, Andre ; Ace Trainer Alton, Lois | Dresseurs post-événement Gyarados / mercredis — « Aaron » corrigé en « Alton » 2026-07-09 (extraction ROM, coquille OCR probable) | — | |
 | Lance | Se présente au bord du lac après le combat, recrute le joueur pour Acajou Ville | — | |
 
 **Side quests dans cette zone** : 1 (concours du plus gros poisson-compagnon)
@@ -796,7 +802,7 @@ Apricorns) — ne pas le dupliquer ici.
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Black Belt Kenji, Hiker Timothy/Michael/Bailey/Parry/Erik, Camper Ted, Picnicker Erin, Ace Trainer Ryan/Kelly | Dresseurs de route (10 au total, répartis sur les chemins est/ouest) | — | |
+| Black Belt Kenji, Hiker Timothy/Michael/Erik/Parry, Ace Trainer Ryan/Kelly | Dresseurs de route — 7 confirmés propres à Route 45 (extraction ROM 2026-07-09, résout le « 10 au total » : Bailey/Ted/Erin déplacés vers route-46, Erik reste bien ici) | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0
@@ -824,7 +830,7 @@ Apricorns) — ne pas le dupliquer ici.
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Hiker Erik | Seul dresseur confirmé sur cette route (roster partagé avec Route 45 dans le guide, confirmé propre à Route 46) | — | |
+| Hiker Bailey, Camper Ted, Picnicker Erin | Dresseurs de route — corrigé 2026-07-09 (extraction ROM) : Erik (précédemment attribué ici) appartient en fait à Route 45 ; Bailey/Ted/Erin sont les 3 vrais dresseurs de Route 46, mal comptés dans le « 10 au total » de route-45 | — | |
 
 Connecteur bloqué par un rebord à sens unique côté Route 29 (accès différé, voir section route-29).
 
@@ -982,7 +988,7 @@ Confirmé exhaustivement par le guidebook : aucun dresseur de route sur l'ensemb
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Twins Amy & Dani, Picnicker Selina, Camper Virgil | Dresseurs confirmés (Route 5/Route 6/Passage Souterrain) | — | |
+| Twins Day & Dani, Picnicker Selina, Camper Virgil | Dresseurs confirmés (Route 5/Route 6/Passage Souterrain) — « Amy » corrigé en « Day » 2026-07-09 (extraction ROM, coquille OCR probable) | — | |
 | Vieille dame (Route 5) | Pressent un danger | Talisman Anti-Combat | |
 | PNJ du Passage Souterrain | Échange une spécialité locale (RageCandyBar) contre une CT | CT | |
 
@@ -1023,7 +1029,7 @@ Confirmé exhaustivement par le guidebook : aucun dresseur de route sur l'ensemb
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Camper Sid, Hiker Eoin, Picnicker Heidi/Edna, Camper Dean, Hiker Sidney (Route 9) | Dresseurs (6) | — | |
+| Camper Sid, Hiker Eoin, Picnicker Heidi/Edna, Camper Dean, Hiker Clarke (Route 9) | Dresseurs (6, confirmés par extraction ROM 2026-07-09 — « Hiker Sidney » était une coquille pour « Hiker Clarke ») | — | |
 | 2 Randonneurs (Route 10, 2e nom incertain OCR) | Dresseurs | — | |
 | Garçon (Centre Pokémon voisin) | Relaie le vol à la Centrale (indice pur) | — | |
 
@@ -1053,9 +1059,12 @@ Aucun dresseur dans Rock Tunnel — donjon d'exploration pure plongé dans le no
 **Budget** : ~1220 kanji étudiés (plateau, optionnelle — Safranville↔Lavender, zéro croissance requise) | N2 | 65–115 chars
 **Grammaire nouvellement disponible à ce palier** : N2 (inchangé)
 
-Aucun PNJ propre sourcé pour cette route — son contenu (Bikers « turbulents » non nommés) est déjà
-recensé sous la section route-7-kanto (roster Route 7/8 fusionné dans le guide d'origine) ; ne pas
-dupliquer ici.
+| PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
+|---|---|---|---|
+| Biker Dwayne, Biker Harris, Biker Zeke | Dresseurs — roster complet trouvé par extraction ROM (2026-07-09), remplace le placeholder « fusionné avec route-7-kanto » (le guide d'origine ne distinguait pas Route 7 de Route 8) | — | |
+| Super Nerd Sam, Super Nerd Tyrone | Dresseurs — idem | — | |
+| Young Couple Moe & Lulu | Dresseurs — idem | — | |
+| Gentleman Milton | Dresseur — idem | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0
@@ -1139,10 +1148,10 @@ fusionné dans le guide d'origine) ; ne pas dupliquer ici.
 **Budget** : 1370–1380 kanji étudiés | N2 | 68–115 chars
 **Grammaire nouvellement disponible à ce palier** : N2 (inchangé)
 
-| PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
-|---|---|---|---|
-| Young Couple Moe & Lulu, Super Nerd Sam (Route 7) | Dresseurs | — | |
-| Bikers "turbulents" non nommés (Route 8) | Dresseurs | — | |
+Aucun dresseur trouvé sur la carte Route 7 par extraction ROM (2026-07-09, `~/pokeheartgold`) —
+route de transit pure. Young Couple Moe & Lulu et Super Nerd Sam, précédemment attribués ici,
+appartiennent en fait à route-8-kanto (le guide d'origine fusionnait « Route 7/8 » sans
+distinguer) ; déplacés là-bas, voir cette section pour le roster complet.
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0
@@ -1180,10 +1189,9 @@ fusionné dans le guide d'origine) ; ne pas dupliquer ici.
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Biker Dale (Route 16) | Dresseur | — | |
 | PNJ récurrent (Route 16) | Enseigne "un mot à la mode" par jour à qui revient le voir | — | |
-| 12 Motards dont Joel, Jacob, Aiden, Reese (Route 17) | Dresseurs — Reese ajouté par recoupement registre téléphonique (source Serebii, 2026-07-09), un des 9 motards jusque-là non nommés | — | |
-| 7 Motards nommés + 2 Bird Keeper (Route 18, 9 dresseurs) | Dresseurs | — | |
+| Biker Reese, Joel, Markey, Dale, Jacob, Aiden, Dan, Theron, Glenn, Teddy, Ernest (Route 17, 11 confirmés) | Dresseurs — roster exact confirmé par extraction ROM (2026-07-09) : Dale déplacé depuis Route 16 (aucun dresseur trouvé sur Route 16 dans la ROM) ; « 12 Motards » du guidebook corrigé à 11 | — | |
+| Bird Keeper Bob, Bird Keeper Boris, Biker Charles (Route 18, 3 confirmés) | Dresseurs — roster exact confirmé par extraction ROM (2026-07-09), corrige fortement le « 9 dresseurs (7 Motards + 2 Bird Keeper) » du guidebook Prima (sous-comptage web déjà repéré confirmé faux dans l'autre sens) | — | |
 
 🔒 Bicyclette obligatoire (16→17), Coupe pour l'ensemble de Route 18.
 
@@ -1220,7 +1228,7 @@ fusionné dans le guide d'origine) ; ne pas dupliquer ici.
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Twins Kay & Tia, Pokéfan Eleanor, Enseignante Colette/Hillary, 2 Écoliers dont Billy, Pokéfan Boone (Route 15) | Dresseurs — Billy ajouté par recoupement registre téléphonique (source Serebii, 2026-07-09), classe non confirmée par cette source, un des 2 Écoliers jusque-là non nommés | — | |
-| Bird Keeper Josh/Roy, 5 Écoliers dont Torin, 2 Pokéfans, Enseignante Clarice (Route 14) | Dresseurs — Torin ajouté par recoupement registre téléphonique (source Serebii, 2026-07-09), classe non confirmée par cette source, un des 5 Écoliers jusque-là non nommés | — | |
+| Bird Keeper Josh/Roy, School Kid Torin/Connor/Travis, Pokéfan Trevor/Carter, Enseignante Clarice (Route 14) | Dresseurs — roster complet (8) confirmé par extraction ROM (2026-07-09), classe School Kid confirmée pour Torin (précédemment ajouté sans classe via le registre téléphonique) | — | |
 | Fille dans les hautes herbes (Route 14, ouest) | Demande à voir un compagnon précis | Objet porté rare | |
 
 📍 Première apparition à pied de l'esprit légendaire (Suicune-analogue), Eusine en poursuite, oriente vers Route 25. 🔒 Coupe requis ; rebords à sens unique imposant un ordre de traversée.
@@ -1386,7 +1394,7 @@ Aucun obstacle confirmé.
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Nageurs/Pêcheurs/Bird Keeper (5 nommés) | Dresseurs | — | |
+| Fisherman Arnold, Murphy, Liam, Gideon ; Swimmer Nikki, Chelan, Kendra, Tyson, Esteban, Duane ; Bird Keeper Easton, Kinsley | Dresseurs — roster complet (12) trouvé par extraction ROM (2026-07-09), remplace le placeholder « 5 nommés » sans noms | — | |
 
 Éruption volcanique mentionnée en ambiance. 🔒 Surf ; objet bonus accessible après 力, pas remis par un PNJ.
 
@@ -1422,8 +1430,8 @@ Aucun obstacle confirmé.
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Nageurs/Campeurs/Pique-niqueuses/Bird Keeper nommés (Route 20, 7-8) | Dresseurs | — | |
-| 7 Nageurs nommés (Route 19) | Dresseurs | — | |
+| Nageurs/Campeurs/Pique-niqueuses/Bird Keeper nommés (Route 20, 7-8) | Dresseurs — non confirmés par extraction ROM (2026-07-09) : la carte Route 20 n'a pas pu être rattachée automatiquement à cette zone (limite technique de l'extraction sur ce zone_id fusionné), compte du guidebook conservé tel quel | — | |
+| Swimmer Jerome, Harold, Tucker, Debbie (Route 19) | Dresseurs — 4 confirmés par extraction ROM (2026-07-09) ; le guidebook en annonçait 7, seuls ces 4 ont pu être localisés avec certitude, écart non résolu | — | |
 | Dresseurs postés (Seafoam B2F) | Servent de "freins" pour stopper la glissade sur sol de glace (puzzle environnemental-social) | — | |
 
 🔒 Surf, 力, Rock Smash (sans équivalent ici) pour l'ensemble.
