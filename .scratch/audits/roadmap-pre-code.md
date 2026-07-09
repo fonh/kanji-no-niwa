@@ -84,9 +84,15 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    leaders jamais en ligne de PNJ propre ; Day Care coupé du projet), **8 vrais dresseurs
    génériques manquants trouvés et ajoutés à npc-inventory.md** (Route 2 : Rob/Doug ; Route 12 :
    Kyle/Kyler ; Route 13 : Tim & Sue ; Route 14 : Torin ; Route 15 : Billy ; Route 17 : Reese).
-   Rapport : `.scratch/audits/phone-registry-report.md`. **Reste : les dresseurs génériques par
-   route (fidélité stricte)** — dénombrement systématique zone par zone contre le guidebook,
-   au-delà des 8 déjà comblés via ce recoupement ponctuel.
+   Rapport : `.scratch/audits/phone-registry-report.md`.
+   **🔶 PARTIEL 2026-07-09 — dresseurs génériques par route (fidélité stricte)** : scan
+   systématique de `npc-inventory.md` (marqueurs d'incomplétude + comptes déclarés vs. noms
+   listés) → 9 zones flaggées. **1 résolue** (union-cave : 8 dresseurs identifiés et confirmés
+   par deux sources web indépendantes concordantes). **8 restent ouvertes** — les tableaux de
+   dresseurs Bulbapedia/StrategyWiki pour Kanto (Routes 18/19/20/Seafoam notamment) tronquent
+   systématiquement au fetch ; une divergence réelle trouvée sur Route 18 (guidebook dit 9
+   dresseurs, une source web n'en trouve que 3) reste **non tranchée** plutôt que devinée.
+   Rapport détaillé, zone par zone : `.scratch/audits/generic-trainers-report.md`.
 5. **La colonne « Type assigné » de npc-inventory** : distribuer leçon / texte / combat sur
    les PNJ sourcés, zone par zone — dépend du point 1 (l'assignation kanji doit exister pour
    savoir ce qu'un PNJ-leçon enseigne). C'est la dernière décision « lourde » (elle fixe qui

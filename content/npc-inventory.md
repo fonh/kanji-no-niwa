@@ -227,7 +227,9 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Randonneurs, Maniaques, Dresseurs Ace (7 dresseurs au total, noms individuels non détaillés par le guide) | Dresseurs de combat | — | |
+| Hiker Daniel, Hiker Russell (B1F) | Dresseurs de combat — noms trouvés par recherche web ciblée (StrategyWiki + Bulbapedia, 2026-07-09, deux sources indépendantes concordantes), le guidebook Prima ne les détaillait pas | — | |
+| Poké Maniac Andrew, Poké Maniac Calvin, Poké Maniac Larry (B1F sud) | Dresseurs de combat — idem | — | |
+| Ace Trainer Nick, Ace Trainer Gwen, Ace Trainer Emma (B2F) | Dresseurs de combat — idem, 8 dresseurs au total (le « 7 » du guidebook Prima était une approximation) | — | |
 
 Psychic Nathan (bordure Centre de Recherche/Union Cave) est déjà recensé dans la section
 ruins-of-alph — ne pas dupliquer ici (vérification croisée 2026-07-09 : doublon trouvé et

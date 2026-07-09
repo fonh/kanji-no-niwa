@@ -2,12 +2,36 @@
   "zone_id": "union-cave",
   "npcs": [
     {
-      "name": "Randonneurs, Maniaques, Dresseurs Ace (7 dresseurs au total, noms individuels non détaillés par le guide)",
-      "role_origin": "Dresseurs de combat",
+      "name": "Hiker Daniel, Hiker Russell (B1F)",
+      "role_origin": "Dresseurs de combat — noms trouvés par recherche web ciblée (StrategyWiki + Bulbapedia, 2026-07-09, deux sources indépendantes concordantes), le guidebook Prima ne les détaillait pas",
       "item": "—",
       "map_zone": "MAP_UNION_CAVE_1F",
       "tile_x": 10,
       "tile_y": 0,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Poké Maniac Andrew, Poké Maniac Calvin, Poké Maniac Larry (B1F sud)",
+      "role_origin": "Dresseurs de combat — idem",
+      "item": "—",
+      "map_zone": "MAP_UNION_CAVE_1F",
+      "tile_x": 31,
+      "tile_y": 10,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Ace Trainer Nick, Ace Trainer Gwen, Ace Trainer Emma (B2F)",
+      "role_origin": "Dresseurs de combat — idem, 8 dresseurs au total (le « 7 » du guidebook Prima était une approximation)",
+      "item": "—",
+      "map_zone": "MAP_UNION_CAVE_1F",
+      "tile_x": 2,
+      "tile_y": 18,
       "facing": "south",
       "source": "generated",
       "matched_object_id": null,
