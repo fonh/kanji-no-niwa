@@ -115,6 +115,23 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    Sidney→Clarke, Aaron→Alton, May→Mimi). Rapport complet :
    `.scratch/audits/rom-trainer-roster-report.md`. Historique de la phase web (dépassée) :
    `.scratch/audits/generic-trainers-report.md`.
+   **✅ FAIT 2026-07-09 — registre téléphonique remplacé par la donnée ROM exacte** (sur
+   demande explicite) : `scripts/build/build-rom-phone-registry.py` lit
+   `files/tel/pmtel_book.json` (table binaire du jeu, déjà décodée dans la décompilation) →
+   `content/phone-registry.json`, **75/75 contacts, 0 non rattaché**. Confirme indépendamment
+   les corrections de placement déjà faites sur le roster de dresseurs (Joey/route-30,
+   Wade/route-31, Anthony/route-33...) et trouve 4 corrections propres au registre
+   (Ethan/Lyra : Day Care → leur maison à Bourg Geon ; Baoba : Route 39 → Safari Zone ; Pr.
+   Oak : Route 30 → son labo à Bourg-Origine). Remplace le fichier sourcé Serebii de la passe
+   précédente. Rapport : `.scratch/audits/rom-phone-registry-report.md`.
+   **✅ FAIT 2026-07-09 — objets cachés par zone (bonus, hors périmètre initial)** :
+   `scripts/build/build-rom-item-roster.py` → `content/rom-item-roster.json`, 257/257 objets
+   sur 56/83 zones (même méthode : `scriptId` `std_itemball_<carte>_<item>`). **Dataset de
+   référence brut, pas fusionné dans npc-inventory.md** — les deux sources se complètent
+   (npc-inventory ne catalogue que les objets remis par PNJ/quête, jamais les objets au sol
+   génériques). Utilisation prévue à la passe contenu (étape 4) ou pour un futur système de
+   collecte de carte — pas d'action requise maintenant. Rapport :
+   `.scratch/audits/rom-item-roster-report.md`.
 5. **La colonne « Type assigné » de npc-inventory** : distribuer leçon / texte / combat sur
    les PNJ sourcés, zone par zone — dépend du point 1 (l'assignation kanji doit exister pour
    savoir ce qu'un PNJ-leçon enseigne). C'est la dernière décision « lourde » (elle fixe qui

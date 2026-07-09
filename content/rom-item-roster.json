@@ -1,0 +1,1401 @@
+{
+  "zones": {
+    "burned-tower": [
+      {
+        "item": "HP Up",
+        "slug": "hp_up",
+        "map_name": "MAP_BURNED_TOWER_1F"
+      },
+      {
+        "item": "Antidote",
+        "slug": "antidote",
+        "map_name": "MAP_BURNED_TOWER_1F"
+      },
+      {
+        "item": "TM12",
+        "slug": "tm12",
+        "map_name": "MAP_BURNED_TOWER_B1F"
+      }
+    ],
+    "route-2-foret-viridian": [
+      {
+        "item": "Elixir",
+        "slug": "elixir",
+        "map_name": "MAP_ROUTE_2"
+      },
+      {
+        "item": "Dire Hit",
+        "slug": "dire_hit",
+        "map_name": "MAP_VIRIDIAN_FOREST"
+      },
+      {
+        "item": "Blue Flute",
+        "slug": "blue_flute",
+        "map_name": "MAP_VIRIDIAN_FOREST"
+      },
+      {
+        "item": "Leaf Stone",
+        "slug": "leaf_stone",
+        "map_name": "MAP_VIRIDIAN_FOREST"
+      },
+      {
+        "item": "TM77",
+        "slug": "tm77",
+        "map_name": "MAP_VIRIDIAN_FOREST"
+      },
+      {
+        "item": "Carbos",
+        "slug": "carbos",
+        "map_name": "MAP_ROUTE_2_EAST"
+      }
+    ],
+    "mont-lune-route-3-4": [
+      {
+        "item": "Big Root",
+        "slug": "big_root",
+        "map_name": "MAP_ROUTE_3"
+      },
+      {
+        "item": "HP Up",
+        "slug": "hp_up",
+        "map_name": "MAP_ROUTE_4"
+      }
+    ],
+    "route-6-kanto": [
+      {
+        "item": "TM62",
+        "slug": "tm62",
+        "map_name": "MAP_ROUTE_6"
+      }
+    ],
+    "route-7-kanto": [
+      {
+        "item": "Mental Herb",
+        "slug": "mental_herb",
+        "map_name": "MAP_ROUTE_7"
+      }
+    ],
+    "route-8-kanto": [
+      {
+        "item": "TM41",
+        "slug": "tm41",
+        "map_name": "MAP_ROUTE_8"
+      }
+    ],
+    "route-9-10-rocktunnel": [
+      {
+        "item": "TM91",
+        "slug": "tm91",
+        "map_name": "MAP_ROUTE_9"
+      },
+      {
+        "item": "Full Restore",
+        "slug": "full_restore",
+        "map_name": "MAP_ROUTE_9"
+      },
+      {
+        "item": "Light Clay",
+        "slug": "light_clay",
+        "map_name": "MAP_ROUTE_9"
+      },
+      {
+        "item": "Max Potion",
+        "slug": "max_potion",
+        "map_name": "MAP_ROUTE_9"
+      },
+      {
+        "item": "Elixir",
+        "slug": "elixir",
+        "map_name": "MAP_ROCK_TUNNEL_1F"
+      },
+      {
+        "item": "TM56",
+        "slug": "tm56",
+        "map_name": "MAP_ROCK_TUNNEL_1F"
+      },
+      {
+        "item": "TM69",
+        "slug": "tm69",
+        "map_name": "MAP_ROUTE_10_SOUTH"
+      },
+      {
+        "item": "Iron",
+        "slug": "iron",
+        "map_name": "MAP_ROCK_TUNNEL_B1F"
+      },
+      {
+        "item": "PP Up",
+        "slug": "pp_up",
+        "map_name": "MAP_ROCK_TUNNEL_B1F"
+      },
+      {
+        "item": "Revive",
+        "slug": "revive",
+        "map_name": "MAP_ROCK_TUNNEL_B1F"
+      },
+      {
+        "item": "Oval Stone",
+        "slug": "oval_stone",
+        "map_name": "MAP_ROCK_TUNNEL_B1F"
+      }
+    ],
+    "route-11-12-13-diglett": [
+      {
+        "item": "TM86",
+        "slug": "tm86",
+        "map_name": "MAP_ROUTE_11"
+      },
+      {
+        "item": "Calcium",
+        "slug": "calcium",
+        "map_name": "MAP_ROUTE_12"
+      },
+      {
+        "item": "Yellow Flute",
+        "slug": "yellow_flute",
+        "map_name": "MAP_ROUTE_12"
+      },
+      {
+        "item": "PP Max",
+        "slug": "pp_max",
+        "map_name": "MAP_DIGLETT_CAVE"
+      },
+      {
+        "item": "Rock Incense",
+        "slug": "rock_incense",
+        "map_name": "MAP_DIGLETT_CAVE"
+      }
+    ],
+    "route-14-15-kanto": [
+      {
+        "item": "PP Up",
+        "slug": "pp_up",
+        "map_name": "MAP_ROUTE_15"
+      },
+      {
+        "item": "Rose Incense",
+        "slug": "rose_incense",
+        "map_name": "MAP_ROUTE_15"
+      }
+    ],
+    "route-24-25-kanto": [
+      {
+        "item": "Protein",
+        "slug": "protein",
+        "map_name": "MAP_ROUTE_25"
+      }
+    ],
+    "route-26": [
+      {
+        "item": "Max Elixir",
+        "slug": "max_elixir",
+        "map_name": "MAP_ROUTE_26"
+      },
+      {
+        "item": "Moon Stone",
+        "slug": "moon_stone",
+        "map_name": "MAP_TOHJO_FALLS"
+      }
+    ],
+    "route-27": [
+      {
+        "item": "Rare Candy",
+        "slug": "rare_candy",
+        "map_name": "MAP_ROUTE_27"
+      },
+      {
+        "item": "TM02",
+        "slug": "tm02",
+        "map_name": "MAP_ROUTE_27"
+      },
+      {
+        "item": "Destiny Knot",
+        "slug": "destiny_knot",
+        "map_name": "MAP_ROUTE_27"
+      }
+    ],
+    "mt-silver-route-28": [
+      {
+        "item": "TM35",
+        "slug": "tm35",
+        "map_name": "MAP_ROUTE_28"
+      },
+      {
+        "item": "Reaper Cloth",
+        "slug": "reaper_cloth",
+        "map_name": "MAP_MOUNT_SILVER"
+      }
+    ],
+    "route-29": [
+      {
+        "item": "Potion",
+        "slug": "potion",
+        "map_name": "MAP_ROUTE_29"
+      }
+    ],
+    "route-30": [
+      {
+        "item": "Antidote",
+        "slug": "antidote",
+        "map_name": "MAP_ROUTE_30"
+      },
+      {
+        "item": "Potion",
+        "slug": "potion",
+        "map_name": "MAP_ROUTE_30"
+      }
+    ],
+    "route-31": [
+      {
+        "item": "Potion",
+        "slug": "potion",
+        "map_name": "MAP_ROUTE_31"
+      },
+      {
+        "item": "Poke Ball",
+        "slug": "poke_ball",
+        "map_name": "MAP_ROUTE_31"
+      }
+    ],
+    "route-32": [
+      {
+        "item": "Repel",
+        "slug": "repel",
+        "map_name": "MAP_ROUTE_32"
+      },
+      {
+        "item": "Great Ball",
+        "slug": "great_ball",
+        "map_name": "MAP_ROUTE_32"
+      },
+      {
+        "item": "TM09",
+        "slug": "tm09",
+        "map_name": "MAP_ROUTE_32"
+      },
+      {
+        "item": "Shell Bell",
+        "slug": "shell_bell",
+        "map_name": "MAP_ROUTE_32"
+      }
+    ],
+    "route-34": [
+      {
+        "item": "Nugget",
+        "slug": "nugget",
+        "map_name": "MAP_ROUTE_34"
+      },
+      {
+        "item": "TM63",
+        "slug": "tm63",
+        "map_name": "MAP_ROUTE_34"
+      }
+    ],
+    "route-35": [
+      {
+        "item": "TM66",
+        "slug": "tm66",
+        "map_name": "MAP_ROUTE_35"
+      },
+      {
+        "item": "Parlyz Heal",
+        "slug": "parlyz_heal",
+        "map_name": "MAP_ROUTE_35"
+      }
+    ],
+    "route-36": [
+      {
+        "item": "Hyper Potion",
+        "slug": "hyper_potion",
+        "map_name": "MAP_ROUTE_36"
+      }
+    ],
+    "route-38": [
+      {
+        "item": "Max Potion",
+        "slug": "max_potion",
+        "map_name": "MAP_ROUTE_38"
+      },
+      {
+        "item": "Lax Incense",
+        "slug": "lax_incense",
+        "map_name": "MAP_ROUTE_38"
+      }
+    ],
+    "route-39": [
+      {
+        "item": "TM60",
+        "slug": "tm60",
+        "map_name": "MAP_ROUTE_39"
+      }
+    ],
+    "route-42": [
+      {
+        "item": "Super Potion",
+        "slug": "super_potion",
+        "map_name": "MAP_ROUTE_42"
+      },
+      {
+        "item": "Dubious Disc",
+        "slug": "dubious_disc",
+        "map_name": "MAP_ROUTE_42"
+      },
+      {
+        "item": "TM65",
+        "slug": "tm65",
+        "map_name": "MAP_ROUTE_42"
+      }
+    ],
+    "route-43": [
+      {
+        "item": "Max Ether",
+        "slug": "max_ether",
+        "map_name": "MAP_ROUTE_43"
+      }
+    ],
+    "route-44": [
+      {
+        "item": "Max Repel",
+        "slug": "max_repel",
+        "map_name": "MAP_ROUTE_44"
+      },
+      {
+        "item": "Max Revive",
+        "slug": "max_revive",
+        "map_name": "MAP_ROUTE_44"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_ROUTE_44"
+      }
+    ],
+    "route-45": [
+      {
+        "item": "Elixir",
+        "slug": "elixir",
+        "map_name": "MAP_ROUTE_45"
+      },
+      {
+        "item": "Max Potion",
+        "slug": "max_potion",
+        "map_name": "MAP_ROUTE_45"
+      },
+      {
+        "item": "Full Heal",
+        "slug": "full_heal",
+        "map_name": "MAP_ROUTE_45"
+      },
+      {
+        "item": "Nugget",
+        "slug": "nugget",
+        "map_name": "MAP_ROUTE_45"
+      },
+      {
+        "item": "Revive",
+        "slug": "revive",
+        "map_name": "MAP_ROUTE_45"
+      }
+    ],
+    "route-46": [
+      {
+        "item": "X Speed",
+        "slug": "x_speed",
+        "map_name": "MAP_ROUTE_46"
+      }
+    ],
+    "pewter-city": [
+      {
+        "item": "Wise Glasses",
+        "slug": "wise_glasses",
+        "map_name": "MAP_PEWTER"
+      }
+    ],
+    "vermilion-city": [
+      {
+        "item": "Luck Incense",
+        "slug": "luck_incense",
+        "map_name": "MAP_VERMILION"
+      },
+      {
+        "item": "Sticky Barb",
+        "slug": "sticky_barb",
+        "map_name": "MAP_VERMILION"
+      }
+    ],
+    "celadon-city": [
+      {
+        "item": "TM67",
+        "slug": "tm67",
+        "map_name": "MAP_CELADON"
+      }
+    ],
+    "cinnabar-island": [
+      {
+        "item": "Magmarizer",
+        "slug": "magmarizer",
+        "map_name": "MAP_CINNABAR_ISLAND"
+      }
+    ],
+    "violet-city": [
+      {
+        "item": "Rare Candy",
+        "slug": "rare_candy",
+        "map_name": "MAP_VIOLET"
+      },
+      {
+        "item": "PP Up",
+        "slug": "pp_up",
+        "map_name": "MAP_VIOLET"
+      }
+    ],
+    "olivine-city": [
+      {
+        "item": "TM57",
+        "slug": "tm57",
+        "map_name": "MAP_OLIVINE"
+      },
+      {
+        "item": "Rare Candy",
+        "slug": "rare_candy",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR"
+      },
+      {
+        "item": "Ether",
+        "slug": "ether",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_3F"
+      },
+      {
+        "item": "TM87",
+        "slug": "tm87",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_4F"
+      },
+      {
+        "item": "Super Repel",
+        "slug": "super_repel",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_5F"
+      },
+      {
+        "item": "Super Potion",
+        "slug": "super_potion",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM"
+      }
+    ],
+    "lake-of-rage": [
+      {
+        "item": "TM43",
+        "slug": "tm43",
+        "map_name": "MAP_LAKE_OF_RAGE"
+      },
+      {
+        "item": "Red Flute",
+        "slug": "red_flute",
+        "map_name": "MAP_LAKE_OF_RAGE"
+      },
+      {
+        "item": "Choice Specs",
+        "slug": "choice_specs",
+        "map_name": "MAP_LAKE_OF_RAGE"
+      }
+    ],
+    "route-19-20-seafoam": [
+      {
+        "item": "TM55",
+        "slug": "tm55",
+        "map_name": "MAP_ROUTE_19"
+      },
+      {
+        "item": "Grip Claw",
+        "slug": "grip_claw",
+        "map_name": "MAP_SEAFOAM_ISLANDS_B1F"
+      },
+      {
+        "item": "Ice Heal",
+        "slug": "ice_heal",
+        "map_name": "MAP_SEAFOAM_ISLANDS_B1F"
+      },
+      {
+        "item": "Water Stone",
+        "slug": "water_stone",
+        "map_name": "MAP_SEAFOAM_ISLANDS_B2F"
+      },
+      {
+        "item": "Revive",
+        "slug": "revive",
+        "map_name": "MAP_SEAFOAM_ISLANDS_B3F"
+      },
+      {
+        "item": "Big Pearl",
+        "slug": "big_pearl",
+        "map_name": "MAP_SEAFOAM_ISLANDS_B3F"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_SEAFOAM_ISLANDS_B4F"
+      },
+      {
+        "item": "TM13",
+        "slug": "tm13",
+        "map_name": "MAP_SEAFOAM_ISLANDS_B4F"
+      }
+    ],
+    "route-40": [
+      {
+        "item": "TM88",
+        "slug": "tm88",
+        "map_name": "MAP_ROUTE_40"
+      }
+    ],
+    "national-park": [
+      {
+        "item": "TM28",
+        "slug": "tm28",
+        "map_name": "MAP_NATIONAL_PARK"
+      },
+      {
+        "item": "Soothe Bell",
+        "slug": "soothe_bell",
+        "map_name": "MAP_NATIONAL_PARK"
+      },
+      {
+        "item": "Shiny Stone",
+        "slug": "shiny_stone",
+        "map_name": "MAP_NATIONAL_PARK"
+      },
+      {
+        "item": "TM28",
+        "slug": "tm28",
+        "map_name": "MAP_NATIONAL_PARK_BUG_CATCHING_CONTEST"
+      },
+      {
+        "item": "Soothe Bell",
+        "slug": "soothe_bell",
+        "map_name": "MAP_NATIONAL_PARK_BUG_CATCHING_CONTEST"
+      },
+      {
+        "item": "Shiny Stone",
+        "slug": "shiny_stone",
+        "map_name": "MAP_NATIONAL_PARK_BUG_CATCHING_CONTEST"
+      }
+    ],
+    "union-cave": [
+      {
+        "item": "X Attack",
+        "slug": "x_attack",
+        "map_name": "MAP_UNION_CAVE_1F"
+      },
+      {
+        "item": "Great Ball",
+        "slug": "great_ball",
+        "map_name": "MAP_UNION_CAVE_1F"
+      },
+      {
+        "item": "Potion",
+        "slug": "potion",
+        "map_name": "MAP_UNION_CAVE_1F"
+      },
+      {
+        "item": "Awakening",
+        "slug": "awakening",
+        "map_name": "MAP_UNION_CAVE_1F"
+      },
+      {
+        "item": "TM39",
+        "slug": "tm39",
+        "map_name": "MAP_UNION_CAVE_B1F"
+      },
+      {
+        "item": "X Defense",
+        "slug": "x_defense",
+        "map_name": "MAP_UNION_CAVE_B1F"
+      },
+      {
+        "item": "Elixir",
+        "slug": "elixir",
+        "map_name": "MAP_UNION_CAVE_B2F"
+      },
+      {
+        "item": "Hyper Potion",
+        "slug": "hyper_potion",
+        "map_name": "MAP_UNION_CAVE_B2F"
+      }
+    ],
+    "sprout-tower": [
+      {
+        "item": "Parlyz Heal",
+        "slug": "parlyz_heal",
+        "map_name": "MAP_SPROUT_TOWER_1F"
+      },
+      {
+        "item": "X Accuracy",
+        "slug": "x_accuracy",
+        "map_name": "MAP_SPROUT_TOWER_2F"
+      },
+      {
+        "item": "Potion",
+        "slug": "potion",
+        "map_name": "MAP_SPROUT_TOWER_3F"
+      },
+      {
+        "item": "Escape Rope",
+        "slug": "escape_rope",
+        "map_name": "MAP_SPROUT_TOWER_3F"
+      }
+    ],
+    "ruins-of-alph": [
+      {
+        "item": "Potion",
+        "slug": "potion",
+        "map_name": "MAP_RUINS_OF_ALPH"
+      },
+      {
+        "item": "Hyper Potion",
+        "slug": "hyper_potion",
+        "map_name": "MAP_RUINS_OF_ALPH"
+      },
+      {
+        "item": "Heal Powder",
+        "slug": "heal_powder",
+        "map_name": "MAP_RUINS_OF_ALPH_NORTHEAST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Energypowder",
+        "slug": "energypowder",
+        "map_name": "MAP_RUINS_OF_ALPH_NORTHEAST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Oran Berry",
+        "slug": "oran_berry",
+        "map_name": "MAP_RUINS_OF_ALPH_NORTHEAST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Pecha Berry",
+        "slug": "pecha_berry",
+        "map_name": "MAP_RUINS_OF_ALPH_NORTHEAST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Heal Powder",
+        "slug": "heal_powder",
+        "map_name": "MAP_RUINS_OF_ALPH_SOUTHEAST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Energy Root",
+        "slug": "energy_root",
+        "map_name": "MAP_RUINS_OF_ALPH_SOUTHEAST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Sitrus Berry",
+        "slug": "sitrus_berry",
+        "map_name": "MAP_RUINS_OF_ALPH_SOUTHEAST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Moon Stone",
+        "slug": "moon_stone",
+        "map_name": "MAP_RUINS_OF_ALPH_SOUTHEAST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Revival Herb",
+        "slug": "revival_herb",
+        "map_name": "MAP_RUINS_OF_ALPH_NORTHWEST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Charcoal",
+        "slug": "charcoal",
+        "map_name": "MAP_RUINS_OF_ALPH_NORTHWEST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Life Orb",
+        "slug": "life_orb",
+        "map_name": "MAP_RUINS_OF_ALPH_NORTHWEST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Leppa Berry",
+        "slug": "leppa_berry",
+        "map_name": "MAP_RUINS_OF_ALPH_NORTHWEST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Stardust",
+        "slug": "stardust",
+        "map_name": "MAP_RUINS_OF_ALPH_SOUTHWEST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Star Piece",
+        "slug": "star_piece",
+        "map_name": "MAP_RUINS_OF_ALPH_SOUTHWEST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Leppa Berry",
+        "slug": "leppa_berry",
+        "map_name": "MAP_RUINS_OF_ALPH_SOUTHWEST_ENTRANCE_SECOND_ROOM"
+      },
+      {
+        "item": "Mystic Water",
+        "slug": "mystic_water",
+        "map_name": "MAP_RUINS_OF_ALPH_SOUTHWEST_ENTRANCE_SECOND_ROOM"
+      }
+    ],
+    "ilex-forest": [
+      {
+        "item": "Revive",
+        "slug": "revive",
+        "map_name": "MAP_ILEX_FOREST"
+      },
+      {
+        "item": "X Attack",
+        "slug": "x_attack",
+        "map_name": "MAP_ILEX_FOREST"
+      },
+      {
+        "item": "Antidote",
+        "slug": "antidote",
+        "map_name": "MAP_ILEX_FOREST"
+      },
+      {
+        "item": "Ether",
+        "slug": "ether",
+        "map_name": "MAP_ILEX_FOREST"
+      }
+    ],
+    "mt-mortar": [
+      {
+        "item": "Ether",
+        "slug": "ether",
+        "map_name": "MAP_MOUNT_MORTAR_1F_ENTRANCE"
+      },
+      {
+        "item": "Revive",
+        "slug": "revive",
+        "map_name": "MAP_MOUNT_MORTAR_1F_ENTRANCE"
+      },
+      {
+        "item": "Escape Rope",
+        "slug": "escape_rope",
+        "map_name": "MAP_MOUNT_MORTAR_1F_BACK"
+      },
+      {
+        "item": "Nugget",
+        "slug": "nugget",
+        "map_name": "MAP_MOUNT_MORTAR_1F_BACK"
+      },
+      {
+        "item": "Iron Ball",
+        "slug": "iron_ball",
+        "map_name": "MAP_MOUNT_MORTAR_1F_BACK"
+      },
+      {
+        "item": "Max Potion",
+        "slug": "max_potion",
+        "map_name": "MAP_MOUNT_MORTAR_1F_BACK"
+      },
+      {
+        "item": "Iron",
+        "slug": "iron",
+        "map_name": "MAP_MOUNT_MORTAR_1F_BACK"
+      },
+      {
+        "item": "Max Revive",
+        "slug": "max_revive",
+        "map_name": "MAP_MOUNT_MORTAR_1F_BACK"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_MOUNT_MORTAR_1F_BACK"
+      },
+      {
+        "item": "Full Incense",
+        "slug": "full_incense",
+        "map_name": "MAP_MOUNT_MORTAR_1F_BACK"
+      },
+      {
+        "item": "Protector",
+        "slug": "protector",
+        "map_name": "MAP_MOUNT_MORTAR_1F_BACK"
+      },
+      {
+        "item": "Rare Candy",
+        "slug": "rare_candy",
+        "map_name": "MAP_MOUNT_MORTAR_2F"
+      },
+      {
+        "item": "Max Potion",
+        "slug": "max_potion",
+        "map_name": "MAP_MOUNT_MORTAR_2F"
+      },
+      {
+        "item": "TM40",
+        "slug": "tm40",
+        "map_name": "MAP_MOUNT_MORTAR_2F"
+      },
+      {
+        "item": "Elixir",
+        "slug": "elixir",
+        "map_name": "MAP_MOUNT_MORTAR_2F"
+      },
+      {
+        "item": "Dragon Scale",
+        "slug": "dragon_scale",
+        "map_name": "MAP_MOUNT_MORTAR_2F"
+      },
+      {
+        "item": "Escape Rope",
+        "slug": "escape_rope",
+        "map_name": "MAP_MOUNT_MORTAR_2F"
+      },
+      {
+        "item": "Carbos",
+        "slug": "carbos",
+        "map_name": "MAP_MOUNT_MORTAR_B1F"
+      },
+      {
+        "item": "PP Up",
+        "slug": "pp_up",
+        "map_name": "MAP_MOUNT_MORTAR_B1F"
+      },
+      {
+        "item": "Full Restore",
+        "slug": "full_restore",
+        "map_name": "MAP_MOUNT_MORTAR_B1F"
+      },
+      {
+        "item": "Max Ether",
+        "slug": "max_ether",
+        "map_name": "MAP_MOUNT_MORTAR_B1F"
+      },
+      {
+        "item": "Hyper Potion",
+        "slug": "hyper_potion",
+        "map_name": "MAP_MOUNT_MORTAR_B1F"
+      }
+    ],
+    "ice-path": [
+      {
+        "item": "HM07",
+        "slug": "hm07",
+        "map_name": "MAP_ICE_PATH_1F"
+      },
+      {
+        "item": "Protein",
+        "slug": "protein",
+        "map_name": "MAP_ICE_PATH_1F"
+      },
+      {
+        "item": "PP Up",
+        "slug": "pp_up",
+        "map_name": "MAP_ICE_PATH_1F"
+      },
+      {
+        "item": "Iron",
+        "slug": "iron",
+        "map_name": "MAP_ICE_PATH_B1F"
+      },
+      {
+        "item": "TM72",
+        "slug": "tm72",
+        "map_name": "MAP_ICE_PATH_B2F"
+      },
+      {
+        "item": "Full Heal",
+        "slug": "full_heal",
+        "map_name": "MAP_ICE_PATH_B2F"
+      },
+      {
+        "item": "Max Potion",
+        "slug": "max_potion",
+        "map_name": "MAP_ICE_PATH_B2F"
+      },
+      {
+        "item": "Nevermeltice",
+        "slug": "nevermeltice",
+        "map_name": "MAP_ICE_PATH_B3F"
+      }
+    ],
+    "whirl-islands": [
+      {
+        "item": "Ultra Ball 2",
+        "slug": "ultra_ball_2",
+        "map_name": "MAP_WHIRL_ISLANDS_1F"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_WHIRL_ISLANDS_1F"
+      },
+      {
+        "item": "Escape Rope",
+        "slug": "escape_rope",
+        "map_name": "MAP_WHIRL_ISLANDS_B1F"
+      },
+      {
+        "item": "Carbos",
+        "slug": "carbos",
+        "map_name": "MAP_WHIRL_ISLANDS_B1F"
+      },
+      {
+        "item": "Full Restore",
+        "slug": "full_restore",
+        "map_name": "MAP_WHIRL_ISLANDS_B1F"
+      },
+      {
+        "item": "Nugget",
+        "slug": "nugget",
+        "map_name": "MAP_WHIRL_ISLANDS_B1F"
+      },
+      {
+        "item": "Calcium",
+        "slug": "calcium",
+        "map_name": "MAP_WHIRL_ISLANDS_B1F"
+      },
+      {
+        "item": "Max Revive",
+        "slug": "max_revive",
+        "map_name": "MAP_WHIRL_ISLANDS_B2F"
+      },
+      {
+        "item": "Full Restore",
+        "slug": "full_restore",
+        "map_name": "MAP_WHIRL_ISLANDS_B2F"
+      },
+      {
+        "item": "Max Elixir",
+        "slug": "max_elixir",
+        "map_name": "MAP_WHIRL_ISLANDS_B2F"
+      },
+      {
+        "item": "Rare Candy",
+        "slug": "rare_candy",
+        "map_name": "MAP_WHIRL_ISLANDS_B3F"
+      }
+    ],
+    "mt-silver-base": [
+      {
+        "item": "Full Restore",
+        "slug": "full_restore",
+        "map_name": "MAP_MOUNT_SILVER_CAVE_1F"
+      },
+      {
+        "item": "Expert Belt",
+        "slug": "expert_belt",
+        "map_name": "MAP_MOUNT_SILVER_CAVE_EXPERT_BELT_CHAMBER"
+      },
+      {
+        "item": "Max Elixir",
+        "slug": "max_elixir",
+        "map_name": "MAP_MOUNT_SILVER_CAVE_2F"
+      },
+      {
+        "item": "Calcium",
+        "slug": "calcium",
+        "map_name": "MAP_MOUNT_SILVER_CAVE_2F"
+      },
+      {
+        "item": "Protein",
+        "slug": "protein",
+        "map_name": "MAP_MOUNT_SILVER_CAVE_2F"
+      },
+      {
+        "item": "Max Revive",
+        "slug": "max_revive",
+        "map_name": "MAP_MOUNT_SILVER_CAVE_2F"
+      }
+    ],
+    "dark-cave": [
+      {
+        "item": "TM54",
+        "slug": "tm54",
+        "map_name": "MAP_DARK_CAVE_ROUTE_45_SIDE"
+      },
+      {
+        "item": "Revive",
+        "slug": "revive",
+        "map_name": "MAP_DARK_CAVE_ROUTE_45_SIDE"
+      },
+      {
+        "item": "Potion",
+        "slug": "potion",
+        "map_name": "MAP_DARK_CAVE_ROUTE_31_SIDE"
+      },
+      {
+        "item": "Hyper Potion",
+        "slug": "hyper_potion",
+        "map_name": "MAP_DARK_CAVE_ROUTE_31_SIDE"
+      },
+      {
+        "item": "Full Heal",
+        "slug": "full_heal",
+        "map_name": "MAP_DARK_CAVE_ROUTE_31_SIDE"
+      },
+      {
+        "item": "Dire Hit",
+        "slug": "dire_hit",
+        "map_name": "MAP_DARK_CAVE_ROUTE_31_SIDE"
+      },
+      {
+        "item": "Black Flute",
+        "slug": "black_flute",
+        "map_name": "MAP_DARK_CAVE_ROUTE_31_SIDE"
+      }
+    ],
+    "indigo-plateau-antichambre": [
+      {
+        "item": "Max Revive",
+        "slug": "max_revive",
+        "map_name": "MAP_VICTORY_ROAD_1F"
+      },
+      {
+        "item": "Full Heal",
+        "slug": "full_heal",
+        "map_name": "MAP_VICTORY_ROAD_1F"
+      },
+      {
+        "item": "Potion",
+        "slug": "potion",
+        "map_name": "MAP_VICTORY_ROAD_1F"
+      },
+      {
+        "item": "TM26",
+        "slug": "tm26",
+        "map_name": "MAP_VICTORY_ROAD_2F"
+      },
+      {
+        "item": "HP Up",
+        "slug": "hp_up",
+        "map_name": "MAP_VICTORY_ROAD_2F"
+      },
+      {
+        "item": "Full Restore",
+        "slug": "full_restore",
+        "map_name": "MAP_VICTORY_ROAD_2F"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_VICTORY_ROAD_3F"
+      },
+      {
+        "item": "TM79",
+        "slug": "tm79",
+        "map_name": "MAP_VICTORY_ROAD_3F"
+      },
+      {
+        "item": "Rare Candy",
+        "slug": "rare_candy",
+        "map_name": "MAP_VICTORY_ROAD_3F"
+      }
+    ],
+    "cerulean-cave": [
+      {
+        "item": "Max Elixir",
+        "slug": "max_elixir",
+        "map_name": "MAP_CERULEAN_CAVE_1F"
+      },
+      {
+        "item": "Nugget",
+        "slug": "nugget",
+        "map_name": "MAP_CERULEAN_CAVE_1F"
+      },
+      {
+        "item": "Full Restore",
+        "slug": "full_restore",
+        "map_name": "MAP_CERULEAN_CAVE_1F"
+      },
+      {
+        "item": "Sea Incense",
+        "slug": "sea_incense",
+        "map_name": "MAP_CERULEAN_CAVE_1F"
+      },
+      {
+        "item": "PP Up",
+        "slug": "pp_up",
+        "map_name": "MAP_CERULEAN_CAVE_2F"
+      },
+      {
+        "item": "TM24",
+        "slug": "tm24",
+        "map_name": "MAP_CERULEAN_CAVE_2F"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_CERULEAN_CAVE_2F"
+      },
+      {
+        "item": "Odd Incense",
+        "slug": "odd_incense",
+        "map_name": "MAP_CERULEAN_CAVE_2F"
+      },
+      {
+        "item": "Max Revive",
+        "slug": "max_revive",
+        "map_name": "MAP_CERULEAN_CAVE_B1F"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_CERULEAN_CAVE_B1F"
+      },
+      {
+        "item": "Dusk Stone",
+        "slug": "dusk_stone",
+        "map_name": "MAP_CERULEAN_CAVE_B1F"
+      },
+      {
+        "item": "Electirizer",
+        "slug": "electirizer",
+        "map_name": "MAP_CERULEAN_CAVE_B1F"
+      },
+      {
+        "item": "Black Sludge",
+        "slug": "black_sludge",
+        "map_name": "MAP_CERULEAN_CAVE_B1F"
+      }
+    ],
+    "route-47-48-cliff-cave": [
+      {
+        "item": "Revive",
+        "slug": "revive",
+        "map_name": "MAP_ROUTE_47"
+      },
+      {
+        "item": "Lagging Tail",
+        "slug": "lagging_tail",
+        "map_name": "MAP_ROUTE_47"
+      },
+      {
+        "item": "Wave Incense",
+        "slug": "wave_incense",
+        "map_name": "MAP_ROUTE_47"
+      },
+      {
+        "item": "White Flute",
+        "slug": "white_flute",
+        "map_name": "MAP_ROUTE_47"
+      },
+      {
+        "item": "Nugget",
+        "slug": "nugget",
+        "map_name": "MAP_ROUTE_48"
+      }
+    ],
+    "slowpoke-well": [
+      {
+        "item": "Super Potion",
+        "slug": "super_potion",
+        "map_name": "MAP_SLOWPOKE_WELL_B1F"
+      },
+      {
+        "item": "TM18",
+        "slug": "tm18",
+        "map_name": "MAP_SLOWPOKE_WELL_B2F"
+      }
+    ],
+    "goldenrod-city": [
+      {
+        "item": "TM78",
+        "slug": "tm78",
+        "map_name": "MAP_GOLDENROD_GAME_CORNER_JP"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_4F"
+      },
+      {
+        "item": "Amulet Coin",
+        "slug": "amulet_coin",
+        "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_BASEMENT"
+      },
+      {
+        "item": "Burn Heal",
+        "slug": "burn_heal",
+        "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_BASEMENT"
+      },
+      {
+        "item": "Ether",
+        "slug": "ether",
+        "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_BASEMENT"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_BASEMENT"
+      },
+      {
+        "item": "Full Heal",
+        "slug": "full_heal",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B2F"
+      },
+      {
+        "item": "Smoke Ball",
+        "slug": "smoke_ball",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B2F"
+      },
+      {
+        "item": "TM82",
+        "slug": "tm82",
+        "map_name": "MAP_GOLDENROD_TUNNEL_WAREHOUSE"
+      },
+      {
+        "item": "Max Ether",
+        "slug": "max_ether",
+        "map_name": "MAP_GOLDENROD_TUNNEL_WAREHOUSE"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_GOLDENROD_TUNNEL_WAREHOUSE"
+      }
+    ],
+    "mahogany-town": [
+      {
+        "item": "Hyper Potion",
+        "slug": "hyper_potion",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B1F"
+      },
+      {
+        "item": "Guard Spec ",
+        "slug": "guard_spec_",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B1F"
+      },
+      {
+        "item": "Nugget",
+        "slug": "nugget",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B1F"
+      },
+      {
+        "item": "TM46",
+        "slug": "tm46",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B2F"
+      },
+      {
+        "item": "Protein",
+        "slug": "protein",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B3F"
+      },
+      {
+        "item": "X Special",
+        "slug": "x_special",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B3F"
+      },
+      {
+        "item": "TM49",
+        "slug": "tm49",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B3F"
+      },
+      {
+        "item": "Full Heal",
+        "slug": "full_heal",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B3F"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B3F"
+      }
+    ],
+    "dragons-den": [
+      {
+        "item": "Dragon Fang",
+        "slug": "dragon_fang",
+        "map_name": "MAP_DRAGONS_DEN"
+      },
+      {
+        "item": "Calcium",
+        "slug": "calcium",
+        "map_name": "MAP_DRAGONS_DEN"
+      },
+      {
+        "item": "Max Elixir",
+        "slug": "max_elixir",
+        "map_name": "MAP_DRAGONS_DEN"
+      }
+    ],
+    "ecruteak-city": [
+      {
+        "item": "Full Heal",
+        "slug": "full_heal",
+        "map_name": "MAP_BELL_TOWER_3F"
+      },
+      {
+        "item": "Escape Rope",
+        "slug": "escape_rope",
+        "map_name": "MAP_BELL_TOWER_4F"
+      },
+      {
+        "item": "Ultra Ball",
+        "slug": "ultra_ball",
+        "map_name": "MAP_BELL_TOWER_4F"
+      },
+      {
+        "item": "PP Up",
+        "slug": "pp_up",
+        "map_name": "MAP_BELL_TOWER_4F"
+      },
+      {
+        "item": "Rare Candy",
+        "slug": "rare_candy",
+        "map_name": "MAP_BELL_TOWER_5F"
+      },
+      {
+        "item": "Max Potion",
+        "slug": "max_potion",
+        "map_name": "MAP_BELL_TOWER_6F"
+      },
+      {
+        "item": "Full Heal",
+        "slug": "full_heal",
+        "map_name": "MAP_BELL_TOWER_6F"
+      },
+      {
+        "item": "Max Revive",
+        "slug": "max_revive",
+        "map_name": "MAP_BELL_TOWER_7F"
+      },
+      {
+        "item": "Full Restore",
+        "slug": "full_restore",
+        "map_name": "MAP_BELL_TOWER_8F"
+      },
+      {
+        "item": "Max Elixir",
+        "slug": "max_elixir",
+        "map_name": "MAP_BELL_TOWER_8F"
+      },
+      {
+        "item": "Nugget",
+        "slug": "nugget",
+        "map_name": "MAP_BELL_TOWER_8F"
+      },
+      {
+        "item": "HP Up",
+        "slug": "hp_up",
+        "map_name": "MAP_BELL_TOWER_9F"
+      }
+    ],
+    "mt-silver-upper": [
+      {
+        "item": "Pure Incense",
+        "slug": "pure_incense",
+        "map_name": "MAP_MOUNT_SILVER_CAVE_UPPER_MOUNTAINSIDE"
+      },
+      {
+        "item": "Dawn Stone",
+        "slug": "dawn_stone",
+        "map_name": "MAP_MOUNT_SILVER_CAVE_UPPER_MOUNTAINSIDE"
+      }
+    ],
+    "mt-silver-lower": [
+      {
+        "item": "Escape Rope",
+        "slug": "escape_rope",
+        "map_name": "MAP_MOUNT_SILVER_CAVE_LOWER_MOUNTAINSIDE"
+      },
+      {
+        "item": "TM76",
+        "slug": "tm76",
+        "map_name": "MAP_MOUNT_SILVER_CAVE_LOWER_MOUNTAINSIDE"
+      }
+    ]
+  }
+}

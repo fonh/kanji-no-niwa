@@ -158,6 +158,35 @@ DIRECT_MAP_TO_ZONE = {
     "MAP_ROCK_TUNNEL_1F": "route-9-10-rocktunnel",
     "MAP_ROCK_TUNNEL_B1F": "route-9-10-rocktunnel",
     "MAP_DIGLETT_CAVE": "route-11-12-13-diglett",
+    # Découvertes via l'extraction objets (2026-07-09), même type de trou
+    # (bâtiment à étages sans le nom de sa ville / seconde moitié de route
+    # fusionnée sans préfixe commun).
+    "MAP_BELL_TOWER_3F": "ecruteak-city",
+    "MAP_BELL_TOWER_4F": "ecruteak-city",
+    "MAP_BELL_TOWER_5F": "ecruteak-city",
+    "MAP_BELL_TOWER_6F": "ecruteak-city",
+    "MAP_BELL_TOWER_7F": "ecruteak-city",
+    "MAP_BELL_TOWER_8F": "ecruteak-city",
+    "MAP_BELL_TOWER_9F": "ecruteak-city",
+    "MAP_GOLDENROD_DEPARTMENT_STORE_BASEMENT": "goldenrod-city",
+    "MAP_GOLDENROD_GAME_CORNER_JP": "goldenrod-city",
+    "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR": "olivine-city",
+    "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM": "olivine-city",
+    "MAP_ROUTE_28": "mt-silver-route-28",
+    "MAP_ROUTE_48": "route-47-48-cliff-cave",
+    "MAP_SEAFOAM_ISLANDS_B1F": "route-19-20-seafoam",
+    "MAP_SEAFOAM_ISLANDS_B3F": "route-19-20-seafoam",
+    "MAP_SEAFOAM_ISLANDS_B4F": "route-19-20-seafoam",
+    "MAP_TOHJO_FALLS": "route-26",
+    # Découvertes via l'extraction du registre téléphonique (2026-07-09) :
+    # maisons/bâtiments nommés par PNJ plutôt que par ville.
+    "MAP_NEW_BARK_ELMS_LAB_1F": "new-bark-town",
+    "MAP_NEW_BARK_PLAYER_HOUSE_1F": "new-bark-town",
+    "MAP_NEW_BARK_RIVAL_HOUSE_2F": "new-bark-town",
+    "MAP_AZALEA_KURT_HOUSE": "azalea-town",
+    "MAP_GOLDENROD_BIKE_SHOP": "goldenrod-city",
+    "MAP_GOLDENROD_BILLS_HOUSE": "goldenrod-city",
+    "MAP_SAFFRON_FIGHTING_DOJO": "saffron-city",
 }
 
 # Thèmes universels non spécifiques à une zone (partagés par toutes les
