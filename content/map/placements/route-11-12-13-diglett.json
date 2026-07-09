@@ -14,8 +14,8 @@
       "matched_sprite_id": null
     },
     {
-      "name": "Pêcheurs génériques (Route 12, marchent en silence pour ne pas effrayer les Pokémon)",
-      "role_origin": "Dresseurs (ambiance)",
+      "name": "Fisherman Kyle, Kyler (Route 12, marchent en silence pour ne pas effrayer les Pokémon)",
+      "role_origin": "Dresseurs — noms ajoutés par recoupement registre téléphonique (source Serebii, 2026-07-09), non nommés dans le guidebook original",
       "item": "—",
       "map_zone": "MAP_ROUTE_11",
       "tile_x": 39,
@@ -26,8 +26,8 @@
       "matched_sprite_id": null
     },
     {
-      "name": "Camper Clark, Hiker Kenny, Picnicker Ginger, Pokéfan Alex, Camper Tanner (Route 13, 11 au total confirmés)",
-      "role_origin": "Dresseurs",
+      "name": "Camper Clark, Hiker Kenny, Picnicker Ginger, Pokéfan Alex, Camper Tanner, Tim & Sue (Route 13, 11 au total confirmés)",
+      "role_origin": "Dresseurs — Tim & Sue ajoutés par recoupement registre téléphonique (source Serebii, 2026-07-09), classe non confirmée par cette source, parmi les dresseurs jusque-là non nommés",
       "item": "—",
       "map_zone": "MAP_ROUTE_11",
       "tile_x": 39,

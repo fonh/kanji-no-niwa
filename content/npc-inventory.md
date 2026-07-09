@@ -1180,7 +1180,7 @@ fusionné dans le guide d'origine) ; ne pas dupliquer ici.
 |---|---|---|---|
 | Biker Dale (Route 16) | Dresseur | — | |
 | PNJ récurrent (Route 16) | Enseigne "un mot à la mode" par jour à qui revient le voir | — | |
-| 12 Motards dont Joel, Jacob, Aiden (Route 17) | Dresseurs | — | |
+| 12 Motards dont Joel, Jacob, Aiden, Reese (Route 17) | Dresseurs — Reese ajouté par recoupement registre téléphonique (source Serebii, 2026-07-09), un des 9 motards jusque-là non nommés | — | |
 | 7 Motards nommés + 2 Bird Keeper (Route 18, 9 dresseurs) | Dresseurs | — | |
 
 🔒 Bicyclette obligatoire (16→17), Coupe pour l'ensemble de Route 18.
@@ -1217,8 +1217,8 @@ fusionné dans le guide d'origine) ; ne pas dupliquer ici.
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Twins Kay & Tia, Pokéfan Eleanor, Enseignante Colette/Hillary, 2 Écoliers, Pokéfan Boone (Route 15) | Dresseurs | — | |
-| Bird Keeper Josh/Roy, 5 Écoliers, 2 Pokéfans, Enseignante Clarice (Route 14) | Dresseurs | — | |
+| Twins Kay & Tia, Pokéfan Eleanor, Enseignante Colette/Hillary, 2 Écoliers dont Billy, Pokéfan Boone (Route 15) | Dresseurs — Billy ajouté par recoupement registre téléphonique (source Serebii, 2026-07-09), classe non confirmée par cette source, un des 2 Écoliers jusque-là non nommés | — | |
+| Bird Keeper Josh/Roy, 5 Écoliers dont Torin, 2 Pokéfans, Enseignante Clarice (Route 14) | Dresseurs — Torin ajouté par recoupement registre téléphonique (source Serebii, 2026-07-09), classe non confirmée par cette source, un des 5 Écoliers jusque-là non nommés | — | |
 | Fille dans les hautes herbes (Route 14, ouest) | Demande à voir un compagnon précis | Objet porté rare | |
 
 📍 Première apparition à pied de l'esprit légendaire (Suicune-analogue), Eusine en poursuite, oriente vers Route 25. 🔒 Coupe requis ; rebords à sens unique imposant un ordre de traversée.
@@ -1236,8 +1236,8 @@ fusionné dans le guide d'origine) ; ne pas dupliquer ici.
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Psychic Fidel, Youngster Jason/Owen, Psychic Herman (Route 11) | Dresseurs | — | |
-| Pêcheurs génériques (Route 12, marchent en silence pour ne pas effrayer les Pokémon) | Dresseurs (ambiance) | — | |
-| Camper Clark, Hiker Kenny, Picnicker Ginger, Pokéfan Alex, Camper Tanner (Route 13, 11 au total confirmés) | Dresseurs | — | |
+| Fisherman Kyle, Kyler (Route 12, marchent en silence pour ne pas effrayer les Pokémon) | Dresseurs — noms ajoutés par recoupement registre téléphonique (source Serebii, 2026-07-09), non nommés dans le guidebook original | — | |
+| Camper Clark, Hiker Kenny, Picnicker Ginger, Pokéfan Alex, Camper Tanner, Tim & Sue (Route 13, 11 au total confirmés) | Dresseurs — Tim & Sue ajoutés par recoupement registre téléphonique (source Serebii, 2026-07-09), classe non confirmée par cette source, parmi les dresseurs jusque-là non nommés | — | |
 | PNJ de couleur locale (Grotte Diglett) | Surpris par les créatures qui surgissent du sol | — | |
 | Portier (Grotte Diglett) | Remet un objet de quête confié par le Pr. Chen/Oak | Objet de quête | |
 | Maison voisine (Grotte Diglett) | — | Pépite | |
@@ -1294,6 +1294,7 @@ Aucun dresseur nommé au Mont Lune (contrairement aux Routes 3/4 alentour) — l
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Bug Catcher Ed, Abner, Ellis, Dane, Stacey, Dion | 6 Insectophiles (thème de classe homogène) | — | |
+| Rob, Doug (Route 2, hors forêt) | Dresseurs — noms ajoutés par recoupement registre téléphonique (source Serebii, 2026-07-09), classe non confirmée par cette source, non nommés dans le guidebook original | — | |
 
 🔒 切/Coupe pour l'arbre côté Argenta *(« 飛 » corrigé 2026-07-07, passe de vérification globale V-13 — coquille : l'arbre se coupe, 切, il ne se survole pas)* ; scavenger-hunt de zone encouragé par le texte source.
 

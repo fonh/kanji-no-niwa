@@ -75,9 +75,18 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    vide au lieu d'être ignorées silencieusement. Effet de bord utile : les **sections
    npc-inventory des 11 zones réintégrées** du point 4 ci-dessous sont aussi faites (mêmes
    sources), 83/83 zones dans `npc-inventory.md`.
-4. **Dénombrements guidebook** (décisions prises, comptes à faire) : les donneurs de numéro
-   de téléphone (registre fermé), les dresseurs génériques par route (fidélité stricte).
+4. **Dénombrements guidebook** (décisions prises, comptes à faire).
    ~~Sections npc-inventory des 11 zones réintégrées~~ — faites au point 3 ci-dessus.
+   **✅ FAIT 2026-07-09 — les donneurs de numéro de téléphone (registre fermé)** :
+   `scripts/build/build-phone-registry.py` → `content/phone-registry.json`, 74 contacts
+   (dépouillement Serebii, vérifié par un second fetch indépendant), croisés avec
+   `npc-inventory.md` — 59/74 retrouvés directement, 6 absences structurelles attendues (gym
+   leaders jamais en ligne de PNJ propre ; Day Care coupé du projet), **8 vrais dresseurs
+   génériques manquants trouvés et ajoutés à npc-inventory.md** (Route 2 : Rob/Doug ; Route 12 :
+   Kyle/Kyler ; Route 13 : Tim & Sue ; Route 14 : Torin ; Route 15 : Billy ; Route 17 : Reese).
+   Rapport : `.scratch/audits/phone-registry-report.md`. **Reste : les dresseurs génériques par
+   route (fidélité stricte)** — dénombrement systématique zone par zone contre le guidebook,
+   au-delà des 8 déjà comblés via ce recoupement ponctuel.
 5. **La colonne « Type assigné » de npc-inventory** : distribuer leçon / texte / combat sur
    les PNJ sourcés, zone par zone — dépend du point 1 (l'assignation kanji doit exister pour
    savoir ce qu'un PNJ-leçon enseigne). C'est la dernière décision « lourde » (elle fixe qui

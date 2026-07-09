@@ -12,6 +12,18 @@
       "source": "generated",
       "matched_object_id": null,
       "matched_sprite_id": null
+    },
+    {
+      "name": "Rob, Doug (Route 2, hors forêt)",
+      "role_origin": "Dresseurs — noms ajoutés par recoupement registre téléphonique (source Serebii, 2026-07-09), classe non confirmée par cette source, non nommés dans le guidebook original",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_2",
+      "tile_x": 12,
+      "tile_y": 5,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
     }
   ]
 }
