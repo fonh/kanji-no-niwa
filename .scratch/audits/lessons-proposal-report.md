@@ -1,0 +1,121 @@
+# Rapport — proposition de leçons (étape 2 point 5)
+
+`344` leçons proposées, `1950` kanji couverts, méthode : ordre JLPT pur (pas de radical), taille cible souple (6 kanji, pas une règle dure), pool de PNJ-leçon = tout PNJ non-combat hors personnages récurrents à rôle fixé (STORY_DENYLIST), report du pool des zones à 0 PNJ éligible sur la zone suivante mieux pourvue (PRD § Volume estimé : « croissance kanji absorbée par les zones voisines mieux fournies »). Voir `content/lessons-proposal.json`.
+
+## Reports appliqués (zone à 0 PNJ éligible → absorbée par la suivante)
+
+- azalea-town: absorbe le pool de route-33 (15 kanji reportés)
+- ilex-forest: absorbe le pool de slowpoke-well (10 kanji reportés)
+- goldenrod-city: absorbe le pool de route-34 (15 kanji reportés)
+- national-park: absorbe le pool de route-35 (20 kanji reportés)
+- route-39: absorbe le pool de burned-tower, route-38 (35 kanji reportés)
+- cianwood-city: absorbe le pool de route-41, whirl-islands (20 kanji reportés)
+- mahogany-town: absorbe le pool de mt-mortar (10 kanji reportés)
+- blackthorn-city: absorbe le pool de route-44, ice-path (40 kanji reportés)
+- dark-cave: absorbe le pool de route-45 (20 kanji reportés)
+- vermilion-city: absorbe le pool de indigo-plateau-will, indigo-plateau-koga, indigo-plateau-bruno, indigo-plateau-karen, indigo-plateau-lance (30 kanji reportés)
+- celadon-city: absorbe le pool de route-24-25-kanto, route-7-kanto (30 kanji reportés)
+- route-19-20-seafoam: absorbe le pool de route-21-kanto, cinnabar-island (50 kanji reportés)
+
+## Écarts de capacité restants (zone pauvre en PNJ éligibles vs. pool de kanji, après report)
+
+- new-bark-town: 1 PNJ éligibles pour 5 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- new-bark-town: 31 points de grammaire pour 5 leçons — 26 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-29: 1 PNJ éligibles pour 4 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-29: 21 points de grammaire pour 4 leçons — 17 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- cherrygrove-city: 11 points de grammaire pour 2 leçons — 9 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-30: 1 PNJ éligibles pour 4 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-30: 21 points de grammaire pour 4 leçons — 17 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-31: 1 PNJ éligibles pour 4 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-31: 21 points de grammaire pour 4 leçons — 17 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- violet-city: 31 points de grammaire pour 5 leçons — 26 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- sprout-tower: 8 points de grammaire pour 2 leçons — 6 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-32: 15 points de grammaire pour 4 leçons — 11 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- ruins-of-alph: 2 PNJ éligibles pour 4 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- ruins-of-alph: 16 points de grammaire pour 4 leçons — 12 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-33: 0 PNJ éligible pour 15 kanji — reporté sur la zone suivante
+- azalea-town: 2 PNJ éligibles pour 5 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- azalea-town: 23 points de grammaire pour 5 leçons — 18 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- slowpoke-well: 0 PNJ éligible pour 10 kanji — reporté sur la zone suivante
+- ilex-forest: 2 PNJ éligibles pour 5 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- ilex-forest: 23 points de grammaire pour 5 leçons — 18 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-34: 0 PNJ éligible pour 15 kanji — reporté sur la zone suivante
+- goldenrod-city: 39 points de grammaire pour 9 leçons — 30 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-35: 0 PNJ éligible pour 20 kanji — reporté sur la zone suivante
+- national-park: 4 PNJ éligibles pour 7 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- national-park: 23 points de grammaire pour 7 leçons — 16 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-36: 2 PNJ éligibles pour 5 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-36: 14 points de grammaire pour 5 leçons — 9 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-37: 1 PNJ éligibles pour 3 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-37: 9 points de grammaire pour 3 leçons — 6 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- ecruteak-city: 6 PNJ éligibles pour 7 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- ecruteak-city: 23 points de grammaire pour 7 leçons — 16 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- burned-tower: 0 PNJ éligible pour 20 kanji — reporté sur la zone suivante
+- route-38: 0 PNJ éligible pour 35 kanji — reporté sur la zone suivante
+- route-39: 4 PNJ éligibles pour 9 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-39: 29 points de grammaire pour 9 leçons — 20 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- olivine-city: 2 PNJ éligibles pour 5 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- olivine-city: 17 points de grammaire pour 5 leçons — 12 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-41: 0 PNJ éligible pour 20 kanji — reporté sur la zone suivante
+- whirl-islands: 0 PNJ éligible pour 20 kanji — reporté sur la zone suivante
+- cianwood-city: 3 PNJ éligibles pour 5 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- cianwood-city: 17 points de grammaire pour 5 leçons — 12 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-42: 1 PNJ éligibles pour 3 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-42: 8 points de grammaire pour 3 leçons — 5 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- mt-mortar: 0 PNJ éligible pour 10 kanji — reporté sur la zone suivante
+- mahogany-town: 12 points de grammaire pour 5 leçons — 7 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-43: 3 points de grammaire pour 1 leçons — 2 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- lake-of-rage: 2 points de grammaire pour 1 leçons — 1 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-44: 0 PNJ éligible pour 20 kanji — reporté sur la zone suivante
+- ice-path: 0 PNJ éligible pour 40 kanji — reporté sur la zone suivante
+- blackthorn-city: 7 PNJ éligibles pour 15 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- blackthorn-city: 45 points de grammaire pour 15 leçons — 30 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- dragons-den: 2 PNJ éligibles pour 10 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- dragons-den: 31 points de grammaire pour 10 leçons — 21 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-45: 0 PNJ éligible pour 20 kanji — reporté sur la zone suivante
+- dark-cave: 1 PNJ éligibles pour 7 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- dark-cave: 20 points de grammaire pour 7 leçons — 13 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-26: 2 PNJ éligibles pour 7 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-26: 20 points de grammaire pour 7 leçons — 13 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-27: 1 PNJ éligibles pour 5 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-27: 15 points de grammaire pour 5 leçons — 10 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- indigo-plateau-antichambre: 1 PNJ éligibles pour 7 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- indigo-plateau-antichambre: 20 points de grammaire pour 7 leçons — 13 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- indigo-plateau-will: 0 PNJ éligible pour 30 kanji — reporté sur la zone suivante
+- indigo-plateau-koga: 0 PNJ éligible pour 30 kanji — reporté sur la zone suivante
+- indigo-plateau-bruno: 0 PNJ éligible pour 30 kanji — reporté sur la zone suivante
+- indigo-plateau-karen: 0 PNJ éligible pour 30 kanji — reporté sur la zone suivante
+- indigo-plateau-lance: 0 PNJ éligible pour 30 kanji — reporté sur la zone suivante
+- vermilion-city: 4 PNJ éligibles pour 30 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- vermilion-city: 50 points de grammaire pour 30 leçons — 20 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- saffron-city: 6 PNJ éligibles pour 24 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- saffron-city: 33 points de grammaire pour 24 leçons — 9 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-9-10-rocktunnel: 1 PNJ éligibles pour 4 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-9-10-rocktunnel: 5 points de grammaire pour 4 leçons — 1 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- lavender-town: 1 PNJ éligibles pour 4 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- kanto-power-plant: 3 points de grammaire pour 2 leçons — 1 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- cerulean-city: 2 PNJ éligibles pour 17 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- cerulean-city: 23 points de grammaire pour 17 leçons — 6 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-24-25-kanto: 0 PNJ éligible pour 20 kanji — reporté sur la zone suivante
+- route-7-kanto: 0 PNJ éligible pour 30 kanji — reporté sur la zone suivante
+- celadon-city: 6 PNJ éligibles pour 25 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- celadon-city: 35 points de grammaire pour 25 leçons — 10 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-16-17-18-cycling-road: 1 PNJ éligibles pour 4 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-16-17-18-cycling-road: 5 points de grammaire pour 4 leçons — 1 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- fuchsia-city: 4 PNJ éligibles pour 22 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- fuchsia-city: 30 points de grammaire pour 22 leçons — 8 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-14-15-kanto: 1 PNJ éligibles pour 4 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-14-15-kanto: 5 points de grammaire pour 4 leçons — 1 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- pewter-city: 2 PNJ éligibles pour 20 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- pewter-city: 27 points de grammaire pour 20 leçons — 7 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- mont-lune-route-3-4: 1 PNJ éligibles pour 4 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- mont-lune-route-3-4: 5 points de grammaire pour 4 leçons — 1 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- route-2-foret-viridian: 1 PNJ éligibles pour 3 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- viridian-city: 1 PNJ éligibles pour 2 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-1-kanto: 1 PNJ éligibles pour 2 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-1-kanto: 3 points de grammaire pour 2 leçons — 1 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)
+- pallet-town: 1 PNJ éligibles pour 3 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-21-kanto: 0 PNJ éligible pour 15 kanji — reporté sur la zone suivante
+- cinnabar-island: 0 PNJ éligible pour 50 kanji — reporté sur la zone suivante
+- route-19-20-seafoam: 1 PNJ éligibles pour 14 leçons — certains PNJ donnent plusieurs leçons successives (comme le bootstrap Elm, PRD)
+- route-19-20-seafoam: 19 points de grammaire pour 14 leçons — 5 restent sans leçon porteuse (à couvrir par le contenu combat/contexte)

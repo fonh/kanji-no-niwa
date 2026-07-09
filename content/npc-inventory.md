@@ -101,7 +101,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Guide Gent (vieux monsieur) | Accueille le joueur à l'entrée, fait visiter la ville | Running Shoes, Map Card | |
-| Rival (Silver) | Nargue le joueur puis déclenche le 1er combat de rival (Silver apparition #1) | — | |
+| Rival (Silver) | Nargue le joueur puis déclenche le 1er combat de rival (Silver apparition #1) | — | combat |
 | Vendeuse du Mart | Comptoir du fond | Air Mail, Heal Ball (vente) | |
 | Employé Centre Pokémon | Signature de carte dresseur au 2F | — | |
 
@@ -318,8 +318,8 @@ Union Cave → Force) — verrou d'exploration, pas un PNJ.
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Camper Todd, Gamin Ian, Picnicker Gina, Pokéfan Brandon, Gamin Samuel | Dresseurs de route | — | combat |
-| Policeman Keith | Combat uniquement nocturne (20h–4h), à l'ouest de la pension | — | |
-| Trio Ace Trainer Jenn/Irene/Kate | Combat groupé après une traversée d'eau | Power Herb | |
+| Policeman Keith | Combat uniquement nocturne (20h–4h), à l'ouest de la pension | — | combat |
+| Trio Ace Trainer Jenn/Irene/Kate | Combat groupé après une traversée d'eau | Power Herb | combat |
 | Couple de la pension (grands-parents de Lyra/Ethan) | PNJ ambiant (Day Care supprimée dans 漢字の庭) | — | |
 
 **Side quests dans cette zone** : 0
@@ -349,13 +349,13 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 | Black Belt (sous-sol Dept Store) | Bloque l'accès avec ses conteneurs | — | |
 | Fille du 5F Dept Store (dimanche uniquement) | Affection élevée requise | TM27 Return | |
 | Poké Maniac Donald/Issac, Super Nerd Eric/Teru | Dresseurs du Tunnel de Doublonville | — | combat |
-| Burglar Orson, Duncan | Combats liés à l'arc Team Rocket (Tunnel) | — | |
+| Burglar Orson, Duncan | Combats liés à l'arc Team Rocket (Tunnel) | — | combat |
 | Sbire (déguisement) | Force le joueur à porter un déguisement Team Rocket | — | |
 | "Directeur" = Exécutif Petrel déguisé (5F) | Boss d'étage, sa défaite donne la clé de sous-sol | Basement Key | |
 | Vrai Directeur (otage, Tunnel B2F) | Délivré via la Basement Key | Carte-clé (Card Key) | |
-| Rival (Silver) | Démasque le déguisement, combat (Silver apparition #5, en réalité Tunnel B2F, revisite tardive ~560+ kanji) | — | |
+| Rival (Silver) | Démasque le déguisement, combat (Silver apparition #5, en réalité Tunnel B2F, revisite tardive ~560+ kanji) | — | combat |
 | Kimono Girl Kuni | Tunnel, après la Card Key (revisite tardive) | — | |
-| Executive Proton (3F, re-apparition) | Combat, aux côtés de Petrel re-déguisé | — | |
+| Executive Proton (3F, re-apparition) | Combat, aux côtés de Petrel re-déguisé | — | combat |
 | Executive Ariana, puis Executive Archer (sommet) | Combat final, révèle l'objectif : rappeler Giovanni | Plume Arc-en-ciel | combat |
 | Team Rocket Grunt, Team Rocket F Grunt, Team Rocket Grunt, Team Rocket Grunt (Tour Radio 2F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | combat |
 | Team Rocket Grunt, Team Rocket Grunt, Scientist Gs Garett, Team Rocket Grunt (Tour Radio 3F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | combat |
@@ -444,14 +444,14 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 | Medium Martha, Edith, Grace, Georgina | Gardiennes avant Morty | — | |
 | Bill | Centre Pokémon, repart pour Doublonville | — | |
 | Homme à l'énigme | Bonne réponse → détecteur d'objets ; la pièce contient un livre relatant la légende des 3 esprits | Dowsing MCHN | |
-| Sbire Rocket | Harcèle Kimono Girl Miki au Théâtre, combat de sauvetage | — | |
+| Sbire Rocket | Harcèle Kimono Girl Miki au Théâtre, combat de sauvetage | — | combat |
 | Kimono Girl Miki | 3e Kimono Girl rencontrée (sauvée du Sbire) | — | |
 | Gentleman (public du Théâtre) | Témoin du sauvetage | HM03 Surf | |
 | Hommes du Poste-frontière | Racontent les légendes locales de Ho-Oh, bloquent l'accès à Tour Jo | — | |
 | Homme au nord du Gym | Signale que le gardien-phare d'Oliville est malade | — | |
 | Vendeur du Mart | Comptoir du fond | Air Mail, Heal Ball, Net Ball (vente) | |
 | Rival (Silver) | Devant Tour Jo (Silver apparition #3) | — | |
-| Gauntlet des 5 Kimono Girls (post-remise du grand texte d'Elm — « post-Master Ball » adapté 2026-07-06, audit 04) | Combat récapitulatif au Théâtre, "test du lien avec ton équipe" | Clear Bell / Tidal Bell | |
+| Gauntlet des 5 Kimono Girls (post-remise du grand texte d'Elm — « post-Master Ball » adapté 2026-07-06, audit 04) | Combat récapitulatif au Théâtre, "test du lien avec ton équipe" | Clear Bell / Tidal Bell | combat |
 | Medium Martha/Edith/Grace/Georgina (Gym) | Récompense finale du Gym Morty | Fog Badge + TM30 Shadow Ball | |
 
 **Side quests dans cette zone** : 1 (résoudre l'énigme de l'homme à l'ouest du Centre Pokémon)
@@ -520,10 +520,10 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 |---|---|---|---|
 | Rival (Silver) | Sort du Gym juste avant le joueur, indique que Jasmine est au Phare | — | |
 | Pêcheur (maison nord du Centre Pokémon) | Donne la Bonne Canne | Bonne Canne (Good Rod) | |
-| Fille au Centre Pokémon | Demande l'avis du joueur puis défie en combat | — | |
+| Fille au Centre Pokémon | Demande l'avis du joueur puis défie en combat | — | combat |
 | Fille (maison nord du Mart) | Donne 3 décorations aléatoires par jour | Décorations | |
 | Sailor Ernest, Terrell, Huey, Kent ; Gentleman Alfred, Preston ; Lass Connie ; Bird Keeper Denis, Theo | Roster complet du Phare (9 dresseurs, 1F au sommet) | — | combat |
-| Jasmine | Veille le gardien malade au Phare ; demande la Potion Secrète d'Irisia ; combat de Gym après guérison | Mineral Badge + TM23 Iron Tail (vrai combat calibré ~600 kanji/N2, voir note zones revisitées) | |
+| Jasmine | Veille le gardien malade au Phare ; demande la Potion Secrète d'Irisia ; combat de Gym après guérison | Mineral Badge + TM23 Iron Tail (vrai combat calibré ~600 kanji/N2, voir note zones revisitées) | combat |
 | Baoba (appel téléphonique) | Prévient que la réserve d'Irisia est terminée, une fois la potion livrée | — | |
 | Sailor Roberto (Phare 5F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | combat |
 
@@ -659,7 +659,7 @@ original transposée). Les prises rejoignent la collection du Sac (règle P-15 :
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Super Nerd Hugh (2F), Markus (1F fond) ; Poké Maniac Harrison (1F fond) | Dresseurs internes — « Marcus » corrigé en « Markus » 2026-07-09 (extraction ROM, coquille OCR probable) | — | combat |
-| Black Belt Kiyo ("Karate King") | Médite tout au fond (B1F, accessible via traversée d'eau) ; combat-épreuve, offre un compagnon en cas de victoire | Compagnon (récompense narrative) | |
+| Black Belt Kiyo ("Karate King") | Médite tout au fond (B1F, accessible via traversée d'eau) ; combat-épreuve, offre un compagnon en cas de victoire | Compagnon (récompense narrative) | combat |
 
 **Side quests dans cette zone** : 1 — mini-donjon dōjō du Karate King Kiyo, réintégré v1 (2026-07-06, décision « aucune v2 » ; chiffré 2026-07-07, synthèse : intérieur, hérite de la fenêtre mt-mortar 510–545 ; voir `content/side-content-inventory.md` § E1)
 **Objets à aller chercher dans cette zone** : 1 (compagnon offert par Kiyo)
@@ -684,7 +684,7 @@ original transposée). Les prises rejoignent la collection du Sac (règle P-15 :
 | Rival (Silver) | QG Rocket B2F, déjà vaincu par Lance (Silver apparition #4, cameo — pas un combat) | — | |
 | Lance | Soigne l'équipe au B2F, affronte Ariana+Sbire en double avec le joueur (transmetteur) | Objet de traversée d'eau (Whirlpool-équivalent) | |
 | Executive Petrel (déguisé en "Boss") | Salle du chef, retournement narratif | — | |
-| Executive Ariana | Combat en double, aux côtés de Lance | — | |
+| Executive Ariana | Combat en double, aux côtés de Lance | — | combat |
 | Skier/Boarder (Gym) | Récompense finale du Gym Pryce | Glacier Badge + TM07 Hail | |
 | Team Rocket Grunt (QG Rocket B1F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | combat |
 | Team Rocket Grunt, Team Rocket Grunt, Team Rocket Grunt (QG Rocket B2F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | combat |
@@ -729,7 +729,7 @@ Apricorns) — ne pas le dupliquer ici.
 | Fishing Guru | Concours du plus gros poisson-compagnon | Ether (record battu) | |
 | Frère/sœur du jour Wesley (mercredi, post-QG) | PNJ calendaire | Black Belt (objet à équiper) | |
 | Fisherman Raymond, Andre ; Ace Trainer Alton, Lois | Dresseurs post-événement Gyarados / mercredis — « Aaron » corrigé en « Alton » 2026-07-09 (extraction ROM, coquille OCR probable) | — | combat |
-| Lance | Se présente au bord du lac après le combat, recrute le joueur pour Acajou Ville | — | |
+| Lance | Se présente au bord du lac après le combat, recrute le joueur pour Acajou Ville | — | combat |
 
 **Side quests dans cette zone** : 1 (concours du plus gros poisson-compagnon)
 **Objets à aller chercher dans cette zone** : 3 (TM36 Sludge Bomb, Ether, Black Belt)
@@ -780,7 +780,7 @@ Apricorns) — ne pas le dupliquer ici.
 | Frère/sœur du jour Santos (samedi) | PNJ calendaire | Soft Sand | |
 | Homme bloquant l'Antre du Dragon | Refuse l'entrée tant que le badge de Gym n'est pas en poche | — | |
 | Ace Trainer Mike, Fran, Cody, Lola, Paulo | Gardiens avant Clair (5, le plus grand roster de gardiens du jeu) | — | combat |
-| Clair | Bat le joueur au Gym mais refuse explicitement de remettre le badge, envoie à l'Antre du Dragon | 印 n°8 — via l'Antre, pas directement au Gym | |
+| Clair | Bat le joueur au Gym mais refuse explicitement de remettre le badge, envoie à l'Antre du Dragon | 印 n°8 — via l'Antre, pas directement au Gym | combat |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 2 (Ruban d'Effort, Soft Sand)
@@ -976,14 +976,14 @@ Confirmé exhaustivement par le guidebook : aucun dresseur de route sur l'ensemb
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Grand-père paniqué (SS Aqua, arrivée) | Sa petite-fille a disparu du navire, retrouvée au sous-sol | Manteau de Métal | |
-| Marin du mess | Cherche un collègue endormi dans une cabine (déclenche un combat) | — | |
+| Marin du mess | Cherche un collègue endormi dans une cabine (déclenche un combat) | — | combat |
 | Capitaine | Héberge la petite-fille retrouvée, distribue des Plaques collectionnables | Plaques (selon jour de la semaine) | |
 | Président du Club des Fans | Récompense qui écoute son histoire jusqu'au bout | Super Bonbon | |
 | Homme du comptoir du Club des Fans | Détient l'objet perdu de Copycat, à livrer à Safranville | Poupée de Copycat | |
 | Steven (1ère apparition, cameo) | Intercepte le joueur, intrigué par une espèce hors-région | — | |
 | Eusine (cameo) | Aperçu sur la jetée en pleine chasse à Suicune | — | |
 | Gentleman Gregory, Guitarist Vincent, Juggler Horton | Gardiens avant Lt. Surge (3 confirmés) | — | combat |
-| Lt. Surge | 師範 Électrik, 9e badge | — | |
+| Lt. Surge | 師範 Électrik, 9e badge | — | combat |
 | Gentleman Edward, Burglar Corey (SS Aqua 1F SE) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | combat |
 | Hiker Noland, Ace Trainer Shaye, Ace Trainer Carol, Poké Maniac Morgan (SS Aqua 1F SO) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | combat |
 | Firebreather Lyle, Beauty Cassie, Guitarist Clyde, Bug Catcher Ken (SS Aqua 1F NE) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | combat |
@@ -1029,7 +1029,7 @@ Confirmé exhaustivement par le guidebook : aucun dresseur de route sur l'ensemb
 | Steven (Silph Co., 1ère rencontre) | Répond à une question pour recevoir un compagnon-cadeau | Compagnon-cadeau | |
 | Steven (Silph Co., revisite) | Propose un échange direct contre un compagnon différent | Compagnon (échange) | |
 | Medium Darcy, Psychic Franklin, Jared, Medium Rebecca | Gardiens avant Sabrina (4 confirmés ; Gym en 9 chambres reliées par téléportation) | — | combat |
-| Sabrina | 師範 Psy, 10e badge | — | |
+| Sabrina | 師範 Psy, 10e badge | — | combat |
 
 **Side quests dans cette zone** : 1 (Pass Train Aimant via la quête Copycat/Vermeille)
 **Objets à aller chercher dans cette zone** : 4 (CT, Amélioration, Pass Train Aimant, compagnon-cadeau)
@@ -1111,7 +1111,7 @@ Vrai hub de la quête "pièce volée" qui déverrouille aussi le Passage Souterr
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Sbire Rocket isolé | "Seul membre étranger de la Team Rocket", n'a jamais reçu le mémo de dissolution ; vole une pièce mécanique de la Centrale | — | |
+| Sbire Rocket isolé | "Seul membre étranger de la Team Rocket", n'a jamais reçu le mémo de dissolution ; poursuivi puis affronté (combat), avoue avoir volé une pièce mécanique de la Centrale | — | combat |
 | Gérant du magasin de vélos d'origine | Regrette la baisse de fréquentation, évoque "un garçon et son vélo" trois ans plus tôt (écho Red) | — | |
 | Garçon récurrent (nord de la ville) | Indique où trouver Misty, puis signale une anomalie à la rivière | — | |
 | Misty | Trouvée hors du Gym (point de vue) ; le Gym ne se peuple de ses 5 dresseurs qu'après l'avoir rencontrée | — | combat |
@@ -1146,7 +1146,7 @@ fusionné dans le guide d'origine) ; ne pas dupliquer ici.
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Sbire isolé (Route 24) | Combat scripté obligatoire (voleur de la pièce mécanique, dernier vestige de la Team Rocket "dissoute") | — | |
+| Sbire isolé (Route 24) | Combat scripté obligatoire (voleur de la pièce mécanique, dernier vestige de la Team Rocket "dissoute") | — | combat |
 | 2 dresseurs supplémentaires (Route 24, zone d'attribution incertaine OCR) | Dresseurs | — | combat |
 | Camper Lloyd, Fille Laura, Intello Pat, Écolier Joe, Fille Shannon, Ace Trainer Kevin (Route 25, gauntlet obligatoire de 6) + 1 dresseur non listé officiellement | Dresseurs | Pépite (Kevin) | combat |
 | Grand-père de Bill (Chaumière au bord de mer) | Montrer un compagnon précis → objet évolutif au choix | Objet évolutif | |
@@ -1192,7 +1192,7 @@ distinguer) ; déplacés là-bas, voir cette section pour le roster complet.
 | Gentleman du comptoir d'échange | Se plaint de son manque de Jetons (flavor) | — | |
 | Conseiller "Pouvoir Caché" | PNJ d'information gratuite près du Casino | — | |
 | Picnicker Tanya, Beauty Julia, Twins Jo & Zoe, Lass Michelle | Gardiens avant Erika (4 confirmés) | — | combat |
-| Erika | 師範 Plante, 12e badge | — | |
+| Erika | 師範 Plante, 12e badge | — | combat |
 
 **Side quests dans cette zone** : 1 (quête du Réalisateur GAME FREAK, 2 paliers)
 **Objets à aller chercher dans cette zone** : 3 (masques, Grigri Esprit, objet-clé musique)
@@ -1230,7 +1230,7 @@ distinguer) ; déplacés là-bas, voir cette section pour le roster complet.
 | Fils de Baoba | Gère le Pal Park (callback direct vers un PNJ Johto déjà documenté) | — | |
 | Visiteur du Pal Park au chapeau | Donne un accessoire cosmétique sous condition externe | Accessoire cosmétique | |
 | Picnicker Cindy, Camper Barry, Lass Alice, Linda | Gardiens avant Janine (4 confirmés) | — | combat |
-| Janine | 師範 Poison, 13e badge (Gym-labyrinthe de murs transparents) | — | |
+| Janine | 師範 Poison, 13e badge (Gym-labyrinthe de murs transparents) | — | combat |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 2 (baie via troc, accessoire cosmétique)
@@ -1342,10 +1342,10 @@ Aucun dresseur nommé au Mont Lune (contrairement aux Routes 3/4 alentour) — l
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Vieil homme devant le Gym | Bloque puis laisse passer une fois la condition remplie (Gym fermé au 1er passage) | — | |
-| Trainer House | Un combat par jour (lieu, non personnifié dans le texte) | — | |
+| Trainer House | Un combat par jour (lieu, non personnifié dans le texte) | — | combat |
 | Rumeur ambiante (Centre Pokémon) | Clients se demandant si le Gym d'Île Braise existe encore, pousse le joueur vers le sud | — | |
 | Ace Trainer Bonita, Salma, Arabella | Gardiens avant Blue (3 confirmés ; sol à tuiles-flèches) | — | combat |
-| Blue | 師範 final Kanto, 16e badge ; Gym verrouillé jusqu'à la toute fin (1ère visite : Gym fermé — vrai combat calibré ~1920 kanji/N1, sur revisite après Île Braise) | 印/Badge (sur revisite) | |
+| Blue | 師範 final Kanto, 16e badge ; Gym verrouillé jusqu'à la toute fin (1ère visite : Gym fermé — vrai combat calibré ~1920 kanji/N1, sur revisite après Île Braise) | 印/Badge (sur revisite) | combat |
 
 ⚠️ **Zone revisitée** (même schéma que Doublonville/Silver #5 et Oliville/Jasmine, voir `curriculum-checkpoints.md` § Note zones revisitées) : cette ligne couvre uniquement la 1ère visite (Gym fermé, le 師範 est absent). Le vrai combat contre Blue reste gaté à 1920 kanji (déjà fixé au PRD), sur la revisite après Île Braise.
 | Double Team Elan & Ida (Gym) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | combat |
@@ -1436,7 +1436,7 @@ Aucun obstacle confirmé.
 | Blue (revisite tardive, post-Rock Climb) | Donne un objet porté | Magmarizer | |
 | Panneau de relocalisation du Gym | Objet de décor, pointe vers Seafoam Islands | — | |
 | Scientist Linden, Daniel ; Super Nerd Merle, Waldo, Cary | Gardiens avant Blaine (~5-6 annoncés, Seafoam Islands) | — | combat |
-| Blaine | 師範 Feu, 15e badge (Gym relocalisé aux Seafoam Islands suite à l'éruption) | — | |
+| Blaine | 師範 Feu, 15e badge (Gym relocalisé aux Seafoam Islands suite à l'éruption) | — | combat |
 
 ⚠️ Île sinistrée par l'éruption volcanique un an avant l'arrivée du joueur (seul le Centre Pokémon a survécu) — contenu PNJ volontairement clairsemé, cohérent avec le ton "carrefour émotionnel" plutôt qu'un simple gym de plus.
 

@@ -1,0 +1,6770 @@
+{
+  "zones": [
+    {
+      "zone_id": "new-bark-town",
+      "sequence_index": 1,
+      "npc_name": "Professeur Elm",
+      "npc_role_origin": "Fait choisir un starter parmi 3, envoie en mission chez Mr. Pokémon, panique lors du cambriolage",
+      "kanji_ids": [
+        "一",
+        "二",
+        "人",
+        "先",
+        "入",
+        "八"
+      ],
+      "grammar_ids": [
+        "N5-001"
+      ],
+      "grammar_titles": [
+        "A が いちばん～ (A ga ichiban～)"
+      ]
+    },
+    {
+      "zone_id": "new-bark-town",
+      "sequence_index": 2,
+      "npc_name": "Professeur Elm",
+      "npc_role_origin": "Fait choisir un starter parmi 3, envoie en mission chez Mr. Pokémon, panique lors du cambriolage",
+      "kanji_ids": [
+        "円",
+        "十",
+        "口",
+        "四",
+        "土",
+        "大"
+      ],
+      "grammar_ids": [
+        "N5-002"
+      ],
+      "grammar_titles": [
+        "A。けれども、～B。(A. Keredomo,~ B.)"
+      ]
+    },
+    {
+      "zone_id": "new-bark-town",
+      "sequence_index": 3,
+      "npc_name": "Professeur Elm",
+      "npc_role_origin": "Fait choisir un starter parmi 3, envoie en mission chez Mr. Pokémon, panique lors du cambriolage",
+      "kanji_ids": [
+        "女",
+        "子",
+        "小",
+        "山",
+        "川",
+        "手"
+      ],
+      "grammar_ids": [
+        "N5-003"
+      ],
+      "grammar_titles": [
+        "A。しかし、～B。 (A. Shikashi, ~B.)"
+      ]
+    },
+    {
+      "zone_id": "new-bark-town",
+      "sequence_index": 4,
+      "npc_name": "Professeur Elm",
+      "npc_role_origin": "Fait choisir un starter parmi 3, envoie en mission chez Mr. Pokémon, panique lors du cambriolage",
+      "kanji_ids": [
+        "日",
+        "月",
+        "木",
+        "気",
+        "水",
+        "火"
+      ],
+      "grammar_ids": [
+        "N5-004"
+      ],
+      "grammar_titles": [
+        "A。じゃ、～B。(A. Ja, ~B.)"
+      ]
+    },
+    {
+      "zone_id": "new-bark-town",
+      "sequence_index": 5,
+      "npc_name": "Professeur Elm",
+      "npc_role_origin": "Fait choisir un starter parmi 3, envoie en mission chez Mr. Pokémon, panique lors du cambriolage",
+      "kanji_ids": [
+        "生",
+        "目",
+        "立",
+        "耳",
+        "車",
+        "金"
+      ],
+      "grammar_ids": [
+        "N5-005"
+      ],
+      "grammar_titles": [
+        "A。それじゃ、～B。(A. Soreja,~B.)"
+      ]
+    },
+    {
+      "zone_id": "route-29",
+      "sequence_index": 1,
+      "npc_name": "Frère/sœur du jour Tuscany",
+      "npc_role_origin": "PNJ calendaire, visible uniquement le mardi (et après le badge de Mauville)",
+      "kanji_ids": [
+        "雨",
+        "前",
+        "北",
+        "後",
+        "母"
+      ],
+      "grammar_ids": [
+        "N5-032"
+      ],
+      "grammar_titles": [
+        "Noun に～ (Noun ni～)"
+      ]
+    },
+    {
+      "zone_id": "route-29",
+      "sequence_index": 2,
+      "npc_name": "Frère/sœur du jour Tuscany",
+      "npc_role_origin": "PNJ calendaire, visible uniquement le mardi (et après le badge de Mauville)",
+      "kanji_ids": [
+        "毎",
+        "父",
+        "行",
+        "西",
+        "長"
+      ],
+      "grammar_ids": [
+        "N5-033"
+      ],
+      "grammar_titles": [
+        "Noun に 帰ります (Noun ni kaerimasu)"
+      ]
+    },
+    {
+      "zone_id": "route-29",
+      "sequence_index": 3,
+      "npc_name": "Frère/sœur du jour Tuscany",
+      "npc_role_origin": "PNJ calendaire, visible uniquement le mardi (et après le badge de Mauville)",
+      "kanji_ids": [
+        "食",
+        "高",
+        "魚",
+        "力",
+        "夕"
+      ],
+      "grammar_ids": [
+        "N5-034"
+      ],
+      "grammar_titles": [
+        "Noun に します (Noun ni shimasu)"
+      ]
+    },
+    {
+      "zone_id": "route-29",
+      "sequence_index": 4,
+      "npc_name": "Frère/sœur du jour Tuscany",
+      "npc_role_origin": "PNJ calendaire, visible uniquement le mardi (et après le badge de Mauville)",
+      "kanji_ids": [
+        "文",
+        "田",
+        "京",
+        "作",
+        "光"
+      ],
+      "grammar_ids": [
+        "N5-035"
+      ],
+      "grammar_titles": [
+        "Noun に なります (Noun ni narimasu)"
+      ]
+    },
+    {
+      "zone_id": "cherrygrove-city",
+      "sequence_index": 1,
+      "npc_name": "Guide Gent (vieux monsieur)",
+      "npc_role_origin": "Accueille le joueur à l'entrée, fait visiter la ville",
+      "kanji_ids": [
+        "冬",
+        "図",
+        "夏",
+        "夜",
+        "家"
+      ],
+      "grammar_ids": [
+        "N5-053"
+      ],
+      "grammar_titles": [
+        "Verb に 行きます (Verb ni ikimasu)"
+      ]
+    },
+    {
+      "zone_id": "cherrygrove-city",
+      "sequence_index": 2,
+      "npc_name": "Vendeuse du Mart",
+      "npc_role_origin": "Comptoir du fond",
+      "kanji_ids": [
+        "工",
+        "帰",
+        "広",
+        "心",
+        "方"
+      ],
+      "grammar_ids": [
+        "N5-054"
+      ],
+      "grammar_titles": [
+        "Verb ましょう (mashou)"
+      ]
+    },
+    {
+      "zone_id": "route-30",
+      "sequence_index": 1,
+      "npc_name": "Homme dans une maison (nord)",
+      "npc_role_origin": "Donne l'Apricorn Box (objet-clé, débloque la cueillette d'Apricorns)",
+      "kanji_ids": [
+        "止",
+        "池",
+        "牛",
+        "用",
+        "考"
+      ],
+      "grammar_ids": [
+        "N5-064"
+      ],
+      "grammar_titles": [
+        "～あります (〜arimasu)"
+      ]
+    },
+    {
+      "zone_id": "route-30",
+      "sequence_index": 2,
+      "npc_name": "Homme dans une maison (nord)",
+      "npc_role_origin": "Donne l'Apricorn Box (objet-clé, débloque la cueillette d'Apricorns)",
+      "kanji_ids": [
+        "肉",
+        "色",
+        "茶",
+        "通",
+        "遠"
+      ],
+      "grammar_ids": [
+        "N5-065"
+      ],
+      "grammar_titles": [
+        "～いかがですか。 (〜ikaga desu ka.)"
+      ]
+    },
+    {
+      "zone_id": "route-30",
+      "sequence_index": 3,
+      "npc_name": "Homme dans une maison (nord)",
+      "npc_role_origin": "Donne l'Apricorn Box (objet-clé, débloque la cueillette d'Apricorns)",
+      "kanji_ids": [
+        "門",
+        "顔",
+        "風",
+        "鳥",
+        "世"
+      ],
+      "grammar_ids": [
+        "N5-066"
+      ],
+      "grammar_titles": [
+        "いくつ～ (ikutsu~)"
+      ]
+    },
+    {
+      "zone_id": "route-30",
+      "sequence_index": 4,
+      "npc_name": "Homme dans une maison (nord)",
+      "npc_role_origin": "Donne l'Apricorn Box (objet-clé, débloque la cueillette d'Apricorns)",
+      "kanji_ids": [
+        "代",
+        "区",
+        "寒",
+        "度",
+        "業"
+      ],
+      "grammar_ids": [
+        "N5-067"
+      ],
+      "grammar_titles": [
+        "いつか～ (itsuka～)"
+      ]
+    },
+    {
+      "zone_id": "route-31",
+      "sequence_index": 1,
+      "npc_name": "Jeune homme près de l'Apricorn noir",
+      "npc_role_origin": "Quête de livraison (\"porte ce message à mon contact\", compagnon-courrier Kenya)",
+      "kanji_ids": [
+        "死",
+        "漢",
+        "発",
+        "送",
+        "進"
+      ],
+      "grammar_ids": [
+        "N5-085"
+      ],
+      "grammar_titles": [
+        "それから、～ (sorekara、～)"
+      ]
+    },
+    {
+      "zone_id": "route-31",
+      "sequence_index": 2,
+      "npc_name": "Jeune homme près de l'Apricorn noir",
+      "npc_role_origin": "Quête de livraison (\"porte ce message à mon contact\", compagnon-courrier Kenya)",
+      "kanji_ids": [
+        "低",
+        "別",
+        "建",
+        "私",
+        "王"
+      ],
+      "grammar_ids": [
+        "N5-086"
+      ],
+      "grammar_titles": [
+        "だいたい〜 (daitai〜)"
+      ]
+    },
+    {
+      "zone_id": "route-31",
+      "sequence_index": 3,
+      "npc_name": "Jeune homme près de l'Apricorn noir",
+      "npc_role_origin": "Quête de livraison (\"porte ce message à mon contact\", compagnon-courrier Kenya)",
+      "kanji_ids": [
+        "竹",
+        "糸",
+        "原",
+        "園",
+        "当"
+      ],
+      "grammar_ids": [
+        "N5-087"
+      ],
+      "grammar_titles": [
+        "たいてい～ (taitei～)"
+      ]
+    },
+    {
+      "zone_id": "route-31",
+      "sequence_index": 4,
+      "npc_name": "Jeune homme près de l'Apricorn noir",
+      "npc_role_origin": "Quête de livraison (\"porte ce message à mon contact\", compagnon-courrier Kenya)",
+      "kanji_ids": [
+        "形",
+        "戸",
+        "才",
+        "数",
+        "毛"
+      ],
+      "grammar_ids": [
+        "N5-088"
+      ],
+      "grammar_titles": [
+        "だから、～ (dakara、～)"
+      ]
+    },
+    {
+      "zone_id": "violet-city",
+      "sequence_index": 1,
+      "npc_name": "Earl",
+      "npc_role_origin": "Instituteur ambulant de \"l'École Pokémon\", trouvé errant entre le Gym et le Mart",
+      "kanji_ids": [
+        "米",
+        "羽",
+        "角",
+        "谷",
+        "馬",
+        "麦"
+      ],
+      "grammar_ids": [
+        "N5-106"
+      ],
+      "grammar_titles": [
+        "どこへも Verb ないです (doko e mo + Verb + nai desu)"
+      ]
+    },
+    {
+      "zone_id": "violet-city",
+      "sequence_index": 2,
+      "npc_name": "Garçon blond",
+      "npc_role_origin": "Près du Centre Pokémon, échange des Éclats contre des lots de Baies",
+      "kanji_ids": [
+        "他",
+        "倍",
+        "列",
+        "化",
+        "命",
+        "定"
+      ],
+      "grammar_ids": [
+        "N5-107"
+      ],
+      "grammar_titles": [
+        "どこへも Verb ません (doko e mo + Verb + masen)"
+      ]
+    },
+    {
+      "zone_id": "violet-city",
+      "sequence_index": 3,
+      "npc_name": "Garçon à lunettes",
+      "npc_role_origin": "PNJ d'échange de compagnon (maison près du Centre Pokémon)",
+      "kanji_ids": [
+        "実",
+        "宿",
+        "役",
+        "投",
+        "決",
+        "流"
+      ],
+      "grammar_ids": [
+        "N5-108"
+      ],
+      "grammar_titles": [
+        "どこも Verb ないです (dokomo + Verb + naidesu)"
+      ]
+    },
+    {
+      "zone_id": "violet-city",
+      "sequence_index": 4,
+      "npc_name": "Garçon près du Mart",
+      "npc_role_origin": "Agité, rapporte avoir vu \"un arbre qui bouge\" (teaser Sudowoodo/Route 36)",
+      "kanji_ids": [
+        "深",
+        "温",
+        "港",
+        "湖",
+        "湯",
+        "皮"
+      ],
+      "grammar_ids": [
+        "N5-109"
+      ],
+      "grammar_titles": [
+        "どこも Verb ません (dokomo + Verb + masen)"
+      ]
+    },
+    {
+      "zone_id": "violet-city",
+      "sequence_index": 5,
+      "npc_name": "Teala",
+      "npc_role_origin": "Sous-sol du Centre Pokémon, donne le Pal Pad après le 1er badge",
+      "kanji_ids": [
+        "皿",
+        "福",
+        "落",
+        "葉",
+        "身",
+        "追"
+      ],
+      "grammar_ids": [
+        "N5-110"
+      ],
+      "grammar_titles": [
+        "どちら～ (dochira～)"
+      ]
+    },
+    {
+      "zone_id": "sprout-tower",
+      "sequence_index": 1,
+      "npc_name": "Sage Neal, Troy, Jin, Nico, Edmond, Chow",
+      "npc_role_origin": "6 Sages répartis sur les 3 étages",
+      "kanji_ids": [
+        "遊",
+        "部",
+        "酒",
+        "陽",
+        "面"
+      ],
+      "grammar_ids": [
+        "N4-001"
+      ],
+      "grammar_titles": [
+        "A とか B とか"
+      ]
+    },
+    {
+      "zone_id": "sprout-tower",
+      "sequence_index": 2,
+      "npc_name": "Ancien Li",
+      "npc_role_origin": "Sommet (3F), bat le joueur, explique la technique",
+      "kanji_ids": [
+        "争",
+        "伝",
+        "候",
+        "兆",
+        "利"
+      ],
+      "grammar_ids": [
+        "N4-002"
+      ],
+      "grammar_titles": [
+        "A は B ほど～ありません (A wa B hodo ～ arimasen)"
+      ]
+    },
+    {
+      "zone_id": "route-32",
+      "sequence_index": 1,
+      "npc_name": "Homme sur le chemin",
+      "npc_role_origin": "Cadeau gratuit sans condition",
+      "kanji_ids": [
+        "刷",
+        "副",
+        "印",
+        "参",
+        "器"
+      ],
+      "grammar_ids": [
+        "N4-009"
+      ],
+      "grammar_titles": [
+        "Noun に なる (Noun ni naru)"
+      ]
+    },
+    {
+      "zone_id": "route-32",
+      "sequence_index": 2,
+      "npc_name": "Jeune homme près du Centre Pokémon",
+      "npc_role_origin": "PNJ comique, tente de vendre une \"queue de Ramoloss\"",
+      "kanji_ids": [
+        "変",
+        "官",
+        "害",
+        "富",
+        "席"
+      ],
+      "grammar_ids": [
+        "N4-010"
+      ],
+      "grammar_titles": [
+        "のために (no tame ni)"
+      ]
+    },
+    {
+      "zone_id": "route-32",
+      "sequence_index": 3,
+      "npc_name": "Pêcheur (Centre Pokémon)",
+      "npc_role_origin": "Donne la Vieille Canne",
+      "kanji_ids": [
+        "帯",
+        "底",
+        "康",
+        "愛",
+        "成"
+      ],
+      "grammar_ids": [
+        "N4-011"
+      ],
+      "grammar_titles": [
+        "Noun の 間に (〜no aida ni)"
+      ]
+    },
+    {
+      "zone_id": "route-32",
+      "sequence_index": 4,
+      "npc_name": "Homme au-delà d'un point 力",
+      "npc_role_origin": "Récompense une fois le CS débloqué",
+      "kanji_ids": [
+        "散",
+        "欠",
+        "残",
+        "求",
+        "浅"
+      ],
+      "grammar_ids": [
+        "N4-012"
+      ],
+      "grammar_titles": [
+        "Noun ばかり (〜bakari)"
+      ]
+    },
+    {
+      "zone_id": "ruins-of-alph",
+      "sequence_index": 1,
+      "npc_name": "Jeune homme (salle souterraine)",
+      "npc_role_origin": "Admiratif du 1er puzzle résolu, remet un journal qui s'auto-remplit",
+      "kanji_ids": [
+        "満",
+        "無",
+        "然",
+        "熱",
+        "競"
+      ],
+      "grammar_ids": [
+        "N4-024"
+      ],
+      "grammar_titles": [
+        "Verb た ところ (Verb ta tokoro)"
+      ]
+    },
+    {
+      "zone_id": "ruins-of-alph",
+      "sequence_index": 2,
+      "npc_name": "Chercheurs (PNJ ambiants)",
+      "npc_role_origin": "Centre de Recherche des Ruines, discutent des découvertes",
+      "kanji_ids": [
+        "老",
+        "臣",
+        "良",
+        "芸",
+        "衣"
+      ],
+      "grammar_ids": [
+        "N4-025"
+      ],
+      "grammar_titles": [
+        "Verb たほうがいい (〜ta hou ga ii)"
+      ]
+    },
+    {
+      "zone_id": "ruins-of-alph",
+      "sequence_index": 3,
+      "npc_name": "Jeune homme (salle souterraine)",
+      "npc_role_origin": "Admiratif du 1er puzzle résolu, remet un journal qui s'auto-remplit",
+      "kanji_ids": [
+        "達",
+        "選",
+        "陸",
+        "類",
+        "久"
+      ],
+      "grammar_ids": [
+        "N4-026"
+      ],
+      "grammar_titles": [
+        "Verb ために (tame ni)"
+      ]
+    },
+    {
+      "zone_id": "ruins-of-alph",
+      "sequence_index": 4,
+      "npc_name": "Chercheurs (PNJ ambiants)",
+      "npc_role_origin": "Centre de Recherche des Ruines, discutent des découvertes",
+      "kanji_ids": [
+        "仏",
+        "任",
+        "価",
+        "保",
+        "修"
+      ],
+      "grammar_ids": [
+        "N4-027"
+      ],
+      "grammar_titles": [
+        "Verb つもり (〜tsumori)"
+      ]
+    },
+    {
+      "zone_id": "azalea-town",
+      "sequence_index": 1,
+      "npc_name": "Charcoal Man",
+      "npc_role_origin": "Ses Farfetch'd-analogues se sont enfuis en Forêt Secte ; remet le Charbon une fois résolu",
+      "kanji_ids": [
+        "備",
+        "制",
+        "厚",
+        "師",
+        "得",
+        "復"
+      ],
+      "grammar_ids": [
+        "N4-040"
+      ],
+      "grammar_titles": [
+        "Verb て くる (Verb te kuru)"
+      ]
+    },
+    {
+      "zone_id": "azalea-town",
+      "sequence_index": 2,
+      "npc_name": "Vendeur du Mart",
+      "npc_role_origin": "Comptoir du fond",
+      "kanji_ids": [
+        "快",
+        "接",
+        "殺",
+        "毒",
+        "比",
+        "減"
+      ],
+      "grammar_ids": [
+        "N4-041"
+      ],
+      "grammar_titles": [
+        "Verb てくれませんか (〜te kuremasen ka)"
+      ]
+    },
+    {
+      "zone_id": "azalea-town",
+      "sequence_index": 3,
+      "npc_name": "Charcoal Man",
+      "npc_role_origin": "Ses Farfetch'd-analogues se sont enfuis en Forêt Secte ; remet le Charbon une fois résolu",
+      "kanji_ids": [
+        "準",
+        "演",
+        "犯",
+        "示",
+        "税",
+        "能"
+      ],
+      "grammar_ids": [
+        "N4-042"
+      ],
+      "grammar_titles": [
+        "Verb て くれる (Verb-te kureru)"
+      ]
+    },
+    {
+      "zone_id": "azalea-town",
+      "sequence_index": 4,
+      "npc_name": "Vendeur du Mart",
+      "npc_role_origin": "Comptoir du fond",
+      "kanji_ids": [
+        "複",
+        "象",
+        "述",
+        "逆",
+        "過",
+        "適"
+      ],
+      "grammar_ids": [
+        "N4-043"
+      ],
+      "grammar_titles": [
+        "Verb て + さしあげる (Verb TE sashiageru)"
+      ]
+    },
+    {
+      "zone_id": "azalea-town",
+      "sequence_index": 5,
+      "npc_name": "Charcoal Man",
+      "npc_role_origin": "Ses Farfetch'd-analogues se sont enfuis en Forêt Secte ; remet le Charbon une fois résolu",
+      "kanji_ids": [
+        "限",
+        "険",
+        "雑",
+        "非",
+        "並",
+        "亡"
+      ],
+      "grammar_ids": [
+        "N4-044"
+      ],
+      "grammar_titles": [
+        "Verb てしまう (〜te shimau)"
+      ]
+    },
+    {
+      "zone_id": "ilex-forest",
+      "sequence_index": 1,
+      "npc_name": "Apprenti du Maître du Charbon",
+      "npc_role_origin": "À l'entrée, enseigne la technique de capture des 2 fuyards",
+      "kanji_ids": [
+        "冊",
+        "処",
+        "刻",
+        "劇",
+        "卵",
+        "宅"
+      ],
+      "grammar_ids": [
+        "N4-063"
+      ],
+      "grammar_titles": [
+        "Verb られる (〜rareru)"
+      ]
+    },
+    {
+      "zone_id": "ilex-forest",
+      "sequence_index": 2,
+      "npc_name": "Jeune homme sur une corniche",
+      "npc_role_origin": "Enseigne la technique \"secouer les arbres\" (Headbutt)",
+      "kanji_ids": [
+        "宇",
+        "将",
+        "展",
+        "座",
+        "律",
+        "拝"
+      ],
+      "grammar_ids": [
+        "N4-064"
+      ],
+      "grammar_titles": [
+        "Verb る ことがある (〜ru koto ga aru)"
+      ]
+    },
+    {
+      "zone_id": "ilex-forest",
+      "sequence_index": 3,
+      "npc_name": "Apprenti du Maître du Charbon",
+      "npc_role_origin": "À l'entrée, enseigne la technique de capture des 2 fuyards",
+      "kanji_ids": [
+        "探",
+        "操",
+        "敬",
+        "段",
+        "片",
+        "疑"
+      ],
+      "grammar_ids": [
+        "N4-065"
+      ],
+      "grammar_titles": [
+        "Verb ることができる (〜ru koto ga dekiru)"
+      ]
+    },
+    {
+      "zone_id": "ilex-forest",
+      "sequence_index": 4,
+      "npc_name": "Jeune homme sur une corniche",
+      "npc_role_origin": "Enseigne la technique \"secouer les arbres\" (Headbutt)",
+      "kanji_ids": [
+        "痛",
+        "蒸",
+        "蔵",
+        "補",
+        "退",
+        "降"
+      ],
+      "grammar_ids": [
+        "N4-066"
+      ],
+      "grammar_titles": [
+        "Verb ることにする (〜ru koto ni suru)"
+      ]
+    },
+    {
+      "zone_id": "ilex-forest",
+      "sequence_index": 5,
+      "npc_name": "Apprenti du Maître du Charbon",
+      "npc_role_origin": "À l'entrée, enseigne la technique de capture des 2 fuyards",
+      "kanji_ids": [
+        "難",
+        "革",
+        "了",
+        "偉",
+        "偶",
+        "刺"
+      ],
+      "grammar_ids": [
+        "N4-067"
+      ],
+      "grammar_titles": [
+        "Verb る ことになる (〜ru koto ni naru)"
+      ]
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "sequence_index": 1,
+      "npc_name": "Beauty Victoria, Samantha ; Lass Carrie, Cathy",
+      "npc_role_origin": "Gardiennes avant Whitney",
+      "kanji_ids": [
+        "匹",
+        "寝",
+        "巨",
+        "悩",
+        "払",
+        "挟"
+      ],
+      "grammar_ids": [
+        "N4-086"
+      ],
+      "grammar_titles": [
+        "そんなに～ (sonna ni〜)"
+      ]
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "sequence_index": 2,
+      "npc_name": "Mr. Game",
+      "npc_role_origin": "Game Corner — mini-jeu de kanji contre jetons, tables Kanji Flip + kanji jumeaux (« feature hors-scope » corrigé 2026-07-07, passe de vérification — adapté R8/I-3)",
+      "kanji_ids": [
+        "捕",
+        "捜",
+        "掃",
+        "換",
+        "殿",
+        "汚"
+      ],
+      "grammar_ids": [
+        "N4-087"
+      ],
+      "grammar_titles": [
+        "～たらいい (〜tara ii)"
+      ]
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "sequence_index": 3,
+      "npc_name": "Gérant du magasin de vélos",
+      "npc_role_origin": "Prête une Bicyclette gratuitement, puis l'offre définitivement",
+      "kanji_ids": [
+        "沈",
+        "沸",
+        "浮",
+        "湾",
+        "湿",
+        "滴"
+      ],
+      "grammar_ids": [
+        "N4-088"
+      ],
+      "grammar_titles": [
+        "～たら いかがですか (〜tara ikaga desu ka)"
+      ]
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "sequence_index": 4,
+      "npc_name": "Fille évaluatrice d'affection",
+      "npc_role_origin": "Maison au nord du Dept Store, évalue le lien avec le compagnon en tête",
+      "kanji_ids": [
+        "濯",
+        "狭",
+        "甘",
+        "療",
+        "舞",
+        "舟"
+      ],
+      "grammar_ids": [
+        "N4-089"
+      ],
+      "grammar_titles": [
+        "～たら どうですか (〜tara doudesuka)"
+      ]
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "sequence_index": 5,
+      "npc_name": "Réceptionniste Tour Radio",
+      "npc_role_origin": "Quiz de 5 questions",
+      "kanji_ids": [
+        "荒",
+        "薄",
+        "迎",
+        "遅",
+        "違",
+        "隅"
+      ],
+      "grammar_ids": [
+        "N4-090"
+      ],
+      "grammar_titles": [
+        "～たり～たり (〜tari 〜tari)"
+      ]
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "sequence_index": 6,
+      "npc_name": "Name Rater",
+      "npc_role_origin": "Maison nord de la ville, renomme les surnoms",
+      "kanji_ids": [
+        "刀",
+        "弓",
+        "汽",
+        "羊",
+        "豆"
+      ],
+      "grammar_ids": [
+        "N4-091"
+      ],
+      "grammar_titles": [
+        "～だろう (〜darou)"
+      ]
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "sequence_index": 7,
+      "npc_name": "Fleuriste (Floria)",
+      "npc_role_origin": "Donne le SquirtBottle une fois le badge de Gym vu",
+      "kanji_ids": [
+        "径",
+        "徳",
+        "氏",
+        "滋",
+        "潟"
+      ],
+      "grammar_ids": [
+        "N4-092"
+      ],
+      "grammar_titles": [
+        "～っていう (〜tte iu)"
+      ]
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "sequence_index": 8,
+      "npc_name": "Jeune homme à la grille nord",
+      "npc_role_origin": "Quête courrier (objet porté par un oiseau sauvage à capturer)",
+      "kanji_ids": [
+        "隊",
+        "鹿",
+        "士",
+        "属",
+        "幹"
+      ],
+      "grammar_ids": [
+        "N4-093"
+      ],
+      "grammar_titles": [
+        "～で (〜de)"
+      ]
+    },
+    {
+      "zone_id": "goldenrod-city",
+      "sequence_index": 9,
+      "npc_name": "Fille du 5F Dept Store (dimanche uniquement)",
+      "npc_role_origin": "Affection élevée requise",
+      "kanji_ids": [
+        "弁",
+        "潔",
+        "酸",
+        "傷",
+        "厳"
+      ],
+      "grammar_ids": [
+        "N4-094"
+      ],
+      "grammar_titles": [
+        "～でしょう (〜deshou)"
+      ]
+    },
+    {
+      "zone_id": "national-park",
+      "sequence_index": 1,
+      "npc_name": "Magnus",
+      "npc_role_origin": "Gérant du dôme Pokéathlon, fait visiter les lieux",
+      "kanji_ids": [
+        "宣",
+        "寸",
+        "己",
+        "従",
+        "我",
+        "推"
+      ],
+      "grammar_ids": [
+        "N3-001"
+      ],
+      "grammar_titles": [
+        "A その上 B (A sono ue B)"
+      ]
+    },
+    {
+      "zone_id": "national-park",
+      "sequence_index": 2,
+      "npc_name": "Vieil homme retraité",
+      "npc_role_origin": "Record de 998 sauts, défie le joueur de dépasser 1000",
+      "kanji_ids": [
+        "敵",
+        "沿",
+        "派",
+        "激",
+        "熟",
+        "穀"
+      ],
+      "grammar_ids": [
+        "N3-002"
+      ],
+      "grammar_titles": [
+        "～うちに (〜uchi ni)"
+      ]
+    },
+    {
+      "zone_id": "national-park",
+      "sequence_index": 3,
+      "npc_name": "Vendeur du stand Aprijuice",
+      "npc_role_origin": "Ouest du dôme",
+      "kanji_ids": [
+        "郷",
+        "陛",
+        "丹",
+        "乏",
+        "乙",
+        "亀"
+      ],
+      "grammar_ids": [
+        "N3-003"
+      ],
+      "grammar_titles": [
+        "～うとした (〜uto shita)"
+      ]
+    },
+    {
+      "zone_id": "national-park",
+      "sequence_index": 4,
+      "npc_name": "Enseignant (banc sud du parc)",
+      "npc_role_origin": "PNJ-professeur, donne un objet de \"priorité au tour\"",
+      "kanji_ids": [
+        "享",
+        "仰",
+        "伐",
+        "佳",
+        "併",
+        "侯"
+      ],
+      "grammar_ids": [
+        "N3-004"
+      ],
+      "grammar_titles": [
+        "～おかげで (〜okagede)"
+      ]
+    },
+    {
+      "zone_id": "national-park",
+      "sequence_index": 5,
+      "npc_name": "Magnus",
+      "npc_role_origin": "Gérant du dôme Pokéathlon, fait visiter les lieux",
+      "kanji_ids": [
+        "侵",
+        "俊",
+        "倫",
+        "倹",
+        "偏",
+        "傍"
+      ],
+      "grammar_ids": [
+        "N3-005"
+      ],
+      "grammar_titles": [
+        "～かけ (〜kake)"
+      ]
+    },
+    {
+      "zone_id": "national-park",
+      "sequence_index": 6,
+      "npc_name": "Vieil homme retraité",
+      "npc_role_origin": "Record de 998 sauts, défie le joueur de dépasser 1000",
+      "kanji_ids": [
+        "傑",
+        "催",
+        "僕",
+        "僚",
+        "充"
+      ],
+      "grammar_ids": [
+        "N3-006"
+      ],
+      "grammar_titles": [
+        "～かなあ (〜kanaa)"
+      ]
+    },
+    {
+      "zone_id": "national-park",
+      "sequence_index": 7,
+      "npc_name": "Vendeur du stand Aprijuice",
+      "npc_role_origin": "Ouest du dôme",
+      "kanji_ids": [
+        "免",
+        "冗",
+        "冠",
+        "准",
+        "凡"
+      ],
+      "grammar_ids": [
+        "N3-007"
+      ],
+      "grammar_titles": [
+        "～ないで (〜naide)"
+      ]
+    },
+    {
+      "zone_id": "route-36",
+      "sequence_index": 1,
+      "npc_name": "Jeune homme près d'un panneau (ouest)",
+      "npc_role_origin": "Donne le CS Éclate-Roc (砕), débloqué dès le badge de Falkner *(corrigé 2026-07-06, audit 04, finding 04-A3 : « CS Marteau-Piqueur (力) » était un double contresens — 力 = Force, déjà remis par le Hiker de la Route 42, et « Marteau-Piqueur » n'est le nom d'aucun des 8 CS-Kanji (« 7 » corrigé 2026-07-07, synthèse — 登 réintégré depuis) ; voir PRD § CS-Kanji et guidebook-adapted L572/1177)*",
+      "kanji_ids": [
+        "凶",
+        "凹",
+        "刈",
+        "刑",
+        "剖"
+      ],
+      "grammar_ids": [
+        "N3-024"
+      ],
+      "grammar_titles": [
+        "すこしも〜ない (sukoshimo~nai)"
+      ]
+    },
+    {
+      "zone_id": "route-36",
+      "sequence_index": 2,
+      "npc_name": "Frère/sœur du jour Arthur (jeudi)",
+      "npc_role_origin": "Nord des Ruines Arcaniques",
+      "kanji_ids": [
+        "剣",
+        "升",
+        "卑",
+        "即",
+        "卸"
+      ],
+      "grammar_ids": [
+        "N3-025"
+      ],
+      "grammar_titles": [
+        "～ずに (〜zu ni)"
+      ]
+    },
+    {
+      "zone_id": "route-36",
+      "sequence_index": 3,
+      "npc_name": "Jeune homme près d'un panneau (ouest)",
+      "npc_role_origin": "Donne le CS Éclate-Roc (砕), débloqué dès le badge de Falkner *(corrigé 2026-07-06, audit 04, finding 04-A3 : « CS Marteau-Piqueur (力) » était un double contresens — 力 = Force, déjà remis par le Hiker de la Route 42, et « Marteau-Piqueur » n'est le nom d'aucun des 8 CS-Kanji (« 7 » corrigé 2026-07-07, synthèse — 登 réintégré depuis) ; voir PRD § CS-Kanji et guidebook-adapted L572/1177)*",
+      "kanji_ids": [
+        "厄",
+        "又",
+        "呉",
+        "唐",
+        "奉"
+      ],
+      "grammar_ids": [
+        "N3-026"
+      ],
+      "grammar_titles": [
+        "～せいで (〜sei de)"
+      ]
+    },
+    {
+      "zone_id": "route-36",
+      "sequence_index": 4,
+      "npc_name": "Frère/sœur du jour Arthur (jeudi)",
+      "npc_role_origin": "Nord des Ruines Arcaniques",
+      "kanji_ids": [
+        "宴",
+        "寛",
+        "寡",
+        "寮",
+        "尚"
+      ],
+      "grammar_ids": [
+        "N3-027"
+      ],
+      "grammar_titles": [
+        "～せてください (〜sete kudasai)"
+      ]
+    },
+    {
+      "zone_id": "route-36",
+      "sequence_index": 5,
+      "npc_name": "Jeune homme près d'un panneau (ouest)",
+      "npc_role_origin": "Donne le CS Éclate-Roc (砕), débloqué dès le badge de Falkner *(corrigé 2026-07-06, audit 04, finding 04-A3 : « CS Marteau-Piqueur (力) » était un double contresens — 力 = Force, déjà remis par le Hiker de la Route 42, et « Marteau-Piqueur » n'est le nom d'aucun des 8 CS-Kanji (« 7 » corrigé 2026-07-07, synthèse — 登 réintégré depuis) ; voir PRD § CS-Kanji et guidebook-adapted L572/1177)*",
+      "kanji_ids": [
+        "尼",
+        "屯",
+        "巡",
+        "幻",
+        "幾"
+      ],
+      "grammar_ids": [
+        "N3-028"
+      ],
+      "grammar_titles": [
+        "～そのために (〜sono tame ni)"
+      ]
+    },
+    {
+      "zone_id": "route-37",
+      "sequence_index": 1,
+      "npc_name": "Frère/sœur du jour Sunny (dimanche)",
+      "npc_role_origin": "Nord de 3 arbres Apricorn",
+      "kanji_ids": [
+        "庶",
+        "庸",
+        "廷",
+        "弊",
+        "微"
+      ],
+      "grammar_ids": [
+        "N3-038"
+      ],
+      "grammar_titles": [
+        "～たびに (〜tabi ni)"
+      ]
+    },
+    {
+      "zone_id": "route-37",
+      "sequence_index": 2,
+      "npc_name": "Frère/sœur du jour Sunny (dimanche)",
+      "npc_role_origin": "Nord de 3 arbres Apricorn",
+      "kanji_ids": [
+        "徴",
+        "徹",
+        "怪",
+        "恒",
+        "恨"
+      ],
+      "grammar_ids": [
+        "N3-039"
+      ],
+      "grammar_titles": [
+        "～だものだ (〜da mono da)"
+      ]
+    },
+    {
+      "zone_id": "route-37",
+      "sequence_index": 3,
+      "npc_name": "Frère/sœur du jour Sunny (dimanche)",
+      "npc_role_origin": "Nord de 3 arbres Apricorn",
+      "kanji_ids": [
+        "悟",
+        "悦",
+        "惰",
+        "愉",
+        "慕"
+      ],
+      "grammar_ids": [
+        "N3-040"
+      ],
+      "grammar_titles": [
+        "～ちゃった (〜chatta)"
+      ]
+    },
+    {
+      "zone_id": "ecruteak-city",
+      "sequence_index": 1,
+      "npc_name": "Medium Martha, Edith, Grace, Georgina",
+      "npc_role_origin": "Gardiennes avant Morty",
+      "kanji_ids": [
+        "慢",
+        "慶",
+        "憂",
+        "憤",
+        "懐",
+        "戒"
+      ],
+      "grammar_ids": [
+        "N3-047"
+      ],
+      "grammar_titles": [
+        "～てくれと (〜te kureto)"
+      ]
+    },
+    {
+      "zone_id": "ecruteak-city",
+      "sequence_index": 2,
+      "npc_name": "Homme à l'énigme",
+      "npc_role_origin": "Bonne réponse → détecteur d'objets ; la pièce contient un livre relatant la légende des 3 esprits",
+      "kanji_ids": [
+        "把",
+        "抑",
+        "抗",
+        "抵",
+        "拐",
+        "振"
+      ],
+      "grammar_ids": [
+        "N3-048"
+      ],
+      "grammar_titles": [
+        "～てごらん (〜te goran)"
+      ]
+    },
+    {
+      "zone_id": "ecruteak-city",
+      "sequence_index": 3,
+      "npc_name": "Gentleman (public du Théâtre)",
+      "npc_role_origin": "Témoin du sauvetage",
+      "kanji_ids": [
+        "挿",
+        "掛",
+        "掲",
+        "揚",
+        "援",
+        "揺"
+      ],
+      "grammar_ids": [
+        "N3-049"
+      ],
+      "grammar_titles": [
+        "ですから～ (desu kara)"
+      ]
+    },
+    {
+      "zone_id": "ecruteak-city",
+      "sequence_index": 4,
+      "npc_name": "Hommes du Poste-frontière",
+      "npc_role_origin": "Racontent les légendes locales de Ho-Oh, bloquent l'accès à Tour Jo",
+      "kanji_ids": [
+        "搭",
+        "携",
+        "搾",
+        "摂",
+        "摘",
+        "撤"
+      ],
+      "grammar_ids": [
+        "N3-050"
+      ],
+      "grammar_titles": [
+        "～てはじめて (〜te hajimete)"
+      ]
+    },
+    {
+      "zone_id": "ecruteak-city",
+      "sequence_index": 5,
+      "npc_name": "Homme au nord du Gym",
+      "npc_role_origin": "Signale que le gardien-phare d'Oliville est malade",
+      "kanji_ids": [
+        "撲",
+        "擁",
+        "敢",
+        "敷",
+        "斗",
+        "斤"
+      ],
+      "grammar_ids": [
+        "N3-051"
+      ],
+      "grammar_titles": [
+        "～てほしい (〜te hoshii)"
+      ]
+    },
+    {
+      "zone_id": "ecruteak-city",
+      "sequence_index": 6,
+      "npc_name": "Vendeur du Mart",
+      "npc_role_origin": "Comptoir du fond",
+      "kanji_ids": [
+        "既",
+        "暦",
+        "殻",
+        "没",
+        "泰"
+      ],
+      "grammar_ids": [
+        "N3-052"
+      ],
+      "grammar_titles": [
+        "～ても (〜temo)"
+      ]
+    },
+    {
+      "zone_id": "ecruteak-city",
+      "sequence_index": 7,
+      "npc_name": "Medium Martha, Edith, Grace, Georgina",
+      "npc_role_origin": "Gardiennes avant Morty",
+      "kanji_ids": [
+        "津",
+        "浦",
+        "浸",
+        "涯",
+        "添"
+      ],
+      "grammar_ids": [
+        "N3-053"
+      ],
+      "grammar_titles": [
+        "～といいなあ (〜to ii naa)"
+      ]
+    },
+    {
+      "zone_id": "route-39",
+      "sequence_index": 1,
+      "npc_name": "Fille (gauche du Miltank-analogue, ferme Moomoo)",
+      "npc_role_origin": "Donne le Seal Case une fois le compagnon guéri",
+      "kanji_ids": [
+        "渇",
+        "渋",
+        "渓",
+        "渦",
+        "溝",
+        "滅"
+      ],
+      "grammar_ids": [
+        "N3-070"
+      ],
+      "grammar_titles": [
+        "～ないことはない (〜nai koto wa nai)"
+      ]
+    },
+    {
+      "zone_id": "route-39",
+      "sequence_index": 2,
+      "npc_name": "Fille (droite, ferme Moomoo)",
+      "npc_role_origin": "Donne 3 décorations gratuites",
+      "kanji_ids": [
+        "漆",
+        "漏",
+        "漠",
+        "漫",
+        "潤",
+        "濁"
+      ],
+      "grammar_ids": [
+        "N3-071"
+      ],
+      "grammar_titles": [
+        "～ないと (〜nai to)"
+      ]
+    },
+    {
+      "zone_id": "route-39",
+      "sequence_index": 3,
+      "npc_name": "Fermière (ferme Moomoo)",
+      "npc_role_origin": "Donne TM83 Natural Gift",
+      "kanji_ids": [
+        "為",
+        "焦",
+        "爵",
+        "猛",
+        "猟",
+        "猶"
+      ],
+      "grammar_ids": [
+        "N3-072"
+      ],
+      "grammar_titles": [
+        "～なぜなら (〜nazenara)"
+      ]
+    },
+    {
+      "zone_id": "route-39",
+      "sequence_index": 4,
+      "npc_name": "Fermier (ferme Moomoo)",
+      "npc_role_origin": "Vend une spécialité locale une fois la quête résolue",
+      "kanji_ids": [
+        "猿",
+        "獄",
+        "獲",
+        "玄",
+        "疫",
+        "癒"
+      ],
+      "grammar_ids": [
+        "N3-073"
+      ],
+      "grammar_titles": [
+        "～など (〜nado)"
+      ]
+    },
+    {
+      "zone_id": "route-39",
+      "sequence_index": 5,
+      "npc_name": "Fille (gauche du Miltank-analogue, ferme Moomoo)",
+      "npc_role_origin": "Donne le Seal Case une fois le compagnon guéri",
+      "kanji_ids": [
+        "癖",
+        "禍",
+        "秀",
+        "称",
+        "稚",
+        "稲"
+      ],
+      "grammar_ids": [
+        "N3-074"
+      ],
+      "grammar_titles": [
+        "～なんか (〜nanka)"
+      ]
+    },
+    {
+      "zone_id": "route-39",
+      "sequence_index": 6,
+      "npc_name": "Fille (droite, ferme Moomoo)",
+      "npc_role_origin": "Donne 3 décorations gratuites",
+      "kanji_ids": [
+        "穏",
+        "穫",
+        "竜",
+        "繭",
+        "缶"
+      ],
+      "grammar_ids": [
+        "N3-075"
+      ],
+      "grammar_titles": [
+        "～において (〜ni oite)"
+      ]
+    },
+    {
+      "zone_id": "route-39",
+      "sequence_index": 7,
+      "npc_name": "Fermière (ferme Moomoo)",
+      "npc_role_origin": "Donne TM83 Natural Gift",
+      "kanji_ids": [
+        "罰",
+        "舗",
+        "芋",
+        "芝",
+        "茂"
+      ],
+      "grammar_ids": [
+        "N3-076"
+      ],
+      "grammar_titles": [
+        "～にかわって (〜ni kawatte)"
+      ]
+    },
+    {
+      "zone_id": "route-39",
+      "sequence_index": 8,
+      "npc_name": "Fermier (ferme Moomoo)",
+      "npc_role_origin": "Vend une spécialité locale une fois la quête résolue",
+      "kanji_ids": [
+        "茎",
+        "菊",
+        "菌",
+        "華",
+        "葬"
+      ],
+      "grammar_ids": [
+        "N3-077"
+      ],
+      "grammar_titles": [
+        "～にしては (〜ni shite wa)"
+      ]
+    },
+    {
+      "zone_id": "route-39",
+      "sequence_index": 9,
+      "npc_name": "Fille (gauche du Miltank-analogue, ferme Moomoo)",
+      "npc_role_origin": "Donne le Seal Case une fois le compagnon guéri",
+      "kanji_ids": [
+        "薦",
+        "薫",
+        "藤",
+        "藩",
+        "藻"
+      ],
+      "grammar_ids": [
+        "N3-078"
+      ],
+      "grammar_titles": [
+        "～にしても (〜ni shitemo)"
+      ]
+    },
+    {
+      "zone_id": "olivine-city",
+      "sequence_index": 1,
+      "npc_name": "Pêcheur (maison nord du Centre Pokémon)",
+      "npc_role_origin": "Donne la Bonne Canne",
+      "kanji_ids": [
+        "虎",
+        "虐",
+        "虚",
+        "褐",
+        "覇",
+        "豪"
+      ],
+      "grammar_ids": [
+        "N3-099"
+      ],
+      "grammar_titles": [
+        "～まで (〜made)"
+      ]
+    },
+    {
+      "zone_id": "olivine-city",
+      "sequence_index": 2,
+      "npc_name": "Fille (maison nord du Mart)",
+      "npc_role_origin": "Donne 3 décorations aléatoires par jour",
+      "kanji_ids": [
+        "迅",
+        "逐",
+        "逓",
+        "逮",
+        "遂",
+        "遇"
+      ],
+      "grammar_ids": [
+        "N3-100"
+      ],
+      "grammar_titles": [
+        "～まま (〜mama)"
+      ]
+    },
+    {
+      "zone_id": "olivine-city",
+      "sequence_index": 3,
+      "npc_name": "Pêcheur (maison nord du Centre Pokémon)",
+      "npc_role_origin": "Donne la Bonne Canne",
+      "kanji_ids": [
+        "遍",
+        "遣",
+        "遷",
+        "避",
+        "還",
+        "那"
+      ],
+      "grammar_ids": [
+        "N3-101"
+      ],
+      "grammar_titles": [
+        "まるで～よう (maru de ~ you)"
+      ]
+    },
+    {
+      "zone_id": "olivine-city",
+      "sequence_index": 4,
+      "npc_name": "Fille (maison nord du Mart)",
+      "npc_role_origin": "Donne 3 décorations aléatoires par jour",
+      "kanji_ids": [
+        "邦",
+        "邸",
+        "酌",
+        "酔",
+        "酢",
+        "醸"
+      ],
+      "grammar_ids": [
+        "N3-102"
+      ],
+      "grammar_titles": [
+        "～てみる (〜te miru)"
+      ]
+    },
+    {
+      "zone_id": "olivine-city",
+      "sequence_index": 5,
+      "npc_name": "Pêcheur (maison nord du Centre Pokémon)",
+      "npc_role_origin": "Donne la Bonne Canne",
+      "kanji_ids": [
+        "陥",
+        "陪",
+        "陰",
+        "陵",
+        "陶",
+        "隆"
+      ],
+      "grammar_ids": [
+        "N3-103"
+      ],
+      "grammar_titles": [
+        "～みたいだ (〜mitai da)"
+      ]
+    },
+    {
+      "zone_id": "cianwood-city",
+      "sequence_index": 1,
+      "npc_name": "Pharmacie",
+      "npc_role_origin": "Remet la Potion Secrète au 1er passage (pour Jasmine)",
+      "kanji_ids": [
+        "随",
+        "隔",
+        "隠",
+        "隣",
+        "隷",
+        "雄"
+      ],
+      "grammar_ids": [
+        "N3-116"
+      ],
+      "grammar_titles": [
+        "～ようになった (〜you ni natta)"
+      ]
+    },
+    {
+      "zone_id": "cianwood-city",
+      "sequence_index": 2,
+      "npc_name": "Jeune homme (sud du Gym)",
+      "npc_role_origin": "Confie temporairement un compagnon (Shuckle-analogue) ; révèle le passage de Silver",
+      "kanji_ids": [
+        "雌",
+        "離",
+        "須",
+        "顕",
+        "飢",
+        "飾"
+      ],
+      "grammar_ids": [
+        "N3-117"
+      ],
+      "grammar_titles": [
+        "～ように言う (〜you ni iu)"
+      ]
+    },
+    {
+      "zone_id": "cianwood-city",
+      "sequence_index": 3,
+      "npc_name": "Homme (Centre Pokémon)",
+      "npc_role_origin": "Explique l'entraînement de Chuck sous une chute d'eau",
+      "kanji_ids": [
+        "鬼",
+        "俺",
+        "傲",
+        "僅",
+        "冥",
+        "刹"
+      ],
+      "grammar_ids": [
+        "N3-118"
+      ],
+      "grammar_titles": [
+        "～らしい (〜rashii)"
+      ]
+    },
+    {
+      "zone_id": "cianwood-city",
+      "sequence_index": 4,
+      "npc_name": "Pharmacie",
+      "npc_role_origin": "Remet la Potion Secrète au 1er passage (pour Jasmine)",
+      "kanji_ids": [
+        "剝",
+        "勾",
+        "匂",
+        "宛",
+        "巾",
+        "彙"
+      ],
+      "grammar_ids": [
+        "N3-119"
+      ],
+      "grammar_titles": [
+        "～られた (〜rareta)"
+      ]
+    },
+    {
+      "zone_id": "cianwood-city",
+      "sequence_index": 5,
+      "npc_name": "Jeune homme (sud du Gym)",
+      "npc_role_origin": "Confie temporairement un compagnon (Shuckle-analogue) ; révèle le passage de Silver",
+      "kanji_ids": [
+        "慄",
+        "戚",
+        "拶",
+        "挨",
+        "挫",
+        "毀"
+      ],
+      "grammar_ids": [
+        "N3-120"
+      ],
+      "grammar_titles": [
+        "～ている (〜te iru)"
+      ]
+    },
+    {
+      "zone_id": "route-42",
+      "sequence_index": 1,
+      "npc_name": "Hiker anonyme",
+      "npc_role_origin": "Sortant de Mont Mortier, bouscule le joueur et s'excuse",
+      "kanji_ids": [
+        "氾",
+        "沃",
+        "淫",
+        "爪",
+        "牙"
+      ],
+      "grammar_ids": [
+        "N2-001"
+      ],
+      "grammar_titles": [
+        "A あるいは B (A aruiwa B)"
+      ]
+    },
+    {
+      "zone_id": "route-42",
+      "sequence_index": 2,
+      "npc_name": "Hiker anonyme",
+      "npc_role_origin": "Sortant de Mont Mortier, bouscule le joueur et s'excuse",
+      "kanji_ids": [
+        "瓦",
+        "痕",
+        "痩",
+        "瘍",
+        "稽"
+      ],
+      "grammar_ids": [
+        "N2-002"
+      ],
+      "grammar_titles": [
+        "A。おまけに B。(~omake ni)"
+      ]
+    },
+    {
+      "zone_id": "route-42",
+      "sequence_index": 3,
+      "npc_name": "Hiker anonyme",
+      "npc_role_origin": "Sortant de Mont Mortier, bouscule le joueur et s'excuse",
+      "kanji_ids": [
+        "羞",
+        "臼",
+        "葛",
+        "蓋",
+        "蔑"
+      ],
+      "grammar_ids": [
+        "N2-003"
+      ],
+      "grammar_titles": [
+        "A。さて B。(A. Sate B.)"
+      ]
+    },
+    {
+      "zone_id": "mahogany-town",
+      "sequence_index": 1,
+      "npc_name": "Vendeur RageCandyBar",
+      "npc_role_origin": "Bloque la route est, vend la spécialité locale ; laisse passer une fois la Team Rocket vaincue",
+      "kanji_ids": [
+        "蔽",
+        "貌",
+        "遡",
+        "隙",
+        "韓"
+      ],
+      "grammar_ids": [
+        "N2-009"
+      ],
+      "grammar_titles": [
+        "A。そこで B。(~sokode)"
+      ]
+    },
+    {
+      "zone_id": "mahogany-town",
+      "sequence_index": 2,
+      "npc_name": "Vendeur du magasin de souvenirs",
+      "npc_role_origin": "\"Type louche\", détourne le regard du bruit suspect au sous-sol ; remplacé après la chute du QG",
+      "kanji_ids": [
+        "頃",
+        "頰",
+        "顎",
+        "餅",
+        "鬱"
+      ],
+      "grammar_ids": [
+        "N2-010"
+      ],
+      "grammar_titles": [
+        "A。それがB。(~sorega)"
+      ]
+    },
+    {
+      "zone_id": "mahogany-town",
+      "sequence_index": 3,
+      "npc_name": "Homme devant le Gym",
+      "npc_role_origin": "Évoque \"l'homme à la cape noire\" (Lance) enquêtant sur le signal brouillé",
+      "kanji_ids": [
+        "七",
+        "三",
+        "上",
+        "下",
+        "中"
+      ],
+      "grammar_ids": [
+        "N2-011"
+      ],
+      "grammar_titles": [
+        "A。それで B。 (~sore de)"
+      ]
+    },
+    {
+      "zone_id": "mahogany-town",
+      "sequence_index": 4,
+      "npc_name": "PNJ à la grille de Route 43",
+      "npc_role_origin": "Mentionne que Mr. Pokémon cherche une Écaille Rouge",
+      "kanji_ids": [
+        "九",
+        "五",
+        "休",
+        "六",
+        "出"
+      ],
+      "grammar_ids": [
+        "N2-012"
+      ],
+      "grammar_titles": [
+        "A。それでも B。(~sore demo)"
+      ]
+    },
+    {
+      "zone_id": "mahogany-town",
+      "sequence_index": 5,
+      "npc_name": "Scientist Gregg",
+      "npc_role_origin": "Garde le PC qui coupe le système d'alarme du QG (B1F)",
+      "kanji_ids": [
+        "千",
+        "右",
+        "名",
+        "天",
+        "学"
+      ],
+      "grammar_ids": [
+        "N2-013"
+      ],
+      "grammar_titles": [
+        "A。それなのに B。(~sorenanoni)"
+      ]
+    },
+    {
+      "zone_id": "route-43",
+      "sequence_index": 1,
+      "npc_name": "PNJ à la grille de Route 43",
+      "npc_role_origin": "Mentionne que Mr. Pokémon cherche une Écaille Rouge",
+      "kanji_ids": [
+        "左",
+        "本",
+        "男",
+        "白",
+        "花"
+      ],
+      "grammar_ids": [
+        "N2-021"
+      ],
+      "grammar_titles": [
+        "A。ということは B。 (A. To iu koto wa B.)"
+      ]
+    },
+    {
+      "zone_id": "lake-of-rage",
+      "sequence_index": 1,
+      "npc_name": "Poste-frontière Team Rocket (Route 43)",
+      "npc_role_origin": "Rançonne pour passer ; redevient normal après la chute du QG",
+      "kanji_ids": [
+        "見",
+        "足",
+        "万",
+        "今",
+        "会"
+      ],
+      "grammar_ids": [
+        "N2-024"
+      ],
+      "grammar_titles": [
+        "A。もっとも B。(Motto mo ~)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 1,
+      "npc_name": "Tuteur Ultime",
+      "npc_role_origin": "Enseigne la \"capacité ultime\" à la forme finale du starter du joueur",
+      "kanji_ids": [
+        "分",
+        "半",
+        "南",
+        "友",
+        "古",
+        "外"
+      ],
+      "grammar_ids": [
+        "N2-026"
+      ],
+      "grammar_titles": [
+        "Noun につき (〜ni tsuki)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 2,
+      "npc_name": "Grand-mère Wilma",
+      "npc_role_origin": "Enseigne la capacité Dragon la plus puissante à un compagnon-Dragon lié au joueur",
+      "kanji_ids": [
+        "多",
+        "少",
+        "新",
+        "書",
+        "来",
+        "東"
+      ],
+      "grammar_ids": [
+        "N2-027"
+      ],
+      "grammar_titles": [
+        "Noun にて (Noun nite)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 3,
+      "npc_name": "Maniaque des capacités",
+      "npc_role_origin": "Contre une Écaille de Cœur, réapprend une capacité oubliée",
+      "kanji_ids": [
+        "社",
+        "聞",
+        "言",
+        "間",
+        "電",
+        "安"
+      ],
+      "grammar_ids": [
+        "N2-028"
+      ],
+      "grammar_titles": [
+        "Noun の ことだから (Noun no koto dakara)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 4,
+      "npc_name": "Effaceur de capacités",
+      "npc_role_origin": "Fait oublier n'importe quelle capacité, y compris permanentes",
+      "kanji_ids": [
+        "飲",
+        "字",
+        "早",
+        "村",
+        "林",
+        "正"
+      ],
+      "grammar_ids": [
+        "N2-029"
+      ],
+      "grammar_titles": [
+        "Noun を はじめ (Noun wo hajime)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 5,
+      "npc_name": "Fille de la maison nord",
+      "npc_role_origin": "Donne un Ruban d'Effort si le compagnon en tête est assez endurci",
+      "kanji_ids": [
+        "犬",
+        "赤",
+        "青",
+        "音",
+        "元",
+        "兄"
+      ],
+      "grammar_ids": [
+        "N2-030"
+      ],
+      "grammar_titles": [
+        "Noun を はじめとして (Noun wo hajime to shite)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 6,
+      "npc_name": "Garçon local",
+      "npc_role_origin": "Explique que les Dompteurs de Dragons sont tous nés à Ebènelle",
+      "kanji_ids": [
+        "台",
+        "合",
+        "同",
+        "回",
+        "地",
+        "場"
+      ],
+      "grammar_ids": [
+        "N2-031"
+      ],
+      "grammar_titles": [
+        "Noun を はじめとする Noun (Noun o hajime to suru Noun)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 7,
+      "npc_name": "Frère/sœur du jour Santos (samedi)",
+      "npc_role_origin": "PNJ calendaire",
+      "kanji_ids": [
+        "声",
+        "売",
+        "太",
+        "市",
+        "引",
+        "弟"
+      ],
+      "grammar_ids": [
+        "N2-032"
+      ],
+      "grammar_titles": [
+        "Noun を めぐって (Noun wo megutte)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 8,
+      "npc_name": "Tuteur Ultime",
+      "npc_role_origin": "Enseigne la \"capacité ultime\" à la forme finale du starter du joueur",
+      "kanji_ids": [
+        "弱",
+        "強",
+        "思",
+        "明",
+        "春",
+        "曜"
+      ],
+      "grammar_ids": [
+        "N2-033"
+      ],
+      "grammar_titles": [
+        "Noun を めぐる Noun (Noun o meguru Noun)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 9,
+      "npc_name": "Grand-mère Wilma",
+      "npc_role_origin": "Enseigne la capacité Dragon la plus puissante à un compagnon-Dragon lié au joueur",
+      "kanji_ids": [
+        "朝",
+        "楽",
+        "歌",
+        "海",
+        "秋",
+        "紙"
+      ],
+      "grammar_ids": [
+        "N2-034"
+      ],
+      "grammar_titles": [
+        "Noun を もとに (Noun o moto ni)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 10,
+      "npc_name": "Maniaque des capacités",
+      "npc_role_origin": "Contre une Écaille de Cœur, réapprend une capacité oubliée",
+      "kanji_ids": [
+        "自",
+        "走",
+        "近",
+        "頭",
+        "主",
+        "事"
+      ],
+      "grammar_ids": [
+        "N2-035"
+      ],
+      "grammar_titles": [
+        "Noun を もとにして (Noun wo moto ni shite)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 11,
+      "npc_name": "Effaceur de capacités",
+      "npc_role_origin": "Fait oublier n'importe quelle capacité, y compris permanentes",
+      "kanji_ids": [
+        "仕",
+        "勉",
+        "去",
+        "品",
+        "問",
+        "急"
+      ],
+      "grammar_ids": [
+        "N2-036"
+      ],
+      "grammar_titles": [
+        "Verb ことなく (~kotonaku)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 12,
+      "npc_name": "Fille de la maison nord",
+      "npc_role_origin": "Donne un Ruban d'Effort si le compagnon en tête est assez endurci",
+      "kanji_ids": [
+        "所",
+        "旅",
+        "族",
+        "有",
+        "服",
+        "洋"
+      ],
+      "grammar_ids": [
+        "N2-037"
+      ],
+      "grammar_titles": [
+        "Verb ないことには Verb ない (~nai koto ni wa ~ nai)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 13,
+      "npc_name": "Garçon local",
+      "npc_role_origin": "Explique que les Dompteurs de Dragons sont tous nés à Ebènelle",
+      "kanji_ids": [
+        "物",
+        "県",
+        "着",
+        "終",
+        "者",
+        "転"
+      ],
+      "grammar_ids": [
+        "N2-038"
+      ],
+      "grammar_titles": [
+        "～あげく (~ageku)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 14,
+      "npc_name": "Frère/sœur du jour Santos (samedi)",
+      "npc_role_origin": "PNJ calendaire",
+      "kanji_ids": [
+        "軽",
+        "銀",
+        "開",
+        "集",
+        "館",
+        "不"
+      ],
+      "grammar_ids": [
+        "N2-039"
+      ],
+      "grammar_titles": [
+        "～あまり (〜amari)"
+      ]
+    },
+    {
+      "zone_id": "blackthorn-city",
+      "sequence_index": 15,
+      "npc_name": "Tuteur Ultime",
+      "npc_role_origin": "Enseigne la \"capacité ultime\" à la forme finale du starter du joueur",
+      "kanji_ids": [
+        "以",
+        "好",
+        "料",
+        "民",
+        "産",
+        "験"
+      ],
+      "grammar_ids": [
+        "N2-040"
+      ],
+      "grammar_titles": [
+        "～うちに (〜uchi ni)"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "sequence_index": 1,
+      "npc_name": "Le Maître (Ancien)",
+      "npc_role_origin": "Quiz d'empathie en 5 questions, condition réelle du 印 n°8 ; révèle être le grand-père de Clair/Lance",
+      "kanji_ids": [
+        "堂",
+        "洗",
+        "玉",
+        "石",
+        "貝",
+        "交"
+      ],
+      "grammar_ids": [
+        "N2-071"
+      ],
+      "grammar_titles": [
+        "～たところ (〜ta tokoro)"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "sequence_index": 2,
+      "npc_name": "\"Les autres vieillards du Sanctuaire\" (non nommés)",
+      "npc_role_origin": "PNJ ambiants, corroborent la lignée Clair/Lance/Maître",
+      "kanji_ids": [
+        "公",
+        "内",
+        "寺",
+        "星",
+        "番",
+        "直"
+      ],
+      "grammar_ids": [
+        "N2-072"
+      ],
+      "grammar_titles": [
+        "～たとたん (〜ta totan)"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "sequence_index": 3,
+      "npc_name": "Le Maître (Ancien)",
+      "npc_role_origin": "Quiz d'empathie en 5 questions, condition réelle du 印 n°8 ; révèle être le grand-père de Clair/Lance",
+      "kanji_ids": [
+        "科",
+        "算",
+        "細",
+        "船",
+        "雪",
+        "雲"
+      ],
+      "grammar_ids": [
+        "N2-073"
+      ],
+      "grammar_titles": [
+        "～だらけ (〜darake)"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "sequence_index": 4,
+      "npc_name": "\"Les autres vieillards du Sanctuaire\" (non nommés)",
+      "npc_role_origin": "PNJ ambiants, corroborent la lignée Clair/Lance/Maître",
+      "kanji_ids": [
+        "鳴",
+        "両",
+        "予",
+        "全",
+        "具",
+        "勝"
+      ],
+      "grammar_ids": [
+        "N2-074"
+      ],
+      "grammar_titles": [
+        "～っこない (〜kkonai)"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "sequence_index": 5,
+      "npc_name": "Le Maître (Ancien)",
+      "npc_role_origin": "Quiz d'empathie en 5 questions, condition réelle du 印 n°8 ; révèle être le grand-père de Clair/Lance",
+      "kanji_ids": [
+        "反",
+        "取",
+        "受",
+        "号",
+        "向",
+        "君"
+      ],
+      "grammar_ids": [
+        "N2-075"
+      ],
+      "grammar_titles": [
+        "～つつ (〜tsutsu)"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "sequence_index": 6,
+      "npc_name": "\"Les autres vieillards du Sanctuaire\" (non nommés)",
+      "npc_role_origin": "PNJ ambiants, corroborent la lignée Clair/Lance/Maître",
+      "kanji_ids": [
+        "和",
+        "商",
+        "央",
+        "委",
+        "守",
+        "対"
+      ],
+      "grammar_ids": [
+        "N2-076"
+      ],
+      "grammar_titles": [
+        "～つつある (〜tsutsu aru)"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "sequence_index": 7,
+      "npc_name": "Le Maître (Ancien)",
+      "npc_role_origin": "Quiz d'empathie en 5 questions, condition réelle du 印 n°8 ; révèle être le grand-père de Clair/Lance",
+      "kanji_ids": [
+        "岸",
+        "島",
+        "州",
+        "幸",
+        "庫",
+        "庭"
+      ],
+      "grammar_ids": [
+        "N2-077"
+      ],
+      "grammar_titles": [
+        "～っぱなし (〜ppanashi)"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "sequence_index": 8,
+      "npc_name": "\"Les autres vieillards du Sanctuaire\" (non nommés)",
+      "npc_role_origin": "PNJ ambiants, corroborent la lignée Clair/Lance/Maître",
+      "kanji_ids": [
+        "式",
+        "悲",
+        "感",
+        "放",
+        "昔",
+        "曲"
+      ],
+      "grammar_ids": [
+        "N2-078"
+      ],
+      "grammar_titles": [
+        "～っぽい (〜ppoi)"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "sequence_index": 9,
+      "npc_name": "Le Maître (Ancien)",
+      "npc_role_origin": "Quiz d'empathie en 5 questions, condition réelle du 印 n°8 ; révèle être le grand-père de Clair/Lance",
+      "kanji_ids": [
+        "期",
+        "根",
+        "様",
+        "橋",
+        "次",
+        "歯"
+      ],
+      "grammar_ids": [
+        "N2-079"
+      ],
+      "grammar_titles": [
+        "～ていられない (〜te irarenai)"
+      ]
+    },
+    {
+      "zone_id": "dragons-den",
+      "sequence_index": 10,
+      "npc_name": "\"Les autres vieillards du Sanctuaire\" (non nommés)",
+      "npc_role_origin": "PNJ ambiants, corroborent la lignée Clair/Lance/Maître",
+      "kanji_ids": [
+        "氷",
+        "波",
+        "球",
+        "由",
+        "申",
+        "畑"
+      ],
+      "grammar_ids": [
+        "N2-080"
+      ],
+      "grammar_titles": [
+        "～てかなわない (〜te kanawanai)"
+      ]
+    },
+    {
+      "zone_id": "dark-cave",
+      "sequence_index": 1,
+      "npc_name": "Homme du fond (côté Ebènelle)",
+      "npc_role_origin": "Accessible seulement après l'Antre du Dragon",
+      "kanji_ids": [
+        "登",
+        "相",
+        "礼",
+        "祭",
+        "第",
+        "筆"
+      ],
+      "grammar_ids": [
+        "N2-102"
+      ],
+      "grammar_titles": [
+        "～ないことはない (〜nai koto wa nai)"
+      ]
+    },
+    {
+      "zone_id": "dark-cave",
+      "sequence_index": 2,
+      "npc_name": "Homme du fond (côté Ebènelle)",
+      "npc_role_origin": "Accessible seulement après l'Antre du Dragon",
+      "kanji_ids": [
+        "緑",
+        "美",
+        "育",
+        "血",
+        "表",
+        "配"
+      ],
+      "grammar_ids": [
+        "N2-103"
+      ],
+      "grammar_titles": [
+        "～ないこともない (〜nai koto mo nai)"
+      ]
+    },
+    {
+      "zone_id": "dark-cave",
+      "sequence_index": 3,
+      "npc_name": "Homme du fond (côté Ebènelle)",
+      "npc_role_origin": "Accessible seulement après l'Antre du Dragon",
+      "kanji_ids": [
+        "付",
+        "令",
+        "位",
+        "例",
+        "健",
+        "共"
+      ],
+      "grammar_ids": [
+        "N2-104"
+      ],
+      "grammar_titles": [
+        "～ないではいられない (〜nai de wa irarenai)"
+      ]
+    },
+    {
+      "zone_id": "dark-cave",
+      "sequence_index": 4,
+      "npc_name": "Homme du fond (côté Ebènelle)",
+      "npc_role_origin": "Accessible seulement après l'Antre du Dragon",
+      "kanji_ids": [
+        "初",
+        "加",
+        "労",
+        "包",
+        "卒",
+        "協"
+      ],
+      "grammar_ids": [
+        "N2-105"
+      ],
+      "grammar_titles": [
+        "～ながら (〜nagara)"
+      ]
+    },
+    {
+      "zone_id": "dark-cave",
+      "sequence_index": 5,
+      "npc_name": "Homme du fond (côté Ebènelle)",
+      "npc_role_origin": "Accessible seulement après l'Antre du Dragon",
+      "kanji_ids": [
+        "司",
+        "各",
+        "城",
+        "塩",
+        "夫",
+        "季"
+      ],
+      "grammar_ids": [
+        "N2-106"
+      ],
+      "grammar_titles": [
+        "～にあたり (〜ni atari)"
+      ]
+    },
+    {
+      "zone_id": "dark-cave",
+      "sequence_index": 6,
+      "npc_name": "Homme du fond (côté Ebènelle)",
+      "npc_role_origin": "Accessible seulement après l'Antre du Dragon",
+      "kanji_ids": [
+        "差",
+        "必",
+        "折",
+        "改",
+        "昨"
+      ],
+      "grammar_ids": [
+        "N2-107"
+      ],
+      "grammar_titles": [
+        "～において (〜ni oite)"
+      ]
+    },
+    {
+      "zone_id": "dark-cave",
+      "sequence_index": 7,
+      "npc_name": "Homme du fond (côté Ebènelle)",
+      "npc_role_origin": "Accessible seulement après l'Antre du Dragon",
+      "kanji_ids": [
+        "景",
+        "望",
+        "未",
+        "末",
+        "札"
+      ],
+      "grammar_ids": [
+        "N2-108"
+      ],
+      "grammar_titles": [
+        "～にかかわらず (〜ni kakawarazu)"
+      ]
+    },
+    {
+      "zone_id": "route-26",
+      "sequence_index": 1,
+      "npc_name": "Maison des Frères/sœurs du jour",
+      "npc_role_origin": "Carnet-index listant les 7 emplacements/jours (hub du fil PNJ récurrent)",
+      "kanji_ids": [
+        "材",
+        "束",
+        "果",
+        "栄",
+        "械",
+        "極"
+      ],
+      "grammar_ids": [
+        "N2-122"
+      ],
+      "grammar_titles": [
+        "～に基づいて (〜ni motozuite)"
+      ]
+    },
+    {
+      "zone_id": "route-26",
+      "sequence_index": 2,
+      "npc_name": "Fille de la maison au nord",
+      "npc_role_origin": "Soigne gratuitement l'équipe du joueur",
+      "kanji_ids": [
+        "機",
+        "泣",
+        "浴",
+        "漁",
+        "焼",
+        "笑"
+      ],
+      "grammar_ids": [
+        "N2-123"
+      ],
+      "grammar_titles": [
+        "～に対して (〜ni taishite)"
+      ]
+    },
+    {
+      "zone_id": "route-26",
+      "sequence_index": 3,
+      "npc_name": "Maison des Frères/sœurs du jour",
+      "npc_role_origin": "Carnet-index listant les 7 emplacements/jours (hub du fil PNJ récurrent)",
+      "kanji_ids": [
+        "管",
+        "節",
+        "約",
+        "要",
+        "軍",
+        "輪"
+      ],
+      "grammar_ids": [
+        "N2-124"
+      ],
+      "grammar_titles": [
+        "～に応えて (〜ni kotaete)"
+      ]
+    },
+    {
+      "zone_id": "route-26",
+      "sequence_index": 4,
+      "npc_name": "Fille de la maison au nord",
+      "npc_role_origin": "Soigne gratuitement l'équipe du joueur",
+      "kanji_ids": [
+        "辺",
+        "連",
+        "録",
+        "関",
+        "順",
+        "願"
+      ],
+      "grammar_ids": [
+        "N2-125"
+      ],
+      "grammar_titles": [
+        "～に応じて (〜ni oujite)"
+      ]
+    },
+    {
+      "zone_id": "route-26",
+      "sequence_index": 5,
+      "npc_name": "Maison des Frères/sœurs du jour",
+      "npc_role_origin": "Carnet-index listant les 7 emplacements/jours (hub du fil PNJ récurrent)",
+      "kanji_ids": [
+        "飛",
+        "香",
+        "件",
+        "余",
+        "像",
+        "再"
+      ],
+      "grammar_ids": [
+        "N2-126"
+      ],
+      "grammar_titles": [
+        "～に決まっている (〜ni kimatte iru)"
+      ]
+    },
+    {
+      "zone_id": "route-26",
+      "sequence_index": 6,
+      "npc_name": "Fille de la maison au nord",
+      "npc_role_origin": "Soigne gratuitement l'équipe du joueur",
+      "kanji_ids": [
+        "勢",
+        "史",
+        "告",
+        "因",
+        "団"
+      ],
+      "grammar_ids": [
+        "N2-127"
+      ],
+      "grammar_titles": [
+        "～に沿って (〜ni sotte)"
+      ]
+    },
+    {
+      "zone_id": "route-26",
+      "sequence_index": 7,
+      "npc_name": "Maison des Frères/sœurs du jour",
+      "npc_role_origin": "Carnet-index listant les 7 emplacements/jours (hub du fil PNJ récurrent)",
+      "kanji_ids": [
+        "圧",
+        "在",
+        "均",
+        "型",
+        "基"
+      ],
+      "grammar_ids": [
+        "N2-128"
+      ],
+      "grammar_titles": [
+        "～に過ぎない (〜ni suginai)"
+      ]
+    },
+    {
+      "zone_id": "route-27",
+      "sequence_index": 1,
+      "npc_name": "Vieille dame (sortie est des Chutes de Tohjo)",
+      "npc_role_origin": "Donne TM37 Sandstorm si affection élevée du compagnon en tête",
+      "kanji_ids": [
+        "境",
+        "夢",
+        "妻",
+        "婦",
+        "容",
+        "布"
+      ],
+      "grammar_ids": [
+        "N2-142"
+      ],
+      "grammar_titles": [
+        "～はまだしも (〜wa mada shimo)"
+      ]
+    },
+    {
+      "zone_id": "route-27",
+      "sequence_index": 2,
+      "npc_name": "Vieille dame (sortie est des Chutes de Tohjo)",
+      "npc_role_origin": "Donne TM37 Sandstorm si affection élevée du compagnon en tête",
+      "kanji_ids": [
+        "常",
+        "張",
+        "志",
+        "応",
+        "性",
+        "支"
+      ],
+      "grammar_ids": [
+        "N2-143"
+      ],
+      "grammar_titles": [
+        "～はもとより (〜wa moto yori)"
+      ]
+    },
+    {
+      "zone_id": "route-27",
+      "sequence_index": 3,
+      "npc_name": "Vieille dame (sortie est des Chutes de Tohjo)",
+      "npc_role_origin": "Donne TM37 Sandstorm si affection élevée du compagnon en tête",
+      "kanji_ids": [
+        "救",
+        "断",
+        "旧",
+        "易",
+        "暴",
+        "条"
+      ],
+      "grammar_ids": [
+        "N2-144"
+      ],
+      "grammar_titles": [
+        "～は抜きにして (〜wa nuki ni shite)"
+      ]
+    },
+    {
+      "zone_id": "route-27",
+      "sequence_index": 4,
+      "npc_name": "Vieille dame (sortie est des Chutes de Tohjo)",
+      "npc_role_origin": "Donne TM37 Sandstorm si affection élevée du compagnon en tête",
+      "kanji_ids": [
+        "検",
+        "構",
+        "武",
+        "歴",
+        "永",
+        "液"
+      ],
+      "grammar_ids": [
+        "N2-145"
+      ],
+      "grammar_titles": [
+        "～べきではない (〜beki dewa nai)"
+      ]
+    },
+    {
+      "zone_id": "route-27",
+      "sequence_index": 5,
+      "npc_name": "Vieille dame (sortie est des Chutes de Tohjo)",
+      "npc_role_origin": "Donne TM37 Sandstorm si affection élevée du compagnon en tête",
+      "kanji_ids": [
+        "燃",
+        "率",
+        "留",
+        "築",
+        "経",
+        "絶"
+      ],
+      "grammar_ids": [
+        "N2-146"
+      ],
+      "grammar_titles": [
+        "～まい (〜mai)"
+      ]
+    },
+    {
+      "zone_id": "indigo-plateau-antichambre",
+      "sequence_index": 1,
+      "npc_name": "Vieil homme avec compagnon-télépathe (hall d'entrée)",
+      "npc_role_origin": "PNJ ambiant, blague que son compagnon \"ne pourra pas te ramener à la maison\"",
+      "kanji_ids": [
+        "綿",
+        "総",
+        "編",
+        "罪",
+        "職",
+        "航"
+      ],
+      "grammar_ids": [
+        "N2-157"
+      ],
+      "grammar_titles": [
+        "～も～ば～も～ (〜mo〜ba〜mo〜)"
+      ]
+    },
+    {
+      "zone_id": "indigo-plateau-antichambre",
+      "sequence_index": 2,
+      "npc_name": "Vieil homme avec compagnon-télépathe (hall d'entrée)",
+      "npc_role_origin": "PNJ ambiant, blague que son compagnon \"ne pourra pas te ramener à la maison\"",
+      "kanji_ids": [
+        "術",
+        "製",
+        "解",
+        "輸",
+        "迷",
+        "鉱"
+      ],
+      "grammar_ids": [
+        "N2-158"
+      ],
+      "grammar_titles": [
+        "～も同然だ (〜mo douzen da)"
+      ]
+    },
+    {
+      "zone_id": "indigo-plateau-antichambre",
+      "sequence_index": 3,
+      "npc_name": "Vieil homme avec compagnon-télépathe (hall d'entrée)",
+      "npc_role_origin": "PNJ ambiant, blague que son compagnon \"ne pourra pas te ramener à la maison\"",
+      "kanji_ids": [
+        "防",
+        "乳",
+        "優",
+        "券",
+        "割",
+        "勤"
+      ],
+      "grammar_ids": [
+        "N2-159"
+      ],
+      "grammar_titles": [
+        "～やら～やら (〜yara〜yara)"
+      ]
+    },
+    {
+      "zone_id": "indigo-plateau-antichambre",
+      "sequence_index": 4,
+      "npc_name": "Vieil homme avec compagnon-télépathe (hall d'entrée)",
+      "npc_role_origin": "PNJ ambiant, blague que son compagnon \"ne pourra pas te ramener à la maison\"",
+      "kanji_ids": [
+        "危",
+        "収",
+        "呼",
+        "善",
+        "困",
+        "域"
+      ],
+      "grammar_ids": [
+        "N2-160"
+      ],
+      "grammar_titles": [
+        "～ようがない (〜you ga nai)"
+      ]
+    },
+    {
+      "zone_id": "indigo-plateau-antichambre",
+      "sequence_index": 5,
+      "npc_name": "Vieil homme avec compagnon-télépathe (hall d'entrée)",
+      "npc_role_origin": "PNJ ambiant, blague que son compagnon \"ne pourra pas te ramener à la maison\"",
+      "kanji_ids": [
+        "存",
+        "専",
+        "尊",
+        "巻",
+        "干",
+        "幼"
+      ],
+      "grammar_ids": [
+        "N2-161"
+      ],
+      "grammar_titles": [
+        "～よりほかない (〜yori hoka nai)"
+      ]
+    },
+    {
+      "zone_id": "indigo-plateau-antichambre",
+      "sequence_index": 6,
+      "npc_name": "Vieil homme avec compagnon-télépathe (hall d'entrée)",
+      "npc_role_origin": "PNJ ambiant, blague que son compagnon \"ne pourra pas te ramener à la maison\"",
+      "kanji_ids": [
+        "忘",
+        "批",
+        "拡",
+        "晩",
+        "暖"
+      ],
+      "grammar_ids": [
+        "N2-162"
+      ],
+      "grammar_titles": [
+        "～わけがない (〜wake ga nai)"
+      ]
+    },
+    {
+      "zone_id": "indigo-plateau-antichambre",
+      "sequence_index": 7,
+      "npc_name": "Vieil homme avec compagnon-télépathe (hall d'entrée)",
+      "npc_role_origin": "PNJ ambiant, blague que son compagnon \"ne pourra pas te ramener à la maison\"",
+      "kanji_ids": [
+        "暮",
+        "机",
+        "枚",
+        "棒",
+        "権"
+      ],
+      "grammar_ids": [
+        "N2-163"
+      ],
+      "grammar_titles": [
+        "～わけだ (〜wake da)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 1,
+      "npc_name": "Grand-père paniqué (SS Aqua, arrivée)",
+      "npc_role_origin": "Sa petite-fille a disparu du navire, retrouvée au sous-sol",
+      "kanji_ids": [
+        "欲",
+        "泉",
+        "灰",
+        "看",
+        "紅",
+        "純"
+      ],
+      "grammar_ids": [
+        "N2-177"
+      ],
+      "grammar_titles": [
+        "～上は (～ue wa)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 2,
+      "npc_name": "Capitaine",
+      "npc_role_origin": "Héberge la petite-fille retrouvée, distribue des Plaques collectionnables",
+      "kanji_ids": [
+        "翌",
+        "胃",
+        "背",
+        "胸",
+        "脳",
+        "腹"
+      ],
+      "grammar_ids": [
+        "N2-178"
+      ],
+      "grammar_titles": [
+        "～以上 (〜ijou)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 3,
+      "npc_name": "Président du Club des Fans",
+      "npc_role_origin": "Récompense qui écoute son histoire jusqu'au bout",
+      "kanji_ids": [
+        "臓",
+        "裏",
+        "針",
+        "閉",
+        "骨",
+        "与"
+      ],
+      "grammar_ids": [
+        "N2-179"
+      ],
+      "grammar_titles": [
+        "～以来 (〜irai)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 4,
+      "npc_name": "Homme du comptoir du Club des Fans",
+      "npc_role_origin": "Détient l'objet perdu de Copycat, à livrer à Safranville",
+      "kanji_ids": [
+        "互",
+        "介",
+        "依",
+        "傾",
+        "募",
+        "占"
+      ],
+      "grammar_ids": [
+        "N2-180"
+      ],
+      "grammar_titles": [
+        "～切る (〜kiru)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 5,
+      "npc_name": "Grand-père paniqué (SS Aqua, arrivée)",
+      "npc_role_origin": "Sa petite-fille a disparu du navire, retrouvée au sous-sol",
+      "kanji_ids": [
+        "双",
+        "叫",
+        "召",
+        "吹",
+        "咲",
+        "坊"
+      ],
+      "grammar_ids": [
+        "N2-181"
+      ],
+      "grammar_titles": [
+        "～反面 (〜hanmen)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 6,
+      "npc_name": "Capitaine",
+      "npc_role_origin": "Héberge la petite-fille retrouvée, distribue des Plaques collectionnables",
+      "kanji_ids": [
+        "塔",
+        "塗",
+        "壁",
+        "奥",
+        "姓",
+        "娘"
+      ],
+      "grammar_ids": [
+        "N2-182"
+      ],
+      "grammar_titles": [
+        "～向け (〜muke)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 7,
+      "npc_name": "Président du Club des Fans",
+      "npc_role_origin": "Récompense qui écoute son histoire jusqu'au bout",
+      "kanji_ids": [
+        "婚",
+        "封",
+        "幅",
+        "床",
+        "彼",
+        "御"
+      ],
+      "grammar_ids": [
+        "N2-183"
+      ],
+      "grammar_titles": [
+        "～恐れがある (〜osore ga aru)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 8,
+      "npc_name": "Homme du comptoir du Club des Fans",
+      "npc_role_origin": "Détient l'objet perdu de Copycat, à livrer à Safranville",
+      "kanji_ids": [
+        "忙",
+        "恋",
+        "恐",
+        "恥",
+        "恵",
+        "戻"
+      ],
+      "grammar_ids": [
+        "N2-184"
+      ],
+      "grammar_titles": [
+        "～折には (〜ori ni wa)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 9,
+      "npc_name": "Grand-père paniqué (SS Aqua, arrivée)",
+      "npc_role_origin": "Sa petite-fille a disparu du navire, retrouvée au sous-sol",
+      "kanji_ids": [
+        "昇",
+        "普",
+        "更",
+        "替",
+        "欧",
+        "歳"
+      ],
+      "grammar_ids": [
+        "N2-185"
+      ],
+      "grammar_titles": [
+        "～末 (～sue)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 10,
+      "npc_name": "Capitaine",
+      "npc_role_origin": "Héberge la petite-fille retrouvée, distribue des Plaques collectionnables",
+      "kanji_ids": [
+        "泥",
+        "涼",
+        "渡",
+        "煙",
+        "燥",
+        "珍"
+      ],
+      "grammar_ids": [
+        "N2-186"
+      ],
+      "grammar_titles": [
+        "～次第 (〜shidai)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 11,
+      "npc_name": "Président du Club des Fans",
+      "npc_role_origin": "Récompense qui écoute son histoire jusqu'au bout",
+      "kanji_ids": [
+        "環",
+        "畜",
+        "畳",
+        "疲",
+        "祈",
+        "粒"
+      ],
+      "grammar_ids": [
+        "N2-187"
+      ],
+      "grammar_titles": [
+        "～次第で (〜shidai de)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 12,
+      "npc_name": "Homme du comptoir du Club des Fans",
+      "npc_role_origin": "Détient l'objet perdu de Copycat, à livrer à Safranville",
+      "kanji_ids": [
+        "肌",
+        "肩",
+        "肯",
+        "腕",
+        "般",
+        "袋"
+      ],
+      "grammar_ids": [
+        "N2-188"
+      ],
+      "grammar_titles": [
+        "～次第です (〜shidai desu)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 13,
+      "npc_name": "Grand-père paniqué (SS Aqua, arrivée)",
+      "npc_role_origin": "Sa petite-fille a disparu du navire, retrouvée au sous-sol",
+      "kanji_ids": [
+        "被",
+        "軟",
+        "辛",
+        "込",
+        "逃",
+        "鈍"
+      ],
+      "grammar_ids": [
+        "N2-189"
+      ],
+      "grammar_titles": [
+        "～気味 (〜gimi)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 14,
+      "npc_name": "Capitaine",
+      "npc_role_origin": "Héberge la petite-fille retrouvée, distribue des Plaques collectionnables",
+      "kanji_ids": [
+        "鋭",
+        "雇",
+        "震",
+        "靴",
+        "里",
+        "丁"
+      ],
+      "grammar_ids": [
+        "N2-190"
+      ],
+      "grammar_titles": [
+        "～限り (〜kagiri)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 15,
+      "npc_name": "Président du Club des Fans",
+      "npc_role_origin": "Récompense qui écoute son histoire jusqu'au bout",
+      "kanji_ids": [
+        "帳",
+        "井",
+        "倉",
+        "功",
+        "博",
+        "唱"
+      ],
+      "grammar_ids": [
+        "N2-191"
+      ],
+      "grammar_titles": [
+        "～際に (〜sai ni)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 16,
+      "npc_name": "Homme du comptoir du Club des Fans",
+      "npc_role_origin": "Détient l'objet perdu de Copycat, à livrer à Safranville",
+      "kanji_ids": [
+        "奈",
+        "媛",
+        "挙",
+        "旗",
+        "梅",
+        "梨"
+      ],
+      "grammar_ids": [
+        "N1-001"
+      ],
+      "grammar_titles": [
+        "A うが B うが (A uga B uga)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 17,
+      "npc_name": "Grand-père paniqué (SS Aqua, arrivée)",
+      "npc_role_origin": "Sa petite-fille a disparu du navire, retrouvée au sous-sol",
+      "kanji_ids": [
+        "熊",
+        "牧",
+        "票",
+        "縄",
+        "芽",
+        "街"
+      ],
+      "grammar_ids": [
+        "N1-002"
+      ],
+      "grammar_titles": [
+        "A うと B うと (A uto B uto)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 18,
+      "npc_name": "Capitaine",
+      "npc_role_origin": "Héberge la petite-fille retrouvée, distribue des Plaques collectionnables",
+      "kanji_ids": [
+        "鏡",
+        "養",
+        "句",
+        "墓",
+        "態",
+        "桜"
+      ],
+      "grammar_ids": [
+        "N1-003"
+      ],
+      "grammar_titles": [
+        "A かたわら B (A katawara B)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 19,
+      "npc_name": "Président du Club des Fans",
+      "npc_role_origin": "Récompense qui écoute son histoire jusqu'au bout",
+      "kanji_ids": [
+        "災",
+        "益",
+        "眼",
+        "紀",
+        "素",
+        "統"
+      ],
+      "grammar_ids": [
+        "N1-004"
+      ],
+      "grammar_titles": [
+        "A かれ B かれ (A kare B kare)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 20,
+      "npc_name": "Homme du comptoir du Club des Fans",
+      "npc_role_origin": "Détient l'objet perdu de Copycat, à livrer à Safranville",
+      "kanji_ids": [
+        "織",
+        "義",
+        "肥",
+        "脈",
+        "興",
+        "衛"
+      ],
+      "grammar_ids": [
+        "N1-005"
+      ],
+      "grammar_titles": [
+        "A だの B だの (A dano B dano)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 21,
+      "npc_name": "Grand-père paniqué (SS Aqua, arrivée)",
+      "npc_role_origin": "Sa petite-fille a disparu du navire, retrouvée au sous-sol",
+      "kanji_ids": [
+        "仁",
+        "俳",
+        "后",
+        "奮",
+        "孝",
+        "宗"
+      ],
+      "grammar_ids": [
+        "N1-006"
+      ],
+      "grammar_titles": [
+        "A であれ B であれ (A deare B deare)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 22,
+      "npc_name": "Capitaine",
+      "npc_role_origin": "Héberge la petite-fille retrouvée, distribue des Plaques collectionnables",
+      "kanji_ids": [
+        "密",
+        "射",
+        "就",
+        "尺",
+        "幕",
+        "憲"
+      ],
+      "grammar_ids": [
+        "N1-007"
+      ],
+      "grammar_titles": [
+        "A というか B というか (A to iu ka B to iu ka)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 23,
+      "npc_name": "Président du Club des Fans",
+      "npc_role_origin": "Récompense qui écoute son histoire jusqu'au bout",
+      "kanji_ids": [
+        "朗",
+        "染",
+        "模",
+        "樹",
+        "源",
+        "班"
+      ],
+      "grammar_ids": [
+        "N1-008"
+      ],
+      "grammar_titles": [
+        "A とも B とも (A tomo B tomo)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 24,
+      "npc_name": "Homme du comptoir du Club des Fans",
+      "npc_role_origin": "Détient l'objet perdu de Copycat, à livrer à Safranville",
+      "kanji_ids": [
+        "盛",
+        "穴",
+        "筋",
+        "策",
+        "糖",
+        "系"
+      ],
+      "grammar_ids": [
+        "N1-009"
+      ],
+      "grammar_titles": [
+        "A にしろ B にしろ (A nishiro B nishiro)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 25,
+      "npc_name": "Grand-père paniqué (SS Aqua, arrivée)",
+      "npc_role_origin": "Sa petite-fille a disparu du navire, retrouvée au sous-sol",
+      "kanji_ids": [
+        "絹",
+        "縦",
+        "縮",
+        "聖",
+        "腸",
+        "臨"
+      ],
+      "grammar_ids": [
+        "N1-010"
+      ],
+      "grammar_titles": [
+        "A にせよ B にせよ (A ni seyo B ni seyo)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 26,
+      "npc_name": "Capitaine",
+      "npc_role_origin": "Héberge la petite-fille retrouvée, distribue des Plaques collectionnables",
+      "kanji_ids": [
+        "至",
+        "裁",
+        "銭",
+        "丈",
+        "且",
+        "丘"
+      ],
+      "grammar_ids": [
+        "N1-011"
+      ],
+      "grammar_titles": [
+        "A につけ B につけ (A ni tsuke B ni tsuke)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 27,
+      "npc_name": "Président du Club des Fans",
+      "npc_role_origin": "Récompense qui écoute son histoire jusqu'au bout",
+      "kanji_ids": [
+        "亜",
+        "仙",
+        "企",
+        "侮",
+        "俗",
+        "俸"
+      ],
+      "grammar_ids": [
+        "N1-012"
+      ],
+      "grammar_titles": [
+        "A のやら B のやら (A no yara B no yara)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 28,
+      "npc_name": "Homme du comptoir du Club des Fans",
+      "npc_role_origin": "Détient l'objet perdu de Copycat, à livrer à Safranville",
+      "kanji_ids": [
+        "偽",
+        "傘",
+        "兼",
+        "冒",
+        "凝",
+        "凸"
+      ],
+      "grammar_ids": [
+        "N1-013"
+      ],
+      "grammar_titles": [
+        "Noun1 が Noun1 なら、 Noun2 も Noun2 だ (A ga A nara, B mo B da)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 29,
+      "npc_name": "Grand-père paniqué (SS Aqua, arrivée)",
+      "npc_role_origin": "Sa petite-fille a disparu du navire, retrouvée au sous-sol",
+      "kanji_ids": [
+        "刃",
+        "励",
+        "劾",
+        "勧",
+        "匠",
+        "及"
+      ],
+      "grammar_ids": [
+        "N1-014"
+      ],
+      "grammar_titles": [
+        "Noun1 も Noun1 なら、Noun2 も Noun2 だ (A mo A nara, B mo B da)"
+      ]
+    },
+    {
+      "zone_id": "vermilion-city",
+      "sequence_index": 30,
+      "npc_name": "Capitaine",
+      "npc_role_origin": "Héberge la petite-fille retrouvée, distribue des Plaques collectionnables",
+      "kanji_ids": [
+        "叔",
+        "吉",
+        "吐",
+        "呂",
+        "呈",
+        "哀"
+      ],
+      "grammar_ids": [
+        "N1-015"
+      ],
+      "grammar_titles": [
+        "Noun + あっての + Noun (A atte no B)"
+      ]
+    },
+    {
+      "zone_id": "route-6-kanto",
+      "sequence_index": 1,
+      "npc_name": "Vieille dame (Route 5)",
+      "npc_role_origin": "Pressent un danger",
+      "kanji_ids": [
+        "唆",
+        "唇",
+        "唯",
+        "啓",
+        "喚"
+      ],
+      "grammar_ids": [
+        "N1-036"
+      ],
+      "grammar_titles": [
+        "Noun といい Noun といい (〜to ii〜to ii)"
+      ]
+    },
+    {
+      "zone_id": "route-6-kanto",
+      "sequence_index": 2,
+      "npc_name": "PNJ du Passage Souterrain",
+      "npc_role_origin": "Échange une spécialité locale (RageCandyBar) contre une CT",
+      "kanji_ids": [
+        "喝",
+        "喪",
+        "嘆",
+        "嘱",
+        "噴"
+      ],
+      "grammar_ids": [
+        "N1-037"
+      ],
+      "grammar_titles": [
+        "Noun という Noun (~to iu~)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 1,
+      "npc_name": "Mr. Psychic",
+      "npc_role_origin": "Donne une CT gratuitement",
+      "kanji_ids": [
+        "嚇",
+        "囚",
+        "坑",
+        "垣",
+        "培",
+        "堅"
+      ],
+      "grammar_ids": [
+        "N1-038"
+      ],
+      "grammar_titles": [
+        "Noun というところだ (Noun to iu tokoro da)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 2,
+      "npc_name": "Vigile du hall Silph Co.",
+      "npc_role_origin": "Explique l'ascenseur en panne",
+      "kanji_ids": [
+        "堕",
+        "塀",
+        "塁",
+        "塊",
+        "塑",
+        "塚"
+      ],
+      "grammar_ids": [
+        "N1-039"
+      ],
+      "grammar_titles": [
+        "Noun + というもの (~ to iu mono)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 3,
+      "npc_name": "Copycat",
+      "npc_role_origin": "Imite instantanément le joueur à la rencontre (flavor)",
+      "kanji_ids": [
+        "塾",
+        "墜",
+        "墳",
+        "墾",
+        "壇",
+        "壊"
+      ],
+      "grammar_ids": [
+        "N1-040"
+      ],
+      "grammar_titles": [
+        "Noun といったところだ (Noun to itta tokoro da)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 4,
+      "npc_name": "Fille de la gare de Safranville",
+      "npc_role_origin": "Explique qu'un Pass Train Aimant est requis",
+      "kanji_ids": [
+        "壌",
+        "壮",
+        "壱",
+        "契",
+        "奔",
+        "奨"
+      ],
+      "grammar_ids": [
+        "N1-041"
+      ],
+      "grammar_titles": [
+        "Noun といわず Noun といわず (A to iwazu B to iwazu)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 5,
+      "npc_name": "Karatéka du dojo",
+      "npc_role_origin": "Absent — parti s'entraîner au Mont Mortier, Johto (callback direct)",
+      "kanji_ids": [
+        "奪",
+        "奴",
+        "如",
+        "妃",
+        "妄",
+        "妊"
+      ],
+      "grammar_ids": [
+        "N1-042"
+      ],
+      "grammar_titles": [
+        "Noun + ときたら (〜tokitara)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 6,
+      "npc_name": "Copycat (résolution)",
+      "npc_role_origin": "Poupée rapportée depuis Vermeille → donne le Pass Train Aimant",
+      "kanji_ids": [
+        "妥",
+        "妨",
+        "姫",
+        "威",
+        "娠",
+        "娯"
+      ],
+      "grammar_ids": [
+        "N1-043"
+      ],
+      "grammar_titles": [
+        "Noun とは比べものにならない (~to wa kurabemono ni naranai)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 7,
+      "npc_name": "Mr. Psychic",
+      "npc_role_origin": "Donne une CT gratuitement",
+      "kanji_ids": [
+        "婿",
+        "嫁",
+        "嫡",
+        "嬢",
+        "孔",
+        "孤"
+      ],
+      "grammar_ids": [
+        "N1-044"
+      ],
+      "grammar_titles": [
+        "Noun + ともあろう + Noun (~tomoarou~)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 8,
+      "npc_name": "Vigile du hall Silph Co.",
+      "npc_role_origin": "Explique l'ascenseur en panne",
+      "kanji_ids": [
+        "尉",
+        "尋",
+        "尾",
+        "尿",
+        "履",
+        "峠"
+      ],
+      "grammar_ids": [
+        "N1-045"
+      ],
+      "grammar_titles": [
+        "Noun ともなると (〜to mo naru to)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 9,
+      "npc_name": "Copycat",
+      "npc_role_origin": "Imite instantanément le joueur à la rencontre (flavor)",
+      "kanji_ids": [
+        "峡",
+        "峰",
+        "崩",
+        "嵐",
+        "巧",
+        "帆"
+      ],
+      "grammar_ids": [
+        "N1-046"
+      ],
+      "grammar_titles": [
+        "Noun ともなれば (〜to mo nareba)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 10,
+      "npc_name": "Fille de la gare de Safranville",
+      "npc_role_origin": "Explique qu'un Pass Train Aimant est requis",
+      "kanji_ids": [
+        "帝",
+        "帥",
+        "幣",
+        "幽",
+        "廃",
+        "弐"
+      ],
+      "grammar_ids": [
+        "N1-047"
+      ],
+      "grammar_titles": [
+        "Noun と相まって (~ to aimatte)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 11,
+      "npc_name": "Karatéka du dojo",
+      "npc_role_origin": "Absent — parti s'entraîner au Mont Mortier, Johto (callback direct)",
+      "kanji_ids": [
+        "弔",
+        "弥",
+        "弦",
+        "弧",
+        "忌",
+        "悔"
+      ],
+      "grammar_ids": [
+        "N1-048"
+      ],
+      "grammar_titles": [
+        "Noun なくして～はない (Noun nakushite ~ wa nai)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 12,
+      "npc_name": "Copycat (résolution)",
+      "npc_role_origin": "Poupée rapportée depuis Vermeille → donne le Pass Train Aimant",
+      "kanji_ids": [
+        "悠",
+        "惑",
+        "惨",
+        "愚",
+        "慈",
+        "慌"
+      ],
+      "grammar_ids": [
+        "N1-049"
+      ],
+      "grammar_titles": [
+        "Noun なしでは～ない (Noun nashi de wa ~nai)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 13,
+      "npc_name": "Mr. Psychic",
+      "npc_role_origin": "Donne une CT gratuitement",
+      "kanji_ids": [
+        "慨",
+        "懇",
+        "懲",
+        "懸",
+        "戯",
+        "房"
+      ],
+      "grammar_ids": [
+        "N1-050"
+      ],
+      "grammar_titles": [
+        "Noun なしには～ない (Noun nashi ni wa ~nai)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 14,
+      "npc_name": "Vigile du hall Silph Co.",
+      "npc_role_origin": "Explique l'ascenseur en panne",
+      "kanji_ids": [
+        "扇",
+        "扉",
+        "披",
+        "拒",
+        "拠",
+        "拳"
+      ],
+      "grammar_ids": [
+        "N1-051"
+      ],
+      "grammar_titles": [
+        "Noun ならいざ知らず (~nara izashirazu)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 15,
+      "npc_name": "Copycat",
+      "npc_role_origin": "Imite instantanément le joueur à la rencontre (flavor)",
+      "kanji_ids": [
+        "拷",
+        "挑",
+        "掌",
+        "排",
+        "撃",
+        "擬"
+      ],
+      "grammar_ids": [
+        "N1-052"
+      ],
+      "grammar_titles": [
+        "Noun + ならでは (~nara de wa)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 16,
+      "npc_name": "Fille de la gare de Safranville",
+      "npc_role_origin": "Explique qu'un Pass Train Aimant est requis",
+      "kanji_ids": [
+        "攻",
+        "敏",
+        "斉",
+        "斥",
+        "施",
+        "旋"
+      ],
+      "grammar_ids": [
+        "N1-053"
+      ],
+      "grammar_titles": [
+        "Noun なり Noun なり (A nari B nari)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 17,
+      "npc_name": "Karatéka du dojo",
+      "npc_role_origin": "Absent — parti s'entraîner au Mont Mortier, Johto (callback direct)",
+      "kanji_ids": [
+        "旦",
+        "旨",
+        "旬",
+        "旺",
+        "昆",
+        "是"
+      ],
+      "grammar_ids": [
+        "N1-054"
+      ],
+      "grammar_titles": [
+        "Noun なりとも (~nari tomo)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 18,
+      "npc_name": "Copycat (résolution)",
+      "npc_role_origin": "Poupée rapportée depuis Vermeille → donne le Pass Train Aimant",
+      "kanji_ids": [
+        "晶",
+        "暁",
+        "暇",
+        "曹",
+        "朕",
+        "朴"
+      ],
+      "grammar_ids": [
+        "N1-055"
+      ],
+      "grammar_titles": [
+        "Noun に Noun を重ねて (A ni B wo kasanete)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 19,
+      "npc_name": "Mr. Psychic",
+      "npc_role_origin": "Donne une CT gratuitement",
+      "kanji_ids": [
+        "朽",
+        "杉",
+        "析",
+        "枠",
+        "枢",
+        "某"
+      ],
+      "grammar_ids": [
+        "N1-056"
+      ],
+      "grammar_titles": [
+        "Noun にあっては (Noun ni atte ha)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 20,
+      "npc_name": "Vigile du hall Silph Co.",
+      "npc_role_origin": "Explique l'ascenseur en panne",
+      "kanji_ids": [
+        "柳",
+        "核",
+        "栽",
+        "桃",
+        "桑",
+        "桟"
+      ],
+      "grammar_ids": [
+        "N1-057"
+      ],
+      "grammar_titles": [
+        "Noun にあるまじき Noun (Noun ni aru majiki Noun)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 21,
+      "npc_name": "Copycat",
+      "npc_role_origin": "Imite instantanément le joueur à la rencontre (flavor)",
+      "kanji_ids": [
+        "棄",
+        "棋",
+        "棚",
+        "棺",
+        "椎"
+      ],
+      "grammar_ids": [
+        "N1-058"
+      ],
+      "grammar_titles": [
+        "Noun にして (Noun ni shite)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 22,
+      "npc_name": "Fille de la gare de Safranville",
+      "npc_role_origin": "Explique qu'un Pass Train Aimant est requis",
+      "kanji_ids": [
+        "楼",
+        "概",
+        "欄",
+        "欺",
+        "款"
+      ],
+      "grammar_ids": [
+        "N1-059"
+      ],
+      "grammar_titles": [
+        "Noun にして初めて (Noun nishite hajimete)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 23,
+      "npc_name": "Karatéka du dojo",
+      "npc_role_origin": "Absent — parti s'entraîner au Mont Mortier, Johto (callback direct)",
+      "kanji_ids": [
+        "歓",
+        "殴",
+        "汁",
+        "江",
+        "浄"
+      ],
+      "grammar_ids": [
+        "N1-060"
+      ],
+      "grammar_titles": [
+        "Noun にすら (〜ni sura)"
+      ]
+    },
+    {
+      "zone_id": "saffron-city",
+      "sequence_index": 24,
+      "npc_name": "Copycat (résolution)",
+      "npc_role_origin": "Poupée rapportée depuis Vermeille → donne le Pass Train Aimant",
+      "kanji_ids": [
+        "浪",
+        "滝",
+        "滞",
+        "炉",
+        "炊"
+      ],
+      "grammar_ids": [
+        "N1-061"
+      ],
+      "grammar_titles": [
+        "Noun にとどまらず～も (~ ni todomarazu ~ mo)"
+      ]
+    },
+    {
+      "zone_id": "route-9-10-rocktunnel",
+      "sequence_index": 1,
+      "npc_name": "Garçon (Centre Pokémon voisin)",
+      "npc_role_origin": "Relaie le vol à la Centrale (indice pur)",
+      "kanji_ids": [
+        "炎",
+        "烈",
+        "煩",
+        "爽",
+        "牲"
+      ],
+      "grammar_ids": [
+        "N1-071"
+      ],
+      "grammar_titles": [
+        "Noun に限る (~ni kagiru)"
+      ]
+    },
+    {
+      "zone_id": "route-9-10-rocktunnel",
+      "sequence_index": 2,
+      "npc_name": "Garçon (Centre Pokémon voisin)",
+      "npc_role_origin": "Relaie le vol à la Centrale (indice pur)",
+      "kanji_ids": [
+        "狂",
+        "璃",
+        "瓶",
+        "甚",
+        "甲"
+      ],
+      "grammar_ids": [
+        "N1-072"
+      ],
+      "grammar_titles": [
+        "Noun ぬいた Noun (A nuita B)"
+      ]
+    },
+    {
+      "zone_id": "route-9-10-rocktunnel",
+      "sequence_index": 3,
+      "npc_name": "Garçon (Centre Pokémon voisin)",
+      "npc_role_origin": "Relaie le vol à la Centrale (indice pur)",
+      "kanji_ids": [
+        "畝",
+        "痘",
+        "痢",
+        "監",
+        "盲"
+      ],
+      "grammar_ids": [
+        "N1-073"
+      ],
+      "grammar_titles": [
+        "Noun + ぬいて（~nuite)"
+      ]
+    },
+    {
+      "zone_id": "route-9-10-rocktunnel",
+      "sequence_index": 4,
+      "npc_name": "Garçon (Centre Pokémon voisin)",
+      "npc_role_origin": "Relaie le vol à la Centrale (indice pur)",
+      "kanji_ids": [
+        "盾",
+        "眉",
+        "眺",
+        "睦",
+        "瞬"
+      ],
+      "grammar_ids": [
+        "N1-074"
+      ],
+      "grammar_titles": [
+        " ～ぬく (~nuku)"
+      ]
+    },
+    {
+      "zone_id": "lavender-town",
+      "sequence_index": 1,
+      "npc_name": "Directeur de la station radio de Lavender Town",
+      "npc_role_origin": "Remet la carte EXPN une fois la quête de la Centrale Électrique de Kanto résolue (finding 04-B1)",
+      "kanji_ids": [
+        "瞭",
+        "祉",
+        "祥",
+        "稼",
+        "稿"
+      ],
+      "grammar_ids": [
+        "N1-076"
+      ],
+      "grammar_titles": [
+        "Noun のいかんでは (Noun no ikan de wa)"
+      ]
+    },
+    {
+      "zone_id": "lavender-town",
+      "sequence_index": 2,
+      "npc_name": "Directeur de la station radio de Lavender Town",
+      "npc_role_origin": "Remet la carte EXPN une fois la quête de la Centrale Électrique de Kanto résolue (finding 04-B1)",
+      "kanji_ids": [
+        "端",
+        "範",
+        "篤",
+        "簿",
+        "籍"
+      ],
+      "grammar_ids": [
+        "N1-077"
+      ],
+      "grammar_titles": [
+        "Noun のいかんにかかわらず (Noun no ikan ni kakawarazu)"
+      ]
+    },
+    {
+      "zone_id": "lavender-town",
+      "sequence_index": 3,
+      "npc_name": "Directeur de la station radio de Lavender Town",
+      "npc_role_origin": "Remet la carte EXPN une fois la quête de la Centrale Électrique de Kanto résolue (finding 04-B1)",
+      "kanji_ids": [
+        "粋",
+        "粛",
+        "粧",
+        "糾",
+        "紋"
+      ],
+      "grammar_ids": [
+        "N1-078"
+      ],
+      "grammar_titles": [
+        "Noun のいかんによっては (Noun no ikan ni yotte wa)"
+      ]
+    },
+    {
+      "zone_id": "lavender-town",
+      "sequence_index": 4,
+      "npc_name": "Directeur de la station radio de Lavender Town",
+      "npc_role_origin": "Remet la carte EXPN une fois la quête de la Centrale Électrique de Kanto résolue (finding 04-B1)",
+      "kanji_ids": [
+        "紡",
+        "索",
+        "紫",
+        "累",
+        "紺"
+      ],
+      "grammar_ids": [
+        "N1-079"
+      ],
+      "grammar_titles": [
+        "Noun のいかんによらず (~ no ikan ni yorazu)"
+      ]
+    },
+    {
+      "zone_id": "kanto-power-plant",
+      "sequence_index": 1,
+      "npc_name": "Directeur",
+      "npc_role_origin": "Furieux du vol d'une pièce mécanique, la récupère et donne une CT une fois rendue",
+      "kanji_ids": [
+        "継",
+        "維",
+        "網",
+        "緊",
+        "緩"
+      ],
+      "grammar_ids": [
+        "N1-080"
+      ],
+      "grammar_titles": [
+        "Noun のごとき Noun (A no gotoki B)"
+      ]
+    },
+    {
+      "zone_id": "kanto-power-plant",
+      "sequence_index": 2,
+      "npc_name": "Vigile",
+      "npc_role_origin": "Relaie un indice vers Azuria",
+      "kanji_ids": [
+        "緯",
+        "縁",
+        "縛",
+        "縫",
+        "繊"
+      ],
+      "grammar_ids": [
+        "N1-081"
+      ],
+      "grammar_titles": [
+        "Noun のことだから (〜no koto dakara)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 1,
+      "npc_name": "Gérant du magasin de vélos d'origine",
+      "npc_role_origin": "Regrette la baisse de fréquentation, évoque \"un garçon et son vélo\" trois ans plus tôt (écho Red)",
+      "kanji_ids": [
+        "繰",
+        "罷",
+        "耐",
+        "耗",
+        "聴",
+        "肖"
+      ],
+      "grammar_ids": [
+        "N1-083"
+      ],
+      "grammar_titles": [
+        "Noun の手前 (~no temae)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 2,
+      "npc_name": "Garçon récurrent (nord de la ville)",
+      "npc_role_origin": "Indique où trouver Misty, puis signale une anomalie à la rivière",
+      "kanji_ids": [
+        "肪",
+        "脅",
+        "脱",
+        "膜",
+        "膨",
+        "艇"
+      ],
+      "grammar_ids": [
+        "N1-084"
+      ],
+      "grammar_titles": [
+        "Noun の極み (〜no kiwami)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 3,
+      "npc_name": "Gérant du magasin de vélos d'origine",
+      "npc_role_origin": "Regrette la baisse de fréquentation, évoque \"un garçon et son vélo\" trois ans plus tôt (écho Red)",
+      "kanji_ids": [
+        "芳",
+        "苗",
+        "虞",
+        "衡",
+        "衰",
+        "衷"
+      ],
+      "grammar_ids": [
+        "N1-085"
+      ],
+      "grammar_titles": [
+        "Noun の 至り (~no itari)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 4,
+      "npc_name": "Garçon récurrent (nord de la ville)",
+      "npc_role_origin": "Indique où trouver Misty, puis signale une anomalie à la rivière",
+      "kanji_ids": [
+        "裂",
+        "裕",
+        "褒",
+        "襲",
+        "覆",
+        "豚"
+      ],
+      "grammar_ids": [
+        "N1-086"
+      ],
+      "grammar_titles": [
+        "Noun はいざ知らず (~ wa iza shirazu)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 5,
+      "npc_name": "Gérant du magasin de vélos d'origine",
+      "npc_role_origin": "Regrette la baisse de fréquentation, évoque \"un garçon et son vélo\" trois ans plus tôt (écho Red)",
+      "kanji_ids": [
+        "載",
+        "輩",
+        "轄",
+        "辱",
+        "透",
+        "逸"
+      ],
+      "grammar_ids": [
+        "N1-087"
+      ],
+      "grammar_titles": [
+        "Noun はおろか～すら (Noun wa oroka ～sura)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 6,
+      "npc_name": "Garçon récurrent (nord de la ville)",
+      "npc_role_origin": "Indique où trouver Misty, puis signale une anomalie à la rivière",
+      "kanji_ids": [
+        "遮",
+        "邪",
+        "郎",
+        "郭",
+        "醜",
+        "采"
+      ],
+      "grammar_ids": [
+        "N1-088"
+      ],
+      "grammar_titles": [
+        "Noun はおろか～まで (~wa oroka ~made)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 7,
+      "npc_name": "Gérant du magasin de vélos d'origine",
+      "npc_role_origin": "Regrette la baisse de fréquentation, évoque \"un garçon et son vélo\" trois ans plus tôt (écho Red)",
+      "kanji_ids": [
+        "釣",
+        "鉛",
+        "銃",
+        "錠",
+        "錦",
+        "鍛"
+      ],
+      "grammar_ids": [
+        "N1-089"
+      ],
+      "grammar_titles": [
+        "Noun はおろか～も (Noun wa oroka ～ mo)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 8,
+      "npc_name": "Garçon récurrent (nord de la ville)",
+      "npc_role_origin": "Indique où trouver Misty, puis signale une anomalie à la rivière",
+      "kanji_ids": [
+        "鎖",
+        "閑",
+        "閥",
+        "閲",
+        "闘",
+        "陣"
+      ],
+      "grammar_ids": [
+        "N1-090"
+      ],
+      "grammar_titles": [
+        "Noun はさておき (~ wa sateoki)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 9,
+      "npc_name": "Gérant du magasin de vélos d'origine",
+      "npc_role_origin": "Regrette la baisse de fréquentation, évoque \"un garçon et son vélo\" trois ans plus tôt (écho Red)",
+      "kanji_ids": [
+        "隻",
+        "雅",
+        "雷",
+        "需",
+        "霊",
+        "項"
+      ],
+      "grammar_ids": [
+        "N1-091"
+      ],
+      "grammar_titles": [
+        "Noun + はどうであれ (~ wa dou de are)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 10,
+      "npc_name": "Garçon récurrent (nord de la ville)",
+      "npc_role_origin": "Indique où trouver Misty, puis signale une anomalie à la rivière",
+      "kanji_ids": [
+        "餓",
+        "駆",
+        "騒",
+        "騰",
+        "驚",
+        "魂"
+      ],
+      "grammar_ids": [
+        "N1-092"
+      ],
+      "grammar_titles": [
+        "Noun まみれ (~mamire)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 11,
+      "npc_name": "Gérant du magasin de vélos d'origine",
+      "npc_role_origin": "Regrette la baisse de fréquentation, évoque \"un garçon et son vélo\" trois ans plus tôt (écho Red)",
+      "kanji_ids": [
+        "鮮",
+        "鯨",
+        "鶏",
+        "鶴",
+        "麗",
+        "岡"
+      ],
+      "grammar_ids": [
+        "N1-093"
+      ],
+      "grammar_titles": [
+        "Noun もさることながら Noun も (A mo saru koto nagara B mo)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 12,
+      "npc_name": "Garçon récurrent (nord de la ville)",
+      "npc_role_origin": "Indique où trouver Misty, puis signale une anomalie à la rivière",
+      "kanji_ids": [
+        "栃",
+        "阜",
+        "乞",
+        "勃",
+        "哺",
+        "喉"
+      ],
+      "grammar_ids": [
+        "N1-094"
+      ],
+      "grammar_titles": [
+        "Noun も兼ねて (~mo kanete)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 13,
+      "npc_name": "Gérant du magasin de vélos d'origine",
+      "npc_role_origin": "Regrette la baisse de fréquentation, évoque \"un garçon et son vélo\" trois ans plus tôt (écho Red)",
+      "kanji_ids": [
+        "喩",
+        "堆",
+        "塞",
+        "塡",
+        "妖",
+        "崖"
+      ],
+      "grammar_ids": [
+        "N1-095"
+      ],
+      "grammar_titles": [
+        "Noun も相まって (~mo aimatte)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 14,
+      "npc_name": "Garçon récurrent (nord de la ville)",
+      "npc_role_origin": "Indique où trouver Misty, puis signale une anomalie à la rivière",
+      "kanji_ids": [
+        "弄",
+        "怨",
+        "拉",
+        "斑",
+        "斬",
+        "曖"
+      ],
+      "grammar_ids": [
+        "N1-096"
+      ],
+      "grammar_titles": [
+        "Noun を おいて他に Verb ない (〜wo oite hoka ni〜nai)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 15,
+      "npc_name": "Gérant du magasin de vélos d'origine",
+      "npc_role_origin": "Regrette la baisse de fréquentation, évoque \"un garçon et son vélo\" trois ans plus tôt (écho Red)",
+      "kanji_ids": [
+        "曽",
+        "枕",
+        "柵",
+        "桁",
+        "汎",
+        "煎"
+      ],
+      "grammar_ids": [
+        "N1-097"
+      ],
+      "grammar_titles": [
+        "Noun をもって (~wo motte)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 16,
+      "npc_name": "Garçon récurrent (nord de la ville)",
+      "npc_role_origin": "Indique où trouver Misty, puis signale une anomalie à la rivière",
+      "kanji_ids": [
+        "畏",
+        "畿",
+        "箋",
+        "籠",
+        "綻"
+      ],
+      "grammar_ids": [
+        "N1-098"
+      ],
+      "grammar_titles": [
+        "Noun をものともせずに (Noun wo mono tomo sezu ni)"
+      ]
+    },
+    {
+      "zone_id": "cerulean-city",
+      "sequence_index": 17,
+      "npc_name": "Gérant du magasin de vélos d'origine",
+      "npc_role_origin": "Regrette la baisse de fréquentation, évoque \"un garçon et son vélo\" trois ans plus tôt (écho Red)",
+      "kanji_ids": [
+        "罵",
+        "羨",
+        "肘",
+        "股",
+        "脇"
+      ],
+      "grammar_ids": [
+        "N1-099"
+      ],
+      "grammar_titles": [
+        "Noun をよそに (~wo yoso ni)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 1,
+      "npc_name": "Homme du toit des Condominiums (visible 20h–4h uniquement)",
+      "npc_role_origin": "PNJ à horaire fixe",
+      "kanji_ids": [
+        "脊",
+        "腎",
+        "膝",
+        "舷",
+        "芯",
+        "酎"
+      ],
+      "grammar_ids": [
+        "N1-106"
+      ],
+      "grammar_titles": [
+        "Noun を皮切りにして (Noun wo kawakiri ni shite)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 2,
+      "npc_name": "\"Président\" GAME FREAK (cameo)",
+      "npc_role_origin": "Dialogue d'ambiance sur le développement du jeu",
+      "kanji_ids": [
+        "釜",
+        "鍋",
+        "鍵",
+        "頓",
+        "餌",
+        "麺"
+      ],
+      "grammar_ids": [
+        "N1-107"
+      ],
+      "grammar_titles": [
+        "Noun を禁じ得ない (〜wo kinjienai)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 3,
+      "npc_name": "\"Directeur son\" GAME FREAK",
+      "npc_role_origin": "Objet-clé changeant la musique d'ambiance, une fois tous les badges réunis",
+      "kanji_ids": [
+        "年",
+        "校",
+        "百",
+        "空",
+        "午",
+        "国"
+      ],
+      "grammar_ids": [
+        "N1-108"
+      ],
+      "grammar_titles": [
+        "Noun を経て (〜wo hete)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 4,
+      "npc_name": "\"Réalisateur\" GAME FREAK",
+      "npc_role_origin": "Quête en 2 étapes, récompense à chaque jalon de complétion",
+      "kanji_ids": [
+        "店",
+        "時",
+        "語",
+        "読",
+        "買",
+        "駅"
+      ],
+      "grammar_ids": [
+        "N1-109"
+      ],
+      "grammar_titles": [
+        "Noun を踏まえて (〜wo fumaete)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 5,
+      "npc_name": "Gentleman du comptoir d'échange",
+      "npc_role_origin": "Se plaint de son manque de Jetons (flavor)",
+      "kanji_ids": [
+        "森",
+        "町",
+        "体",
+        "切",
+        "妹",
+        "姉"
+      ],
+      "grammar_ids": [
+        "N1-110"
+      ],
+      "grammar_titles": [
+        "Noun を限りに (Noun wo kagiri ni)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 6,
+      "npc_name": "Conseiller \"Pouvoir Caché\"",
+      "npc_role_origin": "PNJ d'information gratuite près du Casino",
+      "kanji_ids": [
+        "室",
+        "教",
+        "昼",
+        "歩",
+        "理",
+        "画"
+      ],
+      "grammar_ids": [
+        "N1-111"
+      ],
+      "grammar_titles": [
+        "Noun 並み (~nami)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 7,
+      "npc_name": "Homme du toit des Condominiums (visible 20h–4h uniquement)",
+      "npc_role_origin": "PNJ à horaire fixe",
+      "kanji_ids": [
+        "答",
+        "親",
+        "計",
+        "野",
+        "首",
+        "黒"
+      ],
+      "grammar_ids": [
+        "N1-112"
+      ],
+      "grammar_titles": [
+        "Noun + 前提で (Noun + zentei de)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 8,
+      "npc_name": "\"Président\" GAME FREAK (cameo)",
+      "npc_role_origin": "Dialogue d'ambiance sur le développement du jeu",
+      "kanji_ids": [
+        "乗",
+        "住",
+        "写",
+        "味",
+        "員",
+        "始"
+      ],
+      "grammar_ids": [
+        "N1-113"
+      ],
+      "grammar_titles": [
+        "Verbる / Noun(である) + 限り(は) (kagiri (wa))"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 9,
+      "npc_name": "\"Directeur son\" GAME FREAK",
+      "npc_role_origin": "Objet-clé changeant la musique d'ambiance, une fois tous les badges réunis",
+      "kanji_ids": [
+        "屋",
+        "待",
+        "悪",
+        "意",
+        "持",
+        "暑"
+      ],
+      "grammar_ids": [
+        "N1-114"
+      ],
+      "grammar_titles": [
+        "Verb がてら (~ gatera)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 10,
+      "npc_name": "\"Réalisateur\" GAME FREAK",
+      "npc_role_origin": "Quête en 2 étapes, récompense à chaque jalon de complétion",
+      "kanji_ids": [
+        "暗",
+        "注",
+        "界",
+        "真",
+        "研",
+        "究"
+      ],
+      "grammar_ids": [
+        "N1-115"
+      ],
+      "grammar_titles": [
+        "Verb こそすれ (~koso sure)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 11,
+      "npc_name": "Gentleman du comptoir d'échange",
+      "npc_role_origin": "Se plaint de son manque de Jetons (flavor)",
+      "kanji_ids": [
+        "習",
+        "薬",
+        "起",
+        "運",
+        "都",
+        "重"
+      ],
+      "grammar_ids": [
+        "N1-116"
+      ],
+      "grammar_titles": [
+        "Verb させられる (~saserareru)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 12,
+      "npc_name": "Conseiller \"Pouvoir Caché\"",
+      "npc_role_origin": "PNJ d'information gratuite près du Casino",
+      "kanji_ids": [
+        "題",
+        "便",
+        "借",
+        "特",
+        "英",
+        "菜"
+      ],
+      "grammar_ids": [
+        "N1-117"
+      ],
+      "grammar_titles": [
+        "Verb ざるを得ない (~ zaru wo enai)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 13,
+      "npc_name": "Homme du toit des Condominiums (visible 20h–4h uniquement)",
+      "npc_role_origin": "PNJ à horaire fixe",
+      "kanji_ids": [
+        "試",
+        "説",
+        "飯",
+        "貸",
+        "質",
+        "映"
+      ],
+      "grammar_ids": [
+        "N1-118"
+      ],
+      "grammar_titles": [
+        "Verb ずじまい (~zu jimai)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 14,
+      "npc_name": "\"Président\" GAME FREAK (cameo)",
+      "npc_role_origin": "Dialogue d'ambiance sur le développement du jeu",
+      "kanji_ids": [
+        "草",
+        "虫",
+        "丸",
+        "岩",
+        "晴",
+        "点"
+      ],
+      "grammar_ids": [
+        "N1-119"
+      ],
+      "grammar_titles": [
+        "Verb ずとも (〜zu tomo)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 15,
+      "npc_name": "\"Directeur son\" GAME FREAK",
+      "npc_role_origin": "Objet-clé changeant la musique d'ambiance, une fois tous les badges réunis",
+      "kanji_ids": [
+        "組",
+        "絵",
+        "線",
+        "記",
+        "黄",
+        "係"
+      ],
+      "grammar_ids": [
+        "N1-120"
+      ],
+      "grammar_titles": [
+        "Verb ずにはおかない (~zuni wa okanai)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 16,
+      "npc_name": "\"Réalisateur\" GAME FREAK",
+      "npc_role_origin": "Quête en 2 étapes, récompense à chaque jalon de complétion",
+      "kanji_ids": [
+        "助",
+        "坂",
+        "客",
+        "局",
+        "平",
+        "息"
+      ],
+      "grammar_ids": [
+        "N1-121"
+      ],
+      "grammar_titles": [
+        "Verb ずにはすまない (Verb zuni wa sumanai)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 17,
+      "npc_name": "Gentleman du comptoir d'échange",
+      "npc_role_origin": "Se plaint de son manque de Jetons (flavor)",
+      "kanji_ids": [
+        "想",
+        "打",
+        "拾",
+        "指",
+        "整",
+        "板"
+      ],
+      "grammar_ids": [
+        "N1-122"
+      ],
+      "grammar_titles": [
+        "Verb そうにない (Verb sou ni nai)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 18,
+      "npc_name": "Conseiller \"Pouvoir Caché\"",
+      "npc_role_origin": "PNJ d'information gratuite près du Casino",
+      "kanji_ids": [
+        "柱",
+        "植",
+        "油",
+        "泳",
+        "消",
+        "炭"
+      ],
+      "grammar_ids": [
+        "N1-123"
+      ],
+      "grammar_titles": [
+        "Verb そうもない (〜sou mo nai)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 19,
+      "npc_name": "Homme du toit des Condominiums (visible 20h–4h uniquement)",
+      "npc_role_origin": "PNJ à horaire fixe",
+      "kanji_ids": [
+        "神",
+        "秒",
+        "章",
+        "童",
+        "等",
+        "箱"
+      ],
+      "grammar_ids": [
+        "N1-124"
+      ],
+      "grammar_titles": [
+        "Verb そばから (〜soba kara)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 20,
+      "npc_name": "\"Président\" GAME FREAK (cameo)",
+      "npc_role_origin": "Dialogue d'ambiance sur le développement du jeu",
+      "kanji_ids": [
+        "級",
+        "練",
+        "苦",
+        "談",
+        "負",
+        "路"
+      ],
+      "grammar_ids": [
+        "N1-125"
+      ],
+      "grammar_titles": [
+        "Verb たが最後 (〜ta ga saigo)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 21,
+      "npc_name": "\"Directeur son\" GAME FREAK",
+      "npc_role_origin": "Objet-clé changeant la musique d'ambiance, une fois tous les badges réunis",
+      "kanji_ids": [
+        "農",
+        "返",
+        "速",
+        "鼻",
+        "仲",
+        "信"
+      ],
+      "grammar_ids": [
+        "N1-126"
+      ],
+      "grammar_titles": [
+        "Verb たことにしてください (~ ta koto ni shite kudasai)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 22,
+      "npc_name": "\"Réalisateur\" GAME FREAK",
+      "npc_role_origin": "Quête en 2 étapes, récompense à chaque jalon de complétion",
+      "kanji_ids": [
+        "児",
+        "兵",
+        "冷",
+        "努",
+        "勇",
+        "単"
+      ],
+      "grammar_ids": [
+        "N1-127"
+      ],
+      "grammar_titles": [
+        "Verb たら Verb たで (~ tara ~ tade)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 23,
+      "npc_name": "Gentleman du comptoir d'échange",
+      "npc_role_origin": "Se plaint de son manque de Jetons (flavor)",
+      "kanji_ids": [
+        "周",
+        "固",
+        "失",
+        "孫",
+        "完",
+        "察"
+      ],
+      "grammar_ids": [
+        "N1-128"
+      ],
+      "grammar_titles": [
+        "Verb たら きりがない (Verb tara kiri ga nai)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 24,
+      "npc_name": "Conseiller \"Pouvoir Caché\"",
+      "npc_role_origin": "PNJ d'information gratuite près du Casino",
+      "kanji_ids": [
+        "希",
+        "府",
+        "徒",
+        "念",
+        "敗",
+        "最"
+      ],
+      "grammar_ids": [
+        "N1-129"
+      ],
+      "grammar_titles": [
+        "Verb たら最後 (〜tara saigo)"
+      ]
+    },
+    {
+      "zone_id": "celadon-city",
+      "sequence_index": 25,
+      "npc_name": "Homme du toit des Condominiums (visible 20h–4h uniquement)",
+      "npc_role_origin": "PNJ à horaire fixe",
+      "kanji_ids": [
+        "案",
+        "標",
+        "治",
+        "法",
+        "清",
+        "灯"
+      ],
+      "grammar_ids": [
+        "N1-130"
+      ],
+      "grammar_titles": [
+        "Verb つ Verb つ (Verb tsu Verb tsu)"
+      ]
+    },
+    {
+      "zone_id": "route-16-17-18-cycling-road",
+      "sequence_index": 1,
+      "npc_name": "PNJ récurrent (Route 16)",
+      "npc_role_origin": "Enseigne \"un mot à la mode\" par jour à qui revient le voir",
+      "kanji_ids": [
+        "的",
+        "省",
+        "祝",
+        "結",
+        "給"
+      ],
+      "grammar_ids": [
+        "N1-141"
+      ],
+      "grammar_titles": [
+        "Verb ないものだろうか (Verb nai mono darou ka)"
+      ]
+    },
+    {
+      "zone_id": "route-16-17-18-cycling-road",
+      "sequence_index": 2,
+      "npc_name": "PNJ récurrent (Route 16)",
+      "npc_role_origin": "Enseigne \"un mot à la mode\" par jour à qui revient le voir",
+      "kanji_ids": [
+        "続",
+        "置",
+        "群",
+        "覚",
+        "観"
+      ],
+      "grammar_ids": [
+        "N1-142"
+      ],
+      "grammar_titles": [
+        "Verb ないものでもない (Verb nai mono demo nai)"
+      ]
+    },
+    {
+      "zone_id": "route-16-17-18-cycling-road",
+      "sequence_index": 3,
+      "npc_name": "PNJ récurrent (Route 16)",
+      "npc_role_origin": "Enseigne \"un mot à la mode\" par jour à qui revient le voir",
+      "kanji_ids": [
+        "訓",
+        "課",
+        "議",
+        "貨",
+        "量"
+      ],
+      "grammar_ids": [
+        "N1-143"
+      ],
+      "grammar_titles": [
+        "Verb の ない Noun (~ no nai ~)"
+      ]
+    },
+    {
+      "zone_id": "route-16-17-18-cycling-road",
+      "sequence_index": 4,
+      "npc_name": "PNJ récurrent (Route 16)",
+      "npc_role_origin": "Enseigne \"un mot à la mode\" par jour à qui revient le voir",
+      "kanji_ids": [
+        "静",
+        "仮",
+        "似",
+        "刊",
+        "判"
+      ],
+      "grammar_ids": [
+        "N1-144"
+      ],
+      "grammar_titles": [
+        "Verb ば きりがない (〜ba kiri ga nai)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 1,
+      "npc_name": "Fille au nord du Centre Pokémon",
+      "npc_role_origin": "Explique que la Zone Safari a déménagé au Johto (lore)",
+      "kanji_ids": [
+        "則",
+        "効",
+        "可",
+        "喜",
+        "営",
+        "囲"
+      ],
+      "grammar_ids": [
+        "N1-146"
+      ],
+      "grammar_titles": [
+        "Verb やしない (~ yashinai)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 2,
+      "npc_name": "Fille à l'est du Gym",
+      "npc_role_origin": "Mentionne que le grand-père de Bill est parti lui rendre visite",
+      "kanji_ids": [
+        "報",
+        "増",
+        "居",
+        "情",
+        "技",
+        "招"
+      ],
+      "grammar_ids": [
+        "N1-147"
+      ],
+      "grammar_titles": [
+        "Verb よう (~ you / ~ you ni)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 3,
+      "npc_name": "PNJ troc \"Wadbutt\" (nord)",
+      "npc_role_origin": "Troc récurrent : un fragment contre une baie thématique",
+      "kanji_ids": [
+        "授",
+        "採",
+        "政",
+        "故",
+        "枝",
+        "査"
+      ],
+      "grammar_ids": [
+        "N1-148"
+      ],
+      "grammar_titles": [
+        "Verb ようか Verbるまいか (Verb you ka Verb ru mai ka)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 4,
+      "npc_name": "Visiteur du Pal Park au chapeau",
+      "npc_role_origin": "Donne un accessoire cosmétique sous condition externe",
+      "kanji_ids": [
+        "格",
+        "混",
+        "版",
+        "状",
+        "現",
+        "略"
+      ],
+      "grammar_ids": [
+        "N1-149"
+      ],
+      "grammar_titles": [
+        "Verb ようが Verb るまいが (Verb you ga Verb ru mai ga)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 5,
+      "npc_name": "Fille au nord du Centre Pokémon",
+      "npc_role_origin": "Explique que la Zone Safari a déménagé au Johto (lore)",
+      "kanji_ids": [
+        "破",
+        "確",
+        "祖",
+        "禁",
+        "移",
+        "程"
+      ],
+      "grammar_ids": [
+        "N1-150"
+      ],
+      "grammar_titles": [
+        "Verb ようがない (〜you ga nai)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 6,
+      "npc_name": "Fille à l'est du Gym",
+      "npc_role_origin": "Mentionne que le grand-père de Bill est parti lui rendre visite",
+      "kanji_ids": [
+        "粉",
+        "精",
+        "耕",
+        "規",
+        "設",
+        "講"
+      ],
+      "grammar_ids": [
+        "N1-151"
+      ],
+      "grammar_titles": [
+        "Verb ようと Verbる まいと (Verb you to Verb ru mai to)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 7,
+      "npc_name": "PNJ troc \"Wadbutt\" (nord)",
+      "npc_role_origin": "Troc récurrent : un fragment contre une baie thématique",
+      "kanji_ids": [
+        "識",
+        "豊",
+        "財",
+        "貧",
+        "責",
+        "貯"
+      ],
+      "grammar_ids": [
+        "N1-152"
+      ],
+      "grammar_titles": [
+        "Verb ようにも (〜you ni mo)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 8,
+      "npc_name": "Visiteur du Pal Park au chapeau",
+      "npc_role_origin": "Donne un accessoire cosmétique sous condition externe",
+      "kanji_ids": [
+        "費",
+        "貿",
+        "資",
+        "賛",
+        "賞",
+        "造"
+      ],
+      "grammar_ids": [
+        "N1-153"
+      ],
+      "grammar_titles": [
+        "Verb ようにも Verb れない (〜you ni mo 〜renai)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 9,
+      "npc_name": "Fille au nord du Centre Pokémon",
+      "npc_role_origin": "Explique que la Zone Safari a déménagé au Johto (lore)",
+      "kanji_ids": [
+        "銅",
+        "際",
+        "領",
+        "供",
+        "値",
+        "党"
+      ],
+      "grammar_ids": [
+        "N1-154"
+      ],
+      "grammar_titles": [
+        "Verb ようもない (~you mo nai)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 10,
+      "npc_name": "Fille à l'est du Gym",
+      "npc_role_origin": "Mentionne que le grand-père de Bill est parti lui rendre visite",
+      "kanji_ids": [
+        "否",
+        "吸",
+        "宙",
+        "宝",
+        "届",
+        "層"
+      ],
+      "grammar_ids": [
+        "N1-155"
+      ],
+      "grammar_titles": [
+        "Verbる がままに (〜ga mama ni)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 11,
+      "npc_name": "PNJ troc \"Wadbutt\" (nord)",
+      "npc_role_origin": "Troc récurrent : un fragment contre une baie thématique",
+      "kanji_ids": [
+        "庁",
+        "延",
+        "承",
+        "担",
+        "済",
+        "異"
+      ],
+      "grammar_ids": [
+        "N1-156"
+      ],
+      "grammar_titles": [
+        "Verbる が早いか (verb-ru ga hayai ka)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 12,
+      "npc_name": "Visiteur du Pal Park au chapeau",
+      "npc_role_origin": "Donne un accessoire cosmétique sous condition externe",
+      "kanji_ids": [
+        "砂",
+        "窓",
+        "簡",
+        "署",
+        "若",
+        "著"
+      ],
+      "grammar_ids": [
+        "N1-157"
+      ],
+      "grammar_titles": [
+        "Verbる くらいなら (〜ru kurai nara)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 13,
+      "npc_name": "Fille au nord du Centre Pokémon",
+      "npc_role_origin": "Explique que la Zone Safari a déménagé au Johto (lore)",
+      "kanji_ids": [
+        "装",
+        "訪",
+        "詞",
+        "誌",
+        "誤",
+        "論"
+      ],
+      "grammar_ids": [
+        "N1-158"
+      ],
+      "grammar_titles": [
+        "Verbる こと なし に (Verb-ru koto nashi ni)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 14,
+      "npc_name": "Fille à l'est du Gym",
+      "npc_role_origin": "Mentionne que le grand-père de Bill est parti lui rendre visite",
+      "kanji_ids": [
+        "諸",
+        "警",
+        "賃",
+        "除",
+        "頂",
+        "預"
+      ],
+      "grammar_ids": [
+        "N1-159"
+      ],
+      "grammar_titles": [
+        "Verbる ことのないように (Verb-ru koto no nai you ni)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 15,
+      "npc_name": "PNJ troc \"Wadbutt\" (nord)",
+      "npc_role_origin": "Troc récurrent : un fragment contre une baie thématique",
+      "kanji_ids": [
+        "乾",
+        "伸",
+        "伺",
+        "凍",
+        "到",
+        "含"
+      ],
+      "grammar_ids": [
+        "N1-160"
+      ],
+      "grammar_titles": [
+        "Verbる ときりがない (verb-ru to kiri ga nai)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 16,
+      "npc_name": "Visiteur du Pal Park au chapeau",
+      "npc_role_origin": "Donne un accessoire cosmétique sous condition externe",
+      "kanji_ids": [
+        "喫",
+        "埋",
+        "帽",
+        "怒",
+        "怖",
+        "憎"
+      ],
+      "grammar_ids": [
+        "N1-161"
+      ],
+      "grammar_titles": [
+        "Verbる ともなく Verb (Verb-ru tomonaku Verb)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 17,
+      "npc_name": "Fille au nord du Centre Pokémon",
+      "npc_role_origin": "Explique que la Zone Safari a déménagé au Johto (lore)",
+      "kanji_ids": [
+        "抜",
+        "抱",
+        "押",
+        "曇",
+        "杯",
+        "枯"
+      ],
+      "grammar_ids": [
+        "N1-162"
+      ],
+      "grammar_titles": [
+        "Verbる ともなしに Verb (Verb-ru tomonashi ni Verb)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 18,
+      "npc_name": "Fille à l'est du Gym",
+      "npc_role_origin": "Mentionne que le grand-père de Bill est parti lui rendre visite",
+      "kanji_ids": [
+        "汗",
+        "況",
+        "泊",
+        "涙",
+        "溶",
+        "爆"
+      ],
+      "grammar_ids": [
+        "N1-163"
+      ],
+      "grammar_titles": [
+        "Verbる なり (Verb-ru nari)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 19,
+      "npc_name": "PNJ troc \"Wadbutt\" (nord)",
+      "npc_role_origin": "Troc récurrent : un fragment contre une baie thématique",
+      "kanji_ids": [
+        "猫",
+        "皆",
+        "盗",
+        "眠",
+        "硬",
+        "突"
+      ],
+      "grammar_ids": [
+        "N1-164"
+      ],
+      "grammar_titles": [
+        "Verbる にとどまらず～も (Verb-ru ni todomarazu ~ mo)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 20,
+      "npc_name": "Visiteur du Pal Park au chapeau",
+      "npc_role_origin": "Donne un accessoire cosmétique sous condition externe",
+      "kanji_ids": [
+        "符",
+        "筒",
+        "紹",
+        "絡",
+        "緒",
+        "脂"
+      ],
+      "grammar_ids": [
+        "N1-165"
+      ],
+      "grammar_titles": [
+        "Verbる にはあたらない (Verb-ru ni wa ataranai)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 21,
+      "npc_name": "Fille au nord du Centre Pokémon",
+      "npc_role_origin": "Explique que la Zone Safari a déménagé au Johto (lore)",
+      "kanji_ids": [
+        "腰",
+        "膚",
+        "菓",
+        "詰",
+        "販"
+      ],
+      "grammar_ids": [
+        "N1-166"
+      ],
+      "grammar_titles": [
+        "Verbる にも (Verb-ru ni mo)"
+      ]
+    },
+    {
+      "zone_id": "fuchsia-city",
+      "sequence_index": 22,
+      "npc_name": "Fille à l'est du Gym",
+      "npc_role_origin": "Mentionne que le grand-père de Bill est parti lui rendre visite",
+      "kanji_ids": [
+        "賢",
+        "贈",
+        "超",
+        "越",
+        "踊"
+      ],
+      "grammar_ids": [
+        "N1-167"
+      ],
+      "grammar_titles": [
+        "Verbる にも Verb れない (Verb-ru ni mo Verb-re nai)"
+      ]
+    },
+    {
+      "zone_id": "route-14-15-kanto",
+      "sequence_index": 1,
+      "npc_name": "Fille dans les hautes herbes (Route 14, ouest)",
+      "npc_role_origin": "Demande à voir un compagnon précis",
+      "kanji_ids": [
+        "軒",
+        "較",
+        "途",
+        "郊",
+        "零"
+      ],
+      "grammar_ids": [
+        "N1-176"
+      ],
+      "grammar_titles": [
+        "Verbる 嫌いがある (～ru kirai ga aru)"
+      ]
+    },
+    {
+      "zone_id": "route-14-15-kanto",
+      "sequence_index": 2,
+      "npc_name": "Fille dans les hautes herbes (Route 14, ouest)",
+      "npc_role_origin": "Demande à voir un compagnon précis",
+      "kanji_ids": [
+        "頼",
+        "駐",
+        "髪",
+        "齢",
+        "矢"
+      ],
+      "grammar_ids": [
+        "N1-177"
+      ],
+      "grammar_titles": [
+        "いつまで～のやら (itsumade ~ no yara)"
+      ]
+    },
+    {
+      "zone_id": "route-14-15-kanto",
+      "sequence_index": 3,
+      "npc_name": "Fille dans les hautes herbes (Route 14, ouest)",
+      "npc_role_origin": "Demande à voir un compagnon précis",
+      "kanji_ids": [
+        "宮",
+        "昭",
+        "笛",
+        "詩",
+        "佐"
+      ],
+      "grammar_ids": [
+        "N1-178"
+      ],
+      "grammar_titles": [
+        "～が Verb られる (〜ga Verb rareru)"
+      ]
+    },
+    {
+      "zone_id": "route-14-15-kanto",
+      "sequence_index": 4,
+      "npc_name": "Fille dans les hautes herbes (Route 14, ouest)",
+      "npc_role_origin": "Demande à voir un compagnon précis",
+      "kanji_ids": [
+        "典",
+        "岐",
+        "巣",
+        "松",
+        "沖"
+      ],
+      "grammar_ids": [
+        "N1-179"
+      ],
+      "grammar_titles": [
+        "～かと思いきや (〜ka to omoikiya)"
+      ]
+    },
+    {
+      "zone_id": "route-11-12-13-diglett",
+      "sequence_index": 1,
+      "npc_name": "PNJ de couleur locale (Grotte Diglett)",
+      "npc_role_origin": "Surpris par les créatures qui surgissent du sol",
+      "kanji_ids": [
+        "賀",
+        "郡",
+        "序",
+        "往",
+        "提"
+      ],
+      "grammar_ids": [
+        "N1-181"
+      ],
+      "grammar_titles": [
+        "～がゆえの Noun (〜ga yue no Noun)"
+      ]
+    },
+    {
+      "zone_id": "route-11-12-13-diglett",
+      "sequence_index": 2,
+      "npc_name": "Portier (Grotte Diglett)",
+      "npc_role_origin": "Remet un objet de quête confié par le Pr. Chen/Oak",
+      "kanji_ids": [
+        "舎",
+        "証",
+        "謝",
+        "護",
+        "飼"
+      ],
+      "grammar_ids": [
+        "N1-182"
+      ],
+      "grammar_titles": [
+        "～から Noun に 至る まで (〜kara 〜ni itaru made)"
+      ]
+    },
+    {
+      "zone_id": "route-11-12-13-diglett",
+      "sequence_index": 3,
+      "npc_name": "Maison voisine (Grotte Diglett)",
+      "npc_role_origin": "—",
+      "kanji_ids": [
+        "俵",
+        "創",
+        "垂",
+        "奏",
+        "姿"
+      ],
+      "grammar_ids": [
+        "N1-183"
+      ],
+      "grammar_titles": [
+        "～ごとく (〜gotoku)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 1,
+      "npc_name": "Vieil homme sur la colline (près du Poké Mart)",
+      "npc_role_origin": "Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto)",
+      "kanji_ids": [
+        "忠",
+        "恩",
+        "揮",
+        "潮",
+        "皇",
+        "盟"
+      ],
+      "grammar_ids": [
+        "N1-184"
+      ],
+      "grammar_titles": [
+        "～こととて (〜koto tote)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 2,
+      "npc_name": "Comptoir du Musée des Sciences",
+      "npc_role_origin": "Restaure un fossile-objet en compagnon",
+      "kanji_ids": [
+        "磁",
+        "秘",
+        "納",
+        "肺",
+        "舌",
+        "衆"
+      ],
+      "grammar_ids": [
+        "N1-185"
+      ],
+      "grammar_titles": [
+        "～ずにすんだ (〜zuni sunda)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 3,
+      "npc_name": "Vieil homme sur la colline (près du Poké Mart)",
+      "npc_role_origin": "Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto)",
+      "kanji_ids": [
+        "視",
+        "覧",
+        "討",
+        "訳",
+        "誠",
+        "貴"
+      ],
+      "grammar_ids": [
+        "N1-186"
+      ],
+      "grammar_titles": [
+        "～だろうとなかろうと (〜darou to nakarou to)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 4,
+      "npc_name": "Comptoir du Musée des Sciences",
+      "npc_role_origin": "Restaure un fossile-objet en compagnon",
+      "kanji_ids": [
+        "鋼",
+        "閣",
+        "丙",
+        "亭",
+        "伎",
+        "伏"
+      ],
+      "grammar_ids": [
+        "N1-187"
+      ],
+      "grammar_titles": [
+        "～つもりだ (〜tsumori da)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 5,
+      "npc_name": "Vieil homme sur la colline (près du Poké Mart)",
+      "npc_role_origin": "Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto)",
+      "kanji_ids": [
+        "伯",
+        "伴",
+        "但",
+        "侍",
+        "促",
+        "倣"
+      ],
+      "grammar_ids": [
+        "N1-188"
+      ],
+      "grammar_titles": [
+        "～つもりで (〜tsumori de)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 6,
+      "npc_name": "Comptoir du Musée des Sciences",
+      "npc_role_origin": "Restaure un fossile-objet en compagnon",
+      "kanji_ids": [
+        "僧",
+        "儀",
+        "儒",
+        "克",
+        "冶",
+        "削"
+      ],
+      "grammar_ids": [
+        "N1-189"
+      ],
+      "grammar_titles": [
+        "～ではすまない (〜dewa sumanai)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 7,
+      "npc_name": "Vieil homme sur la colline (près du Poké Mart)",
+      "npc_role_origin": "Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto)",
+      "kanji_ids": [
+        "剛",
+        "剤",
+        "劣",
+        "勅",
+        "勘",
+        "卓"
+      ],
+      "grammar_ids": [
+        "N1-190"
+      ],
+      "grammar_titles": [
+        "～とあって (〜to atte)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 8,
+      "npc_name": "Comptoir du Musée des Sciences",
+      "npc_role_origin": "Restaure un fossile-objet en compagnon",
+      "kanji_ids": [
+        "却",
+        "厘",
+        "叙",
+        "吏",
+        "吟",
+        "哲"
+      ],
+      "grammar_ids": [
+        "N1-191"
+      ],
+      "grammar_titles": [
+        "～とあれば (〜to areba)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 9,
+      "npc_name": "Vieil homme sur la colline (près du Poké Mart)",
+      "npc_role_origin": "Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto)",
+      "kanji_ids": [
+        "唄",
+        "嗣",
+        "圏",
+        "堤",
+        "堪",
+        "妙"
+      ],
+      "grammar_ids": [
+        "N1-192"
+      ],
+      "grammar_titles": [
+        "～といえども (〜to iedomo)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 10,
+      "npc_name": "Comptoir du Musée des Sciences",
+      "npc_role_origin": "Restaure un fossile-objet en compagnon",
+      "kanji_ids": [
+        "姻",
+        "婆",
+        "媒",
+        "嫌",
+        "宜",
+        "宰"
+      ],
+      "grammar_ids": [
+        "N1-193"
+      ],
+      "grammar_titles": [
+        "～といったらありはしない (〜to ittara ari wa shinai)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 11,
+      "npc_name": "Vieil homme sur la colline (près du Poké Mart)",
+      "npc_role_origin": "Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto)",
+      "kanji_ids": [
+        "宵",
+        "寂",
+        "寧",
+        "審",
+        "寿",
+        "尽"
+      ],
+      "grammar_ids": [
+        "N1-194"
+      ],
+      "grammar_titles": [
+        "～といったらありゃしない (〜to ittara arya shinai)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 12,
+      "npc_name": "Comptoir du Musée des Sciences",
+      "npc_role_origin": "Restaure un fossile-objet en compagnon",
+      "kanji_ids": [
+        "屈",
+        "岬",
+        "岳",
+        "崇",
+        "廉",
+        "廊"
+      ],
+      "grammar_ids": [
+        "N1-195"
+      ],
+      "grammar_titles": [
+        "～といったらない (〜to ittara nai)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 13,
+      "npc_name": "Vieil homme sur la colline (près du Poké Mart)",
+      "npc_role_origin": "Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto)",
+      "kanji_ids": [
+        "彩",
+        "影",
+        "征",
+        "徐",
+        "循",
+        "忍"
+      ],
+      "grammar_ids": [
+        "N1-196"
+      ],
+      "grammar_titles": [
+        "～ときている (〜to kite iru)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 14,
+      "npc_name": "Comptoir du Musée des Sciences",
+      "npc_role_origin": "Restaure un fossile-objet en compagnon",
+      "kanji_ids": [
+        "怠",
+        "恭",
+        "惜",
+        "愁",
+        "慮",
+        "慰"
+      ],
+      "grammar_ids": [
+        "N1-197"
+      ],
+      "grammar_titles": [
+        "～ところを (〜tokoro wo)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 15,
+      "npc_name": "Vieil homme sur la colline (près du Poké Mart)",
+      "npc_role_origin": "Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto)",
+      "kanji_ids": [
+        "憾",
+        "扱",
+        "扶",
+        "抄",
+        "択",
+        "抹"
+      ],
+      "grammar_ids": [
+        "N1-198"
+      ],
+      "grammar_titles": [
+        "～とされる (〜to sareru)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 16,
+      "npc_name": "Comptoir du Musée des Sciences",
+      "npc_role_origin": "Restaure un fossile-objet en compagnon",
+      "kanji_ids": [
+        "抽",
+        "拍",
+        "拓",
+        "拘",
+        "拙"
+      ],
+      "grammar_ids": [
+        "N1-199"
+      ],
+      "grammar_titles": [
+        "～としたところで (〜to shita tokoro de)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 17,
+      "npc_name": "Vieil homme sur la colline (près du Poké Mart)",
+      "npc_role_origin": "Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto)",
+      "kanji_ids": [
+        "措",
+        "描",
+        "搬",
+        "斎",
+        "斜"
+      ],
+      "grammar_ids": [
+        "N1-200"
+      ],
+      "grammar_titles": [
+        "～とすると (〜to suru to)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 18,
+      "npc_name": "Comptoir du Musée des Sciences",
+      "npc_role_origin": "Restaure un fossile-objet en compagnon",
+      "kanji_ids": [
+        "暫",
+        "朱",
+        "架",
+        "栓",
+        "棟"
+      ],
+      "grammar_ids": [
+        "N1-201"
+      ],
+      "grammar_titles": [
+        "～とすれば (～to sureba)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 19,
+      "npc_name": "Vieil homme sur la colline (près du Poké Mart)",
+      "npc_role_origin": "Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto)",
+      "kanji_ids": [
+        "槽",
+        "殉",
+        "殖",
+        "汰",
+        "沙"
+      ],
+      "grammar_ids": [
+        "N1-202"
+      ],
+      "grammar_titles": [
+        "～となったら (〜to nattara)"
+      ]
+    },
+    {
+      "zone_id": "pewter-city",
+      "sequence_index": 20,
+      "npc_name": "Comptoir du Musée des Sciences",
+      "npc_role_origin": "Restaure un fossile-objet en compagnon",
+      "kanji_ids": [
+        "沢",
+        "沼",
+        "泌",
+        "泡",
+        "洞"
+      ],
+      "grammar_ids": [
+        "N1-203"
+      ],
+      "grammar_titles": [
+        "～となると (〜to naru to)"
+      ]
+    },
+    {
+      "zone_id": "mont-lune-route-3-4",
+      "sequence_index": 1,
+      "npc_name": "Petit comptoir marchand (Mont Lune)",
+      "npc_role_origin": "Au milieu de la traversée",
+      "kanji_ids": [
+        "洪",
+        "淑",
+        "淡",
+        "滑",
+        "漂"
+      ],
+      "grammar_ids": [
+        "N1-211"
+      ],
+      "grammar_titles": [
+        "～と言わんばかりに (〜to iwan bakari ni)"
+      ]
+    },
+    {
+      "zone_id": "mont-lune-route-3-4",
+      "sequence_index": 2,
+      "npc_name": "Petit comptoir marchand (Mont Lune)",
+      "npc_role_origin": "Au milieu de la traversée",
+      "kanji_ids": [
+        "漸",
+        "潜",
+        "澄",
+        "濫",
+        "煮"
+      ],
+      "grammar_ids": [
+        "N1-212"
+      ],
+      "grammar_titles": [
+        "～と言わんばかりの Noun (～to iwan bakari no Noun)"
+      ]
+    },
+    {
+      "zone_id": "mont-lune-route-3-4",
+      "sequence_index": 3,
+      "npc_name": "Petit comptoir marchand (Mont Lune)",
+      "npc_role_origin": "Au milieu de la traversée",
+      "kanji_ids": [
+        "犠",
+        "狩",
+        "献",
+        "獣",
+        "琴"
+      ],
+      "grammar_ids": [
+        "N1-213"
+      ],
+      "grammar_titles": [
+        "～ながらに (～nagara ni)"
+      ]
+    },
+    {
+      "zone_id": "mont-lune-route-3-4",
+      "sequence_index": 4,
+      "npc_name": "Petit comptoir marchand (Mont Lune)",
+      "npc_role_origin": "Au milieu de la traversée",
+      "kanji_ids": [
+        "瑠",
+        "璽",
+        "畔",
+        "疎",
+        "症"
+      ],
+      "grammar_ids": [
+        "N1-214"
+      ],
+      "grammar_titles": [
+        "～ながらの Noun (〜nagara no Noun)"
+      ]
+    },
+    {
+      "zone_id": "route-2-foret-viridian",
+      "sequence_index": 1,
+      "npc_name": "Bug Catcher Ed, Abner, Ellis, Dane, Stacey, Dion",
+      "npc_role_origin": "6 Insectophiles (thème de classe homogène)",
+      "kanji_ids": [
+        "盆",
+        "盤",
+        "督",
+        "矛",
+        "砕"
+      ],
+      "grammar_ids": [
+        "N1-216"
+      ],
+      "grammar_titles": [
+        "～なくはない (〜naku wa nai)"
+      ]
+    },
+    {
+      "zone_id": "route-2-foret-viridian",
+      "sequence_index": 2,
+      "npc_name": "Bug Catcher Ed, Abner, Ellis, Dane, Stacey, Dion",
+      "npc_role_origin": "6 Insectophiles (thème de classe homogène)",
+      "kanji_ids": [
+        "砲",
+        "硝",
+        "硫",
+        "碁",
+        "碑"
+      ],
+      "grammar_ids": [
+        "N1-217"
+      ],
+      "grammar_titles": [
+        "～なくもない (〜naku mo nai)"
+      ]
+    },
+    {
+      "zone_id": "route-2-foret-viridian",
+      "sequence_index": 3,
+      "npc_name": "Bug Catcher Ed, Abner, Ellis, Dane, Stacey, Dion",
+      "npc_role_origin": "6 Insectophiles (thème de classe homogène)",
+      "kanji_ids": [
+        "礁",
+        "礎",
+        "租",
+        "穂",
+        "窒"
+      ],
+      "grammar_ids": [
+        "N1-218"
+      ],
+      "grammar_titles": [
+        "～なら～なりに"
+      ]
+    },
+    {
+      "zone_id": "viridian-city",
+      "sequence_index": 1,
+      "npc_name": "Rumeur ambiante (Centre Pokémon)",
+      "npc_role_origin": "Clients se demandant si le Gym d'Île Braise existe encore, pousse le joueur vers le sud",
+      "kanji_ids": [
+        "窮",
+        "窯",
+        "粗",
+        "粘",
+        "紛"
+      ],
+      "grammar_ids": [
+        "N1-219"
+      ],
+      "grammar_titles": [
+        "～には及ばない (〜ni wa oyobanai)"
+      ]
+    },
+    {
+      "zone_id": "viridian-city",
+      "sequence_index": 2,
+      "npc_name": "Rumeur ambiante (Centre Pokémon)",
+      "npc_role_origin": "Clients se demandant si le Gym d'Île Braise existe encore, pousse le joueur vers le sud",
+      "kanji_ids": [
+        "紳",
+        "絞",
+        "綱",
+        "締",
+        "繁"
+      ],
+      "grammar_ids": [
+        "N1-220"
+      ],
+      "grammar_titles": [
+        "～に堪えない (～ni taenai)"
+      ]
+    },
+    {
+      "zone_id": "route-1-kanto",
+      "sequence_index": 1,
+      "npc_name": "Photographe itinérant",
+      "npc_role_origin": "Jours différents côté Vertville vs côté Bourg-Origine",
+      "kanji_ids": [
+        "繕",
+        "羅",
+        "翁",
+        "翻",
+        "肝"
+      ],
+      "grammar_ids": [
+        "N1-221"
+      ],
+      "grammar_titles": [
+        "～に堪える (～ni taeru)"
+      ]
+    },
+    {
+      "zone_id": "route-1-kanto",
+      "sequence_index": 2,
+      "npc_name": "Photographe itinérant",
+      "npc_role_origin": "Jours différents côté Vertville vs côté Bourg-Origine",
+      "kanji_ids": [
+        "肢",
+        "胆",
+        "胎",
+        "胞",
+        "胴"
+      ],
+      "grammar_ids": [
+        "N1-222"
+      ],
+      "grammar_titles": [
+        "～に耐える (～ni taeru)"
+      ]
+    },
+    {
+      "zone_id": "pallet-town",
+      "sequence_index": 1,
+      "npc_name": "Photographe itinérant",
+      "npc_role_origin": "Présent mercredi/jeudi/vendredi uniquement",
+      "kanji_ids": [
+        "臭",
+        "致",
+        "舶",
+        "艦",
+        "荘"
+      ],
+      "grammar_ids": [
+        "N1-224"
+      ],
+      "grammar_titles": [
+        "～に越したことはない (〜ni koshita koto wa nai)"
+      ]
+    },
+    {
+      "zone_id": "pallet-town",
+      "sequence_index": 2,
+      "npc_name": "Photographe itinérant",
+      "npc_role_origin": "Présent mercredi/jeudi/vendredi uniquement",
+      "kanji_ids": [
+        "蓄",
+        "薪",
+        "藍",
+        "虜",
+        "裸"
+      ],
+      "grammar_ids": [
+        "N1-225"
+      ],
+      "grammar_titles": [
+        "～に難くない (～ni katakunai)"
+      ]
+    },
+    {
+      "zone_id": "pallet-town",
+      "sequence_index": 3,
+      "npc_name": "Photographe itinérant",
+      "npc_role_origin": "Présent mercredi/jeudi/vendredi uniquement",
+      "kanji_ids": [
+        "訂",
+        "託",
+        "訟",
+        "訴",
+        "診"
+      ],
+      "grammar_ids": [
+        "N1-226"
+      ],
+      "grammar_titles": [
+        "～のは Noun ぐらいのものだ (〜no wa Noun gurai no mono da)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 1,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "詐",
+        "詔",
+        "詠",
+        "該",
+        "詳",
+        "誇"
+      ],
+      "grammar_ids": [
+        "N1-227"
+      ],
+      "grammar_titles": [
+        "～ば～ものを (～ba～mono o)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 2,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "誉",
+        "誓",
+        "誘",
+        "請",
+        "諭",
+        "諮"
+      ],
+      "grammar_ids": [
+        "N1-228"
+      ],
+      "grammar_titles": [
+        "～びた (～bita)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 3,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "謀",
+        "謁",
+        "謄",
+        "謙",
+        "謡",
+        "謹"
+      ],
+      "grammar_ids": [
+        "N1-229"
+      ],
+      "grammar_titles": [
+        "～びる (〜biru)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 4,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "譜",
+        "譲",
+        "貞",
+        "貢",
+        "貫",
+        "賄"
+      ],
+      "grammar_ids": [
+        "N1-230"
+      ],
+      "grammar_titles": [
+        "～ぶった (～butta)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 5,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "賊",
+        "賓",
+        "賜",
+        "賠",
+        "賦",
+        "購"
+      ],
+      "grammar_ids": [
+        "N1-231"
+      ],
+      "grammar_titles": [
+        "～ぶって (〜butte)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 6,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "赦",
+        "赴",
+        "趣",
+        "距",
+        "跡",
+        "跳"
+      ],
+      "grammar_ids": [
+        "N1-232"
+      ],
+      "grammar_titles": [
+        "～ぶり (〜buri)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 7,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "践",
+        "踏",
+        "躍",
+        "軌",
+        "軸",
+        "輝"
+      ],
+      "grammar_ids": [
+        "N1-233"
+      ],
+      "grammar_titles": [
+        "～ぶる (〜buru)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 8,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "迫",
+        "逝",
+        "遭",
+        "遵",
+        "酪",
+        "酬"
+      ],
+      "grammar_ids": [
+        "N1-234"
+      ],
+      "grammar_titles": [
+        "～までだ (～made da)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 9,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "酵",
+        "酷",
+        "釈",
+        "鈴",
+        "鉢",
+        "銘"
+      ],
+      "grammar_ids": [
+        "N1-235"
+      ],
+      "grammar_titles": [
+        "～もなんでもない (〜mo nandemonai)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 10,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "錬",
+        "錯",
+        "鎌",
+        "鑑",
+        "阻",
+        "附"
+      ],
+      "grammar_ids": [
+        "N1-236"
+      ],
+      "grammar_titles": [
+        "～ものとして (～mono to shite)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 11,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "陳",
+        "雰",
+        "霜",
+        "響",
+        "頑"
+      ],
+      "grammar_ids": [
+        "N1-237"
+      ],
+      "grammar_titles": [
+        "～んがために (〜n ga tame ni)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 12,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "頒",
+        "顧",
+        "飽",
+        "駄",
+        "駒"
+      ],
+      "grammar_ids": [
+        "N1-238"
+      ],
+      "grammar_titles": [
+        "～んばかりに (〜n bakari ni)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 13,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "髄",
+        "魅",
+        "麻",
+        "鼓",
+        "茨"
+      ],
+      "grammar_ids": [
+        "N1-239"
+      ],
+      "grammar_titles": [
+        "～差し支えない (〜sashitsukaenai)"
+      ]
+    },
+    {
+      "zone_id": "route-19-20-seafoam",
+      "sequence_index": 14,
+      "npc_name": "Dresseurs postés (Seafoam B2F)",
+      "npc_role_origin": "Servent de \"freins\" pour stopper la glissade sur sol de glace (puzzle environnemental-social)",
+      "kanji_ids": [
+        "阪",
+        "串",
+        "丼",
+        "侶",
+        "凄"
+      ],
+      "grammar_ids": [
+        "N1-240"
+      ],
+      "grammar_titles": [
+        "～折に (〜ori ni)"
+      ]
+    }
+  ]
+}

@@ -136,6 +136,22 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    les PNJ sourcés, zone par zone — dépend du point 1 (l'assignation kanji doit exister pour
    savoir ce qu'un PNJ-leçon enseigne). C'est la dernière décision « lourde » (elle fixe qui
    enseigne quoi, où) mais elle se prend zone par zone, pas d'un bloc.
+   **🚧 EN COURS 2026-07-09** : `combat` tagué sur 124 lignes (regex sur le texte de rôle,
+   2 passes + 6 corrections manuelles de 師範/Gym Leaders qui n'étaient pas taguées — Lt.
+   Surge, Sabrina, Erika, Janine, Blaine, Clair). Simplifications actées par l'utilisateur :
+   groupement kanji **par ordre JLPT pur** (pas par radicaux), **taille de leçon libre**
+   (l'ancienne règle 4-5 Johto/8-12 Kanto est supprimée), recatégorisation large des PNJ
+   ambiants inutilisés en PNJ-leçon autorisée. `scripts/build/build-lessons-proposal.py`
+   génère une proposition pilote (`content/lessons-proposal.json`, non encore fusionnée dans
+   npc-inventory.md) : denylist des personnages récurrents/boss (mentors, rival, 8 Champions
+   d'arène + Elite 4, cameos Steven/Maylene/Wake), exception bootstrap Pr. Elm (seul PNJ-leçon
+   de Bourg Geon, ~7 leçons), report en cascade du pool kanji des zones sans PNJ éligible vers
+   la zone suivante mieux fournie (12 cas), cyclage round-robin d'un même PNJ sur plusieurs
+   leçons consécutives, 1 point de grammaire max par leçon. **344 leçons sur 48 zones (sur 64
+   zones de croissance), 1950/1950 kanji couverts** — cohérent avec l'estimation PRD indépendante
+   (280-370). Reste à faire : relecture d'un plus large échantillon, validation utilisateur,
+   fusion dans la colonne Type assigné, tag `ambiant` par défaut sur le reste. Rapport :
+   `.scratch/audits/lessons-proposal-report.md`.
 6. Migration `{jp, en}` des quêtes existantes (FV-4) et micro-lignes du Journal de quêtes.
 
 ## Étape 3 — Gabarits + tranche verticale (le test qui évite d'industrialiser dans le vide)
