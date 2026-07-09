@@ -72,6 +72,30 @@
       "source": "generated",
       "matched_object_id": null,
       "matched_sprite_id": null
+    },
+    {
+      "name": "Fisherman Martin, Young Couple Vic & Tara, Fisherman Stephen, Fisherman Barney, Bird Keeper Gs Gail (Route 12)",
+      "role_origin": "Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_11",
+      "tile_x": 20,
+      "tile_y": 19,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Pokéfan Joshua, Bird Keeper Gs Bret, Bird Keeper Gs Perry (Route 13)",
+      "role_origin": "Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_11",
+      "tile_x": 34,
+      "tile_y": 21,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
     }
   ]
 }

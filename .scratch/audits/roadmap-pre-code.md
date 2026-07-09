@@ -90,15 +90,23 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    fetch — 1/9 zones résolue) puis une **extraction directe de la décompilation ROM**
    `pret/pokeheartgold` (dispo en local, `~/pokeheartgold` — bien plus fiable : chaque objet de
    combat porte `std_trainer(TRAINER_XXX)`, résolu via `trainers.json`, 738 dresseurs).
-   `scripts/build/build-rom-trainer-roster.py` → `content/rom-trainer-roster.json` (39/83
-   zones, 200 dresseurs). Tous les écarts détectés sont résolus : dresseurs manquants ajoutés
-   (union-cave passe de 8 à 12 réels, route-21-kanto de 5 à 12 noms, route-18 de 9 à 3 — la
-   passe web s'était trompée dans l'autre sens), **9 inversions entre zones voisines**
+   `scripts/build/build-rom-trainer-roster.py` → `content/rom-trainer-roster.json`.
+   **Couverture complétée à 100% sur demande explicite** (« je veux qu'on trouve un moyen
+   d'avoir les données exactes ») : la 1ʳᵉ extraction ne rattachait que 39/83 zones (les gyms et
+   bâtiments à étages sans le nom de leur ville dans leur propre nom, plus la « seconde moitié »
+   des zone_id fusionnant deux routes non contiguës, ex. route-11-12-13-diglett ne matchait que
+   Route 11 — échouaient sur l'heuristique de préfixe). Une table de correspondance explicite
+   (`DIRECT_MAP_TO_ZONE`, 44 entrées) résout tous les cas restants → **55/55 zones à dresseurs
+   rattachées, 390/390 dresseurs de combat de la ROM intégrés à npc-inventory.md, 0 écart
+   restant** (hors 2 collisions de prénom entre personnes distinctes, documentées). Corrections
+   au passage : dresseurs manquants ajoutés (union-cave 8→12, route-21-kanto 5→12 noms,
+   route-18 9→3 — la passe web précédente s'était trompée dans l'autre sens ; + tout le
+   contenu combat du SS Aqua, de la Tour Radio/Tunnel de Doublonville, du QG Rocket d'Acajou,
+   du Phare d'Oliville et de 6 gyms, absent jusqu'ici), **9 inversions entre zones voisines**
    corrigées (Route 30↔31, 32→33, 40↔41, 45→46, 35→national-park, 7→8-kanto, 16→17), et
-   **6 coquilles OCR** corrigées (Marcus→Markus, Norman→Nelson, Ben→Beckett, Amy→Day,
-   Sidney→Clarke, Aaron→Alton). Rapport complet : `.scratch/audits/rom-trainer-roster-report.md`
-   (limites de couverture — 44/83 zones non rattachées, gyms + quelques zones fusionnées à
-   numérotation non contiguë — documentées dedans). Historique de la phase web (dépassée) :
+   **7 coquilles OCR** corrigées (Marcus→Markus, Norman→Nelson, Ben→Beckett, Amy→Day,
+   Sidney→Clarke, Aaron→Alton, May→Mimi). Rapport complet :
+   `.scratch/audits/rom-trainer-roster-report.md`. Historique de la phase web (dépassée) :
    `.scratch/audits/generic-trainers-report.md`.
 5. **La colonne « Type assigné » de npc-inventory** : distribuer leçon / texte / combat sur
    les PNJ sourcés, zone par zone — dépend du point 1 (l'assignation kanji doit exister pour

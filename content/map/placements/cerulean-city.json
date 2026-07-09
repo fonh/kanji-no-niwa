@@ -60,6 +60,18 @@
       "source": "generated",
       "matched_object_id": null,
       "matched_sprite_id": null
+    },
+    {
+      "name": "Swimmer Diana, Swimmer Joy, Sailor Eddie (Gym)",
+      "role_origin": "Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial",
+      "item": "—",
+      "map_zone": "MAP_CERULEAN",
+      "tile_x": 27,
+      "tile_y": 41,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
     }
   ]
 }

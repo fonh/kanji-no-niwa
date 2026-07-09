@@ -84,6 +84,18 @@
       "source": "generated",
       "matched_object_id": null,
       "matched_sprite_id": null
+    },
+    {
+      "name": "Sailor Roberto (Phare 5F)",
+      "role_origin": "Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial",
+      "item": "—",
+      "map_zone": "MAP_OLIVINE",
+      "tile_x": 16,
+      "tile_y": 40,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
     }
   ]
 }

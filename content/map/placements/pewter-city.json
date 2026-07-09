@@ -36,6 +36,18 @@
       "source": "generated",
       "matched_object_id": null,
       "matched_sprite_id": null
+    },
+    {
+      "name": "Camper Jerry, Hiker Edwin (Gym)",
+      "role_origin": "Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial",
+      "item": "—",
+      "map_zone": "MAP_PEWTER",
+      "tile_x": 39,
+      "tile_y": 29,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
     }
   ]
 }

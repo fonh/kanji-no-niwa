@@ -36,6 +36,18 @@
       "source": "generated",
       "matched_object_id": null,
       "matched_sprite_id": null
+    },
+    {
+      "name": "School Kid Kipp, School Kid Tommy, School Kid Johnny (Route 15)",
+      "role_origin": "Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_14",
+      "tile_x": 1,
+      "tile_y": 21,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
     }
   ]
 }

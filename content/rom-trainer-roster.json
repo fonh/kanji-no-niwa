@@ -85,6 +85,69 @@
           "Butterfree Lv.39",
           "Ariados Lv.37"
         ]
+      },
+      {
+        "class": "Bug Catcher",
+        "name": "Dane",
+        "map_name": "MAP_VIRIDIAN_FOREST",
+        "trainer_const": "TRAINER_BUG_CATCHER_DANE",
+        "party_summary": [
+          "Beedrill Lv.44",
+          "Butterfree Lv.48"
+        ]
+      },
+      {
+        "class": "Bug Catcher",
+        "name": "Dion",
+        "map_name": "MAP_VIRIDIAN_FOREST",
+        "trainer_const": "TRAINER_BUG_CATCHER_DION",
+        "party_summary": [
+          "Ariados Lv.50"
+        ]
+      },
+      {
+        "class": "Bug Catcher",
+        "name": "Stacey",
+        "map_name": "MAP_VIRIDIAN_FOREST",
+        "trainer_const": "TRAINER_BUG_CATCHER_STACEY",
+        "party_summary": [
+          "Metapod Lv.52",
+          "Metapod Lv.56",
+          "Metapod Lv.60"
+        ]
+      },
+      {
+        "class": "Bug Catcher",
+        "name": "Ellis",
+        "map_name": "MAP_VIRIDIAN_FOREST",
+        "trainer_const": "TRAINER_BUG_CATCHER_ELLIS",
+        "party_summary": [
+          "Weedle Lv.28",
+          "Kakuna Lv.38",
+          "Beedrill Lv.46"
+        ]
+      },
+      {
+        "class": "Bug Catcher",
+        "name": "Abner",
+        "map_name": "MAP_VIRIDIAN_FOREST",
+        "trainer_const": "TRAINER_BUG_CATCHER_ABNER",
+        "party_summary": [
+          "Butterfree Lv.44",
+          "Beedrill Lv.44",
+          "Pikachu Lv.44"
+        ]
+      },
+      {
+        "class": "Bug Catcher",
+        "name": "Ed",
+        "map_name": "MAP_ROUTE_2_EAST",
+        "trainer_const": "TRAINER_BUG_CATCHER_ED",
+        "party_summary": [
+          "Burmy Lv.43",
+          "Butterfree Lv.43",
+          "Beedrill Lv.43"
+        ]
       }
     ],
     "mont-lune-route-3-4": [
@@ -386,6 +449,24 @@
           "Skiploom Lv.43",
           "Skiploom Lv.43"
         ]
+      },
+      {
+        "class": "Hiker",
+        "name": "Jim",
+        "map_name": "MAP_ROUTE_10_SOUTH",
+        "trainer_const": "TRAINER_HIKER_JIM",
+        "party_summary": [
+          "Machamp Lv.45"
+        ]
+      },
+      {
+        "class": "Pokéfan",
+        "name": "Robert",
+        "map_name": "MAP_ROUTE_10_SOUTH",
+        "trainer_const": "TRAINER_POKEFAN_M_ROBERT",
+        "party_summary": [
+          "Quagsire Lv.43"
+        ]
       }
     ],
     "route-11-12-13-diglett": [
@@ -426,6 +507,191 @@
         "party_summary": [
           "Sandslash Lv.42",
           "Crobat Lv.42"
+        ]
+      },
+      {
+        "class": "Fisherman",
+        "name": "Kyle",
+        "map_name": "MAP_ROUTE_12",
+        "trainer_const": "TRAINER_FISHERMAN_KYLE",
+        "party_summary": [
+          "Goldeen Lv.39",
+          "Qwilfish Lv.35",
+          "Goldeen Lv.39"
+        ]
+      },
+      {
+        "class": "Fisherman",
+        "name": "Martin",
+        "map_name": "MAP_ROUTE_12",
+        "trainer_const": "TRAINER_FISHERMAN_MARTIN",
+        "party_summary": [
+          "Remoraid Lv.36",
+          "Octillery Lv.42"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Justin",
+        "map_name": "MAP_ROUTE_12",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_JUSTIN",
+        "party_summary": [
+          "Xatu Lv.44",
+          "Noctowl Lv.39"
+        ]
+      },
+      {
+        "class": "Young Couple",
+        "name": "Vic & Tara",
+        "map_name": "MAP_ROUTE_12",
+        "trainer_const": "TRAINER_YOUNG_COUPLE_VIC_AND_TARA",
+        "party_summary": [
+          "Magmar Lv.44",
+          "Sunflora Lv.43"
+        ]
+      },
+      {
+        "class": "Fisherman",
+        "name": "Stephen",
+        "map_name": "MAP_ROUTE_12",
+        "trainer_const": "TRAINER_FISHERMAN_STEPHEN",
+        "party_summary": [
+          "Quagsire Lv.43",
+          "Qwilfish Lv.38",
+          "Tentacruel Lv.38"
+        ]
+      },
+      {
+        "class": "Fisherman",
+        "name": "Barney",
+        "map_name": "MAP_ROUTE_12",
+        "trainer_const": "TRAINER_FISHERMAN_BARNEY",
+        "party_summary": [
+          "Gyarados Lv.40",
+          "Gyarados Lv.37",
+          "Gyarados Lv.37"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Gail",
+        "map_name": "MAP_ROUTE_12",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_GAIL",
+        "party_summary": [
+          "Fearow Lv.42",
+          "Spearow Lv.39"
+        ]
+      },
+      {
+        "class": "Fisherman",
+        "name": "Kyler",
+        "map_name": "MAP_ROUTE_12",
+        "trainer_const": "TRAINER_FISHERMAN_KYLER",
+        "party_summary": [
+          "Magikarp Lv.18",
+          "Magikarp Lv.18",
+          "Magikarp Lv.18"
+        ]
+      },
+      {
+        "class": "Hiker",
+        "name": "Kenny",
+        "map_name": "MAP_ROUTE_13",
+        "trainer_const": "TRAINER_HIKER_KENNY",
+        "party_summary": [
+          "Sandslash Lv.27",
+          "Graveler Lv.29",
+          "Golem Lv.33"
+        ]
+      },
+      {
+        "class": "Young Couple",
+        "name": "Tim & Sue",
+        "map_name": "MAP_ROUTE_13",
+        "trainer_const": "TRAINER_YOUNG_COUPLE_TIM_AND_SUE",
+        "party_summary": [
+          "Kadabra Lv.41",
+          "Psyduck Lv.46"
+        ]
+      },
+      {
+        "class": "Pokéfan",
+        "name": "Joshua",
+        "map_name": "MAP_ROUTE_13",
+        "trainer_const": "TRAINER_POKEFAN_M_JOSHUA",
+        "party_summary": [
+          "Pikachu Lv.32",
+          "Pikachu Lv.32",
+          "Pikachu Lv.32",
+          "Pikachu Lv.32",
+          "Pikachu Lv.32",
+          "Pikachu Lv.32"
+        ]
+      },
+      {
+        "class": "Pokéfan",
+        "name": "Alex",
+        "map_name": "MAP_ROUTE_13",
+        "trainer_const": "TRAINER_POKEFAN_M_ALEX",
+        "party_summary": [
+          "Nidoking Lv.29",
+          "Slowking Lv.29",
+          "Magikarp Lv.65"
+        ]
+      },
+      {
+        "class": "Camper",
+        "name": "Clark",
+        "map_name": "MAP_ROUTE_13",
+        "trainer_const": "TRAINER_CAMPER_CLARK",
+        "party_summary": [
+          "Buizel Lv.40"
+        ]
+      },
+      {
+        "class": "Camper",
+        "name": "Tanner",
+        "map_name": "MAP_ROUTE_13",
+        "trainer_const": "TRAINER_CAMPER_TANNER",
+        "party_summary": [
+          "Sudowoodo Lv.38"
+        ]
+      },
+      {
+        "class": "Picnicker",
+        "name": "Piper",
+        "map_name": "MAP_ROUTE_13",
+        "trainer_const": "TRAINER_PICNICKER_PIPER",
+        "party_summary": [
+          "Spoink Lv.40"
+        ]
+      },
+      {
+        "class": "Picnicker",
+        "name": "Ginger",
+        "map_name": "MAP_ROUTE_13",
+        "trainer_const": "TRAINER_PICNICKER_GINGER",
+        "party_summary": [
+          "Whismur Lv.41"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Bret",
+        "map_name": "MAP_ROUTE_13",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_BRET",
+        "party_summary": [
+          "Taillow Lv.41",
+          "Fearow Lv.41"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Perry",
+        "map_name": "MAP_ROUTE_13",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_PERRY",
+        "party_summary": [
+          "Farfetchd Lv.42"
         ]
       }
     ],
@@ -505,6 +771,309 @@
         "trainer_const": "TRAINER_SCHOOL_KID_M_TRAVIS",
         "party_summary": [
           "Budew Lv.42"
+        ]
+      },
+      {
+        "class": "School Kid",
+        "name": "Kipp",
+        "map_name": "MAP_ROUTE_15",
+        "trainer_const": "TRAINER_SCHOOL_KID_M_KIPP",
+        "party_summary": [
+          "Voltorb Lv.36",
+          "Magnemite Lv.36",
+          "Voltorb Lv.40",
+          "Magneton Lv.40"
+        ]
+      },
+      {
+        "class": "School Kid",
+        "name": "Tommy",
+        "map_name": "MAP_ROUTE_15",
+        "trainer_const": "TRAINER_SCHOOL_KID_M_TOMMY",
+        "party_summary": [
+          "Xatu Lv.41",
+          "Alakazam Lv.43"
+        ]
+      },
+      {
+        "class": "Enseignante",
+        "name": "Hillary",
+        "map_name": "MAP_ROUTE_15",
+        "trainer_const": "TRAINER_TEACHER_HILLARY",
+        "party_summary": [
+          "Sunkern Lv.41",
+          "Aipom Lv.31"
+        ]
+      },
+      {
+        "class": "Twins",
+        "name": "Kay & Tia",
+        "map_name": "MAP_ROUTE_15",
+        "trainer_const": "TRAINER_TWINS_KAY_AND_TIA",
+        "party_summary": [
+          "Quagsire Lv.41",
+          "Quagsire Lv.41"
+        ]
+      },
+      {
+        "class": "Pokefan",
+        "name": "Eleanor",
+        "map_name": "MAP_ROUTE_15",
+        "trainer_const": "TRAINER_POKEFAN_ELEANOR",
+        "party_summary": [
+          "Spinda Lv.43",
+          "Illumise Lv.41"
+        ]
+      },
+      {
+        "class": "Pokéfan",
+        "name": "Boone",
+        "map_name": "MAP_ROUTE_15",
+        "trainer_const": "TRAINER_POKEFAN_M_BOONE",
+        "party_summary": [
+          "Spinda Lv.43",
+          "Volbeat Lv.41"
+        ]
+      },
+      {
+        "class": "Enseignante",
+        "name": "Colette",
+        "map_name": "MAP_ROUTE_15",
+        "trainer_const": "TRAINER_TEACHER_COLETTE",
+        "party_summary": [
+          "Clefairy Lv.45"
+        ]
+      },
+      {
+        "class": "School Kid",
+        "name": "Johnny",
+        "map_name": "MAP_ROUTE_15",
+        "trainer_const": "TRAINER_SCHOOL_KID_M_JOHNNY",
+        "party_summary": [
+          "Bellsprout Lv.39",
+          "Weepinbell Lv.40",
+          "Victreebel Lv.42"
+        ]
+      },
+      {
+        "class": "School Kid",
+        "name": "Billy",
+        "map_name": "MAP_ROUTE_15",
+        "trainer_const": "TRAINER_SCHOOL_KID_M_BILLY",
+        "party_summary": [
+          "Parasect Lv.39",
+          "Poliwhirl Lv.37",
+          "Ditto Lv.35"
+        ]
+      }
+    ],
+    "route-16-17-18-cycling-road": [
+      {
+        "class": "Biker",
+        "name": "Reese",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_REESE",
+        "party_summary": [
+          "Weezing Lv.45"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Joel",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_JOEL",
+        "party_summary": [
+          "Magmar Lv.43",
+          "Magmar Lv.43"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Markey",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_MARKEY",
+        "party_summary": [
+          "Skorupi Lv.47"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Dale",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_DALE",
+        "party_summary": [
+          "Gulpin Lv.47"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Jacob",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_JACOB",
+        "party_summary": [
+          "Magmar Lv.43",
+          "Tentacruel Lv.43"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Aiden",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_AIDEN",
+        "party_summary": [
+          "Tentacruel Lv.45"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Dan",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_DAN",
+        "party_summary": [
+          "Gulpin Lv.39",
+          "Weezing Lv.37",
+          "Weezing Lv.37"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Theron",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_THERON",
+        "party_summary": [
+          "Croagunk Lv.45"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Glenn",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_GLENN",
+        "party_summary": [
+          "Koffing Lv.39",
+          "Magmar Lv.41",
+          "Weezing Lv.43"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Teddy",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_TEDDY",
+        "party_summary": [
+          "Seviper Lv.46"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Ernest",
+        "map_name": "MAP_ROUTE_17",
+        "trainer_const": "TRAINER_BIKER_ERNEST",
+        "party_summary": [
+          "Teddiursa Lv.45",
+          "Marill Lv.44"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Bob",
+        "map_name": "MAP_ROUTE_18",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_BOB",
+        "party_summary": [
+          "Noctowl Lv.48"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Boris",
+        "map_name": "MAP_ROUTE_18",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_BORIS",
+        "party_summary": [
+          "Doduo Lv.39",
+          "Doduo Lv.37",
+          "Dodrio Lv.41"
+        ]
+      },
+      {
+        "class": "Biker",
+        "name": "Charles",
+        "map_name": "MAP_ROUTE_18",
+        "trainer_const": "TRAINER_BIKER_CHARLES",
+        "party_summary": [
+          "Koffing Lv.41",
+          "Charmeleon Lv.41",
+          "Weezing Lv.42"
+        ]
+      }
+    ],
+    "route-24-25-kanto": [
+      {
+        "class": "School Kid",
+        "name": "Dudley",
+        "map_name": "MAP_ROUTE_25",
+        "trainer_const": "TRAINER_SCHOOL_KID_M_DUDLEY",
+        "party_summary": [
+          "Oddish Lv.45"
+        ]
+      },
+      {
+        "class": "Lass",
+        "name": "Ellen",
+        "map_name": "MAP_ROUTE_25",
+        "trainer_const": "TRAINER_LASS_ELLEN",
+        "party_summary": [
+          "Wigglytuff Lv.40",
+          "Granbull Lv.44"
+        ]
+      },
+      {
+        "class": "School Kid",
+        "name": "Joe",
+        "map_name": "MAP_ROUTE_25",
+        "trainer_const": "TRAINER_SCHOOL_KID_M_JOE",
+        "party_summary": [
+          "Tangela Lv.44",
+          "Vaporeon Lv.42"
+        ]
+      },
+      {
+        "class": "Lass",
+        "name": "Laura",
+        "map_name": "MAP_ROUTE_25",
+        "trainer_const": "TRAINER_LASS_LAURA",
+        "party_summary": [
+          "Gloom Lv.38",
+          "Pidgeotto Lv.41",
+          "Bellossom Lv.41"
+        ]
+      },
+      {
+        "class": "Lass",
+        "name": "Shannon",
+        "map_name": "MAP_ROUTE_25",
+        "trainer_const": "TRAINER_LASS_SHANNON",
+        "party_summary": [
+          "Paras Lv.38",
+          "Paras Lv.38",
+          "Parasect Lv.42"
+        ]
+      },
+      {
+        "class": "Camper",
+        "name": "Lloyd",
+        "map_name": "MAP_ROUTE_25",
+        "trainer_const": "TRAINER_CAMPER_LLOYD",
+        "party_summary": [
+          "Nidoking Lv.46"
+        ]
+      },
+      {
+        "class": "Super Nerd",
+        "name": "Pat",
+        "map_name": "MAP_ROUTE_25",
+        "trainer_const": "TRAINER_SUPER_NERD_PAT",
+        "party_summary": [
+          "Porygon Lv.47"
         ]
       }
     ],
@@ -1356,6 +1925,51 @@
         ]
       }
     ],
+    "ecruteak-city": [
+      {
+        "class": "Medium",
+        "name": "Georgina",
+        "map_name": "MAP_ECRUTEAK_GYM",
+        "trainer_const": "TRAINER_MEDIUM_GEORGINA",
+        "party_summary": [
+          "Gastly Lv.16",
+          "Gastly Lv.16",
+          "Gastly Lv.16",
+          "Gastly Lv.16",
+          "Gastly Lv.16"
+        ]
+      },
+      {
+        "class": "Medium",
+        "name": "Grace",
+        "map_name": "MAP_ECRUTEAK_GYM",
+        "trainer_const": "TRAINER_MEDIUM_GRACE",
+        "party_summary": [
+          "Haunter Lv.20",
+          "Haunter Lv.20"
+        ]
+      },
+      {
+        "class": "Medium",
+        "name": "Edith",
+        "map_name": "MAP_ECRUTEAK_GYM",
+        "trainer_const": "TRAINER_MEDIUM_EDITH",
+        "party_summary": [
+          "Haunter Lv.22"
+        ]
+      },
+      {
+        "class": "Medium",
+        "name": "Martha",
+        "map_name": "MAP_ECRUTEAK_GYM",
+        "trainer_const": "TRAINER_MEDIUM_MARTHA",
+        "party_summary": [
+          "Gastly Lv.18",
+          "Haunter Lv.20",
+          "Gastly Lv.20"
+        ]
+      }
+    ],
     "lake-of-rage": [
       {
         "class": "Fisherman",
@@ -1440,6 +2054,152 @@
         "trainer_const": "TRAINER_SWIMMER_F_DEBBIE",
         "party_summary": [
           "Clamperl Lv.46"
+        ]
+      },
+      {
+        "class": "Swimmer",
+        "name": "Frankie",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_SWIMMER_M_FRANKIE",
+        "party_summary": [
+          "Azumarill Lv.44"
+        ]
+      },
+      {
+        "class": "Camper",
+        "name": "Pedro",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_CAMPER_PEDRO",
+        "party_summary": [
+          "Linoone Lv.45"
+        ]
+      },
+      {
+        "class": "Picnicker",
+        "name": "Adrian",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_PICNICKER_ADRIAN",
+        "party_summary": [
+          "Shroomish Lv.45"
+        ]
+      },
+      {
+        "class": "Picnicker",
+        "name": "Cheyenne",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_PICNICKER_CHEYENNE",
+        "party_summary": [
+          "Shinx Lv.45"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Bert",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_BERT",
+        "party_summary": [
+          "Wingull Lv.46",
+          "Fearow Lv.43"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Ernie",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_ERNIE",
+        "party_summary": [
+          "Starly Lv.48"
+        ]
+      },
+      {
+        "class": "Swimmer",
+        "name": "Nicole",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_SWIMMER_F_NICOLE",
+        "party_summary": [
+          "Marill Lv.39",
+          "Marill Lv.39",
+          "Lapras Lv.42"
+        ]
+      },
+      {
+        "class": "Swimmer",
+        "name": "Lori",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_SWIMMER_F_LORI",
+        "party_summary": [
+          "Starmie Lv.42",
+          "Starmie Lv.42",
+          "Starmie Lv.42"
+        ]
+      },
+      {
+        "class": "Swimmer",
+        "name": "Elmo",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_SWIMMER_M_ELMO",
+        "party_summary": [
+          "Poliwhirl Lv.46",
+          "Tentacruel Lv.42"
+        ]
+      },
+      {
+        "class": "Swimmer",
+        "name": "Luis",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_SWIMMER_M_LUIS",
+        "party_summary": [
+          "Seadra Lv.46",
+          "Quagsire Lv.42"
+        ]
+      },
+      {
+        "class": "Swimmer",
+        "name": "Leona",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_SWIMMER_F_LEONA",
+        "party_summary": [
+          "Bidoof Lv.44"
+        ]
+      },
+      {
+        "class": "Swimmer",
+        "name": "Mina",
+        "map_name": "MAP_ROUTE_20",
+        "trainer_const": "TRAINER_SWIMMER_F_MINA",
+        "party_summary": [
+          "Luvdisc Lv.38",
+          "Luvdisc Lv.39",
+          "Luvdisc Lv.41"
+        ]
+      },
+      {
+        "class": "Boarder",
+        "name": "Bryce",
+        "map_name": "MAP_SEAFOAM_ISLANDS_B2F",
+        "trainer_const": "TRAINER_BOARDER_BRYCE",
+        "party_summary": [
+          "Dewgong Lv.55",
+          "Lapras Lv.50"
+        ]
+      },
+      {
+        "class": "Boarder",
+        "name": "Shaun",
+        "map_name": "MAP_SEAFOAM_ISLANDS_B2F",
+        "trainer_const": "TRAINER_BOARDER_SHAUN",
+        "party_summary": [
+          "Cloyster Lv.55",
+          "Dewgong Lv.50"
+        ]
+      },
+      {
+        "class": "Skier",
+        "name": "Cady",
+        "map_name": "MAP_SEAFOAM_ISLANDS_B2F",
+        "trainer_const": "TRAINER_SKIER_CADY",
+        "party_summary": [
+          "Delibird Lv.53"
         ]
       }
     ],
@@ -1948,6 +2708,563 @@
         ]
       }
     ],
+    "violet-city": [
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Abe",
+        "map_name": "MAP_VIOLET_GYM",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_ABE",
+        "party_summary": [
+          "Spearow Lv.9"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Rod",
+        "map_name": "MAP_VIOLET_GYM",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_ROD",
+        "party_summary": [
+          "Pidgey Lv.7",
+          "Pidgey Lv.7"
+        ]
+      }
+    ],
+    "goldenrod-city": [
+      {
+        "class": "Lass",
+        "name": "Cathy",
+        "map_name": "MAP_GOLDENROD_GYM",
+        "trainer_const": "TRAINER_LASS_CATHY",
+        "party_summary": [
+          "Jigglypuff Lv.15",
+          "Jigglypuff Lv.15",
+          "Jigglypuff Lv.15"
+        ]
+      },
+      {
+        "class": "Lass",
+        "name": "Carrie",
+        "map_name": "MAP_GOLDENROD_GYM",
+        "trainer_const": "TRAINER_LASS_CARRIE",
+        "party_summary": [
+          "Snubbull Lv.17"
+        ]
+      },
+      {
+        "class": "Beauty",
+        "name": "Victoria",
+        "map_name": "MAP_GOLDENROD_GYM",
+        "trainer_const": "TRAINER_BEAUTY_VICTORIA",
+        "party_summary": [
+          "Sentret Lv.9",
+          "Sentret Lv.13",
+          "Sentret Lv.16"
+        ]
+      },
+      {
+        "class": "Beauty",
+        "name": "Samantha",
+        "map_name": "MAP_GOLDENROD_GYM",
+        "trainer_const": "TRAINER_BEAUTY_SAMANTHA",
+        "party_summary": [
+          "Meowth Lv.16",
+          "Meowth Lv.16"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_5",
+        "party_summary": [
+          "Rattata Lv.21",
+          "Rattata Lv.21",
+          "Rattata Lv.23",
+          "Rattata Lv.23",
+          "Rattata Lv.23"
+        ]
+      },
+      {
+        "class": "Team Rocket F",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_F_GRUNT_2",
+        "party_summary": [
+          "Arbok Lv.26"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_6",
+        "party_summary": [
+          "Zubat Lv.26",
+          "Zubat Lv.26"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_4",
+        "party_summary": [
+          "Grimer Lv.23",
+          "Grimer Lv.23",
+          "Muk Lv.25"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_3F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_7",
+        "party_summary": [
+          "Koffing Lv.23",
+          "Grimer Lv.23",
+          "Zubat Lv.23",
+          "Rattata Lv.23"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_3F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_8",
+        "party_summary": [
+          "Weezing Lv.26"
+        ]
+      },
+      {
+        "class": "Scientist Gs",
+        "name": "Garett",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_3F",
+        "trainer_const": "TRAINER_SCIENTIST_GS_GARETT",
+        "party_summary": [
+          "Magnemite Lv.27",
+          "Magnemite Lv.27",
+          "Magnemite Lv.27"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_3F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_9",
+        "party_summary": [
+          "Raticate Lv.24",
+          "Koffing Lv.26"
+        ]
+      },
+      {
+        "class": "Scientist Gs",
+        "name": "Trenton",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_4F",
+        "trainer_const": "TRAINER_SCIENTIST_GS_TRENTON",
+        "party_summary": [
+          "Porygon Lv.30"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_4F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_10",
+        "party_summary": [
+          "Zubat Lv.22",
+          "Golbat Lv.24",
+          "Grimer Lv.22"
+        ]
+      },
+      {
+        "class": "Executive Proton",
+        "name": "Proton",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_4F",
+        "trainer_const": "TRAINER_EXECUTIVE_PROTON_PROTON_2",
+        "party_summary": [
+          "Golbat Lv.28",
+          "Weezing Lv.33"
+        ]
+      },
+      {
+        "class": "Executive Ariana",
+        "name": "Ariana",
+        "map_name": "MAP_GOLDENROD_RADIO_TOWER_5F",
+        "trainer_const": "TRAINER_EXECUTIVE_ARIANA_ARIANA",
+        "party_summary": [
+          "Arbok Lv.32",
+          "Vileplume Lv.32",
+          "Murkrow Lv.32"
+        ]
+      },
+      {
+        "class": "Poké Maniac",
+        "name": "Donald",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B1F",
+        "trainer_const": "TRAINER_POKE_MANIAC_DONALD",
+        "party_summary": [
+          "Slowpoke Lv.11",
+          "Slowpoke Lv.11"
+        ]
+      },
+      {
+        "class": "Super Nerd",
+        "name": "Teru",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B1F",
+        "trainer_const": "TRAINER_SUPER_NERD_TERU",
+        "party_summary": [
+          "Magnemite Lv.7",
+          "Voltorb Lv.11",
+          "Magnemite Lv.7",
+          "Magnemite Lv.9"
+        ]
+      },
+      {
+        "class": "Poké Maniac",
+        "name": "Issac",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B1F",
+        "trainer_const": "TRAINER_POKE_MANIAC_ISSAC",
+        "party_summary": [
+          "Lickitung Lv.12"
+        ]
+      },
+      {
+        "class": "Super Nerd",
+        "name": "Eric",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B1F",
+        "trainer_const": "TRAINER_SUPER_NERD_ERIC",
+        "party_summary": [
+          "Grimer Lv.11",
+          "Grimer Lv.11"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_11",
+        "party_summary": [
+          "Muk Lv.23",
+          "Koffing Lv.23",
+          "Rattata Lv.25"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_23",
+        "party_summary": [
+          "Koffing Lv.24",
+          "Muk Lv.24"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_12",
+        "party_summary": [
+          "Rattata Lv.27"
+        ]
+      },
+      {
+        "class": "Team Rocket F",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_F_GRUNT_3",
+        "party_summary": [
+          "Gloom Lv.25",
+          "Gloom Lv.25"
+        ]
+      },
+      {
+        "class": "Burglar",
+        "name": "Orson",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B2F",
+        "trainer_const": "TRAINER_BURGLAR_ORSON",
+        "party_summary": [
+          "Growlithe Lv.26",
+          "Koffing Lv.24"
+        ]
+      },
+      {
+        "class": "Burglar",
+        "name": "Duncan",
+        "map_name": "MAP_GOLDENROD_TUNNEL_B2F",
+        "trainer_const": "TRAINER_BURGLAR_DUNCAN",
+        "party_summary": [
+          "Koffing Lv.23",
+          "Magmar Lv.25",
+          "Koffing Lv.23"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_TUNNEL_WAREHOUSE",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_13",
+        "party_summary": [
+          "Raticate Lv.24",
+          "Golbat Lv.24"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_TUNNEL_WAREHOUSE",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_14",
+        "party_summary": [
+          "Grimer Lv.26",
+          "Weezing Lv.23"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_GOLDENROD_TUNNEL_WAREHOUSE",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_22",
+        "party_summary": [
+          "Koffing Lv.25",
+          "Koffing Lv.25"
+        ]
+      }
+    ],
+    "cianwood-city": [
+      {
+        "class": "Black Belt",
+        "name": "Yoshi",
+        "map_name": "MAP_CIANWOOD_GYM",
+        "trainer_const": "TRAINER_BLACK_BELT_YOSHI",
+        "party_summary": [
+          "Hitmonlee Lv.27"
+        ]
+      },
+      {
+        "class": "Black Belt",
+        "name": "Lao",
+        "map_name": "MAP_CIANWOOD_GYM",
+        "trainer_const": "TRAINER_BLACK_BELT_LAO",
+        "party_summary": [
+          "Hitmonchan Lv.27"
+        ]
+      },
+      {
+        "class": "Black Belt",
+        "name": "Nob",
+        "map_name": "MAP_CIANWOOD_GYM",
+        "trainer_const": "TRAINER_BLACK_BELT_NOB",
+        "party_summary": [
+          "Machop Lv.25",
+          "Machoke Lv.25"
+        ]
+      },
+      {
+        "class": "Black Belt",
+        "name": "Lung",
+        "map_name": "MAP_CIANWOOD_GYM",
+        "trainer_const": "TRAINER_BLACK_BELT_LUNG",
+        "party_summary": [
+          "Mankey Lv.23",
+          "Mankey Lv.23",
+          "Primeape Lv.25"
+        ]
+      }
+    ],
+    "mahogany-town": [
+      {
+        "class": "Boarder",
+        "name": "Deandre",
+        "map_name": "MAP_MAHOGANY_GYM_LEADER_ROOM",
+        "trainer_const": "TRAINER_BOARDER_DEANDRE",
+        "party_summary": [
+          "Seel Lv.25",
+          "Dewgong Lv.26",
+          "Seel Lv.25"
+        ]
+      },
+      {
+        "class": "Boarder",
+        "name": "Gerardo",
+        "map_name": "MAP_MAHOGANY_GYM_LEADER_ROOM",
+        "trainer_const": "TRAINER_BOARDER_GERARDO",
+        "party_summary": [
+          "Shellder Lv.25",
+          "Cloyster Lv.26",
+          "Seel Lv.25"
+        ]
+      },
+      {
+        "class": "Skier",
+        "name": "Jill",
+        "map_name": "MAP_MAHOGANY_GYM_LEADER_ROOM",
+        "trainer_const": "TRAINER_SKIER_JILL",
+        "party_summary": [
+          "Dewgong Lv.29"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B1F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_15",
+        "party_summary": [
+          "Rattata Lv.16",
+          "Rattata Lv.16",
+          "Rattata Lv.16",
+          "Rattata Lv.16"
+        ]
+      },
+      {
+        "class": "Scientist Gs",
+        "name": "Gregg",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B1F",
+        "trainer_const": "TRAINER_SCIENTIST_GS_GREGG",
+        "party_summary": [
+          "Magnemite Lv.20",
+          "Magnemite Lv.20",
+          "Magnemite Lv.20"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_18",
+        "party_summary": [
+          "Venonat Lv.18",
+          "Venonat Lv.18"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_16",
+        "party_summary": [
+          "Golbat Lv.18"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B2F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_17",
+        "party_summary": [
+          "Rattata Lv.17",
+          "Zubat Lv.17",
+          "Rattata Lv.17"
+        ]
+      },
+      {
+        "class": "Scientist Gs",
+        "name": "Ross",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B3F",
+        "trainer_const": "TRAINER_SCIENTIST_GS_ROSS",
+        "party_summary": [
+          "Koffing Lv.22",
+          "Koffing Lv.22"
+        ]
+      },
+      {
+        "class": "Scientist Gs",
+        "name": "Mitch",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B3F",
+        "trainer_const": "TRAINER_SCIENTIST_GS_MITCH",
+        "party_summary": [
+          "Ditto Lv.24"
+        ]
+      },
+      {
+        "class": "Team Rocket",
+        "name": "Grunt",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B3F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_GRUNT_19",
+        "party_summary": [
+          "Raticate Lv.19"
+        ]
+      },
+      {
+        "class": "Team Rocket F",
+        "name": "Grunt",
+        "map_name": "MAP_TEAM_ROCKET_HEADQUARTERS_B3F",
+        "trainer_const": "TRAINER_TEAM_ROCKET_F_GRUNT_5",
+        "party_summary": [
+          "Ekans Lv.18",
+          "Gloom Lv.18"
+        ]
+      },
+      {
+        "class": "Skier",
+        "name": "Diana",
+        "map_name": "MAP_MAHOGANY_GYM_ROOM_2",
+        "trainer_const": "TRAINER_SKIER_DIANA",
+        "party_summary": [
+          "Jynx Lv.29"
+        ]
+      },
+      {
+        "class": "Boarder",
+        "name": "Patton",
+        "map_name": "MAP_MAHOGANY_GYM_ROOM_2",
+        "trainer_const": "TRAINER_BOARDER_PATTON",
+        "party_summary": [
+          "Swinub Lv.27",
+          "Swinub Lv.27"
+        ]
+      }
+    ],
+    "blackthorn-city": [
+      {
+        "class": "Ace Trainer",
+        "name": "Paulo",
+        "map_name": "MAP_BLACKTHORN_GYM",
+        "trainer_const": "TRAINER_ACE_TRAINER_M_PAULO",
+        "party_summary": [
+          "Dratini Lv.35",
+          "Seadra Lv.35",
+          "Dratini Lv.35"
+        ]
+      },
+      {
+        "class": "Ace Trainer",
+        "name": "Lola",
+        "map_name": "MAP_BLACKTHORN_GYM",
+        "trainer_const": "TRAINER_ACE_TRAINER_F_LOLA",
+        "party_summary": [
+          "Dratini Lv.35",
+          "Dragonair Lv.37"
+        ]
+      },
+      {
+        "class": "Ace Trainer",
+        "name": "Cody",
+        "map_name": "MAP_BLACKTHORN_GYM",
+        "trainer_const": "TRAINER_ACE_TRAINER_M_CODY",
+        "party_summary": [
+          "Horsea Lv.35",
+          "Seadra Lv.37"
+        ]
+      },
+      {
+        "class": "Ace Trainer",
+        "name": "Fran",
+        "map_name": "MAP_BLACKTHORN_GYM",
+        "trainer_const": "TRAINER_ACE_TRAINER_F_FRAN",
+        "party_summary": [
+          "Seadra Lv.38"
+        ]
+      },
+      {
+        "class": "Ace Trainer",
+        "name": "Mike",
+        "map_name": "MAP_BLACKTHORN_GYM",
+        "trainer_const": "TRAINER_ACE_TRAINER_M_MIKE",
+        "party_summary": [
+          "Dragonair Lv.38"
+        ]
+      }
+    ],
     "route-47-48-cliff-cave": [
       {
         "class": "Double Team",
@@ -2024,6 +3341,142 @@
         ]
       }
     ],
+    "azalea-town": [
+      {
+        "class": "Bug Catcher",
+        "name": "Al",
+        "map_name": "MAP_AZALEA_GYM",
+        "trainer_const": "TRAINER_BUG_CATCHER_AL",
+        "party_summary": [
+          "Caterpie Lv.12",
+          "Weedle Lv.12"
+        ]
+      },
+      {
+        "class": "Bug Catcher",
+        "name": "Benny",
+        "map_name": "MAP_AZALEA_GYM",
+        "trainer_const": "TRAINER_BUG_CATCHER_BENNY",
+        "party_summary": [
+          "Weedle Lv.7",
+          "Kakuna Lv.9",
+          "Beedrill Lv.12"
+        ]
+      },
+      {
+        "class": "Twins",
+        "name": "Amy & Mimi",
+        "map_name": "MAP_AZALEA_GYM",
+        "trainer_const": "TRAINER_TWINS_AMY_AND_MIMI",
+        "party_summary": [
+          "Spinarak Lv.10",
+          "Ledyba Lv.10"
+        ]
+      },
+      {
+        "class": "Bug Catcher",
+        "name": "Josh",
+        "map_name": "MAP_AZALEA_GYM",
+        "trainer_const": "TRAINER_BUG_CATCHER_JOSH",
+        "party_summary": [
+          "Paras Lv.13"
+        ]
+      }
+    ],
+    "olivine-city": [
+      {
+        "class": "Gentleman",
+        "name": "Alfred",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_2F",
+        "trainer_const": "TRAINER_GENTLEMAN_ALFRED",
+        "party_summary": [
+          "Noctowl Lv.22"
+        ]
+      },
+      {
+        "class": "Sailor",
+        "name": "Huey",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_2F",
+        "trainer_const": "TRAINER_SAILOR_HUEY",
+        "party_summary": [
+          "Poliwag Lv.18",
+          "Poliwhirl Lv.20"
+        ]
+      },
+      {
+        "class": "Sailor",
+        "name": "Kent",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_3F",
+        "trainer_const": "TRAINER_SAILOR_KENT",
+        "party_summary": [
+          "Krabby Lv.18",
+          "Krabby Lv.20"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Denis",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_3F",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_DENIS",
+        "party_summary": [
+          "Spearow Lv.18",
+          "Fearow Lv.20",
+          "Spearow Lv.18"
+        ]
+      },
+      {
+        "class": "Bird Keeper Gs",
+        "name": "Theo",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_3F",
+        "trainer_const": "TRAINER_BIRD_KEEPER_GS_THEO",
+        "party_summary": [
+          "Pidgey Lv.17",
+          "Pidgey Lv.15",
+          "Pidgey Lv.19",
+          "Pidgey Lv.15",
+          "Pidgey Lv.15"
+        ]
+      },
+      {
+        "class": "Lass",
+        "name": "Connie",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_4F",
+        "trainer_const": "TRAINER_LASS_CONNIE",
+        "party_summary": [
+          "Marill Lv.21"
+        ]
+      },
+      {
+        "class": "Gentleman",
+        "name": "Preston",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_4F",
+        "trainer_const": "TRAINER_GENTLEMAN_PRESTON",
+        "party_summary": [
+          "Growlithe Lv.18",
+          "Growlithe Lv.18"
+        ]
+      },
+      {
+        "class": "Sailor",
+        "name": "Terrell",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_5F",
+        "trainer_const": "TRAINER_SAILOR_TERRELL",
+        "party_summary": [
+          "Poliwhirl Lv.20"
+        ]
+      },
+      {
+        "class": "Sailor",
+        "name": "Roberto",
+        "map_name": "MAP_OLIVINE_LIGHTHOUSE_5F",
+        "trainer_const": "TRAINER_SAILOR_ROBERTO",
+        "party_summary": [
+          "Machop Lv.18",
+          "Machop Lv.18",
+          "Poliwhirl Lv.18"
+        ]
+      }
+    ],
     "mt-mortar": [
       {
         "class": "Poké Maniac",
@@ -2083,6 +3536,509 @@
         "party_summary": [
           "Dratini Lv.35",
           "Dratini Lv.35"
+        ]
+      }
+    ],
+    "vermilion-city": [
+      {
+        "class": "Gentleman",
+        "name": "Edward",
+        "map_name": "MAP_SS_AQUA_1F_SOUTHEAST_ROOMS",
+        "trainer_const": "TRAINER_GENTLEMAN_EDWARD",
+        "party_summary": [
+          "Persian Lv.41"
+        ]
+      },
+      {
+        "class": "Burglar",
+        "name": "Corey",
+        "map_name": "MAP_SS_AQUA_1F_SOUTHEAST_ROOMS",
+        "trainer_const": "TRAINER_BURGLAR_COREY",
+        "party_summary": [
+          "Koffing Lv.33",
+          "Magmar Lv.36",
+          "Koffing Lv.33",
+          "Koffing Lv.38"
+        ]
+      },
+      {
+        "class": "Hiker",
+        "name": "Noland",
+        "map_name": "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS",
+        "trainer_const": "TRAINER_HIKER_NOLAND",
+        "party_summary": [
+          "Bronzor Lv.39",
+          "Golem Lv.42"
+        ]
+      },
+      {
+        "class": "Ace Trainer",
+        "name": "Shaye",
+        "map_name": "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS",
+        "trainer_const": "TRAINER_ACE_TRAINER_M_SHAYE",
+        "party_summary": [
+          "Jolteon Lv.43",
+          "Tangela Lv.43",
+          "Tauros Lv.43"
+        ]
+      },
+      {
+        "class": "Ace Trainer",
+        "name": "Carol",
+        "map_name": "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS",
+        "trainer_const": "TRAINER_ACE_TRAINER_F_CAROL",
+        "party_summary": [
+          "Electrode Lv.43",
+          "Starmie Lv.43",
+          "Ninetales Lv.43"
+        ]
+      },
+      {
+        "class": "Poké Maniac",
+        "name": "Morgan",
+        "map_name": "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS",
+        "trainer_const": "TRAINER_POKE_MANIAC_MORGAN",
+        "party_summary": [
+          "Rhyhorn Lv.39",
+          "Rhydon Lv.39"
+        ]
+      },
+      {
+        "class": "Firebreather",
+        "name": "Lyle",
+        "map_name": "MAP_SS_AQUA_1F_NORTHEAST_ROOMS",
+        "trainer_const": "TRAINER_FIREBREATHER_LYLE",
+        "party_summary": [
+          "Koffing Lv.36",
+          "Flareon Lv.39",
+          "Koffing Lv.36"
+        ]
+      },
+      {
+        "class": "Beauty",
+        "name": "Cassie",
+        "map_name": "MAP_SS_AQUA_1F_NORTHEAST_ROOMS",
+        "trainer_const": "TRAINER_BEAUTY_CASSIE",
+        "party_summary": [
+          "Vileplume Lv.36",
+          "Butterfree Lv.42"
+        ]
+      },
+      {
+        "class": "Guitarist",
+        "name": "Clyde",
+        "map_name": "MAP_SS_AQUA_1F_NORTHEAST_ROOMS",
+        "trainer_const": "TRAINER_GUITARIST_CLYDE",
+        "party_summary": [
+          "Electabuzz Lv.42"
+        ]
+      },
+      {
+        "class": "Bug Catcher",
+        "name": "Ken",
+        "map_name": "MAP_SS_AQUA_1F_NORTHEAST_ROOMS",
+        "trainer_const": "TRAINER_BUG_CATCHER_KEN",
+        "party_summary": [
+          "Ariados Lv.39",
+          "Pinsir Lv.40"
+        ]
+      },
+      {
+        "class": "Pokéfan",
+        "name": "Colin",
+        "map_name": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+        "trainer_const": "TRAINER_POKEFAN_M_COLIN",
+        "party_summary": [
+          "Delibird Lv.40"
+        ]
+      },
+      {
+        "class": "Twins",
+        "name": "Meg & Peg",
+        "map_name": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+        "trainer_const": "TRAINER_TWINS_MEG_AND_PEG",
+        "party_summary": [
+          "Teddiursa Lv.39",
+          "Phanpy Lv.39"
+        ]
+      },
+      {
+        "class": "Super Nerd",
+        "name": "Shawn",
+        "map_name": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+        "trainer_const": "TRAINER_SUPER_NERD_SHAWN",
+        "party_summary": [
+          "Magnemite Lv.39",
+          "Muk Lv.41",
+          "Magnemite Lv.39"
+        ]
+      },
+      {
+        "class": "Psychic",
+        "name": "Rodney",
+        "map_name": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+        "trainer_const": "TRAINER_PSYCHIC_M_RODNEY",
+        "party_summary": [
+          "Chingling Lv.37",
+          "Hypno Lv.41"
+        ]
+      },
+      {
+        "class": "Pokefan",
+        "name": "Georgia",
+        "map_name": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+        "trainer_const": "TRAINER_POKEFAN_GEORGIA",
+        "party_summary": [
+          "Sentret Lv.31",
+          "Sentret Lv.31",
+          "Sentret Lv.31",
+          "Furret Lv.36",
+          "Sentret Lv.31"
+        ]
+      },
+      {
+        "class": "Pokéfan",
+        "name": "Jeremy",
+        "map_name": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+        "trainer_const": "TRAINER_POKEFAN_M_JEREMY",
+        "party_summary": [
+          "Meowth Lv.36",
+          "Meowth Lv.36",
+          "Meowth Lv.36"
+        ]
+      },
+      {
+        "class": "Picnicker",
+        "name": "Debra",
+        "map_name": "MAP_SS_AQUA_B1F",
+        "trainer_const": "TRAINER_PICNICKER_DEBRA",
+        "party_summary": [
+          "Seaking Lv.41"
+        ]
+      },
+      {
+        "class": "Sailor",
+        "name": "Jeff",
+        "map_name": "MAP_SS_AQUA_B1F",
+        "trainer_const": "TRAINER_SAILOR_JEFF",
+        "party_summary": [
+          "Makuhita Lv.40",
+          "Raticate Lv.40"
+        ]
+      },
+      {
+        "class": "Juggler",
+        "name": "Fritz",
+        "map_name": "MAP_SS_AQUA_B1F",
+        "trainer_const": "TRAINER_JUGGLER_FRITZ",
+        "party_summary": [
+          "Mr_Mime Lv.37",
+          "Magmar Lv.37",
+          "Machoke Lv.37"
+        ]
+      },
+      {
+        "class": "Fisherman",
+        "name": "Jonah",
+        "map_name": "MAP_SS_AQUA_B1F",
+        "trainer_const": "TRAINER_FISHERMAN_JONAH",
+        "party_summary": [
+          "Shellder Lv.33",
+          "Octillery Lv.37",
+          "Remoraid Lv.33",
+          "Cloyster Lv.37"
+        ]
+      },
+      {
+        "class": "Sailor",
+        "name": "Garrett",
+        "map_name": "MAP_SS_AQUA_B1F",
+        "trainer_const": "TRAINER_SAILOR_GARRETT",
+        "party_summary": [
+          "Kingler Lv.42"
+        ]
+      },
+      {
+        "class": "Black Belt",
+        "name": "Wai",
+        "map_name": "MAP_SS_AQUA_B1F",
+        "trainer_const": "TRAINER_BLACK_BELT_WAI",
+        "party_summary": [
+          "Machoke Lv.38",
+          "Machoke Lv.40",
+          "Meditite Lv.42"
+        ]
+      },
+      {
+        "class": "Sailor",
+        "name": "Kenneth",
+        "map_name": "MAP_SS_AQUA_B1F",
+        "trainer_const": "TRAINER_SAILOR_KENNETH",
+        "party_summary": [
+          "Machop Lv.36",
+          "Machop Lv.36",
+          "Poliwrath Lv.36",
+          "Machop Lv.36"
+        ]
+      },
+      {
+        "class": "School Kid",
+        "name": "Nate",
+        "map_name": "MAP_SS_AQUA_B1F",
+        "trainer_const": "TRAINER_SCHOOL_KID_M_NATE",
+        "party_summary": [
+          "Ledian Lv.40",
+          "Exeggutor Lv.40"
+        ]
+      },
+      {
+        "class": "School Kid",
+        "name": "Ricky",
+        "map_name": "MAP_SS_AQUA_B1F",
+        "trainer_const": "TRAINER_SCHOOL_KID_M_RICKY",
+        "party_summary": [
+          "Aipom Lv.40",
+          "Ditto Lv.40"
+        ]
+      },
+      {
+        "class": "Enseignante",
+        "name": "Shirley",
+        "map_name": "MAP_SS_AQUA_B1F",
+        "trainer_const": "TRAINER_TEACHER_SHIRLEY",
+        "party_summary": [
+          "Chatot Lv.43",
+          "Jigglypuff Lv.43"
+        ]
+      },
+      {
+        "class": "Guitarist",
+        "name": "Vincent",
+        "map_name": "MAP_VERMILION_GYM",
+        "trainer_const": "TRAINER_GUITARIST_VINCENT",
+        "party_summary": [
+          "Jolteon Lv.45",
+          "Voltorb Lv.43",
+          "Magnemite Lv.42"
+        ]
+      },
+      {
+        "class": "Juggler",
+        "name": "Horton",
+        "map_name": "MAP_VERMILION_GYM",
+        "trainer_const": "TRAINER_JUGGLER_HORTON",
+        "party_summary": [
+          "Electrode Lv.43",
+          "Electrode Lv.43",
+          "Electrode Lv.43"
+        ]
+      },
+      {
+        "class": "Gentleman",
+        "name": "Gregory",
+        "map_name": "MAP_VERMILION_GYM",
+        "trainer_const": "TRAINER_GENTLEMAN_GREGORY",
+        "party_summary": [
+          "Pikachu Lv.46",
+          "Flaaffy Lv.43",
+          "Electrike Lv.42"
+        ]
+      }
+    ],
+    "celadon-city": [
+      {
+        "class": "Twins",
+        "name": "Jo & Zoe",
+        "map_name": "MAP_CELADON_GYM",
+        "trainer_const": "TRAINER_TWINS_JO_AND_ZOE",
+        "party_summary": [
+          "Victreebel Lv.47",
+          "Vileplume Lv.47"
+        ]
+      },
+      {
+        "class": "Lass",
+        "name": "Michelle",
+        "map_name": "MAP_CELADON_GYM",
+        "trainer_const": "TRAINER_LASS_MICHELLE",
+        "party_summary": [
+          "Skiploom Lv.44",
+          "Hoppip Lv.45",
+          "Jumpluff Lv.46"
+        ]
+      },
+      {
+        "class": "Picnicker",
+        "name": "Tanya",
+        "map_name": "MAP_CELADON_GYM",
+        "trainer_const": "TRAINER_PICNICKER_TANYA",
+        "party_summary": [
+          "Exeggutor Lv.49"
+        ]
+      },
+      {
+        "class": "Beauty",
+        "name": "Julia",
+        "map_name": "MAP_CELADON_GYM",
+        "trainer_const": "TRAINER_BEAUTY_JULIA",
+        "party_summary": [
+          "Paras Lv.44",
+          "Carnivine Lv.44",
+          "Parasect Lv.47"
+        ]
+      }
+    ],
+    "saffron-city": [
+      {
+        "class": "Medium",
+        "name": "Darcy",
+        "map_name": "MAP_SAFFRON_GYM",
+        "trainer_const": "TRAINER_MEDIUM_DARCY",
+        "party_summary": [
+          "Slowpoke Lv.44",
+          "Slowbro Lv.46"
+        ]
+      },
+      {
+        "class": "Psychic",
+        "name": "Jared",
+        "map_name": "MAP_SAFFRON_GYM",
+        "trainer_const": "TRAINER_PSYCHIC_M_JARED",
+        "party_summary": [
+          "Mr_Mime Lv.42",
+          "Exeggcute Lv.42",
+          "Exeggcute Lv.45"
+        ]
+      },
+      {
+        "class": "Medium",
+        "name": "Rebecca",
+        "map_name": "MAP_SAFFRON_GYM",
+        "trainer_const": "TRAINER_MEDIUM_REBECCA",
+        "party_summary": [
+          "Bronzor Lv.45",
+          "Hypno Lv.45"
+        ]
+      },
+      {
+        "class": "Psychic",
+        "name": "Franklin",
+        "map_name": "MAP_SAFFRON_GYM",
+        "trainer_const": "TRAINER_PSYCHIC_M_FRANKLIN",
+        "party_summary": [
+          "Kadabra Lv.44",
+          "Girafarig Lv.47"
+        ]
+      }
+    ],
+    "cerulean-city": [
+      {
+        "class": "Swimmer",
+        "name": "Diana",
+        "map_name": "MAP_CERULEAN_GYM",
+        "trainer_const": "TRAINER_SWIMMER_F_DIANA",
+        "party_summary": [
+          "Golduck Lv.48"
+        ]
+      },
+      {
+        "class": "Swimmer",
+        "name": "Joy",
+        "map_name": "MAP_CERULEAN_GYM",
+        "trainer_const": "TRAINER_SWIMMER_F_JOY",
+        "party_summary": [
+          "Cloyster Lv.48"
+        ]
+      },
+      {
+        "class": "Swimmer",
+        "name": "Briana",
+        "map_name": "MAP_CERULEAN_GYM",
+        "trainer_const": "TRAINER_SWIMMER_F_BRIANA",
+        "party_summary": [
+          "Seaking Lv.46",
+          "Seaking Lv.46"
+        ]
+      },
+      {
+        "class": "Sailor",
+        "name": "Eddie",
+        "map_name": "MAP_CERULEAN_GYM",
+        "trainer_const": "TRAINER_SAILOR_EDDIE",
+        "party_summary": [
+          "Azumarill Lv.48"
+        ]
+      },
+      {
+        "class": "Sailor",
+        "name": "Parker",
+        "map_name": "MAP_CERULEAN_GYM",
+        "trainer_const": "TRAINER_SAILOR_PARKER",
+        "party_summary": [
+          "Horsea Lv.43",
+          "Seadra Lv.43"
+        ]
+      }
+    ],
+    "pewter-city": [
+      {
+        "class": "Camper",
+        "name": "Jerry",
+        "map_name": "MAP_PEWTER_GYM",
+        "trainer_const": "TRAINER_CAMPER_JERRY",
+        "party_summary": [
+          "Rhydon Lv.50"
+        ]
+      },
+      {
+        "class": "Hiker",
+        "name": "Edwin",
+        "map_name": "MAP_PEWTER_GYM",
+        "trainer_const": "TRAINER_HIKER_EDWIN",
+        "party_summary": [
+          "Golem Lv.50"
+        ]
+      }
+    ],
+    "viridian-city": [
+      {
+        "class": "Ace Trainer",
+        "name": "Arabella",
+        "map_name": "MAP_VIRIDIAN_GYM",
+        "trainer_const": "TRAINER_ACE_TRAINER_M_ARABELLA",
+        "party_summary": [
+          "Stantler Lv.53",
+          "Tauros Lv.52"
+        ]
+      },
+      {
+        "class": "Ace Trainer",
+        "name": "Bonita",
+        "map_name": "MAP_VIRIDIAN_GYM",
+        "trainer_const": "TRAINER_ACE_TRAINER_M_BONITA",
+        "party_summary": [
+          "Spinda Lv.50",
+          "Sudowoodo Lv.52"
+        ]
+      },
+      {
+        "class": "Ace Trainer",
+        "name": "Salma",
+        "map_name": "MAP_VIRIDIAN_GYM",
+        "trainer_const": "TRAINER_ACE_TRAINER_F_SALMA",
+        "party_summary": [
+          "Slowking Lv.50",
+          "Lickilicky Lv.53"
+        ]
+      },
+      {
+        "class": "Double Team",
+        "name": "Elan & Ida",
+        "map_name": "MAP_VIRIDIAN_GYM",
+        "trainer_const": "TRAINER_DOUBLE_TEAM_ELAN_AND_IDA",
+        "party_summary": [
+          "Porygon2 Lv.52",
+          "Azumarill Lv.50"
         ]
       }
     ]

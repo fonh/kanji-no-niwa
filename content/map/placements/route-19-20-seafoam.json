@@ -36,6 +36,30 @@
       "source": "generated",
       "matched_object_id": null,
       "matched_sprite_id": null
+    },
+    {
+      "name": "Swimmer Frankie, Camper Pedro, Picnicker Adrian, Picnicker Cheyenne, Bird Keeper Gs Bert, Bird Keeper Gs Ernie, Swimmer Nicole, Swimmer Lori, Swimmer Elmo, Swimmer Luis, Swimmer Leona, Swimmer Mina (Route 20)",
+      "role_origin": "Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_19",
+      "tile_x": 23,
+      "tile_y": 11,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
+    },
+    {
+      "name": "Boarder Bryce, Boarder Shaun, Skier Cady (Seafoam Islands B2F)",
+      "role_origin": "Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial",
+      "item": "—",
+      "map_zone": "MAP_ROUTE_19",
+      "tile_x": 22,
+      "tile_y": 15,
+      "facing": "south",
+      "source": "generated",
+      "matched_object_id": null,
+      "matched_sprite_id": null
     }
   ]
 }

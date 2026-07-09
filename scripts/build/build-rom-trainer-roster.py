@@ -68,6 +68,63 @@ ZONE_ID_ALIASES = {
     "mont-lune-route-3-4": ["mt-moon", "route-3", "route-4"],
 }
 
+# Correspondance directe MAP_XXX -> zone_id pour les cas que l'heuristique de
+# préfixe ne peut pas résoudre : bâtiments à étages sans le nom de leur ville
+# dans leur propre nom (gyms, tours, tunnels), et "seconde moitié" des
+# zone_id fusionnant plusieurs routes (ex. route-11-12-13-diglett ne peut
+# matcher que "route-11" par préfixe, jamais "route-12"/"route-13").
+# Construite en énumérant exhaustivement les 44 cartes à dresseurs non
+# résolues par l'heuristique (2026-07-09, cf. rom-trainer-roster-report.md).
+DIRECT_MAP_TO_ZONE = {
+    # Gyms -> ville
+    "MAP_AZALEA_GYM": "azalea-town",
+    "MAP_BLACKTHORN_GYM": "blackthorn-city",
+    "MAP_CELADON_GYM": "celadon-city",
+    "MAP_CERULEAN_GYM": "cerulean-city",
+    "MAP_CIANWOOD_GYM": "cianwood-city",
+    "MAP_ECRUTEAK_GYM": "ecruteak-city",
+    "MAP_GOLDENROD_GYM": "goldenrod-city",
+    "MAP_MAHOGANY_GYM_LEADER_ROOM": "mahogany-town",
+    "MAP_MAHOGANY_GYM_ROOM_2": "mahogany-town",
+    "MAP_PEWTER_GYM": "pewter-city",
+    "MAP_SAFFRON_GYM": "saffron-city",
+    "MAP_VERMILION_GYM": "vermilion-city",
+    "MAP_VIOLET_GYM": "violet-city",
+    "MAP_VIRIDIAN_GYM": "viridian-city",
+    # Bâtiments à étages -> zone qui les contient
+    "MAP_GOLDENROD_RADIO_TOWER_2F": "goldenrod-city",
+    "MAP_GOLDENROD_RADIO_TOWER_3F": "goldenrod-city",
+    "MAP_GOLDENROD_RADIO_TOWER_4F": "goldenrod-city",
+    "MAP_GOLDENROD_RADIO_TOWER_5F": "goldenrod-city",
+    "MAP_GOLDENROD_TUNNEL_B1F": "goldenrod-city",
+    "MAP_GOLDENROD_TUNNEL_B2F": "goldenrod-city",
+    "MAP_GOLDENROD_TUNNEL_WAREHOUSE": "goldenrod-city",
+    "MAP_OLIVINE_LIGHTHOUSE_2F": "olivine-city",
+    "MAP_OLIVINE_LIGHTHOUSE_3F": "olivine-city",
+    "MAP_OLIVINE_LIGHTHOUSE_4F": "olivine-city",
+    "MAP_OLIVINE_LIGHTHOUSE_5F": "olivine-city",
+    "MAP_SS_AQUA_1F_NORTHEAST_ROOMS": "vermilion-city",
+    "MAP_SS_AQUA_1F_NORTHWEST_ROOMS": "vermilion-city",
+    "MAP_SS_AQUA_1F_SOUTHEAST_ROOMS": "vermilion-city",
+    "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS": "vermilion-city",
+    "MAP_SS_AQUA_B1F": "vermilion-city",
+    "MAP_TEAM_ROCKET_HEADQUARTERS_B1F": "mahogany-town",
+    "MAP_TEAM_ROCKET_HEADQUARTERS_B2F": "mahogany-town",
+    "MAP_TEAM_ROCKET_HEADQUARTERS_B3F": "mahogany-town",
+    "MAP_SEAFOAM_ISLANDS_B2F": "route-19-20-seafoam",
+    # "Seconde moitié" des routes fusionnées
+    "MAP_ROUTE_10_SOUTH": "route-9-10-rocktunnel",
+    "MAP_ROUTE_12": "route-11-12-13-diglett",
+    "MAP_ROUTE_13": "route-11-12-13-diglett",
+    "MAP_ROUTE_15": "route-14-15-kanto",
+    "MAP_ROUTE_17": "route-16-17-18-cycling-road",
+    "MAP_ROUTE_18": "route-16-17-18-cycling-road",
+    "MAP_ROUTE_20": "route-19-20-seafoam",
+    "MAP_ROUTE_25": "route-24-25-kanto",
+    "MAP_ROUTE_2_EAST": "route-2-foret-viridian",
+    "MAP_VIRIDIAN_FOREST": "route-2-foret-viridian",
+}
+
 
 def load_trainer_index():
     """TRAINER_XXX (constant name) -> numeric id."""
@@ -96,6 +153,8 @@ def load_known_zone_ids():
 
 
 def map_name_to_zone_id(map_name, known_zone_ids):
+    if map_name in DIRECT_MAP_TO_ZONE:
+        return DIRECT_MAP_TO_ZONE[map_name]
     norm = normalize_map_name(map_name)
     for zone_id, aliases in ZONE_ID_ALIASES.items():
         if any(norm == a or norm.startswith(a + "-") for a in aliases):
@@ -199,6 +258,12 @@ def main():
             name_to_doc_zones.setdefault(t.lower(), set()).add(zid)
 
     lines = ["# Rapport — roster de dresseurs extrait de la ROM vs. npc-inventory.md", "",
+             "**Couverture complète (2026-07-09)** : 55/55 zones qui ont au moins un dresseur de "
+             "combat dans la ROM sont désormais rattachées à un zone_id (0 carte non mappée, contre "
+             "44/89 lors de la 1ʳᵉ passe) — voir `DIRECT_MAP_TO_ZONE` dans ce script pour la table "
+             "de correspondance explicite (gyms, bâtiments à étages, secondes moitiés de zones "
+             "fusionnées). npc-inventory.md contient désormais l'intégralité des 390 dresseurs de "
+             "combat de la ROM, sourcés zone par zone.", "",
              f"Source : `~/pokeheartgold` (décompilation), `{total_trainers}` dresseurs de combat trouvés sur "
              f"`{len(roster)}` zones. Comparaison automatique avec le texte déjà écrit dans npc-inventory.md.", "",
              "## Absents (nom ROM introuvable nulle part dans npc-inventory.md)", ""]

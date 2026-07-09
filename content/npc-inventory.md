@@ -266,7 +266,7 @@ Union Cave → Force) — verrou d'exploration, pas un PNJ.
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Kurt | Artisan Apricorn → Boule : dépose des Apricorns, reçoit un objet en 24h | Boule (selon couleur d'Apricorn apportée) | |
-| Bug Catcher Al, Josh, Benny ; Twins Amy & May | Gardiens avant Bugsy | — | |
+| Bug Catcher Al, Josh, Benny ; Twins Amy & Mimi | Gardiens avant Bugsy — « May » corrigé en « Mimi » 2026-07-09 (extraction ROM, coquille probable) | — | |
 | Rival (Silver) | Défi au portail ouest, vers Forêt Secte (Silver apparition #2) | — | |
 | Charcoal Man | Ses Farfetch'd-analogues se sont enfuis en Forêt Secte ; remet le Charbon une fois résolu | Charbon | |
 | Sbire Rocket | Bloque l'entrée du Puits Ramoloss | — | |
@@ -286,7 +286,7 @@ Union Cave → Force) — verrou d'exploration, pas un PNJ.
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Kurt | Mène le joueur, se blesse au dos au pied de l'échelle, demande de continuer sans lui | — | |
-| Sbires Rocket ×3 | Combats de couloir, répartis B1F/B2F | — | |
+| Sbires Rocket ×3 | Combats de couloir, répartis B1F/B2F — compte confirmé par extraction ROM (2026-07-09) : 2 Team Rocket Grunt + 1 Team Rocket F Grunt | — | |
 | Executive Proton | Combat final ; confirme que la Team Rocket opère en sous-main pour Giovanni | — | |
 
 **Side quests dans cette zone** : 0 (événement scripté bloquant l'accès au Gym Bugsy)
@@ -357,6 +357,11 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 | Kimono Girl Kuni | Tunnel, après la Card Key (revisite tardive) | — | |
 | Executive Proton (3F, re-apparition) | Combat, aux côtés de Petrel re-déguisé | — | |
 | Executive Ariana, puis Executive Archer (sommet) | Combat final, révèle l'objectif : rappeler Giovanni | Plume Arc-en-ciel | |
+| Team Rocket Grunt, Team Rocket F Grunt, Team Rocket Grunt, Team Rocket Grunt (Tour Radio 2F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Team Rocket Grunt, Team Rocket Grunt, Scientist Gs Garett, Team Rocket Grunt (Tour Radio 3F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Scientist Gs Trenton, Team Rocket Grunt (Tour Radio 4F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Team Rocket Grunt, Team Rocket Grunt, Team Rocket Grunt, Team Rocket F Grunt (Tunnel B2F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Team Rocket Grunt, Team Rocket Grunt, Team Rocket Grunt (Tunnel entrepôt) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 3 (livraison courrier oiseau ; infiltration de la Radio Tower en plusieurs temps ; résolution Tunnel/Card Key)
 **Objets à aller chercher dans cette zone** : 9 (Eevee-analogue, Coin Case, Bicyclette, Radio Card, Blue Card, SquirtBottle, HP Up, TM27 Return, Plume Arc-en-ciel — Carte-clé et Basement Key comptées comme objets de progression)
@@ -520,6 +525,7 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 | Sailor Ernest, Terrell, Huey, Kent ; Gentleman Alfred, Preston ; Lass Connie ; Bird Keeper Denis, Theo | Roster complet du Phare (9 dresseurs, 1F au sommet) | — | |
 | Jasmine | Veille le gardien malade au Phare ; demande la Potion Secrète d'Irisia ; combat de Gym après guérison | Mineral Badge + TM23 Iron Tail (vrai combat calibré ~600 kanji/N2, voir note zones revisitées) | |
 | Baoba (appel téléphonique) | Prévient que la réserve d'Irisia est terminée, une fois la potion livrée | — | |
+| Sailor Roberto (Phare 5F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 1 (mini-arc du Phare — Potion Secrète en 3 temps, résolue à Irisia)
 **Objets à aller chercher dans cette zone** : 3 (Bonne Canne, décorations, badge/TM de Gym)
@@ -680,6 +686,9 @@ original transposée). Les prises rejoignent la collection du Sac (règle P-15 :
 | Executive Petrel (déguisé en "Boss") | Salle du chef, retournement narratif | — | |
 | Executive Ariana | Combat en double, aux côtés de Lance | — | |
 | Skier/Boarder (Gym) | Récompense finale du Gym Pryce | Glacier Badge + TM07 Hail | |
+| Team Rocket Grunt (QG Rocket B1F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Team Rocket Grunt, Team Rocket Grunt, Team Rocket Grunt (QG Rocket B2F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Team Rocket Grunt, Team Rocket F Grunt (QG Rocket B3F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 0 (arc principal scripté)
 **Objets à aller chercher dans cette zone** : 2 (spécialité locale en vente, objet de traversée d'eau via Lance)
@@ -975,6 +984,11 @@ Confirmé exhaustivement par le guidebook : aucun dresseur de route sur l'ensemb
 | Eusine (cameo) | Aperçu sur la jetée en pleine chasse à Suicune | — | |
 | Gentleman Gregory, Guitarist Vincent, Juggler Horton | Gardiens avant Lt. Surge (3 confirmés) | — | |
 | Lt. Surge | 師範 Électrik, 9e badge | — | |
+| Gentleman Edward, Burglar Corey (SS Aqua 1F SE) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Hiker Noland, Ace Trainer Shaye, Ace Trainer Carol, Poké Maniac Morgan (SS Aqua 1F SO) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Firebreather Lyle, Beauty Cassie, Guitarist Clyde, Bug Catcher Ken (SS Aqua 1F NE) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Pokéfan Colin, Twins Meg & Peg, Super Nerd Shawn, Psychic Rodney, Pokefan Georgia, Pokéfan Jeremy (SS Aqua 1F NO) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Picnicker Debra, Sailor Jeff, Juggler Fritz, Fisherman Jonah, Sailor Garrett, Black Belt Wai, Sailor Kenneth, School Kid Nate, School Kid Ricky, Enseignante Shirley (SS Aqua B1F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 1 (poupée de Copycat, résolue à Safranville)
 **Objets à aller chercher dans cette zone** : 3 (Manteau de Métal, Super Bonbon, Plaques)
@@ -1034,6 +1048,7 @@ Confirmé exhaustivement par le guidebook : aucun dresseur de route sur l'ensemb
 | Garçon (Centre Pokémon voisin) | Relaie le vol à la Centrale (indice pur) | — | |
 
 Aucun dresseur dans Rock Tunnel — donjon d'exploration pure plongé dans le noir (🔒 Flash), objets cachés dont 2 accessibles seulement après 力.
+| Hiker Jim, Pokéfan Robert (Route 10 sud) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0
@@ -1103,6 +1118,7 @@ Vrai hub de la quête "pièce volée" qui déverrouille aussi le Passage Souterr
 | Swimmer Briana, Parker (+ 3 non confirmés dans l'OCR) | Gardiens avant Misty (5 au total annoncés) | — | |
 
 ⚠️ Ville confirmée pauvre en PNJ secondaires dans le texte source (vérifié en recoupant les pages OCR adjacentes).
+| Swimmer Diana, Swimmer Joy, Sailor Eddie (Gym) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 1 (récupérer la pièce mécanique volée, relance la Centrale Électrique)
 **Objets à aller chercher dans cette zone** : 0 (la pièce est rendue à la Centrale, pas remise au joueur)
@@ -1137,6 +1153,7 @@ fusionné dans le guide d'origine) ; ne pas dupliquer ici.
 | Misty (rendez-vous, bout de la route) | Scène climactique de poursuite de l'esprit légendaire, Eusine en commentateur | — | |
 
 🔒 Coupe et Surf.
+| School Kid Dudley, Lass Ellen (Route 25) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 1 (montrer un compagnon précis au grand-père de Bill)
 **Objets à aller chercher dans cette zone** : 2 (Pépite, objet évolutif)
@@ -1232,6 +1249,7 @@ distinguer) ; déplacés là-bas, voir cette section pour le roster complet.
 | Fille dans les hautes herbes (Route 14, ouest) | Demande à voir un compagnon précis | Objet porté rare | |
 
 📍 Première apparition à pied de l'esprit légendaire (Suicune-analogue), Eusine en poursuite, oriente vers Route 25. 🔒 Coupe requis ; rebords à sens unique imposant un ordre de traversée.
+| School Kid Kipp, School Kid Tommy, School Kid Johnny (Route 15) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 1 (objet porté rare)
@@ -1253,6 +1271,8 @@ distinguer) ; déplacés là-bas, voir cette section pour le roster complet.
 | Maison voisine (Grotte Diglett) | — | Pépite | |
 
 🔒 力 pour un accès complet à la Grotte Diglett.
+| Fisherman Martin, Young Couple Vic & Tara, Fisherman Stephen, Fisherman Barney, Bird Keeper Gs Gail (Route 12) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Pokéfan Joshua, Bird Keeper Gs Bret, Bird Keeper Gs Perry (Route 13) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 2 (objet de quête, Pépite)
@@ -1271,6 +1291,7 @@ distinguer) ; déplacés là-bas, voir cette section pour le roster complet.
 | Steven (cameo) | Champion visiteur, absorbé dans une expo minérale ; prérequis silencieux du fil Steven (résolu à Safranville) | — | |
 
 Aucun dresseur devant le Gym — Brock est explicitement le seul 師範 Kanto sans garde ("on peut marcher droit jusqu'à lui").
+| Camper Jerry, Hiker Edwin (Gym) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 2 (Aile légendaire, compagnon-fossile)
@@ -1327,6 +1348,7 @@ Aucun dresseur nommé au Mont Lune (contrairement aux Routes 3/4 alentour) — l
 | Blue | 師範 final Kanto, 16e badge ; Gym verrouillé jusqu'à la toute fin (1ère visite : Gym fermé — vrai combat calibré ~1920 kanji/N1, sur revisite après Île Braise) | 印/Badge (sur revisite) | |
 
 ⚠️ **Zone revisitée** (même schéma que Doublonville/Silver #5 et Oliville/Jasmine, voir `curriculum-checkpoints.md` § Note zones revisitées) : cette ligne couvre uniquement la 1ère visite (Gym fermé, le 師範 est absent). Le vrai combat contre Blue reste gaté à 1920 kanji (déjà fixé au PRD), sur la revisite après Île Braise.
+| Double Team Elan & Ida (Gym) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0
@@ -1435,6 +1457,8 @@ Aucun obstacle confirmé.
 | Dresseurs postés (Seafoam B2F) | Servent de "freins" pour stopper la glissade sur sol de glace (puzzle environnemental-social) | — | |
 
 🔒 Surf, 力, Rock Smash (sans équivalent ici) pour l'ensemble.
+| Swimmer Frankie, Camper Pedro, Picnicker Adrian, Picnicker Cheyenne, Bird Keeper Gs Bert, Bird Keeper Gs Ernie, Swimmer Nicole, Swimmer Lori, Swimmer Elmo, Swimmer Luis, Swimmer Leona, Swimmer Mina (Route 20) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
+| Boarder Bryce, Boarder Shaun, Skier Cady (Seafoam Islands B2F) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | |
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 0
