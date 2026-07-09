@@ -5,7 +5,7 @@ Mise à jour le 2026-07-08 après l'audit 10 (charnières + grill) puis après l
 pivot stockage par Neon + Auth.js (même jour, hors périmètre des audits — voir
 `docs/adr/0005-data-storage-neon-authjs.md`).
 
-## Statut : Étape 1 soldée. Étape 2 points 1, 2 et 3 faits 2026-07-09 (point 4 partiellement fait — reste les dénombrements téléphone/dresseurs génériques). Prochaine étape → Étape 2, point 4 (reste) ou point 5.
+## Statut : Étape 1 et Étape 2 soldées 2026-07-09 (points 1-5 faits ; point 6 retiré, déplacé à l'Étape 4 — c'est du contenu, pas de la structure). Prochaine étape → Étape 3 (gabarits + tranche verticale).
 
 Toutes les décisions de design sont prises et écrites dans le PRD. Le stockage/auth est déjà
 migré et commité (Neon, Auth.js — code en place, rien à refaire). **Ce qui suit est le chemin
@@ -165,7 +165,11 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    combat / 117 leçon / 88 ambiant sur 341 lignes PNJ.** `texte` reste hors scope, différé
    jusqu'à la rédaction du contenu (décision utilisateur). Rapport :
    `.scratch/audits/lessons-proposal-report.md`.
-6. Migration `{jp, en}` des quêtes existantes (FV-4) et micro-lignes du Journal de quêtes.
+6. ~~Migration `{jp, en}` des quêtes existantes (FV-4) et micro-lignes du Journal de quêtes.~~
+   **Retiré de l'Étape 2, 2026-07-09** : c'est écrire du japonais calibré par palier (donc du
+   contenu), pas de la structure — FV-4 et le PRD (§ table `quests`) disent tous deux « à la
+   passe contenu », et l'utilisateur a confirmé le report plutôt qu'une migration de schéma à
+   vide. Déplacé à l'Étape 4 (passe contenu industrielle), avec le reste de l'écriture jp/en.
 
 ## Étape 3 — Gabarits + tranche verticale (le test qui évite d'industrialiser dans le vide)
 
@@ -189,9 +193,13 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
 ## Étape 4 — Passe contenu industrielle
 
 Zone par zone, dans l'ordre de la table de calibration (83 zones), avec l'outillage de
-l'étape 3 en CI : dialogues, leçons (**≈290-385** au total, réintégrations comprises),
-placement des textes secondaires (**~85-115**, sélection des sources réelles + vetting
-12bis), scripts radio, 36 lettres des mentors (Elm/Oak), Carnet des compteurs. Les seuils N des 8
+l'étape 3 en CI : dialogues, leçons (**344 assignées** — voir Étape 2 point 5 pour la
+répartition zone par zone, `content/lessons-proposal.json` et `npc-inventory.md`), placement des
+textes secondaires (**~85-115**, sélection des sources réelles + vetting 12bis), scripts radio,
+36 lettres des mentors (Elm/Oak), Carnet des compteurs, **migration `{jp, en}` des quêtes (FV-4,
+retirée de l'Étape 2)** : `content/quests/*.json` (`name`, `steps[].label`), un seul fichier
+existant à ce jour (`cherrygrove_welcome.json`) mais le format se généralise à mesure que
+d'autres quêtes sont écrites. Les seuils N des 8
 CS-Kanji sont re-calculés au fil du placement réel (valeurs actuelles de calibration :
 砕 6 · 切 12 · 水 20 · 飛 26 · 力 29 · 渦 32 · 滝 35 · 登 60). **C'est seulement à la fin
 de l'étape 3 qu'on sait combien de temps celle-ci prendra** — c'est tout l'intérêt de la
