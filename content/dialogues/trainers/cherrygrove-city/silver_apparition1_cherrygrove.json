@@ -1,0 +1,23 @@
+{
+ "_note": "Étape 3 point 2 — Silver apparition #1 (PRD.md § Silver — 6 Rencontres, kanji signature 怒争力敵速逃). Pas encore nommé 'Silver' à l'écran (révélé en laissant tomber sa carte de dresseur — beat non modélisé ici, simplification assumée pour cette passe). Budget kanji tenu volontairement plus strict que ce que le linter exigerait (cumulative_start cherrygrove-city=50 compte à tort le pool de route-29, non réellement enseigné sur le chemin critique — voir npc-inventory.md § route-29) : un seul kanji utilisé (力), un des 6 kanji signature, dans le budget des 2 max par dialogue ET des 2 max parmi ses 6 signature (même règle, PRD.md § Silver). **Corrigé après relecture (2026-07-09)** : `battle_length` déplacé ici vers `content/map/trainers.json` (schéma PRD § map_trainers — n'appartient pas au fichier dialogue) et sa valeur corrigée de 5 (inventée sans vérification) à **12**, la vraie valeur de la table PRD.md § Système de Combat (« Silver #1 Ville Griotte : 12 »).",
+ "trainer_id": "silver_apparition1_cherrygrove",
+ "name": { "jp": "あかいかみの　おとこのこ", "en": "Boy with Red Hair" },
+ "zone_id": "cherrygrove-city",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "おまえが　あたらしい　こぞうか。", "en": "So you're the new kid, huh." },
+    { "jp": "エルムの　ところの。", "en": "From Elm's place." },
+    { "jp": "おれの　力（ちから）を　みせてやる。", "en": "I'll show you my power." }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "ふん。", "en": "Hmph." },
+    { "jp": "まあ　いいさ。", "en": "Whatever." },
+    { "jp": "またな。", "en": "See you around." }
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "trainer_id": "hiker_anthony_route33",
+ "name": { "jp": "やまおとこの　アンソニー", "en": "Hiker Anthony" },
+ "zone_id": "route-33",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "この　みちは　おれの　しまだ。", "en": "This road is my turf." }] },
+  "post_battle": { "pages": [{ "jp": "とおって　いいぞ。", "en": "You may pass." }] }
+ }
+}

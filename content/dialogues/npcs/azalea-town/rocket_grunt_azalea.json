@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 4 — sourcé : bloque l'entrée du Puits Ramoloss (npc-inventory.md § azalea-town). Roadblock NPC (cône de vision, résolution block), pas de combat ici — le combat réel a lieu à l'intérieur du puits (content/dialogues/trainers/slowpoke-well/).",
+ "npc_id": "rocket_grunt_azalea",
+ "name": { "jp": "ロケットだんの　しもっぱ", "en": "Team Rocket Grunt" },
+ "zone_id": "azalea-town",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "blocking" }
+ ],
+ "dialogue_states": {
+  "blocking": {
+   "pages": [
+    { "jp": "ここから　さきは　だめだ。", "en": "You can't go past here." },
+    { "jp": "われわれの　しごとちゅうだ。", "en": "We're working." }
+   ]
+  }
+ }
+}

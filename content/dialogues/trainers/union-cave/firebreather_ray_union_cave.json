@@ -1,0 +1,10 @@
+{
+ "trainer_id": "firebreather_ray_union_cave",
+ "name": { "jp": "ひをふく　レイ", "en": "Firebreather Ray" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "ほのおを　あびろ！", "en": "Bathe in the flame!" }] },
+  "post_battle": { "pages": [{ "jp": "きえちゃった。", "en": "It went out." }] }
+ }
+}

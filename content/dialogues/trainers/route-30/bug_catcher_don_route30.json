@@ -1,0 +1,18 @@
+{
+ "trainer_id": "bug_catcher_don_route30",
+ "name": { "jp": "むしとりしょうねんの　ドン", "en": "Bug Catcher Don" },
+ "zone_id": "route-30",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "むしが　だいすきなんだ！", "en": "I love bugs!" }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "まけたけど、むしは　すきだよ。", "en": "I lost, but I still love bugs." }
+   ]
+  }
+ }
+}

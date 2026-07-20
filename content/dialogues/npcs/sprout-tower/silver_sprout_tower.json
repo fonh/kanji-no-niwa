@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 3 (extension) — sourcé « présent au 3F, sermonné par l'Ancien Li sans écouter (scène, pas de combat) » (npc-inventory.md). Toujours non-nommé 'Silver' à l'écran — la révélation reste celle de la carte de dresseur trouvée à Ville Griotte (déjà écrite).",
+ "npc_id": "silver_sprout_tower",
+ "name": { "jp": "あかいかみの　おとこのこ", "en": "Boy with Red Hair" },
+ "zone_id": "sprout-tower",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "……べつに。", "en": "...Whatever." },
+    { "jp": "つよく　なれれば、それで　いい。", "en": "As long as I get stronger, that's all that matters." }
+   ]
+  }
+ }
+}

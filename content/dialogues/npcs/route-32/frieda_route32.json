@@ -1,0 +1,21 @@
+{
+ "_note": "Étape 4 — sourcé PNJ calendaire (vendredi), donne Poison Barb (npc-inventory.md § route-32).",
+ "npc_id": "frieda_route32",
+ "name": { "jp": "フリーダ", "en": "Frieda" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "きんようびだけ、ここに　いるの。", "en": "I'm only here on Fridays." },
+    { "jp": "これ、あげる。", "en": "Here, take this." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "poison_barb" }
+   ]
+  }
+ }
+}

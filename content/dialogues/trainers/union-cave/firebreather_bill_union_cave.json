@@ -1,0 +1,10 @@
+{
+ "trainer_id": "firebreather_bill_union_cave",
+ "name": { "jp": "ひをふく　ビル", "en": "Firebreather Bill" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "ひの　いきを　みせてやる。", "en": "I'll show you my fire breath." }] },
+  "post_battle": { "pages": [{ "jp": "のどが　かわいた。", "en": "My throat is dry." }] }
+ }
+}

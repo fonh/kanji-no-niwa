@@ -1,0 +1,20 @@
+{
+ "_note": "Étape 3 point 2 — Lyra/Ethan est l'un des deux personnages-miroir de HGSS (celui que le joueur n'incarne pas apparaît comme PNJ voisin·e). Aucune donnée ne modélise encore ce choix de genre/apparence dans le schéma (hors scope de ce PNJ) — fichier écrit avec Lyra par défaut, à traiter comme un placeholder tant que le mécanisme de sélection genre/nom n'est pas spécifié ailleurs.",
+ "npc_id": "lyra_ethan_new_bark",
+ "name": { "jp": "コハル", "en": "Lyra" },
+ "zone_id": "new-bark-town",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "やあ！", "en": "Hey!" },
+    { "jp": "もう　パソコンを　みた？", "en": "Have you seen the PC yet?" },
+    { "jp": "メールを　おいて　おいたよ。", "en": "I left you a mail." },
+    { "jp": "がんばってね！", "en": "Good luck!" }
+   ]
+  }
+ }
+}

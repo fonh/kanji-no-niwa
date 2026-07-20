@@ -1,0 +1,10 @@
+{
+ "trainer_id": "bird_keeper_peter_route32",
+ "name": { "jp": "とりつかいの　ピーター", "en": "Bird Keeper Peter" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "そらが　だいすきなんだ。", "en": "I love the sky." }] },
+  "post_battle": { "pages": [{ "jp": "また　そらを　みあげるよ。", "en": "I'll look up at the sky again." }] }
+ }
+}

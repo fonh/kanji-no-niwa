@@ -1,0 +1,27 @@
+{
+ "quest_id": "escaped_companions_errand",
+ "name": { "jp": "にげた　とりの　おつかい", "en": "The Escaped Birds Errand" },
+ "zone_ids": ["azalea-town", "ilex-forest"],
+ "steps": [
+  {
+   "step_id": "briefed",
+   "label": { "jp": "すみやきの　ひとの　とりが　もりに　にげた。もりで　さがそう。", "en": "The Charcoal Man's birds ran off into the forest. Time to look for them there." },
+   "target_zone_id": "ilex-forest"
+  },
+  {
+   "step_id": "technique_learned",
+   "label": { "jp": "でしに　とりへの　ちかづきかたを　おそわった。うしろから　そっと。", "en": "The apprentice taught me how to approach the birds — gently, from behind." },
+   "target_zone_id": "ilex-forest"
+  },
+  {
+   "step_id": "birds_returned",
+   "label": { "jp": "2わとも　つれもどした。まちの　すみやきの　ひとに　しらせよう。", "en": "I led both birds back. Time to report to the Charcoal Man in town." },
+   "target_zone_id": "azalea-town"
+  },
+  {
+   "step_id": "charbon_received",
+   "label": { "jp": "おれいに「切（き）り」の　ちからを　もらった。もりの　きを　切（き）れる。", "en": "As thanks I received the power to Cut. Now I can cut the forest tree." },
+   "target_zone_id": "ilex-forest"
+  }
+ ]
+}

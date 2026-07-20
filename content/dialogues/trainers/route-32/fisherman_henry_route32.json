@@ -1,0 +1,10 @@
+{
+ "trainer_id": "fisherman_henry_route32",
+ "name": { "jp": "つりびとの　ヘンリー", "en": "Fisherman Henry" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "つりを　じゃまするな！", "en": "Don't interrupt my fishing!" }] },
+  "post_battle": { "pages": [{ "jp": "つりに　もどるよ。", "en": "Back to fishing." }] }
+ }
+}

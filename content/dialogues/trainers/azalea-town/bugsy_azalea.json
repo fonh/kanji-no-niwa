@@ -1,0 +1,27 @@
+{
+ "_note": "Étape 4 — 2e 師範, format examen 試練 (PRD § Jalons-examens, longueur 31, vies 4). exam_name sourcé des fiches guidebook (試練・空の道, 虫の道…, PRD.md § Jalons-examens) — même statut d'exemption budget que Falkner.",
+ "trainer_id": "bugsy_azalea",
+ "name": { "jp": "ジムリーダー　ツクシ", "en": "Bugsy" },
+ "exam_name": { "jp": "試練（しれん）・虫（むし）の道（みち）", "en": "Trial of the Bug Path" },
+ "zone_id": "azalea-town",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "むしの　けんきゅうを　してるんだ。", "en": "I research bugs." },
+    { "jp": "きみの　じつりょくを　みせて　もらうよ。", "en": "Show me your real strength." }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "すごいね、きみ。", "en": "Amazing." },
+    { "jp": "この　バッジを　うけとって　ください。", "en": "Please accept this badge." },
+    { "jp": "ハイブバッジだ。", "en": "The Hive Badge." }
+   ],
+   "effects": [
+    { "type": "grant_badge", "badge_id": "bugsy" },
+    { "type": "grant_item", "item_id": "tm89_uturn" }
+   ]
+  }
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "_note": "Étape 3 point 2 — PNJ-leçon calendaire (content/lessons/route-29.json). Cette state 'greeting' ne se voit qu'une fois ses 4 leçons épuisées (le moteur sert la leçon en tête tant qu'il y en a) — elle porte le TwistedSpoon, sourcé (npc-inventory.md § route-29).",
+ "npc_id": "tuscany_route29",
+ "name": { "jp": "トスカーナ", "en": "Tuscany" },
+ "zone_id": "route-29",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "あら、きょうは　かようびね。", "en": "Oh, today's Tuesday." },
+    { "jp": "これを　あげる。", "en": "Here, take this." },
+    { "jp": "たいせつに　つかってね。", "en": "Take good care of it." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "twisted_spoon" }
+   ]
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "_note": "Étape 3 (extension) — PNJ-leçon (content/lessons/route-36.json, leçons #1/#3/#5) ET remise du CS 砕 (npc-inventory.md § route-36 : « débloqué dès le badge de Falkner »). Le don du CS n'est mécaniquement disponible qu'une fois badge_earned(falkner) — avant ça, seules ses leçons (non gated) sont servies par le moteur ; approcher après épuisement de ses 3 leçons mais avant le badge retombe sur 'waiting'.",
+ "npc_id": "young_man_by_sign_route36",
+ "name": { "jp": "かんばんの　そばの　わかもの", "en": "Young Man by the Sign" },
+ "zone_id": "route-36",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [{ "type": "badge_earned", "badge_id": "falkner" }],
+   "state": "cs_grant"
+  },
+  { "default": true, "state": "waiting" }
+ ],
+ "dialogue_states": {
+  "waiting": {
+   "pages": [
+    { "jp": "この　みちの　いわ、じゃまだよね。", "en": "The rocks on this road are in the way, huh." },
+    { "jp": "バッジを　とったら、また　きてね。", "en": "Come back once you've got a badge." }
+   ]
+  },
+  "cs_grant": {
+   "pages": [
+    { "jp": "バッジ、もってるね。", "en": "You have a badge now." },
+    { "jp": "これを　あげよう。", "en": "I'll give you this." },
+    { "jp": "まえに　はなした　はなし、おぼえてる？", "en": "Remember the story I told you earlier?" }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "cs_kudakeru" },
+    { "type": "unlock_text", "text_id": "cs_kudakeru_route36" }
+   ]
+  }
+ }
+}

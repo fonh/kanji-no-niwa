@@ -1,0 +1,10 @@
+{
+ "trainer_id": "bug_catcher_josh_azalea",
+ "name": { "jp": "むしとりしょうねんの　ジョシュ", "en": "Bug Catcher Josh" },
+ "zone_id": "azalea-town",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "むしを　あなどるなよ。", "en": "Don't underestimate bugs." }] },
+  "post_battle": { "pages": [{ "jp": "まいったな。", "en": "You got me." }] }
+ }
+}

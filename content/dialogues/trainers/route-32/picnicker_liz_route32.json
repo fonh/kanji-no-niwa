@@ -1,0 +1,10 @@
+{
+ "trainer_id": "picnicker_liz_route32",
+ "name": { "jp": "ピクニックの　リズ", "en": "Picnicker Liz" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "いっしょに　ピクニック、どう？", "en": "Care to picnic with me?" }] },
+  "post_battle": { "pages": [{ "jp": "たのしかったよ。", "en": "That was fun." }] }
+ }
+}

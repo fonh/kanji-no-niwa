@@ -1,0 +1,10 @@
+{
+ "trainer_id": "fisherman_justin_route32",
+ "name": { "jp": "つりびとの　ジャスティン", "en": "Fisherman Justin" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "きょうは　たくさん　つれたよ。", "en": "I've caught a lot today." }] },
+  "post_battle": { "pages": [{ "jp": "つぎは　もっと　つるぞ。", "en": "I'll catch more next time." }] }
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "_gabarit_note": "Étape 3, point 1 — exemple validé contre PRD.md § Textes Progressifs, content/texts-progressifs.md § Diversité des questions / Retry-jusqu'à-correct, et CONTEXT.md § Kanji Budget. Texte obligatoire choisi pour la remise du CS-Kanji 砕 (le plus bas seuil N=6, donc le premier texte obligatoire du jeu) — donneur sourcé 'Jeune homme près d'un panneau (ouest)', route-36, content/npc-inventory.md L412. Longueur réelle calibrée pour ce texte nommé est 38-55 caractères (content/curriculum-checkpoints.md, route-36) ; ce gabarit va légèrement au-delà (71 caractères hors furigana) pour avoir assez de matière pour les 5 types de question — la vraie passe de contenu (Étape 4) resserrera à la longueur calibrée. **Corrigé après relecture (2026-07-09)** : une première version de ce fichier utilisait 12 kanji distincts hors studiedSet (道/硬/祖/父/昔/素/技/教/信/試, plus 砕/岩) sur un texte de 66 caractères — très au-dessus du budget proportionnel de content/texts-progressifs.md § Vetting (~2 inconnus/100 caractères, plafond 8-10) — réécrite pour ne garder que 岩 et 砕 comme kanji hors studiedSet (vérifié par script contre `content/kanji-zone-assignment.json`, cumulative_start route-36 = 330), le reste en hiragana ou kanji déjà étudiés (大/父/手/力/帰/文/気) — cohérent avec le fait que même du vocabulaire très courant (なに/いう/おもう/はなし) n'est pas encore ' kanji-isé' à ce point du curriculum (confirmé : aucun de ces kanji n'apparaît dans les 330 premiers). Les questions reprennent le même vocabulaire que le passage plutôt que d'en introduire du nouveau — traité comme faisant partie du même budget que le texte, lecture la plus prudente en l'absence de règle explicite du PRD sur les prompts de quiz. Décisions prises en écrivant ce gabarit, à confirmer : (1) title et les champs de question sont bilingues {jp, en} comme partout ailleurs dans le contenu (items, quêtes, dialogues) ; (2) le type 'vocabulaire en contexte' ne porte pas de answer_span — non listé dans le mécanisme de scaffolding de texts-progressifs.md (seuls idée générale/inférence/référence y sont explicitement traités), traité comme le factuel : aucun scaffolding automatique.",
+
+ "text": {
+  "title": { "jp": "いわくだき", "en": "The Rock-Breaker" },
+  "jp_text": "ここの岩（いわ）はとても大（おお）きいです。むかし、父（ちち）はこの岩（いわ）を手（て）で砕（くだ）いたそうです。これから、その力（ちから）をあなたにみせます。しんじられないなら、ためしてください。",
+  "en_text": "This rock here is very big. Long ago, apparently my father broke this rock with his bare hand. From now, I'll show you that power. If you don't believe it, please try.",
+  "audio_ref": null,
+  "level": "N3",
+  "source": "original",
+  "tier": "obligatoire",
+  "zone_id": "route-36",
+  "npc_ref": "young_man_by_sign_route36",
+  "found_object_ref": null,
+  "event_ref": "cs_kudakeru_route36",
+  "length_chars": 71,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": { "jp": "この　はなしは　なにについてですか。", "en": "What is this story about?" },
+    "options": [
+     { "jp": "岩（いわ）を　くだく　力（ちから）を　おしえる　はなし。", "en": "A story about teaching the power to break rocks" },
+     { "jp": "かぞくの　おもいでの　はなしだけ。", "en": "Just a family memory" },
+     { "jp": "みちの　つくりかたの　せつめい。", "en": "An explanation of how to build a road" },
+     { "jp": "父（ちち）の　せいかくの　はなし。", "en": "A story about father's personality" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": { "jp": "父（ちち）は　なにで　岩（いわ）を　くだいたと　いっていますか。", "en": "According to the story, what did father use to break the rock?" },
+    "options": [
+     { "jp": "手（て）で", "en": "His bare hand" },
+     { "jp": "どうぐで", "en": "A tool" },
+     { "jp": "ハンマーで", "en": "A hammer" },
+     { "jp": "まほうで", "en": "Magic" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": { "jp": "この　文（ぶん）の「力（ちから）」の　いみは？", "en": "In this passage, what does 「力」mean?" },
+    "options": [
+     { "jp": "ちから（パワー）", "en": "Physical strength / power" },
+     { "jp": "どりょく", "en": "Effort" },
+     { "jp": "のうりょく", "en": "Ability / talent" },
+     { "jp": "ぐんたい", "en": "Military force" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "inference",
+    "prompt": { "jp": "「しんじられないなら、ためしてください」と　いう　人（ひと）の　きもちとして　ただしいものは　どれですか。", "en": "What feeling does the line \"if you don't believe it, please try\" suggest about the speaker?" },
+    "options": [
+     { "jp": "じぶんの　はなしに　じしんが　ある。", "en": "He is confident in his own story" },
+     { "jp": "はなしが　うそだと　おもっている。", "en": "He thinks the story is a lie" },
+     { "jp": "岩（いわ）を　われたくない。", "en": "He doesn't want the rock broken" },
+     { "jp": "はやく　帰（かえ）って　ほしい。", "en": "He wants the player to leave quickly" }
+    ],
+    "correct_index": 0,
+    "answer_span": { "start": 80, "end": 99 }
+   },
+   {
+    "type": "resolution_reference",
+    "prompt": { "jp": "「その　力（ちから）」の「その」は　なにを　さしていますか。", "en": "What does \"that\" refer to in \"that power\"?" },
+    "options": [
+     { "jp": "父（ちち）が　手（て）で　岩（いわ）を　くだいた　力（ちから）。", "en": "The power father used to break the rock with his bare hand" },
+     { "jp": "みちを　つくる　力（ちから）。", "en": "The power to build roads" },
+     { "jp": "ポケモンを　そだてる　力（ちから）。", "en": "The power to raise Pokémon" },
+     { "jp": "がっこうで　ならう　べんきょう。", "en": "Schoolwork learned at school" }
+    ],
+    "correct_index": 0,
+    "answer_span": { "start": 34, "end": 52 }
+   }
+  ]
+ }
+}

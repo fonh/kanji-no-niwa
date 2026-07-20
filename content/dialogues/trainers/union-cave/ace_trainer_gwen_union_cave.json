@@ -1,0 +1,10 @@
+{
+ "trainer_id": "ace_trainer_gwen_union_cave",
+ "name": { "jp": "エリートの　グウェン", "en": "Ace Trainer Gwen" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "ながく　れんしゅうしてきたんだ。", "en": "I've trained a long time for this." }] },
+  "post_battle": { "pages": [{ "jp": "また　れんしゅうを　つづけるよ。", "en": "I'll keep on training." }] }
+ }
+}

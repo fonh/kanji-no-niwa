@@ -1,0 +1,17 @@
+{
+ "npc_id": "pokecenter_clerk_cherrygrove",
+ "name": { "jp": "うけつけの　ひと", "en": "Center Clerk" },
+ "zone_id": "cherrygrove-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "ようこそ、ポケモンセンターへ。", "en": "Welcome to the Pokémon Center." },
+    { "jp": "きょうの　セッションは　もう　しましたか？", "en": "Have you done today's session yet?" }
+   ]
+  }
+ }
+}

@@ -57,7 +57,7 @@ A hand-authored reading written directly in the `jp` string, in full-width paren
 _Avoid_: auto-furigana, computed furigana, adaptive furigana
 
 **Kanji Budget**:
-The calibration rule that a single dialogue — across all its Dialogue States and pages combined — may use at most 2 kanji the player hasn't studied yet, on top of kanji already known. Applies per dialogue, not per page or sentence *(confirmed as the authoritative unit 2026-07-06, audit 04, finding 04-A2)*. For Progressive Texts the budget is proportional instead: ~2 unknown kanji per 100 characters, capped at 8–10 distinct unknowns per text *(2026-07-07, audit 05, finding 05-D1 — same ~98% readability contract, adapted to length)*. Character names are exempt from the budget; their Inline Readings follow the same Y-button reveal as everything else.
+The calibration rule that a single dialogue — across all its Dialogue States and pages combined — may use at most 2 kanji the player hasn't studied yet, on top of kanji already known. Applies per dialogue, not per page or sentence *(confirmed as the authoritative unit 2026-07-06, audit 04, finding 04-A2)*. For Progressive Texts the budget is proportional instead: ~2 unknown kanji per 100 characters, capped at 8–10 distinct unknowns per text *(2026-07-07, audit 05, finding 05-D1 — same ~98% readability contract, adapted to length)*. Character names are exempt from the budget; their Inline Readings follow the same Y-button reveal as everything else. Same exemption extended 2026-07-10 to a Trial (師範 exam) `exam_name` — a fixed, sourced proper-noun-like title (e.g. 試練・空の道), not narrative prose — still furigana-annotated, just not counted.
 _Avoid_: unknown kanji limit (per line)
 
 **Condition** *(type list updated 2026-07-06 twice: audit 04 relic hunt, then progression re-pass — `all_texts_read` retired: "everything read" was ruled too demanding; CS-Kanji now gate on a monotone `count(texts_read, N)` threshold, so the model has no dynamic-perimeter condition left)*:
@@ -79,3 +79,15 @@ _Avoid_: mission, errand (when referring to the modeled entity — fine as flavo
 **Quest Step**:
 One named stage of a Quest (e.g. `briefed`, `captured_1`, `complete`). Existence as a name is what other systems reference via `Condition { type: "quest_step" }` — a step has no inherent conditions of its own; whatever NPC's Effect sets `current_step` to it is what "completes" it.
 _Avoid_: quest stage, milestone (milestone is reserved for Achievements)
+
+**Instant Response** (即時応答) *(added 2026-07-09, Étape 3 point 1 gabarit)*:
+A phone-call exercise: a registered Trainer says an everyday-life line, the player picks the natural reply among 3 (one natural, one too formal, one off-topic), then gets a warm reaction or a gentle correction. Modeled as a special entry inside a call's `pages[]` (`kind: "instant_response"`, carrying `prompt`/`choices[]`), not a parallel structure — same `dialogue_states`/`state_rules`/`pages` format as any NPC/Trainer dialogue (PRD § Pokégear でんわ). Zero SRS write, zero penalty, no stat ever displayed — the reaction is flavor text, never an `Effect`. Example: `content/dialogues/calls/joey_route30.json`.
+_Avoid_: call quiz, phone minigame
+
+**Keigo Salon** (敬語サロン, "Salon du keigo") *(added 2026-07-09, Étape 3 point 1 gabarit)*:
+A dedicated mini-game (Vermeille City Fan Club; advanced variant at Silph Co., Saffron) testing register choice: one situation, three interlocutors (friend / shopkeeper / superior), the player picks the phrasing fitting each register (casual / teineigo / keigo) among 3-4 options. ~5 situations per session, graded N4→N2, zero SRS write. The advanced variant specifically traps 二重敬語 (double honorifics, e.g. お読みになられました) as a distractor. Needs no new DB table — reward is an ordinary `items.category: collectible` granted via idempotent `Effect.grant_item`; owning the item is itself the "session done" marker. Example: `content/gabarits/keigo-session-example.json`.
+_Avoid_: keigo quiz, politeness minigame
+
+**Companion Choice** *(added 2026-07-09, Étape 3 point 2, player-review pass)*:
+A one-time, purely cosmetic pick among 3 companions (Pikachu + 2 TBD, PRD § Compagnon) at Elm's lab. Modeled as a `kind: "companion_choice"` entry inside `pages[]` (same extension pattern as Instant Response), backed by `content/companions.json` and written once via `Effect.set_companion` into `user_map_state.companion_id` — found missing from the schema entirely until this pass (§ Compagnon referenced `companion_id` as "persisted" with no table carrying it). Never re-chosen; no stats, no SRS, no battle effect — only a map-follower sprite and a cosmetic echo at the true ending. The 2 non-Pikachu slots stay `tbd_2`/`tbd_3` until the HGSS follower-sprite dump is checked (roadmap Étape 5 point 5) — deciding their identity without that check would be unsourced content.
+_Avoid_: starter choice, starter Pokémon (no battle Pokémon exist in this game — see rule #1, `guidebook-adapted.md`)

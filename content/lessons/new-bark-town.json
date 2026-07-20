@@ -1,0 +1,52 @@
+[
+ {
+  "zone_id": "new-bark-town",
+  "npc_ref": "prof_elm_lab",
+  "sequence_index": 1,
+  "kanji_ids": ["一", "二", "人", "先", "入", "八"],
+  "grammar_id": "N5-001",
+  "unlock_conditions": [
+   { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "sent_by_elm" }
+  ]
+ },
+ {
+  "zone_id": "new-bark-town",
+  "npc_ref": "prof_elm_lab",
+  "sequence_index": 2,
+  "kanji_ids": ["円", "十", "口", "四", "土", "大"],
+  "grammar_id": "N5-002",
+  "unlock_conditions": [
+   { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "sent_by_elm" }
+  ]
+ },
+ {
+  "zone_id": "new-bark-town",
+  "npc_ref": "prof_elm_lab",
+  "sequence_index": 3,
+  "kanji_ids": ["女", "子", "小", "山", "川", "手"],
+  "grammar_id": "N5-003",
+  "unlock_conditions": [
+   { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_received" }
+  ]
+ },
+ {
+  "zone_id": "new-bark-town",
+  "npc_ref": "prof_elm_lab",
+  "sequence_index": 4,
+  "kanji_ids": ["日", "月", "木", "気", "水", "火"],
+  "grammar_id": "N5-004",
+  "unlock_conditions": [
+   { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_received" }
+  ]
+ },
+ {
+  "zone_id": "new-bark-town",
+  "npc_ref": "prof_elm_lab",
+  "sequence_index": 5,
+  "kanji_ids": ["生", "目", "立", "耳", "車", "金"],
+  "grammar_id": "N5-005",
+  "unlock_conditions": [
+   { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_received" }
+  ]
+ }
+]

@@ -1,0 +1,10 @@
+{
+ "trainer_id": "youngster_gordon_route32",
+ "name": { "jp": "たんパンこぞうの　ゴードン", "en": "Youngster Gordon" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "れんしゅう、いっぱい　したよ。", "en": "I've practiced a lot." }] },
+  "post_battle": { "pages": [{ "jp": "もっと　つよく　なるよ。", "en": "I'll get stronger." }] }
+ }
+}

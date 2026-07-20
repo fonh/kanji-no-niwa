@@ -1,0 +1,22 @@
+{
+ "_note": "Étape 4 — PNJ-leçon (leçons #1/#3). Sourcé : admiratif du 1er puzzle résolu, remet un journal qui s'auto-remplit (npc-inventory.md § ruins-of-alph).",
+ "npc_id": "young_man_ruins_of_alph",
+ "name": { "jp": "ちかしつの　わかもの", "en": "Young Man in the Underground Room" },
+ "zone_id": "ruins-of-alph",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "パズルを　といたんだね！", "en": "You solved the puzzle!" },
+    { "jp": "これ、あげる。", "en": "Here, take this." },
+    { "jp": "じぶんで　かきこんで　いくんだ。", "en": "It fills itself in as you go." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "unknown_report" }
+   ]
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "npc_id": "mart_vendor_violet_city",
+ "name": { "jp": "マートの　てんいん", "en": "Mart Clerk" },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "いらっしゃい！", "en": "Welcome!" },
+    { "jp": "なにか　おさがしですか？", "en": "Looking for something?" }
+   ]
+  }
+ }
+}

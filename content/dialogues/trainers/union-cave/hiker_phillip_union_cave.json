@@ -1,0 +1,10 @@
+{
+ "trainer_id": "hiker_phillip_union_cave",
+ "name": { "jp": "やまおとこの　フィリップ", "en": "Hiker Phillip" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "したの　かいそうも　きびしいぞ。", "en": "This lower floor is tough too." }] },
+  "post_battle": { "pages": [{ "jp": "つよいな、きみ。", "en": "You're strong." }] }
+ }
+}

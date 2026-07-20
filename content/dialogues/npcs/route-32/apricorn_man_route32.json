@@ -1,0 +1,21 @@
+{
+ "_note": "Étape 4 — sourcé : demande si le joueur collectionne les Apricorns, donne 2 Lure Balls (npc-inventory.md § route-32).",
+ "npc_id": "apricorn_man_route32",
+ "name": { "jp": "つりびとの　そばの　ひと", "en": "Man by the Fisherman" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "アプリコット、あつめてる？", "en": "Are you collecting apricorns?" },
+    { "jp": "これ、やくに　たつよ。", "en": "This will come in handy." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "lure_ball" }
+   ]
+  }
+ }
+}

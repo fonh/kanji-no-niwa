@@ -1,0 +1,22 @@
+{
+ "_note": "Étape 3 (extension) — PNJ-leçon (content/lessons/route-31.json, 4 leçons) portant aussi la quête de livraison sourcée (npc-inventory.md § route-31 : « porte ce message à mon contact », compagnon-courrier Kenya, contre TM44 Rest). **Simplifié** : le destinataire (Kenya) est hors des zones couvertes par cette extension — modélisé en un seul échange plutôt qu'une quête multi-zones, à raffiner si Kenya entre un jour dans le périmètre écrit. Cette state 'greeting' ne se voit qu'une fois les 4 leçons épuisées.",
+ "npc_id": "black_apricorn_man_route31",
+ "name": { "jp": "くろい　アプリコットの　そばの　ひと", "en": "Man by the Black Apricorn" },
+ "zone_id": "route-31",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "これを　もっていって　ほしいんだ。", "en": "I want you to take this." },
+    { "jp": "ケニアという　こに　わたしてね。", "en": "Please give it to someone named Kenya." },
+    { "jp": "おれいに　これを　あげる。", "en": "As thanks, here's this." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "tm44_rest" }
+   ]
+  }
+ }
+}

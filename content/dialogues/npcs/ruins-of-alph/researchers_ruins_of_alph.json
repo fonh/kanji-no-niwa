@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 4 — PNJ-leçon (leçons #2/#4). Sourcé : Centre de Recherche des Ruines, discutent des découvertes (npc-inventory.md § ruins-of-alph). Regroupés sous un seul npc_ref, comme les sages de la Tour Grospignon.",
+ "npc_id": "researchers_ruins_of_alph",
+ "name": { "jp": "けんきゅういん", "en": "Researchers" },
+ "zone_id": "ruins-of-alph",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "この　もじ、まだ　なぞなんだ。", "en": "These characters are still a mystery." },
+    { "jp": "いっしょに　かんがえよう。", "en": "Let's think about it together." }
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "trainer_id": "poke_maniac_larry_union_cave",
+ "name": { "jp": "ポケマニアの　ラリー", "en": "Poké Maniac Larry" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "きみも　マニアかい？", "en": "Are you a maniac too?" }] },
+  "post_battle": { "pages": [{ "jp": "また　あつめに　いくよ。", "en": "Off to collect more." }] }
+ }
+}

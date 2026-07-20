@@ -1,0 +1,21 @@
+{
+ "_note": "Étape 4 — PNJ-leçon (leçon #3). Sourcé : donne la Vieille Canne (npc-inventory.md § route-32).",
+ "npc_id": "fisherman_route32",
+ "name": { "jp": "つりびとの　ひと", "en": "Fisherman" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "つりを　やってみる？", "en": "Want to try fishing?" },
+    { "jp": "これを　つかいなさい。", "en": "Use this." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "old_rod" }
+   ]
+  }
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "_note": "Étape 3 point 2 — tranche verticale. Elm est un PNJ-leçon (content/lessons/new-bark-town.json, 5 leçons) ET porte la narration hors-leçon (choix du compagnon, envoi en mission, retour). Résolution à l'approche : le moteur sert d'abord sa prochaine leçon si elle est en tête ET débloquée (unlock_conditions) ; sinon il retombe sur les state_rules ci-dessous — voir PRD.md § Leçons « Coupure aller-retour — mécanisme ». Avant que mystery_egg_errand n'ait jamais avancé, aucune leçon n'est débloquée : la toute première approche voit donc forcément 'welcome', jamais l'écran-livre. **Corrigé après relecture (2026-07-09)** : le choix du compagnon est maintenant une vraie entrée de pages[] (kind: 'companion_choice', même principe d'extension que 'instant_response' au § Pokégear でんわ) plutôt qu'une ligne de texte sans mécanique derrière — options tirées de content/companions.json, effet set_companion (PRD.md § Schéma Base de Données, nouvel Effect). Seul Pikachu est confirmé ; les 2 autres slots restent 'tbd_2'/'tbd_3' tant que le dump d'assets follower n'a pas été vérifié (roadmap Étape 5 point 5) — inventer leur identité ici aurait été écrire du contenu sans base.",
+ "npc_id": "prof_elm_lab",
+ "name": { "jp": "エルムはかせ", "en": "Prof. Elm" },
+ "zone_id": "new-bark-town",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [
+    { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_received" }
+   ],
+   "state": "welcome_back"
+  },
+  {
+   "if": [
+    { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "sent_by_elm" }
+   ],
+   "state": "sent_off"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    { "jp": "あ、きたね。", "en": "Ah, there you are." },
+    { "jp": "ここに　3びき　います。", "en": "There are three of them here." },
+    { "jp": "1ぴき　えらんで　ください。", "en": "Please choose one." },
+    {
+     "kind": "companion_choice",
+     "prompt": { "jp": "だれと　いっしょに　いく？", "en": "Who will you travel with?" },
+     "options_ref": "content/companions.json",
+     "effect_template": { "type": "set_companion", "companion_id": "{{selected}}" }
+    },
+    { "jp": "いい　ともだちに　なりますよ。", "en": "It'll make a great friend." },
+    { "jp": "さあ、Mr.ポケモンの　いえに　いって　ください。", "en": "Now, please go to Mr. Pokémon's house." },
+    { "jp": "みちで　わたしに　でんわしてね。", "en": "Call me on the way, okay?" }
+   ],
+   "effects": [
+    { "type": "advance_quest", "quest_id": "mystery_egg_errand", "step_id": "sent_by_elm" }
+   ]
+  },
+  "sent_off": {
+   "pages": [
+    { "jp": "はやく　いって　ください。", "en": "Please hurry along." },
+    { "jp": "Mr.ポケモンが　まっていますよ。", "en": "Mr. Pokémon is waiting." }
+   ]
+  },
+  "welcome_back": {
+   "pages": [
+    { "jp": "おお、かえってきたね！", "en": "Oh, you're back!" },
+    { "jp": "たまごを　もらったんだね。", "en": "So you got the egg." },
+    { "jp": "だいじに　あずかりますよ。", "en": "I'll take good care of it." },
+    { "jp": "ときどき　わるい　ひとが　います。", "en": "Sometimes there are bad people around." },
+    { "jp": "きを　つけてね。", "en": "Be careful, okay?" }
+   ]
+  }
+ }
+}

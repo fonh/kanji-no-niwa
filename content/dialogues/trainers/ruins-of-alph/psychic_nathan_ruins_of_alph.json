@@ -1,0 +1,10 @@
+{
+ "trainer_id": "psychic_nathan_ruins_of_alph",
+ "name": { "jp": "エスパーの　ネイサン", "en": "Psychic Nathan" },
+ "zone_id": "ruins-of-alph",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "きみの　こころ、みえるよ。", "en": "I can see into your heart." }] },
+  "post_battle": { "pages": [{ "jp": "……みえなかったな。", "en": "...Guess I couldn't." }] }
+ }
+}

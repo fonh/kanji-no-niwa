@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 3 point 2, passe de revue joueur (2026-07-09) — comble un trou trouvé en croisant contre le guidebook sourcé : 'révélé comme Silver après avoir fait tomber sa carte de dresseur' (content/guidebook-adapted.md § cherrygrove-city) n'avait aucune scène. Modélisé en objet trouvé (kind: object, comme le panneau/PC — pas un PNJ inventé) plutôt qu'en `texts` : une révélation d'une phrase n'a pas la même valeur pédagogique qu'une vraie lecture, forcer un quiz de compréhension dessus aurait été absurde. Présence gated sur la défaite de Silver (content/map/npcs.json).",
+ "npc_id": "silver_card_cherrygrove",
+ "name": { "jp": "トレーナーカード", "en": "Trainer Card" },
+ "zone_id": "cherrygrove-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "found" }
+ ],
+ "dialogue_states": {
+  "found": {
+   "pages": [
+    { "jp": "とれーなーカードが　おちている。", "en": "A trainer card has fallen on the ground." },
+    { "jp": "「シルバー」と　かいてある。", "en": "It says \"Silver\" on it." }
+   ]
+  }
+ }
+}

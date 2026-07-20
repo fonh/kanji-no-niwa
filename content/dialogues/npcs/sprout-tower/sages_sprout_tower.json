@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 3 (extension) — les 6 sages (Neal/Troy/Jin/Nico/Edmond/Chow) regroupés sous un seul npc_ref, cohérent avec content/lessons/sprout-tower.json (voir sa note).",
+ "npc_id": "sages_sprout_tower",
+ "name": { "jp": "とうの　そうりょ", "en": "Tower Sages" },
+ "zone_id": "sprout-tower",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "この　とうは　ふるいんだよ。", "en": "This tower is old." },
+    { "jp": "しずかに　のぼって　いってね。", "en": "Please climb quietly." }
+   ]
+  }
+ }
+}

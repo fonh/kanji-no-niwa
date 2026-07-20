@@ -1,0 +1,80 @@
+{
+ "_note": "Étape 4 (Lot 3) — remise du CS-Kanji 切 (Cut), 2e des 8 CS (seuil de lecture N=12, roadmap Étape 4 ; valeur à re-calibrer au placement réel des textes). Modèle CS standard, miroir de content/texts/route-36/cs_kudakeru.json (砕) : texte obligatoire dont la lecture (quiz réussi) déclenche grant_item cs_kiru + unlock_text, câblés dans charcoal_man_azalea.json (état 'charbon'). Donné par le Maître du Charbon à Écorcia au retour des oiseaux (guidebook-adapted.md § ilex-forest : « retour au Maître du Charbon → reçoit l'objet de coupe »), clôt escaped_companions_errand (étape charbon_received). 切 est le kanji dédié du CS (2 inconnus autorisés comme tout texte CS) ; 木 déjà étudié ; furigana partout.",
+ "text": {
+  "text_id": "cs_kiru_azalea",
+  "title": { "jp": "きこりの　やいば", "en": "The Woodcutter's Blade" },
+  "jp_text": "とりを　つれて　きて　くれて、ありがとう。おれいに、これを　わたそう。この　やいばは、とても　よく　切（き）れる。もりの　木（き）を　切（き）って、あたらしい　みちを　ひらける。ちからを　いれすぎず、こころを　こめて　切（き）れば　いい。",
+  "en_text": "Thank you for bringing my birds back. As thanks, let me give you this. This blade cuts very well. With it you can cut the forest trees and open a new path. Don't force it — cut with your heart in it, and it'll go just fine.",
+  "audio_ref": null,
+  "level": "N4",
+  "source": "original",
+  "tier": "obligatoire",
+  "zone_id": "azalea-town",
+  "npc_ref": "charcoal_man_azalea",
+  "found_object_ref": null,
+  "event_ref": "cs_kiru_azalea",
+  "length_chars": 107,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": { "jp": "すみやきの　ひとは　なにを　わたして　いますか。", "en": "What is the Charcoal Man handing over?" },
+    "options": [
+     { "jp": "きを　切（き）る　やいば。", "en": "A blade for cutting trees" },
+     { "jp": "とりの　えさ。", "en": "Feed for the birds" },
+     { "jp": "もりの　ちず。", "en": "A map of the forest" },
+     { "jp": "あたらしい　きもの。", "en": "A new kimono" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": { "jp": "この　やいばで　なにが　できますか。", "en": "What can you do with this blade?" },
+    "options": [
+     { "jp": "もりの　木（き）を　切（き）って、みちを　ひらける。", "en": "Cut the forest trees and open a path" },
+     { "jp": "とりを　つかまえられる。", "en": "Catch the birds" },
+     { "jp": "いえを　たてられる。", "en": "Build a house" },
+     { "jp": "かわを　わたれる。", "en": "Cross a river" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": { "jp": "「よく　切（き）れる」の　いみは？", "en": "What does 「よく切れる」mean here?" },
+    "options": [
+     { "jp": "とても　するどい。", "en": "It is very sharp" },
+     { "jp": "とても　おもい。", "en": "It is very heavy" },
+     { "jp": "とても　ふるい。", "en": "It is very old" },
+     { "jp": "とても　やすい。", "en": "It is very cheap" }
+    ],
+    "correct_index": 0,
+    "answer_span": { "start": 35, "end": 56 }
+   },
+   {
+    "type": "inference",
+    "prompt": { "jp": "「ちからを　いれすぎず、こころを　こめて」から　わかる　こつは　なんですか。", "en": "What tip does \"don't force it, put your heart in it\" convey?" },
+    "options": [
+     { "jp": "ちからより、ていねいさが　たいせつ。", "en": "Care matters more than brute force" },
+     { "jp": "できるだけ　つよく　きる　こと。", "en": "Cut as hard as you possibly can" },
+     { "jp": "はやく　きる　こと。", "en": "Cut as fast as possible" },
+     { "jp": "みんなで　きる　こと。", "en": "Cut together with everyone" }
+    ],
+    "correct_index": 0,
+    "answer_span": { "start": 89, "end": 118 }
+   },
+   {
+    "type": "resolution_reference",
+    "prompt": { "jp": "「これを　わたそう」の「これ」は　なにを　さして　いますか。", "en": "What does \"this\" refer to in \"let me give you this\"?" },
+    "options": [
+     { "jp": "よく　切（き）れる　やいば。", "en": "The blade that cuts well" },
+     { "jp": "にげた　とり。", "en": "The birds that ran off" },
+     { "jp": "もりの　やしろ。", "en": "The forest shrine" },
+     { "jp": "すみやきの　しごと。", "en": "The charcoal-making trade" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   }
+  ]
+ }
+}

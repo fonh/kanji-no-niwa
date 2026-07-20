@@ -1,0 +1,30 @@
+[
+ {
+  "zone_id": "route-31",
+  "npc_ref": "black_apricorn_man_route31",
+  "sequence_index": 1,
+  "kanji_ids": ["死", "漢", "発", "送", "進"],
+  "grammar_id": "N5-085"
+ },
+ {
+  "zone_id": "route-31",
+  "npc_ref": "black_apricorn_man_route31",
+  "sequence_index": 2,
+  "kanji_ids": ["低", "別", "建", "私", "王"],
+  "grammar_id": "N5-086"
+ },
+ {
+  "zone_id": "route-31",
+  "npc_ref": "black_apricorn_man_route31",
+  "sequence_index": 3,
+  "kanji_ids": ["竹", "糸", "原", "園", "当"],
+  "grammar_id": "N5-087"
+ },
+ {
+  "zone_id": "route-31",
+  "npc_ref": "black_apricorn_man_route31",
+  "sequence_index": 4,
+  "kanji_ids": ["形", "戸", "才", "数", "毛"],
+  "grammar_id": "N5-088"
+ }
+]

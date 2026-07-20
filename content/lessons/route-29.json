@@ -1,0 +1,31 @@
+[
+ {
+  "_note": "Pas d'unlock_conditions ici : Tuscany elle-même est calendaire au niveau de sa présence (content/map/npcs.json — time_window mardi + badge_earned falkner), ce qui suffit à gater ses 4 leçons. Le champ lessons.unlock_conditions (PRD.md § Leçons) sert un cas différent : un PNJ toujours présent (Elm) dont les leçons se débloquent en plusieurs temps.",
+  "zone_id": "route-29",
+  "npc_ref": "tuscany_route29",
+  "sequence_index": 1,
+  "kanji_ids": ["雨", "前", "北", "後", "母"],
+  "grammar_id": "N5-032"
+ },
+ {
+  "zone_id": "route-29",
+  "npc_ref": "tuscany_route29",
+  "sequence_index": 2,
+  "kanji_ids": ["毎", "父", "行", "西", "長"],
+  "grammar_id": "N5-033"
+ },
+ {
+  "zone_id": "route-29",
+  "npc_ref": "tuscany_route29",
+  "sequence_index": 3,
+  "kanji_ids": ["食", "高", "魚", "力", "夕"],
+  "grammar_id": "N5-034"
+ },
+ {
+  "zone_id": "route-29",
+  "npc_ref": "tuscany_route29",
+  "sequence_index": 4,
+  "kanji_ids": ["文", "田", "京", "作", "光"],
+  "grammar_id": "N5-035"
+ }
+]

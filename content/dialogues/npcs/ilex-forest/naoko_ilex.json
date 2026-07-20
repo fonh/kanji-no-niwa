@@ -1,0 +1,20 @@
+{
+ "_note": "Étape 4 (Lot 3) — Forêt Secte. Kimono Girl Naoko : PNJ ambiant (npc-inventory.md § ilex-forest — 'Type assigné: ambiant', PAS PNJ-leçon ; l'ancien 'thème invité' 方向の道 du guidebook est un fossile PRD antérieur au gel de lessons-proposal.json, non repris — audit « no kanji theming »). Sourcée : perdue plus au nord, demande le chemin de la sortie ; le compagnon du joueur la raccompagne (flaveur cosmétique, aucun Effect). Talk-only, aucune leçon, aucune quête.",
+ "npc_id": "naoko_ilex",
+ "name": { "jp": "まいごの　ナオコ", "en": "Naoko" },
+ "zone_id": "ilex-forest",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "lost" }
+ ],
+ "dialogue_states": {
+  "lost": {
+   "pages": [
+    { "jp": "あ、あの…　でぐちは　どちらですか？", "en": "Oh, um... which way is the exit?" },
+    { "jp": "みちに　まよって　しまって。", "en": "I've gone and lost my way." },
+    { "jp": "きものが　えだに　ひっかかって　こまります。", "en": "My kimono keeps catching on the branches, it's such a bother." },
+    { "jp": "あなたの　ともだちが　あんないして　くれるの？たすかります。", "en": "Your friend will guide me out? What a relief." }
+   ]
+  }
+ }
+}

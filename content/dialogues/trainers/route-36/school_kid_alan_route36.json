@@ -1,0 +1,18 @@
+{
+ "trainer_id": "school_kid_alan_route36",
+ "name": { "jp": "がくせいの　アラン", "en": "School Kid Alan" },
+ "zone_id": "route-36",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "べんきょうの　せいかを　みせるよ。", "en": "I'll show you the fruits of my studies." }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "もっと　べんきょう　しなきゃ。", "en": "I need to study more." }
+   ]
+  }
+ }
+}

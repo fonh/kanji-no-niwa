@@ -1,0 +1,22 @@
+{
+ "_note": "Étape 4 — Exécutif Rocket, 1er des 3 événements (PRD.md § Team Rocket — 3 Lieux, longueur 24, vies 3). Sourcé : confirme que la Team Rocket opère en sous-main pour Giovanni (npc-inventory.md § slowpoke-well). rocket_progress event_id=1.",
+ "trainer_id": "executive_proton_slowpoke_well",
+ "name": { "jp": "かんぶ　プロトン", "en": "Executive Proton" },
+ "zone_id": "slowpoke-well",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "ここまで　くるとは、やるな。", "en": "Making it this far, not bad." },
+    { "jp": "だが、ここで　おわりだ。", "en": "But this is where it ends." }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "ちっ……", "en": "Tch..." },
+    { "jp": "われわれは　うえの　めいれいで　うごいている。", "en": "We take orders from someone above us." },
+    { "jp": "おぼえて　おけ。", "en": "Remember that." }
+   ]
+  }
+ }
+}

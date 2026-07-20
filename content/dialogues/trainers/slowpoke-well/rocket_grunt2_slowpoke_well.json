@@ -1,0 +1,10 @@
+{
+ "trainer_id": "rocket_grunt2_slowpoke_well",
+ "name": { "jp": "ロケットだんの　しもっぱ", "en": "Team Rocket Grunt" },
+ "zone_id": "slowpoke-well",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "これより　さきは　とおさない。", "en": "You won't pass beyond here." }] },
+  "post_battle": { "pages": [{ "jp": "……ボスに　しかられる。", "en": "...The boss is going to scold me." }] }
+ }
+}

@@ -1,0 +1,38 @@
+[
+ {
+  "_note": "Étape 4 (Lot 3) — Forêt Secte. 5 leçons copiées telles quelles depuis content/lessons-proposal.json (zone_id ilex-forest), sans réordonner ni recomposer (guide § 1, audit « no kanji theming »). Apprenti = #1/#3/#5, Homme de la corniche = #2/#4. 30 kanji = pool propre de la zone (kanji-zone-assignment.json), aucune cascade ici. grammar_ids N4-063→067 (grammar-zone-assignment.json / Hanabira). Pas d'unlock_conditions : les leçons de l'apprenti ne dépendent pas de la quête (§ Leçons, aucun lien thématique PNJ↔contenu) — sa narration de quête est servie hors-leçon par ses state_rules.",
+  "zone_id": "ilex-forest",
+  "npc_ref": "charcoal_apprentice_ilex",
+  "sequence_index": 1,
+  "kanji_ids": ["冊", "処", "刻", "劇", "卵", "宅"],
+  "grammar_id": "N4-063"
+ },
+ {
+  "zone_id": "ilex-forest",
+  "npc_ref": "ledge_youth_ilex",
+  "sequence_index": 2,
+  "kanji_ids": ["宇", "将", "展", "座", "律", "拝"],
+  "grammar_id": "N4-064"
+ },
+ {
+  "zone_id": "ilex-forest",
+  "npc_ref": "charcoal_apprentice_ilex",
+  "sequence_index": 3,
+  "kanji_ids": ["探", "操", "敬", "段", "片", "疑"],
+  "grammar_id": "N4-065"
+ },
+ {
+  "zone_id": "ilex-forest",
+  "npc_ref": "ledge_youth_ilex",
+  "sequence_index": 4,
+  "kanji_ids": ["痛", "蒸", "蔵", "補", "退", "降"],
+  "grammar_id": "N4-066"
+ },
+ {
+  "zone_id": "ilex-forest",
+  "npc_ref": "charcoal_apprentice_ilex",
+  "sequence_index": 5,
+  "kanji_ids": ["難", "革", "了", "偉", "偶", "刺"],
+  "grammar_id": "N4-067"
+ }
+]

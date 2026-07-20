@@ -1,0 +1,27 @@
+{
+ "_note": "Étape 3 (extension) — bloque l'entrée du Gym tant que la Tour Grospignon n'est pas visitée (npc-inventory.md § violet-city). Modélisé sur item_owned(tm70_flash) plutôt qu'un event_cleared inventé pour 'zone visitée' (type inexistant dans le modèle — visited_zones[] n'a pas de Condition dédiée) : atteindre le sommet de la tour et y battre l'Ancien Li donne mécaniquement le TM70, un signal fiable et déjà modélisable sans rien ajouter au schéma.",
+ "npc_id": "glasses_man_violet_city",
+ "name": { "jp": "サングラスの　ひと", "en": "Man in Sunglasses" },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [{ "type": "item_owned", "item_id": "tm70_flash" }],
+   "state": "cleared"
+  },
+  { "default": true, "state": "blocking" }
+ ],
+ "dialogue_states": {
+  "blocking": {
+   "pages": [
+    { "jp": "まって。", "en": "Wait." },
+    { "jp": "まず、あの　塔（とう）を　みて　きて。", "en": "First, go see that tower." }
+   ]
+  },
+  "cleared": {
+   "pages": [
+    { "jp": "ジムは　あっちだよ。", "en": "The Gym is that way." }
+   ]
+  }
+ }
+}

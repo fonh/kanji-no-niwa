@@ -1,0 +1,42 @@
+{
+ "_gabarit_note": "Point 4 (câblage grammaire) — 2026-07-17. Montre la FORME d'un point de grammaire câblé, prêt à être consommé par une leçon via son grammar_id. Pilote : N5-001, porté par la leçon 1 de new-bark-town (content/lessons/new-bark-town.json, sequence_index 1). RÈGLE DE RÉSOLUTION vérifiée : grammar_id 'N5-00X' → scripts/sources/grammar_JLPT_N5.json[X-1] (déterministe, ordre du corpus Hanabira = ordre d'assignation des ids). Les champs title/short_explanation/long_explanation/formation/example_variants[].{jp_plain,en,romaji,grammar_audio} sont IMPORTÉS tels quels de Hanabira (explications en anglais réutilisées, cf. PRD.md L44 — note_fr supprimée). Les champs AJOUTÉS au câblage (à produire, pas dans Hanabira) : jp (= jp_plain + Inline Reading ADR-0002), jp_cloze, point_answer, distractors[], conjugation_distractors. Les distractors ci-dessous sont HANDMADE POUR LE PILOTE — en production ils sortent du batch IA relu (PRD § Pipeline étapes 13-14). Sélection : 2-3 example_variants les mieux couverts par le studiedSet du palier (PRD L354) ; ici zone 1, studiedSet quasi vide → tous les kanji résiduels portent furigana (toléré, corpus figé). QC voir content/grammar-wiring-spec.md.",
+
+ "grammar": {
+  "grammar_id": "N5-001",
+  "jlpt_level": "N5",
+  "source": "hanabira",
+  "source_index": 0,
+  "title": "A が いちばん～ (A ga ichiban～)",
+  "short_explanation": "Express the superlative degree; 'the most', 'the best', 'the least'.",
+  "long_explanation": "The pattern Noun + が + いちばん + Adjective/Verb marks the highest degree of a quality within a stated set or scope: 'A is the most ~'. いちばん (一番, literally 'number one') is placed directly before the adjective or verb it intensifies.",
+  "formation": "Noun + が + いちばん + Adjective/Verb",
+
+  "example_variants": [
+   {
+    "jp": "この中（なか）で、寿司（すし）が一番（いちばん）好（す）きです。",
+    "jp_plain": "この中で、寿司が一番好きです。",
+    "jp_cloze": "この中（なか）で、寿司（すし）が＿＿好（す）きです。",
+    "point_answer": "いちばん",
+    "point_surface": "一番（いちばん）",
+    "en": "Of all these, I like sushi the most.",
+    "romaji": "Kono naka de, sushi ga ichiban suki desu.",
+    "grammar_audio": "/audio/japanese/grammar/n5/s_A_が_いちばん_A_ga_ichiban_20250209_この中で寿司が一番好きです.mp3",
+    "distractors": ["もっと", "あまり", "ぜんぜん"],
+    "_distractor_note": "もっと = comparatif (le presque-juste, superlatif vs comparatif) ; あまり/ぜんぜん exigent un prédicat négatif → faux ici.",
+    "conjugation_distractors": null
+   },
+   {
+    "jp": "この町（まち）では、この公園（こうえん）が一番（いちばん）きれいです。",
+    "jp_plain": "この町では、この公園が一番きれいです。",
+    "jp_cloze": "この町（まち）では、この公園（こうえん）が＿＿きれいです。",
+    "point_answer": "いちばん",
+    "point_surface": "一番（いちばん）",
+    "en": "In this town, this park is the most beautiful.",
+    "romaji": "Kono machi de wa, kono kouen ga ichiban kirei desu.",
+    "grammar_audio": "/audio/japanese/grammar/n5/s_A_が_いちばん_A_ga_ichiban_20250209_この町ではこの公園が一番きれいです.mp3",
+    "distractors": ["もっと", "すこし", "あまり"],
+    "conjugation_distractors": null
+   }
+  ]
+ }
+}

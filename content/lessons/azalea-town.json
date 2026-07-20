@@ -1,0 +1,38 @@
+[
+ {
+  "_note": "Étape 4 (extension) — Charcoal Man est PNJ-leçon (leçons #1/#3/#5) indépendamment de son rôle narratif (remise du Charbon, conditionnée à la résolution de Forêt Secte, hors périmètre de ce lot) : § Leçons, aucun lien thématique PNJ↔contenu, ses leçons ne dépendent donc pas de cette quête non encore écrite. **Vérifié 2026-07-10** : les 30 kanji de ce fichier (5 leçons × 6) dépassent le pool propre d'azalea-town (15 kanji, `content/kanji-zone-assignment.json`) — les 15 en trop (備制厚師得復/快接殺毒比減/準演犯, grammar_ids N4-040→044) appartiennent au pool de route-33, qui n'a aucun PNJ-leçon (seul Hiker Anthony, combat) : cascade documentée à l'Étape 2 point 5 (« report en cascade du pool kanji des zones sans PNJ éligible vers la zone suivante mieux fournie, 12 cas ») — confirmé en croisant contre `content/lessons-proposal.json`, pas une erreur de recopie.",
+  "zone_id": "azalea-town",
+  "npc_ref": "charcoal_man_azalea",
+  "sequence_index": 1,
+  "kanji_ids": ["備", "制", "厚", "師", "得", "復"],
+  "grammar_id": "N4-040"
+ },
+ {
+  "zone_id": "azalea-town",
+  "npc_ref": "mart_vendor_azalea",
+  "sequence_index": 2,
+  "kanji_ids": ["快", "接", "殺", "毒", "比", "減"],
+  "grammar_id": "N4-041"
+ },
+ {
+  "zone_id": "azalea-town",
+  "npc_ref": "charcoal_man_azalea",
+  "sequence_index": 3,
+  "kanji_ids": ["準", "演", "犯", "示", "税", "能"],
+  "grammar_id": "N4-042"
+ },
+ {
+  "zone_id": "azalea-town",
+  "npc_ref": "mart_vendor_azalea",
+  "sequence_index": 4,
+  "kanji_ids": ["複", "象", "述", "逆", "過", "適"],
+  "grammar_id": "N4-043"
+ },
+ {
+  "zone_id": "azalea-town",
+  "npc_ref": "charcoal_man_azalea",
+  "sequence_index": 5,
+  "kanji_ids": ["限", "険", "雑", "非", "並", "亡"],
+  "grammar_id": "N4-044"
+ }
+]

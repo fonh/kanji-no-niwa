@@ -1,0 +1,19 @@
+{
+ "_note": "Étape 3 (extension) — PNJ-leçon (content/lessons/violet-city.json, leçon #1). Sourcé « instituteur ambulant, trouvé errant entre le Gym et le Mart » (npc-inventory.md). **Simplifié** : la side quest « ramener Earl pour commencer les cours » n'est pas modélisée comme escorte séparée ici — sa ligne d'accueil couvre le beat, à raffiner si l'École Pokémon entre en détail dans une passe ultérieure.",
+ "npc_id": "earl_violet_city",
+ "name": { "jp": "アール", "en": "Earl" },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "ああ、こんなところに　いたのか。", "en": "Ah, so this is where I was." },
+    { "jp": "がっこうに　もどらなきゃ。", "en": "I need to get back to school." },
+    { "jp": "その　まえに、すこし　おしえるよ。", "en": "But first, let me teach you a little." }
+   ]
+  }
+ }
+}

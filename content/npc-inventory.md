@@ -67,10 +67,13 @@ ci-dessous ont été mises à jour en conséquence.
 
 **Note leçons (ajoutée 2026-07-07, passe de vérification audit 06 ; mentor mis à jour 2026-07-08, audit 10, tranché au grill — Fukuda supprimé ; recompté 2026-07-09, Étape 2 point 5 — proposition automatique fusionnée)** :
 les leçons de cette zone sont portées par **le Pr. Elm, dans son labo** (bâtiment HGSS d'origine, aucune géographie inventée — voir PRD § bootstrap Elm), seul PNJ-leçon désigné de la zone (voir sa
-ligne ci-dessus). Assignation mécanique : **5 leçons (30 kanji fondamentaux, ordre `getAvailableKanji`, groupes de 6)**, `lessons-new-bark-town` #1→#5. À la passe contenu, à répartir sur les
-deux passages narratifs réels (Elm → course chez Mr. Pokémon → retour) : les 1-2 premières leçons avant le départ, le reste au retour — la coupure précise entre les 5 groupes mécaniques et les 2
-visites narratives reste une décision d'écriture, pas figée ici. Seuil de 30 exigé à l'entrée de Ville Griotte. Route 29 n'a aucun PNJ-leçon : sa croissance 10→50 est portée par ces
-mêmes leçons du labo d'Elm (allers-retours).
+ligne ci-dessus). Assignation mécanique : **5 leçons (30 kanji fondamentaux, ordre `getAvailableKanji`, groupes de 6)**, `lessons-new-bark-town` #1→#5. **Coupure fixée 2026-07-09 (Étape 3 point 2)** :
+leçons #1-2 avant le départ (`unlock_conditions: quest_step(mystery_egg_errand, sent_by_elm)`), leçons #3-5 au retour (`unlock_conditions: quest_step(mystery_egg_errand, egg_received)`) — voir
+`content/lessons/new-bark-town.json` et PRD.md § Leçons « Coupure aller-retour — mécanisme ». Seuil de 30 exigé à l'entrée de Ville Griotte. **Route 29 n'a en pratique aucun PNJ-leçon sur le
+chemin critique** : Tuscany (seule PNJ-leçon sourcée de la zone) est calendaire (mardi + post-badge Mauville, voir sa ligne ci-dessous) — un joueur qui suit le chemin direct ne la rencontre pas
+avant longtemps après avoir quitté cette zone. Constaté à l'écriture (2026-07-09) : la croissance 30→50 nominalement assignée à route-29 n'est donc **pas** portée par ces leçons du labo d'Elm au
+sens strict (celui-ci plafonne à 30) mais par les deux leçons toujours-disponibles de Ville Griotte (Guide Gent + Vendeuse, 10 kanji) puis celles de Route 30 (20 kanji) — le pool de route-29 est
+simplement rattrapé beaucoup plus tard par Tuscany, comme n'importe quelle zone dont le PNJ-leçon est temporairement indisponible (même tolérance de chemin que documentée au PRD § Leçons).
 
 **Side quests dans cette zone** : 0 (zone d'onboarding pure, pas de quête distincte)
 **Objets à aller chercher (remis par un PNJ, pas juste trouvés au sol) dans cette zone** : 2 (Pokégear via Mom, grand texte d'Elm via Elm — « Master Ball/objet narratif » corrigé 2026-07-07, passe de vérification)
@@ -162,7 +165,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 | Teala | Sous-sol du Centre Pokémon, donne le Pal Pad après le 1er badge | Pal Pad | leçon #5 — 漢字: 皿・福・落・葉・身・追 — 文法: どちら～ (dochira～) |
 | Kimono Girl Zuki | Devant le Mart, demande au joueur de prendre soin de l'œuf mystère | — | ambiant |
 | Vendeur du Mart | Comptoir du fond | Heal Ball, Net Ball, Tunnel Mail (vente) | ambiant |
-| Bird Keeper Rod/Abe (Gym) | Récompense finale du Gym Falkner | Zephyr Badge + TM51 Roost | ambiant |
+| Bird Keeper Rod/Abe (Gym) | Récompense finale du Gym Falkner | Zephyr Badge + TM51 Roost | ambiant *(clarifié 2026-07-10, Étape 3 point 3, passe de vérification : cette ligne résume `guidebook-adapted.md` L265 « Gym Falkner — dresseurs : Rod, Abe avant Falkner. Récompense : ... » — la récompense y est attribuée au gym dans son ensemble, pas littéralement remise en main propre par les 門弟. Implémenté avec Falkner comme donneur direct (`content/dialogues/trainers/violet-city/falkner_violet_city.json`), cohérent avec le comportement réel des jeux Pokémon — pas de fichier PNJ séparé pour cette ligne)* |
 
 **Side quests dans cette zone** : 1 (ramener Earl pour "commencer les cours")
 **Objets à aller chercher dans cette zone** : 2 (Pal Pad, Baies)

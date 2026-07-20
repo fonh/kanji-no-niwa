@@ -1,0 +1,10 @@
+{
+ "trainer_id": "ace_trainer_emma_union_cave",
+ "name": { "jp": "エリートの　エマ", "en": "Ace Trainer Emma" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "この　どうくつの　いちばん　おくで　まっていたよ。", "en": "I've been waiting at the very back of this cave." }] },
+  "post_battle": { "pages": [{ "jp": "とおって　いいよ。", "en": "You may pass." }] }
+ }
+}

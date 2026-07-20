@@ -1,0 +1,19 @@
+{
+ "_note": "Étape 4 (Lot 3) — Forêt Secte. Jeune homme sur une corniche (nord-est de l'arbre coupé, guidebook-adapted.md § ilex-forest) : PNJ-leçon (content/lessons/ilex-forest.json, leçons #2/#4). Sourcé « enseigne la technique pour secouer les arbres » (orig. Headbutt) — gardé comme flaveur, aucune mécanique de capture (règle #1). Talk-only, pas de quête, pas d'effet ; le moteur sert d'abord ses leçons non épuisées, sinon cette ligne d'accueil.",
+ "npc_id": "ledge_youth_ilex",
+ "name": { "jp": "がけの　うえの　わかもの", "en": "Youth on the Ledge" },
+ "zone_id": "ilex-forest",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "この　もりの　きはね、", "en": "The trees in this forest, you see —" },
+    { "jp": "こうやって　ゆらすと、いい　ことが　あるんだ。", "en": "give one a good shake like this, and something nice happens." },
+    { "jp": "ほら、やってみて。", "en": "Go on, give it a try." }
+   ]
+  }
+ }
+}

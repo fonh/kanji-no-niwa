@@ -1,4 +1,5 @@
 {
+ "_note": "Étape 3 point 2 — première ligne de dialogue du jeu. Le Pokégear est remis AVANT le départ (état give_pokegear, dès que le joueur est envoyé chez Mr. Pokémon par Elm, step sent_by_elm) — fidèle à HGSS (Mom arrête le joueur à la sortie) et rend jouable l'ordre d'Elm « appelle-moi en chemin » ainsi que les appels Route 30 (corrige finding G1 de l'audit 2026-07-17). welcome_back (au retour, egg_received) ne porte plus que l'annonce du vol ; grant_item pokegear y est conservé comme filet de sécurité (idempotent item_kind: unique) au cas où le joueur sortirait sans parler à Mom.",
  "npc_id": "mom_new_bark",
  "name": {
   "jp": "ママ",
@@ -7,6 +8,18 @@
  "zone_id": "new-bark-town",
  "jlpt_level": "N5",
  "state_rules": [
+  {
+   "if": [
+    { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_received" }
+   ],
+   "state": "welcome_back"
+  },
+  {
+   "if": [
+    { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "sent_by_elm" }
+   ],
+   "state": "give_pokegear"
+  },
   {
    "default": true,
    "state": "intro"
@@ -27,6 +40,30 @@
      "jp": "けんきゅうじょへ　いってください。",
      "en": "Please go to the research lab."
     }
+   ]
+  },
+  "give_pokegear": {
+   "pages": [
+    { "jp": "ちょっと　まって！", "en": "Wait a second!" },
+    { "jp": "これを　もっていってね。", "en": "Take this with you." },
+    { "jp": "ポケギアです。", "en": "It's a Pokégear." },
+    { "jp": "みちで　だれかに　でんわ　できますよ。", "en": "You can call people while you're on the road." },
+    { "jp": "きを　つけてね。", "en": "Be careful, okay." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "pokegear" }
+   ]
+  },
+  "welcome_back": {
+   "pages": [
+    { "jp": "おかえりなさい！", "en": "Welcome back!" },
+    { "jp": "それと、きいてね。", "en": "And, listen to this." },
+    { "jp": "けんきゅうじょに　どろぼうが　はいったの。", "en": "A thief broke into the research lab." },
+    { "jp": "あかいかみの　おとこのこだったって。", "en": "Apparently it was a boy with red hair." },
+    { "jp": "きを　つけてね。", "en": "Be careful, okay." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "pokegear" }
    ]
   }
  }

@@ -1,0 +1,56 @@
+{
+ "_gabarit_note": "Étape 3 point 2 — sourcé content/side-content-inventory.md A7 ('Vous entrez dans Johto', tutoriel de lecture environnementale) et guidebook-adapted.md L217 ('lisez les panneaux'). **Point ouvert** : texts-progressifs.md § Calibrage cite un texte obligatoire déjà nommé 'Route 29' dans sa table de longueurs, mais sans préciser lequel des documents/PNJ de la zone c'est, ni ce qu'il gaterait en aval (aucun `Effect` évident à débloquer si tôt dans le jeu) — faute de confirmation, ce panneau est marqué 'secondaire' plutôt que de lui inventer un gate. À trancher à la prochaine passe si ce texte est bien celui visé.",
+ "text": {
+  "text_id": "johto_entrance_sign_route29",
+  "title": { "jp": "みちの　かんばん", "en": "The Road Sign" },
+  "jp_text": "ジョウトへ　ようこそ。ここから　みちが　つづきます。みちを　あるいて、まちへ　いきましょう。",
+  "en_text": "Welcome to Johto. The road continues from here. Let's walk the road and head to town.",
+  "audio_ref": null,
+  "level": "N5",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "route-29",
+  "npc_ref": null,
+  "found_object_ref": "sign_johto_entrance_route29",
+  "event_ref": null,
+  "length_chars": 39,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": { "jp": "この　かんばんは　なにを　いっていますか。", "en": "What is this sign about?" },
+    "options": [
+     { "jp": "みちの　あんない", "en": "Directions for the road" },
+     { "jp": "てんきの　よほう", "en": "A weather forecast" },
+     { "jp": "おみせの　じかん", "en": "A shop's hours" },
+     { "jp": "でんわばんごう", "en": "A phone number" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": { "jp": "どこへ　いきましょうと　いっていますか。", "en": "Where does it say to go?" },
+    "options": [
+     { "jp": "まち", "en": "Town" },
+     { "jp": "やま", "en": "Mountain" },
+     { "jp": "うみ", "en": "Sea" },
+     { "jp": "いえ", "en": "Home" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": { "jp": "「つづきます」の　いみは　どれですか。", "en": "What does 「つづきます」mean here?" },
+    "options": [
+     { "jp": "おわらないで、さきへ　いく", "en": "To go on without ending" },
+     { "jp": "とまる", "en": "To stop" },
+     { "jp": "かえる", "en": "To go home" },
+     { "jp": "こわれる", "en": "To break" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   }
+  ]
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "npc_id": "mr_pokemon_route30",
+ "name": { "jp": "Mr.ポケモン", "en": "Mr. Pokémon" },
+ "zone_id": "route-30",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [{ "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_received" }],
+   "state": "after"
+  },
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "よく　きたね。", "en": "Good, you've come." },
+    { "jp": "これを　あげよう。", "en": "I'll give you this." },
+    { "jp": "ふしぎな　たまごだよ。", "en": "It's a mysterious egg." },
+    { "jp": "だいじに　そだててね。", "en": "Raise it with care." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "mystery_egg" },
+    { "type": "advance_quest", "quest_id": "mystery_egg_errand", "step_id": "egg_received" }
+   ]
+  },
+  "after": {
+   "pages": [
+    { "jp": "たまご、げんきかな？", "en": "Is the egg doing well?" }
+   ]
+  }
+ }
+}

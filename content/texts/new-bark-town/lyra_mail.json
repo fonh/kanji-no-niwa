@@ -1,0 +1,56 @@
+{
+ "_gabarit_note": "Étape 3 point 2 — première lecture possible du jeu entier (content/side-content-inventory.md A15). Zone à studiedSet vide (cumulative_start=0) : texte et questions volontairement 100% hiragana, aucun budget kanji à dépenser ici — cohérent avec mom_new_bark.json/prof_elm_lab.json, mêmes contraintes de zone.",
+ "text": {
+  "text_id": "lyra_mail_new_bark",
+  "title": { "jp": "コハルからの　メール", "en": "A Mail from Lyra" },
+  "jp_text": "げんきかな？　ぼうけんを　たのしんでね。コハルより。",
+  "en_text": "How are you doing? Enjoy the adventure. From Lyra.",
+  "audio_ref": null,
+  "level": "N5",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "new-bark-town",
+  "npc_ref": null,
+  "found_object_ref": "player_pc_new_bark",
+  "event_ref": null,
+  "length_chars": 24,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": { "jp": "この　メールは　なにについてですか。", "en": "What is this mail about?" },
+    "options": [
+     { "jp": "ともだちからの　おうえん", "en": "Encouragement from a friend" },
+     { "jp": "テストの　もんだい", "en": "A test question" },
+     { "jp": "おみせの　あんない", "en": "A shop advertisement" },
+     { "jp": "てんきの　よほう", "en": "A weather forecast" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": { "jp": "だれが　この　メールを　かきましたか。", "en": "Who wrote this mail?" },
+    "options": [
+     { "jp": "コハル", "en": "Lyra" },
+     { "jp": "エルムはかせ", "en": "Prof. Elm" },
+     { "jp": "ママ", "en": "Mom" },
+     { "jp": "おまわりさん", "en": "The officer" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": { "jp": "「ぼうけん」の　いみは　どれですか。", "en": "What does 「ぼうけん」mean here?" },
+    "options": [
+     { "jp": "たびに　でて　いろいろな　ことを　する　こと", "en": "Going on a journey and experiencing many things" },
+     { "jp": "べんきょうする　こと", "en": "Studying" },
+     { "jp": "ねる　こと", "en": "Sleeping" },
+     { "jp": "たべる　こと", "en": "Eating" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   }
+  ]
+ }
+}

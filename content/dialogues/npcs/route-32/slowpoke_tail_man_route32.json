@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 4 — PNJ-leçon (leçon #2). Sourcé : PNJ comique, tente de vendre une « queue de Ramoloss » (npc-inventory.md § route-32).",
+ "npc_id": "slowpoke_tail_man_route32",
+ "name": { "jp": "しっぽを　うる　ひと", "en": "Man Selling a Tail" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "ラモロスの　しっぽ、いらない？", "en": "Don't you want a Slowpoke tail?" },
+    { "jp": "……じょうだんだよ。", "en": "...I'm kidding." }
+   ]
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "_note": "Étape 3 (extension) — PNJ-leçon (leçon #2). Sourcé : échange des Éclats (obtenus en brisant des roches fissurées, CS 砕) contre des baies (npc-inventory.md, guidebook-adapted.md L257). Le trade lui-même dépend du CS 砕, pas encore obtenu à ce point du chemin critique — état 'greeting' couvre la leçon puis explique l'échange pour plus tard.",
+ "npc_id": "blond_boy_violet_city",
+ "name": { "jp": "きんぱつの　しょうねん", "en": "Blond Boy" },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "やあ！", "en": "Hey!" },
+    { "jp": "いわの　かけらを　もってたら、きのみと　こうかんするよ。", "en": "If you have rock shards, I'll trade you berries for them." },
+    { "jp": "また　あとでね。", "en": "See you later." }
+   ]
+  }
+ }
+}

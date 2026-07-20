@@ -1,0 +1,18 @@
+{
+ "trainer_id": "bug_catcher_wade_route31",
+ "name": { "jp": "むしとりしょうねんの　ウェイド", "en": "Bug Catcher Wade" },
+ "zone_id": "route-31",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "むしを　あつめるのが　しゅみなんだ。", "en": "Collecting bugs is my hobby." }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "つよいね、きみ。", "en": "You're strong." }
+   ]
+  }
+ }
+}

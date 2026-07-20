@@ -1,0 +1,43 @@
+{
+ "_gabarit_note": "Étape 3, point 1 — exemple validé contre PRD.md § Pokégear ラジオ et § Schéma Base de Données (`radio_shows`/`radio_show_completions`). Premier épisode possible de la bibliothèque d'Oak (N5, débloquée après la Radio Card — quiz de la réceptionniste, Tour Radio 1F de Doublonville). Script ~300-400 caractères, écoute pure sans texte affiché en jeu (le script_jp ci-dessous existe côté données/production, jamais montré au joueur) ; audio_ref non nullable ici (contrairement aux textes) — l'émission n'a de sens qu'à l'écoute. Décision prise en écrivant ce gabarit, à confirmer : title bilingue {jp, en}, comme pour `texts.title`. **Vérifié en relecture (2026-07-09)** : le budget kanji (CONTEXT.md § Kanji Budget, texts-progressifs.md § Vetting) ne s'applique pas à `script_jp` — 13 kanji hors studiedSet théorique à ce palier, mais volontaire : c'est un texte de production pour la synthèse vocale, jamais affiché ni lu par le joueur (aucune Inline Reading, aucun bouton Y), donc hors du contrat de lisibilité qui motive la règle. Le niveau de vocabulaire vise la compréhension orale N5, pas la lecture — peut légitimement être un peu plus riche que l'équivalent écrit du même palier.",
+
+ "radio_show": {
+  "show_id": "oak_show_001",
+  "title": { "jp": "オーキドはかせの　どうぶつつうしん", "en": "Prof. Oak's Pokémon Report" },
+  "jlpt_level": "N5",
+  "audio_ref": "/audio/radio/oak_show_001.opus",
+  "script_jp": "みなさん、こんにちは。オーキドです。今日（きょう）は、たまごの話（はなし）をします。ポケモンのたまごは、あたたかい場所（ばしょ）が好（す）きです。まいにち、水（みず）と食（た）べ物（もの）をあげてください。そして、たまごに話（はな）しかけてください。声（こえ）を聞（き）くと、たまごは元気（げんき）になります。けんきゅうを長（なが）くしていますが、たまごが生（う）まれる日（ひ）は、いつも　わくわくします。生（う）まれたばかりの　ポケモンは、とても　小（ちい）さくて、力（ちから）も　弱（よわ）いです。だから、はじめは　やさしく　せわを　してあげてください。もうすぐ、たまごから　ちいさいポケモンが生（う）まれるでしょう。生（う）まれたら、名前（なまえ）を　つけてあげてくださいね。それでは、また来週（らいしゅう）。",
+  "questions": [
+   {
+    "prompt": { "jp": "たまごは何（なに）が好（す）きだと言（い）っていましたか。", "en": "What did Oak say Pokémon eggs like?" },
+    "options": [
+     { "jp": "あたたかい場所", "en": "A warm place" },
+     { "jp": "つめたい場所", "en": "A cold place" },
+     { "jp": "くらい場所", "en": "A dark place" },
+     { "jp": "せまい場所", "en": "A cramped place" }
+    ],
+    "correct_index": 0
+   },
+   {
+    "prompt": { "jp": "まいにち何（なに）を　あげますかと　言（い）っていましたか。", "en": "What did Oak say to give the egg every day?" },
+    "options": [
+     { "jp": "水と食べ物", "en": "Water and food" },
+     { "jp": "おもちゃ", "en": "Toys" },
+     { "jp": "おかね", "en": "Money" },
+     { "jp": "くすり", "en": "Medicine" }
+    ],
+    "correct_index": 0
+   },
+   {
+    "prompt": { "jp": "たまごに話（はな）しかけると、どうなると言（い）っていましたか。", "en": "What did Oak say happens if you talk to the egg?" },
+    "options": [
+     { "jp": "元気になる", "en": "It becomes lively / healthy" },
+     { "jp": "ねむくなる", "en": "It gets sleepy" },
+     { "jp": "こわれる", "en": "It breaks" },
+     { "jp": "小さくなる", "en": "It gets smaller" }
+    ],
+    "correct_index": 0
+   }
+  ]
+ }
+}

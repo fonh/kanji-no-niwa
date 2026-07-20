@@ -1,0 +1,20 @@
+[
+ {
+  "_note": "Étape 3 point 2 — sans ce gate, la toute première approche de Guide Gent servirait directement l'écran-livre et court-circuiterait content/dialogues/npcs/cherrygrove-city/guide_gent_cherrygrove.json 'intro' (remise des Running Shoes, quête cherrygrove_welcome) — même mécanisme que le gate d'Elm, voir PRD.md § Leçons.",
+  "zone_id": "cherrygrove-city",
+  "npc_ref": "guide_gent_cherrygrove",
+  "sequence_index": 1,
+  "kanji_ids": ["冬", "図", "夏", "夜", "家"],
+  "grammar_id": "N5-053",
+  "unlock_conditions": [
+   { "type": "quest_step", "quest_id": "cherrygrove_welcome", "step": "shoes_given" }
+  ]
+ },
+ {
+  "zone_id": "cherrygrove-city",
+  "npc_ref": "shopkeeper_cherrygrove",
+  "sequence_index": 2,
+  "kanji_ids": ["工", "帰", "広", "心", "方"],
+  "grammar_id": "N5-054"
+ }
+]

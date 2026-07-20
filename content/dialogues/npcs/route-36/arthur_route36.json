@@ -1,0 +1,21 @@
+{
+ "_note": "Étape 3 (extension) — PNJ-leçon calendaire (content/lessons/route-36.json, leçons #2/#4), même mécanique que Tuscany route-29. Sourcé : nord des Ruines Arcaniques, donne Hard Stone (npc-inventory.md § route-36).",
+ "npc_id": "arthur_route36",
+ "name": { "jp": "アーサー", "en": "Arthur" },
+ "zone_id": "route-36",
+ "jlpt_level": "N3",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "もくようびだけ　ここに　いるんだ。", "en": "I'm only here on Thursdays." },
+    { "jp": "これ、あげるよ。", "en": "Here, take this." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "hard_stone" }
+   ]
+  }
+ }
+}

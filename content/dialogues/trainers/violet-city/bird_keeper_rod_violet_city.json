@@ -1,0 +1,19 @@
+{
+ "_note": "Étape 3 (extension) — 門弟 #1 de Falkner (PRD § 道場, longueur 10, vies 2). Positionné dans le gymnase, même zone_id violet-city (le gym ne fractionne pas en zone_id séparé, à la différence des donjons multi-étages — aucune entrée dédiée dans kanji-zone-assignment.json).",
+ "trainer_id": "bird_keeper_rod_violet_city",
+ "name": { "jp": "とりつかいの　ロッド", "en": "Bird Keeper Rod" },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "ここから　さきは　とおさないよ。", "en": "I won't let you past here." }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "ジムリーダーは　あそこだ。", "en": "The Gym Leader is over there." }
+   ]
+  }
+ }
+}

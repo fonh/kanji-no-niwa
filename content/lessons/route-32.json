@@ -1,0 +1,30 @@
+[
+ {
+  "zone_id": "route-32",
+  "npc_ref": "path_man_route32",
+  "sequence_index": 1,
+  "kanji_ids": ["刷", "副", "印", "参", "器"],
+  "grammar_id": "N4-009"
+ },
+ {
+  "zone_id": "route-32",
+  "npc_ref": "slowpoke_tail_man_route32",
+  "sequence_index": 2,
+  "kanji_ids": ["変", "官", "害", "富", "席"],
+  "grammar_id": "N4-010"
+ },
+ {
+  "zone_id": "route-32",
+  "npc_ref": "fisherman_route32",
+  "sequence_index": 3,
+  "kanji_ids": ["帯", "底", "康", "愛", "成"],
+  "grammar_id": "N4-011"
+ },
+ {
+  "zone_id": "route-32",
+  "npc_ref": "man_beyond_force_point_route32",
+  "sequence_index": 4,
+  "kanji_ids": ["散", "欠", "残", "求", "浅"],
+  "grammar_id": "N4-012"
+ }
+]

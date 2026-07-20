@@ -1,0 +1,170 @@
+{
+ "_gabarit_note": "Étape 3, point 1 — exemple validé contre PRD.md § Leçons et § Schéma Base de Données. Leçon réelle (sequence_index 4 de new-bark-town, content/lessons-proposal.json) — kanji/grammaire réels, illustrations/audio_ref à produire au pipeline (Étape 4). Décisions prises en écrivant ce gabarit, à confirmer : (1) le mini-quiz de fin de leçon tire son mode Sens sur le mot-clé anglais (mécanisme C, pas encore maîtrisé) — jp_definition/jp_definition_distractors ne servent qu'au mode Sens gradué post-maîtrise en combat, jamais au quiz de leçon ; (2) distracteurs du mini-quiz = tirage global dans `kanji`/`grammar` comme prescrit au § Leçons, ici simulé avec 2 kanji hors-leçon pris ailleurs dans le jeu.",
+
+ "lesson": {
+  "zone_id": "new-bark-town",
+  "npc_ref": "prof_elm_lab",
+  "sequence_index": 4,
+  "kanji_ids": ["日", "月", "木", "気", "水", "火"],
+  "grammar_id": "N5-004"
+ },
+
+ "resolved_kanji": [
+  {
+   "character": "日",
+   "jlpt_level": "N5",
+   "grade": 1,
+   "meanings": ["day", "sun", "Japan", "counter for days"],
+   "readings": { "on": ["ニチ", "ジツ"], "kun": ["ひ", "-び", "-か"] },
+   "etymology": "Pictograph: the sun — originally a circle with a dot at its center, squared by the brush into a rectangle with a bar. One sun crossing the sky = one day.",
+   "mnemonic": "A window with the blind half-drawn: through it, the sun. One sunrise per day — ひ, the sun; にち, the day it makes.",
+   "icon_ref": "☀️",
+   "lesson_examples": [
+    { "jp": "日（ひ）が　でました。", "en": "The sun came out.", "audio_ref": "/audio/kanji_examples/日_1.webm", "source": "generated" }
+   ],
+   "jp_definition": "朝（あさ）から　夜（よる）までの、一（ひと）つの　時間（じかん）。",
+   "jp_definition_distractors": [
+    "空（そら）に　うかぶ、まるい　星（ほし）。夜（よる）に　光（ひか）る。",
+    "赤（あか）くて　あつい、もえる　もの。",
+    "からだの　中（なか）を　流（なが）れる、すきとおった　もの。"
+   ]
+  },
+  {
+   "character": "月",
+   "jlpt_level": "N5",
+   "grade": 1,
+   "meanings": ["month", "moon"],
+   "readings": { "on": ["ゲツ", "ガツ"], "kun": ["つき"] },
+   "etymology": "Pictograph: the crescent moon with two shading strokes inside. One full cycle of the moon = one month.",
+   "mnemonic": "The sun's window (日) grew legs and slimmed down for the night shift: the moon. It waxes and wanes once a month — つき / ゲツ, as in 月曜日, the moon's own day.",
+   "icon_ref": "🌙",
+   "lesson_examples": [
+    { "jp": "月（つき）が　きれいです。", "en": "The moon is beautiful.", "audio_ref": "/audio/kanji_examples/月_1.webm", "source": "generated" }
+   ],
+   "jp_definition": "空（そら）に　うかぶ、まるい　星（ほし）。夜（よる）に　光（ひか）る。",
+   "jp_definition_distractors": [
+    "朝（あさ）から　夜（よる）までの、一（ひと）つの　時間（じかん）。",
+    "山（やま）に　生（は）える、みきと　えだが　ある　もの。",
+    "こころの　中（なか）に　ある、思（おも）う　力（ちから）。"
+   ]
+  },
+  {
+   "character": "木",
+   "jlpt_level": "N5",
+   "grade": 1,
+   "meanings": ["tree", "wood"],
+   "readings": { "on": ["ボク", "モク"], "kun": ["き", "こ-"] },
+   "etymology": "Pictograph: a tree — trunk, spreading branches, roots below. Doubled it becomes a wood (林), tripled a forest (森).",
+   "mnemonic": "Trunk up the middle, branches out, roots down — き. Thursday, 木曜日, is the tree's day. Wherever wood is worked, this kanji stands at the left of the character.",
+   "icon_ref": "🌳",
+   "lesson_examples": [
+    { "jp": "木（き）が　おおきいです。", "en": "The tree is big.", "audio_ref": "/audio/kanji_examples/木_1.webm", "source": "generated" }
+   ],
+   "jp_definition": "山（やま）に　生（は）える、みきと　えだが　ある　もの。",
+   "jp_definition_distractors": [
+    "からだの　中（なか）を　流（なが）れる、すきとおった　もの。",
+    "こころの　中（なか）に　ある、思（おも）う　力（ちから）。",
+    "赤（あか）くて　あつい、もえる　もの。"
+   ]
+  },
+  {
+   "character": "気",
+   "jlpt_level": "N5",
+   "grade": 1,
+   "meanings": ["spirit", "mind", "air", "atmosphere", "mood"],
+   "readings": { "on": ["キ", "ケ"], "kun": ["いき", "き"] },
+   "etymology": "Simplified from 氣: vapor (气) rising from cooking rice (米) — steam, breath, and by extension the invisible energy of weather and mood.",
+   "mnemonic": "Steam curling off a pot of rice: invisible, but it moves everything — き. The sky's steam is 天気, yours is 元気. When both are good, life is too.",
+   "icon_ref": "💭",
+   "lesson_examples": [
+    { "jp": "気（き）を　つけて。", "en": "Take care.", "audio_ref": "/audio/kanji_examples/気_1.webm", "source": "generated" }
+   ],
+   "jp_definition": "こころの　中（なか）に　ある、思（おも）う　力（ちから）。",
+   "jp_definition_distractors": [
+    "山（やま）に　生（は）える、みきと　えだが　ある　もの。",
+    "朝（あさ）から　夜（よる）までの、一（ひと）つの　時間（じかん）。",
+    "からだの　中（なか）を　流（なが）れる、すきとおった　もの。"
+   ]
+  },
+  {
+   "character": "水",
+   "jlpt_level": "N5",
+   "grade": 1,
+   "meanings": ["water"],
+   "readings": { "on": ["スイ"], "kun": ["みず", "みず-"] },
+   "etymology": "Pictograph: a central current with droplets splashing to both sides. As a left-side component it compresses into the three drops of 氵.",
+   "mnemonic": "A river seen head-on: the main stream down the middle, spray flying left and right — みず. Its on-reading スイ flows through 水曜日, Wednesday, the water day.",
+   "icon_ref": "💧",
+   "lesson_examples": [
+    { "jp": "水（みず）を　のみます。", "en": "I drink water.", "audio_ref": "/audio/kanji_examples/水_1.webm", "source": "generated" }
+   ],
+   "jp_definition": "からだの　中（なか）を　流（なが）れる、すきとおった　もの。",
+   "jp_definition_distractors": [
+    "赤（あか）くて　あつい、もえる　もの。",
+    "空（そら）に　うかぶ、まるい　星（ほし）。夜（よる）に　光（ひか）る。",
+    "こころの　中（なか）に　ある、思（おも）う　力（ちから）。"
+   ]
+  },
+  {
+   "character": "火",
+   "jlpt_level": "N5",
+   "grade": 1,
+   "meanings": ["fire"],
+   "readings": { "on": ["カ"], "kun": ["ひ", "-び", "ほ-"] },
+   "etymology": "Pictograph: a flame rising from a burning pile, sparks flying off both sides. As a bottom component it flattens into four dots (灬).",
+   "mnemonic": "A campfire: the central blaze and two sparks leaping away — ひ. Tuesday, 火曜日, is fire's day. Keep it away from 木 unless you want ashes.",
+   "icon_ref": "🔥",
+   "lesson_examples": [
+    { "jp": "火（ひ）は　あついです。", "en": "Fire is hot.", "audio_ref": "/audio/kanji_examples/火_1.webm", "source": "generated" }
+   ],
+   "jp_definition": "赤（あか）くて　あつい、もえる　もの。",
+   "jp_definition_distractors": [
+    "山（やま）に　生（は）える、みきと　えだが　ある　もの。",
+    "空（そら）に　うかぶ、まるい　星（ほし）。夜（よる）に　光（ひか）る。",
+    "からだの　中（なか）を　流（なが）れる、すきとおった　もの。"
+   ]
+  }
+ ],
+
+ "resolved_grammar": {
+  "grammar_id": "N5-004",
+  "title": "A。じゃ、～B。 (A. Ja, ~B.)",
+  "formation": "[Sentence A]。じゃ、[Sentence B]。",
+  "short_explanation": "Casual transition meaning 'well then' / 'in that case' — signals a conclusion or next action following from what was just said.",
+  "long_explanation": "じゃ is the contracted, casual form of では, used to pivot from one statement to the next action or conclusion it prompts. It sits at the start of Sentence B, after a full stop, not mid-clause. Common in spoken Japanese to close a topic and move on ('well then, ...') or to react to news with a decision ('in that case, I'll...').",
+  "example_variants": [
+   {
+    "jp": "雨（あめ）です。じゃ、家（いえ）に　います。",
+    "en": "It's raining. Well then, I'll stay home.",
+    "grammar_audio": "/audio/grammar/N5-004_ex1.mp3",
+    "distractors": ["Well then, I'll stay home.", "Even so, I'll go out.", "It's raining, isn't it?"]
+   },
+   {
+    "jp": "つかれました。じゃ、休（やす）みましょう。",
+    "en": "I'm tired. Well then, let's rest.",
+    "grammar_audio": "/audio/grammar/N5-004_ex2.mp3",
+    "distractors": ["Well then, let's rest.", "But I want to keep going.", "I'm tired, aren't I?"]
+   }
+  ],
+  "jlpt_level": "N5"
+ },
+
+ "quiz": {
+  "_note": "Proportionnel : 1 question par kanji enseigné (Sens ou Lecture, tiré au sort) + 1 question grammaire — 7 questions ici, cohérent avec '5-6 questions en Johto' (§ Leçons).",
+  "questions": [
+   { "kanji_id": "日", "mode": "sens", "prompt_en": "What does 日 mean here?", "options_en": ["day / sun", "moon", "water", "tree"], "correct_index": 0 },
+   { "kanji_id": "月", "mode": "lecture", "prompt_jp": "月　の　よみかたは？", "options_kana": ["つき", "みず", "ひ", "き"], "correct_index": 0 },
+   { "kanji_id": "木", "mode": "sens", "prompt_en": "What does 木 mean here?", "options_en": ["tree / wood", "fire", "spirit / mood", "day"], "correct_index": 0 },
+   { "kanji_id": "気", "mode": "sens", "prompt_en": "What does 気 mean here?", "options_en": ["spirit / mood", "moon", "tree", "water"], "correct_index": 0 },
+   { "kanji_id": "水", "mode": "lecture", "prompt_jp": "水　の　よみかたは？", "options_kana": ["みず", "つき", "き", "ひ"], "correct_index": 0 },
+   { "kanji_id": "火", "mode": "sens", "prompt_en": "What does 火 mean here?", "options_en": ["fire", "tree / wood", "day / sun", "spirit / mood"], "correct_index": 0 },
+   {
+    "grammar_id": "N5-004",
+    "example_variant_index": 0,
+    "prompt_jp": "雨（あめ）です。じゃ、＿＿＿。",
+    "options_en": ["Well then, I'll stay home.", "Even so, I'll go out.", "It's raining, isn't it?", "Because it's raining, I'll go out."],
+    "correct_index": 0
+   }
+  ]
+ }
+}

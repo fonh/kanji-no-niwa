@@ -1,0 +1,19 @@
+{
+ "_note": "Étape 3 (extension) — PNJ-leçon (leçon #4). Sourcé : agité, rapporte avoir vu « un arbre qui bouge » — teaser Sudowoodo/Route 36 (npc-inventory.md).",
+ "npc_id": "mart_boy_violet_city",
+ "name": { "jp": "マートの　まえの　しょうねん", "en": "Boy by the Mart" },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "きいて！　きいて！", "en": "Listen! Listen!" },
+    { "jp": "きが　うごいたんだ！　ほんとうだよ！", "en": "A tree moved! It's true!" },
+    { "jp": "だれも　しんじて　くれない…", "en": "Nobody believes me..." }
+   ]
+  }
+ }
+}

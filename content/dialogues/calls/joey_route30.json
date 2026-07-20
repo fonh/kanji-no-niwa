@@ -1,0 +1,58 @@
+{
+ "_gabarit_note": "Étape 3, point 1 — exemple de format pour l'exercice 即時応答, validé contre PRD.md § Pokégear でんわ. Chemin réel `content/dialogues/calls/<caller_id>.json` prescrit par le PRD. Dresseur choisi : Youngster Joey (route-30, phone_contact_id PHONE_CONTACT_JOEY, content/phone-registry.json) — enregistrable, sourcé HGSS. Décision prise en écrivant ce gabarit, à confirmer : le bloc d'exercice s'insère comme une entrée spéciale dans `pages[]` (kind: 'instant_response') plutôt qu'une structure parallèle — cohérent avec 'même format dialogue_states/state_rules/pages que les PNJ' (§ でんわ). Zéro écriture SRS, zéro pénalité, aucune stat affichée — la réaction (chaleureuse ou correction gentille) est purement narrative, jamais un Effect de progression. **Corrigé après relecture (2026-07-09)** : (1) le `name.jp` utilisait à tort la classe 'むしとりしょうねん' (Bug Catcher, en fait Don sur cette même route) au lieu de la vraie classe de Joey — Youngster, confirmée par `content/rom-trainer-roster.json` (TRAINER_YOUNGSTER_JOEY) — corrigé en 'たんパンこぞうの　ジョーイ' selon la convention de classe posée par l'ADR-0002 ('たんパンこぞうの　ケン' = Youngster Ken) ; (2) le dialogue dépassait de 1 le budget kanji CONTEXT.md § Kanji Budget (max 2 inconnus par dialogue entier, tous states/pages confondus) avec 3 kanji hors studiedSet route-30 (今/天/話) — 天気（てんき） repassé en hiragana pur pour retomber à 2 (今/話), vérifié par script contre `content/kanji-zone-assignment.json` (cumulative_end route-30 = 80).",
+
+ "caller_id": "joey_route30",
+ "name": { "jp": "たんパンこぞうの　ジョーイ", "en": "Youngster Joey" },
+ "phone_contact_id": "PHONE_CONTACT_JOEY",
+ "zone_id": "route-30",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "call" }
+ ],
+ "dialogue_states": {
+  "call": {
+   "pages": [
+    { "jp": "もしもし、ジョーイです！", "en": "Hello, this is Joey!" },
+    {
+     "kind": "instant_response",
+     "prompt": { "jp": "今日（きょう）は　あついですね。", "en": "It's hot today, isn't it.", "audio_ref": "/audio/calls/joey_route30_prompt_1.opus" },
+     "choices": [
+      {
+       "jp": "そうですね。あついです。",
+       "en": "That's right, it is hot.",
+       "quality": "natural",
+       "reaction": {
+        "pages": [
+         { "jp": "うん！　いい　てんきだね！", "en": "Yeah! Nice weather, huh!" }
+        ]
+       }
+      },
+      {
+       "jp": "さようでございます。",
+       "en": "Indeed it is so (very formal).",
+       "quality": "too_formal",
+       "reaction": {
+        "pages": [
+         { "jp": "ふふっ、そんなに　かたく　ならなくても　いいよ。", "en": "Haha, you don't have to be so stiff." },
+         { "jp": "「そうですね」で　じゅうぶんだよ。", "en": "\"That's right\" is plenty." }
+        ]
+       }
+      },
+      {
+       "jp": "すきです、火（ひ）。",
+       "en": "I like fire.",
+       "quality": "off_topic",
+       "reaction": {
+        "pages": [
+         { "jp": "え、あつさの　話（はなし）を　してたんだけど……", "en": "Uh, we were talking about the heat, though…" },
+         { "jp": "「そうですね。あついです。」って　いえば　よかったんだよ。", "en": "You could've just said \"That's right, it is hot.\"" }
+        ]
+       }
+      }
+     ]
+    },
+    { "jp": "また　バトルしようね！", "en": "Let's battle again sometime!" }
+   ]
+  }
+ }
+}

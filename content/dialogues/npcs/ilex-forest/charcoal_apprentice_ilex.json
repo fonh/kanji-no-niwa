@@ -1,0 +1,69 @@
+{
+ "_note": "Étape 4 (Lot 3) — Forêt Secte. Apprenti du Maître du Charbon : PNJ-leçon (content/lessons/ilex-forest.json, leçons #1/#3/#5) ET pivot narratif de la quête escaped_companions_errand (guidebook-adapted.md § ilex-forest — enseigne la technique d'approche des 2 fuyards). Résolution à l'approche (PRD § Leçons) : le moteur sert d'abord sa prochaine leçon si en tête ; sinon retombe sur les state_rules. **Puzzle des oiseaux** : navigation D-pad pure (aucune mécanique de capture, règle #1 ; guidebook « puzzle spatial de guidage transposable tel quel »). L'étape birds_returned est scellée par event_cleared 'birds_guided_ilex' posé par l'événement de navigation, pas par une simple relance de dialogue — sinon reparler à l'apprenti collapse-rait le puzzle. Les 2 fuyards sont des 'とり' (oiseaux d'élevage du charbonnier), jamais une espèce Pokémon nommée.",
+ "npc_id": "charcoal_apprentice_ilex",
+ "name": { "jp": "すみやきの　でし", "en": "Charcoal Apprentice" },
+ "zone_id": "ilex-forest",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [{ "type": "quest_step", "quest_id": "escaped_companions_errand", "step": "charbon_received" }],
+   "state": "reported"
+  },
+  {
+   "if": [{ "type": "event_cleared", "event_id": "birds_guided_ilex" }],
+   "state": "confirm"
+  },
+  {
+   "if": [{ "type": "quest_step", "quest_id": "escaped_companions_errand", "step": "technique_learned" }],
+   "state": "guiding"
+  },
+  {
+   "if": [{ "type": "quest_step", "quest_id": "escaped_companions_errand", "step": "briefed" }],
+   "state": "teaching"
+  },
+  { "default": true, "state": "not_briefed" }
+ ],
+ "dialogue_states": {
+  "not_briefed": {
+   "pages": [
+    { "jp": "おれは　すみやきの　でしだよ。", "en": "I'm the Charcoal Man's apprentice." },
+    { "jp": "にげた　とりを　さがしてるの？", "en": "Looking for the birds that ran off?" },
+    { "jp": "まちの　ししょうに　きいてみて。", "en": "Ask my master back in town first." }
+   ]
+  },
+  "teaching": {
+   "pages": [
+    { "jp": "とりは　おくびょうでね。", "en": "The birds are timid, you see." },
+    { "jp": "まえから　いくと　にげちゃう。", "en": "Go at them head-on and they'll bolt." },
+    { "jp": "うしろから　そっと　ちかづくんだ。", "en": "Approach gently, from behind." },
+    { "jp": "そうすれば、ここまで　つれてこられる。", "en": "Do that and you can lead them back here." }
+   ],
+   "effects": [
+    { "type": "advance_quest", "quest_id": "escaped_companions_errand", "step_id": "technique_learned" }
+   ]
+  },
+  "guiding": {
+   "pages": [
+    { "jp": "とりは　2わ　いる。", "en": "There are two birds." },
+    { "jp": "1わは　ひがし、もう1わは　その　おくだ。", "en": "One's to the east, the other deeper in." },
+    { "jp": "うしろから　そっとね。まってるよ。", "en": "Gently, from behind. I'll be waiting." }
+   ]
+  },
+  "confirm": {
+   "pages": [
+    { "jp": "2わとも　もどってきた！", "en": "Both birds are back!" },
+    { "jp": "きみは　すじが　いいね。", "en": "You've got a real knack for this." },
+    { "jp": "まちの　ししょうに　しらせよう。", "en": "Let's go tell my master in town." }
+   ],
+   "effects": [
+    { "type": "advance_quest", "quest_id": "escaped_companions_errand", "step_id": "birds_returned" }
+   ]
+  },
+  "reported": {
+   "pages": [
+    { "jp": "ししょうの　ところ、いってきた？", "en": "Been to see my master, then?" },
+    { "jp": "ほんとうに　ありがとう。たすかったよ。", "en": "Truly, thank you. You saved us." }
+   ]
+  }
+ }
+}

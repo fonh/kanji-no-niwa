@@ -1,0 +1,18 @@
+{
+ "trainer_id": "youngster_joey_route30",
+ "name": { "jp": "たんパンこぞうの　ジョーイ", "en": "Youngster Joey" },
+ "zone_id": "route-30",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "ぼくは　じょういランクなんだ！", "en": "I'm in the top ranks!" }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "つぎは　まけないぞ！", "en": "I won't lose next time!" }
+   ]
+  }
+ }
+}

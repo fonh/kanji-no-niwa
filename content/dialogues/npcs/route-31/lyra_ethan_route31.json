@@ -1,0 +1,22 @@
+{
+ "_note": "Étape 3 (extension) — remise du Vs. Recorder, sourcé npc-inventory.md § route-31.",
+ "npc_id": "lyra_ethan_route31",
+ "name": { "jp": "コハル", "en": "Lyra" },
+ "zone_id": "route-31",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "また　あったね！", "en": "We meet again!" },
+    { "jp": "これ、あげる。", "en": "Here, take this." },
+    { "jp": "べんりだよ。", "en": "It's handy." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "vs_recorder" }
+   ]
+  }
+ }
+}

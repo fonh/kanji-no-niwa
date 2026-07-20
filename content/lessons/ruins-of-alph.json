@@ -1,0 +1,30 @@
+[
+ {
+  "zone_id": "ruins-of-alph",
+  "npc_ref": "young_man_ruins_of_alph",
+  "sequence_index": 1,
+  "kanji_ids": ["満", "無", "然", "熱", "競"],
+  "grammar_id": "N4-024"
+ },
+ {
+  "zone_id": "ruins-of-alph",
+  "npc_ref": "researchers_ruins_of_alph",
+  "sequence_index": 2,
+  "kanji_ids": ["老", "臣", "良", "芸", "衣"],
+  "grammar_id": "N4-025"
+ },
+ {
+  "zone_id": "ruins-of-alph",
+  "npc_ref": "young_man_ruins_of_alph",
+  "sequence_index": 3,
+  "kanji_ids": ["達", "選", "陸", "類", "久"],
+  "grammar_id": "N4-026"
+ },
+ {
+  "zone_id": "ruins-of-alph",
+  "npc_ref": "researchers_ruins_of_alph",
+  "sequence_index": 4,
+  "kanji_ids": ["仏", "任", "価", "保", "修"],
+  "grammar_id": "N4-027"
+ }
+]

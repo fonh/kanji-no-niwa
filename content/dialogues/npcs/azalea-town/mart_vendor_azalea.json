@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 4 — PNJ-leçon (leçons #2/#4). Sourcé : comptoir du fond (npc-inventory.md § azalea-town).",
+ "npc_id": "mart_vendor_azalea",
+ "name": { "jp": "マートの　てんいん", "en": "Mart Clerk" },
+ "zone_id": "azalea-town",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "いらっしゃい！", "en": "Welcome!" },
+    { "jp": "なにか　おさがしですか？", "en": "Looking for something?" }
+   ]
+  }
+ }
+}

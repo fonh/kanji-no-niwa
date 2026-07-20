@@ -1,0 +1,10 @@
+{
+ "trainer_id": "twins_amy_mimi_azalea",
+ "name": { "jp": "ふたごの　エイミー・ミミ", "en": "Twins Amy & Mimi" },
+ "zone_id": "azalea-town",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "ふたりで　いっしょに　バトルするよ！", "en": "We battle together!" }] },
+  "post_battle": { "pages": [{ "jp": "ふたりとも　まいったね。", "en": "We both give up." }] }
+ }
+}

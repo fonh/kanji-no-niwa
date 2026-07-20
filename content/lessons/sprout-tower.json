@@ -1,0 +1,17 @@
+[
+ {
+  "_note": "Étape 3 (extension) — les 6 sages (Neal/Troy/Jin/Nico/Edmond/Chow) sont regroupés sous un seul npc_ref pour cette leçon : le guidebook les liste comme un ensemble réparti sur les 3 étages, pas comme 6 rôles narratifs distincts (npc-inventory.md § sprout-tower).",
+  "zone_id": "sprout-tower",
+  "npc_ref": "sages_sprout_tower",
+  "sequence_index": 1,
+  "kanji_ids": ["遊", "部", "酒", "陽", "面"],
+  "grammar_id": "N4-001"
+ },
+ {
+  "zone_id": "sprout-tower",
+  "npc_ref": "elder_li_sprout_tower",
+  "sequence_index": 2,
+  "kanji_ids": ["争", "伝", "候", "兆", "利"],
+  "grammar_id": "N4-002"
+ }
+]

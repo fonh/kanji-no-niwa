@@ -1,0 +1,50 @@
+{
+ "_note": "Étape 4 — PNJ-leçon (content/lessons/azalea-town.json, leçons #1/#3/#5) ET initiateur + conclusion de la quête escaped_companions_errand. **Arc complété au Lot 3 (2026-07-17)** : la remise du Charbon/objet de coupe, différée au Lot 1 (« reste dans son état d'attente, dépend de Forêt Secte »), est maintenant câblée. Son état 'waiting' pose l'étape 'briefed' (advance_quest) ; au retour des oiseaux (étape birds_returned, scellée en Forêt Secte), l'état 'charbon' remet le CS 切 (grant_item cs_kiru + unlock_text cs_kiru_azalea, modèle CS standard identique à young_man_by_sign_route36) et clôt la quête (charbon_received). Les leçons restent servies en priorité par le moteur, indépendamment de la quête (§ Leçons).",
+ "npc_id": "charcoal_man_azalea",
+ "name": { "jp": "すみやきの　ひと", "en": "Charcoal Man" },
+ "zone_id": "azalea-town",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [{ "type": "quest_step", "quest_id": "escaped_companions_errand", "step": "charbon_received" }],
+   "state": "after"
+  },
+  {
+   "if": [{ "type": "quest_step", "quest_id": "escaped_companions_errand", "step": "birds_returned" }],
+   "state": "charbon"
+  },
+  { "default": true, "state": "waiting" }
+ ],
+ "dialogue_states": {
+  "waiting": {
+   "pages": [
+    { "jp": "こまってるんだ。", "en": "I'm in trouble." },
+    { "jp": "とりが　もりに　にげちゃって。", "en": "My birds ran off into the forest." },
+    { "jp": "みつけて　くれたら、おれいするよ。", "en": "If you find them, I'll thank you properly." },
+    { "jp": "もりの　いりぐちに　でしが　いる。ききなさい。", "en": "My apprentice is at the forest entrance. Ask him." }
+   ],
+   "effects": [
+    { "type": "advance_quest", "quest_id": "escaped_companions_errand", "step_id": "briefed" }
+   ]
+  },
+  "charbon": {
+   "pages": [
+    { "jp": "おお、とりを　つれもどして　くれたのか！", "en": "Oh — you brought my birds back!" },
+    { "jp": "ほんとうに　たすかったよ。ありがとう。", "en": "You really saved me. Thank you." },
+    { "jp": "おれいに、これを　うけとって　ほしい。", "en": "As thanks, I'd like you to have this." },
+    { "jp": "もりの　木（き）も　よく　切（き）れる、りっぱな　やいばだ。", "en": "A fine blade — it cuts even forest trees clean through." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "cs_kiru" },
+    { "type": "unlock_text", "text_id": "cs_kiru_azalea" },
+    { "type": "advance_quest", "quest_id": "escaped_companions_errand", "step_id": "charbon_received" }
+   ]
+  },
+  "after": {
+   "pages": [
+    { "jp": "とりたちは　げんきだよ。", "en": "The birds are doing well." },
+    { "jp": "きみの　おかげだ。かんしゃしてる。", "en": "It's all thanks to you. I'm grateful." }
+   ]
+  }
+ }
+}

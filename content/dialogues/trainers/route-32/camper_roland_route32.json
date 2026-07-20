@@ -1,0 +1,10 @@
+{
+ "trainer_id": "camper_roland_route32",
+ "name": { "jp": "キャンパーの　ローランド", "en": "Camper Roland" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "キャンプの　あとの　バトルだ！", "en": "A battle after camping!" }] },
+  "post_battle": { "pages": [{ "jp": "テントに　もどるよ。", "en": "Back to the tent." }] }
+ }
+}

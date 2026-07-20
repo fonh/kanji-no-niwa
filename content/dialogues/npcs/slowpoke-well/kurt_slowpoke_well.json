@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 4 — sourcé : mène le joueur, se blesse au dos au pied de l'échelle, demande de continuer sans lui (npc-inventory.md § slowpoke-well). npc_id distinct de kurt_azalea (même personnage, scène différente — convention multi-zones ADR-0004).",
+ "npc_id": "kurt_slowpoke_well",
+ "name": { "jp": "クルト", "en": "Kurt" },
+ "zone_id": "slowpoke-well",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "いたた……こしが……", "en": "Ouch... my back..." },
+    { "jp": "さきに　いって　くれ。", "en": "Go on ahead without me." }
+   ]
+  }
+ }
+}

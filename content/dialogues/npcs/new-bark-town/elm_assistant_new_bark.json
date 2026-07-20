@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 3 point 2 — présent au comptoir du Mart uniquement après l'obtention de l'œuf (unlock_conditions sur l'entrée map_npcs : quest_step(mystery_egg_errand, egg_received) — rien à garder avant.",
+ "npc_id": "elm_assistant_new_bark",
+ "name": { "jp": "エルムはかせの　じょしゅ", "en": "Prof. Elm's Assistant" },
+ "zone_id": "new-bark-town",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "たまごは　ここで　あずかっているよ。", "en": "We're keeping the egg here." },
+    { "jp": "あんしんしてね。", "en": "Don't worry." }
+   ]
+  }
+ }
+}

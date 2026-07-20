@@ -1,0 +1,20 @@
+{
+ "_note": "Étape 3 point 2 — sourcé 'attend sur la route une fois l'œuf mystère livré, apprend au joueur à attraper' (npc-inventory.md § route-29) : présence gated sur quest_step(mystery_egg_errand, egg_received) (content/map/npcs.json). Le tutoriel de capture original n'a pas d'équivalent direct (règle d'adaptation globale #1, guidebook-adapted.md : les Pokémon n'apparaissent pas) — adapté en tutoriel du 図鑑 Kanjidex, mécanique de collection la plus proche en esprit.",
+ "npc_id": "lyra_ethan_route29",
+ "name": { "jp": "コハル", "en": "Lyra" },
+ "zone_id": "route-29",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "あ、みつけた！", "en": "Ah, found you!" },
+    { "jp": "かんじずかんは　もう　みた？", "en": "Have you seen the Kanji Dex yet?" },
+    { "jp": "あたらしい　かんじを　みつけたら、ずかんに　のるんだよ。", "en": "When you find a new kanji, it gets added to the dex." },
+    { "jp": "がんばってね！", "en": "Good luck!" }
+   ]
+  }
+ }
+}

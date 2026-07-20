@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 3 point 2 — PNJ-leçon (content/lessons/cherrygrove-city.json, leçon #2). Cette state 'greeting' ne se voit qu'une fois sa leçon épuisée — sinon le moteur sert la leçon (ou une ligne de blocage du pool partagé si le joueur l'aborde avant Guide Gent, l'ordre intra-zone étant strict).",
+ "npc_id": "shopkeeper_cherrygrove",
+ "name": { "jp": "みせのひと", "en": "Shopkeeper" },
+ "zone_id": "cherrygrove-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "いらっしゃい！", "en": "Welcome!" },
+    { "jp": "なにか　いりますか？", "en": "Do you need anything?" }
+   ]
+  }
+ }
+}

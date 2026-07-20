@@ -1,0 +1,22 @@
+{
+ "_note": "Étape 3 (extension) — PNJ-leçon (leçon #5). Sourcé : sous-sol du Centre Pokémon, donne le Pal Pad après le 1er badge (npc-inventory.md). Présence gated sur badge_earned(falkner) — voir content/map/npcs.json.",
+ "npc_id": "teala_violet_city",
+ "name": { "jp": "ティアラ", "en": "Teala" },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "バッジ、おめでとう！", "en": "Congratulations on the badge!" },
+    { "jp": "これを　どうぞ。", "en": "Here, take this." },
+    { "jp": "ともだちと　つながれるよ。", "en": "It'll let you connect with friends." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "pal_pad" }
+   ]
+  }
+ }
+}

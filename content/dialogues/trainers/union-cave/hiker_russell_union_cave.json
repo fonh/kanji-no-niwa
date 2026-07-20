@@ -1,0 +1,10 @@
+{
+ "trainer_id": "hiker_russell_union_cave",
+ "name": { "jp": "やまおとこの　ラッセル", "en": "Hiker Russell" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "ここは　おれの　しまだ。", "en": "This is my turf." }] },
+  "post_battle": { "pages": [{ "jp": "とおって　いいよ。", "en": "You may pass." }] }
+ }
+}

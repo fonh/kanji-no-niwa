@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 3 point 2 — cameo furtif, jamais nommé 'Silver' ici (révélé plus tard). Présent uniquement avant le départ en mission (unlock_conditions sur l'entrée map_npcs : quest_step(mystery_egg_errand, sent_by_elm, negate: true) — disparaît dès que le joueur part chez Mr. Pokémon, cohérent avec 'aperçu en train d'espionner le labo').",
+ "npc_id": "silver_spying_new_bark",
+ "name": { "jp": "あかいかみの　おとこのこ", "en": "Boy with Red Hair" },
+ "zone_id": "new-bark-town",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "……", "en": "..." },
+    { "jp": "……なんでもない。", "en": "...it's nothing." }
+   ]
+  }
+ }
+}

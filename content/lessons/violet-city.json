@@ -1,0 +1,38 @@
+[
+ {
+  "_note": "Étape 3 (extension) — Earl (leçon #1) donne accès au reste des PNJ-leçon de la zone via la side quest « ramener Earl pour commencer les cours » (npc-inventory.md) ; pas de gate mécanique supplémentaire ici, l'ordre intra-zone strict suffit.",
+  "zone_id": "violet-city",
+  "npc_ref": "earl_violet_city",
+  "sequence_index": 1,
+  "kanji_ids": ["米", "羽", "角", "谷", "馬", "麦"],
+  "grammar_id": "N5-106"
+ },
+ {
+  "zone_id": "violet-city",
+  "npc_ref": "blond_boy_violet_city",
+  "sequence_index": 2,
+  "kanji_ids": ["他", "倍", "列", "化", "命", "定"],
+  "grammar_id": "N5-107"
+ },
+ {
+  "zone_id": "violet-city",
+  "npc_ref": "glasses_boy_violet_city",
+  "sequence_index": 3,
+  "kanji_ids": ["実", "宿", "役", "投", "決", "流"],
+  "grammar_id": "N5-108"
+ },
+ {
+  "zone_id": "violet-city",
+  "npc_ref": "mart_boy_violet_city",
+  "sequence_index": 4,
+  "kanji_ids": ["深", "温", "港", "湖", "湯", "皮"],
+  "grammar_id": "N5-109"
+ },
+ {
+  "zone_id": "violet-city",
+  "npc_ref": "teala_violet_city",
+  "sequence_index": 5,
+  "kanji_ids": ["皿", "福", "落", "葉", "身", "追"],
+  "grammar_id": "N5-110"
+ }
+]

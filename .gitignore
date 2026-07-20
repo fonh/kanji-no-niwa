@@ -71,3 +71,6 @@ scripts/sources/tatoeba_jpn_eng.json
 
 # japanese learning books (PDFs, copyright) — local only
 scripts/sources/japanse books/
+
+# rendered book pages (derived from copyrighted scans) — local only, ephemeral
+/scratch/book-pages/

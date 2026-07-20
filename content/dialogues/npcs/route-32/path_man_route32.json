@@ -1,0 +1,21 @@
+{
+ "_note": "Étape 4 — PNJ-leçon (content/lessons/route-32.json, leçon #1). Sourcé : cadeau gratuit sans condition (npc-inventory.md § route-32).",
+ "npc_id": "path_man_route32",
+ "name": { "jp": "みちの　ひと", "en": "Man on the Path" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "やあ。", "en": "Hey." },
+    { "jp": "これ、いる？　ただで　あげるよ。", "en": "Want this? I'll give it to you for free." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "miracle_seed" }
+   ]
+  }
+ }
+}

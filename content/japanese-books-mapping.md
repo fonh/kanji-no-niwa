@@ -43,14 +43,19 @@ recensés). Trouvés en auditant `content/lessons-proposal.json` contre cette ca
 Correspondance CECR↔JLPT (cf. `jlpt-language-syllabus.md`) : A1=N5 · A2=N4 · B1=N3 · B2=N2 · C1=N1.
 **La série Marugoto s'arrête à B1** — c'est une limite de la collection, pas un oubli.
 
-**Blocage pratique découvert 2026-07-09** : 17 des 18 PDF Marugoto/Shin Kanzen Master sont des
-scans image sans aucune couche de texte (0 caractère extractible, testé page par page avec
-pymupdf sur les 6 nouveaux fichiers + spot-check des anciens). Aucun OCR n'est installé sur cette
-machine (`tesseract` absent). Donc même les livres « présents » ne sont pas exploitables par un
-script tant qu'ils n'ont pas été OCRisés (ou lus visuellement page à page) — c'est un blocage
-d'outillage, pas seulement un manquement d'inventaire. Décision 2026-07-09 : **différé à la passe
-contenu dédiée** (Étape 3-4), pas avant — l'assignation grammaire↔zone reste sur Hanabira
-(`grammar-zone-assignment.json`, déjà en place) pour la structuration des leçons (Point 5).
+**Blocage pratique découvert 2026-07-09, résolu 2026-07-10** : 17 des 18 PDF Marugoto/Shin
+Kanzen Master sont des scans image sans aucune couche de texte (0 caractère extractible, testé
+page par page avec pymupdf). Vrai pour un *script* cherchant à extraire du texte machine — mais
+sans objet pour la lecture directe par l'agent qui écrit le contenu : `pymupdf` (déjà une
+dépendance du projet) rend nativement n'importe quelle page en PNG sans `poppler`/`tesseract`
+(aucun des deux n'est installé, et ce n'est plus nécessaire). Testé en conditions réelles sur
+`marugoto-elementary-2-a2-katsudo` : texte, tableaux et mise en page lisibles nettement, sans
+erreur de reconnaissance (mieux qu'un OCR générique sur du kanji+furigana). Outillage :
+`scripts/build/render-book-pages.py <pdf> <page_début> <page_fin>` → PNG dans
+`scratch/book-pages/` (non commité), à lire ensuite avec l'outil `Read`. Procédure complète et
+table « quel livre pour quel besoin d'écriture » : `content/content-writing-guide.md` § 3.
+L'assignation grammaire↔zone reste sur Hanabira (`grammar-zone-assignment.json`) pour la
+structuration des leçons — ces livres servent à calibrer registre/situations, pas à la remplacer.
 
 ---
 
@@ -84,7 +89,7 @@ contenu dédiée** (Étape 3-4), pas avant — l'assignation grammaire↔zone re
 |---|---|---|---|---|
 | Bourg Geon → Ville Griotte (bootstrap Elm, premières routes) | 0–60 | N5 pur | Marugoto Starter A1 + ごいちょう ; YCRJ L1 Vol. 1 (premiers textes) | ✅ solide |
 | Routes 30-31 → Mauville, Tour Grospignon | 50–140 | N5/N4 | Marugoto Starter A1 (fin) ; YCRJ Vol. 1-2 ; JSS for Beginners (à vetter) | ✅ solide |
-| Route 32 → Forêt Secte | 110–240 | N4 | Marugoto Élémentaire 1 (A2-1) かつどう+りかい — **trouvé présent 2026-07-09** (l'inventaire précédent le disait absent) ; YCRJ Vol. 2, JSS for Beginners en textes | 🟡 présent mais non-OCR, voir Manquements |
+| Route 32 → Forêt Secte | 110–240 | N4 | Marugoto Élémentaire 1 (A2-1) かつどう+りかい — **trouvé présent 2026-07-09** (l'inventaire précédent le disait absent) ; YCRJ Vol. 2, JSS for Beginners en textes | ✅ lisible via `render-book-pages.py` (§ Manquements) |
 | Route 34 → Doublonville | 220–290 | N4 | Marugoto A2-2 かつどう+りかい | ✅ solide |
 | Route 35 → Parc National | 270–330 | N4/N3 | Marugoto A2-2 (fin) + A2/B1 (début) ; Tuttle (1ers contes : Urashima Tarō) | ✅ |
 | Routes 36-37 → Rosalia → Irisia | 310–520 | N3 | Marugoto A2/B1 puis B1 (中級1) ; Tuttle (milieu) | ✅ |
@@ -92,9 +97,9 @@ contenu dédiée** (Étape 3-4), pas avant — l'assignation grammaire↔zone re
 | Route 44 → Routes 26-27 | 555–830 | N2 | Marugoto B1-2 (dernier volume — s'épuise ici) ; Tuttle (fin : Le Fil de l'araignée, vrai Akutagawa simplifié) | 🟡 fin de collection |
 | Antre du Dragon, Antichambre | 640–870 | N2/N1 | Tuttle (registre littéraire, dernier usage) ; rien d'autre | 🟡 |
 | Ligue (plate) | 870–900 | N2/N1 *(remappé 2026-07-05)* | — (calibration de langue seulement, pas de leçons — voulu, audit 01) | ✅ par design |
-| Kanto — Vermeille → Céladia | 900–1500 | N2 *(remappé 2026-07-05)* | Shin Kanzen Master N2 読解 + 語彙 **trouvés présents 2026-07-09** ; N2 文法 (l'étalon de séquençage grammatical) toujours absent | 🟡 partiel, voir Manquements |
+| Kanto — Vermeille → Céladia | 900–1500 | N2 *(remappé 2026-07-05)* | Shin Kanzen Master N2 読解 + 語彙 **trouvés présents 2026-07-09**, lisibles via `render-book-pages.py` ; N2 文法 (l'étalon de séquençage grammatical) toujours absent | 🟡 partiel (N2 文法 manquant), voir Manquements |
 | Kanto — Cycling Road → Routes 14-15 | 1500–1670 | N2/N1 | idem (transition) | 🟡 |
-| Kanto — Grotte Diglett → Seafoam + revisites | 1670–2136 | N1 | Shin Kanzen Master N1 文法 + 読解 **trouvés présents 2026-07-09** ; relais textes par NHK, Matcha, Aozora brut *(« textes officiels Pokémon » retiré 2026-07-07, audit 05, finding 05-A3 : source écartée du N1 le 2026-07-02, `texts-progressifs.md` § Sources — fossile de rédaction)* | 🟡 présent mais non-OCR, voir Manquements |
+| Kanto — Grotte Diglett → Seafoam + revisites | 1670–2136 | N1 | Shin Kanzen Master N1 文法 + 読解 **trouvés présents 2026-07-09**, lisibles via `render-book-pages.py` ; relais textes par NHK, Matcha, Aozora brut *(« textes officiels Pokémon » retiré 2026-07-07, audit 05, finding 05-A3 : source écartée du N1 le 2026-07-02, `texts-progressifs.md` § Sources — fossile de rédaction)* | ✅ |
 | Mont Gris (plateau 2136) | 2136 | N1 | idem — textes N1 durs prévus par `texts-progressifs.md` (Aozora brut, chapitre de manga pour Red, lettre finale du mentor) | 🟡 |
 | Transversal (tout le jeu) | 0–2136 | — | Heisig RTK 1 (mnémotechniques, pipeline 7) ; syllabus JLPT comme référentiel | ✅ |
 
@@ -102,25 +107,24 @@ contenu dédiée** (Étape 3-4), pas avant — l'assignation grammaire↔zone re
 
 ## Manquements identifiés (l'essentiel du document)
 
-**🔄 Recalculé 2026-07-09** — 6 fichiers déjà présents sur disque n'avaient pas été recensés en
-juillet (Shin Kanzen Master ×4, Marugoto Élémentaire 1 ×2, + un 2e volume Starter A1 non identifié).
-Ça ferme la plupart des trous d'*inventaire* ci-dessous, mais **révèle un trou d'*outillage*** : 17
-des 18 PDF Marugoto/Shin Kanzen Master sont des scans sans texte extractible, et il n'y a pas d'OCR
-installé sur la machine — donc « présent sur disque » ≠ « exploitable par un script ou une relecture
-rapide » tant que ce blocage n'est pas levé.
+**🔄 Recalculé 2026-07-09, blocage d'outillage levé 2026-07-10** — 6 fichiers déjà présents sur
+disque n'avaient pas été recensés en juillet (Shin Kanzen Master ×4, Marugoto Élémentaire 1 ×2,
++ un 2e volume Starter A1 non identifié). Ça ferme la plupart des trous d'*inventaire*
+ci-dessous. Le trou d'*outillage* qui en découlait (17/18 PDF sont des scans sans texte
+extractible par un script) est résolu pour l'usage réel du projet : `render-book-pages.py` +
+lecture directe par l'agent (`content-writing-guide.md` § 3) — pas besoin d'OCR, « présent sur
+disque » = « exploitable » désormais.
 
-1. **🟡 N1-N2 / arc Kanto (900→2136) — 3 des 4 volumes Shin Kanzen Master demandés sont présents**
-   (N2 読解, N1 文法, N1 読解, + N2 語彙 en bonus non demandé) mais aucun n'a de texte extractible.
-   **Il manque toujours Shin Kanzen Master N2 文法** (l'étalon de séquençage grammatical pour
-   Vermeille → Céladia, 900–1500) — c'est la seule vraie case vide restante de la liste
-   d'acquisition d'origine. Pour les 3 volumes présents : utilisables seulement après OCR ou
-   lecture visuelle page à page (aucun des deux fait à ce stade — **décision 2026-07-09 : différé
-   à la passe contenu**, cf. `roadmap-pre-code.md` Étape 2 point 5).
+1. **✅ N1-N2 / arc Kanto (900→2136) — 3 des 4 volumes Shin Kanzen Master demandés sont présents**
+   (N2 読解, N1 文法, N1 読解, + N2 語彙 en bonus non demandé), lisibles page à page via
+   `render-book-pages.py`. **Il manque toujours Shin Kanzen Master N2 文法** (l'étalon de
+   séquençage grammatical pour Vermeille → Céladia, 900–1500) — c'est la seule vraie case vide
+   restante de la liste d'acquisition d'origine, un vrai manque d'inventaire (pas d'outillage).
 2. **✅ Marugoto Élémentaire 1 (A2-1) trouvé présent** (かつどう et りかい) — referme le trou
-   Route 32 → Forêt Secte signalé en juillet. Même blocage OCR que le reste.
+   Route 32 → Forêt Secte signalé en juillet. Lisible via `render-book-pages.py`.
 3. **🟡 Starter A1 : second volume probable trouvé** (`marugoto-a1_compress.pdf`, 149p, distinct du
-   fichier `#1` par le nombre de pages) mais identité かつどう/りかい non confirmée (scan sans texte,
-   pas de préface lisible sans OCR/lecture visuelle).
+   fichier `#1` par le nombre de pages) mais identité かつどう/りかい non confirmée — à trancher en
+   lisant la préface via `render-book-pages.py` au moment de l'utiliser, pas avant.
 4. **🟡 Textes secondaires : ~30 histoires candidates pour ~85-115 slots.** Les 4 recueils fournissent
    environ 30 textes N5→N2 — un excellent démarrage, pas une couverture complète. Le complément vient
    des sources déjà actées (Tadoku libre, Watanoc, NHK Easy, Matcha) — cohérent avec
@@ -136,21 +140,21 @@ rapide » tant que ce blocage n'est pas levé.
 
 La progression du joueur (audit 01) est fermée sans ces livres : kanji 0→2136, gates, grammaire
 comptée sur Hanabira, textes sourcés web. Cette bibliothèque est une **couche de qualité éditoriale**
-(situations authentiques, séquençage éprouvé, textes prêts à adapter) — ses trous restants (N2 文法,
-blocage OCR) sont des trous de *confort d'écriture*, pas des trous de *progression*. L'assignation
-grammaire↔zone du Point 5 (`grammar-zone-assignment.json`) reste sur Hanabira, indépendamment de
-l'avancement de cette bibliothèque.
+(situations authentiques, séquençage éprouvé, textes prêts à adapter) — son seul trou restant
+(N2 文法 non acquis) est un trou de *confort d'écriture*, pas un trou de *progression*.
+L'assignation grammaire↔zone du Point 5 (`grammar-zone-assignment.json`) reste sur Hanabira,
+indépendamment de l'avancement de cette bibliothèque.
 
-## Liste d'acquisition / OCR (recalculée 2026-07-09 — ce qui manque vraiment, par priorité)
+## Liste d'acquisition (recalculée 2026-07-10 — ce qui manque vraiment, par priorité)
 
 **Reste à acquérir :**
 1. Shin Kanzen Master N2 文法 — seul volume demandé encore absent (Kanto 900–1500, Vermeille → Céladia)
 
-**Présents mais bloqués par l'absence d'OCR (différé à la passe contenu, pas maintenant) :**
+**Présents, lisibles via `render-book-pages.py` (plus de blocage d'outillage, § Manquements) :**
 - Shin Kanzen Master N2 読解, N1 文法, N1 読解, N2 語彙
 - Marugoto Élémentaire 1 (A2-1) かつどう + りかい
-- Tous les autres PDF Marugoto sauf `marugoto-b1-vocabulary_compress.pdf` (seul à avoir du texte
-  extractible nativement)
+- Tous les autres PDF Marugoto (`marugoto-b1-vocabulary_compress.pdf` reste le seul à avoir aussi
+  du texte extractible nativement, donc exploitable en plus par un script si besoin)
 
 **Confort (pas bloquant) :**
 2. Tobira ou TRY! N2 — pont N3→N2, fin de Johto (Route 44 → Routes 26-27)

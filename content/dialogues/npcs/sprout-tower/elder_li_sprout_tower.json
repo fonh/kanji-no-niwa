@@ -1,0 +1,22 @@
+{
+ "_note": "Étape 3 (extension) — sourcé « Sommet (3F), bat le joueur, explique la technique » (npc-inventory.md), mais tagué leçon (pas combat) dans la colonne Type assigné — même règle que Guide Gent/Vendeuse : le rôle narratif d'origine et le rôle mécanique en jeu n'ont pas à correspondre (§ Leçons, aucun lien thématique). Pas de fichier trainers/ séparé : sa ligne 'bat le joueur' reste de la flaveur de dialogue, pas un combat modélisé.",
+ "npc_id": "elder_li_sprout_tower",
+ "name": { "jp": "ちょうろう　リー", "en": "Elder Li" },
+ "zone_id": "sprout-tower",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "よく　ここまで　のぼって　きたね。", "en": "You climbed all the way up here." },
+    { "jp": "これを　つかいなさい。", "en": "Use this." },
+    { "jp": "くらい　みちを　てらして　くれるよ。", "en": "It'll light up dark paths." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "tm70_flash" }
+   ]
+  }
+ }
+}

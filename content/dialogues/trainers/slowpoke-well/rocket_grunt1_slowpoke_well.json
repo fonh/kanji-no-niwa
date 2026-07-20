@@ -1,0 +1,10 @@
+{
+ "trainer_id": "rocket_grunt1_slowpoke_well",
+ "name": { "jp": "ロケットだんの　しもっぱ", "en": "Team Rocket Grunt" },
+ "zone_id": "slowpoke-well",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "ここは　われわれの　しごとばだ。", "en": "This is our workplace." }] },
+  "post_battle": { "pages": [{ "jp": "ちっ、じゃまを　するな。", "en": "Tch, don't get in the way." }] }
+ }
+}

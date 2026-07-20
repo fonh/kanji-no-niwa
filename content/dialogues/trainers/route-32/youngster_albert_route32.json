@@ -1,0 +1,10 @@
+{
+ "trainer_id": "youngster_albert_route32",
+ "name": { "jp": "たんパンこぞうの　アルバート", "en": "Youngster Albert" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "まけないよ！", "en": "I won't lose!" }] },
+  "post_battle": { "pages": [{ "jp": "つよいなあ。", "en": "You're strong." }] }
+ }
+}

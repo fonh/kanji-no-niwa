@@ -1,0 +1,18 @@
+{
+ "trainer_id": "psychic_mark_route36",
+ "name": { "jp": "エスパーの　マーク", "en": "Psychic Mark" },
+ "zone_id": "route-36",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "きみの　うごき、よめて　いるよ。", "en": "I can read your moves." }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "よめて、なかったな。", "en": "Guess I couldn't, after all." }
+   ]
+  }
+ }
+}

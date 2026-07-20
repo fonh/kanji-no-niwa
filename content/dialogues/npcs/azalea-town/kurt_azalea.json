@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 4 — sourcé : artisan Apricorn → Boule, dépose des Apricorns, reçoit un objet en 24h (npc-inventory.md § azalea-town). Mécanisme de fabrication (fournée 24h, item fungible fournee_<couleur>) décrit au PRD § Implémentation mais non détaillé zone par zone ici — état d'accueil seulement pour cette passe.",
+ "npc_id": "kurt_azalea",
+ "name": { "jp": "クルト", "en": "Kurt" },
+ "zone_id": "azalea-town",
+ "jlpt_level": "N4",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "アプリコットを　もってきたら、ボールを　つくるよ。", "en": "Bring me apricorns and I'll make you a Ball." },
+    { "jp": "いちにち　まってね。", "en": "It takes a day." }
+   ]
+  }
+ }
+}

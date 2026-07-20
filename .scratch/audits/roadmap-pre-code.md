@@ -5,7 +5,7 @@ Mise à jour le 2026-07-08 après l'audit 10 (charnières + grill) puis après l
 pivot stockage par Neon + Auth.js (même jour, hors périmètre des audits — voir
 `docs/adr/0005-data-storage-neon-authjs.md`).
 
-## Statut : Étape 1 et Étape 2 soldées 2026-07-09 (points 1-5 faits ; point 6 retiré, déplacé à l'Étape 4 — c'est du contenu, pas de la structure). Prochaine étape → Étape 3 (gabarits + tranche verticale).
+## Statut : Étape 1 et Étape 2 soldées 2026-07-09 (points 1-5 faits ; point 6 retiré, déplacé à l'Étape 4 — c'est du contenu, pas de la structure). **Étape 3 intégralement soldée 2026-07-10** : gabarits (1), tranche verticale Bourg Geon → Route 36 avec 1er badge + 1er CS-Kanji (2, étendue), 4 scripts de validation tous verts (3), 26 mockups d'écran (4). Prochaine étape → Étape 4 (passe contenu industrielle, 83 zones) — ou combler au choix les restes notés en cours de route (Carnet de leçons ne distingue pas verrouillé/disponible ; choix du compagnon UI non modélisé au-delà de `companion_id`/`set_companion`).
 
 Toutes les décisions de design sont prises et écrites dans le PRD. Le stockage/auth est déjà
 migré et commité (Neon, Auth.js — code en place, rien à refaire). **Ce qui suit est le chemin
@@ -91,7 +91,9 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    leaders jamais en ligne de PNJ propre ; Day Care coupé du projet), **8 vrais dresseurs
    génériques manquants trouvés et ajoutés à npc-inventory.md** (Route 2 : Rob/Doug ; Route 12 :
    Kyle/Kyler ; Route 13 : Tim & Sue ; Route 14 : Torin ; Route 15 : Billy ; Route 17 : Reese).
-   Rapport : `.scratch/audits/phone-registry-report.md`.
+   *(rapport de cette passe Serebii supprimé 2026-07-09 — remplacé en place par la passe ROM
+   ci-dessous, dont le registre corrige 3 placements erronés que ce rapport tenait pour acquis ;
+   voir la note de suppression en bas de fichier)*.
    **✅ FAIT 2026-07-09 — dresseurs génériques par route (fidélité stricte)**, en deux passes :
    une passe web (partielle, limitée par des tableaux Bulbapedia/StrategyWiki tronqués au
    fetch — 1/9 zones résolue) puis une **extraction directe de la décompilation ROM**
@@ -113,8 +115,10 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
    corrigées (Route 30↔31, 32→33, 40↔41, 45→46, 35→national-park, 7→8-kanto, 16→17), et
    **7 coquilles OCR** corrigées (Marcus→Markus, Norman→Nelson, Ben→Beckett, Amy→Day,
    Sidney→Clarke, Aaron→Alton, May→Mimi). Rapport complet :
-   `.scratch/audits/rom-trainer-roster-report.md`. Historique de la phase web (dépassée) :
-   `.scratch/audits/generic-trainers-report.md`.
+   `.scratch/audits/rom-trainer-roster-report.md`. *(Rapport de la phase web précédente
+   supprimé 2026-07-09 — il s'auto-décrivait « ⚠️ Dépassé », gardé pour l'historique de la
+   démarche uniquement, avec des écarts non résolus que cette passe ROM a tous fermés ; voir la
+   note de suppression en bas de fichier.)*
    **✅ FAIT 2026-07-09 — registre téléphonique remplacé par la donnée ROM exacte** (sur
    demande explicite) : `scripts/build/build-rom-phone-registry.py` lit
    `files/tel/pmtel_book.json` (table binaire du jeu, déjà décodée dans la décompilation) →
@@ -173,22 +177,142 @@ humaine. **Ordre conseillé** — le point 1 conditionne tout le reste :
 
 ## Étape 3 — Gabarits + tranche verticale (le test qui évite d'industrialiser dans le vide)
 
-1. **Un fichier-exemple complet par type de contenu** : une leçon (le format JSON n'existe
-   pas encore en exemple), un texte avec quiz + `answer_span`, une émission radio, un appel
-   即時応答, une session keigo — chacun validé contre le schéma du PRD.
-2. **Écrire LA tranche verticale : Bourg Geon → Ville Griotte** (zones 0-3 + l'ouverture de
-   l'étape 1) : tous les dialogues jp/en, les ~7 leçons du bootstrap Elm, les 2-4 premiers textes, la
-   quête d'accueil, Silver #1. Objectif : vérifier **en vrai** que la règle des 2 inconnus
-   par dialogue tient, que les lectures inline s'écrivent vite, et mesurer le coût réel
-   d'écriture d'une zone → extrapoler le budget des 83.
+1. **✅ FAIT 2026-07-09 — Un fichier-exemple complet par type de contenu** : leçon, texte avec
+   quiz + `answer_span`, émission radio, appel 即時応答, session keigo — chacun validé contre le
+   schéma du PRD, contenu réel là où une source existait (kanji/grammaire/dresseur/PNJ sourcés) :
+   `content/gabarits/` (`lesson-example.json` — new-bark-town leçon #4 d'Elm, 日月木気水火/N5-004 ;
+   `text-example.json` — texte obligatoire route-36, remise CS-Kanji 砕, 5 types de question + 2
+   `answer_span` ; `radio-show-example.json` — 1er épisode bibliothèque d'Oak, N5, 358 caractères ;
+   `keigo-session-example.json` — Salon du keigo Vermeille, intention complète ami/commerçant/
+   supérieur, piège 二重敬語) et `content/dialogues/calls/joey_route30.json` (即時応答, Youngster
+   Joey, chemin réel prescrit par le PRD). **5 décisions de forme comblées** (schéma prescrit en
+   prose sans JSON exact) : champs bilingues `{jp, en}` généralisés à tout texte joueur ; le
+   mini-quiz de leçon en mode Sens lit le mot-clé anglais, jamais `jp_definition` (réservé au mode
+   Sens gradué post-maîtrise) ; 即時応答 = entrée spéciale `kind: "instant_response"` dans
+   `pages[]`, pas une structure parallèle ; Salon du keigo confirmé **sans nouvelle table** (récompense
+   = `items.category: collectible` + `grant_item` idempotent, existant) ; `vocabulaire en contexte`
+   sans `answer_span` (scaffolding non prévu pour ce type). Détail : `content/gabarits/README.md`.
+2. **✅ FAIT 2026-07-09 — Écrire LA tranche verticale : Bourg Geon → Ville Griotte** (zones 0-3 :
+   new-bark-town, route-29, cherrygrove-city, route-30). **17 fichiers de contenu** (11 dialogues
+   PNJ/dresseurs jp/en, 4 fichiers `lessons/<zone>.json`, 1 quête `mystery_egg_errand` en plus de
+   `cherrygrove_welcome` réutilisée, 2 textes) + **50 kanji dotés de `lesson_examples[]` réels**
+   dans `src/data/kanji-content.json` (30 bootstrap Elm + 20 Route 30) + registre
+   `content/map/npcs.json`/`trainers.json` peuplé pour les 4 zones (positions ROM-matched
+   quand disponibles, `content/map/placements/`). Silver apparition #1 (Ville Griotte, combat
+   sight_auto) et le premier badge-free challenge de dresseurs de route (Don/Joey/Mikey,
+   Route 30) écrits. **Auto-testé** : `scripts/validate/lint-kanji-budget.py` (0 échec/27
+   fichiers) et `scripts/validate/lint-cross-refs.py` (0 écart, nouveau ce point — voir point 3).
+   **Textes : 2, pas 2-4** — seuls 2 candidats sourcés existent réellement pour ces 4 zones
+   (`content/side-content-inventory.md` A7 le panneau d'entrée, A15 le mail de Lyra/Ethan) ;
+   pas de 3ᵉ inventé pour combler le chiffre.
+   **Décision de schéma prise à l'écriture** : `lessons.unlock_conditions` (`Condition[]`,
+   optionnel) ajouté au schéma — nécessaire dès qu'un PNJ-leçon unique livre ses leçons en
+   plusieurs temps narratifs (Elm : 2 avant/3 après la course chez Mr. Pokémon, sinon rien
+   n'empêche d'enchaîner les 5 slots à la même visite) ; PRD.md § Leçons « Coupure aller-retour —
+   mécanisme » et § Schéma Base de Données, `lessons`.
+   **Trouvaille réelle (pas un bug, une conséquence du système déjà accepté)** : le pool kanji
+   de route-29 (30→50) n'est en pratique **pas** enseigné sur le chemin critique — sa seule
+   PNJ-leçon (Tuscany) est calendaire (mardi + post-badge Mauville), donc absente tant que le
+   joueur n'a pas déjà quitté la zone depuis longtemps. La croissance réelle du joueur passe par
+   Ville Griotte (10 kanji, Guide Gent + Vendeuse, toujours disponibles) puis Route 30 (20 kanji) —
+   couvert par la tolérance de chemin déjà actée au PRD (§ Leçons), documenté dans
+   `content/npc-inventory.md` § route-29 pour que la passe de contenu suivante ne la redécouvre pas.
+   **Simplifications assumées, non résolues ici** (hors scope de ce point, notées pour ne rien
+   perdre) : le choix du compagnon parmi 3 (mécanique UI, pas de champ `Condition`/`Effect` connu
+   pour l'exprimer) ; l'identité Lyra/Ethan miroir du genre du joueur (aucune donnée de
+   sélection genre/nom modélisée) ; les appels-panique d'Elm pendant le cambriolage (canal
+   `content/dialogues/mentors/elm/`, jamais scaffoldé — remplacé ici par la révélation en personne
+   de Mom au retour, qui couvre le même beat narratif).
+   **Coût mesuré** : ~2h de travail agent pour 4 zones (17 fichiers + 50 exemples de kanji +
+   2 scripts de linter + 1 décision de schéma) — largement dominé par la recherche de source
+   (placements, npc-inventory, guidebook) plutôt que par l'écriture elle-même une fois la source
+   en main ; la règle des 2 inconnus/dialogue n'a jamais forcé de réécriture a posteriori (grâce au
+   linter, pas à l'attention manuelle) ; les lectures inline s'écrivent vite une fois le réflexe pris.
+
+   **Passe de revue joueur (2026-07-09, demandée par l'utilisateur — « analyse en tant que game
+   designer, est-ce que tout marchera ? »)** : relecture beat par beat en croisant chaque ligne
+   contre le PRD plutôt que contre ma propre mémoire. **1 vraie erreur chiffrée trouvée et
+   corrigée** : `battle_length` de Silver #1 était 5 (invention sans vérification, au mauvais
+   endroit — le fichier dialogue au lieu de `map_trainers`) au lieu de **12**, la valeur exacte de
+   la table PRD § Système de Combat (courbe 12→15→18→cameo→22→24 sur ses 6 rencontres). **2 vrais
+   trous comblés** : (1) `companion_id` était référencé comme « persisté » au § Compagnon depuis
+   l'audit 10 sans exister dans aucune table — ajouté à `user_map_state` + nouvel `Effect.set_companion`
+   + `content/companions.json` (Pikachu confirmé, 2 slots `tbd_2`/`tbd_3` intentionnellement non
+   tranchés, réservés à l'Étape 5 point 5 — vérification du dump d'assets follower avant de choisir,
+   pas d'invention à l'aveugle) + le choix est maintenant une vraie entrée `kind: "companion_choice"`
+   dans `prof_elm_lab.json` ; (2) la révélation du nom « Silver » (source : guidebook, carte de
+   dresseur tombée après le combat) n'existait dans aucun fichier — ajoutée en objet trouvé
+   (`silver_card_cherrygrove`, gated sur la défaite de Silver), pas en PNJ inventé ni en `texts`
+   (une révélation d'une phrase ne justifie pas un quiz de compréhension). **1 trou identifié, non
+   corrigé — noté pour la suite** : `getLessonBook` (Carnet de leçons) n'a aucun moyen d'afficher
+   qu'une leçon « en tête de file » est en fait verrouillée par `unlock_conditions` — un joueur qui
+   checke son menu pendant la course chez Mr. Pokémon verrait « prochaine leçon : Elm » comme si
+   retourner au labo la donnait tout de suite. Conséquence directe de l'extension de schéma de ce
+   point — hors scope UI de la tranche verticale, à traiter à l'implémentation de l'écran.
+   Auto-testé de nouveau après corrections : 0 échec sur 28 fichiers (linter budget) et sur les
+   ids croisés.
 3. **Outillage de validation** (du script, pas du code produit — `scripts/` en a déjà) :
-   linter de budget kanji (2 inconnus/dialogue, lectures inline présentes), vérificateur
-   anti-deadlock (déjà spécifié), vérificateur d'ids croisés (quest/npc/zone/text refs),
-   calculateur des corpus réels par CS (re-calage des seuils N au placement).
-4. **Mockups des ~20 écrans** (papier/Excalidraw suffit) : carte, dialogue, les 9 modes de
+   **✅ FAIT 2026-07-09 (partiel) — linter de budget kanji** :
+   `scripts/validate/lint-kanji-budget.py`. Fait avant le point 2 (inversion volontaire de
+   l'ordre de cette roadmap) — les deux erreurs trouvées à la main en écrivant les gabarits du
+   point 1 (`content/gabarits/README.md` § Vérification post-écriture) auraient été attrapées
+   instantanément par un linter plutôt qu'un audit manuel. Vérifie contre
+   `content/kanji-zone-assignment.json` : (a) lecture inline présente sur chaque kanji
+   (ADR-0002) ; (b) budget dialogue ≤ 2 kanji hors studiedSet/fichier (`name` exempté du
+   compte, pas de la règle de lecture) ; (c) budget texte proportionnel ~2/100 caractères,
+   plafonné à 10 (`jp_text` + `questions[]` combinés) ; (d) `kanji.lesson_examples[]` : zéro
+   kanji hors le kanji de l'entrée. Scanne par défaut `content/dialogues/{npcs,trainers,calls}`
+   et les gabarits ; testé contre une fixture cassée (6 échecs détectés, code de sortie 1) et
+   contre les 5 fichiers réels existants (0 échec) — puis contre toute la tranche verticale du
+   point 2 (27 fichiers, 0 échec).
+   **✅ FAIT 2026-07-09 — vérificateur d'ids croisés (première version)** :
+   `scripts/validate/lint-cross-refs.py`, écrit une fois la tranche verticale disponible pour lui
+   donner de la matière réelle. Vérifie : `dialogue_ref` (npcs/trainers.json) → fichier existant ;
+   `npc_ref`/`trainer_ref` (lessons/*.json) → id déclaré dans npcs/trainers.json ; `quest_id`/
+   `step_id` référencés dans un dialogue → existent bien dans `content/quests/<quest_id>.json` ;
+   `zone_id` → existe dans `kanji-zone-assignment.json`. 0 écart sur la tranche verticale.
+   **Ne couvre pas encore** : `item_ids` (pas de table `items` peuplée à ce stade — tous les
+   `grant_item` de ce point restent non vérifiés, ex. `pokegear`/`mystery_egg`/`pokedex`),
+   `found_object_ref`/`text_id` (2 textes seulement, pas encore assez de volume pour un vrai
+   registre) — à étendre au fil de la passe contenu plutôt que d'anticiper des tables vides.
+   **✅ FAIT 2026-07-10 — tranche verticale étendue jusqu'au 1er CS-Kanji, puis les 2 derniers
+   outils, avec de vraies données à vérifier** (« on étend la passe 3 ») : chemin critique
+   prolongé Route 30 → **Route 31 → Mauville (Gym 1 Falkner complet : 2 門弟 + 師範 format
+   examen 試練・空の道) → Tour Grospignon (6 sages + Ancien Li + cameo Silver) → Route 36**
+   (remise du CS 砕, seuil N=6, le plus bas des 8) — **28 nouveaux fichiers** (dialogues,
+   4 fichiers `lessons/<zone>.json`, 2 nouveaux textes, `map/obstacles.json` créé avec 2 entrées
+   dont la 1ère roche fissurée 砕 du jeu). **2 nouveaux trous de schéma trouvés et comblés en
+   écrivant Falkner** (même famille que `companion_id` du point 2) : `Effect.grant_badge`
+   (`user_map_state.badges[]` était « écrit à la cérémonie du 印 » sans aucun `Effect` pour
+   l'écrire) et l'exemption `exam_name` du budget kanji (試練・空の道 est un titre sourcé fixe,
+   même statut que les noms de personnages). **Trouvaille de fond confirmée deux fois** : le
+   pool kanji de Route 36 (cumulative_start=330, `order` story-beats.json=18) est calé sur sa
+   visite *tardive* dans HGSS (résolution Simularbre), pas sur sa visite *précoce* réelle (juste
+   après Falkner, remise du CS) — même zone_id, deux moments narratifs, un seul pool possible
+   dans le modèle actuel ; `content/texts/route-36/cs_kudakeru.json` et
+   `scripts/validate/calc-cs-corpus.py` documentent chacun la conséquence pratique.
+   `scripts/validate/check-cs-kanji-deadlock.py` : vérifie qu'aucun donneur de CS n'est
+   lui-même derrière un obstacle exigeant un CS (0 deadlock trouvé sur 砕 ; testé contre une
+   fixture cassée injectée puis restaurée, détecté correctement). `scripts/validate/calc-cs-corpus.py` :
+   calcule le corpus réel atteignable sans CS avant 砕 — **3 textes contre une cible de 10-12**
+   pour que N=6 représente ~50-60% du corpus (règle de calibration) — écart honnête, attendu
+   avant l'Étape 4, pas un bug de l'outil. Ordre narratif réel encodé à la main
+   (`NARRATIVE_ORDER`) plutôt que lu depuis `story-beats.json` § order, justement à cause de la
+   trouvaille Route 36 ci-dessus. **4 scripts de validation au total désormais dans
+   `scripts/validate/`, tous verts sur 55 fichiers de contenu.**
+4. **✅ FAIT 2026-07-09 — Mockups des écrans** (HTML/CSS interactif au lieu de papier/Excalidraw) :
+   **26 écrans** (le compte réel derrière le « ~20 » de l'estimation — 9 modes de combat +
+   6 slots START + 4 onglets Pokégear comptés séparément) : carte, dialogue, les 9 modes de
    combat, écran-livre, session SRS, les 6 menus START, les 4 onglets Pokégear, fenêtre de
-   lecture, radio, keigo. Ça ne code rien mais ça débusque les décisions d'écran oubliées —
-   et ça fixe la typographie de l'étape 1.3.
+   lecture, émission radio, Salon du keigo. Publié en Artifact, navigation par barre latérale,
+   chaque écran annoté avec les décisions PRD qu'il matérialise. **Peuplé avec le vrai contenu
+   déjà écrit** aux points 1-2 (kanji 日/火, N5-004, `mystery_egg_errand`, le panneau Route 29,
+   l'émission d'Oak, le Salon du keigo) plutôt que du texte inventé. **2 limites assumées,
+   documentées dans l'artifact lui-même** : (a) `DotGothic16`/`BIZ UDGothic` non chargeables
+   dans un artifact auto-contenu (pas de CDN) — polices système en substitut, à corriger à
+   l'implémentation ; (b) le trou du Carnet de leçons trouvé à la revue du point 2 (aucun moyen
+   d'afficher qu'une leçon en tête de file est verrouillée par `unlock_conditions`) est rendu
+   visible sur l'écran レッスン lui-même plutôt que caché.
 
 ## Étape 4 — Passe contenu industrielle
 
@@ -204,6 +328,90 @@ CS-Kanji sont re-calculés au fil du placement réel (valeurs actuelles de calib
 砕 6 · 切 12 · 水 20 · 飛 26 · 力 29 · 渦 32 · 滝 35 · 登 60). **C'est seulement à la fin
 de l'étape 3 qu'on sait combien de temps celle-ci prendra** — c'est tout l'intérêt de la
 tranche verticale.
+
+### Lot 1 (2026-07-10) — Ruines Arcaniques → Route 32 → Union Cave → Route 33 → Écorcia
+(Gym 2 Bugsy) → Puits Ramoloss (Exécutif Proton, Silver #2)
+
+**6 zones, ~60 nouveaux fichiers** (dialogues, 3 `lessons/<zone>.json`, 2 textes, registre) +
+**70 kanji dotés de vrais `lesson_examples[]`** (route-32 20 + ruins-of-alph 20 + azalea-town 30,
+dont le pool cascadé de route-33). Continuité de l'ordre narratif réel commencé au point 2
+(pas l'ordre abstrait de la table de calibration — `NARRATIVE_ORDER` de
+`calc-cs-corpus.py` étendu en conséquence). Auto-testé en continu : 104 fichiers, 0 échec sur
+les 4 outils.
+
+**2 vraies erreurs trouvées et corrigées en écrivant ce lot** — même famille que les fautes du
+point 2 (Pokémon n'apparaissent jamais comme compagnons de combat, règle #1 du guidebook) :
+deux dresseurs (Youngster Gordon, Youngster Joey) avaient des lignes de dialogue nommant leur
+Pokémon possédé (« mon Wooper », « mon Rattata ») — réécrites en flaveur générique. Trouvées en
+relisant mon propre texte plutôt que par un outil (aucun linter ne les aurait attrapées) — un
+angle mort réel de l'outillage actuel, noté pour un futur `lint-no-pokemon-species.py` si le
+volume le justifie.
+
+**1 fausse alerte comprise et corrigée** : une vérification manuelle a d'abord signalé
+`azalea-town.json` comme couvrant 30 kanji au lieu des 15 de son propre pool — pas un bug, la
+cascade documentée à l'Étape 2 point 5 (route-33 n'a aucun PNJ-leçon, son pool de 15 kanji +
+grammaire est absorbé par les PNJ-leçon d'Écorcia). Confirmé en croisant contre
+`content/lessons-proposal.json`, noté dans le fichier pour ne pas re-déclencher l'alarme.
+
+**1 ajustement d'outillage** : `check-cs-kanji-deadlock.py` faisait échouer la build sur tout
+obstacle gaté par un CS pas encore remis nulle part — normal la plupart du temps pendant
+l'Étape 4 (la majorité des 8 CS n'ont pas encore leur zone écrite). Downgradé en `WARN`
+(non-bloquant) ; un vrai deadlock reste détecté (donneur existant mais lui-même bloqué).
+
+**Simplifications assumées** : Charcoal Man (Écorcia) reste dans son état d'attente — la
+remise du Charbon dépend de Forêt Secte, hors périmètre de ce lot. Kurt (fabrication
+Apricorn → Boule, cycle 24h) réduit à une ligne d'accueil, le mécanisme de fournée n'est pas
+détaillé ici. Le 4ᵉ point d'entrée du puzzle d'Union Cave (« aucun objet → Coupe → Union Cave →
+Force ») reste ambigu dans la source — seuls les 3 points clairs sont notés, le 4ᵉ à
+clarifier plus tard. `content/map/obstacles.json` gagne `force_rock_route32` (CS 力, pas
+encore remis).
+
+### Audit qualité pré-Lot 2 (2026-07-10) — trou trouvé et comblé
+
+Revue demandée par l'utilisateur avant de lancer le Lot 2 (« regarde si le contenu déjà
+écrit correspond aux attentes du projet »). Sourcing/fidélité/règle #1 tous **PASS**
+(cross-check complet contre `npc-inventory.md`, table Silver, format examen boss,
+mécaniques compagnon, fidélité guidebook — rien à corriger). **1 vrai trou trouvé, hors
+portée des 4 linters** : sur les 235 kanji réellement assignés à des leçons écrites
+(`content/lessons/*.json`), **115 (6 zones : cherrygrove-city, route-29, route-31,
+route-36, sprout-tower, violet-city) n'avaient aucun `lesson_examples[]`** dans
+`src/data/kanji-content.json` — la page droite du Book Screen (« usage : 1-2 phrases »,
+`CONTEXT.md` § Book Screen) était vide pour eux. `lint-kanji-budget.py` ne l'attrapait
+pas : son check ne fait que boucler sur `lesson_examples` quand la liste existe déjà,
+jamais vérifié sa présence. Comblé par
+`scripts/build/add-etape4-lot2prep-lesson-examples.py` : phrases ancrées dans le corpus
+Tatoeba déjà importé (`scripts/sources/tatoeba_jpn_eng.json`, filtré aux phrases
+n'utilisant que le kanji cible) quand une correspondance courte existait (~71/115),
+composées à la main dans le même registre que les 120 déjà écrites sinon (kanji rares
+N2 sans usage isolé naturel — 剖/寡/屯/候 — phrase-étiquette minimale, seule option
+honnête). Les PDF de `scripts/sources/japanse books/` restent bloqués par l'absence
+d'OCR (`content/japanese-books-mapping.md`) et de toute façon mal adaptés à ce champ
+précis (règle zéro-autre-kanji stricte, y compris kanji déjà étudiés — une phrase de
+manuel authentique la respecte rarement). **235/235 kanji des leçons écrites ont
+maintenant un exemple réel**, 4 linters toujours verts (104 fichiers).
+
+**Suite 2026-07-10 — la règle « zéro autre kanji » de `lesson_examples[]` elle-même abandonnée.**
+En discutant des options pour les ~5 kanji rares tombés en phrase-étiquette (工/候/寡/屯/剖,
+sans usage isolé naturel — voir ci-dessus), l'utilisateur a posé la bonne question : un kanji qui
+apparaît juste dans l'exemple d'un *autre* kanji a-t-il un effet mécanique ? Réponse trouvée dans
+le PRD lui-même (`PRD.md` § Timing des nouvelles cartes, ligne ~411) : **« un kanji est "étudié"
+dès que sa propre leçon est complétée »** — son apparition incidente ailleurs n'incrémente jamais
+`studiedSet`, ne crée aucune carte SRS, ne débloque rien. Donc la contrainte « zéro autre kanji »
+protégeait contre un risque qui n'existe pas mécaniquement ; seule la lecture inline (ADR-0002,
+déjà universelle) importe. **Règle changée** : `lint_lesson_examples` (`lint-kanji-budget.py`) ne
+vérifie plus que la lecture inline sur toute la phrase (plus le zéro-autre-kanji) ; `PRD.md`
+ligne 354 mis à jour en conséquence ; les 5 phrases-étiquettes réécrites en usages réels
+(工 → 大工「だいく」, 候 → 気候「きこう」, 寡 → 寡黙「かもく」, 屯 → 屯所「とんしょ」,
+剖 → 解剖「かいぼう」). `content/content-writing-guide.md` § 4 mis à jour : les livres
+(`render-book-pages.py`) redeviennent une source directe pour ce champ aussi, plus seulement pour
+les situations/grammaire/textes. 4 linters toujours verts après le changement (104 fichiers).
+
+**Second constat, non corrigé (dette notée)** : sur les 5 textes secondaires écrits,
+4 réutilisent exactement les 3 mêmes types de question (`idee_generale`/
+`detail_factuel`/`vocabulaire_contexte`) sans jamais `answer_span`/`inference`/
+`resolution_reference` — la panoplie du gabarit `text-example.json` est sous-exploitée.
+Pas bloquant à ce volume (5 textes), à surveiller quand le volume montera vers les
+~85-115 prévus.
 
 ## Étape 5 — Petits restes techniques épars
 
@@ -243,3 +451,26 @@ jalon de code naturel : le moteur de carte + dialogue sur la tranche verticale e
 *Hors v1, définitivement, et rien d'autre : Battle Frontier, fonction de transfert du Pal
 Park (décision F-A, synthèse — Pal Park reste un intérieur réel navigable, seule la
 fonction de transfert est coupée).*
+
+---
+
+## Nettoyage de documents dépassés (2026-07-09)
+
+Deux rapports supprimés — leurs données étaient factuellement remplacées par une passe
+ultérieure, pas juste incomplètes, et risquaient d'induire en erreur un lecteur sans le contexte
+du fil ci-dessus :
+
+- **`.scratch/audits/generic-trainers-report.md`** — la phase de recherche web sur les dresseurs
+  génériques, qui s'auto-décrivait déjà « ⚠️ Dépassé » et listait des écarts non résolus (Route
+  18, Route 19/20…) ; tous fermés par la passe d'extraction ROM (`rom-trainer-roster-report.md`,
+  toujours en place).
+- **`.scratch/audits/phone-registry-report.md`** — le registre téléphonique sourcé Serebii (74
+  contacts) ; remplacé par le registre exact extrait de la ROM (`rom-phone-registry-report.md`,
+  75 contacts), qui corrige 3 placements que ce rapport tenait pour acquis (Ethan/Lyra, Baoba,
+  Pr. Oak — détail au point 4 de l'Étape 2 ci-dessus).
+
+Les fichiers `findings-0N-*.md`/`prompt-0N-*.md` de l'audit structuré (01-10) ne sont **pas**
+concernés par ce nettoyage : ce sont les cibles citées par numéro dans `PRD.md`/`CONTEXT.md`/les
+ADR (« corrigé 2026-07-06, audit 04, finding 04-A3 ») — les supprimer casserait cette
+traçabilité, contrairement aux deux rapports ci-dessus qui n'étaient référencés que par cette
+roadmap.

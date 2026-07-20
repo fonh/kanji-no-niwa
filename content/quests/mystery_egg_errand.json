@@ -1,0 +1,17 @@
+{
+ "quest_id": "mystery_egg_errand",
+ "name": { "jp": "ふしぎな　たまごの　おつかい", "en": "The Mystery Egg Errand" },
+ "zone_ids": ["new-bark-town", "route-29", "cherrygrove-city", "route-30"],
+ "steps": [
+  {
+   "step_id": "sent_by_elm",
+   "label": { "jp": "エルムはかせに　たのまれた。Mr.ポケモンに　あいに　いく。", "en": "Prof. Elm asked me to go see Mr. Pokémon." },
+   "target_zone_id": "route-30"
+  },
+  {
+   "step_id": "egg_received",
+   "label": { "jp": "ふしぎな　たまごと　ポケモンずかんを　もらった。ワカバタウンに　かえろう。", "en": "I received a mystery egg and the Pokédex. Time to head back to New Bark Town." },
+   "target_zone_id": "new-bark-town"
+  }
+ ]
+}

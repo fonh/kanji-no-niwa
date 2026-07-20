@@ -1,0 +1,123 @@
+{
+ "_note": "Overlay grammaire de zone (Point 4 câblage, 2026-07-17). Contrat de fusion au build : pour chaque point, on charge le contenu Hanabira scripts/sources/grammar_JLPT_N5.json[source_index] (title, short/long_explanation, formation, examples[].{jp brut, en, romaji, grammar_audio}) et on y greffe, PAR exemple sélectionné (source_example_index), la couche ci-dessous : jp (furigana ADR-0002), jp_cloze (trou du mode Saisie/QCM), point_answer, distractors[] (QCM), conjugation_distractors. Rien du contenu Hanabira n'est dupliqué ici. Méthode + QC : content/grammar-wiring-spec.md ; forme : content/gabarits/grammar-point-example.json. Distracteurs de ce pilote rédigés à la main (relus) — en production, batch IA (pipeline 13-14). Règle appliquée : jamais un connecteur quasi-synonyme comme distracteur (けれども↔しかし, じゃ↔それじゃ exclus mutuellement) ; on oppose contraste vs cause/conséquence, faux sans ambiguïté. Zone 1 studiedSet≈vide → tous les kanji des exemples portent furigana (toléré, corpus figé). CHAMP point_surface : la sous-chaîne exacte de jp effacée pour produire jp_cloze — DIFFÈRE de point_answer quand le point s'écrit en kanji dans la phrase mais se tape/QCM en kana (ex. surface 一番（いちばん） vs réponse いちばん). Défaut si absent = point_answer (cas des connecteurs kana けれども/しかし/じゃ/それじゃ).",
+ "zone_id": "new-bark-town",
+ "points": [
+  {
+   "grammar_id": "N5-001",
+   "source_index": 0,
+   "title": "A が いちばん～ (A ga ichiban～)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この中（なか）で、寿司（すし）が一番（いちばん）好（す）きです。",
+     "jp_cloze": "この中（なか）で、寿司（すし）が＿＿好（す）きです。",
+     "point_answer": "いちばん",
+     "point_surface": "一番（いちばん）",
+     "distractors": ["もっと", "あまり", "ぜんぜん"],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "この町（まち）では、この公園（こうえん）が一番（いちばん）きれいです。",
+     "jp_cloze": "この町（まち）では、この公園（こうえん）が＿＿きれいです。",
+     "point_answer": "いちばん",
+     "point_surface": "一番（いちばん）",
+     "distractors": ["もっと", "すこし", "あまり"],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N5-002",
+   "source_index": 1,
+   "title": "A。けれども、～B。(A. Keredomo,~ B.)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "今日（きょう）は晴（は）れている。けれども、寒（さむ）いです。",
+     "jp_cloze": "今日（きょう）は晴（は）れている。＿＿、寒（さむ）いです。",
+     "point_answer": "けれども",
+     "distractors": ["だから", "そして", "それから"],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "その映画（えいが）は長（なが）かった。けれども、退屈（たいくつ）じゃなかった。",
+     "jp_cloze": "その映画（えいが）は長（なが）かった。＿＿、退屈（たいくつ）じゃなかった。",
+     "point_answer": "けれども",
+     "distractors": ["だから", "そして", "つまり"],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N5-003",
+   "source_index": 2,
+   "title": "A。しかし、～B。 (A. Shikashi, ~B.)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "その映画（えいが）は面白（おもしろ）かった。しかし、長（なが）すぎました。",
+     "jp_cloze": "その映画（えいが）は面白（おもしろ）かった。＿＿、長（なが）すぎました。",
+     "point_answer": "しかし",
+     "distractors": ["だから", "そして", "それから"],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "彼（かれ）は疲（つか）れていた。しかし、宿題（しゅくだい）を終（お）わらせた。",
+     "jp_cloze": "彼（かれ）は疲（つか）れていた。＿＿、宿題（しゅくだい）を終（お）わらせた。",
+     "point_answer": "しかし",
+     "distractors": ["だから", "そして", "つまり"],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N5-004",
+   "source_index": 3,
+   "title": "A。じゃ、～B。(A. Ja, ~B.)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "お腹（なか）がすいた。じゃ、レストランに行（い）こう。",
+     "jp_cloze": "お腹（なか）がすいた。＿＿、レストランに行（い）こう。",
+     "point_answer": "じゃ",
+     "distractors": ["けれども", "しかし", "ところが"],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "電車（でんしゃ）が遅（おく）れた。じゃ、バスで行（い）こう。",
+     "jp_cloze": "電車（でんしゃ）が遅（おく）れた。＿＿、バスで行（い）こう。",
+     "point_answer": "じゃ",
+     "distractors": ["けれども", "しかし", "ところが"],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N5-005",
+   "source_index": 4,
+   "title": "A。それじゃ、～B。(A. Soreja,~B.)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "今日（きょう）は休（やす）みです。それじゃ、映画（えいが）を観（み）に行（い）きましょう。",
+     "jp_cloze": "今日（きょう）は休（やす）みです。＿＿、映画（えいが）を観（み）に行（い）きましょう。",
+     "point_answer": "それじゃ",
+     "distractors": ["けれども", "しかし", "ところが"],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "電気（でんき）が切（き）れた。それじゃ、ろうそくを使（つか）いましょう。",
+     "jp_cloze": "電気（でんき）が切（き）れた。＿＿、ろうそくを使（つか）いましょう。",
+     "point_answer": "それじゃ",
+     "distractors": ["けれども", "しかし", "ところが"],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

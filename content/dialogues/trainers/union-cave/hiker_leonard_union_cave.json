@@ -1,0 +1,10 @@
+{
+ "trainer_id": "hiker_leonard_union_cave",
+ "name": { "jp": "やまおとこの　レナード", "en": "Hiker Leonard" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "くらい　どうくつは　こわくないぞ。", "en": "This dark cave doesn't scare me." }] },
+  "post_battle": { "pages": [{ "jp": "まいったよ。", "en": "You got me." }] }
+ }
+}

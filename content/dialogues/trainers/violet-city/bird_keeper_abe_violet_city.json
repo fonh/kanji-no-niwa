@@ -1,0 +1,19 @@
+{
+ "_note": "Étape 3 (extension) — 門弟 #2 de Falkner (PRD § 道場, longueur 10, vies 2).",
+ "trainer_id": "bird_keeper_abe_violet_city",
+ "name": { "jp": "とりつかいの　アベ", "en": "Bird Keeper Abe" },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "とりを　あいするなら、まず　おれに　かて。", "en": "If you love birds, beat me first." }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "まいったな。", "en": "I've been beaten." }
+   ]
+  }
+ }
+}

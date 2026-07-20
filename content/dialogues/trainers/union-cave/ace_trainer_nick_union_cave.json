@@ -1,0 +1,10 @@
+{
+ "trainer_id": "ace_trainer_nick_union_cave",
+ "name": { "jp": "エリートの　ニック", "en": "Ace Trainer Nick" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "そこの　どうくつの　おくは　ほんきの　あいてが　おおいぞ。", "en": "Deep in this cave, most opponents are serious." }] },
+  "post_battle": { "pages": [{ "jp": "みとめよう、きみは　つよい。", "en": "I admit it, you're strong." }] }
+ }
+}

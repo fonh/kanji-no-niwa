@@ -1,0 +1,18 @@
+{
+ "trainer_id": "youngster_mikey_route30",
+ "name": { "jp": "たんパンこぞうの　マイキー", "en": "Youngster Mikey" },
+ "zone_id": "route-30",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "トレーナーに　なりたてなんだ。", "en": "I just became a trainer." }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "もっと　れんしゅうする！", "en": "I'll practice more!" }
+   ]
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "trainer_id": "rocket_grunt_f_slowpoke_well",
+ "name": { "jp": "ロケットだんの　しもっぱ（じょせい）", "en": "Team Rocket Grunt (F)" },
+ "zone_id": "slowpoke-well",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "こどもは　ひっこんで　いなさい。", "en": "A kid like you should stay out of this." }] },
+  "post_battle": { "pages": [{ "jp": "こんな　はずでは……", "en": "This wasn't supposed to happen..." }] }
+ }
+}

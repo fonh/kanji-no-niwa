@@ -1,0 +1,22 @@
+{
+ "npc_id": "prof_oak_route30",
+ "name": { "jp": "オーキドはかせ", "en": "Prof. Oak" },
+ "zone_id": "route-30",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "intro" }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    { "jp": "おお、きみが　うわさの　こか。", "en": "Oh, you're the one I've heard about." },
+    { "jp": "これを　どうぞ。", "en": "Here, take this." },
+    { "jp": "ポケモンずかんだ。", "en": "It's the Pokédex." },
+    { "jp": "これからも　がんばってね。", "en": "Keep it up from here on." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "pokedex" }
+   ]
+  }
+ }
+}

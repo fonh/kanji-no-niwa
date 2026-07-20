@@ -1,0 +1,10 @@
+{
+ "trainer_id": "poke_maniac_calvin_union_cave",
+ "name": { "jp": "ポケマニアの　カルビン", "en": "Poké Maniac Calvin" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "コレクションを　まもるぞ。", "en": "I'll protect my collection." }] },
+  "post_battle": { "pages": [{ "jp": "みごとだ。", "en": "Impressive." }] }
+ }
+}

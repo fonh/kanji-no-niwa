@@ -1,0 +1,21 @@
+{
+ "_note": "Étape 4 — Silver apparition #2 (PRD.md § Silver — 6 Rencontres, kanji signature 強越勝誇傲鋼, longueur 15). Nommé 'Silver' à partir d'ici (révélé à Ville Griotte, sa carte trouvée après l'apparition #1). Un seul kanji signature utilisé (強), dans le budget des 2 max par dialogue.",
+ "trainer_id": "silver_apparition2_azalea",
+ "name": { "jp": "シルバー", "en": "Silver" },
+ "zone_id": "azalea-town",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "また　あったな。", "en": "We meet again." },
+    { "jp": "おれの　強（つよ）さを　わすれたか？", "en": "Have you forgotten how strong I am?" }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "ちっ。", "en": "Tch." },
+    { "jp": "つぎこそ、な。", "en": "Next time, then." }
+   ]
+  }
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "_note": "Étape 3 (extension) — PNJ-leçon (leçon #3). Sourcé : PNJ d'échange de compagnon, maison près du Centre Pokémon (npc-inventory.md). Le mécanisme d'échange lui-même n'est pas modélisé ici (hors scope — le compagnon est cosmétique et choisi une seule fois, § Compagnon).",
+ "npc_id": "glasses_boy_violet_city",
+ "name": { "jp": "めがねの　しょうねん", "en": "Boy with Glasses" },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "ぼくの　へやへ　ようこそ。", "en": "Welcome to my room." },
+    { "jp": "べんきょう、すきなんだ。", "en": "I like studying." }
+   ]
+  }
+ }
+}

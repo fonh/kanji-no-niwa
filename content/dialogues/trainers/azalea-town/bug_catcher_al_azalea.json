@@ -1,0 +1,11 @@
+{
+ "_note": "Étape 4 — 門弟 de Bugsy (PRD § 道場, longueur 11, vies 2). **Écart constaté** : npc-inventory.md liste 4 gardiens réels (Al, Josh, Benny, Twins) pour ce gym, pas 2 comme la convention générale du PRD § 道場 ('2 門弟 postés sur le parcours') — fidélité stricte à la donnée ROM retenue plutôt que forcer le nombre à 2.",
+ "trainer_id": "bug_catcher_al_azalea",
+ "name": { "jp": "むしとりしょうねんの　アル", "en": "Bug Catcher Al" },
+ "zone_id": "azalea-town",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "むしの　みちだ！　とおさないぞ！", "en": "This is the path of bugs! I won't let you through!" }] },
+  "post_battle": { "pages": [{ "jp": "つぎの　ひとが　まってるよ。", "en": "The next one is waiting." }] }
+ }
+}

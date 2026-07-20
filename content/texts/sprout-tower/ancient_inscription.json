@@ -1,0 +1,56 @@
+{
+ "_note": "Étape 3 (extension) — sourcé content/side-content-inventory.md A6 (« Inscription ancienne de la Tour Grospignon », cible de la fetch quest B8 « pierre rouge au sommet »). Budget kanji : cumulative_start réel du chemin critique à ce point ≈ 130-140 (voir note de cs_kudakeru.json) — texte volontairement 100% hiragana pour rester dans la marge sans dépendance fragile à un kanji précis.",
+ "text": {
+  "text_id": "ancient_inscription_sprout_tower",
+  "title": { "jp": "とうの　むかしの　もじ", "en": "The Tower's Ancient Writing" },
+  "jp_text": "このとうは　とても　ふるいです。むかし、ひとびとが　ここで　しゅぎょうを　しました。とうの　いちばん　うえに、あかい　いしが　あると　いわれています。",
+  "en_text": "This tower is very old. Long ago, people trained here. It is said that there is a red stone at the very top of the tower.",
+  "audio_ref": null,
+  "level": "N4",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "sprout-tower",
+  "npc_ref": null,
+  "found_object_ref": "inscription_sprout_tower",
+  "event_ref": null,
+  "length_chars": 68,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": { "jp": "この　ぶんは　なにについてですか。", "en": "What is this passage about?" },
+    "options": [
+     { "jp": "とうの　むかしの　はなし", "en": "A story about the tower's past" },
+     { "jp": "きょうの　てんき", "en": "Today's weather" },
+     { "jp": "たべものの　レシピ", "en": "A food recipe" },
+     { "jp": "でんしゃの　じかん", "en": "A train schedule" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": { "jp": "とうの　うえに　なにが　あると　いわれていますか。", "en": "What is said to be at the top of the tower?" },
+    "options": [
+     { "jp": "あかい　いし", "en": "A red stone" },
+     { "jp": "きんの　とけい", "en": "A gold watch" },
+     { "jp": "ふるい　ほん", "en": "An old book" },
+     { "jp": "おおきな　かがみ", "en": "A big mirror" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": { "jp": "「しゅぎょう」の　いみは　どれですか。", "en": "What does 「しゅぎょう」mean here?" },
+    "options": [
+     { "jp": "つよく　なるために　れんしゅうする　こと", "en": "Training to become stronger" },
+     { "jp": "やすむ　こと", "en": "Resting" },
+     { "jp": "りょこうする　こと", "en": "Traveling" },
+     { "jp": "たべる　こと", "en": "Eating" }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   }
+  ]
+ }
+}

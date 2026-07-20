@@ -1,0 +1,23 @@
+{
+ "_note": "Étape 3 point 2, passe de revue joueur (2026-07-09). PRD.md § Compagnon : choix parmi 3 (Pikachu + 2 autres), purement cosmétique, jamais changé. Les 2 compagnons additionnels sont explicitement hors périmètre de cette passe — roadmap-pre-code.md § Étape 5 point 5 : « Pikachu + 2 autres à déterminer... vérifier qu'une planche exploitable existe pour chacun dans le dump d'assets HGSS, sinon les produire ; trancher les 2 compagnons additionnels. » Décider ces 2 identités sans vérifier les sprites disponibles serait écrire du contenu au hasard — ce fichier fixe donc la FORME (schéma du roster, consommé par content/dialogues/npcs/new-bark-town/prof_elm_lab.json) sans figer les 2 slots restants.",
+ "companions": [
+  {
+   "companion_id": "pikachu",
+   "name": { "jp": "ピカチュウ", "en": "Pikachu" },
+   "sprite_ref": "public/sprites/followers/pikachu/",
+   "status": "confirmed"
+  },
+  {
+   "companion_id": "tbd_2",
+   "name": { "jp": "？？？", "en": "???" },
+   "sprite_ref": null,
+   "status": "à trancher — Étape 5 point 5, dépend du dump d'assets follower HGSS"
+  },
+  {
+   "companion_id": "tbd_3",
+   "name": { "jp": "？？？", "en": "???" },
+   "sprite_ref": null,
+   "status": "à trancher — Étape 5 point 5, dépend du dump d'assets follower HGSS"
+  }
+ ]
+}

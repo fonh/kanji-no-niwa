@@ -1,0 +1,28 @@
+{
+ "_note": "Étape 3 (extension) — 1er 師範, format examen 試練 (PRD § Jalons-examens, longueur 24, vies 3). Nom de l'épreuve 試練・空の道 sourcé des fiches guidebook (guidebook-adapted.md) — champ informatif ici, pas encore un champ de schéma dédié (l'écran 試練 le lit tel quel, aucune table ne l'a formalisé). Le contenu des questions est piochera dans le pool commun (getBattlePool), rien à écrire à la main ici au-delà des lignes de dialogue et de la cérémonie.",
+ "trainer_id": "falkner_violet_city",
+ "name": { "jp": "ジムリーダー　ハヤト", "en": "Falkner" },
+ "exam_name": { "jp": "試練（しれん）・空（そら）の道（みち）", "en": "Trial of the Sky Path" },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    { "jp": "ようこそ、わたしの　ジムへ。", "en": "Welcome to my Gym." },
+    { "jp": "わたしは　とりつかいの　ハヤト。", "en": "I am Falkner, the bird trainer." },
+    { "jp": "きみの　ちからを　みせて　もらおう。", "en": "Show me your strength." }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    { "jp": "みごとだ。", "en": "Splendid." },
+    { "jp": "この　バッジを　うけとって　ください。", "en": "Please accept this badge." },
+    { "jp": "ゼファーバッジだ。", "en": "The Zephyr Badge." }
+   ],
+   "effects": [
+    { "type": "grant_badge", "badge_id": "falkner" },
+    { "type": "grant_item", "item_id": "tm51_roost" }
+   ]
+  }
+ }
+}

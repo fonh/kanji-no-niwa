@@ -1,0 +1,10 @@
+{
+ "trainer_id": "poke_maniac_andrew_union_cave",
+ "name": { "jp": "ポケマニアの　アンドリュー", "en": "Poké Maniac Andrew" },
+ "zone_id": "union-cave",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "コレクションを　みせるよ。", "en": "I'll show you my collection." }] },
+  "post_battle": { "pages": [{ "jp": "つぎこそ　かつぞ。", "en": "I'll win next time." }] }
+ }
+}

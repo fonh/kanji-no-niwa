@@ -1,0 +1,30 @@
+[
+ {
+  "zone_id": "route-30",
+  "npc_ref": "man_in_house_route30",
+  "sequence_index": 1,
+  "kanji_ids": ["止", "池", "牛", "用", "考"],
+  "grammar_id": "N5-064"
+ },
+ {
+  "zone_id": "route-30",
+  "npc_ref": "man_in_house_route30",
+  "sequence_index": 2,
+  "kanji_ids": ["肉", "色", "茶", "通", "遠"],
+  "grammar_id": "N5-065"
+ },
+ {
+  "zone_id": "route-30",
+  "npc_ref": "man_in_house_route30",
+  "sequence_index": 3,
+  "kanji_ids": ["門", "顔", "風", "鳥", "世"],
+  "grammar_id": "N5-066"
+ },
+ {
+  "zone_id": "route-30",
+  "npc_ref": "man_in_house_route30",
+  "sequence_index": 4,
+  "kanji_ids": ["代", "区", "寒", "度", "業"],
+  "grammar_id": "N5-067"
+ }
+]

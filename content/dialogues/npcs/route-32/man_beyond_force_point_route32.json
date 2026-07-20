@@ -1,0 +1,31 @@
+{
+ "_note": "Étape 4 — PNJ-leçon (leçon #4). Sourcé : récompense (TM05 Roar) une fois le CS 力 débloqué (npc-inventory.md § route-32) — le CS 力 (Force) n'existe pas encore dans le contenu écrit (aucun donneur), reste donc verrouillé pour l'instant, attendu comme content/map/obstacles.json § sudowoodo_route36.",
+ "npc_id": "man_beyond_force_point_route32",
+ "name": { "jp": "いわの　むこうの　ひと", "en": "Man Beyond the Rock" },
+ "zone_id": "route-32",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [{ "type": "item_owned", "item_id": "cs_chikara" }],
+   "state": "reward"
+  },
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "この　いわ、うごかせる？", "en": "Can you move this rock?" },
+    { "jp": "ちからが　いるんだ。", "en": "It takes strength." }
+   ]
+  },
+  "reward": {
+   "pages": [
+    { "jp": "おお、うごかしたね！", "en": "Oh, you moved it!" },
+    { "jp": "これを　どうぞ。", "en": "Here, take this." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "tm05_roar" }
+   ]
+  }
+ }
+}

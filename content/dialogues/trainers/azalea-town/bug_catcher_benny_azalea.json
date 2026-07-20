@@ -1,0 +1,10 @@
+{
+ "trainer_id": "bug_catcher_benny_azalea",
+ "name": { "jp": "むしとりしょうねんの　ベニー", "en": "Bug Catcher Benny" },
+ "zone_id": "azalea-town",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": { "pages": [{ "jp": "ジムまで、あと　すこしだぞ。", "en": "Just a bit further to the Gym." }] },
+  "post_battle": { "pages": [{ "jp": "つよいな。", "en": "You're strong." }] }
+ }
+}

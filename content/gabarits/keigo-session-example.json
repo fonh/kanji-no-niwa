@@ -1,0 +1,54 @@
+{
+ "_gabarit_note": "Étape 3, point 1 — exemple de format pour le Salon du keigo, validé contre PRD.md § Obstacles-Puzzles et content/guidebook-adapted.md § Vermeille City ('même intention, trois interlocuteurs', ami/commerçant/supérieur, ~5 intentions par session, gradué N4→N2, zéro écriture SRS, récompense de collection). Une seule intention est développée intégralement ci-dessous ; une session réelle en répète ~5 sur le même gabarit. Point vérifié en écrivant ce fichier : aucune nouvelle table n'est nécessaire au § Schéma Base de Données — la récompense de collection se modélise avec l'existant (`items.category: collectible`, `Effect.grant_item` idempotent sur un item `unique`), l'identité de la session/l'objet déjà possédé suffit à marquer 'déjà fait', pas de `keigo_session_completions` à ajouter. Variante avancée (Silph Co., N2/N1, entreprise) réutilise la même structure — seul le champ `variant` et le piège 二重敬語 changent, illustré en note sur l'interlocuteur supérieur.",
+
+ "keigo_session": {
+  "session_id": "keigo_salon_vermeille_001",
+  "location": "vermeille-city-fan-club",
+  "variant": "casual",
+  "jlpt_range": "N4-N2",
+  "reward_item": { "item_id": "fan_club_pin_01", "category": "collectible", "item_kind": "unique" },
+  "intentions": [
+   {
+    "intention_id": "ask_if_read_document",
+    "situation": { "jp": "あいてに、しょるいを　読（よ）んだか　たずねてください。", "en": "Ask the person whether they've read the document." },
+    "interlocutors": [
+     {
+      "role": "ami",
+      "register": "casual",
+      "context": { "jp": "友（とも）だちに聞（き）く。", "en": "Asking a friend." },
+      "options": [
+       { "jp": "これ、読んだ？", "en": "Did you read this?" },
+       { "jp": "これを　お読みになりましたか？", "en": "Have you (respectfully) read this?" },
+       { "jp": "これ、読んでいただけますか？", "en": "Could you (please) read this for me?" }
+      ],
+      "correct_index": 0
+     },
+     {
+      "role": "commercant",
+      "register": "teineigo",
+      "context": { "jp": "お店（みせ）の人（ひと）に聞（き）く。", "en": "Asking a shopkeeper." },
+      "options": [
+       { "jp": "これ、読んだ？", "en": "Did you read this? (casual)" },
+       { "jp": "これを　読みましたか？", "en": "Did you read this?" },
+       { "jp": "これを　読んでもらっていい？", "en": "Mind reading this for me? (casual favor)" }
+      ],
+      "correct_index": 1
+     },
+     {
+      "role": "superieur",
+      "register": "keigo",
+      "context": { "jp": "会社（かいしゃ）の　上司（じょうし）に聞（き）く。", "en": "Asking your boss." },
+      "options": [
+       { "jp": "これを　読みましたか？", "en": "Did you read this? (plain polite)" },
+       { "jp": "これを　お読みになりましたか。", "en": "Have you read this? (respectful — correct)" },
+       { "jp": "これを　お読みになられましたか。", "en": "Have you read this? (double honorific — 二重敬語, incorrect)" },
+       { "jp": "これ、読んだ？", "en": "Did you read this? (casual — wrong register)" }
+      ],
+      "correct_index": 1,
+      "note": "Distracteur ciblé (二重敬語, お...になる + られる cumulés) : c'est ce piège spécifique que la variante Silph Co. (N2/N1, keigo d'entreprise) doit tester systématiquement, § Vermeille City."
+     }
+    ]
+   }
+  ]
+ }
+}

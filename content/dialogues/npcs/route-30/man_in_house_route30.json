@@ -1,0 +1,21 @@
+{
+ "_note": "Étape 3 point 2 — PNJ-leçon (content/lessons/route-30.json, 4 leçons). Cette state 'greeting' ne se voit qu'une fois ses 4 leçons épuisées.",
+ "npc_id": "man_in_house_route30",
+ "name": { "jp": "いえの　ひと", "en": "Man in the House" },
+ "zone_id": "route-30",
+ "jlpt_level": "N5",
+ "state_rules": [
+  { "default": true, "state": "greeting" }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    { "jp": "アプリコットボックスだよ。", "en": "It's an Apricorn Box." },
+    { "jp": "きの　みを　あつめられるよ。", "en": "Now you can collect tree fruits." }
+   ],
+   "effects": [
+    { "type": "grant_item", "item_id": "apricorn_box" }
+   ]
+  }
+ }
+}
