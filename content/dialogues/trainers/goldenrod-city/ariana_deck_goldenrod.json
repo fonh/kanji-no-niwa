@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 6 — Ariana à la plateforme d'observation (46q).",
+ "trainer_id": "ariana_deck_goldenrod",
+ "name": {
+  "jp": "ロケットだんかんぶ　アテナ",
+  "en": "Executive Ariana"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "アカジオの　かり、ここで　かえして　もらうわ。",
+     "en": "Time to repay you for Mahogany."
+    },
+    {
+     "jp": "てんぼうだいからの　ながめと　いっしょに、おちて　いきなさい！",
+     "en": "Enjoy the view from the deck — on your way down!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "2かいも　まけるなんて…　この　こ、なんなの…。",
+     "en": "Losing twice... what IS this child..."
+    }
+   ]
+  }
+ }
+}

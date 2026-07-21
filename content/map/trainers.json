@@ -2752,5 +2752,779 @@
     "step": "hq_fallen"
    }
   ]
+ },
+ {
+  "trainer_id": "burglar_orson_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Burglar Orson",
+  "tile_x": 28,
+  "tile_y": 44,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/burglar_orson_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   }
+  ]
+ },
+ {
+  "trainer_id": "burglar_duncan_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Burglar Duncan",
+  "tile_x": 34,
+  "tile_y": 46,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/burglar_duncan_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   }
+  ]
+ },
+ {
+  "trainer_id": "silver_apparition5_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Silver",
+  "tile_x": 30,
+  "tile_y": 51,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/goldenrod-city/silver_apparition5_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "basement_key"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt1_2f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 10,
+  "tile_y": 60,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt1_2f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt2_2f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 12,
+  "tile_y": 61,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt2_2f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt3_2f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 14,
+  "tile_y": 62,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt3_2f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_f_grunt_2f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 16,
+  "tile_y": 63,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_f_grunt_2f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt1_3f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 10,
+  "tile_y": 65,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt1_3f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt2_3f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 12,
+  "tile_y": 66,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt2_3f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt3_3f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 14,
+  "tile_y": 67,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 19,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt3_3f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "scientist_garett_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Scientist Garett",
+  "tile_x": 16,
+  "tile_y": 68,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 19,
+  "dialogue_ref": "trainers/goldenrod-city/scientist_garett_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt_4f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 12,
+  "tile_y": 70,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 19,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt_4f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "scientist_trenton_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Scientist Trenton",
+  "tile_x": 14,
+  "tile_y": 71,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 19,
+  "dialogue_ref": "trainers/goldenrod-city/scientist_trenton_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt1_b2f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 28,
+  "tile_y": 48,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt1_b2f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "basement_key"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt2_b2f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 30,
+  "tile_y": 49,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt2_b2f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "basement_key"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt3_b2f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 32,
+  "tile_y": 50,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 19,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt3_b2f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "basement_key"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_f_grunt_b2f_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 34,
+  "tile_y": 51,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 19,
+  "dialogue_ref": "trainers/goldenrod-city/rt_f_grunt_b2f_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "basement_key"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt1_wh_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 26,
+  "tile_y": 53,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt1_wh_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "basement_key"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt2_wh_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 28,
+  "tile_y": 54,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt2_wh_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "basement_key"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rt_grunt3_wh_radio_tower_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt",
+  "tile_x": 30,
+  "tile_y": 55,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/goldenrod-city/rt_grunt3_wh_radio_tower_goldenrod",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 3,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "basement_key"
+   }
+  ]
+ },
+ {
+  "trainer_id": "petrel_5f_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "The 'Director'",
+  "tile_x": 12,
+  "tile_y": 74,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 40,
+  "dialogue_ref": "trainers/goldenrod-city/petrel_5f_goldenrod",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "proton_3f_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Executive Proton",
+  "tile_x": 11,
+  "tile_y": 66,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 42,
+  "dialogue_ref": "trainers/goldenrod-city/proton_3f_goldenrod",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "director_freed"
+   }
+  ]
+ },
+ {
+  "trainer_id": "petrel_3f_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Executive Petrel",
+  "tile_x": 13,
+  "tile_y": 66,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 44,
+  "dialogue_ref": "trainers/goldenrod-city/petrel_3f_goldenrod",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "director_freed"
+   }
+  ]
+ },
+ {
+  "trainer_id": "ariana_deck_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Executive Ariana",
+  "tile_x": 12,
+  "tile_y": 78,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 46,
+  "dialogue_ref": "trainers/goldenrod-city/ariana_deck_goldenrod",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "third_floor_cleared"
+   }
+  ]
+ },
+ {
+  "trainer_id": "archer_deck_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Executive Archer",
+  "tile_x": 12,
+  "tile_y": 80,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 48,
+  "dialogue_ref": "trainers/goldenrod-city/archer_deck_goldenrod",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "ariana_deck_goldenrod"
+   }
+  ]
  }
 ]

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rt_grunt2_2f_radio_tower_goldenrod",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　スタジオは　かしきりだ！",
+     "en": "This studio is booked solid — by us!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "スタジオから　でて　いく…。",
+     "en": "Fine, I'll leave the studio..."
+    }
+   ]
+  }
+ }
+}

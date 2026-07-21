@@ -1,0 +1,69 @@
+{
+ "_note": "Étape 4 Lot 6 — événement Rocket 3/3 (prise de la Tour Radio, séquence complète sourcée guidebook § goldenrod). Déclenchée après le badge de Pryce (appel d'Elm — passe téléphone) ; les unlock_conditions des entrées portent badge_earned(pryce) en plus des étapes. Fin d'arc : Plume Arc-en-ciel (vrai Directeur) → ouvre Tour Jo (obstacle bell_tower_gate_ecruteak), la radio diffuse le Kanji Swarm d'Oak, rocket_progress event 3 écrit par la logique de jeu.",
+ "quest_id": "radio_tower_takeover",
+ "name": {
+  "jp": "でんぱジャック！　ラジオとうの　たたかい",
+  "en": "Signal Hijack! The Battle for the Radio Tower"
+ },
+ "zone_ids": [
+  "goldenrod-city"
+ ],
+ "steps": [
+  {
+   "step_id": "tower_occupied",
+   "label": {
+    "jp": "ラジオとうが　ロケットだんに　のっとられた！　いりぐちは　だんいんしか　とおれない。",
+    "en": "Team Rocket has seized the Radio Tower! Only members may enter."
+   },
+   "target_zone_id": "goldenrod-city"
+  },
+  {
+   "step_id": "disguised",
+   "label": {
+    "jp": "ちかどうの　だんいんに　ロケットだんの　せいふくを　きせられた。これで　はいれる…！",
+    "en": "A grunt in the Tunnel forced a Rocket uniform on me. Now I can get in...!"
+   },
+   "target_zone_id": "goldenrod-city"
+  },
+  {
+   "step_id": "unmasked",
+   "label": {
+    "jp": "ライバルに　へんそうを　みやぶられて、せいふくを　はがされた。もう　しょうめんとっぱしか　ない。",
+    "en": "My rival saw through the disguise and tore it off. Nothing left but the direct approach."
+   },
+   "target_zone_id": "goldenrod-city"
+  },
+  {
+   "step_id": "basement_key",
+   "label": {
+    "jp": "5かいの　「きょくちょう」は　ラムボスの　へんそうだった。ちかの　かぎを　おとして　いった。",
+    "en": "The 'Director' on 5F was Petrel in disguise. He dropped the basement key."
+   },
+   "target_zone_id": "goldenrod-city"
+  },
+  {
+   "step_id": "director_freed",
+   "label": {
+    "jp": "ちかどうの　おくで　ほんものの　きょくちょうを　たすけた。カードキーを　もらった。",
+    "en": "Rescued the real Director deep in the Tunnel. He gave me the Card Key."
+   },
+   "target_zone_id": "goldenrod-city"
+  },
+  {
+   "step_id": "third_floor_cleared",
+   "label": {
+    "jp": "3がいの　ランボーと　ラムボスを　やぶった。てんぼうだいへ！",
+    "en": "Beat Proton and Petrel on 3F. To the observation deck!"
+   },
+   "target_zone_id": "goldenrod-city"
+  },
+  {
+   "step_id": "tower_liberated",
+   "label": {
+    "jp": "アテナ、そして　アポロを　やぶった！　ラジオとうは　かいほうされた！",
+    "en": "Defeated Ariana, then Archer! The Radio Tower is free!"
+   },
+   "target_zone_id": "goldenrod-city"
+  }
+ ]
+}

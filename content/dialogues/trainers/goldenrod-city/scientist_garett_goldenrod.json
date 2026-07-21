@@ -1,0 +1,27 @@
+{
+ "trainer_id": "scientist_garett_goldenrod",
+ "name": {
+  "jp": "けんきゅういんの　ギャレット",
+  "en": "Scientist Garett"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　ぞうふくそうちは　わたしの　けっさくだ！",
+     "en": "This amplifier is my masterpiece!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "けっさくが　とまって　しまう…。",
+     "en": "My masterpiece, silenced..."
+    }
+   ]
+  }
+ }
+}

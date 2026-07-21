@@ -1,0 +1,31 @@
+{
+ "trainer_id": "burglar_duncan_goldenrod",
+ "name": {
+  "jp": "かいとうの　ダンカン",
+  "en": "Burglar Duncan"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　どさくさに　おたからを　いただくのさ。",
+     "en": "In all this confusion, treasure's there for the taking."
+    },
+    {
+     "jp": "おまえの　もちものも　いただこうか！",
+     "en": "Maybe I'll take yours too!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "なにも　とれなかった…。",
+     "en": "Couldn't take a thing..."
+    }
+   ]
+  }
+ }
+}

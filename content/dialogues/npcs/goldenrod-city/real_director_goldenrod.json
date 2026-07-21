@@ -1,0 +1,81 @@
+{
+ "_note": "Étape 4 Lot 6 — vrai Directeur : captif au Tunnel B2F (Card Key), puis remet la **Plume Arc-en-ciel** à la libération (fin d'arc, ouvre bell_tower_gate_ecruteak). Deux positions successives = une seule entrée re-localisée par états ; sur la carte, l'entrée B2F porte negate(tower_liberated) et une entrée jumelle 1F l'inverse — même personnage, deux npc_id serait plus lourd ; choix documenté.",
+ "npc_id": "real_director_goldenrod",
+ "name": {
+  "jp": "ラジオきょくの　きょくちょう",
+  "en": "Radio Director"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "radio_tower_takeover",
+     "step": "tower_liberated"
+    }
+   ],
+   "state": "freed"
+  },
+  {
+   "default": true,
+   "state": "captive"
+  }
+ ],
+ "dialogue_states": {
+  "captive": {
+   "pages": [
+    {
+     "jp": "おお、たすけに　きて　くれたのか！",
+     "en": "Oh, you've come to rescue me!"
+    },
+    {
+     "jp": "わたしが　ほんものの　きょくちょうだ。にせものが　とうに　いる！",
+     "en": "I am the real Director. An impostor sits in my tower!"
+    },
+    {
+     "jp": "この　カードキーを　もって　いきなさい。3がいの　とびらが　あく。",
+     "en": "Take this Card Key. It opens the door on the third floor."
+    },
+    {
+     "jp": "ほうそうを…　みんなの　ラジオを　とりもどして　くれ！",
+     "en": "Take back the airwaves... everyone's radio!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "card_key"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "radio_tower_takeover",
+     "step_id": "director_freed"
+    }
+   ]
+  },
+  "freed": {
+   "pages": [
+    {
+     "jp": "とうの　かいほう、きみの　おかげだ。",
+     "en": "The tower is free, thanks to you."
+    },
+    {
+     "jp": "おれいに　これを。にじいろの　はねだ。",
+     "en": "Take this as thanks — a Rainbow Wing."
+    },
+    {
+     "jp": "エンジュの　スズの　とうで、その　はねは　ほんとうの　いみを　もつだろう。",
+     "en": "At Ecruteak's Bell Tower, that feather will find its true meaning."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "rainbow_wing"
+    }
+   ]
+  }
+ }
+}

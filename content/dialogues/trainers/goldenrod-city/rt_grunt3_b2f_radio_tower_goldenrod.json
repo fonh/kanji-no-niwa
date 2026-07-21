@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rt_grunt3_b2f_radio_tower_goldenrod",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "きょくちょうは　わたさない！",
+     "en": "You'll not have the Director!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きょくちょうを　まもれ…！",
+     "en": "Someone guard the Director...!"
+    }
+   ]
+  }
+ }
+}

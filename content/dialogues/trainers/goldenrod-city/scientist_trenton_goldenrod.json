@@ -1,0 +1,27 @@
+{
+ "trainer_id": "scientist_trenton_goldenrod",
+ "name": {
+  "jp": "けんきゅういんの　トレントン",
+  "en": "Scientist Trenton"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "でんぱの　ちからで　サカキさまを　よぶのだ！",
+     "en": "With the power of radio waves, we summon Lord Giovanni!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "でんぱは　とどかなかったか…。",
+     "en": "The signal never reached him, did it..."
+    }
+   ]
+  }
+ }
+}

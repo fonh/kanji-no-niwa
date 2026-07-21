@@ -1,0 +1,31 @@
+{
+ "trainer_id": "burglar_orson_goldenrod",
+ "name": {
+  "jp": "かいとうの　オーソン",
+  "en": "Burglar Orson"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ロケットだんの　おかげで　しごとが　しやすいぜ。",
+     "en": "Team Rocket's chaos makes my job easy."
+    },
+    {
+     "jp": "みつかった　からには、しょうぶだ！",
+     "en": "But now that you've seen me — battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "しごとの　じゃまを　しやがって…。",
+     "en": "Ruining my business..."
+    }
+   ]
+  }
+ }
+}

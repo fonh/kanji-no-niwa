@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 6 — Proton au 3F (42q), aux côtés de Petrel re-déguisé (séquence confirmée passe 2 du guidebook).",
+ "trainer_id": "proton_3f_goldenrod",
+ "name": {
+  "jp": "ロケットだんかんぶ　ランボー",
+  "en": "Executive Proton"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "スロウポークの　いど　いらいだな、ガキ。",
+     "en": "Not since the Slowpoke Well, eh, brat."
+    },
+    {
+     "jp": "ロケットだんで　いちばん　おそろしいのは　この　おれだと、おしえて　やる！",
+     "en": "Let me teach you why I'm called the scariest man in Team Rocket!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "くっ…　いどの　かたきも　とれないとは…。",
+     "en": "Tch... couldn't even avenge the Well..."
+    }
+   ]
+  }
+ }
+}

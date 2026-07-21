@@ -1,0 +1,39 @@
+{
+ "_note": "Étape 4 Lot 6 — re-Petrel au 3F après la Card Key (44q). Sa défaite + Proton = third_floor_cleared.",
+ "trainer_id": "petrel_3f_goldenrod",
+ "name": {
+  "jp": "ロケットだんかんぶ　ラムボス",
+  "en": "Executive Petrel"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "また　あったな！　こんどは　にげないぞ！",
+     "en": "We meet again! No running this time!"
+    },
+    {
+     "jp": "どくガスの　じゅんびは　ばんたんだ！",
+     "en": "My poison gas is primed and ready!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ゲホゲホ…　じぶんの　ガスが…。",
+     "en": "*cough cough*... my own gas..."
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "radio_tower_takeover",
+     "step_id": "third_floor_cleared"
+    }
+   ]
+  }
+ }
+}

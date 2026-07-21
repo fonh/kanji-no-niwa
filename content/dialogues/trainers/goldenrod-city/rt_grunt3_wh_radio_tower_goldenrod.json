@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rt_grunt3_wh_radio_tower_goldenrod",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "おれで　さいごだと　おもうなよ！",
+     "en": "Don't think I'm the last of us!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "おれで　さいごだった…。",
+     "en": "I was the last of us..."
+    }
+   ]
+  }
+ }
+}

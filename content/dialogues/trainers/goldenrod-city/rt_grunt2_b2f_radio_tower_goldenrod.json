@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rt_grunt2_b2f_radio_tower_goldenrod",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "スイッチの　なぞは　とけっこない！",
+     "en": "You'll never solve the switches!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "みどりを　さいごに　おすとは…。",
+     "en": "Pressing green last, of all things..."
+    }
+   ]
+  }
+ }
+}

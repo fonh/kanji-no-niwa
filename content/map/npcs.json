@@ -1612,5 +1612,108 @@
     "step": "hq_fallen"
    }
   ]
+ },
+ {
+  "npc_id": "disguise_grunt_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Team Rocket Grunt (Recruiter)",
+  "tile_x": 32,
+  "tile_y": 41,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/disguise_grunt_goldenrod",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   }
+  ]
+ },
+ {
+  "npc_id": "silver_unmask_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Silver",
+  "tile_x": 12,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/silver_unmask_goldenrod",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "disguised"
+   }
+  ]
+ },
+ {
+  "npc_id": "real_director_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Radio Director",
+  "tile_x": 33,
+  "tile_y": 52,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/real_director_goldenrod",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "basement_key"
+   }
+  ]
+ },
+ {
+  "npc_id": "kimono_kuni_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Kimono Girl Kuni",
+  "tile_x": 31,
+  "tile_y": 50,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/kimono_kuni_goldenrod",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "pryce"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "tower_occupied"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "radio_tower_takeover",
+    "step": "director_freed"
+   }
+  ]
  }
 ]

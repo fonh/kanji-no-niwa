@@ -1,0 +1,63 @@
+{
+ "_note": "Étape 4 Lot 6 — le sbire du Tunnel qui force le déguisement (levier d'infiltration sourcé, « au lieu d'un vol pur et simple »). L'uniforme est retiré par Silver (remove_item à l'étape unmasked).",
+ "npc_id": "disguise_grunt_goldenrod",
+ "name": {
+  "jp": "ロケットだんいん（しんじん がかり）",
+  "en": "Team Rocket Grunt (Recruiter)"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "radio_tower_takeover",
+     "step": "disguised"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "give"
+  }
+ ],
+ "dialogue_states": {
+  "give": {
+   "pages": [
+    {
+     "jp": "おい、そこの　きみ！　しんじんだろ？",
+     "en": "Hey, you there! You're the new recruit, right?"
+    },
+    {
+     "jp": "せいふくも　きないで　うろつくな！　ほら、きろ！",
+     "en": "Don't wander around out of uniform! Here — put it on!"
+    },
+    {
+     "jp": "（ロケットだんの　せいふくを　きせられて　しまった…。）",
+     "en": "(You've been stuffed into a Team Rocket uniform...)"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "rocket_uniform"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "radio_tower_takeover",
+     "step_id": "disguised"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "しんじんは　きびきび　はたらけよ！",
+     "en": "Get to work, rookie, chop chop!"
+    }
+   ]
+  }
+ }
+}

@@ -35,6 +35,17 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **12 écrits** (dont 6 remises de CS : 砕・切・水・飛・力・渦)
 
 ### Journal
+- **2026-07-21 — arc Tour Radio, Doublonville revisite (Lot 6)** : l'événement Rocket 3/3
+  différé du Lot 2, complet — quête **radio_tower_takeover** en 7 étapes (occupation →
+  déguisement forcé au Tunnel → Silver démasque (scène ; il cherche Lance) → Petrel-faux-
+  Directeur 5F 40q → Basement Key → vrai Directeur au Tunnel B2F (Card Key) → **Silver #5
+  combat 22q** (début de rédemption) + Kuni (4ᵉ Kimono, scène) + Burglars Orson/Duncan →
+  3F Proton 42q + re-Petrel 44q → plateforme : Ariana 46q puis **Archer 48q** (valeur
+  gauntlet de la table PRD atteinte sur le boss final, exécutifs interpolés 40-46,
+  documenté) → dissolution des Rocket (sourcé) → **Plume Arc-en-ciel** (ouvre Tour Jo)).
+  15 grunts/scientists ROM (18-19q), 3 obstacles (entrée-déguisement, porte 3F/Card Key,
+  sous-sol/Basement Key), gating global badge_earned(pryce) + étapes. Aucune leçon (déjà
+  toutes écrites au Lot 2). 5 linters verts (349 fichiers).
 - **2026-07-21 — route-42/mt-mortar + mahogany + route-43 + lake-of-rage (Lot 5)** :
   route-42 — 3 combats, **Hiker de Mont Mortier = PNJ-leçon N2-001→003 + remise CS 力**
   (+ texte obligatoire — résout le WARN force_rock_route32 ouvert depuis le Lot 1), Eusine
@@ -127,7 +138,7 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 9 | ruins-of-alph | Johto | 4 | 20 | 2 | ✅ fait | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 10 | azalea-town | Johto | 5 | 30 | 2 | ✅ fait | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 11 | ilex-forest | Johto | 5 | 30 | 2 | ✅ fait | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 12 | goldenrod-city | Johto | 9 | 50 | 9 | ✅ 1ʳᵉ visite (arc Tour Radio différé au beat Rocket) | ✅ | ✅ | ✅ | — | ✅ |
+| 12 | goldenrod-city | Johto | 9 | 50 | 9 | ✅ COMPLET (1ʳᵉ visite Lot 2 + arc Tour Radio Lot 6) | ✅ | ✅ | ✅ | — | ✅ |
 | 13 | national-park | Johto | 7 | 40 | 4 | ✅ fait (concours mar/jeu/sam = mécanique I-6, différée à l'implémentation) | ✅ | ✅ | ✅ | — | ✅ |
 | 14 | route-36 | Johto | 5 | 25 | 2 | ✅ fait | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 15 | route-37 | Johto | 3 | 15 | 1 | ✅ fait | ✅ | ✅ | ✅ | — | ✅ |

@@ -1,0 +1,38 @@
+{
+ "_note": "Étape 4 Lot 6 — Kuni, 4ᵉ Kimono Girl rencontrée (Tunnel, post-Card Key — unlock quête director_freed). Scène/leçon, pas un combat (audit 01) ; kimono_progress.cleared_at à la lecture.",
+ "npc_id": "kimono_kuni_goldenrod",
+ "name": {
+  "jp": "まいこの　クニ",
+  "en": "Kimono Girl Kuni"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "こんな　ちかで　お会（あ）いするとは、ごえんですね。",
+     "en": "To meet in a place like this — fate, surely."
+    },
+    {
+     "jp": "あなたの　うわさは、ねえさんたちから　きいて　います。",
+     "en": "My sisters have told me about you."
+    },
+    {
+     "jp": "にじいろの　はねを　もつ　ひとに、いつか　スズの　とうで…。",
+     "en": "One day, at the Bell Tower, the bearer of the rainbow feather will..."
+    },
+    {
+     "jp": "ふふ。その　ときを　たのしみに　して　います。",
+     "en": "Heh heh. I look forward to that day."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "_note": "Étape 4 Lot 6 — Silver apparition #5 (Tunnel B2F, 22q — table PRD § Silver, V-17). Premier signe de sa rédemption (après la leçon de Lance au QG).",
+ "trainer_id": "silver_apparition5_goldenrod",
+ "name": {
+  "jp": "ライバル",
+  "en": "Silver"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "…また　あったな。",
+     "en": "...You again."
+    },
+    {
+     "jp": "ワタルは　みつからない。かわりに　おまえで　ためす。",
+     "en": "I can't find Lance. So I'll test myself on you instead."
+    },
+    {
+     "jp": "まえの　おれとは　ちがう。なかまを…　しんじる　ことに　した。",
+     "en": "I'm not who I was. I've decided to... trust my companions."
+    },
+    {
+     "jp": "いくぞ！",
+     "en": "Here I come!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…まけた。だが、ふしぎと　くやしくない。",
+     "en": "...I lost. And yet, strangely, I'm not bitter."
+    },
+    {
+     "jp": "つよさの　いみが、すこし　わかって　きた　気（き）が　する。",
+     "en": "I think I'm starting to understand what strength means."
+    },
+    {
+     "jp": "ロケットだんを　たのむ。おれは　おれの　みちを　いく。",
+     "en": "Deal with Team Rocket. I'll walk my own road."
+    }
+   ]
+  }
+ }
+}

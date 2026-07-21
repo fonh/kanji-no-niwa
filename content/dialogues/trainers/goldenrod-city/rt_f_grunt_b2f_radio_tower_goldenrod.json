@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rt_f_grunt_b2f_radio_tower_goldenrod",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ここまで　きた　ガキは　はじめてよ！",
+     "en": "No brat's ever made it this far!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ガキに　まけた…。",
+     "en": "Beaten by a brat..."
+    }
+   ]
+  }
+ }
+}

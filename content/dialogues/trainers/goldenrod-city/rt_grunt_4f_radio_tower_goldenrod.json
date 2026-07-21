@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rt_grunt_4f_radio_tower_goldenrod",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "4かいまで　くるとは　しつこい　やつ！",
+     "en": "Up to the fourth floor? Persistent pest!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "しつこさでは　まけた…。",
+     "en": "Out-persisted..."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rt_grunt2_3f_radio_tower_goldenrod",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ここから　さきは　カードキーが　ないと　むりだぜ。",
+     "en": "You'll get nowhere past here without the Card Key."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まさか　カードキーを…！？",
+     "en": "Wait — you have the Card Key!?"
+    }
+   ]
+  }
+ }
+}

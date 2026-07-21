@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rt_grunt1_wh_radio_tower_goldenrod",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "そうこの　みはりだ！　とおさん！",
+     "en": "Warehouse guard! None shall pass!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "とおしちまった…。",
+     "en": "They passed..."
+    }
+   ]
+  }
+ }
+}

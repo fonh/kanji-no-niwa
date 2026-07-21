@@ -1,0 +1,47 @@
+{
+ "_note": "Étape 4 Lot 6 — Petrel déguisé en Directeur (5F, 40q — le gauntlet culmine à 48 sur Archer, calibration interpolée documentée roadmap Lot 6). Lâche la clé du sous-sol.",
+ "trainer_id": "petrel_5f_goldenrod",
+ "name": {
+  "jp": "ラジオきょくちょう？",
+  "en": "The 'Director'"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "わたしが　きょくちょうです。なにか　ごようかな？",
+     "en": "I am the Director. May I help you?"
+    },
+    {
+     "jp": "…ん？　その　め。ばれてるな？",
+     "en": "...Hm? That look. You're onto me, aren't you."
+    },
+    {
+     "jp": "しかたない！　へんそうの　めいじん、ラムボスさまの　おでましだ！",
+     "en": "Very well! Behold Petrel, master of disguise!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "にげるが　かちって　いうだろ！　ほら、かぎを　やるから　みのがせ！",
+     "en": "They say he who runs away wins! Here, take this key and let me go!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "basement_key"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "radio_tower_takeover",
+     "step_id": "basement_key"
+    }
+   ]
+  }
+ }
+}

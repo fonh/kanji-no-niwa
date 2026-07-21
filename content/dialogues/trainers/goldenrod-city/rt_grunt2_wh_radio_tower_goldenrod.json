@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rt_grunt2_wh_radio_tower_goldenrod",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ぬすんだ　きざいで　いっぱいだぜ、ここは！",
+     "en": "This place is packed with stolen gear!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きざいを　おいて　にげよう…。",
+     "en": "Forget the gear, run..."
+    }
+   ]
+  }
+ }
+}

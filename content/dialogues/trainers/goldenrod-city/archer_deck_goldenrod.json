@@ -1,0 +1,51 @@
+{
+ "_note": "Étape 4 Lot 6 — Archer, combat final de l'arc (48q — la valeur « Gauntlet Tour Radio : 48 » de la table PRD, atteinte sur le boss final ; les exécutifs précédents 40/42/44/46, interpolation documentée). Sa défaite = tower_liberated + dissolution des Rocket (sourcé).",
+ "trainer_id": "archer_deck_goldenrod",
+ "name": {
+  "jp": "ロケットだんかんぶ　アポロ",
+  "en": "Executive Archer"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "わたしは　アポロ。ロケットだんを　あずかる　もの。",
+     "en": "I am Archer, steward of Team Rocket."
+    },
+    {
+     "jp": "この　ほうそうは　サカキさまへの　よびかけ。じゃまは　させない。",
+     "en": "This broadcast is our call to Lord Giovanni. You will not interfere."
+    },
+    {
+     "jp": "ロケットだんの　みらいの　ために、きえて　もらう！",
+     "en": "For the future of Team Rocket — begone!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "サカキさま…　やはり　もどっては　こられないのですね…。",
+     "en": "Lord Giovanni... so you truly are not coming back..."
+    },
+    {
+     "jp": "ロケットだんは…　ここで　かいさんだ。",
+     "en": "Team Rocket... disbands here and now."
+    },
+    {
+     "jp": "わたしたちの　ゆめは、でんぱと　ともに　きえた。",
+     "en": "Our dream fades with the dying signal."
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "radio_tower_takeover",
+     "step_id": "tower_liberated"
+    }
+   ]
+  }
+ }
+}
