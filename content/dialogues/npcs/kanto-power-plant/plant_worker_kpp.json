@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 12 — ouvrier (ambiant, troc simple = saveur ; l'échange réel est une mécanique d'implémentation mineure).",
+ "npc_id": "plant_worker_kpp",
+ "name": {
+  "jp": "はつでんしょの　さぎょういん",
+  "en": "Power Plant Worker"
+ },
+ "zone_id": "kanto-power-plant",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ひまだから　ぶつぶつこうかんでも　しようぜ。",
+     "en": "Nothing to do — fancy a little barter?"
+    },
+    {
+     "jp": "その　へんの　いしと、うちの　ねじ、とりかえっこだ！",
+     "en": "One of your stones for one of our bolts — deal!"
+    }
+   ]
+  }
+ }
+}

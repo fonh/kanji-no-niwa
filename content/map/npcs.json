@@ -2218,5 +2218,64 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/saffron-city/steven_silph_saffron"
+ },
+ {
+  "npc_id": "center_boy_r910",
+  "zone_id": "route-9-10-rocktunnel",
+  "name": "Boy at the Pokémon Center",
+  "tile_x": 14,
+  "tile_y": 20,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-9-10-rocktunnel.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-9-10-rocktunnel/center_boy_r910",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "radio_director_lavender",
+  "zone_id": "lavender-town",
+  "name": "Radio Station Director",
+  "tile_x": 8,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lavender-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/lavender-town/radio_director_lavender",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "plant_director_kpp",
+  "zone_id": "kanto-power-plant",
+  "name": "Power Plant Director",
+  "tile_x": 8,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/kanto-power-plant.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/kanto-power-plant/plant_director_kpp",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "plant_guard_kpp",
+  "zone_id": "kanto-power-plant",
+  "name": "Power Plant Guard",
+  "tile_x": 6,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/kanto-power-plant.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/kanto-power-plant/plant_guard_kpp",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "plant_worker_kpp",
+  "zone_id": "kanto-power-plant",
+  "name": "Power Plant Worker",
+  "tile_x": 10,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/kanto-power-plant.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/kanto-power-plant/plant_worker_kpp"
  }
 ]

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "camper_sid_r910",
+ "name": {
+  "jp": "キャンプボーイの　シド",
+  "en": "Camper Sid"
+ },
+ "zone_id": "route-9-10-rocktunnel",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "いわやまの　キャンプは　カントーいち　ハードだぜ！",
+     "en": "Camping on this rocky mountain is Kanto's toughest!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ハードさで　まけた…。",
+     "en": "Out-toughed..."
+    }
+   ]
+  }
+ }
+}

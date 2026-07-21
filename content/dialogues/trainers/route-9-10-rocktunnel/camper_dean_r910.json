@@ -1,0 +1,27 @@
+{
+ "trainer_id": "camper_dean_r910",
+ "name": {
+  "jp": "キャンプボーイの　ディーン",
+  "en": "Camper Dean"
+ },
+ "zone_id": "route-9-10-rocktunnel",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "トンネルごえの　まえに、うでを　みせて　みろ！",
+     "en": "Show me your skill before you brave the tunnel!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "その　うでなら　だいじょうぶだ。",
+     "en": "With skill like that, you'll be fine."
+    }
+   ]
+  }
+ }
+}

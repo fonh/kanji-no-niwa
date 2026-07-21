@@ -1,0 +1,27 @@
+{
+ "trainer_id": "picnicker_edna_r910",
+ "name": {
+  "jp": "ピクニックガールの　エドナ",
+  "en": "Picnicker Edna"
+ },
+ "zone_id": "route-9-10-rocktunnel",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ハイジに　かったの？　なら　わたしも！",
+     "en": "You beat Heidi? Then me next!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ふたりとも　まけちゃった。",
+     "en": "Both of us, beaten."
+    }
+   ]
+  }
+ }
+}

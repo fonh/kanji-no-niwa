@@ -1,0 +1,27 @@
+{
+ "trainer_id": "hiker_eoin_r910",
+ "name": {
+  "jp": "やまおとこの　オーウェン",
+  "en": "Hiker Eoin"
+ },
+ "zone_id": "route-9-10-rocktunnel",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "いわトンネルの　まえで　ちからだめしだ！",
+     "en": "A strength test before Rock Tunnel!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "トンネルは　まっくらだぞ。きを　つけな。",
+     "en": "The tunnel's pitch dark. Watch yourself."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "hiker_clarke_r910",
+ "name": {
+  "jp": "やまおとこの　クラーク",
+  "en": "Hiker Clarke"
+ },
+ "zone_id": "route-9-10-rocktunnel",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　いわ、ぜんぶ　おれの　ともだちだ！",
+     "en": "Every one of these rocks is my friend!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ともだちの　まえで　まけた…。",
+     "en": "Beaten in front of my friends..."
+    }
+   ]
+  }
+ }
+}

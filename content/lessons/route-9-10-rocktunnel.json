@@ -1,0 +1,54 @@
+[
+ {
+  "zone_id": "route-9-10-rocktunnel",
+  "npc_ref": "center_boy_r910",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "炎",
+   "烈",
+   "煩",
+   "爽",
+   "牲"
+  ],
+  "grammar_id": "N1-071"
+ },
+ {
+  "zone_id": "route-9-10-rocktunnel",
+  "npc_ref": "center_boy_r910",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "狂",
+   "璃",
+   "瓶",
+   "甚",
+   "甲"
+  ],
+  "grammar_id": "N1-072"
+ },
+ {
+  "zone_id": "route-9-10-rocktunnel",
+  "npc_ref": "center_boy_r910",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "畝",
+   "痘",
+   "痢",
+   "監",
+   "盲"
+  ],
+  "grammar_id": "N1-073"
+ },
+ {
+  "zone_id": "route-9-10-rocktunnel",
+  "npc_ref": "center_boy_r910",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "盾",
+   "眉",
+   "眺",
+   "睦",
+   "瞬"
+  ],
+  "grammar_id": "N1-074"
+ }
+]

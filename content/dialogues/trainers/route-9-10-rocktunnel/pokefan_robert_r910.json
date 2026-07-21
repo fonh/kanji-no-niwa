@@ -1,0 +1,31 @@
+{
+ "trainer_id": "pokefan_robert_r910",
+ "name": {
+  "jp": "だいすきクラブの　ロバート",
+  "en": "Pokéfan Robert"
+ },
+ "zone_id": "route-9-10-rocktunnel",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "はつでんしょの　けんがくかい？　いまは　むりだよ。",
+     "en": "A Power Plant tour? Not possible right now."
+    },
+    {
+     "jp": "その　かわり、しょうぶなら　できる！",
+     "en": "But a battle? That we can do!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "はやく　でんきが　もどると　いいな。",
+     "en": "I hope the power comes back soon."
+    }
+   ]
+  }
+ }
+}

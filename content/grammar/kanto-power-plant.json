@@ -1,0 +1,44 @@
+{
+ "_note": "Overlay grammaire — Centrale de Kanto, 2 points N1-080/081. のことだから déjà vu à Ebènelle (N2-028) — variantes d'exemple différentes, pas de doublon de tirage.",
+ "zone_id": "kanto-power-plant",
+ "points": [
+  {
+   "grammar_id": "N1-080",
+   "source_index": 79,
+   "title": "Noun のごとき Noun (A no gotoki B)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は神（かみ）のごとき存在（そんざい）だ。",
+     "point_answer": "のごとき",
+     "jp_cloze": "彼（かれ）は神（かみ）＿＿存在（そんざい）だ。",
+     "distractors": [
+      "のままの",
+      "のせいの",
+      "のむけの"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-081",
+   "source_index": 80,
+   "title": "Noun のことだから (〜no koto dakara)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）のことだから、きっと大丈夫（だいじょうぶ）だと思（おも）う。",
+     "point_answer": "のことだから",
+     "jp_cloze": "彼（かれ）＿＿、きっと大丈夫（だいじょうぶ）だと思（おも）う。",
+     "distractors": [
+      "のくせだから",
+      "のおかげだから",
+      "のためだから"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

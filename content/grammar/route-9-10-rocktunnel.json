@@ -1,0 +1,82 @@
+{
+ "_note": "Overlay grammaire — Routes 9-10/Rock Tunnel, 4 points N1-071→074 (famille ぬく : jamais deux membres croisés).",
+ "zone_id": "route-9-10-rocktunnel",
+ "points": [
+  {
+   "grammar_id": "N1-071",
+   "source_index": 70,
+   "title": "Noun に限る (~ni kagiru)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "寒（さむ）い冬（ふゆ）には温（あたた）かいお茶（ちゃ）に限（かぎ）る。",
+     "point_answer": "に限（かぎ）る",
+     "jp_cloze": "寒（さむ）い冬（ふゆ）には温（あたた）かいお茶（ちゃ）＿＿。",
+     "distractors": [
+      "に過（す）ぎない",
+      "に決（き）まる",
+      "にとどまる"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-072",
+   "source_index": 71,
+   "title": "Noun ぬいた Noun (A nuita B)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "私（わたし）は料理（りょうり）から塩（しお）をぬいた。",
+     "point_answer": "をぬいた",
+     "jp_cloze": "私（わたし）は料理（りょうり）から塩（しお）＿＿。",
+     "distractors": [
+      "をこめた",
+      "をかけた",
+      "をとおした"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-073",
+   "source_index": 72,
+   "title": "Noun + ぬいて（~nuite)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "今日（きょう）の仕事（しごと）は昼休（ひるやす）みをぬいて忙（いそが）しかった。",
+     "point_answer": "をぬいて",
+     "jp_cloze": "今日（きょう）の仕事（しごと）は昼休（ひるやす）み＿＿忙（いそが）しかった。",
+     "distractors": [
+      "をこめて",
+      "をとおして",
+      "をひかえて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-074",
+   "source_index": 73,
+   "title": " ～ぬく (~nuku)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は一日中（いちにちじゅう）本（ほん）を読（よ）みぬく。",
+     "point_answer": "ぬく",
+     "jp_cloze": "彼（かれ）は一日中（いちにちじゅう）本（ほん）を読（よ）み＿＿。",
+     "distractors": [
+      "こむ",
+      "だす",
+      "かける"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

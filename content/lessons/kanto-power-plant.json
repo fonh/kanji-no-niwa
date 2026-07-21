@@ -1,0 +1,28 @@
+[
+ {
+  "zone_id": "kanto-power-plant",
+  "npc_ref": "plant_director_kpp",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "継",
+   "維",
+   "網",
+   "緊",
+   "緩"
+  ],
+  "grammar_id": "N1-080"
+ },
+ {
+  "zone_id": "kanto-power-plant",
+  "npc_ref": "plant_guard_kpp",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "緯",
+   "縁",
+   "縛",
+   "縫",
+   "繊"
+  ],
+  "grammar_id": "N1-081"
+ }
+]

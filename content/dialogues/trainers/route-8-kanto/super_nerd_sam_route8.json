@@ -1,0 +1,31 @@
+{
+ "trainer_id": "super_nerd_sam_route8",
+ "name": {
+  "jp": "りかけいの　おとこの　サム",
+  "en": "Super Nerd Sam"
+ },
+ "zone_id": "route-8-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ていでんの　げんいんを　ちょうさちゅうだ。",
+     "en": "I'm investigating the blackout."
+    },
+    {
+     "jp": "データしゅうしゅうに　きょうりょくしろ！",
+     "en": "Contribute to my data!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きちょうな　サンプルだった。",
+     "en": "A precious sample indeed."
+    }
+   ]
+  }
+ }
+}

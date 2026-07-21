@@ -1,0 +1,27 @@
+{
+ "trainer_id": "biker_harris_route8",
+ "name": {
+  "jp": "ぼうそうぞくの　ハリス",
+  "en": "Biker Harris"
+ },
+ "zone_id": "route-8-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　みちは　おれたちの　コースだぜ！",
+     "en": "This road is our turf!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "コースを　ゆずるよ。",
+     "en": "The road's yours."
+    }
+   ]
+  }
+ }
+}

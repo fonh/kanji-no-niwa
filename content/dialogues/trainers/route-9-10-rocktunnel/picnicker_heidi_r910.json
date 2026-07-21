@@ -1,0 +1,27 @@
+{
+ "trainer_id": "picnicker_heidi_r910",
+ "name": {
+  "jp": "ピクニックガールの　ハイジ",
+  "en": "Picnicker Heidi"
+ },
+ "zone_id": "route-9-10-rocktunnel",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　いわばで　ピクニックするのが　つうなの。",
+     "en": "Picnicking on these rocks is the connoisseur's choice."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "つうの　まけかたも　あるのよ。",
+     "en": "There's a connoisseur's way to lose, too."
+    }
+   ]
+  }
+ }
+}

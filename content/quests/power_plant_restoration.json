@@ -1,0 +1,39 @@
+{
+ "_note": "Étape 4 Lot 12 — arc du courant de Kanto (finding 04-B1) : pièce mécanique volée à la Centrale → retrouvée à Azuria (sbire Rocket en fuite au gym, écrit à la passe Azuria) → rendue au Directeur (CT) → la radio de Kanto revit → carte EXPN chez le directeur de la station de Lavanville (→ réveil du Ronflex par la radio, passe Céladopole/Route 11).",
+ "quest_id": "power_plant_restoration",
+ "name": {
+  "jp": "はつでんしょの　ぬすまれた　ぶひん",
+  "en": "The Power Plant's Stolen Part"
+ },
+ "zone_ids": [
+  "kanto-power-plant",
+  "cerulean-city",
+  "lavender-town"
+ ],
+ "steps": [
+  {
+   "step_id": "part_missing",
+   "label": {
+    "jp": "はつでんしょの　ぶひんが　ぬすまれた！　はんにんは　アズリアの　ほうへ　にげたらしい。",
+    "en": "The Power Plant's machine part was stolen! The thief fled toward Cerulean."
+   },
+   "target_zone_id": "cerulean-city"
+  },
+  {
+   "step_id": "part_recovered",
+   "label": {
+    "jp": "ぬすまれた　ぶひんを　とりかえした。はつでんしょに　とどけよう。",
+    "en": "Recovered the stolen part. Return it to the Power Plant."
+   },
+   "target_zone_id": "kanto-power-plant"
+  },
+  {
+   "step_id": "restored",
+   "label": {
+    "jp": "ぶひんを　もどした！　カントーに　でんきと　ラジオが　もどった。",
+    "en": "The part is back! Power and radio have returned to Kanto."
+   },
+   "target_zone_id": "lavender-town"
+  }
+ ]
+}

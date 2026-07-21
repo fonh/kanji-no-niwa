@@ -1,0 +1,82 @@
+{
+ "_note": "Overlay grammaire — Lavanville, 4 points N1-076→079 (famille いかん complète — les 4 variantes ne se servent JAMAIS mutuellement de distracteurs ; contrastes sur ため/くせ/おかげ).",
+ "zone_id": "lavender-town",
+ "points": [
+  {
+   "grammar_id": "N1-076",
+   "source_index": 75,
+   "title": "Noun のいかんでは (Noun no ikan de wa)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "交通事情（こうつうじじょう）のいかんでは、遅（おく）れることがあります。",
+     "point_answer": "のいかんでは",
+     "jp_cloze": "交通事情（こうつうじじょう）＿＿、遅（おく）れることがあります。",
+     "distractors": [
+      "のおかげでは",
+      "のためには",
+      "のくせには"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-077",
+   "source_index": 76,
+   "title": "Noun のいかんにかかわらず (Noun no ikan ni kakawarazu)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "経験（けいけん）のいかんにかかわらず、始（はじ）めることが大切（たいせつ）です。",
+     "point_answer": "のいかんにかかわらず",
+     "jp_cloze": "経験（けいけん）＿＿、始（はじ）めることが大切（たいせつ）です。",
+     "distractors": [
+      "のおかげにかかわらず",
+      "のためにかかわらず",
+      "のうえにかかわらず"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-078",
+   "source_index": 77,
+   "title": "Noun のいかんによっては (Noun no ikan ni yotte wa)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "試験（しけん）の結果（けっか）のいかんによっては、進学（しんがく）できます。",
+     "point_answer": "のいかんによっては",
+     "jp_cloze": "試験（しけん）の結果（けっか）＿＿、進学（しんがく）できます。",
+     "distractors": [
+      "のおかげによっては",
+      "のせいによっては",
+      "のくせによっては"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-079",
+   "source_index": 78,
+   "title": "Noun のいかんによらず (~ no ikan ni yorazu)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "天気（てんき）のいかんによらず、毎日（まいにち）、ジョギングをします。",
+     "point_answer": "のいかんによらず",
+     "jp_cloze": "天気（てんき）＿＿、毎日（まいにち）、ジョギングをします。",
+     "distractors": [
+      "のおかげによらず",
+      "のせいによらず",
+      "のうえによらず"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

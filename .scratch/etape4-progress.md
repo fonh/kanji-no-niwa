@@ -28,13 +28,19 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **32 / 48** écrites
-- Leçons : **211 / 344** écrites
-- Kanji dotés d'exemples : **1200 / 1950**
-- Overlays grammaire : **21 / 48**
+- Zones : **35 / 48** écrites
+- Leçons : **221 / 344** écrites
+- Kanji dotés d'exemples : **1250 / 1950**
+- Overlays grammaire : **24 / 48**
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-21 — routes 8/9-10 + Lavanville + Centrale (Lot 12)** : l'arc du courant de
+  Kanto (04-B1) posé en quête **power_plant_restoration** (pièce volée → indice « R » vers
+  le gym d'Azuria → CT au retour → radio de Kanto rétablie → **carte EXPN** chez le
+  directeur de Lavanville, prépare le réveil du Ronflex). 10 leçons N1-071→074/076→081
+  (famille いかん complète chez le directeur radio), 15 combats ROM (routes 8/9/10),
+  overlays 10 points, 50 lesson_examples. 5 linters verts.
 - **2026-07-21 — route-6-kanto + saffron-city (Lot 11)** : route-6 (avec Route 5/Passage
   Souterrain fusionnés) — 3 combats ROM, 2 leçons N1-036/037 (vieille dame/Talisman,
   troc RageCandyBar↔CT = callback D10). Safran — **24 leçons N1-038→061** sur 6 refs
@@ -217,9 +223,9 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 30 | vermilion-city | Kanto | 30 | 180 | 4 | ✅ fait (SS Aqua 27 combats, quêtes B6 + poupée, Surge 74q, Steven FV-5 soldé) | ✅ | ✅ | ✅ | — | ✅ |
 | 31 | route-6-kanto | Kanto | 2 | 10 | 2 | ✅ fait (callback RageCandyBar D10) | ✅ | ✅ | ✅ | — | ✅ |
 | 32 | saffron-city | Kanto | 24 | 140 | 6 | ✅ fait (Copycat/Magnet Pass, dojo vide→parchemins, Sabrina 77q) | ✅ | ✅ | ✅ | — | ✅ |
-| 33 | route-9-10-rocktunnel | Kanto | 4 | 20 | 1 | ⬜ à faire | · | · | · | · | · |
-| 34 | lavender-town | Kanto | 4 | 20 | 1 | ⬜ à faire | · | · | · | · | · |
-| 35 | kanto-power-plant | Kanto | 2 | 10 | 2 | ⬜ à faire | · | · | · | · | · |
+| 33 | route-9-10-rocktunnel | Kanto | 4 | 20 | 1 | ✅ fait (+ route-8) | ✅ | ✅ | ✅ | — | ✅ |
+| 34 | lavender-town | Kanto | 4 | 20 | 1 | ✅ fait (EXPN gated centrale) | ✅ | ✅ | ✅ | — | ✅ |
+| 35 | kanto-power-plant | Kanto | 2 | 10 | 2 | ✅ fait (quête pièce volée → Azuria) | ✅ | ✅ | ✅ | — | ✅ |
 | 36 | cerulean-city | Kanto | 17 | 100 | 2 | ⬜ à faire | · | · | · | · | · |
 | 37 | celadon-city | Kanto | 25 | 150 | 6 | ⬜ à faire | · | · | · | · | · |
 | 38 | route-16-17-18-cycling-road | Kanto | 4 | 20 | 1 | ⬜ à faire | · | · | · | · | · |

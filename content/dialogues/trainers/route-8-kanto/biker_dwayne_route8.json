@@ -1,0 +1,31 @@
+{
+ "trainer_id": "biker_dwayne_route8",
+ "name": {
+  "jp": "ぼうそうぞくの　ドウェイン",
+  "en": "Biker Dwayne"
+ },
+ "zone_id": "route-8-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "エンジンおんが　こいしくてよ…　でんきが　ないと　バイクも　だんまりだ。",
+     "en": "I miss my engine's roar... no power, no bike."
+    },
+    {
+     "jp": "かわりに　おまえと　しょうぶだ！",
+     "en": "You'll have to do instead!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "バイクなしでも　まけか…。",
+     "en": "Beaten even without my bike..."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "biker_zeke_route8",
+ "name": {
+  "jp": "ぼうそうぞくの　ジーク",
+  "en": "Biker Zeke"
+ },
+ "zone_id": "route-8-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "スピードこそ　せいぎ！",
+     "en": "Speed is justice!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "おまえの　ほうが　はやかった。",
+     "en": "You were faster."
+    }
+   ]
+  }
+ }
+}

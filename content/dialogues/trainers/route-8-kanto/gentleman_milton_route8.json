@@ -1,0 +1,27 @@
+{
+ "trainer_id": "gentleman_milton_route8",
+ "name": {
+  "jp": "ジェントルマンの　ミルトン",
+  "en": "Gentleman Milton"
+ },
+ "zone_id": "route-8-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ヤマブキがえりの　さんぽでな。いい　うんどうに　なるかね？",
+     "en": "A stroll back from Saffron. Care to make it exercise?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いい　うんどうに　なったよ。",
+     "en": "Excellent exercise indeed."
+    }
+   ]
+  }
+ }
+}

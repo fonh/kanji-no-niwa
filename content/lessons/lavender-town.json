@@ -1,0 +1,54 @@
+[
+ {
+  "zone_id": "lavender-town",
+  "npc_ref": "radio_director_lavender",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "瞭",
+   "祉",
+   "祥",
+   "稼",
+   "稿"
+  ],
+  "grammar_id": "N1-076"
+ },
+ {
+  "zone_id": "lavender-town",
+  "npc_ref": "radio_director_lavender",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "端",
+   "範",
+   "篤",
+   "簿",
+   "籍"
+  ],
+  "grammar_id": "N1-077"
+ },
+ {
+  "zone_id": "lavender-town",
+  "npc_ref": "radio_director_lavender",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "粋",
+   "粛",
+   "粧",
+   "糾",
+   "紋"
+  ],
+  "grammar_id": "N1-078"
+ },
+ {
+  "zone_id": "lavender-town",
+  "npc_ref": "radio_director_lavender",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "紡",
+   "索",
+   "紫",
+   "累",
+   "紺"
+  ],
+  "grammar_id": "N1-079"
+ }
+]

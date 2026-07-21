@@ -76,6 +76,7 @@ NARRATIVE_ORDER = [
     "indigo-plateau-antichambre", "indigo-plateau-will", "indigo-plateau-koga",
     "indigo-plateau-bruno", "indigo-plateau-karen", "indigo-plateau-lance",
     "vermilion-city", "route-6-kanto", "saffron-city",
+    "route-8-kanto", "route-9-10-rocktunnel", "lavender-town", "kanto-power-plant",
 ]
 
 

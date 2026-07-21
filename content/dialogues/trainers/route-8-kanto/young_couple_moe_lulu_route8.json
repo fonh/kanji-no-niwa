@@ -1,0 +1,31 @@
+{
+ "trainer_id": "young_couple_moe_lulu_route8",
+ "name": {
+  "jp": "わかづまふうふの　モーと　ルル",
+  "en": "Young Couple Moe & Lulu"
+ },
+ "zone_id": "route-8-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "「デートの　とちゅうだけど」",
+     "en": "\"We're mid-date, but\""
+    },
+    {
+     "jp": "「ふたりの　きずな、みせちゃう？」",
+     "en": "\"shall we show off our bond?\""
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "「まけても　なかよし！」",
+     "en": "\"Losing changes nothing between us!\""
+    }
+   ]
+  }
+ }
+}

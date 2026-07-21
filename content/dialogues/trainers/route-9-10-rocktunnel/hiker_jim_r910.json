@@ -1,0 +1,27 @@
+{
+ "trainer_id": "hiker_jim_r910",
+ "name": {
+  "jp": "やまおとこの　ジム",
+  "en": "Hiker Jim"
+ },
+ "zone_id": "route-9-10-rocktunnel",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "10ばんどうろの　みなみは　おれが　みはる！",
+     "en": "I watch the south of Route 10!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "みはりやく、こうたいだな。",
+     "en": "Time to change the watch."
+    }
+   ]
+  }
+ }
+}

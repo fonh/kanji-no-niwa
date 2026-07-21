@@ -1,0 +1,27 @@
+{
+ "trainer_id": "super_nerd_tyrone_route8",
+ "name": {
+  "jp": "りかけいの　おとこの　タイロン",
+  "en": "Super Nerd Tyrone"
+ },
+ "zone_id": "route-8-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "でんきなしの　よるは　ほしが　きれいだぞ。",
+     "en": "The stars are beautiful on blackout nights."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ほしでも　みて　おちつくよ。",
+     "en": "I'll calm down with some stargazing."
+    }
+   ]
+  }
+ }
+}

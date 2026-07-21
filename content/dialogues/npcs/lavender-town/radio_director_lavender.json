@@ -1,0 +1,66 @@
+{
+ "_note": "Étape 4 Lot 12 — directeur de la station (leçons #1→#4, N1-076→079 — sa réplique いかんにかかわらず expose la famille いかん de ses 4 points). Carte EXPN gated restored (finding 04-B1) ; prépare le réveil du Ronflex (radio, objet-clé — passe Route 11).",
+ "npc_id": "radio_director_lavender",
+ "name": {
+  "jp": "ラジオきょくの　きょくちょう",
+  "en": "Radio Station Director"
+ },
+ "zone_id": "lavender-town",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "power_plant_restoration",
+     "step": "restored"
+    }
+   ],
+   "state": "power_back"
+  },
+  {
+   "default": true,
+   "state": "no_power"
+  }
+ ],
+ "dialogue_states": {
+  "no_power": {
+   "pages": [
+    {
+     "jp": "ここは　カントー・ラジオの　きょくしゃです。",
+     "en": "This is the Kanto Radio station."
+    },
+    {
+     "jp": "でんきが　とまって、ほうそうの　いかんに　かかわらず　なにも　ながせません…。",
+     "en": "With the power out, we can broadcast nothing at all..."
+    },
+    {
+     "jp": "はつでんしょが　なおれば　いいのですが。",
+     "en": "If only the Power Plant were fixed."
+    }
+   ]
+  },
+  "power_back": {
+   "pages": [
+    {
+     "jp": "でんきが　もどりました！　あなたの　おかげと　ききましたよ！",
+     "en": "The power is back! And I hear it's thanks to you!"
+    },
+    {
+     "jp": "おれいに　この　EXPNカードを。ポケギアの　ラジオで　カントーの　ばんぐみが　きけます。",
+     "en": "Take this EXPN Card — your Pokégear radio can now pick up Kanto's shows."
+    },
+    {
+     "jp": "この　カードの　おんがくには、ねむった　ものを　おこす　ちからも　あるとか…。",
+     "en": "They say its music can even wake the deepest sleeper..."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "expn_card"
+    }
+   ]
+  }
+ }
+}

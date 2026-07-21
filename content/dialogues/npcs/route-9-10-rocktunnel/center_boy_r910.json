@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 12 — garçon du Centre (leçons #1→#4, N1-071→074), relais de l'indice du vol (sourcé). Sa réplique に限る expose N1-071.",
+ "npc_id": "center_boy_r910",
+ "name": {
+  "jp": "センターの　しょうねん",
+  "en": "Boy at the Pokémon Center"
+ },
+ "zone_id": "route-9-10-rocktunnel",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "きいた？　はつでんしょで　どろぼうが　あったんだって！",
+     "en": "Did you hear? There was a theft at the Power Plant!"
+    },
+    {
+     "jp": "きかいの　ぶひんが　ぬすまれて、カントーじゅうの　ラジオが　とまってるんだ。",
+     "en": "A machine part was stolen — radio's down all over Kanto."
+    },
+    {
+     "jp": "つかれた　ときは　この　センターで　やすむに　かぎるよ。",
+     "en": "When you're tired, nothing beats resting at this Center."
+    }
+   ]
+  }
+ }
+}
