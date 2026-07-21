@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 5 — PNJ-leçon #4 (N2-012). Amorce du callback red_scale_errand.",
+ "npc_id": "route43_gate_npc_mahogany",
+ "name": {
+  "jp": "きたの　ゲートの　おとこ",
+  "en": "Man at the North Gate"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "Mr.ポケモンって　はかせを　しってるか？",
+     "en": "Know that researcher, Mr. Pokémon?"
+    },
+    {
+     "jp": "あかい　うろこを　さがしてるんだと。それでも　みつからないらしい。",
+     "en": "He's hunting for a red scale. Even so, he can't find one, apparently."
+    },
+    {
+     "jp": "みずうみに　いけば　なにか　わかるかもな。",
+     "en": "Maybe the lake holds the answer."
+    }
+   ]
+  }
+ }
+}

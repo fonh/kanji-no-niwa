@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rocket_grunt_b3f_hq_mahogany",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "けんきゅういんたちを　みはってるんだ。じゃまするな！",
+     "en": "I'm watching the scientists. Stay out of it!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "みはりやくが　やられてどうする…。",
+     "en": "The watchman, beaten... how embarrassing..."
+    }
+   ]
+  }
+ }
+}

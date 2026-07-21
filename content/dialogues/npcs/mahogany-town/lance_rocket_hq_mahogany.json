@@ -1,0 +1,70 @@
+{
+ "_note": "Étape 4 Lot 5 — Lance au B2F (soigne, puis combat en double contre Ariana — le combat vit dans ariana_rocket_hq_mahogany, 36q, le joueur + Lance allié = saveur, aucune mécanique de duo). Remet le CS 渦 (seuil N=32) après la chute. Texte obligatoire : texts/mahogany-town/cs_uzu.json.",
+ "npc_id": "lance_rocket_hq_mahogany",
+ "name": {
+  "jp": "ブラックマントの　ワタル",
+  "en": "Lance"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "rocket_hq_mahogany",
+     "step": "hq_fallen"
+    }
+   ],
+   "state": "give_whirl"
+  },
+  {
+   "default": true,
+   "state": "healing"
+  }
+ ],
+ "dialogue_states": {
+  "healing": {
+   "pages": [
+    {
+     "jp": "きたか。ここからが　ほんばんだ。",
+     "en": "You came. The real work starts here."
+    },
+    {
+     "jp": "きみの　なかまたちは　わたしが　いやして　おいた。",
+     "en": "I've healed your team for you."
+    },
+    {
+     "jp": "そうしんきの　へやで　あおう。ふたりで　いくぞ。",
+     "en": "Meet me at the transmitter room. We go in together."
+    }
+   ]
+  },
+  "give_whirl": {
+   "pages": [
+    {
+     "jp": "やったな。そうしんきは　とまった。",
+     "en": "We did it. The transmitter is dead."
+    },
+    {
+     "jp": "きみの　ちからは　ほんものだ。これを　うけとって　ほしい。",
+     "en": "Your strength is the real thing. I want you to have this."
+    },
+    {
+     "jp": "渦（うず）の　かんじの　ひでん。うずしおも　しずめられる。",
+     "en": "The secret kanji of Whirlpool. It can calm even the fiercest maelstrom."
+    },
+    {
+     "jp": "また　あおう。こんどは　ライバルとしてかも　しれないな。",
+     "en": "We'll meet again — perhaps as rivals next time."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "cs_uzu"
+    }
+   ]
+  }
+ }
+}

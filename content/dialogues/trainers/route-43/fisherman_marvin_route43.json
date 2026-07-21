@@ -1,0 +1,31 @@
+{
+ "trainer_id": "fisherman_marvin_route43",
+ "name": {
+  "jp": "つりびとの　マービン",
+  "en": "Fisherman Marvin"
+ },
+ "zone_id": "route-43",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "みずうみの　さかなが　ぜんぜん　つれなく　なった。",
+     "en": "The lake fish have stopped biting entirely."
+    },
+    {
+     "jp": "この　もやもや、しょうぶで　はらす！",
+     "en": "I'll clear this gloom with a battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "もやもやは　はれたが、なぞは　のこる…。",
+     "en": "The gloom's cleared, but the mystery remains..."
+    }
+   ]
+  }
+ }
+}

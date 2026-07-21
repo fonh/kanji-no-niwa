@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 5 — callback longue distance : l'objet du combat du lac (écaille rouge) se ramène à Mr. Pokémon (Route 30) contre l'Exp. Share (sourcé). L'état correspondant est ajouté à mr_pokemon_route30.json.",
+ "quest_id": "red_scale_errand",
+ "name": {
+  "jp": "あかい　うろこ",
+  "en": "The Red Scale"
+ },
+ "zone_ids": [
+  "lake-of-rage",
+  "route-30"
+ ],
+ "steps": [
+  {
+   "step_id": "scale_obtained",
+   "label": {
+    "jp": "みずうみで　あかい　うろこを　ひろった。Mr.ポケモンが　さがして　いるらしい。",
+    "en": "Picked up a red scale at the lake. Apparently Mr. Pokémon is looking for one."
+   },
+   "target_zone_id": "route-30"
+  },
+  {
+   "step_id": "delivered",
+   "label": {
+    "jp": "Mr.ポケモンに　うろこを　わたして、おれいを　もらった。",
+    "en": "Gave the scale to Mr. Pokémon and received a reward."
+   },
+   "target_zone_id": "route-30"
+  }
+ ]
+}

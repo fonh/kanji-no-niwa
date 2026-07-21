@@ -1,0 +1,37 @@
+{
+ "_note": "Overlay grammaire — Route 43, 1 point N2-021.",
+ "zone_id": "route-43",
+ "points": [
+  {
+   "grammar_id": "N2-021",
+   "source_index": 20,
+   "title": "A。ということは B。 (A. To iu koto wa B.)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼女（かのじょ）が泣（な）いている。ということは何（なに）か悲（かな）しいことがあったに違（ちが）いない。",
+     "point_answer": "ということは",
+     "jp_cloze": "彼女（かのじょ）が泣（な）いている。＿＿何（なに）か悲（かな）しいことがあったに違（ちが）いない。",
+     "distractors": [
+      "とはいえ",
+      "ところで",
+      "そのかわり"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "道（みち）が渋滞（じゅうたい）している。ということは、事故（じこ）があったのかもしれない。",
+     "point_answer": "ということは",
+     "jp_cloze": "道（みち）が渋滞（じゅうたい）している。＿＿、事故（じこ）があったのかもしれない。",
+     "distractors": [
+      "とはいえ",
+      "ところで",
+      "そのかわり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

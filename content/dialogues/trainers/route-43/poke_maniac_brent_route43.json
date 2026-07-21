@@ -1,0 +1,31 @@
+{
+ "trainer_id": "poke_maniac_brent_route43",
+ "name": {
+  "jp": "かいじゅうマニアの　ブレント",
+  "en": "Poké Maniac Brent"
+ },
+ "zone_id": "route-43",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "あかい　かげが　みずうみに　みえたって　ほんとかな？",
+     "en": "They say a red shadow was seen in the lake — can it be true?"
+    },
+    {
+     "jp": "きに　なって　ねむれない！　しょうぶで　きを　まぎらす！",
+     "en": "I can't sleep for wondering! A battle will take my mind off it!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きが　まぎれたよ。ありがとう。",
+     "en": "That took my mind off it. Thanks."
+    }
+   ]
+  }
+ }
+}

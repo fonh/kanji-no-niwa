@@ -1,0 +1,58 @@
+{
+ "_note": "Étape 4 Lot 5 — 7ᵉ 師範, examen 試練・氷の道 (longueur 65, vies 7). Accès gated par la chute du QG (fidèle : le gym reste fermé pendant l'occupation Rocket — unlock quête + 5 gardiens sourcés). Récompense : badge pryce (Glacier Badge) + TM07 (guidebook).",
+ "trainer_id": "pryce_mahogany",
+ "name": {
+  "jp": "ジムリーダー　ヤナギ",
+  "en": "Pryce"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・氷（こおり）の道（みち）",
+  "en": "Trial of the Ice Path"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "わしは　ヤナギ。50ねん、こおりと　ともに　いきて　きた。",
+     "en": "I am Pryce. Fifty years I have lived alongside the ice."
+    },
+    {
+     "jp": "こおりは　しずかで、つめたく、そして　なによりも　かたい。",
+     "en": "Ice is quiet, cold — and above all, hard."
+    },
+    {
+     "jp": "わかい　ちから、この　ふゆの　かべを　こえて　みせよ！",
+     "en": "Young power — show me you can cross this wall of winter!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…はっはっは！　みごと、みごと。",
+     "en": "...Ha ha ha! Splendid, splendid."
+    },
+    {
+     "jp": "ながい　ふゆの　あとには、はるが　くる。わしの　まけじゃ。",
+     "en": "After the long winter comes spring. I am beaten."
+    },
+    {
+     "jp": "グレイシャーバッジと　これを　もって　いきなさい。",
+     "en": "Take the Glacier Badge, and this as well."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_badge",
+     "badge_id": "pryce"
+    },
+    {
+     "type": "grant_item",
+     "item_id": "tm07_hail"
+    }
+   ]
+  }
+ }
+}

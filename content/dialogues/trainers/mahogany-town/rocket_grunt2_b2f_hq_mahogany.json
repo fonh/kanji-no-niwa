@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rocket_grunt2_b2f_hq_mahogany",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "マントの　おとこの　なかまか！？",
+     "en": "You're with the caped man!?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ふたりがかりとは　ひきょうだぞ…。",
+     "en": "Two against one... that's dirty..."
+    }
+   ]
+  }
+ }
+}

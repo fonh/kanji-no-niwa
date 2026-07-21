@@ -1,0 +1,59 @@
+{
+ "_note": "Étape 4 Lot 5 — PNJ-leçon #5 (N2-013), scientifique du B1F gardant le PC-alarme. Typé leçon au npc-inventory (pas combat) : l'alarme tombe par le dialogue (le savant gaffeur, saveur HGSS), pas par un combat. Sa réplique finale expose それなのに en creux (leçon).",
+ "npc_id": "scientist_gregg_mahogany",
+ "name": {
+  "jp": "けんきゅういんの　グレッグ",
+  "en": "Scientist Gregg"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "rocket_hq_mahogany",
+     "step": "alarm_disabled"
+    }
+   ],
+   "state": "resigned"
+  },
+  {
+   "default": true,
+   "state": "guarding"
+  }
+ ],
+ "dialogue_states": {
+  "guarding": {
+   "pages": [
+    {
+     "jp": "この　パソコンには　さわらせないぞ。けいほうそうちに　つながって　いるんだ。",
+     "en": "You're not touching this PC. It's wired to the alarm system."
+    },
+    {
+     "jp": "…って、なんで　それを　いっちゃったんだ、わたしは！",
+     "en": "...Wait, why did I just tell you that!?"
+    },
+    {
+     "jp": "あーあ。とめかたまで　がめんに　でてるし。もう　どうにでも　なれ。",
+     "en": "Ugh. The shutdown screen's right there too. Fine, whatever happens happens."
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "rocket_hq_mahogany",
+     "step_id": "alarm_disabled"
+    }
+   ]
+  },
+  "resigned": {
+   "pages": [
+    {
+     "jp": "けいほうは　きれた。わたしは　しらん。かがくに　きこくは　ないんだ。",
+     "en": "The alarm's off. Not my problem. Science has no homeland."
+    }
+   ]
+  }
+ }
+}

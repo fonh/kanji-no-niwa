@@ -1,0 +1,47 @@
+{
+ "_note": "Étape 4 Lot 5 — Ariana, combat final du QG (36q, table PRD § Exécutifs Rocket). Lance combat « à tes côtés » = saveur narrative (aucune mécanique de duo — le profil Boss standard s'applique). Sa défaite = hq_fallen (écrit aussi rocket_progress event 2 par la logique de jeu).",
+ "trainer_id": "ariana_rocket_hq_mahogany",
+ "name": {
+  "jp": "ロケットだんかんぶ　アテナ",
+  "en": "Executive Ariana"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "あら、マントの　おとこと　こどもが　ふたりで　おでかけ？",
+     "en": "My my — the caped man and a child, out for a stroll?"
+    },
+    {
+     "jp": "この　そうしんきは　ロケットだん　ふっかつの　かなめ。",
+     "en": "This transmitter is the keystone of Team Rocket's revival."
+    },
+    {
+     "jp": "ふたり　まとめて　かたづけて　あげる！",
+     "en": "I'll deal with you both at once!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "この　わたしが…　まけるなんて…。",
+     "en": "That I... could lose..."
+    },
+    {
+     "jp": "おぼえて　おきなさい。ロケットだんは　これで　おわらないわ。",
+     "en": "Mark my words — Team Rocket does not end here."
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "rocket_hq_mahogany",
+     "step_id": "hq_fallen"
+    }
+   ]
+  }
+ }
+}

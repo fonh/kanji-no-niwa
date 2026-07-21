@@ -1336,5 +1336,281 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/safari-zone.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/safari-zone/baoba_safari_zone"
+ },
+ {
+  "npc_id": "hiker_cs_route42",
+  "zone_id": "route-42",
+  "name": "Hiker from Mt. Mortar",
+  "tile_x": 6,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-42.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-42/hiker_cs_route42",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "eusine_route42",
+  "zone_id": "route-42",
+  "name": "Eusine",
+  "tile_x": 20,
+  "tile_y": 9,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-42.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-42/eusine_route42",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "suicune_hunt",
+    "step": "cianwood_battle"
+   }
+  ]
+ },
+ {
+  "npc_id": "ragecandy_vendor_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "RageCandyBar Vendor",
+  "tile_x": 26,
+  "tile_y": 12,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/mahogany-town/ragecandy_vendor_mahogany",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "souvenir_vendor_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Souvenir Shop Keeper",
+  "tile_x": 14,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/mahogany-town/souvenir_vendor_mahogany",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "gym_front_man_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Man in Front of the Gym",
+  "tile_x": 21,
+  "tile_y": 22,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/mahogany-town/gym_front_man_mahogany",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "route43_gate_npc_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Man at the North Gate",
+  "tile_x": 18,
+  "tile_y": 2,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/mahogany-town/route43_gate_npc_mahogany",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "scientist_gregg_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Scientist Gregg",
+  "tile_x": 9,
+  "tile_y": 41,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/mahogany-town/scientist_gregg_mahogany",
+  "role": "lesson",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "recruited"
+   }
+  ]
+ },
+ {
+  "npc_id": "scientist_ross_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Scientist Ross",
+  "tile_x": 7,
+  "tile_y": 53,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/mahogany-town/scientist_ross_mahogany",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "alarm_disabled"
+   }
+  ]
+ },
+ {
+  "npc_id": "scientist_mitch_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Scientist Mitch",
+  "tile_x": 13,
+  "tile_y": 53,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/mahogany-town/scientist_mitch_mahogany",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "alarm_disabled"
+   }
+  ]
+ },
+ {
+  "npc_id": "silver_rocket_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Silver",
+  "tile_x": 11,
+  "tile_y": 45,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/mahogany-town/silver_rocket_hq_mahogany",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "recruited"
+   }
+  ]
+ },
+ {
+  "npc_id": "lance_rocket_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Lance",
+  "tile_x": 13,
+  "tile_y": 47,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/mahogany-town/lance_rocket_hq_mahogany",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "recruited"
+   }
+  ]
+ },
+ {
+  "npc_id": "picnicker_tiffany_route43",
+  "zone_id": "route-43",
+  "name": "Picnicker Tiffany",
+  "tile_x": 10,
+  "tile_y": 18,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-43.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-43/picnicker_tiffany_route43"
+ },
+ {
+  "npc_id": "gate_npc_route43",
+  "zone_id": "route-43",
+  "name": "Young Man in the Gatehouse",
+  "tile_x": 10,
+  "tile_y": 2,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-43.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-43/gate_npc_route43",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "tollbooth_lake_of_rage",
+  "zone_id": "lake-of-rage",
+  "name": "Tollbooth Man",
+  "tile_x": 10,
+  "tile_y": 24,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/lake-of-rage/tollbooth_lake_of_rage",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "rage_kanji_lake_of_rage",
+  "zone_id": "lake-of-rage",
+  "name": "Red-Shimmering Kanji",
+  "tile_x": 10,
+  "tile_y": 7,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/lake-of-rage/rage_kanji_lake_of_rage",
+  "kind": "object"
+ },
+ {
+  "npc_id": "lance_lakeside_lake_of_rage",
+  "zone_id": "lake-of-rage",
+  "name": "Lance",
+  "tile_x": 12,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/lake-of-rage/lance_lakeside_lake_of_rage",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "red_scale_errand",
+    "step": "scale_obtained"
+   }
+  ]
+ },
+ {
+  "npc_id": "fishing_guru_lake_of_rage",
+  "zone_id": "lake-of-rage",
+  "name": "Fishing Guru",
+  "tile_x": 3,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/lake-of-rage/fishing_guru_lake_of_rage",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "hq_fallen"
+   }
+  ]
+ },
+ {
+  "npc_id": "wesley_lake_of_rage",
+  "zone_id": "lake-of-rage",
+  "name": "Wesley",
+  "tile_x": 8,
+  "tile_y": 14,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/lake-of-rage/wesley_lake_of_rage",
+  "unlock_conditions": [
+   {
+    "type": "time_window",
+    "days_of_week": [
+     "wednesday"
+    ]
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "hq_fallen"
+   }
+  ]
  }
 ]

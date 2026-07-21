@@ -1,0 +1,99 @@
+{
+ "_note": "Overlay grammaire — Route 42, 3 points N2-001→003 (connecteurs — patron du pilote : contraste sémantique franc, jamais un quasi-synonyme).",
+ "zone_id": "route-42",
+ "points": [
+  {
+   "grammar_id": "N2-001",
+   "source_index": 0,
+   "title": "A あるいは B (A aruiwa B)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "彼女（かのじょ）は英語（えいご）あるいはドイツ語（ご）で話（はな）すことができます。",
+     "point_answer": "あるいは",
+     "jp_cloze": "彼女（かのじょ）は英語（えいご）＿＿ドイツ語（ご）で話（はな）すことができます。",
+     "distractors": [
+      "しかも",
+      "つまり",
+      "ところが"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "僕（ぼく）らはコーヒーあるいは紅茶（こうちゃ）を飲（の）むのが好（す）きです。",
+     "point_answer": "あるいは",
+     "jp_cloze": "僕（ぼく）らはコーヒー＿＿紅茶（こうちゃ）を飲（の）むのが好（す）きです。",
+     "distractors": [
+      "しかも",
+      "つまり",
+      "ところが"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-002",
+   "source_index": 1,
+   "title": "A。おまけに B。(~omake ni)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は遅刻（ちこく）した。おまけに宿題（しゅくだい）も忘（わす）れた。",
+     "point_answer": "おまけに",
+     "jp_cloze": "彼（かれ）は遅刻（ちこく）した。＿＿宿題（しゅくだい）も忘（わす）れた。",
+     "distractors": [
+      "ところが",
+      "つまり",
+      "さもないと"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "このアパートは狭（せま）い。おまけに家賃（やちん）が高（たか）い。",
+     "point_answer": "おまけに",
+     "jp_cloze": "このアパートは狭（せま）い。＿＿家賃（やちん）が高（たか）い。",
+     "distractors": [
+      "ところが",
+      "つまり",
+      "さもないと"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-003",
+   "source_index": 2,
+   "title": "A。さて B。(A. Sate B.)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "今日（きょう）の仕事（しごと）が終（お）わった。さて、これから帰（かえ）るか。",
+     "point_answer": "さて",
+     "jp_cloze": "今日（きょう）の仕事（しごと）が終（お）わった。＿＿、これから帰（かえ）るか。",
+     "distractors": [
+      "なぜなら",
+      "ところが",
+      "おまけに"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "映画（えいが）を見（み）て楽（たの）しかった。さて、何（なに）を食（た）べに行（い）こう。",
+     "point_answer": "さて",
+     "jp_cloze": "映画（えいが）を見（み）て楽（たの）しかった。＿＿、何（なに）を食（た）べに行（い）こう。",
+     "distractors": [
+      "なぜなら",
+      "ところが",
+      "おまけに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

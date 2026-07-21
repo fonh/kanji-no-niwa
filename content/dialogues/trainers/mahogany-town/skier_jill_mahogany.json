@@ -1,0 +1,27 @@
+{
+ "trainer_id": "skier_jill_mahogany",
+ "name": {
+  "jp": "スキーヤーの　ジル",
+  "en": "Skier Jill"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ひえた　あたまで　たたかうのが　いちばんよ。",
+     "en": "A cool head fights best."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あたまが　ひえすぎたわ…。",
+     "en": "My head got a little TOO cool..."
+    }
+   ]
+  }
+ }
+}

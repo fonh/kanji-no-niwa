@@ -1,0 +1,31 @@
+{
+ "trainer_id": "fisherman_andre_lake_of_rage",
+ "name": {
+  "jp": "つりびとの　アンドレ",
+  "en": "Fisherman Andre"
+ },
+ "zone_id": "lake-of-rage",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "おおものが　もどって　きたぞ！",
+     "en": "The big ones are back!"
+    },
+    {
+     "jp": "おれの　うでも　みせて　やる！",
+     "en": "Let me show you my skill too!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみは　おおものいじょうだ。",
+     "en": "You're a bigger catch than any fish."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,15 @@
+[
+ {
+  "zone_id": "lake-of-rage",
+  "npc_ref": "tollbooth_lake_of_rage",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "見",
+   "足",
+   "万",
+   "今",
+   "会"
+  ],
+  "grammar_id": "N2-024"
+ }
+]

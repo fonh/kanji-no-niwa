@@ -1,0 +1,137 @@
+{
+ "_note": "Étape 4 Lot 5 — texte obligatoire de remise du CS-Kanji 渦 (lance_rocket_hq_mahogany, après hq_fallen). Pattern des 5 précédents. Seuil N=32.",
+ "text": {
+  "text_id": "cs_uzu_mahogany",
+  "title": {
+   "jp": "うずの　よみかた",
+   "en": "Reading the Whirlpool"
+  },
+  "jp_text": "うずしおは　うみの　いかりでは　ありません。ふたつの　しおの　ながれが　ぶつかって、まわりはじめる　だけの　ことです。それが　わかれば、こわく　ありません。ながれを　よんで、まわる　力（ちから）を　りようすれば、ふねは　うずの　うえを　すべるように　すすめます。しずめるのではなく、ながれに　のる。それが　渦（うず）の　ひでんです。",
+  "en_text": "A maelstrom is not the sea's anger. Two currents simply collide and begin to turn — that is all. Once you understand that, there is nothing to fear. Read the flow, use the turning force, and a ship can glide right over the whirl. Not to still it, but to ride it — that is the secret of the Whirlpool.",
+  "audio_ref": null,
+  "level": "N2",
+  "source": "original",
+  "tier": "obligatoire",
+  "zone_id": "mahogany-town",
+  "npc_ref": "lance_rocket_hq_mahogany",
+  "found_object_ref": null,
+  "event_ref": "cs_uzu_mahogany",
+  "length_chars": 166,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "うずの　ひでんとは　なんですか。",
+     "en": "What is the secret of the Whirlpool?"
+    },
+    "options": [
+     {
+      "jp": "しずめず、ながれに　のる　こと。",
+      "en": "Not to still it, but to ride the flow"
+     },
+     {
+      "jp": "うずを　こわす　こと。",
+      "en": "To destroy the whirlpool"
+     },
+     {
+      "jp": "うみに　ちかづかない　こと。",
+      "en": "To stay away from the sea"
+     },
+     {
+      "jp": "いのる　こと。",
+      "en": "To pray"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 131,
+     "end": 148
+    }
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "うずしおは　どうして　できますか。",
+     "en": "How does a maelstrom form?"
+    },
+    "options": [
+     {
+      "jp": "ふたつの　しおの　ながれが　ぶつかるから。",
+      "en": "Two tidal currents collide"
+     },
+     {
+      "jp": "うみが　いかるから。",
+      "en": "The sea grows angry"
+     },
+     {
+      "jp": "かぜが　つよいから。",
+      "en": "The wind is strong"
+     },
+     {
+      "jp": "つきが　ちかいから。",
+      "en": "The moon draws near"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 22,
+     "end": 49
+    }
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "この　ひでんを　しった　ひとは、うずを　どう　みるように　なりますか。",
+     "en": "How will one who knows this secret come to see whirlpools?"
+    },
+    "options": [
+     {
+      "jp": "こわい　ものではなく、りようできる　ながれと　みる。",
+      "en": "Not as something fearsome, but as a flow to be used"
+     },
+     {
+      "jp": "うみの　いかりと　みる。",
+      "en": "As the sea's anger"
+     },
+     {
+      "jp": "ちかづいては　いけない　ものと　みる。",
+      "en": "As something never to approach"
+     },
+     {
+      "jp": "ただの　かざりと　みる。",
+      "en": "As mere decoration"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": {
+     "jp": "「ながれを　よむ」の「よむ」の　いみは？",
+     "en": "What does 「よむ」 mean in 'read the flow'?"
+    },
+    "options": [
+     {
+      "jp": "うごきを　みて　りかいする。",
+      "en": "To observe and understand movement"
+     },
+     {
+      "jp": "こえに　だして　いう。",
+      "en": "To say aloud"
+     },
+     {
+      "jp": "ほんを　ひらく。",
+      "en": "To open a book"
+     },
+     {
+      "jp": "かぞえる。",
+      "en": "To count"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   }
+  ]
+ }
+}

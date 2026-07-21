@@ -1,0 +1,31 @@
+{
+ "trainer_id": "fisherman_tully_route42",
+ "name": {
+  "jp": "つりびとの　タリー",
+  "en": "Fisherman Tully"
+ },
+ "zone_id": "route-42",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "みずうみの　さかなは　おおものぞろいだ。",
+     "en": "The lake fish here are all big ones."
+    },
+    {
+     "jp": "おおものらしい　しょうぶを　しような！",
+     "en": "Let's have a battle worthy of a big catch!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "にがした　さかなは　おおきい…。",
+     "en": "The one that got away is always the biggest..."
+    }
+   ]
+  }
+ }
+}

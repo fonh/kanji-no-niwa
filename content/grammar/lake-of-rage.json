@@ -1,0 +1,37 @@
+{
+ "_note": "Overlay grammaire — Lac Colère, 1 point N2-024.",
+ "zone_id": "lake-of-rage",
+ "points": [
+  {
+   "grammar_id": "N2-024",
+   "source_index": 23,
+   "title": "A。もっとも B。(Motto mo ~)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は頭（あたま）がいい。もっとも、勉強（べんきょう）も大切（たいせつ）だ。",
+     "point_answer": "もっとも",
+     "jp_cloze": "彼（かれ）は頭（あたま）がいい。＿＿、勉強（べんきょう）も大切（たいせつ）だ。",
+     "distractors": [
+      "つまり",
+      "だから",
+      "さて"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "このレストランは美味（おい）しい。もっとも、値段（ねだん）が高（たか）い。",
+     "point_answer": "もっとも",
+     "jp_cloze": "このレストランは美味（おい）しい。＿＿、値段（ねだん）が高（たか）い。",
+     "distractors": [
+      "つまり",
+      "だから",
+      "さて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

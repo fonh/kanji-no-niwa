@@ -2182,5 +2182,575 @@
   "sight_auto_result": "battle",
   "repeats": false,
   "sight_range": 4
+ },
+ {
+  "trainer_id": "fisherman_tully_route42",
+  "zone_id": "route-42",
+  "name": "Fisherman Tully",
+  "tile_x": 8,
+  "tile_y": 10,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-42.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 15,
+  "dialogue_ref": "trainers/route-42/fisherman_tully_route42",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "hiker_benjamin_route42",
+  "zone_id": "route-42",
+  "name": "Hiker Benjamin",
+  "tile_x": 12,
+  "tile_y": 8,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-42.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 15,
+  "dialogue_ref": "trainers/route-42/hiker_benjamin_route42",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "poke_maniac_shane_route42",
+  "zone_id": "route-42",
+  "name": "Poké Maniac Shane",
+  "tile_x": 16,
+  "tile_y": 11,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-42.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 15,
+  "dialogue_ref": "trainers/route-42/poke_maniac_shane_route42",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "super_nerd_hugh_mt_mortar",
+  "zone_id": "mt-mortar",
+  "name": "Super Nerd Hugh",
+  "tile_x": 8,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mt-mortar.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 15,
+  "dialogue_ref": "trainers/mt-mortar/super_nerd_hugh_mt_mortar",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "super_nerd_markus_mt_mortar",
+  "zone_id": "mt-mortar",
+  "name": "Super Nerd Markus",
+  "tile_x": 12,
+  "tile_y": 14,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mt-mortar.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 15,
+  "dialogue_ref": "trainers/mt-mortar/super_nerd_markus_mt_mortar",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "poke_maniac_harrison_mt_mortar",
+  "zone_id": "mt-mortar",
+  "name": "Poké Maniac Harrison",
+  "tile_x": 14,
+  "tile_y": 16,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mt-mortar.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 15,
+  "dialogue_ref": "trainers/mt-mortar/poke_maniac_harrison_mt_mortar",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "black_belt_kiyo_mt_mortar",
+  "zone_id": "mt-mortar",
+  "name": "Black Belt Kiyo",
+  "tile_x": 10,
+  "tile_y": 22,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mt-mortar.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/mt-mortar/black_belt_kiyo_mt_mortar"
+ },
+ {
+  "trainer_id": "skier_jill_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Skier Jill",
+  "tile_x": 20,
+  "tile_y": 24,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/mahogany-town/skier_jill_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "skier_diana_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Skier Diana",
+  "tile_x": 22,
+  "tile_y": 26,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/mahogany-town/skier_diana_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "boarder_deandre_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Boarder Deandre",
+  "tile_x": 24,
+  "tile_y": 24,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/mahogany-town/boarder_deandre_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "boarder_gerardo_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Boarder Gerardo",
+  "tile_x": 21,
+  "tile_y": 28,
+  "facing": "north",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/mahogany-town/boarder_gerardo_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "boarder_patton_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Boarder Patton",
+  "tile_x": 23,
+  "tile_y": 30,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/mahogany-town/boarder_patton_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "pryce_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Pryce",
+  "tile_x": 22,
+  "tile_y": 32,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 65,
+  "dialogue_ref": "trainers/mahogany-town/pryce_mahogany",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "hq_fallen"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "skier_jill_mahogany"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "skier_diana_mahogany"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "boarder_deandre_mahogany"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "boarder_gerardo_mahogany"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "boarder_patton_mahogany"
+   }
+  ]
+ },
+ {
+  "trainer_id": "rocket_grunt_b1f_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Team Rocket Grunt",
+  "tile_x": 10,
+  "tile_y": 40,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/mahogany-town/rocket_grunt_b1f_hq_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "rocket_grunt1_b2f_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Team Rocket Grunt",
+  "tile_x": 8,
+  "tile_y": 44,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/mahogany-town/rocket_grunt1_b2f_hq_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "rocket_grunt2_b2f_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Team Rocket Grunt",
+  "tile_x": 12,
+  "tile_y": 46,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/mahogany-town/rocket_grunt2_b2f_hq_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "rocket_grunt3_b2f_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Team Rocket Grunt",
+  "tile_x": 10,
+  "tile_y": 48,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/mahogany-town/rocket_grunt3_b2f_hq_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "rocket_grunt_b3f_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Team Rocket Grunt",
+  "tile_x": 8,
+  "tile_y": 52,
+  "facing": "north",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/mahogany-town/rocket_grunt_b3f_hq_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "rocket_f_grunt_b3f_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Team Rocket Grunt (F)",
+  "tile_x": 12,
+  "tile_y": 54,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/mahogany-town/rocket_f_grunt_b3f_hq_mahogany",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "petrel_boss_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Executive Petrel",
+  "tile_x": 10,
+  "tile_y": 56,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 30,
+  "dialogue_ref": "trainers/mahogany-town/petrel_boss_hq_mahogany",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "passwords_obtained"
+   }
+  ]
+ },
+ {
+  "trainer_id": "ariana_rocket_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "name": "Executive Ariana",
+  "tile_x": 14,
+  "tile_y": 50,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/mahogany-town.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 36,
+  "dialogue_ref": "trainers/mahogany-town/ariana_rocket_hq_mahogany",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "boss_unmasked"
+   }
+  ]
+ },
+ {
+  "trainer_id": "poke_maniac_ron_route43",
+  "zone_id": "route-43",
+  "name": "Poké Maniac Ron",
+  "tile_x": 8,
+  "tile_y": 8,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-43.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 16,
+  "dialogue_ref": "trainers/route-43/poke_maniac_ron_route43",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "poke_maniac_beckett_route43",
+  "zone_id": "route-43",
+  "name": "Poké Maniac Beckett",
+  "tile_x": 11,
+  "tile_y": 12,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-43.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 16,
+  "dialogue_ref": "trainers/route-43/poke_maniac_beckett_route43",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "poke_maniac_brent_route43",
+  "zone_id": "route-43",
+  "name": "Poké Maniac Brent",
+  "tile_x": 9,
+  "tile_y": 16,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-43.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 16,
+  "dialogue_ref": "trainers/route-43/poke_maniac_brent_route43",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "camper_spencer_route43",
+  "zone_id": "route-43",
+  "name": "Camper Spencer",
+  "tile_x": 12,
+  "tile_y": 20,
+  "facing": "north",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-43.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 16,
+  "dialogue_ref": "trainers/route-43/camper_spencer_route43",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "fisherman_marvin_route43",
+  "zone_id": "route-43",
+  "name": "Fisherman Marvin",
+  "tile_x": 8,
+  "tile_y": 24,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-43.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 16,
+  "dialogue_ref": "trainers/route-43/fisherman_marvin_route43",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "rage_kanji_battle_lake_of_rage",
+  "zone_id": "lake-of-rage",
+  "name": "The Raging Kanji",
+  "tile_x": 10,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 20,
+  "dialogue_ref": "trainers/lake-of-rage/rage_kanji_battle_lake_of_rage",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "red_scale_errand",
+    "step": "scale_obtained",
+    "negate": true
+   }
+  ]
+ },
+ {
+  "trainer_id": "fisherman_raymond_lake_of_rage",
+  "zone_id": "lake-of-rage",
+  "name": "Fisherman Raymond",
+  "tile_x": 6,
+  "tile_y": 12,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/lake-of-rage/fisherman_raymond_lake_of_rage",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4,
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "red_scale_errand",
+    "step": "scale_obtained"
+   }
+  ]
+ },
+ {
+  "trainer_id": "fisherman_andre_lake_of_rage",
+  "zone_id": "lake-of-rage",
+  "name": "Fisherman Andre",
+  "tile_x": 14,
+  "tile_y": 12,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/lake-of-rage/fisherman_andre_lake_of_rage",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4,
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "red_scale_errand",
+    "step": "scale_obtained"
+   }
+  ]
+ },
+ {
+  "trainer_id": "ace_trainer_alton_lake_of_rage",
+  "zone_id": "lake-of-rage",
+  "name": "Ace Trainer Alton",
+  "tile_x": 4,
+  "tile_y": 16,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/lake-of-rage/ace_trainer_alton_lake_of_rage",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4,
+  "unlock_conditions": [
+   {
+    "type": "time_window",
+    "days_of_week": [
+     "wednesday"
+    ]
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "hq_fallen"
+   }
+  ]
+ },
+ {
+  "trainer_id": "ace_trainer_lois_lake_of_rage",
+  "zone_id": "lake-of-rage",
+  "name": "Ace Trainer Lois",
+  "tile_x": 16,
+  "tile_y": 18,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/lake-of-rage/ace_trainer_lois_lake_of_rage",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4,
+  "unlock_conditions": [
+   {
+    "type": "time_window",
+    "days_of_week": [
+     "wednesday"
+    ]
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "hq_fallen"
+   }
+  ]
  }
 ]

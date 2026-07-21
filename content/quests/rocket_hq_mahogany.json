@@ -1,0 +1,54 @@
+{
+ "_note": "Étape 4 Lot 5 — arc QG Rocket d'Acajou (événement Rocket 2/3, séquençage par Quest — modèle ADR-0004 « gros morceaux multi-PNJ »). Lance recrute au Lac (vrai point de départ, sourcé) ; la chute du QG (hq_fallen) débloque le poste-frontière (TM36), le vendeur RageCandyBar, et rend la ville normale.",
+ "quest_id": "rocket_hq_mahogany",
+ "name": {
+  "jp": "アカジオの　ちかに　ひそむ　もの",
+  "en": "What Lurks Beneath Mahogany"
+ },
+ "zone_ids": [
+  "lake-of-rage",
+  "mahogany-town"
+ ],
+ "steps": [
+  {
+   "step_id": "recruited",
+   "label": {
+    "jp": "ワタルに　スカウトされた。アカジオの　みやげやが　あやしい。",
+    "en": "Lance recruited me. The Mahogany souvenir shop looks suspicious."
+   },
+   "target_zone_id": "mahogany-town"
+  },
+  {
+   "step_id": "alarm_disabled",
+   "label": {
+    "jp": "けいほうそうちを　とめた。",
+    "en": "The alarm system is off."
+   },
+   "target_zone_id": "mahogany-town"
+  },
+  {
+   "step_id": "passwords_obtained",
+   "label": {
+    "jp": "2つの　あいことばを　しった。ボスの　へやが　あく。",
+    "en": "Learned both passwords. The boss's door will open."
+   },
+   "target_zone_id": "mahogany-town"
+  },
+  {
+   "step_id": "boss_unmasked",
+   "label": {
+    "jp": "「ボス」の　しょうたいは　ラムボス…　いや、ランスの　へんそうだった！",
+    "en": "The 'boss' was Petrel in disguise!"
+   },
+   "target_zone_id": "mahogany-town"
+  },
+  {
+   "step_id": "hq_fallen",
+   "label": {
+    "jp": "ワタルと　ふたりで　アテナを　やぶった。QGは　かいめつ！",
+    "en": "Lance and I defeated Ariana. The HQ has fallen!"
+   },
+   "target_zone_id": "mahogany-town"
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "_note": "Overlay grammaire — Acajou, 5 points N2-009→013 (famille des connecteurs それ～ : les distracteurs croisés restent des contrastes cause/opposition nets, jamais deux membres interchangeables de la famille dans le même tirage).",
+ "zone_id": "mahogany-town",
+ "points": [
+  {
+   "grammar_id": "N2-009",
+   "source_index": 8,
+   "title": "A。そこで B。(~sokode)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "明日（あした）は試験（しけん）があります。そこで今晩（こんばん）勉強（べんきょう）しようと思（おも）います。",
+     "point_answer": "そこで",
+     "jp_cloze": "明日（あした）は試験（しけん）があります。＿＿今晩（こんばん）勉強（べんきょう）しようと思（おも）います。",
+     "distractors": [
+      "ところが",
+      "それなのに",
+      "もっとも"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "このレストランは混（こ）んでいます。そこで別（べつ）の場所（ばしょ）でランチを食（た）べましょう。",
+     "point_answer": "そこで",
+     "jp_cloze": "このレストランは混（こ）んでいます。＿＿別（べつ）の場所（ばしょ）でランチを食（た）べましょう。",
+     "distractors": [
+      "ところが",
+      "それなのに",
+      "もっとも"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-010",
+   "source_index": 9,
+   "title": "A。それがB。(~sorega)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は勉強（べんきょう）ができる。それが天才（てんさい）というものだ。",
+     "point_answer": "それが",
+     "jp_cloze": "彼（かれ）は勉強（べんきょう）ができる。＿＿天才（てんさい）というものだ。",
+     "distractors": [
+      "そこで",
+      "しかも",
+      "ただし"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "彼女（かのじょ）は私（わたし）を助（たす）けてくれる。それが友達（ともだち）というものだ。",
+     "point_answer": "それが",
+     "jp_cloze": "彼女（かのじょ）は私（わたし）を助（たす）けてくれる。＿＿友達（ともだち）というものだ。",
+     "distractors": [
+      "そこで",
+      "しかも",
+      "ただし"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-011",
+   "source_index": 10,
+   "title": "A。それで B。 (~sore de)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "昨日（きのう）は雨（あめ）が降（ふ）っていた。それで公園（こうえん）に行（い）かなかった。",
+     "point_answer": "それで",
+     "jp_cloze": "昨日（きのう）は雨（あめ）が降（ふ）っていた。＿＿公園（こうえん）に行（い）かなかった。",
+     "distractors": [
+      "それなのに",
+      "ところが",
+      "もっとも"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "部屋（へや）が寒（さむ）かった。それで暖房（だんぼう）をつけた。",
+     "point_answer": "それで",
+     "jp_cloze": "部屋（へや）が寒（さむ）かった。＿＿暖房（だんぼう）をつけた。",
+     "distractors": [
+      "それなのに",
+      "ところが",
+      "もっとも"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-012",
+   "source_index": 11,
+   "title": "A。それでも B。(~sore demo)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "今日（きょう）は日曜日（にちようび）です。それでも、仕事（しごと）に行（い）かなければなりません。",
+     "point_answer": "それでも",
+     "jp_cloze": "今日（きょう）は日曜日（にちようび）です。＿＿、仕事（しごと）に行（い）かなければなりません。",
+     "distractors": [
+      "だから",
+      "そこで",
+      "つまり"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "雨（あめ）が降（ふ）っています。それでも、散歩（さんぽ）に行（い）きたいです。",
+     "point_answer": "それでも",
+     "jp_cloze": "雨（あめ）が降（ふ）っています。＿＿、散歩（さんぽ）に行（い）きたいです。",
+     "distractors": [
+      "だから",
+      "そこで",
+      "つまり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-013",
+   "source_index": 12,
+   "title": "A。それなのに B。(~sorenanoni)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は頭（あたま）がいい。それなのに、試験（しけん）に落（お）ちた。",
+     "point_answer": "それなのに",
+     "jp_cloze": "彼（かれ）は頭（あたま）がいい。＿＿、試験（しけん）に落（お）ちた。",
+     "distractors": [
+      "だから",
+      "そこで",
+      "つまり"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "私（わたし）は早（はや）く起（お）きた。それなのに、バスに遅（おく）れた。",
+     "point_answer": "それなのに",
+     "jp_cloze": "私（わたし）は早（はや）く起（お）きた。＿＿、バスに遅（おく）れた。",
+     "distractors": [
+      "だから",
+      "そこで",
+      "つまり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

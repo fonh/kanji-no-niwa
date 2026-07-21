@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rocket_grunt1_b2f_hq_mahogany",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "でんぱそうしんきには　ちかづけないぞ！",
+     "en": "You'll not get near the transmitter!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "そうしんきを　まもれ…！",
+     "en": "Protect the transmitter...!"
+    }
+   ]
+  }
+ }
+}

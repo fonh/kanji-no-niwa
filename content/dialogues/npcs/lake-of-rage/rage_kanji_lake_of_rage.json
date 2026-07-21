@@ -1,0 +1,56 @@
+{
+ "_note": "Étape 4 Lot 5 — didascalies de la rencontre Shiny garantie (kanji 怒 au shimmer rouge, design PRD/guidebook). Le combat vit dans trainers.json (rage_kanji_battle_lake_of_rage, 20q) ; « toujours une récompense, peu importe l'issue » (sourcé) → l'écaille est accordée par le post_battle du combat, idempotente.",
+ "npc_id": "rage_kanji_lake_of_rage",
+ "name": {
+  "jp": "あかく　ひかる　かんじ",
+  "en": "Red-Shimmering Kanji"
+ },
+ "zone_id": "lake-of-rage",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "red_scale_errand",
+     "step": "scale_obtained"
+    }
+   ],
+   "state": "calmed"
+  },
+  {
+   "default": true,
+   "state": "raging"
+  }
+ ],
+ "dialogue_states": {
+  "raging": {
+   "pages": [
+    {
+     "jp": "（みずうみの　まんなかで、あかい　ひかりが　あばれて　いる…！）",
+     "en": "(In the middle of the lake, a red light thrashes wildly...!)"
+    },
+    {
+     "jp": "（「怒（いか）り」の　かんじが、いかりに　のまれて　いる！）",
+     "en": "(The kanji of Rage, swallowed by its own fury!)"
+    },
+    {
+     "jp": "（しずめるには、たたかう　しか　ない！）",
+     "en": "(There's no calming it but to fight!)"
+    }
+   ]
+  },
+  "calmed": {
+   "pages": [
+    {
+     "jp": "（みずうみは　しずかに　なった。）",
+     "en": "(The lake has gone still.)"
+    },
+    {
+     "jp": "（あかい　うろこが　きらりと　ながれついた。）",
+     "en": "(A red scale drifts glittering to your feet.)"
+    }
+   ]
+  }
+ }
+}

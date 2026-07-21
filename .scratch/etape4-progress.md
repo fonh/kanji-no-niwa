@@ -28,13 +28,29 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **19 / 48** écrites (+ 8 zones sans leçon faites : routes 34/35/38/40/41, burned-tower, 47-48, safari)
-- Leçons : **94 / 344** écrites
-- Kanji dotés d'exemples : **520 / 1950**
-- Overlays grammaire : **8 / 48** (pilote + goldenrod, national-park, route-37, ecruteak, route-39, olivine, cianwood)
-- Textes : **10 écrits** (dont 4 remises de CS : 砕・切・水・飛)
+- Zones : **23 / 48** écrites (+ 9 zones sans leçon faites, dont mt-mortar)
+- Leçons : **104 / 344** écrites
+- Kanji dotés d'exemples : **570 / 1950**
+- Overlays grammaire : **12 / 48**
+- Textes : **12 écrits** (dont 6 remises de CS : 砕・切・水・飛・力・渦)
 
 ### Journal
+- **2026-07-21 — route-42/mt-mortar + mahogany + route-43 + lake-of-rage (Lot 5)** :
+  route-42 — 3 combats, **Hiker de Mont Mortier = PNJ-leçon N2-001→003 + remise CS 力**
+  (+ texte obligatoire — résout le WARN force_rock_route32 ouvert depuis le Lot 1), Eusine
+  est (suicune_hunt +1 étape). mt-mortar — 3 combats + **Kiyo le Karate King** (22q, dōjō
+  E1 réintégré ; récompense adaptée en ceinture noire collectible, règle compagnon-unique).
+  lake-of-rage — **rencontre Shiny garantie du kanji 怒** (combat 20q, écaille rouge
+  garantie — sourcé « ne peut pas être raté »), **Lance recrute au bord du lac** (vrai
+  point de départ du fil, sourcé), Fishing Guru, Wesley du mercredi, dresseurs du mercredi
+  (time_window + post-QG), quête **red_scale_errand** (callback Mr. Pokémon → Exp. Share,
+  états ajoutés à son fichier Lot 1). mahogany — 5 leçons N2-009→013 (dont 3 de kanji N5
+  cascadés du pool route-29, conformes au comptage figé), **arc QG Rocket complet en Quest
+  5 étapes** (Gregg le savant gaffeur coupe l'alarme par dialogue — typé leçon, pas combat ;
+  Ross/Mitch mots de passe ; Silver #4 cameo sans combat ; Petrel-faux-Sakaki 30q
+  interpolé ; **double avec Lance contre Ariana 36q** ; **CS 渦 remis par Lance** + texte),
+  Pryce examen 試練・氷の道 65q gated chute du QG + 5 gardiens. 50 lesson_examples,
+  4 overlays (20 exemples), 2 textes CS. 5 linters verts (320 fichiers), 0 WARN deadlock.
 - **2026-07-21 — routes 38-41 + olivine + cianwood + 47-48 + safari (Lot 4)** : route-38 —
   5 combats ROM. route-39 — 9 leçons N3-070→078 sur les 4 PNJ de la ferme Moomoo, **quête
   moomoo_recovery** (7 baies multi-jours, modèle time_window du PRD ; l'animal est うし,
@@ -119,10 +135,10 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 17 | route-39 | Johto | 9 | 50 | 4 | ✅ fait (+ route-38 ; quête uси 7 baies) | ✅ | ✅ | ✅ | — | ✅ |
 | 18 | olivine-city | Johto | 5 | 30 | 2 | ✅ fait (Phare complet, Jasmine gym gated quête) | ✅ | ✅ | ✅ | — | ✅ |
 | 19 | cianwood-city | Johto | 5 | 30 | 3 | ✅ fait (+ routes 40/41, 47/48, safari, whirl obstacle ; CS 飛) | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 20 | route-42 | Johto | 3 | 15 | 1 | ⬜ à faire | · | · | · | · | · |
-| 21 | mahogany-town | Johto | 5 | 25 | 5 | ⬜ à faire | · | · | · | · | · |
-| 22 | route-43 | Johto | 1 | 5 | 1 | ⬜ à faire | · | · | · | · | · |
-| 23 | lake-of-rage | Johto | 1 | 5 | 1 | ⬜ à faire | · | · | · | · | · |
+| 20 | route-42 | Johto | 3 | 15 | 1 | ✅ fait (+ mt-mortar/Kiyo ; CS 力) | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 21 | mahogany-town | Johto | 5 | 25 | 5 | ✅ fait (arc QG Rocket complet, Pryce, CS 渦) | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 22 | route-43 | Johto | 1 | 5 | 1 | ✅ fait | ✅ | ✅ | ✅ | — | ✅ |
+| 23 | lake-of-rage | Johto | 1 | 5 | 1 | ✅ fait (kanji 怒 shiny, Lance, écaille rouge) | ✅ | ✅ | ✅ | — | ✅ |
 | 24 | blackthorn-city | Johto | 15 | 90 | 7 | ⬜ à faire | · | · | · | · | · |
 | 25 | dragons-den | Johto | 10 | 60 | 2 | ⬜ à faire | · | · | · | · | · |
 | 26 | dark-cave | Johto | 7 | 40 | 1 | ⬜ à faire | · | · | · | · | · |

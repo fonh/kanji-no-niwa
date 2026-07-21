@@ -1,0 +1,27 @@
+{
+ "trainer_id": "boarder_patton_mahogany",
+ "name": {
+  "jp": "ボーダーの　パットン",
+  "en": "Boarder Patton"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ろうしの　まえの　さいごの　かべ、この　おれだ！",
+     "en": "I'm the last wall before the Elder!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "かべは　やぶられた…。ろうし、たのみます。",
+     "en": "The wall is broken... Elder, it's on you."
+    }
+   ]
+  }
+ }
+}

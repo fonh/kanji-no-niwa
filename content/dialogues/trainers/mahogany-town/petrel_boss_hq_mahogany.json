@@ -1,0 +1,47 @@
+{
+ "_note": "Étape 4 Lot 5 — Petrel déguisé en « Boss » (retournement sourcé). 30q (interpolation entre Proton 24 et Ariana 36, les longueurs de la table PRD couvrant les 3 événements). Sa défaite avance boss_unmasked.",
+ "trainer_id": "petrel_boss_hq_mahogany",
+ "name": {
+  "jp": "ロケットだんかんぶ　ラムボス",
+  "en": "Executive Petrel"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "よく　きたな。わたしが　ロケットだんの　ボス、サカキだ！",
+     "en": "You've come far. I am Giovanni, boss of Team Rocket!"
+    },
+    {
+     "jp": "…なに、その　うたがいの　め は。",
+     "en": "...What's with that doubtful look?"
+    },
+    {
+     "jp": "いいだろう、しょうぶで　わからせて　やる！",
+     "en": "Fine — I'll make you a believer in battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ばれたか。わたしは　かんぶの　ラムボス、へんそうの　めいじんさ。",
+     "en": "So you saw through it. I'm Executive Petrel, master of disguise."
+    },
+    {
+     "jp": "ほんものの　サカキさまは　いつか　もどられる。その　ときが　たのしみだ。",
+     "en": "The real Giovanni will return one day. I look forward to it."
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "rocket_hq_mahogany",
+     "step_id": "boss_unmasked"
+    }
+   ]
+  }
+ }
+}

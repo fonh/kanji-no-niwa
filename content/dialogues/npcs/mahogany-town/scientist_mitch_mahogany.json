@@ -1,0 +1,37 @@
+{
+ "_note": "Étape 4 Lot 5 — 2ᵉ mot de passe ; avance passwords_obtained (Ross donne le 1er en saveur). La porte du boss = obstacle boss_door_rocket_hq (gated quête).",
+ "npc_id": "scientist_mitch_mahogany",
+ "name": {
+  "jp": "けんきゅういんの　ミッチ",
+  "en": "Scientist Mitch"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ボスの　へやの　あいことばは　ふたつ　いる。",
+     "en": "The boss's door needs two passwords."
+    },
+    {
+     "jp": "もう　ひとつは　「かねのおと」…　って、なんで　いっちゃうんだ！",
+     "en": "The other is 'Bell Chime'... wait, why am I saying this!?"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "rocket_hq_mahogany",
+     "step_id": "passwords_obtained"
+    }
+   ]
+  }
+ }
+}

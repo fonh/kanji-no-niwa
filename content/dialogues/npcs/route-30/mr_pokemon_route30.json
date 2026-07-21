@@ -1,32 +1,125 @@
 {
  "npc_id": "mr_pokemon_route30",
- "name": { "jp": "Mr.ポケモン", "en": "Mr. Pokémon" },
+ "name": {
+  "jp": "Mr.ポケモン",
+  "en": "Mr. Pokémon"
+ },
  "zone_id": "route-30",
  "jlpt_level": "N5",
  "state_rules": [
   {
-   "if": [{ "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_received" }],
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "red_scale"
+    }
+   ],
+   "state": "scale_delivery"
+  },
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "red_scale_errand",
+     "step": "delivered"
+    }
+   ],
+   "state": "scale_thanks_done"
+  },
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "mystery_egg_errand",
+     "step": "egg_received"
+    }
+   ],
    "state": "after"
   },
-  { "default": true, "state": "intro" }
+  {
+   "default": true,
+   "state": "intro"
+  }
  ],
  "dialogue_states": {
   "intro": {
    "pages": [
-    { "jp": "よく　きたね。", "en": "Good, you've come." },
-    { "jp": "これを　あげよう。", "en": "I'll give you this." },
-    { "jp": "ふしぎな　たまごだよ。", "en": "It's a mysterious egg." },
-    { "jp": "だいじに　そだててね。", "en": "Raise it with care." }
+    {
+     "jp": "よく　きたね。",
+     "en": "Good, you've come."
+    },
+    {
+     "jp": "これを　あげよう。",
+     "en": "I'll give you this."
+    },
+    {
+     "jp": "ふしぎな　たまごだよ。",
+     "en": "It's a mysterious egg."
+    },
+    {
+     "jp": "だいじに　そだててね。",
+     "en": "Raise it with care."
+    }
    ],
    "effects": [
-    { "type": "grant_item", "item_id": "mystery_egg" },
-    { "type": "advance_quest", "quest_id": "mystery_egg_errand", "step_id": "egg_received" }
+    {
+     "type": "grant_item",
+     "item_id": "mystery_egg"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "mystery_egg_errand",
+     "step_id": "egg_received"
+    }
    ]
   },
   "after": {
    "pages": [
-    { "jp": "たまご、げんきかな？", "en": "Is the egg doing well?" }
+    {
+     "jp": "たまご、げんきかな？",
+     "en": "Is the egg doing well?"
+    }
+   ]
+  },
+  "scale_delivery": {
+   "pages": [
+    {
+     "jp": "そ…　それは！　あかい　うろこ！！",
+     "en": "Th... that's it! The Red Scale!!"
+    },
+    {
+     "jp": "ながねん　さがして　いたのだよ！　ゆずって　くれないか！",
+     "en": "I've hunted for one for years! Won't you part with it?"
+    },
+    {
+     "jp": "おれいは　これだ。けいけんの　わけまえが　ふえる　ふしぎな　どうぐさ。",
+     "en": "Here's your reward — a curious device that shares out experience."
+    }
+   ],
+   "effects": [
+    {
+     "type": "remove_item",
+     "item_id": "red_scale"
+    },
+    {
+     "type": "grant_item",
+     "item_id": "exp_share"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "red_scale_errand",
+     "step_id": "delivered"
+    }
+   ]
+  },
+  "scale_thanks_done": {
+   "pages": [
+    {
+     "jp": "うろこの　けんきゅうは　じゅんちょうだよ。ありがとう！",
+     "en": "My scale research is going swimmingly. Thank you!"
+    }
    ]
   }
- }
+ },
+ "_note": " — Lot 5 (2026-07-21) : états scale_delivery/scale_thanks_done ajoutés (callback red_scale_errand, Exp. Share — sourcé guidebook § lake-of-rage)."
 }

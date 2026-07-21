@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 5 — Silver apparition #4 : cameo au QG (outcome=cameo, PAS un combat — table PRD § Silver, audit 02). Déjà vaincu par Lance ; germe de son arc de rédemption.",
+ "npc_id": "silver_rocket_hq_mahogany",
+ "name": {
+  "jp": "ライバル",
+  "en": "Silver"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "…おれは　まけた。マントの　おとこ、ワタルに。",
+     "en": "...I lost. To the caped man — Lance."
+    },
+    {
+     "jp": "ちからで　おさえつける　だけの　おれは　よわいと　いわれた。",
+     "en": "He said I'm weak — that I only know how to dominate by force."
+    },
+    {
+     "jp": "…どういう　いみだ。つよければ　いいんだろう。どけ。",
+     "en": "...What's that supposed to mean? Strong is strong. Move."
+    }
+   ]
+  }
+ }
+}

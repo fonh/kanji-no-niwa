@@ -1,0 +1,27 @@
+{
+ "trainer_id": "fisherman_raymond_lake_of_rage",
+ "name": {
+  "jp": "つりびとの　レイモンド",
+  "en": "Fisherman Raymond"
+ },
+ "zone_id": "lake-of-rage",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "みずうみが　しずかに　なってから、つりが　さいこうなんだ！",
+     "en": "Ever since the lake calmed down, the fishing's been superb!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "さかなも　しょうぶも　だいりょうだ。",
+     "en": "A fine haul, in fish and in battles."
+    }
+   ]
+  }
+ }
+}

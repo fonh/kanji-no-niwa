@@ -1,0 +1,31 @@
+{
+ "trainer_id": "poke_maniac_harrison_mt_mortar",
+ "name": {
+  "jp": "かいじゅうマニアの　ハリソン",
+  "en": "Poké Maniac Harrison"
+ },
+ "zone_id": "mt-mortar",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　やまの　ぬしの　うわさ、しってるか？",
+     "en": "Heard the rumors about this mountain's master?"
+    },
+    {
+     "jp": "ぬしに　あう　まえに、おれと　しょうぶだ！",
+     "en": "Before you meet him, you face me!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ぬしは　もっと　つよいぞ…。",
+     "en": "The master is far stronger..."
+    }
+   ]
+  }
+ }
+}

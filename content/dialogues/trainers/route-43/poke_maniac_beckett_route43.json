@@ -1,0 +1,31 @@
+{
+ "trainer_id": "poke_maniac_beckett_route43",
+ "name": {
+  "jp": "かいじゅうマニアの　ベケット",
+  "en": "Poké Maniac Beckett"
+ },
+ "zone_id": "route-43",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "さいきん、みずうみの　ようすが　おかしいんだ。",
+     "en": "The lake's been strange lately."
+    },
+    {
+     "jp": "いらいらするから、しょうぶだ！",
+     "en": "It's got me on edge — battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いらいらが　すこし　きえたよ。",
+     "en": "I feel a bit less on edge now."
+    }
+   ]
+  }
+ }
+}

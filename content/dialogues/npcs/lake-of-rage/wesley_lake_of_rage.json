@@ -1,0 +1,53 @@
+{
+ "_note": "Étape 4 Lot 5 — Wesley, frère du mercredi (fratrie calendaire ; time_window mercredi + post-QG sur l'entrée carte). La baisse des eaux du mercredi (pluie permanente sinon) = time_window sur les entrées des dresseurs du mercredi (Alton/Lois).",
+ "npc_id": "wesley_lake_of_rage",
+ "name": {
+  "jp": "ウェスリー",
+  "en": "Wesley"
+ },
+ "zone_id": "lake-of-rage",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "black_belt_item"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ぼく、ウェスリー。すいようびの　みずうみは　みずが　ひくく　なるんだ。",
+     "en": "I'm Wesley. On Wednesdays the lake water drops."
+    },
+    {
+     "jp": "かくれた　みちが　あらわれる。きみにも　みせて　あげる。ほら、これも！",
+     "en": "Hidden paths appear. Let me show you — and here, take this too!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "black_belt_item"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "すいようびは　みずうみの　ひみつの　ひ、だよ。",
+     "en": "Wednesday is the lake's secret day."
+    }
+   ]
+  }
+ }
+}

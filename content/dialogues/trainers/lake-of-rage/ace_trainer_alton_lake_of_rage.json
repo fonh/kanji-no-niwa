@@ -1,0 +1,31 @@
+{
+ "trainer_id": "ace_trainer_alton_lake_of_rage",
+ "name": {
+  "jp": "エリートトレーナーの　アルトン",
+  "en": "Ace Trainer Alton"
+ },
+ "zone_id": "lake-of-rage",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "すいようびだけ、みずが　ひいた　みちに　これるんだ。",
+     "en": "Only on Wednesdays can you reach this drained path."
+    },
+    {
+     "jp": "ここまで　きた　きみと　たたかいたい！",
+     "en": "And I want to battle whoever makes it here!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "すいようびに　また　こよう。",
+     "en": "I'll come again next Wednesday."
+    }
+   ]
+  }
+ }
+}

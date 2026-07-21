@@ -1,0 +1,31 @@
+{
+ "trainer_id": "poke_maniac_ron_route43",
+ "name": {
+  "jp": "かいじゅうマニアの　ロン",
+  "en": "Poké Maniac Ron"
+ },
+ "zone_id": "route-43",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "みずうみへの　ちかみちは　この　みちだけ。",
+     "en": "This is the only shortcut to the lake."
+    },
+    {
+     "jp": "とおりたければ　しょうぶだ！",
+     "en": "Battle me if you want through!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "みずうみで　なにが　まってるか、みて　くると　いい。",
+     "en": "Go see what awaits at the lake."
+    }
+   ]
+  }
+ }
+}

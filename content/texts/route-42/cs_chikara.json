@@ -1,0 +1,137 @@
+{
+ "_note": "Étape 4 Lot 5 — texte obligatoire de remise du CS-Kanji 力 (hiker_cs_route42). Pattern 砕/切/水/飛. Seuil N=29.",
+ "text": {
+  "text_id": "cs_chikara_route42",
+  "title": {
+   "jp": "岩（いわ）の　うごかしかた",
+   "en": "How to Move a Boulder"
+  },
+  "jp_text": "岩（いわ）を　うごかすのは、うでの　力（ちから）だけでは　ありません。あしの　おきかた、こしの　いれかた、いきの　あわせかた。からだ　ぜんぶで　おすのです。あるいは、こう　いっても　いい。力（ちから）とは、からだと　こころを　ひとつに　する　わざだと。",
+  "en_text": "Moving a boulder is not just arm strength. Where you set your feet, how you plant your hips, how you time your breath — you push with your whole body. Or you could put it this way: power is the art of making body and mind one.",
+  "audio_ref": null,
+  "level": "N2",
+  "source": "original",
+  "tier": "obligatoire",
+  "zone_id": "route-42",
+  "npc_ref": "hiker_cs_route42",
+  "found_object_ref": null,
+  "event_ref": "cs_chikara_route42",
+  "length_chars": 126,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　はなしの　いいたい　ことは？",
+     "en": "What is the main point?"
+    },
+    "options": [
+     {
+      "jp": "力（ちから）は　からだと　こころを　あわせる　わざだ。",
+      "en": "Power is the art of uniting body and mind"
+     },
+     {
+      "jp": "うでを　きたえれば　いい。",
+      "en": "Just train your arms"
+     },
+     {
+      "jp": "岩（いわ）は　うごかせない。",
+      "en": "Boulders cannot be moved"
+     },
+     {
+      "jp": "いきを　とめる　ことが　だいじだ。",
+      "en": "Holding your breath is what matters"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "岩（いわ）を　おす　ときは　なにで　おしますか。",
+     "en": "What do you push a boulder with?"
+    },
+    "options": [
+     {
+      "jp": "からだ　ぜんぶで。",
+      "en": "Your whole body"
+     },
+     {
+      "jp": "うでだけで。",
+      "en": "Arms only"
+     },
+     {
+      "jp": "どうぐで。",
+      "en": "A tool"
+     },
+     {
+      "jp": "こえで。",
+      "en": "Your voice"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 63,
+     "end": 77
+    }
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": {
+     "jp": "「あるいは」の　いみは？",
+     "en": "What does 「あるいは」 mean here?"
+    },
+    "options": [
+     {
+      "jp": "または／べつの　いいかたを　すれば。",
+      "en": "Or / to put it another way"
+     },
+     {
+      "jp": "ぜったいに。",
+      "en": "Absolutely"
+     },
+     {
+      "jp": "やっぱり。",
+      "en": "As expected"
+     },
+     {
+      "jp": "たとえば　むかし。",
+      "en": "For example, long ago"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "resolution_reference",
+    "prompt": {
+     "jp": "「こう　いっても　いい」の「こう」は　どれですか。",
+     "en": "What does 「こう」 point to?"
+    },
+    "options": [
+     {
+      "jp": "力（ちから）とは　からだと　こころを　ひとつに　する　わざ、という　いいかた。",
+      "en": "The phrasing that power is the art of uniting body and mind"
+     },
+     {
+      "jp": "岩（いわ）は　おもい、という　いいかた。",
+      "en": "The phrasing that boulders are heavy"
+     },
+     {
+      "jp": "うでの　力（ちから）が　すべて、という　いいかた。",
+      "en": "The phrasing that arm strength is everything"
+     },
+     {
+      "jp": "いきを　あわせるな、という　いいかた。",
+      "en": "The phrasing that you shouldn't time your breath"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 94,
+     "end": 125
+    }
+   }
+  ]
+ }
+}

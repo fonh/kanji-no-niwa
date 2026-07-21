@@ -1,0 +1,31 @@
+{
+ "trainer_id": "super_nerd_hugh_mt_mortar",
+ "name": {
+  "jp": "りかけいの　おとこの　ヒュー",
+  "en": "Super Nerd Hugh"
+ },
+ "zone_id": "mt-mortar",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "どうくつの　こうせきを　しらべて　いるんだ。",
+     "en": "I'm studying the cave's mineral veins."
+    },
+    {
+     "jp": "じゃまを　する　なら、しょうぶだ！",
+     "en": "If you're going to interrupt — battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "けんきゅうに　もどるよ…。",
+     "en": "Back to my research..."
+    }
+   ]
+  }
+ }
+}

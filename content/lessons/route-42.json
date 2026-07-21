@@ -1,0 +1,41 @@
+[
+ {
+  "zone_id": "route-42",
+  "npc_ref": "hiker_cs_route42",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "氾",
+   "沃",
+   "淫",
+   "爪",
+   "牙"
+  ],
+  "grammar_id": "N2-001"
+ },
+ {
+  "zone_id": "route-42",
+  "npc_ref": "hiker_cs_route42",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "瓦",
+   "痕",
+   "痩",
+   "瘍",
+   "稽"
+  ],
+  "grammar_id": "N2-002"
+ },
+ {
+  "zone_id": "route-42",
+  "npc_ref": "hiker_cs_route42",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "羞",
+   "臼",
+   "葛",
+   "蓋",
+   "蔑"
+  ],
+  "grammar_id": "N2-003"
+ }
+]

@@ -1,0 +1,61 @@
+{
+ "_note": "Étape 4 Lot 5 — le Hiker anonyme sortant de Mont Mortier (sourcé : bouscule le joueur et s'excuse — HM04 Strength adapté). PNJ-leçon #1-3 de route-42 (N2-001→003) + remise du CS 力 (seuil N=29). Texte obligatoire : texts/route-42/cs_chikara.json. Résout l'obstacle force_rock_route32 (WARN du linter depuis le Lot 1).",
+ "npc_id": "hiker_cs_route42",
+ "name": {
+  "jp": "モルタルやまの　やまおとこ",
+  "en": "Hiker from Mt. Mortar"
+ },
+ "zone_id": "route-42",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "cs_chikara"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "おっと！　すまんすまん、まえを　みて　いなかった。",
+     "en": "Oof! Sorry, sorry — wasn't watching where I was going."
+    },
+    {
+     "jp": "モルタルやまの　しゅぎょうがえりでな。",
+     "en": "Just back from training in Mt. Mortar."
+    },
+    {
+     "jp": "おわびに、いい　ものを　やろう。力（ちから）の　かんじの　ひでんだ。",
+     "en": "By way of apology, take this — the secret kanji of Power."
+    },
+    {
+     "jp": "おもい　いわも、これで　うごかせるように　なるぞ。",
+     "en": "With it, you'll be able to move even heavy boulders."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "cs_chikara"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "いわを　うごかすには、こつが　いる。あせらず　やる　ことだ。",
+     "en": "Moving boulders takes knack. Don't rush it."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "trainer_id": "super_nerd_markus_mt_mortar",
+ "name": {
+  "jp": "りかけいの　おとこの　マーカス",
+  "en": "Super Nerd Markus"
+ },
+ "zone_id": "mt-mortar",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "こんな　おくまで　くる　ひとは　めずらしい。",
+     "en": "Few make it this deep."
+    },
+    {
+     "jp": "データを　とらせて　もらう！",
+     "en": "Let me collect some data on you!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きちょうな　データだ…。",
+     "en": "Precious data indeed..."
+    }
+   ]
+  }
+ }
+}

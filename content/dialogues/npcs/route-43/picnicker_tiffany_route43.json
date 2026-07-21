@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 5 — Tiffany typée « ambiant » au npc-inventory (pas de combat) : elle commente la rançon du poste Rocket.",
+ "npc_id": "picnicker_tiffany_route43",
+ "name": {
+  "jp": "ピクニックガールの　ティファニー",
+  "en": "Picnicker Tiffany"
+ },
+ "zone_id": "route-43",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "この　みち、ロケットだんの　ゲートが　あるでしょ。",
+     "en": "There's a Rocket toll gate on this road, you know."
+    },
+    {
+     "jp": "1000えん　はらうか、とおまわりするか…　ひどい　はなしよね。",
+     "en": "Pay a thousand yen or go the long way... awful, isn't it."
+    }
+   ]
+  }
+ }
+}

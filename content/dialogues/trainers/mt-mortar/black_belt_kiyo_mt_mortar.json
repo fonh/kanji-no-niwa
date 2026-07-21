@@ -1,0 +1,50 @@
+{
+ "_note": "Étape 4 Lot 5 — Karate King Kiyo (mini-donjon dōjō E1, réintégré v1). Adaptation règle #1 + compagnon-unique : la récompense « compagnon » devient sa ceinture noire (kiyo_black_belt, collectible — companion_id inchangeable). Combat-épreuve 22q (narratif, fond de donjon).",
+ "trainer_id": "black_belt_kiyo_mt_mortar",
+ "name": {
+  "jp": "からてだいおうの　キヨ",
+  "en": "Black Belt Kiyo"
+ },
+ "zone_id": "mt-mortar",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "……よく　ここまで　きた。",
+     "en": "......You've come far to reach me."
+    },
+    {
+     "jp": "わしは　カラテだいおう　キヨ。この　やまの　そこで　こころを　みがいて　おる。",
+     "en": "I am Kiyo, the Karate King. I polish my spirit at the bottom of this mountain."
+    },
+    {
+     "jp": "わしの　しゅぎょうの　せいかを　うけて　みよ！",
+     "en": "Now face the fruits of my training!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "……みごとじゃ。",
+     "en": "......Splendid."
+    },
+    {
+     "jp": "わしの　くろおびを　さずけよう。しゅぎょうの　あかしじゃ。",
+     "en": "I bestow on you my black belt — proof of true training."
+    },
+    {
+     "jp": "これからも　こころを　みがき　つづけなさい。",
+     "en": "Keep polishing your spirit, always."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "kiyo_black_belt"
+    }
+   ]
+  }
+ }
+}

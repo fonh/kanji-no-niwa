@@ -1,0 +1,63 @@
+{
+ "_note": "Étape 4 Lot 5 — Lance au bord du lac (vrai point de départ du fil, sourcé guidebook — « apparaît ici, pas à Mahogany »). Le type « combat » de sa ligne npc-inventory correspond au double contre Ariana (QG), pas à un combat ici.",
+ "npc_id": "lance_lakeside_lake_of_rage",
+ "name": {
+  "jp": "ブラックマントの　ワタル",
+  "en": "Lance"
+ },
+ "zone_id": "lake-of-rage",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "rocket_hq_mahogany",
+     "step": "recruited"
+    }
+   ],
+   "state": "gone"
+  },
+  {
+   "default": true,
+   "state": "recruit"
+  }
+ ],
+ "dialogue_states": {
+  "recruit": {
+   "pages": [
+    {
+     "jp": "いい　うでだ。あの　あばれる　かんじを　しずめるとは。",
+     "en": "Impressive work, calming that raging kanji."
+    },
+    {
+     "jp": "わたしは　ワタル。この　みずうみの　いへんを　しらべて　いる。",
+     "en": "I am Lance. I'm investigating the disturbances in this lake."
+    },
+    {
+     "jp": "げんいんは　アカジオの　まちに　ある。みやげやの　ちかが　あやしい。",
+     "en": "The cause lies in Mahogany — that souvenir shop's basement is suspect."
+    },
+    {
+     "jp": "きみの　ちからを　かして　くれ。まちで　あおう。",
+     "en": "Lend me your strength. Meet me in town."
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "rocket_hq_mahogany",
+     "step_id": "recruited"
+    }
+   ]
+  },
+  "gone": {
+   "pages": [
+    {
+     "jp": "（ワタルは　アカジオへ　むかった。）",
+     "en": "(Lance has headed for Mahogany.)"
+    }
+   ]
+  }
+ }
+}

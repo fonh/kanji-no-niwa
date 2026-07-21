@@ -1,0 +1,31 @@
+{
+ "trainer_id": "hiker_benjamin_route42",
+ "name": {
+  "jp": "やまおとこの　ベンジャミン",
+  "en": "Hiker Benjamin"
+ },
+ "zone_id": "route-42",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "モルタルやまの　いわは　かたいぞ。",
+     "en": "The rocks of Mt. Mortar are hard."
+    },
+    {
+     "jp": "おれの　いしも　かたい！",
+     "en": "And so is my will!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いしは　かたくても、まけたか。",
+     "en": "Hard will or not, I lost."
+    }
+   ]
+  }
+ }
+}

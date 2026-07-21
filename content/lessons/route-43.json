@@ -1,0 +1,15 @@
+[
+ {
+  "zone_id": "route-43",
+  "npc_ref": "gate_npc_route43",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "左",
+   "本",
+   "男",
+   "白",
+   "花"
+  ],
+  "grammar_id": "N2-021"
+ }
+]

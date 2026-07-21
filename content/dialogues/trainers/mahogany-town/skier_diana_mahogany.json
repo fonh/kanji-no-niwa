@@ -1,0 +1,31 @@
+{
+ "trainer_id": "skier_diana_mahogany",
+ "name": {
+  "jp": "スキーヤーの　ダイアナ",
+  "en": "Skier Diana"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ヤナギろうしの　ジムは　こおりの　せかい。",
+     "en": "Elder Pryce's Gym is a world of ice."
+    },
+    {
+     "jp": "すべらない　ように　きを　つけなさい！",
+     "en": "Mind you don't slip!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "わたしが　すべっちゃった。",
+     "en": "I'm the one who slipped."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "_note": "Étape 4 Lot 5 — PNJ-leçon #2 (N2-010). « Type louche » remplacé après la chute du QG (sourcé). L'escalier du QG est l'obstacle rocket_hq_stairs_mahogany (gated quête recruited).",
+ "npc_id": "souvenir_vendor_mahogany",
+ "name": {
+  "jp": "みやげやの　てんしゅ",
+  "en": "Souvenir Shop Keeper"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "rocket_hq_mahogany",
+     "step": "hq_fallen"
+    }
+   ],
+   "state": "replaced"
+  },
+  {
+   "default": true,
+   "state": "shady"
+  }
+ ],
+ "dialogue_states": {
+  "shady": {
+   "pages": [
+    {
+     "jp": "いらっしゃい…。うちは　ふつうの　みやげやだよ。",
+     "en": "Welcome... This is just an ordinary souvenir shop."
+    },
+    {
+     "jp": "ちかから　おとが　する？　きの　せいだろ。それが　なにか？",
+     "en": "Noises from the basement? Your imagination. What of it?"
+    }
+   ]
+  },
+  "replaced": {
+   "pages": [
+    {
+     "jp": "せんだいの　てんしゅは　ロケットだんの　てさきだったとはねえ。",
+     "en": "To think the last keeper was a Rocket agent."
+    },
+    {
+     "jp": "いまは　わたしが　ほんものの　みやげを　うって　いますよ。",
+     "en": "Now I sell real souvenirs here."
+    }
+   ]
+  }
+ }
+}

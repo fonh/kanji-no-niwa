@@ -1,0 +1,41 @@
+{
+ "_note": "Étape 4 Lot 5 — Eusine côté est de Route 42 (après Coupe), nouvel aperçu (quête suicune_hunt, étape route42_glimpse — ajoutée au fichier quête).",
+ "npc_id": "eusine_route42",
+ "name": {
+  "jp": "でんせつハンターの　ミナキ",
+  "en": "Eusine"
+ },
+ "zone_id": "route-42",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "…また　みたんだ。ひがしの　みずうみの　ほうで。",
+     "en": "...I saw it again. Off toward the lake in the east."
+    },
+    {
+     "jp": "かぜのように　はしって　いった。",
+     "en": "It ran past like the wind."
+    },
+    {
+     "jp": "ぼくたちの　おいかけっこは　まだまだ　つづくよ。",
+     "en": "Our little chase is far from over."
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "suicune_hunt",
+     "step_id": "route42_glimpse"
+    }
+   ]
+  }
+ }
+}

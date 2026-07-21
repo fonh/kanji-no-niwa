@@ -1,0 +1,27 @@
+{
+ "trainer_id": "boarder_deandre_mahogany",
+ "name": {
+  "jp": "ボーダーの　ディアンドレ",
+  "en": "Boarder Deandre"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ボードも　しょうぶも、スピードが　いのち！",
+     "en": "Boarding or battling, speed is everything!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "スピードまけだ…。",
+     "en": "Out-sped..."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "_note": "Étape 4 Lot 5 — combat de la rencontre Shiny garantie (20q, narratif). Récompense garantie quelle que soit l'issue (sourcé : « le combat ne peut pas être raté ») — la règle défaite/interruption du PRD redonne accès au combat, et l'écaille tombe au premier post_battle atteint ; le badge Shiny rouge sur 怒 + lettre du mentor sont écrits par la logique de jeu.",
+ "trainer_id": "rage_kanji_battle_lake_of_rage",
+ "name": {
+  "jp": "あばれる　かんじ　怒（いかり）",
+  "en": "The Raging Kanji"
+ },
+ "zone_id": "lake-of-rage",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "（あかい　ひかりが　おそいかかって　きた！）",
+     "en": "(The red light lunges at you!)"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "（ひかりが　おさまり、みずうみに　しずかさが　もどった。）",
+     "en": "(The light subsides; calm returns to the lake.)"
+    },
+    {
+     "jp": "（あかい　うろこを　ひろった！）",
+     "en": "(You picked up the Red Scale!)"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "red_scale"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "red_scale_errand",
+     "step_id": "scale_obtained"
+    }
+   ]
+  }
+ }
+}

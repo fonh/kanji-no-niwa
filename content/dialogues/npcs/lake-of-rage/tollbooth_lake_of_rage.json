@@ -1,0 +1,58 @@
+{
+ "_note": "Étape 4 Lot 5 — poste-frontière Rocket (rançon 1000¥ tant que le QG tient ; TM36 après). PNJ-leçon #1 de lake-of-rage (N2-024 — sa réplique もっとも expose le point). La rançon effective (péage) est une mécanique d'implémentation ; ici les deux états.",
+ "npc_id": "tollbooth_lake_of_rage",
+ "name": {
+  "jp": "りょうきんじょの　おとこ",
+  "en": "Tollbooth Man"
+ },
+ "zone_id": "lake-of-rage",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "rocket_hq_mahogany",
+     "step": "hq_fallen"
+    }
+   ],
+   "state": "normal"
+  },
+  {
+   "default": true,
+   "state": "ransom"
+  }
+ ],
+ "dialogue_states": {
+  "ransom": {
+   "pages": [
+    {
+     "jp": "ここから　さきは　ゆうりょうどうろ！　1000えん　いただこう！",
+     "en": "Toll road ahead! That'll be 1000 yen!"
+    },
+    {
+     "jp": "…もっとも、はらわないなら　とおまわりだな。",
+     "en": "...Though if you won't pay, it's the long way round for you."
+    }
+   ]
+  },
+  "normal": {
+   "pages": [
+    {
+     "jp": "すみません、この　ゲートは　ロケットだんに　のっとられて　いたんです。",
+     "en": "My apologies — Team Rocket had taken over this gatehouse."
+    },
+    {
+     "jp": "おわびに　これを　どうぞ。ほんらいは　ただの　ゲートですから。",
+     "en": "Please take this by way of apology. It's just an ordinary gate, really."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "tm36_sludge_bomb"
+    }
+   ]
+  }
+ }
+}

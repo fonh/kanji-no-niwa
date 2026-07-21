@@ -1,0 +1,31 @@
+{
+ "trainer_id": "ace_trainer_lois_lake_of_rage",
+ "name": {
+  "jp": "エリートトレーナーの　ロイス",
+  "en": "Ace Trainer Lois"
+ },
+ "zone_id": "lake-of-rage",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "みずうみの　ひみつの　ひに　あえたわね。",
+     "en": "So you found the lake's secret day."
+    },
+    {
+     "jp": "きねんに　しょうぶしましょ！",
+     "en": "Let's battle to mark it!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "らいしゅうも　きっと　くるわ。",
+     "en": "I'll surely come next week too."
+    }
+   ]
+  }
+ }
+}

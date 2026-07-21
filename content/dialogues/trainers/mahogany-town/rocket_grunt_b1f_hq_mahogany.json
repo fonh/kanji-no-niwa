@@ -1,0 +1,27 @@
+{
+ "trainer_id": "rocket_grunt_b1f_hq_mahogany",
+ "name": {
+  "jp": "ロケットだんいん",
+  "en": "Team Rocket Grunt"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ここは　ただの　みやげやの　ちか…な　わけが　ないだろ！",
+     "en": "This is just a souvenir shop basement... as if!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "けいほう！　けいほうは　まだか！？",
+     "en": "The alarm! Where's the alarm!?"
+    }
+   ]
+  }
+ }
+}

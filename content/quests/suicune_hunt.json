@@ -37,6 +37,14 @@
     "en": "Saw the spirit at the Cianwood cape. Battled Eusine and earned his respect."
    },
    "target_zone_id": "cianwood-city"
+  },
+  {
+   "step_id": "route42_glimpse",
+   "label": {
+    "jp": "42ばんどうろの　ひがしで、また　せいれいを　みかけた。",
+    "en": "Glimpsed the spirit again on eastern Route 42."
+   },
+   "target_zone_id": "route-42"
   }
  ]
 }

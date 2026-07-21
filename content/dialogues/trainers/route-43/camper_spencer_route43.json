@@ -1,0 +1,31 @@
+{
+ "trainer_id": "camper_spencer_route43",
+ "name": {
+  "jp": "キャンプボーイの　スペンサー",
+  "en": "Camper Spencer"
+ },
+ "zone_id": "route-43",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "みずうみの　ちかくは　キャンプの　あなばなんだ。",
+     "en": "Near the lake is a hidden camping gem."
+    },
+    {
+     "jp": "あなばを　まもる　しょうぶだ！",
+     "en": "I'll defend my secret spot!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あなばは　みんなの　ものさ…。",
+     "en": "A secret spot belongs to everyone, I guess..."
+    }
+   ]
+  }
+ }
+}

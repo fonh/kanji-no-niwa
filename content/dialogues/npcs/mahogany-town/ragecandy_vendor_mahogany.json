@@ -1,0 +1,56 @@
+{
+ "_note": "Étape 4 Lot 5 — PNJ-leçon #1 d'Acajou (N2-009). Bloque la route est jusqu'à la chute du QG (fidèle). La vente (RageCandyBar, troquée plus tard au Passage Souterrain — callback D10) : inventaire de boutique à l'implémentation. La réplique そこで expose son propre point de grammaire.",
+ "npc_id": "ragecandy_vendor_mahogany",
+ "name": {
+  "jp": "いかりまんじゅうの　うりこ",
+  "en": "RageCandyBar Vendor"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "rocket_hq_mahogany",
+     "step": "hq_fallen"
+    }
+   ],
+   "state": "cleared"
+  },
+  {
+   "default": true,
+   "state": "blocking"
+  }
+ ],
+ "dialogue_states": {
+  "blocking": {
+   "pages": [
+    {
+     "jp": "いかりまんじゅうは　いかが！　アカジオめいぶつ！",
+     "en": "RageCandyBars! Mahogany's specialty!"
+    },
+    {
+     "jp": "この　さきに　いきたい？　だめだめ、いま　みちが　ふさがってるんだ。",
+     "en": "Want through? No no, the road's blocked right now."
+    },
+    {
+     "jp": "そこで　どうだい、まんじゅうでも　たべて　まって　いれば？",
+     "en": "So how about it — eat a bun while you wait?"
+    }
+   ]
+  },
+  "cleared": {
+   "pages": [
+    {
+     "jp": "ロケットだんが　いなく　なって、しょうばいも　あんしんだ。",
+     "en": "With Team Rocket gone, business is safe again."
+    },
+    {
+     "jp": "とおって　いいよ。まんじゅうも　よろしくね！",
+     "en": "Go on through. And do buy a bun!"
+    }
+   ]
+  }
+ }
+}

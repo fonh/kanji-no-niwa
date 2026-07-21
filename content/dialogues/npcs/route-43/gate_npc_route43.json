@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 5 — PNJ-leçon #1 de route-43 (N2-021 — sa réplique ということは expose le point).",
+ "npc_id": "gate_npc_route43",
+ "name": {
+  "jp": "ゲートの　わかもの",
+  "en": "Young Man in the Gatehouse"
+ },
+ "zone_id": "route-43",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "みずうみに　いくのかい？",
+     "en": "Headed to the lake?"
+    },
+    {
+     "jp": "あかい　うろこの　うわさ、しってる？　ひろった　ひとは　いない。",
+     "en": "Heard the red scale rumors? No one's ever found one."
+    },
+    {
+     "jp": "ということは、みずうみの　そこに　まだ　ねむってるって　ことさ。",
+     "en": "Which means it must still be sleeping at the bottom of the lake."
+    }
+   ]
+  }
+ }
+}

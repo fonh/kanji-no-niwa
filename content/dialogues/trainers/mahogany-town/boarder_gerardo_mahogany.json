@@ -1,0 +1,27 @@
+{
+ "trainer_id": "boarder_gerardo_mahogany",
+ "name": {
+  "jp": "ボーダーの　ジェラルド",
+  "en": "Boarder Gerardo"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "こおりの　うえの　バランスかんかく、みせて　やるぜ！",
+     "en": "Let me show you balance honed on ice!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "バランスを　くずしちまった。",
+     "en": "I lost my balance."
+    }
+   ]
+  }
+ }
+}

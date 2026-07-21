@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 5 — concours du plus gros poisson (side-quest sourcée). Le « poisson-compagnon » est une prise de pêche (Bonne Canne), pas un compagnon : les prises/records sont une mécanique de collection à l'implémentation ; l'Ether au record battu, idem. Saveur posée ici.",
+ "npc_id": "fishing_guru_lake_of_rage",
+ "name": {
+  "jp": "つりの　めいじん",
+  "en": "Fishing Guru"
+ },
+ "zone_id": "lake-of-rage",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "わしは　つりの　めいじん。おおものコンテストを　やっとる。",
+     "en": "I'm the Fishing Guru. I run a big-catch contest."
+    },
+    {
+     "jp": "きろくを　ぬく　おおものを　つったら、みせに　きなさい。",
+     "en": "Land a record-breaker and bring it to me."
+    },
+    {
+     "jp": "ほうびを　やろう。",
+     "en": "There'll be a prize in it for you."
+    }
+   ]
+  }
+ }
+}

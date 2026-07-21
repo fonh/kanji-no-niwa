@@ -122,5 +122,33 @@
    }
   ],
   "_note": "Étape 4 Lot 4 — entrée de la mer Route 40 depuis Oliville (exemple canonique du PRD § map_obstacles : 水 + badge Morty)."
+ },
+ {
+  "obstacle_id": "rocket_hq_stairs_mahogany",
+  "zone_id": "mahogany-town",
+  "tile_x": 14,
+  "tile_y": 11,
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "recruited"
+   }
+  ],
+  "_note": "Étape 4 Lot 5 — escalier du QG sous le magasin de souvenirs : ne s'ouvre qu'une fois recruté par Lance (fidèle)."
+ },
+ {
+  "obstacle_id": "boss_door_rocket_hq_mahogany",
+  "zone_id": "mahogany-town",
+  "tile_x": 10,
+  "tile_y": 55,
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "rocket_hq_mahogany",
+    "step": "passwords_obtained"
+   }
+  ],
+  "_note": "Étape 4 Lot 5 — porte du « Boss » (2 mots de passe, Ross/Mitch)."
  }
 ]

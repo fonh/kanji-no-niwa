@@ -1,0 +1,31 @@
+{
+ "trainer_id": "poke_maniac_shane_route42",
+ "name": {
+  "jp": "かいじゅうマニアの　シェーン",
+  "en": "Poké Maniac Shane"
+ },
+ "zone_id": "route-42",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "やまの　ちかくには　めずらしい　ものが　あつまる。",
+     "en": "Rare things gather near the mountain."
+    },
+    {
+     "jp": "きみも　その　ひとつかな？　たしかめる！",
+     "en": "Are you one of them? Let's find out!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみは　めずらしい　つよさだった。",
+     "en": "Your strength was a rare find."
+    }
+   ]
+  }
+ }
+}

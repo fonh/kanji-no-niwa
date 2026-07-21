@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 5 — PNJ-leçon #3 (N2-011 — sa réplique それで expose le point). Évoque Lance (« l'homme à la cape noire »).",
+ "npc_id": "gym_front_man_mahogany",
+ "name": {
+  "jp": "ジムまえの　おとこ",
+  "en": "Man in Front of the Gym"
+ },
+ "zone_id": "mahogany-town",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "くろい　マントの　おとこを　みたかい？",
+     "en": "Seen the man in the black cape?"
+    },
+    {
+     "jp": "ラジオの　でんぱが　みだれてる。それで　しらべに　きたらしい。",
+     "en": "The radio signal's been scrambled. That's why he came to investigate, they say."
+    }
+   ]
+  }
+ }
+}

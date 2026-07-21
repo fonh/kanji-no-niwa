@@ -1,0 +1,67 @@
+[
+ {
+  "zone_id": "mahogany-town",
+  "npc_ref": "ragecandy_vendor_mahogany",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "蔽",
+   "貌",
+   "遡",
+   "隙",
+   "韓"
+  ],
+  "grammar_id": "N2-009"
+ },
+ {
+  "zone_id": "mahogany-town",
+  "npc_ref": "souvenir_vendor_mahogany",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "頃",
+   "頰",
+   "顎",
+   "餅",
+   "鬱"
+  ],
+  "grammar_id": "N2-010"
+ },
+ {
+  "zone_id": "mahogany-town",
+  "npc_ref": "gym_front_man_mahogany",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "七",
+   "三",
+   "上",
+   "下",
+   "中"
+  ],
+  "grammar_id": "N2-011"
+ },
+ {
+  "zone_id": "mahogany-town",
+  "npc_ref": "route43_gate_npc_mahogany",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "九",
+   "五",
+   "休",
+   "六",
+   "出"
+  ],
+  "grammar_id": "N2-012"
+ },
+ {
+  "zone_id": "mahogany-town",
+  "npc_ref": "scientist_gregg_mahogany",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "千",
+   "右",
+   "名",
+   "天",
+   "学"
+  ],
+  "grammar_id": "N2-013"
+ }
+]
