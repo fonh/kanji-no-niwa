@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 2 — dresseur nocturne sourcé (side-content C11), time_window 20h-4h dans map/trainers.json, même mécanique que Keith (route-34).",
+ "trainer_id": "policeman_dirk_route35",
+ "name": {
+  "jp": "おまわりさんの　ダーク",
+  "en": "Policeman Dirk"
+ },
+ "zone_id": "route-35",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "よるの　こうえんいりぐちは　ぶっそうだ。",
+     "en": "The park entrance can be dodgy at night."
+    },
+    {
+     "jp": "きみも　ようじんの　ため、チェックさせて　もらう！",
+     "en": "For safety's sake, let me check you too!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "もんだいなし！　よい　よるを。",
+     "en": "All clear! Have a good night."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "trainer_id": "pokefan_beverly_national_park",
+ "name": {
+  "jp": "だいすきクラブの　ビバリー",
+  "en": "Pokéfan Beverly"
+ },
+ "zone_id": "national-park",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　こうえんの　花（はな）だん、すてきでしょう？",
+     "en": "Aren't the flower beds in this park lovely?"
+    },
+    {
+     "jp": "すてきな　しょうぶも　しましょう！",
+     "en": "Let's have a lovely battle to match!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あなたも　すてきだったわ。",
+     "en": "You were lovely too."
+    }
+   ]
+  }
+ }
+}

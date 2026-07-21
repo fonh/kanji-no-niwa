@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 2 — PNJ-leçon #2/#6 (record de 998 sauts, guidebook). Le défi des 1000 sauts reste de la saveur — pas de mini-jeu dédié (le dôme couvre la fluence). La réplique « わかいうちに » expose le point N3-002 ～うちに de sa propre leçon.",
+ "npc_id": "retired_jumper_national_park",
+ "name": {
+  "jp": "なわとびの　ごいんきょ",
+  "en": "Retired Record-Holder"
+ },
+ "zone_id": "national-park",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "わしの　きろくは　998かい。",
+     "en": "My record is 998 jumps."
+    },
+    {
+     "jp": "わかい　うちに、からだを　きたえて　おきなさい。",
+     "en": "Train your body while you're still young."
+    },
+    {
+     "jp": "1000かい、こえて　みせるかね？",
+     "en": "Think you can top a thousand?"
+    }
+   ]
+  }
+ }
+}

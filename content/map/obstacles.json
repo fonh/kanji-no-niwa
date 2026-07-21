@@ -1,46 +1,75 @@
 [
-  {
-    "obstacle_id": "sudowoodo_route36",
-    "zone_id": "route-36",
-    "tile_x": 12,
-    "tile_y": 15,
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-36.json",
-    "unlock_conditions": [
-      { "type": "item_owned", "item_id": "sprinkler_floria" }
-    ],
-    "note": "Simularbre — bloque la route vers Ecruteak, résolu via l'arrosoir de Floria (Doublonville, hors zones écrites à ce stade — reste verrouillé, attendu)."
-  },
-  {
-    "obstacle_id": "cracked_rock_route36_shortcut",
-    "zone_id": "route-36",
-    "tile_x": 20,
-    "tile_y": 8,
-    "position_status": "provisional — tuile illustrative, aucune donnée ROM précise pour ce raccourci ; mécanisme sourcé (roches fissurées 砕, guidebook-adapted.md L1553), position à confirmer au tile-authoring",
-    "unlock_conditions": [
-      { "type": "item_owned", "item_id": "cs_kudakeru" }
-    ],
-    "note": "Premier obstacle 砕 du jeu (roche fissurée bloquant un raccourci) — donne au vérificateur anti-deadlock et au calculateur de corpus par CS un premier cas réel à vérifier."
-  },
-  {
-    "obstacle_id": "force_rock_route32",
-    "zone_id": "route-32",
-    "tile_x": 4,
-    "tile_y": 88,
-    "position_status": "provisional — juste avant l'homme au-delà du point 力, aucune donnée ROM précise",
-    "unlock_conditions": [
-      { "type": "item_owned", "item_id": "cs_chikara" }
-    ],
-    "note": "Sourcé npc-inventory.md § route-32 (« Homme au-delà d'un point 力 »). CS 力 (Force) pas encore remis par aucun donneur dans le contenu écrit — reste verrouillé pour l'instant, attendu (même statut que sudowoodo_route36)."
-  },
-  {
-    "obstacle_id": "cut_tree_ilex_shortcut",
-    "zone_id": "ilex-forest",
-    "tile_x": 20,
-    "tile_y": 6,
-    "position_status": "provisional — raccourci nord vers Route 34 (guidebook-adapted.md § ilex-forest), position exacte à confirmer au tile-authoring",
-    "unlock_conditions": [
-      { "type": "item_owned", "item_id": "cs_kiru" }
-    ],
-    "note": "Premier obstacle 切 (Cut) du jeu : arbre bloquant le raccourci nord de la Forêt Secte. Le CS 切 est remis par le Maître du Charbon à Écorcia (content/texts/azalea-town/cs_kiru.json) au terme de escaped_companions_errand — donneur en amont (Écorcia précède Forêt Secte), aucun deadlock. Au-delà : le sanctuaire (forest_shrine_ilex), l'homme de la corniche, Naoko, puis la sortie vers Route 34."
-  }
+ {
+  "obstacle_id": "sudowoodo_route36",
+  "zone_id": "route-36",
+  "tile_x": 12,
+  "tile_y": 15,
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-36.json",
+  "unlock_conditions": [
+   {
+    "type": "item_owned",
+    "item_id": "sprinkler_floria"
+   }
+  ],
+  "note": "Simularbre — bloque la route vers Ecruteak, résolu via l'arrosoir de Floria (Doublonville, hors zones écrites à ce stade — reste verrouillé, attendu)."
+ },
+ {
+  "obstacle_id": "cracked_rock_route36_shortcut",
+  "zone_id": "route-36",
+  "tile_x": 20,
+  "tile_y": 8,
+  "position_status": "provisional — tuile illustrative, aucune donnée ROM précise pour ce raccourci ; mécanisme sourcé (roches fissurées 砕, guidebook-adapted.md L1553), position à confirmer au tile-authoring",
+  "unlock_conditions": [
+   {
+    "type": "item_owned",
+    "item_id": "cs_kudakeru"
+   }
+  ],
+  "note": "Premier obstacle 砕 du jeu (roche fissurée bloquant un raccourci) — donne au vérificateur anti-deadlock et au calculateur de corpus par CS un premier cas réel à vérifier."
+ },
+ {
+  "obstacle_id": "force_rock_route32",
+  "zone_id": "route-32",
+  "tile_x": 4,
+  "tile_y": 88,
+  "position_status": "provisional — juste avant l'homme au-delà du point 力, aucune donnée ROM précise",
+  "unlock_conditions": [
+   {
+    "type": "item_owned",
+    "item_id": "cs_chikara"
+   }
+  ],
+  "note": "Sourcé npc-inventory.md § route-32 (« Homme au-delà d'un point 力 »). CS 力 (Force) pas encore remis par aucun donneur dans le contenu écrit — reste verrouillé pour l'instant, attendu (même statut que sudowoodo_route36)."
+ },
+ {
+  "obstacle_id": "cut_tree_ilex_shortcut",
+  "zone_id": "ilex-forest",
+  "tile_x": 20,
+  "tile_y": 6,
+  "position_status": "provisional — raccourci nord vers Route 34 (guidebook-adapted.md § ilex-forest), position exacte à confirmer au tile-authoring",
+  "unlock_conditions": [
+   {
+    "type": "item_owned",
+    "item_id": "cs_kiru"
+   }
+  ],
+  "note": "Premier obstacle 切 (Cut) du jeu : arbre bloquant le raccourci nord de la Forêt Secte. Le CS 切 est remis par le Maître du Charbon à Écorcia (content/texts/azalea-town/cs_kiru.json) au terme de escaped_companions_errand — donneur en amont (Écorcia précède Forêt Secte), aucun deadlock. Au-delà : le sanctuaire (forest_shrine_ilex), l'homme de la corniche, Naoko, puis la sortie vers Route 34."
+ },
+ {
+  "obstacle_id": "water_tiles_route34",
+  "zone_id": "route-34",
+  "tile_x": 13,
+  "tile_y": 13,
+  "unlock_conditions": [
+   {
+    "type": "item_owned",
+    "item_id": "cs_mizu"
+   },
+   {
+    "type": "badge_earned",
+    "badge_id": "morty"
+   }
+  ],
+  "_note": "Étape 4 Lot 2 — plan d'eau menant au trio Ace Jenn/Irene/Kate (side-content F26). Même paire de conditions que l'exemple canonique du PRD (tuile de mer : remise 水 + badge Morty). Le linter check-cs-kanji-deadlock signalera WARN tant que cs_mizu n'est pas remis (zone d'Oliville, pas encore écrite) — attendu."
+ }
 ]

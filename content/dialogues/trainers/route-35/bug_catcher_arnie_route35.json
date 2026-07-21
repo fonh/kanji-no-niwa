@@ -1,0 +1,31 @@
+{
+ "trainer_id": "bug_catcher_arnie_route35",
+ "name": {
+  "jp": "むしとりしょうねんの　アーニー",
+  "en": "Bug Catcher Arnie"
+ },
+ "zone_id": "route-35",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "こうえんの　コンテスト、しってる？",
+     "en": "You know about the Park contest?"
+    },
+    {
+     "jp": "れんしゅうに　つきあってよ！",
+     "en": "Help me practice for it!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "コンテストまでに　もっと　つよく　なる！",
+     "en": "I'll get stronger before the contest!"
+    }
+   ]
+  }
+ }
+}

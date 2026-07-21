@@ -1,0 +1,65 @@
+{
+ "_note": "Étape 4 Lot 2 — Buena (ambiante, side-content C8, boucle I-13) : le mot de passe s'entend à l'émission de 11h (exercice d'écoute), les points s'échangent contre cosmétiques. La boucle quotidienne (saisie du mot de passe, compteur) est une mécanique d'implémentation — ici la Blue Card et la saveur.",
+ "npc_id": "buena_goldenrod",
+ "name": {
+  "jp": "DJの　ブエナ",
+  "en": "Buena"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "blue_card"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ハーイ！　ブエナの　パスワード、きいてくれた？",
+     "en": "Hi there! Did you catch Buena's Password?"
+    },
+    {
+     "jp": "まいにち　11じの　ばんぐみで　パスワードを　いうの。",
+     "en": "I give out a password on my show every day at 11."
+    },
+    {
+     "jp": "おぼえて　きたら、ポイントが　たまるよ！",
+     "en": "Remember it, come tell me, and you rack up points!"
+    },
+    {
+     "jp": "はい、あなたの　ブルーカード！",
+     "en": "Here's your very own Blue Card!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "blue_card"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "きょうの　パスワード、きいた？",
+     "en": "Did you hear today's password?"
+    },
+    {
+     "jp": "ポイントが　たまったら、いい　ものと　こうかんしてね。",
+     "en": "Once you've saved up points, trade them for something nice."
+    }
+   ]
+  }
+ }
+}

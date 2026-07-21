@@ -1,0 +1,31 @@
+{
+ "trainer_id": "poke_maniac_donald_goldenrod",
+ "name": {
+  "jp": "かいじゅうマニアの　ドナルド",
+  "en": "Poké Maniac Donald"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ちかどうは　いいぞ。ひんやりして　おちつく。",
+     "en": "The Tunnel's great. Cool and calming."
+    },
+    {
+     "jp": "でも　しょうぶは　あつく　いくぜ！",
+     "en": "But my battles run hot!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あつく　なりすぎた…。",
+     "en": "I ran a little too hot..."
+    }
+   ]
+  }
+ }
+}

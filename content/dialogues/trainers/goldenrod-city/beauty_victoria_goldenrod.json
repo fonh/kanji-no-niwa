@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 2 — 門弟 #1 de Whitney (longueur 13, table PRD § Système de Combat). Répartition des 4 gardiennes documentée dans lass_carrie_goldenrod.json.",
+ "trainer_id": "beauty_victoria_goldenrod",
+ "name": {
+  "jp": "おとなの　おねえさんの　ビクトリア",
+  "en": "Beauty Victoria"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "アカネさまに　あう　まえに、わたしを　とおして　いってね。",
+     "en": "Before you see Lady Whitney, you'll have to get past me."
+    },
+    {
+     "jp": "うつくしく、つよく、よ！",
+     "en": "With beauty AND strength!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "つよさは　ほんものね。どうぞ、すすんで。",
+     "en": "Your strength is the real deal. Go on ahead."
+    }
+   ]
+  }
+ }
+}

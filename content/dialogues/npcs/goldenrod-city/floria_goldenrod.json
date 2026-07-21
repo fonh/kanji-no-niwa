@@ -1,0 +1,61 @@
+{
+ "_note": "Étape 4 Lot 2 — leçon #7. SquirtBottle gated sur badge_earned(whitney), fidèle HGSS. Les Pots à Baies (remise ultérieure, Route 36) viendront avec la passe de cette zone-là.",
+ "npc_id": "floria_goldenrod",
+ "name": {
+  "jp": "はなやの　フロリア",
+  "en": "Floria the Florist"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "badge_earned",
+     "badge_id": "whitney"
+    }
+   ],
+   "state": "give_bottle"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "いらっしゃい。おみずやりの　どうぐも　あるわよ。",
+     "en": "Welcome. We have watering tools too."
+    },
+    {
+     "jp": "ジムの　しあい、がんばってね。",
+     "en": "Good luck with your Gym match."
+    }
+   ]
+  },
+  "give_bottle": {
+   "pages": [
+    {
+     "jp": "あら、ジムバッジ！　やったわね！",
+     "en": "Oh, a Gym Badge! Way to go!"
+    },
+    {
+     "jp": "おいわいに、この　ジョウロを　あげる。",
+     "en": "To celebrate, take this SquirtBottle."
+    },
+    {
+     "jp": "36ばんどうろの　へんな　きに　つかえるかもよ。",
+     "en": "It might come in handy for that odd tree on Route 36."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "squirtbottle"
+    }
+   ]
+  }
+ }
+}

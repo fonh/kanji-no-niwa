@@ -1,0 +1,29 @@
+{
+ "npc_id": "lass_cathy_goldenrod",
+ "name": {
+  "jp": "ミニスカートの　キャシー",
+  "en": "Lass Cathy"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "アカネさまは　つよくて　かわいいの！",
+     "en": "Lady Whitney is strong AND adorable!"
+    },
+    {
+     "jp": "まけたら　ないちゃうかも。あなたがね！",
+     "en": "Someone might cry if they lose. You, that is!"
+    }
+   ]
+  }
+ }
+}

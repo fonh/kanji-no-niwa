@@ -1,0 +1,69 @@
+{
+ "_note": "Étape 4 Lot 2 — leçon #5. Le quiz HGSS (5 questions) est ici résolu en saveur de dialogue ; à l'implémentation il pourra devenir une entrée kind quiz/instant_response si on veut le rendre réellement interactif — noté comme simplification assumée (roadmap Lot 2). La page sur l'émission de 11h amorce la boucle Buena (side-content C8).",
+ "npc_id": "radio_receptionist_goldenrod",
+ "name": {
+  "jp": "ラジオとうの　うけつけ",
+  "en": "Radio Tower Receptionist"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "radio_card"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ようこそ、ラジオとうへ！",
+     "en": "Welcome to the Radio Tower!"
+    },
+    {
+     "jp": "いま、クイズたいかいを　やって　います。",
+     "en": "We're running a quiz challenge right now."
+    },
+    {
+     "jp": "5もん　せいかいで、ラジオカードを　さしあげます！",
+     "en": "Answer 5 questions right and you get a Radio Card!"
+    },
+    {
+     "jp": "…すばらしい！　ぜんもん　せいかい　です！",
+     "en": "...Wonderful! All answers correct!"
+    },
+    {
+     "jp": "この　ラジオカードで、ポケギアの　ラジオが　きけますよ。",
+     "en": "With this Radio Card, your Pokégear can play the radio."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "radio_card"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "ラジオ、たのしんで　いますか？",
+     "en": "Enjoying the radio?"
+    },
+    {
+     "jp": "11じの　ばんぐみは　ききのがせませんよ。",
+     "en": "Don't miss the 11 o'clock show."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "_note": "Étape 4 Lot 2 — objet de la quête goldenrod_mail_errand. Entrée map_npcs gatée quest_step(briefed) et negate quest_step(mail_recovered) : l'oiseau n'existe qu'entre le brief et la récupération. Narration en didascalies (même procédé que les objets trouvés), aucune espèce nommée (règle #1).",
+ "npc_id": "mail_bird_goldenrod",
+ "name": {
+  "jp": "きの　うえの　とり",
+  "en": "Bird in the Tree"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "perched"
+  }
+ ],
+ "dialogue_states": {
+  "perched": {
+   "pages": [
+    {
+     "jp": "（きの　うえで　とりが　てがみを　くわえて　いる。）",
+     "en": "(Up in the tree, a bird holds a letter in its beak.)"
+    },
+    {
+     "jp": "（うしろから　そっと　ちかづいた…。）",
+     "en": "(You crept up gently from behind...)"
+    },
+    {
+     "jp": "（てがみを　とりかえした！）",
+     "en": "(You got the letter back!)"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "lost_mail"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "goldenrod_mail_errand",
+     "step_id": "mail_recovered"
+    }
+   ]
+  }
+ }
+}

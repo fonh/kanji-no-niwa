@@ -1,0 +1,98 @@
+[
+ {
+  "zone_id": "national-park",
+  "npc_ref": "magnus_national_park",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "宣",
+   "寸",
+   "己",
+   "従",
+   "我",
+   "推"
+  ],
+  "grammar_id": "N3-001"
+ },
+ {
+  "zone_id": "national-park",
+  "npc_ref": "retired_jumper_national_park",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "敵",
+   "沿",
+   "派",
+   "激",
+   "熟",
+   "穀"
+  ],
+  "grammar_id": "N3-002"
+ },
+ {
+  "zone_id": "national-park",
+  "npc_ref": "aprijuice_vendor_national_park",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "郷",
+   "陛",
+   "丹",
+   "乏",
+   "乙",
+   "亀"
+  ],
+  "grammar_id": "N3-003"
+ },
+ {
+  "zone_id": "national-park",
+  "npc_ref": "bench_teacher_national_park",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "享",
+   "仰",
+   "伐",
+   "佳",
+   "併",
+   "侯"
+  ],
+  "grammar_id": "N3-004"
+ },
+ {
+  "zone_id": "national-park",
+  "npc_ref": "magnus_national_park",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "侵",
+   "俊",
+   "倫",
+   "倹",
+   "偏",
+   "傍"
+  ],
+  "grammar_id": "N3-005"
+ },
+ {
+  "zone_id": "national-park",
+  "npc_ref": "retired_jumper_national_park",
+  "sequence_index": 6,
+  "kanji_ids": [
+   "傑",
+   "催",
+   "僕",
+   "僚",
+   "充"
+  ],
+  "grammar_id": "N3-006"
+ },
+ {
+  "zone_id": "national-park",
+  "npc_ref": "aprijuice_vendor_national_park",
+  "sequence_index": 7,
+  "kanji_ids": [
+   "免",
+   "冗",
+   "冠",
+   "准",
+   "凡"
+  ],
+  "grammar_id": "N3-007"
+ }
+]

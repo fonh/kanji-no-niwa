@@ -1,0 +1,97 @@
+{
+ "_note": "Étape 4 Lot 2 — 3ᵉ 師範, format examen 試練 (PRD § Jalons-examens, longueur 38, vies 4). Nom d'épreuve 試練・常の道 sourcé de la fiche guidebook (« Plain Badge » → 常). Fidélité HGSS : Whitney pleure après sa défaite et ne remet le badge qu'en lui reparlant — post_battle sans effects (les larmes), état give_badge au dialogue suivant (state_rule npc_cleared), effets idempotents. TM45 Attract sourcée guidebook.",
+ "trainer_id": "whitney_goldenrod",
+ "name": {
+  "jp": "ジムリーダー　アカネ",
+  "en": "Whitney"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・常（つね）の道（みち）",
+  "en": "Trial of the Everyday Path"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "npc_cleared",
+     "npc_id": "whitney_goldenrod"
+    }
+   ],
+   "state": "give_badge"
+  },
+  {
+   "default": true,
+   "state": "pre_battle"
+  }
+ ],
+ "dialogue_states": {
+  "pre_battle": {
+   "pages": [
+    {
+     "jp": "わたしが　ジムリーダーの　アカネ！",
+     "en": "I'm Whitney, the Gym Leader!"
+    },
+    {
+     "jp": "ふつうの　ことを　まいにち　つづける。それが　いちばん　つよいの！",
+     "en": "Doing ordinary things every single day — that's the strongest thing there is!"
+    }
+   ]
+  },
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "じゅんびは　いい？　わたしの　しれん、はじめるよ！",
+     "en": "Ready? My trial begins now!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うっ…　ぐすっ…",
+     "en": "Urk... *sniffle*..."
+    },
+    {
+     "jp": "まけちゃった…　えーん！",
+     "en": "I lost... waaah!"
+    },
+    {
+     "jp": "（すこし　まって　あげた　ほうが　よさそうだ。）",
+     "en": "(Maybe give her a moment.)"
+    }
+   ]
+  },
+  "give_badge": {
+   "pages": [
+    {
+     "jp": "…ぐすっ。もう　だいじょうぶ。",
+     "en": "...*sniff*. I'm okay now."
+    },
+    {
+     "jp": "まけは　まけ。あなたは　ほんとうに　つよかった。",
+     "en": "A loss is a loss. You really were strong."
+    },
+    {
+     "jp": "レギュラーバッジ、うけとって！",
+     "en": "Take the Plain Badge!"
+    },
+    {
+     "jp": "これも　おまけ。なかよしの　しるしよ。",
+     "en": "And this too. A token of friendship."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_badge",
+     "badge_id": "whitney"
+    },
+    {
+     "type": "grant_item",
+     "item_id": "tm45_attract"
+    }
+   ]
+  }
+ }
+}

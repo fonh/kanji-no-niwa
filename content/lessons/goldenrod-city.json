@@ -1,0 +1,124 @@
+[
+ {
+  "zone_id": "goldenrod-city",
+  "npc_ref": "lass_carrie_goldenrod",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "匹",
+   "寝",
+   "巨",
+   "悩",
+   "払",
+   "挟"
+  ],
+  "grammar_id": "N4-086"
+ },
+ {
+  "zone_id": "goldenrod-city",
+  "npc_ref": "mr_game_goldenrod",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "捕",
+   "捜",
+   "掃",
+   "換",
+   "殿",
+   "汚"
+  ],
+  "grammar_id": "N4-087"
+ },
+ {
+  "zone_id": "goldenrod-city",
+  "npc_ref": "bike_shop_manager_goldenrod",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "沈",
+   "沸",
+   "浮",
+   "湾",
+   "湿",
+   "滴"
+  ],
+  "grammar_id": "N4-088"
+ },
+ {
+  "zone_id": "goldenrod-city",
+  "npc_ref": "affection_evaluator_goldenrod",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "濯",
+   "狭",
+   "甘",
+   "療",
+   "舞",
+   "舟"
+  ],
+  "grammar_id": "N4-089"
+ },
+ {
+  "zone_id": "goldenrod-city",
+  "npc_ref": "radio_receptionist_goldenrod",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "荒",
+   "薄",
+   "迎",
+   "遅",
+   "違",
+   "隅"
+  ],
+  "grammar_id": "N4-090"
+ },
+ {
+  "zone_id": "goldenrod-city",
+  "npc_ref": "name_rater_goldenrod",
+  "sequence_index": 6,
+  "kanji_ids": [
+   "刀",
+   "弓",
+   "汽",
+   "羊",
+   "豆"
+  ],
+  "grammar_id": "N4-091"
+ },
+ {
+  "zone_id": "goldenrod-city",
+  "npc_ref": "floria_goldenrod",
+  "sequence_index": 7,
+  "kanji_ids": [
+   "径",
+   "徳",
+   "氏",
+   "滋",
+   "潟"
+  ],
+  "grammar_id": "N4-092"
+ },
+ {
+  "zone_id": "goldenrod-city",
+  "npc_ref": "north_gate_man_goldenrod",
+  "sequence_index": 8,
+  "kanji_ids": [
+   "隊",
+   "鹿",
+   "士",
+   "属",
+   "幹"
+  ],
+  "grammar_id": "N4-093"
+ },
+ {
+  "zone_id": "goldenrod-city",
+  "npc_ref": "dept_store_5f_girl_goldenrod",
+  "sequence_index": 9,
+  "kanji_ids": [
+   "弁",
+   "潔",
+   "酸",
+   "傷",
+   "厳"
+  ],
+  "grammar_id": "N4-094"
+ }
+]

@@ -1,0 +1,31 @@
+{
+ "trainer_id": "pokefan_william_national_park",
+ "name": {
+  "jp": "だいすきクラブの　ウィリアム",
+  "en": "Pokéfan William"
+ },
+ "zone_id": "national-park",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "まいしゅう、この　こうえんに　かよってるんだ。",
+     "en": "I come to this park every week."
+    },
+    {
+     "jp": "きょうは　きみと　しょうぶできて　うれしいよ！",
+     "en": "Today I get to battle you — lucky me!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "らいしゅうも　きっと　くるよ。",
+     "en": "I'll surely be back next week."
+    }
+   ]
+  }
+ }
+}

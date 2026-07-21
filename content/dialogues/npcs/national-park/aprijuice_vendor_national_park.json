@@ -1,0 +1,65 @@
+{
+ "_note": "Étape 4 Lot 2 — PNJ-leçon #3/#7, remet l'Apriblender (guidebook). Se branche sur la boucle Apricorns de Kurt (fournées, items fungibles).",
+ "npc_id": "aprijuice_vendor_national_park",
+ "name": {
+  "jp": "ジュースやの　おやじ",
+  "en": "Aprijuice Vendor"
+ },
+ "zone_id": "national-park",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "apriblender"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ぼんぐりジュースは　どうだい？",
+     "en": "How about some Aprijuice?"
+    },
+    {
+     "jp": "しぼりたてが　いちばん　うまい！",
+     "en": "Fresh-squeezed is the best!"
+    },
+    {
+     "jp": "この　ミキサー、きみに　あげよう。",
+     "en": "Here, you can have this blender."
+    },
+    {
+     "jp": "じぶんで　つくって　みると　いい。",
+     "en": "Try making some yourself."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "apriblender"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "ミキサーの　ちょうしは　どう？",
+     "en": "How's that blender working out?"
+    },
+    {
+     "jp": "いい　ぼんぐりで　いい　ジュースが　できるよ。",
+     "en": "Good Apricorns make good juice."
+    }
+   ]
+  }
+ }
+}

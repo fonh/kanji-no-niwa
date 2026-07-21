@@ -28,11 +28,37 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **12 / 48** écrites
-- Leçons : **49 / 344** écrites
-- Kanji dotés d'exemples : **265 / 1950**
+- Zones : **14 / 48** écrites (+ route-34 et route-35, zones sans leçon, faites)
+- Leçons : **65 / 344** écrites
+- Kanji dotés d'exemples : **355 / 1950**
+- Overlays grammaire : **3 / 48** (new-bark-town pilote, goldenrod-city, national-park)
 
 ### Journal
+- **2026-07-21 — route-35 + national-park (Lot 2, suite)** : route-35 — 9 dresseurs ROM
+  (dont Dirk nocturne, paire Brooke & Elliot en rivalité), 0 leçon. national-park —
+  7 leçons N3-001→007 sur 4 PNJ-leçon sourcés (Magnus ×2, vieux sauteur ×2, vendeur
+  Aprijuice ×2, enseignant du banc), Whitney réapparition (maillot), 4 dresseurs ROM 10q,
+  Apriblender/Quick Claw/maillot câblés, overlay grammaire 7 points (14 exemples — ex2/ex3
+  de N3-006 écartés car agrammaticaux dans le corpus Hanabira, documenté), 40
+  lesson_examples (`add-national-park-lesson-examples.py`). Concours du Parc (mar/jeu/sam)
+  et disciplines Pokéathlon = mécaniques I-5/I-6 adoptées, barèmes à l'implémentation —
+  aucun fichier contenu à écrire ici. Correctif au passage : `calc-cs-corpus.py` gagne le
+  donneur de cs_kiru (charcoal_man_azalea) manquant depuis le lot Ilex → corpus 切 mesuré
+  (4 textes vs cible 20-24, déficit attendu, comblé à la passe textes).
+- **2026-07-21 — route-34 + goldenrod-city (1ʳᵉ visite, Lot 2)** : route-34 — 9 dresseurs ROM
+  (dont Keith nocturne time_window 20h-4h et trio Ace Jenn/Irene/Kate derrière l'eau,
+  obstacle `water_tiles_route34` CS 水 + badge Morty, Power Herb par Kate), couple de la
+  pension ambiant, 0 leçon (zone hors table). goldenrod-city — 9 leçons N4-086→094
+  (réconciliation gardiennes documentée : Victoria/Samantha = 門弟 13q, Carrie = npc_ref
+  leçon #1, Cathy ambiante), Whitney examen 試練・常の道 38q avec larmes fidèles HGSS
+  (badge à la re-parole), 4 dresseurs Tunnel 12q, quête `goldenrod_mail_errand` (adaptation
+  règle #1 : approche furtive, pas de capture), Coin Case/Bicyclette/Radio Card/Blue
+  Card/SquirtBottle/TM27/TM45/HP Up câblés, Bill = poupée collectible (companion_id
+  inchangeable, adaptation documentée), overlay grammaire 9 points (18 exemples, linter
+  vert), 50 lesson_examples (`scripts/build/add-goldenrod-lesson-examples.py`).
+  **Différé au beat narratif Rocket (post-Mahogany)** : Tour Radio 2F-5F (14 grunts +
+  Petrel ×2 + Proton + Ariana + Archer), Tunnel B2F (Silver #5, Burglars, vrai Directeur,
+  Kuni), sbire déguisement. 5 linters verts (142 fichiers).
 - **2026-07-17 — ilex-forest (Forêt Secte)** : 3 dialogues (apprenti charbonnier PNJ-leçon #1/#3/#5 + quête, homme de la corniche PNJ-leçon #2/#4, Naoko ambiant), `lessons/ilex-forest.json` (5 leçons N4-063→067), 30 lesson_examples, texte secondaire A8 (sanctuaire `forest_shrine_ilex`), quête cross-zone `escaped_companions_errand` (Écorcia↔Forêt), remise CS 切 (`cs_kiru` + texte obligatoire `cs_kiru_azalea`, arc du Maître du Charbon d'Écorcia complété — différé du Lot 1), obstacle `cut_tree_ilex_shortcut`, 3 entrées carte. 4 linters verts (110 fichiers). Aucun dresseur nommé sourcé pour cette zone (roster ROM vide) → 0 combat inventé.
 
 ## Tableau de suivi (ordre narratif réel)
@@ -52,8 +78,8 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 9 | ruins-of-alph | Johto | 4 | 20 | 2 | ✅ fait | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 10 | azalea-town | Johto | 5 | 30 | 2 | ✅ fait | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 11 | ilex-forest | Johto | 5 | 30 | 2 | ✅ fait | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 12 | goldenrod-city | Johto | 9 | 50 | 9 | ⬜ à faire | · | · | · | · | · |
-| 13 | national-park | Johto | 7 | 40 | 4 | ⬜ à faire | · | · | · | · | · |
+| 12 | goldenrod-city | Johto | 9 | 50 | 9 | ✅ 1ʳᵉ visite (arc Tour Radio différé au beat Rocket) | ✅ | ✅ | ✅ | — | ✅ |
+| 13 | national-park | Johto | 7 | 40 | 4 | ✅ fait (concours mar/jeu/sam = mécanique I-6, différée à l'implémentation) | ✅ | ✅ | ✅ | — | ✅ |
 | 14 | route-36 | Johto | 5 | 25 | 2 | ✅ fait | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 15 | route-37 | Johto | 3 | 15 | 1 | ⬜ à faire | · | · | · | · | · |
 | 16 | ecruteak-city | Johto | 7 | 40 | 6 | ⬜ à faire | · | · | · | · | · |

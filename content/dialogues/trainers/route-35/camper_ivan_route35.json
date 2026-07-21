@@ -1,0 +1,31 @@
+{
+ "trainer_id": "camper_ivan_route35",
+ "name": {
+  "jp": "キャンプボーイの　アイバン",
+  "en": "Camper Ivan"
+ },
+ "zone_id": "route-35",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "キャンプじょうは　まだ　さきだけど、",
+     "en": "The campsite's still a ways off, but"
+    },
+    {
+     "jp": "ここで　ちからだめしだ！",
+     "en": "let's test our strength right here!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "テントの　なかで　さくせんを　ねりなおすよ。",
+     "en": "Back to the tent to rethink my strategy."
+    }
+   ]
+  }
+ }
+}

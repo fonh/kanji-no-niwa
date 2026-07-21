@@ -1,0 +1,31 @@
+{
+ "trainer_id": "super_nerd_teru_goldenrod",
+ "name": {
+  "jp": "りかけいの　おとこの　テル",
+  "en": "Super Nerd Teru"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ぼくの　データに　よると、きみは　つよい。",
+     "en": "According to my data, you're strong."
+    },
+    {
+     "jp": "でも　データは　やぶる　ためだけに　ある！",
+     "en": "But data exists only to be defied!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "データどおりだった…。",
+     "en": "It went exactly as the data said..."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 2 — leçon #6. Le renommage de surnoms n'a pas de mécanique (le compagnon n'a pas de surnom modélisé) : l'oyaji devient un PNJ-leçon sur le sens des noms — thématiquement aligné avec sa fonction d'origine, aucun personnage inventé.",
+ "npc_id": "name_rater_goldenrod",
+ "name": {
+  "jp": "なづけおやじ",
+  "en": "Name Rater"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "わしは　なづけおやじ。",
+     "en": "I am the Name Rater."
+    },
+    {
+     "jp": "なまえには　いみが　あるんじゃ。",
+     "en": "Names carry meaning, you know."
+    },
+    {
+     "jp": "きみの　あいぼうの　なまえかね？　いい　なまえだろう。",
+     "en": "Your partner's name? A fine name, wouldn't you say."
+    }
+   ]
+  }
+ }
+}

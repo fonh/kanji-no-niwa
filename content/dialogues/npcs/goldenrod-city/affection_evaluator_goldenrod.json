@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 2 — leçon #4. « あいぼう » = le compagnon cosmétique (user_map_state.companion_id) ; l'évaluation reste de la saveur (aucune jauge d'affection modélisée — simplification assumée, notée roadmap Lot 2). Situation-conseil calibrée sur les recommandations ～たらどうですか (Marugoto A2-2 りかい だい16か, adaptée).",
+ "npc_id": "affection_evaluator_goldenrod",
+ "name": {
+  "jp": "なかよしチェックの　おねえさん",
+  "en": "Friendship Rater"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "あなたと　あいぼうの　なかを　みて　あげる。",
+     "en": "I'll take a look at the bond between you and your partner."
+    },
+    {
+     "jp": "うん、いい　かんじ！",
+     "en": "Mm-hm, looking good!"
+    },
+    {
+     "jp": "たまには　いっしょに　やすんだら　どう？",
+     "en": "Why not take a break together now and then?"
+    }
+   ]
+  }
+ }
+}

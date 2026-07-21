@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 2 — couple de la pension, grands-parents de Lyra/Ethan (npc-inventory § route-34). La fonction Day Care est coupée du projet (décision synthèse) : le couple reste un PNJ ambiant sourcé, la maison sert de halte. Aucune mécanique.",
+ "npc_id": "daycare_couple_route34",
+ "name": {
+  "jp": "そだてやの　ふうふ",
+  "en": "Day Care Couple"
+ },
+ "zone_id": "route-34",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "resting"
+  }
+ ],
+ "dialogue_states": {
+  "resting": {
+   "pages": [
+    {
+     "jp": "まごが　いつも　おせわに　なってるねえ。",
+     "en": "Our grandchild is always in your debt."
+    },
+    {
+     "jp": "たびの　とちゅうでしょう。",
+     "en": "You're in the middle of a journey, aren't you?"
+    },
+    {
+     "jp": "つかれたら、ここで　やすんで　いきなさい。",
+     "en": "If you're tired, rest here a while."
+    }
+   ]
+  }
+ }
+}

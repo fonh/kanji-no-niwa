@@ -45,7 +45,7 @@ ROOT = Path(__file__).resolve().parents[2]
 # PRD.md § CS-Kanji — table sourcée, seuils N calibrés à la synthèse
 CS_THRESHOLDS = {
     "cs_kudakeru": {"character": "砕", "n": 6, "given_by_npc": "young_man_by_sign_route36"},
-    "cs_kiru": {"character": "切", "n": 12, "given_by_npc": None},
+    "cs_kiru": {"character": "切", "n": 12, "given_by_npc": "charcoal_man_azalea"},
     "cs_nami": {"character": "水", "n": 20, "given_by_npc": None},
     "cs_tobu": {"character": "飛", "n": 26, "given_by_npc": None},
     "cs_chikara": {"character": "力", "n": 29, "given_by_npc": None},
@@ -66,6 +66,7 @@ NARRATIVE_ORDER = [
     "route-31", "violet-city", "sprout-tower", "route-36",
     "ruins-of-alph", "route-32", "union-cave", "route-33",
     "azalea-town", "slowpoke-well", "ilex-forest",
+    "route-34", "goldenrod-city", "route-35", "national-park",
 ]
 
 

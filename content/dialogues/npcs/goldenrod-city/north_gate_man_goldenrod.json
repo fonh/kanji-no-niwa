@@ -1,0 +1,121 @@
+{
+ "_note": "Étape 4 Lot 2 — leçon #8 + quête goldenrod_mail_errand (side-content B7). Adaptation règle #1 : « oiseau sauvage à capturer » devient une approche furtive (même technique que les とり de Forêt Secte — continuité pédagogique), aucune capture, aucune espèce nommée. L'état delivered est déclenché par la possession du courrier (item_owned), pas par une étape — le joueur peut revenir dans n'importe quel ordre.",
+ "npc_id": "north_gate_man_goldenrod",
+ "name": {
+  "jp": "きたゲートの　わかもの",
+  "en": "Young Man at the North Gate"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "goldenrod_mail_errand",
+     "step": "delivered"
+    }
+   ],
+   "state": "done"
+  },
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "lost_mail"
+    }
+   ],
+   "state": "delivered"
+  },
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "goldenrod_mail_errand",
+     "step": "briefed"
+    }
+   ],
+   "state": "waiting"
+  },
+  {
+   "default": true,
+   "state": "not_briefed"
+  }
+ ],
+ "dialogue_states": {
+  "not_briefed": {
+   "pages": [
+    {
+     "jp": "たいへんだ！　だいじな　てがみを　とりに　もって　いかれた！",
+     "en": "This is bad! A bird made off with my important letter!"
+    },
+    {
+     "jp": "きたの　きの　うえに　とまってる。",
+     "en": "It's perched up in a tree to the north."
+    },
+    {
+     "jp": "そっと　ちかづけば、とりかえせるかも。おねがい！",
+     "en": "If you approach gently, you might get it back. Please!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "goldenrod_mail_errand",
+     "step_id": "briefed"
+    }
+   ]
+  },
+  "waiting": {
+   "pages": [
+    {
+     "jp": "とりは　まだ　きの　うえかい？",
+     "en": "Is the bird still up in that tree?"
+    },
+    {
+     "jp": "うしろから　そっと、だよ。",
+     "en": "Gently, from behind, remember."
+    }
+   ]
+  },
+  "delivered": {
+   "pages": [
+    {
+     "jp": "てがみだ！　とりかえして　くれたんだね！",
+     "en": "My letter! You got it back!"
+    },
+    {
+     "jp": "ほんとうに　ありがとう。これ、おれいだよ。",
+     "en": "Thank you so much. Here, a token of thanks."
+    }
+   ],
+   "effects": [
+    {
+     "type": "remove_item",
+     "item_id": "lost_mail"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "goldenrod_mail_errand",
+     "step_id": "delivered"
+    },
+    {
+     "type": "grant_item",
+     "item_id": "hp_up"
+    }
+   ]
+  },
+  "done": {
+   "pages": [
+    {
+     "jp": "てがみ、ぶじに　だせたよ。",
+     "en": "I got my letter sent, safe and sound."
+    },
+    {
+     "jp": "きみの　おかげだ！",
+     "en": "All thanks to you!"
+    }
+   ]
+  }
+ }
+}

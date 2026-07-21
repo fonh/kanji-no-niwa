@@ -1,0 +1,31 @@
+{
+ "trainer_id": "picnicker_kim_route35",
+ "name": {
+  "jp": "ピクニックガールの　キム",
+  "en": "Picnicker Kim"
+ },
+ "zone_id": "route-35",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "こうえんの　まえで　ひとやすみ。",
+     "en": "Taking a breather in front of the park."
+    },
+    {
+     "jp": "そのまえに　ウォーミングアップ、いい？",
+     "en": "Mind being my warm-up first?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "じゅうぶん　あたたまったわ。",
+     "en": "Well, I'm plenty warmed up now."
+    }
+   ]
+  }
+ }
+}

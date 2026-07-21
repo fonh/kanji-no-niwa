@@ -1,0 +1,40 @@
+{
+ "_note": "Étape 4 Lot 2 — dresseur nocturne sourcé (side-content C11) : présence gatée time_window 20h-4h dans map/trainers.json, comme le PNJ des Condominiums (PRD § Condition.time_window).",
+ "trainer_id": "policeman_keith_route34",
+ "name": {
+  "jp": "おまわりさんの　キース",
+  "en": "Policeman Keith"
+ },
+ "zone_id": "route-34",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "よるの　みまわりちゅうだ。",
+     "en": "I'm on night patrol."
+    },
+    {
+     "jp": "こんな　じかんに　あるいて　いるのは…　きみか！",
+     "en": "Who's out walking at this hour... you!"
+    },
+    {
+     "jp": "あやしくないか、たしかめさせて　もらう！",
+     "en": "Let me check you're not up to no good!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "よし、あやしくないと　わかった。",
+     "en": "Alright, you check out."
+    },
+    {
+     "jp": "よみちには　きを　つけてね。",
+     "en": "Be careful on the roads at night."
+    }
+   ]
+  }
+ }
+}

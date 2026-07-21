@@ -1,0 +1,31 @@
+{
+ "trainer_id": "picnicker_gina_route34",
+ "name": {
+  "jp": "ピクニックガールの　ジーナ",
+  "en": "Picnicker Gina"
+ },
+ "zone_id": "route-34",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ピクニックの　まえに　ひとしょうぶ、どう？",
+     "en": "How about a quick battle before my picnic?"
+    },
+    {
+     "jp": "かった　ほうが　おべんとうを　たべるの！",
+     "en": "Winner gets to eat the lunch box!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "はい、サンドイッチ。まけた　おわびよ。",
+     "en": "Here, a sandwich. My apologies for losing."
+    }
+   ]
+  }
+ }
+}

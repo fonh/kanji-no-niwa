@@ -1,0 +1,38 @@
+{
+ "_note": "Étape 4 Lot 2 — PNJ-leçon #1/#5 du Parc (npc-inventory). Anecdote du bras de fer sourcée guidebook. Le hub Pokéathlon lui-même (4 disciplines chrono I-5, barèmes) est une mécanique d'implémentation — le score gate Chuck via count(pokeathlon_score, 250).",
+ "npc_id": "magnus_national_park",
+ "name": {
+  "jp": "ドームかんちょうの　マグナス",
+  "en": "Magnus"
+ },
+ "zone_id": "national-park",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ようこそ、ポケスロンドームへ！",
+     "en": "Welcome to the Pokéathlon Dome!"
+    },
+    {
+     "jp": "ここは　はやさと　しゅうちゅうの　ばしょ。",
+     "en": "This is a place of speed and focus."
+    },
+    {
+     "jp": "この　うでずもう、まけた　ことが　ないんだ。",
+     "en": "I've never once lost at arm wrestling, you know."
+    },
+    {
+     "jp": "きみも　きろくに　ちょうせんして　みて！",
+     "en": "You should challenge the records too!"
+    }
+   ]
+  }
+ }
+}

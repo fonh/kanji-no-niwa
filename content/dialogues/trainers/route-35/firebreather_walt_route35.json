@@ -1,0 +1,31 @@
+{
+ "trainer_id": "firebreather_walt_route35",
+ "name": {
+  "jp": "ひふきやろうの　ウォルト",
+  "en": "Firebreather Walt"
+ },
+ "zone_id": "route-35",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "おれの　げいは　ひを　ふく　こと！",
+     "en": "My art is breathing fire!"
+    },
+    {
+     "jp": "しょうぶも　あつい　ぜ！",
+     "en": "My battles run hot too!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ひが　きえちまった…。",
+     "en": "My flame's gone out..."
+    }
+   ]
+  }
+ }
+}

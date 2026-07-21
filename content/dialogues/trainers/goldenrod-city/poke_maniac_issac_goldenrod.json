@@ -1,0 +1,31 @@
+{
+ "trainer_id": "poke_maniac_issac_goldenrod",
+ "name": {
+  "jp": "かいじゅうマニアの　アイザック",
+  "en": "Poké Maniac Issac"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　ちかどう、じつは　おたからが　ねむってるって　うわさだ。",
+     "en": "Rumor has it treasure sleeps somewhere in this tunnel."
+    },
+    {
+     "jp": "さがす　まえに、きみと　しょうぶだ！",
+     "en": "But before I hunt for it — you and me!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "おたからより　きみが　すごかった。",
+     "en": "You turned out more impressive than any treasure."
+    }
+   ]
+  }
+ }
+}

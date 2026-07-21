@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 2 — Black Belt du sous-sol de la Librairie (npc-inventory : ambiant, « bloque l'accès avec ses conteneurs, à débloquer en lui parlant »). Le déblocage est résolu en parlant (état unique) ; le sous-sol ne devient un enjeu qu'à l'arc Rocket (Card Key).",
+ "npc_id": "black_belt_b1_goldenrod",
+ "name": {
+  "jp": "からておうの　ゴウ",
+  "en": "Black Belt Go"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "この　にもつ、ぜんぶ　おれが　はこぶんだ。",
+     "en": "All these crates? I'm the one hauling them."
+    },
+    {
+     "jp": "とおりたいのか？　よし、どかして　やろう。",
+     "en": "Need to get through? Fine, I'll shift them."
+    },
+    {
+     "jp": "うんどうに　なるからな！",
+     "en": "It's good exercise anyway!"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,225 @@
+{
+ "_note": "Overlay grammaire — Parc National, 7 points N3-001→007 (mêmes règles que goldenrod-city). N3-006 : ex2/ex3 du corpus Hanabira sont agrammaticaux (静かだかなあ/医者だかなあ — le だ ne précède pas かなあ après nom/na-adj) — corpus figé jamais réécrit, on sélectionne ex0/ex1. N3-007 : distracteur なくて = LE contraste JLPT classique ないで/なくて (cause vs manière), faux ici sans ambiguïté ; ないまま exclu (aussi correct que la réponse).",
+ "zone_id": "national-park",
+ "points": [
+  {
+   "grammar_id": "N3-001",
+   "source_index": 0,
+   "title": "A その上 B (A sono ue B)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は頭（あたま）が良（よ）い。その上（うえ）、スポーツも得意（とくい）だ。",
+     "point_answer": "そのうえ",
+     "point_surface": "その上（うえ）",
+     "jp_cloze": "彼（かれ）は頭（あたま）が良（よ）い。＿＿、スポーツも得意（とくい）だ。",
+     "distractors": [
+      "そのくせ",
+      "それとも",
+      "そのため"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "このアパートは駅（えき）に近（ちか）い。その上（うえ）、家賃（やちん）も安（やす）い。",
+     "point_answer": "そのうえ",
+     "point_surface": "その上（うえ）",
+     "jp_cloze": "このアパートは駅（えき）に近（ちか）い。＿＿、家賃（やちん）も安（やす）い。",
+     "distractors": [
+      "そのくせ",
+      "それとも",
+      "そのため"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-002",
+   "source_index": 1,
+   "title": "～うちに (〜uchi ni)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "雨（あめ）が降（ふ）っていないうちに、買（か）い物（もの）に行（い）こう。",
+     "point_answer": "うちに",
+     "jp_cloze": "雨（あめ）が降（ふ）っていない＿＿、買（か）い物（もの）に行（い）こう。",
+     "distractors": [
+      "ままに",
+      "ころに",
+      "とおりに"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "料理（りょうり）が熱（あつ）いうちに食（た）べましょう。",
+     "point_answer": "うちに",
+     "jp_cloze": "料理（りょうり）が熱（あつ）い＿＿食（た）べましょう。",
+     "distractors": [
+      "ままに",
+      "ころに",
+      "とおりに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-003",
+   "source_index": 2,
+   "title": "～うとした (〜uto shita)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "電話（でんわ）に出（で）ようとしたが、相手（あいて）は切（き）ってしまった。",
+     "point_answer": "ようとした",
+     "jp_cloze": "電話（でんわ）に出（で）＿＿が、相手（あいて）は切（き）ってしまった。",
+     "distractors": [
+      "ようになった",
+      "ることにした",
+      "たことがあった"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "ケーキを作（つく）ろうとしたが、材料（ざいりょう）が足（た）りなかった。",
+     "point_answer": "ろうとした",
+     "jp_cloze": "ケーキを作（つく）＿＿が、材料（ざいりょう）が足（た）りなかった。",
+     "distractors": [
+      "るようになった",
+      "ることにした",
+      "ったことがあった"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-004",
+   "source_index": 3,
+   "title": "～おかげで (〜okagede)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "先生（せんせい）の助（たす）けのおかげで、試験（しけん）に合格（ごうかく）しました。",
+     "point_answer": "おかげで",
+     "jp_cloze": "先生（せんせい）の助（たす）けの＿＿、試験（しけん）に合格（ごうかく）しました。",
+     "distractors": [
+      "せいで",
+      "くせに",
+      "かわりに"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 3,
+     "jp": "晴（は）れた天気（てんき）のおかげで、ピクニックが楽（たの）しかったです。",
+     "point_answer": "おかげで",
+     "jp_cloze": "晴（は）れた天気（てんき）の＿＿、ピクニックが楽（たの）しかったです。",
+     "distractors": [
+      "せいで",
+      "くせに",
+      "かわりに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-005",
+   "source_index": 4,
+   "title": "～かけ (〜kake)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "この本（ほん）は読（よ）みかけで、まだ終（お）わっていません。",
+     "point_answer": "かけ",
+     "jp_cloze": "この本（ほん）は読（よ）み＿＿で、まだ終（お）わっていません。",
+     "distractors": [
+      "きり",
+      "がち",
+      "ぬき"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "この部屋（へや）は掃除（そうじ）しかけで、まだ片（かた）づいていません。",
+     "point_answer": "かけ",
+     "jp_cloze": "この部屋（へや）は掃除（そうじ）し＿＿で、まだ片（かた）づいていません。",
+     "distractors": [
+      "きり",
+      "がち",
+      "ぬき"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-006",
+   "source_index": 5,
+   "title": "～かなあ (〜kanaa)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "明日（あした）晴（は）れるかなあ。",
+     "point_answer": "かなあ",
+     "jp_cloze": "明日（あした）晴（は）れる＿＿。",
+     "distractors": [
+      "ものか",
+      "ことか",
+      "っけ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "このスープ、辛（から）いかなあ。",
+     "point_answer": "かなあ",
+     "jp_cloze": "このスープ、辛（から）い＿＿。",
+     "distractors": [
+      "ものか",
+      "ことか",
+      "っけ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-007",
+   "source_index": 6,
+   "title": "～ないで (〜naide)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "誰（だれ）にも聞（き）かないで、その秘密（ひみつ）を知（し）りました。",
+     "point_answer": "ないで",
+     "jp_cloze": "誰（だれ）にも聞（き）か＿＿、その秘密（ひみつ）を知（し）りました。",
+     "distractors": [
+      "なくて",
+      "ないなら",
+      "なければ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "雨（あめ）が降（ふ）るのを待（ま）たないで、家（いえ）を出（で）ました。",
+     "point_answer": "ないで",
+     "jp_cloze": "雨（あめ）が降（ふ）るのを待（ま）た＿＿、家（いえ）を出（で）ました。",
+     "distractors": [
+      "なくて",
+      "ないなら",
+      "なければ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

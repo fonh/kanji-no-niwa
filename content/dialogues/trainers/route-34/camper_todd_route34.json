@@ -1,0 +1,35 @@
+{
+ "trainer_id": "camper_todd_route34",
+ "name": {
+  "jp": "キャンパーの　トッド",
+  "en": "Camper Todd"
+ },
+ "zone_id": "route-34",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "キャンプは　しぜんの　なかが　いちばん！",
+     "en": "Nothing beats camping out in nature!"
+    },
+    {
+     "jp": "きみも　テントを　はって　みたら　どう？",
+     "en": "Why don't you try pitching a tent too?"
+    },
+    {
+     "jp": "その　まえに、しょうぶだ！",
+     "en": "But first, let's battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まけたけど、キャンプは　やめないぞ。",
+     "en": "I lost, but I'm not giving up camping."
+    }
+   ]
+  }
+ }
+}

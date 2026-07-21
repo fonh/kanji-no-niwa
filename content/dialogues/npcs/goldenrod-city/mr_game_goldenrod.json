@@ -1,0 +1,44 @@
+{
+ "_note": "Étape 4 Lot 2 — leçon #2. Game Corner adapté (design I-3) : tables Kanji Flip + kanji jumeaux, réglages de production à l'implémentation. Le grant du Coin Case est idempotent (item unique). Dernière page = saveur ～たり～たり (leçon #5 de la zone, exposition anticipée naturelle).",
+ "npc_id": "mr_game_goldenrod",
+ "name": {
+  "jp": "ゲームコーナーの　マスター",
+  "en": "Mr. Game"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "いらっしゃい！　ここは　ゲームコーナー。",
+     "en": "Welcome! This is the Game Corner."
+    },
+    {
+     "jp": "あそぶには　コインケースが　いるよ。",
+     "en": "You'll need a Coin Case to play."
+    },
+    {
+     "jp": "はじめての　きみに、プレゼントだ。",
+     "en": "Since it's your first time, here's a gift."
+    },
+    {
+     "jp": "コインを　ためたり、けいひんに　かえたり　できるよ。",
+     "en": "You can save up coins, trade them for prizes, that kind of thing."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "coin_case"
+    }
+   ]
+  }
+ }
+}

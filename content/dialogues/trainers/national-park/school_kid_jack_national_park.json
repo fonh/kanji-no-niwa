@@ -1,0 +1,31 @@
+{
+ "trainer_id": "school_kid_jack_national_park",
+ "name": {
+  "jp": "じゅくがえりの　ジャック",
+  "en": "School Kid Jack"
+ },
+ "zone_id": "national-park",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "じゅくの　かえりに　よりみちしてるんだ。",
+     "en": "I'm stopping by on my way home from cram school."
+    },
+    {
+     "jp": "べんきょうの　せいかを　みせるよ！",
+     "en": "Let me show you the fruits of my studying!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まだまだ　べんきょうが　たりないや。",
+     "en": "Guess I've still got studying to do."
+    }
+   ]
+  }
+ }
+}

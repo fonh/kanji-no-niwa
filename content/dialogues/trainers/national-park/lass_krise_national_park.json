@@ -1,0 +1,31 @@
+{
+ "trainer_id": "lass_krise_national_park",
+ "name": {
+  "jp": "ミニスカートの　クリセ",
+  "en": "Lass Krise"
+ },
+ "zone_id": "national-park",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ふんすいの　まえで　まちあわせなの。",
+     "en": "I'm meeting someone by the fountain."
+    },
+    {
+     "jp": "それまで　ひまだから、しょうぶ！",
+     "en": "I'm free till then, so — battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いい　ひまつぶしに　なったわ。",
+     "en": "That killed the time nicely."
+    }
+   ]
+  }
+ }
+}

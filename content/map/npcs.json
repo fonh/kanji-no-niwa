@@ -642,5 +642,260 @@
   "trigger_type": "talk",
   "role": "ambient",
   "dialogue_ref": "npcs/ilex-forest/naoko_ilex"
+ },
+ {
+  "npc_id": "daycare_couple_route34",
+  "zone_id": "route-34",
+  "name": "Day Care Couple",
+  "tile_x": 8,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated — intérieur de la maison de la pension, voir content/map/placements/route-34.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-34/daycare_couple_route34"
+ },
+ {
+  "npc_id": "lass_carrie_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Lass Carrie",
+  "tile_x": 51,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/lass_carrie_goldenrod",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "lass_cathy_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Lass Cathy",
+  "tile_x": 53,
+  "tile_y": 7,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/lass_cathy_goldenrod"
+ },
+ {
+  "npc_id": "mr_game_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Mr. Game",
+  "tile_x": 66,
+  "tile_y": 5,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/mr_game_goldenrod",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "bike_shop_manager_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Bike Shop Manager",
+  "tile_x": 22,
+  "tile_y": 14,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/bike_shop_manager_goldenrod",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "affection_evaluator_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Friendship Rater",
+  "tile_x": 40,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/affection_evaluator_goldenrod",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "radio_receptionist_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Radio Tower Receptionist",
+  "tile_x": 12,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/radio_receptionist_goldenrod",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "name_rater_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Name Rater",
+  "tile_x": 44,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/name_rater_goldenrod",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "floria_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Floria the Florist",
+  "tile_x": 36,
+  "tile_y": 12,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/floria_goldenrod",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "north_gate_man_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Young Man at the North Gate",
+  "tile_x": 28,
+  "tile_y": 1,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/north_gate_man_goldenrod",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "dept_store_5f_girl_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Girl on the 5th Floor",
+  "tile_x": 18,
+  "tile_y": 22,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/dept_store_5f_girl_goldenrod",
+  "role": "lesson",
+  "unlock_conditions": [
+   {
+    "type": "time_window",
+    "days_of_week": [
+     "sunday"
+    ]
+   }
+  ]
+ },
+ {
+  "npc_id": "bill_house_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Bill's House",
+  "tile_x": 58,
+  "tile_y": 16,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/bill_house_goldenrod"
+ },
+ {
+  "npc_id": "buena_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Buena",
+  "tile_x": 13,
+  "tile_y": 9,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/buena_goldenrod"
+ },
+ {
+  "npc_id": "black_belt_b1_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Black Belt Go",
+  "tile_x": 19,
+  "tile_y": 30,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/black_belt_b1_goldenrod"
+ },
+ {
+  "npc_id": "mail_bird_goldenrod",
+  "zone_id": "goldenrod-city",
+  "name": "Bird in the Tree",
+  "tile_x": 29,
+  "tile_y": 3,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/goldenrod-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/goldenrod-city/mail_bird_goldenrod",
+  "kind": "object",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "goldenrod_mail_errand",
+    "step": "briefed"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "goldenrod_mail_errand",
+    "step": "mail_recovered",
+    "negate": true
+   }
+  ]
+ },
+ {
+  "npc_id": "magnus_national_park",
+  "zone_id": "national-park",
+  "name": "Magnus",
+  "tile_x": 6,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/national-park/magnus_national_park",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "retired_jumper_national_park",
+  "zone_id": "national-park",
+  "name": "Retired Record-Holder",
+  "tile_x": 12,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/national-park/retired_jumper_national_park",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "aprijuice_vendor_national_park",
+  "zone_id": "national-park",
+  "name": "Aprijuice Vendor",
+  "tile_x": 3,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/national-park/aprijuice_vendor_national_park",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "bench_teacher_national_park",
+  "zone_id": "national-park",
+  "name": "Teacher on the Bench",
+  "tile_x": 10,
+  "tile_y": 22,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/national-park/bench_teacher_national_park",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "whitney_national_park",
+  "zone_id": "national-park",
+  "name": "Whitney",
+  "tile_x": 7,
+  "tile_y": 3,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/national-park/whitney_national_park"
  }
 ]

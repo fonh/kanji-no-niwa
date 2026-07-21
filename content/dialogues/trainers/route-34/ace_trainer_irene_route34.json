@@ -1,0 +1,31 @@
+{
+ "trainer_id": "ace_trainer_irene_route34",
+ "name": {
+  "jp": "エリートトレーナーの　アイリーン",
+  "en": "Ace Trainer Irene"
+ },
+ "zone_id": "route-34",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ねえさんを　たおしたのね。",
+     "en": "So you beat my big sister."
+    },
+    {
+     "jp": "でも　わたしは　もっと　つよいわ！",
+     "en": "But I'm even stronger!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うそでしょ…。つぎは　いもうとよ。",
+     "en": "No way... your next opponent is our little sister."
+    }
+   ]
+  }
+ }
+}

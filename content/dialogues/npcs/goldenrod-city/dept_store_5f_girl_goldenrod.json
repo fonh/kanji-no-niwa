@@ -1,0 +1,40 @@
+{
+ "_note": "Étape 4 Lot 2 — leçon #9. Présence gatée time_window dimanche (map/npcs.json). « Affection élevée » sans jauge modélisée : remise directe idempotente, simplification assumée (même famille que l'évaluatrice, roadmap Lot 2).",
+ "npc_id": "dept_store_5f_girl_goldenrod",
+ "name": {
+  "jp": "5かいの　おねえさん",
+  "en": "Girl on the 5th Floor"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "にちようびだけ、ここに　いるの。",
+     "en": "I'm only here on Sundays."
+    },
+    {
+     "jp": "あいぼうと　なかよしの　ひとに、いい　ものを　あげてるんだ。",
+     "en": "I give something nice to people who are close with their partner."
+    },
+    {
+     "jp": "あなたたち、とっても　なかよしね！　はい、どうぞ。",
+     "en": "You two are really close! Here you go."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "tm27_return"
+    }
+   ]
+  }
+ }
+}

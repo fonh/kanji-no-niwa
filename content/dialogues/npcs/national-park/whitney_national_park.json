@@ -1,0 +1,61 @@
+{
+ "_note": "Étape 4 Lot 2 — réapparition de Whitney (ambiant, npc-inventory) : accueil du Pokéathlon, remet le maillot porté en épreuve (guidebook). Personnage récurrent multi-zones = un npc_id par (personnage × zone), modèle 04-D1.",
+ "npc_id": "whitney_national_park",
+ "name": {
+  "jp": "ジムリーダー　アカネ",
+  "en": "Whitney"
+ },
+ "zone_id": "national-park",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "pokeathlon_jersey"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "あら、また　あったね！",
+     "en": "Oh, it's you again!"
+    },
+    {
+     "jp": "わたし、ポケスロンの　うけつけも　やってるの。",
+     "en": "I help out at the Pokéathlon reception too."
+    },
+    {
+     "jp": "これ、しあいようの　ユニフォーム。にあうと　おもうよ！",
+     "en": "Here's a jersey for the events. It'll suit you!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "pokeathlon_jersey"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "ユニフォーム、きて　くれてる？",
+     "en": "Are you wearing the jersey?"
+    },
+    {
+     "jp": "きろく、のばして　いこうね！",
+     "en": "Let's push those records higher!"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "_note": "Étape 4 Lot 2 — porteuse de la leçon #1 de Doublonville (lessons/goldenrod-city.json). Réconciliation documentée : la ligne npc-inventory « Beauty Victoria, Samantha ; Lass Carrie, Cathy — leçon #1 » couvre les 4 gardiennes, mais le PRD § Gyms exige des 門弟 en combat — répartition retenue : Victoria + Samantha = 門弟 (combat, longueur 13), Carrie = npc_ref de la leçon #1, Cathy = ambiante d'accompagnement. Journalisé roadmap Lot 2.",
+ "npc_id": "lass_carrie_goldenrod",
+ "name": {
+  "jp": "ミニスカートの　キャリー",
+  "en": "Lass Carrie"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "badge_earned",
+     "badge_id": "whitney"
+    }
+   ],
+   "state": "post_badge"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ここは　アカネさまの　ジムよ。",
+     "en": "This is Lady Whitney's Gym."
+    },
+    {
+     "jp": "そんなに　きんちょうしなくても　いいわ。",
+     "en": "You don't need to be that nervous."
+    },
+    {
+     "jp": "まず　わたしと　べんきょうしましょ。",
+     "en": "Let's study together first."
+    }
+   ]
+  },
+  "post_badge": {
+   "pages": [
+    {
+     "jp": "アカネさまに　かったのね！",
+     "en": "You beat Lady Whitney!"
+    },
+    {
+     "jp": "なきむしだけど、まけを　みとめる　ひとよ。",
+     "en": "She's a crybaby, but she owns her losses."
+    }
+   ]
+  }
+ }
+}

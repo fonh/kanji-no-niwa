@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 2 — Irwin est un donneur de numéro enthousiaste en HGSS (phone-registry.json) ; son fichier d'appels viendra à la passe téléphone.",
+ "trainer_id": "juggler_irwin_route35",
+ "name": {
+  "jp": "だいどうげいにんの　アーウィン",
+  "en": "Juggler Irwin"
+ },
+ "zone_id": "route-35",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ぼくの　ジャグリング、みて　いってよ！",
+     "en": "Stick around for my juggling!"
+    },
+    {
+     "jp": "しょうぶも　おてだまみたいに　かるく　いくよ！",
+     "en": "I'll juggle this battle just as lightly!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "すごい！　きみの　ファンに　なっちゃった！",
+     "en": "Amazing! I've become your fan!"
+    }
+   ]
+  }
+ }
+}

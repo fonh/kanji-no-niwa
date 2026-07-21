@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 2 — trio « Kate et ses deux sœurs » (side-content F26), combat de groupe mis en scène derrière la traversée d'eau (obstacle water_tiles_route34, CS 水). 3 combats enchaînés Jenn → Irene → Kate ; Kate remet la Power Herb.",
+ "trainer_id": "ace_trainer_jenn_route34",
+ "name": {
+  "jp": "エリートトレーナーの　ジェーン",
+  "en": "Ace Trainer Jenn"
+ },
+ "zone_id": "route-34",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "あら、みずうみの　こっちまで　くる　ひと、ひさしぶり。",
+     "en": "My, it's been a while since anyone crossed the water."
+    },
+    {
+     "jp": "ここからは　わたしたち　3にんが　あいてよ！",
+     "en": "From here on, you face the three of us!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まだ　ふたり　いるわよ。",
+     "en": "There are still two of us left."
+    }
+   ]
+  }
+ }
+}

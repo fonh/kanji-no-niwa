@@ -1,0 +1,31 @@
+{
+ "trainer_id": "camper_elliot_route35",
+ "name": {
+  "jp": "キャンプボーイの　エリオット",
+  "en": "Camper Elliot"
+ },
+ "zone_id": "route-35",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ブルックに　まけた　なら、ぼくにも　かてないよ！",
+     "en": "If Brooke beat you, you can't beat me either!"
+    },
+    {
+     "jp": "…え、かったの？",
+     "en": "...Wait, you won?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ブルックには　ないしょに　して…。",
+     "en": "Don't tell Brooke about this..."
+    }
+   ]
+  }
+ }
+}

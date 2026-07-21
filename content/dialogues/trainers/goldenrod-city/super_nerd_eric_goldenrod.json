@@ -1,0 +1,31 @@
+{
+ "trainer_id": "super_nerd_eric_goldenrod",
+ "name": {
+  "jp": "りかけいの　おとこの　エリック",
+  "en": "Super Nerd Eric"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ちかの　しつどは　べんきょうに　さいてきなんだ。",
+     "en": "The humidity down here is optimal for studying."
+    },
+    {
+     "jp": "けいさんずみの　しょうぶ、いくよ！",
+     "en": "This battle has been fully calculated!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "けいさんが…　あわない…。",
+     "en": "The numbers... don't add up..."
+    }
+   ]
+  }
+ }
+}

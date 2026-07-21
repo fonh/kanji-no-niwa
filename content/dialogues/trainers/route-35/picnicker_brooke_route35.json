@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 2 — paire Brooke & Elliot (npc-inventory) : deux combats séparés, flaveur de rivalité partagée.",
+ "trainer_id": "picnicker_brooke_route35",
+ "name": {
+  "jp": "ピクニックガールの　ブルック",
+  "en": "Picnicker Brooke"
+ },
+ "zone_id": "route-35",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "エリオットと　どっちが　つよいか、しょうぶで　きめるの！",
+     "en": "Elliot and I are settling who's stronger — through battles!"
+    },
+    {
+     "jp": "あなたで　れんしゅうさせて！",
+     "en": "Let me practice on you!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "エリオット、つぎは　あなたの　ばんよ！",
+     "en": "Elliot, you're up next!"
+    }
+   ]
+  }
+ }
+}

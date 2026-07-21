@@ -1,0 +1,31 @@
+{
+ "trainer_id": "bird_keeper_bryan_route35",
+ "name": {
+  "jp": "とりつかいの　ブライアン",
+  "en": "Bird Keeper Bryan"
+ },
+ "zone_id": "route-35",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "そらを　みる　めが　あるかい？",
+     "en": "Got an eye for the skies?"
+    },
+    {
+     "jp": "しょうぶで　たしかめよう！",
+     "en": "Let's find out in battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみの　めは　たしかだ。",
+     "en": "Your eye is true."
+    }
+   ]
+  }
+ }
+}

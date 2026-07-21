@@ -1,0 +1,31 @@
+{
+ "trainer_id": "youngster_ian_route34",
+ "name": {
+  "jp": "たんパンこぞうの　イアン",
+  "en": "Youngster Ian"
+ },
+ "zone_id": "route-34",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "まって！　きみ、つよそうだね。",
+     "en": "Wait up! You look strong."
+    },
+    {
+     "jp": "ぼくと　しょうぶだ！",
+     "en": "Battle me!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "やっぱり　つよかった…。",
+     "en": "Yep... you really were strong."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "quest_id": "goldenrod_mail_errand",
+ "name": {
+  "jp": "とりに　もって　いかれた　てがみ",
+  "en": "The Letter the Bird Took"
+ },
+ "zone_ids": [
+  "goldenrod-city"
+ ],
+ "steps": [
+  {
+   "step_id": "briefed",
+   "label": {
+    "jp": "きたゲートの　わかものの　てがみを　とりが　もって　いった。とりかえそう。",
+    "en": "A bird took the young man's letter at the north gate. Get it back."
+   },
+   "target_zone_id": "goldenrod-city"
+  },
+  {
+   "step_id": "mail_recovered",
+   "label": {
+    "jp": "てがみを　とりかえした。わかものに　とどけよう。",
+    "en": "Got the letter back. Bring it to the young man."
+   },
+   "target_zone_id": "goldenrod-city"
+  },
+  {
+   "step_id": "delivered",
+   "label": {
+    "jp": "てがみを　とどけた。おれいに　いい　ものを　もらった。",
+    "en": "Delivered the letter and got a nice reward."
+   },
+   "target_zone_id": "goldenrod-city"
+  }
+ ]
+}

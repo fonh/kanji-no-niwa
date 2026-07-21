@@ -1,0 +1,69 @@
+{
+ "_note": "Étape 4 Lot 2 — Bill (ambiant, arc D4). Adaptation du « compagnon rare Eevee-analogue » : le companion_id est unique et fixé chez Elm (PRD § Compagnon, jamais rechangé) — le cadeau devient une poupée de collection (items.category collectible, exposée au Global Terminal § collections). L'état bill_home est gaté sur event_cleared(bill_met_ecruteak), posé à la passe Rosalia.",
+ "npc_id": "bill_house_goldenrod",
+ "name": {
+  "jp": "ビルの　いえ",
+  "en": "Bill's House"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "event_cleared",
+     "event_id": "bill_met_ecruteak"
+    }
+   ],
+   "state": "bill_home"
+  },
+  {
+   "default": true,
+   "state": "bill_away"
+  }
+ ],
+ "dialogue_states": {
+  "bill_away": {
+   "pages": [
+    {
+     "jp": "あ、おきゃくさん！　おにいちゃんは　いま　いないの。",
+     "en": "Oh, a visitor! My big brother's not home right now."
+    },
+    {
+     "jp": "エンジュシティの　ポケモンセンターに　いるって。",
+     "en": "He said he's at the Pokémon Center in Ecruteak."
+    },
+    {
+     "jp": "パソコンの　てんさいなんだよ！",
+     "en": "He's a computer genius, you know!"
+    }
+   ]
+  },
+  "bill_home": {
+   "pages": [
+    {
+     "jp": "やあ、また　あったね！　エンジュいらいだ。",
+     "en": "Hey, we meet again! First time since Ecruteak."
+    },
+    {
+     "jp": "きみに　これを　もらって　ほしいんだ。",
+     "en": "I'd like you to have this."
+    },
+    {
+     "jp": "だいじに　してた　おきにいりの　にんぎょうさ。",
+     "en": "A favorite doll I've treasured."
+    },
+    {
+     "jp": "かわいがって　やってね。",
+     "en": "Take good care of it."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "eevee_doll"
+    }
+   ]
+  }
+ }
+}

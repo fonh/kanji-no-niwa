@@ -1,0 +1,27 @@
+{
+ "trainer_id": "youngster_samuel_route34",
+ "name": {
+  "jp": "たんパンこぞうの　サミュエル",
+  "en": "Youngster Samuel"
+ },
+ "zone_id": "route-34",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "めが　あったら　しょうぶ。それが　ルールだ！",
+     "en": "Eyes meet, you battle. That's the rule!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ルールは　まもった。でも　まけた…。",
+     "en": "I followed the rule... and lost anyway."
+    }
+   ]
+  }
+ }
+}

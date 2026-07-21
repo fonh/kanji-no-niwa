@@ -1,0 +1,41 @@
+{
+ "trainer_id": "ace_trainer_kate_route34",
+ "name": {
+  "jp": "エリートトレーナーの　ケイト",
+  "en": "Ace Trainer Kate"
+ },
+ "zone_id": "route-34",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "さいごは　わたし。",
+     "en": "I'm the last one."
+    },
+    {
+     "jp": "あねたちの　ぶんまで、まけられない！",
+     "en": "For my sisters' sake, I can't lose!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "3にん　ぬきなんて…　みごとだわ。",
+     "en": "Beating all three of us... impressive."
+    },
+    {
+     "jp": "これ、もって　いって。",
+     "en": "Here, take this."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "power_herb"
+    }
+   ]
+  }
+ }
+}

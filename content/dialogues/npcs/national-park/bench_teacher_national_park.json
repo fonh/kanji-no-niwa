@@ -1,0 +1,57 @@
+{
+ "_note": "Étape 4 Lot 2 — PNJ-leçon #4 (enseignant du banc sud, guidebook), remet la Quick Claw. Sa réplique expose le point N3-004 ～おかげで de sa leçon.",
+ "npc_id": "bench_teacher_national_park",
+ "name": {
+  "jp": "ベンチの　せんせい",
+  "en": "Teacher on the Bench"
+ },
+ "zone_id": "national-park",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "quick_claw"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "この　こうえんで　よく　本（ほん）を　よむんです。",
+     "en": "I often read here in this park."
+    },
+    {
+     "jp": "しずかな　ばしょの　おかげで、あたまに　よく　入（はい）ります。",
+     "en": "Thanks to the quiet, it all sinks right in."
+    },
+    {
+     "jp": "これ、さしあげましょう。はやい　もの勝（が）ちの　おまもりです。",
+     "en": "Here, take this. A charm for those quick off the mark."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "quick_claw"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "べんきょうは　まいにちの　つみかさねですよ。",
+     "en": "Study is a matter of daily accumulation."
+    }
+   ]
+  }
+ }
+}

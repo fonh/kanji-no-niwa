@@ -389,6 +389,33 @@ Force ») reste ambigu dans la source — seuls les 3 points clairs sont notés,
 clarifier plus tard. `content/map/obstacles.json` gagne `force_rock_route32` (CS 力, pas
 encore remis).
 
+### Lot 2 (2026-07-21) — Route 34 → Doublonville (Gym 3 Whitney) → Route 35 → Parc National
+
+**4 zones, ~50 nouveaux fichiers** (dialogues, 2 `lessons/<zone>.json`, 2 overlays grammaire,
+2 quêtes/scripts, registres) + **90 kanji dotés de `lesson_examples[]`** (goldenrod 50 +
+national-park 40, scripts `add-goldenrod-` / `add-national-park-lesson-examples.py`) +
+**16 leçons** (9 N4-086→094 + 7 N3-001→007) + **32 exemples d'overlay grammaire**. Détail
+zone par zone : `.scratch/etape4-progress.md` § Journal. 5 linters verts (161 fichiers).
+
+**Réconciliation documentée (gardiennes de Whitney)** : la ligne npc-inventory « leçon #1 »
+couvre les 4 gardiennes mais le PRD § Gyms exige des 門弟 en combat — répartition :
+Victoria + Samantha = 門弟 (13q), Carrie = npc_ref leçon #1, Cathy = ambiante. Larmes de
+Whitney fidèles HGSS (badge remis en lui reparlant, état give_badge sur npc_cleared).
+
+**Adaptations règle #1** : quête courrier de la grille nord (l'« oiseau à capturer » devient
+une approche furtive, technique héritée de Forêt Secte) ; cadeau de Bill (l'Eevee-analogue
+devient une poupée de collection — companion_id est unique et inchangeable, PRD § Compagnon).
+
+**Différé au beat narratif Rocket (post-Mahogany)** : tout l'arc Tour Radio/Tunnel de
+Doublonville (14 grunts ROM, Petrel ×2, Proton, Ariana, Archer, Silver #5, Burglars, vrai
+Directeur, Kuni, sbire-déguisement) — même zone_id, moment narratif tardif, sera écrit à sa
+place dans l'ordre de visite. **Différé à l'implémentation** : disciplines Pokéathlon (I-5),
+Concours du Parc (I-6), quiz interactif de la réceptionniste radio, boucle Buena (I-13) —
+designs adoptés, barèmes/mécaniques hors périmètre contenu.
+
+**Correctif d'outillage** : `calc-cs-corpus.py` — donneur de cs_kiru (charcoal_man_azalea)
+manquant depuis le lot Ilex, ajouté ; NARRATIVE_ORDER étendu (+4 zones).
+
 ### Audit qualité pré-Lot 2 (2026-07-10) — trou trouvé et comblé
 
 Revue demandée par l'utilisateur avant de lancer le Lot 2 (« regarde si le contenu déjà

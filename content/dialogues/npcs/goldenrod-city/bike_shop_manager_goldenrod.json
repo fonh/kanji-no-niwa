@@ -1,0 +1,65 @@
+{
+ "_note": "Étape 4 Lot 2 — leçon #3. Prêt de la Bicyclette dès la première visite (fidèle HGSS « bonne publicité ») ; l'offre définitive par rappel téléphonique viendra avec la passe téléphone. Fonction I-11 : objet-clé de la Cycling Road + vitesse ×2. Situation calibrée sur Marugoto A2-2 りかい だい12か « こっちの方が安いです » (comparatif de modèles, p111) — adaptée.",
+ "npc_id": "bike_shop_manager_goldenrod",
+ "name": {
+  "jp": "じてんしゃやの　てんちょう",
+  "en": "Bike Shop Manager"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "bicycle"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "うちの　じてんしゃ、どれも　いいものだよ。",
+     "en": "Every bike we carry is a good one."
+    },
+    {
+     "jp": "こっちの　ほうが　かるくて、はしりやすい。",
+     "en": "This one here is lighter and easier to ride."
+    },
+    {
+     "jp": "よかったら　タダで　かして　あげよう。",
+     "en": "If you like, I'll lend you one for free."
+    },
+    {
+     "jp": "いい　せんでんに　なるからね！",
+     "en": "It'll be good advertising!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "bicycle"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "じてんしゃの　ちょうしは　どうだい？",
+     "en": "How's the bike treating you?"
+    },
+    {
+     "jp": "この　チェーンてん、もともと　カントーの　ハナダの　みせなんだ。",
+     "en": "This chain actually started from a shop in Cerulean, in Kanto."
+    }
+   ]
+  }
+ }
+}

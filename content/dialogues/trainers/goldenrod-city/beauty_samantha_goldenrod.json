@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 2 — 門弟 #2 de Whitney (longueur 13).",
+ "trainer_id": "beauty_samantha_goldenrod",
+ "name": {
+  "jp": "おとなの　おねえさんの　サマンサ",
+  "en": "Beauty Samantha"
+ },
+ "zone_id": "goldenrod-city",
+ "jlpt_level": "N4",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ビクトリアに　かったくらいで、いい　きに　ならないで。",
+     "en": "Don't get cocky just because you beat Victoria."
+    },
+    {
+     "jp": "ほんばんは　これからよ！",
+     "en": "The real test starts now!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まいったわ。アカネさま、おねがいします！",
+     "en": "I give up. Lady Whitney, it's all yours!"
+    }
+   ]
+  }
+ }
+}
