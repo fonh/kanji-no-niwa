@@ -1,0 +1,61 @@
+{
+ "_note": "Étape 4 Lot 8 — l'homme du fond de la Grotte Sombre (7 leçons N2-102→108, BlackGlasses). Accès côté Ebènelle, post-Antre (unlock badge clair sur l'entrée carte). Sa réplique ないことはない expose N2-102. Les couloirs sombres restent narratifs (pas d'équivalent Flash, décision guidebook L29).",
+ "npc_id": "deep_man_dark_cave",
+ "name": {
+  "jp": "くらやみの　おく の　おとこ",
+  "en": "Man in the Deepest Dark"
+ },
+ "zone_id": "dark-cave",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "blackglasses"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "おどろいた。ここまで　こられる　ひとが　いるとは。",
+     "en": "Well, I'll be. Someone actually made it this far."
+    },
+    {
+     "jp": "わしは　ここで　30ねん、くらやみと　くらして　おる。",
+     "en": "I've lived with this darkness for thirty years."
+    },
+    {
+     "jp": "くらい　ところでも、まなべない　ことは　ない。めが　なれれば　な。",
+     "en": "Even in the dark, learning is not impossible — once your eyes adjust."
+    },
+    {
+     "jp": "これを　やろう。くらやみの　きねんじゃ。",
+     "en": "Take this. A keepsake of the dark."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "blackglasses"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "めが　なれたかね？　では　つづきを　まなぼう。",
+     "en": "Eyes adjusted? Then let us continue our study."
+    }
+   ]
+  }
+ }
+}

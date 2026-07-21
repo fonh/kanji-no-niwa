@@ -1,0 +1,31 @@
+{
+ "trainer_id": "hiker_bailey_route46",
+ "name": {
+  "jp": "やまおとこの　ベイリー",
+  "en": "Hiker Bailey"
+ },
+ "zone_id": "route-46",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　みちは　29ばんどうろに　つながってる。",
+     "en": "This road connects to Route 29."
+    },
+    {
+     "jp": "なつかしいだろ？　しょうぶだ！",
+     "en": "Nostalgic, eh? Battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "はじまりの　みちに　もどるんだな。",
+     "en": "Back to where it all began."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "_note": "Étape 4 Lot 8 — combat de l'être arc-en-ciel au sommet (65q — au-dessus des 3 esprits (≤60), sous l'E4 (70), interpolation documentée ; rejouable si échec, sourcé E3 point 8 — la règle défaite/interruption du PRD suffit). Récompense narrative + trophée (badge doré/lettre du mentor par la logique de jeu).",
+ "trainer_id": "hooh_summit_ecruteak",
+ "name": {
+  "jp": "にじいろの　とり",
+  "en": "The Rainbow Bird"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "（にじいろの　とりが、しずかに　こちらを　みて　いる。）",
+     "en": "(The rainbow bird regards you in silence.)"
+    },
+    {
+     "jp": "（つばさが　ひかり、七（なな）いろの　かぜが　ふきぬけた！）",
+     "en": "(Its wings blaze — a seven-colored wind rushes past!)"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "（とりは　ながく　たかく　ないた。みとめられたのだ。）",
+     "en": "(The bird cries long and high. You are acknowledged.)"
+    },
+    {
+     "jp": "（にじいろの　はねが　いちまい、しずかに　まいおちた。）",
+     "en": "(A single rainbow feather drifts quietly down.)"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "kimono_finale",
+     "step_id": "hooh_faced"
+    }
+   ]
+  }
+ }
+}

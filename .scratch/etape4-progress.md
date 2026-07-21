@@ -28,13 +28,25 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **25 / 48** écrites (+ 11 zones sans leçon faites, dont route-44 et ice-path)
-- Leçons : **129 / 344** écrites
-- Kanji dotés d'exemples : **720 / 1950**
-- Overlays grammaire : **14 / 48**
-- Textes : **16 écrits** (dont 7 remises de CS : 砕・切・水・飛・力・渦・滝 — reste 登)
+- Zones : **26 / 48** écrites (+ 13 zones sans leçon faites, dont routes 45/46)
+- Leçons : **136 / 344** écrites
+- Kanji dotés d'exemples : **760 / 1950**
+- Overlays grammaire : **15 / 48**
+- Textes : **17 écrits** (dont le grand texte d'Elm « 漢字の庭 » ; 7 CS remis, reste 登)
 
 ### Journal
+- **2026-07-21 — arc final Kimono + dark-cave + routes 45/46 (Lot 8)** : **grand texte
+  d'Elm écrit** (ex-Master Ball R11 — support choisi : le vieux livre 「漢字の庭」,
+  texte-titre du jeu, métaphore fondatrice du projet ; gate count(badges_earned, 8),
+  nouveaux états d'Elm — bug d'ordre des state_rules attrapé et corrigé), quête
+  **kimono_finale** (gauntlet des 5 au Théâtre 24→48q avec continuité narrative des 5
+  rencontres, Clear Bell, danse rituelle au sommet de Tour Jo, **combat de l'être
+  arc-en-ciel 65q** — interpolé entre les 3 esprits (≤60) et l'E4 (70), rejouable si
+  échec, sourcé E3). dark-cave — 7 leçons N2-102→108 (l'homme du fond, 30 ans dans le
+  noir, BlackGlasses ; unlock badge Clair). routes 45/46 — 10 combats ROM. 40
+  lesson_examples, 7 points d'overlay. Correctif budget : pages d'Elm kana-isées
+  (印/漢/庭/本 hors studiedSet de new-bark — le titre garde ses kanji dans le TEXTE,
+  qui a un budget proportionnel). 5 linters verts (406 fichiers).
 - **2026-07-21 — route-44 + ice-path + blackthorn + dragons-den (Lot 7)** : route-44 — 7
   combats ROM. ice-path — **Sayo, 5ᵉ Kimono** (scène comique sourcée, 5/5 rencontrées),
   **CS 滝 au piédestal du puzzle de glissades** (+ texte obligatoire ; event
@@ -165,7 +177,7 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 23 | lake-of-rage | Johto | 1 | 5 | 1 | ✅ fait (kanji 怒 shiny, Lance, écaille rouge) | ✅ | ✅ | ✅ | — | ✅ |
 | 24 | blackthorn-city | Johto | 15 | 90 | 7 | ✅ fait (+ route-44, ice-path/Sayo/CS 滝 ; Clair refuse le badge) | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 25 | dragons-den | Johto | 10 | 60 | 2 | ✅ fait (quiz du Maître écrit, parchemin du successeur, 印 n°8) | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 26 | dark-cave | Johto | 7 | 40 | 1 | ⬜ à faire | · | · | · | · | · |
+| 26 | dark-cave | Johto | 7 | 40 | 1 | ✅ fait (+ routes 45/46 ; homme du fond, BlackGlasses) | ✅ | ✅ | ✅ | — | ✅ |
 | 27 | route-26 | Johto | 7 | 40 | 2 | ⬜ à faire | · | · | · | · | · |
 | 28 | route-27 | Johto | 5 | 30 | 1 | ⬜ à faire | · | · | · | · | · |
 | 29 | indigo-plateau-antichambre | Johto | 7 | 40 | 1 | ⬜ à faire | · | · | · | · | · |

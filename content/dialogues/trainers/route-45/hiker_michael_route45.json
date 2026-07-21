@@ -1,0 +1,27 @@
+{
+ "trainer_id": "hiker_michael_route45",
+ "name": {
+  "jp": "やまおとこの　マイケル",
+  "en": "Hiker Michael"
+ },
+ "zone_id": "route-45",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "いわばの　あるきかた、しってるかい？",
+     "en": "Know how to walk on rocky ground?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あんていかんが　ちがうな。",
+     "en": "Your footing is something else."
+    }
+   ]
+  }
+ }
+}

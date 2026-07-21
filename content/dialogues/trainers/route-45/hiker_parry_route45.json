@@ -1,0 +1,31 @@
+{
+ "trainer_id": "hiker_parry_route45",
+ "name": {
+  "jp": "やまおとこの　パリー",
+  "en": "Hiker Parry"
+ },
+ "zone_id": "route-45",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　さき、ダークどうくつは　まっくらだぞ。",
+     "en": "Dark Cave ahead is pitch black."
+    },
+    {
+     "jp": "あかるい　うちに　おれと　しょうぶ！",
+     "en": "Battle me while there's still light!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "くらやみには　きを　つけな。",
+     "en": "Watch yourself in the dark."
+    }
+   ]
+  }
+ }
+}

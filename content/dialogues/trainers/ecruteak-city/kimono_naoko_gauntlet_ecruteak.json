@@ -1,0 +1,31 @@
+{
+ "trainer_id": "kimono_naoko_gauntlet_ecruteak",
+ "name": {
+  "jp": "まいこの　ナオコ",
+  "en": "Kimono Girl Naoko"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "もりで　たすけて　いただいた、ナオコです。",
+     "en": "I am Naoko — you helped me in the forest."
+    },
+    {
+     "jp": "こんどは　わたしが　あなたを　ためす　ばん。",
+     "en": "Now it is my turn to test you."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "つよく　なられましたね。",
+     "en": "How strong you have become."
+    }
+   ]
+  }
+ }
+}

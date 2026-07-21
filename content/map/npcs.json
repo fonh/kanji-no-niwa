@@ -1911,5 +1911,45 @@
     "step": "trial_passed"
    }
   ]
+ },
+ {
+  "npc_id": "kimono_dance_summit_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "The Five Kimono Girls",
+  "tile_x": 23,
+  "tile_y": 0,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/kimono_dance_summit_ecruteak",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "kimono_finale",
+    "step": "gauntlet_cleared"
+   },
+   {
+    "type": "item_owned",
+    "item_id": "clear_bell"
+   }
+  ]
+ },
+ {
+  "npc_id": "deep_man_dark_cave",
+  "zone_id": "dark-cave",
+  "name": "Man in the Deepest Dark",
+  "tile_x": 18,
+  "tile_y": 20,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/dark-cave.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/dark-cave/deep_man_dark_cave",
+  "role": "lesson",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "clair"
+   }
+  ]
  }
 ]

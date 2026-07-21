@@ -1,0 +1,31 @@
+{
+ "trainer_id": "ace_trainer_kelly_route45",
+ "name": {
+  "jp": "エリートトレーナーの　ケリー",
+  "en": "Ace Trainer Kelly"
+ },
+ "zone_id": "route-45",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ジョウトの　はてまで　きたわね。",
+     "en": "You've come to the edge of Johto."
+    },
+    {
+     "jp": "はての　しょうぶ、はじめましょ！",
+     "en": "Let's battle at the edge!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "はてまで　きた　かいが　あったわ。",
+     "en": "Worth coming to the edge for."
+    }
+   ]
+  }
+ }
+}

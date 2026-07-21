@@ -1,0 +1,27 @@
+{
+ "trainer_id": "hiker_erik_route45",
+ "name": {
+  "jp": "やまおとこの　エリック",
+  "en": "Hiker Erik"
+ },
+ "zone_id": "route-45",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "くだりざかで　スピードに　のってるぜ！",
+     "en": "I've got downhill momentum!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "スピードの　だしすぎだった…。",
+     "en": "Too much momentum, clearly..."
+    }
+   ]
+  }
+ }
+}

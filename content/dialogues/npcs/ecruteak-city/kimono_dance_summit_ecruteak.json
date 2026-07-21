@@ -1,0 +1,71 @@
+{
+ "_note": "Étape 4 Lot 8 — la danse rituelle au sommet de Tour Jo (climax E3, « un moment de merveille et de beauté »). L'entrée carte est gated gauntlet_cleared + item clear_bell ; la scène déclenche l'apparition (dance_witnessed) qui unlock le combat du sommet.",
+ "npc_id": "kimono_dance_summit_ecruteak",
+ "name": {
+  "jp": "5にんの　まいこ",
+  "en": "The Five Kimono Girls"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "kimono_finale",
+     "step": "dance_witnessed"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "dance"
+  }
+ ],
+ "dialogue_states": {
+  "dance": {
+   "pages": [
+    {
+     "jp": "（いただきに、5にんの　まいこが　ならんで　いる。）",
+     "en": "(The five dancers stand in a row at the summit.)"
+    },
+    {
+     "jp": "ようこそ。それでは…　はじめましょう。",
+     "en": "Welcome. Now then... let us begin."
+    },
+    {
+     "jp": "（まいが　はじまった。すずの　ねと、とうの　かねが　ひびきあう…。）",
+     "en": "(The dance begins. The clear bell and the tower's great bell resonate...)"
+    },
+    {
+     "jp": "（そらが　にじいろに　ひかった！）",
+     "en": "(The sky flashes with rainbow light!)"
+    },
+    {
+     "jp": "（おおきな　かげが、ゆっくりと　まいおりて　くる…！）",
+     "en": "(A great shadow slowly descends...!)"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "kimono_finale",
+     "step_id": "dance_witnessed"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "とりは　あなたを　えらびました。",
+     "en": "The bird has chosen you."
+    },
+    {
+     "jp": "150ねんの　ときを　こえて。",
+     "en": "Across one hundred and fifty years."
+    }
+   ]
+  }
+ }
+}

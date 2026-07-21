@@ -1,0 +1,27 @@
+{
+ "trainer_id": "hiker_timothy_route45",
+ "name": {
+  "jp": "やまおとこの　ティモシー",
+  "en": "Hiker Timothy"
+ },
+ "zone_id": "route-45",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　がけみちは　わしの　にわだ！",
+     "en": "These cliffs are my garden!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "にわで　まけるとはな…。",
+     "en": "Beaten in my own garden..."
+    }
+   ]
+  }
+ }
+}

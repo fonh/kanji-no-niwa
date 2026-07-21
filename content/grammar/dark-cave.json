@@ -1,0 +1,223 @@
+{
+ "_note": "Overlay grammaire — Grotte Sombre, 7 points N2-102→108. ないことはない/ないこともない sont frères (102/103) — jamais l'un en distracteur de l'autre.",
+ "zone_id": "dark-cave",
+ "points": [
+  {
+   "grammar_id": "N2-102",
+   "source_index": 101,
+   "title": "～ないことはない (〜nai koto wa nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）が来（こ）ないことはない。",
+     "point_answer": "ないことはない",
+     "jp_cloze": "彼（かれ）が来（こ）＿＿。",
+     "distractors": [
+      "ないことにした",
+      "るしかない",
+      "たことがない"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "あの問題（もんだい）が解（と）けないことはない。",
+     "point_answer": "ないことはない",
+     "jp_cloze": "あの問題（もんだい）が解（と）け＿＿。",
+     "distractors": [
+      "ないことにした",
+      "るしかない",
+      "たことがない"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-103",
+   "source_index": 102,
+   "title": "～ないこともない (〜nai koto mo nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この問題（もんだい）は解（と）けないこともないけど、難（むずか）しいです。",
+     "point_answer": "ないこともない",
+     "jp_cloze": "この問題（もんだい）は解（と）け＿＿けど、難（むずか）しいです。",
+     "distractors": [
+      "ないことにする",
+      "るほかない",
+      "たばかりだ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）に会（あ）わないこともないが、あまり話（はな）す時間（じかん）がない。",
+     "point_answer": "ないこともない",
+     "jp_cloze": "彼（かれ）に会（あ）わ＿＿が、あまり話（はな）す時間（じかん）がない。",
+     "distractors": [
+      "ないことにする",
+      "るほかない",
+      "たばかりだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-104",
+   "source_index": 103,
+   "title": "～ないではいられない (〜nai de wa irarenai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この映画（えいが）はとても感動的（かんどうてき）で、泣（な）かないではいられなかった。",
+     "point_answer": "ないではいられなかった",
+     "jp_cloze": "この映画（えいが）はとても感動的（かんどうてき）で、泣（な）か＿＿。",
+     "distractors": [
+      "ないことにしていた",
+      "ないほうがよかった",
+      "ないままだった"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼女（かのじょ）の笑顔（えがお）を見（み）ると、笑（わら）わないではいられない。",
+     "point_answer": "ないではいられない",
+     "jp_cloze": "彼女（かのじょ）の笑顔（えがお）を見（み）ると、笑（わら）わ＿＿。",
+     "distractors": [
+      "ないことにしている",
+      "ないほうがいい",
+      "ないままでいる"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-105",
+   "source_index": 104,
+   "title": "～ながら (〜nagara)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "テレビを見（み）ながら宿題（しゅくだい）をしています。",
+     "point_answer": "ながら",
+     "jp_cloze": "テレビを見（み）＿＿宿題（しゅくだい）をしています。",
+     "distractors": [
+      "てから",
+      "ずに",
+      "るなり"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼女（かのじょ）は歌（うた）いながら料理（りょうり）を作（つく）っていました。",
+     "point_answer": "ながら",
+     "jp_cloze": "彼女（かのじょ）は歌（うた）い＿＿料理（りょうり）を作（つく）っていました。",
+     "distractors": [
+      "てから",
+      "ずに",
+      "るなり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-106",
+   "source_index": 105,
+   "title": "～にあたり (〜ni atari)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "入学（にゅうがく）にあたり、必要（ひつよう）な書類（しょるい）を準備（じゅんび）してください。",
+     "point_answer": "にあたり",
+     "jp_cloze": "入学（にゅうがく）＿＿、必要（ひつよう）な書類（しょるい）を準備（じゅんび）してください。",
+     "distractors": [
+      "にかわり",
+      "にくらべ",
+      "にはんし"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "新年（しんねん）にあたり、抱負（ほうふ）を立（た）てる人（ひと）が多（おお）いです。",
+     "point_answer": "にあたり",
+     "jp_cloze": "新年（しんねん）＿＿、抱負（ほうふ）を立（た）てる人（ひと）が多（おお）いです。",
+     "distractors": [
+      "にかわり",
+      "にくらべ",
+      "にはんし"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-107",
+   "source_index": 106,
+   "title": "～において (〜ni oite)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この大学（だいがく）において、英語（えいご）のクラスが一番（いちばん）人気（にんき）があります。",
+     "point_answer": "において",
+     "jp_cloze": "この大学（だいがく）＿＿、英語（えいご）のクラスが一番（いちばん）人気（にんき）があります。",
+     "distractors": [
+      "にとって",
+      "によって",
+      "にかけて"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）の研究（けんきゅう）において新（あたら）しい発見（はっけん）がありました。",
+     "point_answer": "において",
+     "jp_cloze": "彼（かれ）の研究（けんきゅう）＿＿新（あたら）しい発見（はっけん）がありました。",
+     "distractors": [
+      "にとって",
+      "によって",
+      "にかけて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-108",
+   "source_index": 107,
+   "title": "～にかかわらず (〜ni kakawarazu)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "天気（てんき）にかかわらず、今日（きょう）の試合（しあい）は行（おこな）われます。",
+     "point_answer": "にかかわらず",
+     "jp_cloze": "天気（てんき）＿＿、今日（きょう）の試合（しあい）は行（おこな）われます。",
+     "distractors": [
+      "にしたがって",
+      "にもとづいて",
+      "にくわえて"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）は年齢（ねんれい）にかかわらず、新（あたら）しいことを学（まな）び続（つづ）けています。",
+     "point_answer": "にかかわらず",
+     "jp_cloze": "彼（かれ）は年齢（ねんれい）＿＿、新（あたら）しいことを学（まな）び続（つづ）けています。",
+     "distractors": [
+      "にしたがって",
+      "にもとづいて",
+      "にくわえて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

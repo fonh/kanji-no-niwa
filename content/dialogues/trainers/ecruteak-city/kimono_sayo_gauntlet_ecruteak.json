@@ -1,0 +1,54 @@
+{
+ "trainer_id": "kimono_sayo_gauntlet_ecruteak",
+ "name": {
+  "jp": "まいこの　サヨ",
+  "en": "Kimono Girl Sayo"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "こおりの　うえでは　おみぐるしい　ところを…。",
+     "en": "You saw me at my clumsiest, on the ice..."
+    },
+    {
+     "jp": "ぶたいの　うえの　わたしは、ちがいますよ。",
+     "en": "But on the stage, I am another person entirely."
+    },
+    {
+     "jp": "5にんの　しれん、さいごの　まい！",
+     "en": "The final dance of the five trials!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…みとめます。5にん　ぜんいんが。",
+     "en": "...We acknowledge you. All five of us."
+    },
+    {
+     "jp": "この　すずを。とうの　かねと　ひびきあう、とうめいな　すずです。",
+     "en": "Take this bell — a clear bell that resonates with the tower's own."
+    },
+    {
+     "jp": "スズの　とうの　いただきで、おまちして　います。",
+     "en": "We shall await you at the top of the Bell Tower."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "clear_bell"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "kimono_finale",
+     "step_id": "gauntlet_cleared"
+    }
+   ]
+  }
+ }
+}

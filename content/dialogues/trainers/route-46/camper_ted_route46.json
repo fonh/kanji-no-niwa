@@ -1,0 +1,27 @@
+{
+ "trainer_id": "camper_ted_route46",
+ "name": {
+  "jp": "キャンプボーイの　テッド",
+  "en": "Camper Ted"
+ },
+ "zone_id": "route-46",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "がけの　うえから　ずっと　みてたぞ！",
+     "en": "I've been watching you from the cliff!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "みてた　とおりの　つよさだ。",
+     "en": "As strong as you looked."
+    }
+   ]
+  }
+ }
+}

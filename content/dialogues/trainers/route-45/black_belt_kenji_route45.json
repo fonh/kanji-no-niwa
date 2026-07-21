@@ -1,0 +1,31 @@
+{
+ "trainer_id": "black_belt_kenji_route45",
+ "name": {
+  "jp": "からておうの　ケンジ",
+  "en": "Black Belt Kenji"
+ },
+ "zone_id": "route-45",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "やまみちは　したりの　いっぽうつうこう！",
+     "en": "This mountain road only goes down!"
+    },
+    {
+     "jp": "くだりながらの　しょうぶ、うけて　みよ！",
+     "en": "Battle me on the descent!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ころがりおちる　ところだった…。",
+     "en": "I nearly tumbled all the way down..."
+    }
+   ]
+  }
+ }
+}

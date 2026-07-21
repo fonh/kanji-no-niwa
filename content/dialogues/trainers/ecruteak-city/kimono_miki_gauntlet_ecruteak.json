@@ -1,0 +1,31 @@
+{
+ "trainer_id": "kimono_miki_gauntlet_ecruteak",
+ "name": {
+  "jp": "まいこの　ミキ",
+  "en": "Kimono Girl Miki"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "げきじょうで　すくって　くださった　ごおんは　わすれません。",
+     "en": "I have not forgotten how you saved me in this very theater."
+    },
+    {
+     "jp": "ですから、てかげんも　いたしません！",
+     "en": "Which is why I shall not hold back!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あの　方（かた）の　めに　くるいは　なかった。",
+     "en": "That person's eye was true indeed."
+    }
+   ]
+  }
+ }
+}

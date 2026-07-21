@@ -3833,5 +3833,301 @@
   "sight_auto_result": "battle",
   "repeats": false,
   "sight_range": 4
+ },
+ {
+  "trainer_id": "kimono_zuki_gauntlet_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Zuki (Kimono)",
+  "tile_x": 26,
+  "tile_y": 15,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 24,
+  "dialogue_ref": "trainers/ecruteak-city/kimono_zuki_gauntlet_ecruteak",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "kimono_finale",
+    "step": "great_text_received"
+   }
+  ]
+ },
+ {
+  "trainer_id": "kimono_naoko_gauntlet_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Naoko (Kimono)",
+  "tile_x": 27,
+  "tile_y": 15,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 30,
+  "dialogue_ref": "trainers/ecruteak-city/kimono_naoko_gauntlet_ecruteak",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "kimono_finale",
+    "step": "great_text_received"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "kimono_zuki_gauntlet_ecruteak"
+   }
+  ]
+ },
+ {
+  "trainer_id": "kimono_miki_gauntlet_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Miki (Kimono)",
+  "tile_x": 28,
+  "tile_y": 15,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 36,
+  "dialogue_ref": "trainers/ecruteak-city/kimono_miki_gauntlet_ecruteak",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "kimono_finale",
+    "step": "great_text_received"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "kimono_naoko_gauntlet_ecruteak"
+   }
+  ]
+ },
+ {
+  "trainer_id": "kimono_kuni_gauntlet_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Kuni (Kimono)",
+  "tile_x": 29,
+  "tile_y": 15,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 42,
+  "dialogue_ref": "trainers/ecruteak-city/kimono_kuni_gauntlet_ecruteak",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "kimono_finale",
+    "step": "great_text_received"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "kimono_miki_gauntlet_ecruteak"
+   }
+  ]
+ },
+ {
+  "trainer_id": "kimono_sayo_gauntlet_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Sayo (Kimono)",
+  "tile_x": 30,
+  "tile_y": 15,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 48,
+  "dialogue_ref": "trainers/ecruteak-city/kimono_sayo_gauntlet_ecruteak",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "kimono_finale",
+    "step": "great_text_received"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "kimono_kuni_gauntlet_ecruteak"
+   }
+  ]
+ },
+ {
+  "trainer_id": "hooh_summit_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "The Rainbow Bird",
+  "tile_x": 24,
+  "tile_y": 0,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 65,
+  "dialogue_ref": "trainers/ecruteak-city/hooh_summit_ecruteak",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "kimono_finale",
+    "step": "dance_witnessed"
+   }
+  ]
+ },
+ {
+  "trainer_id": "black_belt_kenji_route45",
+  "zone_id": "route-45",
+  "name": "Black Belt Kenji",
+  "tile_x": 6,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-45.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/route-45/black_belt_kenji_route45",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "hiker_timothy_route45",
+  "zone_id": "route-45",
+  "name": "Hiker Timothy",
+  "tile_x": 9,
+  "tile_y": 10,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-45.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/route-45/hiker_timothy_route45",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "hiker_michael_route45",
+  "zone_id": "route-45",
+  "name": "Hiker Michael",
+  "tile_x": 7,
+  "tile_y": 14,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-45.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/route-45/hiker_michael_route45",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "hiker_erik_route45",
+  "zone_id": "route-45",
+  "name": "Hiker Erik",
+  "tile_x": 10,
+  "tile_y": 18,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-45.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/route-45/hiker_erik_route45",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "hiker_parry_route45",
+  "zone_id": "route-45",
+  "name": "Hiker Parry",
+  "tile_x": 8,
+  "tile_y": 22,
+  "facing": "north",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-45.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/route-45/hiker_parry_route45",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "ace_trainer_ryan_route45",
+  "zone_id": "route-45",
+  "name": "Ace Trainer Ryan",
+  "tile_x": 11,
+  "tile_y": 26,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-45.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/route-45/ace_trainer_ryan_route45",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "ace_trainer_kelly_route45",
+  "zone_id": "route-45",
+  "name": "Ace Trainer Kelly",
+  "tile_x": 9,
+  "tile_y": 30,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-45.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 18,
+  "dialogue_ref": "trainers/route-45/ace_trainer_kelly_route45",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "hiker_bailey_route46",
+  "zone_id": "route-46",
+  "name": "Hiker Bailey",
+  "tile_x": 6,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-46.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/route-46/hiker_bailey_route46",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "camper_ted_route46",
+  "zone_id": "route-46",
+  "name": "Camper Ted",
+  "tile_x": 9,
+  "tile_y": 12,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-46.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/route-46/camper_ted_route46",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "picnicker_erin_route46",
+  "zone_id": "route-46",
+  "name": "Picnicker Erin",
+  "tile_x": 7,
+  "tile_y": 16,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-46.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 17,
+  "dialogue_ref": "trainers/route-46/picnicker_erin_route46",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
  }
 ]

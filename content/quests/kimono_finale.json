@@ -1,0 +1,46 @@
+{
+ "_note": "Étape 4 Lot 8 — arc final Kimono (post-8 badges) : grand texte d'Elm (ex-Master Ball, R11) → gauntlet des 5 au Théâtre (24→48q) → Clear Bell → ascension Tour Jo → danse rituelle → apparition de l'être arc-en-ciel (combat au sommet, rejouable si échec — sourcé E3).",
+ "quest_id": "kimono_finale",
+ "name": {
+  "jp": "5にんの　まいこと　にじいろの　とり",
+  "en": "The Five Dancers and the Rainbow Bird"
+ },
+ "zone_ids": [
+  "new-bark-town",
+  "ecruteak-city"
+ ],
+ "steps": [
+  {
+   "step_id": "great_text_received",
+   "label": {
+    "jp": "エルムはかせから　たいせつな　本（ほん）を　もらった。まいこたちが　エンジュで　まって　いるらしい。",
+    "en": "Prof. Elm gave me a precious book. The kimono dancers are said to be waiting in Ecruteak."
+   },
+   "target_zone_id": "ecruteak-city"
+  },
+  {
+   "step_id": "gauntlet_cleared",
+   "label": {
+    "jp": "5にんの　まいこ　ぜんいんに　みとめられた！　とうめいな　すずを　もらった。",
+    "en": "All five dancers have acknowledged me! I received the Clear Bell."
+   },
+   "target_zone_id": "ecruteak-city"
+  },
+  {
+   "step_id": "dance_witnessed",
+   "label": {
+    "jp": "スズの　とうの　いただきで、5にんの　まいが　はじまった。かねが　なりひびく…！",
+    "en": "Atop the Bell Tower, the five began their dance. The bell rings out...!"
+   },
+   "target_zone_id": "ecruteak-city"
+  },
+  {
+   "step_id": "hooh_faced",
+   "label": {
+    "jp": "にじいろの　とりと　むきあった。150ねんぶりに、とりは　まいおりた。",
+    "en": "I faced the rainbow bird. For the first time in 150 years, it descended."
+   },
+   "target_zone_id": "ecruteak-city"
+  }
+ ]
+}

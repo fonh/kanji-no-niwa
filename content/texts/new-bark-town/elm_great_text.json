@@ -1,0 +1,167 @@
+{
+ "_note": "Étape 4 Lot 8 — LE grand texte d'Elm (ex-Master Ball, adaptation R11 : « texte de lecture majeur, support choisi à la passe contenu »). Choix de support : le vieux livre 「漢字の庭」 — le texte-titre du jeu, métaphore du jardin qui fonde tout le projet. Gate du gauntlet Kimono.",
+ "text": {
+  "text_id": "elm_great_text_new_bark",
+  "title": {
+   "jp": "漢字（かんじ）の　庭（にわ）",
+   "en": "The Kanji Garden"
+  },
+  "jp_text": "ことばは　たねに　にて　いる。ひとつ　まなべば、こころの　庭（にわ）に　ひとつ　めが　でる。まいにち　みずを　やれば、めは　のびて、はなが　さき、みが　なる。みの　なかには　あたらしい　たねが　あって、それが　また　つぎの　めに　なる。だから　まなびに　おわりは　ない。庭（にわ）が　ひろがりつづける　だけだ。わすれて　しまう　ことも　あるだろう。かれる　めも　あるだろう。それでも　だいじょうぶ。いちど　そだてた　つちは、つぎの　たねを　もっと　はやく　そだてる。きみの　庭（にわ）は、もう　どこにも　なくならない。",
+  "en_text": "Words are like seeds. Learn one, and a sprout appears in the garden of your heart. Water it daily and the sprout grows, flowers, bears fruit. Inside the fruit are new seeds, and they become the next sprouts. That is why learning has no end — the garden simply keeps growing. You will forget things, yes. Some sprouts will wither. Even so, do not worry: soil that has raised one seed raises the next one faster. Your garden can never be lost.",
+  "audio_ref": null,
+  "level": "N2",
+  "source": "original",
+  "tier": "obligatoire",
+  "zone_id": "new-bark-town",
+  "npc_ref": "prof_elm_lab",
+  "found_object_ref": null,
+  "event_ref": "elm_great_text",
+  "length_chars": 259,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　本（ほん）は　ことばを　なにに　たとえて　いますか。",
+     "en": "What does this book compare words to?"
+    },
+    "options": [
+     {
+      "jp": "庭（にわ）に　まく　たね。",
+      "en": "Seeds sown in a garden"
+     },
+     {
+      "jp": "そらを　とぶ　とり。",
+      "en": "Birds in the sky"
+     },
+     {
+      "jp": "うみの　なみ。",
+      "en": "Waves of the sea"
+     },
+     {
+      "jp": "やまの　いし。",
+      "en": "Mountain stones"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "みの　なかには　なにが　ありますか。",
+     "en": "What is inside the fruit?"
+    },
+    "options": [
+     {
+      "jp": "あたらしい　たね。",
+      "en": "New seeds"
+     },
+     {
+      "jp": "ふるい　はな。",
+      "en": "Old flowers"
+     },
+     {
+      "jp": "あまい　みず。",
+      "en": "Sweet water"
+     },
+     {
+      "jp": "ちいさな　とり。",
+      "en": "A small bird"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 79,
+     "end": 100
+    }
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "「いちど　そだてた　つちは、つぎの　たねを　もっと　はやく　そだてる」とは　どういう　ことですか。",
+     "en": "What does 'soil that has raised one seed raises the next faster' mean?"
+    },
+    "options": [
+     {
+      "jp": "いちど　まなんだ　けいけんは、つぎの　まなびを　らくに　する。",
+      "en": "The experience of learning once makes the next learning easier"
+     },
+     {
+      "jp": "つちを　かえれば　はやく　そだつ。",
+      "en": "Changing the soil speeds growth"
+     },
+     {
+      "jp": "たねは　じぶんで　そだつ。",
+      "en": "Seeds grow by themselves"
+     },
+     {
+      "jp": "にわしごとは　つかれる。",
+      "en": "Gardening is tiring"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 199,
+     "end": 232
+    }
+   },
+   {
+    "type": "resolution_reference",
+    "prompt": {
+     "jp": "「それが　また　つぎの　めに　なる」の「それ」は？",
+     "en": "What does 'they' refer to in 'they become the next sprouts'?"
+    },
+    "options": [
+     {
+      "jp": "みの　なかの　あたらしい　たね。",
+      "en": "The new seeds inside the fruit"
+     },
+     {
+      "jp": "こころの　庭（にわ）。",
+      "en": "The garden of the heart"
+     },
+     {
+      "jp": "まいにちの　みず。",
+      "en": "The daily watering"
+     },
+     {
+      "jp": "かれた　め。",
+      "en": "The withered sprouts"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 79,
+     "end": 117
+    }
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": {
+     "jp": "「かれる」の　いみは？",
+     "en": "What does 「かれる」 mean here?"
+    },
+    "options": [
+     {
+      "jp": "しんで　しまう（しょくぶつが）。",
+      "en": "To wither and die (of plants)"
+     },
+     {
+      "jp": "大（おお）きく　なる。",
+      "en": "To grow large"
+     },
+     {
+      "jp": "はなが　さく。",
+      "en": "To bloom"
+     },
+     {
+      "jp": "たねを　まく。",
+      "en": "To sow seeds"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   }
+  ]
+ }
+}

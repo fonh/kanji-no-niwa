@@ -1,0 +1,98 @@
+[
+ {
+  "zone_id": "dark-cave",
+  "npc_ref": "deep_man_dark_cave",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "登",
+   "相",
+   "礼",
+   "祭",
+   "第",
+   "筆"
+  ],
+  "grammar_id": "N2-102"
+ },
+ {
+  "zone_id": "dark-cave",
+  "npc_ref": "deep_man_dark_cave",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "緑",
+   "美",
+   "育",
+   "血",
+   "表",
+   "配"
+  ],
+  "grammar_id": "N2-103"
+ },
+ {
+  "zone_id": "dark-cave",
+  "npc_ref": "deep_man_dark_cave",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "付",
+   "令",
+   "位",
+   "例",
+   "健",
+   "共"
+  ],
+  "grammar_id": "N2-104"
+ },
+ {
+  "zone_id": "dark-cave",
+  "npc_ref": "deep_man_dark_cave",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "初",
+   "加",
+   "労",
+   "包",
+   "卒",
+   "協"
+  ],
+  "grammar_id": "N2-105"
+ },
+ {
+  "zone_id": "dark-cave",
+  "npc_ref": "deep_man_dark_cave",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "司",
+   "各",
+   "城",
+   "塩",
+   "夫",
+   "季"
+  ],
+  "grammar_id": "N2-106"
+ },
+ {
+  "zone_id": "dark-cave",
+  "npc_ref": "deep_man_dark_cave",
+  "sequence_index": 6,
+  "kanji_ids": [
+   "差",
+   "必",
+   "折",
+   "改",
+   "昨"
+  ],
+  "grammar_id": "N2-107"
+ },
+ {
+  "zone_id": "dark-cave",
+  "npc_ref": "deep_man_dark_cave",
+  "sequence_index": 7,
+  "kanji_ids": [
+   "景",
+   "望",
+   "未",
+   "末",
+   "札"
+  ],
+  "grammar_id": "N2-108"
+ }
+]

@@ -1,25 +1,60 @@
 {
- "_note": "Étape 3 point 2 — tranche verticale. Elm est un PNJ-leçon (content/lessons/new-bark-town.json, 5 leçons) ET porte la narration hors-leçon (choix du compagnon, envoi en mission, retour). Résolution à l'approche : le moteur sert d'abord sa prochaine leçon si elle est en tête ET débloquée (unlock_conditions) ; sinon il retombe sur les state_rules ci-dessous — voir PRD.md § Leçons « Coupure aller-retour — mécanisme ». Avant que mystery_egg_errand n'ait jamais avancé, aucune leçon n'est débloquée : la toute première approche voit donc forcément 'welcome', jamais l'écran-livre. **Corrigé après relecture (2026-07-09)** : le choix du compagnon est maintenant une vraie entrée de pages[] (kind: 'companion_choice', même principe d'extension que 'instant_response' au § Pokégear でんわ) plutôt qu'une ligne de texte sans mécanique derrière — options tirées de content/companions.json, effet set_companion (PRD.md § Schéma Base de Données, nouvel Effect). Seul Pikachu est confirmé ; les 2 autres slots restent 'tbd_2'/'tbd_3' tant que le dump d'assets follower n'a pas été vérifié (roadmap Étape 5 point 5) — inventer leur identité ici aurait été écrire du contenu sans base.",
+ "_note": "Étape 3 point 2 — tranche verticale. Elm est un PNJ-leçon (content/lessons/new-bark-town.json, 5 leçons) ET porte la narration hors-leçon (choix du compagnon, envoi en mission, retour). Résolution à l'approche : le moteur sert d'abord sa prochaine leçon si elle est en tête ET débloquée (unlock_conditions) ; sinon il retombe sur les state_rules ci-dessous — voir PRD.md § Leçons « Coupure aller-retour — mécanisme ». Avant que mystery_egg_errand n'ait jamais avancé, aucune leçon n'est débloquée : la toute première approche voit donc forcément 'welcome', jamais l'écran-livre. **Corrigé après relecture (2026-07-09)** : le choix du compagnon est maintenant une vraie entrée de pages[] (kind: 'companion_choice', même principe d'extension que 'instant_response' au § Pokégear でんわ) plutôt qu'une ligne de texte sans mécanique derrière — options tirées de content/companions.json, effet set_companion (PRD.md § Schéma Base de Données, nouvel Effect). Seul Pikachu est confirmé ; les 2 autres slots restent 'tbd_2'/'tbd_3' tant que le dump d'assets follower n'a pas été vérifié (roadmap Étape 5 point 5) — inventer leur identité ici aurait été écrire du contenu sans base. — Lot 8 (2026-07-21) : états great_text/after_great_text ajoutés (grand texte d'Elm post-8 badges, R11 — gate count(badges_earned, 8), lance l'arc kimono_finale).",
  "npc_id": "prof_elm_lab",
- "name": { "jp": "エルムはかせ", "en": "Prof. Elm" },
+ "name": {
+  "jp": "エルムはかせ",
+  "en": "Prof. Elm"
+ },
  "zone_id": "new-bark-town",
  "jlpt_level": "N5",
  "state_rules": [
   {
    "if": [
-    { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_delivered" }
+    {
+     "type": "quest_step",
+     "quest_id": "kimono_finale",
+     "step": "great_text_received"
+    }
+   ],
+   "state": "after_great_text"
+  },
+  {
+   "if": [
+    {
+     "type": "count",
+     "metric": "badges_earned",
+     "threshold": 8
+    }
+   ],
+   "state": "great_text"
+  },
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "mystery_egg_errand",
+     "step": "egg_delivered"
+    }
    ],
    "state": "egg_care"
   },
   {
    "if": [
-    { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_received" }
+    {
+     "type": "quest_step",
+     "quest_id": "mystery_egg_errand",
+     "step": "egg_received"
+    }
    ],
    "state": "welcome_back"
   },
   {
    "if": [
-    { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "sent_by_elm" }
+    {
+     "type": "quest_step",
+     "quest_id": "mystery_egg_errand",
+     "step": "sent_by_elm"
+    }
    ],
    "state": "sent_off"
   },
@@ -31,45 +66,147 @@
  "dialogue_states": {
   "welcome": {
    "pages": [
-    { "jp": "あ、きたね。", "en": "Ah, there you are." },
-    { "jp": "ここに　3びき　います。", "en": "There are three of them here." },
-    { "jp": "1ぴき　えらんで　ください。", "en": "Please choose one." },
+    {
+     "jp": "あ、きたね。",
+     "en": "Ah, there you are."
+    },
+    {
+     "jp": "ここに　3びき　います。",
+     "en": "There are three of them here."
+    },
+    {
+     "jp": "1ぴき　えらんで　ください。",
+     "en": "Please choose one."
+    },
     {
      "kind": "companion_choice",
-     "prompt": { "jp": "だれと　いっしょに　いく？", "en": "Who will you travel with?" },
+     "prompt": {
+      "jp": "だれと　いっしょに　いく？",
+      "en": "Who will you travel with?"
+     },
      "options_ref": "content/companions.json",
-     "effect_template": { "type": "set_companion", "companion_id": "{{selected}}" }
+     "effect_template": {
+      "type": "set_companion",
+      "companion_id": "{{selected}}"
+     }
     },
-    { "jp": "いい　ともだちに　なりますよ。", "en": "It'll make a great friend." },
-    { "jp": "さあ、Mr.ポケモンの　いえに　いって　ください。", "en": "Now, please go to Mr. Pokémon's house." },
-    { "jp": "みちで　わたしに　でんわしてね。", "en": "Call me on the way, okay?" }
+    {
+     "jp": "いい　ともだちに　なりますよ。",
+     "en": "It'll make a great friend."
+    },
+    {
+     "jp": "さあ、Mr.ポケモンの　いえに　いって　ください。",
+     "en": "Now, please go to Mr. Pokémon's house."
+    },
+    {
+     "jp": "みちで　わたしに　でんわしてね。",
+     "en": "Call me on the way, okay?"
+    }
    ],
    "effects": [
-    { "type": "advance_quest", "quest_id": "mystery_egg_errand", "step_id": "sent_by_elm" }
+    {
+     "type": "advance_quest",
+     "quest_id": "mystery_egg_errand",
+     "step_id": "sent_by_elm"
+    }
    ]
   },
   "sent_off": {
    "pages": [
-    { "jp": "はやく　いって　ください。", "en": "Please hurry along." },
-    { "jp": "Mr.ポケモンが　まっていますよ。", "en": "Mr. Pokémon is waiting." }
+    {
+     "jp": "はやく　いって　ください。",
+     "en": "Please hurry along."
+    },
+    {
+     "jp": "Mr.ポケモンが　まっていますよ。",
+     "en": "Mr. Pokémon is waiting."
+    }
    ]
   },
   "welcome_back": {
    "pages": [
-    { "jp": "おお、かえってきたね！", "en": "Oh, you're back!" },
-    { "jp": "たまごを　もらったんだね。", "en": "So you got the egg." },
-    { "jp": "だいじに　あずかりますよ。", "en": "I'll take good care of it." },
-    { "jp": "ときどき　わるい　ひとが　います。", "en": "Sometimes there are bad people around." },
-    { "jp": "きを　つけてね。", "en": "Be careful, okay?" }
+    {
+     "jp": "おお、かえってきたね！",
+     "en": "Oh, you're back!"
+    },
+    {
+     "jp": "たまごを　もらったんだね。",
+     "en": "So you got the egg."
+    },
+    {
+     "jp": "だいじに　あずかりますよ。",
+     "en": "I'll take good care of it."
+    },
+    {
+     "jp": "ときどき　わるい　ひとが　います。",
+     "en": "Sometimes there are bad people around."
+    },
+    {
+     "jp": "きを　つけてね。",
+     "en": "Be careful, okay?"
+    }
    ],
    "effects": [
-    { "type": "advance_quest", "quest_id": "mystery_egg_errand", "step_id": "egg_delivered" }
+    {
+     "type": "advance_quest",
+     "quest_id": "mystery_egg_errand",
+     "step_id": "egg_delivered"
+    }
    ]
   },
   "egg_care": {
    "pages": [
-    { "jp": "たまごは　げんきですよ。", "en": "The egg is doing fine." },
-    { "jp": "なにか　わかったら　でんわします。", "en": "I'll call you if I learn anything." }
+    {
+     "jp": "たまごは　げんきですよ。",
+     "en": "The egg is doing fine."
+    },
+    {
+     "jp": "なにか　わかったら　でんわします。",
+     "en": "I'll call you if I learn anything."
+    }
+   ]
+  },
+  "great_text": {
+   "pages": [
+    {
+     "jp": "8つの　しるし、ぜんぶ　あつめたんだね！　すごい、すごいよ！",
+     "en": "All eight seals! Incredible — truly incredible!"
+    },
+    {
+     "jp": "きみに　わたしたい　ものが　ある。わたしの　たからものだ。",
+     "en": "There's something I want you to have. A treasure of mine."
+    },
+    {
+     "jp": "「かんじの　にわ」…　ふるい　ふるい　ほんだよ。",
+     "en": "'The Kanji Garden'... a very, very old book."
+    },
+    {
+     "jp": "よみおわったら、エンジュシティへ　いくと　いい。まいこさんたちが　きみを　まって　いる。",
+     "en": "When you've read it, go to Ecruteak. The kimono dancers are waiting for you."
+    }
+   ],
+   "effects": [
+    {
+     "type": "unlock_text",
+     "text_id": "elm_great_text_new_bark"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "kimono_finale",
+     "step_id": "great_text_received"
+    }
+   ]
+  },
+  "after_great_text": {
+   "pages": [
+    {
+     "jp": "エンジュの　まいこさんたちに　よろしくね。",
+     "en": "Give my regards to the dancers in Ecruteak."
+    },
+    {
+     "jp": "きみは　わたしの　じまんの　でしだよ。",
+     "en": "You are the student I'm proudest of."
+    }
    ]
   }
  }

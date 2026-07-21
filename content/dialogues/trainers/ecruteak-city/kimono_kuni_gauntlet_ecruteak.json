@@ -1,0 +1,31 @@
+{
+ "trainer_id": "kimono_kuni_gauntlet_ecruteak",
+ "name": {
+  "jp": "まいこの　クニ",
+  "en": "Kimono Girl Kuni"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ちかどうでの　やくそく、おぼえて　いますか。",
+     "en": "Do you remember our promise in the tunnel?"
+    },
+    {
+     "jp": "「いつか　スズの　とうで」。その　いつかが　きました。",
+     "en": "'One day, at the Bell Tower.' That day has come."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あとは　サヨを　のこすのみ。",
+     "en": "Only Sayo remains."
+    }
+   ]
+  }
+ }
+}

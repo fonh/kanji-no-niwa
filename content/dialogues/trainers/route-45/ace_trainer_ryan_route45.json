@@ -1,0 +1,31 @@
+{
+ "trainer_id": "ace_trainer_ryan_route45",
+ "name": {
+  "jp": "エリートトレーナーの　ライアン",
+  "en": "Ace Trainer Ryan"
+ },
+ "zone_id": "route-45",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　みちを　くだる　トレーナーは　みんな　つよい。",
+     "en": "Every trainer who takes this road is strong."
+    },
+    {
+     "jp": "きみは　どうかな？",
+     "en": "Are you?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うわさ　いじょうだ。",
+     "en": "Beyond the rumors."
+    }
+   ]
+  }
+ }
+}

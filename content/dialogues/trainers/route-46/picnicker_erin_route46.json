@@ -1,0 +1,27 @@
+{
+ "trainer_id": "picnicker_erin_route46",
+ "name": {
+  "jp": "ピクニックガールの　エリン",
+  "en": "Picnicker Erin"
+ },
+ "zone_id": "route-46",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "さいごの　ピクニックしょうぶ、いく？",
+     "en": "One last picnic battle?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いい　しめくくりに　なったわ。",
+     "en": "A fine way to wrap things up."
+    }
+   ]
+  }
+ }
+}

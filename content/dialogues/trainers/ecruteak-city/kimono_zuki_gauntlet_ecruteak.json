@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 8 — gauntlet des 5 Kimono Girls (Théâtre, post-grand texte ; longueurs 24→48, table PRD). Chaque combat gated sur la défaite de la précédente.",
+ "trainer_id": "kimono_zuki_gauntlet_ecruteak",
+ "name": {
+  "jp": "まいこの　ズキ",
+  "en": "Kimono Girl Zuki"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "マウビルで　お会（あ）いして　いらい　ですね。",
+     "en": "We haven't met since Violet City."
+    },
+    {
+     "jp": "5にんの　しれん、その　いちばんめ。まいります！",
+     "en": "The trial of the five — I am the first. Begin!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "おみごと。つぎの　いもうとへ。",
+     "en": "Well danced. On to my next sister."
+    }
+   ]
+  }
+ }
+}
