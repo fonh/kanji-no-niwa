@@ -2277,5 +2277,88 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/kanto-power-plant.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/kanto-power-plant/plant_worker_kpp"
+ },
+ {
+  "npc_id": "lone_grunt_gym_cerulean",
+  "zone_id": "cerulean-city",
+  "name": "Lone Rocket Grunt",
+  "tile_x": 14,
+  "tile_y": 30,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cerulean-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/cerulean-city/lone_grunt_gym_cerulean",
+  "unlock_conditions": [
+   {
+    "type": "event_cleared",
+    "event_id": "misty_met_viewpoint",
+    "negate": true
+   }
+  ]
+ },
+ {
+  "npc_id": "bike_shop_owner_cerulean",
+  "zone_id": "cerulean-city",
+  "name": "Original Bike Shop Owner",
+  "tile_x": 8,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cerulean-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/cerulean-city/bike_shop_owner_cerulean",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "recurring_boy_cerulean",
+  "zone_id": "cerulean-city",
+  "name": "Boy in the North of Town",
+  "tile_x": 12,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cerulean-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/cerulean-city/recurring_boy_cerulean",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "machine_part_hiding_cerulean",
+  "zone_id": "cerulean-city",
+  "name": "The Machine Part",
+  "tile_x": 15,
+  "tile_y": 31,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cerulean-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/cerulean-city/machine_part_hiding_cerulean",
+  "kind": "object",
+  "unlock_conditions": [
+   {
+    "type": "npc_cleared",
+    "npc_id": "lone_grunt_bridge_r2425"
+   }
+  ]
+ },
+ {
+  "npc_id": "bill_grandpa_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "Bill's Grandfather",
+  "tile_x": 18,
+  "tile_y": 24,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-24-25-kanto/bill_grandpa_r2425"
+ },
+ {
+  "npc_id": "suicune_viewpoint_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "Presence at the Cape",
+  "tile_x": 21,
+  "tile_y": 30,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-24-25-kanto/suicune_viewpoint_r2425",
+  "kind": "object"
  }
 ]

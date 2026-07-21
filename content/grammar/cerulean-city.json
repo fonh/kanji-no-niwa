@@ -1,0 +1,329 @@
+{
+ "_note": "Overlay grammaire — Azuria, 17 points N1-083→099 (1 exemple câblé/point, dérogation Carmin ; famille はおろか (087/088/089) et は～ (090/091) : distracteurs croisés uniquement quand sémantiquement faux au vu de la glose EN, jamais un synonyme).",
+ "zone_id": "cerulean-city",
+ "points": [
+  {
+   "grammar_id": "N1-083",
+   "source_index": 82,
+   "title": "Noun の手前 (~no temae)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "彼女（かのじょ）と別（わか）れる手前（てまえ）、思（おも）い直（なお）しました。",
+     "point_answer": "手前（てまえ）",
+     "jp_cloze": "彼女（かのじょ）と別（わか）れる＿＿、思（おも）い直（なお）しました。",
+     "distractors": [
+      "あまり",
+      "うちに",
+      "かぎり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-084",
+   "source_index": 83,
+   "title": "Noun の極み (〜no kiwami)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "彼（かれ）は音楽（おんがく）の極（きわ）みを追求（ついきゅう）し続（つづ）けている。",
+     "point_answer": "の極（きわ）み",
+     "jp_cloze": "彼（かれ）は音楽（おんがく）＿＿を追求（ついきゅう）し続（つづ）けている。",
+     "distractors": [
+      "のかぎり",
+      "のあまり",
+      "のはず"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-085",
+   "source_index": 84,
+   "title": "Noun の 至り (~no itari)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）の冗談（じょうだん）には驚（おどろ）きの至（いた）りだ。",
+     "point_answer": "の至（いた）りだ",
+     "jp_cloze": "彼（かれ）の冗談（じょうだん）には驚（おどろ）き＿＿。",
+     "distractors": [
+      "のかぎりだ",
+      "のはずだ",
+      "のつもりだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-086",
+   "source_index": 85,
+   "title": "Noun はいざ知らず (~ wa iza shirazu)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）が遅（おく）れるのはいざ知（し）らず、彼女（かのじょ）まで遅刻（ちこく）するとは意外（いがい）だ。",
+     "point_answer": "はいざ知（し）らず",
+     "jp_cloze": "彼（かれ）が遅（おく）れるの＿＿、彼女（かのじょ）まで遅刻（ちこく）するとは意外（いがい）だ。",
+     "distractors": [
+      "はそれきり",
+      "はなんなり",
+      "はどうやら"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-087",
+   "source_index": 86,
+   "title": "Noun はおろか～すら (Noun wa oroka ～sura)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "日本語（にほんご）はおろか、英語（えいご）さえ話（はな）しません。",
+     "point_answer": "はおろか",
+     "jp_cloze": "日本語（にほんご）＿＿、英語（えいご）さえ話（はな）しません。",
+     "distractors": [
+      "はもとより",
+      "はまだしも",
+      "はさておき"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-088",
+   "source_index": 87,
+   "title": "Noun はおろか～まで (~wa oroka ~made)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "この料理（りょうり）は見（み）た目（め）はおろか、味（あじ）まで最高（さいこう）だ。",
+     "point_answer": "はおろか",
+     "jp_cloze": "この料理（りょうり）は見（み）た目（め）＿＿、味（あじ）まで最高（さいこう）だ。",
+     "distractors": [
+      "はともかく",
+      "はまだしも",
+      "はぬきにして"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-089",
+   "source_index": 88,
+   "title": "Noun はおろか～も (Noun wa oroka ～ mo)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "絵（え）を描（か）くことはおろか、字（じ）さえ書（か）けない。",
+     "point_answer": "はおろか",
+     "jp_cloze": "絵（え）を描（か）くこと＿＿、字（じ）さえ書（か）けない。",
+     "distractors": [
+      "はもちろん",
+      "はまだしも",
+      "はともかく"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-090",
+   "source_index": 89,
+   "title": "Noun はさておき (~ wa sateoki)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "彼（かれ）の性格（せいかく）はさておき、彼（かれ）のスキルは認（みと）めざるを得（え）ない。",
+     "point_answer": "はさておき",
+     "jp_cloze": "彼（かれ）の性格（せいかく）＿＿、彼（かれ）のスキルは認（みと）めざるを得（え）ない。",
+     "distractors": [
+      "はおろか",
+      "はいざしらず",
+      "はどうであれ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-091",
+   "source_index": 90,
+   "title": "Noun + はどうであれ (~ wa dou de are)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "天候（てんこう）はどうであれ、試合（しあい）は行（おこな）われます。",
+     "point_answer": "はどうであれ",
+     "jp_cloze": "天候（てんこう）＿＿、試合（しあい）は行（おこな）われます。",
+     "distractors": [
+      "はなんであれ",
+      "はさておき",
+      "はおろか"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-092",
+   "source_index": 91,
+   "title": "Noun まみれ (~mamire)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は泥（どろ）まみれになって帰（かえ）ってきた。",
+     "point_answer": "まみれ",
+     "jp_cloze": "彼（かれ）は泥（どろ）＿＿になって帰（かえ）ってきた。",
+     "distractors": [
+      "ずくめ",
+      "がち",
+      "ぎみ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-093",
+   "source_index": 92,
+   "title": "Noun もさることながら Noun も (A mo saru koto nagara B mo)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）の歌唱力（かしょうりょく）もさることながら、ダンスも素晴（すば）らしい。",
+     "point_answer": "もさることながら",
+     "jp_cloze": "彼（かれ）の歌唱力（かしょうりょく）＿＿、ダンスも素晴（すば）らしい。",
+     "distractors": [
+      "もかまわず",
+      "もどうぜんで",
+      "もかねて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-094",
+   "source_index": 93,
+   "title": "Noun も兼ねて (~mo kanete)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "散歩（さんぽ）も兼（か）ねて、公園（こうえん）に行（い）きました。",
+     "point_answer": "も兼（か）ねて",
+     "jp_cloze": "散歩（さんぽ）＿＿、公園（こうえん）に行（い）きました。",
+     "distractors": [
+      "もかまわず",
+      "もめぐって",
+      "もこめて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-095",
+   "source_index": 94,
+   "title": "Noun も相まって (~mo aimatte)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）の才能（さいのう）も相（あい）まって、彼（かれ）は急速（きゅうそく）に昇進（しょうしん）した。",
+     "point_answer": "も相（あい）まって",
+     "jp_cloze": "彼（かれ）の才能（さいのう）＿＿、彼（かれ）は急速（きゅうそく）に昇進（しょうしん）した。",
+     "distractors": [
+      "もかまわず",
+      "もかねずに",
+      "もほどほどに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-096",
+   "source_index": 95,
+   "title": "Noun を おいて他に Verb ない (〜wo oite hoka ni〜nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この仕事（しごと）を彼（かれ）に任（まか）せる人（ひと）をおいて他（ほか）にいない。",
+     "point_answer": "をおいて他（ほか）に",
+     "jp_cloze": "この仕事（しごと）を彼（かれ）に任（まか）せる人（ひと）＿＿いない。",
+     "distractors": [
+      "をもって他（ほか）に",
+      "をよそに他（ほか）に",
+      "をぬきに他（ほか）に"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-097",
+   "source_index": 96,
+   "title": "Noun をもって (~wo motte)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "彼（かれ）は強（つよ）い決意（けつい）をもって問題（もんだい）に取（と）り組（く）んだ。",
+     "point_answer": "をもって",
+     "jp_cloze": "彼（かれ）は強（つよ）い決意（けつい）＿＿問題（もんだい）に取（と）り組（く）んだ。",
+     "distractors": [
+      "をよそに",
+      "をおいて",
+      "をかねて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-098",
+   "source_index": 97,
+   "title": "Noun をものともせずに (Noun wo mono tomo sezu ni)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "彼（かれ）は風雪（ふうせつ）をものともせずに山（やま）を登（のぼ）った。",
+     "point_answer": "をものともせずに",
+     "jp_cloze": "彼（かれ）は風雪（ふうせつ）＿＿山（やま）を登（のぼ）った。",
+     "distractors": [
+      "をどうともせずに",
+      "をなんともいわずに",
+      "をそれともみずに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-099",
+   "source_index": 98,
+   "title": "Noun をよそに (~wo yoso ni)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "経済危機（けいざいきき）をよそに、彼（かれ）は高級（こうきゅう）な車（くるま）を買（か）った。",
+     "point_answer": "をよそに",
+     "jp_cloze": "経済危機（けいざいきき）＿＿、彼（かれ）は高級（こうきゅう）な車（くるま）を買（か）った。",
+     "distractors": [
+      "をもって",
+      "をおいて",
+      "をかねて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

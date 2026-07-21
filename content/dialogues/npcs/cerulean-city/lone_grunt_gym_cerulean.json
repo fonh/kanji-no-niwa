@@ -1,0 +1,38 @@
+{
+ "_note": "Étape 4 Lot 13 — le « seul membre étranger de la Team Rocket », jamais mis au courant de la dissolution (sourcé). Présent au gym tant que negate event_cleared(misty_met_viewpoint) — l'exemple canonique du modificateur negate du PRD. Fuit vers le pont (combat lone_grunt_bridge_r2425). La pièce mécanique reste cachée au gym (objet machine_part_hiding, unlock npc_cleared du pont).",
+ "npc_id": "lone_grunt_gym_cerulean",
+ "name": {
+  "jp": "のこされた　ロケットだんいん",
+  "en": "Lone Rocket Grunt"
+ },
+ "zone_id": "cerulean-city",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "caught": {
+   "pages": [
+    {
+     "jp": "な、なんだ　おまえは！",
+     "en": "Wh-who are you!?"
+    },
+    {
+     "jp": "かいさん？　だんが？　きいてないぞ、そんな　れんらく！",
+     "en": "Disbanded? The team? Nobody told ME that!"
+    },
+    {
+     "jp": "と、とにかく　ここは　みせられない！　あばよ！",
+     "en": "A-anyway, you can't see this place! So long!"
+    },
+    {
+     "jp": "（きたの　ほうへ　にげて　いった…。）",
+     "en": "(He fled north...)"
+    }
+   ]
+  }
+ }
+}

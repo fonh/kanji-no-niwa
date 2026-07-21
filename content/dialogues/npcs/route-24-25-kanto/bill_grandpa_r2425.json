@@ -1,0 +1,61 @@
+{
+ "_note": "Étape 4 Lot 13 — grand-père de Bill (fil D4 clos : « montrer un compagnon précis → objet évolutif » adapté en troc de la pierre de Hoenn de Steven — cohérence des collectibles, aucun compagnon échangé). Étape finale du fil bill_family_thread côté Kanto.",
+ "npc_id": "bill_grandpa_r2425",
+ "name": {
+  "jp": "ビルの　おじいさん",
+  "en": "Bill's Grandfather"
+ },
+ "zone_id": "route-24-25-kanto",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "evolution_stone"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "おお、まごの　ともだちかね！　ビルから　てがみで　きいて　おるよ。",
+     "en": "Oh, you're my grandson's friend! Bill wrote to me about you."
+    },
+    {
+     "jp": "めずらしい　ものを　みせて　くれたら、わしの　コレクションの　いしを　やろう。",
+     "en": "Show me something rare, and I'll give you a stone from my collection."
+    },
+    {
+     "jp": "ほれ、その　ホウエンの　いし！　りっぱじゃ！　こうかんと　いこう！",
+     "en": "Why, that Hoenn stone! Splendid! Let's trade!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "remove_item",
+     "item_id": "hoenn_stone"
+    },
+    {
+     "type": "grant_item",
+     "item_id": "evolution_stone"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "いい　こうかんじゃった。ビルに　よろしくな。",
+     "en": "A fine trade. Give Bill my best."
+    }
+   ]
+  }
+ }
+}

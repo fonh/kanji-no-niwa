@@ -1,0 +1,27 @@
+{
+ "trainer_id": "swimmer_parker_cerulean",
+ "name": {
+  "jp": "かいパンやろうの　パーカー",
+  "en": "Swimmer Parker"
+ },
+ "zone_id": "cerulean-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "みずの　ジムの　ほんきを　みせて　やる！",
+     "en": "Behold the Water Gym at full strength!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "なみに　のまれた…。",
+     "en": "Swallowed by the wave..."
+    }
+   ]
+  }
+ }
+}

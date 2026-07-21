@@ -1,0 +1,47 @@
+{
+ "_note": "Étape 4 Lot 13 — combat de Suicune (60q, table PRD § Légendaires), finale de suicune_hunt (I-2). Le mystère du grand-père d'Eusine reste non bouclé (fidèle). Trophée de grammaire rare + lettre du mentor par la logique de jeu. Raikou (45q) et Entei (52q) restent des rencontres errantes — design de déclenchement à l'implémentation, noté roadmap.",
+ "trainer_id": "suicune_battle_r2425",
+ "name": {
+  "jp": "みずの　せいれい",
+  "en": "The Water Spirit"
+ },
+ "zone_id": "route-24-25-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "（せいれいが　こおりの　ような　めで　あなたを　ためす。）",
+     "en": "(The spirit tests you with eyes like ice.)"
+    },
+    {
+     "jp": "（きたかぜが　ほえた！）",
+     "en": "(The north wind howls!)"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "（せいれいは　しずかに　あたまを　さげた。）",
+     "en": "(The spirit quietly bows its head.)"
+    },
+    {
+     "jp": "（そして　かぜと　ともに　きえた　――　いつでも　よべる　きが　した。）",
+     "en": "(Then it vanished with the wind — yet you feel it will answer your call.)"
+    },
+    {
+     "jp": "ミナキ「…まけたよ。きみが　えらばれた。10ねんの　こたえが　でたんだ。」",
+     "en": "Eusine: '...I concede. You were chosen. Ten years, and here is my answer.'"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "suicune_hunt",
+     "step_id": "route25_finale"
+    }
+   ]
+  }
+ }
+}

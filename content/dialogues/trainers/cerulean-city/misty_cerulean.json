@@ -1,0 +1,54 @@
+{
+ "_note": "Étape 4 Lot 13 — 11ᵉ 師範 (80q, courbe Kanto). 門弟 23q, présents seulement après event_cleared(misty_met_viewpoint) (PRD § negate, exemple canonique). Unlock : 5 gardiens.",
+ "trainer_id": "misty_cerulean",
+ "name": {
+  "jp": "ジムリーダー　カスミ",
+  "en": "Misty"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・水（みず）の道（みち）",
+  "en": "Trial of the Water Path"
+ },
+ "zone_id": "cerulean-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "…みさきでは　おじゃましちゃったわね。おあいこよ。",
+     "en": "...Sorry about the scene at the cape. Now we're even."
+    },
+    {
+     "jp": "わたしは　カスミ。おてんば　にんぎょ、って　よばれてるわ。",
+     "en": "I'm Misty — the Tomboyish Mermaid, they call me."
+    },
+    {
+     "jp": "みずの　すべてを　かけて、あなたに　いどむ！",
+     "en": "With everything the water has taught me — I challenge you!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…まけたわ。でも　いい　しょうぶだった！",
+     "en": "...I lost. But what a match!"
+    },
+    {
+     "jp": "ブルーバッジ、うけとって。",
+     "en": "Take the Cascade Badge."
+    },
+    {
+     "jp": "あの　みさきで　みた　せいれい…　あなたなら　まもって　あげられるわね。",
+     "en": "That spirit we saw at the cape... you're the one who can protect it."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_badge",
+     "badge_id": "misty"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,238 @@
+[
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "bike_shop_owner_cerulean",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "繰",
+   "罷",
+   "耐",
+   "耗",
+   "聴",
+   "肖"
+  ],
+  "grammar_id": "N1-083"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "recurring_boy_cerulean",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "肪",
+   "脅",
+   "脱",
+   "膜",
+   "膨",
+   "艇"
+  ],
+  "grammar_id": "N1-084"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "bike_shop_owner_cerulean",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "芳",
+   "苗",
+   "虞",
+   "衡",
+   "衰",
+   "衷"
+  ],
+  "grammar_id": "N1-085"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "recurring_boy_cerulean",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "裂",
+   "裕",
+   "褒",
+   "襲",
+   "覆",
+   "豚"
+  ],
+  "grammar_id": "N1-086"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "bike_shop_owner_cerulean",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "載",
+   "輩",
+   "轄",
+   "辱",
+   "透",
+   "逸"
+  ],
+  "grammar_id": "N1-087"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "recurring_boy_cerulean",
+  "sequence_index": 6,
+  "kanji_ids": [
+   "遮",
+   "邪",
+   "郎",
+   "郭",
+   "醜",
+   "采"
+  ],
+  "grammar_id": "N1-088"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "bike_shop_owner_cerulean",
+  "sequence_index": 7,
+  "kanji_ids": [
+   "釣",
+   "鉛",
+   "銃",
+   "錠",
+   "錦",
+   "鍛"
+  ],
+  "grammar_id": "N1-089"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "recurring_boy_cerulean",
+  "sequence_index": 8,
+  "kanji_ids": [
+   "鎖",
+   "閑",
+   "閥",
+   "閲",
+   "闘",
+   "陣"
+  ],
+  "grammar_id": "N1-090"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "bike_shop_owner_cerulean",
+  "sequence_index": 9,
+  "kanji_ids": [
+   "隻",
+   "雅",
+   "雷",
+   "需",
+   "霊",
+   "項"
+  ],
+  "grammar_id": "N1-091"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "recurring_boy_cerulean",
+  "sequence_index": 10,
+  "kanji_ids": [
+   "餓",
+   "駆",
+   "騒",
+   "騰",
+   "驚",
+   "魂"
+  ],
+  "grammar_id": "N1-092"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "bike_shop_owner_cerulean",
+  "sequence_index": 11,
+  "kanji_ids": [
+   "鮮",
+   "鯨",
+   "鶏",
+   "鶴",
+   "麗",
+   "岡"
+  ],
+  "grammar_id": "N1-093"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "recurring_boy_cerulean",
+  "sequence_index": 12,
+  "kanji_ids": [
+   "栃",
+   "阜",
+   "乞",
+   "勃",
+   "哺",
+   "喉"
+  ],
+  "grammar_id": "N1-094"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "bike_shop_owner_cerulean",
+  "sequence_index": 13,
+  "kanji_ids": [
+   "喩",
+   "堆",
+   "塞",
+   "塡",
+   "妖",
+   "崖"
+  ],
+  "grammar_id": "N1-095"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "recurring_boy_cerulean",
+  "sequence_index": 14,
+  "kanji_ids": [
+   "弄",
+   "怨",
+   "拉",
+   "斑",
+   "斬",
+   "曖"
+  ],
+  "grammar_id": "N1-096"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "bike_shop_owner_cerulean",
+  "sequence_index": 15,
+  "kanji_ids": [
+   "曽",
+   "枕",
+   "柵",
+   "桁",
+   "汎",
+   "煎"
+  ],
+  "grammar_id": "N1-097"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "recurring_boy_cerulean",
+  "sequence_index": 16,
+  "kanji_ids": [
+   "畏",
+   "畿",
+   "箋",
+   "籠",
+   "綻"
+  ],
+  "grammar_id": "N1-098"
+ },
+ {
+  "zone_id": "cerulean-city",
+  "npc_ref": "bike_shop_owner_cerulean",
+  "sequence_index": 17,
+  "kanji_ids": [
+   "罵",
+   "羨",
+   "肘",
+   "股",
+   "脇"
+  ],
+  "grammar_id": "N1-099"
+ }
+]

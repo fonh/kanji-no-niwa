@@ -1,0 +1,44 @@
+{
+ "_note": "Étape 4 Lot 13 — combat scripté du voleur (22q). Sa défaite révèle la cachette (unlock de l'objet au gym). Dernier vestige de la Team Rocket — clôt définitivement l'arc Rocket du jeu.",
+ "trainer_id": "lone_grunt_bridge_r2425",
+ "name": {
+  "jp": "のこされた　ロケットだんいん",
+  "en": "Lone Rocket Grunt"
+ },
+ "zone_id": "route-24-25-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "しつこい　やつめ！",
+     "en": "Persistent little pest!"
+    },
+    {
+     "jp": "おれは　りゅうがくせいだんいん　だぞ！　ぼこくでは　エリートだったんだ！",
+     "en": "I'm an exchange grunt! An ELITE back home!"
+    },
+    {
+     "jp": "だんの　さいごの　ほこり、みせて　やる！",
+     "en": "I'll show you the last pride of Team Rocket!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まけた…。だんは　ほんとうに　おわって　いたんだな…。",
+     "en": "Beaten... so the team really is finished..."
+    },
+    {
+     "jp": "…ぶひんは　ジムの　プールに　かくした。もって　いけ。",
+     "en": "...I hid the part by the Gym pool. Take it."
+    },
+    {
+     "jp": "おれは　ぼこくに　かえるよ。せいせいした。",
+     "en": "I'm going home. And honestly? What a relief."
+    }
+   ]
+  }
+ }
+}

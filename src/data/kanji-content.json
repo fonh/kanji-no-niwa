@@ -26080,7 +26080,15 @@
   ],
   "etymology": "Pictograph: the ridge line — hill; a place-name workhorse (岡山, 福岡, 静岡).",
   "mnemonic": "The hill three prefectures share — おか. 福岡: lucky hill.",
-  "audio": "/audio/kanji/岡.mp3"
+  "audio": "/audio/kanji/岡.mp3",
+  "lesson_examples": [
+   {
+    "jp": "岡（おか）の　うえから　うみを　みる。",
+    "en": "Watching the sea from the hill.",
+    "audio_ref": "/audio/kanji_examples/岡_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "阪": {
   "jlpt": "N1",
@@ -26141,7 +26149,15 @@
   "examples": [],
   "etymology": "A kokuji — made in Japan: the tochi tree: horse chestnut; Tochigi's namesake.",
   "mnemonic": "The tree Japan had to invent a kanji for — とち. 栃木: chestnut-tree prefecture.",
-  "audio": "/audio/kanji/栃.mp3"
+  "audio": "/audio/kanji/栃.mp3",
+  "lesson_examples": [
+   {
+    "jp": "栃（とち）の　きの　みを　ひろう。",
+    "en": "Gathering horse-chestnuts.",
+    "audio_ref": "/audio/kanji_examples/栃_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "阜": {
   "jlpt": "N1",
@@ -26159,7 +26175,15 @@
   "examples": [],
   "etymology": "Pictograph: the terraced mound — the left-side 阝's full form; Gifu's second kanji.",
   "mnemonic": "The 阝 radical, standing alone at last — フ. 岐阜: fork-hill.",
-  "audio": "/audio/kanji/阜.mp3"
+  "audio": "/audio/kanji/阜.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ぎ阜（ふ）けんの　やまやまを　あるいた。",
+    "en": "I hiked the mountains of Gifu.",
+    "audio_ref": "/audio/kanji_examples/阜_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "質": {
   "jlpt": "N4",
@@ -47822,7 +47846,15 @@
   ],
   "etymology": "Compound: the rabbit (兎) bolting down the road (辶) — slipping away: to deviate, be lost; running ahead of the pack: excel.",
   "mnemonic": "The rabbit off the path — イツ. 逸話: the story that escaped the official record.",
-  "audio": "/audio/kanji/逸.mp3"
+  "audio": "/audio/kanji/逸.mp3",
+  "lesson_examples": [
+   {
+    "jp": "この　はなしは　逸（いつ）話（わ）として　ゆうめいだ。",
+    "en": "This story is a famous anecdote.",
+    "audio_ref": "/audio/kanji_examples/逸_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "稲": {
   "jlpt": "N2",
@@ -48217,7 +48249,15 @@
   "examples": [],
   "etymology": "Phono-semantic: gate (門) + 兌 (phonetic エツ) — checked one by one at the gate: to inspect, peruse.",
   "mnemonic": "Every page shows its papers at the gate — エツ. 閲覧室: the reading room; 検閲: the gate gone wrong.",
-  "audio": "/audio/kanji/閲.mp3"
+  "audio": "/audio/kanji/閲.mp3",
+  "lesson_examples": [
+   {
+    "jp": "しりょうを　閲（えつ）覧（らん）する。",
+    "en": "Browsing the archives.",
+    "audio_ref": "/audio/kanji_examples/閲_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "宴": {
   "jlpt": "N2",
@@ -48489,7 +48529,15 @@
   ],
   "etymology": "Phono-semantic: metal (金) + 㕣 (phonetic エン) — the soft grey metal: lead.",
   "mnemonic": "The heaviest pencil ancestor — なまり. 鉛筆: lead's daily gig, graphite notwithstanding.",
-  "audio": "/audio/kanji/鉛.mp3"
+  "audio": "/audio/kanji/鉛.mp3",
+  "lesson_examples": [
+   {
+    "jp": "鉛（えん）筆（ぴつ）で　メモを　とる。",
+    "en": "Taking notes in pencil.",
+    "audio_ref": "/audio/kanji_examples/鉛_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "凹": {
   "jlpt": "N2",
@@ -49081,7 +49129,15 @@
   ],
   "etymology": "Phono-semantic: 牙 (phonetic ガ) + bird (隹) — originally a crow-name, borrowed for courtly refinement: elegant.",
   "mnemonic": "The bird that behaves at court — みやび. 優雅: grace with a pedigree.",
-  "audio": "/audio/kanji/雅.mp3"
+  "audio": "/audio/kanji/雅.mp3",
+  "lesson_examples": [
+   {
+    "jp": "優（ゆう）雅（が）な　おどりだった。",
+    "en": "An elegant dance.",
+    "audio_ref": "/audio/kanji_examples/雅_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "餓": {
   "jlpt": "N2",
@@ -49100,7 +49156,15 @@
   "examples": [],
   "etymology": "Phono-semantic: food (飠) + 我 (phonetic ガ) — the self stripped to hunger: to starve.",
   "mnemonic": "When 'I' and 'food' are the only two thoughts left — ガ. 餓死: hunger's last entry.",
-  "audio": "/audio/kanji/餓.mp3"
+  "audio": "/audio/kanji/餓.mp3",
+  "lesson_examples": [
+   {
+    "jp": "飢（き）餓（が）を　なくす　とりくみ。",
+    "en": "Efforts to end hunger.",
+    "audio_ref": "/audio/kanji_examples/餓_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "塊": {
   "jlpt": "N2",
@@ -49710,7 +49774,15 @@
   "examples": [],
   "etymology": "Phono-semantic: 享 (phonetic カク) + city (阝) — the walled outer town: enclosure, quarter.",
   "mnemonic": "The city's outer ring wall — カク. 輪郭: the outline — a face's city wall.",
-  "audio": "/audio/kanji/郭.mp3"
+  "audio": "/audio/kanji/郭.mp3",
+  "lesson_examples": [
+   {
+    "jp": "まちの　輪（りん）郭（かく）が　みえて　きた。",
+    "en": "The town's outline came into view.",
+    "audio_ref": "/audio/kanji_examples/郭_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "隔": {
   "jlpt": "N2",
@@ -50001,7 +50073,15 @@
   "examples": [],
   "etymology": "Phono-semantic: cart (車) + 害 (phonetic カツ) — the linchpin that keeps the wheel on: control, jurisdiction.",
   "mnemonic": "Pull the pin and the cart is nobody's — カツ. 管轄: whose pin it is.",
-  "audio": "/audio/kanji/轄.mp3"
+  "audio": "/audio/kanji/轄.mp3",
+  "lesson_examples": [
+   {
+    "jp": "この　ちいきを　管（かん）轄（かつ）する。",
+    "en": "This area falls under their jurisdiction.",
+    "audio_ref": "/audio/kanji_examples/轄_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "且": {
   "jlpt": "N2",
@@ -50787,7 +50867,15 @@
   ],
   "etymology": "Compound: a tree (木) grown in the gateway (門) — traffic long gone: idle, quiet.",
   "mnemonic": "So few visitors a tree took the doorway — カン. 閑静: real-estate-listing quiet.",
-  "audio": "/audio/kanji/閑.mp3"
+  "audio": "/audio/kanji/閑.mp3",
+  "lesson_examples": [
+   {
+    "jp": "閑（しず）かな　ろじうら。",
+    "en": "A quiet back alley.",
+    "audio_ref": "/audio/kanji_examples/閑_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "陥": {
   "jlpt": "N2",
@@ -52262,7 +52350,15 @@
   ],
   "etymology": "Phono-semantic: 劦 'joined force' (phonetic キョウ) + flesh (月) — force pressed against the body: to menace.",
   "mnemonic": "Three muscles against one ribcage — おどす. 脅迫: menace, notarized.",
-  "audio": "/audio/kanji/脅.mp3"
+  "audio": "/audio/kanji/脅.mp3",
+  "lesson_examples": [
+   {
+    "jp": "あらしが　むらを　脅（おびや）かす。",
+    "en": "The storm threatens the village.",
+    "audio_ref": "/audio/kanji_examples/脅_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "響": {
   "jlpt": "N2",
@@ -52331,7 +52427,15 @@
   ],
   "etymology": "Phono-semantic: 敬 (phonetic キョウ) + horse (馬) — the horse shying: startled: to be amazed.",
   "mnemonic": "Even the horse jumped — おどろく. 驚き: the kanji with its mane up.",
-  "audio": "/audio/kanji/驚.mp3"
+  "audio": "/audio/kanji/驚.mp3",
+  "lesson_examples": [
+   {
+    "jp": "せいれいの　すがたに　驚（おどろ）いた。",
+    "en": "Astonished by the spirit's form.",
+    "audio_ref": "/audio/kanji_examples/驚_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "仰": {
   "jlpt": "N2",
@@ -52474,7 +52578,15 @@
   "examples": [],
   "etymology": "Compound: cloth (帛) shot with gold (金) — woven splendor: brocade.",
   "mnemonic": "Fabric with bullion in the weft — にしき. 錦鯉: the koi wearing it.",
-  "audio": "/audio/kanji/錦.mp3"
+  "audio": "/audio/kanji/錦.mp3",
+  "lesson_examples": [
+   {
+    "jp": "錦（にしき）の　おびが　うつくしい。",
+    "en": "The brocade sash is beautiful.",
+    "audio_ref": "/audio/kanji_examples/錦_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "斤": {
   "jlpt": "N2",
@@ -52698,7 +52810,15 @@
   ],
   "etymology": "Phono-semantic: horse (馬) + 区 (phonetic ク) — spurring across the district: to gallop, drive.",
   "mnemonic": "Hooves through every ward — かける. 駆け込み乗車: the platform gallop.",
-  "audio": "/audio/kanji/駆.mp3"
+  "audio": "/audio/kanji/駆.mp3",
+  "lesson_examples": [
+   {
+    "jp": "こどもたちが　はまべを　駆（か）ける。",
+    "en": "Children dash along the beach.",
+    "audio_ref": "/audio/kanji_examples/駆_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "駒": {
   "jlpt": "N2",
@@ -52780,7 +52900,15 @@
   "examples": [],
   "etymology": "Phono-semantic: 虍 (phonetic グ) + 呉 — foreseen danger: apprehension (the legal 〜のおそれ).",
   "mnemonic": "The tiger you plan around — おそれ. 虞: statute-book worry.",
-  "audio": "/audio/kanji/虞.mp3"
+  "audio": "/audio/kanji/虞.mp3",
+  "lesson_examples": [
+   {
+    "jp": "こうずいの　虞（おそれ）が　ある。",
+    "en": "There is a risk of flooding.",
+    "audio_ref": "/audio/kanji_examples/虞_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "遇": {
   "jlpt": "N2",
@@ -52892,7 +53020,15 @@
   ],
   "etymology": "Phono-semantic: thread (糸) + 喿 (phonetic ソウ→く) — winding thread in: to reel; to turn over in sequence (繰り返す).",
   "mnemonic": "Hand over hand on the spool — くる. 繰り返す: rewind, replay, repeat.",
-  "audio": "/audio/kanji/繰.mp3"
+  "audio": "/audio/kanji/繰.mp3",
+  "lesson_examples": [
+   {
+    "jp": "れんしゅうを　繰（く）り返（かえ）す。",
+    "en": "Repeat the practice.",
+    "audio_ref": "/audio/kanji_examples/繰_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "桑": {
   "jlpt": "N2",
@@ -53355,7 +53491,15 @@
   ],
   "etymology": "Phono-semantic: 奚 (phonetic ケイ) + bird (鳥) — the yard bird: chicken.",
   "mnemonic": "The bird on a string in the yard — にわとり. 鶏肉: the menu's plainest kanji.",
-  "audio": "/audio/kanji/鶏.mp3"
+  "audio": "/audio/kanji/鶏.mp3",
+  "lesson_examples": [
+   {
+    "jp": "あさ、鶏（にわとり）が　なく。",
+    "en": "The rooster crows at dawn.",
+    "audio_ref": "/audio/kanji_examples/鶏_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "鯨": {
   "jlpt": "N2",
@@ -53372,7 +53516,15 @@
   "examples": [],
   "etymology": "Phono-semantic: fish (魚) + 京 (phonetic ゲイ) — the capital-sized fish: whale.",
   "mnemonic": "A fish the size of a city — くじら. 鯨: the ocean's metropolis.",
-  "audio": "/audio/kanji/鯨.mp3"
+  "audio": "/audio/kanji/鯨.mp3",
+  "lesson_examples": [
+   {
+    "jp": "おきで　鯨（くじら）が　しおを　ふく。",
+    "en": "A whale spouts offshore.",
+    "audio_ref": "/audio/kanji_examples/鯨_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "撃": {
   "jlpt": "N2",
@@ -54811,7 +54963,15 @@
   "examples": [],
   "etymology": "Compound: the balance beam carried level between (行) — the crossbar of scales: equilibrium.",
   "mnemonic": "The beam that must not tip — コウ. 均衡: balance, treaty-grade.",
-  "audio": "/audio/kanji/衡.mp3"
+  "audio": "/audio/kanji/衡.mp3",
+  "lesson_examples": [
+   {
+    "jp": "きん衡（こう）――　均（きん）衡（こう）を　たもつ。",
+    "en": "Keeping the balance.",
+    "audio_ref": "/audio/kanji_examples/衡_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "貢": {
   "jlpt": "N2",
@@ -54906,7 +55066,15 @@
   ],
   "etymology": "Phono-semantic: 工 (phonetic コウ) + head (頁) — originally the nape; each 'head' of a text: item, clause.",
   "mnemonic": "Every heading gets its number — コウ. 項目: the list's skeleton.",
-  "audio": "/audio/kanji/項.mp3"
+  "audio": "/audio/kanji/項.mp3",
+  "lesson_examples": [
+   {
+    "jp": "じこうを　項（こう）目（もく）ごとに　まとめる。",
+    "en": "Organizing matters item by item.",
+    "audio_ref": "/audio/kanji_examples/項_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "剛": {
   "jlpt": "N2",
@@ -55236,7 +55404,15 @@
   "examples": [],
   "etymology": "Phono-semantic: 云 (phonetic コン) + 鬼 — the spirit-breath of the dead: soul.",
   "mnemonic": "The vapor the ghost is made of — たましい. 大和魂: the national soul, capital S.",
-  "audio": "/audio/kanji/魂.mp3"
+  "audio": "/audio/kanji/魂.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ことばに　魂（たましい）を　こめる。",
+    "en": "Putting your soul into your words.",
+    "audio_ref": "/audio/kanji_examples/魂_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "唆": {
   "jlpt": "N2",
@@ -55336,7 +55512,15 @@
   "examples": [],
   "etymology": "Phono-semantic: metal (金) + a phonetic — links locked in series: chain; to close off (鎖国).",
   "mnemonic": "Small rings holding like money holds people — くさり. 鎖国: the chained country era.",
-  "audio": "/audio/kanji/鎖.mp3"
+  "audio": "/audio/kanji/鎖.mp3",
+  "lesson_examples": [
+   {
+    "jp": "とびらの　鎖（くさり）を　はずす。",
+    "en": "Removing the door's chain.",
+    "audio_ref": "/audio/kanji_examples/鎖_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "債": {
   "jlpt": "N2",
@@ -55503,7 +55687,15 @@
   "examples": [],
   "etymology": "Pictograph: a hand plucking from a tree — gathering; the gathered look of things: mien; the tossed lot: dice (采配).",
   "mnemonic": "The hand that picks — and the general's baton it became — サイ. 采配を振る: calling the plays.",
-  "audio": "/audio/kanji/采.mp3"
+  "audio": "/audio/kanji/采.mp3",
+  "lesson_examples": [
+   {
+    "jp": "みごとな　采（さい）配（はい）だった。",
+    "en": "Masterful command decisions.",
+    "audio_ref": "/audio/kanji_examples/采_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "砕": {
   "jlpt": "N2",
@@ -55593,7 +55785,15 @@
   ],
   "etymology": "Phono-semantic: 𢦏 (phonetic サイ) + cart (車) — set aboard: to load; set into print: to publish (掲載).",
   "mnemonic": "Cargo on the cart, articles on the page — のせる. 記載: loaded into the record.",
-  "audio": "/audio/kanji/載.mp3"
+  "audio": "/audio/kanji/載.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ざっしに　きじが　載（の）った。",
+    "en": "The article appeared in a magazine.",
+    "audio_ref": "/audio/kanji_examples/載_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "剤": {
   "jlpt": "N2",
@@ -56527,7 +56727,15 @@
   ],
   "etymology": "Phono-semantic: movement (辶) + 庶 (phonetic シャ) — stepped into the path: to block.",
   "mnemonic": "The crowd closing the road — さえぎる. 遮断機: the railway crossing's arm.",
-  "audio": "/audio/kanji/遮.mp3"
+  "audio": "/audio/kanji/遮.mp3",
+  "lesson_examples": [
+   {
+    "jp": "カーテンで　ひかりを　遮（さえぎ）る。",
+    "en": "Blocking the light with curtains.",
+    "audio_ref": "/audio/kanji_examples/遮_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "蛇": {
   "jlpt": "N2",
@@ -56590,7 +56798,15 @@
   ],
   "etymology": "Phono-semantic: 牙 (phonetic ジャ) + city (阝) — crooked ways: wicked, evil; the body's invader: 風邪.",
   "mnemonic": "Tusks inside the city walls — ジャ. 邪魔: evil's polite little brother — 'excuse the intrusion'.",
-  "audio": "/audio/kanji/邪.mp3"
+  "audio": "/audio/kanji/邪.mp3",
+  "lesson_examples": [
+   {
+    "jp": "邪（じゃ）魔（ま）を　しないでね。",
+    "en": "Don't get in the way, okay?",
+    "audio_ref": "/audio/kanji_examples/邪_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "爵": {
   "jlpt": "N2",
@@ -56916,7 +57132,15 @@
   ],
   "etymology": "Compound: waiting under the rain (雨) — what one waits needing: demand.",
   "mnemonic": "Standing in the rain until supply arrives — ジュ. 需要: the market's umbrella-less crowd.",
-  "audio": "/audio/kanji/需.mp3"
+  "audio": "/audio/kanji/需.mp3",
+  "lesson_examples": [
+   {
+    "jp": "じゅようと　きょうきゅう　――　需（じゅ）要（よう）が　たかい。",
+    "en": "Demand is high.",
+    "audio_ref": "/audio/kanji_examples/需_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "囚": {
   "jlpt": "N2",
@@ -57077,7 +57301,15 @@
   ],
   "etymology": "Phono-semantic: 龍 (phonetic シュウ) + 衣 — layered robes: to inherit (襲名); falling on like a cloak: to attack.",
   "mnemonic": "The dragon drops from above wearing your ancestor's coat — おそう. 襲撃 and 世襲: raids and dynasties.",
-  "audio": "/audio/kanji/襲.mp3"
+  "audio": "/audio/kanji/襲.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ねむけが　襲（おそ）って　きた。",
+    "en": "Drowsiness washed over me.",
+    "audio_ref": "/audio/kanji_examples/襲_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "酬": {
   "jlpt": "N2",
@@ -57125,7 +57357,15 @@
   ],
   "etymology": "Phono-semantic: 酉 (phonetic シュウ) + 鬼 — the drunken demon face: ugly, shameful.",
   "mnemonic": "The ghost after the third jar — みにくい. 醜い: conduct more often than faces.",
-  "audio": "/audio/kanji/醜.mp3"
+  "audio": "/audio/kanji/醜.mp3",
+  "lesson_examples": [
+   {
+    "jp": "あらそいの　醜（みにく）さを　しる。",
+    "en": "Knowing the ugliness of conflict.",
+    "audio_ref": "/audio/kanji_examples/醜_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "充": {
   "jlpt": "N2",
@@ -57284,7 +57524,15 @@
   "examples": [],
   "etymology": "Phono-semantic: metal (金) + 充 (phonetic ジュウ) — the loaded barrel: firearm.",
   "mnemonic": "Metal, filled — ジュウ. 銃: the kanji Japan reads more than sees.",
-  "audio": "/audio/kanji/銃.mp3"
+  "audio": "/audio/kanji/銃.mp3",
+  "lesson_examples": [
+   {
+    "jp": "水（みず）でっぽう　――　銃（じゅう）の　おもちゃは　なつの　ていばん。",
+    "en": "Water guns — a summer classic.",
+    "audio_ref": "/audio/kanji_examples/銃_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "叔": {
   "jlpt": "N2",
@@ -58380,7 +58628,15 @@
   "examples": [],
   "etymology": "Compound: flesh (月) in miniature (小) — the smaller likeness: resemblance.",
   "mnemonic": "The child wearing the parent's face — ショウ. 肖像画: the portrait.",
-  "audio": "/audio/kanji/肖.mp3"
+  "audio": "/audio/kanji/肖.mp3",
+  "lesson_examples": [
+   {
+    "jp": "おうの　肖（しょう）像（ぞう）画（が）。",
+    "en": "A portrait of the king.",
+    "audio_ref": "/audio/kanji_examples/肖_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "衝": {
   "jlpt": "N2",
@@ -58753,7 +59009,15 @@
   "examples": [],
   "etymology": "Phono-semantic: metal (金) + 定 (phonetic ジョウ) — the fixing metal: a lock; the fixed dose: a tablet.",
   "mnemonic": "Metal that makes things stay decided — ジョウ. 錠剤: the pill; 施錠: the click.",
-  "audio": "/audio/kanji/錠.mp3"
+  "audio": "/audio/kanji/錠.mp3",
+  "lesson_examples": [
+   {
+    "jp": "とびらに　錠（じょう）を　かける。",
+    "en": "Locking the door.",
+    "audio_ref": "/audio/kanji_examples/錠_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "嘱": {
   "jlpt": "N2",
@@ -58873,7 +59137,15 @@
   ],
   "etymology": "Compound: the hand (寸) that missed the farming season (辰) — disgraced: to humiliate.",
   "mnemonic": "Caught idle at planting time — はずかしめる. 侮辱: the insult, formal charge.",
-  "audio": "/audio/kanji/辱.mp3"
+  "audio": "/audio/kanji/辱.mp3",
+  "lesson_examples": [
+   {
+    "jp": "くつ辱（じょく）を　バネに　がんばる。",
+    "en": "Turning humiliation into fuel.",
+    "audio_ref": "/audio/kanji_examples/辱_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "侵": {
   "jlpt": "N2",
@@ -59400,7 +59672,15 @@
   "examples": [],
   "etymology": "Compound: chariots (車) drawn up at the mound (阝) — the battle formation: camp, position.",
   "mnemonic": "Wagons in fighting order on the hill — ジン. 陣地: the claimed ground.",
-  "audio": "/audio/kanji/陣.mp3"
+  "audio": "/audio/kanji/陣.mp3",
+  "lesson_examples": [
+   {
+    "jp": "さきん　――　先（せん）陣（じん）を　きって　すすむ。",
+    "en": "Leading the charge.",
+    "audio_ref": "/audio/kanji_examples/陣_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "須": {
   "jlpt": "N2",
@@ -59644,7 +59924,15 @@
   ],
   "etymology": "Pictograph: the mourning garment of plaited straw — worn down: to wane.",
   "mnemonic": "The coat gone slack on the frame — おとろえる. 衰退: empires and batteries.",
-  "audio": "/audio/kanji/衰.mp3"
+  "audio": "/audio/kanji/衰.mp3",
+  "lesson_examples": [
+   {
+    "jp": "たいりょくが　衰（おとろ）えないよう　うんどう。",
+    "en": "Exercise so your strength doesn't fade.",
+    "audio_ref": "/audio/kanji_examples/衰_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "遂": {
   "jlpt": "N2",
@@ -60241,7 +60529,15 @@
   "examples": [],
   "etymology": "Compound: one bird (隹) in the hand (又) — a single one: the counter for ships (and one of a pair).",
   "mnemonic": "One bird, one hull — セキ. 一隻: one ship logged.",
-  "audio": "/audio/kanji/隻.mp3"
+  "audio": "/audio/kanji/隻.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ふねが　1隻（せき）　みなとに　はいる。",
+    "en": "One ship enters the harbor.",
+    "audio_ref": "/audio/kanji_examples/隻_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "惜": {
   "jlpt": "N2",
@@ -60807,7 +61103,15 @@
   ],
   "etymology": "Compound: fish (魚) and sheep (羊) — the two meats at their best only fresh: fresh, vivid; Korea (朝鮮).",
   "mnemonic": "Fish and lamb, judged by the hour — あざやか. 新鮮: the market's first word.",
-  "audio": "/audio/kanji/鮮.mp3"
+  "audio": "/audio/kanji/鮮.mp3",
+  "lesson_examples": [
+   {
+    "jp": "鮮（あざ）やかな　いろの　さかな。",
+    "en": "A fish of vivid colors.",
+    "audio_ref": "/audio/kanji_examples/鮮_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "漸": {
   "jlpt": "N2",
@@ -61492,7 +61796,15 @@
   ],
   "etymology": "Phono-semantic: horse (馬) + 蚤 'flea' (phonetic ソウ) — the horse with fleas: uproar.",
   "mnemonic": "One flea, one horse, total chaos — さわぐ. 騒音: the neighbor's playlist.",
-  "audio": "/audio/kanji/騒.mp3"
+  "audio": "/audio/kanji/騒.mp3",
+  "lesson_examples": [
+   {
+    "jp": "まちが　おまつりで　騒（さわ）がしい。",
+    "en": "The town is abuzz with the festival.",
+    "audio_ref": "/audio/kanji_examples/騒_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "促": {
   "jlpt": "N2",
@@ -61788,7 +62100,15 @@
   ],
   "etymology": "Compound: holding steady (寸) under it (而) — to bear: endure; resistant: -proof (耐火).",
   "mnemonic": "Grip held while it keeps coming — たえる. 耐震: earthquake-proof — Japan's favorite suffix.",
-  "audio": "/audio/kanji/耐.mp3"
+  "audio": "/audio/kanji/耐.mp3",
+  "lesson_examples": [
+   {
+    "jp": "さむさに　耐（た）える　トレーニング。",
+    "en": "Training to endure the cold.",
+    "audio_ref": "/audio/kanji_examples/耐_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "怠": {
   "jlpt": "N2",
@@ -62251,7 +62571,15 @@
   ],
   "etymology": "Phono-semantic: flesh (月) + 兌 'slip out' (phonetic ダツ) — out of the skin: to remove, escape.",
   "mnemonic": "Shed like a jacket — ぬぐ. 脱出: escaping the room; 脱線: the train undressing its rails.",
-  "audio": "/audio/kanji/脱.mp3"
+  "audio": "/audio/kanji/脱.mp3",
+  "lesson_examples": [
+   {
+    "jp": "くつを　脱（ぬ）いで　あがる。",
+    "en": "Take off your shoes before entering.",
+    "audio_ref": "/audio/kanji_examples/脱_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "棚": {
   "jlpt": "N2",
@@ -62549,7 +62877,15 @@
   ],
   "etymology": "Phono-semantic: metal (金) + 段 (phonetic タン) — hammered in stages: to forge, train.",
   "mnemonic": "Beaten better, step by step — きたえる. 鍛える: swords and abdominals.",
-  "audio": "/audio/kanji/鍛.mp3"
+  "audio": "/audio/kanji/鍛.mp3",
+  "lesson_examples": [
+   {
+    "jp": "からだを　鍛（きた）える。",
+    "en": "Training the body.",
+    "audio_ref": "/audio/kanji_examples/鍛_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "壇": {
   "jlpt": "N2",
@@ -62882,7 +63218,15 @@
   "examples": [],
   "etymology": "Compound: the middle (中) worn inside the robe (衣) — the innermost feeling.",
   "mnemonic": "What's worn under everything else — チュウ. 折衷: compromise — inner middles averaged.",
-  "audio": "/audio/kanji/衷.mp3"
+  "audio": "/audio/kanji/衷.mp3",
+  "lesson_examples": [
+   {
+    "jp": "せっ衷（ちゅう）あんで　まとまった。",
+    "en": "We settled on a compromise plan.",
+    "audio_ref": "/audio/kanji_examples/衷_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "鋳": {
   "jlpt": "N2",
@@ -63143,7 +63487,15 @@
   ],
   "etymology": "Compound: the ear (耳) with upright heart — hearing with intention: to listen.",
   "mnemonic": "聞く with the heart plugged in — きく. 聴く: what you do to music, not noise.",
-  "audio": "/audio/kanji/聴.mp3"
+  "audio": "/audio/kanji/聴.mp3",
+  "lesson_examples": [
+   {
+    "jp": "こうえんを　聴（ちょう）講（こう）する。",
+    "en": "Attending the lecture.",
+    "audio_ref": "/audio/kanji_examples/聴_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "跳": {
   "jlpt": "N2",
@@ -63466,7 +63818,15 @@
   ],
   "etymology": "Phono-semantic: metal (金) + 勺 (phonetic チョウ) — the hook that ladles fish out: to angle; balanced exchange: change (お釣り).",
   "mnemonic": "Metal spoon-hook in the water — つる. お釣り: the change fished back to you.",
-  "audio": "/audio/kanji/釣.mp3"
+  "audio": "/audio/kanji/釣.mp3",
+  "lesson_examples": [
+   {
+    "jp": "はしの　うえから　釣（つ）りを　する。",
+    "en": "Fishing from the bridge.",
+    "audio_ref": "/audio/kanji_examples/釣_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "鶴": {
   "jlpt": "N2",
@@ -63484,7 +63844,15 @@
   "examples": [],
   "etymology": "Phono-semantic: a phonetic + bird (鳥) — the thousand-year bird: crane.",
   "mnemonic": "The origami everyone learns first — つる. 千羽鶴: a thousand of them, folded in hope.",
-  "audio": "/audio/kanji/鶴.mp3"
+  "audio": "/audio/kanji/鶴.mp3",
+  "lesson_examples": [
+   {
+    "jp": "おりがみで　鶴（つる）を　おる。",
+    "en": "Folding a paper crane.",
+    "audio_ref": "/audio/kanji_examples/鶴_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "亭": {
   "jlpt": "N2",
@@ -63753,7 +64121,15 @@
   "examples": [],
   "etymology": "Phono-semantic: boat (舟) + 廷 (phonetic テイ) — the light craft: boat.",
   "mnemonic": "The boat small enough to carry upstairs — テイ. 競艇: powerboat racing.",
-  "audio": "/audio/kanji/艇.mp3"
+  "audio": "/audio/kanji/艇.mp3",
+  "lesson_examples": [
+   {
+    "jp": "きゅうめい艇（てい）が　でどうした。",
+    "en": "The lifeboat was launched.",
+    "audio_ref": "/audio/kanji_examples/艇_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "訂": {
   "jlpt": "N2",
@@ -64397,7 +64773,15 @@
   ],
   "etymology": "Phono-semantic: movement (辶) + 秀 (phonetic トウ) — passing clean through: transparent.",
   "mnemonic": "Light walks through without knocking — すける. 透明: the clear kanji.",
-  "audio": "/audio/kanji/透.mp3"
+  "audio": "/audio/kanji/透.mp3",
+  "lesson_examples": [
+   {
+    "jp": "みずが　透（す）きとおって　いる。",
+    "en": "The water is crystal clear.",
+    "audio_ref": "/audio/kanji_examples/透_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "陶": {
   "jlpt": "N2",
@@ -64467,7 +64851,15 @@
   ],
   "etymology": "Phono-semantic: a phonetic + horse (馬) — the horse rearing: to leap; prices doing it: surge.",
   "mnemonic": "The chart bolting like a spooked horse — トウ. 高騰: the headline about eggs.",
-  "audio": "/audio/kanji/騰.mp3"
+  "audio": "/audio/kanji/騰.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ぶっかが　高（こう）騰（とう）して　いる。",
+    "en": "Prices are soaring.",
+    "audio_ref": "/audio/kanji_examples/騰_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "闘": {
   "jlpt": "N2",
@@ -64492,7 +64884,15 @@
   ],
   "etymology": "Compound (simplified from 鬥, two fighters facing off): combat at the gate: to fight.",
   "mnemonic": "The brawl in the doorway — たたかう. 闘う: 戦う's scrappier twin — illness, matches, Mondays.",
-  "audio": "/audio/kanji/闘.mp3"
+  "audio": "/audio/kanji/闘.mp3",
+  "lesson_examples": [
+   {
+    "jp": "さいごまで　闘（たたか）う。",
+    "en": "Fighting to the very end.",
+    "audio_ref": "/audio/kanji_examples/闘_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "憧": {
   "jlpt": "N2",
@@ -64794,7 +65194,15 @@
   ],
   "etymology": "Compound ideograph: flesh (月) + pig (豕) — the pig as food: pork.",
   "mnemonic": "The pig with a menu destiny — ぶた. 豚カツ: the kanji, breaded.",
-  "audio": "/audio/kanji/豚.mp3"
+  "audio": "/audio/kanji/豚.mp3",
+  "lesson_examples": [
+   {
+    "jp": "豚（ぶた）の　かいわれの　ぼくじょう。",
+    "en": "A farm raising pigs.",
+    "audio_ref": "/audio/kanji_examples/豚_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "那": {
   "jlpt": "N2",
@@ -65295,7 +65703,15 @@
   ],
   "etymology": "Phono-semantic: 非 (phonetic ハイ) + 車 — carts in rank: one's cohort: fellows.",
   "mnemonic": "The convoy you entered service with — ハイ. 先輩・後輩: the whole social ladder.",
-  "audio": "/audio/kanji/輩.mp3"
+  "audio": "/audio/kanji/輩.mp3",
+  "lesson_examples": [
+   {
+    "jp": "せん輩（ぱい）に　そうだんする。",
+    "en": "I consult my senior.",
+    "audio_ref": "/audio/kanji_examples/輩_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "培": {
   "jlpt": "N2",
@@ -65679,7 +66095,15 @@
   "examples": [],
   "etymology": "Phono-semantic: gate (門) + 伐 (phonetic バツ) — the gate only insiders pass: faction, clique.",
   "mnemonic": "The door with an unwritten guest list — バツ. 財閥: the zaibatsu conglomerates.",
-  "audio": "/audio/kanji/閥.mp3"
+  "audio": "/audio/kanji/閥.mp3",
+  "lesson_examples": [
+   {
+    "jp": "がく閥（ばつ）に　とらわれない。",
+    "en": "Free from cliques and factions.",
+    "audio_ref": "/audio/kanji_examples/閥_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "伴": {
   "jlpt": "N2",
@@ -66174,7 +66598,15 @@
   "examples": [],
   "etymology": "Compound: the able beast (能) caught in the net (罒) — worn out, removed: to dismiss.",
   "mnemonic": "Talent, netted and retired — ヒ. 罷免: the dismissal decree.",
-  "audio": "/audio/kanji/罷.mp3"
+  "audio": "/audio/kanji/罷.mp3",
+  "lesson_examples": [
+   {
+    "jp": "やくいんが　罷（ひ）免（めん）された。",
+    "en": "The official was dismissed.",
+    "audio_ref": "/audio/kanji_examples/罷_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "避": {
   "jlpt": "N2",
@@ -66449,7 +66881,15 @@
   "examples": [],
   "etymology": "Compound ideograph: young plants (艹) in the field (田) — seedlings; the family 'seedling': surname (苗字).",
   "mnemonic": "The nursery rows before transplanting — なえ. 苗字: your family's sprout-name.",
-  "audio": "/audio/kanji/苗.mp3"
+  "audio": "/audio/kanji/苗.mp3",
+  "lesson_examples": [
+   {
+    "jp": "はたけに　苗（なえ）を　うえる。",
+    "en": "Planting seedlings in the field.",
+    "audio_ref": "/audio/kanji_examples/苗_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "浜": {
   "jlpt": "N2",
@@ -66892,7 +67332,15 @@
   ],
   "etymology": "Phono-semantic: cover (覀) + 復 (phonetic フク) — turned over upon: to cover; turned right over: to capsize, overturn (a ruling).",
   "mnemonic": "The lid that flips — おおう, くつがえす. 覆す: verdicts and boats.",
-  "audio": "/audio/kanji/覆.mp3"
+  "audio": "/audio/kanji/覆.mp3",
+  "lesson_examples": [
+   {
+    "jp": "きりが　みなとを　覆（おお）う。",
+    "en": "Fog blankets the harbor.",
+    "audio_ref": "/audio/kanji_examples/覆_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "噴": {
   "jlpt": "N2",
@@ -67730,7 +68178,15 @@
   ],
   "etymology": "Phono-semantic: plants (艹) + 方 (phonetic ホウ) — fragrance on the air: sweet-smelling; honorific 'your' (芳名).",
   "mnemonic": "The scent that arrives before the garden — かんばしい. 芳名帳: the guest book's flattery.",
-  "audio": "/audio/kanji/芳.mp3"
+  "audio": "/audio/kanji/芳.mp3",
+  "lesson_examples": [
+   {
+    "jp": "芳（かんば）しい　はなの　かおり。",
+    "en": "The fragrant scent of flowers.",
+    "audio_ref": "/audio/kanji_examples/芳_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "褒": {
   "jlpt": "N2",
@@ -67754,7 +68210,15 @@
   ],
   "etymology": "Phono-semantic: robe (衣) + 保 (phonetic ホウ) — the robe of honor conferred: to praise.",
   "mnemonic": "Wrapped in the commendation — ほめる. 褒める: the teacher's best tool.",
-  "audio": "/audio/kanji/褒.mp3"
+  "audio": "/audio/kanji/褒.mp3",
+  "lesson_examples": [
+   {
+    "jp": "がんばりを　褒（ほ）められた。",
+    "en": "I was praised for my effort.",
+    "audio_ref": "/audio/kanji_examples/褒_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "邦": {
   "jlpt": "N2",
@@ -68129,7 +68593,15 @@
   ],
   "etymology": "Phono-semantic: flesh (月) + 方 (phonetic ボウ) — the body's stored fat.",
   "mnemonic": "The reserves nobody ordered — ボウ. 脂肪: the health-check line item.",
-  "audio": "/audio/kanji/肪.mp3"
+  "audio": "/audio/kanji/肪.mp3",
+  "lesson_examples": [
+   {
+    "jp": "し肪（ぼう）――　脂（し）肪（ぼう）を　ひかえた　しょくじ。",
+    "en": "A diet light on fat.",
+    "audio_ref": "/audio/kanji_examples/肪_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "膨": {
   "jlpt": "N2",
@@ -68165,7 +68637,15 @@
   ],
   "etymology": "Phono-semantic: flesh (月) + 彭 (phonetic ボウ) — drumming outward: to expand.",
   "mnemonic": "Inflating like a struck drum — ふくらむ. 膨大: swollen to enormous.",
-  "audio": "/audio/kanji/膨.mp3"
+  "audio": "/audio/kanji/膨.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ゆめが　膨（ふく）らむ。",
+    "en": "Dreams swell and grow.",
+    "audio_ref": "/audio/kanji_examples/膨_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "謀": {
   "jlpt": "N2",
@@ -68658,7 +69138,15 @@
   "examples": [],
   "etymology": "Phono-semantic: flesh (月) + 莫 (phonetic マク) — the thin covering layer: membrane.",
   "mnemonic": "The body's plastic wrap — マク. 鼓膜: the eardrum — 鼓 included.",
-  "audio": "/audio/kanji/膜.mp3"
+  "audio": "/audio/kanji/膜.mp3",
+  "lesson_examples": [
+   {
+    "jp": "うすい　膜（まく）で　おおわれて　いる。",
+    "en": "Covered by a thin membrane.",
+    "audio_ref": "/audio/kanji_examples/膜_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "又": {
   "jlpt": "N2",
@@ -69258,7 +69746,15 @@
   "examples": [],
   "etymology": "Phono-semantic: plow (耒) + 毛 (phonetic モウ) — worn thin as hair: to wear away.",
   "mnemonic": "Ground down to fuzz — モウ. 消耗: batteries and morale.",
-  "audio": "/audio/kanji/耗.mp3"
+  "audio": "/audio/kanji/耗.mp3",
+  "lesson_examples": [
+   {
+    "jp": "たいりょくを　消（しょう）耗（もう）した。",
+    "en": "My stamina is spent.",
+    "audio_ref": "/audio/kanji_examples/耗_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "黙": {
   "jlpt": "N2",
@@ -69788,7 +70284,15 @@
   ],
   "etymology": "Phono-semantic: garment (衤) + 谷 (phonetic ユウ) — robes with room to spare: affluence.",
   "mnemonic": "Clothes a size beyond need — ユウ. 余裕: slack in the budget and the soul.",
-  "audio": "/audio/kanji/裕.mp3"
+  "audio": "/audio/kanji/裕.mp3",
+  "lesson_examples": [
+   {
+    "jp": "よ裕（ゆう）を　もって　しゅっぱつする。",
+    "en": "Setting out with time to spare.",
+    "audio_ref": "/audio/kanji_examples/裕_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "誘": {
   "jlpt": "N2",
@@ -70279,7 +70783,15 @@
   ],
   "etymology": "Compound: the storm (雨) rolling over the fields (田) — thunder.",
   "mnemonic": "The sky's drum solo over the paddies — かみなり. 雷: Pikachu's element, formally.",
-  "audio": "/audio/kanji/雷.mp3"
+  "audio": "/audio/kanji/雷.mp3",
+  "lesson_examples": [
+   {
+    "jp": "雷（かみなり）が　なって　いる。",
+    "en": "Thunder is rumbling.",
+    "audio_ref": "/audio/kanji_examples/雷_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "酪": {
   "jlpt": "N2",
@@ -71109,7 +71621,15 @@
   "examples": [],
   "etymology": "Compound (simplified from 靈): the shaman calling rain — the spirit realm: soul, ghost.",
   "mnemonic": "What the rain-caller talks to — レイ. 幽霊: the faint kind; 霊柩車: the hearse.",
-  "audio": "/audio/kanji/霊.mp3"
+  "audio": "/audio/kanji/霊.mp3",
+  "lesson_examples": [
+   {
+    "jp": "とうの　せいれい　――　霊（れい）の　でんせつ。",
+    "en": "Legends of the tower spirits.",
+    "audio_ref": "/audio/kanji_examples/霊_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "麗": {
   "jlpt": "N2",
@@ -71136,7 +71656,15 @@
   ],
   "etymology": "Pictograph: the deer (鹿) with paired antler-ornaments — graceful: beautiful.",
   "mnemonic": "The deer in earrings — うるわしい. 綺麗's formal ancestor — 華麗: gorgeous.",
-  "audio": "/audio/kanji/麗.mp3"
+  "audio": "/audio/kanji/麗.mp3",
+  "lesson_examples": [
+   {
+    "jp": "うるわしい　――　麗（うるわ）しい　けしきだ。",
+    "en": "A lovely scene.",
+    "audio_ref": "/audio/kanji_examples/麗_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "暦": {
   "jlpt": "N2",
@@ -71261,7 +71789,15 @@
   ],
   "etymology": "Phono-semantic: 列 (phonetic レツ) + cloth (衣) — torn along the line: to rip.",
   "mnemonic": "The seam gives way — さける. 分裂: the split, cellular or political.",
-  "audio": "/audio/kanji/裂.mp3"
+  "audio": "/audio/kanji/裂.mp3",
+  "lesson_examples": [
+   {
+    "jp": "くもが　裂（さ）けて　ひかりが　さす。",
+    "en": "The clouds split and light pours through.",
+    "audio_ref": "/audio/kanji_examples/裂_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "廉": {
   "jlpt": "N2",
@@ -71548,7 +72084,15 @@
   "examples": [],
   "etymology": "Phono-semantic: 良 (phonetic ロウ) + 阝 — the young gentleman: son — the 〜郎 of a million names.",
   "mnemonic": "The name-ending of firstborn sons — ロウ. 太郎, 一郎, 桃太郎: the clan of 郎.",
-  "audio": "/audio/kanji/郎.mp3"
+  "audio": "/audio/kanji/郎.mp3",
+  "lesson_examples": [
+   {
+    "jp": "むかしばなしの　たろうと　じろう　――　郎（ろう）の　つく　なまえ。",
+    "en": "Names ending in -rō, like in old tales.",
+    "audio_ref": "/audio/kanji_examples/郎_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "賄": {
   "jlpt": "N2",
@@ -71827,7 +72371,15 @@
   ],
   "etymology": "Pictograph: a demon-masked figure — dread mixed with reverence: awe.",
   "mnemonic": "Fear that bows — おそれる. 畏敬: awe — the mountain-shrine feeling.",
-  "audio": "/audio/kanji/畏.mp3"
+  "audio": "/audio/kanji/畏.mp3",
+  "lesson_examples": [
+   {
+    "jp": "しぜんへの　畏（い）敬（けい）の　ねん。",
+    "en": "Reverence for nature.",
+    "audio_ref": "/audio/kanji_examples/畏_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "萎": {
   "jlpt": "N1",
@@ -71996,7 +72548,15 @@
   "examples": [],
   "etymology": "Phono-semantic: 夗 (phonetic エン) + heart (心) — the heart bent double: resentment.",
   "mnemonic": "The heart that keeps receipts — うらみ. 怨霊: the grudge with an afterlife — J-horror's engine.",
-  "audio": "/audio/kanji/怨.mp3"
+  "audio": "/audio/kanji/怨.mp3",
+  "lesson_examples": [
+   {
+    "jp": "怨（うら）みは　なにも　うまない。",
+    "en": "Grudges bear no fruit.",
+    "audio_ref": "/audio/kanji_examples/怨_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "臆": {
   "jlpt": "N1",
@@ -72144,7 +72704,15 @@
   "examples": [],
   "etymology": "Phono-semantic: mountain (山) + 厓 (phonetic ガイ) — the sheer face: cliff.",
   "mnemonic": "The mountain's abrupt opinion — がけ. 崖っぷち: the brink, career included.",
-  "audio": "/audio/kanji/崖.mp3"
+  "audio": "/audio/kanji/崖.mp3",
+  "lesson_examples": [
+   {
+    "jp": "崖（がけ）の　うえに　たつ　とうだい。",
+    "en": "A lighthouse atop the cliff.",
+    "audio_ref": "/audio/kanji_examples/崖_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "蓋": {
   "jlpt": "N1",
@@ -72405,7 +72973,15 @@
   "examples": [],
   "etymology": "Phono-semantic: 幾 (phonetic キ) + 田 — the fields around the throne: the capital region: Kinki (近畿).",
   "mnemonic": "The emperor's home farmland — キ. 近畿: the Kansai region's formal name.",
-  "audio": "/audio/kanji/畿.mp3"
+  "audio": "/audio/kanji/畿.mp3",
+  "lesson_examples": [
+   {
+    "jp": "近（きん）畿（き）ちほうを　りょこうする。",
+    "en": "Traveling the Kinki region.",
+    "audio_ref": "/audio/kanji_examples/畿_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "僅": {
   "jlpt": "N1",
@@ -72647,7 +73223,15 @@
   ],
   "etymology": "Phono-semantic: wood (木) + 行 (phonetic コウ→けた) — the crossbeam; the abacus rod: digit, order of magnitude.",
   "mnemonic": "The beam that carries place value — けた. 桁違い: off by a whole beam.",
-  "audio": "/audio/kanji/桁.mp3"
+  "audio": "/audio/kanji/桁.mp3",
+  "lesson_examples": [
+   {
+    "jp": "けたちがいの　つよさ　――　桁（けた）が　ちがう。",
+    "en": "Strength on another order of magnitude.",
+    "audio_ref": "/audio/kanji_examples/桁_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "鍵": {
   "jlpt": "N1",
@@ -72717,7 +73301,15 @@
   "examples": [],
   "etymology": "Phono-semantic: flesh (月) + 殳 (phonetic コ) — the leg's fork: thigh.",
   "mnemonic": "Where the legs disagree — また. 大股: the long stride.",
-  "audio": "/audio/kanji/股.mp3"
+  "audio": "/audio/kanji/股.mp3",
+  "lesson_examples": [
+   {
+    "jp": "大（おお）股（また）で　あるく。",
+    "en": "Walking with long strides.",
+    "audio_ref": "/audio/kanji_examples/股_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "乞": {
   "jlpt": "N1",
@@ -72740,7 +73332,15 @@
   "examples": [],
   "etymology": "Pictograph: the bent figure asking — to beg, request (乞う).",
   "mnemonic": "Bowed with palms out — こう. ご期待乞う: 'anticipation begged' — stay tuned.",
-  "audio": "/audio/kanji/乞.mp3"
+  "audio": "/audio/kanji/乞.mp3",
+  "lesson_examples": [
+   {
+    "jp": "あめ乞（ご）いの　まつりの　でんとう。",
+    "en": "The tradition of rain-prayer festivals.",
+    "audio_ref": "/audio/kanji_examples/乞_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "勾": {
   "jlpt": "N1",
@@ -72803,7 +73403,15 @@
   ],
   "etymology": "Phono-semantic: mouth (口) + 侯 (phonetic コウ) — the voice's corridor: throat.",
   "mnemonic": "The hall behind the mouth — のど. 喉が渇く: the corridor asking for water.",
-  "audio": "/audio/kanji/喉.mp3"
+  "audio": "/audio/kanji/喉.mp3",
+  "lesson_examples": [
+   {
+    "jp": "うたいすぎて　喉（のど）が　かれた。",
+    "en": "Sang so much my throat is hoarse.",
+    "audio_ref": "/audio/kanji_examples/喉_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "梗": {
   "jlpt": "N1",
@@ -72968,7 +73576,15 @@
   ],
   "etymology": "Compound: the pass filled with earthworks — to block; the fort that does it (要塞).",
   "mnemonic": "The corridor bricked shut — ふさぐ. 要塞: the fortress; 塞がる: schedules too.",
-  "audio": "/audio/kanji/塞.mp3"
+  "audio": "/audio/kanji/塞.mp3",
+  "lesson_examples": [
+   {
+    "jp": "みちが　塞（ふさ）がって　いる。",
+    "en": "The road is blocked.",
+    "audio_ref": "/audio/kanji_examples/塞_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "柵": {
   "jlpt": "N1",
@@ -72992,7 +73608,15 @@
   "examples": [],
   "etymology": "Compound: timber bound like book-slips (冊) — the palisade: fence.",
   "mnemonic": "Logs lined like a shelf of books — サク. 柵: the zoo's polite boundary.",
-  "audio": "/audio/kanji/柵.mp3"
+  "audio": "/audio/kanji/柵.mp3",
+  "lesson_examples": [
+   {
+    "jp": "プールの　柵（さく）を　こえない　こと。",
+    "en": "Do not climb the pool fence.",
+    "audio_ref": "/audio/kanji_examples/柵_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "拶": {
   "jlpt": "N1",
@@ -73046,7 +73670,15 @@
   "examples": [],
   "etymology": "Compound: the axe (斤) at the execution cart (車) — to cut down: slay; strikingly fresh (斬新).",
   "mnemonic": "The period drama's sound effect — きる. 斬新: an idea that cuts.",
-  "audio": "/audio/kanji/斬.mp3"
+  "audio": "/audio/kanji/斬.mp3",
+  "lesson_examples": [
+   {
+    "jp": "斬（ざん）新（しん）な　アイデアだ。",
+    "en": "A strikingly original idea.",
+    "audio_ref": "/audio/kanji_examples/斬_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "嫉": {
   "jlpt": "N1",
@@ -73414,7 +74046,15 @@
   "examples": [],
   "etymology": "Phono-semantic: 前 (phonetic セン) + fire (灬) — heated before serving: to roast, decoct.",
   "mnemonic": "Fire under the 'before' — せんべい's first kanji. 煎茶: tea, properly brewed.",
-  "audio": "/audio/kanji/煎.mp3"
+  "audio": "/audio/kanji/煎.mp3",
+  "lesson_examples": [
+   {
+    "jp": "お茶（ちゃ）を　煎（せん）じる。",
+    "en": "Brewing the tea.",
+    "audio_ref": "/audio/kanji_examples/煎_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "羨": {
   "jlpt": "N1",
@@ -73441,7 +74081,15 @@
   ],
   "etymology": "Compound: drooling (次) over the sheep (羊) — wanting what's theirs: envy.",
   "mnemonic": "Eyeing the neighbor's lamb dinner — うらやましい. 羨ましい: said fifty times a day.",
-  "audio": "/audio/kanji/羨.mp3"
+  "audio": "/audio/kanji/羨.mp3",
+  "lesson_examples": [
+   {
+    "jp": "きみの　どりょくが　羨（うらや）ましい。",
+    "en": "I envy your diligence.",
+    "audio_ref": "/audio/kanji_examples/羨_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "腺": {
   "jlpt": "N1",
@@ -73532,7 +74180,15 @@
   "examples": [],
   "etymology": "Pictograph: the layered steamer pot — generational layers: great-grand (曽祖父); once before (かつて).",
   "mnemonic": "One more layer back in time — ソ. 曽祖父: the great-grandfather stratum.",
-  "audio": "/audio/kanji/曽.mp3"
+  "audio": "/audio/kanji/曽.mp3",
+  "lesson_examples": [
+   {
+    "jp": "曽（そう）祖（そ）父（ふ）の　はなしを　きく。",
+    "en": "Hearing stories of my great-grandfather.",
+    "audio_ref": "/audio/kanji_examples/曽_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "狙": {
   "jlpt": "N1",
@@ -73745,7 +74401,15 @@
   "examples": [],
   "etymology": "Phono-semantic: earth (土) + 隹 (phonetic タイ) — heaped up: piled (堆積).",
   "mnemonic": "The sediment doing its slow paperwork — タイ. 堆積: geology's inbox.",
-  "audio": "/audio/kanji/堆.mp3"
+  "audio": "/audio/kanji/堆.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ゆきが　堆（うずたか）く　つもる。",
+    "en": "Snow piles up high.",
+    "audio_ref": "/audio/kanji_examples/堆_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "戴": {
   "jlpt": "N1",
@@ -73819,7 +74483,15 @@
   ],
   "etymology": "Phono-semantic: thread (糸) + 定 (phonetic タン) — the seam giving: to come apart; a smile breaking open (綻ぶ).",
   "mnemonic": "The stitch that lets go, the face that opens — ほころぶ. 破綻: plans at seam-failure.",
-  "audio": "/audio/kanji/綻.mp3"
+  "audio": "/audio/kanji/綻.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ほころび　――　セーターが　綻（ほころ）びた。",
+    "en": "The sweater came unraveled.",
+    "audio_ref": "/audio/kanji_examples/綻_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "酎": {
   "jlpt": "N1",
@@ -74279,7 +74951,15 @@
   ],
   "etymology": "Phono-semantic: net (罒) + 馬 (phonetic バ) — words hurled like nets: to revile.",
   "mnemonic": "Insults at cavalry volume — ののしる. 罵声: the stadium's dark side.",
-  "audio": "/audio/kanji/罵.mp3"
+  "audio": "/audio/kanji/罵.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ひとを　罵（ののし）っては　いけない。",
+    "en": "Never hurl abuse at people.",
+    "audio_ref": "/audio/kanji_examples/罵_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "箸": {
   "jlpt": "N1",
@@ -74324,7 +75004,15 @@
   "examples": [],
   "etymology": "Compound: markings (文) between jades (王王) — mottled: spots.",
   "mnemonic": "The pattern between the gems — まだら. 斑点: the leopard's syntax.",
-  "audio": "/audio/kanji/斑.mp3"
+  "audio": "/audio/kanji/斑.mp3",
+  "lesson_examples": [
+   {
+    "jp": "斑（まだら）もようの　ねこ。",
+    "en": "A cat with mottled markings.",
+    "audio_ref": "/audio/kanji_examples/斑_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "氾": {
   "jlpt": "N1",
@@ -74372,7 +75060,15 @@
   "examples": [],
   "etymology": "Phono-semantic: water (氵) + 凡 (phonetic ハン) — spreading wide over: general: pan- (汎用).",
   "mnemonic": "Flooding every use case — ハン. 汎用: general-purpose — the engineer's adjective.",
-  "audio": "/audio/kanji/汎.mp3"
+  "audio": "/audio/kanji/汎.mp3",
+  "lesson_examples": [
+   {
+    "jp": "汎（はん）用（よう）の　どうぐは　べんりだ。",
+    "en": "General-purpose tools are handy.",
+    "audio_ref": "/audio/kanji_examples/汎_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "膝": {
   "jlpt": "N1",
@@ -74420,7 +75116,15 @@
   ],
   "etymology": "Compound: the arm's measure-point (寸) in flesh (月) — elbow.",
   "mnemonic": "The arm's hinge, table-banned — ひじ. 肘: the crowded-train weapon.",
-  "audio": "/audio/kanji/肘.mp3"
+  "audio": "/audio/kanji/肘.mp3",
+  "lesson_examples": [
+   {
+    "jp": "つくえに　肘（ひじ）を　つかない。",
+    "en": "No elbows on the desk.",
+    "audio_ref": "/audio/kanji_examples/肘_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "蔽": {
   "jlpt": "N1",
@@ -74557,7 +75261,15 @@
   "examples": [],
   "etymology": "Phono-semantic: 孛 (phonetic ボツ) + 力 — bursting up: sudden outbreak (勃発).",
   "mnemonic": "Zero to conflict in one stroke — ボツ. 勃発: the war correspondent's verb.",
-  "audio": "/audio/kanji/勃.mp3"
+  "audio": "/audio/kanji/勃.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ぎろんが　勃（ぼっ）発（ぱつ）した。",
+    "en": "A debate broke out.",
+    "audio_ref": "/audio/kanji_examples/勃_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "昧": {
   "jlpt": "N1",
@@ -74606,7 +75318,15 @@
   "examples": [],
   "etymology": "Compound: the wooden headrest (木) under the sleeper (冘) — pillow.",
   "mnemonic": "The tree the head trusts — まくら. 枕: rakugo's opening word, too.",
-  "audio": "/audio/kanji/枕.mp3"
+  "audio": "/audio/kanji/枕.mp3",
+  "lesson_examples": [
+   {
+    "jp": "たびさきでは　枕（まくら）が　かわると　ねむれない。",
+    "en": "I can't sleep on an unfamiliar pillow.",
+    "audio_ref": "/audio/kanji_examples/枕_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "蜜": {
   "jlpt": "N1",
@@ -74729,7 +75449,15 @@
   "examples": [],
   "etymology": "Phono-semantic: 女 + 夭 (phonetic ヨウ) — uncanny allure: bewitching; the spirits (妖怪).",
   "mnemonic": "Beauty with an asterisk — あやしい. 妖怪: the folklore census.",
-  "audio": "/audio/kanji/妖.mp3"
+  "audio": "/audio/kanji/妖.mp3",
+  "lesson_examples": [
+   {
+    "jp": "妖（あや）しい　ひかりが　みずうみに。",
+    "en": "An eerie light on the lake.",
+    "audio_ref": "/audio/kanji_examples/妖_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "沃": {
   "jlpt": "N1",
@@ -74830,7 +75558,15 @@
   ],
   "etymology": "Compound: the jade (王) turned in both hands (廾) — to toy with: to trifle (翻弄).",
   "mnemonic": "Fate spinning you like a trinket — もてあそぶ. 翻弄: waves and romances do it.",
-  "audio": "/audio/kanji/弄.mp3"
+  "audio": "/audio/kanji/弄.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ことばを　弄（もてあそ）んでは　いけない。",
+    "en": "Do not toy with words.",
+    "audio_ref": "/audio/kanji_examples/弄_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "麓": {
   "jlpt": "N1",
@@ -74880,7 +75616,15 @@
   ],
   "etymology": "Phono-semantic: flesh (月) + 劦 (phonetic キョウ) — the body's side: flank, armpit.",
   "mnemonic": "Where the arm keeps its secrets — わき. 脇役: the supporting role, at the lead's side.",
-  "audio": "/audio/kanji/脇.mp3"
+  "audio": "/audio/kanji/脇.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ほんを　脇（わき）に　かかえる。",
+    "en": "Carrying a book under one arm.",
+    "audio_ref": "/audio/kanji_examples/脇_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "丼": {
   "jlpt": "N1",
@@ -74977,7 +75721,15 @@
   "examples": [],
   "etymology": "Phono-semantic: mouth (口) + 甫 (phonetic ホ) — fed at the mouth: to nurse — 哺乳類, the mammals.",
   "mnemonic": "The class of animals defined by dinner — ホ. 哺乳類: us, taxonomically.",
-  "audio": "/audio/kanji/哺.mp3"
+  "audio": "/audio/kanji/哺.mp3",
+  "lesson_examples": [
+   {
+    "jp": "哺（ほ）乳（にゅう）るいの　ずかん。",
+    "en": "An encyclopedia of mammals.",
+    "audio_ref": "/audio/kanji_examples/哺_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "喩": {
   "jlpt": "N1",
@@ -74996,7 +75748,15 @@
   "examples": [],
   "etymology": "Phono-semantic: mouth (口) + 兪 (phonetic ユ) — meaning ferried across: metaphor (比喩).",
   "mnemonic": "One thing said in another's boat — ユ. 比喩: the figure of speech.",
-  "audio": "/audio/kanji/喩.mp3"
+  "audio": "/audio/kanji/喩.mp3",
+  "lesson_examples": [
+   {
+    "jp": "たとえばなし　――　比（ひ）喩（ゆ）で　せつめいする。",
+    "en": "Explaining with a metaphor.",
+    "audio_ref": "/audio/kanji_examples/喩_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "嗅": {
   "jlpt": "N1",
@@ -75218,7 +75978,15 @@
   ],
   "etymology": "Phono-semantic: hand (扌) + 立 (phonetic ラツ/ラ) — dragged off: abduction (拉致); also ramen's 拉 (拉麺).",
   "mnemonic": "Pulled off one's feet — ラ. 拉致 and 拉麺: the kanji's two very different jobs.",
-  "audio": "/audio/kanji/拉.mp3"
+  "audio": "/audio/kanji/拉.mp3",
+  "lesson_examples": [
+   {
+    "jp": "メンの　こな　――　拉（ラー）メンの　ごとき　にんき。",
+    "en": "Popularity like ramen's.",
+    "audio_ref": "/audio/kanji_examples/拉_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "摯": {
   "jlpt": "N1",
@@ -75262,7 +76030,15 @@
   ],
   "etymology": "Phono-semantic: sun (日) + 愛 (phonetic アイ) — the sun veiled: dim — 曖昧, ambiguity.",
   "mnemonic": "Love clouding the daylight — アイ. 曖昧: the answer that isn't one.",
-  "audio": "/audio/kanji/曖.mp3"
+  "audio": "/audio/kanji/曖.mp3",
+  "lesson_examples": [
+   {
+    "jp": "曖（あい）昧（まい）な　へんじは　だめ。",
+    "en": "No vague answers.",
+    "audio_ref": "/audio/kanji_examples/曖_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "楷": {
   "jlpt": "N1",
@@ -75401,7 +76177,15 @@
   ],
   "etymology": "Phono-semantic: bamboo (⺮) + 戔 (phonetic セン) — the note slip: label — 付箋, the sticky note; 処方箋, the prescription.",
   "mnemonic": "The small paper with big authority — セン. 処方箋: the pharmacy's password.",
-  "audio": "/audio/kanji/箋.mp3"
+  "audio": "/audio/kanji/箋.mp3",
+  "lesson_examples": [
+   {
+    "jp": "びん箋（せん）に　てがみを　かく。",
+    "en": "Writing a letter on stationery.",
+    "audio_ref": "/audio/kanji_examples/箋_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "籠": {
   "jlpt": "N1",
@@ -75443,7 +76227,15 @@
   ],
   "etymology": "Phono-semantic: bamboo (⺮) + 龍 (phonetic ロウ) — the woven cage: basket; shut inside: to seclude (籠る).",
   "mnemonic": "A basket strong enough to hold a dragon — かご. 引き籠り: the self-woven basket.",
-  "audio": "/audio/kanji/籠.mp3"
+  "audio": "/audio/kanji/籠.mp3",
+  "lesson_examples": [
+   {
+    "jp": "とりが　籠（かご）から　とびたつ。",
+    "en": "The bird flies from its cage.",
+    "audio_ref": "/audio/kanji_examples/籠_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "緻": {
   "jlpt": "N1",
@@ -75630,7 +76422,15 @@
   ],
   "etymology": "Phono-semantic: earth (土) + 眞 (phonetic テン) — packed full: to fill — 補塡, covering a shortfall.",
   "mnemonic": "The hole made whole — テン. 補塡: accounting's spackle.",
-  "audio": "/audio/kanji/塡.mp3"
+  "audio": "/audio/kanji/塡.mp3",
+  "lesson_examples": [
+   {
+    "jp": "あなを　補（ほ）塡（てん）する。",
+    "en": "Filling in the gap.",
+    "audio_ref": "/audio/kanji_examples/塡_1.webm",
+    "source": "generated"
+   }
+  ]
  },
  "頰": {
   "jlpt": "N1",

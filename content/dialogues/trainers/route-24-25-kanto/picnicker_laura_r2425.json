@@ -1,0 +1,27 @@
+{
+ "trainer_id": "picnicker_laura_r2425",
+ "name": {
+  "jp": "ピクニックガールの　ローラ",
+  "en": "Picnicker Laura"
+ },
+ "zone_id": "route-24-25-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ふたりめは　わたし！",
+     "en": "I'm number two!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "さん、し、ご…　まだまだ　いるわよ。",
+     "en": "Three, four, five... plenty more ahead."
+    }
+   ]
+  }
+ }
+}

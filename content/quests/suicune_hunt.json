@@ -53,6 +53,14 @@
     "en": "Met Eusine on the Vermilion pier. The spirit has come to Kanto too."
    },
    "target_zone_id": "vermilion-city"
+  },
+  {
+   "step_id": "route25_finale",
+   "label": {
+    "jp": "25ばんどうろの　みさきで、みずの　せいれいと　むきあった。10ねんの　ついせきが　おわった。",
+    "en": "Faced the water spirit at the Route 25 cape. The ten-year chase is over."
+   },
+   "target_zone_id": "route-24-25-kanto"
   }
  ]
 }

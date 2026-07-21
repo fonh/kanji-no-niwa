@@ -1,0 +1,27 @@
+{
+ "trainer_id": "swimmer_joy_cerulean",
+ "name": {
+  "jp": "ビキニのおねえさんの　ジョイ",
+  "en": "Swimmer Joy"
+ },
+ "zone_id": "cerulean-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "カスミさんの　しあいの　まえに、じゅんびうんどう！",
+     "en": "A warm-up before your bout with Misty!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "じゅうぶん　あったまったでしょ。",
+     "en": "You're plenty warmed up now."
+    }
+   ]
+  }
+ }
+}

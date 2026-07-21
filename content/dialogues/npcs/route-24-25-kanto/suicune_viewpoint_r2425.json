@@ -1,0 +1,42 @@
+{
+ "_note": "Étape 4 Lot 13 — scène climactique de la Route 25 (sourcé D1/I-2 : Eusine en commentateur, Misty au rendez-vous interrompu). Déclenche le combat suicune_battle_r2425 ; l'event misty_met_viewpoint est posé par la logique de jeu à la fin de la scène (peuple le gym de Misty, PRD § negate).",
+ "npc_id": "suicune_viewpoint_r2425",
+ "name": {
+  "jp": "みさきの　けはい",
+  "en": "Presence at the Cape"
+ },
+ "zone_id": "route-24-25-kanto",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "scene": {
+   "pages": [
+    {
+     "jp": "（みさきの　さきに、カスミと　だれかが　いる。）",
+     "en": "(At the cape's end stand Misty and someone else.)"
+    },
+    {
+     "jp": "（とつぜん、きたかぜが　ふきぬけた！）",
+     "en": "(Suddenly the north wind rushes through!)"
+    },
+    {
+     "jp": "（みずの　せいれいが、なみの　うえに　たって　いる…！）",
+     "en": "(The water spirit stands upon the waves...!)"
+    },
+    {
+     "jp": "ミナキ「きた！　10ねん　おいつづけた　この　しゅんかん！」",
+     "en": "Eusine: 'It's here! The moment I chased for ten years!'"
+    },
+    {
+     "jp": "（せいれいは　まっすぐ　あなたを　みて　いる。えらばれたのだ。）",
+     "en": "(The spirit looks straight at you. You have been chosen.)"
+    }
+   ]
+  }
+ }
+}

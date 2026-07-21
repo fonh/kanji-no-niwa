@@ -1,0 +1,52 @@
+{
+ "_note": "Étape 4 Lot 13 — garçon récurrent (leçons paires #2→#16, 8 leçons N1). Indique Misty au point de vue, puis signale l'anomalie de la rivière (le passage de l'esprit de l'eau — amorce de la finale Route 25).",
+ "npc_id": "recurring_boy_cerulean",
+ "name": {
+  "jp": "きたの　しょうねん",
+  "en": "Boy in the North of Town"
+ },
+ "zone_id": "cerulean-city",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "power_plant_restoration",
+     "step": "part_recovered"
+    }
+   ],
+   "state": "anomaly"
+  },
+  {
+   "default": true,
+   "state": "before"
+  }
+ ],
+ "dialogue_states": {
+  "before": {
+   "pages": [
+    {
+     "jp": "カスミさん？　ジムには　いないよ。",
+     "en": "Misty? She's not at the Gym."
+    },
+    {
+     "jp": "きたの　みさきで　デートだって。ふふ。",
+     "en": "She's on a date at the northern cape. Heh heh."
+    }
+   ]
+  },
+  "anomaly": {
+   "pages": [
+    {
+     "jp": "ねえ、きいた？　かわの　みずが　きゅうに　すみわたったんだ。",
+     "en": "Hey, did you hear? The river suddenly ran crystal-clear."
+    },
+    {
+     "jp": "きたかぜと　いっしょに、なにかが　はしって　いったって…。",
+     "en": "They say something ran past with the north wind..."
+    }
+   ]
+  }
+ }
+}

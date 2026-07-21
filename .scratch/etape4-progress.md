@@ -28,13 +28,25 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **35 / 48** écrites
-- Leçons : **221 / 344** écrites
-- Kanji dotés d'exemples : **1250 / 1950**
-- Overlays grammaire : **24 / 48**
+- Zones : **36 / 48** écrites
+- Leçons : **238 / 344** écrites
+- Kanji dotés d'exemples : **1350 / 1950**
+- Overlays grammaire : **25 / 48**
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-21 — cerulean-city + routes 24/25 (Lot 13)** : Azuria — 17 leçons N1-083→099
+  (gérant du magasin de vélos d'origine avec écho Red, garçon récurrent), **sbire isolé
+  au gym** (l'exemple canonique du negate du PRD, câblé tel quel : présent tant que
+  negate(misty_met_viewpoint)) → fuite → **combat au pont** → aveu → pièce mécanique
+  récupérée (clôt le milieu de power_plant_restoration), gym de Misty peuplé post-event
+  (5 gardiens 23q), **Misty 80q 試練・水の道**. Routes 24/25 — gauntlet des 6 du Pont
+  Pépite, **grand-père de Bill** (fil D4 clos : troc pierre de Hoenn ↔ objet évolutif,
+  cohérence collectibles), **FINALE SUICUNE** : scène du point de vue (Eusine
+  commentateur, Misty au rendez-vous — sourcé), **combat 60q**, suicune_hunt close (le
+  mystère du grand-père d'Eusine reste ouvert, fidèle). Raikou 45q/Entei 52q = errants,
+  design de déclenchement à l'implémentation (noté). Overlay 17 points, 100
+  lesson_examples. 5 linters verts (536 fichiers).
 - **2026-07-21 — routes 8/9-10 + Lavanville + Centrale (Lot 12)** : l'arc du courant de
   Kanto (04-B1) posé en quête **power_plant_restoration** (pièce volée → indice « R » vers
   le gym d'Azuria → CT au retour → radio de Kanto rétablie → **carte EXPN** chez le
@@ -226,7 +238,7 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 33 | route-9-10-rocktunnel | Kanto | 4 | 20 | 1 | ✅ fait (+ route-8) | ✅ | ✅ | ✅ | — | ✅ |
 | 34 | lavender-town | Kanto | 4 | 20 | 1 | ✅ fait (EXPN gated centrale) | ✅ | ✅ | ✅ | — | ✅ |
 | 35 | kanto-power-plant | Kanto | 2 | 10 | 2 | ✅ fait (quête pièce volée → Azuria) | ✅ | ✅ | ✅ | — | ✅ |
-| 36 | cerulean-city | Kanto | 17 | 100 | 2 | ⬜ à faire | · | · | · | · | · |
+| 36 | cerulean-city | Kanto | 17 | 100 | 2 | ✅ fait (+ routes 24/25 — FINALE SUICUNE, Misty 80q, fil Bill clos) | ✅ | ✅ | ✅ | — | ✅ |
 | 37 | celadon-city | Kanto | 25 | 150 | 6 | ⬜ à faire | · | · | · | · | · |
 | 38 | route-16-17-18-cycling-road | Kanto | 4 | 20 | 1 | ⬜ à faire | · | · | · | · | · |
 | 39 | fuchsia-city | Kanto | 22 | 130 | 4 | ⬜ à faire | · | · | · | · | · |

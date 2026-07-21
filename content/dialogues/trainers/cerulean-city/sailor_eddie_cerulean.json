@@ -1,0 +1,27 @@
+{
+ "trainer_id": "sailor_eddie_cerulean",
+ "name": {
+  "jp": "ふなのりの　エディ",
+  "en": "Sailor Eddie"
+ },
+ "zone_id": "cerulean-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "さいごの　ばんにんは　おれだ！",
+     "en": "I'm the last guard!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "カスミさん、たのみます！",
+     "en": "Misty, she's all yours!"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "swimmer_diana_cerulean",
+ "name": {
+  "jp": "ビキニのおねえさんの　ダイアナ",
+  "en": "Swimmer Diana"
+ },
+ "zone_id": "cerulean-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "プールの　まんなかで　しょうぶよ！",
+     "en": "We battle mid-pool!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "おぼれそうな　まけかたね。",
+     "en": "I nearly drowned in that loss."
+    }
+   ]
+  }
+ }
+}

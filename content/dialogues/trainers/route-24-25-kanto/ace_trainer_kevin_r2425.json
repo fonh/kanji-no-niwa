@@ -1,0 +1,37 @@
+{
+ "trainer_id": "ace_trainer_kevin_r2425",
+ "name": {
+  "jp": "エリートトレーナーの　ケビン",
+  "en": "Ace Trainer Kevin"
+ },
+ "zone_id": "route-24-25-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "6にんぬきの　さいごは　この　おれ！",
+     "en": "I'm the last of the six!"
+    },
+    {
+     "jp": "ぜんりょくで　こい！",
+     "en": "Come at me with everything!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "6にんぬき、たっせい！　ほうびの　きんかいだ！",
+     "en": "Six in a row — done! Here's your Nugget prize!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "nugget_bridge"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "swimmer_briana_cerulean",
+ "name": {
+  "jp": "ビキニのおねえさんの　ブリアナ",
+  "en": "Swimmer Briana"
+ },
+ "zone_id": "cerulean-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "カスミさんが　もどって、ジムも　さいかいよ！",
+     "en": "With Misty back, the Gym reopens!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "カスミさんは　もっと　つよいわよ！",
+     "en": "Misty's far stronger than me!"
+    }
+   ]
+  }
+ }
+}

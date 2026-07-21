@@ -1,0 +1,27 @@
+{
+ "trainer_id": "super_nerd_pat_r2425",
+ "name": {
+  "jp": "りかけいの　おとこの　パット",
+  "en": "Super Nerd Pat"
+ },
+ "zone_id": "route-24-25-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "さんにんめ。かくりつてきに　そろそろ　まける　ころだぞ？",
+     "en": "Number three. Statistically, you're due for a loss."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "かくりつが　くつがえった…。",
+     "en": "The statistics have been overturned..."
+    }
+   ]
+  }
+ }
+}

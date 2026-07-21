@@ -1,0 +1,27 @@
+{
+ "trainer_id": "camper_lloyd_r2425",
+ "name": {
+  "jp": "キャンプボーイの　ロイド",
+  "en": "Camper Lloyd"
+ },
+ "zone_id": "route-24-25-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "きんのはしの　6にんぬき、ちょうせんかい？",
+     "en": "Taking the Nugget Bridge six-in-a-row challenge?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まず　ひとり　とっぱ！",
+     "en": "One down, five to go!"
+    }
+   ]
+  }
+ }
+}

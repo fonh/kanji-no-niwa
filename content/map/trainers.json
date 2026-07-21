@@ -5316,5 +5316,325 @@
   "sight_range": 4,
   "battle_length": 22,
   "dialogue_ref": "trainers/route-8-kanto/gentleman_milton_route8"
+ },
+ {
+  "trainer_id": "swimmer_briana_cerulean",
+  "zone_id": "cerulean-city",
+  "name": "Swimmer Briana",
+  "tile_x": 12,
+  "tile_y": 28,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cerulean-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 23,
+  "dialogue_ref": "trainers/cerulean-city/swimmer_briana_cerulean",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4,
+  "unlock_conditions": [
+   {
+    "type": "event_cleared",
+    "event_id": "misty_met_viewpoint"
+   }
+  ]
+ },
+ {
+  "trainer_id": "swimmer_parker_cerulean",
+  "zone_id": "cerulean-city",
+  "name": "Swimmer Parker",
+  "tile_x": 14,
+  "tile_y": 29,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cerulean-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 23,
+  "dialogue_ref": "trainers/cerulean-city/swimmer_parker_cerulean",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4,
+  "unlock_conditions": [
+   {
+    "type": "event_cleared",
+    "event_id": "misty_met_viewpoint"
+   }
+  ]
+ },
+ {
+  "trainer_id": "swimmer_diana_cerulean",
+  "zone_id": "cerulean-city",
+  "name": "Swimmer Diana",
+  "tile_x": 16,
+  "tile_y": 28,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cerulean-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 23,
+  "dialogue_ref": "trainers/cerulean-city/swimmer_diana_cerulean",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4,
+  "unlock_conditions": [
+   {
+    "type": "event_cleared",
+    "event_id": "misty_met_viewpoint"
+   }
+  ]
+ },
+ {
+  "trainer_id": "swimmer_joy_cerulean",
+  "zone_id": "cerulean-city",
+  "name": "Swimmer Joy",
+  "tile_x": 13,
+  "tile_y": 31,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cerulean-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 23,
+  "dialogue_ref": "trainers/cerulean-city/swimmer_joy_cerulean",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4,
+  "unlock_conditions": [
+   {
+    "type": "event_cleared",
+    "event_id": "misty_met_viewpoint"
+   }
+  ]
+ },
+ {
+  "trainer_id": "sailor_eddie_cerulean",
+  "zone_id": "cerulean-city",
+  "name": "Sailor Eddie",
+  "tile_x": 15,
+  "tile_y": 33,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cerulean-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 23,
+  "dialogue_ref": "trainers/cerulean-city/sailor_eddie_cerulean",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4,
+  "unlock_conditions": [
+   {
+    "type": "event_cleared",
+    "event_id": "misty_met_viewpoint"
+   }
+  ]
+ },
+ {
+  "trainer_id": "misty_cerulean",
+  "zone_id": "cerulean-city",
+  "name": "Misty",
+  "tile_x": 14,
+  "tile_y": 35,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cerulean-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 80,
+  "dialogue_ref": "trainers/cerulean-city/misty_cerulean",
+  "unlock_conditions": [
+   {
+    "type": "event_cleared",
+    "event_id": "misty_met_viewpoint"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "swimmer_briana_cerulean"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "swimmer_parker_cerulean"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "swimmer_diana_cerulean"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "swimmer_joy_cerulean"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "sailor_eddie_cerulean"
+   }
+  ]
+ },
+ {
+  "trainer_id": "lone_grunt_bridge_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "Lone Rocket Grunt",
+  "tile_x": 10,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/route-24-25-kanto/lone_grunt_bridge_r2425",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4,
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "power_plant_restoration",
+    "step": "part_missing"
+   }
+  ]
+ },
+ {
+  "trainer_id": "camper_lloyd_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "Camper Lloyd",
+  "tile_x": 10,
+  "tile_y": 10,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/route-24-25-kanto/camper_lloyd_r2425",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "picnicker_laura_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "Picnicker Laura",
+  "tile_x": 11,
+  "tile_y": 12,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/route-24-25-kanto/picnicker_laura_r2425",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "super_nerd_pat_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "Super Nerd Pat",
+  "tile_x": 10,
+  "tile_y": 14,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/route-24-25-kanto/super_nerd_pat_r2425",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "school_kid_joe_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "School Kid Joe",
+  "tile_x": 11,
+  "tile_y": 16,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/route-24-25-kanto/school_kid_joe_r2425",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "lass_shannon_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "Lass Shannon",
+  "tile_x": 10,
+  "tile_y": 18,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/route-24-25-kanto/lass_shannon_r2425",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "ace_trainer_kevin_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "Ace Trainer Kevin",
+  "tile_x": 11,
+  "tile_y": 20,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 23,
+  "dialogue_ref": "trainers/route-24-25-kanto/ace_trainer_kevin_r2425",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "school_kid_dudley_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "School Kid Dudley",
+  "tile_x": 14,
+  "tile_y": 24,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/route-24-25-kanto/school_kid_dudley_r2425",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "lass_ellen_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "Lass Ellen",
+  "tile_x": 16,
+  "tile_y": 26,
+  "facing": "north",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/route-24-25-kanto/lass_ellen_r2425",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "suicune_battle_r2425",
+  "zone_id": "route-24-25-kanto",
+  "name": "The Water Spirit",
+  "tile_x": 22,
+  "tile_y": 30,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-24-25-kanto.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 60,
+  "dialogue_ref": "trainers/route-24-25-kanto/suicune_battle_r2425",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "suicune_hunt",
+    "step": "vermilion_pier"
+   }
+  ]
  }
 ]

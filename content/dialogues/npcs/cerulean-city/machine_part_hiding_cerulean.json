@@ -1,0 +1,59 @@
+{
+ "_note": "Étape 4 Lot 13 — la pièce cachée au gym (kind=object, unlock npc_cleared(lone_grunt_bridge_r2425) — le sbire vaincu avoue la cachette).",
+ "npc_id": "machine_part_hiding_cerulean",
+ "name": {
+  "jp": "きかいの　ぶひん",
+  "en": "The Machine Part"
+ },
+ "zone_id": "cerulean-city",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "power_plant_restoration",
+     "step": "part_recovered"
+    }
+   ],
+   "state": "empty"
+  },
+  {
+   "default": true,
+   "state": "found"
+  }
+ ],
+ "dialogue_states": {
+  "found": {
+   "pages": [
+    {
+     "jp": "（プールの　うきわの　かげに、なにか　ひかって　いる。）",
+     "en": "(Something glints behind the pool floats.)"
+    },
+    {
+     "jp": "（はつでんしょの　ぶひんだ！　みつけた！）",
+     "en": "(The Power Plant's machine part! Found it!)"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "machine_part"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "power_plant_restoration",
+     "step_id": "part_recovered"
+    }
+   ]
+  },
+  "empty": {
+   "pages": [
+    {
+     "jp": "（もう　なにも　ない。）",
+     "en": "(Nothing left here.)"
+    }
+   ]
+  }
+ }
+}

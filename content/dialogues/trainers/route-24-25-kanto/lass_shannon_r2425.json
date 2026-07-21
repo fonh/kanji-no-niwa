@@ -1,0 +1,27 @@
+{
+ "trainer_id": "lass_shannon_r2425",
+ "name": {
+  "jp": "ミニスカートの　シャノン",
+  "en": "Lass Shannon"
+ },
+ "zone_id": "route-24-25-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ごにんめよ。あと　すこしで　ゴールだけど、いかせない！",
+     "en": "Number five. So close to the end — but no further!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ゴールは　めのまえよ。",
+     "en": "The goal is right ahead."
+    }
+   ]
+  }
+ }
+}
