@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 9 — Porte de Réception (bloque est/ouest, sourcé). Débloquages post-Ligue (SS Aqua / 16 badges).",
+ "npc_id": "league_gate_man_route27",
+ "name": {
+  "jp": "うけつけゲートの　おとこ",
+  "en": "Reception Gate Attendant"
+ },
+ "zone_id": "route-27",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ここは　ポケモンリーグ　うけつけゲート。",
+     "en": "This is the Pokémon League Reception Gate."
+    },
+    {
+     "jp": "ひがしは　カントーちほう。いまは　とおれません。",
+     "en": "To the east lies Kanto — closed for now."
+    },
+    {
+     "jp": "にしの　シロガネやまも　まだです。きたの　チャンピオンロードだけが　あいて　います。",
+     "en": "Mt. Silver to the west is closed too. Only Victory Road, north, is open."
+    }
+   ]
+  }
+ }
+}

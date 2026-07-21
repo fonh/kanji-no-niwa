@@ -1,0 +1,98 @@
+[
+ {
+  "zone_id": "route-26",
+  "npc_ref": "siblings_house_route26",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "材",
+   "束",
+   "果",
+   "栄",
+   "械",
+   "極"
+  ],
+  "grammar_id": "N2-122"
+ },
+ {
+  "zone_id": "route-26",
+  "npc_ref": "healer_girl_route26",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "機",
+   "泣",
+   "浴",
+   "漁",
+   "焼",
+   "笑"
+  ],
+  "grammar_id": "N2-123"
+ },
+ {
+  "zone_id": "route-26",
+  "npc_ref": "siblings_house_route26",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "管",
+   "節",
+   "約",
+   "要",
+   "軍",
+   "輪"
+  ],
+  "grammar_id": "N2-124"
+ },
+ {
+  "zone_id": "route-26",
+  "npc_ref": "healer_girl_route26",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "辺",
+   "連",
+   "録",
+   "関",
+   "順",
+   "願"
+  ],
+  "grammar_id": "N2-125"
+ },
+ {
+  "zone_id": "route-26",
+  "npc_ref": "siblings_house_route26",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "飛",
+   "香",
+   "件",
+   "余",
+   "像",
+   "再"
+  ],
+  "grammar_id": "N2-126"
+ },
+ {
+  "zone_id": "route-26",
+  "npc_ref": "healer_girl_route26",
+  "sequence_index": 6,
+  "kanji_ids": [
+   "勢",
+   "史",
+   "告",
+   "因",
+   "団"
+  ],
+  "grammar_id": "N2-127"
+ },
+ {
+  "zone_id": "route-26",
+  "npc_ref": "siblings_house_route26",
+  "sequence_index": 7,
+  "kanji_ids": [
+   "圧",
+   "在",
+   "均",
+   "型",
+   "基"
+  ],
+  "grammar_id": "N2-128"
+ }
+]

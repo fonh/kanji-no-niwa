@@ -1,0 +1,161 @@
+{
+ "_note": "Overlay grammaire — Route 27, 5 points N2-142→146.",
+ "zone_id": "route-27",
+ "points": [
+  {
+   "grammar_id": "N2-142",
+   "source_index": 141,
+   "title": "～はまだしも (〜wa mada shimo)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "失敗（しっぱい）するのはまだしも、やらないで後悔（こうかい）する方（ほう）がつらい。",
+     "point_answer": "はまだしも",
+     "jp_cloze": "失敗（しっぱい）するの＿＿、やらないで後悔（こうかい）する方（ほう）がつらい。",
+     "distractors": [
+      "はもちろん",
+      "はともかく",
+      "はおろか"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "このピザは野菜（やさい）が少（すく）ないのはまだしも、味（あじ）も悪（わる）い。",
+     "point_answer": "はまだしも",
+     "jp_cloze": "このピザは野菜（やさい）が少（すく）ないの＿＿、味（あじ）も悪（わる）い。",
+     "distractors": [
+      "はもちろん",
+      "はともかく",
+      "はおろか"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-143",
+   "source_index": 142,
+   "title": "～はもとより (〜wa moto yori)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "英語（えいご）はもとより、スペイン語（ご）も勉強（べんきょう）しています。",
+     "point_answer": "はもとより",
+     "jp_cloze": "英語（えいご）＿＿、スペイン語（ご）も勉強（べんきょう）しています。",
+     "distractors": [
+      "はともかく",
+      "はぬきにして",
+      "にはんして"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼女（かのじょ）は料理（りょうり）はもとより、お菓子作（かしづく）りも得意（とくい）です。",
+     "point_answer": "はもとより",
+     "jp_cloze": "彼女（かのじょ）は料理（りょうり）＿＿、お菓子作（かしづく）りも得意（とくい）です。",
+     "distractors": [
+      "はともかく",
+      "はぬきにして",
+      "にはんして"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-144",
+   "source_index": 143,
+   "title": "～は抜きにして (〜wa nuki ni shite)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "値段（ねだん）は抜（ぬ）きにして、味（あじ）は美味（おい）しい。",
+     "point_answer": "は抜（ぬ）きにして",
+     "jp_cloze": "値段（ねだん）＿＿、味（あじ）は美味（おい）しい。",
+     "distractors": [
+      "はもとより",
+      "にもとづいて",
+      "にくわえて"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）の性格（せいかく）は抜（ぬ）きにして、彼（かれ）の実力（じつりょく）は認（みと）めざるを得（え）ない。",
+     "point_answer": "は抜（ぬ）きにして",
+     "jp_cloze": "彼（かれ）の性格（せいかく）＿＿、彼（かれ）の実力（じつりょく）は認（みと）めざるを得（え）ない。",
+     "distractors": [
+      "はもとより",
+      "にもとづいて",
+      "にくわえて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-145",
+   "source_index": 144,
+   "title": "～べきではない (〜beki dewa nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "遅（おく）れる理由（りゆう）がないなら、遅（おく）れるべきではありません。",
+     "point_answer": "べきではありません",
+     "jp_cloze": "遅（おく）れる理由（りゆう）がないなら、遅（おく）れる＿＿。",
+     "distractors": [
+      "しかありません",
+      "ざるをえません",
+      "までもありません"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "子供（こども）に悪口（わるぐち）を言（い）うべきではありません。",
+     "point_answer": "べきではありません",
+     "jp_cloze": "子供（こども）に悪口（わるぐち）を言（い）う＿＿。",
+     "distractors": [
+      "しかありません",
+      "ざるをえません",
+      "までもありません"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-146",
+   "source_index": 145,
+   "title": "～まい (〜mai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は今晩（こんばん）来（く）るまい。",
+     "point_answer": "まい",
+     "jp_cloze": "彼（かれ）は今晩（こんばん）来（く）る＿＿。",
+     "distractors": [
+      "べきだ",
+      "かねる",
+      "がたい"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "こんなに遅（おく）れては、電車（でんしゃ）に間（ま）に合（あ）うまい。",
+     "point_answer": "まい",
+     "jp_cloze": "こんなに遅（おく）れては、電車（でんしゃ）に間（ま）に合（あ）う＿＿。",
+     "distractors": [
+      "べきだ",
+      "かねる",
+      "がたい"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "bird_keeper_jose_route27",
+ "name": {
+  "jp": "とりつかいの　ホセ",
+  "en": "Bird Keeper Jose"
+ },
+ "zone_id": "route-27",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "たきの　うえの　そらは　ひろいぞ！",
+     "en": "The sky above the falls is vast!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "そらの　ひろさに　まけない　つよさだ。",
+     "en": "Strength as vast as that sky."
+    }
+   ]
+  }
+ }
+}

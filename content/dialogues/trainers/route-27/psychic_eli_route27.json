@@ -1,0 +1,27 @@
+{
+ "trainer_id": "psychic_eli_route27",
+ "name": {
+  "jp": "サイキッカーの　イーライ",
+  "en": "Psychic Eli"
+ },
+ "zone_id": "route-27",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "みずおとの　なかで　しゅうちゅうできるか？",
+     "en": "Can you focus amid the roar of the falls?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "みごとな　しゅうちゅうりょくだ。",
+     "en": "Remarkable focus."
+    }
+   ]
+  }
+ }
+}

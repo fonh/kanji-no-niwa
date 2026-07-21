@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_brian_route27",
+ "name": {
+  "jp": "エリートトレーナーの　ブライアン",
+  "en": "Ace Trainer Brian"
+ },
+ "zone_id": "route-27",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "リーグへの　さいごの　ひとふんばり、てつだって　やるよ！",
+     "en": "One last push to the League — let me help!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "じゅんびは　かんぺきだ。",
+     "en": "You're fully prepared."
+    }
+   ]
+  }
+ }
+}

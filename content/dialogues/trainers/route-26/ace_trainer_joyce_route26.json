@@ -1,0 +1,31 @@
+{
+ "trainer_id": "ace_trainer_joyce_route26",
+ "name": {
+  "jp": "エリートトレーナーの　ジョイス",
+  "en": "Ace Trainer Joyce"
+ },
+ "zone_id": "route-26",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ここまでの　たびで、なにを　まなんだ？",
+     "en": "What have you learned on your journey so far?"
+    },
+    {
+     "jp": "こたえは　しょうぶで　みせて！",
+     "en": "Answer me in battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いい　こたえだったわ。",
+     "en": "A fine answer indeed."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "trainer_id": "ace_trainer_jamie_route26",
+ "name": {
+  "jp": "エリートトレーナーの　ジェイミー",
+  "en": "Ace Trainer Jamie"
+ },
+ "zone_id": "route-26",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　みちは　チャンピオンへの　みち。",
+     "en": "This road leads to the Champion."
+    },
+    {
+     "jp": "かくごの　ほどを　みせて！",
+     "en": "Show me your resolve!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "かくご、うけとったわ。",
+     "en": "Resolve received, loud and clear."
+    }
+   ]
+  }
+ }
+}

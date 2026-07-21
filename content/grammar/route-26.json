@@ -1,0 +1,223 @@
+{
+ "_note": "Overlay grammaire — Route 26, 7 points N2-122→128. Famille に応えて/に応じて (124/125) : jamais l'un en distracteur de l'autre ; にしたがって exclu de に応じて (trop proche).",
+ "zone_id": "route-26",
+ "points": [
+  {
+   "grammar_id": "N2-122",
+   "source_index": 121,
+   "title": "～に基づいて (〜ni motozuite)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "研究結果（けんきゅうけっか）に基（もと）づいて、新（あたら）しい治療法（ちりょうほう）が開発（かいはつ）されました。",
+     "point_answer": "に基（もと）づいて",
+     "jp_cloze": "研究結果（けんきゅうけっか）＿＿、新（あたら）しい治療法（ちりょうほう）が開発（かいはつ）されました。",
+     "distractors": [
+      "にはんして",
+      "にくわえて",
+      "にさきだって"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "法律（ほうりつ）に基（もと）づいて、犯罪者（はんざいしゃ）は逮捕（たいほ）されました。",
+     "point_answer": "に基（もと）づいて",
+     "jp_cloze": "法律（ほうりつ）＿＿、犯罪者（はんざいしゃ）は逮捕（たいほ）されました。",
+     "distractors": [
+      "にはんして",
+      "にくわえて",
+      "にさきだって"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-123",
+   "source_index": 122,
+   "title": "～に対して (〜ni taishite)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "日本（にほん）の文化（ぶんか）に対（たい）して尊敬（そんけい）の念（ねん）を持（も）っています。",
+     "point_answer": "に対（たい）して",
+     "jp_cloze": "日本（にほん）の文化（ぶんか）＿＿尊敬（そんけい）の念（ねん）を持（も）っています。",
+     "distractors": [
+      "にわたって",
+      "にさきだって",
+      "をとわず"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）に対（たい）して無礼（ぶれい）な態度（たいど）を取（と）らないでください。",
+     "point_answer": "に対（たい）して",
+     "jp_cloze": "彼（かれ）＿＿無礼（ぶれい）な態度（たいど）を取（と）らないでください。",
+     "distractors": [
+      "にわたって",
+      "にさきだって",
+      "をとわず"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-124",
+   "source_index": 123,
+   "title": "～に応えて (〜ni kotaete)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "お客様（きゃくさま）の要望（ようぼう）に応（こた）えて、新（あたら）しいメニューを作（つく）りました。",
+     "point_answer": "に応（こた）えて",
+     "jp_cloze": "お客様（きゃくさま）の要望（ようぼう）＿＿、新（あたら）しいメニューを作（つく）りました。",
+     "distractors": [
+      "にはんして",
+      "にさきだって",
+      "をこめて"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）はチームの期待（きたい）に応（こた）えて素晴（すば）らしいプレーを見（み）せた。",
+     "point_answer": "に応（こた）えて",
+     "jp_cloze": "彼（かれ）はチームの期待（きたい）＿＿素晴（すば）らしいプレーを見（み）せた。",
+     "distractors": [
+      "にはんして",
+      "にさきだって",
+      "をこめて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-125",
+   "source_index": 124,
+   "title": "～に応じて (〜ni oujite)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "仕事（しごと）の量（りょう）に応（おう）じて給料（きゅうりょう）が変（か）わります。",
+     "point_answer": "に応（おう）じて",
+     "jp_cloze": "仕事（しごと）の量（りょう）＿＿給料（きゅうりょう）が変（か）わります。",
+     "distractors": [
+      "にはんして",
+      "をとわず",
+      "にさきだって"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "季節（きせつ）に応（おう）じて服装（ふくそう）を選（えら）びましょう。",
+     "point_answer": "に応（おう）じて",
+     "jp_cloze": "季節（きせつ）＿＿服装（ふくそう）を選（えら）びましょう。",
+     "distractors": [
+      "にはんして",
+      "をとわず",
+      "にさきだって"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-126",
+   "source_index": 125,
+   "title": "～に決まっている (〜ni kimatte iru)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "こんなに暑（あつ）い日（ひ）に運動（うんどう）したら、汗（あせ）をかくに決（き）まっている。",
+     "point_answer": "に決（き）まっている",
+     "jp_cloze": "こんなに暑（あつ）い日（ひ）に運動（うんどう）したら、汗（あせ）をかく＿＿。",
+     "distractors": [
+      "にすぎない",
+      "におよばない",
+      "にたえない"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）が試験（しけん）に落（お）ちたら、がっかりするに決（き）まっている。",
+     "point_answer": "に決（き）まっている",
+     "jp_cloze": "彼（かれ）が試験（しけん）に落（お）ちたら、がっかりする＿＿。",
+     "distractors": [
+      "にすぎない",
+      "におよばない",
+      "にたえない"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-127",
+   "source_index": 126,
+   "title": "～に沿って (〜ni sotte)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "川（かわ）に沿（そ）って歩（ある）いていくと、橋（はし）が見（み）えてきます。",
+     "point_answer": "に沿（そ）って",
+     "jp_cloze": "川（かわ）＿＿歩（ある）いていくと、橋（はし）が見（み）えてきます。",
+     "distractors": [
+      "にはんして",
+      "をとわず",
+      "にさきだって"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "このレシピに沿（そ）って料理（りょうり）を作（つく）れば、間違（まちが）いありません。",
+     "point_answer": "に沿（そ）って",
+     "jp_cloze": "このレシピ＿＿料理（りょうり）を作（つく）れば、間違（まちが）いありません。",
+     "distractors": [
+      "にはんして",
+      "をとわず",
+      "にさきだって"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-128",
+   "source_index": 127,
+   "title": "～に過ぎない (〜ni suginai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）の失敗（しっぱい）はミスに過（す）ぎない。",
+     "point_answer": "に過（す）ぎない",
+     "jp_cloze": "彼（かれ）の失敗（しっぱい）はミス＿＿。",
+     "distractors": [
+      "にちがいない",
+      "にほかならない",
+      "にたえない"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "この試験（しけん）は簡単（かんたん）な問題（もんだい）に過（す）ぎない。",
+     "point_answer": "に過（す）ぎない",
+     "jp_cloze": "この試験（しけん）は簡単（かんたん）な問題（もんだい）＿＿。",
+     "distractors": [
+      "にちがいない",
+      "にほかならない",
+      "にたえない"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

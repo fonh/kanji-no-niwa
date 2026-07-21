@@ -1,0 +1,27 @@
+{
+ "trainer_id": "psychic_vernon_route26",
+ "name": {
+  "jp": "サイキッカーの　バーノン",
+  "en": "Psychic Vernon"
+ },
+ "zone_id": "route-26",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "こころの　つよさが　ないと、リーグでは　かてない。",
+     "en": "Without strength of mind, you can't win at the League."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみの　こころは　じゅうぶん　つよい。",
+     "en": "Your mind is more than strong enough."
+    }
+   ]
+  }
+ }
+}

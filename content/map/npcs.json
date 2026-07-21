@@ -1951,5 +1951,75 @@
     "badge_id": "clair"
    }
   ]
+ },
+ {
+  "npc_id": "siblings_house_route26",
+  "zone_id": "route-26",
+  "name": "The Siblings' House",
+  "tile_x": 5,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-26.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-26/siblings_house_route26",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "healer_girl_route26",
+  "zone_id": "route-26",
+  "name": "Healer Girl",
+  "tile_x": 5,
+  "tile_y": 22,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-26.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-26/healer_girl_route26",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "tohjo_old_lady_route27",
+  "zone_id": "route-27",
+  "name": "Old Lady by the Falls",
+  "tile_x": 14,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-27.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-27/tohjo_old_lady_route27",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "league_gate_man_route27",
+  "zone_id": "route-27",
+  "name": "Reception Gate Attendant",
+  "tile_x": 16,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-27.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-27/league_gate_man_route27"
+ },
+ {
+  "npc_id": "telepath_man_antichambre",
+  "zone_id": "indigo-plateau-antichambre",
+  "name": "Old Man in the Hall",
+  "tile_x": 6,
+  "tile_y": 12,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/indigo-plateau-antichambre.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/indigo-plateau-antichambre/telepath_man_antichambre",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "league_door_man_antichambre",
+  "zone_id": "indigo-plateau-antichambre",
+  "name": "League Doorman",
+  "tile_x": 10,
+  "tile_y": 2,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/indigo-plateau-antichambre.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/indigo-plateau-antichambre/league_door_man_antichambre"
  }
 ]

@@ -1,0 +1,40 @@
+{
+ "_note": "Étape 4 Lot 9 — Conseil 4 (70q, vies 7).",
+ "trainer_id": "koga_indigo",
+ "name": {
+  "jp": "してんのう　キョウ",
+  "en": "Koga"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・毒（どく）の道（みち）",
+  "en": "Trial of the Poison Path"
+ },
+ "zone_id": "indigo-plateau-koga",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "フフフ…　わしは　キョウ。かつて　セキチクの　ジムリーダー、いまは　してんのう。",
+     "en": "Heh heh... I am Koga. Once Fuchsia's Gym Leader, now Elite Four."
+    },
+    {
+     "jp": "きえる　わざ、まどわす　わざ、とくと　あじわえ！",
+     "en": "Taste my arts of vanishing and confusion!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…みごと。まどわされぬ　めを　もって　おるな。",
+     "en": "...Splendid. Eyes that cannot be fooled."
+    },
+    {
+     "jp": "むすめにも　あわせたい　ものだ。すすむが　よい。",
+     "en": "I'd like my daughter to meet you. Proceed."
+    }
+   ]
+  }
+ }
+}

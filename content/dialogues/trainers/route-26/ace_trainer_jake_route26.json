@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_jake_route26",
+ "name": {
+  "jp": "エリートトレーナーの　ジェイク",
+  "en": "Ace Trainer Jake"
+ },
+ "zone_id": "route-26",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "まいしゅう　ここで　リーグちょうせんしゃを　まってるんだ。",
+     "en": "Every week I wait here for League challengers."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみは　ほんものだ。",
+     "en": "You're the real deal."
+    }
+   ]
+  }
+ }
+}

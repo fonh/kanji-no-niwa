@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 9 — vieil homme au compagnon-télépathe (leçons #1→#7 de l'antichambre ; blague sourcée).",
+ "npc_id": "telepath_man_antichambre",
+ "name": {
+  "jp": "ホールの　ろうじん",
+  "en": "Old Man in the Hall"
+ },
+ "zone_id": "indigo-plateau-antichambre",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "わしの　あいぼうは　こころが　よめるんじゃ。",
+     "en": "My partner here can read minds, you know."
+    },
+    {
+     "jp": "おまえさんの　きんちょうも、まるみえじゃよ。",
+     "en": "Your nerves are plain as day to it."
+    },
+    {
+     "jp": "だが　いえまで　おくる　ことは　できんぞ。ほっほっほ。",
+     "en": "But it can't carry you home, mind you. Ho ho ho."
+    }
+   ]
+  }
+ }
+}

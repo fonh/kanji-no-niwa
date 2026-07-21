@@ -1,0 +1,98 @@
+[
+ {
+  "zone_id": "indigo-plateau-antichambre",
+  "npc_ref": "telepath_man_antichambre",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "綿",
+   "総",
+   "編",
+   "罪",
+   "職",
+   "航"
+  ],
+  "grammar_id": "N2-157"
+ },
+ {
+  "zone_id": "indigo-plateau-antichambre",
+  "npc_ref": "telepath_man_antichambre",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "術",
+   "製",
+   "解",
+   "輸",
+   "迷",
+   "鉱"
+  ],
+  "grammar_id": "N2-158"
+ },
+ {
+  "zone_id": "indigo-plateau-antichambre",
+  "npc_ref": "telepath_man_antichambre",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "防",
+   "乳",
+   "優",
+   "券",
+   "割",
+   "勤"
+  ],
+  "grammar_id": "N2-159"
+ },
+ {
+  "zone_id": "indigo-plateau-antichambre",
+  "npc_ref": "telepath_man_antichambre",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "危",
+   "収",
+   "呼",
+   "善",
+   "困",
+   "域"
+  ],
+  "grammar_id": "N2-160"
+ },
+ {
+  "zone_id": "indigo-plateau-antichambre",
+  "npc_ref": "telepath_man_antichambre",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "存",
+   "専",
+   "尊",
+   "巻",
+   "干",
+   "幼"
+  ],
+  "grammar_id": "N2-161"
+ },
+ {
+  "zone_id": "indigo-plateau-antichambre",
+  "npc_ref": "telepath_man_antichambre",
+  "sequence_index": 6,
+  "kanji_ids": [
+   "忘",
+   "批",
+   "拡",
+   "晩",
+   "暖"
+  ],
+  "grammar_id": "N2-162"
+ },
+ {
+  "zone_id": "indigo-plateau-antichambre",
+  "npc_ref": "telepath_man_antichambre",
+  "sequence_index": 7,
+  "kanji_ids": [
+   "暮",
+   "机",
+   "枚",
+   "棒",
+   "権"
+  ],
+  "grammar_id": "N2-163"
+ }
+]

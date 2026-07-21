@@ -1,0 +1,56 @@
+{
+ "_note": "Étape 4 Lot 9 — Silver apparition #6 (Route Victoire, 24q — fin de la courbe 12→15→18→cameo→22→24). Aboutissement de la rédemption. « A vidé la route de tout dresseur » (sourcé) : aucun autre combat sur la Route Victoire.",
+ "trainer_id": "silver_apparition6_antichambre",
+ "name": {
+  "jp": "ライバル",
+  "en": "Silver"
+ },
+ "zone_id": "indigo-plateau-antichambre",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "…きたか。この　さきが　リーグだ。",
+     "en": "...So you came. The League lies ahead."
+    },
+    {
+     "jp": "ここまでの　みちの　トレーナーは、ぜんぶ　おれが　たおした。",
+     "en": "I cleared every trainer on the road here."
+    },
+    {
+     "jp": "おまえと　さいごに　たたかう　ためだ。じゃまの　はいらない　ばしょでな。",
+     "en": "So that our last battle would have no interruptions."
+    },
+    {
+     "jp": "おれは　かわった。なかまを　しんじる　つよさを　みつけた。",
+     "en": "I've changed. I found the strength of trusting companions."
+    },
+    {
+     "jp": "すべてを　かけて、いくぞ！",
+     "en": "With everything I have — here I come!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…ははっ。まけたのに、わらえるなんてな。",
+     "en": "...Ha. Losing, and yet I can smile."
+    },
+    {
+     "jp": "おまえの　おかげだ。おまえが　いたから、ここまで　これた。",
+     "en": "It's thanks to you. Because you were there, I made it this far."
+    },
+    {
+     "jp": "いけ。チャンピオンに　なって　みせろ。",
+     "en": "Go. Show me you can become Champion."
+    },
+    {
+     "jp": "そして　いつか、また　しょうぶだ。",
+     "en": "And someday... we battle again."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_blake_route27",
+ "name": {
+  "jp": "エリートトレーナーの　ブレイク",
+  "en": "Ace Trainer Blake"
+ },
+ "zone_id": "route-27",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　みずべの　しょうぶは　おれの　とくいぶんや！",
+     "en": "Waterside battles are my specialty!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "とくいぶんやで　まけた…。",
+     "en": "Beaten at my own specialty..."
+    }
+   ]
+  }
+ }
+}

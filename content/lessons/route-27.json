@@ -1,0 +1,72 @@
+[
+ {
+  "zone_id": "route-27",
+  "npc_ref": "tohjo_old_lady_route27",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "境",
+   "夢",
+   "妻",
+   "婦",
+   "容",
+   "布"
+  ],
+  "grammar_id": "N2-142"
+ },
+ {
+  "zone_id": "route-27",
+  "npc_ref": "tohjo_old_lady_route27",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "常",
+   "張",
+   "志",
+   "応",
+   "性",
+   "支"
+  ],
+  "grammar_id": "N2-143"
+ },
+ {
+  "zone_id": "route-27",
+  "npc_ref": "tohjo_old_lady_route27",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "救",
+   "断",
+   "旧",
+   "易",
+   "暴",
+   "条"
+  ],
+  "grammar_id": "N2-144"
+ },
+ {
+  "zone_id": "route-27",
+  "npc_ref": "tohjo_old_lady_route27",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "検",
+   "構",
+   "武",
+   "歴",
+   "永",
+   "液"
+  ],
+  "grammar_id": "N2-145"
+ },
+ {
+  "zone_id": "route-27",
+  "npc_ref": "tohjo_old_lady_route27",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "燃",
+   "率",
+   "留",
+   "築",
+   "経",
+   "絶"
+  ],
+  "grammar_id": "N2-146"
+ }
+]

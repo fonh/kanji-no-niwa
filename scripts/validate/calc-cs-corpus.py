@@ -72,7 +72,9 @@ NARRATIVE_ORDER = [
     "cianwood-city", "route-47-48-cliff-cave", "safari-zone", "whirl-islands",
     "route-42", "mt-mortar", "route-43", "lake-of-rage", "mahogany-town",
     "route-44", "ice-path", "blackthorn-city", "dragons-den",
-    "dark-cave", "route-45", "route-46",
+    "dark-cave", "route-45", "route-46", "route-26", "route-27",
+    "indigo-plateau-antichambre", "indigo-plateau-will", "indigo-plateau-koga",
+    "indigo-plateau-bruno", "indigo-plateau-karen", "indigo-plateau-lance",
 ]
 
 

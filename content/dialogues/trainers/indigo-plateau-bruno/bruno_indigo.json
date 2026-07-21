@@ -1,0 +1,44 @@
+{
+ "_note": "Étape 4 Lot 9 — Conseil 4 (70q, vies 7).",
+ "trainer_id": "bruno_indigo",
+ "name": {
+  "jp": "してんのう　シバ",
+  "en": "Bruno"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・剛（ごう）の道（みち）",
+  "en": "Trial of the Iron Path"
+ },
+ "zone_id": "indigo-plateau-bruno",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "おれは　シバ。からだと　こころを　きたえつづける　おとこ。",
+     "en": "I am Bruno — always training body and mind."
+    },
+    {
+     "jp": "ちからと　ちからの　ぶつかりあいこそ　しんじつ！",
+     "en": "Truth lies in the clash of strength on strength!"
+    },
+    {
+     "jp": "うおおおお！　いくぞ！",
+     "en": "WOOOOAH! Here I come!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…ぐぬぬ。この　シバが　ちからまけか。",
+     "en": "...Grrr. Out-powered — me, Bruno."
+    },
+    {
+     "jp": "きたえなおして　また　あおう。つぎへ　いけ！",
+     "en": "I'll retrain and meet you again. Onward!"
+    }
+   ]
+  }
+ }
+}

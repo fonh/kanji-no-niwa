@@ -1,0 +1,223 @@
+{
+ "_note": "Overlay grammaire — Antichambre de la Ligue, 7 points N2-157→163. ようがない/よりほかない (160/161) : proches mais distincts (impossibilité vs absence de choix) — jamais l'un en distracteur de l'autre ; わけがない/わけだ (162/163) idem.",
+ "zone_id": "indigo-plateau-antichambre",
+ "points": [
+  {
+   "grammar_id": "N2-157",
+   "source_index": 156,
+   "title": "～も～ば～も～ (〜mo〜ba〜mo〜)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は勉強（べんきょう）もできればスポーツもできる。",
+     "point_answer": "もできれば",
+     "jp_cloze": "彼（かれ）は勉強（べんきょう）＿＿スポーツもできる。",
+     "distractors": [
+      "もできるなら",
+      "ができては",
+      "はできても"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "このレストランは値段（ねだん）も安（やす）ければ味（あじ）もいい。",
+     "point_answer": "も安（やす）ければ",
+     "jp_cloze": "このレストランは値段（ねだん）＿＿味（あじ）もいい。",
+     "distractors": [
+      "も安（やす）いなら",
+      "が安（やす）くては",
+      "は安（やす）くても"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-158",
+   "source_index": 157,
+   "title": "～も同然だ (〜mo douzen da)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）とは長（なが）い付（つ）き合（あ）いだから、家族（かぞく）も同然（どうぜん）だ。",
+     "point_answer": "も同然（どうぜん）だ",
+     "jp_cloze": "彼（かれ）とは長（なが）い付（つ）き合（あ）いだから、家族（かぞく）＿＿。",
+     "distractors": [
+      "もどうようだ",
+      "もかまわない",
+      "もかねない"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "毎日（まいにち）遅刻（ちこく）するなんて、来（き）ていないも同然（どうぜん）だ。",
+     "point_answer": "も同然（どうぜん）だ",
+     "jp_cloze": "毎日（まいにち）遅刻（ちこく）するなんて、来（き）ていない＿＿。",
+     "distractors": [
+      "もどうようだ",
+      "もかまわない",
+      "もかねない"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-159",
+   "source_index": 158,
+   "title": "～やら～やら (〜yara〜yara)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "宿題（しゅくだい）やら掃除（そうじ）やら、やることがたくさんある。",
+     "point_answer": "やら",
+     "jp_cloze": "宿題（しゅくだい）＿＿掃除（そうじ）やら、やることがたくさんある。",
+     "distractors": [
+      "こそ",
+      "ほど",
+      "まで"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "野菜（やさい）やら果物（くだもの）やら、色々（いろいろ）な食（た）べ物（もの）を買（か）いました。",
+     "point_answer": "やら",
+     "jp_cloze": "野菜（やさい）＿＿果物（くだもの）やら、色々（いろいろ）な食（た）べ物（もの）を買（か）いました。",
+     "distractors": [
+      "こそ",
+      "ほど",
+      "まで"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-160",
+   "source_index": 159,
+   "title": "～ようがない (〜you ga nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）の連絡先（れんらくさき）がわからないので、助（たす）けようがない。",
+     "point_answer": "ようがない",
+     "jp_cloze": "彼（かれ）の連絡先（れんらくさき）がわからないので、助（たす）け＿＿。",
+     "distractors": [
+      "ないでもない",
+      "るまでもない",
+      "るはずがある"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "ここまで壊（こわ）れてしまったら、もう直（なお）しようがない。",
+     "point_answer": "ようがない",
+     "jp_cloze": "ここまで壊（こわ）れてしまったら、もう直（なお）し＿＿。",
+     "distractors": [
+      "ないでもない",
+      "すまでもない",
+      "すはずがある"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-161",
+   "source_index": 160,
+   "title": "～よりほかない (〜yori hoka nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "試験（しけん）が近（ちか）いので、勉強（べんきょう）するよりほかない。",
+     "point_answer": "よりほかない",
+     "jp_cloze": "試験（しけん）が近（ちか）いので、勉強（べんきょう）する＿＿。",
+     "distractors": [
+      "どころではない",
+      "までもない",
+      "ものではない"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "風邪（かぜ）がひどいので、早（はや）く寝（ね）るよりほかない。",
+     "point_answer": "よりほかない",
+     "jp_cloze": "風邪（かぜ）がひどいので、早（はや）く寝（ね）る＿＿。",
+     "distractors": [
+      "どころではない",
+      "までもない",
+      "ものではない"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-162",
+   "source_index": 161,
+   "title": "～わけがない (〜wake ga nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）が怪我（けが）をしたから、試合（しあい）に勝（か）てるわけがない。",
+     "point_answer": "わけがない",
+     "jp_cloze": "彼（かれ）が怪我（けが）をしたから、試合（しあい）に勝（か）てる＿＿。",
+     "distractors": [
+      "わけにはいかない",
+      "ことはない",
+      "ものだ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "嘘（うそ）ばかり言（い）っている人（ひと）を、信（しん）じるわけがない。",
+     "point_answer": "わけがない",
+     "jp_cloze": "嘘（うそ）ばかり言（い）っている人（ひと）を、信（しん）じる＿＿。",
+     "distractors": [
+      "わけにはいかない",
+      "ことはない",
+      "ものだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-163",
+   "source_index": 162,
+   "title": "～わけだ (〜wake da)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼女（かのじょ）が遅（おく）れたのは、電車（でんしゃ）が遅（おく）れたわけだ。",
+     "point_answer": "わけだ",
+     "jp_cloze": "彼女（かのじょ）が遅（おく）れたのは、電車（でんしゃ）が遅（おく）れた＿＿。",
+     "distractors": [
+      "ものか",
+      "はずがない",
+      "どころではない"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "授業（じゅぎょう）が面白（おもしろ）かったから、みんな熱心（ねっしん）に聞（き）いていたわけだ。",
+     "point_answer": "わけだ",
+     "jp_cloze": "授業（じゅぎょう）が面白（おもしろ）かったから、みんな熱心（ねっしん）に聞（き）いていた＿＿。",
+     "distractors": [
+      "ものか",
+      "はずがない",
+      "どころではない"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

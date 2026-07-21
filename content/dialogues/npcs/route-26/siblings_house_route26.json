@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 9 — maison des Frères/sœurs du jour (leçons #1/#3/#5/#7 de route-26) : hub du fil calendaire (carnet-index des 7 emplacements/jours, sourcé). Sa réplique にもとづいて expose N2-122.",
+ "npc_id": "siblings_house_route26",
+ "name": {
+  "jp": "きょうだいの　いえ",
+  "en": "The Siblings' House"
+ },
+ "zone_id": "route-26",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ここは　「ようびきょうだい」の　いえ。7にん　きょうだいの　じっかよ。",
+     "en": "This is the Weekday Siblings' home — all seven of them."
+    },
+    {
+     "jp": "この　ちょうに　もとづいて、みんなの　いばしょが　わかるわ。",
+     "en": "This ledger tells you where each of them is."
+    },
+    {
+     "jp": "げつようは　モニカ、にちようは　サニー…って　ぐあいにね。",
+     "en": "Monica on Mondays, Sunny on Sundays... and so on."
+    }
+   ]
+  }
+ }
+}

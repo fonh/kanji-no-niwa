@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_gaven_route26",
+ "name": {
+  "jp": "エリートトレーナーの　ゲイブン",
+  "en": "Ace Trainer Gaven"
+ },
+ "zone_id": "route-26",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "リーグに　いどむ　ものは、まず　おれを　こえて　いけ！",
+     "en": "Challengers of the League go through me first!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "リーグでも　その　ちからを　だせよ。",
+     "en": "Bring that strength to the League."
+    }
+   ]
+  }
+ }
+}

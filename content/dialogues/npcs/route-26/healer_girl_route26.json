@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 9 — fille qui soigne gratuitement (leçons #2/#4/#6). Le soin = même service que le Centre, mécanique d'implémentation.",
+ "npc_id": "healer_girl_route26",
+ "name": {
+  "jp": "いやしの　おんなのこ",
+  "en": "Healer Girl"
+ },
+ "zone_id": "route-26",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "リーグに　いく　まえに、やすんで　いって。",
+     "en": "Rest here before you head to the League."
+    },
+    {
+     "jp": "つかれた　たびびとに　たいして、うちは　いつでも　ドアを　あけてるの。",
+     "en": "Our door is always open to weary travelers."
+    },
+    {
+     "jp": "はい、これで　げんき　いっぱい！",
+     "en": "There — good as new!"
+    }
+   ]
+  }
+ }
+}

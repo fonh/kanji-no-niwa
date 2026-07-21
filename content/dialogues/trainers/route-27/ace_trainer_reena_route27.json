@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_reena_route27",
+ "name": {
+  "jp": "エリートトレーナーの　リーナ",
+  "en": "Ace Trainer Reena"
+ },
+ "zone_id": "route-27",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ジョウトの　さいなんたんへ　ようこそ。",
+     "en": "Welcome to Johto's southernmost edge."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "さいなんたんの　かぜが　きもちいいでしょ。",
+     "en": "The southern wind feels nice, doesn't it."
+    }
+   ]
+  }
+ }
+}

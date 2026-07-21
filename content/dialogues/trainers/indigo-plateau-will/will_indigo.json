@@ -1,0 +1,44 @@
+{
+ "_note": "Étape 4 Lot 9 — Conseil 4 (examen 70q fixe, vies 7, PRD § Jalons-examens ; « aucune personnalité officielle sourcée, liberté du studio » — caractérisation dérivée des types/rôles canon). Noms d'épreuve créés (les fiches guidebook n'en donnent pas pour la Ligue). Karen porte sa maxime célèbre adaptée aux mots.",
+ "trainer_id": "will_indigo",
+ "name": {
+  "jp": "してんのう　イツキ",
+  "en": "Will"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・心（こころ）の道（みち）",
+  "en": "Trial of the Mind Path"
+ },
+ "zone_id": "indigo-plateau-will",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ようこそ。ぼくは　イツキ。マスクの　したの　すがおは　ひみつだよ。",
+     "en": "Welcome. I am Will. What's under the mask stays secret."
+    },
+    {
+     "jp": "せかいじゅうを　まわって　こころを　きたえた。",
+     "en": "I trained my mind traveling the whole world."
+    },
+    {
+     "jp": "きみの　こころ、よませて　もらう！",
+     "en": "Allow me to read yours!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…よめなかった。きみの　こころは　ぼくより　ふかい。",
+     "en": "...I couldn't read it. Your mind runs deeper than mine."
+    },
+    {
+     "jp": "つぎの　へやへ　どうぞ。",
+     "en": "Proceed to the next room."
+    }
+   ]
+  }
+ }
+}

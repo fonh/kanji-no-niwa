@@ -1,0 +1,57 @@
+{
+ "_note": "Étape 4 Lot 9 — vieille dame des Chutes de Tohjo (leçons #1→#5 de route-27), TM37 (« affection élevée » = flaveur, simplification récurrente). Sa réplique はまだしも expose N2-142.",
+ "npc_id": "tohjo_old_lady_route27",
+ "name": {
+  "jp": "たきの　でぐちの　おばあさん",
+  "en": "Old Lady by the Falls"
+ },
+ "zone_id": "route-27",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "tm37_sandstorm"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "まあまあ、あいぼうと　なかよしなんだねえ。",
+     "en": "My my, what a close pair you two are."
+    },
+    {
+     "jp": "なかよしは　まだしも、そこまで　しんらいしあえるとは　ねえ。",
+     "en": "Being close is one thing — but such deep trust, now that's rare."
+    },
+    {
+     "jp": "ほうびに　これを　あげよう。",
+     "en": "Here's a little reward for you."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "tm37_sandstorm"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "リーグは　もう　すぐ　そこだよ。",
+     "en": "The League is just ahead now."
+    }
+   ]
+  }
+ }
+}

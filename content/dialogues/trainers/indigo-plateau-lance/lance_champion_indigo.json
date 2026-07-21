@@ -1,0 +1,56 @@
+{
+ "_note": "Étape 4 Lot 9 — Lance, combat de Champion (80q fixe, vies 8, PRD). Sa victoire = Hall of Fame (cérémonie par la logique de jeu, credits) + amorce Kanto (billet SS Aqua remis par Elm — passe suivante). Il connaît le joueur (QG d'Acajou, double battle) — continuité respectée.",
+ "trainer_id": "lance_champion_indigo",
+ "name": {
+  "jp": "チャンピオン　ワタル",
+  "en": "Champion Lance"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・頂（いただき）の道（みち）",
+  "en": "Trial of the Summit Path"
+ },
+ "zone_id": "indigo-plateau-lance",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "まって　いたよ。ロケットだんとの　たたかい、みごとだった。",
+     "en": "I've been waiting. Your fight against Team Rocket was magnificent."
+    },
+    {
+     "jp": "わたしは　チャンピオン、ワタル。りゅうの　けんしんだ。",
+     "en": "I am Lance, the Champion — devotee of dragons."
+    },
+    {
+     "jp": "チャンピオンとして、ぜんりょくで　きみを　むかえうつ。",
+     "en": "As Champion, I meet you with everything I have."
+    },
+    {
+     "jp": "さあ…　しんの　けいしょうしゃを　きめよう！",
+     "en": "Now... let us decide the true successor!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…すばらしい。かんぺきな　まけだ。",
+     "en": "...Magnificent. A perfect defeat."
+    },
+    {
+     "jp": "きみは　つよさの　いみを　しって　いる。ちからだけでは　ない、ことばと　こころの　つよさを。",
+     "en": "You know what strength means — not just power, but strength of words and heart."
+    },
+    {
+     "jp": "あたらしい　チャンピオンの　たんじょうだ！　でんどういりの　しるしを　きざもう。",
+     "en": "A new Champion is born! Let us record your name in the Hall of Fame."
+    },
+    {
+     "jp": "エルムはかせも　きっと　よろこぶ。それから…　カントーちほうが　きみを　まって　いる。",
+     "en": "Prof. Elm will be overjoyed. And after this... the Kanto region awaits you."
+    }
+   ]
+  }
+ }
+}

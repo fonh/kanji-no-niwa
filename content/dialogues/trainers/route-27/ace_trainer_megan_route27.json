@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_megan_route27",
+ "name": {
+  "jp": "エリートトレーナーの　メーガン",
+  "en": "Ace Trainer Megan"
+ },
+ "zone_id": "route-27",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "トージョーのたきを　こえて　きたのね。",
+     "en": "So you've crossed the Tohjo Falls."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "たきを　こえる　ちからは　ほんものね。",
+     "en": "The strength to cross those falls is real."
+    }
+   ]
+  }
+ }
+}

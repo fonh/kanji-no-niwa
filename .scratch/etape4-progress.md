@@ -28,13 +28,24 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **26 / 48** écrites (+ 13 zones sans leçon faites, dont routes 45/46)
-- Leçons : **136 / 344** écrites
-- Kanji dotés d'exemples : **760 / 1950**
-- Overlays grammaire : **15 / 48**
-- Textes : **17 écrits** (dont le grand texte d'Elm « 漢字の庭 » ; 7 CS remis, reste 登)
+- Zones : **29 / 48** écrites — **TOUT JOHTO EST CLOS** (29 zones de leçons + 18 sans leçon, Conseil 4 + Lance inclus)
+- Leçons : **155 / 344** écrites
+- Kanji dotés d'exemples : **870 / 1950**
+- Overlays grammaire : **18 / 48**
+- Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-21 — routes 26/27 + Route Victoire + Ligue (Lot 9) — JOHTO CLOS** : routes
+  26/27 — 12 combats ROM, 12 leçons N2-122→128/142→146 (hub des frères/sœurs du jour
+  sourcé = carnet-index du fil calendaire ; vieille dame de Tohjo TM37 ; Porte de
+  Réception est/ouest fermés). Route Victoire — **Silver #6 (24q)**, aboutissement de la
+  rédemption, « a vidé la route » sourcé = zéro autre combat. Antichambre — 7 leçons
+  N2-157→163 (vieil homme au télépathe), règle « pas de sortie sans défaite ».
+  **Conseil 4 en examens 70q** (Will/Koga/Bruno/Karen — « aucune personnalité sourcée,
+  liberté studio » : caractérisations dérivées du canon, noms d'épreuve créés, maxime de
+  Karen adaptée aux mots) enchaînés par npc_cleared, **Lance Champion 80q**
+  (試練・頂の道, Hall of Fame + amorce Kanto). 110 lesson_examples, 19 points d'overlay.
+  5 linters verts (433 fichiers).
 - **2026-07-21 — arc final Kimono + dark-cave + routes 45/46 (Lot 8)** : **grand texte
   d'Elm écrit** (ex-Master Ball R11 — support choisi : le vieux livre 「漢字の庭」,
   texte-titre du jeu, métaphore fondatrice du projet ; gate count(badges_earned, 8),
@@ -178,9 +189,9 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 24 | blackthorn-city | Johto | 15 | 90 | 7 | ✅ fait (+ route-44, ice-path/Sayo/CS 滝 ; Clair refuse le badge) | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 25 | dragons-den | Johto | 10 | 60 | 2 | ✅ fait (quiz du Maître écrit, parchemin du successeur, 印 n°8) | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 26 | dark-cave | Johto | 7 | 40 | 1 | ✅ fait (+ routes 45/46 ; homme du fond, BlackGlasses) | ✅ | ✅ | ✅ | — | ✅ |
-| 27 | route-26 | Johto | 7 | 40 | 2 | ⬜ à faire | · | · | · | · | · |
-| 28 | route-27 | Johto | 5 | 30 | 1 | ⬜ à faire | · | · | · | · | · |
-| 29 | indigo-plateau-antichambre | Johto | 7 | 40 | 1 | ⬜ à faire | · | · | · | · | · |
+| 27 | route-26 | Johto | 7 | 40 | 2 | ✅ fait (hub des frères/sœurs du jour) | ✅ | ✅ | ✅ | — | ✅ |
+| 28 | route-27 | Johto | 5 | 30 | 1 | ✅ fait (Chutes de Tohjo, Porte de Réception) | ✅ | ✅ | ✅ | — | ✅ |
+| 29 | indigo-plateau-antichambre | Johto | 7 | 40 | 1 | ✅ fait (Silver #6, Conseil 4, Lance — JOHTO CLOS) | ✅ | ✅ | ✅ | — | ✅ |
 | 30 | vermilion-city | Kanto | 30 | 180 | 4 | ⬜ à faire | · | · | · | · | · |
 | 31 | route-6-kanto | Kanto | 2 | 10 | 2 | ⬜ à faire | · | · | · | · | · |
 | 32 | saffron-city | Kanto | 24 | 140 | 6 | ⬜ à faire | · | · | · | · | · |

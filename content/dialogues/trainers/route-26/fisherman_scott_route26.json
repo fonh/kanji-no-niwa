@@ -1,0 +1,27 @@
+{
+ "trainer_id": "fisherman_scott_route26",
+ "name": {
+  "jp": "つりびとの　スコット",
+  "en": "Fisherman Scott"
+ },
+ "zone_id": "route-26",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "リーグまえの　さいごの　つりばだぞ、ここは。",
+     "en": "This is the last fishing spot before the League."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "おおものが　リーグへ　むかって　いく…。",
+     "en": "And there goes the biggest catch of all, off to the League..."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 9 — règle « pas de sortie sans défaite » (sourcée).",
+ "npc_id": "league_door_man_antichambre",
+ "name": {
+  "jp": "リーグの　もんばん",
+  "en": "League Doorman"
+ },
+ "zone_id": "indigo-plateau-antichambre",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "この　とびらの　さきは、してんのうの　ま。",
+     "en": "Beyond this door await the Elite Four."
+    },
+    {
+     "jp": "ひとつ　だけ　ルールが　ある。いちど　はいったら、まけるまで　でられない。",
+     "en": "One rule: once you enter, you cannot leave until defeated."
+    },
+    {
+     "jp": "…もしくは、ぜんいんに　かつまでだ。かくごは　いいか？",
+     "en": "...Or until you defeat them all. Are you ready?"
+    }
+   ]
+  }
+ }
+}
