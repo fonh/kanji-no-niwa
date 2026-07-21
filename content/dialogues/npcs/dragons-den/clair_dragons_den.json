@@ -1,0 +1,75 @@
+{
+ "_note": "Étape 4 Lot 7 — Clair fait irruption au sanctuaire (surprise sourcée) et remet enfin le 印 n°8 + TM. Entrée carte gated trial_passed.",
+ "npc_id": "clair_dragons_den",
+ "name": {
+  "jp": "ジムリーダー　イブキ",
+  "en": "Clair"
+ },
+ "zone_id": "dragons-den",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "dragons_den_trial",
+     "step": "badge_received"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "gives_badge"
+  }
+ ],
+ "dialogue_states": {
+  "gives_badge": {
+   "pages": [
+    {
+     "jp": "おさ！　この　こを　みとめたって　ほんとう…！？",
+     "en": "Elder! You truly acknowledged this child...!?"
+    },
+    {
+     "jp": "…そう。おさが　そう　いうなら…。",
+     "en": "...I see. If the Elder says so..."
+    },
+    {
+     "jp": "…はい、ライジングバッジ。これで　まんぞく？",
+     "en": "...Here. The Rising Badge. Satisfied?"
+    },
+    {
+     "jp": "…ごめんなさい。あなたは　つよかった。ほんとうよ。",
+     "en": "...I'm sorry. You were strong. Truly."
+    },
+    {
+     "jp": "ジョウトの　8つの　印（しるし）、おめでとう。",
+     "en": "All eight seals of Johto — congratulations."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_badge",
+     "badge_id": "clair"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "dragons_den_trial",
+     "step_id": "badge_received"
+    },
+    {
+     "type": "grant_item",
+     "item_id": "tm59_dragon_pulse"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "つぎは　リーグね。ワタルに　よろしく。",
+     "en": "The League is next. Give Lance my regards."
+    }
+   ]
+  }
+ }
+}

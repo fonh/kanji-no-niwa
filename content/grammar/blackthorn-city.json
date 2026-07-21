@@ -1,0 +1,471 @@
+{
+ "_note": "Overlay grammaire — Ebènelle, 15 points N2-026→040. Familles をはじめ(29/30/31), をめぐって/をめぐる(32/33), をもとに(34/35) : jamais un membre de la même famille en distracteur d'un autre ; synonymes exclus (にもとづいて pour をもとに, ながら pour つつ, etc.).",
+ "zone_id": "blackthorn-city",
+ "points": [
+  {
+   "grammar_id": "N2-026",
+   "source_index": 25,
+   "title": "Noun につき (〜ni tsuki)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "試験（しけん）につき、今日（きょう）は静（しず）かにしてください。",
+     "point_answer": "につき",
+     "jp_cloze": "試験（しけん）＿＿、今日（きょう）は静（しず）かにしてください。",
+     "distractors": [
+      "にとって",
+      "にかけて",
+      "にわたって"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "このエリアは工事中（こうじちゅう）につき、通行止（つうこうど）めです。",
+     "point_answer": "につき",
+     "jp_cloze": "このエリアは工事中（こうじちゅう）＿＿、通行止（つうこうど）めです。",
+     "distractors": [
+      "にとって",
+      "にかけて",
+      "にわたって"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-027",
+   "source_index": 26,
+   "title": "Noun にて (Noun nite)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "駅前広場（えきまえひろば）にてイベントが開催（かいさい）されます。",
+     "point_answer": "にて",
+     "jp_cloze": "駅前広場（えきまえひろば）＿＿イベントが開催（かいさい）されます。",
+     "distractors": [
+      "へと",
+      "から",
+      "まで"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "ホテルにて会議（かいぎ）が行（おこな）われます。",
+     "point_answer": "にて",
+     "jp_cloze": "ホテル＿＿会議（かいぎ）が行（おこな）われます。",
+     "distractors": [
+      "へと",
+      "から",
+      "まで"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-028",
+   "source_index": 27,
+   "title": "Noun の ことだから (Noun no koto dakara)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "料理（りょうり）が得意（とくい）な彼（かれ）のことだから、美味（おい）しい料理（りょうり）を作（つく）ってくれるでしょう。",
+     "point_answer": "のことだから",
+     "jp_cloze": "料理（りょうり）が得意（とくい）な彼（かれ）＿＿、美味（おい）しい料理（りょうり）を作（つく）ってくれるでしょう。",
+     "distractors": [
+      "のくせに",
+      "のかわりに",
+      "にしては"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "いつも遅刻（ちこく）する彼女（かのじょ）のことだから、今日（きょう）も遅（おく）れるかもしれない。",
+     "point_answer": "のことだから",
+     "jp_cloze": "いつも遅刻（ちこく）する彼女（かのじょ）＿＿、今日（きょう）も遅（おく）れるかもしれない。",
+     "distractors": [
+      "のくせに",
+      "のかわりに",
+      "にしては"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-029",
+   "source_index": 28,
+   "title": "Noun を はじめ (Noun wo hajime)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "日本料理（にほんりょうり）をはじめ、さまざまな料理（りょうり）がこのレストランで楽（たの）しめます。",
+     "point_answer": "をはじめ",
+     "jp_cloze": "日本料理（にほんりょうり）＿＿、さまざまな料理（りょうり）がこのレストランで楽（たの）しめます。",
+     "distractors": [
+      "をこめて",
+      "をとわず",
+      "にかぎって"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）は絵画（かいが）をはじめ、彫刻（ちょうこく）や写真（しゃしん）もコレクションしている。",
+     "point_answer": "をはじめ",
+     "jp_cloze": "彼（かれ）は絵画（かいが）＿＿、彫刻（ちょうこく）や写真（しゃしん）もコレクションしている。",
+     "distractors": [
+      "をこめて",
+      "をとわず",
+      "にかぎって"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-030",
+   "source_index": 29,
+   "title": "Noun を はじめとして (Noun wo hajime to shite)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "東京（とうきょう）をはじめとして、日本（にほん）にはたくさんの観光（かんこう）スポットがあります。",
+     "point_answer": "をはじめとして",
+     "jp_cloze": "東京（とうきょう）＿＿、日本（にほん）にはたくさんの観光（かんこう）スポットがあります。",
+     "distractors": [
+      "をのぞいて",
+      "をとわず",
+      "にはんして"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）は、ピアノをはじめとして、たくさんの楽器（がっき）を演奏（えんそう）できます。",
+     "point_answer": "をはじめとして",
+     "jp_cloze": "彼（かれ）は、ピアノ＿＿、たくさんの楽器（がっき）を演奏（えんそう）できます。",
+     "distractors": [
+      "をのぞいて",
+      "をとわず",
+      "にはんして"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-031",
+   "source_index": 30,
+   "title": "Noun を はじめとする Noun (Noun o hajime to suru Noun)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）はフランス語（ご）をはじめとする外国語（がいこくご）が話（はな）せる。",
+     "point_answer": "をはじめとする",
+     "jp_cloze": "彼（かれ）はフランス語（ご）＿＿外国語（がいこくご）が話（はな）せる。",
+     "distractors": [
+      "をのぞく",
+      "にたいする",
+      "とことなる"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "このコンサートには、BTSをはじめとする人気（にんき）アーティストが出演（しゅつえん）する予定（よてい）です。",
+     "point_answer": "をはじめとする",
+     "jp_cloze": "このコンサートには、BTS＿＿人気（にんき）アーティストが出演（しゅつえん）する予定（よてい）です。",
+     "distractors": [
+      "をのぞく",
+      "にたいする",
+      "とことなる"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-032",
+   "source_index": 31,
+   "title": "Noun を めぐって (Noun wo megutte)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "環境問題（かんきょうもんだい）をめぐって、多（おお）くの議論（ぎろん）が行（おこな）われています。",
+     "point_answer": "をめぐって",
+     "jp_cloze": "環境問題（かんきょうもんだい）＿＿、多（おお）くの議論（ぎろん）が行（おこな）われています。",
+     "distractors": [
+      "をこめて",
+      "をとわず",
+      "にそって"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）の死（し）をめぐって、いくつかの陰謀説（いんぼうせつ）が浮（う）かび上（あ）がっている。",
+     "point_answer": "をめぐって",
+     "jp_cloze": "彼（かれ）の死（し）＿＿、いくつかの陰謀説（いんぼうせつ）が浮（う）かび上（あ）がっている。",
+     "distractors": [
+      "をこめて",
+      "をとわず",
+      "にそって"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-033",
+   "source_index": 32,
+   "title": "Noun を めぐる Noun (Noun o meguru Noun)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この事件（じけん）をめぐる議論（ぎろん）が続（つづ）いています。",
+     "point_answer": "をめぐる",
+     "jp_cloze": "この事件（じけん）＿＿議論（ぎろん）が続（つづ）いています。",
+     "distractors": [
+      "をこめた",
+      "にそった",
+      "をのぞいた"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "環境問題（かんきょうもんだい）をめぐる国際会議（こくさいかいぎ）が開（ひら）かれます。",
+     "point_answer": "をめぐる",
+     "jp_cloze": "環境問題（かんきょうもんだい）＿＿国際会議（こくさいかいぎ）が開（ひら）かれます。",
+     "distractors": [
+      "をこめた",
+      "にそった",
+      "をのぞいた"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-034",
+   "source_index": 33,
+   "title": "Noun を もとに (Noun o moto ni)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この映画（えいが）は実話（じつわ）をもとに作（つく）られました。",
+     "point_answer": "をもとに",
+     "jp_cloze": "この映画（えいが）は実話（じつわ）＿＿作（つく）られました。",
+     "distractors": [
+      "をめざして",
+      "にくらべて",
+      "をとわず"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）の経験（けいけん）をもとにアドバイスが必要（ひつよう）だ。",
+     "point_answer": "をもとに",
+     "jp_cloze": "彼（かれ）の経験（けいけん）＿＿アドバイスが必要（ひつよう）だ。",
+     "distractors": [
+      "をめざして",
+      "にくらべて",
+      "をとわず"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-035",
+   "source_index": 34,
+   "title": "Noun を もとにして (Noun wo moto ni shite)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）の意見（いけん）をもとにして、計画（けいかく）を変更（へんこう）しました。",
+     "point_answer": "をもとにして",
+     "jp_cloze": "彼（かれ）の意見（いけん）＿＿、計画（けいかく）を変更（へんこう）しました。",
+     "distractors": [
+      "をめざして",
+      "にくらべて",
+      "をとわないで"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "この小説（しょうせつ）は実話（じつわ）をもとにして書（か）かれています。",
+     "point_answer": "をもとにして",
+     "jp_cloze": "この小説（しょうせつ）は実話（じつわ）＿＿書（か）かれています。",
+     "distractors": [
+      "をめざして",
+      "にくらべて",
+      "をとわないで"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-036",
+   "source_index": 35,
+   "title": "Verb ことなく (~kotonaku)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼女（かのじょ）は泣（な）くことなく帰（かえ）ってしまいました。",
+     "point_answer": "ことなく",
+     "jp_cloze": "彼女（かのじょ）は泣（な）く＿＿帰（かえ）ってしまいました。",
+     "distractors": [
+      "ことだから",
+      "ことには",
+      "ばかりか"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）は注意（ちゅうい）することなく突然（とつぜん）出（で）かけた。",
+     "point_answer": "ことなく",
+     "jp_cloze": "彼（かれ）は注意（ちゅうい）する＿＿突然（とつぜん）出（で）かけた。",
+     "distractors": [
+      "ことだから",
+      "ことには",
+      "ばかりか"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-037",
+   "source_index": 36,
+   "title": "Verb ないことには Verb ない (~nai koto ni wa ~ nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "薬（くすり）を飲（の）まないことには、病気（びょうき）が治（なお）らない。",
+     "point_answer": "ないことには",
+     "jp_cloze": "薬（くすり）を飲（の）ま＿＿、病気（びょうき）が治（なお）らない。",
+     "distractors": [
+      "ないばかりに",
+      "ないながらも",
+      "ないことだから"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "この問題（もんだい）によく考（かんが）えないことには、解決（かいけつ）できない。",
+     "point_answer": "ないことには",
+     "jp_cloze": "この問題（もんだい）によく考（かんが）え＿＿、解決（かいけつ）できない。",
+     "distractors": [
+      "ないばかりに",
+      "ないながらも",
+      "ないことだから"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-038",
+   "source_index": 37,
+   "title": "～あげく (~ageku)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "長（なが）い時間（じかん）待（ま）ったあげく、電車（でんしゃ）が来（こ）なかった。",
+     "point_answer": "あげく",
+     "jp_cloze": "長（なが）い時間（じかん）待（ま）った＿＿、電車（でんしゃ）が来（こ）なかった。",
+     "distractors": [
+      "とたん",
+      "うちに",
+      "かぎり"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "いろいろな方法（ほうほう）を試（ため）したあげく、成功（せいこう）した。",
+     "point_answer": "あげく",
+     "jp_cloze": "いろいろな方法（ほうほう）を試（ため）した＿＿、成功（せいこう）した。",
+     "distractors": [
+      "とたん",
+      "うちに",
+      "かぎり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-039",
+   "source_index": 38,
+   "title": "～あまり (〜amari)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "昨日（きのう）は疲（つか）れすぎたあまり、朝（あさ）まで眠（ねむ）り続（つづ）けました。",
+     "point_answer": "あまり",
+     "jp_cloze": "昨日（きのう）は疲（つか）れすぎた＿＿、朝（あさ）まで眠（ねむ）り続（つづ）けました。",
+     "distractors": [
+      "かぎり",
+      "うちに",
+      "ばかりか"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼女（かのじょ）はうれしいあまり、泣（な）き出（だ）してしまった。",
+     "point_answer": "あまり",
+     "jp_cloze": "彼女（かのじょ）はうれしい＿＿、泣（な）き出（だ）してしまった。",
+     "distractors": [
+      "かぎり",
+      "うちに",
+      "ばかりか"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-040",
+   "source_index": 39,
+   "title": "～うちに (〜uchi ni)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "元気（げんき）なうちに、旅行（りょこう）を楽（たの）しんでください。",
+     "point_answer": "うちに",
+     "jp_cloze": "元気（げんき）な＿＿、旅行（りょこう）を楽（たの）しんでください。",
+     "distractors": [
+      "ままに",
+      "とおりに",
+      "ばかりに"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "若（わか）いうちに、いろいろなことを学（まな）ぶべきだ。",
+     "point_answer": "うちに",
+     "jp_cloze": "若（わか）い＿＿、いろいろなことを学（まな）ぶべきだ。",
+     "distractors": [
+      "ままに",
+      "とおりに",
+      "ばかりに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

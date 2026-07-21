@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_paulo_blackthorn",
+ "name": {
+  "jp": "エリートトレーナーの　パウロ",
+  "en": "Ace Trainer Paulo"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "さいごの　もんばんは　この　ぼく！",
+     "en": "I'm the last gatekeeper!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "イブキさま…　あとは　おねがいします…。",
+     "en": "Lady Clair... the rest is up to you..."
+    }
+   ]
+  }
+ }
+}

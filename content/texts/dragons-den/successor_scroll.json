@@ -1,0 +1,167 @@
+{
+ "_note": "Étape 4 Lot 7 — le « cadeau de successeur / trophée de texte légendaire » (sourcé) : makimono des préceptes du sanctuaire, débloqué par unlock_text à la réussite du quiz du Maître. Registre volontairement archaïsant (なり/あれ) — usage réservé aux moments narratifs anciens, conforme texts-progressifs § Sources.",
+ "text": {
+  "text_id": "successor_scroll_dragons_den",
+  "title": {
+   "jp": "けいしょうしゃの　まきもの",
+   "en": "The Successor's Scroll"
+  },
+  "jp_text": "りゅうと　ともに　いきた　わたしたちの　おしえを、ここに　のこす。ひとつ、ことばは　ちからなり。ちからは　ふりかざす　ためではなく、まもる　ために　ある。ひとつ、まなびに　おわりなし。きわめたと　おもった　とき、まなびは　しぬ。ひとつ、つよき　ものほど、しずかで　あれ。りゅうが　ほえるのは、たたかいの　ときのみ。この　みっつを　まもる　ものこそ、まことの　けいしょうしゃなり。",
+  "en_text": "Here we leave the teachings of those who lived alongside dragons. One: words are power — power exists not to be brandished, but to protect. One: learning has no end — the moment you believe you have mastered it, learning dies. One: let the strong be quiet — a dragon roars only in battle. Whoever keeps these three is a true successor.",
+  "audio_ref": null,
+  "level": "N2",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "dragons-den",
+  "npc_ref": "elder_master_dragons_den",
+  "found_object_ref": null,
+  "event_ref": null,
+  "length_chars": 189,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　まきものは　なにを　のこして　いますか。",
+     "en": "What does this scroll preserve?"
+    },
+    "options": [
+     {
+      "jp": "りゅうと　いきた　ものたちの　3つの　おしえ。",
+      "en": "Three teachings of those who lived with dragons"
+     },
+     {
+      "jp": "りゅうの　そだてかた。",
+      "en": "How to raise dragons"
+     },
+     {
+      "jp": "ほこらの　ちず。",
+      "en": "A map of the shrine"
+     },
+     {
+      "jp": "けいしょうしゃの　なまえ。",
+      "en": "The successors' names"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "ちからは　なんの　ために　あると　かいて　ありますか。",
+     "en": "According to the scroll, what does power exist for?"
+    },
+    "options": [
+     {
+      "jp": "まもる　ため。",
+      "en": "To protect"
+     },
+     {
+      "jp": "ふりかざす　ため。",
+      "en": "To brandish"
+     },
+     {
+      "jp": "ほこる　ため。",
+      "en": "To boast"
+     },
+     {
+      "jp": "うる　ため。",
+      "en": "To sell"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 48,
+     "end": 76
+    }
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "「きわめたと　おもった　とき、まなびは　しぬ」とは　どういう　ことですか。",
+     "en": "What does 'the moment you believe you have mastered it, learning dies' mean?"
+    },
+    "options": [
+     {
+      "jp": "まなびつづける　こころを　うしなえば、せいちょうが　とまる。",
+      "en": "Lose the will to keep learning, and growth stops"
+     },
+     {
+      "jp": "べんきょうは　からだに　わるい。",
+      "en": "Studying is bad for the body"
+     },
+     {
+      "jp": "きわめる　ことは　ふかのうだ。",
+      "en": "Mastery is impossible"
+     },
+     {
+      "jp": "まなびには　しけんが　ひつようだ。",
+      "en": "Learning requires exams"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 92,
+     "end": 113
+    }
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": {
+     "jp": "「けいしょうしゃ」の　いみは？",
+     "en": "What does 「けいしょうしゃ」 mean?"
+    },
+    "options": [
+     {
+      "jp": "おしえを　うけつぐ　ひと。",
+      "en": "One who inherits the teachings"
+     },
+     {
+      "jp": "けいさんを　する　ひと。",
+      "en": "One who calculates"
+     },
+     {
+      "jp": "けいかくを　たてる　ひと。",
+      "en": "One who makes plans"
+     },
+     {
+      "jp": "けいびを　する　ひと。",
+      "en": "One who stands guard"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "resolution_reference",
+    "prompt": {
+     "jp": "「この　みっつ」は　なにを　さしますか。",
+     "en": "What does 'these three' refer to?"
+    },
+    "options": [
+     {
+      "jp": "まきものの　3つの　おしえ。",
+      "en": "The scroll's three teachings"
+     },
+     {
+      "jp": "3にんの　けいしょうしゃ。",
+      "en": "Three successors"
+     },
+     {
+      "jp": "3びきの　りゅう。",
+      "en": "Three dragons"
+     },
+     {
+      "jp": "3つの　ほこら。",
+      "en": "Three shrines"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 33,
+     "end": 47
+    }
+   }
+  ]
+ }
+}

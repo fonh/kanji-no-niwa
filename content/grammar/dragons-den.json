@@ -1,0 +1,316 @@
+{
+ "_note": "Overlay grammaire — Antre du Dragon, 10 points N2-071→080. たところ/たとたん en distracteurs croisés = LA confusion JLPT classique, assumée (presque-juste faux au vu de la glose EN) ; synonymes stricts exclus (まみれ pour だらけ, ようがない pour っこない, ながら pour つつ, てしかたがない pour てかなわない).",
+ "zone_id": "dragons-den",
+ "points": [
+  {
+   "grammar_id": "N2-071",
+   "source_index": 70,
+   "title": "～たところ (〜ta tokoro)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）に聞（き）いたところ、その質問（しつもん）の答（こた）えは分（わ）からないみたいです。",
+     "point_answer": "たところ",
+     "jp_cloze": "彼（かれ）に聞（き）い＿＿、その質問（しつもん）の答（こた）えは分（わ）からないみたいです。",
+     "distractors": [
+      "たとたん",
+      "るまえに",
+      "たばかりに"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 0,
+     "jp": "掃除（そうじ）したところ、部屋（へや）がずっとキレイになりました。",
+     "point_answer": "たところ",
+     "jp_cloze": "掃除（そうじ）し＿＿、部屋（へや）がずっとキレイになりました。",
+     "distractors": [
+      "たとたん",
+      "るまえに",
+      "たばかりに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-072",
+   "source_index": 71,
+   "title": "～たとたん (〜ta totan)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "ドアを開（あ）けたとたん、雨（あめ）が降（ふ）り始（はじ）めた。",
+     "point_answer": "たとたん",
+     "jp_cloze": "ドアを開（あ）け＿＿、雨（あめ）が降（ふ）り始（はじ）めた。",
+     "distractors": [
+      "たところで",
+      "るうちに",
+      "たかぎりで"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "電話（でんわ）をかけたとたん、バッテリーが切（き）れた。",
+     "point_answer": "たとたん",
+     "jp_cloze": "電話（でんわ）をかけ＿＿、バッテリーが切（き）れた。",
+     "distractors": [
+      "たところで",
+      "るうちに",
+      "たかぎりで"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-073",
+   "source_index": 72,
+   "title": "～だらけ (〜darake)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）の部屋（へや）はゴミだらけだ。",
+     "point_answer": "だらけ",
+     "jp_cloze": "彼（かれ）の部屋（へや）はゴミ＿＿だ。",
+     "distractors": [
+      "がち",
+      "ぎみ",
+      "むけ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "このビーチは岩（いわ）だらけで泳（およ）ぎにくい。",
+     "point_answer": "だらけ",
+     "jp_cloze": "このビーチは岩（いわ）＿＿で泳（およ）ぎにくい。",
+     "distractors": [
+      "がち",
+      "ぎみ",
+      "むけ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-074",
+   "source_index": 73,
+   "title": "～っこない (〜kkonai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "こんなに雪（ゆき）が降（ふ）っているんだから、学校（がっこう）に間（ま）に合（あ）いっこない。",
+     "point_answer": "っこない",
+     "jp_cloze": "こんなに雪（ゆき）が降（ふ）っているんだから、学校（がっこう）に間（ま）に合（あ）い＿＿。",
+     "distractors": [
+      "かねない",
+      "がたい",
+      "がちだ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）は泳（およ）げないので、プールの向（む）こう側（がわ）に泳（およ）いで行（い）きっこない。",
+     "point_answer": "っこない",
+     "jp_cloze": "彼（かれ）は泳（およ）げないので、プールの向（む）こう側（がわ）に泳（およ）いで行（い）き＿＿。",
+     "distractors": [
+      "かねない",
+      "がたい",
+      "がちだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-075",
+   "source_index": 74,
+   "title": "～つつ (〜tsutsu)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）はテレビを見（み）つつ、宿題（しゅくだい）をしていました。",
+     "point_answer": "つつ",
+     "jp_cloze": "彼（かれ）はテレビを見（み）＿＿、宿題（しゅくだい）をしていました。",
+     "distractors": [
+      "ずに",
+      "てから",
+      "るなり"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "最近（さいきん）忙（いそが）しいと思（おも）いつつ、毎日（まいにち）運動（うんどう）を続（つづ）けています。",
+     "point_answer": "つつ",
+     "jp_cloze": "最近（さいきん）忙（いそが）しいと思（おも）い＿＿、毎日（まいにち）運動（うんどう）を続（つづ）けています。",
+     "distractors": [
+      "ずに",
+      "てから",
+      "るなり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-076",
+   "source_index": 75,
+   "title": "～つつある (〜tsutsu aru)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "地球温暖化（ちきゅうおんだんか）は進行（しんこう）しつつある。",
+     "point_answer": "しつつある",
+     "jp_cloze": "地球温暖化（ちきゅうおんだんか）は進行（しんこう）＿＿。",
+     "distractors": [
+      "しっぱなしだ",
+      "しがちだ",
+      "しかねない"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "この町（まち）は急速（きゅうそく）に発展（はってん）しつつある。",
+     "point_answer": "しつつある",
+     "jp_cloze": "この町（まち）は急速（きゅうそく）に発展（はってん）＿＿。",
+     "distractors": [
+      "しっぱなしだ",
+      "しがちだ",
+      "しかねない"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-077",
+   "source_index": 76,
+   "title": "～っぱなし (〜ppanashi)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "窓（まど）を開（あ）けっぱなしにして、部屋（へや）が寒（さむ）くなってしまった。",
+     "point_answer": "っぱなし",
+     "jp_cloze": "窓（まど）を開（あ）け＿＿にして、部屋（へや）が寒（さむ）くなってしまった。",
+     "distractors": [
+      "がち",
+      "ぎみ",
+      "かけ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）は音楽（おんがく）を聴（き）くのが好（す）きで、いつもイヤホンをつけっぱなしです。",
+     "point_answer": "っぱなし",
+     "jp_cloze": "彼（かれ）は音楽（おんがく）を聴（き）くのが好（す）きで、いつもイヤホンをつけ＿＿です。",
+     "distractors": [
+      "がち",
+      "ぎみ",
+      "かけ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-078",
+   "source_index": 77,
+   "title": "～っぽい (〜ppoi)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼女（かのじょ）は大人（おとな）っぽい服（ふく）を着（き）ている。",
+     "point_answer": "っぽい",
+     "jp_cloze": "彼女（かのじょ）は大人（おとな）＿＿服（ふく）を着（き）ている。",
+     "distractors": [
+      "だらけの",
+      "まみれの",
+      "ぎみの"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "この説明（せつめい）は分（わ）かりにくっぽい。",
+     "point_answer": "っぽい",
+     "jp_cloze": "この説明（せつめい）は分（わ）かりにく＿＿。",
+     "distractors": [
+      "だらけ",
+      "まみれ",
+      "ぎみ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-079",
+   "source_index": 78,
+   "title": "～ていられない (〜te irarenai)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "寒（さむ）すぎて、外（そと）で待（ま）っていられない。",
+     "point_answer": "ていられない",
+     "jp_cloze": "寒（さむ）すぎて、外（そと）で待（ま）っ＿＿。",
+     "distractors": [
+      "てばかりだ",
+      "たままだ",
+      "たきりだ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 0,
+     "jp": "こんなに忙（いそが）しいのに、無理（むり）に遊（あそ）んでいられない。",
+     "point_answer": "でいられない",
+     "jp_cloze": "こんなに忙（いそが）しいのに、無理（むり）に遊（あそ）ん＿＿。",
+     "distractors": [
+      "でばかりだ",
+      "だままだ",
+      "だきりだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-080",
+   "source_index": 79,
+   "title": "～てかなわない (〜te kanawanai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "こんなに暑（あつ）くてかなわない。",
+     "point_answer": "てかなわない",
+     "jp_cloze": "こんなに暑（あつ）く＿＿。",
+     "distractors": [
+      "てはならない",
+      "てまでも",
+      "てからでないと"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）の話（はなし）は失礼（しつれい）すぎてかなわない。",
+     "point_answer": "てかなわない",
+     "jp_cloze": "彼（かれ）の話（はなし）は失礼（しつれい）すぎ＿＿。",
+     "distractors": [
+      "てはならない",
+      "てまでも",
+      "てからでないと"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

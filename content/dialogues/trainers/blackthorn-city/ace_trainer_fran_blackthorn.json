@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_fran_blackthorn",
+ "name": {
+  "jp": "エリートトレーナーの　フラン",
+  "en": "Ace Trainer Fran"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "イブキさまの　しれんは　ジョウトいち　きびしいわよ。",
+     "en": "Clair's trial is the harshest in Johto."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あなたなら　たえられるかも。",
+     "en": "Maybe you can withstand it."
+    }
+   ]
+  }
+ }
+}

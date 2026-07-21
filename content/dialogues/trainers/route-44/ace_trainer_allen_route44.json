@@ -1,0 +1,31 @@
+{
+ "trainer_id": "ace_trainer_allen_route44",
+ "name": {
+  "jp": "エリートトレーナーの　アレン",
+  "en": "Ace Trainer Allen"
+ },
+ "zone_id": "route-44",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "8つめの　バッジが　ほしいんだろ？",
+     "en": "After your eighth badge, are you?"
+    },
+    {
+     "jp": "その　みちの　けわしさ、おしえて　やる！",
+     "en": "Let me show you how steep that road is!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "けわしい　みちを　いく　しかくが　あるな。",
+     "en": "You've earned the right to walk that road."
+    }
+   ]
+  }
+ }
+}

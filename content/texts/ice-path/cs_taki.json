@@ -1,0 +1,137 @@
+{
+ "_note": "Étape 4 Lot 7 — texte obligatoire de remise du CS-Kanji 滝 (piédestal du puzzle de glace). Pattern des 6 précédents. Seuil N=35.",
+ "text": {
+  "text_id": "cs_taki_ice_path",
+  "title": {
+   "jp": "滝（たき）を　のぼる　もの",
+   "en": "That Which Climbs the Waterfall"
+  },
+  "jp_text": "滝（たき）は　うえから　したへ　おちる　もの。だれもが　そう　おもって　います。けれど、さかなは　ちがいます。さかなは　滝（たき）を　のぼるのです。ながれに　さからうのではなく、ながれの　なかの　しずかな　みちを　みつけて。あなたも　その　みちを　みつけられたら、どんな　滝（たき）も　のぼれるでしょう。",
+  "en_text": "A waterfall falls from high to low — everyone believes so. But fish are different. Fish climb the waterfall. Not by fighting the current, but by finding the quiet path within it. If you too can find that path, you will climb any waterfall.",
+  "audio_ref": null,
+  "level": "N2",
+  "source": "original",
+  "tier": "obligatoire",
+  "zone_id": "ice-path",
+  "npc_ref": null,
+  "found_object_ref": "cs_taki_pedestal_ice_path",
+  "event_ref": "cs_taki_ice_path",
+  "length_chars": 152,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　はなしの　いいたい　ことは？",
+     "en": "What is the main point?"
+    },
+    "options": [
+     {
+      "jp": "ながれの　なかの　しずかな　みちを　みつければ、滝（たき）も　のぼれる。",
+      "en": "Find the quiet path within the current, and you can climb even a waterfall"
+     },
+     {
+      "jp": "滝（たき）には　ちかづくな。",
+      "en": "Stay away from waterfalls"
+     },
+     {
+      "jp": "さかなは　つよい　どうぶつだ。",
+      "en": "Fish are strong animals"
+     },
+     {
+      "jp": "みずは　うえから　したに　おちる。",
+      "en": "Water falls from high to low"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "さかなは　どうやって　滝（たき）を　のぼりますか。",
+     "en": "How do fish climb the waterfall?"
+    },
+    "options": [
+     {
+      "jp": "ながれの　なかの　しずかな　みちを　みつけて。",
+      "en": "By finding the quiet path within the current"
+     },
+     {
+      "jp": "ながれに　ちからで　さからって。",
+      "en": "By fighting the current with force"
+     },
+     {
+      "jp": "かぜに　のって。",
+      "en": "By riding the wind"
+     },
+     {
+      "jp": "よるに　なってから。",
+      "en": "By waiting for nightfall"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 89,
+     "end": 111
+    }
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "「その　みち」を　みつけるとは、どういう　ことだと　おもいますか。",
+     "en": "What does 'finding that path' suggest?"
+    },
+    "options": [
+     {
+      "jp": "むりに　あらそわず、じぶんに　あった　やりかたを　みつける　こと。",
+      "en": "Finding your own way forward without forcing a struggle"
+     },
+     {
+      "jp": "いちばん　はやい　みちを　えらぶ　こと。",
+      "en": "Choosing the fastest route"
+     },
+     {
+      "jp": "だれかの　あとを　ついて　いく　こと。",
+      "en": "Following in someone's footsteps"
+     },
+     {
+      "jp": "みずを　ぜんぶ　とめる　こと。",
+      "en": "Stopping the water entirely"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "resolution_reference",
+    "prompt": {
+     "jp": "「そう　おもって　います」の「そう」は　なにを　さしますか。",
+     "en": "What does 「そう」 refer to?"
+    },
+    "options": [
+     {
+      "jp": "滝（たき）は　うえから　したへ　おちる　もの、という　かんがえ。",
+      "en": "The idea that waterfalls fall from high to low"
+     },
+     {
+      "jp": "さかなは　滝（たき）を　のぼる、という　かんがえ。",
+      "en": "The idea that fish climb waterfalls"
+     },
+     {
+      "jp": "みちは　みつからない、という　かんがえ。",
+      "en": "The idea that the path cannot be found"
+     },
+     {
+      "jp": "ながれは　しずかだ、という　かんがえ。",
+      "en": "The idea that the current is quiet"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 0,
+     "end": 22
+    }
+   }
+  ]
+ }
+}

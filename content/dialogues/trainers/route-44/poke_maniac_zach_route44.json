@@ -1,0 +1,31 @@
+{
+ "trainer_id": "poke_maniac_zach_route44",
+ "name": {
+  "jp": "かいじゅうマニアの　ザック",
+  "en": "Poké Maniac Zach"
+ },
+ "zone_id": "route-44",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "こおりの　どうくつの　てまえで　ねばってるんだ。",
+     "en": "I've been camped out before the icy cave."
+    },
+    {
+     "jp": "ねばりづよさなら　まけない！",
+     "en": "Nobody out-stubborns me!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ねばりまけした…。",
+     "en": "Out-stubborned..."
+    }
+   ]
+  }
+ }
+}

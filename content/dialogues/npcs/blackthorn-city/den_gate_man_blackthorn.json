@@ -1,0 +1,52 @@
+{
+ "_note": "Étape 4 Lot 7 — gardien de l'Antre (unlock = envoyé par Clair, pas le badge — fidèle : le badge vient APRÈS l'épreuve).",
+ "npc_id": "den_gate_man_blackthorn",
+ "name": {
+  "jp": "りゅうのあなの　ばんにん",
+  "en": "Dragon's Den Gatekeeper"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "dragons_den_trial",
+     "step": "sent_to_den"
+    }
+   ],
+   "state": "open"
+  },
+  {
+   "default": true,
+   "state": "blocking"
+  }
+ ],
+ "dialogue_states": {
+  "blocking": {
+   "pages": [
+    {
+     "jp": "この　さきは　りゅうの　あな。りゅうつかいの　せいち だ。",
+     "en": "Beyond lies the Dragon's Den — sacred ground of the Dragon Tamers."
+    },
+    {
+     "jp": "イブキさまの　みとめた　ものしか　とおせん。",
+     "en": "Only those Lady Clair acknowledges may pass."
+    }
+   ]
+  },
+  "open": {
+   "pages": [
+    {
+     "jp": "イブキさまから　はなしは　きいた。とおりなさい。",
+     "en": "Lady Clair told me of you. You may pass."
+    },
+    {
+     "jp": "ほこらの　おさに　れいを　つくすのだぞ。",
+     "en": "Mind your manners before the Shrine Elder."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_lola_blackthorn",
+ "name": {
+  "jp": "エリートトレーナーの　ローラ",
+  "en": "Ace Trainer Lola"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "8ばんめの　とびらを　たたく　しかく、みせて　もらうわ。",
+     "en": "Show me you've the right to knock on the eighth door."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "しかく　じゅうぶんね。",
+     "en": "Right well earned."
+    }
+   ]
+  }
+ }
+}

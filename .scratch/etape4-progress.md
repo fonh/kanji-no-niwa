@@ -28,13 +28,26 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **23 / 48** écrites (+ 9 zones sans leçon faites, dont mt-mortar)
-- Leçons : **104 / 344** écrites
-- Kanji dotés d'exemples : **570 / 1950**
-- Overlays grammaire : **12 / 48**
-- Textes : **12 écrits** (dont 6 remises de CS : 砕・切・水・飛・力・渦)
+- Zones : **25 / 48** écrites (+ 11 zones sans leçon faites, dont route-44 et ice-path)
+- Leçons : **129 / 344** écrites
+- Kanji dotés d'exemples : **720 / 1950**
+- Overlays grammaire : **14 / 48**
+- Textes : **16 écrits** (dont 7 remises de CS : 砕・切・水・飛・力・渦・滝 — reste 登)
 
 ### Journal
+- **2026-07-21 — route-44 + ice-path + blackthorn + dragons-den (Lot 7)** : route-44 — 7
+  combats ROM. ice-path — **Sayo, 5ᵉ Kimono** (scène comique sourcée, 5/5 rencontrées),
+  **CS 滝 au piédestal du puzzle de glissades** (+ texte obligatoire ; event
+  ice_path_puzzle_solved, audit 02), quête optionnelle « Retardataires » (2 sbires
+  post-dissolution + note d'adieu d'Archer en texte de lore). blackthorn — 15 leçons
+  N2-026→040 sur 7 PNJ sourcés (adaptations : tuteurs de capacités → enseignants de
+  lectures ; Santos du samedi), 5 gardiens 20q, **Clair 72q 試練・竜の道 qui REFUSE le
+  badge** (fidèle) → quête dragons_den_trial. dragons-den — 10 leçons N2-071→080 (Maître
+  ×5, vieillards ×5), 3 combats, **quiz d'empathie du Maître écrit** (5 questions absentes
+  de la source, rédigées : apprendre/protéger/perdre/compagnons/servir), lignée
+  Clair/Lance/Maître sourcée, **parchemin du successeur** (unlock_text, registre
+  archaïsant conforme texts-progressifs), Clair remet le 印 n°8 au sanctuaire. 150
+  lesson_examples, 25 points d'overlay (50 exemples). 5 linters verts (386 fichiers).
 - **2026-07-21 — arc Tour Radio, Doublonville revisite (Lot 6)** : l'événement Rocket 3/3
   différé du Lot 2, complet — quête **radio_tower_takeover** en 7 étapes (occupation →
   déguisement forcé au Tunnel → Silver démasque (scène ; il cherche Lance) → Petrel-faux-
@@ -150,8 +163,8 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 21 | mahogany-town | Johto | 5 | 25 | 5 | ✅ fait (arc QG Rocket complet, Pryce, CS 渦) | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 22 | route-43 | Johto | 1 | 5 | 1 | ✅ fait | ✅ | ✅ | ✅ | — | ✅ |
 | 23 | lake-of-rage | Johto | 1 | 5 | 1 | ✅ fait (kanji 怒 shiny, Lance, écaille rouge) | ✅ | ✅ | ✅ | — | ✅ |
-| 24 | blackthorn-city | Johto | 15 | 90 | 7 | ⬜ à faire | · | · | · | · | · |
-| 25 | dragons-den | Johto | 10 | 60 | 2 | ⬜ à faire | · | · | · | · | · |
+| 24 | blackthorn-city | Johto | 15 | 90 | 7 | ✅ fait (+ route-44, ice-path/Sayo/CS 滝 ; Clair refuse le badge) | ✅ | ✅ | ✅ | ✅ | ✅ |
+| 25 | dragons-den | Johto | 10 | 60 | 2 | ✅ fait (quiz du Maître écrit, parchemin du successeur, 印 n°8) | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 26 | dark-cave | Johto | 7 | 40 | 1 | ⬜ à faire | · | · | · | · | · |
 | 27 | route-26 | Johto | 7 | 40 | 2 | ⬜ à faire | · | · | · | · | · |
 | 28 | route-27 | Johto | 5 | 30 | 1 | ⬜ à faire | · | · | · | · | · |

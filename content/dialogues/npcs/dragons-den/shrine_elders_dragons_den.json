@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 7 — les autres vieillards du sanctuaire (leçons #2/#4/#6/#8/#10), corroborent la lignée (sourcé).",
+ "npc_id": "shrine_elders_dragons_den",
+ "name": {
+  "jp": "ほこらの　ろうじんたち",
+  "en": "The Shrine Elders"
+ },
+ "zone_id": "dragons-den",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "おさは　ワタルと　イブキの　おじいさまじゃよ。",
+     "en": "The Master is grandfather to Lance and Clair, you know."
+    },
+    {
+     "jp": "ふたりが　こどもの　ころから、この　ほこらで　きたえて　きなさった。",
+     "en": "He trained them both here at the shrine since they were children."
+    }
+   ]
+  }
+ }
+}

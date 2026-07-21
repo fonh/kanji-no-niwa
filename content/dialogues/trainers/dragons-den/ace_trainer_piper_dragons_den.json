@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_piper_dragons_den",
+ "name": {
+  "jp": "エリートトレーナーの　パイパー",
+  "en": "Ace Trainer Piper"
+ },
+ "zone_id": "dragons-den",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ほこらの　てまえで　ちからだめしよ！",
+     "en": "A test of strength before the shrine!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ほこらに　ふさわしい　ちからね。",
+     "en": "Strength worthy of the shrine."
+    }
+   ]
+  }
+ }
+}

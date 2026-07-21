@@ -1,0 +1,95 @@
+{
+ "_note": "Étape 4 Lot 7 — le Maître (leçons #1/#3/#5/#7/#9). Les 5 questions du quiz d'empathie ne sont pas transcrites par la source (« à écrire entièrement ») — écrites ici, adaptées au thème du jeu (apprendre/protéger/perdre/compagnons/servir). Les réponses du joueur sont narratives (didascalie « …… ») — un rendu interactif type companion_choice reste possible à l'implémentation, noté. Révélation de la lignée (grand-père de Clair/Lance) sourcée. Le « cadeau de successeur » = makimono (unlock_text successor_scroll_dragons_den, trophée de texte légendaire).",
+ "npc_id": "elder_master_dragons_den",
+ "name": {
+  "jp": "ほこらの　おさ",
+  "en": "The Shrine Elder"
+ },
+ "zone_id": "dragons-den",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "dragons_den_trial",
+     "step": "trial_passed"
+    }
+   ],
+   "state": "acknowledged"
+  },
+  {
+   "default": true,
+   "state": "trial"
+  }
+ ],
+ "dialogue_states": {
+  "trial": {
+   "pages": [
+    {
+     "jp": "よく　きた、わかい　ひと。イブキから　きいて　おるよ。",
+     "en": "Welcome, young one. Clair has told me of you."
+    },
+    {
+     "jp": "これより　5つの　といを　たてる。かざらず、こたえなさい。",
+     "en": "I shall now pose five questions. Answer without pretense."
+    },
+    {
+     "jp": "ひとつ。あなたに　とって、まなぶとは　なにか。",
+     "en": "One: what is learning, to you?"
+    },
+    {
+     "jp": "ふたつ。つよさとは、なにを　まもる　ための　ものか。",
+     "en": "Two: what is strength meant to protect?"
+    },
+    {
+     "jp": "みっつ。まけた　とき、あなたは　なにを　するか。",
+     "en": "Three: when you lose, what do you do?"
+    },
+    {
+     "jp": "よっつ。ともに　あゆむ　ものを、どう　おもうか。",
+     "en": "Four: how do you regard those who walk beside you?"
+    },
+    {
+     "jp": "いつつ。まなんだ　ことばを、なんの　ために　つかうか。",
+     "en": "Five: for what purpose will you use the words you've learned?"
+    },
+    {
+     "jp": "……。",
+     "en": "......"
+    },
+    {
+     "jp": "…よい　めを　して　おる。ことばに　うそが　ない。",
+     "en": "...You have honest eyes. There is no falsehood in your words."
+    },
+    {
+     "jp": "あなたを　みとめよう。この　まきものを　さずける。",
+     "en": "I acknowledge you. I bestow upon you this scroll."
+    }
+   ],
+   "effects": [
+    {
+     "type": "unlock_text",
+     "text_id": "successor_scroll_dragons_den"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "dragons_den_trial",
+     "step_id": "trial_passed"
+    }
+   ]
+  },
+  "acknowledged": {
+   "pages": [
+    {
+     "jp": "イブキも、ワタルも、わしの　まごでな。",
+     "en": "Clair and Lance are both my grandchildren, you know."
+    },
+    {
+     "jp": "ふたりとも、あなたから　まなぶ　ことが　あろう。",
+     "en": "They both have things to learn from you."
+    }
+   ]
+  }
+ }
+}

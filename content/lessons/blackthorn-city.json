@@ -1,0 +1,212 @@
+[
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "move_tutor_blackthorn",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "分",
+   "半",
+   "南",
+   "友",
+   "古",
+   "外"
+  ],
+  "grammar_id": "N2-026"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "wilma_blackthorn",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "多",
+   "少",
+   "新",
+   "書",
+   "来",
+   "東"
+  ],
+  "grammar_id": "N2-027"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "move_maniac_blackthorn",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "社",
+   "聞",
+   "言",
+   "間",
+   "電",
+   "安"
+  ],
+  "grammar_id": "N2-028"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "move_deleter_blackthorn",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "飲",
+   "字",
+   "早",
+   "村",
+   "林",
+   "正"
+  ],
+  "grammar_id": "N2-029"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "effort_girl_blackthorn",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "犬",
+   "赤",
+   "青",
+   "音",
+   "元",
+   "兄"
+  ],
+  "grammar_id": "N2-030"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "local_boy_blackthorn",
+  "sequence_index": 6,
+  "kanji_ids": [
+   "台",
+   "合",
+   "同",
+   "回",
+   "地",
+   "場"
+  ],
+  "grammar_id": "N2-031"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "santos_blackthorn",
+  "sequence_index": 7,
+  "kanji_ids": [
+   "声",
+   "売",
+   "太",
+   "市",
+   "引",
+   "弟"
+  ],
+  "grammar_id": "N2-032"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "move_tutor_blackthorn",
+  "sequence_index": 8,
+  "kanji_ids": [
+   "弱",
+   "強",
+   "思",
+   "明",
+   "春",
+   "曜"
+  ],
+  "grammar_id": "N2-033"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "wilma_blackthorn",
+  "sequence_index": 9,
+  "kanji_ids": [
+   "朝",
+   "楽",
+   "歌",
+   "海",
+   "秋",
+   "紙"
+  ],
+  "grammar_id": "N2-034"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "move_maniac_blackthorn",
+  "sequence_index": 10,
+  "kanji_ids": [
+   "自",
+   "走",
+   "近",
+   "頭",
+   "主",
+   "事"
+  ],
+  "grammar_id": "N2-035"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "move_deleter_blackthorn",
+  "sequence_index": 11,
+  "kanji_ids": [
+   "仕",
+   "勉",
+   "去",
+   "品",
+   "問",
+   "急"
+  ],
+  "grammar_id": "N2-036"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "effort_girl_blackthorn",
+  "sequence_index": 12,
+  "kanji_ids": [
+   "所",
+   "旅",
+   "族",
+   "有",
+   "服",
+   "洋"
+  ],
+  "grammar_id": "N2-037"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "local_boy_blackthorn",
+  "sequence_index": 13,
+  "kanji_ids": [
+   "物",
+   "県",
+   "着",
+   "終",
+   "者",
+   "転"
+  ],
+  "grammar_id": "N2-038"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "santos_blackthorn",
+  "sequence_index": 14,
+  "kanji_ids": [
+   "軽",
+   "銀",
+   "開",
+   "集",
+   "館",
+   "不"
+  ],
+  "grammar_id": "N2-039"
+ },
+ {
+  "zone_id": "blackthorn-city",
+  "npc_ref": "move_tutor_blackthorn",
+  "sequence_index": 15,
+  "kanji_ids": [
+   "以",
+   "好",
+   "料",
+   "民",
+   "産",
+   "験"
+  ],
+  "grammar_id": "N2-040"
+ }
+]

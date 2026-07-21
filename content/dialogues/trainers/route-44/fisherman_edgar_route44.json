@@ -1,0 +1,31 @@
+{
+ "trainer_id": "fisherman_edgar_route44",
+ "name": {
+  "jp": "つりびとの　エドガー",
+  "en": "Fisherman Edgar"
+ },
+ "zone_id": "route-44",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　いけの　さかなは　つめたい　みずで　きたえられてる。",
+     "en": "The fish in this pond are toughened by cold water."
+    },
+    {
+     "jp": "つりびとも　おなじさ！",
+     "en": "Same goes for the fishermen!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きたえなおして　くる…。",
+     "en": "Back to toughening up..."
+    }
+   ]
+  }
+ }
+}

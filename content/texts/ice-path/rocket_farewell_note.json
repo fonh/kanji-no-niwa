@@ -1,0 +1,107 @@
+{
+ "_note": "Étape 4 Lot 7 — texte de lore de la quête optionnelle « Retardataires » (P-7, reward lore entry). Note d'adieu d'Archer, trouvée après la défaite des 2 derniers sbires (found_object gated npc_cleared ×2).",
+ "text": {
+  "text_id": "rocket_farewell_note_ice_path",
+  "title": {
+   "jp": "さいごの　めいれい",
+   "en": "The Final Order"
+  },
+  "jp_text": "だんいんの　みんなへ。ながい　あいだ、ごくろうだった。サカキさまは　もどらない。ゆめは　おわった。それぞれの　まちへ　かえり、それぞれの　いきかたを　さがして　ほしい。ぬすんだ　ものは　かえせ。あやまれる　ものには　あやまれ。それが　さいごの　めいれいだ。──アポロ",
+  "en_text": "To all members: you have served long and well. Lord Giovanni is not coming back. The dream is over. Return to your towns and find your own ways to live. Return what was stolen. Apologize where apology is owed. That is my final order. — Archer",
+  "audio_ref": null,
+  "level": "N2",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "ice-path",
+  "npc_ref": null,
+  "found_object_ref": "farewell_note_ice_path",
+  "event_ref": null,
+  "length_chars": 133,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　てがみは　なんの　ために　かかれましたか。",
+     "en": "Why was this letter written?"
+    },
+    "options": [
+     {
+      "jp": "かいさんした　だんいんに　さいごの　めいれいを　つたえる　ため。",
+      "en": "To give the disbanded members a final order"
+     },
+     {
+      "jp": "サカキを　よびもどす　ため。",
+      "en": "To call Giovanni back"
+     },
+     {
+      "jp": "あたらしい　だんいんを　あつめる　ため。",
+      "en": "To recruit new members"
+     },
+     {
+      "jp": "たからの　ばしょを　しらせる　ため。",
+      "en": "To reveal a treasure's location"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "アポロの　さいごの　めいれいは　なんですか。",
+     "en": "What is Archer's final order?"
+    },
+    "options": [
+     {
+      "jp": "ぬすんだ　ものを　かえし、あやまれる　ものには　あやまる　こと。",
+      "en": "Return what was stolen and apologize where owed"
+     },
+     {
+      "jp": "さいごまで　たたかう　こと。",
+      "en": "To fight to the end"
+     },
+     {
+      "jp": "あたらしい　ボスを　えらぶ　こと。",
+      "en": "To choose a new boss"
+     },
+     {
+      "jp": "とうに　あつまる　こと。",
+      "en": "To gather at the tower"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 84,
+     "end": 112
+    }
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "この　てがみから、アポロの　きもちとして　ただしいのは？",
+     "en": "What does the letter suggest about Archer's feelings?"
+    },
+    "options": [
+     {
+      "jp": "ゆめの　おわりを　うけいれ、だんいんの　これからを　あんじて　いる。",
+      "en": "He accepts the dream's end and worries for his members' futures"
+     },
+     {
+      "jp": "まだ　ふっかつを　あきらめて　いない。",
+      "en": "He hasn't given up on a revival"
+     },
+     {
+      "jp": "だんいんを　にくんで　いる。",
+      "en": "He despises his members"
+     },
+     {
+      "jp": "なにも　かんじて　いない。",
+      "en": "He feels nothing at all"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   }
+  ]
+ }
+}

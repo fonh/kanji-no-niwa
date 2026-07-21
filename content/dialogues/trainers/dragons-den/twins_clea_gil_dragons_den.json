@@ -1,0 +1,31 @@
+{
+ "trainer_id": "twins_clea_gil_dragons_den",
+ "name": {
+  "jp": "ふたごちゃんの　クレアと　ギル",
+  "en": "Twins Clea & Gil"
+ },
+ "zone_id": "dragons-den",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "「りゅうの　あなの」",
+     "en": "\"We are the Den's\""
+    },
+    {
+     "jp": "「ちいさな　ばんにん！」",
+     "en": "\"littlest gatekeepers!\""
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "「まけちゃった」「おさに　いいつけよっと」",
+     "en": "\"We lost.\" \"Let's tattle to the Elder.\""
+    }
+   ]
+  }
+ }
+}

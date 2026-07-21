@@ -1,0 +1,53 @@
+{
+ "_note": "Étape 4 Lot 7 — Santos du samedi (leçons #7/#14 ; fratrie calendaire, time_window samedi sur l'entrée carte). Soft Sand.",
+ "npc_id": "santos_blackthorn",
+ "name": {
+  "jp": "サントス",
+  "en": "Santos"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "soft_sand"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ぼく、サントス。どようびだけ　ここに　くるんだ。",
+     "en": "I'm Santos. I only come here on Saturdays."
+    },
+    {
+     "jp": "どようびの　きねんに、これを　どうぞ！",
+     "en": "Here — a little Saturday keepsake!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "soft_sand"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "また　どようびに　ね！",
+     "en": "See you next Saturday!"
+    }
+   ]
+  }
+ }
+}

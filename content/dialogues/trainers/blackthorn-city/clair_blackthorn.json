@@ -1,0 +1,59 @@
+{
+ "_note": "Étape 4 Lot 7 — 8ᵉ 師範, examen 試練・竜の道 (longueur 72, vies 8 — la plus dure de Johto, dépasse légèrement le premier E4, accepté au PRD). FIDÉLITÉ CLEF : Clair REFUSE de remettre le badge à sa défaite et envoie au sanctuaire (post_battle → advance sent_to_den, AUCUN grant_badge ici — le badge vient de clair_dragons_den après le quiz du Maître).",
+ "trainer_id": "clair_blackthorn",
+ "name": {
+  "jp": "ジムリーダー　イブキ",
+  "en": "Clair"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・竜（りゅう）の道（みち）",
+  "en": "Trial of the Dragon Path"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "わたしは　イブキ。せかいいちの　りゅうつかい。",
+     "en": "I am Clair — the world's greatest dragon master."
+    },
+    {
+     "jp": "ワタルと　ならぶ　ものと　いわれるのは、この　わたしだけ。",
+     "en": "I alone am said to stand beside Lance."
+    },
+    {
+     "jp": "あなたていどの　トレーナーに、まける　わけには　いかないの！",
+     "en": "I simply cannot afford to lose to the likes of you!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…まけた？　この　わたしが？",
+     "en": "...I lost? I... lost?"
+    },
+    {
+     "jp": "…みとめない。みとめないわ！",
+     "en": "...I don't accept it. I won't!"
+    },
+    {
+     "jp": "バッジが　ほしければ、りゅうの　あなの　ほこらへ　いきなさい。",
+     "en": "If you want the badge, go to the shrine in the Dragon's Den."
+    },
+    {
+     "jp": "おさに　みとめられたら…　かんがえて　あげる。",
+     "en": "If the Elder acknowledges you... I'll consider it."
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "dragons_den_trial",
+     "step_id": "sent_to_den"
+    }
+   ]
+  }
+ }
+}

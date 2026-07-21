@@ -1,0 +1,38 @@
+{
+ "_note": "Étape 4 Lot 7 — l'épreuve de l'Antre du Dragon : Clair bat... euh, est battue au gym mais refuse le badge et envoie le joueur au sanctuaire ; le Maître (grand-père de Clair et Lance) fait passer le quiz d'empathie en 5 questions (non transcrites par la source — écrites ici) ; Clair fait irruption et remet enfin le 印 n°8.",
+ "quest_id": "dragons_den_trial",
+ "name": {
+  "jp": "りゅうの　ほこらの　しれん",
+  "en": "The Trial of the Dragon Shrine"
+ },
+ "zone_ids": [
+  "blackthorn-city",
+  "dragons-den"
+ ],
+ "steps": [
+  {
+   "step_id": "sent_to_den",
+   "label": {
+    "jp": "イブキに　かったのに、バッジを　もらえなかった。りゅうの　あなの　ほこらで　みとめて　もらえと　いう。",
+    "en": "I beat Clair, but she refused me the badge. She says the shrine in the Dragon's Den must approve me."
+   },
+   "target_zone_id": "dragons-den"
+  },
+  {
+   "step_id": "trial_passed",
+   "label": {
+    "jp": "ほこらの　おさの　5つの　といに　こたえた。みとめられた！",
+    "en": "I answered the Elder's five questions. I have been acknowledged!"
+   },
+   "target_zone_id": "dragons-den"
+  },
+  {
+   "step_id": "badge_received",
+   "label": {
+    "jp": "イブキから　ライジングバッジを　うけとった。ジョウトの　8つの　印（しるし）が　そろった！",
+    "en": "Clair gave me the Rising Badge. All eight Johto seals are mine!"
+   },
+   "target_zone_id": "dragons-den"
+  }
+ ]
+}

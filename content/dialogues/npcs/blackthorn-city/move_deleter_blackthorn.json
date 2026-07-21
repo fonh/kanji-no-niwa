@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 7 — Effaceur (leçons #4/#11). Sa réplique ことなく expose N2-036.",
+ "npc_id": "move_deleter_blackthorn",
+ "name": {
+  "jp": "わざわすれの　おとこ",
+  "en": "Move Deleter"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "わしは　わすれさせる　ほう。にいさんとは　はんたいの　しごとさ。",
+     "en": "I make folks forget — opposite trade to my brother's."
+    },
+    {
+     "jp": "だが　あんしんしな。ほんとうに　みに　ついた　ものは、わすれる　ことなく　のこる。",
+     "en": "But rest easy: what's truly learned stays, never to be forgotten."
+    }
+   ]
+  }
+ }
+}

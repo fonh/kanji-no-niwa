@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 7 — quête Rocket optionnelle « Retardataires » (P-7) : deux derniers sbires errants post-dissolution. Leur défaite débloque la note d'adieu (texte de lore, found_object rocket_farewell_note_ice_path).",
+ "trainer_id": "rocket_straggler1_ice_path",
+ "name": {
+  "jp": "ロケットだんの　ざんとう",
+  "en": "Rocket Straggler"
+ },
+ "zone_id": "ice-path",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "だんは　かいさんした…　でも　おれたちは　どこへ　いけば　いい？",
+     "en": "The team disbanded... but where are WE supposed to go?"
+    },
+    {
+     "jp": "この　さむさも、ぜんぶ　おまえの　せいだ！",
+     "en": "This cold — it's all YOUR fault!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…わるかったのは　おれたちだ。わかってるさ。",
+     "en": "...We were the ones in the wrong. I know that."
+    }
+   ]
+  }
+ }
+}

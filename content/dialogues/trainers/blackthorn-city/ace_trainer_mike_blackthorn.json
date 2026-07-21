@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_mike_blackthorn",
+ "name": {
+  "jp": "エリートトレーナーの　マイク",
+  "en": "Ace Trainer Mike"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ここは　さいごの　ジム。がくもんの　いただきだ。",
+     "en": "This is the final Gym — the summit of learning."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いただきは　まだ　さきだ。",
+     "en": "The summit lies further still."
+    }
+   ]
+  }
+ }
+}

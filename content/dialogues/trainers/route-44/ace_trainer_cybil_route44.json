@@ -1,0 +1,31 @@
+{
+ "trainer_id": "ace_trainer_cybil_route44",
+ "name": {
+  "jp": "エリートトレーナーの　シビル",
+  "en": "Ace Trainer Cybil"
+ },
+ "zone_id": "route-44",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ここまで　これた　トレーナーなら、てかげんは　しつれいね。",
+     "en": "Any trainer who's made it this far deserves my best."
+    },
+    {
+     "jp": "ぜんりょくで　いくわ！",
+     "en": "Full strength, here I come!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ぜんりょくでも　とどかなかった。",
+     "en": "Even my best fell short."
+    }
+   ]
+  }
+ }
+}

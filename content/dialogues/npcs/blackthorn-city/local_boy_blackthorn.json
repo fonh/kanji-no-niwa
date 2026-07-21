@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 7 — garçon local (leçons #6/#13). Sa réplique をはじめとして expose N2-030 (famille de ses points).",
+ "npc_id": "local_boy_blackthorn",
+ "name": {
+  "jp": "じもとの　しょうねん",
+  "en": "Local Boy"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "りゅうつかいは　みんな、この　まちで　うまれたんだって！",
+     "en": "Every Dragon Tamer was born right here, you know!"
+    },
+    {
+     "jp": "イブキさんを　はじめとして、ワタルさんも、みーんな！",
+     "en": "Starting with Clair — and Lance too — all of them!"
+    }
+   ]
+  }
+ }
+}

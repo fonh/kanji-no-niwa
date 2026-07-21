@@ -1,0 +1,59 @@
+{
+ "_note": "Étape 4 Lot 7 — Sayo, 5ᵉ et dernière Kimono Girl (coincée près de la sortie, libérée d'une poussée — moment comique sourcé). Scène/leçon, pas un combat. event sayo_freed_ice_path posé par la logique de jeu à la fin de la scène (kimono_progress 5/5 → gate de Clair « 4/5 » largement remplie).",
+ "npc_id": "kimono_sayo_ice_path",
+ "name": {
+  "jp": "まいこの　サヨ",
+  "en": "Kimono Girl Sayo"
+ },
+ "zone_id": "ice-path",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "event_cleared",
+     "event_id": "sayo_freed_ice_path"
+    }
+   ],
+   "state": "freed"
+  },
+  {
+   "default": true,
+   "state": "stuck"
+  }
+ ],
+ "dialogue_states": {
+  "stuck": {
+   "pages": [
+    {
+     "jp": "あの…　すみません…。",
+     "en": "Um... excuse me..."
+    },
+    {
+     "jp": "ぞうりが　こおりに　はりついて　しまって…　うごけないんです…。",
+     "en": "My sandals are frozen to the ice... I can't move..."
+    },
+    {
+     "jp": "うしろから　そっと　おして　いただけますか…？",
+     "en": "Could you give me a gentle push from behind...?"
+    },
+    {
+     "jp": "（そっと　おした。サヨは　つるりと　すべって　いった！）",
+     "en": "(You pushed gently. Sayo slid gracefully away!)"
+    },
+    {
+     "jp": "きゃー！　…ふふ、たすかりました。まいこが　こおりで　ころぶなんて、ないしょですよ。",
+     "en": "Eek! ...Heh heh, thank you. A kimono dancer slipping on ice — our little secret, please."
+    }
+   ]
+  },
+  "freed": {
+   "pages": [
+    {
+     "jp": "スズの　とうで、5にん　そろって　おまちして　います。",
+     "en": "The five of us will be waiting at the Bell Tower."
+    }
+   ]
+  }
+ }
+}

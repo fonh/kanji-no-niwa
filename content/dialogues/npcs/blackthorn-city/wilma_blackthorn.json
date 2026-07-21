@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 7 — Wilma (leçons #2/#9).",
+ "npc_id": "wilma_blackthorn",
+ "name": {
+  "jp": "りゅうつかいの　ウィルマ",
+  "en": "Wilma"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "りゅうの　ちからは　きずなに　やどるの。",
+     "en": "A dragon's power dwells in bonds."
+    },
+    {
+     "jp": "あなたと　あいぼうの　きずな、みせて　ちょうだい。",
+     "en": "Show me the bond between you and your partner."
+    }
+   ]
+  }
+ }
+}

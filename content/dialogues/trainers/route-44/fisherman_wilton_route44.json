@@ -1,0 +1,27 @@
+{
+ "trainer_id": "fisherman_wilton_route44",
+ "name": {
+  "jp": "つりびとの　ウィルトン",
+  "en": "Fisherman Wilton"
+ },
+ "zone_id": "route-44",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "イブキさんに　いどむのか？　その　まえに　おれだ！",
+     "en": "Challenging Clair? You'll get past me first!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "イブキさんは　おれの　100ばい　つよいぞ…。",
+     "en": "Clair's a hundred times stronger than me..."
+    }
+   ]
+  }
+ }
+}

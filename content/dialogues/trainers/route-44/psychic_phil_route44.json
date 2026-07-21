@@ -1,0 +1,31 @@
+{
+ "trainer_id": "psychic_phil_route44",
+ "name": {
+  "jp": "サイキッカーの　フィル",
+  "en": "Psychic Phil"
+ },
+ "zone_id": "route-44",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "こおりの　やまの　まえは、こころが　すみわたる。",
+     "en": "Before the icy mountain, the mind grows clear."
+    },
+    {
+     "jp": "すんだ　こころで　しょうぶ！",
+     "en": "Let us battle with clear minds!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "こころが　みだれた…。",
+     "en": "My mind is shaken..."
+    }
+   ]
+  }
+ }
+}

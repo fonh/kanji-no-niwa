@@ -50,7 +50,7 @@ CS_THRESHOLDS = {
     "cs_tobu": {"character": "飛", "n": 26, "given_by_npc": "chuck_wife_cianwood"},
     "cs_chikara": {"character": "力", "n": 29, "given_by_npc": "hiker_cs_route42"},
     "cs_uzu": {"character": "渦", "n": 32, "given_by_npc": "lance_rocket_hq_mahogany"},
-    "cs_taki": {"character": "滝", "n": 35, "given_by_npc": None},
+    "cs_taki": {"character": "滝", "n": 35, "given_by_npc": "cs_taki_pedestal_ice_path"},
     "cs_noboru": {"character": "登", "n": 60, "given_by_npc": None},
 }
 
@@ -71,6 +71,7 @@ NARRATIVE_ORDER = [
     "route-38", "route-39", "olivine-city", "route-40", "route-41",
     "cianwood-city", "route-47-48-cliff-cave", "safari-zone", "whirl-islands",
     "route-42", "mt-mortar", "route-43", "lake-of-rage", "mahogany-town",
+    "route-44", "ice-path", "blackthorn-city", "dragons-den",
 ]
 
 

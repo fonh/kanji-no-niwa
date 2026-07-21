@@ -1715,5 +1715,201 @@
     "step": "director_freed"
    }
   ]
+ },
+ {
+  "npc_id": "kimono_sayo_ice_path",
+  "zone_id": "ice-path",
+  "name": "Kimono Girl Sayo",
+  "tile_x": 14,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ice-path.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ice-path/kimono_sayo_ice_path"
+ },
+ {
+  "npc_id": "cs_taki_pedestal_ice_path",
+  "zone_id": "ice-path",
+  "name": "Ice Pedestal",
+  "tile_x": 6,
+  "tile_y": 18,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ice-path.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ice-path/cs_taki_pedestal_ice_path",
+  "kind": "object",
+  "unlock_conditions": [
+   {
+    "type": "event_cleared",
+    "event_id": "ice_path_puzzle_solved"
+   }
+  ]
+ },
+ {
+  "npc_id": "farewell_note_ice_path",
+  "zone_id": "ice-path",
+  "name": "Crumpled Note",
+  "tile_x": 9,
+  "tile_y": 13,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ice-path.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ice-path/farewell_note_ice_path",
+  "kind": "object",
+  "unlock_conditions": [
+   {
+    "type": "npc_cleared",
+    "npc_id": "rocket_straggler1_ice_path"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "rocket_straggler2_ice_path"
+   }
+  ]
+ },
+ {
+  "npc_id": "move_tutor_blackthorn",
+  "zone_id": "blackthorn-city",
+  "name": "Ultimate Move Tutor",
+  "tile_x": 8,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/blackthorn-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/blackthorn-city/move_tutor_blackthorn",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "wilma_blackthorn",
+  "zone_id": "blackthorn-city",
+  "name": "Wilma",
+  "tile_x": 12,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/blackthorn-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/blackthorn-city/wilma_blackthorn",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "move_maniac_blackthorn",
+  "zone_id": "blackthorn-city",
+  "name": "Move Maniac",
+  "tile_x": 6,
+  "tile_y": 12,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/blackthorn-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/blackthorn-city/move_maniac_blackthorn",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "move_deleter_blackthorn",
+  "zone_id": "blackthorn-city",
+  "name": "Move Deleter",
+  "tile_x": 7,
+  "tile_y": 12,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/blackthorn-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/blackthorn-city/move_deleter_blackthorn",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "effort_girl_blackthorn",
+  "zone_id": "blackthorn-city",
+  "name": "Effort-Loving Girl",
+  "tile_x": 14,
+  "tile_y": 3,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/blackthorn-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/blackthorn-city/effort_girl_blackthorn",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "local_boy_blackthorn",
+  "zone_id": "blackthorn-city",
+  "name": "Local Boy",
+  "tile_x": 16,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/blackthorn-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/blackthorn-city/local_boy_blackthorn",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "santos_blackthorn",
+  "zone_id": "blackthorn-city",
+  "name": "Santos",
+  "tile_x": 10,
+  "tile_y": 16,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/blackthorn-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/blackthorn-city/santos_blackthorn",
+  "role": "lesson",
+  "unlock_conditions": [
+   {
+    "type": "time_window",
+    "days_of_week": [
+     "saturday"
+    ]
+   }
+  ]
+ },
+ {
+  "npc_id": "den_gate_man_blackthorn",
+  "zone_id": "blackthorn-city",
+  "name": "Dragon's Den Gatekeeper",
+  "tile_x": 24,
+  "tile_y": 34,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/blackthorn-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/blackthorn-city/den_gate_man_blackthorn"
+ },
+ {
+  "npc_id": "elder_master_dragons_den",
+  "zone_id": "dragons-den",
+  "name": "The Shrine Elder",
+  "tile_x": 10,
+  "tile_y": 20,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/dragons-den.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/dragons-den/elder_master_dragons_den",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "shrine_elders_dragons_den",
+  "zone_id": "dragons-den",
+  "name": "The Shrine Elders",
+  "tile_x": 8,
+  "tile_y": 21,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/dragons-den.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/dragons-den/shrine_elders_dragons_den",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "clair_dragons_den",
+  "zone_id": "dragons-den",
+  "name": "Clair",
+  "tile_x": 11,
+  "tile_y": 21,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/dragons-den.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/dragons-den/clair_dragons_den",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "dragons_den_trial",
+    "step": "trial_passed"
+   }
+  ]
  }
 ]

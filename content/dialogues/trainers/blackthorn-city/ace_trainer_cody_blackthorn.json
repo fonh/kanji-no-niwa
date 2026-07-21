@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_cody_blackthorn",
+ "name": {
+  "jp": "エリートトレーナーの　コーディ",
+  "en": "Ace Trainer Cody"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "りゅうの　ちからの　まえに　ひれふせ！",
+     "en": "Bow before the power of dragons!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ひれふしたのは　おれか…。",
+     "en": "I'm the one bowing..."
+    }
+   ]
+  }
+ }
+}

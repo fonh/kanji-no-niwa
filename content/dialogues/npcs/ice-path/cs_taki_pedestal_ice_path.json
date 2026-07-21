@@ -1,0 +1,57 @@
+{
+ "_note": "Étape 4 Lot 7 — remise du CS-Kanji 滝 (HM Waterfall adapté : caché derrière la séquence de glissades — entrée map gated event_cleared(ice_path_puzzle_solved), posé par le puzzle, cf. audit 02). Seuil N=35. Texte obligatoire : texts/ice-path/cs_taki.json (found_object sur ce piédestal).",
+ "npc_id": "cs_taki_pedestal_ice_path",
+ "name": {
+  "jp": "こおりの　だいざ",
+  "en": "Ice Pedestal"
+ },
+ "zone_id": "ice-path",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "cs_taki"
+    }
+   ],
+   "state": "empty"
+  },
+  {
+   "default": true,
+   "state": "reached"
+  }
+ ],
+ "dialogue_states": {
+  "reached": {
+   "pages": [
+    {
+     "jp": "（グリッサードの　さきに、こおりの　だいざが　あった。）",
+     "en": "(Beyond the sliding puzzle stands a pedestal of ice.)"
+    },
+    {
+     "jp": "（だいざの　うえで、滝（たき）の　かんじが　ひかって　いる。）",
+     "en": "(Atop it, the kanji of Waterfall glimmers.)"
+    },
+    {
+     "jp": "（滝（たき）の　ひでんを　さずかった！）",
+     "en": "(You received the secret of the Waterfall!)"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "cs_taki"
+    }
+   ]
+  },
+  "empty": {
+   "pages": [
+    {
+     "jp": "（からの　だいざが　しずかに　たって　いる。）",
+     "en": "(The empty pedestal stands in silence.)"
+    }
+   ]
+  }
+ }
+}

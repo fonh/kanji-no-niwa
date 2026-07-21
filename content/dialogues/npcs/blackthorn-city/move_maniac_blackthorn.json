@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 7 — Maniaque des capacités (leçons #3/#10). Adaptation : « réapprendre une capacité » = la révision (SRS) — clin d'œil, aucune mécanique. Sa réplique のことだから expose N2-028.",
+ "npc_id": "move_maniac_blackthorn",
+ "name": {
+  "jp": "わざマニアの　おとこ",
+  "en": "Move Maniac"
+ },
+ "zone_id": "blackthorn-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "わすれた　ことを　おもいだすのが　わしの　しごと。",
+     "en": "Recalling what was forgotten — that's my trade."
+    },
+    {
+     "jp": "いつも　ふくしゅうして　いる　きみの　ことだから、わすれものは　すくなかろうがね。",
+     "en": "Though knowing you and your reviews, you don't forget much."
+    }
+   ]
+  }
+ }
+}

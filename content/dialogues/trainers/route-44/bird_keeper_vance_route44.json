@@ -1,0 +1,31 @@
+{
+ "trainer_id": "bird_keeper_vance_route44",
+ "name": {
+  "jp": "とりつかいの　バンス",
+  "en": "Bird Keeper Vance"
+ },
+ "zone_id": "route-44",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "やまの　かぜは　つめたく　するどい。",
+     "en": "The mountain wind is cold and sharp."
+    },
+    {
+     "jp": "するどい　しょうぶを　みせて　くれ！",
+     "en": "Show me a battle just as sharp!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "かぜより　するどいとは…。",
+     "en": "Sharper than the wind itself..."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_kobe_dragons_den",
+ "name": {
+  "jp": "エリートトレーナーの　コービー",
+  "en": "Ace Trainer Kobe"
+ },
+ "zone_id": "dragons-den",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "せいちで　さわぐ　やつは　ゆるさない！",
+     "en": "None shall disturb the sacred ground!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "しずかに　かえって　いくよ…。",
+     "en": "I'll leave quietly..."
+    }
+   ]
+  }
+ }
+}
