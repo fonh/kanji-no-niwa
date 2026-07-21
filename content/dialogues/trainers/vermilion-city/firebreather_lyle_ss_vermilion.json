@@ -1,0 +1,27 @@
+{
+ "trainer_id": "firebreather_lyle_ss_vermilion",
+ "name": {
+  "jp": "ひふきやろうの　ライル",
+  "en": "Firebreather Lyle"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "うみの　うえの　ひふきは　きけんで　いいだろ？",
+     "en": "Fire-breathing at sea — thrillingly dangerous, no?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ひが　しけっちまった。",
+     "en": "My flame got damp."
+    }
+   ]
+  }
+ }
+}

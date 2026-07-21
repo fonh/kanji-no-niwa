@@ -1,0 +1,59 @@
+{
+ "_note": "Étape 4 Lot 10 — la petite-fille cachée au B1F (entrée carte gated girl_missing + negate girl_found).",
+ "npc_id": "lost_girl_vermilion",
+ "name": {
+  "jp": "まいごの　おんなのこ",
+  "en": "The Lost Girl"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "ss_aqua_granddaughter",
+     "step": "girl_found"
+    }
+   ],
+   "state": "back"
+  },
+  {
+   "default": true,
+   "state": "hiding"
+  }
+ ],
+ "dialogue_states": {
+  "hiding": {
+   "pages": [
+    {
+     "jp": "しーっ！　かくれんぼの　とちゅうなの！",
+     "en": "Shhh! I'm in the middle of hide-and-seek!"
+    },
+    {
+     "jp": "…え？　おじいちゃんが　ないてる？",
+     "en": "...Huh? Grandpa's crying?"
+    },
+    {
+     "jp": "あそびの　つもりだったのに…。ごめんなさい、もどる！",
+     "en": "I thought we were playing... I'm sorry, I'll go back!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "ss_aqua_granddaughter",
+     "step_id": "girl_found"
+    }
+   ]
+  },
+  "back": {
+   "pages": [
+    {
+     "jp": "おじいちゃんの　ところに　もどったよ。ありがと！",
+     "en": "I'm back with Grandpa now. Thanks!"
+    }
+   ]
+  }
+ }
+}

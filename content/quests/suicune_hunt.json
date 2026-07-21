@@ -45,6 +45,14 @@
     "en": "Glimpsed the spirit again on eastern Route 42."
    },
    "target_zone_id": "route-42"
+  },
+  {
+   "step_id": "vermilion_pier",
+   "label": {
+    "jp": "クチバの　じばしで　ミナキに　あった。せいれいは　カントーにも　きて　いる。",
+    "en": "Met Eusine on the Vermilion pier. The spirit has come to Kanto too."
+   },
+   "target_zone_id": "vermilion-city"
   }
  ]
 }

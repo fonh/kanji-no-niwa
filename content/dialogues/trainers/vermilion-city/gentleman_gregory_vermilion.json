@@ -1,0 +1,31 @@
+{
+ "trainer_id": "gentleman_gregory_vermilion",
+ "name": {
+  "jp": "ジェントルマンの　グレゴリー",
+  "en": "Gentleman Gregory"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "マチスどのの　ジムは　でんきの　とりで。",
+     "en": "Lt. Surge's Gym is an electric fortress."
+    },
+    {
+     "jp": "ゴミばこの　スイッチなぞは　もう　ない。あるのは　しょうぶだけだ！",
+     "en": "No more trash-can switches — only battles now!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "でんげきの　ような　つよさだ。",
+     "en": "Strength like a lightning strike."
+    }
+   ]
+  }
+ }
+}

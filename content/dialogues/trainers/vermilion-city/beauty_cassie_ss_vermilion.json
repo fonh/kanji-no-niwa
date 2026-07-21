@@ -1,0 +1,27 @@
+{
+ "trainer_id": "beauty_cassie_ss_vermilion",
+ "name": {
+  "jp": "おとなの　おねえさんの　カシー",
+  "en": "Beauty Cassie"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ふなたびは　おしゃれの　みせどころよ。",
+     "en": "A cruise is the place to show off one's style."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まけかたも　エレガントに、ね。",
+     "en": "One must lose elegantly too."
+    }
+   ]
+  }
+ }
+}

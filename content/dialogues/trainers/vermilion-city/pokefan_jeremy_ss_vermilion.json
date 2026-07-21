@@ -1,0 +1,27 @@
+{
+ "trainer_id": "pokefan_jeremy_ss_vermilion",
+ "name": {
+  "jp": "だいすきクラブの　ジェレミー",
+  "en": "Pokéfan Jeremy"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "コレクションじまん、きいて　くれよ！",
+     "en": "Let me show off my collection!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみが　いちばんの　コレクションだ。",
+     "en": "You're the finest piece of all."
+    }
+   ]
+  }
+ }
+}

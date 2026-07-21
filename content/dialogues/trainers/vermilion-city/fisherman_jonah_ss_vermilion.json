@@ -1,0 +1,27 @@
+{
+ "trainer_id": "fisherman_jonah_ss_vermilion",
+ "name": {
+  "jp": "つりびとの　ジョナ",
+  "en": "Fisherman Jonah"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ふねから　つる　さかなは　おおものぞろい！",
+     "en": "The fish you catch from a ship are all big ones!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いちばんの　おおものは　きみだ。",
+     "en": "You're the biggest catch."
+    }
+   ]
+  }
+ }
+}

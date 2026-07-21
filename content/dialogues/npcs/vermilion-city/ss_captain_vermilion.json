@@ -1,0 +1,40 @@
+{
+ "_note": "Étape 4 Lot 10 — Capitaine (leçons #2/#6/#10/#14/#18/#22/#26/#30 — 8 leçons). Héberge la petite-fille retrouvée (saveur), distribue les Plaques collectionnables C9 (une par jour de semaine — captain_plate fungible + time_window par couleur à l'implémentation, collection du Global Terminal).",
+ "npc_id": "ss_captain_vermilion",
+ "name": {
+  "jp": "アクア号（ごう）の　せんちょう",
+  "en": "Captain of the SS Aqua"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ようこそ　アクア号（ごう）へ！　わしが　せんちょうじゃ。",
+     "en": "Welcome aboard the SS Aqua! I'm the captain."
+    },
+    {
+     "jp": "ジョウトと　カントーを　むすぶ　ふねは　この　ふねだけ。",
+     "en": "This is the only ship linking Johto and Kanto."
+    },
+    {
+     "jp": "のった　きねんに、プレートを　あつめて　みんか？　ようびごとに　ちがう　いろを　くばって　おるよ。",
+     "en": "Why not collect our Plates? A different color for each day of the week."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "captain_plate"
+    }
+   ]
+  }
+ }
+}

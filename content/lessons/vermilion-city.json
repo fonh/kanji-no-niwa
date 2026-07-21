@@ -1,0 +1,422 @@
+[
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_grandfather_vermilion",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "欲",
+   "泉",
+   "灰",
+   "看",
+   "紅",
+   "純"
+  ],
+  "grammar_id": "N2-177"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_captain_vermilion",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "翌",
+   "胃",
+   "背",
+   "胸",
+   "脳",
+   "腹"
+  ],
+  "grammar_id": "N2-178"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_president_vermilion",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "臓",
+   "裏",
+   "針",
+   "閉",
+   "骨",
+   "与"
+  ],
+  "grammar_id": "N2-179"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_counter_man_vermilion",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "互",
+   "介",
+   "依",
+   "傾",
+   "募",
+   "占"
+  ],
+  "grammar_id": "N2-180"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_grandfather_vermilion",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "双",
+   "叫",
+   "召",
+   "吹",
+   "咲",
+   "坊"
+  ],
+  "grammar_id": "N2-181"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_captain_vermilion",
+  "sequence_index": 6,
+  "kanji_ids": [
+   "塔",
+   "塗",
+   "壁",
+   "奥",
+   "姓",
+   "娘"
+  ],
+  "grammar_id": "N2-182"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_president_vermilion",
+  "sequence_index": 7,
+  "kanji_ids": [
+   "婚",
+   "封",
+   "幅",
+   "床",
+   "彼",
+   "御"
+  ],
+  "grammar_id": "N2-183"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_counter_man_vermilion",
+  "sequence_index": 8,
+  "kanji_ids": [
+   "忙",
+   "恋",
+   "恐",
+   "恥",
+   "恵",
+   "戻"
+  ],
+  "grammar_id": "N2-184"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_grandfather_vermilion",
+  "sequence_index": 9,
+  "kanji_ids": [
+   "昇",
+   "普",
+   "更",
+   "替",
+   "欧",
+   "歳"
+  ],
+  "grammar_id": "N2-185"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_captain_vermilion",
+  "sequence_index": 10,
+  "kanji_ids": [
+   "泥",
+   "涼",
+   "渡",
+   "煙",
+   "燥",
+   "珍"
+  ],
+  "grammar_id": "N2-186"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_president_vermilion",
+  "sequence_index": 11,
+  "kanji_ids": [
+   "環",
+   "畜",
+   "畳",
+   "疲",
+   "祈",
+   "粒"
+  ],
+  "grammar_id": "N2-187"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_counter_man_vermilion",
+  "sequence_index": 12,
+  "kanji_ids": [
+   "肌",
+   "肩",
+   "肯",
+   "腕",
+   "般",
+   "袋"
+  ],
+  "grammar_id": "N2-188"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_grandfather_vermilion",
+  "sequence_index": 13,
+  "kanji_ids": [
+   "被",
+   "軟",
+   "辛",
+   "込",
+   "逃",
+   "鈍"
+  ],
+  "grammar_id": "N2-189"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_captain_vermilion",
+  "sequence_index": 14,
+  "kanji_ids": [
+   "鋭",
+   "雇",
+   "震",
+   "靴",
+   "里",
+   "丁"
+  ],
+  "grammar_id": "N2-190"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_president_vermilion",
+  "sequence_index": 15,
+  "kanji_ids": [
+   "帳",
+   "井",
+   "倉",
+   "功",
+   "博",
+   "唱"
+  ],
+  "grammar_id": "N2-191"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_counter_man_vermilion",
+  "sequence_index": 16,
+  "kanji_ids": [
+   "奈",
+   "媛",
+   "挙",
+   "旗",
+   "梅",
+   "梨"
+  ],
+  "grammar_id": "N1-001"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_grandfather_vermilion",
+  "sequence_index": 17,
+  "kanji_ids": [
+   "熊",
+   "牧",
+   "票",
+   "縄",
+   "芽",
+   "街"
+  ],
+  "grammar_id": "N1-002"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_captain_vermilion",
+  "sequence_index": 18,
+  "kanji_ids": [
+   "鏡",
+   "養",
+   "句",
+   "墓",
+   "態",
+   "桜"
+  ],
+  "grammar_id": "N1-003"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_president_vermilion",
+  "sequence_index": 19,
+  "kanji_ids": [
+   "災",
+   "益",
+   "眼",
+   "紀",
+   "素",
+   "統"
+  ],
+  "grammar_id": "N1-004"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_counter_man_vermilion",
+  "sequence_index": 20,
+  "kanji_ids": [
+   "織",
+   "義",
+   "肥",
+   "脈",
+   "興",
+   "衛"
+  ],
+  "grammar_id": "N1-005"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_grandfather_vermilion",
+  "sequence_index": 21,
+  "kanji_ids": [
+   "仁",
+   "俳",
+   "后",
+   "奮",
+   "孝",
+   "宗"
+  ],
+  "grammar_id": "N1-006"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_captain_vermilion",
+  "sequence_index": 22,
+  "kanji_ids": [
+   "密",
+   "射",
+   "就",
+   "尺",
+   "幕",
+   "憲"
+  ],
+  "grammar_id": "N1-007"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_president_vermilion",
+  "sequence_index": 23,
+  "kanji_ids": [
+   "朗",
+   "染",
+   "模",
+   "樹",
+   "源",
+   "班"
+  ],
+  "grammar_id": "N1-008"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_counter_man_vermilion",
+  "sequence_index": 24,
+  "kanji_ids": [
+   "盛",
+   "穴",
+   "筋",
+   "策",
+   "糖",
+   "系"
+  ],
+  "grammar_id": "N1-009"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_grandfather_vermilion",
+  "sequence_index": 25,
+  "kanji_ids": [
+   "絹",
+   "縦",
+   "縮",
+   "聖",
+   "腸",
+   "臨"
+  ],
+  "grammar_id": "N1-010"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_captain_vermilion",
+  "sequence_index": 26,
+  "kanji_ids": [
+   "至",
+   "裁",
+   "銭",
+   "丈",
+   "且",
+   "丘"
+  ],
+  "grammar_id": "N1-011"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_president_vermilion",
+  "sequence_index": 27,
+  "kanji_ids": [
+   "亜",
+   "仙",
+   "企",
+   "侮",
+   "俗",
+   "俸"
+  ],
+  "grammar_id": "N1-012"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "fanclub_counter_man_vermilion",
+  "sequence_index": 28,
+  "kanji_ids": [
+   "偽",
+   "傘",
+   "兼",
+   "冒",
+   "凝",
+   "凸"
+  ],
+  "grammar_id": "N1-013"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_grandfather_vermilion",
+  "sequence_index": 29,
+  "kanji_ids": [
+   "刃",
+   "励",
+   "劾",
+   "勧",
+   "匠",
+   "及"
+  ],
+  "grammar_id": "N1-014"
+ },
+ {
+  "zone_id": "vermilion-city",
+  "npc_ref": "ss_captain_vermilion",
+  "sequence_index": 30,
+  "kanji_ids": [
+   "叔",
+   "吉",
+   "吐",
+   "呂",
+   "呈",
+   "哀"
+  ],
+  "grammar_id": "N1-015"
+ }
+]

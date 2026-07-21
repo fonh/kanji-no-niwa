@@ -28,13 +28,25 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **29 / 48** écrites — **TOUT JOHTO EST CLOS** (29 zones de leçons + 18 sans leçon, Conseil 4 + Lance inclus)
-- Leçons : **155 / 344** écrites
-- Kanji dotés d'exemples : **870 / 1950**
-- Overlays grammaire : **18 / 48**
+- Zones : **30 / 48** écrites (Johto clos + Carmin — 1ʳᵉ zone Kanto)
+- Leçons : **185 / 344** écrites
+- Kanji dotés d'exemples : **1050 / 1950**
+- Overlays grammaire : **19 / 48**
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-21 — SS Aqua + vermilion-city (Lot 10, entrée en Kanto)** : traversée
+  fonctionnelle (I-1) — **27 combats du navire** (roster ROM complet 1F/B1F, 21q),
+  quête B6 (petite-fille au B1F, Manteau de Métal), Capitaine distributeur de Plaques
+  (C9), quête fetch de la poupée de Copycat (résolue à Safran). Carmin — **30 leçons**
+  N2-177→191 + N1-001→015 sur 4 PNJ-leçon (grand-père/capitaine ×8, président/comptoir
+  ×7), overlay 30 points (**dérogation documentée : 1 exemple câblé/point** au lieu de
+  2-3, volume oblige — les variants Hanabira restent au build), 180 lesson_examples.
+  **Lt. Surge 74q 試練・雷の道** — courbe Kanto posée : Surge 74 → Sabrina 77 → Misty 80
+  → Erika 83 → Janine 86 → Brock 89 → Blaine 93 → **Blue 98** (borne « jusqu'à 98 »
+  sourcée PRD § Gyms). Cameos : **Steven (FV-5 soldé** — la « rencontre légendaire
+  ailleurs » devient sa ligne sur les mojis hors-région, roadmap Étape 5.1), Eusine jetée
+  (suicune_hunt +1). 5 linters verts.
 - **2026-07-21 — routes 26/27 + Route Victoire + Ligue (Lot 9) — JOHTO CLOS** : routes
   26/27 — 12 combats ROM, 12 leçons N2-122→128/142→146 (hub des frères/sœurs du jour
   sourcé = carnet-index du fil calendaire ; vieille dame de Tohjo TM37 ; Porte de
@@ -192,7 +204,7 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 27 | route-26 | Johto | 7 | 40 | 2 | ✅ fait (hub des frères/sœurs du jour) | ✅ | ✅ | ✅ | — | ✅ |
 | 28 | route-27 | Johto | 5 | 30 | 1 | ✅ fait (Chutes de Tohjo, Porte de Réception) | ✅ | ✅ | ✅ | — | ✅ |
 | 29 | indigo-plateau-antichambre | Johto | 7 | 40 | 1 | ✅ fait (Silver #6, Conseil 4, Lance — JOHTO CLOS) | ✅ | ✅ | ✅ | — | ✅ |
-| 30 | vermilion-city | Kanto | 30 | 180 | 4 | ⬜ à faire | · | · | · | · | · |
+| 30 | vermilion-city | Kanto | 30 | 180 | 4 | ✅ fait (SS Aqua 27 combats, quêtes B6 + poupée, Surge 74q, Steven FV-5 soldé) | ✅ | ✅ | ✅ | — | ✅ |
 | 31 | route-6-kanto | Kanto | 2 | 10 | 2 | ⬜ à faire | · | · | · | · | · |
 | 32 | saffron-city | Kanto | 24 | 140 | 6 | ⬜ à faire | · | · | · | · | · |
 | 33 | route-9-10-rocktunnel | Kanto | 4 | 20 | 1 | ⬜ à faire | · | · | · | · | · |

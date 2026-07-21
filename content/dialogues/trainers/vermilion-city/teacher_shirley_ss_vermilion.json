@@ -1,0 +1,27 @@
+{
+ "trainer_id": "teacher_shirley_ss_vermilion",
+ "name": {
+  "jp": "せんせいの　シャーリー",
+  "en": "Teacher Shirley"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "しゅうがくりょこうの　ひきそつちゅうです。せいとに　いい　ところ、みせないと！",
+     "en": "I'm chaperoning a school trip — must set an example!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "せいとには　ないしょよ。",
+     "en": "Not a word to my students."
+    }
+   ]
+  }
+ }
+}

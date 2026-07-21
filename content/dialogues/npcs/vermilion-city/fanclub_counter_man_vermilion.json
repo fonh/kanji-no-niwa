@@ -1,0 +1,59 @@
+{
+ "_note": "Étape 4 Lot 10 — homme du comptoir (leçons #4/#8/#12/#16/#20/#24/#28 — 7 leçons), quête fetch de la poupée (résolue à Safran).",
+ "npc_id": "fanclub_counter_man_vermilion",
+ "name": {
+  "jp": "クラブの　うけつけの　おとこ",
+  "en": "Man at the Fan Club Counter"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "copycat_doll",
+     "step": "doll_obtained"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "この　にんぎょう、ヤマブキシティの　ものまねむすめの　わすれものなんだ。",
+     "en": "This doll — Copycat from Saffron left it behind."
+    },
+    {
+     "jp": "とどけて　あげて　くれないか。だいじな　ものらしいんだ。",
+     "en": "Would you deliver it to her? It seems precious to her."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "copycat_doll_item"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "copycat_doll",
+     "step_id": "doll_obtained"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "にんぎょう、とどけて　くれたかい？",
+     "en": "Delivered the doll yet?"
+    }
+   ]
+  }
+ }
+}

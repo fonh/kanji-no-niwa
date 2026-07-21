@@ -1,0 +1,27 @@
+{
+ "trainer_id": "super_nerd_shawn_ss_vermilion",
+ "name": {
+  "jp": "りかけいの　おとこの　ショーン",
+  "en": "Super Nerd Shawn"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "エンジンルームの　ねつりきがく、かたらせて…いや、しょうぶだ！",
+     "en": "The thermodynamics of the engine room— no, battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "けいさんちがいだ…。",
+     "en": "A miscalculation..."
+    }
+   ]
+  }
+ }
+}

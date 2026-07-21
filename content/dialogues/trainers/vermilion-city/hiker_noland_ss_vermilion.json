@@ -1,0 +1,27 @@
+{
+ "trainer_id": "hiker_noland_ss_vermilion",
+ "name": {
+  "jp": "やまおとこの　ノーランド",
+  "en": "Hiker Noland"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "うみの　うえでも　やまおとこは　やまおとこ！",
+     "en": "A hiker's a hiker, even at sea!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うみは　にがてだ…。",
+     "en": "The sea's not my element..."
+    }
+   ]
+  }
+ }
+}

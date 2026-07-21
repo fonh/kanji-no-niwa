@@ -1,0 +1,27 @@
+{
+ "trainer_id": "pokefan_georgia_ss_vermilion",
+ "name": {
+  "jp": "だいすきクラブの　ジョージア",
+  "en": "Pokéfan Georgia"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　ふね、まいつき　のってるのよ。",
+     "en": "I ride this ship every month."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "じょうれんの　いじも　ここまでね。",
+     "en": "So much for a regular's pride."
+    }
+   ]
+  }
+ }
+}

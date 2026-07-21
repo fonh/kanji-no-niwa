@@ -1,0 +1,50 @@
+{
+ "_note": "Étape 4 Lot 10 — 9ᵉ 師範 (1er de Kanto). Longueur 74 : la courbe Kanto interpole entre Clair (72) et « jusqu'à 98 à Blue » (PRD § Gyms) — Surge 74, Sabrina 77, Misty 80, Erika 83, Janine 86, Brock 89, Blaine 93, Blue 98 (ordre des badges Kanto de la table 門弟) ; calibration documentée roadmap Lot 10. 門弟 21q (table PRD). Badge surge + TM d'usage à l'implémentation.",
+ "trainer_id": "lt_surge_vermilion",
+ "name": {
+  "jp": "ジムリーダー　マチス",
+  "en": "Lt. Surge"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・雷（かみなり）の道（みち）",
+  "en": "Trial of the Thunder Path"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ヘイ！　ジョウトの　チャンピオンが　おれさまに　なんの　ようだ！？",
+     "en": "HEY! What does Johto's Champion want with ME!?"
+    },
+    {
+     "jp": "いくさで　でんきタイプに　いのちを　すくわれて　いらい、おれは　でんきひとすじよ！",
+     "en": "Ever since electricity saved my life in the war, I've lived for it!"
+    },
+    {
+     "jp": "ビリビリに　しびれさせて　やるぜ！",
+     "en": "I'll shock you senseless!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ワッハッハ！　ビリビリ　しびれたのは　おれの　ほうか！",
+     "en": "WAHAHA! I'm the one who got shocked!"
+    },
+    {
+     "jp": "サンダーバッジは　おまえの　ものだ！",
+     "en": "The Thunder Badge is yours!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_badge",
+     "badge_id": "surge"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "twins_meg_peg_ss_vermilion",
+ "name": {
+  "jp": "ふたごちゃんの　メグと　ペグ",
+  "en": "Twins Meg & Peg"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "「ふねの　うえでも」「ふたりで　ひとつ！」",
+     "en": "\"Even at sea—\" \"—two as one!\""
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "「まけても」「ふたり！」",
+     "en": "\"Even in defeat—\" \"—together!\""
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "bug_catcher_ken_ss_vermilion",
+ "name": {
+  "jp": "むしとりしょうねんの　ケン",
+  "en": "Bug Catcher Ken"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ふねにも　むしは　いるんだぜ！",
+     "en": "There are bugs even on ships, you know!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うみの　むしは　てごわい…。",
+     "en": "Sea bugs are tough..."
+    }
+   ]
+  }
+ }
+}

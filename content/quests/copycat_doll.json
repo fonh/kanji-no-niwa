@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 10 — quête fetch de la poupée de Copycat (Club des Fans de Carmin → Copycat à Safranville). L'étape delivered s'écrit à la passe Safran.",
+ "quest_id": "copycat_doll",
+ "name": {
+  "jp": "ものまねむすめの　にんぎょう",
+  "en": "Copycat's Doll"
+ },
+ "zone_ids": [
+  "vermilion-city",
+  "saffron-city"
+ ],
+ "steps": [
+  {
+   "step_id": "doll_obtained",
+   "label": {
+    "jp": "クラブで　ものまねむすめの　にんぎょうを　あずかった。ヤマブキシティに　とどけよう。",
+    "en": "The Fan Club entrusted me with Copycat's doll. Deliver it to Saffron City."
+   },
+   "target_zone_id": "saffron-city"
+  },
+  {
+   "step_id": "delivered",
+   "label": {
+    "jp": "にんぎょうを　ものまねむすめに　とどけた！",
+    "en": "Delivered the doll to Copycat!"
+   },
+   "target_zone_id": "saffron-city"
+  }
+ ]
+}

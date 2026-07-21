@@ -1,0 +1,27 @@
+{
+ "trainer_id": "guitarist_clyde_ss_vermilion",
+ "name": {
+  "jp": "ギタリストの　クライド",
+  "en": "Guitarist Clyde"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ふねの　ライブ、まえざせき　どうぞ！",
+     "en": "Front-row seat for my shipboard concert!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "アンコールは　なしか…。",
+     "en": "No encore, then..."
+    }
+   ]
+  }
+ }
+}

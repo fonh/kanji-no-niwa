@@ -1,0 +1,27 @@
+{
+ "trainer_id": "gentleman_edward_ss_vermilion",
+ "name": {
+  "jp": "ジェントルマンの　エドワード",
+  "en": "Gentleman Edward"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ふなたびの　たしなみは　しょうぶだよ。",
+     "en": "A battle is the refined way to pass a voyage."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ゆうがな　まけだった。",
+     "en": "An elegant defeat."
+    }
+   ]
+  }
+ }
+}

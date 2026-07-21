@@ -2021,5 +2021,106 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/indigo-plateau-antichambre.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/indigo-plateau-antichambre/league_door_man_antichambre"
+ },
+ {
+  "npc_id": "ss_grandfather_vermilion",
+  "zone_id": "vermilion-city",
+  "name": "Grandfather on the SS Aqua",
+  "tile_x": 40,
+  "tile_y": 60,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/vermilion-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/vermilion-city/ss_grandfather_vermilion",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "lost_girl_vermilion",
+  "zone_id": "vermilion-city",
+  "name": "The Lost Girl",
+  "tile_x": 44,
+  "tile_y": 70,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/vermilion-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/vermilion-city/lost_girl_vermilion",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "ss_aqua_granddaughter",
+    "step": "girl_missing"
+   },
+   {
+    "type": "quest_step",
+    "quest_id": "ss_aqua_granddaughter",
+    "step": "girl_found",
+    "negate": true
+   }
+  ]
+ },
+ {
+  "npc_id": "ss_captain_vermilion",
+  "zone_id": "vermilion-city",
+  "name": "Captain of the SS Aqua",
+  "tile_x": 42,
+  "tile_y": 58,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/vermilion-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/vermilion-city/ss_captain_vermilion",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "fanclub_president_vermilion",
+  "zone_id": "vermilion-city",
+  "name": "Fan Club President",
+  "tile_x": 12,
+  "tile_y": 14,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/vermilion-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/vermilion-city/fanclub_president_vermilion",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "fanclub_counter_man_vermilion",
+  "zone_id": "vermilion-city",
+  "name": "Man at the Fan Club Counter",
+  "tile_x": 13,
+  "tile_y": 15,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/vermilion-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/vermilion-city/fanclub_counter_man_vermilion",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "steven_cameo_vermilion",
+  "zone_id": "vermilion-city",
+  "name": "Steven",
+  "tile_x": 8,
+  "tile_y": 20,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/vermilion-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/vermilion-city/steven_cameo_vermilion"
+ },
+ {
+  "npc_id": "eusine_pier_vermilion",
+  "zone_id": "vermilion-city",
+  "name": "Eusine",
+  "tile_x": 20,
+  "tile_y": 30,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/vermilion-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/vermilion-city/eusine_pier_vermilion",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "suicune_hunt",
+    "step": "route42_glimpse"
+   }
+  ]
  }
 ]

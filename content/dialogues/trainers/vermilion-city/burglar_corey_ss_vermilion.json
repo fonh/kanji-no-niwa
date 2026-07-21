@@ -1,0 +1,27 @@
+{
+ "trainer_id": "burglar_corey_ss_vermilion",
+ "name": {
+  "jp": "かいとうの　コーリー",
+  "en": "Burglar Corey"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ふねの　うえなら　にげばが　ない…おまえがな！",
+     "en": "Nowhere to run at sea... for YOU, that is!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "にげばが　ないのは　おれだった。",
+     "en": "I was the one with nowhere to run."
+    }
+   ]
+  }
+ }
+}

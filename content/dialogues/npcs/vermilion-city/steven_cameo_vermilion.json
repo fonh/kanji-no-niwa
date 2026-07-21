@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 10 — Steven, 1ʳᵉ apparition (cameo sourcé). FV-5 (roadmap Étape 5.1) : « déclenche une rencontre légendaire ailleurs » adapté en simple ligne de dialogue — c'est cette ligne (« もじ » hors-région), rien de mécanique. FV-5 soldé.",
+ "npc_id": "steven_cameo_vermilion",
+ "name": {
+  "jp": "いしずきの　ダイゴ",
+  "en": "Steven"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "やあ。きみが　ジョウトの　チャンピオンだね。",
+     "en": "Hello. You're the Johto Champion, I take it."
+    },
+    {
+     "jp": "ぼくは　ダイゴ。ホウエンちほうから　きた。めずらしい　いしを　さがして　いてね。",
+     "en": "I'm Steven, from the Hoenn region. I'm hunting for rare stones."
+    },
+    {
+     "jp": "この　ちほうには　みた　ことの　ない　「もじ」も　あると　きく。きみと　は　また　あえる　きが　するよ。",
+     "en": "They say this region holds characters never seen elsewhere. Something tells me we'll meet again."
+    }
+   ]
+  }
+ }
+}

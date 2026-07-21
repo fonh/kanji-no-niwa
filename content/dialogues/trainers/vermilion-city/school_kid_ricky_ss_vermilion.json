@@ -1,0 +1,27 @@
+{
+ "trainer_id": "school_kid_ricky_ss_vermilion",
+ "name": {
+  "jp": "じゅくがえりの　リッキー",
+  "en": "School Kid Ricky"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "テストが　ちかいんだ。きあいを　わけて！",
+     "en": "Exams are coming. Share some of your spirit!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きあい、もらった！",
+     "en": "Spirit received!"
+    }
+   ]
+  }
+ }
+}

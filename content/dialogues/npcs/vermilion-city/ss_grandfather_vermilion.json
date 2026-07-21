@@ -1,0 +1,92 @@
+{
+ "_note": "Étape 4 Lot 10 — grand-père du SS Aqua (leçons #1/#5/#9/#13/#17/#21/#25/#29 — 8 leçons N2/N1, PNJ-leçon le plus chargé du jeu avec le Capitaine). Quête B6, Manteau de Métal. Sa réplique いじょう expose N2-... (famille de ses points).",
+ "npc_id": "ss_grandfather_vermilion",
+ "name": {
+  "jp": "アクア号（ごう）の　おじいさん",
+  "en": "Grandfather on the SS Aqua"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "ss_aqua_granddaughter",
+     "step": "reunited"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "ss_aqua_granddaughter",
+     "step": "girl_found"
+    }
+   ],
+   "state": "thanks"
+  },
+  {
+   "default": true,
+   "state": "panic"
+  }
+ ],
+ "dialogue_states": {
+  "panic": {
+   "pages": [
+    {
+     "jp": "たっ、たいへんじゃ！　まごが　おらん！",
+     "en": "T-terrible news! My granddaughter is gone!"
+    },
+    {
+     "jp": "ふねを　おりた　いじょう…　いや、おりて　おらんはずじゃ！",
+     "en": "She can't have left the ship... no, she mustn't have!"
+    },
+    {
+     "jp": "たのむ、さがして　くれんか！",
+     "en": "Please, help me find her!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "ss_aqua_granddaughter",
+     "step_id": "girl_missing"
+    }
+   ]
+  },
+  "thanks": {
+   "pages": [
+    {
+     "jp": "おお、みつけて　くれたか！　ありがとう、ありがとう！",
+     "en": "You found her! Thank you, thank you!"
+    },
+    {
+     "jp": "これは　おれいじゃ。うけとって　くれ。",
+     "en": "Here — a token of my gratitude."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "metal_coat"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "ss_aqua_granddaughter",
+     "step_id": "reunited"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "まごは　カントーの　けしきに　むちゅうじゃよ。",
+     "en": "She's engrossed in the Kanto scenery now."
+    }
+   ]
+  }
+ }
+}

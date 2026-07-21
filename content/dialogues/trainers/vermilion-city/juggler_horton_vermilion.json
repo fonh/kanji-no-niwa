@@ -1,0 +1,27 @@
+{
+ "trainer_id": "juggler_horton_vermilion",
+ "name": {
+  "jp": "だいどうげいにんの　ホートン",
+  "en": "Juggler Horton"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "でんきゅうジャグリング、みて　いきな！",
+     "en": "Behold my lightbulb juggling!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "でんきゅうが　ぜんぶ　おちた…。",
+     "en": "I dropped every last bulb..."
+    }
+   ]
+  }
+ }
+}

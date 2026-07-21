@@ -1,0 +1,61 @@
+{
+ "_note": "Étape 4 Lot 10 — Président du Club des Fans (leçons #3/#7/#11/#15/#19/#23/#27 — 7 leçons). Récompense « qui écoute jusqu'au bout » (Super Bonbon), sourcé.",
+ "npc_id": "fanclub_president_vermilion",
+ "name": {
+  "jp": "だいすきクラブの　かいちょう",
+  "en": "Fan Club President"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "rare_candy"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "おお、あたらしい　かおだね！　まあ　すわりなさい。",
+     "en": "Ah, a new face! Sit, sit."
+    },
+    {
+     "jp": "わしの　じまんの　コレクションの　はなしを　しよう。ながく　なるが　の。",
+     "en": "Let me tell you about my prized collection. It's a long story, mind you."
+    },
+    {
+     "jp": "……というわけで、45ねんかけて　あつめたのじゃ。さいごまで　きいて　くれたのは　きみだけじゃよ！",
+     "en": "...and THAT is how I spent 45 years collecting. You're the only one who's ever listened to the end!"
+    },
+    {
+     "jp": "ほうびに　これを　やろう！",
+     "en": "Here's a reward for your patience!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "rare_candy"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "また　はなしを　ききに　きて　くれよ。",
+     "en": "Come listen to my stories again, won't you."
+    }
+   ]
+  }
+ }
+}

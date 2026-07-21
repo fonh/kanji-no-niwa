@@ -1,0 +1,27 @@
+{
+ "trainer_id": "guitarist_vincent_vermilion",
+ "name": {
+  "jp": "ギタリストの　ビンセント",
+  "en": "Guitarist Vincent"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "おれの　エレキと　どっちが　しびれるか、ためそうぜ！",
+     "en": "Let's see who electrifies better — you or my guitar!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみの　ほうが　しびれたよ…。",
+     "en": "You were the more electrifying one..."
+    }
+   ]
+  }
+ }
+}

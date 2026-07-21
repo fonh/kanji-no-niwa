@@ -1,0 +1,27 @@
+{
+ "trainer_id": "sailor_garrett_ss_vermilion",
+ "name": {
+  "jp": "ふなのりの　ギャレット",
+  "en": "Sailor Garrett"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "B1Fは　のりくみいんの　なわばりだ！",
+     "en": "B1F is crew territory!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "なわばりを　やぶられた。",
+     "en": "Territory breached."
+    }
+   ]
+  }
+ }
+}

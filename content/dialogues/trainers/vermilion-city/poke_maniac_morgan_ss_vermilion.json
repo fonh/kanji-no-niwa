@@ -1,0 +1,27 @@
+{
+ "trainer_id": "poke_maniac_morgan_ss_vermilion",
+ "name": {
+  "jp": "かいじゅうマニアの　モーガン",
+  "en": "Poké Maniac Morgan"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "カントーの　めずらしい　ものの　はなし、きく？　その　まえに　しょうぶ！",
+     "en": "Want to hear about Kanto's rarities? Battle first!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "はなしは　また　こんど…。",
+     "en": "The stories can wait..."
+    }
+   ]
+  }
+ }
+}

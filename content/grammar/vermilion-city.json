@@ -1,0 +1,585 @@
+{
+ "_note": "Overlay grammaire — Carmin, 30 points N2-177→191 + N1-001→015. DÉROGATION documentée : 1 exemple câblé par point (la spec vise 2-3) — la zone porte 30 leçons, le volume prime ; les example_variants[] Hanabira restants restent disponibles au build pour la variété du tirage. Familles A～B～ (にしろ/にせよ/であれ/とも/かれ…, N1) : jamais deux membres interchangeables dans le même tirage ; 次第/次第で/次第です (186-188) idem.",
+ "zone_id": "vermilion-city",
+ "points": [
+  {
+   "grammar_id": "N2-177",
+   "source_index": 176,
+   "title": "～上は (～ue wa)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "試験（しけん）に合格（ごうかく）した上（うえ）は、パーティーを開（ひら）こう。",
+     "point_answer": "上（うえ）は",
+     "jp_cloze": "試験（しけん）に合格（ごうかく）した＿＿、パーティーを開（ひら）こう。",
+     "distractors": [
+      "ものの",
+      "とたん",
+      "かぎりは"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-178",
+   "source_index": 177,
+   "title": "～以上 (〜ijou)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は忙（いそが）しい以上（いじょう）、手伝（てつだ）いに行（い）っても無駄（むだ）だろう。",
+     "point_answer": "以上（いじょう）",
+     "jp_cloze": "彼（かれ）は忙（いそが）しい＿＿、手伝（てつだ）いに行（い）っても無駄（むだ）だろう。",
+     "distractors": [
+      "以来（いらい）",
+      "上（うえ）に",
+      "うちに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-179",
+   "source_index": 178,
+   "title": "～以来 (〜irai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "卒業（そつぎょう）以来（いらい）、彼女（かのじょ）に会（あ）っていない。",
+     "point_answer": "以来（いらい）",
+     "jp_cloze": "卒業（そつぎょう）＿＿、彼女（かのじょ）に会（あ）っていない。",
+     "distractors": [
+      "以上（いじょう）",
+      "し次第（しだい）",
+      "の末（すえ）"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-180",
+   "source_index": 179,
+   "title": "～切る (〜kiru)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は試験勉強（しけんべんきょう）をがんばり切（き）るつもりだ。",
+     "point_answer": "切（き）る",
+     "jp_cloze": "彼（かれ）は試験勉強（しけんべんきょう）をがんばり＿＿つもりだ。",
+     "distractors": [
+      "かける",
+      "がちな",
+      "ぎみな"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-181",
+   "source_index": 180,
+   "title": "～反面 (〜hanmen)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この車（くるま）は速（はや）い反面（はんめん）、燃費（ねんぴ）が悪（わる）いです。",
+     "point_answer": "反面（はんめん）",
+     "jp_cloze": "この車（くるま）は速（はや）い＿＿、燃費（ねんぴ）が悪（わる）いです。",
+     "distractors": [
+      "以上（いじょう）",
+      "うちに",
+      "あまり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-182",
+   "source_index": 181,
+   "title": "～向け (〜muke)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この雑誌（ざっし）は若者（わかもの）向（む）けです。",
+     "point_answer": "向（む）け",
+     "jp_cloze": "この雑誌（ざっし）は若者（わかもの）＿＿です。",
+     "distractors": [
+      "ぬき",
+      "だらけ",
+      "ばかり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-183",
+   "source_index": 182,
+   "title": "～恐れがある (〜osore ga aru)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "地震（じしん）が来（く）る恐（おそ）れがあるため、避難所（ひなんじょ）に行（い）ってください。",
+     "point_answer": "恐（おそ）れがある",
+     "jp_cloze": "地震（じしん）が来（く）る＿＿ため、避難所（ひなんじょ）に行（い）ってください。",
+     "distractors": [
+      "わけがない",
+      "までもない",
+      "ことはない"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-184",
+   "source_index": 183,
+   "title": "～折には (〜ori ni wa)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "喉（のど）が渇（かわ）く折（おり）には、このペットボトルの水（みず）を飲（の）んでください。",
+     "point_answer": "折（おり）には",
+     "jp_cloze": "喉（のど）が渇（かわ）く＿＿、このペットボトルの水（みず）を飲（の）んでください。",
+     "distractors": [
+      "末（すえ）には",
+      "あげくには",
+      "うちには"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-185",
+   "source_index": 184,
+   "title": "～末 (～sue)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "長（なが）い議論（ぎろん）の末（すえ）、ようやく意見（いけん）がまとまった。",
+     "point_answer": "末（すえ）",
+     "jp_cloze": "長（なが）い議論（ぎろん）の＿＿、ようやく意見（いけん）がまとまった。",
+     "distractors": [
+      "おかげ",
+      "とたん",
+      "かぎり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-186",
+   "source_index": 185,
+   "title": "～次第 (〜shidai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "仕事（しごと）が終（お）わり次第（しだい）、帰（かえ）ります。",
+     "point_answer": "次第（しだい）",
+     "jp_cloze": "仕事（しごと）が終（お）わり＿＿、帰（かえ）ります。",
+     "distractors": [
+      "ながら",
+      "がてら",
+      "がけに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-187",
+   "source_index": 186,
+   "title": "～次第で (〜shidai de)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "仕事（しごと）の終（お）わり次第（しだい）で、家（いえ）に帰（かえ）る時間（じかん）が変（か）わります。",
+     "point_answer": "次第（しだい）で",
+     "jp_cloze": "仕事（しごと）の終（お）わり＿＿、家（いえ）に帰（かえ）る時間（じかん）が変（か）わります。",
+     "distractors": [
+      "向（む）けで",
+      "ばかりで",
+      "だらけで"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-188",
+   "source_index": 187,
+   "title": "～次第です (〜shidai desu)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "天気（てんき）次第（しだい）ですが、明日（あした）はピクニックに行（い）こうと思（おも）います。",
+     "point_answer": "次第（しだい）です",
+     "jp_cloze": "天気（てんき）＿＿が、明日（あした）はピクニックに行（い）こうと思（おも）います。",
+     "distractors": [
+      "がちです",
+      "ぎみです",
+      "むきです"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-189",
+   "source_index": 188,
+   "title": "～気味 (〜gimi)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "最近（さいきん）寝不足（ねぶそく）気味（ぎみ）で、ちょっと疲（つか）れています。",
+     "point_answer": "気味（ぎみ）",
+     "jp_cloze": "最近（さいきん）寝不足（ねぶそく）＿＿で、ちょっと疲（つか）れています。",
+     "distractors": [
+      "向（む）き",
+      "ぬき",
+      "こみ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-190",
+   "source_index": 189,
+   "title": "～限り (〜kagiri)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "元気（げんき）な限（かぎ）り、運動（うんどう）し続（つづ）けます。",
+     "point_answer": "限（かぎ）り",
+     "jp_cloze": "元気（げんき）な＿＿、運動（うんどう）し続（つづ）けます。",
+     "distractors": [
+      "末（すえ）",
+      "折（おり）",
+      "うえ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N2-191",
+   "source_index": 190,
+   "title": "～際に (〜sai ni)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "出発（しゅっぱつ）の際（さい）に、パスポートを忘（わす）れないでください。",
+     "point_answer": "際（さい）に",
+     "jp_cloze": "出発（しゅっぱつ）の＿＿、パスポートを忘（わす）れないでください。",
+     "distractors": [
+      "末（すえ）に",
+      "あまりに",
+      "うえに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-001",
+   "source_index": 0,
+   "title": "A うが B うが (A uga B uga)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "朝（あさ）早（はや）かろうが夜（よる）遅（おそ）かろうが、いつもバスが遅（おく）れる。",
+     "point_answer": "かろうが",
+     "point_surface": "早（はや）かろうが",
+     "jp_cloze": "朝（あさ）＿＿夜（よる）遅（おそ）かろうが、いつもバスが遅（おく）れる。",
+     "distractors": [
+      "ければ",
+      "かったが",
+      "くては"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-002",
+   "source_index": 1,
+   "title": "A うと B うと (A uto B uto)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "雨（あめ）が降（ふ）ろうと晴（は）れようと、私（わたし）は毎日（まいにち）ジョギングをします。",
+     "point_answer": "ろうと",
+     "point_surface": "降（ふ）ろうと",
+     "jp_cloze": "雨（あめ）が＿＿晴（は）れようと、私（わたし）は毎日（まいにち）ジョギングをします。",
+     "distractors": [
+      "れば",
+      "ったと",
+      "っては"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-003",
+   "source_index": 2,
+   "title": "A かたわら B (A katawara B)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は仕事（しごと）をするかたわら、大学（だいがく）に通（かよ）っている。",
+     "point_answer": "かたわら",
+     "jp_cloze": "彼（かれ）は仕事（しごと）をする＿＿、大学（だいがく）に通（かよ）っている。",
+     "distractors": [
+      "あまり",
+      "あげく",
+      "とたん"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-004",
+   "source_index": 3,
+   "title": "A かれ B かれ (A kare B kare)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "冬（ふゆ）かれ夏（なつ）かれ、毎日（まいにち）ジョギングする。",
+     "point_answer": "かれ",
+     "point_surface": "冬（ふゆ）かれ",
+     "jp_cloze": "＿＿夏（なつ）かれ、毎日（まいにち）ジョギングする。",
+     "distractors": [
+      "やら",
+      "だの",
+      "とか"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-005",
+   "source_index": 4,
+   "title": "A だの B だの (A dano B dano)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）はいつも遅刻（ちこく）だの、仕事（しごと）を忘（わす）れるだので困（こま）る。",
+     "point_answer": "だの",
+     "jp_cloze": "彼（かれ）はいつも遅刻（ちこく）＿＿、仕事（しごと）を忘（わす）れるだので困（こま）る。",
+     "distractors": [
+      "こそ",
+      "ほど",
+      "まで"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-006",
+   "source_index": 5,
+   "title": "A であれ B であれ (A deare B deare)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "雨（あめ）であれ雪（ゆき）であれ、試合（しあい）は中止（ちゅうし）にならない。",
+     "point_answer": "であれ",
+     "point_surface": "雨（あめ）であれ",
+     "jp_cloze": "＿＿雪（ゆき）であれ、試合（しあい）は中止（ちゅうし）にならない。",
+     "distractors": [
+      "であって",
+      "でなくて",
+      "だけあって"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-007",
+   "source_index": 6,
+   "title": "A というか B というか (A to iu ka B to iu ka)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は無礼（ぶれい）というか、直接的（ちょくせつてき）というか、とにかくはっきりしている。",
+     "point_answer": "というか",
+     "jp_cloze": "彼（かれ）は無礼（ぶれい）＿＿、直接的（ちょくせつてき）というか、とにかくはっきりしている。",
+     "distractors": [
+      "といえば",
+      "となると",
+      "とすれば"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-008",
+   "source_index": 7,
+   "title": "A とも B とも (A tomo B tomo)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "決断（けつだん）とも誤（あやま）りとも、結果（けっか）は時間（じかん）が教（おし）えてくれるでしょう。",
+     "point_answer": "とも",
+     "point_surface": "決断（けつだん）とも",
+     "jp_cloze": "＿＿誤（あやま）りとも、結果（けっか）は時間（じかん）が教（おし）えてくれるでしょう。",
+     "distractors": [
+      "こそ",
+      "さえ",
+      "まで"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-009",
+   "source_index": 8,
+   "title": "A にしろ B にしろ (A nishiro B nishiro)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "暑（あつ）いにしろ寒（さむ）いにしろ、毎日（まいにち）運動（うんどう）するべきです。",
+     "point_answer": "にしろ",
+     "point_surface": "暑（あつ）いにしろ",
+     "jp_cloze": "＿＿寒（さむ）いにしろ、毎日（まいにち）運動（うんどう）するべきです。",
+     "distractors": [
+      "にしたら",
+      "になったら",
+      "にすれば"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-010",
+   "source_index": 9,
+   "title": "A にせよ B にせよ (A ni seyo B ni seyo)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "雨（あめ）にせよ雪（ゆき）にせよ、試合（しあい）は中止（ちゅうし）しない。",
+     "point_answer": "にせよ",
+     "point_surface": "雨（あめ）にせよ",
+     "jp_cloze": "＿＿雪（ゆき）にせよ、試合（しあい）は中止（ちゅうし）しない。",
+     "distractors": [
+      "になれば",
+      "にしたら",
+      "にとって"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-011",
+   "source_index": 10,
+   "title": "A につけ B につけ (A ni tsuke B ni tsuke)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）には笑（わら）うにつけ泣（な）くにつけ、とても魅力的（みりょくてき）だ。",
+     "point_answer": "につけ",
+     "point_surface": "笑（わら）うにつけ",
+     "jp_cloze": "彼（かれ）には＿＿泣（な）くにつけ、とても魅力的（みりょくてき）だ。",
+     "distractors": [
+      "にとって",
+      "によって",
+      "にかけて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-012",
+   "source_index": 11,
+   "title": "A のやら B のやら (A no yara B no yara)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）が怒（おこ）っているのやら、悲（かな）しいのやら、私（わたし）には分（わ）からない。",
+     "point_answer": "のやら",
+     "point_surface": "怒（おこ）っているのやら",
+     "jp_cloze": "彼（かれ）が＿＿、悲（かな）しいのやら、私（わたし）には分（わ）からない。",
+     "distractors": [
+      "のなら",
+      "のには",
+      "のでは"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-013",
+   "source_index": 12,
+   "title": "Noun1 が Noun1 なら、 Noun2 も Noun2 だ (A ga A nara, B mo B da)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "鬼（おに）が鬼（おに）なら、人間（にんげん）も人間（にんげん）だ。",
+     "point_answer": "が鬼（おに）なら",
+     "jp_cloze": "鬼（おに）＿＿、人間（にんげん）も人間（にんげん）だ。",
+     "distractors": [
+      "も鬼（おに）なら",
+      "は鬼（おに）でも",
+      "の鬼（おに）だと"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-014",
+   "source_index": 13,
+   "title": "Noun1 も Noun1 なら、Noun2 も Noun2 だ (A mo A nara, B mo B da)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "君（きみ）も君（きみ）なら、私（わたし）も私（わたし）だ。",
+     "point_answer": "も君（きみ）なら",
+     "jp_cloze": "君（きみ）＿＿、私（わたし）も私（わたし）だ。",
+     "distractors": [
+      "が君（きみ）でも",
+      "は君（きみ）だと",
+      "の君（きみ）には"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-015",
+   "source_index": 14,
+   "title": "Noun + あっての + Noun (A atte no B)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "家族（かぞく）あっての私（わたし）です。",
+     "point_answer": "あっての",
+     "jp_cloze": "家族（かぞく）＿＿私（わたし）です。",
+     "distractors": [
+      "あったのに",
+      "あるままの",
+      "ないままの"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

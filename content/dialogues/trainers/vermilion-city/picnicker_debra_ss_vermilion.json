@@ -1,0 +1,27 @@
+{
+ "trainer_id": "picnicker_debra_ss_vermilion",
+ "name": {
+  "jp": "ピクニックガールの　デブラ",
+  "en": "Picnicker Debra"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "デッキで　ピクニックして　いたの。",
+     "en": "I was picnicking on deck."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "かぜで　サンドイッチが…。",
+     "en": "The wind took my sandwich..."
+    }
+   ]
+  }
+ }
+}

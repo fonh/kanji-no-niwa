@@ -1,0 +1,37 @@
+{
+ "_note": "Étape 4 Lot 10 — quête B6 : la petite-fille disparue du SS Aqua, jouée pendant la 1ʳᵉ traversée Johto→Kanto (I-1 : billet remis par Elm après la Ligue). Retrouvée au B1F (cache-cache), le grand-père remet le Manteau de Métal.",
+ "quest_id": "ss_aqua_granddaughter",
+ "name": {
+  "jp": "アクア号（ごう）の　まいご",
+  "en": "The Lost Girl of the SS Aqua"
+ },
+ "zone_ids": [
+  "vermilion-city"
+ ],
+ "steps": [
+  {
+   "step_id": "girl_missing",
+   "label": {
+    "jp": "アクア号（ごう）の　おじいさんの　まごが　いなく　なった。ふねの　なかを　さがそう。",
+    "en": "The old man's granddaughter has vanished aboard the SS Aqua. Search the ship."
+   },
+   "target_zone_id": "vermilion-city"
+  },
+  {
+   "step_id": "girl_found",
+   "label": {
+    "jp": "まごを　B1Fで　みつけた！　かくれんぼの　つもりだったらしい。",
+    "en": "Found her on B1F! She thought it was hide-and-seek."
+   },
+   "target_zone_id": "vermilion-city"
+  },
+  {
+   "step_id": "reunited",
+   "label": {
+    "jp": "まごを　おじいさんの　ところへ　つれて　いった。おれいを　もらった。",
+    "en": "Brought her back to her grandfather and received his thanks."
+   },
+   "target_zone_id": "vermilion-city"
+  }
+ ]
+}

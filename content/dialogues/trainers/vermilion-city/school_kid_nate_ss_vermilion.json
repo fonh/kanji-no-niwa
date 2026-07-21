@@ -1,0 +1,27 @@
+{
+ "trainer_id": "school_kid_nate_ss_vermilion",
+ "name": {
+  "jp": "じゅくがえりの　ネイト",
+  "en": "School Kid Nate"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ふねの　なかでも　べんきょう、かかさないよ。",
+     "en": "I keep up my studies even at sea."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみには　まなぶ　ことばかりだ。",
+     "en": "You're a lesson in yourself."
+    }
+   ]
+  }
+ }
+}

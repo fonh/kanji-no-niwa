@@ -1,0 +1,41 @@
+{
+ "_note": "Étape 4 Lot 10 — Eusine sur la jetée (cameo D1, étape vermilion_pier ajoutée à suicune_hunt).",
+ "npc_id": "eusine_pier_vermilion",
+ "name": {
+  "jp": "でんせつハンターの　ミナキ",
+  "en": "Eusine"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "きみか！　カントーまで　おいかけて　きたんだ。",
+     "en": "You! I've chased it all the way to Kanto."
+    },
+    {
+     "jp": "この　じばしに　あの　この　けはいが　した。まちがいない。",
+     "en": "I felt its presence on this very pier. No mistake."
+    },
+    {
+     "jp": "さきに　みつけるのは　ぼくだからね！",
+     "en": "I'll be the one to find it first!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "suicune_hunt",
+     "step_id": "vermilion_pier"
+    }
+   ]
+  }
+ }
+}

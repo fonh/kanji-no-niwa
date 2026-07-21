@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_shaye_ss_vermilion",
+ "name": {
+  "jp": "エリートトレーナーの　シェイ",
+  "en": "Ace Trainer Shaye"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ジョウトチャンピオンと　しょうぶできるなんて！",
+     "en": "A battle with the Johto Champion!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うわさどおりの　つよさ！",
+     "en": "As strong as the rumors say!"
+    }
+   ]
+  }
+ }
+}

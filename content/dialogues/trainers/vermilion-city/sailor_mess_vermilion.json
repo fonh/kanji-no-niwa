@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 10 — marin du mess (combat sourcé npc-inventory : « cherche un collègue endormi, déclenche un combat »).",
+ "trainer_id": "sailor_mess_vermilion",
+ "name": {
+  "jp": "ふなのりの　スタン",
+  "en": "Sailor Stan"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "あいつ、また　キャビンで　ねてやがるな…。",
+     "en": "That guy's asleep in his cabin AGAIN..."
+    },
+    {
+     "jp": "おこして　くる　まえに、いらいらを　しょうぶで　はらす！",
+     "en": "Before I go wake him, let me battle off this frustration!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "よし、すっきりした。あいつを　おこして　くる。",
+     "en": "Right, that cleared my head. Off to wake him."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "trainer_id": "sailor_kenneth_ss_vermilion",
+ "name": {
+  "jp": "ふなのりの　ケネス",
+  "en": "Sailor Kenneth"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "きかんしつの　ばんにんだ。とおるなら　かって　いけ！",
+     "en": "I guard the engine room. Win your way past!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "とおって　よし！",
+     "en": "You may pass!"
+    }
+   ]
+  }
+ }
+}

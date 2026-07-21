@@ -1,0 +1,27 @@
+{
+ "trainer_id": "sailor_jeff_ss_vermilion",
+ "name": {
+  "jp": "ふなのりの　ジェフ",
+  "en": "Sailor Jeff"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　ふねの　ふなのりは　つよいぞ！",
+     "en": "This ship's sailors are strong!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "りくの　ひとに　まけるとは。",
+     "en": "Beaten by a landlubber."
+    }
+   ]
+  }
+ }
+}

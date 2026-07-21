@@ -1,0 +1,27 @@
+{
+ "trainer_id": "ace_trainer_carol_ss_vermilion",
+ "name": {
+  "jp": "エリートトレーナーの　キャロル",
+  "en": "Ace Trainer Carol"
+ },
+ "zone_id": "vermilion-city",
+ "jlpt_level": "N2",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ふなたびの　たいくつしのぎに　どう？",
+     "en": "Care to relieve the boredom of the crossing?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "たいくつなんて　ふきとんだわ。",
+     "en": "Boredom thoroughly blown away."
+    }
+   ]
+  }
+ }
+}
