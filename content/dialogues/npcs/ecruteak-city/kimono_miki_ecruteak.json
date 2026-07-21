@@ -1,0 +1,51 @@
+{
+ "_note": "Étape 4 Lot 3 — 3ᵉ Kimono Girl rencontrée (scène/leçon, PAS un combat — corrigé audit 01). Le remerciement énigmatique « quelqu'un avait raison à ton sujet » est sourcé guidebook. kimono_progress.cleared_at = scène complétée (état saved vu).",
+ "npc_id": "kimono_miki_ecruteak",
+ "name": {
+  "jp": "まいこの　ミキ",
+  "en": "Kimono Girl Miki"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "npc_cleared",
+     "npc_id": "rocket_grunt_theater_ecruteak"
+    }
+   ],
+   "state": "saved"
+  },
+  {
+   "default": true,
+   "state": "threatened"
+  }
+ ],
+ "dialogue_states": {
+  "threatened": {
+   "pages": [
+    {
+     "jp": "（ロケットだんいんが　まいこさんに　つめよって　いる…。）",
+     "en": "(A Rocket Grunt is closing in on the kimono dancer...)"
+    }
+   ]
+  },
+  "saved": {
+   "pages": [
+    {
+     "jp": "たすけて　くださって、ありがとう　ございます。",
+     "en": "Thank you for saving me."
+    },
+    {
+     "jp": "…あの　方（かた）の　言（い）った　とおりの　人（ひと）ですね。",
+     "en": "...You are just as that person said you would be."
+    },
+    {
+     "jp": "いつか、また　お会（あ）いしましょう。",
+     "en": "We shall meet again, someday."
+    }
+   ]
+  }
+ }
+}

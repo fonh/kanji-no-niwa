@@ -1,0 +1,36 @@
+{
+ "_note": "Étape 4 Lot 3 — paire ROM (TRAINER_TWINS_TORI_AND_TIL), un seul combat pour les deux comme les jumelles d'Écorcia. La réplique ちゃった expose le point N3-040 de la zone.",
+ "trainer_id": "twins_tori_til_route37",
+ "name": {
+  "jp": "ふたごちゃんの　トリと　チル",
+  "en": "Twins Tori & Til"
+ },
+ "zone_id": "route-37",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "「わたしたちと」",
+     "en": "\"You'll battle\""
+    },
+    {
+     "jp": "「しょうぶだよ！」",
+     "en": "\"the both of us!\""
+    },
+    {
+     "jp": "ふたりで　ひとつ、だもん！",
+     "en": "Two of us, one team!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "「まけちゃった」「まけちゃった…」",
+     "en": "\"We lost.\" \"We lost...\""
+    }
+   ]
+  }
+ }
+}

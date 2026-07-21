@@ -1,0 +1,31 @@
+{
+ "trainer_id": "psychic_greg_route37",
+ "name": {
+  "jp": "サイキッカーの　グレッグ",
+  "en": "Psychic Greg"
+ },
+ "zone_id": "route-37",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　さきは　れきしと　たましいの　まち。",
+     "en": "Beyond here lies a city of history and spirits."
+    },
+    {
+     "jp": "こころの　じゅんびが　できているか、みせて　もらう！",
+     "en": "Show me your mind is ready!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "こころの　そこから　まいった。",
+     "en": "I concede, from the bottom of my mind."
+    }
+   ]
+  }
+ }
+}

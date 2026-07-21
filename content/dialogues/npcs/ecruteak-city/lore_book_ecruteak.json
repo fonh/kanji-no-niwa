@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 3 — objet-livre (kind=object) de la maison de l'homme à l'énigme, porteur du texte A2 (three_spirits_legend_ecruteak via found_object_ref). La didascalie ouvre la fenêtre de lecture.",
+ "npc_id": "lore_book_ecruteak",
+ "name": {
+  "jp": "でんせつの　ほん",
+  "en": "Legend Book"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "read"
+  }
+ ],
+ "dialogue_states": {
+  "read": {
+   "pages": [
+    {
+     "jp": "（ふるい　ほんが　たなに　おいて　ある。）",
+     "en": "(An old book rests on the shelf.)"
+    },
+    {
+     "jp": "（よんで　みよう。）",
+     "en": "(Let's read it.)"
+    }
+   ]
+  }
+ }
+}

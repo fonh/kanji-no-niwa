@@ -1,0 +1,31 @@
+{
+ "trainer_id": "medium_grace_ecruteak",
+ "name": {
+  "jp": "いたこの　グレース",
+  "en": "Medium Grace"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "影（かげ）は　うそを　つきません。",
+     "en": "Shadows never lie."
+    },
+    {
+     "jp": "あなたの　影（かげ）を　よませて　いただきます。",
+     "en": "Allow me to read yours."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いい　影（かげ）を　して　います。おとおりなさい。",
+     "en": "You cast a fine shadow. You may pass."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,41 @@
+[
+ {
+  "zone_id": "route-37",
+  "npc_ref": "sunny_route37",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "庶",
+   "庸",
+   "廷",
+   "弊",
+   "微"
+  ],
+  "grammar_id": "N3-038"
+ },
+ {
+  "zone_id": "route-37",
+  "npc_ref": "sunny_route37",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "徴",
+   "徹",
+   "怪",
+   "恒",
+   "恨"
+  ],
+  "grammar_id": "N3-039"
+ },
+ {
+  "zone_id": "route-37",
+  "npc_ref": "sunny_route37",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "悟",
+   "悦",
+   "惰",
+   "愉",
+   "慕"
+  ],
+  "grammar_id": "N3-040"
+ }
+]

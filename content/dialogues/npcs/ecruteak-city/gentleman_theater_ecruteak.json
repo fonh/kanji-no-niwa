@@ -1,0 +1,61 @@
+{
+ "_note": "Étape 4 Lot 3 — leçon #3 + remise du CS-Kanji 水 (HM03 Surf adapté ; seuil N=20 via count(texts_read, 20), utilisabilité gated badge Morty comme posé au PRD § map_obstacles). Texte obligatoire de remise : texts/ecruteak-city/cs_mizu.json (même pattern que 砕/切). calc-cs-corpus.py mis à jour avec ce donneur.",
+ "npc_id": "gentleman_theater_ecruteak",
+ "name": {
+  "jp": "ジェントルマンの　だんな",
+  "en": "Gentleman in the Audience"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "npc_cleared",
+     "npc_id": "rocket_grunt_theater_ecruteak"
+    }
+   ],
+   "state": "give_surf"
+  },
+  {
+   "default": true,
+   "state": "before"
+  }
+ ],
+ "dialogue_states": {
+  "before": {
+   "pages": [
+    {
+     "jp": "この　げきじょうでは　しずかに　するものだ。",
+     "en": "One keeps quiet in this theater."
+    }
+   ]
+  },
+  "give_surf": {
+   "pages": [
+    {
+     "jp": "みごとな　たちまわりだった！",
+     "en": "A splendid intervention!"
+    },
+    {
+     "jp": "まいこさんを　たすけた　きみに、これを　おくろう。",
+     "en": "For saving the dancer, I present you this."
+    },
+    {
+     "jp": "水（みず）の　かんじの　ひでんだ。うみも　かわも　わたれるように　なる。",
+     "en": "The secret kanji of Water. You'll be able to cross seas and rivers."
+    },
+    {
+     "jp": "つかいこなすには、もっと　本（ほん）を　よむ　ことだ。",
+     "en": "To master it, keep reading — many more books."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "cs_mizu"
+    }
+   ]
+  }
+ }
+}

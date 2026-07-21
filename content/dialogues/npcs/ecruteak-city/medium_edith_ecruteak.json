@@ -1,0 +1,33 @@
+{
+ "npc_id": "medium_edith_ecruteak",
+ "name": {
+  "jp": "いたこの　イーディス",
+  "en": "Medium Edith"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "この　まちには　ふたつの　とうが　あります。",
+     "en": "This city has two towers."
+    },
+    {
+     "jp": "ひとつは　やけて、ひとつは　のこった。",
+     "en": "One burned. One remains."
+    },
+    {
+     "jp": "どちらにも、ものがたりが　ねむって　います。",
+     "en": "Stories sleep in both."
+    }
+   ]
+  }
+ }
+}

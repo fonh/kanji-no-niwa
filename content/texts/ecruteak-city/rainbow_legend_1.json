@@ -1,0 +1,107 @@
+{
+ "_note": "Étape 4 Lot 3 — texte A9 (fragment 1/2) : légende de l'être arc-en-ciel, livrée par le conteur devant le Gym. Fragment 2 à la Tour Embrasée. Modèle « légende en plusieurs fragments à travers la zone » (guidebook).",
+ "text": {
+  "text_id": "rainbow_legend_1_ecruteak",
+  "title": {
+   "jp": "にじいろの　とり（いち）",
+   "en": "The Rainbow Bird (I)"
+  },
+  "jp_text": "150ねんまえ、そらいろのはねをもつおおきなとりが、まいにちとうのうえにとまっていました。まちの人（ひと）びとは、そのとりをまもりがみとしてあがめていました。しかし、とうがやけたよる、とりはどこかへとんでいってしまいました。それからだれも、そのすがたをみていません。",
+  "en_text": "A hundred and fifty years ago, a great bird with sky-colored wings perched atop the tower every day. The townspeople revered it as a guardian deity. But the night the tower burned, the bird flew away somewhere. No one has seen it since.",
+  "audio_ref": null,
+  "level": "N3",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "ecruteak-city",
+  "npc_ref": "storyteller_ecruteak",
+  "found_object_ref": null,
+  "event_ref": null,
+  "length_chars": 133,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　はなしは　なにに　ついて　ですか。",
+     "en": "What is this tale about?"
+    },
+    "options": [
+     {
+      "jp": "むかし　まちに　いた　とりの　でんせつ。",
+      "en": "The legend of a bird that once lived in the city"
+     },
+     {
+      "jp": "とうの　たてかた。",
+      "en": "How the tower was built"
+     },
+     {
+      "jp": "まもりがみの　まつり。",
+      "en": "A guardian deity festival"
+     },
+     {
+      "jp": "はねの　いろの　しくみ。",
+      "en": "How feather colors work"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "とりは　いつ　いなく　なりましたか。",
+     "en": "When did the bird disappear?"
+    },
+    "options": [
+     {
+      "jp": "とうが　やけた　よる。",
+      "en": "The night the tower burned"
+     },
+     {
+      "jp": "150ねんまえの　あさ。",
+      "en": "One morning 150 years ago"
+     },
+     {
+      "jp": "まつりの　ひ。",
+      "en": "On a festival day"
+     },
+     {
+      "jp": "ふゆの　おわり。",
+      "en": "At winter's end"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "まちの　人（ひと）びとに　とって、とりは　どんな　そんざいでしたか。",
+     "en": "What was the bird to the townspeople?"
+    },
+    "options": [
+     {
+      "jp": "たいせつな　まもりがみ。",
+      "en": "A cherished guardian deity"
+     },
+     {
+      "jp": "こわい　てき。",
+      "en": "A fearsome enemy"
+     },
+     {
+      "jp": "ただの　ペット。",
+      "en": "Just a pet"
+     },
+     {
+      "jp": "しょくりょう。",
+      "en": "A source of food"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 45,
+     "end": 78
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "_note": "Étape 4 Lot 3 — même réconciliation que Whitney (roadmap Lot 2) : la ligne npc-inventory « leçon #1/#7 » couvre les 4 Mediums, le PRD § Gyms exige des 門弟 — répartition : Grace + Georgina = 門弟 (14q), Martha = npc_ref des leçons #1 et #7, Edith = ambiante.",
+ "npc_id": "medium_martha_ecruteak",
+ "name": {
+  "jp": "いたこの　マーサ",
+  "en": "Medium Martha"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "badge_earned",
+     "badge_id": "morty"
+    }
+   ],
+   "state": "post_badge"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ここは　マツバさまの　ジム。かげの　しゅぎょうの　ばです。",
+     "en": "This is Lord Morty's Gym — a place of shadow training."
+    },
+    {
+     "jp": "こわがらないで、まず　わたしと　まなびなさい。",
+     "en": "Don't be afraid. First, study with me."
+    }
+   ]
+  },
+  "post_badge": {
+   "pages": [
+    {
+     "jp": "マツバさまの　目（め）は　とおくを　みて　います。",
+     "en": "Lord Morty's eyes see far into the distance."
+    },
+    {
+     "jp": "あなたの　目（め）も、ですね。",
+     "en": "As do yours, it seems."
+    }
+   ]
+  }
+ }
+}

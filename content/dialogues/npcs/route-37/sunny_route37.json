@@ -1,0 +1,57 @@
+{
+ "_note": "Étape 4 Lot 3 — Sunny, « frère/sœur du jour » du dimanche (PNJ calendaire, v1 depuis la décision aucune-v2 ; time_window sur l'entrée map_npcs). Porte les 3 leçons de route-37 (N3-038→040) et remet le Magnet. Sa fratrie apparaîtra dans d'autres zones aux autres jours (registre fermé, un npc_id par zone, modèle 04-D1).",
+ "npc_id": "sunny_route37",
+ "name": {
+  "jp": "サニー",
+  "en": "Sunny"
+ },
+ "zone_id": "route-37",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "magnet"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ぼく、サニー。にちようびが　だいすきなんだ。",
+     "en": "I'm Sunny. Sundays are my favorite."
+    },
+    {
+     "jp": "にちようびに　ここに　くる　たびに、いい　ことが　あるんだよ。",
+     "en": "Every time I come here on a Sunday, something good happens."
+    },
+    {
+     "jp": "きょうは　きみに　あえた！　はい、これ　あげる。",
+     "en": "Today I got to meet you! Here, this is for you."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "magnet"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "らいしゅうの　にちようびも、ここに　いるよ。",
+     "en": "I'll be here next Sunday too."
+    }
+   ]
+  }
+ }
+}

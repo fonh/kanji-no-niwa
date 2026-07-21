@@ -1,0 +1,38 @@
+{
+ "_note": "Étape 4 Lot 3 — leçon #4. Bloquent l'accès à Tour Jo (fidèle : même avec le badge, la tour reste fermée jusqu'à l'arc Kimono/Plume Arc-en-ciel — obstacle bell_tower_gate_ecruteak). La réplique てはじめて expose N3-050.",
+ "npc_id": "border_post_men_ecruteak",
+ "name": {
+  "jp": "きたの　もんばん",
+  "en": "Border Post Men"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "この　さきは　スズの　とうへ　つづく　みちだ。",
+     "en": "Beyond here lies the path to the Bell Tower."
+    },
+    {
+     "jp": "むかし、にじいろの　とりが　この　まちに　すんで　いたと　いう。",
+     "en": "They say a rainbow bird once lived in this city."
+    },
+    {
+     "jp": "とうに　のぼって　はじめて、その　いみが　わかるだろう。",
+     "en": "Only when you climb the tower will you understand what that means."
+    },
+    {
+     "jp": "だが　いまは　とおせない。とうは　とざされて　いる。",
+     "en": "But we can't let you through now. The tower is sealed."
+    }
+   ]
+  }
+ }
+}

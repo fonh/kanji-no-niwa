@@ -1,0 +1,31 @@
+{
+ "trainer_id": "firebreather_richard_burned_tower",
+ "name": {
+  "jp": "ひふきやろうの　リチャード",
+  "en": "Firebreather Richard"
+ },
+ "zone_id": "burned-tower",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ちかは　あぶないぞ。ゆかが　くずれる。",
+     "en": "The basement's dangerous. The floor gives way."
+    },
+    {
+     "jp": "ここから　さきは、おれに　かってからだ！",
+     "en": "Beat me before you go further!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "気（き）を　つけて　いけよ。",
+     "en": "Watch your step down there."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 3 — leçon #5, amorce sourcée de la quête du Phare d'Oliville (Jasmine/Amphy, écrite à la passe Olivine). La réplique てほしい expose N3-051.",
+ "npc_id": "man_north_gym_ecruteak",
+ "name": {
+  "jp": "ジムの　きたの　おとこ",
+  "en": "Man North of the Gym"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "アサギシティの　とうだいもりが　びょうきらしい。",
+     "en": "I hear the lighthouse keeper in Olivine is ill."
+    },
+    {
+     "jp": "あかりが　きえたら、ふねが　あぶない。",
+     "en": "If the light goes out, the ships are in danger."
+    },
+    {
+     "jp": "だれかに　たすけに　行（い）って　ほしいよ。",
+     "en": "I wish someone would go help."
+    }
+   ]
+  }
+ }
+}

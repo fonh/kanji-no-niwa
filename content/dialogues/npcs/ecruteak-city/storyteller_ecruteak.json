@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 3 — vieil homme conteur (sourcé guidebook § ecruteak « autres PNJ clés ») : livre la légende de l'être arc-en-ciel en 2 fragments (side-content A9), ici le fragment 1 (texts/ecruteak-city/rainbow_legend_1.json), le fragment 2 à la Tour Embrasée. Modèle « légende en plusieurs fragments à travers la zone ».",
+ "npc_id": "storyteller_ecruteak",
+ "name": {
+  "jp": "かたりべの　ろうじん",
+  "en": "Old Storyteller"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ジムの　まえで　なにを　して　いるかって？",
+     "en": "What am I doing in front of the Gym, you ask?"
+    },
+    {
+     "jp": "むかしばなしを　かたって　いるのさ。よんで　いくかい？",
+     "en": "Telling the old tales. Care to hear one?"
+    }
+   ]
+  }
+ }
+}

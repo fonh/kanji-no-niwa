@@ -1,0 +1,31 @@
+{
+ "trainer_id": "medium_georgina_ecruteak",
+ "name": {
+  "jp": "いたこの　ジョージナ",
+  "en": "Medium Georgina"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "マツバさまの　もとへは　行（い）かせません。",
+     "en": "You shall not reach Lord Morty."
+    },
+    {
+     "jp": "めに　みえない　ものと、たたかえますか？",
+     "en": "Can you fight what cannot be seen?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "みえない　ものさえ、あなたには　みえて　いるようね。",
+     "en": "It seems you see even the unseen."
+    }
+   ]
+  }
+ }
+}

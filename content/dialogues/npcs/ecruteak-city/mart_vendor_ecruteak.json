@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 3 — leçon #6 (comptoir du fond : Air Mail, Heal Ball, Net Ball en vente — l'inventaire de boutique est une donnée d'implémentation). La réplique ～ても expose N3-052.",
+ "npc_id": "mart_vendor_ecruteak",
+ "name": {
+  "jp": "フレンドリィショップの　てんいん",
+  "en": "Mart Vendor"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "いらっしゃいませ！　おくの　カウンターへ　どうぞ。",
+     "en": "Welcome! Come to the counter in the back."
+    },
+    {
+     "jp": "エアメールに　ボールも　あります。",
+     "en": "We have Air Mail, and Balls too."
+    },
+    {
+     "jp": "高（たか）くても、いい　しなものを　そろえて　いますよ。",
+     "en": "Even if they cost more, we stock only quality goods."
+    }
+   ]
+  }
+ }
+}

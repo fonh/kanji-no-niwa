@@ -1,0 +1,44 @@
+{
+ "_note": "Étape 4 Lot 3 — Silver apparition #3 (table PRD § Silver : Tour Embrasée, longueur 18). En haut de l'échelle vers B1F (sourcé). sight_auto battle comme #1/#2.",
+ "trainer_id": "silver_apparition3_burned_tower",
+ "name": {
+  "jp": "ライバル",
+  "en": "Silver"
+ },
+ "zone_id": "burned-tower",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "…また　おまえか。",
+     "en": "...You again."
+    },
+    {
+     "jp": "おれは　でんせつの　せいれいを　しらべに　きた。よわい　やつには　ようは　ない。",
+     "en": "I came to investigate the legendary spirits. I've no use for weaklings."
+    },
+    {
+     "jp": "おまえが　よわいか　どうか、たしかめて　やる！",
+     "en": "Let's find out if you're one of them!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…ちっ。なんで　おまえなんかに。",
+     "en": "...Tch. Why do I keep losing to you?"
+    },
+    {
+     "jp": "つよさとは　なんだ…。おれには　まだ　たりない　ものが　あるのか。",
+     "en": "What is strength...? Am I still missing something?"
+    },
+    {
+     "jp": "そこを　どけ。ひとりに　なりたい。",
+     "en": "Out of my way. I want to be alone."
+    }
+   ]
+  }
+ }
+}

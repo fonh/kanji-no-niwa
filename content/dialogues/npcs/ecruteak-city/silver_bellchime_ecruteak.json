@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 3 — apparition ambiante de Silver devant Tour Jo (npc-inventory : ambiant — distincte du combat #3 qui a lieu DANS la Tour Embrasée, table PRD § Silver). Un npc_id par (personnage × zone), modèle 04-D1.",
+ "npc_id": "silver_bellchime_ecruteak",
+ "name": {
+  "jp": "ライバル",
+  "en": "Silver"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "…この　とうに　なにか　あるのか？",
+     "en": "...Is there something in this tower?"
+    },
+    {
+     "jp": "つよく　なる　ためなら、なんでも　しらべる。",
+     "en": "If it makes me stronger, I'll look into anything."
+    },
+    {
+     "jp": "じゃまを　するな。",
+     "en": "Don't get in my way."
+    }
+   ]
+  }
+ }
+}

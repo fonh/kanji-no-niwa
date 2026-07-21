@@ -1,5 +1,5 @@
 {
- "_note": "Étape 4 Lot 2 — Bill (ambiant, arc D4). Adaptation du « compagnon rare Eevee-analogue » : le companion_id est unique et fixé chez Elm (PRD § Compagnon, jamais rechangé) — le cadeau devient une poupée de collection (items.category collectible, exposée au Global Terminal § collections). L'état bill_home est gaté sur event_cleared(bill_met_ecruteak), posé à la passe Rosalia.",
+ "_note": "Étape 4 Lot 2 — Bill (ambiant, arc D4). Adaptation du « compagnon rare Eevee-analogue » : le companion_id est unique et fixé chez Elm (PRD § Compagnon, jamais rechangé) — le cadeau devient une poupée de collection (items.category collectible, exposée au Global Terminal § collections). L'état bill_home est gaté sur quest_step(bill_family_thread, met_ecruteak) — corrigé Lot 3 : aucun Effect ne sait écrire un event depuis un dialogue, le fil D4 est porté par la Quest partagée (modèle 04-D1).",
  "npc_id": "bill_house_goldenrod",
  "name": {
   "jp": "ビルの　いえ",
@@ -11,8 +11,9 @@
   {
    "if": [
     {
-     "type": "event_cleared",
-     "event_id": "bill_met_ecruteak"
+     "type": "quest_step",
+     "quest_id": "bill_family_thread",
+     "step": "met_ecruteak"
     }
    ],
    "state": "bill_home"
@@ -62,6 +63,11 @@
     {
      "type": "grant_item",
      "item_id": "eevee_doll"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "bill_family_thread",
+     "step_id": "doll_received"
     }
    ]
   }

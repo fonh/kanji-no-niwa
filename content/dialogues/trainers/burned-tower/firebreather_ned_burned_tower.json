@@ -1,0 +1,31 @@
+{
+ "trainer_id": "firebreather_ned_burned_tower",
+ "name": {
+  "jp": "ひふきやろうの　ネッド",
+  "en": "Firebreather Ned"
+ },
+ "zone_id": "burned-tower",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "やけた　とうで　ひを　ふく。しゃれてる　だろ？",
+     "en": "Breathing fire in a burned tower. Poetic, right?"
+    },
+    {
+     "jp": "あつい　しょうぶと　いこう！",
+     "en": "Let's have a blazing battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "おれの　ひは　けされちまった。",
+     "en": "My flame's been snuffed out."
+    }
+   ]
+  }
+ }
+}

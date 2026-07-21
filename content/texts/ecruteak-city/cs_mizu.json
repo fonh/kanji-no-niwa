@@ -1,0 +1,164 @@
+{
+ "_note": "Étape 4 Lot 3 — texte obligatoire de remise du CS-Kanji 水 (gentleman_theater_ecruteak, après le sauvetage de Miki). Même pattern que cs_kudakeru_route36 / cs_kiru_azalea. Seuil N=20 (count(texts_read, 20)), utilisabilité gated badge Morty (PRD § map_obstacles).",
+ "text": {
+  "text_id": "cs_mizu_ecruteak",
+  "title": {
+   "jp": "みずの　こころ",
+   "en": "The Heart of Water"
+  },
+  "jp_text": "水（みず）はかたちをもちません。うつわに入（はい）ればうつわのかたちになります。だから水（みず）はどこへでも行（い）けるのです。このかんじをまなんだ人（ひと）は、うみもかわもこわくありません。水（みず）のこころをもって、すすんでください。",
+  "en_text": "Water has no shape. Poured into a vessel, it takes the vessel's shape. That is why water can go anywhere. One who has learned this kanji fears neither sea nor river. Go forward with the heart of water.",
+  "audio_ref": null,
+  "level": "N3",
+  "source": "original",
+  "tier": "obligatoire",
+  "zone_id": "ecruteak-city",
+  "npc_ref": "gentleman_theater_ecruteak",
+  "found_object_ref": null,
+  "event_ref": "cs_mizu_ecruteak",
+  "length_chars": 119,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　はなしは　なにに　ついて　ですか。",
+     "en": "What is this passage about?"
+    },
+    "options": [
+     {
+      "jp": "水（みず）の　せいしつと　こころ。",
+      "en": "The nature and heart of water"
+     },
+     {
+      "jp": "うつわの　つくりかた。",
+      "en": "How to make vessels"
+     },
+     {
+      "jp": "うみの　あぶなさ。",
+      "en": "The dangers of the sea"
+     },
+     {
+      "jp": "かんじの　れきし。",
+      "en": "The history of kanji"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "水（みず）は　うつわに　入（はい）ると　どう　なりますか。",
+     "en": "What happens when water is poured into a vessel?"
+    },
+    "options": [
+     {
+      "jp": "うつわの　かたちに　なる。",
+      "en": "It takes the vessel's shape"
+     },
+     {
+      "jp": "こおって　しまう。",
+      "en": "It freezes"
+     },
+     {
+      "jp": "きえて　しまう。",
+      "en": "It disappears"
+     },
+     {
+      "jp": "あふれて　しまう。",
+      "en": "It overflows"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": {
+     "jp": "「うつわ」の　いみは？",
+     "en": "What does 「うつわ」 mean?"
+    },
+    "options": [
+     {
+      "jp": "入（い）れもの",
+      "en": "A container"
+     },
+     {
+      "jp": "たべもの",
+      "en": "Food"
+     },
+     {
+      "jp": "のりもの",
+      "en": "A vehicle"
+     },
+     {
+      "jp": "たてもの",
+      "en": "A building"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "水（みず）は　なぜ　どこへでも　行（い）けるのですか。",
+     "en": "Why can water go anywhere?"
+    },
+    "options": [
+     {
+      "jp": "かたちを　もたないから。",
+      "en": "Because it has no shape"
+     },
+     {
+      "jp": "つめたいから。",
+      "en": "Because it is cold"
+     },
+     {
+      "jp": "おもいから。",
+      "en": "Because it is heavy"
+     },
+     {
+      "jp": "はやいから。",
+      "en": "Because it is fast"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 40,
+     "end": 63
+    }
+   },
+   {
+    "type": "resolution_reference",
+    "prompt": {
+     "jp": "「この　かんじ」とは　どの　かんじですか。",
+     "en": "Which kanji does \"this kanji\" refer to?"
+    },
+    "options": [
+     {
+      "jp": "水（みず）",
+      "en": "水 (water)"
+     },
+     {
+      "jp": "火（ひ）",
+      "en": "火 (fire)"
+     },
+     {
+      "jp": "山（やま）",
+      "en": "山 (mountain)"
+     },
+     {
+      "jp": "空（そら）",
+      "en": "空 (sky)"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 64,
+     "end": 69
+    }
+   }
+  ]
+ }
+}

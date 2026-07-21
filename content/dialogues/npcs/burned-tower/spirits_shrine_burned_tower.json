@@ -1,0 +1,59 @@
+{
+ "_note": "Étape 4 Lot 3 — adaptation de la scène des 3 bêtes du sous-sol : entrée kind=object, narration en didascalies, aucune espèce nommée (règle #1). Avance suicune_hunt → spirits_awakened (ce qui fait réagir Eusine et ouvre la traque des 3 légendaires, combats aux zones dédiées).",
+ "npc_id": "spirits_shrine_burned_tower",
+ "name": {
+  "jp": "3つの　せきぞう",
+  "en": "Three Stone Statues"
+ },
+ "zone_id": "burned-tower",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "suicune_hunt",
+     "step": "spirits_awakened"
+    }
+   ],
+   "state": "empty"
+  },
+  {
+   "default": true,
+   "state": "dormant"
+  }
+ ],
+ "dialogue_states": {
+  "dormant": {
+   "pages": [
+    {
+     "jp": "（3つの　せきぞうが　ならんで　いる。）",
+     "en": "(Three stone statues stand in a row.)"
+    },
+    {
+     "jp": "（ちかづいた　とたん、せきぞうの　かげから　3つの　けはいが　とびだした！）",
+     "en": "(The moment you drew near, three presences burst from behind the statues!)"
+    },
+    {
+     "jp": "（かぜのように　はしりさって　いった…。）",
+     "en": "(They ran off like the wind...)"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "suicune_hunt",
+     "step_id": "spirits_awakened"
+    }
+   ]
+  },
+  "empty": {
+   "pages": [
+    {
+     "jp": "（せきぞうだけが、しずかに　のこって　いる。）",
+     "en": "(Only the statues remain, in silence.)"
+    }
+   ]
+  }
+ }
+}

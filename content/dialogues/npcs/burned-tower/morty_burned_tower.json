@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 3 — Morty à la Tour Embrasée (ambiant, avant son combat de gym). Personnage récurrent : un npc_id par zone (04-D1).",
+ "npc_id": "morty_burned_tower",
+ "name": {
+  "jp": "ジムリーダー　マツバ",
+  "en": "Morty"
+ },
+ "zone_id": "burned-tower",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "この　とうは　150ねん　まえに　やけた。",
+     "en": "This tower burned down 150 years ago."
+    },
+    {
+     "jp": "3つの　せいれいが　ここで　いのちを　おとし、にじいろの　とりが　よみがえらせたと　いう。",
+     "en": "Three spirits perished here — and the rainbow bird brought them back, they say."
+    },
+    {
+     "jp": "わたしは　その　とりを　まつ　ために　しゅぎょうを　して　いる。",
+     "en": "I train so that I may await that bird."
+    }
+   ]
+  }
+ }
+}

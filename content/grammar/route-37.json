@@ -1,0 +1,99 @@
+{
+ "_note": "Overlay grammaire — Route 37, 3 points N3-038→040 (mêmes règles que goldenrod-city). N3-039 : la forme du corpus Hanabira est ～んだものだから — cloze sur ものだ, cohérent avec le title.",
+ "zone_id": "route-37",
+ "points": [
+  {
+   "grammar_id": "N3-038",
+   "source_index": 37,
+   "title": "～たびに (〜tabi ni)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼女（かのじょ）に会（あ）うたびに、心（こころ）が弾（はず）む。",
+     "point_answer": "たびに",
+     "jp_cloze": "彼女（かのじょ）に会（あ）う＿＿、心（こころ）が弾（はず）む。",
+     "distractors": [
+      "とおりに",
+      "かわりに",
+      "ばかりに"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "この歌（うた）を聴（き）くたびに、幸（しあわ）せな気分（きぶん）になる。",
+     "point_answer": "たびに",
+     "jp_cloze": "この歌（うた）を聴（き）く＿＿、幸（しあわ）せな気分（きぶん）になる。",
+     "distractors": [
+      "とおりに",
+      "かわりに",
+      "ばかりに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-039",
+   "source_index": 38,
+   "title": "～だものだ (〜da mono da)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "疲（つか）れたんだものだから、休（やす）みたい。",
+     "point_answer": "ものだ",
+     "jp_cloze": "疲（つか）れたんだ＿＿から、休（やす）みたい。",
+     "distractors": [
+      "ことだ",
+      "はずだ",
+      "ばかりだ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "忙（いそが）しいんだものだから、来（こ）られない。",
+     "point_answer": "ものだ",
+     "jp_cloze": "忙（いそが）しいんだ＿＿から、来（こ）られない。",
+     "distractors": [
+      "ことだ",
+      "はずだ",
+      "ばかりだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-040",
+   "source_index": 39,
+   "title": "～ちゃった (〜chatta)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "忘（わす）れ物（もの）をしちゃった。",
+     "point_answer": "ちゃった",
+     "jp_cloze": "忘（わす）れ物（もの）をし＿＿。",
+     "distractors": [
+      "ておいた",
+      "たがった",
+      "つづけた"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "寝坊（ねぼう）して遅刻（ちこく）しちゃった。",
+     "point_answer": "ちゃった",
+     "jp_cloze": "寝坊（ねぼう）して遅刻（ちこく）し＿＿。",
+     "distractors": [
+      "ておいた",
+      "たがった",
+      "つづけた"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

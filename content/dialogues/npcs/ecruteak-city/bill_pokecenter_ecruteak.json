@@ -1,0 +1,63 @@
+{
+ "_note": "Étape 4 Lot 3 — Bill (fil D4). La rencontre avance bill_family_thread ; bill_house_goldenrod (Lot 2) est re-gaté sur cette étape de quête (remplace l'event bill_met_ecruteak initialement posé, qu'aucun Effect ne sait écrire — les events sont posés par la logique de jeu, pas par un dialogue ; correction du Lot 3).",
+ "npc_id": "bill_pokecenter_ecruteak",
+ "name": {
+  "jp": "パソコンの　てんさい　ビル",
+  "en": "Bill"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "bill_family_thread",
+     "step": "met_ecruteak"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "やあ！　ぼくは　ビル。パソコンの　ネットワークを　作（つく）ったんだ。",
+     "en": "Hey! I'm Bill. I built the PC network."
+    },
+    {
+     "jp": "ラネットさんって　けんきゅうかと　いっしょにね。",
+     "en": "Together with a researcher called Lanette."
+    },
+    {
+     "jp": "かぞくの　ようじで、コガネの　いえに　帰（かえ）るところなんだ。",
+     "en": "Family matters — I'm headed back home to Goldenrod."
+    },
+    {
+     "jp": "よかったら、あそびに　来（き）てよ！",
+     "en": "Come visit me sometime!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "bill_family_thread",
+     "step_id": "met_ecruteak"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "コガネの　いえで　まってるよ！",
+     "en": "I'll be waiting at my house in Goldenrod!"
+    }
+   ]
+  }
+ }
+}

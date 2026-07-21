@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 3 — fil PNJ récurrent de Bill (side-content D4), modèle Quest partagée 04-D1. Étapes futures (grand-père Route 25, indice Fuchsia) ajoutées aux passes Kanto.",
+ "quest_id": "bill_family_thread",
+ "name": {
+  "jp": "パソコンの　てんさい　ビル",
+  "en": "Bill, the PC Genius"
+ },
+ "zone_ids": [
+  "ecruteak-city",
+  "goldenrod-city"
+ ],
+ "steps": [
+  {
+   "step_id": "met_ecruteak",
+   "label": {
+    "jp": "エンジュの　ポケモンセンターで　ビルに　会（あ）った。コガネの　いえに　帰（かえ）るそうだ。",
+    "en": "Met Bill at the Ecruteak Pokémon Center. He's heading home to Goldenrod."
+   },
+   "target_zone_id": "goldenrod-city"
+  },
+  {
+   "step_id": "doll_received",
+   "label": {
+    "jp": "コガネシティの　いえで、ビルから　にんぎょうを　もらった。",
+    "en": "Bill gave me a doll at his house in Goldenrod."
+   },
+   "target_zone_id": "goldenrod-city"
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "_note": "Étape 4 Lot 3 — 4ᵉ 師範, format examen 試練 (PRD § Jalons-examens, longueur 45, vies 5). Nom d'épreuve 試練・影の道 sourcé fiche guidebook. Morty a déjà été rencontré à la Tour Embrasée (état pre_battle en tient compte). Récompense : badge morty (Fog Badge) + TM30 (guidebook).",
+ "trainer_id": "morty_ecruteak",
+ "name": {
+  "jp": "ジムリーダー　マツバ",
+  "en": "Morty"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・影（かげ）の道（みち）",
+  "en": "Trial of the Shadow Path"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "やけた　とうでは　どうも。わたしが　マツバ。",
+     "en": "We met at the Burned Tower. I am Morty."
+    },
+    {
+     "jp": "この　まちで　しゅぎょうを　つみ、みえない　ものを　みる　目（め）を　やしなった。",
+     "en": "Training in this city, I learned to see what cannot be seen."
+    },
+    {
+     "jp": "きみの　目（め）に　なにが　みえるか、ためして　あげよう。",
+     "en": "Let us test what your eyes can see."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…みえたよ。きみの　ちからは　ほんものだ。",
+     "en": "...I saw it. Your power is real."
+    },
+    {
+     "jp": "フォッグバッジを　うけとって　ほしい。",
+     "en": "Please accept the Fog Badge."
+    },
+    {
+     "jp": "この　まちの　でんせつも、いつか　きみが　たしかめる　ことに　なるだろう。",
+     "en": "One day, you too will witness this city's legend."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_badge",
+     "badge_id": "morty"
+    },
+    {
+     "type": "grant_item",
+     "item_id": "tm30_shadow_ball"
+    }
+   ]
+  }
+ }
+}

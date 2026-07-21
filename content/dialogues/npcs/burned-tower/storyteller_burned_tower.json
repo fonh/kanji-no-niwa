@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 3 — fragment 2 de la légende A9 (texts/burned-tower/rainbow_legend_2.json). Même personnage que storyteller_ecruteak (un npc_id par zone, 04-D1).",
+ "npc_id": "storyteller_burned_tower",
+ "name": {
+  "jp": "かたりべの　ろうじん",
+  "en": "Old Storyteller"
+ },
+ "zone_id": "burned-tower",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "おや、また　会（あ）ったな。",
+     "en": "Oh, we meet again."
+    },
+    {
+     "jp": "はなしの　つづきを　よみたいかね？",
+     "en": "Care to read the rest of the tale?"
+    }
+   ]
+  }
+ }
+}

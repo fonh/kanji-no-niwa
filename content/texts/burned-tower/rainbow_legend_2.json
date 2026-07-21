@@ -1,0 +1,110 @@
+{
+ "_note": "Étape 4 Lot 3 — texte A9 (fragment 2/2), conteur à la Tour Embrasée. Relie la légende à l'arc Kimono (danse rituelle de Tour Jo, side-content E3).",
+ "text": {
+  "text_id": "rainbow_legend_2_burned_tower",
+  "title": {
+   "jp": "にじいろの　とり（に）",
+   "en": "The Rainbow Bird (II)"
+  },
+  "jp_text": "はなしのつづきじゃ。とりがさったあと、人（ひと）びとはあたらしいかねをつくり、とうにかけました。「かねのねが　きれいにひびくとき、とりはかえってくる」と、いいつたえられています。だから、まいこたちはいまも、おどりとうたでかねのねをみがいているのです。",
+  "en_text": "The tale continues. After the bird departed, the people forged a new bell and hung it in the tower. It is said the bird will return when the bell's tone rings pure. That is why, even now, the kimono dancers polish that tone with dance and song.",
+  "audio_ref": null,
+  "level": "N3",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "burned-tower",
+  "npc_ref": "storyteller_burned_tower",
+  "found_object_ref": null,
+  "event_ref": null,
+  "length_chars": 125,
+  "questions": [
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "とりは　いつ　かえって　くると　いいつたえられて　いますか。",
+     "en": "According to legend, when will the bird return?"
+    },
+    "options": [
+     {
+      "jp": "かねの　ねが　きれいに　ひびく　とき。",
+      "en": "When the bell's tone rings pure"
+     },
+     {
+      "jp": "とうが　たてなおされた　とき。",
+      "en": "When the tower is rebuilt"
+     },
+     {
+      "jp": "ゆきが　ふった　とき。",
+      "en": "When snow falls"
+     },
+     {
+      "jp": "まつりの　よる。",
+      "en": "On the festival night"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "resolution_reference",
+    "prompt": {
+     "jp": "「だから」は　なにを　うけて　いますか。",
+     "en": "What does \"that is why\" follow from?"
+    },
+    "options": [
+     {
+      "jp": "かねの　ねが　ひびけば　とりが　かえる　という　いいつたえ。",
+      "en": "The legend that the bird returns when the bell rings pure"
+     },
+     {
+      "jp": "とりが　さった　こと。",
+      "en": "The bird's departure"
+     },
+     {
+      "jp": "とうが　やけた　こと。",
+      "en": "The tower burning"
+     },
+     {
+      "jp": "まいこが　うたが　すきな　こと。",
+      "en": "The dancers' love of song"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 48,
+     "end": 88
+    }
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "まいこたちが　おどる　ほんとうの　りゆうは　なんですか。",
+     "en": "What is the dancers' true reason for dancing?"
+    },
+    "options": [
+     {
+      "jp": "とりに　かえって　きて　ほしいから。",
+      "en": "They want the bird to return"
+     },
+     {
+      "jp": "おかねを　かせぎたいから。",
+      "en": "They want to earn money"
+     },
+     {
+      "jp": "ゆうめいに　なりたいから。",
+      "en": "They want to be famous"
+     },
+     {
+      "jp": "かねを　うりたいから。",
+      "en": "They want to sell the bell"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 93,
+     "end": 124
+    }
+   }
+  ]
+ }
+}

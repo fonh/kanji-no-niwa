@@ -71,5 +71,22 @@
    }
   ],
   "_note": "Étape 4 Lot 2 — plan d'eau menant au trio Ace Jenn/Irene/Kate (side-content F26). Même paire de conditions que l'exemple canonique du PRD (tuile de mer : remise 水 + badge Morty). Le linter check-cs-kanji-deadlock signalera WARN tant que cs_mizu n'est pas remis (zone d'Oliville, pas encore écrite) — attendu."
+ },
+ {
+  "obstacle_id": "bell_tower_gate_ecruteak",
+  "zone_id": "ecruteak-city",
+  "tile_x": 24,
+  "tile_y": 1,
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "morty"
+   },
+   {
+    "type": "item_owned",
+    "item_id": "rainbow_wing"
+   }
+  ],
+  "_note": "Étape 4 Lot 3 — accès à Tour Jo : badge Morty (poste-frontière) + Plume Arc-en-ciel (Sage du 1F, séquence E3). La Plume est remise à la fin de l'arc Tour Radio (vrai Directeur) — la tour reste fermée jusque-là, fidèle HGSS."
  }
 ]

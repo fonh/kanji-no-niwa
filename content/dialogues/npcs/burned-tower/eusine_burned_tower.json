@@ -1,0 +1,67 @@
+{
+ "_note": "Étape 4 Lot 3 — Eusine, départ du fil suicune_hunt (I-2, side-content D1). L'étape spirits_awakened est avancée par l'événement de sous-sol (spirits_shrine_burned_tower, entrée object : approcher les 3 statues déclenche la fuite des esprits — adaptation de la rencontre HGSS des 3 bêtes, aucun combat ici, les 3 légendaires se combattent bien plus tard, PRD § Légendaires).",
+ "npc_id": "eusine_burned_tower",
+ "name": {
+  "jp": "でんせつハンターの　ミナキ",
+  "en": "Eusine"
+ },
+ "zone_id": "burned-tower",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "suicune_hunt",
+     "step": "spirits_awakened"
+    }
+   ],
+   "state": "after_awakening"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "きみ、この　とうに　なんの　ようだい？",
+     "en": "You — what brings you to this tower?"
+    },
+    {
+     "jp": "ぼくは　ミナキ。10ねん　みずの　せいれいを　おいかけて　いる。",
+     "en": "I'm Eusine. Ten years I've chased the water spirit."
+    },
+    {
+     "jp": "ちかで　なにかが　うごいた　気（き）が　するんだ。しらべて　みて　くれないか。",
+     "en": "Something stirred in the basement, I'm sure of it. Would you take a look?"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "suicune_hunt",
+     "step_id": "eusine_met"
+    }
+   ]
+  },
+  "after_awakening": {
+   "pages": [
+    {
+     "jp": "みた　かい！？　あの　はしりさる　すがた！",
+     "en": "Did you see them!? The way they ran!"
+    },
+    {
+     "jp": "あの　みずいろの　せいれい…　うつくしかった…！",
+     "en": "That water-blue spirit... magnificent...!"
+    },
+    {
+     "jp": "ぼくは　おいかける。イリシアで　また　会（あ）おう！",
+     "en": "I'm going after it. We'll meet again in Cianwood!"
+    }
+   ]
+  }
+ }
+}

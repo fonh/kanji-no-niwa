@@ -28,12 +28,28 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **14 / 48** écrites (+ route-34 et route-35, zones sans leçon, faites)
-- Leçons : **65 / 344** écrites
-- Kanji dotés d'exemples : **355 / 1950**
-- Overlays grammaire : **3 / 48** (new-bark-town pilote, goldenrod-city, national-park)
+- Zones : **16 / 48** écrites (+ route-34/35 et burned-tower, zones sans leçon, faites)
+- Leçons : **75 / 344** écrites
+- Kanji dotés d'exemples : **410 / 1950**
+- Overlays grammaire : **5 / 48** (new-bark pilote, goldenrod, national-park, route-37, ecruteak)
+- Textes : **9 écrits** (dont 3 remises de CS : 砕・切・水)
 
 ### Journal
+- **2026-07-21 — route-37 + ecruteak-city + burned-tower (Lot 3)** : route-37 — 4 combats ROM
+  (paire Twins Tori & Til), Sunny « frère/sœur du dimanche » (time_window, 3 leçons
+  N3-038→040, Magnet). ecruteak-city — 7 leçons N3-047→053 (réconciliation Mediums comme
+  Whitney : Grace/Georgina 門弟 14q, Martha npc_ref #1/#7, Edith ambiante), Morty examen
+  試練・影の道 45q (badge + TM30), sauvetage de Miki (Sbire 13q → npc_cleared bascule Miki
+  « saved » et le Gentleman « give_surf »), **remise CS 水** (+ texte obligatoire cs_mizu),
+  Dowsing MCHN (I-9) + livre A2 des 3 esprits (objet), conteur A9 fragment 1, Bill
+  (nouvelle quête transversale bill_family_thread — corrige le gating par event du Lot 2,
+  qu'aucun Effect ne sait écrire), obstacle bell_tower_gate (badge + Plume). burned-tower —
+  Morty/Eusine ambiants, **quête suicune_hunt créée** (I-2, étapes 1-2 câblées : rencontre
+  Eusine + fuite des 3 esprits via sanctuaire-objet, règle #1 respectée), Ned/Richard,
+  **Silver #3 (18q)**. 55 lesson_examples (`add-lot3-lesson-examples.py`), 2 overlays
+  (24 exemples), 4 textes. Corrections linter : kanji hors studiedSet kana-isés (l'ordre
+  canonique par composants place 見/本/学/曜 plus tard que l'intuition JLPT — à garder en
+  tête pour les prochains dialogues). 5 linters verts (195 fichiers).
 - **2026-07-21 — route-35 + national-park (Lot 2, suite)** : route-35 — 9 dresseurs ROM
   (dont Dirk nocturne, paire Brooke & Elliot en rivalité), 0 leçon. national-park —
   7 leçons N3-001→007 sur 4 PNJ-leçon sourcés (Magnus ×2, vieux sauteur ×2, vendeur
@@ -81,8 +97,8 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 12 | goldenrod-city | Johto | 9 | 50 | 9 | ✅ 1ʳᵉ visite (arc Tour Radio différé au beat Rocket) | ✅ | ✅ | ✅ | — | ✅ |
 | 13 | national-park | Johto | 7 | 40 | 4 | ✅ fait (concours mar/jeu/sam = mécanique I-6, différée à l'implémentation) | ✅ | ✅ | ✅ | — | ✅ |
 | 14 | route-36 | Johto | 5 | 25 | 2 | ✅ fait | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 15 | route-37 | Johto | 3 | 15 | 1 | ⬜ à faire | · | · | · | · | · |
-| 16 | ecruteak-city | Johto | 7 | 40 | 6 | ⬜ à faire | · | · | · | · | · |
+| 15 | route-37 | Johto | 3 | 15 | 1 | ✅ fait | ✅ | ✅ | ✅ | — | ✅ |
+| 16 | ecruteak-city | Johto | 7 | 40 | 6 | ✅ fait (+ burned-tower, Silver #3 ; gauntlet Kimono différé au beat post-grand-texte) | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 17 | route-39 | Johto | 9 | 50 | 4 | ⬜ à faire | · | · | · | · | · |
 | 18 | olivine-city | Johto | 5 | 30 | 2 | ⬜ à faire | · | · | · | · | · |
 | 19 | cianwood-city | Johto | 5 | 30 | 3 | ⬜ à faire | · | · | · | · | · |

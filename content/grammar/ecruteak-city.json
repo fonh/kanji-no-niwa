@@ -1,0 +1,223 @@
+{
+ "_note": "Overlay grammaire — Rosalia, 7 points N3-047→053. Règles du pilote ; notes : N3-047 ex1 = forme voisée でくれと (graft sur 運んで), surface distincte ; N3-053 : たらいいなあ/ならいいなあ exclus des distracteurs (aussi corrects que la réponse), contraste sur てもいいなあ (permission) et formes clairement fausses.",
+ "zone_id": "ecruteak-city",
+ "points": [
+  {
+   "grammar_id": "N3-047",
+   "source_index": 46,
+   "title": "～てくれと (〜te kureto)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "電話（でんわ）をかけてくれと言（い）われました。",
+     "point_answer": "てくれと",
+     "jp_cloze": "電話（でんわ）をかけ＿＿言（い）われました。",
+     "distractors": [
+      "てあげると",
+      "てもらうと",
+      "てくれるなら"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "この荷物（にもつ）を運（はこ）んでくれと頼（たの）まれました。",
+     "point_answer": "でくれと",
+     "jp_cloze": "この荷物（にもつ）を運（はこ）ん＿＿頼（たの）まれました。",
+     "distractors": [
+      "であげると",
+      "でもらうと",
+      "でくれるなら"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-048",
+   "source_index": 47,
+   "title": "～てごらん (〜te goran)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）に話（はな）してごらん。",
+     "point_answer": "てごらん",
+     "jp_cloze": "彼（かれ）に話（はな）し＿＿。",
+     "distractors": [
+      "たとたん",
+      "てばかり",
+      "たきり"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "新（あたら）しいレシピを作（つく）ってごらん。",
+     "point_answer": "ってごらん",
+     "jp_cloze": "新（あたら）しいレシピを作（つく）＿＿。",
+     "distractors": [
+      "ったとたん",
+      "ってばかり",
+      "ったきり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-049",
+   "source_index": 48,
+   "title": "ですから～ (desu kara)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "今日（きょう）は寒（さむ）いですから、コートを着（き）てください。",
+     "point_answer": "ですから",
+     "jp_cloze": "今日（きょう）は寒（さむ）い＿＿、コートを着（き）てください。",
+     "distractors": [
+      "ですのに",
+      "ですけど",
+      "ですが"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "明日（あした）は休（やす）みですから、ゆっくり休（やす）んでください。",
+     "point_answer": "ですから",
+     "jp_cloze": "明日（あした）は休（やす）み＿＿、ゆっくり休（やす）んでください。",
+     "distractors": [
+      "ですのに",
+      "ですけど",
+      "ですが"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-050",
+   "source_index": 49,
+   "title": "～てはじめて (〜te hajimete)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "海外（かいがい）に行（い）ってはじめて、日本（にほん）の良（よ）さが分（わ）かりました。",
+     "point_answer": "ってはじめて",
+     "jp_cloze": "海外（かいがい）に行（い）＿＿、日本（にほん）の良（よ）さが分（わ）かりました。",
+     "distractors": [
+      "ったとたん",
+      "くまえに",
+      "ってばかりで"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "大学（だいがく）を卒業（そつぎょう）してはじめて、学生（がくせい）時代（じだい）の楽（たの）しさが分（わ）かった。",
+     "point_answer": "してはじめて",
+     "jp_cloze": "大学（だいがく）を卒業（そつぎょう）＿＿、学生（がくせい）時代（じだい）の楽（たの）しさが分（わ）かった。",
+     "distractors": [
+      "したとたん",
+      "するまえに",
+      "してばかりで"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-051",
+   "source_index": 50,
+   "title": "～てほしい (〜te hoshii)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "子供（こども）にもっと勉強（べんきょう）してほしい。",
+     "point_answer": "してほしい",
+     "jp_cloze": "子供（こども）にもっと勉強（べんきょう）＿＿。",
+     "distractors": [
+      "しないでほしい",
+      "したがる",
+      "しかねる"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）に私（わたし）に電話（でんわ）してほしい。",
+     "point_answer": "してほしい",
+     "jp_cloze": "彼（かれ）に私（わたし）に電話（でんわ）＿＿。",
+     "distractors": [
+      "しないでほしい",
+      "したがる",
+      "しかねる"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-052",
+   "source_index": 51,
+   "title": "～ても (〜temo)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "雨（あめ）が降（ふ）っても、運動会（うんどうかい）は開催（かいさい）されます。",
+     "point_answer": "っても",
+     "jp_cloze": "雨（あめ）が降（ふ）＿＿、運動会（うんどうかい）は開催（かいさい）されます。",
+     "distractors": [
+      "ったら",
+      "るなら",
+      "るので"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "高（たか）くても、良（よ）い品質（ひんしつ）のものを買（か）います。",
+     "point_answer": "くても",
+     "jp_cloze": "高（たか）＿＿、良（よ）い品質（ひんしつ）のものを買（か）います。",
+     "distractors": [
+      "かったら",
+      "いなら",
+      "いので"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-053",
+   "source_index": 52,
+   "title": "～といいなあ (〜to ii naa)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "明日（あした）晴（は）れるといいなあ。",
+     "point_answer": "といいなあ",
+     "jp_cloze": "明日（あした）晴（は）れる＿＿。",
+     "distractors": [
+      "てもいいなあ",
+      "ことだなあ",
+      "ばかりだなあ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "この試験（しけん）に合格（ごうかく）するといいなあ。",
+     "point_answer": "といいなあ",
+     "jp_cloze": "この試験（しけん）に合格（ごうかく）する＿＿。",
+     "distractors": [
+      "てもいいなあ",
+      "ことだなあ",
+      "ばかりだなあ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

@@ -897,5 +897,209 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/national-park/whitney_national_park"
+ },
+ {
+  "npc_id": "sunny_route37",
+  "zone_id": "route-37",
+  "name": "Sunny",
+  "tile_x": 6,
+  "tile_y": 5,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-37.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "unlock_conditions": [
+   {
+    "type": "time_window",
+    "days_of_week": [
+     "sunday"
+    ]
+   }
+  ],
+  "dialogue_ref": "npcs/route-37/sunny_route37"
+ },
+ {
+  "npc_id": "medium_martha_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Medium Martha",
+  "tile_x": 20,
+  "tile_y": 30,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/medium_martha_ecruteak",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "medium_edith_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Medium Edith",
+  "tile_x": 22,
+  "tile_y": 31,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/medium_edith_ecruteak"
+ },
+ {
+  "npc_id": "bill_pokecenter_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Bill",
+  "tile_x": 14,
+  "tile_y": 18,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/bill_pokecenter_ecruteak"
+ },
+ {
+  "npc_id": "riddle_man_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Riddle Man",
+  "tile_x": 10,
+  "tile_y": 18,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/riddle_man_ecruteak",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "kimono_miki_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Kimono Girl Miki",
+  "tile_x": 27,
+  "tile_y": 12,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/kimono_miki_ecruteak"
+ },
+ {
+  "npc_id": "gentleman_theater_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Gentleman in the Audience",
+  "tile_x": 29,
+  "tile_y": 14,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/gentleman_theater_ecruteak",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "border_post_men_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Border Post Men",
+  "tile_x": 24,
+  "tile_y": 2,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/border_post_men_ecruteak",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "man_north_gym_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Man North of the Gym",
+  "tile_x": 19,
+  "tile_y": 26,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/man_north_gym_ecruteak",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "mart_vendor_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Mart Vendor",
+  "tile_x": 8,
+  "tile_y": 22,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/mart_vendor_ecruteak",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "silver_bellchime_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Silver",
+  "tile_x": 26,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/silver_bellchime_ecruteak"
+ },
+ {
+  "npc_id": "storyteller_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Old Storyteller",
+  "tile_x": 18,
+  "tile_y": 28,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/storyteller_ecruteak"
+ },
+ {
+  "npc_id": "lore_book_ecruteak",
+  "zone_id": "ecruteak-city",
+  "name": "Legend Book",
+  "tile_x": 9,
+  "tile_y": 17,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/ecruteak-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/ecruteak-city/lore_book_ecruteak",
+  "kind": "object"
+ },
+ {
+  "npc_id": "morty_burned_tower",
+  "zone_id": "burned-tower",
+  "name": "Morty",
+  "tile_x": 8,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/burned-tower.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/burned-tower/morty_burned_tower"
+ },
+ {
+  "npc_id": "eusine_burned_tower",
+  "zone_id": "burned-tower",
+  "name": "Eusine",
+  "tile_x": 10,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/burned-tower.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/burned-tower/eusine_burned_tower"
+ },
+ {
+  "npc_id": "spirits_shrine_burned_tower",
+  "zone_id": "burned-tower",
+  "name": "Three Stone Statues",
+  "tile_x": 9,
+  "tile_y": 18,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/burned-tower.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/burned-tower/spirits_shrine_burned_tower",
+  "kind": "object"
+ },
+ {
+  "npc_id": "storyteller_burned_tower",
+  "zone_id": "burned-tower",
+  "name": "Old Storyteller",
+  "tile_x": 4,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/burned-tower.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/burned-tower/storyteller_burned_tower"
  }
 ]

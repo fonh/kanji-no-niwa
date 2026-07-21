@@ -1,0 +1,31 @@
+{
+ "trainer_id": "beauty_callie_route37",
+ "name": {
+  "jp": "おとなの　おねえさんの　カリー",
+  "en": "Beauty Callie"
+ },
+ "zone_id": "route-37",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "エンジュに　行（い）くの？",
+     "en": "Headed to Ecruteak?"
+    },
+    {
+     "jp": "れきしの　まちに　入（はい）る　まえに、しょうぶよ！",
+     "en": "Before you enter the historic city — a battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あなた、れきしに　のこる　つよさね。",
+     "en": "Your strength belongs in the history books."
+    }
+   ]
+  }
+ }
+}

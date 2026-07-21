@@ -1,0 +1,98 @@
+[
+ {
+  "zone_id": "ecruteak-city",
+  "npc_ref": "medium_martha_ecruteak",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "慢",
+   "慶",
+   "憂",
+   "憤",
+   "懐",
+   "戒"
+  ],
+  "grammar_id": "N3-047"
+ },
+ {
+  "zone_id": "ecruteak-city",
+  "npc_ref": "riddle_man_ecruteak",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "把",
+   "抑",
+   "抗",
+   "抵",
+   "拐",
+   "振"
+  ],
+  "grammar_id": "N3-048"
+ },
+ {
+  "zone_id": "ecruteak-city",
+  "npc_ref": "gentleman_theater_ecruteak",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "挿",
+   "掛",
+   "掲",
+   "揚",
+   "援",
+   "揺"
+  ],
+  "grammar_id": "N3-049"
+ },
+ {
+  "zone_id": "ecruteak-city",
+  "npc_ref": "border_post_men_ecruteak",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "搭",
+   "携",
+   "搾",
+   "摂",
+   "摘",
+   "撤"
+  ],
+  "grammar_id": "N3-050"
+ },
+ {
+  "zone_id": "ecruteak-city",
+  "npc_ref": "man_north_gym_ecruteak",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "撲",
+   "擁",
+   "敢",
+   "敷",
+   "斗",
+   "斤"
+  ],
+  "grammar_id": "N3-051"
+ },
+ {
+  "zone_id": "ecruteak-city",
+  "npc_ref": "mart_vendor_ecruteak",
+  "sequence_index": 6,
+  "kanji_ids": [
+   "既",
+   "暦",
+   "殻",
+   "没",
+   "泰"
+  ],
+  "grammar_id": "N3-052"
+ },
+ {
+  "zone_id": "ecruteak-city",
+  "npc_ref": "medium_martha_ecruteak",
+  "sequence_index": 7,
+  "kanji_ids": [
+   "津",
+   "浦",
+   "浸",
+   "涯",
+   "添"
+  ],
+  "grammar_id": "N3-053"
+ }
+]

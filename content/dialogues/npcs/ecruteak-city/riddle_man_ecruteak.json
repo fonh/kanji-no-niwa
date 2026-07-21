@@ -1,0 +1,65 @@
+{
+ "_note": "Étape 4 Lot 3 — leçon #2 + Dowsing MCHN (fonction I-9 : détecteur des objets-textes non lus). L'énigme HGSS est résolue en saveur ; sa maison contient le texte A2 (three_spirits_legend, found_object lore_book_ecruteak). La réplique てごらん expose le point N3-048 de sa propre leçon.",
+ "npc_id": "riddle_man_ecruteak",
+ "name": {
+  "jp": "なぞかけの　おじさん",
+  "en": "Riddle Man"
+ },
+ "zone_id": "ecruteak-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "dowsing_mchn"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "なぞなぞだ。「やけても　のこり、ならなくても　ひびく　ものは？」",
+     "en": "A riddle: what remains though burned, and echoes though it cannot ring?"
+    },
+    {
+     "jp": "…そう、「かね」。とうの　かねだ。よく　できた！",
+     "en": "...That's right — a bell. The tower's bell. Well done!"
+    },
+    {
+     "jp": "ごほうびに、この　きかいを　あげよう。",
+     "en": "As a reward, take this machine."
+    },
+    {
+     "jp": "よんで　いない　ほんや　てがみが　ちかくに　あると、おしえて　くれるぞ。",
+     "en": "It tells you when an unread book or letter is nearby."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "dowsing_mchn"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "その　たなの　ほん、よんで　ごらん。",
+     "en": "Try reading that book on the shelf."
+    },
+    {
+     "jp": "この　まちの　でんせつが　かいて　ある。",
+     "en": "It tells this city's legend."
+    }
+   ]
+  }
+ }
+}

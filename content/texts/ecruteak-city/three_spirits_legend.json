@@ -1,0 +1,164 @@
+{
+ "_note": "Étape 4 Lot 3 — texte A2 du vivier (side-content-inventory) : livre de la légende des trois esprits et des deux tours, dans la maison de l'homme à l'énigme. Objet trouvé (found_object lore_book_ecruteak, entrée kind=object du registre).",
+ "text": {
+  "text_id": "three_spirits_legend_ecruteak",
+  "title": {
+   "jp": "3つの　せいれいの　でんせつ",
+   "en": "The Legend of the Three Spirits"
+  },
+  "jp_text": "むかし、このまちにはふたつのとうがありました。あるよる、かみなりがおちて、にしのとうがやけました。とうにすんでいた3つのせいれいは、ひのなかでいのちをおとしました。それをみたにじいろのとりが、そらからおりて、3つのせいれいをよみがえらせたといいます。せいれいはいまも、やけたとうのちかでねむっているそうです。",
+  "en_text": "Long ago, this city had two towers. One night, lightning struck and the western tower burned. The three spirits living in the tower lost their lives in the fire. Seeing this, the rainbow bird came down from the sky and brought the three spirits back to life, they say. Even now, the spirits are said to sleep beneath the burned tower.",
+  "audio_ref": null,
+  "level": "N3",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "ecruteak-city",
+  "npc_ref": null,
+  "found_object_ref": "lore_book_ecruteak",
+  "event_ref": null,
+  "length_chars": 154,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　本（ほん）は　なにの　はなしですか。",
+     "en": "What is this book about?"
+    },
+    "options": [
+     {
+      "jp": "ふたつの　とうと　3つの　せいれいの　でんせつ。",
+      "en": "The legend of the two towers and three spirits"
+     },
+     {
+      "jp": "かみなりの　しくみ。",
+      "en": "How lightning works"
+     },
+     {
+      "jp": "とりの　そだてかた。",
+      "en": "How to raise birds"
+     },
+     {
+      "jp": "まちの　つくりかた。",
+      "en": "How the city was built"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "とうは　どうして　やけましたか。",
+     "en": "Why did the tower burn?"
+    },
+    "options": [
+     {
+      "jp": "かみなりが　おちたから。",
+      "en": "Lightning struck it"
+     },
+     {
+      "jp": "せいれいが　もやしたから。",
+      "en": "The spirits set it alight"
+     },
+     {
+      "jp": "とりが　ひを　はいたから。",
+      "en": "The bird breathed fire"
+     },
+     {
+      "jp": "ひとが　ひを　つけたから。",
+      "en": "Someone set it on fire"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "resolution_reference",
+    "prompt": {
+     "jp": "「それを　みた」の「それ」は　なにを　さしますか。",
+     "en": "What does \"that\" refer to in \"seeing that\"?"
+    },
+    "options": [
+     {
+      "jp": "せいれいが　ひの　なかで　いのちを　おとした　こと。",
+      "en": "The spirits losing their lives in the fire"
+     },
+     {
+      "jp": "とうが　たった　こと。",
+      "en": "The tower being built"
+     },
+     {
+      "jp": "あめが　ふった　こと。",
+      "en": "The rain falling"
+     },
+     {
+      "jp": "まちが　できた　こと。",
+      "en": "The city being founded"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 49,
+     "end": 81
+    }
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "にじいろの　とりは　どんな　そんざいだと　わかりますか。",
+     "en": "What can we infer about the rainbow bird?"
+    },
+    "options": [
+     {
+      "jp": "いのちを　よみがえらせる　ちからを　もつ。",
+      "en": "It has the power to restore life"
+     },
+     {
+      "jp": "ひを　ふる　ちからを　もつ。",
+      "en": "It has the power to rain fire"
+     },
+     {
+      "jp": "とうを　たてる　ちからを　もつ。",
+      "en": "It has the power to build towers"
+     },
+     {
+      "jp": "かみなりを　おとす　ちからを　もつ。",
+      "en": "It has the power to call lightning"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 87,
+     "end": 119
+    }
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": {
+     "jp": "「よみがえらせた」の　いみは？",
+     "en": "What does 「よみがえらせた」 mean?"
+    },
+    "options": [
+     {
+      "jp": "いきかえらせた。",
+      "en": "Brought back to life"
+     },
+     {
+      "jp": "ねむらせた。",
+      "en": "Put to sleep"
+     },
+     {
+      "jp": "とばせた。",
+      "en": "Made fly"
+     },
+     {
+      "jp": "わすれさせた。",
+      "en": "Made forget"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   }
+  ]
+ }
+}

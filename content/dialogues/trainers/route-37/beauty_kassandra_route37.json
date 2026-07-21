@@ -1,0 +1,31 @@
+{
+ "trainer_id": "beauty_kassandra_route37",
+ "name": {
+  "jp": "おとなの　おねえさんの　カサンドラ",
+  "en": "Beauty Kassandra"
+ },
+ "zone_id": "route-37",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　みちは　雨（あめ）が　おおいの。",
+     "en": "It rains a lot on this road."
+    },
+    {
+     "jp": "ぬれる　まえに、さっさと　しょうぶしましょ！",
+     "en": "Let's battle quickly, before we get soaked!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あめが　ふる　まえに　まけちゃった。",
+     "en": "I lost before the rain even came."
+    }
+   ]
+  }
+ }
+}
