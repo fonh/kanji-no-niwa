@@ -11,10 +11,12 @@ l'avancement de la *rédaction* de chaque zone.
 - `content/npc-inventory.md` — PNJ par zone + colonne Type assigné (136 combat / 117 leçon / 88 ambiant)
 - `content/side-content-inventory.md` — vivier des ~80-110 textes secondaires
 
-## Décisions d'exécution (validées 2026-07-17)
+## Décisions d'exécution (validées 2026-07-17, amendées 2026-07-21)
 1. **Séquentiel, 1 session** — pas de multi-agents parallèles (fichiers partagés kanji-content.json / npc-inventory.md).
 2. **Textes au fil de chaque zone** — chaque zone sourcée reçoit son texte dans son propre passage.
-3. **Point de contrôle après chaque zone** — revue utilisateur avant de passer à la suivante.
+3. ~~Point de contrôle après chaque zone~~ — **levé 2026-07-21** (demande utilisateur « finis tout le contenu ») : passe continue, commit + push par lot de zones.
+4. **Overlay grammaire au fil de chaque zone** (`content/grammar/<zone>.json`, spec `content/grammar-wiring-spec.md`, pilote New Bark validé) — même passage que les leçons de la zone.
+5. **Pool `reading_snippets` (modes lecture M18-M23, adoptés 2026-07-21)** — passages adaptés des livres au fil des paliers, livrable de cette passe (voir roadmap Lot 0).
 
 ## Méthode par zone (cf. `content/content-writing-guide.md`)
 1. Lire sources : npc-inventory → guidebook-adapted → placements → lessons-proposal → rom-trainer-roster → livres (calibrage)

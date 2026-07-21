@@ -1,6 +1,13 @@
 # Spécification — 13 nouveaux modes de combat dérivés des livres
 
-Créé 2026-07-17. **Proposition PRD-ready à relire, pas encore intégrée au PRD.** Fait suite au
+> **✅ INTÉGRÉE AU PRD 2026-07-21** (décisions utilisateur : famille C **adoptée**, passages
+> adaptés des livres via vetting 12bis ; M11/M12 **fusionnés** « Relations » ; M15 **QCM +
+> variante appariement** ; M13/M14 différés 2ᵉ vague ; longueurs ≤200字 route / ≤300字 boss
+> confirmées). Voir `PRD.md` § Les 13 modes additionnels, § Profils de poids (remplacés),
+> § Modes indisponibles, § Schéma BDD (`reading_snippets`, champs `words`/`grammar`),
+> § Pipeline étape 17. Ce fichier reste la provenance/le raisonnement, le PRD fait foi.
+
+Créé 2026-07-17. ~~Proposition PRD-ready à relire, pas encore intégrée au PRD.~~ Fait suite au
 dépouillement des formats d'exercices des livres (`.scratch/combat-modes-from-books-proposal.md`) et
 à la décision utilisateur de rouvrir le design combat. Rédigé au format de la section PRD § Les 9
 Modes de Question pour intégration directe après relecture.

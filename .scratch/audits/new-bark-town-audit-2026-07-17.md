@@ -1,9 +1,20 @@
 ---
 title: Audit New Bark Town (game designer + prof de japonais)
 date: 2026-07-17
-labels: [ready-for-human]
+labels: [resolved]
 zone: new-bark-town
 ---
+
+> **Soldé 2026-07-21** (décisions utilisateur + application) :
+> - **G2** — tranché « gater via unlock_conditions » : nouvelle étape de quête `egg_delivered`
+>   (avancée par `welcome_back` d'Elm, qui gagne aussi un état terminal `egg_care`), leçons 3-5
+>   gated dessus. Au retour, le beat « je te confie l'œuf » passe toujours en premier.
+> - **G5** — aide d'Elm repositionnée dans le labo (tuile 29,1 près d'Elm), `_note` corrigé.
+> - **J2/J6** — exemples 円 (prix `100円です`) et 女 (`女の人`) réécrits.
+> - **J3/J4** — 2ᵉ `lesson_example` on'yomi ajouté : 一（いち）ばん・二（に）かい・八（はち）じ・
+>   日曜日・一月・学生・元気. (Permis depuis l'abandon de la règle « zéro autre kanji », roadmap 2026-07-10.)
+> - **J5** — couvert par le câblage grammaire (`content/grammar/new-bark-town.json`, pilote validé).
+> - Linters verts après application (110 fichiers).
 
 # Audit zone 1 — ワカバタウン / New Bark Town
 

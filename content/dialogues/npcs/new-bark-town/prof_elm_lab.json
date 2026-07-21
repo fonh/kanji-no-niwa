@@ -7,6 +7,12 @@
  "state_rules": [
   {
    "if": [
+    { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_delivered" }
+   ],
+   "state": "egg_care"
+  },
+  {
+   "if": [
     { "type": "quest_step", "quest_id": "mystery_egg_errand", "step": "egg_received" }
    ],
    "state": "welcome_back"
@@ -55,6 +61,15 @@
     { "jp": "だいじに　あずかりますよ。", "en": "I'll take good care of it." },
     { "jp": "ときどき　わるい　ひとが　います。", "en": "Sometimes there are bad people around." },
     { "jp": "きを　つけてね。", "en": "Be careful, okay?" }
+   ],
+   "effects": [
+    { "type": "advance_quest", "quest_id": "mystery_egg_errand", "step_id": "egg_delivered" }
+   ]
+  },
+  "egg_care": {
+   "pages": [
+    { "jp": "たまごは　げんきですよ。", "en": "The egg is doing fine." },
+    { "jp": "なにか　わかったら　でんわします。", "en": "I'll call you if I learn anything." }
    ]
   }
  }

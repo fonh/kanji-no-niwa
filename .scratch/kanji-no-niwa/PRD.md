@@ -267,6 +267,101 @@ Mélangés aléatoirement dans les combats de route et les combats narratifs ; *
 
 **Source audio Écoute** : `scripts/sources/local-audio-yomichan/` (collection JapanesePod101/Forvo/NHK16/Shinmeikai8, ~382 000 fichiers déjà téléchargés) + pack Ankidrone JLPT_Tango (14 763 fichiers) — couvre déjà la quasi-totalité des 7 836 mots JLPT au niveau mot. `vocab_audio_missing.json` (3 825 entrées) est probablement un artefact de matching partiel à corriger, pas un vrai manque de contenu. VOICEVOX (TTS japonais open source) en complément si des phrases d'exemple spécifiques manquent d'audio.
 
+### Les 13 modes additionnels (adoptés 2026-07-21, dérivés des formats d'exercices des livres)
+
+Issus du dépouillement des formats Shin Kanzen Master (N1 文法, N2 語彙, N1-N2 読解) et Marugoto A2-2
+りかい (`render-book-pages.py` ; proposition complète et provenance :
+`.scratch/combat-modes-spec-proposal.md`). Les 9 modes fondateurs restent inchangés ; les mentions
+historiques « à 9 modes » dans ce document se lisent désormais « tous les modes actifs ». **Trois
+décisions utilisateur actées 2026-07-21** : (1) la famille C (lecture) est **adoptée**, passages
+**adaptés des livres** via le vetting 12bis ; (2) M11/M12 **fusionnés** en un seul mode « Relations »
+(consigne 類義 ou 対義 selon tirage) ; (3) M15 en **QCM par défaut, appariement 2 colonnes en
+variante d'affichage**. Invariants préservés : familles A et B piochent dans les viviers existants
+(`studiedSet` mots, `grammar_encounters`) — additives, rien de rouvert ; la famille C introduit un
+**pool de passages courts authored** (`reading_snippets`), partagé et gaté par palier JLPT — jamais
+par dresseur (07-A1 préservé), lecture seule (03-A3 préservé : aucune écriture SRS), budget kanji =
+règle studiedSet + lecture inline (ADR-0002). Aucune incidence sur les longueurs de combat ni les vies.
+
+**Famille A — lexical en contexte (tire dans les MOTS étudiés) :**
+
+| Mode | Prompt | Réponse | Ce que ça teste |
+|---|---|---|---|
+| **文脈規定 « Le mot juste »** (M10) | Phrase avec un mot étudié masqué （　） | QCM 4 mots | Usage du mot en situation |
+| **Relations « Synonyme / Contraire »** (M11+M12 fusionnés) | Un mot étudié (souligné dans un cadre court), consigne 類義 ou 対義 selon tirage | QCM 4 mots | Relations lexicales |
+| **用法 « Bon emploi »** (M13) | Un mot cible affiché | QCM 4 **phrases**, une seule l'emploie bien | Nuance / collocation |
+| **語形成 « Dérivation »** (M14) | Base + slot d'affixe (反抗＿ / ＿抗) | QCM 4 affixes (的/化/性/さ/反/無…) | Morphologie dérivée |
+| **連語 « Collocation »** (M15) | Nom + particule (恩を＿) | QCM 4 verbes (variante d'affichage : appariement 2 colonnes) | Collocations figées |
+| **仲間はずれ « L'intrus »** (M16) | Phrase-cadre + 3 mots candidats | Désigner le mot qui **ne colle pas** | Collocation / sens fin |
+
+**Famille B — grammaire étendue (tire dans `grammar_encounters`) :**
+
+| Mode | Prompt | Réponse | Ce que ça teste |
+|---|---|---|---|
+| **文の組み立て ★ « Assemblage »** (M17) | Phrase à 4 emplacements（＿＿★＿）+ 4 fragments mélangés | 2 premiers tirages : QCM « quel fragment sur ★ » ; puis glisser l'ordre complet | Connexion grammaticale |
+| **接続 « Le bon connecteur »** (M18) | Mini-passage (2-4 phrases) avec 1 trou de connecteur | QCM 4 connecteurs (それに対して/つまり/さらに/もしくは) | Logique inter-phrases |
+
+**Famille C — lecture 読解 (tire dans `reading_snippets`, pool dédié) :**
+
+| Mode | Prompt | Réponse | Ce que ça teste |
+|---|---|---|---|
+| **指示語 « Le référent »** (M19) | Mini-paragraphe (≤200字), これ/それ souligné | QCM 4 référents | Résolution d'anaphore |
+| **下線部 « Le sens caché »** (M20) | Mini-paragraphe, expression soulignée | QCM 4 paraphrases | Sens contextuel/figuré |
+| **情報検索 « Chasse à l'info »** (M21) | Mini-document réaliste (horaire/annonce/règlement) + question situationnelle | QCM 4 | Lecture fonctionnelle |
+| **主張 « La thèse »** (M22) | Passage court (~200-300字) | QCM 4 (« l'idée principale de l'auteur »), distracteurs = idées vraies mais secondaires | Idée directrice |
+| **対決 « Duel A / B »** (M23) | 2 avis courts opposés (cadres A et B) | QCM 4 (« sur quoi s'accordent/diffèrent-ils ») | Lecture intégrée |
+
+**Longueur max d'un snippet jouable en combat** : ≤200字 sur route, ≤300字 en Boss/examen.
+
+**Sources du tirage & des distracteurs des modes additionnels :** M10 — phrase du pool exemples
+(lesson_examples cités livre + Tatoeba) contenant un mot étudié, masqué ; distracteurs = 3 mots
+étudiés de même classe (nom/verbe/adj) du pool de combat, filtrés sémantiquement faux. M11/12 — mot
+étudié **ayant** un synonyme/antonyme curé (le mode est gaté aux mots couverts ; le batch 8ter étendu
+vise 100 % de couverture syn+ant, JMdict `related`/`antonym` en appoint — sinon mode clairsemé,
+cf. 07-B1) ; bonne réponse = la relation curée, distracteurs = 3 mots étudiés non reliés. M13 — 3
+phrases de mésusage générées batch IA + relues (même régime que défs/mnémo) — **2ᵉ vague/examens**
+(coût distracteurs élevé). M14 — mot dérivé étudié, affixe masqué ; 3 affixes plausibles — **2ᵉ
+vague**. M15 — nom/verbe étudié + sa collocation curée ; 3 verbes/noms étudiés non-collocables.
+M16 — phrase-cadre du pool exemples ; 2 mots plausibles + 1 mot étudié d'un champ sémantique éloigné.
+M17 — exemple Hanabira du point rencontré, segmenté en 4 fragments (★ = fragment cible) ; ordre
+canonique unique vérifié au build. M18 — passage à trou-connecteur du pool `reading_snippets`
+(subtype connector) ; distracteurs = connecteurs de relation logique opposée/erronée. M19 — snippet
+avec référent taggé ; 3 syntagmes du passage qui ne sont pas le référent. M20 — paraphrases proches
+mais fausses (batch IA relu). M21 — 3 réponses contredites par une donnée du doc (date/prix/
+condition). M22 — idées vraies mais secondaires (batch IA relu). M23 — affirmations partiellement
+vraies / attribuées au mauvais avis. **Garde anti-ambiguïté** (comme Lecture) : pour M10/M16,
+exclure tout distracteur qui serait aussi valide dans la phrase-cadre (vérifié à la construction du
+tirage).
+
+**Graduation anglais→japonais des modes additionnels** (extension des mécanismes A/B/C du § Langue
+du Jeu) : les modes portant sur un **mot étudié** (M10-M15) affichent une glose EN du mot cible
+consultable (bouton X) tant que l'item n'est pas maîtrisé (stabilité FSRS ≥ 14 j), puis 100 % JP —
+même règle que Sens/Saisie. M16 est 100 % JP d'emblée (déjà en contexte). M17 suit le régime
+Grammaire (glose EN de la phrase en support, JP quand le point est ancien). **Les passages
+(M18-M23) suivent le régime dialogue/texte, pas le régime item** : traduction EN consultable via
+bouton X, jamais affichée d'office, sans graduation — un passage n'est pas un item SRS
+(cohérent finding 04-C2).
+
+**Schéma `reading_snippets`** (lecture seule en combat, aucun suivi de complétion — un combat
+n'écrit jamais rien ; pas de table de complétion, contraste avec `radio_shows`/`texts` : en combat
+un snippet est une question jetable, tirée au niveau ≤ palier courant du joueur) :
+
+```
+reading_snippets(
+  id, jlpt_level, subtype,            -- subtype ∈ {referent, paraphrase, info, thesis, duel, connector}
+  body_jp, body_en,                   -- passage + traduction (bouton X), budget kanji = studiedSet + lecture inline
+  doc_layout,                         -- pour info : {plain|notice|schedule|two_column_AB}
+  questions[] { prompt_jp, options_jp[4], answer_index, source }
+)
+```
+
+**Données à produire pour ces modes** (détail au § Pipeline de Données) : tag du token masquable
+sur le pool exemples (kuromoji, build — M10/M16) ; 1 synonyme + 1 antonyme curés par mot JLPT
+(extension batch 8ter — M11/12) ; phrases de mésusage (M13, 2ᵉ vague) ; segmentation d'affixes du
+lexique (M14) ; collocations par nom/verbe (mining Tatoeba + batch curé — M15) ; segmentation
+4-fragments + tag ★ des exemples grammaire (M17) ; **pool `reading_snippets` adapté des livres,
+vetting 12bis** (M18-M23) — la vraie brique de contenu nouvelle, produite à la passe contenu
+(Étape 4) ; mini-docs réalistes pour M21 (gabarits fournis par les livres).
+
 **Graduation Sens/Saisie/Disposition/Écoute (voir § Langue du Jeu, mécanismes A/B/C ; reformulé 2026-07-06, audit 03, finding 03-A2 ; prompts gradués précisés mode par mode 2026-07-07, audit 07, tranché au grill) :** l'anglais est le support de quiz d'un item pendant sa phase d'acquisition ; une fois l'item **maîtrisé** (stabilité FSRS ≥ 14 jours), ces modes ne réaffichent plus jamais l'anglais — Sens passe aux définitions japonaises du pipeline (mécanisme B réécrit, finding 07-B1), Saisie affiche l'item en kanji et attend sa lecture tapée, Disposition passe à la consigne audio (une phrase est maîtrisée quand **tous ses mots** le sont), Écoute passe au QCM d'écritures kanji quasi-homophones. C'est la règle qui fait foi — l'ancienne promesse du mécanisme C (« anglais une seule fois, dès la première exposition ») avait déjà été réécrite en conséquence (audit 03).
 
 **Sources des distracteurs des modes QCM (tranché 2026-07-07, audit 07, finding 07-C2 — rien n'était spécifié pour 4 des 9 modes) :** Sens non maîtrisé — 3 sens anglais d'autres items étudiés de même type (kanji↔kanji, mot↔mot), tirés du pool du combat ; Sens maîtrisé — les 3 distracteurs du batch définitions japonaises (pipeline 8ter) ; Lecture — 3 lectures d'autres items étudiés, **filtrées pour exclure toute lecture valide de l'item testé** (garde anti-ambiguïté : こう ne peut pas être distracteur de 行) ; Traduction — 3 traductions anglaises d'autres phrases du pool ; Écoute non maîtrisé — même règle que Sens non maîtrisé, 3 sens anglais d'autres items étudiés *(ajouté V-6, audit 07)* ; Écoute maîtrisé — les 3 mots étudiés aux lectures les plus proches (distance d'édition sur les kana, précalculée au pipeline, déterministe — étape 13bis). Grammaire/Conjugaison gardent leurs `distractors[]`/`conjugation_distractors[]` déjà produits (étapes 13-14). Proposition de calibration, à ajuster par l'équipe contenu.
@@ -305,30 +400,48 @@ La longueur (nombre de questions) n'est plus une valeur fixe par catégorie de c
 
 Hiérarchie résultante : dresseurs/門弟/Silver/Rocket/Kimono (≤48) < Légendaires (≤60) < Elite Four (70) < Lance (80) < Red (100). Le dernier gym (Clair, 72) dépasse légèrement l'Elite Four (70) — accepté tel quel, la gym la plus dure de Johto n'a pas à être strictement plus courte que le premier membre du Conseil 4.
 
-**Profils de poids par type de combat :**
+**Profils de poids par type de combat** *(rééquilibrés 2026-07-21 à l'adoption des 13 modes
+additionnels — chaque colonne resomme à 100 ; proposition de calibration, à ajuster comme
+la table précédente qu'elle remplace. Les modes coûteux en contenu — M13 用法, M18-M23 lecture —
+sont surtout en Boss/examens ; la Route reste dominée par la fluence item-niveau, et M20/M22/M23
+sont absents de route pour ne pas casser le rythme)* :
 
-| Mode            | Route                 | Boss                  |
-| --------------- | --------------------- | --------------------- |
-| Sens            | 25 %                  | 11 %                  |
-| Lecture         | 20 %                  | 11 %                  |
-| Saisie          | 17 %                  | 9 %                   |
-| Composition     | 10 %                  | 4 %                   |
-| Grammaire       | 7 %                   | 13 %                  |
-| Conjugaison     | 7 %                   | 13 %                  |
-| Traduction      | 3 %                   | 4 %                   |
-| **Disposition** | **5 %**               | **27 %**              |
-| Écoute *(ajouté 2026-07-01)* | 6 %    | 8 %                    |
+| Mode            | Route | Boss |
+| --------------- | ---:| ---:|
+| Sens            | 18 | 8 |
+| Lecture         | 15 | 8 |
+| Saisie          | 13 | 7 |
+| Composition     | 8 | 3 |
+| Écoute          | 6 | 6 |
+| Traduction      | 3 | 4 |
+| Disposition     | 4 | 18 |
+| Grammaire       | 6 | 10 |
+| Conjugaison     | 6 | 10 |
+| **M10 文脈規定** | 5 | 4 |
+| **M11/12 Relations** | 4 | 3 |
+| **M13 用法** | 0 | 2 |
+| **M14 語形成** | 0 | 2 |
+| **M15 連語** | 3 | 2 |
+| **M16 仲間はずれ** | 3 | 0 |
+| **M17 ★ 組み立て** | 3 | 4 |
+| **M18 接続** | 0 | 2 |
+| **M19 指示語** | 2 | 2 |
+| **M20 下線部** | 0 | 1 |
+| **M21 情報検索** | 1 | 2 |
+| **M22 主張** | 0 | 1 |
+| **M23 対決** | 0 | 1 |
+| **Total** | **100** | **100** |
 
 Boss = 門弟, 師範, Silver, Exécutifs Rocket, Kimono Girls, Légendaires, Elite Four, Lance, Red. *(Les en-têtes « Route (5–8 questions) / Boss (≥ 10 questions) » ont été retirés — fossiles des longueurs fixes d'avant la courbe de difficulté du 2026-07-01 : un dresseur de route va aujourd'hui jusqu'à 25 questions ; le profil dépend de la **catégorie**, jamais du nombre de questions. Corrigé 2026-07-07, audit 07, finding 07-E2.)*
 
 **Jalons-examens vs combats narratifs (adopté 2026-07-07, audit 07, tranché au grill — matérialise enfin « Gyms = jalons curriculaires ») :** les Boss se divisent en deux familles de présentation.
 
-- **Jalons-examens** — les **師範 (16 gyms), Elite Four, Lance et Red** : le combat est présenté comme un **examen à sections, façon mini-JLPT**. L'écran **試練** (nommé dans toutes les fiches gym de `content/guidebook-adapted.md` — 試練・空の道, 虫の道… — sans avoir jamais été défini : le voici, finding 07-C3) est la **page de garde de l'examen** : nom de l'épreuve, sections et nombre de questions par section, chrome DS solennel. Le combat se déroule ensuite **section par section, dans cet ordre** : 文字・語彙 (Sens/Lecture/Saisie/Composition) → 文法 (Grammaire/Conjugaison) → 読解 (Traduction/Disposition) → 聴解 (Écoute). Les quotas de questions par section sont les **poids Boss ci-dessus convertis en nombres entiers** — aucune nouvelle table ; la section 文法 applique la rotation plus-anciens-d'abord ; les gardes d'indisponibilité de modes s'appliquent à l'intérieur de chaque section (une section entièrement indisponible est redistribuée). À la victoire : **relevé de notes par section** (depuis `battle_results.modes_used[]`/`accuracy`), puis cérémonie du 印. Vies, absence de chrono, longueurs : inchangés.
+- **Jalons-examens** — les **師範 (16 gyms), Elite Four, Lance et Red** : le combat est présenté comme un **examen à sections, façon mini-JLPT**. L'écran **試練** (nommé dans toutes les fiches gym de `content/guidebook-adapted.md` — 試練・空の道, 虫の道… — sans avoir jamais été défini : le voici, finding 07-C3) est la **page de garde de l'examen** : nom de l'épreuve, sections et nombre de questions par section, chrome DS solennel. Le combat se déroule ensuite **section par section, dans cet ordre** : 文字・語彙 (Sens/Lecture/Saisie/Composition + M10-M16) → 文法 (Grammaire/Conjugaison + M17-M18) → 読解 (Traduction/Disposition + M19-M23 — c'est en section 読解 des examens que les modes lecture apparaissent surtout, leur longueur y est absorbée) → 聴解 (Écoute). Les quotas de questions par section sont les **poids Boss ci-dessus convertis en nombres entiers** — aucune nouvelle table ; la section 文法 applique la rotation plus-anciens-d'abord ; les gardes d'indisponibilité de modes s'appliquent à l'intérieur de chaque section (une section entièrement indisponible est redistribuée). À la victoire : **relevé de notes par section** (depuis `battle_results.modes_used[]`/`accuracy`), puis cérémonie du 印. Vies, absence de chrono, longueurs : inchangés.
 - **Combats narratifs** — **Silver, Exécutifs Rocket, Kimono Girls, Légendaires** : mélange aléatoire des modes comme aujourd'hui (une embuscade n'est pas un examen), avec la même rotation grammaire plus-anciens-d'abord. Les 門弟 restent eux aussi des combats mélangés — ce sont des gardes, l'examen est chez le maître.
 
 **Un seul profil par catégorie (Route/Boss), pas de table supplémentaire par phase de jeu (tranché 2026-07-01 après audit combat) :** on aurait pu construire une 3e dimension de poids qui évolue avec la progression (ex. plus de Sens/Lecture en début de partie, plus de Grammaire/Disposition en fin). Ce n'est pas nécessaire — le mécanisme d'exclusion/redistribution ci-dessous produit déjà cet effet **naturellement, sans table à maintenir en plus** : tôt dans le jeu, Grammaire/Conjugaison/Disposition/Écoute sont exclus faute de contenu disponible (peu de grammaire rencontrée, peu de kanji étudiés, peu d'audio couvrant des mots encore inconnus), donc le pool effectif de modes est plus restreint et progressivement redistribué vers Sens/Lecture/Saisie/Composition. Ce pool s'élargit tout seul à mesure que le joueur avance, jusqu'aux 9 modes en fin de partie. Le nombre de modes réellement actifs croît donc avec la progression sans mécanisme dédié.
 
-Modes indisponibles : si `encounteredGrammarCount == 0` (aucun point de grammaire encore rencontré), Grammaire et Conjugaison sont exclus ; si aucune phrase Disposition éligible (**membre de la pool Disposition présélectionnée** — ajouté V-4, audit 07 —, `kanji_ids ⊆ studiedSet` et `chunks` non vide), Disposition est exclue ; si aucun mot/phrase Écoute éligible (audio disponible ET `kanji_ids ⊆ studiedSet` — **l'audio des phrases Écoute provient de la même pool Disposition-audio, étape 4bis** : Tatoeba n'a pas d'audio natif, ajouté V-7, audit 07), Écoute est exclu — même garde que Disposition ; si aucun mot composé valide formable avec le `studiedSet` du combat, Composition est exclu — même garde (2026-07-02). Le poids des modes exclus est redistribué proportionnellement aux modes restants. La redistribution s'effectue à chaque tirage individuel (pas en début de combat).
+Modes indisponibles : si `encounteredGrammarCount == 0` (aucun point de grammaire encore rencontré), Grammaire et Conjugaison sont exclus ; si aucune phrase Disposition éligible (**membre de la pool Disposition présélectionnée** — ajouté V-4, audit 07 —, `kanji_ids ⊆ studiedSet` et `chunks` non vide), Disposition est exclue ; si aucun mot/phrase Écoute éligible (audio disponible ET `kanji_ids ⊆ studiedSet` — **l'audio des phrases Écoute provient de la même pool Disposition-audio, étape 4bis** : Tatoeba n'a pas d'audio natif, ajouté V-7, audit 07), Écoute est exclu — même garde que Disposition ; si aucun mot composé valide formable avec le `studiedSet` du combat, Composition est exclu — même garde (2026-07-02). **Modes additionnels (2026-07-21), même mécanisme d'exclusion** : M10/M16 exclus si aucune phrase du pool exemples n'a de token masquable éligible ; M11/12 exclu si aucun mot étudié n'a de relation syn/ant curée ; M13/M14 exclus tant que leurs données de 2ᵉ vague n'existent pas ; M15 exclu si aucune collocation curée sur les mots étudiés ; M17/M18 suivent la garde Grammaire (`encounteredGrammarCount == 0`) plus, pour M18, l'existence d'un snippet connector au palier ; M19-M23 exclus si aucun `reading_snippets` du subtype au palier ≤ courant. Le poids des modes exclus est redistribué proportionnellement aux modes restants. La redistribution s'effectue à chaque tirage individuel (pas en début de combat).
 
 **Pas de répétition de contenu au sein d'un même combat (adopté 2026-07-02) :** l'enchaînement des *modes* peut se répéter librement (2-3 fois le même mode d'affilée n'est pas un problème) — mais le **contenu précis** tiré (même point de grammaire, même phrase de traduction, même phrase Disposition, même mot/phrase Écoute, même item — kanji ou mot — en Sens/Lecture/Saisie *(élargi V-5, audit 07 : « même kanji en Sens/Lecture » omettait Saisie et les mots)*, même paire de kanji en Composition) ne doit jamais ressortir deux fois dans le même combat. Chaque mode tire dans une pool locale au combat **sans remise** ; si la pool s'épuise avant la fin du combat (pool source trop petite, typique en tout début de partie), elle redevient disponible avec remise plutôt que d'exclure le mode. **Un combat perdu et rejoué immédiatement retire entièrement une nouvelle séquence** (nouveaux tirages de mode et de contenu, aucune réutilisation de la tentative précédente) — cohérent avec l'absence de cooldown déjà en place.
 
@@ -903,8 +1016,8 @@ Toutes les tables ci-dessous vivent dans la même base Neon — pas de distincti
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `kanji`              | character, meanings, readings, etymology, mnemonic, jlpt_level, `grade` *(ajouté 2026-07-07, audit 08, finding 08-B7 : la fiche Kanjidex promet « grade scolaire » — fourni par Kanjidic2, étape 1)*, `lesson_examples[]` *(ajouté 2026-07-07, audit 06, finding 06-B1 : les 1-2 phrases d'exemple de la page kanji de l'écran-livre — {jp, en, audio_ref, source: tango \| generated} — produites au pipeline, hybride humain>TTS, voir § Leçons)*, `icon_ref` *(ajouté 2026-07-07, audit 06, finding 06-B2 : emoji du concept, mapping CLDR automatique relu, **nullable** — pas de match forcé)*, `jp_definition` + `jp_definition_distractors[]` *(ajoutés 2026-07-07, audit 07, finding 07-B1 : définition japonaise du batch 8ter — mode Sens gradué)* |
 | `kanji_components`   | kanji_id, component_id, ordre *(ligne ajoutée 2026-07-07, audit 08, finding 08-B5 : la table est produite par le pipeline (étape 2, KanjiVG), affichée par la fiche Kanjidex (« composants cliquables ») et consommée par `getAvailableKanji` (componentGraph) — elle manquait simplement à cette liste)* |
-| `words`              | word, reading, `meanings`, `part_of_speech` *(ajoutés 2026-07-07, audit 08, finding 08-B6 : le sens anglais des mots est le support des modes Sens/Saisie/Écoute non maîtrisés et de la Carte Mot — aucun champ ne le portait ; JMdict fournit les deux, étape 3)*, jlpt_level, compound_story, pitch_accent, `kanji_ids[]` + `example_sentence_ids[]` *(ajoutés 2026-07-07, audit 08, finding 08-B8 : décomposition mot→kanji précalculée (déblocage de vocabulaire, kanji cliquables, « 6-8 mots par kanji » via l'index inverse) et sélection des 3 phrases d'exemple — étapes 3 et 4ter du pipeline (référence corrigée en passe de vérification V-1, audit 08), le client ne scanne jamais de chaînes)*, `photo_ref` *(ajouté 2026-07-07, audit 06 — nullable : photo du deck Anki Core 2k/6k local (~2 000 mots courants), affichée sur la Carte Mot ; extraction au pipeline)*, `jp_definition` + `jp_definition_distractors[]` *(audit 07, finding 07-B1 — batch 8ter)*, `near_homophones[]` *(audit 07, finding 07-D2 — précalcul 13bis, distracteurs du mode Écoute gradué)* |
-| `grammar`            | title (le `hanabira_title` exact, copié verbatim), formation, `short_explanation`, `long_explanation`, `example_variants[]` (chaque entrée : jp, en, grammar_audio, `distractors[]` — produits à l'étape 14 du pipeline), jlpt_level (source Hanabira) *(champs alignés 2026-07-07, audit 06, finding 06-A3 : l'ancien schéma « title, formation, examples » ne pouvait pas stocker le format grammar_note de `content/curriculum-checkpoints.md`, qui décrit en réalité **l'entrée de cette table** — les leçons la référencent par `grammar_id`, rien n'est embarqué par leçon)* |
+| `words`              | word, reading, `meanings`, `part_of_speech` *(ajoutés 2026-07-07, audit 08, finding 08-B6 : le sens anglais des mots est le support des modes Sens/Saisie/Écoute non maîtrisés et de la Carte Mot — aucun champ ne le portait ; JMdict fournit les deux, étape 3)*, jlpt_level, compound_story, pitch_accent, `kanji_ids[]` + `example_sentence_ids[]` *(ajoutés 2026-07-07, audit 08, finding 08-B8 : décomposition mot→kanji précalculée (déblocage de vocabulaire, kanji cliquables, « 6-8 mots par kanji » via l'index inverse) et sélection des 3 phrases d'exemple — étapes 3 et 4ter du pipeline (référence corrigée en passe de vérification V-1, audit 08), le client ne scanne jamais de chaînes)*, `photo_ref` *(ajouté 2026-07-07, audit 06 — nullable : photo du deck Anki Core 2k/6k local (~2 000 mots courants), affichée sur la Carte Mot ; extraction au pipeline)*, `jp_definition` + `jp_definition_distractors[]` *(audit 07, finding 07-B1 — batch 8ter)*, `near_homophones[]` *(audit 07, finding 07-D2 — précalcul 13bis, distracteurs du mode Écoute gradué)*, `synonym_ref`/`antonym_ref` + `collocations[]` + `affix_parts` + `misuse_sentences[]` *(ajoutés 2026-07-21, modes additionnels M11/12, M15, M14, M13 — étape 17 du pipeline ; `affix_parts`/`misuse_sentences` en 2ᵉ vague, nullables)* |
+| `grammar`            | title (le `hanabira_title` exact, copié verbatim), formation, `short_explanation`, `long_explanation`, `example_variants[]` (chaque entrée : jp, en, grammar_audio, `distractors[]` — produits à l'étape 14 du pipeline, + `fragments[]`/`star_index` *(ajoutés 2026-07-21, mode M17 ★ — segmentation 4-fragments au build, étape 17f, ordre canonique unique vérifié)*), jlpt_level (source Hanabira) *(champs alignés 2026-07-07, audit 06, finding 06-A3 : l'ancien schéma « title, formation, examples » ne pouvait pas stocker le format grammar_note de `content/curriculum-checkpoints.md`, qui décrit en réalité **l'entrée de cette table** — les leçons la référencent par `grammar_id`, rien n'est embarqué par leçon)* |
 | `sentences`          | jp_text, en_text, chunks[], register, kanji_set[] (Tatoeba + JESC), `audio_ref` *(nullable — ajouté 2026-07-07, audit 07, finding 07-D1 : audio VOICEVOX de la pool Disposition, étape 4bis ; consigne des phrases maîtrisées)*                                                                                                                                                     |
 | `lessons`            | zone_id, trainer_ref ou npc_ref, `kanji_ids[]` (2026-07-02, le groupe de kanji de cette leçon), `grammar_id` (optionnel), `sequence_index` (2026-07-02, position dans la quête `lessons-<zone_id>`, pilote l'ordre imposé — voir § Leçons) *(`content` et `lesson_type` purgés 2026-07-07, audit 06, finding 06-D2 tranché au grill : jamais définis, aucun consommateur — les pages kanji sont générées depuis `kanji_ids[]` (tables `kanji`), la page grammaire depuis `grammar_id` ; rien n'est rédigé à la main par leçon)*, `unlock_conditions` (optionnel, `Condition[]`, vide par défaut — *ajouté 2026-07-09, Étape 3 point 2 : gère un PNJ-leçon unique livrant ses leçons en deux temps narratifs (ex. Elm, aller-retour Mr. Pokémon) sans permettre d'enchaîner tous ses slots à la même visite ; voir § Leçons « Coupure aller-retour — mécanisme » pour la règle moteur exacte)* |
 | `texts`              | `title` *(ajouté 2026-07-07, audit 08, finding 08-B9 : le Journal de lecture liste les textes par titre, masqué 「???」 si non lu — aucun champ ne le portait ; en japonais, c'est un écran de jeu)*, jp_text *(furigana inline `漢字（かんじ）`, même convention que les dialogues — précisé 2026-07-07, audit 05, finding 05-C1)*, en_text, questions[] *(chaque question porte un `answer_span` optionnel — intervalle de caractères dans jp_text, obligatoire pour les types inférence/référence, absent pour factuel/idée générale ; ajouté 2026-07-07, audit 05, finding 05-C2, produit à l'étape 12ter)*, `audio_ref` *(nullable — bouton lecture seulement si renseigné ; ajouté 2026-07-07, audit 05, finding 05-C3)*, level, source, event_ref, length_chars, `tier` (obligatoire \| secondaire), `zone_id`, `npc_ref` ou `found_object_ref` *(champs de placement ajoutés 2026-07-02 — nécessaires pour le menu "tous les textes" et le CS-Kanji, voir `content/texts-progressifs.md`)* |
@@ -932,6 +1045,7 @@ Toutes les tables ci-dessous vivent dans la même base Neon — pas de distincti
 | `user_settings`      | user_id, music_vol, sfx_vol, voice_vol, text_speed, `text_size` (petit \| normal \| grand — ajouté 2026-07-08, audit 10, point 7), frame_style, lefty_mode, overlay_opacity *(ajoutée 2026-07-07, audit 08, finding 08-D1 : les réglages de l'écran せってい — liste fermée, voir § Menu Principal)* |
 | `radio_shows`        | show_id, title, jlpt_level, audio_ref, script_jp, questions[] *(ajoutée 2026-07-07, synthèse, tranchée au grill : la bibliothèque des émissions d'Oak — miroir de `texts` pour l'écoute longue ; contenu alimenté à la passe contenu, voir § Pokégear ラジオ)* |
 | `radio_show_completions` | user_id, show_id, discovered_at (première écoute), gold_at (première passe de quiz sans faute, nullable) *(ajoutée 2026-07-07, synthèse : miroir de `text_completions` — sans champ `score` : le quiz radio est optionnel et sans enjeu, seuls découverte et doré comptent)* |
+| `reading_snippets`   | id, jlpt_level, subtype (referent \| paraphrase \| info \| thesis \| duel \| connector), body_jp, body_en, doc_layout (plain \| notice \| schedule \| two_column_AB — pour subtype info), questions[] {prompt_jp, options_jp[4], answer_index, source} *(ajoutée 2026-07-21, adoption des modes lecture M18-M23 — pool de passages courts adaptés des livres (vetting 12bis), gaté par palier JLPT, jamais par dresseur ; lecture seule en combat, **aucune table de complétion** : un snippet est une question jetable, pas une entrée de bibliothèque — contraste voulu avec `texts`/`radio_shows` ; budget kanji = studiedSet + lecture inline)* |
 
 *(Table `mastery_events` supprimée 2026-07-06, audit 03, finding 03-C3 : son consommateur historique — le déblocage des CS-Kanji par maîtrise — a disparu le 2026-07-02 ; la graduation du mode Sens, le tile doré du Kanjidex et les achievements « kanji maîtrisés » se calculent directement sur la stabilité des cartes `srs_cards`, sans événement matérialisé. Elle était de plus kanji-only alors que c'est la maîtrise des **mots** qui pilote le mode Sens.)*
 
@@ -960,7 +1074,7 @@ TypeScript pur, sans I/O :
 - `getAvailableWords(studiedKanjiSet, allWords, wordsInDeck)` — déblocage de vocabulaire dès kanji étudiés (2026-07-01, renommé — n'exige plus `masteredKanjiSet`)
 - `getBattlePool(studiedItems)` — pool de combat unique pour tous les combats (route, 師範, Silver, Rocket…) : items étudiés (kanji + mots) avec poids de tirage pondéré récent *(remplace `getTrainerBattlePool(trainer, studiedSet)` « intersection kanji_pool ∩ studiedSet, min 5 » et `getDōjōKanji(theme, studiedSet)` — supprimés 2026-07-07, audit 07, findings 07-A1/07-E1 : le paramètre `theme` était un fossile des thèmes par 師範 retirés le 2026-07-02, et la fonction entière était redondante)*
 - `getGrammarForBattle(encountersSet, lastDrawnMap)` — grammaire rencontrée uniquement, priorité plus-anciens-d'abord *(re-signé 2026-07-07, audit 07 : `zoneJlptTier` retiré — le pool est l'ensemble des points rencontrés, pas un tier de zone ; `lastDrawnMap` porte la rotation, finding 07-A4)*
-- `selectQuestionMode(battleType, encounteredGrammarCount, hasDispositionSentences, hasEcouteAudio, hasComposablePairs)` — sélection pondérée parmi 9 modes, avec redistribution des modes indisponibles *(paramètre `hasComposablePairs` ajouté 2026-07-07, audit 07, finding 07-D3 : la garde d'exclusion de Composition (2026-07-02) n'avait jamais été reportée dans la signature)*
+- `selectQuestionMode(battleType, encounteredGrammarCount, hasDispositionSentences, hasEcouteAudio, hasComposablePairs, additionalModeAvailability)` — sélection pondérée parmi les modes actifs (9 fondateurs + 13 additionnels), avec redistribution des modes indisponibles *(paramètre `hasComposablePairs` ajouté 2026-07-07, audit 07, finding 07-D3 ; `additionalModeAvailability` ajouté 2026-07-21 — map de disponibilité des modes M10-M23, gardes d'exclusion au § Modes indisponibles)*
 - `getExamSections(battleLength, availableModes)` — pour les jalons-examens (師範/E4/Lance/Red) : convertit les poids Boss en quotas de sections 文字・語彙/文法/読解/聴解 *(ajouté 2026-07-07, audit 07 — voir § Jalons-examens)*
 - `drawBattleContent(mode, pool, usedInBattleSet)` — tirage sans remise dans la pool locale au combat pour le mode donné (grammaire, phrase, kanji, paire de kanji selon le mode) ; retombe en tirage avec remise si `usedInBattleSet` couvre déjà toute la `pool` (voir § Pas de répétition de contenu)
 - `getDispositionChunks(chunks)` — retourne `chunks[]` mélangés (Fisher-Yates), pur
@@ -999,6 +1113,7 @@ TypeScript pur, sans I/O :
 14. **Batch IA** — grammaire : le corpus Hanabira a 3 310 exemples pour 828 points (~4 en moyenne par point), pas un seul — pour **chaque exemple disponible** de chaque point (pas seulement `examples[0]`), génère 2–3 variantes incorrectes (mauvaise particule, registre casual/formel inversé) → nouveau champ `distractors[]` par exemple, stocké dans le tableau `example_variants[]` de l'entrée de la **table `grammar`** (format « grammar_note », voir `content/curriculum-checkpoints.md` § Format grammar_note ; rattachement à la table précisé 2026-07-07, audit 06, finding 06-A3). Objectif : éviter qu'un point de grammaire rencontré plusieurs fois en combat (voir § Pool de grammaire) ne ressorte toujours avec la même phrase/les mêmes distracteurs — risque de pattern-matching identifié en audit (2026-07-01, comparaison Wagotabi : "les joueurs finissent par mémoriser des patterns plutôt que le sens"). Relu une fois par l'équipe de contenu, jamais régénéré au runtime.
 15. **Contenu hand-written** : `/content/map/trainers.json` (depuis guidebook Prima), `/content/map/npcs.json`, **`/content/map/zones.json`** *(ajouté 2026-07-07, audit 08, finding 08-C1 : registre des zones — name {jp, en}, region, music_ref (mapping § Musique du guidebook), is_interior)*, `/content/dialogues/mentors/`, `/content/curriculum-checkpoints.md`
 16. **Manifest dresseurs** : `/content/map/trainers.json` — chaque entrée : `{ trainer_id, zone_id, tile_x, tile_y, facing, sight_range, role, battle_length, name }` *(`kanji_pool[]` retiré 2026-07-07, audit 07, finding 07-A1 — les 10 entrées Route 29 existantes le perdent en passe contenu)*
+17. **Données des modes additionnels** *(ajouté 2026-07-21, adoption des 13 modes — voir § Les 13 modes additionnels)* — (a) **tag du token masquable** sur le pool exemples (kuromoji, build — M10/M16, même principe que les `chunks[]`) ; (b) **extension du batch 8ter** : 1 synonyme + 1 antonyme curés par mot JLPT (JMdict `related`/`antonym` en appoint) → `words.synonym_ref`/`antonym_ref` (M11/12 — objectif 100 % de couverture, sinon mode clairsemé) ; (c) **segmentation d'affixes** du lexique (的/化/性/さ/反/無/不/非…) → `words.affix_parts` (M14, dérivé, 2ᵉ vague) ; (d) **collocations** par nom/verbe (mining co-occurrence Tatoeba + batch curé) → `words.collocations[]` (M15) ; (e) **phrases de mésusage** (3 par mot testé, batch IA relu) → `words.misuse_sentences[]` (M13, **2ᵉ vague/examens**) ; (f) **segmentation 4-fragments + tag ★** des `example_variants[]` grammaire (build) → `fragments[]`/`star_index` par exemple (M17, ordre canonique unique vérifié au build) ; (g) **pool `reading_snippets`** authored, **adapté des livres (vetting 12bis)** à la passe contenu — la vraie brique nouvelle (M18-M23), mini-docs réalistes M21 inclus.
 
 **Principe directeur (2026-07-01) :** aucune fonction ne génère de contenu japonais au runtime, qu'elle soit basée sur de l'IA ou sur une règle déterministe (conjugaison incluse). Tout le contenu linguistique est généré ou téléchargé **avant le lancement du jeu**, une fois, puis stocké **en base Neon, lue par le client** *(arbitrage définitivement tranché 2026-07-08, après l'audit 10, voir § Implémentation et ADR-0005)*. Le client ne fait au runtime que lire, sélectionner et mélanger des données déjà là (ex. `getDispositionChunks` mélange des `chunks[]` déjà tokenisés, il n'en génère aucun).
 

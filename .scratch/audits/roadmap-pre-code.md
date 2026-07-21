@@ -329,6 +329,29 @@ CS-Kanji sont re-calculés au fil du placement réel (valeurs actuelles de calib
 de l'étape 3 qu'on sait combien de temps celle-ci prendra** — c'est tout l'intérêt de la
 tranche verticale.
 
+### Lot 0 (2026-07-21) — solder l'ardoise pré-industrialisation
+
+Demande utilisateur : « finir tout le contenu + tout ce qu'il faut régler avant de coder »,
+en une passe continue sans point de contrôle par zone (le point 3 des décisions d'exécution
+du 2026-07-17 est levé par cette demande). Trois décisions utilisateur prises via
+questionnaire, puis appliquées :
+
+1. **Les 13 modes de combat additionnels intégrés au PRD** — famille C (lecture M19-M23)
+   **adoptée**, passages adaptés des livres (vetting 12bis, ≤200字 route / ≤300字 boss) ;
+   M11/M12 fusionnés « Relations » ; M15 QCM + variante appariement ; M13/M14 différés 2ᵉ
+   vague. PRD : nouvelle section § Les 13 modes additionnels, profils de poids remplacés
+   (resomment à 100 sur 22 modes), sections d'examen étendues, gardes d'indisponibilité,
+   table `reading_snippets`, champs `words`/`grammar`, étape 17 du pipeline,
+   `selectQuestionMode` re-signé. `.scratch/combat-modes-spec-proposal.md` marqué intégré.
+   **Conséquence contenu : le pool `reading_snippets` s'écrit pendant cette passe.**
+2. **Audit New Bark soldé** (`.scratch/audits/new-bark-town-audit-2026-07-17.md`) — G2
+   tranché « gater via unlock_conditions » : étape de quête `egg_delivered` ajoutée à
+   `mystery_egg_errand` (avancée par `welcome_back` d'Elm, nouvel état terminal `egg_care`),
+   leçons 3-5 d'Elm gated dessus ; G5 aide d'Elm repositionnée dans le labo (29,1) ;
+   J2/J6 exemples 円/女 réécrits ; J3/J4 7 seconds `lesson_examples` on'yomi ajoutés
+   (一・二・八・日・月・生・気). Linters verts (110 fichiers).
+3. **Rythme de commit acté : un commit + push par lot de zones.**
+
 ### Lot 1 (2026-07-10) — Ruines Arcaniques → Route 32 → Union Cave → Route 33 → Écorcia
 (Gym 2 Bugsy) → Puits Ramoloss (Exécutif Proton, Silver #2)
 

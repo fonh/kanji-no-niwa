@@ -1,646 +1,646 @@
 [
-  {
-    "npc_id": "mom_new_bark",
-    "zone_id": "new-bark-town",
-    "name": "Mom",
-    "tile_x": 23,
-    "tile_y": 12,
-    "facing": "south",
-    "position_status": "ROM-matched, voir content/map/placements/new-bark-town.json (obj_T20_gsmama)",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/new-bark-town/mom_new_bark"
-  },
-  {
-    "npc_id": "prof_elm_lab",
-    "zone_id": "new-bark-town",
-    "name": "Prof. Elm",
-    "tile_x": 31,
-    "tile_y": 0,
-    "facing": "north",
-    "position_status": "ROM-matched, voir content/map/placements/new-bark-town.json (obj_T20_doctor)",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/new-bark-town/prof_elm_lab"
-  },
-  {
-    "npc_id": "lyra_ethan_new_bark",
-    "zone_id": "new-bark-town",
-    "name": "Lyra/Ethan",
-    "tile_x": 10,
-    "tile_y": 7,
-    "facing": "east",
-    "position_status": "ROM-matched, voir content/map/placements/new-bark-town.json (obj_T20_gsrivel)",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/new-bark-town/lyra_ethan_new_bark"
-  },
-  {
-    "npc_id": "policeman_new_bark",
-    "zone_id": "new-bark-town",
-    "name": "Policeman",
-    "tile_x": 19,
-    "tile_y": 6,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/new-bark-town.json",
-    "trigger_type": "talk",
-    "unlock_conditions": [
-      {
-        "type": "quest_step",
-        "quest_id": "mystery_egg_errand",
-        "step": "egg_received"
-      }
-    ],
-    "dialogue_ref": "npcs/new-bark-town/policeman_new_bark"
-  },
-  {
-    "npc_id": "silver_spying_new_bark",
-    "zone_id": "new-bark-town",
-    "name": "Boy with Red Hair",
-    "tile_x": 3,
-    "tile_y": 12,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/new-bark-town.json",
-    "trigger_type": "talk",
-    "unlock_conditions": [
-      {
-        "type": "quest_step",
-        "quest_id": "mystery_egg_errand",
-        "step": "sent_by_elm",
-        "negate": true
-      }
-    ],
-    "dialogue_ref": "npcs/new-bark-town/silver_spying_new_bark"
-  },
-  {
-    "npc_id": "elm_assistant_new_bark",
-    "zone_id": "new-bark-town",
-    "name": "Prof. Elm's Assistant",
-    "tile_x": 4,
-    "tile_y": 14,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/new-bark-town.json",
-    "trigger_type": "talk",
-    "unlock_conditions": [
-      {
-        "type": "quest_step",
-        "quest_id": "mystery_egg_errand",
-        "step": "egg_received"
-      }
-    ],
-    "dialogue_ref": "npcs/new-bark-town/elm_assistant_new_bark"
-  },
-  {
-    "npc_id": "player_pc_new_bark",
-    "zone_id": "new-bark-town",
-    "name": "PC",
-    "kind": "object",
-    "tile_x": 12,
-    "tile_y": 8,
-    "position_status": "provisional — 2F de la maison du joueur, aucune donnée ROM de référence pour cet objet précis",
-    "trigger_type": "talk"
-  },
-  {
-    "npc_id": "tuscany_route29",
-    "zone_id": "route-29",
-    "name": "Tuscany",
-    "tile_x": 38,
-    "tile_y": 8,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-29.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "unlock_conditions": [
-      {
-        "type": "time_window",
-        "days_of_week": [
-          "tuesday"
-        ]
-      },
-      {
-        "type": "badge_earned",
-        "badge_id": "falkner"
-      }
-    ],
-    "dialogue_ref": "npcs/route-29/tuscany_route29"
-  },
-  {
-    "npc_id": "lyra_ethan_route29",
-    "zone_id": "route-29",
-    "name": "Lyra/Ethan",
-    "tile_x": 64,
-    "tile_y": 2,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-29.json",
-    "trigger_type": "talk",
-    "unlock_conditions": [
-      {
-        "type": "quest_step",
-        "quest_id": "mystery_egg_errand",
-        "step": "egg_received"
-      }
-    ],
-    "dialogue_ref": "npcs/route-29/lyra_ethan_route29"
-  },
-  {
-    "npc_id": "sign_johto_entrance_route29",
-    "zone_id": "route-29",
-    "name": "Sign",
-    "kind": "sign",
-    "tile_x": 2,
-    "tile_y": 2,
-    "position_status": "provisional — entrée ouest de la route, aucune donnée ROM de référence pour ce panneau précis",
-    "trigger_type": "talk"
-  },
-  {
-    "npc_id": "guide_gent_cherrygrove",
-    "zone_id": "cherrygrove-city",
-    "name": "Guide Gent",
-    "tile_x": 35,
-    "tile_y": 0,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/cherrygrove-city.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/cherrygrove-city/guide_gent_cherrygrove"
-  },
-  {
-    "npc_id": "silver_card_cherrygrove",
-    "zone_id": "cherrygrove-city",
-    "name": "Trainer Card",
-    "kind": "object",
-    "tile_x": 63,
-    "tile_y": 1,
-    "position_status": "provisional — juste au sud de la position de combat de Silver, aucune donnée ROM de référence pour cet objet précis",
-    "trigger_type": "talk",
-    "unlock_conditions": [
-      {
-        "type": "npc_cleared",
-        "npc_id": "silver_apparition1_cherrygrove"
-      }
-    ],
-    "dialogue_ref": "npcs/cherrygrove-city/silver_card_cherrygrove"
-  },
-  {
-    "npc_id": "shopkeeper_cherrygrove",
-    "zone_id": "cherrygrove-city",
-    "name": "Shopkeeper",
-    "tile_x": 44,
-    "tile_y": 8,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/cherrygrove-city.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/cherrygrove-city/shopkeeper_cherrygrove"
-  },
-  {
-    "npc_id": "pokecenter_clerk_cherrygrove",
-    "zone_id": "cherrygrove-city",
-    "name": "Center Clerk",
-    "tile_x": 57,
-    "tile_y": 10,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/cherrygrove-city.json",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/cherrygrove-city/pokecenter_clerk_cherrygrove"
-  },
-  {
-    "npc_id": "man_in_house_route30",
-    "zone_id": "route-30",
-    "name": "Man in the House",
-    "tile_x": 21,
-    "tile_y": 33,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-30.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/route-30/man_in_house_route30"
-  },
-  {
-    "npc_id": "mr_pokemon_route30",
-    "zone_id": "route-30",
-    "name": "Mr. Pokémon",
-    "tile_x": 22,
-    "tile_y": 45,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-30.json",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/route-30/mr_pokemon_route30"
-  },
-  {
-    "npc_id": "prof_oak_route30",
-    "zone_id": "route-30",
-    "name": "Prof. Oak",
-    "tile_x": 6,
-    "tile_y": 54,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-30.json",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/route-30/prof_oak_route30"
-  },
-  {
-    "npc_id": "lyra_ethan_route31",
-    "zone_id": "route-31",
-    "name": "Lyra/Ethan",
-    "tile_x": 26,
-    "tile_y": 13,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-31.json",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/route-31/lyra_ethan_route31"
-  },
-  {
-    "npc_id": "black_apricorn_man_route31",
-    "zone_id": "route-31",
-    "name": "Man by the Black Apricorn",
-    "tile_x": 32,
-    "tile_y": 15,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-31.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/route-31/black_apricorn_man_route31"
-  },
-  {
-    "npc_id": "glasses_man_violet_city",
-    "zone_id": "violet-city",
-    "name": "Man in Sunglasses",
-    "tile_x": 42,
-    "tile_y": 16,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/violet-city/glasses_man_violet_city"
-  },
-  {
-    "npc_id": "earl_violet_city",
-    "zone_id": "violet-city",
-    "name": "Earl",
-    "tile_x": 40,
-    "tile_y": 23,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/violet-city/earl_violet_city"
-  },
-  {
-    "npc_id": "blond_boy_violet_city",
-    "zone_id": "violet-city",
-    "name": "Blond Boy",
-    "tile_x": 13,
-    "tile_y": 31,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/violet-city/blond_boy_violet_city"
-  },
-  {
-    "npc_id": "glasses_boy_violet_city",
-    "zone_id": "violet-city",
-    "name": "Boy with Glasses",
-    "tile_x": 16,
-    "tile_y": 35,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/violet-city/glasses_boy_violet_city"
-  },
-  {
-    "npc_id": "mart_boy_violet_city",
-    "zone_id": "violet-city",
-    "name": "Boy by the Mart",
-    "tile_x": 46,
-    "tile_y": 37,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/violet-city/mart_boy_violet_city"
-  },
-  {
-    "npc_id": "teala_violet_city",
-    "zone_id": "violet-city",
-    "name": "Teala",
-    "tile_x": 41,
-    "tile_y": 40,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "unlock_conditions": [
-      {
-        "type": "badge_earned",
-        "badge_id": "falkner"
-      }
-    ],
-    "dialogue_ref": "npcs/violet-city/teala_violet_city"
-  },
-  {
-    "npc_id": "kimono_zuki_violet_city",
-    "zone_id": "violet-city",
-    "name": "Kimono Girl Zuki",
-    "tile_x": 60,
-    "tile_y": 45,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/violet-city/kimono_zuki_violet_city"
-  },
-  {
-    "npc_id": "mart_vendor_violet_city",
-    "zone_id": "violet-city",
-    "name": "Mart Clerk",
-    "tile_x": 48,
-    "tile_y": 50,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/violet-city/mart_vendor_violet_city"
-  },
-  {
-    "npc_id": "sages_sprout_tower",
-    "zone_id": "sprout-tower",
-    "name": "Tower Sages",
-    "tile_x": 5,
-    "tile_y": 8,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/sprout-tower.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/sprout-tower/sages_sprout_tower"
-  },
-  {
-    "npc_id": "elder_li_sprout_tower",
-    "zone_id": "sprout-tower",
-    "name": "Elder Li",
-    "tile_x": 5,
-    "tile_y": 10,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/sprout-tower.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/sprout-tower/elder_li_sprout_tower"
-  },
-  {
-    "npc_id": "silver_sprout_tower",
-    "zone_id": "sprout-tower",
-    "name": "Boy with Red Hair",
-    "tile_x": 12,
-    "tile_y": 12,
-    "facing": "north",
-    "position_status": "ROM-matched, voir content/map/placements/sprout-tower.json (obj_D15R0103_gsrivel)",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/sprout-tower/silver_sprout_tower"
-  },
-  {
-    "npc_id": "inscription_sprout_tower",
-    "zone_id": "sprout-tower",
-    "name": "Ancient Inscription",
-    "kind": "sign",
-    "tile_x": 8,
-    "tile_y": 9,
-    "position_status": "provisional — aucune donnée ROM de référence pour cet objet précis",
-    "trigger_type": "talk"
-  },
-  {
-    "npc_id": "young_man_by_sign_route36",
-    "zone_id": "route-36",
-    "name": "Young Man by the Sign",
-    "tile_x": 0,
-    "tile_y": 0,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-36.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/route-36/young_man_by_sign_route36"
-  },
-  {
-    "npc_id": "arthur_route36",
-    "zone_id": "route-36",
-    "name": "Arthur",
-    "tile_x": 6,
-    "tile_y": 11,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-36.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "unlock_conditions": [
-      {
-        "type": "time_window",
-        "days_of_week": [
-          "thursday"
-        ]
-      }
-    ],
-    "dialogue_ref": "npcs/route-36/arthur_route36"
-  },
-  {
-    "npc_id": "path_man_route32",
-    "zone_id": "route-32",
-    "name": "Man on the Path",
-    "tile_x": 29,
-    "tile_y": 30,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/route-32.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/route-32/path_man_route32"
-  },
-  {
-    "npc_id": "slowpoke_tail_man_route32",
-    "zone_id": "route-32",
-    "name": "Man Selling a Tail",
-    "tile_x": 20,
-    "tile_y": 51,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/route-32.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/route-32/slowpoke_tail_man_route32"
-  },
-  {
-    "npc_id": "fisherman_route32",
-    "zone_id": "route-32",
-    "name": "Fisherman",
-    "tile_x": 12,
-    "tile_y": 71,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/route-32.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/route-32/fisherman_route32"
-  },
-  {
-    "npc_id": "man_beyond_force_point_route32",
-    "zone_id": "route-32",
-    "name": "Man Beyond the Rock",
-    "tile_x": 4,
-    "tile_y": 90,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/route-32.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/route-32/man_beyond_force_point_route32"
-  },
-  {
-    "npc_id": "frieda_route32",
-    "zone_id": "route-32",
-    "name": "Frieda",
-    "tile_x": 17,
-    "tile_y": 9,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/route-32.json",
-    "trigger_type": "talk",
-    "unlock_conditions": [
-      {
-        "type": "time_window",
-        "days_of_week": [
-          "friday"
-        ]
-      }
-    ],
-    "dialogue_ref": "npcs/route-32/frieda_route32"
-  },
-  {
-    "npc_id": "apricorn_man_route32",
-    "zone_id": "route-32",
-    "name": "Man by the Fisherman",
-    "tile_x": 8,
-    "tile_y": 107,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/route-32.json",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/route-32/apricorn_man_route32"
-  },
-  {
-    "npc_id": "young_man_ruins_of_alph",
-    "zone_id": "ruins-of-alph",
-    "name": "Young Man in the Underground Room",
-    "tile_x": 14,
-    "tile_y": 5,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/ruins-of-alph.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/ruins-of-alph/young_man_ruins_of_alph"
-  },
-  {
-    "npc_id": "researchers_ruins_of_alph",
-    "zone_id": "ruins-of-alph",
-    "name": "Researchers",
-    "tile_x": 9,
-    "tile_y": 13,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/ruins-of-alph.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/ruins-of-alph/researchers_ruins_of_alph"
-  },
-  {
-    "npc_id": "kurt_azalea",
-    "zone_id": "azalea-town",
-    "name": "Kurt",
-    "tile_x": 44,
-    "tile_y": 0,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/azalea-town.json",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/azalea-town/kurt_azalea"
-  },
-  {
-    "npc_id": "charcoal_man_azalea",
-    "zone_id": "azalea-town",
-    "name": "Charcoal Man",
-    "tile_x": 26,
-    "tile_y": 13,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/azalea-town.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/azalea-town/charcoal_man_azalea"
-  },
-  {
-    "npc_id": "mart_vendor_azalea",
-    "zone_id": "azalea-town",
-    "name": "Mart Clerk",
-    "tile_x": 12,
-    "tile_y": 17,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/azalea-town.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/azalea-town/mart_vendor_azalea"
-  },
-  {
-    "npc_id": "rocket_grunt_azalea",
-    "zone_id": "azalea-town",
-    "name": "Team Rocket Grunt",
-    "tile_x": 21,
-    "tile_y": 15,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/azalea-town.json",
-    "trigger_type": "sight_auto",
-    "sight_range": 3,
-    "sight_auto_result": "block",
-    "repeats": true,
-    "dialogue_ref": "npcs/azalea-town/rocket_grunt_azalea"
-  },
-  {
-    "npc_id": "kurt_slowpoke_well",
-    "zone_id": "slowpoke-well",
-    "name": "Kurt",
-    "tile_x": 0,
-    "tile_y": 0,
-    "facing": "south",
-    "position_status": "generated, voir content/map/placements/slowpoke-well.json",
-    "trigger_type": "talk",
-    "dialogue_ref": "npcs/slowpoke-well/kurt_slowpoke_well"
-  },
-  {
-    "npc_id": "son_in_law_letter_object_slowpoke_well",
-    "zone_id": "slowpoke-well",
-    "name": "Letter",
-    "kind": "object",
-    "tile_x": 42,
-    "tile_y": 13,
-    "position_status": "provisional — fond du puits, aucune donnée ROM de référence pour cet objet précis",
-    "trigger_type": "talk"
-  },
-  {
-    "npc_id": "charcoal_apprentice_ilex",
-    "zone_id": "ilex-forest",
-    "name": "Charcoal Apprentice",
-    "tile_x": 32,
-    "tile_y": 10,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/ilex-forest.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/ilex-forest/charcoal_apprentice_ilex"
-  },
-  {
-    "npc_id": "ledge_youth_ilex",
-    "zone_id": "ilex-forest",
-    "name": "Youth on the Ledge",
-    "tile_x": 14,
-    "tile_y": 24,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/ilex-forest.json",
-    "trigger_type": "talk",
-    "role": "lesson",
-    "dialogue_ref": "npcs/ilex-forest/ledge_youth_ilex"
-  },
-  {
-    "npc_id": "naoko_ilex",
-    "zone_id": "ilex-forest",
-    "name": "Naoko",
-    "tile_x": 32,
-    "tile_y": 18,
-    "facing": "south",
-    "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/ilex-forest.json",
-    "trigger_type": "talk",
-    "role": "ambient",
-    "dialogue_ref": "npcs/ilex-forest/naoko_ilex"
-  }
+ {
+  "npc_id": "mom_new_bark",
+  "zone_id": "new-bark-town",
+  "name": "Mom",
+  "tile_x": 23,
+  "tile_y": 12,
+  "facing": "south",
+  "position_status": "ROM-matched, voir content/map/placements/new-bark-town.json (obj_T20_gsmama)",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/new-bark-town/mom_new_bark"
+ },
+ {
+  "npc_id": "prof_elm_lab",
+  "zone_id": "new-bark-town",
+  "name": "Prof. Elm",
+  "tile_x": 31,
+  "tile_y": 0,
+  "facing": "north",
+  "position_status": "ROM-matched, voir content/map/placements/new-bark-town.json (obj_T20_doctor)",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/new-bark-town/prof_elm_lab"
+ },
+ {
+  "npc_id": "lyra_ethan_new_bark",
+  "zone_id": "new-bark-town",
+  "name": "Lyra/Ethan",
+  "tile_x": 10,
+  "tile_y": 7,
+  "facing": "east",
+  "position_status": "ROM-matched, voir content/map/placements/new-bark-town.json (obj_T20_gsrivel)",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/new-bark-town/lyra_ethan_new_bark"
+ },
+ {
+  "npc_id": "policeman_new_bark",
+  "zone_id": "new-bark-town",
+  "name": "Policeman",
+  "tile_x": 19,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/new-bark-town.json",
+  "trigger_type": "talk",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "mystery_egg_errand",
+    "step": "egg_received"
+   }
+  ],
+  "dialogue_ref": "npcs/new-bark-town/policeman_new_bark"
+ },
+ {
+  "npc_id": "silver_spying_new_bark",
+  "zone_id": "new-bark-town",
+  "name": "Boy with Red Hair",
+  "tile_x": 3,
+  "tile_y": 12,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/new-bark-town.json",
+  "trigger_type": "talk",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "mystery_egg_errand",
+    "step": "sent_by_elm",
+    "negate": true
+   }
+  ],
+  "dialogue_ref": "npcs/new-bark-town/silver_spying_new_bark"
+ },
+ {
+  "npc_id": "elm_assistant_new_bark",
+  "zone_id": "new-bark-town",
+  "name": "Prof. Elm's Assistant",
+  "tile_x": 29,
+  "tile_y": 1,
+  "facing": "south",
+  "position_status": "generated, repositionné audit G5 2026-07-21 : dans le labo près d'Elm (31,0) — ワカバタウン n'a pas de Mart en canon, l'aide est au labo en HGSS",
+  "trigger_type": "talk",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "mystery_egg_errand",
+    "step": "egg_received"
+   }
+  ],
+  "dialogue_ref": "npcs/new-bark-town/elm_assistant_new_bark"
+ },
+ {
+  "npc_id": "player_pc_new_bark",
+  "zone_id": "new-bark-town",
+  "name": "PC",
+  "kind": "object",
+  "tile_x": 12,
+  "tile_y": 8,
+  "position_status": "provisional — 2F de la maison du joueur, aucune donnée ROM de référence pour cet objet précis",
+  "trigger_type": "talk"
+ },
+ {
+  "npc_id": "tuscany_route29",
+  "zone_id": "route-29",
+  "name": "Tuscany",
+  "tile_x": 38,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-29.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "unlock_conditions": [
+   {
+    "type": "time_window",
+    "days_of_week": [
+     "tuesday"
+    ]
+   },
+   {
+    "type": "badge_earned",
+    "badge_id": "falkner"
+   }
+  ],
+  "dialogue_ref": "npcs/route-29/tuscany_route29"
+ },
+ {
+  "npc_id": "lyra_ethan_route29",
+  "zone_id": "route-29",
+  "name": "Lyra/Ethan",
+  "tile_x": 64,
+  "tile_y": 2,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-29.json",
+  "trigger_type": "talk",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "mystery_egg_errand",
+    "step": "egg_received"
+   }
+  ],
+  "dialogue_ref": "npcs/route-29/lyra_ethan_route29"
+ },
+ {
+  "npc_id": "sign_johto_entrance_route29",
+  "zone_id": "route-29",
+  "name": "Sign",
+  "kind": "sign",
+  "tile_x": 2,
+  "tile_y": 2,
+  "position_status": "provisional — entrée ouest de la route, aucune donnée ROM de référence pour ce panneau précis",
+  "trigger_type": "talk"
+ },
+ {
+  "npc_id": "guide_gent_cherrygrove",
+  "zone_id": "cherrygrove-city",
+  "name": "Guide Gent",
+  "tile_x": 35,
+  "tile_y": 0,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/cherrygrove-city.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/cherrygrove-city/guide_gent_cherrygrove"
+ },
+ {
+  "npc_id": "silver_card_cherrygrove",
+  "zone_id": "cherrygrove-city",
+  "name": "Trainer Card",
+  "kind": "object",
+  "tile_x": 63,
+  "tile_y": 1,
+  "position_status": "provisional — juste au sud de la position de combat de Silver, aucune donnée ROM de référence pour cet objet précis",
+  "trigger_type": "talk",
+  "unlock_conditions": [
+   {
+    "type": "npc_cleared",
+    "npc_id": "silver_apparition1_cherrygrove"
+   }
+  ],
+  "dialogue_ref": "npcs/cherrygrove-city/silver_card_cherrygrove"
+ },
+ {
+  "npc_id": "shopkeeper_cherrygrove",
+  "zone_id": "cherrygrove-city",
+  "name": "Shopkeeper",
+  "tile_x": 44,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/cherrygrove-city.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/cherrygrove-city/shopkeeper_cherrygrove"
+ },
+ {
+  "npc_id": "pokecenter_clerk_cherrygrove",
+  "zone_id": "cherrygrove-city",
+  "name": "Center Clerk",
+  "tile_x": 57,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/cherrygrove-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/cherrygrove-city/pokecenter_clerk_cherrygrove"
+ },
+ {
+  "npc_id": "man_in_house_route30",
+  "zone_id": "route-30",
+  "name": "Man in the House",
+  "tile_x": 21,
+  "tile_y": 33,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-30.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/route-30/man_in_house_route30"
+ },
+ {
+  "npc_id": "mr_pokemon_route30",
+  "zone_id": "route-30",
+  "name": "Mr. Pokémon",
+  "tile_x": 22,
+  "tile_y": 45,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-30.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-30/mr_pokemon_route30"
+ },
+ {
+  "npc_id": "prof_oak_route30",
+  "zone_id": "route-30",
+  "name": "Prof. Oak",
+  "tile_x": 6,
+  "tile_y": 54,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-30.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-30/prof_oak_route30"
+ },
+ {
+  "npc_id": "lyra_ethan_route31",
+  "zone_id": "route-31",
+  "name": "Lyra/Ethan",
+  "tile_x": 26,
+  "tile_y": 13,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-31.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-31/lyra_ethan_route31"
+ },
+ {
+  "npc_id": "black_apricorn_man_route31",
+  "zone_id": "route-31",
+  "name": "Man by the Black Apricorn",
+  "tile_x": 32,
+  "tile_y": 15,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-31.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/route-31/black_apricorn_man_route31"
+ },
+ {
+  "npc_id": "glasses_man_violet_city",
+  "zone_id": "violet-city",
+  "name": "Man in Sunglasses",
+  "tile_x": 42,
+  "tile_y": 16,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/violet-city/glasses_man_violet_city"
+ },
+ {
+  "npc_id": "earl_violet_city",
+  "zone_id": "violet-city",
+  "name": "Earl",
+  "tile_x": 40,
+  "tile_y": 23,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/violet-city/earl_violet_city"
+ },
+ {
+  "npc_id": "blond_boy_violet_city",
+  "zone_id": "violet-city",
+  "name": "Blond Boy",
+  "tile_x": 13,
+  "tile_y": 31,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/violet-city/blond_boy_violet_city"
+ },
+ {
+  "npc_id": "glasses_boy_violet_city",
+  "zone_id": "violet-city",
+  "name": "Boy with Glasses",
+  "tile_x": 16,
+  "tile_y": 35,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/violet-city/glasses_boy_violet_city"
+ },
+ {
+  "npc_id": "mart_boy_violet_city",
+  "zone_id": "violet-city",
+  "name": "Boy by the Mart",
+  "tile_x": 46,
+  "tile_y": 37,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/violet-city/mart_boy_violet_city"
+ },
+ {
+  "npc_id": "teala_violet_city",
+  "zone_id": "violet-city",
+  "name": "Teala",
+  "tile_x": 41,
+  "tile_y": 40,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "falkner"
+   }
+  ],
+  "dialogue_ref": "npcs/violet-city/teala_violet_city"
+ },
+ {
+  "npc_id": "kimono_zuki_violet_city",
+  "zone_id": "violet-city",
+  "name": "Kimono Girl Zuki",
+  "tile_x": 60,
+  "tile_y": 45,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/violet-city/kimono_zuki_violet_city"
+ },
+ {
+  "npc_id": "mart_vendor_violet_city",
+  "zone_id": "violet-city",
+  "name": "Mart Clerk",
+  "tile_x": 48,
+  "tile_y": 50,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/violet-city/mart_vendor_violet_city"
+ },
+ {
+  "npc_id": "sages_sprout_tower",
+  "zone_id": "sprout-tower",
+  "name": "Tower Sages",
+  "tile_x": 5,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/sprout-tower.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/sprout-tower/sages_sprout_tower"
+ },
+ {
+  "npc_id": "elder_li_sprout_tower",
+  "zone_id": "sprout-tower",
+  "name": "Elder Li",
+  "tile_x": 5,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/sprout-tower.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/sprout-tower/elder_li_sprout_tower"
+ },
+ {
+  "npc_id": "silver_sprout_tower",
+  "zone_id": "sprout-tower",
+  "name": "Boy with Red Hair",
+  "tile_x": 12,
+  "tile_y": 12,
+  "facing": "north",
+  "position_status": "ROM-matched, voir content/map/placements/sprout-tower.json (obj_D15R0103_gsrivel)",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/sprout-tower/silver_sprout_tower"
+ },
+ {
+  "npc_id": "inscription_sprout_tower",
+  "zone_id": "sprout-tower",
+  "name": "Ancient Inscription",
+  "kind": "sign",
+  "tile_x": 8,
+  "tile_y": 9,
+  "position_status": "provisional — aucune donnée ROM de référence pour cet objet précis",
+  "trigger_type": "talk"
+ },
+ {
+  "npc_id": "young_man_by_sign_route36",
+  "zone_id": "route-36",
+  "name": "Young Man by the Sign",
+  "tile_x": 0,
+  "tile_y": 0,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-36.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/route-36/young_man_by_sign_route36"
+ },
+ {
+  "npc_id": "arthur_route36",
+  "zone_id": "route-36",
+  "name": "Arthur",
+  "tile_x": 6,
+  "tile_y": 11,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-36.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "unlock_conditions": [
+   {
+    "type": "time_window",
+    "days_of_week": [
+     "thursday"
+    ]
+   }
+  ],
+  "dialogue_ref": "npcs/route-36/arthur_route36"
+ },
+ {
+  "npc_id": "path_man_route32",
+  "zone_id": "route-32",
+  "name": "Man on the Path",
+  "tile_x": 29,
+  "tile_y": 30,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/route-32.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/route-32/path_man_route32"
+ },
+ {
+  "npc_id": "slowpoke_tail_man_route32",
+  "zone_id": "route-32",
+  "name": "Man Selling a Tail",
+  "tile_x": 20,
+  "tile_y": 51,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/route-32.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/route-32/slowpoke_tail_man_route32"
+ },
+ {
+  "npc_id": "fisherman_route32",
+  "zone_id": "route-32",
+  "name": "Fisherman",
+  "tile_x": 12,
+  "tile_y": 71,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/route-32.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/route-32/fisherman_route32"
+ },
+ {
+  "npc_id": "man_beyond_force_point_route32",
+  "zone_id": "route-32",
+  "name": "Man Beyond the Rock",
+  "tile_x": 4,
+  "tile_y": 90,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/route-32.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/route-32/man_beyond_force_point_route32"
+ },
+ {
+  "npc_id": "frieda_route32",
+  "zone_id": "route-32",
+  "name": "Frieda",
+  "tile_x": 17,
+  "tile_y": 9,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/route-32.json",
+  "trigger_type": "talk",
+  "unlock_conditions": [
+   {
+    "type": "time_window",
+    "days_of_week": [
+     "friday"
+    ]
+   }
+  ],
+  "dialogue_ref": "npcs/route-32/frieda_route32"
+ },
+ {
+  "npc_id": "apricorn_man_route32",
+  "zone_id": "route-32",
+  "name": "Man by the Fisherman",
+  "tile_x": 8,
+  "tile_y": 107,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/route-32.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-32/apricorn_man_route32"
+ },
+ {
+  "npc_id": "young_man_ruins_of_alph",
+  "zone_id": "ruins-of-alph",
+  "name": "Young Man in the Underground Room",
+  "tile_x": 14,
+  "tile_y": 5,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/ruins-of-alph.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/ruins-of-alph/young_man_ruins_of_alph"
+ },
+ {
+  "npc_id": "researchers_ruins_of_alph",
+  "zone_id": "ruins-of-alph",
+  "name": "Researchers",
+  "tile_x": 9,
+  "tile_y": 13,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/ruins-of-alph.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/ruins-of-alph/researchers_ruins_of_alph"
+ },
+ {
+  "npc_id": "kurt_azalea",
+  "zone_id": "azalea-town",
+  "name": "Kurt",
+  "tile_x": 44,
+  "tile_y": 0,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/azalea-town.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/azalea-town/kurt_azalea"
+ },
+ {
+  "npc_id": "charcoal_man_azalea",
+  "zone_id": "azalea-town",
+  "name": "Charcoal Man",
+  "tile_x": 26,
+  "tile_y": 13,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/azalea-town.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/azalea-town/charcoal_man_azalea"
+ },
+ {
+  "npc_id": "mart_vendor_azalea",
+  "zone_id": "azalea-town",
+  "name": "Mart Clerk",
+  "tile_x": 12,
+  "tile_y": 17,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/azalea-town.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/azalea-town/mart_vendor_azalea"
+ },
+ {
+  "npc_id": "rocket_grunt_azalea",
+  "zone_id": "azalea-town",
+  "name": "Team Rocket Grunt",
+  "tile_x": 21,
+  "tile_y": 15,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/azalea-town.json",
+  "trigger_type": "sight_auto",
+  "sight_range": 3,
+  "sight_auto_result": "block",
+  "repeats": true,
+  "dialogue_ref": "npcs/azalea-town/rocket_grunt_azalea"
+ },
+ {
+  "npc_id": "kurt_slowpoke_well",
+  "zone_id": "slowpoke-well",
+  "name": "Kurt",
+  "tile_x": 0,
+  "tile_y": 0,
+  "facing": "south",
+  "position_status": "generated, voir content/map/placements/slowpoke-well.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/slowpoke-well/kurt_slowpoke_well"
+ },
+ {
+  "npc_id": "son_in_law_letter_object_slowpoke_well",
+  "zone_id": "slowpoke-well",
+  "name": "Letter",
+  "kind": "object",
+  "tile_x": 42,
+  "tile_y": 13,
+  "position_status": "provisional — fond du puits, aucune donnée ROM de référence pour cet objet précis",
+  "trigger_type": "talk"
+ },
+ {
+  "npc_id": "charcoal_apprentice_ilex",
+  "zone_id": "ilex-forest",
+  "name": "Charcoal Apprentice",
+  "tile_x": 32,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/ilex-forest.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/ilex-forest/charcoal_apprentice_ilex"
+ },
+ {
+  "npc_id": "ledge_youth_ilex",
+  "zone_id": "ilex-forest",
+  "name": "Youth on the Ledge",
+  "tile_x": 14,
+  "tile_y": 24,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/ilex-forest.json",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "dialogue_ref": "npcs/ilex-forest/ledge_youth_ilex"
+ },
+ {
+  "npc_id": "naoko_ilex",
+  "zone_id": "ilex-forest",
+  "name": "Naoko",
+  "tile_x": 32,
+  "tile_y": 18,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/ilex-forest.json",
+  "trigger_type": "talk",
+  "role": "ambient",
+  "dialogue_ref": "npcs/ilex-forest/naoko_ilex"
+ }
 ]

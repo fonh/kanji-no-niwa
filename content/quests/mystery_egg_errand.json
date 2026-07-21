@@ -12,6 +12,11 @@
    "step_id": "egg_received",
    "label": { "jp": "ふしぎな　たまごと　ポケモンずかんを　もらった。ワカバタウンに　かえろう。", "en": "I received a mystery egg and the Pokédex. Time to head back to New Bark Town." },
    "target_zone_id": "new-bark-town"
+  },
+  {
+   "step_id": "egg_delivered",
+   "label": { "jp": "エルムはかせに　たまごを　あずけた。", "en": "I left the egg in Prof. Elm's care." },
+   "target_zone_id": "new-bark-town"
   }
  ]
 }
