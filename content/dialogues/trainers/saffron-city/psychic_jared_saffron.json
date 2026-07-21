@@ -1,0 +1,27 @@
+{
+ "trainer_id": "psychic_jared_saffron",
+ "name": {
+  "jp": "サイキッカーの　ジャレッド",
+  "en": "Psychic Jared"
+ },
+ "zone_id": "saffron-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "スプーンまげより　むずかしい　こと、できる？",
+     "en": "Can you do something harder than bending spoons?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみの　ちからは　スプーンまげ　いじょうだ。",
+     "en": "Your power goes well beyond spoon-bending."
+    }
+   ]
+  }
+ }
+}

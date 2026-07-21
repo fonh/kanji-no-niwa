@@ -1,0 +1,53 @@
+{
+ "_note": "Étape 4 Lot 11 — Mr. Psychic (leçons #1/#7/#13/#19), CT gratuite (sourcé).",
+ "npc_id": "mr_psychic_saffron",
+ "name": {
+  "jp": "ミスター・サイキック",
+  "en": "Mr. Psychic"
+ },
+ "zone_id": "saffron-city",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "tm_mr_psychic"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "…きみが　くると　わかって　いたよ。",
+     "en": "...I knew you would come."
+    },
+    {
+     "jp": "なにが　ほしいかも、ね。はい、どうぞ。",
+     "en": "And I know what you want, too. Here you are."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "tm_mr_psychic"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "つぎに　きみが　いう　ことばも…　わかるよ。「ありがとう」だろう？",
+     "en": "I even know your next words... 'Thank you,' yes?"
+    }
+   ]
+  }
+ }
+}

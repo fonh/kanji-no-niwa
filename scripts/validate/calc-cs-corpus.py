@@ -75,7 +75,7 @@ NARRATIVE_ORDER = [
     "dark-cave", "route-45", "route-46", "route-26", "route-27",
     "indigo-plateau-antichambre", "indigo-plateau-will", "indigo-plateau-koga",
     "indigo-plateau-bruno", "indigo-plateau-karen", "indigo-plateau-lance",
-    "vermilion-city",
+    "vermilion-city", "route-6-kanto", "saffron-city",
 ]
 
 

@@ -1,0 +1,334 @@
+[
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "mr_psychic_saffron",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "嚇",
+   "囚",
+   "坑",
+   "垣",
+   "培",
+   "堅"
+  ],
+  "grammar_id": "N1-038"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "silph_guard_saffron",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "堕",
+   "塀",
+   "塁",
+   "塊",
+   "塑",
+   "塚"
+  ],
+  "grammar_id": "N1-039"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "copycat_saffron",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "塾",
+   "墜",
+   "墳",
+   "墾",
+   "壇",
+   "壊"
+  ],
+  "grammar_id": "N1-040"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "station_girl_saffron",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "壌",
+   "壮",
+   "壱",
+   "契",
+   "奔",
+   "奨"
+  ],
+  "grammar_id": "N1-041"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "dojo_scrolls_saffron",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "奪",
+   "奴",
+   "如",
+   "妃",
+   "妄",
+   "妊"
+  ],
+  "grammar_id": "N1-042"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "copycat_saffron",
+  "sequence_index": 6,
+  "kanji_ids": [
+   "妥",
+   "妨",
+   "姫",
+   "威",
+   "娠",
+   "娯"
+  ],
+  "grammar_id": "N1-043"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "mr_psychic_saffron",
+  "sequence_index": 7,
+  "kanji_ids": [
+   "婿",
+   "嫁",
+   "嫡",
+   "嬢",
+   "孔",
+   "孤"
+  ],
+  "grammar_id": "N1-044"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "silph_guard_saffron",
+  "sequence_index": 8,
+  "kanji_ids": [
+   "尉",
+   "尋",
+   "尾",
+   "尿",
+   "履",
+   "峠"
+  ],
+  "grammar_id": "N1-045"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "copycat_saffron",
+  "sequence_index": 9,
+  "kanji_ids": [
+   "峡",
+   "峰",
+   "崩",
+   "嵐",
+   "巧",
+   "帆"
+  ],
+  "grammar_id": "N1-046"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "station_girl_saffron",
+  "sequence_index": 10,
+  "kanji_ids": [
+   "帝",
+   "帥",
+   "幣",
+   "幽",
+   "廃",
+   "弐"
+  ],
+  "grammar_id": "N1-047"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "dojo_scrolls_saffron",
+  "sequence_index": 11,
+  "kanji_ids": [
+   "弔",
+   "弥",
+   "弦",
+   "弧",
+   "忌",
+   "悔"
+  ],
+  "grammar_id": "N1-048"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "copycat_saffron",
+  "sequence_index": 12,
+  "kanji_ids": [
+   "悠",
+   "惑",
+   "惨",
+   "愚",
+   "慈",
+   "慌"
+  ],
+  "grammar_id": "N1-049"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "mr_psychic_saffron",
+  "sequence_index": 13,
+  "kanji_ids": [
+   "慨",
+   "懇",
+   "懲",
+   "懸",
+   "戯",
+   "房"
+  ],
+  "grammar_id": "N1-050"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "silph_guard_saffron",
+  "sequence_index": 14,
+  "kanji_ids": [
+   "扇",
+   "扉",
+   "披",
+   "拒",
+   "拠",
+   "拳"
+  ],
+  "grammar_id": "N1-051"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "copycat_saffron",
+  "sequence_index": 15,
+  "kanji_ids": [
+   "拷",
+   "挑",
+   "掌",
+   "排",
+   "撃",
+   "擬"
+  ],
+  "grammar_id": "N1-052"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "station_girl_saffron",
+  "sequence_index": 16,
+  "kanji_ids": [
+   "攻",
+   "敏",
+   "斉",
+   "斥",
+   "施",
+   "旋"
+  ],
+  "grammar_id": "N1-053"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "dojo_scrolls_saffron",
+  "sequence_index": 17,
+  "kanji_ids": [
+   "旦",
+   "旨",
+   "旬",
+   "旺",
+   "昆",
+   "是"
+  ],
+  "grammar_id": "N1-054"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "copycat_saffron",
+  "sequence_index": 18,
+  "kanji_ids": [
+   "晶",
+   "暁",
+   "暇",
+   "曹",
+   "朕",
+   "朴"
+  ],
+  "grammar_id": "N1-055"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "mr_psychic_saffron",
+  "sequence_index": 19,
+  "kanji_ids": [
+   "朽",
+   "杉",
+   "析",
+   "枠",
+   "枢",
+   "某"
+  ],
+  "grammar_id": "N1-056"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "silph_guard_saffron",
+  "sequence_index": 20,
+  "kanji_ids": [
+   "柳",
+   "核",
+   "栽",
+   "桃",
+   "桑",
+   "桟"
+  ],
+  "grammar_id": "N1-057"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "copycat_saffron",
+  "sequence_index": 21,
+  "kanji_ids": [
+   "棄",
+   "棋",
+   "棚",
+   "棺",
+   "椎"
+  ],
+  "grammar_id": "N1-058"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "station_girl_saffron",
+  "sequence_index": 22,
+  "kanji_ids": [
+   "楼",
+   "概",
+   "欄",
+   "欺",
+   "款"
+  ],
+  "grammar_id": "N1-059"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "dojo_scrolls_saffron",
+  "sequence_index": 23,
+  "kanji_ids": [
+   "歓",
+   "殴",
+   "汁",
+   "江",
+   "浄"
+  ],
+  "grammar_id": "N1-060"
+ },
+ {
+  "zone_id": "saffron-city",
+  "npc_ref": "copycat_saffron",
+  "sequence_index": 24,
+  "kanji_ids": [
+   "浪",
+   "滝",
+   "滞",
+   "炉",
+   "炊"
+  ],
+  "grammar_id": "N1-061"
+ }
+]

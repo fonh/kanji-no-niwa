@@ -1,0 +1,44 @@
+{
+ "_note": "Overlay grammaire — Route 6 (Kanto), 2 points N1-036/037 (phrases Hanabira exactes + furigana ADR-0002).",
+ "zone_id": "route-6-kanto",
+ "points": [
+  {
+   "grammar_id": "N1-036",
+   "source_index": 35,
+   "title": "Noun といい Noun といい (〜to ii〜to ii)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "この町（まち）の映画館（えいがかん）といい、公園（こうえん）といい、老若男女（ろうにゃくなんにょ）が楽（たの）しめる。",
+     "point_answer": "といい",
+     "jp_cloze": "この町（まち）の映画館（えいがかん）＿＿、公園（こうえん）といい、老若男女（ろうにゃくなんにょ）が楽（たの）しめる。",
+     "distractors": [
+      "といえば",
+      "となると",
+      "とすれば"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-037",
+   "source_index": 36,
+   "title": "Noun という Noun (~to iu~)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "東京（とうきょう）という都市（とし）は夜（よる）も賑（にぎ）やかです。",
+     "point_answer": "という",
+     "jp_cloze": "東京（とうきょう）＿＿都市（とし）は夜（よる）も賑（にぎ）やかです。",
+     "distractors": [
+      "とみえる",
+      "とちがう",
+      "とくらべる"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

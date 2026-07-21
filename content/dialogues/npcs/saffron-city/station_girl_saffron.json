@@ -1,0 +1,51 @@
+{
+ "_note": "Étape 4 Lot 11 — fille de la gare (leçons #4/#10/#16/#22). Voyage rapide par item_owned(magnet_pass), implémentation.",
+ "npc_id": "station_girl_saffron",
+ "name": {
+  "jp": "リニアえきの　おねえさん",
+  "en": "Magnet Train Station Girl"
+ },
+ "zone_id": "saffron-city",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "magnet_pass"
+    }
+   ],
+   "state": "has_pass"
+  },
+  {
+   "default": true,
+   "state": "no_pass"
+  }
+ ],
+ "dialogue_states": {
+  "no_pass": {
+   "pages": [
+    {
+     "jp": "リニア　ライナーの　ごじょうしゃには、パスが　ひつようです。",
+     "en": "Boarding the Magnet Train requires a Pass."
+    },
+    {
+     "jp": "パスなしでは　ごあんない　できかねます…。",
+     "en": "Without one, I cannot let you board..."
+    }
+   ]
+  },
+  "has_pass": {
+   "pages": [
+    {
+     "jp": "パスの　ごていじ、ありがとうございます！",
+     "en": "Thank you for showing your Pass!"
+    },
+    {
+     "jp": "コガネシティいき、まもなく　はっしゃです！",
+     "en": "The train for Goldenrod departs shortly!"
+    }
+   ]
+  }
+ }
+}

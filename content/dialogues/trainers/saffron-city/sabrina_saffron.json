@@ -1,0 +1,50 @@
+{
+ "_note": "Étape 4 Lot 11 — 10ᵉ 師範 (77q, courbe Kanto). 門弟 22q. Gym en 9 chambres téléportées = puzzle spatial conservé (PRD § Gyms).",
+ "trainer_id": "sabrina_saffron",
+ "name": {
+  "jp": "ジムリーダー　ナツメ",
+  "en": "Sabrina"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・念（ねん）の道（みち）",
+  "en": "Trial of the Psychic Path"
+ },
+ "zone_id": "saffron-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "…3ねんまえから、あなたが　この　へやに　たつ　ひを　みて　いました。",
+     "en": "...Three years ago, I foresaw the day you would stand in this room."
+    },
+    {
+     "jp": "わたしは　ナツメ。ちいさい　ころから　みらいが　みえた。",
+     "en": "I am Sabrina. Since childhood, I have seen the future."
+    },
+    {
+     "jp": "けれど　しょうぶの　ゆくえだけは、いつも　きりの　なか。だから　しょうぶは　すきよ。",
+     "en": "But a battle's outcome is always shrouded in mist. That is why I love to fight."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…きりが　はれました。あなたの　かちです。",
+     "en": "...The mist has cleared. The victory is yours."
+    },
+    {
+     "jp": "ゴールドバッジを。みらいで　また　あいましょう。",
+     "en": "The Marsh Badge is yours. Until we meet again — in the future."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_badge",
+     "badge_id": "sabrina"
+    }
+   ]
+  }
+ }
+}

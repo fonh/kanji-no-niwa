@@ -1,0 +1,38 @@
+{
+ "_note": "Étape 4 Lot 11 — dojo de Safran (leçons #5/#11/#17/#23). ADAPTATION zéro-PNJ-inventé : le karatéka est ABSENT (parti au Mont Mortier — c'est Kiyo, combattu au Lot 5, callback D10) ; les leçons sont portées par ses parchemins (kind=object). Post-16 badges : hub de revanche des 師範 (D10, implémentation).",
+ "npc_id": "dojo_scrolls_saffron",
+ "name": {
+  "jp": "どうじょうの　まきもの",
+  "en": "Dojo Training Scrolls"
+ },
+ "zone_id": "saffron-city",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "（どうじょうは　からっぽだ。かべに　かきおきが　ある。）",
+     "en": "(The dojo is empty. A note hangs on the wall.)"
+    },
+    {
+     "jp": "「しゅぎょうの　ため、ジョウトの　モルタルやまに　いく。」",
+     "en": "'Gone to train at Mt. Mortar, in Johto.'"
+    },
+    {
+     "jp": "「まきものは　じゆうに　まなぶが　よい。――カラテだいおうを　こえんと　する　もの」",
+     "en": "'Study my scrolls freely. — He who would surpass the Karate King'"
+    },
+    {
+     "jp": "（かべの　まきものから　まなべそうだ。）",
+     "en": "(You could learn from the scrolls on the wall.)"
+    }
+   ]
+  }
+ }
+}

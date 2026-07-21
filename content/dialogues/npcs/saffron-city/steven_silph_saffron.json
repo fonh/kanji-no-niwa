@@ -1,0 +1,61 @@
+{
+ "_note": "Étape 4 Lot 11 — Steven à la Silph Co. (2 lignes = 2 états). Adaptation compagnon-unique : « compagnon-cadeau » → pierre rare de Hoenn (collectible) ; « échange » → saveur (companion_id fixe). Documenté.",
+ "npc_id": "steven_silph_saffron",
+ "name": {
+  "jp": "いしずきの　ダイゴ",
+  "en": "Steven"
+ },
+ "zone_id": "saffron-city",
+ "jlpt_level": "N1",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "hoenn_stone"
+    }
+   ],
+   "state": "trade"
+  },
+  {
+   "default": true,
+   "state": "gift"
+  }
+ ],
+ "dialogue_states": {
+  "gift": {
+   "pages": [
+    {
+     "jp": "また　あったね。この　ビルの　いしずえの　いしを　みに　きたんだ。",
+     "en": "We meet again. I came to examine this building's foundation stones."
+    },
+    {
+     "jp": "そうだ、きみに　ききたい。いしと　もじ、どちらが　ながく　のこると　おもう？",
+     "en": "Tell me — which lasts longer, stone or the written word?"
+    },
+    {
+     "jp": "……いい　こたえだ。この　いし、きみに　あずけよう。ホウエンの　めずらしい　いしだ。",
+     "en": "...A fine answer. I entrust you with this rare stone from Hoenn."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "hoenn_stone"
+    }
+   ]
+  },
+  "trade": {
+   "pages": [
+    {
+     "jp": "その　いし、だいじに　して　くれて　いるね。",
+     "en": "You've taken good care of that stone."
+    },
+    {
+     "jp": "べつの　いしと　こうかんも　できるが…　いや、きみには　それが　にあう。",
+     "en": "I could trade it for another, but... no. That one suits you."
+    }
+   ]
+  }
+ }
+}

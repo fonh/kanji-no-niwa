@@ -1,0 +1,27 @@
+{
+ "trainer_id": "medium_rebecca_saffron",
+ "name": {
+  "jp": "いたこの　レベッカ",
+  "en": "Medium Rebecca"
+ },
+ "zone_id": "saffron-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "さいごの　テレポートの　さきに、ナツメさまが　まって　いるわ。",
+     "en": "Beyond the final teleporter, Lady Sabrina awaits."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いって　らっしゃい。よい　しょうぶを。",
+     "en": "Off you go. May it be a fine battle."
+    }
+   ]
+  }
+ }
+}

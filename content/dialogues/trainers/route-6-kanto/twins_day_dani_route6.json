@@ -1,0 +1,31 @@
+{
+ "trainer_id": "twins_day_dani_route6",
+ "name": {
+  "jp": "ふたごちゃんの　デイと　ダニ",
+  "en": "Twins Day & Dani"
+ },
+ "zone_id": "route-6-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "「カントーの　ふたごは」",
+     "en": "\"Kanto twins are\""
+    },
+    {
+     "jp": "「ジョウトの　ふたごより　つよい！」",
+     "en": "\"stronger than Johto twins!\""
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "「ジョウトの　ひとって」「つよいんだね…」",
+     "en": "\"Johto folks...\" \"...are strong after all.\""
+    }
+   ]
+  }
+ }
+}

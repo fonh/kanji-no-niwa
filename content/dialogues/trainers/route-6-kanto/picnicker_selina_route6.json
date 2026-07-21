@@ -1,0 +1,27 @@
+{
+ "trainer_id": "picnicker_selina_route6",
+ "name": {
+  "jp": "ピクニックガールの　セリナ",
+  "en": "Picnicker Selina"
+ },
+ "zone_id": "route-6-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ヤマブキの　ちかくは　ピクニックの　めいしょよ。",
+     "en": "The outskirts of Saffron are prime picnic country."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "おべんとう、はんぶん　どうぞ。",
+     "en": "Here — half my lunch, you've earned it."
+    }
+   ]
+  }
+ }
+}

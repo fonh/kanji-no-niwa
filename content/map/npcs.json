@@ -2122,5 +2122,101 @@
     "step": "route42_glimpse"
    }
   ]
+ },
+ {
+  "npc_id": "old_lady_route5_r6",
+  "zone_id": "route-6-kanto",
+  "name": "Old Lady on Route 5",
+  "tile_x": 4,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-6-kanto.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-6-kanto/old_lady_route5_r6",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "underground_trader_r6",
+  "zone_id": "route-6-kanto",
+  "name": "Underground Path Trader",
+  "tile_x": 5,
+  "tile_y": 20,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-6-kanto.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-6-kanto/underground_trader_r6",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "mr_psychic_saffron",
+  "zone_id": "saffron-city",
+  "name": "Mr. Psychic",
+  "tile_x": 8,
+  "tile_y": 24,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/saffron-city/mr_psychic_saffron",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "silph_guard_saffron",
+  "zone_id": "saffron-city",
+  "name": "Silph Co. Guard",
+  "tile_x": 14,
+  "tile_y": 14,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/saffron-city/silph_guard_saffron",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "copycat_saffron",
+  "zone_id": "saffron-city",
+  "name": "Copycat",
+  "tile_x": 10,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/saffron-city/copycat_saffron",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "station_girl_saffron",
+  "zone_id": "saffron-city",
+  "name": "Magnet Train Station Girl",
+  "tile_x": 26,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/saffron-city/station_girl_saffron",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "dojo_scrolls_saffron",
+  "zone_id": "saffron-city",
+  "name": "Dojo Training Scrolls",
+  "tile_x": 18,
+  "tile_y": 28,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/saffron-city/dojo_scrolls_saffron",
+  "role": "lesson",
+  "kind": "object"
+ },
+ {
+  "npc_id": "steven_silph_saffron",
+  "zone_id": "saffron-city",
+  "name": "Steven",
+  "tile_x": 15,
+  "tile_y": 15,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/saffron-city/steven_silph_saffron"
  }
 ]

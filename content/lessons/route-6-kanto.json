@@ -1,0 +1,28 @@
+[
+ {
+  "zone_id": "route-6-kanto",
+  "npc_ref": "old_lady_route5_r6",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "唆",
+   "唇",
+   "唯",
+   "啓",
+   "喚"
+  ],
+  "grammar_id": "N1-036"
+ },
+ {
+  "zone_id": "route-6-kanto",
+  "npc_ref": "underground_trader_r6",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "喝",
+   "喪",
+   "嘆",
+   "嘱",
+   "噴"
+  ],
+  "grammar_id": "N1-037"
+ }
+]

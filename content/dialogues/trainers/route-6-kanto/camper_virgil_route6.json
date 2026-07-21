@@ -1,0 +1,27 @@
+{
+ "trainer_id": "camper_virgil_route6",
+ "name": {
+  "jp": "キャンプボーイの　バージル",
+  "en": "Camper Virgil"
+ },
+ "zone_id": "route-6-kanto",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "カントーの　キャンパーの　いじ、みせて　やる！",
+     "en": "Behold the pride of a Kanto camper!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ジョウトがえりには　かなわないか。",
+     "en": "Can't beat someone fresh from Johto, huh."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "trainer_id": "psychic_franklin_saffron",
+ "name": {
+  "jp": "サイキッカーの　フランクリン",
+  "en": "Psychic Franklin"
+ },
+ "zone_id": "saffron-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ナツメさまの　よちは　ぜったいだ。きみが　くる　ことも　みえて　いた。",
+     "en": "Lady Sabrina's foresight is absolute. She saw your coming."
+    },
+    {
+     "jp": "だが　けっかまでは　みえない！",
+     "en": "But not the outcome!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "けっかは…　きみの　かちか。",
+     "en": "And the outcome... is your victory."
+    }
+   ]
+  }
+ }
+}

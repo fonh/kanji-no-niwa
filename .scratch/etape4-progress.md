@@ -28,13 +28,23 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **30 / 48** écrites (Johto clos + Carmin — 1ʳᵉ zone Kanto)
-- Leçons : **185 / 344** écrites
-- Kanji dotés d'exemples : **1050 / 1950**
-- Overlays grammaire : **19 / 48**
+- Zones : **32 / 48** écrites
+- Leçons : **211 / 344** écrites
+- Kanji dotés d'exemples : **1200 / 1950**
+- Overlays grammaire : **21 / 48**
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-21 — route-6-kanto + saffron-city (Lot 11)** : route-6 (avec Route 5/Passage
+  Souterrain fusionnés) — 3 combats ROM, 2 leçons N1-036/037 (vieille dame/Talisman,
+  troc RageCandyBar↔CT = callback D10). Safran — **24 leçons N1-038→061** sur 6 refs
+  (Mr. Psychic, vigile Silph, **Copycat ×8** — résolution de copycat_doll → **Pass Train
+  Aimant**, gare fonctionnelle ; **dojo vide → leçons par parchemins** (karatéka parti au
+  Mont Mortier = Kiyo du Lot 5, adaptation zéro-PNJ-inventé documentée), Steven Silph
+  (pierre de Hoenn, adaptation compagnon-unique ×2)), Sabrina 77q 試練・念の道 (4 gardiens
+  22q, 9 chambres téléportées). Overlays : leçon apprise du linter — le corpus Hanabira
+  est FIGÉ, phrases exactes réannotées (1ʳᵉ tentative en phrases réécrites rejetée par
+  lint-grammar-overlay, correcte au 2ᵉ passage). 150 lesson_examples N1. 5 linters verts.
 - **2026-07-21 — SS Aqua + vermilion-city (Lot 10, entrée en Kanto)** : traversée
   fonctionnelle (I-1) — **27 combats du navire** (roster ROM complet 1F/B1F, 21q),
   quête B6 (petite-fille au B1F, Manteau de Métal), Capitaine distributeur de Plaques
@@ -205,8 +215,8 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 28 | route-27 | Johto | 5 | 30 | 1 | ✅ fait (Chutes de Tohjo, Porte de Réception) | ✅ | ✅ | ✅ | — | ✅ |
 | 29 | indigo-plateau-antichambre | Johto | 7 | 40 | 1 | ✅ fait (Silver #6, Conseil 4, Lance — JOHTO CLOS) | ✅ | ✅ | ✅ | — | ✅ |
 | 30 | vermilion-city | Kanto | 30 | 180 | 4 | ✅ fait (SS Aqua 27 combats, quêtes B6 + poupée, Surge 74q, Steven FV-5 soldé) | ✅ | ✅ | ✅ | — | ✅ |
-| 31 | route-6-kanto | Kanto | 2 | 10 | 2 | ⬜ à faire | · | · | · | · | · |
-| 32 | saffron-city | Kanto | 24 | 140 | 6 | ⬜ à faire | · | · | · | · | · |
+| 31 | route-6-kanto | Kanto | 2 | 10 | 2 | ✅ fait (callback RageCandyBar D10) | ✅ | ✅ | ✅ | — | ✅ |
+| 32 | saffron-city | Kanto | 24 | 140 | 6 | ✅ fait (Copycat/Magnet Pass, dojo vide→parchemins, Sabrina 77q) | ✅ | ✅ | ✅ | — | ✅ |
 | 33 | route-9-10-rocktunnel | Kanto | 4 | 20 | 1 | ⬜ à faire | · | · | · | · | · |
 | 34 | lavender-town | Kanto | 4 | 20 | 1 | ⬜ à faire | · | · | · | · | · |
 | 35 | kanto-power-plant | Kanto | 2 | 10 | 2 | ⬜ à faire | · | · | · | · | · |

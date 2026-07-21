@@ -1,0 +1,31 @@
+{
+ "trainer_id": "medium_darcy_saffron",
+ "name": {
+  "jp": "いたこの　ダーシー",
+  "en": "Medium Darcy"
+ },
+ "zone_id": "saffron-city",
+ "jlpt_level": "N1",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　ジムは　9つの　へやが　テレポートで　つながって　いるの。",
+     "en": "Nine chambers, linked by teleporters — that is this Gym."
+    },
+    {
+     "jp": "まよいの　なかで　しょうぶよ！",
+     "en": "We battle amid the maze!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まよわず　ここまで…　おみごと。",
+     "en": "You didn't lose your way once... impressive."
+    }
+   ]
+  }
+ }
+}

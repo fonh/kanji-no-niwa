@@ -1,0 +1,462 @@
+{
+ "_note": "Overlay grammaire — Safranville, 24 points N1-038→061 (1 exemple câblé/point — dérogation Carmin documentée ; phrases Hanabira exactes + furigana ; familles と～/なり～/なし～/ともな～ : jamais deux membres interchangeables dans un même tirage).",
+ "zone_id": "saffron-city",
+ "points": [
+  {
+   "grammar_id": "N1-038",
+   "source_index": 37,
+   "title": "Noun というところだ (Noun to iu tokoro da)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）の力（ちから）は80％というところだ。",
+     "point_answer": "というところだ",
+     "jp_cloze": "彼（かれ）の力（ちから）は80％＿＿。",
+     "distractors": [
+      "というものだ",
+      "ということだ",
+      "というわけだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-039",
+   "source_index": 38,
+   "title": "Noun + というもの (~ to iu mono)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "子供（こども）というものは、毎日（まいにち）たくさん遊（あそ）びます。",
+     "point_answer": "というもの",
+     "jp_cloze": "子供（こども）＿＿は、毎日（まいにち）たくさん遊（あそ）びます。",
+     "distractors": [
+      "ということ",
+      "というはず",
+      "というつもり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-040",
+   "source_index": 39,
+   "title": "Noun といったところだ (Noun to itta tokoro da)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）の英語（えいご）レベルは初級（しょきゅう）といったところだ。",
+     "point_answer": "といったところだ",
+     "jp_cloze": "彼（かれ）の英語（えいご）レベルは初級（しょきゅう）＿＿。",
+     "distractors": [
+      "といったままだ",
+      "といったはずだ",
+      "といったからだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-041",
+   "source_index": 40,
+   "title": "Noun といわず Noun といわず (A to iwazu B to iwazu)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "男（おとこ）といわず女（おんな）といわず、誰（だれ）もがこの映画（えいが）を楽（たの）しむでしょう。",
+     "point_answer": "といわず",
+     "jp_cloze": "男（おとこ）＿＿女（おんな）といわず、誰（だれ）もがこの映画（えいが）を楽（たの）しむでしょう。",
+     "distractors": [
+      "といって",
+      "というと",
+      "といえども"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-042",
+   "source_index": 41,
+   "title": "Noun + ときたら (〜tokitara)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "寿司（すし）ときたら、彼（かれ）は何（なに）も食（た）べられない。",
+     "point_answer": "ときたら",
+     "jp_cloze": "寿司（すし）＿＿、彼（かれ）は何（なに）も食（た）べられない。",
+     "distractors": [
+      "となったら",
+      "とすれば",
+      "ともなれば"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-043",
+   "source_index": 42,
+   "title": "Noun とは比べものにならない (~to wa kurabemono ni naranai)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "日本（にほん）の技術（ぎじゅつ）は他（ほか）の国（くに）とは比（くら）べものにならない。",
+     "point_answer": "とは比（くら）べものにならない",
+     "jp_cloze": "日本（にほん）の技術（ぎじゅつ）は他（ほか）の国（くに）＿＿。",
+     "distractors": [
+      "とは限（かぎ）らない",
+      "とは思（おも）えない",
+      "とは言（い）えない"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-044",
+   "source_index": 43,
+   "title": "Noun + ともあろう + Noun (~tomoarou~)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "先生（せんせい）ともあろう者（もの）が、そんな間違（まちが）いをするなんて。",
+     "point_answer": "ともあろう",
+     "jp_cloze": "先生（せんせい）＿＿者（もの）が、そんな間違（まちが）いをするなんて。",
+     "distractors": [
+      "ともいえる",
+      "ともみえる",
+      "ともなりうる"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-045",
+   "source_index": 44,
+   "title": "Noun ともなると (〜to mo naru to)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "夏休（なつやす）みともなると、海辺（うみべ）は観光客（かんこうきゃく）で溢（あふ）れかえります。",
+     "point_answer": "ともなると",
+     "jp_cloze": "夏休（なつやす）み＿＿、海辺（うみべ）は観光客（かんこうきゃく）で溢（あふ）れかえります。",
+     "distractors": [
+      "ともすると",
+      "ともいうと",
+      "ともみると"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-046",
+   "source_index": 45,
+   "title": "Noun ともなれば (〜to mo nareba)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "試験（しけん）ともなれば、大抵（たいてい）の人（ひと）が緊張（きんちょう）するものです。",
+     "point_answer": "ともなれば",
+     "jp_cloze": "試験（しけん）＿＿、大抵（たいてい）の人（ひと）が緊張（きんちょう）するものです。",
+     "distractors": [
+      "ともすれば",
+      "ともいえば",
+      "ともみれば"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-047",
+   "source_index": 46,
+   "title": "Noun と相まって (~ to aimatte)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "努力（どりょく）と運（うん）と相（あい）まって、彼（かれ）は試験（しけん）に合格（ごうかく）しました。",
+     "point_answer": "と相（あい）まって",
+     "jp_cloze": "努力（どりょく）と運（うん）＿＿、彼（かれ）は試験（しけん）に合格（ごうかく）しました。",
+     "distractors": [
+      "と引（ひ）きかえに",
+      "とみられて",
+      "とばかりに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-048",
+   "source_index": 47,
+   "title": "Noun なくして～はない (Noun nakushite ~ wa nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "努力（どりょく）なくして成功（せいこう）はない。",
+     "point_answer": "なくして",
+     "jp_cloze": "努力（どりょく）＿＿成功（せいこう）はない。",
+     "distractors": [
+      "なくても",
+      "ないだけに",
+      "ないばかりか"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-049",
+   "source_index": 48,
+   "title": "Noun なしでは～ない (Noun nashi de wa ~nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "水（みず）なしでは生（い）きられない。",
+     "point_answer": "なしでは",
+     "jp_cloze": "水（みず）＿＿生（い）きられない。",
+     "distractors": [
+      "なしでも",
+      "ぬきには",
+      "ないには"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-050",
+   "source_index": 49,
+   "title": "Noun なしには～ない (Noun nashi ni wa ~nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "お金（かね）なしには生活（せいかつ）ができない。",
+     "point_answer": "なしには",
+     "jp_cloze": "お金（かね）＿＿生活（せいかつ）ができない。",
+     "distractors": [
+      "なしにも",
+      "ぬきでも",
+      "ないでは"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-051",
+   "source_index": 50,
+   "title": "Noun ならいざ知らず (~nara izashirazu)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "日本語（にほんご）ならいざ知（し）らず、中国語（ちゅうごくご）なんて話（はな）せない。",
+     "point_answer": "ならいざ知（し）らず",
+     "jp_cloze": "日本語（にほんご）＿＿、中国語（ちゅうごくご）なんて話（はな）せない。",
+     "distractors": [
+      "ならそれまで",
+      "ならともあれ",
+      "ならなんなり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-052",
+   "source_index": 51,
+   "title": "Noun + ならでは (~nara de wa)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "彼（かれ）の技術（ぎじゅつ）は彼（かれ）ならではのものだ。",
+     "point_answer": "ならでは",
+     "jp_cloze": "彼（かれ）の技術（ぎじゅつ）は彼（かれ）＿＿のものだ。",
+     "distractors": [
+      "ながらも",
+      "なくして",
+      "なりゆき"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-053",
+   "source_index": 52,
+   "title": "Noun なり Noun なり (A nari B nari)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "映画（えいが）なり、音楽（おんがく）なり、何（なに）か趣味（しゅみ）はありますか。",
+     "point_answer": "なり、音楽（おんがく）なり",
+     "jp_cloze": "映画（えいが）＿＿、何（なに）か趣味（しゅみ）はありますか。",
+     "distractors": [
+      "やら、音楽（おんがく）やら",
+      "だの、音楽（おんがく）だの",
+      "とか、音楽（おんがく）とか"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-054",
+   "source_index": 53,
+   "title": "Noun なりとも (~nari tomo)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）には一言（ひとこと）なりとも謝罪（しゃざい）の言葉（ことば）を聞（き）きたい。",
+     "point_answer": "なりとも",
+     "jp_cloze": "彼（かれ）には一言（ひとこと）＿＿謝罪（しゃざい）の言葉（ことば）を聞（き）きたい。",
+     "distractors": [
+      "なりには",
+      "なりでは",
+      "なりからも"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-055",
+   "source_index": 54,
+   "title": "Noun に Noun を重ねて (A ni B wo kasanete)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "仕事（しごと）に仕事（しごと）を重（かさ）ねて、彼（かれ）は疲（つか）れ果（は）てた。",
+     "point_answer": "を重（かさ）ねて",
+     "jp_cloze": "仕事（しごと）に仕事（しごと）＿＿、彼（かれ）は疲（つか）れ果（は）てた。",
+     "distractors": [
+      "を切（き）らして",
+      "を通（とお）して",
+      "を控（ひか）えて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-056",
+   "source_index": 55,
+   "title": "Noun にあっては (Noun ni atte ha)",
+   "selected_examples": [
+    {
+     "source_example_index": 2,
+     "jp": "不況下（ふきょうか）にあっては、どの企業（きぎょう）も経費削減（けいひさくげん）を迫（せま）られている。",
+     "point_answer": "にあっては",
+     "jp_cloze": "不況下（ふきょうか）＿＿、どの企業（きぎょう）も経費削減（けいひさくげん）を迫（せま）られている。",
+     "distractors": [
+      "にとっては",
+      "によっては",
+      "にかけては"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-057",
+   "source_index": 56,
+   "title": "Noun にあるまじき Noun (Noun ni aru majiki Noun)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "これは人間（にんげん）にあるまじき行為（こうい）だ。",
+     "point_answer": "にあるまじき",
+     "jp_cloze": "これは人間（にんげん）＿＿行為（こうい）だ。",
+     "distractors": [
+      "にありがちな",
+      "にあるらしい",
+      "にあるままの"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-058",
+   "source_index": 57,
+   "title": "Noun にして (Noun ni shite)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）は経験豊富（けいけんほうふ）な運転手（うんてんしゅ）にして、事故（じこ）を起（お）こした。",
+     "point_answer": "にして",
+     "jp_cloze": "彼（かれ）は経験豊富（けいけんほうふ）な運転手（うんてんしゅ）＿＿、事故（じこ）を起（お）こした。",
+     "distractors": [
+      "にとって",
+      "にかけて",
+      "にわたって"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-059",
+   "source_index": 58,
+   "title": "Noun にして初めて (Noun nishite hajimete)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "大人（おとな）にして初（はじ）めて、親（おや）の苦労（くろう）が分（わ）かった。",
+     "point_answer": "にして初（はじ）めて",
+     "jp_cloze": "大人（おとな）＿＿、親（おや）の苦労（くろう）が分（わ）かった。",
+     "distractors": [
+      "にしてまでも",
+      "にしてからが",
+      "にしてすでに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-060",
+   "source_index": 59,
+   "title": "Noun にすら (〜ni sura)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）にすらその問題（もんだい）は解（と）けなかった。",
+     "point_answer": "にすら",
+     "jp_cloze": "彼（かれ）＿＿その問題（もんだい）は解（と）けなかった。",
+     "distractors": [
+      "にこそ",
+      "にほど",
+      "にまで"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N1-061",
+   "source_index": 60,
+   "title": "Noun にとどまらず～も (~ ni todomarazu ~ mo)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）は、音楽（おんがく）にとどまらず、映画製作（えいがせいさく）にも興味（きょうみ）がある。",
+     "point_answer": "にとどまらず",
+     "jp_cloze": "彼（かれ）は、音楽（おんがく）＿＿、映画製作（えいがせいさく）にも興味（きょうみ）がある。",
+     "distractors": [
+      "にかかわらず",
+      "にもまして",
+      "におうじて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

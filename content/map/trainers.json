@@ -4933,5 +4933,148 @@
   "sight_auto_result": "battle",
   "repeats": false,
   "sight_range": 3
+ },
+ {
+  "trainer_id": "twins_day_dani_route6",
+  "zone_id": "route-6-kanto",
+  "name": "Twins Day & Dani",
+  "tile_x": 6,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-6-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 21,
+  "dialogue_ref": "trainers/route-6-kanto/twins_day_dani_route6",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "picnicker_selina_route6",
+  "zone_id": "route-6-kanto",
+  "name": "Picnicker Selina",
+  "tile_x": 9,
+  "tile_y": 12,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-6-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 21,
+  "dialogue_ref": "trainers/route-6-kanto/picnicker_selina_route6",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "camper_virgil_route6",
+  "zone_id": "route-6-kanto",
+  "name": "Camper Virgil",
+  "tile_x": 7,
+  "tile_y": 16,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-6-kanto.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 21,
+  "dialogue_ref": "trainers/route-6-kanto/camper_virgil_route6",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "medium_darcy_saffron",
+  "zone_id": "saffron-city",
+  "name": "Medium Darcy",
+  "tile_x": 20,
+  "tile_y": 30,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/saffron-city/medium_darcy_saffron",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "psychic_franklin_saffron",
+  "zone_id": "saffron-city",
+  "name": "Psychic Franklin",
+  "tile_x": 22,
+  "tile_y": 32,
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/saffron-city/psychic_franklin_saffron",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "psychic_jared_saffron",
+  "zone_id": "saffron-city",
+  "name": "Psychic Jared",
+  "tile_x": 24,
+  "tile_y": 30,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/saffron-city/psychic_jared_saffron",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "medium_rebecca_saffron",
+  "zone_id": "saffron-city",
+  "name": "Medium Rebecca",
+  "tile_x": 21,
+  "tile_y": 34,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "sight_auto",
+  "role": "battle",
+  "battle_length": 22,
+  "dialogue_ref": "trainers/saffron-city/medium_rebecca_saffron",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "sight_range": 4
+ },
+ {
+  "trainer_id": "sabrina_saffron",
+  "zone_id": "saffron-city",
+  "name": "Sabrina",
+  "tile_x": 22,
+  "tile_y": 36,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/saffron-city.json",
+  "trigger_type": "talk",
+  "role": "battle",
+  "battle_length": 77,
+  "dialogue_ref": "trainers/saffron-city/sabrina_saffron",
+  "unlock_conditions": [
+   {
+    "type": "npc_cleared",
+    "npc_id": "medium_darcy_saffron"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "psychic_franklin_saffron"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "psychic_jared_saffron"
+   },
+   {
+    "type": "npc_cleared",
+    "npc_id": "medium_rebecca_saffron"
+   }
+  ]
  }
 ]
