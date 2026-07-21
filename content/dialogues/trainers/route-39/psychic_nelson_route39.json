@@ -1,0 +1,31 @@
+{
+ "trainer_id": "psychic_nelson_route39",
+ "name": {
+  "jp": "サイキッカーの　ネルソン",
+  "en": "Psychic Nelson"
+ },
+ "zone_id": "route-39",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "うしの　きもち、わかるかい？",
+     "en": "Can you tell how the cow feels?"
+    },
+    {
+     "jp": "こころを　よむ　しょうぶと　いこう。",
+     "en": "Let's have a battle of reading minds."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみの　こころは　よめなかった…。",
+     "en": "I couldn't read your mind at all..."
+    }
+   ]
+  }
+ }
+}

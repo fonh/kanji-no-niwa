@@ -1,0 +1,31 @@
+{
+ "trainer_id": "black_belt_yoshi_cianwood",
+ "name": {
+  "jp": "からておうの　ヨシ",
+  "en": "Black Belt Yoshi"
+ },
+ "zone_id": "cianwood-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "きあいだーっ！",
+     "en": "Spirit and fight!"
+    },
+    {
+     "jp": "きあいで　まけたら　からておうの　なが　すたる！",
+     "en": "If I lose on spirit, I shame the name of Black Belt!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きあい　まけした…。",
+     "en": "Out-spirited..."
+    }
+   ]
+  }
+ }
+}

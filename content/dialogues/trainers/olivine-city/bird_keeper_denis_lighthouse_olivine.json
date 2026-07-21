@@ -1,0 +1,31 @@
+{
+ "trainer_id": "bird_keeper_denis_lighthouse_olivine",
+ "name": {
+  "jp": "とりつかいの　デニス",
+  "en": "Bird Keeper Denis"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "とりたちも　あかりが　ないと　まよう。",
+     "en": "Without the light, even the birds lose their way."
+    },
+    {
+     "jp": "まよいの　ない　しょうぶを　みせて　くれ！",
+     "en": "Show me a battle with no hesitation!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "まよいが　ないな。みごとだ。",
+     "en": "No hesitation at all. Well done."
+    }
+   ]
+  }
+ }
+}

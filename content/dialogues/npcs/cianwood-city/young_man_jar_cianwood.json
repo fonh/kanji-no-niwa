@@ -1,0 +1,57 @@
+{
+ "_note": "Étape 4 Lot 4 — PNJ-leçon #2/#5. Adaptation règle #1 + compagnon-unique : le Shuckle-analogue confié devient un petit pot de famille (collectible unique confié — le companion_id ne change jamais, PRD § Compagnon) ; la « trace de Silver » (objet précieux volé par un garçon roux) est conservée telle quelle.",
+ "npc_id": "young_man_jar_cianwood",
+ "name": {
+  "jp": "ジムの　みなみの　わかもの",
+  "en": "Young Man South of the Gym"
+ },
+ "zone_id": "cianwood-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "entrusted_jar"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "この　つぼ、うちに　だいだい　つたわる　たからものなんだ。",
+     "en": "This jar is a treasure passed down in my family."
+    },
+    {
+     "jp": "あかい　かみの　おとこに　ひとつ　もって　いかれてね…。",
+     "en": "A red-haired fellow made off with one of them, you see..."
+    },
+    {
+     "jp": "きみは　しんじられそうだ。この　こつぼ、あずかって　くれないか。",
+     "en": "You, though — you I can trust. Would you look after this small jar for me?"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "entrusted_jar"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "つぼは　だいじに　してくれてるね。ありがとう。",
+     "en": "You're taking good care of the jar. Thank you."
+    }
+   ]
+  }
+ }
+}

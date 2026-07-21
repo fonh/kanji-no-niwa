@@ -1101,5 +1101,240 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/burned-tower.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/burned-tower/storyteller_burned_tower"
+ },
+ {
+  "npc_id": "farm_girl_left_route39",
+  "zone_id": "route-39",
+  "name": "Farm Girl (Left)",
+  "tile_x": 5,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-39/farm_girl_left_route39",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "farm_girl_right_route39",
+  "zone_id": "route-39",
+  "name": "Farm Girl (Right)",
+  "tile_x": 7,
+  "tile_y": 4,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-39/farm_girl_right_route39",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "farmer_wife_route39",
+  "zone_id": "route-39",
+  "name": "Farmer's Wife",
+  "tile_x": 6,
+  "tile_y": 2,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-39/farmer_wife_route39",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "farmer_route39",
+  "zone_id": "route-39",
+  "name": "Farmer",
+  "tile_x": 4,
+  "tile_y": 2,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-39/farmer_route39",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "sick_cow_route39",
+  "zone_id": "route-39",
+  "name": "The Farm Cow",
+  "tile_x": 6,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-39/sick_cow_route39",
+  "kind": "object"
+ },
+ {
+  "npc_id": "baoba_route39",
+  "zone_id": "route-39",
+  "name": "Baoba",
+  "tile_x": 10,
+  "tile_y": 3,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-39/baoba_route39"
+ },
+ {
+  "npc_id": "silver_gym_olivine",
+  "zone_id": "olivine-city",
+  "name": "Silver",
+  "tile_x": 9,
+  "tile_y": 28,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/olivine-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/olivine-city/silver_gym_olivine"
+ },
+ {
+  "npc_id": "fisherman_good_rod_olivine",
+  "zone_id": "olivine-city",
+  "name": "Fisherman",
+  "tile_x": 14,
+  "tile_y": 10,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/olivine-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/olivine-city/fisherman_good_rod_olivine",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "deco_girl_olivine",
+  "zone_id": "olivine-city",
+  "name": "Decoration Girl",
+  "tile_x": 18,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/olivine-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/olivine-city/deco_girl_olivine",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "lighthouse_keeper_olivine",
+  "zone_id": "olivine-city",
+  "name": "Old Lighthouse Keeper",
+  "tile_x": 31,
+  "tile_y": 3,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/olivine-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/olivine-city/lighthouse_keeper_olivine"
+ },
+ {
+  "npc_id": "jasmine_lighthouse_olivine",
+  "zone_id": "olivine-city",
+  "name": "Jasmine",
+  "tile_x": 30,
+  "tile_y": 3,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/olivine-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/olivine-city/jasmine_lighthouse_olivine",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "lighthouse_amphy",
+    "step": "keeper_healed",
+    "negate": true
+   }
+  ]
+ },
+ {
+  "npc_id": "monica_route40",
+  "zone_id": "route-40",
+  "name": "Monica",
+  "tile_x": 4,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-40.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-40/monica_route40",
+  "unlock_conditions": [
+   {
+    "type": "time_window",
+    "days_of_week": [
+     "monday"
+    ]
+   }
+  ]
+ },
+ {
+  "npc_id": "photographer_family_route40",
+  "zone_id": "route-40",
+  "name": "Photographer's Family",
+  "tile_x": 3,
+  "tile_y": 3,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-40.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-40/photographer_family_route40"
+ },
+ {
+  "npc_id": "whirl_legend_man_route40",
+  "zone_id": "route-40",
+  "name": "Man Gazing at the Sea",
+  "tile_x": 5,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-40.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/route-40/whirl_legend_man_route40"
+ },
+ {
+  "npc_id": "pharmacist_cianwood",
+  "zone_id": "cianwood-city",
+  "name": "Pharmacist",
+  "tile_x": 4,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cianwood-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/cianwood-city/pharmacist_cianwood",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "young_man_jar_cianwood",
+  "zone_id": "cianwood-city",
+  "name": "Young Man South of the Gym",
+  "tile_x": 11,
+  "tile_y": 20,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cianwood-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/cianwood-city/young_man_jar_cianwood",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "waterfall_man_cianwood",
+  "zone_id": "cianwood-city",
+  "name": "Man at the Pokémon Center",
+  "tile_x": 14,
+  "tile_y": 6,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cianwood-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/cianwood-city/waterfall_man_cianwood",
+  "role": "lesson"
+ },
+ {
+  "npc_id": "chuck_wife_cianwood",
+  "zone_id": "cianwood-city",
+  "name": "Chuck's Wife",
+  "tile_x": 9,
+  "tile_y": 19,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/cianwood-city.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/cianwood-city/chuck_wife_cianwood"
+ },
+ {
+  "npc_id": "baoba_safari_zone",
+  "zone_id": "safari-zone",
+  "name": "Baoba",
+  "tile_x": 5,
+  "tile_y": 2,
+  "facing": "south",
+  "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/safari-zone.json",
+  "trigger_type": "talk",
+  "dialogue_ref": "npcs/safari-zone/baoba_safari_zone"
  }
 ]

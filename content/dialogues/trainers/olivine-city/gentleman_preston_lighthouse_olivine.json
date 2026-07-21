@@ -1,0 +1,37 @@
+{
+ "trainer_id": "gentleman_preston_lighthouse_olivine",
+ "name": {
+  "jp": "ジェントルマンの　プレストン",
+  "en": "Gentleman Preston"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　さき、かちぬけるかな？",
+     "en": "Can you fight your way past me?"
+    },
+    {
+     "jp": "かった　あかつきには、ほうびを　やろう。",
+     "en": "Win, and you shall have a reward."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "みごと。やくそくの　ほうびだ。",
+     "en": "Splendid. Your promised reward."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "nugget"
+    }
+   ]
+  }
+ }
+}

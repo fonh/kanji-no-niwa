@@ -1,0 +1,31 @@
+{
+ "trainer_id": "camper_grant_r4748",
+ "name": {
+  "jp": "キャンプボーイの　グラント",
+  "en": "Camper Grant"
+ },
+ "zone_id": "route-47-48-cliff-cave",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "がけの　うえの　キャンプは　さいこうだぞ！",
+     "en": "Camping on the clifftop is the best!"
+    },
+    {
+     "jp": "けしきの　まえに、しょうぶだ！",
+     "en": "But before the view — a battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "けしきでも　ながめて　おちつくよ。",
+     "en": "I'll calm down watching the view."
+    }
+   ]
+  }
+ }
+}

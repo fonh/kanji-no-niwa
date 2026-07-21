@@ -1,0 +1,31 @@
+{
+ "trainer_id": "gentleman_alfred_lighthouse_olivine",
+ "name": {
+  "jp": "ジェントルマンの　アルフレッド",
+  "en": "Gentleman Alfred"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "わたしは　ジムの　もんばんだがね。",
+     "en": "I'm one of the Gym's gatekeepers, you see."
+    },
+    {
+     "jp": "いまは　ミカンさまの　ために、ここを　まもって　いる。",
+     "en": "For now, I guard this place for Lady Jasmine."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うえへ　どうぞ。ミカンさまを　たのむ。",
+     "en": "Go on up. Take care of Lady Jasmine."
+    }
+   ]
+  }
+ }
+}

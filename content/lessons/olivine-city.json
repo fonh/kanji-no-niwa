@@ -1,0 +1,72 @@
+[
+ {
+  "zone_id": "olivine-city",
+  "npc_ref": "fisherman_good_rod_olivine",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "虎",
+   "虐",
+   "虚",
+   "褐",
+   "覇",
+   "豪"
+  ],
+  "grammar_id": "N3-099"
+ },
+ {
+  "zone_id": "olivine-city",
+  "npc_ref": "deco_girl_olivine",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "迅",
+   "逐",
+   "逓",
+   "逮",
+   "遂",
+   "遇"
+  ],
+  "grammar_id": "N3-100"
+ },
+ {
+  "zone_id": "olivine-city",
+  "npc_ref": "fisherman_good_rod_olivine",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "遍",
+   "遣",
+   "遷",
+   "避",
+   "還",
+   "那"
+  ],
+  "grammar_id": "N3-101"
+ },
+ {
+  "zone_id": "olivine-city",
+  "npc_ref": "deco_girl_olivine",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "邦",
+   "邸",
+   "酌",
+   "酔",
+   "酢",
+   "醸"
+  ],
+  "grammar_id": "N3-102"
+ },
+ {
+  "zone_id": "olivine-city",
+  "npc_ref": "fisherman_good_rod_olivine",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "陥",
+   "陪",
+   "陰",
+   "陵",
+   "陶",
+   "隆"
+  ],
+  "grammar_id": "N3-103"
+ }
+]

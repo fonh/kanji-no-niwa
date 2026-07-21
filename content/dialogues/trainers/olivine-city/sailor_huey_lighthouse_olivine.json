@@ -1,0 +1,31 @@
+{
+ "trainer_id": "sailor_huey_lighthouse_olivine",
+ "name": {
+  "jp": "ふなのりの　ヒューイ",
+  "en": "Sailor Huey"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "おれの　こぶしは　いかりで　もえてるぜ。",
+     "en": "My fists are burning with anger."
+    },
+    {
+     "jp": "あかりが　もどるまで、おれは　ここで　きたえる！",
+     "en": "Until the light returns, I train right here!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きたえかたが　たりなかったか…。",
+     "en": "Guess I haven't trained enough..."
+    }
+   ]
+  }
+ }
+}

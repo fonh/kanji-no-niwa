@@ -1,0 +1,31 @@
+{
+ "trainer_id": "bird_keeper_theo_lighthouse_olivine",
+ "name": {
+  "jp": "とりつかいの　テオ",
+  "en": "Bird Keeper Theo"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "もうすぐ　ちょうじょうだ。",
+     "en": "You're almost at the top."
+    },
+    {
+     "jp": "さいごの　ひとふんばり、いくぞ！",
+     "en": "One last push — here I come!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ちょうじょうで　ミカンさんが　まってる。",
+     "en": "Jasmine's waiting at the top."
+    }
+   ]
+  }
+ }
+}

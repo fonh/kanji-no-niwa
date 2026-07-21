@@ -1,0 +1,31 @@
+{
+ "trainer_id": "black_belt_lung_cianwood",
+ "name": {
+  "jp": "からておうの　ロン",
+  "en": "Black Belt Lung"
+ },
+ "zone_id": "cianwood-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "わざの　キレなら　だれにも　まけん。",
+     "en": "No one matches the sharpness of my technique."
+    },
+    {
+     "jp": "うけて　みよ！",
+     "en": "Take this!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "キレより　おもみか…　なるほど。",
+     "en": "Weight over sharpness... I see."
+    }
+   ]
+  }
+ }
+}

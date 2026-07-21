@@ -1,0 +1,31 @@
+{
+ "trainer_id": "swimmer_ronald_route41",
+ "name": {
+  "jp": "かいパンやろうの　ロナルド",
+  "en": "Swimmer Ronald"
+ },
+ "zone_id": "route-41",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "うずまきじまの　ちかくで　およぐのは　わたしたちだけ！",
+     "en": "We're the only ones who swim near the Whirl Islands!"
+    },
+    {
+     "jp": "うみの　うえの　しょうぶ、うけて　みる？",
+     "en": "Care for a battle on the open sea?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "よなかに　しまから　ひかりが　みえた　ことが　ある。",
+     "en": "I once saw a light from the islands at night."
+    }
+   ]
+  }
+ }
+}

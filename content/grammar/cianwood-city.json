@@ -1,0 +1,161 @@
+{
+ "_note": "Overlay grammaire — Irisia, 5 points N3-116→120. N3-119 : contraste passif/causatif (まれた/ませた) — le distracteur causatif est LA confusion classique ; そうだ/みたいだ exclus de らしい (synonymes de ouï-dire).",
+ "zone_id": "cianwood-city",
+ "points": [
+  {
+   "grammar_id": "N3-116",
+   "source_index": 115,
+   "title": "～ようになった (〜you ni natta)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は料理（りょうり）を作（つく）るようになった。",
+     "point_answer": "ようになった",
+     "jp_cloze": "彼（かれ）は料理（りょうり）を作（つく）る＿＿。",
+     "distractors": [
+      "ことになった",
+      "ばかりになった",
+      "ままになった"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "その子（こ）は読（よ）めるようになった。",
+     "point_answer": "ようになった",
+     "jp_cloze": "その子（こ）は読（よ）める＿＿。",
+     "distractors": [
+      "ことになった",
+      "ばかりになった",
+      "ままになった"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-117",
+   "source_index": 116,
+   "title": "～ように言う (〜you ni iu)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "先生（せんせい）は私（わたし）にもっと勉強（べんきょう）するように言（い）った。",
+     "point_answer": "ように",
+     "jp_cloze": "先生（せんせい）は私（わたし）にもっと勉強（べんきょう）する＿＿言（い）った。",
+     "distractors": [
+      "とおりに",
+      "ばかりに",
+      "かわりに"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "母（はは）は私（わたし）に部屋（へや）を片付（かたづ）けるように言（い）いました。",
+     "point_answer": "ように",
+     "jp_cloze": "母（はは）は私（わたし）に部屋（へや）を片付（かたづ）ける＿＿言（い）いました。",
+     "distractors": [
+      "とおりに",
+      "ばかりに",
+      "かわりに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-118",
+   "source_index": 117,
+   "title": "～らしい (〜rashii)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "明日（あした）雪（ゆき）が降（ふ）るらしい。",
+     "point_answer": "らしい",
+     "jp_cloze": "明日（あした）雪（ゆき）が降（ふ）る＿＿。",
+     "distractors": [
+      "つもりだ",
+      "ことだ",
+      "ままだ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "このレストランは美味（おい）しいらしい。",
+     "point_answer": "らしい",
+     "jp_cloze": "このレストランは美味（おい）しい＿＿。",
+     "distractors": [
+      "つもりだ",
+      "ことだ",
+      "ままだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-119",
+   "source_index": 118,
+   "title": "～られた (〜rareta)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この本（ほん）はたくさんの人（ひと）に読（よ）まれた。",
+     "point_answer": "まれた",
+     "jp_cloze": "この本（ほん）はたくさんの人（ひと）に読（よ）＿＿。",
+     "distractors": [
+      "ませた",
+      "みたがった",
+      "むはずだ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "昨日（きのう）、私（わたし）の財布（さいふ）が盗（ぬす）まれました。",
+     "point_answer": "まれました",
+     "jp_cloze": "昨日（きのう）、私（わたし）の財布（さいふ）が盗（ぬす）＿＿。",
+     "distractors": [
+      "ませました",
+      "みました",
+      "むでしょう"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-120",
+   "source_index": 119,
+   "title": "～ている (〜te iru)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "窓（まど）が開（あ）けられている。",
+     "point_answer": "られている",
+     "jp_cloze": "窓（まど）が開（あ）け＿＿。",
+     "distractors": [
+      "たがっている",
+      "そうだった",
+      "るはずだった"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "彼女（かのじょ）は病気（びょうき）で寝込（ねこ）んでいる。",
+     "point_answer": "んでいる",
+     "jp_cloze": "彼女（かのじょ）は病気（びょうき）で寝込（ねこ）＿＿。",
+     "distractors": [
+      "みたがる",
+      "むはずだ",
+      "んだところだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

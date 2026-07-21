@@ -1,0 +1,31 @@
+{
+ "trainer_id": "sailor_harry_route38",
+ "name": {
+  "jp": "ふなのりの　ハリー",
+  "en": "Sailor Harry"
+ },
+ "zone_id": "route-38",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "アサギの　みなとまで　もう　すこしだ。",
+     "en": "Just a bit further to Olivine's harbor."
+    },
+    {
+     "jp": "ふなのりの　いじ、みせて　やる！",
+     "en": "Let me show you a sailor's pride!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "りくの　しょうぶは　にがてだ…。",
+     "en": "Battles on land aren't my thing..."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "_note": "Étape 4 Lot 4 — PNJ-leçon #1/#4 d'Irisia, remet la Potion Secrète (quête lighthouse_amphy). La réplique ように なった expose N3-116.",
+ "npc_id": "pharmacist_cianwood",
+ "name": {
+  "jp": "くすりやの　しゅじん",
+  "en": "Pharmacist"
+ },
+ "zone_id": "cianwood-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "secret_potion"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "lighthouse_amphy",
+     "step": "keeper_healed"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "give"
+  }
+ ],
+ "dialogue_states": {
+  "give": {
+   "pages": [
+    {
+     "jp": "アサギの　とうだいもりが　びょうき？　それは　いかん。",
+     "en": "The Olivine lighthouse keeper is ill? That won't do."
+    },
+    {
+     "jp": "この　ひみつの　くすりを　もって　いきなさい。",
+     "en": "Take this Secret Potion to him."
+    },
+    {
+     "jp": "よく　きくが、にがいぞ。びょうにんは　のんだ　あと、げんきに　なるように　なった　ためしばかりだ。",
+     "en": "It works wonders — though it's bitter. Every patient who's drunk it has come out healthy."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "secret_potion"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "くすりは　とどけたかね？　はやく　のませて　あげなさい。",
+     "en": "Delivered the medicine yet? Have him drink it soon."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "_note": "Étape 4 Lot 4 — PNJ-leçon #1/#5/#9 de route-39 (npc_ref des leçons). Lance la quête moomoo_recovery, remet le Seal Case à la guérison (grant idempotent).",
+ "npc_id": "farm_girl_left_route39",
+ "name": {
+  "jp": "ぼくじょうの　むすめ（ひだり）",
+  "en": "Farm Girl (Left)"
+ },
+ "zone_id": "route-39",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "moomoo_recovery",
+     "step": "healed"
+    }
+   ],
+   "state": "thanks"
+  },
+  {
+   "default": true,
+   "state": "worried"
+  }
+ ],
+ "dialogue_states": {
+  "worried": {
+   "pages": [
+    {
+     "jp": "うちの　うしが　びょうきなの…。",
+     "en": "Our cow is sick..."
+    },
+    {
+     "jp": "あまい　きのみを　たべさせないと、げんきに　ならないわ。",
+     "en": "If we don't feed her sweet berries, she won't get better."
+    },
+    {
+     "jp": "きのみ、もって　いたら　おねがい。",
+     "en": "If you have berries, please help."
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "moomoo_recovery",
+     "step_id": "sick_found"
+    }
+   ]
+  },
+  "thanks": {
+   "pages": [
+    {
+     "jp": "うしを　たすけて　くれて、ありがとう！",
+     "en": "Thank you for saving our cow!"
+    },
+    {
+     "jp": "これ、うけとって。シールいれよ。",
+     "en": "Take this — it's a Seal Case."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "seal_case"
+    }
+   ]
+  }
+ }
+}

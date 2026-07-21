@@ -1,0 +1,65 @@
+{
+ "_note": "Étape 4 Lot 4 — femme de Chuck : remise du CS-Kanji 飛 (HM Fly adapté, seuil N=26) après le badge, avec le commentaire tendre sourcé (« c'est une bonne leçon pour lui »). Texte obligatoire : texts/cianwood-city/cs_tobu.json. calc-cs-corpus mis à jour.",
+ "npc_id": "chuck_wife_cianwood",
+ "name": {
+  "jp": "シジマの　おくさん",
+  "en": "Chuck's Wife"
+ },
+ "zone_id": "cianwood-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "badge_earned",
+     "badge_id": "chuck"
+    }
+   ],
+   "state": "give_fly"
+  },
+  {
+   "default": true,
+   "state": "before"
+  }
+ ],
+ "dialogue_states": {
+  "before": {
+   "pages": [
+    {
+     "jp": "うちの　ひと、たきの　したで　しゅぎょうちゅうなの。",
+     "en": "My husband's training under the waterfall."
+    },
+    {
+     "jp": "からだを　こわさないと　いいけど。",
+     "en": "I just hope he doesn't hurt himself."
+    }
+   ]
+  },
+  "give_fly": {
+   "pages": [
+    {
+     "jp": "あら、うちの　ひとに　かったのね！",
+     "en": "Oh my, you beat my husband!"
+    },
+    {
+     "jp": "いい　くすりに　なるわ。ふふ。",
+     "en": "It'll do him good. Heh heh."
+    },
+    {
+     "jp": "これ、おれいよ。飛（と）ぶ　かんじの　ひでん。",
+     "en": "Here's your reward — the secret kanji of Flight."
+    },
+    {
+     "jp": "いった　ことの　ある　まちへ、そらから　もどれるように　なるわ。",
+     "en": "You'll be able to return through the sky to any town you've visited."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "cs_tobu"
+    }
+   ]
+  }
+ }
+}

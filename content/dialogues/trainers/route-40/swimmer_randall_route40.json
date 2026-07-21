@@ -1,0 +1,27 @@
+{
+ "trainer_id": "swimmer_randall_route40",
+ "name": {
+  "jp": "かいパンやろうの　ランドール",
+  "en": "Swimmer Randall"
+ },
+ "zone_id": "route-40",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "イリシアまで　およぐのか？　いい　こんじょうだ！",
+     "en": "Swimming all the way to Cianwood? Gutsy!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "こんじょうでは　かなわない。",
+     "en": "Can't beat you on guts."
+    }
+   ]
+  }
+ }
+}

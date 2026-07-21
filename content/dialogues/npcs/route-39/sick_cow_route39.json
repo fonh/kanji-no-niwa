@@ -1,0 +1,52 @@
+{
+ "_note": "Étape 4 Lot 4 — l'animal malade de la ferme (うし, règle #1). Le nourrissage réel (choisir une baie du Sac → remove_item + advance_quest, 1×/jour) est une interaction d'implémentation ; les étapes fed_1..fed_6 sont avancées par cette interaction, pas par ce dialogue.",
+ "npc_id": "sick_cow_route39",
+ "name": {
+  "jp": "ぼくじょうの　うし",
+  "en": "The Farm Cow"
+ },
+ "zone_id": "route-39",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "moomoo_recovery",
+     "step": "healed"
+    }
+   ],
+   "state": "healed"
+  },
+  {
+   "default": true,
+   "state": "sick"
+  }
+ ],
+ "dialogue_states": {
+  "sick": {
+   "pages": [
+    {
+     "jp": "（うしが　よこに　なって、くるしそうだ…。）",
+     "en": "(The cow is lying down, in visible pain...)"
+    },
+    {
+     "jp": "（きのみを　もって　いたら、たべさせて　あげられそうだ。）",
+     "en": "(If you had a berry, you could feed it.)"
+    }
+   ]
+  },
+  "healed": {
+   "pages": [
+    {
+     "jp": "モーモー！",
+     "en": "Moo-moo!"
+    },
+    {
+     "jp": "（すっかり　げんきに　なった！）",
+     "en": "(It's made a full recovery!)"
+    }
+   ]
+  }
+ }
+}

@@ -88,5 +88,39 @@
    }
   ],
   "_note": "Étape 4 Lot 3 — accès à Tour Jo : badge Morty (poste-frontière) + Plume Arc-en-ciel (Sage du 1F, séquence E3). La Plume est remise à la fin de l'arc Tour Radio (vrai Directeur) — la tour reste fermée jusque-là, fidèle HGSS."
+ },
+ {
+  "obstacle_id": "whirlpools_whirl_islands",
+  "zone_id": "whirl-islands",
+  "tile_x": 5,
+  "tile_y": 5,
+  "unlock_conditions": [
+   {
+    "type": "item_owned",
+    "item_id": "cs_uzu"
+   },
+   {
+    "type": "badge_earned",
+    "badge_id": "chuck"
+   }
+  ],
+  "_note": "Étape 4 Lot 4 — tourbillons des Îles (seul vrai terrain du CS 渦, remis au Repaire de Mékanos — WARN deadlock attendu jusque-là). Utilisabilité gated badge Chuck (calibration PRD § CS-Kanji)."
+ },
+ {
+  "obstacle_id": "sea_route40_olivine",
+  "zone_id": "route-40",
+  "tile_x": 2,
+  "tile_y": 2,
+  "unlock_conditions": [
+   {
+    "type": "item_owned",
+    "item_id": "cs_mizu"
+   },
+   {
+    "type": "badge_earned",
+    "badge_id": "morty"
+   }
+  ],
+  "_note": "Étape 4 Lot 4 — entrée de la mer Route 40 depuis Oliville (exemple canonique du PRD § map_obstacles : 水 + badge Morty)."
  }
 ]

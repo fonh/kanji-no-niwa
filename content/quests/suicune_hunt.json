@@ -29,6 +29,14 @@
     "en": "In the tower's basement, the three spirits awoke and fled."
    },
    "target_zone_id": "burned-tower"
+  },
+  {
+   "step_id": "cianwood_battle",
+   "label": {
+    "jp": "イリシアの　みさきで　せいれいを　みた。ミナキと　たたかって、みとめられた。",
+    "en": "Saw the spirit at the Cianwood cape. Battled Eusine and earned his respect."
+   },
+   "target_zone_id": "cianwood-city"
   }
  ]
 }

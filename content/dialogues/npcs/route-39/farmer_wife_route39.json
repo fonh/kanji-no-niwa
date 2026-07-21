@@ -1,0 +1,58 @@
+{
+ "_note": "Étape 4 Lot 4 — PNJ-leçon #3/#7 de route-39. TM83 à la guérison. La réplique なぜなら expose N3-072.",
+ "npc_id": "farmer_wife_route39",
+ "name": {
+  "jp": "ぼくじょうの　おかみさん",
+  "en": "Farmer's Wife"
+ },
+ "zone_id": "route-39",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "moomoo_recovery",
+     "step": "healed"
+    }
+   ],
+   "state": "thanks"
+  },
+  {
+   "default": true,
+   "state": "worried"
+  }
+ ],
+ "dialogue_states": {
+  "worried": {
+   "pages": [
+    {
+     "jp": "うしが　たおれてから、ミルクが　だせなくて　こまって　いるの。",
+     "en": "Since the cow fell ill, we can't sell any milk. We're in trouble."
+    },
+    {
+     "jp": "なぜなら、うちの　ミルクは　あの　こ　だのみだから。",
+     "en": "Because our milk all depends on that girl."
+    }
+   ]
+  },
+  "thanks": {
+   "pages": [
+    {
+     "jp": "ほんとうに　ありがとう！",
+     "en": "Thank you, truly!"
+    },
+    {
+     "jp": "おれいに　これを　うけとって　ちょうだい。",
+     "en": "Please take this as thanks."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "tm83_natural_gift"
+    }
+   ]
+  }
+ }
+}

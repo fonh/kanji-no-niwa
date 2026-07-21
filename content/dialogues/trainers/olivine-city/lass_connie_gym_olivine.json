@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 4 — 門弟 #1 de Jasmine (17q). Même personnage que lass_connie_lighthouse_olivine, « relocalisée » au gym après la quête (unlock quest_step keeper_healed ; l'entrée phare porte le negate) — fidèle au détail sourcé « tous les dresseurs du Gym sont au Phare pendant la quête ».",
+ "trainer_id": "lass_connie_gym_olivine",
+ "name": {
+  "jp": "ミニスカートの　コニー",
+  "en": "Lass Connie"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "とうだいの　ばんは　おわり。ジムの　ばんが　はじまるわ！",
+     "en": "Lighthouse duty is over. Gym duty begins!"
+    },
+    {
+     "jp": "こんどは　ほんきよ！",
+     "en": "This time I'm serious!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ミカンさま、おねがいします！",
+     "en": "Lady Jasmine, she's all yours!"
+    }
+   ]
+  }
+ }
+}

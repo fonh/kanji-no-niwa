@@ -1,0 +1,31 @@
+{
+ "trainer_id": "sailor_roberto_lighthouse_olivine",
+ "name": {
+  "jp": "ふなのりの　ロベルト",
+  "en": "Sailor Roberto"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "5かいまで　きたか。あしこしは　じょうぶだな。",
+     "en": "Made it to the fifth floor, eh? Sturdy legs on you."
+    },
+    {
+     "jp": "うでの　ほうも　みせて　もらおう！",
+     "en": "Now show me your arms!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あしも　うでも　いちりゅうだ。",
+     "en": "First-rate legs AND arms."
+    }
+   ]
+  }
+ }
+}

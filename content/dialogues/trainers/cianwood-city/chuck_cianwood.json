@@ -1,0 +1,54 @@
+{
+ "_note": "Étape 4 Lot 4 — 5ᵉ 師範 (ordre narratif), format examen (longueur 51, vies 6). Nom 試練・力の道 sourcé fiche guidebook. Gate sourcé PRD : count(pokeathlon_score, 250) + npc_cleared des 4 gardiens (tous typés combat au npc-inventory, comme Bugsy — pas de réconciliation nécessaire ici). Récompense : badge chuck (Storm Badge) — le CS 飛 vient de sa femme, pas de lui.",
+ "trainer_id": "chuck_cianwood",
+ "name": {
+  "jp": "ジムリーダー　シジマ",
+  "en": "Chuck"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・力（ちから）の道（みち）",
+  "en": "Trial of the Path of Power"
+ },
+ "zone_id": "cianwood-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ぬおおおお！　たきよ！　おれに　ちからを！",
+     "en": "WOOOOAH! O waterfall! Grant me power!"
+    },
+    {
+     "jp": "…ん？　ちょうせんしゃか！　100ねん　はやい…と　いいたいが、",
+     "en": "...Hm? A challenger! I'd say you're a hundred years too early, but..."
+    },
+    {
+     "jp": "その　め、きたえられて　いるな。よし、うけて　たとう！",
+     "en": "Those eyes have seen training. Very well — I accept!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "がっはっは！　まけた　まけた！",
+     "en": "Gwahaha! I lost, I lost!"
+    },
+    {
+     "jp": "つよさとは　つづける　ことだ。おまえは　それを　しっている。",
+     "en": "Strength is continuing on. You understand that."
+    },
+    {
+     "jp": "ストームバッジを　もって　いけ！",
+     "en": "Take the Storm Badge!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_badge",
+     "badge_id": "chuck"
+    }
+   ]
+  }
+ }
+}

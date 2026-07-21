@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 4 — PNJ-leçon #3. La réplique らしい expose N3-118.",
+ "npc_id": "waterfall_man_cianwood",
+ "name": {
+  "jp": "センターの　おとこ",
+  "en": "Man at the Pokémon Center"
+ },
+ "zone_id": "cianwood-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "ジムリーダーの　シジマさんを　みたかい？",
+     "en": "Seen Chuck, the Gym Leader?"
+    },
+    {
+     "jp": "たきに　うたれて　しゅぎょうしてるらしい。まいにち、あさから　ばんまでね。",
+     "en": "Apparently he trains under the waterfall. Every day, dawn to dusk."
+    },
+    {
+     "jp": "こころも　からだも　きたえる、それが　シジマりゅうさ。",
+     "en": "Body and mind together — that's Chuck's way."
+    }
+   ]
+  }
+ }
+}

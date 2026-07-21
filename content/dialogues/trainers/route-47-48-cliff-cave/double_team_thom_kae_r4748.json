@@ -1,0 +1,31 @@
+{
+ "trainer_id": "double_team_thom_kae_r4748",
+ "name": {
+  "jp": "カップルの　トムと　ケイ",
+  "en": "Double Team Thom & Kae"
+ },
+ "zone_id": "route-47-48-cliff-cave",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "「ふたりの　あいは」",
+     "en": "\"Our love is\""
+    },
+    {
+     "jp": "「がけっぷちでも　くずれない！」",
+     "en": "\"unshakeable, even on a cliff's edge!\""
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "「まけても」「ふたりなら　へいき！」",
+     "en": "\"Even in defeat—\" \"—we're fine, together!\""
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 4 — Baoba à l'entrée de la Safari (fil complet : Route 39 → appel → entrée). Mécanique adaptée (synthèse 2026-07-07) : ~3 prises-lecture par visite quotidienne, collection du Sac (P-15) — spawns semi-aléatoires et économie à l'implémentation.",
+ "npc_id": "baoba_safari_zone",
+ "name": {
+  "jp": "サファリの　バオバ",
+  "en": "Baoba"
+ },
+ "zone_id": "safari-zone",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "おお、route39の　きみか！　よく　きたな！",
+     "en": "Oh, it's you — from Route 39! Glad you came!"
+    },
+    {
+     "jp": "ここが　わしの　ほごくだ。めずらしい　よみものが　まいにち　かくれて　おる。",
+     "en": "This is my reserve. Rare reading finds hide here every day."
+    },
+    {
+     "jp": "1にち　3つまで。めを　こらして　さがして　みなさい！",
+     "en": "Three finds a day. Keep your eyes sharp and hunt them down!"
+    }
+   ]
+  }
+ }
+}

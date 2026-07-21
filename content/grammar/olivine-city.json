@@ -1,0 +1,161 @@
+{
+ "_note": "Overlay grammaire — Oliville, 5 points N3-099→103. までに = LE contraste classique de まで ; そうだ/みたいだ exclus des distracteurs de らしい-famille (synonymes).",
+ "zone_id": "olivine-city",
+ "points": [
+  {
+   "grammar_id": "N3-099",
+   "source_index": 98,
+   "title": "～まで (〜made)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "10時（じ）まで働（はたら）きます。",
+     "point_answer": "まで",
+     "jp_cloze": "10時（じ）＿＿働（はたら）きます。",
+     "distractors": [
+      "までに",
+      "から",
+      "ほど"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "彼（かれ）は疲（つか）れるまで走（はし）りました。",
+     "point_answer": "まで",
+     "jp_cloze": "彼（かれ）は疲（つか）れる＿＿走（はし）りました。",
+     "distractors": [
+      "までに",
+      "ほど",
+      "から"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-100",
+   "source_index": 99,
+   "title": "～まま (〜mama)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "部屋（へや）の窓（まど）を開（あ）けたまま寝（ね）ました。",
+     "point_answer": "まま",
+     "jp_cloze": "部屋（へや）の窓（まど）を開（あ）けた＿＿寝（ね）ました。",
+     "distractors": [
+      "きり",
+      "とたん",
+      "なり"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "熱（あつ）いままのコーヒーを飲（の）んで、舌（した）を焦（こ）がしました。",
+     "point_answer": "まま",
+     "jp_cloze": "熱（あつ）い＿＿のコーヒーを飲（の）んで、舌（した）を焦（こ）がしました。",
+     "distractors": [
+      "ばかり",
+      "とおり",
+      "かぎり"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-101",
+   "source_index": 100,
+   "title": "まるで～よう (maru de ~ you)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼女（かのじょ）はまるで天使（てんし）のように美（うつく）しい。",
+     "point_answer": "まるで",
+     "jp_cloze": "彼女（かのじょ）は＿＿天使（てんし）のように美（うつく）しい。",
+     "distractors": [
+      "たとえ",
+      "まさか",
+      "かならず"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "あの家（いえ）はまるでお城（しろ）のようだ。",
+     "point_answer": "まるで",
+     "jp_cloze": "あの家（いえ）は＿＿お城（しろ）のようだ。",
+     "distractors": [
+      "たとえ",
+      "まさか",
+      "かならず"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-102",
+   "source_index": 101,
+   "title": "～てみる (〜te miru)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は走（はし）ってみたが、まだ膝（ひざ）が痛（いた）いと感（かん）じた。",
+     "point_answer": "ってみた",
+     "jp_cloze": "彼（かれ）は走（はし）＿＿が、まだ膝（ひざ）が痛（いた）いと感（かん）じた。",
+     "distractors": [
+      "っておいた",
+      "りつづけた",
+      "りなおした"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼女（かのじょ）は料理（りょうり）を作（つく）ってみたが、失敗（しっぱい）してしまった。",
+     "point_answer": "ってみた",
+     "jp_cloze": "彼女（かのじょ）は料理（りょうり）を作（つく）＿＿が、失敗（しっぱい）してしまった。",
+     "distractors": [
+      "っておいた",
+      "りつづけた",
+      "りなおした"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-103",
+   "source_index": 102,
+   "title": "～みたいだ (〜mitai da)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼（かれ）は怒（おこ）っているみたいだ。",
+     "point_answer": "みたいだ",
+     "jp_cloze": "彼（かれ）は怒（おこ）っている＿＿。",
+     "distractors": [
+      "べきだ",
+      "ばかりだ",
+      "ところだ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "彼女（かのじょ）は疲（つか）れているみたいだ。",
+     "point_answer": "みたいだ",
+     "jp_cloze": "彼女（かのじょ）は疲（つか）れている＿＿。",
+     "distractors": [
+      "べきだ",
+      "ばかりだ",
+      "ところだ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

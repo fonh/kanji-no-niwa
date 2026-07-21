@@ -1,0 +1,32 @@
+{
+ "_note": "Étape 4 Lot 4 — nageur de Route 41 ; la ligne post-combat porte le lore oral des Îles Tourbillon (réservoir sourcé npc-inventory).",
+ "trainer_id": "swimmer_denise_route41",
+ "name": {
+  "jp": "ビキニのおねえさんの　デニース",
+  "en": "Swimmer Denise"
+ },
+ "zone_id": "route-41",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "うずまきじまの　ちかくで　およぐのは　わたしたちだけ！",
+     "en": "We're the only ones who swim near the Whirl Islands!"
+    },
+    {
+     "jp": "うみの　うえの　しょうぶ、うけて　みる？",
+     "en": "Care for a battle on the open sea?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うずの　ぬしは　うたが　すきだと　いうぜ。",
+     "en": "They say the whirlpool master loves song."
+    }
+   ]
+  }
+ }
+}

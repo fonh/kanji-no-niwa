@@ -1,0 +1,31 @@
+{
+ "trainer_id": "sailor_ernest_lighthouse_olivine",
+ "name": {
+  "jp": "ふなのりの　アーネスト",
+  "en": "Sailor Ernest"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "とうだいの　かいだんは　ながいぞ。",
+     "en": "The lighthouse stairs are long."
+    },
+    {
+     "jp": "のぼる　まえに、うでだめしだ！",
+     "en": "Test your arm before you climb!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うえには　まだまだ　つわものが　いるぞ。",
+     "en": "There are stronger folks further up."
+    }
+   ]
+  }
+ }
+}

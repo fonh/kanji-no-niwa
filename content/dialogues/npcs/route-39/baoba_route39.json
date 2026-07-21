@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 4 — 1ʳᵉ rencontre de Baoba (fil Safari, phone-registry : contact Safari Zone). L'appel d'ouverture de la réserve arrive à la passe téléphone ; revu à l'entrée de la Safari Zone.",
+ "npc_id": "baoba_route39",
+ "name": {
+  "jp": "サファリの　バオバ",
+  "en": "Baoba"
+ },
+ "zone_id": "route-39",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "わしは　バオバ。イリシアの　ほうで　しぜんの　ほごくを　つくって　おってな。",
+     "en": "I'm Baoba. I'm building a nature reserve over by Cianwood."
+    },
+    {
+     "jp": "かんせいしたら　でんわで　しらせよう。ばんごうを　こうかんしような！",
+     "en": "I'll ring you when it's finished. Let's swap numbers!"
+    }
+   ]
+  }
+ }
+}

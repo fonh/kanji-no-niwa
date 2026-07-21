@@ -1,0 +1,77 @@
+{
+ "_note": "Étape 4 Lot 4 — quête de la ferme Moomoo (side-content : nourrir l'animal malade avec 7 baies sur plusieurs visites). Modèle PRD § time_window : Quest ordinaire dont l'advance_quest n'est autorisé qu'une fois par fenêtre de temps (jour calendaire — npc_quest_progress.step_entered_at). Chaque nourrissage consomme une baie (item fungible). Adaptation règle #1 : l'animal est « うし » (la vache de la ferme), aucune espèce Pokémon nommée.",
+ "quest_id": "moomoo_recovery",
+ "name": {
+  "jp": "ぼくじょうの　びょうきの　うし",
+  "en": "The Farm's Sick Cow"
+ },
+ "zone_ids": [
+  "route-39"
+ ],
+ "steps": [
+  {
+   "step_id": "sick_found",
+   "label": {
+    "jp": "ぼくじょうの　うしが　びょうき。きのみを　たべさせて　あげよう。",
+    "en": "The farm's cow is sick. Let's feed it berries."
+   },
+   "target_zone_id": "route-39"
+  },
+  {
+   "step_id": "fed_1",
+   "label": {
+    "jp": "きのみを　1こ　たべた。（のこり　6こ）",
+    "en": "It ate 1 berry. (6 to go)"
+   },
+   "target_zone_id": "route-39"
+  },
+  {
+   "step_id": "fed_2",
+   "label": {
+    "jp": "きのみを　2こ　たべた。（のこり　5こ）",
+    "en": "It ate 2 berries. (5 to go)"
+   },
+   "target_zone_id": "route-39"
+  },
+  {
+   "step_id": "fed_3",
+   "label": {
+    "jp": "きのみを　3こ　たべた。（のこり　4こ）",
+    "en": "It ate 3 berries. (4 to go)"
+   },
+   "target_zone_id": "route-39"
+  },
+  {
+   "step_id": "fed_4",
+   "label": {
+    "jp": "きのみを　4こ　たべた。（のこり　3こ）",
+    "en": "It ate 4 berries. (3 to go)"
+   },
+   "target_zone_id": "route-39"
+  },
+  {
+   "step_id": "fed_5",
+   "label": {
+    "jp": "きのみを　5こ　たべた。（のこり　2こ）",
+    "en": "It ate 5 berries. (2 to go)"
+   },
+   "target_zone_id": "route-39"
+  },
+  {
+   "step_id": "fed_6",
+   "label": {
+    "jp": "きのみを　6こ　たべた。（のこり　1こ）",
+    "en": "It ate 6 berries. (1 to go)"
+   },
+   "target_zone_id": "route-39"
+  },
+  {
+   "step_id": "healed",
+   "label": {
+    "jp": "うしが　げんきに　なった！　ぼくじょうの　みんなに　はなそう。",
+    "en": "The cow is healthy again! Tell everyone at the farm."
+   },
+   "target_zone_id": "route-39"
+  }
+ ]
+}

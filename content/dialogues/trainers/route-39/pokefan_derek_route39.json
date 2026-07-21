@@ -1,0 +1,31 @@
+{
+ "trainer_id": "pokefan_derek_route39",
+ "name": {
+  "jp": "だいすきクラブの　デレク",
+  "en": "Pokéfan Derek"
+ },
+ "zone_id": "route-39",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ぼくじょうの　ミルク、のんだかい？",
+     "en": "Had any of the farm's milk yet?"
+    },
+    {
+     "jp": "のむ　まえに、ひとしょうぶ　どう？",
+     "en": "How about a battle before you drink up?"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ミルクで　げんきを　とりもどすぞ。",
+     "en": "I'll get my energy back with some milk."
+    }
+   ]
+  }
+ }
+}

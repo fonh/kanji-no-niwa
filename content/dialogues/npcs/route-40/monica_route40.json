@@ -1,0 +1,53 @@
+{
+ "_note": "Étape 4 Lot 4 — Monica, sœur du lundi (fratrie calendaire de Sunny/route-37 ; time_window lundi sur l'entrée carte). Sharp Beak.",
+ "npc_id": "monica_route40",
+ "name": {
+  "jp": "モニカ",
+  "en": "Monica"
+ },
+ "zone_id": "route-40",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "sharp_beak"
+    }
+   ],
+   "state": "after"
+  },
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "わたし、モニカ。げつようびの　うみが　いちばん　すきなの。",
+     "en": "I'm Monica. I love the sea best on Mondays."
+    },
+    {
+     "jp": "はい、これ。げつようびの　おもいでにね。",
+     "en": "Here, take this. A little Monday memento."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "sharp_beak"
+    }
+   ]
+  },
+  "after": {
+   "pages": [
+    {
+     "jp": "また　げつようびに　あいましょ。",
+     "en": "See you again next Monday."
+    }
+   ]
+  }
+ }
+}

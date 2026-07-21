@@ -1,0 +1,31 @@
+{
+ "trainer_id": "beauty_valerie_route38",
+ "name": {
+  "jp": "おとなの　おねえさんの　バレリー",
+  "en": "Beauty Valerie"
+ },
+ "zone_id": "route-38",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ぼくじょうの　ミルクは　おはだに　いいのよ。",
+     "en": "The farm's milk does wonders for your skin."
+    },
+    {
+     "jp": "うつくしさの　ひけつ、しりたければ　しょうぶ！",
+     "en": "Want my beauty secret? Then battle me!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ひけつは　まいにちの　つみかさね、よ。",
+     "en": "The secret is daily persistence."
+    }
+   ]
+  }
+ }
+}

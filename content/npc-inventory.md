@@ -592,7 +592,7 @@ CS-Kanji 渦 (Tourbillon).
 |---|---|---|---|
 | Pharmacie | Remet la Potion Secrète au 1er passage (pour Jasmine) | Potion Secrète | leçon #1 — 漢字: 随・隔・隠・隣・隷・雄 — 文法: ～ようになった (〜you ni natta)<br>leçon #4 — 漢字: 剝・勾・匂・宛・巾・彙 — 文法: ～られた (〜rareta) |
 | Jeune homme (sud du Gym) | Confie temporairement un compagnon (Shuckle-analogue) ; révèle le passage de Silver | Compagnon temporaire (Shuckle-analogue) | leçon #2 — 漢字: 雌・離・須・顕・飢・飾 — 文法: ～ように言う (〜you ni iu)<br>leçon #5 — 漢字: 慄・戚・拶・挨・挫・毀 — 文法: ～ている (〜te iru) |
-| Eusine | Défie le joueur après l'apparition fugace d'un esprit-kanji légendaire | — | ambiant |
+| Eusine | Défie le joueur après l'apparition fugace d'un esprit-kanji légendaire | — | combat *(corrigé 2026-07-21, Lot 4 — 8ᵉ combat manqué par les passes de typage : « défie le joueur » = signal combat, cf. side-content D1 « défi en combat » ; même famille que les 7 corrigés à l'Étape 2 point 5)* |
 | Homme (Centre Pokémon) | Explique l'entraînement de Chuck sous une chute d'eau | — | leçon #3 — 漢字: 鬼・俺・傲・僅・冥・刹 — 文法: ～らしい (〜rashii) |
 | Black Belt Nob, Yoshi, Lung, Lao | Gardiens avant Chuck | — | combat |
 | Femme de Chuck | Remet une récompense, commente la défaite de son mari avec tendresse | HM Vol (Fly) | ambiant |

@@ -1,0 +1,31 @@
+{
+ "trainer_id": "bird_keeper_toby_route38",
+ "name": {
+  "jp": "とりつかいの　トビー",
+  "en": "Bird Keeper Toby"
+ },
+ "zone_id": "route-38",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　みちの　そらは　ひろいぞ。",
+     "en": "The sky over this road is wide open."
+    },
+    {
+     "jp": "そらの　ひろさに　まけない　しょうぶを　しよう！",
+     "en": "Let's have a battle as big as that sky!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "そらを　みて　あたまを　ひやすよ。",
+     "en": "I'll look at the sky and cool my head."
+    }
+   ]
+  }
+ }
+}

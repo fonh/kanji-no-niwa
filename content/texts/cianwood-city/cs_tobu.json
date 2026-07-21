@@ -1,0 +1,140 @@
+{
+ "_note": "Étape 4 Lot 4 — texte obligatoire de remise du CS-Kanji 飛 (chuck_wife_cianwood, post-badge Chuck). Pattern 砕/切/水. Seuil N=26.",
+ "text": {
+  "text_id": "cs_tobu_cianwood",
+  "title": {
+   "jp": "そらの　みち",
+   "en": "The Sky Road"
+  },
+  "jp_text": "とりは　なぜ　飛（と）べるのでしょう。つばさが　あるから？　いいえ、それだけでは　ありません。とりは　そらの　みちを　おぼえて　いるのです。一（いち）ど　とおった　みちを、わすれない。だから　まよわず、どこへでも　もどれます。あなたも　おなじ。あるいた　まちを　わすれなければ、そらから　もどれるのです。",
+  "en_text": "Why can birds fly? Because they have wings? No — that is not all. Birds remember the roads of the sky. A road once traveled is never forgotten. That is why they can return anywhere without losing their way. You are the same: as long as you don't forget the towns you have walked, you can return to them through the sky.",
+  "audio_ref": null,
+  "level": "N3",
+  "source": "original",
+  "tier": "obligatoire",
+  "zone_id": "cianwood-city",
+  "npc_ref": "chuck_wife_cianwood",
+  "found_object_ref": null,
+  "event_ref": "cs_tobu_cianwood",
+  "length_chars": 152,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　はなしの　いいたい　ことは　なんですか。",
+     "en": "What is the main point of this passage?"
+    },
+    "options": [
+     {
+      "jp": "みちを　おぼえて　いれば、そらから　もどれる。",
+      "en": "If you remember the roads, you can return through the sky"
+     },
+     {
+      "jp": "つばさが　あれば　だれでも　飛（と）べる。",
+      "en": "Anyone with wings can fly"
+     },
+     {
+      "jp": "とりは　まよいやすい。",
+      "en": "Birds get lost easily"
+     },
+     {
+      "jp": "そらは　あぶない　ばしょだ。",
+      "en": "The sky is a dangerous place"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "とりが　まよわない　りゆうは　なんですか。",
+     "en": "Why don't birds lose their way?"
+    },
+    "options": [
+     {
+      "jp": "そらの　みちを　おぼえて　いるから。",
+      "en": "They remember the sky roads"
+     },
+     {
+      "jp": "つばさが　大（おお）きいから。",
+      "en": "Their wings are big"
+     },
+     {
+      "jp": "めが　いいから。",
+      "en": "They have good eyes"
+     },
+     {
+      "jp": "かぜが　みちを　おしえるから。",
+      "en": "The wind shows them the way"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 47,
+     "end": 69
+    }
+   },
+   {
+    "type": "resolution_reference",
+    "prompt": {
+     "jp": "「あなたも　おなじ」の「おなじ」は　なにと　おなじですか。",
+     "en": "In \"you are the same\" — the same as what?"
+    },
+    "options": [
+     {
+      "jp": "みちを　おぼえて　いて、まよわず　もどれる　とり。",
+      "en": "Birds, who remember roads and return without getting lost"
+     },
+     {
+      "jp": "つばさを　もつ　ひこうき。",
+      "en": "Airplanes with wings"
+     },
+     {
+      "jp": "そらを　ながれる　くも。",
+      "en": "Clouds drifting in the sky"
+     },
+     {
+      "jp": "かぜに　のる　はっぱ。",
+      "en": "Leaves riding the wind"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 92,
+     "end": 112
+    }
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "この　はなしを　した　ひとは、なにを　つたえたいのですか。",
+     "en": "What does the speaker want to convey?"
+    },
+    "options": [
+     {
+      "jp": "たびの　きおくこそが　ちからに　なる。",
+      "en": "The memory of your journey itself becomes power"
+     },
+     {
+      "jp": "とりを　かう　べきだ。",
+      "en": "You should keep birds"
+     },
+     {
+      "jp": "あるくより　飛（と）ぶ　ほうが　いい。",
+      "en": "Flying is better than walking"
+     },
+     {
+      "jp": "まちに　もどっては　いけない。",
+      "en": "You must not return to towns"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": {
+     "start": 122,
+     "end": 151
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "trainer_id": "black_belt_nob_cianwood",
+ "name": {
+  "jp": "からておうの　ノブ",
+  "en": "Black Belt Nob"
+ },
+ "zone_id": "cianwood-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "シジマししょうの　いちばんでしだ！",
+     "en": "I'm Master Chuck's top student!"
+    },
+    {
+     "jp": "ししょうの　もとへは　いかせん！",
+     "en": "You'll not reach the master!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "しゅぎょうが　たりん…！",
+     "en": "I need more training...!"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "trainer_id": "lass_connie_lighthouse_olivine",
+ "name": {
+  "jp": "ミニスカートの　コニー",
+  "en": "Lass Connie"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ジムの　みんなで、こうたいで　とうだいに　つめてるの。",
+     "en": "We Gym trainers take turns keeping watch at the lighthouse."
+    },
+    {
+     "jp": "ミカンさまの　じゃまは　させないわ！",
+     "en": "I won't let you bother Lady Jasmine!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…わるい　ひとじゃ　なさそうね。",
+     "en": "...You don't seem like a bad sort."
+    }
+   ]
+  }
+ }
+}

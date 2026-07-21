@@ -1,0 +1,31 @@
+{
+ "trainer_id": "sailor_terrell_lighthouse_olivine",
+ "name": {
+  "jp": "ふなのりの　テレル",
+  "en": "Sailor Terrell"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "あかりが　よわって、ふねが　こまってる。",
+     "en": "With the light failing, the ships are struggling."
+    },
+    {
+     "jp": "いらだちを　しょうぶに　ぶつけさせて　もらう！",
+     "en": "Let me take my frustration out in a battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "すまん、やつあたりだった。",
+     "en": "Sorry, I was taking it out on you."
+    }
+   ]
+  }
+ }
+}

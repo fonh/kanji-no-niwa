@@ -1,0 +1,31 @@
+{
+ "trainer_id": "school_kid_chad_route38",
+ "name": {
+  "jp": "じゅくがえりの　チャド",
+  "en": "School Kid Chad"
+ },
+ "zone_id": "route-38",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ぼくじょうへ　いく　みちだね。",
+     "en": "This road leads to the farm."
+    },
+    {
+     "jp": "あるきながらの　べんきょうは　きけん。だから　しょうぶで　きゅうけい！",
+     "en": "Studying while walking is dangerous — so let's break for a battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きゅうけい　しゅうりょう…。",
+     "en": "Break's over..."
+    }
+   ]
+  }
+ }
+}

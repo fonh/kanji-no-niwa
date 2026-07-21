@@ -1,0 +1,36 @@
+{
+ "_note": "Étape 4 Lot 4 — PNJ-leçon #2/#4 d'Oliville. « 3 décorations aléatoires par jour » : le tirage quotidien (time_window jour calendaire + choix) est une mécanique d'implémentation ; grant_item random_decoration (fungible) en attendant, noté simplification.",
+ "npc_id": "deco_girl_olivine",
+ "name": {
+  "jp": "かざりずきの　おんなのこ",
+  "en": "Decoration Girl"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "わたし、かざりを　あつめるのが　しゅみなの。",
+     "en": "Collecting decorations is my hobby."
+    },
+    {
+     "jp": "まいにち　3つ、すきなのを　もって　いって！",
+     "en": "Take three every day, whichever you like!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "random_decoration"
+    }
+   ]
+  }
+ }
+}

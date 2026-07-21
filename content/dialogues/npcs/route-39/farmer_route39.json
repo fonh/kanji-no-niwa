@@ -1,0 +1,52 @@
+{
+ "_note": "Étape 4 Lot 4 — PNJ-leçon #4/#8 de route-39. La vente de la spécialité (MooMoo Milk) est une donnée d'inventaire de boutique, à l'implémentation.",
+ "npc_id": "farmer_route39",
+ "name": {
+  "jp": "ぼくじょうの　しゅじん",
+  "en": "Farmer"
+ },
+ "zone_id": "route-39",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "moomoo_recovery",
+     "step": "healed"
+    }
+   ],
+   "state": "shop"
+  },
+  {
+   "default": true,
+   "state": "worried"
+  }
+ ],
+ "dialogue_states": {
+  "worried": {
+   "pages": [
+    {
+     "jp": "すまんが、いまは　みせを　あけられん。",
+     "en": "Sorry, but the shop's closed for now."
+    },
+    {
+     "jp": "うしが　げんきに　なるまでは　な。",
+     "en": "Until the cow gets better, that is."
+    }
+   ]
+  },
+  "shop": {
+   "pages": [
+    {
+     "jp": "おかげさまで　みせを　あけられたよ！",
+     "en": "Thanks to you, the shop is open again!"
+    },
+    {
+     "jp": "うちの　とくせいミルク、のんで　いって　くれ。",
+     "en": "Try our specialty milk before you go."
+    }
+   ]
+  }
+ }
+}

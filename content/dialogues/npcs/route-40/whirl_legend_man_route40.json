@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 4 — légende des 4 îles (sourcé). Prépare le CS 渦 (Repaire de Mékanos, plus tard) et whirl-islands.",
+ "npc_id": "whirl_legend_man_route40",
+ "name": {
+  "jp": "うみを　ながめる　おとこ",
+  "en": "Man Gazing at the Sea"
+ },
+ "zone_id": "route-40",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "おきに　みえる　4つの　しま、うずまきじまと　いうんだ。",
+     "en": "Those four islands offshore? The Whirl Islands."
+    },
+    {
+     "jp": "うずの　ぬしが　ひとばんで　つくったと　いわれてる。",
+     "en": "They say the master of the whirlpools made them in a single night."
+    },
+    {
+     "jp": "うずを　しずめる　じゅつが　なければ、ちかづけないよ。",
+     "en": "Without the art of calming whirlpools, you can't go near them."
+    }
+   ]
+  }
+ }
+}

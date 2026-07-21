@@ -1,0 +1,31 @@
+{
+ "trainer_id": "swimmer_paula_route40",
+ "name": {
+  "jp": "ビキニのおねえさんの　ポーラ",
+  "en": "Swimmer Paula"
+ },
+ "zone_id": "route-40",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "うみは　ひろいわよ。まよったら　たいへん。",
+     "en": "The sea is vast. Get lost and you're in trouble."
+    },
+    {
+     "jp": "みちしるべの　かわりに、わたしが　とめて　あげる！",
+     "en": "Instead of a signpost, I'll stop you myself!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "イリシアは　みなみよ。きを　つけて。",
+     "en": "Cianwood is to the south. Take care."
+    }
+   ]
+  }
+ }
+}

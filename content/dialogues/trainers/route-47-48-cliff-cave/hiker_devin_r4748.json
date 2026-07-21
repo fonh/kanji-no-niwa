@@ -1,0 +1,31 @@
+{
+ "trainer_id": "hiker_devin_r4748",
+ "name": {
+  "jp": "やまおとこの　デビン",
+  "en": "Hiker Devin"
+ },
+ "zone_id": "route-47-48-cliff-cave",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　がけみち、ほって　ひろげたのは　やまおとこたちさ。",
+     "en": "Us hikers dug and widened this cliff path."
+    },
+    {
+     "jp": "ほこりを　かけて　しょうぶ！",
+     "en": "I battle for that pride!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "いい　うでだ。さきの　どうくつ、きを　つけな。",
+     "en": "Good arm. Careful in the cave ahead."
+    }
+   ]
+  }
+ }
+}

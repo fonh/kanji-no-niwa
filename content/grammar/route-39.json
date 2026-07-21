@@ -1,0 +1,285 @@
+{
+ "_note": "Overlay grammaire — Route 39, 9 points N3-070→078 (règles du pilote). Exclusions notables : のわりに/にとって écartés des distracteurs de にしては (trop proches d'une lecture correcte) ; など écarté de なんか (synonyme).",
+ "zone_id": "route-39",
+ "points": [
+  {
+   "grammar_id": "N3-070",
+   "source_index": 69,
+   "title": "～ないことはない (〜nai koto wa nai)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "この問題（もんだい）を解（と）けないことはないが、時間（じかん）がかかりそうだ。",
+     "point_answer": "ないことはない",
+     "jp_cloze": "この問題（もんだい）を解（と）け＿＿が、時間（じかん）がかかりそうだ。",
+     "distractors": [
+      "たことがない",
+      "るしかない",
+      "ないことにした"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "この映画（えいが）を見（み）ないことはないけれど、他（ほか）の映画（えいが）がもっと面白（おもしろ）いと思（おも）う。",
+     "point_answer": "ないことはない",
+     "jp_cloze": "この映画（えいが）を見（み）＿＿けれど、他（ほか）の映画（えいが）がもっと面白（おもしろ）いと思（おも）う。",
+     "distractors": [
+      "たことがない",
+      "るしかない",
+      "ないことにした"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-071",
+   "source_index": 70,
+   "title": "～ないと (〜nai to)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "朝食（ちょうしょく）を食（た）べないと、お腹（なか）が空（す）く。",
+     "point_answer": "ないと",
+     "jp_cloze": "朝食（ちょうしょく）を食（た）べ＿＿、お腹（なか）が空（す）く。",
+     "distractors": [
+      "なくても",
+      "たとたん",
+      "るまえに"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "充電（じゅうでん）をしないと、電話（でんわ）が使（つか）えなくなる。",
+     "point_answer": "ないと",
+     "jp_cloze": "充電（じゅうでん）をし＿＿、電話（でんわ）が使（つか）えなくなる。",
+     "distractors": [
+      "なくても",
+      "たとたん",
+      "るまえに"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-072",
+   "source_index": 71,
+   "title": "～なぜなら (〜nazenara)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "このレストランが大好（だいす）きだ。なぜなら料理（りょうり）が美味（おい）しいから。",
+     "point_answer": "なぜなら",
+     "jp_cloze": "このレストランが大好（だいす）きだ。＿＿料理（りょうり）が美味（おい）しいから。",
+     "distractors": [
+      "それでも",
+      "ただし",
+      "ところが"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "私（わたし）は映画（えいが）を見（み）に行（い）かない。なぜなら今日（きょう）は忙（いそが）しいから。",
+     "point_answer": "なぜなら",
+     "jp_cloze": "私（わたし）は映画（えいが）を見（み）に行（い）かない。＿＿今日（きょう）は忙（いそが）しいから。",
+     "distractors": [
+      "それでも",
+      "ただし",
+      "ところが"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-073",
+   "source_index": 72,
+   "title": "～など (〜nado)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "魚（さかな）、果物（くだもの）などを市場（いちば）で買（か）いました。",
+     "point_answer": "など",
+     "jp_cloze": "魚（さかな）、果物（くだもの）＿＿を市場（いちば）で買（か）いました。",
+     "distractors": [
+      "だけ",
+      "ほど",
+      "こそ"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 1,
+     "jp": "彼（かれ）は日本語（にほんご）、英語（えいご）、中国語（ちゅうごくご）などを話（はな）せます。",
+     "point_answer": "など",
+     "jp_cloze": "彼（かれ）は日本語（にほんご）、英語（えいご）、中国語（ちゅうごくご）＿＿を話（はな）せます。",
+     "distractors": [
+      "だけ",
+      "ほど",
+      "こそ"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-074",
+   "source_index": 73,
+   "title": "～なんか (〜nanka)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "お金（かね）なんかいらない。",
+     "point_answer": "なんか",
+     "jp_cloze": "お金（かね）＿＿いらない。",
+     "distractors": [
+      "こそ",
+      "だけ",
+      "まで"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "忙（いそが）しいなんかじゃないよ。",
+     "point_answer": "なんか",
+     "jp_cloze": "忙（いそが）しい＿＿じゃないよ。",
+     "distractors": [
+      "ばかり",
+      "こそ",
+      "ほど"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-075",
+   "source_index": 74,
+   "title": "～において (〜ni oite)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "会議（かいぎ）において、彼（かれ）の意見（いけん）が一番（いちばん）説得力（せっとくりょく）がありました。",
+     "point_answer": "において",
+     "jp_cloze": "会議（かいぎ）＿＿、彼（かれ）の意見（いけん）が一番（いちばん）説得力（せっとくりょく）がありました。",
+     "distractors": [
+      "にとって",
+      "によって",
+      "にかけて"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "科学（かがく）の分野（ぶんや）において、研究（けんきゅう）が日々（ひび）進（すす）んでいます。",
+     "point_answer": "において",
+     "jp_cloze": "科学（かがく）の分野（ぶんや）＿＿、研究（けんきゅう）が日々（ひび）進（すす）んでいます。",
+     "distractors": [
+      "にとって",
+      "によって",
+      "にかけて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-076",
+   "source_index": 75,
+   "title": "～にかわって (〜ni kawatte)",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "母（はは）は忙（いそが）しいので、私（わたし）が母（はは）にかわって料理（りょうり）を作（つく）ります。",
+     "point_answer": "にかわって",
+     "jp_cloze": "母（はは）は忙（いそが）しいので、私（わたし）が母（はは）＿＿料理（りょうり）を作（つく）ります。",
+     "distractors": [
+      "にとって",
+      "によって",
+      "にくらべて"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "今度（こんど）の旅行（りょこう）は妹（いもうと）にかわって、私（わたし）が一緒（いっしょ）に行（い）きます。",
+     "point_answer": "にかわって",
+     "jp_cloze": "今度（こんど）の旅行（りょこう）は妹（いもうと）＿＿、私（わたし）が一緒（いっしょ）に行（い）きます。",
+     "distractors": [
+      "にとって",
+      "によって",
+      "にくらべて"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-077",
+   "source_index": 76,
+   "title": "～にしては (〜ni shite wa)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "彼女（かのじょ）は初心者（しょしんしゃ）にしては、上手（じょうず）に水泳（すいえい）ができる。",
+     "point_answer": "にしては",
+     "jp_cloze": "彼女（かのじょ）は初心者（しょしんしゃ）＿＿、上手（じょうず）に水泳（すいえい）ができる。",
+     "distractors": [
+      "について",
+      "をとわず",
+      "どころか"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "彼（かれ）は若（わか）いにしては、とても落（お）ち着（つ）いている。",
+     "point_answer": "にしては",
+     "jp_cloze": "彼（かれ）は若（わか）い＿＿、とても落（お）ち着（つ）いている。",
+     "distractors": [
+      "について",
+      "をとわず",
+      "どころか"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N3-078",
+   "source_index": 77,
+   "title": "～にしても (〜ni shitemo)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "雨（あめ）が降（ふ）るにしても、学校（がっこう）へ行（い）かなければなりません。",
+     "point_answer": "にしても",
+     "jp_cloze": "雨（あめ）が降（ふ）る＿＿、学校（がっこう）へ行（い）かなければなりません。",
+     "distractors": [
+      "によって",
+      "にとって",
+      "にかわって"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "このレストランが高（たか）いにしても、料理（りょうり）の質（しつ）がよくておすすめです。",
+     "point_answer": "にしても",
+     "jp_cloze": "このレストランが高（たか）い＿＿、料理（りょうり）の質（しつ）がよくておすすめです。",
+     "distractors": [
+      "によって",
+      "にとって",
+      "にかわって"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

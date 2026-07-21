@@ -28,13 +28,30 @@ l'avancement de la *rédaction* de chaque zone.
 7. Auto-test : 4 linters `scripts/validate/` + vérifs manuelles (espèces Pokémon, présence lesson_examples, variété types de question)
 
 ## Avancement global
-- Zones : **16 / 48** écrites (+ route-34/35 et burned-tower, zones sans leçon, faites)
-- Leçons : **75 / 344** écrites
-- Kanji dotés d'exemples : **410 / 1950**
-- Overlays grammaire : **5 / 48** (new-bark pilote, goldenrod, national-park, route-37, ecruteak)
-- Textes : **9 écrits** (dont 3 remises de CS : 砕・切・水)
+- Zones : **19 / 48** écrites (+ 8 zones sans leçon faites : routes 34/35/38/40/41, burned-tower, 47-48, safari)
+- Leçons : **94 / 344** écrites
+- Kanji dotés d'exemples : **520 / 1950**
+- Overlays grammaire : **8 / 48** (pilote + goldenrod, national-park, route-37, ecruteak, route-39, olivine, cianwood)
+- Textes : **10 écrits** (dont 4 remises de CS : 砕・切・水・飛)
 
 ### Journal
+- **2026-07-21 — routes 38-41 + olivine + cianwood + 47-48 + safari (Lot 4)** : route-38 —
+  5 combats ROM. route-39 — 9 leçons N3-070→078 sur les 4 PNJ de la ferme Moomoo, **quête
+  moomoo_recovery** (7 baies multi-jours, modèle time_window du PRD ; l'animal est うし,
+  règle #1), récompenses Seal Case/3 Seals/TM83 gated guérison, Baoba #1. olivine-city —
+  **arc du Phare complet** (quête lighthouse_amphy en 3 temps, gardien humain — adaptation
+  règle #1 de l'Ampharos ; 11 dresseurs du Phare dont Connie/Alfred « relocalisés » au gym
+  post-quête via negate, fidèle au détail sourcé), 5 leçons N3-099→103, Jasmine examen
+  試練・鋼の道 58q gated quête + 門弟, Bonne Canne, Silver ambiant. routes 40/41 — 14
+  nageurs (lore oral des Îles Tourbillon en post-combat), Monica du lundi, 2 ambiants,
+  obstacles mer (水+Morty). cianwood-city — 5 leçons N3-116→120, Chuck examen 試練・力の道
+  51q (gate pokeathlon_score 250 + 4 karatékas), **remise CS 飛 par la femme de Chuck**
+  (+ texte obligatoire cs_tobu), Potion Secrète (pharmacien), pot confié (adaptation
+  Shuckle règle #1 + compagnon unique), **combat Eusine 20q** (8ᵉ combat manqué par le
+  typage — npc-inventory corrigé, quête suicune_hunt avancée). route-47-48 — 5 combats ROM.
+  safari-zone — Baoba à l'entrée (mécanique I-adaptée à l'implémentation). whirl-islands —
+  obstacle 渦 posé (zone à 0 PNJ, close). 116 lesson_examples (`add-lot4-lesson-examples.py`),
+  3 overlays (38 exemples). 5 linters verts (265 fichiers).
 - **2026-07-21 — route-37 + ecruteak-city + burned-tower (Lot 3)** : route-37 — 4 combats ROM
   (paire Twins Tori & Til), Sunny « frère/sœur du dimanche » (time_window, 3 leçons
   N3-038→040, Magnet). ecruteak-city — 7 leçons N3-047→053 (réconciliation Mediums comme
@@ -99,9 +116,9 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 | 14 | route-36 | Johto | 5 | 25 | 2 | ✅ fait | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 15 | route-37 | Johto | 3 | 15 | 1 | ✅ fait | ✅ | ✅ | ✅ | — | ✅ |
 | 16 | ecruteak-city | Johto | 7 | 40 | 6 | ✅ fait (+ burned-tower, Silver #3 ; gauntlet Kimono différé au beat post-grand-texte) | ✅ | ✅ | ✅ | ✅ | ✅ |
-| 17 | route-39 | Johto | 9 | 50 | 4 | ⬜ à faire | · | · | · | · | · |
-| 18 | olivine-city | Johto | 5 | 30 | 2 | ⬜ à faire | · | · | · | · | · |
-| 19 | cianwood-city | Johto | 5 | 30 | 3 | ⬜ à faire | · | · | · | · | · |
+| 17 | route-39 | Johto | 9 | 50 | 4 | ✅ fait (+ route-38 ; quête uси 7 baies) | ✅ | ✅ | ✅ | — | ✅ |
+| 18 | olivine-city | Johto | 5 | 30 | 2 | ✅ fait (Phare complet, Jasmine gym gated quête) | ✅ | ✅ | ✅ | — | ✅ |
+| 19 | cianwood-city | Johto | 5 | 30 | 3 | ✅ fait (+ routes 40/41, 47/48, safari, whirl obstacle ; CS 飛) | ✅ | ✅ | ✅ | ✅ | ✅ |
 | 20 | route-42 | Johto | 3 | 15 | 1 | ⬜ à faire | · | · | · | · | · |
 | 21 | mahogany-town | Johto | 5 | 25 | 5 | ⬜ à faire | · | · | · | · | · |
 | 22 | route-43 | Johto | 1 | 5 | 1 | ⬜ à faire | · | · | · | · | · |

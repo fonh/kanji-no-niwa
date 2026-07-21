@@ -1,0 +1,117 @@
+{
+ "_note": "Étape 4 Lot 4 — Jasmine au sommet du Phare (quête lighthouse_amphy). Une fois keeper_healed, cette entrée disparaîtrait idéalement de la carte — son unlock_conditions map porte negate quest_step(keeper_healed) ; l'état gone reste en filet. Son combat de gym (jasmine_gym_olivine) est unlocked par keeper_healed.",
+ "npc_id": "jasmine_lighthouse_olivine",
+ "name": {
+  "jp": "ジムリーダー　ミカン",
+  "en": "Jasmine"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "lighthouse_amphy",
+     "step": "keeper_healed"
+    }
+   ],
+   "state": "gone"
+  },
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "secret_potion"
+    }
+   ],
+   "state": "give_potion"
+  },
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "lighthouse_amphy",
+     "step": "keeper_sick"
+    }
+   ],
+   "state": "waiting"
+  },
+  {
+   "default": true,
+   "state": "asking"
+  }
+ ],
+ "dialogue_states": {
+  "asking": {
+   "pages": [
+    {
+     "jp": "あ…　あの…　わたし、ジムリーダーの　ミカンです。",
+     "en": "Um... e-excuse me... I'm Jasmine, the Gym Leader."
+    },
+    {
+     "jp": "とうだいもりの　おじいさんが　びょうきで…　ずっと　ここで　かんびょうして　いるんです。",
+     "en": "The old lighthouse keeper is ill... I've been here nursing him."
+    },
+    {
+     "jp": "イリシアの　くすりやさんに、よく　きく　くすりが　あります。",
+     "en": "The pharmacy in Cianwood has a medicine that works wonders."
+    },
+    {
+     "jp": "おねがいします…　とって　きて　もらえませんか。",
+     "en": "Please... could you go and fetch it?"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "lighthouse_amphy",
+     "step_id": "keeper_sick"
+    }
+   ]
+  },
+  "waiting": {
+   "pages": [
+    {
+     "jp": "くすりは　イリシアの　くすりやさんに…。うみを　わたる　ことに　なりますが…。",
+     "en": "The medicine is at the Cianwood pharmacy... You'll have to cross the sea..."
+    }
+   ]
+  },
+  "give_potion": {
+   "pages": [
+    {
+     "jp": "それは…　ひみつの　くすり！　ありがとう　ございます！",
+     "en": "That's... the Secret Potion! Thank you so much!"
+    },
+    {
+     "jp": "おじいさん、これで　もう　だいじょうぶ。",
+     "en": "He'll be alright now."
+    },
+    {
+     "jp": "わたし、ジムに　もどりますね。こんどは　ジムリーダーとして、おあいてします。",
+     "en": "I'll return to my Gym now. Next time, I'll face you as a Gym Leader."
+    }
+   ],
+   "effects": [
+    {
+     "type": "remove_item",
+     "item_id": "secret_potion"
+    },
+    {
+     "type": "advance_quest",
+     "quest_id": "lighthouse_amphy",
+     "step_id": "keeper_healed"
+    }
+   ]
+  },
+  "gone": {
+   "pages": [
+    {
+     "jp": "（ミカンは　ジムに　もどった。）",
+     "en": "(Jasmine has returned to the Gym.)"
+    }
+   ]
+  }
+ }
+}

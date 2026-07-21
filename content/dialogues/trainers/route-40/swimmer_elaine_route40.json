@@ -1,0 +1,31 @@
+{
+ "trainer_id": "swimmer_elaine_route40",
+ "name": {
+  "jp": "ビキニのおねえさんの　エレーン",
+  "en": "Swimmer Elaine"
+ },
+ "zone_id": "route-40",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "およぎながら　かんがえごとを　するの。",
+     "en": "I do my thinking while I swim."
+    },
+    {
+     "jp": "いまは　あなたに　かつ　ほうほうを　かんがえてる！",
+     "en": "Right now I'm thinking how to beat you!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "かんがえが　まとまらなかったわ。",
+     "en": "My thoughts never came together."
+    }
+   ]
+  }
+ }
+}

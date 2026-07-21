@@ -1,0 +1,31 @@
+{
+ "trainer_id": "black_belt_lao_cianwood",
+ "name": {
+  "jp": "からておうの　ラオ",
+  "en": "Black Belt Lao"
+ },
+ "zone_id": "cianwood-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "さいごの　かべは　この　おれだ。",
+     "en": "I am the final wall."
+    },
+    {
+     "jp": "かべを　こえて　みせろ！",
+     "en": "Show me you can climb it!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "かべは　こえられた。ししょう、たのみます！",
+     "en": "The wall is climbed. Master, it's on you!"
+    }
+   ]
+  }
+ }
+}

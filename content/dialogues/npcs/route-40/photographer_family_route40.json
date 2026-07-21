@@ -1,0 +1,30 @@
+{
+ "_note": "Étape 4 Lot 4 — Maison du Photographe (fil C2 : Cameron l'itinérant, actif après le badge de Doublonville — ses apparitions par zone viennent à la passe calendrier/téléphone).",
+ "npc_id": "photographer_family_route40",
+ "name": {
+  "jp": "しゃしんかの　かぞく",
+  "en": "Photographer's Family"
+ },
+ "zone_id": "route-40",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "たびの　しゃしんかカメロンを　しってるかい？　あれは　うちの　ものでね。",
+     "en": "Know Cameron, the traveling photographer? He's family, you see."
+    },
+    {
+     "jp": "ジョウトじゅうを　あるいて、しゃしんを　とって　まわってるんだ。",
+     "en": "He walks all over Johto taking pictures."
+    }
+   ]
+  }
+ }
+}

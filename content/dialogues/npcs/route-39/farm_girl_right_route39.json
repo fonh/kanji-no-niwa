@@ -1,0 +1,66 @@
+{
+ "_note": "Étape 4 Lot 4 — PNJ-leçon #2/#6 de route-39. Remet les 3 décorations à la guérison.",
+ "npc_id": "farm_girl_right_route39",
+ "name": {
+  "jp": "ぼくじょうの　むすめ（みぎ）",
+  "en": "Farm Girl (Right)"
+ },
+ "zone_id": "route-39",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "moomoo_recovery",
+     "step": "healed"
+    }
+   ],
+   "state": "thanks"
+  },
+  {
+   "default": true,
+   "state": "worried"
+  }
+ ],
+ "dialogue_states": {
+  "worried": {
+   "pages": [
+    {
+     "jp": "おねえちゃんも　わたしも、うしの　ことが　しんぱいで…。",
+     "en": "My sister and I are both so worried about the cow..."
+    },
+    {
+     "jp": "げんきに　なったら、おれいを　するね。",
+     "en": "When she's better, I'll thank you properly."
+    }
+   ]
+  },
+  "thanks": {
+   "pages": [
+    {
+     "jp": "うし、げんきに　なったのね！",
+     "en": "The cow's all better!"
+    },
+    {
+     "jp": "この　シール、3まい　あげる！",
+     "en": "Here — three seals for you!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_item",
+     "item_id": "fire_seal_a"
+    },
+    {
+     "type": "grant_item",
+     "item_id": "party_seal_b"
+    },
+    {
+     "type": "grant_item",
+     "item_id": "flora_seal_c"
+    }
+   ]
+  }
+ }
+}

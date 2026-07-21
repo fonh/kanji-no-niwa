@@ -1,0 +1,31 @@
+{
+ "trainer_id": "center_girl_olivine_battle",
+ "name": {
+  "jp": "センターの　おんなのこ",
+  "en": "Girl at the Pokémon Center"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ねえ、わたしの　あたらしい　かみがた、どう？",
+     "en": "Hey, how's my new hairstyle?"
+    },
+    {
+     "jp": "…その　かお、なっとく　してないでしょ！　しょうぶ！",
+     "en": "...That look on your face — you're not convinced! Battle!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "かみがたの　せいじゃ　ないわね…。",
+     "en": "Guess I can't blame the hairstyle..."
+    }
+   ]
+  }
+ }
+}

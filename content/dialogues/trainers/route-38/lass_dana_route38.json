@@ -1,0 +1,31 @@
+{
+ "trainer_id": "lass_dana_route38",
+ "name": {
+  "jp": "ミニスカートの　ダナ",
+  "en": "Lass Dana"
+ },
+ "zone_id": "route-38",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "アサギの　うみかぜ、きもちいいでしょ？",
+     "en": "The sea breeze from Olivine feels nice, right?"
+    },
+    {
+     "jp": "かぜに　のって、しょうぶよ！",
+     "en": "Let's battle, riding this wind!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "かぜむきが　かわっちゃった。",
+     "en": "The wind's changed direction."
+    }
+   ]
+  }
+ }
+}

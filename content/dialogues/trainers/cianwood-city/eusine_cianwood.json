@@ -1,0 +1,51 @@
+{
+ "_note": "Étape 4 Lot 4 — combat d'Eusine à Irisia (sourcé HGSS + side-content D1 « défi en combat après apparition de l'esprit »). npc-inventory le typait « ambiant » — 8ᵉ combat manqué par les passes de typage (même famille que les 7 corrigés à l'Étape 2 point 5, signal dans la colonne rôle : « Défie le joueur ») ; ligne npc-inventory corrigée en « combat », journalisé roadmap Lot 4. Longueur 20 (combat narratif, N3 mid). Avance suicune_hunt → cianwood_battle.",
+ "trainer_id": "eusine_cianwood",
+ "name": {
+  "jp": "でんせつハンターの　ミナキ",
+  "en": "Eusine"
+ },
+ "zone_id": "cianwood-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "みたか！？　いま、きたの　みさきに　あの　すがたが…！",
+     "en": "Did you see!? Just now, on the northern cape — that form...!"
+    },
+    {
+     "jp": "なぜ　きみの　まえにばかり　あらわれる！？",
+     "en": "Why does it only ever appear before YOU!?"
+    },
+    {
+     "jp": "きみの　ちからを　たしかめさせて　もらう！",
+     "en": "I must see your strength for myself!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…なるほど。これが　えらばれた　ものの　ちからか。",
+     "en": "...I see. So this is the power of the chosen."
+    },
+    {
+     "jp": "みとめよう。だが、さきに　あの　こに　あうのは　ぼくだ！",
+     "en": "I accept it. But I'll be the one to meet that spirit first!"
+    },
+    {
+     "jp": "じゃあな！",
+     "en": "Farewell!"
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "suicune_hunt",
+     "step_id": "cianwood_battle"
+    }
+   ]
+  }
+ }
+}

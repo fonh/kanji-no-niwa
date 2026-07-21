@@ -1,0 +1,58 @@
+{
+ "_note": "Étape 4 Lot 4 — 6ᵉ 師範 (ordre narratif : après Chuck), format examen (PRD § Jalons-examens, longueur 58, vies 6). Nom d'épreuve 試練・鋼の道 sourcé fiche guidebook. Unlock : quête du Phare résolue + 2 門弟. Récompense : badge jasmine (Mineral Badge) + TM23 (guidebook). Sa calibration « vrai combat ~600 kanji/N2 » (npc-inventory, zones revisitées) est portée par la longueur d'examen et le pool du joueur à ce point — rien à theming (07-A1).",
+ "trainer_id": "jasmine_gym_olivine",
+ "name": {
+  "jp": "ジムリーダー　ミカン",
+  "en": "Jasmine"
+ },
+ "exam_name": {
+  "jp": "試練（しれん）・鋼（はがね）の道（みち）",
+  "en": "Trial of the Steel Path"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "とうだいでは、ほんとうに　ありがとう　ございました。",
+     "en": "Thank you again, truly, for what you did at the lighthouse."
+    },
+    {
+     "jp": "でも…　ジムリーダーとしての　わたしは、やさしくないですよ。",
+     "en": "But... as a Gym Leader, I won't go easy on you."
+    },
+    {
+     "jp": "はがねの　こころで、おあいてします！",
+     "en": "I'll face you with a heart of steel!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "…まけました。でも、ふしぎと　うれしいです。",
+     "en": "...I lost. And yet, somehow, I'm glad."
+    },
+    {
+     "jp": "ミネラルバッジと、これを　どうぞ。",
+     "en": "Please take the Mineral Badge, and this."
+    },
+    {
+     "jp": "おじいさんも、きっと　よろこびます。",
+     "en": "The old keeper will be happy too."
+    }
+   ],
+   "effects": [
+    {
+     "type": "grant_badge",
+     "badge_id": "jasmine"
+    },
+    {
+     "type": "grant_item",
+     "item_id": "tm23_iron_tail"
+    }
+   ]
+  }
+ }
+}

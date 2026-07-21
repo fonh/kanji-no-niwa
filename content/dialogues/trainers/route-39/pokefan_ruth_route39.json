@@ -1,0 +1,31 @@
+{
+ "trainer_id": "pokefan_ruth_route39",
+ "name": {
+  "jp": "だいすきクラブの　ルース",
+  "en": "Pokéfan Ruth"
+ },
+ "zone_id": "route-39",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　ぼくじょうには　まいしゅう　かよってるの。",
+     "en": "I come to this farm every week."
+    },
+    {
+     "jp": "じょうれんの　いじ、みせるわ！",
+     "en": "Let me show you a regular's pride!"
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "あなたも　じょうれんに　なりなさいよ。",
+     "en": "You should become a regular too."
+    }
+   ]
+  }
+ }
+}

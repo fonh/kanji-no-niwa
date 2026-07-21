@@ -1,0 +1,52 @@
+{
+ "_note": "Étape 4 Lot 4 — le gardien-phare malade (adaptation règle #1 : humain, pas d'Ampharos).",
+ "npc_id": "lighthouse_keeper_olivine",
+ "name": {
+  "jp": "とうだいもりの　ろうじん",
+  "en": "Old Lighthouse Keeper"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "lighthouse_amphy",
+     "step": "keeper_healed"
+    }
+   ],
+   "state": "healed"
+  },
+  {
+   "default": true,
+   "state": "sick"
+  }
+ ],
+ "dialogue_states": {
+  "sick": {
+   "pages": [
+    {
+     "jp": "ごほっ、ごほっ…。",
+     "en": "*cough*, *cough*..."
+    },
+    {
+     "jp": "（ベッドで　ねこんで　いる。かなり　つらそうだ…。）",
+     "en": "(He's bedridden, and clearly suffering...)"
+    }
+   ]
+  },
+  "healed": {
+   "pages": [
+    {
+     "jp": "おお、きみが　くすりを　とどけて　くれたのか！",
+     "en": "Oh, so you're the one who brought my medicine!"
+    },
+    {
+     "jp": "あかりは　わしが　まもる。ミカンちゃんに　しんぱいを　かけたわい。",
+     "en": "I'll keep the light burning. I gave dear Jasmine such a fright."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "_note": "Étape 4 Lot 4 — mini-arc du Phare (guidebook § olivine : structure en 3 temps). Adaptation règle #1 : le malade est le vieux gardien-phare humain (とうだいもり), pas un Ampharos. Jasmine retourne au gym à la guérison (unlock de son combat).",
+ "quest_id": "lighthouse_amphy",
+ "name": {
+  "jp": "とうだいの　あかり",
+  "en": "The Lighthouse Light"
+ },
+ "zone_ids": [
+  "olivine-city",
+  "cianwood-city"
+ ],
+ "steps": [
+  {
+   "step_id": "keeper_sick",
+   "label": {
+    "jp": "とうだいもりが　びょうき。ミカンさんに　イリシアの　ひみつの　くすりを　たのまれた。",
+    "en": "The lighthouse keeper is ill. Jasmine asked me to fetch the Secret Potion from Cianwood."
+   },
+   "target_zone_id": "cianwood-city"
+  },
+  {
+   "step_id": "potion_obtained",
+   "label": {
+    "jp": "ひみつの　くすりを　もらった。とうだいに　とどけよう。",
+    "en": "Got the Secret Potion. Bring it to the lighthouse."
+   },
+   "target_zone_id": "olivine-city"
+  },
+  {
+   "step_id": "keeper_healed",
+   "label": {
+    "jp": "とうだいもりが　げんきに　なった！　ミカンさんは　ジムに　もどった。",
+    "en": "The keeper recovered! Jasmine has returned to her Gym."
+   },
+   "target_zone_id": "olivine-city"
+  }
+ ]
+}

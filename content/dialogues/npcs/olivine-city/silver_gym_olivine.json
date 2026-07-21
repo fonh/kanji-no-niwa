@@ -1,0 +1,34 @@
+{
+ "_note": "Étape 4 Lot 4 — Silver ambiant à Oliville (sort du gym, indique que Jasmine est au Phare — sourcé). Pas un combat (table PRD § Silver : la prochaine rencontre est le cameo #4 au QG Rocket).",
+ "npc_id": "silver_gym_olivine",
+ "name": {
+  "jp": "ライバル",
+  "en": "Silver"
+ },
+ "zone_id": "olivine-city",
+ "jlpt_level": "N3",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "welcome"
+  }
+ ],
+ "dialogue_states": {
+  "welcome": {
+   "pages": [
+    {
+     "jp": "…この　ジムは　からっぽだ。",
+     "en": "...This Gym is empty."
+    },
+    {
+     "jp": "リーダーは　とうだいで　かんびょうちゅうだとさ。",
+     "en": "The Leader's at the lighthouse, nursing someone."
+    },
+    {
+     "jp": "やさしさで　つよく　なれるのか？　おれには　わからないね。",
+     "en": "Can kindness make you strong? I wouldn't know."
+    }
+   ]
+  }
+ }
+}

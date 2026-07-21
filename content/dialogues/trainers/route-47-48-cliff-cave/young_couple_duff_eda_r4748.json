@@ -1,0 +1,31 @@
+{
+ "trainer_id": "young_couple_duff_eda_r4748",
+ "name": {
+  "jp": "わかづまふうふの　ダフと　エダ",
+  "en": "Young Couple Duff & Eda"
+ },
+ "zone_id": "route-47-48-cliff-cave",
+ "jlpt_level": "N3",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "「しんこんりょこうちゅうなの！」",
+     "en": "\"We're on our honeymoon!\""
+    },
+    {
+     "jp": "「ふたりの　きねんに、しょうぶだ！」",
+     "en": "\"A battle, to mark the occasion!\""
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "「いい　きねんに　なったわ」",
+     "en": "\"What a memory this made!\""
+    }
+   ]
+  }
+ }
+}

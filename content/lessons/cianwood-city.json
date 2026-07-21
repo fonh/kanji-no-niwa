@@ -1,0 +1,72 @@
+[
+ {
+  "zone_id": "cianwood-city",
+  "npc_ref": "pharmacist_cianwood",
+  "sequence_index": 1,
+  "kanji_ids": [
+   "随",
+   "隔",
+   "隠",
+   "隣",
+   "隷",
+   "雄"
+  ],
+  "grammar_id": "N3-116"
+ },
+ {
+  "zone_id": "cianwood-city",
+  "npc_ref": "young_man_jar_cianwood",
+  "sequence_index": 2,
+  "kanji_ids": [
+   "雌",
+   "離",
+   "須",
+   "顕",
+   "飢",
+   "飾"
+  ],
+  "grammar_id": "N3-117"
+ },
+ {
+  "zone_id": "cianwood-city",
+  "npc_ref": "waterfall_man_cianwood",
+  "sequence_index": 3,
+  "kanji_ids": [
+   "鬼",
+   "俺",
+   "傲",
+   "僅",
+   "冥",
+   "刹"
+  ],
+  "grammar_id": "N3-118"
+ },
+ {
+  "zone_id": "cianwood-city",
+  "npc_ref": "pharmacist_cianwood",
+  "sequence_index": 4,
+  "kanji_ids": [
+   "剝",
+   "勾",
+   "匂",
+   "宛",
+   "巾",
+   "彙"
+  ],
+  "grammar_id": "N3-119"
+ },
+ {
+  "zone_id": "cianwood-city",
+  "npc_ref": "young_man_jar_cianwood",
+  "sequence_index": 5,
+  "kanji_ids": [
+   "慄",
+   "戚",
+   "拶",
+   "挨",
+   "挫",
+   "毀"
+  ],
+  "grammar_id": "N3-120"
+ }
+]
