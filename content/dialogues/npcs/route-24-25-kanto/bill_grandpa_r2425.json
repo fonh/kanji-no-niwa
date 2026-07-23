@@ -18,12 +18,21 @@
    "state": "after"
   },
   {
-   "default": true,
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "hoenn_stone"
+    }
+   ],
    "state": "welcome"
+  },
+  {
+   "default": true,
+   "state": "waiting"
   }
  ],
  "dialogue_states": {
-  "welcome": {
+  "waiting": {
    "pages": [
     {
      "jp": "おお、まごの　ともだちかね！　ビルから　てがみで　きいて　おるよ。",
@@ -32,6 +41,14 @@
     {
      "jp": "めずらしい　ものを　みせて　くれたら、わしの　コレクションの　いしを　やろう。",
      "en": "Show me something rare, and I'll give you a stone from my collection."
+    }
+   ]
+  },
+  "welcome": {
+   "pages": [
+    {
+     "jp": "おお、まごの　ともだちかね！　ビルから　てがみで　きいて　おるよ。",
+     "en": "Oh, you're my grandson's friend! Bill wrote to me about you."
     },
     {
      "jp": "ほれ、その　ホウエンの　いし！　りっぱじゃ！　こうかんと　いこう！",
@@ -54,6 +71,13 @@
     {
      "jp": "いい　こうかんじゃった。ビルに　よろしくな。",
      "en": "A fine trade. Give Bill my best."
+    }
+   ],
+   "effects": [
+    {
+     "type": "advance_quest",
+     "quest_id": "bill_family_thread",
+     "step_id": "grandpa_met"
     }
    ]
   }

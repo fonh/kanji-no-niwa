@@ -1,5 +1,8 @@
 {
  "_note": "Étape 4 Lot 6 — Silver démasque le déguisement en chemin vers le 2F (sourcé : il cherche Lance, pas les Rocket). Scène, pas un combat — le combat #5 de la table PRD a lieu au Tunnel B2F (silver_apparition5_goldenrod). L'effet remove_item(rocket_uniform) + advance(unmasked) est porté par l'état unmask.",
+ "_lint_exceptions": {
+  "default_remove_item": "Vérifié phase 0.6 : 'unmask' est l'état default de state_rules, mais ce n'est pas l'anti-pattern de troc 0.2 — cette entité n'existe sur la carte (content/map/npcs.json) que sous quest_step(radio_tower_takeover, disguised), qui n'est posé qu'après grant_item(rocket_uniform) par disguise_grunt_goldenrod.json. Le joueur possède donc toujours l'objet quand 'unmask' est atteint ; aucun état d'attente n'est nécessaire."
+ },
  "npc_id": "silver_unmask_goldenrod",
  "name": {
   "jp": "ライバル",

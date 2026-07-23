@@ -24,6 +24,12 @@
      "jp": "むかしばなしを　かたって　いるのさ。よんで　いくかい？",
      "en": "Telling the old tales. Care to hear one?"
     }
+   ],
+   "effects": [
+    {
+     "type": "unlock_text",
+     "text_id": "rainbow_legend_1_ecruteak"
+    }
    ]
   }
  }

@@ -8,10 +8,10 @@
   "unlock_conditions": [
    {
     "type": "item_owned",
-    "item_id": "sprinkler_floria"
+    "item_id": "squirtbottle"
    }
   ],
-  "note": "Simularbre — bloque la route vers Ecruteak, résolu via l'arrosoir de Floria (Doublonville, hors zones écrites à ce stade — reste verrouillé, attendu)."
+  "note": "Simularbre — bloque la route vers Ecruteak, résolu via l'arrosoir (SquirtBottle) de Floria (content/dialogues/npcs/goldenrod-city/floria_goldenrod.json, grant_item squirtbottle). Corrigé Étape 4 phase 0.1 (l'ancien item_id sprinkler_floria n'existait nulle part)."
  },
  {
   "obstacle_id": "cracked_rock_route36_shortcut",
@@ -196,5 +196,23 @@
    }
   ],
   "_note": "Étape 4 Lot 6 — porte du sous-sol du Tunnel (Basement Key de Petrel-5F). L'énigme des interrupteurs (« vert en dernier ») = navigation/puzzle d'implémentation, saveur portée par le grunt B2F."
+ },
+ {
+  "obstacle_id": "tohjo_falls_route27",
+  "zone_id": "route-27",
+  "tile_x": 126,
+  "tile_y": 6,
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-27.json",
+  "unlock_conditions": [
+   {
+    "type": "item_owned",
+    "item_id": "cs_mizu"
+   },
+   {
+    "type": "item_owned",
+    "item_id": "cs_taki"
+   }
+  ],
+  "note": "Ajouté Étape 4 phase 0.7 — Chutes de Tohjo, chemin critique Johto→Kanto (guidebook-adapted.md § route-27 : « Route 27 depuis New Bark Town est : nécessite 水 CS-Kanji » ; HGSS original exige Surf ET Cascade pour traverser les chutes elles-mêmes). Aucun obstacle n'était enregistré ici avant cette correction alors que les deux CS (mizu Lot 3 / taki Lot 7) sont déjà remis en amont narratif — pas de deadlock."
  }
 ]

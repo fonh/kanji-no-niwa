@@ -35,6 +35,40 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-23 — Phase 0 (corrections mécaniques, revue prof+game designer)** : suite au
+  prompt `.scratch/audits/prompt-etape4-suite-et-fin.md` (double revue du 2026-07-23),
+  corrections structurelles avant toute nouvelle production, ordre du prompt respecté.
+  **0.1** Simularbre Route 36 : `sprinkler_floria` (item inexistant) → `squirtbottle`
+  (celui réellement accordé par Floria). **0.2** 2 trocs corrigés (grand-père de Bill
+  R24/25, marchand du Passage Souterrain R6) : état `default` ne porte plus les Effects
+  du troc, ajout d'un état d'attente gaté `item_owned`. **Trouvaille en plus** : un 3ᵉ
+  cas structurellement similaire (`silver_unmask_goldenrod.json`, remove_item en état
+  default) vérifié PAS bugué (l'entité n'existe sur la carte qu'une fois l'objet garanti
+  possédé, via ses propres `unlock_conditions`) — documenté comme exception au fichier
+  (`_lint_exceptions`) plutôt que silencieusement laissé de côté. **0.3** quêtes :
+  `suicune_hunt` zone_ids corrigé (id inexistant `route-25-kanto` → `route-24-25-kanto`,
+  `route-14-15-kanto` retiré — deviendra scène d'ambiance au Lot 15) ;
+  `bill_family_thread` clos avec un step final `grandpa_met` (payoff réel, Route 24/25) ;
+  `lighthouse_amphy` : step vestige `potion_obtained` supprimé. **0.4** `unlock_text`
+  posé comme unique gate des textes (règle actée) : 5 CS (mizu/taki/tobu/uzu/chikara)
+  + 4 textes secondaires à dialogue porteur (storyteller×2, lore_book, farewell_note)
+  corrigés ; 5 textes sans aucun dialogue porteur (forest_shrine_ilex + 4 autres trouvés
+  en vérifiant tout le corpus, pas seulement la liste du prompt) documentés comme
+  émission moteur dans le nouveau `content/engine-contract.md` § 2. **0.5** création de
+  `content/engine-contract.md` (event_cleared moteur-only : misty_met_viewpoint/
+  ice_path_puzzle_solved/sayo_freed_ice_path/birds_guided_ilex ; quest_step moteur-only :
+  moomoo_recovery fed_1-6/healed, radio_tower_takeover tower_occupied ; items de boutique ;
+  mécaniques différées à l'implémentation ; décisions de spec pour l'équipe code).
+  **0.6** `lint-cross-refs.py` étendu (item_id croisés, event_cleared vs contrat,
+  quest_step consommé vs produit/contrat, anti-pattern troc en default, WARN
+  d'uniformité correct_index) — a immédiatement attrapé le 3ᵉ cas de troc et confirmé
+  les 72/72 correct_index=0 (20 WARN, phase 2.4 les corrigera). **0.7** `CONTEXT.md` §
+  Effect : `grant_badge` ajouté (11 usages non documentés), `unlock_zone` flagué inutilisé
+  (0 usage) ; obstacle Chutes de Tohjo (route-27) ajouté (`cs_mizu`+`cs_taki`, chemin
+  critique Johto→Kanto, absent jusqu'ici) ; 8 zones à placements sans dialogues
+  rattachées explicitement à leur futur lot (tableau dédié ci-dessous) pour qu'aucune ne
+  tombe entre deux lots. 5 linters verts (536 fichiers, 20 WARN attendus/documentés,
+  0 FAIL).
 - **2026-07-21 — cerulean-city + routes 24/25 (Lot 13)** : Azuria — 17 leçons N1-083→099
   (gérant du magasin de vélos d'origine avec écho Red, garçon récurrent), **sbire isolé
   au gym** (l'exemple canonique du negate du PRD, câblé tel quel : présent tant que
@@ -255,3 +289,20 @@ Colonnes statut détaillé à cocher au fil : D=dialogues, L=lessons/*.json, E=l
 _Les 35 zones sans leçon (combat/texte/ambiant seuls) parmi les 83 ne figurent pas ici :
 elles n'ont pas de pool kanji propre et seront traitées comme sous-partie du lot de leur
 région (dialogues de dresseurs/ambiants légers) — voir npc-inventory.md._
+
+### Zones à placements sans dialogues — rattachement explicite (phase 0.7)
+
+8 zones ont des `content/map/placements/<zone>.json` et/ou un roster ROM mais zéro
+dialogue écrit ; sans rattachement explicite elles risquaient de tomber entre deux lots.
+Décidé à la revue du 2026-07-23 :
+
+| Zone | Dresseurs ROM | Rattachement | Note |
+|---|---:|---|---|
+| route-5-kanto | 0 | ✅ clos (fusionné route-6-kanto, Lot 11) | Contenu (vieille dame/Talisman) déjà écrit sous le zone_id route-6-kanto (guidebook-adapted.md L1214 : « roster fusionné dans le guide »). Le zone_id route-5-kanto lui-même n'aura jamais de fichier propre. |
+| route-7-kanto | 0 | Lot 14 (celadon-city) | Ambiant seul (Young Couple Moe & Lulu, Super Nerd Sam, guidebook L1234) — route de transit Céladia↔Safran. |
+| route-19-20-seafoam | 19 | Lot 15 (fuchsia-city) | Vrai roster de combat (19 dresseurs) — géographie du guide (Fuchsia → Route 19/20 → Cinnabar). |
+| cinnabar-island | 0 | Lot 15 (fuchsia-city), sous-partie avec seafoam | Blaine (93q) relocalisé ici ou en Lot 18 selon confirmation de l'emplacement exact (voir Lot 18 dans ce prompt) — la zone elle-même n'a pas de roster propre. |
+| route-21-kanto | 12 | Lot 17 (viridian-city/pallet-town) | Vrai roster de combat (12 dresseurs), déjà noté sous-partie du Lot 17 dans le plan de phase 3. |
+| route-22-kanto | 0 | Lot 17 (viridian-city/pallet-town) | 0 dresseur ROM — obstacle/placement seul, déjà noté sous-partie du Lot 17. |
+| cerulean-cave | 0 | Lot 18 (queue, post-Mont Argenté) | 0 dresseur ROM, aire post-game canon (16 badges + Pokédex national) — cohérent avec la fin de la passe plutôt qu'avec Azuria (Lot 13, déjà clos). |
+| whirl-islands | 0 | ✅ clos (Lot 4) | Obstacle 渦 déjà posé, 0 PNJ sourcé — rien à écrire. |

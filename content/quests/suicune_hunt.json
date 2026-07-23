@@ -1,5 +1,5 @@
 {
- "_note": "Étape 4 Lot 3 — quête Suicune (design I-2 adopté : le fil d'Eusine devient la Quest). Étapes sourcées side-content D1 ; seules les 2 premières sont câblées ici (Tour Embrasée), les suivantes s'écrivent à leurs zones (Irisia, Route 42, jetée de Vermeille, Routes 14/15, Route 25 — combat final, PRD § Légendaires). Le mystère du grand-père d'Eusine reste non bouclé, comme dans la source.",
+ "_note": "Étape 4 Lot 3 — quête Suicune (design I-2 adopté : le fil d'Eusine devient la Quest). Étapes sourcées side-content D1 ; seules les 2 premières sont câblées ici (Tour Embrasée), les suivantes s'écrivent à leurs zones (Irisia, Route 42, jetée de Vermeille, Route 25 — combat final, PRD § Légendaires). Le mystère du grand-père d'Eusine reste non bouclé, comme dans la source. Correction phase 0.3 : la 1ère apparition à pied sur Routes 14/15 annoncée ici en note n'a jamais eu de step — retirée des zone_ids ; deviendra une scène d'ambiance sans step quand la zone sera écrite (Lot 15), la quête restant close depuis le Lot 13.",
  "quest_id": "suicune_hunt",
  "name": {
   "jp": "みずの　せいれいを　おう　もの",
@@ -10,8 +10,7 @@
   "cianwood-city",
   "route-42",
   "vermilion-city",
-  "route-14-15-kanto",
-  "route-25-kanto"
+  "route-24-25-kanto"
  ],
  "steps": [
   {

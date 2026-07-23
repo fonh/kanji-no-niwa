@@ -18,11 +18,28 @@
    "state": "after"
   },
   {
-   "default": true,
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "ragecandybar"
+    }
+   ],
    "state": "trade"
+  },
+  {
+   "default": true,
+   "state": "waiting"
   }
  ],
  "dialogue_states": {
+  "waiting": {
+   "pages": [
+    {
+     "jp": "アカジオの　「いかりまんじゅう」という　まんじゅう、もってないかい？",
+     "en": "Got any of that famous Mahogany RageCandyBar?"
+    }
+   ]
+  },
   "trade": {
    "pages": [
     {

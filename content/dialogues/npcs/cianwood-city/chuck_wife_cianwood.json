@@ -58,6 +58,10 @@
     {
      "type": "grant_item",
      "item_id": "cs_tobu"
+    },
+    {
+     "type": "unlock_text",
+     "text_id": "cs_tobu_cianwood"
     }
    ]
   }

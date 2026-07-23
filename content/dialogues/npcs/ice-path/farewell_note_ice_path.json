@@ -24,6 +24,12 @@
      "jp": "（ひろって　よんで　みよう。）",
      "en": "(Pick it up and read it.)"
     }
+   ],
+   "effects": [
+    {
+     "type": "unlock_text",
+     "text_id": "rocket_farewell_note_ice_path"
+    }
    ]
   }
  }

@@ -63,6 +63,10 @@
     {
      "type": "grant_item",
      "item_id": "cs_uzu"
+    },
+    {
+     "type": "unlock_text",
+     "text_id": "cs_uzu_mahogany"
     }
    ]
   }

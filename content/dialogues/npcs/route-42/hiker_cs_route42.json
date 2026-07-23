@@ -46,6 +46,10 @@
     {
      "type": "grant_item",
      "item_id": "cs_chikara"
+    },
+    {
+     "type": "unlock_text",
+     "text_id": "cs_chikara_route42"
     }
    ]
   },

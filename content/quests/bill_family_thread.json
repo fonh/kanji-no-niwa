@@ -1,5 +1,5 @@
 {
- "_note": "Étape 4 Lot 3 — fil PNJ récurrent de Bill (side-content D4), modèle Quest partagée 04-D1. Étapes futures (grand-père Route 25, indice Fuchsia) ajoutées aux passes Kanto.",
+ "_note": "Étape 4 Lot 3 — fil PNJ récurrent de Bill (side-content D4), modèle Quest partagée 04-D1. Clos au Lot 13 par le payoff du grand-père (Route 24/25) — corrigé phase 0.3 : la quête s'arrêtait auparavant à doll_received alors que le grand-père (déjà écrit, standalone) est le vrai payoff ; step final grandpa_met ajouté ici + advance_quest posé dans content/dialogues/npcs/route-24-25-kanto/bill_grandpa_r2425.json pour que l'Adventure Journal ne montre pas le fil clos avant sa fin.",
  "quest_id": "bill_family_thread",
  "name": {
   "jp": "パソコンの　てんさい　ビル",
@@ -7,7 +7,8 @@
  },
  "zone_ids": [
   "ecruteak-city",
-  "goldenrod-city"
+  "goldenrod-city",
+  "route-24-25-kanto"
  ],
  "steps": [
   {
@@ -25,6 +26,14 @@
     "en": "Bill gave me a doll at his house in Goldenrod."
    },
    "target_zone_id": "goldenrod-city"
+  },
+  {
+   "step_id": "grandpa_met",
+   "label": {
+    "jp": "25ばんどうろで　ビルの　おじいさんに　会（あ）い、ホウエンの　いしを　しんかの　いしと　こうかんした。",
+    "en": "Met Bill's grandfather on Route 25 and traded the Hoenn stone for an evolution stone."
+   },
+   "target_zone_id": "route-24-25-kanto"
   }
  ]
 }

@@ -24,6 +24,12 @@
      "jp": "はなしの　つづきを　よみたいかね？",
      "en": "Care to read the rest of the tale?"
     }
+   ],
+   "effects": [
+    {
+     "type": "unlock_text",
+     "text_id": "rainbow_legend_2_burned_tower"
+    }
    ]
   }
  }

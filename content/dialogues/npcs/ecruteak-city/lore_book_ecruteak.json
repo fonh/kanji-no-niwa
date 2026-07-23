@@ -24,6 +24,12 @@
      "jp": "（よんで　みよう。）",
      "en": "(Let's read it.)"
     }
+   ],
+   "effects": [
+    {
+     "type": "unlock_text",
+     "text_id": "three_spirits_legend_ecruteak"
+    }
    ]
   }
  }
