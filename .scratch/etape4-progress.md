@@ -5,6 +5,12 @@ une trace à chaque étape »). Une ligne par zone de croissance. **Le comptage
 (leçons/kanji/PNJ) est déjà figé** en amont — ce document ne le recalcule pas, il suit
 l'avancement de la *rédaction* de chaque zone.
 
+**Phase 2 (re-kanjification) : voir `.scratch/etape4-rekanjify-zone-plan.md`** pour
+l'ordre de priorité réel par zone (studiedSet décroissant, mesuré avec
+`lint-kanji-density.py`) et l'auto-évaluation programmeur/prof/game designer du
+2026-07-24 — ce journal reste le compte-rendu chronologique, le plan de zone est la
+référence pour « que faire ensuite ».
+
 ## Sources du comptage (ne pas recompter, lire)
 - `content/kanji-zone-assignment.json` — 2136 kanji ordonnés, 83 zones
 - `content/lessons-proposal.json` — 344 leçons / 48 zones / 1950 kanji, taille par leçon
