@@ -27,31 +27,31 @@
   "trial": {
    "pages": [
     {
-     "jp": "よく　きた、わかい　ひと。イブキから　きいて　おるよ。",
+     "jp": "よく　きた、わかい　人（ひと）。イブキから　きいて　おるよ。",
      "en": "Welcome, young one. Clair has told me of you."
     },
     {
-     "jp": "これより　5つの　といを　たてる。かざらず、こたえなさい。",
+     "jp": "これより　5つの　問（と）いを　立（た）てる。かざらず、こたえなさい。",
      "en": "I shall now pose five questions. Answer without pretense."
     },
     {
-     "jp": "ひとつ。あなたに　とって、まなぶとは　なにか。",
+     "jp": "一（ひと）つ。あなたに　とって、学（まな）ぶとは　何（なに）か。",
      "en": "One: what is learning, to you?"
     },
     {
-     "jp": "ふたつ。つよさとは、なにを　まもる　ための　ものか。",
+     "jp": "二（ふた）つ。強（つよ）さとは、何（なに）を　まもる　ための　物（もの）か。",
      "en": "Two: what is strength meant to protect?"
     },
     {
-     "jp": "みっつ。まけた　とき、あなたは　なにを　するか。",
+     "jp": "三（みっ）つ。まけた　時（とき）、あなたは　何（なに）を　するか。",
      "en": "Three: when you lose, what do you do?"
     },
     {
-     "jp": "よっつ。ともに　あゆむ　ものを、どう　おもうか。",
+     "jp": "四（よっ）つ。ともに　あゆむ　者（もの）を、どう　思（おも）うか。",
      "en": "Four: how do you regard those who walk beside you?"
     },
     {
-     "jp": "いつつ。まなんだ　ことばを、なんの　ために　つかうか。",
+     "jp": "五（いつ）つ。学（まな）んだ　言葉（ことば）を、何（なん）の　ために　使（つか）うか。",
      "en": "Five: for what purpose will you use the words you've learned?"
     },
     {
@@ -59,7 +59,7 @@
      "en": "......"
     },
     {
-     "jp": "…よい　めを　して　おる。ことばに　うそが　ない。",
+     "jp": "…よい　目（め）を　して　おる。言葉（ことば）に　うそが　ない。",
      "en": "...You have honest eyes. There is no falsehood in your words."
     },
     {
@@ -86,7 +86,7 @@
      "en": "Clair and Lance are both my grandchildren, you know."
     },
     {
-     "jp": "ふたりとも、あなたから　まなぶ　ことが　あろう。",
+     "jp": "二人（ふたり）とも、あなたから　学（まな）ぶ　ことが　あろう。",
      "en": "They both have things to learn from you."
     }
    ]

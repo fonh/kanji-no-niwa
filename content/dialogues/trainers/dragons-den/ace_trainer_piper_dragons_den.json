@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ほこらの　てまえで　ちからだめしよ！",
+     "jp": "ほこらの　手前（てまえ）で　力試（ちからだめ）しよ！",
      "en": "A test of strength before the shrine!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ほこらに　ふさわしい　ちからね。",
+     "jp": "ほこらに　ふさわしい　力（ちから）ね。",
      "en": "Strength worthy of the shrine."
     }
    ]

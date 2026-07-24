@@ -35,6 +35,37 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, passe dialogues : méthode tranchée (automatisation
+  rejetée), dragons-den (6/6 fichiers) re-kanjifié à la main** : tentative
+  d'automatisation à l'échelle (`scripts/build/rekanjify-dialogues.py`, matching par
+  limite de mot réelle — le corpus écrit　avec　des　espaces　pleine-chasse entre mots,
+  donc pas besoin de deviner les limites comme pour le scan libre des textes) testée
+  en dry-run puis en réel sur dragons-den : **~40% des substitutions étaient de faux
+  amis homophoniques** (どう→動 au lieu de l'adverbe「comment」, いく→幾 au lieu de
+  行く「aller」, りゅう→流 au lieu de 竜「dragon」— dans une zone qui s'appelle Antre
+  du Dragon —, せいち→制ち au lieu de 聖地「terre sacrée」, たてる→建てる au lieu de
+  立てる「poser (une question)」, して→仕手 au lieu de する+forme en te). Un lookup de
+  dictionnaire ne peut pas désambiguïser les homophones sans compréhension du
+  contexte — **rejeté, script supprimé**, corrections annulées (`git checkout`) avant
+  tout commit. Un professeur de japonais ne validerait jamais du contenu enseignant
+  du mauvais kanji dans un jeu dont c'est justement la mission. **Méthode retenue** :
+  même rigueur manuelle que la passe textes, fichier par fichier, jugement humain
+  (LLM) sur chaque mot — mais les fichiers de dialogue sont bien plus courts (2-6
+  lignes typiques contre ~150-300 caractères + 5 questions pour un texte), donc plus
+  rapides à traiter malgré leur nombre. **Erreur trouvée et corrigée en cours de
+  route** : le placement de la lecture inline doit suivre immédiatement le KANJI, pas
+  le mot entier avec ses okurigana (学ぶ（まなぶ）est FAUX, 学（まな）ぶ est correct) —
+  attrapé par le linter sur le 1er fichier (`elder_master_dragons_den.json`, 15 FAIL),
+  corrigé, les 12 autres kanjifications de la passe textes vérifiées rétroactivement
+  indemnes (aucune n'avait cette erreur). dragons-den (studiedSet exact du linter —
+  `ordered[:cumulative_start]`, pas l'approximation par ordre narratif utilisée pour
+  les textes) : 6 fichiers, ~20 mots kanjifiés (人/言葉/問/立/一/学/何/二/強/物/三/時/
+  四/者/思/五/使/目/本/当/子/頃/手/前/力/試/帰/竜/小), plusieurs pièges homophoniques
+  évités par la lecture attentive (者 vs 物 selon que « もの » réfère à une personne
+  ou une chose ; 番人 jamais utilisé — 番 non étudié, resté en kana plutôt que
+  「万人」faux-ami que l'automatisation avait choisi). 5 linters verts. Reste 35 zones
+  à leçon + les zones sans pool (combat/texte/ambiant) — chantier à l'échelle des
+  lots déjà écrits.
 - **2026-07-24 — Phase 2, les 18 textes passés en revue (12 re-kanjifiés, 6 déjà
   optimaux)** : `son_in_law_letter.json` (元気/毎日/お母さん/二人/家 ajoutés).
   `cs_kudakeru.json`, `ancient_inscription.json`, `johto_entrance_sign.json`,
