@@ -41,6 +41,19 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, cherrygrove-city (5/5 fichiers) re-kanjifié.**
+  **Bonus opportuniste** : l'audit a trouvé 2 usages pré-existants (hors
+  session, confirmés via `git log -p`) de 町/店 hors studiedSet dans
+  `guide_gent_cherrygrove.json` — les toutes premières lignes du tutoriel
+  d'ouverture du jeu (« ここは　町（まち）です。店（みせ）が　あります。»)
+  → reverties en kana. Vérifié séparément : le 力（ちから）de
+  `silver_apparition1_cherrygrove.json` (kanji signature de Silver) EST
+  bien dans le studiedSet réel malgré la note du fichier sur un budget
+  volontairement plus strict — pas un bug, juste une prudence
+  supplémentaire déjà documentée. 2 fichiers restent à 0% densité (aucun
+  autre candidat convertible à ce stade, studiedSet=50). Audit
+  `cumulative_start` : CLEAN après le correctif. 7 linters verts. Reste
+  dans le Tier 5 : route-29 (2), new-bark-town (6).
 - **2026-07-24 — Phase 2, route-30 (6/6 fichiers) re-kanjifié.** Kanji
   ajouté : 木 (seul candidat éligible sur toute la zone — studiedSet=60,
   tout début de partie). だいじに/ながねん/けいけん/じょういランク etc. tous
