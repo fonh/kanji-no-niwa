@@ -35,6 +35,10 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, ilex-forest (3/3 fichiers) re-kanjifié à la main** : 木/鳥/
+  前/行/後/羽/知 ajoutés. naoko_ilex.json laissé tel quel (道/着物/枝/友達 hors
+  studiedSet, aucune amélioration sûre à ce point très précoce — 220 kanji étudiés).
+  5 linters verts.
 - **2026-07-24 — Phase 2, route-42 (5/5 fichiers) re-kanjifié à la main** : 前/動/湖/
   方/風/山/一/魚/大 ajoutés. hiker_benjamin_route42.json laissé tel quel (石/岩/硬い
   hors studiedSet, aucune amélioration sûre). 5 linters verts.

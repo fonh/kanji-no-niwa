@@ -10,7 +10,7 @@
  "dialogue_states": {
   "greeting": {
    "pages": [
-    { "jp": "この　もりの　きはね、", "en": "The trees in this forest, you see —" },
+    { "jp": "この　もりの　木（き）はね、", "en": "The trees in this forest, you see —" },
     { "jp": "こうやって　ゆらすと、いい　ことが　あるんだ。", "en": "give one a good shake like this, and something nice happens." },
     { "jp": "ほら、やってみて。", "en": "Go on, give it a try." }
    ]

@@ -27,15 +27,15 @@
   "not_briefed": {
    "pages": [
     { "jp": "おれは　すみやきの　でしだよ。", "en": "I'm the Charcoal Man's apprentice." },
-    { "jp": "にげた　とりを　さがしてるの？", "en": "Looking for the birds that ran off?" },
+    { "jp": "にげた　鳥（とり）を　さがしてるの？", "en": "Looking for the birds that ran off?" },
     { "jp": "まちの　ししょうに　きいてみて。", "en": "Ask my master back in town first." }
    ]
   },
   "teaching": {
    "pages": [
-    { "jp": "とりは　おくびょうでね。", "en": "The birds are timid, you see." },
-    { "jp": "まえから　いくと　にげちゃう。", "en": "Go at them head-on and they'll bolt." },
-    { "jp": "うしろから　そっと　ちかづくんだ。", "en": "Approach gently, from behind." },
+    { "jp": "鳥（とり）は　おくびょうでね。", "en": "The birds are timid, you see." },
+    { "jp": "前（まえ）から　行（い）くと　にげちゃう。", "en": "Go at them head-on and they'll bolt." },
+    { "jp": "後（うし）ろから　そっと　ちかづくんだ。", "en": "Approach gently, from behind." },
     { "jp": "そうすれば、ここまで　つれてこられる。", "en": "Do that and you can lead them back here." }
    ],
    "effects": [
@@ -44,16 +44,16 @@
   },
   "guiding": {
    "pages": [
-    { "jp": "とりは　2わ　いる。", "en": "There are two birds." },
-    { "jp": "1わは　ひがし、もう1わは　その　おくだ。", "en": "One's to the east, the other deeper in." },
-    { "jp": "うしろから　そっとね。まってるよ。", "en": "Gently, from behind. I'll be waiting." }
+    { "jp": "鳥（とり）は　2羽（わ）　いる。", "en": "There are two birds." },
+    { "jp": "1羽（わ）は　ひがし、もう1羽（わ）は　その　おくだ。", "en": "One's to the east, the other deeper in." },
+    { "jp": "後（うし）ろから　そっとね。まってるよ。", "en": "Gently, from behind. I'll be waiting." }
    ]
   },
   "confirm": {
    "pages": [
-    { "jp": "2わとも　もどってきた！", "en": "Both birds are back!" },
+    { "jp": "2羽（わ）とも　もどってきた！", "en": "Both birds are back!" },
     { "jp": "きみは　すじが　いいね。", "en": "You've got a real knack for this." },
-    { "jp": "まちの　ししょうに　しらせよう。", "en": "Let's go tell my master in town." }
+    { "jp": "まちの　ししょうに　知（し）らせよう。", "en": "Let's go tell my master in town." }
    ],
    "effects": [
     { "type": "advance_quest", "quest_id": "escaped_companions_errand", "step_id": "birds_returned" }
