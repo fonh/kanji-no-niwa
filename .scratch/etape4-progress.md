@@ -41,6 +41,11 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-31 (3/3 fichiers vérifiés, 0
+  modification).** Tous les candidats (べんり/わたして) hors studiedSet à
+  ce stade très précoce (80 kanji) — aucune amélioration sûre possible,
+  confirmé par `lint-kanji-density.py`. Reste dans le Tier 5 : route-30
+  (6), cherrygrove-city (5), route-29 (2), new-bark-town (6).
 - **2026-07-24 — Phase 2, violet-city (11/11 fichiers) re-kanjifié.** Kanji
   ajoutés : 後/前/木/鳥/先/通/力. **Bonus opportuniste** : l'audit a trouvé
   un usage pré-existant (hors session, confirmé via `git log -p`) de 塔

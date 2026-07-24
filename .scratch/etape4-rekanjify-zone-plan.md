@@ -181,7 +181,7 @@ dernier, viser la couverture plutôt que la densité par fichier.
 | route-32 | 140 | 14 | 3 | ✅ fait 2026-07-24. 役に立つ/力/後 ajoutés. 3 fichiers restent à 0%, vérifiés sans amélioration sûre. |
 | sprout-tower | 130 | 3 | 3 | ✅ vérifié 2026-07-24. 0 conversion possible (登/道/照 tous hors studiedSet, studiedSet trop pauvre à ce point) — les 3 fichiers restent tels quels, aucune modification. |
 | violet-city | 100 | 11 | 4 | ✅ fait 2026-07-24. 後/前/木/鳥/先/通/力 ajoutés. Bonus : corrige un usage pré-existant (hors session) de 塔 hors studiedSet (glasses_man) → revert kana. 4 fichiers restent à 0%, vérifiés sans amélioration sûre. |
-| route-31 | 80 | 3 |
+| route-31 | 80 | 3 | 1 | ✅ vérifié 2026-07-24. 0 conversion possible (便/利/渡 tous hors studiedSet) — aucune modification. |
 | route-30 | 60 | 6 |
 | cherrygrove-city | 50 | 5 |
 | route-29 | 30 | 2 |
