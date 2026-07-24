@@ -6,7 +6,7 @@
    "jp": "さいごの　めいれい",
    "en": "The Final Order"
   },
-  "jp_text": "だんいんの　みんなへ。ながい　あいだ、ごくろうだった。サカキさまは　もどらない。ゆめは　おわった。それぞれの　まちへ　かえり、それぞれの　いきかたを　さがして　ほしい。ぬすんだ　ものは　かえせ。あやまれる　ものには　あやまれ。それが　さいごの　めいれいだ。──アポロ",
+  "jp_text": "だんいんの　みんなへ。長（なが）い　間（あいだ）、ごくろうだった。サカキさまは　もどらない。ゆめは　おわった。それぞれの　まちへ　帰（かえ）り、それぞれの　生（い）き方（かた）を　さがして　ほしい。ぬすんだ　ものは　かえせ。あやまれる　ものには　あやまれ。それが　さいごの　めいれいだ。──アポロ",
   "en_text": "To all members: you have served long and well. Lord Giovanni is not coming back. The dream is over. Return to your towns and find your own ways to live. Return what was stolen. Apologize where apology is owed. That is my final order. — Archer",
   "audio_ref": null,
   "level": "N2",
@@ -16,7 +16,7 @@
   "npc_ref": null,
   "found_object_ref": "farewell_note_ice_path",
   "event_ref": null,
-  "length_chars": 133,
+  "length_chars": 128,
   "questions": [
    {
     "type": "idee_generale",
@@ -71,8 +71,8 @@
     ],
     "correct_index": 3,
     "answer_span": {
-     "start": 84,
-     "end": 112
+     "start": 99,
+     "end": 127
     }
    },
    {

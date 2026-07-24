@@ -6,7 +6,7 @@
    "jp": "滝（たき）を　のぼる　もの",
    "en": "That Which Climbs the Waterfall"
   },
-  "jp_text": "滝（たき）は　うえから　したへ　おちる　もの。だれもが　そう　おもって　います。けれど、さかなは　ちがいます。さかなは　滝（たき）を　のぼるのです。ながれに　さからうのではなく、ながれの　なかの　しずかな　みちを　みつけて。あなたも　その　みちを　みつけられたら、どんな　滝（たき）も　のぼれるでしょう。",
+  "jp_text": "滝（たき）は　上（うえ）から　下（した）へ　落（お）ちる　もの。だれもが　そう　おもって　います。けれど、魚（さかな）は　違（ちが）います。魚（さかな）は　滝（たき）を　のぼるのです。流（なが）れに　逆（さか）らうのではなく、流（なが）れの　中（なか）の　しずかな　道（みち）を　見（み）つけて。あなたも　その　道（みち）を　見（み）つけられたら、どんな　滝（たき）も　のぼれるでしょう。",
   "en_text": "A waterfall falls from high to low — everyone believes so. But fish are different. Fish climb the waterfall. Not by fighting the current, but by finding the quiet path within it. If you too can find that path, you will climb any waterfall.",
   "audio_ref": null,
   "level": "N2",
@@ -16,7 +16,7 @@
   "npc_ref": null,
   "found_object_ref": "cs_taki_pedestal_ice_path",
   "event_ref": "cs_taki_ice_path",
-  "length_chars": 152,
+  "length_chars": 127,
   "questions": [
    {
     "type": "idee_generale",
@@ -71,8 +71,8 @@
     ],
     "correct_index": 2,
     "answer_span": {
-     "start": 89,
-     "end": 111
+     "start": 113,
+     "end": 147
     }
    },
    {
@@ -129,7 +129,7 @@
     "correct_index": 1,
     "answer_span": {
      "start": 0,
-     "end": 22
+     "end": 31
     }
    }
   ]

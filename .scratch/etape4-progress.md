@@ -35,6 +35,13 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, suite (2 textes ice-path re-kanjifiés)** :
+  `content/texts/ice-path/cs_taki.json` (滝を上る話 — 上/下/落/魚/違/流/逆/中/道/見
+  ajoutés avec lecture inline, ex. 登/思/静/付 restent kana car hors studiedSet) et
+  `content/texts/ice-path/rocket_farewell_note.json` (lettre d'adieu d'Archer —
+  長/間/帰/生/方 ajoutés ; めいれい/さいご/かえせ/あやまれる restent kana, leurs kanji
+  — 令/最/返/謝 — hors studiedSet). `answer_span` et `length_chars` recalculés
+  programmatiquement pour les deux. 5 linters verts.
 - **2026-07-24 — Phase 2, lancement (re-kanjification : règle + outillage +
   1er texte)** : ajouté à `content-writing-guide.md` § 3bis la règle du plancher de
   kanji connus (≥15-20% des mots kanjifiables-connus effectivement en kanji). Outils
