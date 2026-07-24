@@ -41,6 +41,21 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, mahogany-town (23/23 fichiers) re-kanjifié en une
+  passe** — le plan prévoyait 2 sessions vu le volume (arc QG Rocket complet :
+  Lance/Ariana/Petrel-faux-Sakaki/Silver cameo/3 scientifiques/6 sbires/Pryce/
+  vendeurs/skieurs), fait en une seule grâce à la méthode `cumulative_start`
+  déjà rodée. Kanji ajoutés : 私/二人/行/止/力/先/道/食/通/知/湖/何/金/一/二/口/俺/言/
+  先代/手先/目/時/年/生/冬/長/後/気/前. Notable : めいじん（名人）, kanjifié à
+  lake-of-rage, reste hors studiedSet ici (名 non étudié à ce point précis du
+  curriculum) — confirmation supplémentaire que l'ordre `cumulative_start` ne
+  suit pas l'ordre narratif. **8 fichiers restent à 0% densité** (でんぱ/そうしんき/
+  研究員/地下/頭/戦う/命 etc., chaque mot candidat a un kanji hors studiedSet),
+  vérifiés un par un, aucune amélioration sûre. Audit systématique
+  (`cumulative_start`) : CLEAN du premier coup, 0 correctif nécessaire. 5
+  linters verts (536 fichiers, mêmes 3 WARN attendus, 0 FAIL). Densité globale
+  228→215 fichiers sous le plancher. Reste cianwood-city (10 fichiers) pour
+  clore le Tier 3 (whirl-islands déjà clos, 0 dialogue).
 - **2026-07-24 — Phase 2, route-43 + mt-mortar + route-47-48-cliff-cave +
   safari-zone (16/16 fichiers) re-kanjifié**, méthode `cumulative_start` toujours
   correcte. Kanji ajoutés : 湖/行/知/人/底/道/円/払/話/気/通/何/山/心/修行/前/俺/広/先/

@@ -11,11 +11,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "よく　きたな。わたしが　ロケットだんの　ボス、サカキだ！",
+     "jp": "よく　きたな。私（わたし）が　ロケットだんの　ボス、サカキだ！",
      "en": "You've come far. I am Giovanni, boss of Team Rocket!"
     },
     {
-     "jp": "…なに、その　うたがいの　め は。",
+     "jp": "…なに、その　うたがいの　目（め）は。",
      "en": "...What's with that doubtful look?"
     },
     {
@@ -27,11 +27,11 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ばれたか。わたしは　かんぶの　ラムボス、へんそうの　めいじんさ。",
+     "jp": "ばれたか。私（わたし）は　かんぶの　ラムボス、へんそうの　めいじんさ。",
      "en": "So you saw through it. I'm Executive Petrel, master of disguise."
     },
     {
-     "jp": "ほんものの　サカキさまは　いつか　もどられる。その　ときが　たのしみだ。",
+     "jp": "ほんものの　サカキさまは　いつか　もどられる。その　時（とき）が　たのしみだ。",
      "en": "The real Giovanni will return one day. I look forward to it."
     }
    ],

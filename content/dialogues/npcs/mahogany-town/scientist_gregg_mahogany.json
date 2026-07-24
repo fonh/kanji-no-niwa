@@ -31,11 +31,11 @@
      "en": "You're not touching this PC. It's wired to the alarm system."
     },
     {
-     "jp": "…って、なんで　それを　いっちゃったんだ、わたしは！",
+     "jp": "…って、何（なん）で　それを　言（い）っちゃったんだ、私（わたし）は！",
      "en": "...Wait, why did I just tell you that!?"
     },
     {
-     "jp": "あーあ。とめかたまで　がめんに　でてるし。もう　どうにでも　なれ。",
+     "jp": "あーあ。止（と）めかたまで　がめんに　でてるし。もう　どうにでも　なれ。",
      "en": "Ugh. The shutdown screen's right there too. Fine, whatever happens happens."
     }
    ],
@@ -50,7 +50,7 @@
   "resigned": {
    "pages": [
     {
-     "jp": "けいほうは　きれた。わたしは　しらん。かがくに　きこくは　ないんだ。",
+     "jp": "けいほうは　きれた。私（わたし）は　しらん。かがくに　きこくは　ないんだ。",
      "en": "The alarm's off. Not my problem. Science has no homeland."
     }
    ]

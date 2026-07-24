@@ -17,7 +17,7 @@
   "welcome": {
    "pages": [
     {
-     "jp": "Mr.ポケモンって　はかせを　しってるか？",
+     "jp": "Mr.ポケモンって　はかせを　知（し）ってるか？",
      "en": "Know that researcher, Mr. Pokémon?"
     },
     {
@@ -25,7 +25,7 @@
      "en": "He's hunting for a red scale. Even so, he can't find one, apparently."
     },
     {
-     "jp": "みずうみに　いけば　なにか　わかるかもな。",
+     "jp": "湖（みずうみ）に　行（い）けば　何（なに）か　わかるかもな。",
      "en": "Maybe the lake holds the answer."
     }
    ]

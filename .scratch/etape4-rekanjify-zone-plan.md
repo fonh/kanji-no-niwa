@@ -119,7 +119,7 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 | route-44 | 570 | 7 | 0 | ✅ fait 2026-07-24. |
 | lake-of-rage | 565 | 10 | 0 | ✅ fait 2026-07-24. |
 | route-43 | 560 | 7 | 0 | ✅ fait 2026-07-24. |
-| mahogany-town | 545 | 23 | 22 | Gros volume (arc QG Rocket) — prévoir 2 sessions. |
+| mahogany-town | 545 | 23 | 8 | ✅ fait 2026-07-24. Arc QG Rocket complet — traité en une passe malgré le volume. 8 fichiers restent à 0% (mots dont chaque kanji candidat est hors studiedSet, ex. でんぱ/そうしんき/研究員/地下/頭/戦う), vérifiés sans amélioration sûre possible. |
 | mt-mortar | 535 | 4 | 1 | ✅ fait 2026-07-24. 1 fichier (super_nerd_hugh) reste à 0% : ses 4 mots (鉱石/研究/戻る/しらべて) ont un kanji hors studiedSet chacun, aucune amélioration sûre possible. |
 | route-47-48-cliff-cave | 520 | 4 | 0 | ✅ fait 2026-07-24. |
 | safari-zone | 520 | 1 | 0 | ✅ fait 2026-07-24. |

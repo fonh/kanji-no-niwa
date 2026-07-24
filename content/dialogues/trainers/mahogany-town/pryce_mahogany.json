@@ -15,15 +15,15 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "わしは　ヤナギ。50ねん、こおりと　ともに　いきて　きた。",
+     "jp": "わしは　ヤナギ。50年（ねん）、こおりと　ともに　生（い）きて　きた。",
      "en": "I am Pryce. Fifty years I have lived alongside the ice."
     },
     {
-     "jp": "こおりは　しずかで、つめたく、そして　なによりも　かたい。",
+     "jp": "こおりは　しずかで、つめたく、そして　何（なに）よりも　かたい。",
      "en": "Ice is quiet, cold — and above all, hard."
     },
     {
-     "jp": "わかい　ちから、この　ふゆの　かべを　こえて　みせよ！",
+     "jp": "わかい　力（ちから）、この　冬（ふゆ）の　かべを　こえて　みせよ！",
      "en": "Young power — show me you can cross this wall of winter!"
     }
    ]
@@ -35,11 +35,11 @@
      "en": "...Ha ha ha! Splendid, splendid."
     },
     {
-     "jp": "ながい　ふゆの　あとには、はるが　くる。わしの　まけじゃ。",
+     "jp": "長（なが）い　冬（ふゆ）の　後（あと）には、はるが　くる。わしの　まけじゃ。",
      "en": "After the long winter comes spring. I am beaten."
     },
     {
-     "jp": "グレイシャーバッジと　これを　もって　いきなさい。",
+     "jp": "グレイシャーバッジと　これを　もって　行（い）きなさい。",
      "en": "Take the Glacier Badge, and this as well."
     }
    ],

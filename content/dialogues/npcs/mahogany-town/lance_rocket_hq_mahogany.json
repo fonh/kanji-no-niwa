@@ -31,11 +31,11 @@
      "en": "You came. The real work starts here."
     },
     {
-     "jp": "きみの　なかまたちは　わたしが　いやして　おいた。",
+     "jp": "きみの　なかまたちは　私（わたし）が　いやして　おいた。",
      "en": "I've healed your team for you."
     },
     {
-     "jp": "そうしんきの　へやで　あおう。ふたりで　いくぞ。",
+     "jp": "そうしんきの　へやで　あおう。二人（ふたり）で　行（い）くぞ。",
      "en": "Meet me at the transmitter room. We go in together."
     }
    ]
@@ -43,11 +43,11 @@
   "give_whirl": {
    "pages": [
     {
-     "jp": "やったな。そうしんきは　とまった。",
+     "jp": "やったな。そうしんきは　止（と）まった。",
      "en": "We did it. The transmitter is dead."
     },
     {
-     "jp": "きみの　ちからは　ほんものだ。これを　うけとって　ほしい。",
+     "jp": "きみの　力（ちから）は　ほんものだ。これを　うけとって　ほしい。",
      "en": "Your strength is the real thing. I want you to have this."
     },
     {

@@ -14,7 +14,7 @@
      "en": "Elder Pryce's Gym is a world of ice."
     },
     {
-     "jp": "すべらない　ように　きを　つけなさい！",
+     "jp": "すべらない　ように　気（き）を　つけなさい！",
      "en": "Mind you don't slip!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "わたしが　すべっちゃった。",
+     "jp": "私（わたし）が　すべっちゃった。",
      "en": "I'm the one who slipped."
     }
    ]

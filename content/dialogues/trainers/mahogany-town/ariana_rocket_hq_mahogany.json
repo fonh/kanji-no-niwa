@@ -11,7 +11,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "あら、マントの　おとこと　こどもが　ふたりで　おでかけ？",
+     "jp": "あら、マントの　おとこと　こどもが　二人（ふたり）で　おでかけ？",
      "en": "My my — the caped man and a child, out for a stroll?"
     },
     {
@@ -19,7 +19,7 @@
      "en": "This transmitter is the keystone of Team Rocket's revival."
     },
     {
-     "jp": "ふたり　まとめて　かたづけて　あげる！",
+     "jp": "二人（ふたり）　まとめて　かたづけて　あげる！",
      "en": "I'll deal with you both at once!"
     }
    ]
@@ -27,7 +27,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "この　わたしが…　まけるなんて…。",
+     "jp": "この　私（わたし）が…　まけるなんて…。",
      "en": "That I... could lose..."
     },
     {

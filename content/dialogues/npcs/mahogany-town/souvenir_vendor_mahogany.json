@@ -31,7 +31,7 @@
      "en": "Welcome... This is just an ordinary souvenir shop."
     },
     {
-     "jp": "ちかから　おとが　する？　きの　せいだろ。それが　なにか？",
+     "jp": "ちかから　おとが　する？　気（き）の　せいだろ。それが　何（なに）か？",
      "en": "Noises from the basement? Your imagination. What of it?"
     }
    ]
@@ -39,11 +39,11 @@
   "replaced": {
    "pages": [
     {
-     "jp": "せんだいの　てんしゅは　ロケットだんの　てさきだったとはねえ。",
+     "jp": "先代（せんだい）の　てんしゅは　ロケットだんの　手先（てさき）だったとはねえ。",
      "en": "To think the last keeper was a Rocket agent."
     },
     {
-     "jp": "いまは　わたしが　ほんものの　みやげを　うって　いますよ。",
+     "jp": "いまは　私（わたし）が　ほんものの　みやげを　うって　いますよ。",
      "en": "Now I sell real souvenirs here."
     }
    ]

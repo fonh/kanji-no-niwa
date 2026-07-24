@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ボスの　へやには　いかせない！",
+     "jp": "ボスの　へやには　行（い）かせない！",
      "en": "You'll never reach the boss's room!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "あいことばは　ぜったい　いわないからな。",
+     "jp": "あいことばは　ぜったい　言（い）わないからな。",
      "en": "I'll never tell you the password."
     }
    ]
