@@ -7,7 +7,7 @@
  "dialogue_states": {
   "battle_intro": {
    "pages": [
-    { "jp": "ここから　さきは　とおさないよ。", "en": "I won't let you past here." }
+    { "jp": "ここから　先（さき）は　通（とお）さないよ。", "en": "I won't let you past here." }
    ]
   },
   "post_battle": {

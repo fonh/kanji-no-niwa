@@ -10,7 +10,7 @@
    "pages": [
     { "jp": "ようこそ、わたしの　ジムへ。", "en": "Welcome to my Gym." },
     { "jp": "わたしは　とりつかいの　ハヤト。", "en": "I am Falkner, the bird trainer." },
-    { "jp": "きみの　ちからを　みせて　もらおう。", "en": "Show me your strength." }
+    { "jp": "きみの　力（ちから）を　みせて　もらおう。", "en": "Show me your strength." }
    ]
   },
   "post_battle": {

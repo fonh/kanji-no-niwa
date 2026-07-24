@@ -15,7 +15,7 @@
   "blocking": {
    "pages": [
     { "jp": "まって。", "en": "Wait." },
-    { "jp": "まず、あの　塔（とう）を　みて　きて。", "en": "First, go see that tower." }
+    { "jp": "まず、あの　とうを　みて　きて。", "en": "First, go see that tower." }
    ]
   },
   "cleared": {

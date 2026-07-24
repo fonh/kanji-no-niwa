@@ -11,7 +11,7 @@
   "greeting": {
    "pages": [
     { "jp": "きいて！　きいて！", "en": "Listen! Listen!" },
-    { "jp": "きが　うごいたんだ！　ほんとうだよ！", "en": "A tree moved! It's true!" },
+    { "jp": "木（き）が　うごいたんだ！　ほんとうだよ！", "en": "A tree moved! It's true!" },
     { "jp": "だれも　しんじて　くれない…", "en": "Nobody believes me..." }
    ]
   }

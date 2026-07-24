@@ -7,7 +7,7 @@
  "dialogue_states": {
   "battle_intro": {
    "pages": [
-    { "jp": "とりを　あいするなら、まず　おれに　かて。", "en": "If you love birds, beat me first." }
+    { "jp": "鳥（とり）を　あいするなら、まず　おれに　かて。", "en": "If you love birds, beat me first." }
    ]
   },
   "post_battle": {

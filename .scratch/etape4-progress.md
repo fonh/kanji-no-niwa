@@ -41,6 +41,16 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, violet-city (11/11 fichiers) re-kanjifié.** Kanji
+  ajoutés : 後/前/木/鳥/先/通/力. **Bonus opportuniste** : l'audit a trouvé
+  un usage pré-existant (hors session, confirmé via `git log -p`) de 塔
+  hors studiedSet dans `glasses_man_violet_city.json` (「あの　塔（とう）を」)
+  → reverti en kana. Règle tout-ou-rien confirmée sur de nombreux candidats
+  hors studiedSet à ce stade très précoce (がっこう/へや/だいじに/しんじて/
+  ともだち/あいする etc.). 4 fichiers restent à 0% densité, vérifiés sans
+  amélioration sûre possible. Audit `cumulative_start` : CLEAN après le
+  correctif. 7 linters verts. Reste dans le Tier 5 : route-31 (3),
+  route-30 (6), cherrygrove-city (5), route-29 (2), new-bark-town (6).
 - **2026-07-24 — Phase 2, sprout-tower (3/3 fichiers vérifiés, 0
   modification).** Tous les candidats (のぼって/道/てらして) hors
   studiedSet à ce point très précoce du curriculum (130 kanji) — aucune
