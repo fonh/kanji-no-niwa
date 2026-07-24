@@ -17,15 +17,15 @@
   "welcome": {
    "pages": [
     {
-     "jp": "みずうみに　いくのかい？",
+     "jp": "湖（みずうみ）に　行（い）くのかい？",
      "en": "Headed to the lake?"
     },
     {
-     "jp": "あかい　うろこの　うわさ、しってる？　ひろった　ひとは　いない。",
+     "jp": "あかい　うろこの　うわさ、知（し）ってる？　ひろった　人（ひと）は　いない。",
      "en": "Heard the red scale rumors? No one's ever found one."
     },
     {
-     "jp": "ということは、みずうみの　そこに　まだ　ねむってるって　ことさ。",
+     "jp": "ということは、湖（みずうみ）の　底（そこ）に　まだ　ねむってるって　ことさ。",
      "en": "Which means it must still be sleeping at the bottom of the lake."
     }
    ]

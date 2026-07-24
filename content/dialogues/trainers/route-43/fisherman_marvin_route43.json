@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "みずうみの　さかなが　ぜんぜん　つれなく　なった。",
+     "jp": "湖（みずうみ）の　魚（さかな）が　ぜんぜん　つれなく　なった。",
      "en": "The lake fish have stopped biting entirely."
     },
     {
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "もやもやは　はれたが、なぞは　のこる…。",
+     "jp": "もやもやは　はれたが、なぞは　残（のこ）る…。",
      "en": "The gloom's cleared, but the mystery remains..."
     }
    ]

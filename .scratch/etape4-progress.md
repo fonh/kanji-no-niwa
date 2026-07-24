@@ -41,6 +41,16 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-43 + mt-mortar + route-47-48-cliff-cave +
+  safari-zone (16/16 fichiers) re-kanjifié**, méthode `cumulative_start` toujours
+  correcte. Kanji ajoutés : 湖/行/知/人/底/道/円/払/話/気/通/何/山/心/修行/前/俺/広/先/
+  二人/愛/毎日/目/日. 1 fichier (super_nerd_hugh_mt_mortar) reste à 0% : ses 4 mots
+  (鉱石/研究/戻る/しらべて) ont un kanji hors studiedSet chacun, vérifié sans
+  amélioration sûre possible. Audit `cumulative_start` + 5 linters : tout vert
+  (536 fichiers, mêmes 2-3 WARN attendus, 0 FAIL). Densité globale 243→228
+  fichiers sous le plancher. **Reste dans le Tier 3** : mahogany-town (23
+  fichiers, gros volume prévu), cianwood-city (10 fichiers) ; whirl-islands
+  déjà clos (0 dialogue).
 - **2026-07-24 — Phase 2, route-44 + lake-of-rage (17/17 fichiers) re-kanjifié**,
   méthode `cumulative_start` correcte utilisée dès le départ (script corrigé).
   Kanji ajoutés : 道/険/行/山/風/池/魚/水/前/俺/倍/心/手前/名人/私/湖/力/貸/光/流/先/円/払/

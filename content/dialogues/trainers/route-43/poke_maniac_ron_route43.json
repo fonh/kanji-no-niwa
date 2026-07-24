@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "みずうみへの　ちかみちは　この　みちだけ。",
+     "jp": "湖（みずうみ）への　ちかみちは　この　道（みち）だけ。",
      "en": "This is the only shortcut to the lake."
     },
     {
-     "jp": "とおりたければ　しょうぶだ！",
+     "jp": "通（とお）りたければ　しょうぶだ！",
      "en": "Battle me if you want through!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "みずうみで　なにが　まってるか、みて　くると　いい。",
+     "jp": "湖（みずうみ）で　何（なに）が　まってるか、みて　くると　いい。",
      "en": "Go see what awaits at the lake."
     }
    ]
