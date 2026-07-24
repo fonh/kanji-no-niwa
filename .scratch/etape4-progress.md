@@ -41,6 +41,13 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, olivine-city (19/19 fichiers) re-kanjifié.** Kanji
+  ajoutés : 私/毎日/病気/寝/鳥/行/顔/本気/前/先/本当/心/人/長/方/一流. 6 fichiers
+  restent à 0% densité, vérifiés sans amélioration sûre. Audit `cumulative_start` :
+  CLEAN. 5 linters verts (536 fichiers, mêmes 3 WARN attendus, 0 FAIL). Densité
+  globale 194→182 fichiers sous le plancher. Reste dans le Tier 4 : route-39 (10),
+  route-38 (5), burned-tower (7), ecruteak-city (23), route-37 (5), route-36 (4),
+  national-park (9), route-35 (9).
 - **2026-07-24 — Phase 2, route-40 + route-41 (17/17 fichiers) re-kanjifié —
   1ʳᵉ zone du Tier 4.** Kanji ajoutés : 私（わたし/私たち, cohérent sur les 10
   fichiers nageurs de route-41 qui partagent le même battle_intro）/知/作/言/考/
