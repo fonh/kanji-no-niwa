@@ -10,7 +10,7 @@
  "dialogue_states": {
   "blocking": {
    "pages": [
-    { "jp": "ここから　さきは　だめだ。", "en": "You can't go past here." },
+    { "jp": "ここから　先（さき）は　だめだ。", "en": "You can't go past here." },
     { "jp": "われわれの　しごとちゅうだ。", "en": "We're working." }
    ]
   }

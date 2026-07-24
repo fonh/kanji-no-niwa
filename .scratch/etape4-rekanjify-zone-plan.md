@@ -174,7 +174,7 @@ dernier, viser la couverture plutôt que la densité par fichier.
 | route-34 | 240 | 10 | 3 | ✅ fait 2026-07-24. 3 fichiers (ace_trainer_irene/kate/pokefan_brandon) restent à 0%, vérifiés sans amélioration sûre possible. |
 | **ilex-forest** | 220 | 3 | ✅ fait 2026-07-24 (hors ordre, cf. auto-évaluation — gain réel mais aurait dû venir après le Tier 4) |
 | slowpoke-well | 210 | 5 | 3 | ✅ fait 2026-07-24. 3 fichiers (executive_proton/rocket_grunt1/rocket_grunt_f) restent à 0%, vérifiés sans amélioration sûre possible. |
-| azalea-town | 195 | 10 |
+| azalea-town | 195 | 10 | 3 | ✅ fait 2026-07-24. 3 fichiers (mart_vendor/bug_catcher_benny/josh) restent à 0%, vérifiés sans amélioration sûre possible. |
 | union-cave | 180 | 12 |
 | route-33 | 180 | 1 |
 | ruins-of-alph | 160 | 3 |

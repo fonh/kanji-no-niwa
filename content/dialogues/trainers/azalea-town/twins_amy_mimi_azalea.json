@@ -4,7 +4,7 @@
  "zone_id": "azalea-town",
  "jlpt_level": "N4",
  "dialogue_states": {
-  "battle_intro": { "pages": [{ "jp": "ふたりで　いっしょに　バトルするよ！", "en": "We battle together!" }] },
-  "post_battle": { "pages": [{ "jp": "ふたりとも　まいったね。", "en": "We both give up." }] }
+  "battle_intro": { "pages": [{ "jp": "二人（ふたり）で　いっしょに　バトルするよ！", "en": "We battle together!" }] },
+  "post_battle": { "pages": [{ "jp": "二人（ふたり）とも　まいったね。", "en": "We both give up." }] }
  }
 }

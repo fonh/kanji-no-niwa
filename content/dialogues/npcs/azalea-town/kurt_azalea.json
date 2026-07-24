@@ -10,8 +10,8 @@
  "dialogue_states": {
   "intro": {
    "pages": [
-    { "jp": "アプリコットを　もってきたら、ボールを　つくるよ。", "en": "Bring me apricorns and I'll make you a Ball." },
-    { "jp": "いちにち　まってね。", "en": "It takes a day." }
+    { "jp": "アプリコットを　もってきたら、ボールを　作（つく）るよ。", "en": "Bring me apricorns and I'll make you a Ball." },
+    { "jp": "一日（いちにち）　まってね。", "en": "It takes a day." }
    ]
   }
  }

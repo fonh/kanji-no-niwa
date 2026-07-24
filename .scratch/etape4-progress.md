@@ -41,6 +41,20 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, azalea-town (10/10 fichiers) re-kanjifié.** Kanji
+  ajoutés : 鳥/入り口/作/一日/先/通/人/実力/二人. Deux kanji « hors
+  studiedSet » confirmés comme des exceptions documentées, pas des bugs :
+  `charcoal_man_azalea.json` (切, le CS-kanji lui-même remis à cet instant
+  précis de la scène) et `silver_apparition2_azalea.json` (強, kanji
+  signature de Silver documenté dans le fichier — hors curriculum normal
+  par design). Règle tout-ou-rien confirmée sur でし/もり/ほんとうに/きみ/
+  かんしゃ etc. 3 fichiers restent à 0% densité, vérifiés sans amélioration
+  sûre possible. Audit `cumulative_start` : CLEAN (hors les 2 exceptions
+  documentées). 7 linters verts (536 fichiers dialogue, 480 fichiers état,
+  36 fichiers leçons, mêmes 3 WARN attendus, 0 FAIL). Reste dans le Tier 5 :
+  union-cave (12), route-33 (1), ruins-of-alph (3), route-32 (14),
+  sprout-tower (3), violet-city (11), route-31 (3), route-30 (6),
+  cherrygrove-city (5), route-29 (2), new-bark-town (6).
 - **2026-07-24 — Phase 2, slowpoke-well (5/5 fichiers) re-kanjifié.** Kanji
   ajoutés : 先/通. Règle tout-ou-rien confirmée sur de nombreux candidats
   hors studiedSet à ce stade précoce (こし/めいれい/うごいて/しごとば/こども

@@ -5,7 +5,7 @@
  "zone_id": "azalea-town",
  "jlpt_level": "N4",
  "dialogue_states": {
-  "battle_intro": { "pages": [{ "jp": "むしの　みちだ！　とおさないぞ！", "en": "This is the path of bugs! I won't let you through!" }] },
-  "post_battle": { "pages": [{ "jp": "つぎの　ひとが　まってるよ。", "en": "The next one is waiting." }] }
+  "battle_intro": { "pages": [{ "jp": "むしの　みちだ！　通（とお）さないぞ！", "en": "This is the path of bugs! I won't let you through!" }] },
+  "post_battle": { "pages": [{ "jp": "つぎの　人（ひと）が　まってるよ。", "en": "The next one is waiting." }] }
  }
 }

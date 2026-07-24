@@ -9,7 +9,7 @@
   "battle_intro": {
    "pages": [
     { "jp": "むしの　けんきゅうを　してるんだ。", "en": "I research bugs." },
-    { "jp": "きみの　じつりょくを　みせて　もらうよ。", "en": "Show me your real strength." }
+    { "jp": "きみの　実力（じつりょく）を　みせて　もらうよ。", "en": "Show me your real strength." }
    ]
   },
   "post_battle": {

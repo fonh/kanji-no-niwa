@@ -19,9 +19,9 @@
   "waiting": {
    "pages": [
     { "jp": "こまってるんだ。", "en": "I'm in trouble." },
-    { "jp": "とりが　もりに　にげちゃって。", "en": "My birds ran off into the forest." },
+    { "jp": "鳥（とり）が　もりに　にげちゃって。", "en": "My birds ran off into the forest." },
     { "jp": "みつけて　くれたら、おれいするよ。", "en": "If you find them, I'll thank you properly." },
-    { "jp": "もりの　いりぐちに　でしが　いる。ききなさい。", "en": "My apprentice is at the forest entrance. Ask him." }
+    { "jp": "もりの　入（い）り口（ぐち）に　でしが　いる。ききなさい。", "en": "My apprentice is at the forest entrance. Ask him." }
    ],
    "effects": [
     { "type": "advance_quest", "quest_id": "escaped_companions_errand", "step_id": "briefed" }
@@ -29,7 +29,7 @@
   },
   "charbon": {
    "pages": [
-    { "jp": "おお、とりを　つれもどして　くれたのか！", "en": "Oh — you brought my birds back!" },
+    { "jp": "おお、鳥（とり）を　つれもどして　くれたのか！", "en": "Oh — you brought my birds back!" },
     { "jp": "ほんとうに　たすかったよ。ありがとう。", "en": "You really saved me. Thank you." },
     { "jp": "おれいに、これを　うけとって　ほしい。", "en": "As thanks, I'd like you to have this." },
     { "jp": "もりの　木（き）も　よく　切（き）れる、りっぱな　やいばだ。", "en": "A fine blade — it cuts even forest trees clean through." }
@@ -42,7 +42,7 @@
   },
   "after": {
    "pages": [
-    { "jp": "とりたちは　げんきだよ。", "en": "The birds are doing well." },
+    { "jp": "鳥（とり）たちは　げんきだよ。", "en": "The birds are doing well." },
     { "jp": "きみの　おかげだ。かんしゃしてる。", "en": "It's all thanks to you. I'm grateful." }
    ]
   }
