@@ -41,6 +41,11 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-33 (1/1 fichier) re-kanjifié.** Kanji
+  ajouté : 通. Audit `cumulative_start` : CLEAN. 7 linters verts, 0 WARN
+  densité restant sur la zone. Reste dans le Tier 5 : ruins-of-alph (3),
+  route-32 (14), sprout-tower (3), violet-city (11), route-31 (3),
+  route-30 (6), cherrygrove-city (5), route-29 (2), new-bark-town (6).
 - **2026-07-24 — Phase 2, union-cave (12/12 fichiers) re-kanjifié.** Kanji
   ajoutés : 通/長/火/山. Règle tout-ou-rien confirmée sur de nombreux
   candidats hors studiedSet (どうくつ/おく/れんしゅう/ほんき/いき/ほのお/

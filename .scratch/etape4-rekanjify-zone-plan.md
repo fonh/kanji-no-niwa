@@ -176,7 +176,7 @@ dernier, viser la couverture plutôt que la densité par fichier.
 | slowpoke-well | 210 | 5 | 3 | ✅ fait 2026-07-24. 3 fichiers (executive_proton/rocket_grunt1/rocket_grunt_f) restent à 0%, vérifiés sans amélioration sûre possible. |
 | azalea-town | 195 | 10 | 3 | ✅ fait 2026-07-24. 3 fichiers (mart_vendor/bug_catcher_benny/josh) restent à 0%, vérifiés sans amélioration sûre possible. |
 | union-cave | 180 | 12 | 5 | ✅ fait 2026-07-24. 5 fichiers restent à 0%, vérifiés sans amélioration sûre possible. |
-| route-33 | 180 | 1 |
+| route-33 | 180 | 1 | 0 | ✅ fait 2026-07-24. 通 ajouté. |
 | ruins-of-alph | 160 | 3 |
 | route-32 | 140 | 14 |
 | sprout-tower | 130 | 3 |
