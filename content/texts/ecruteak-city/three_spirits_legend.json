@@ -6,7 +6,7 @@
    "jp": "3つの　せいれいの　でんせつ",
    "en": "The Legend of the Three Spirits"
   },
-  "jp_text": "むかし、このまちにはふたつのとうがありました。あるよる、かみなりがおちて、にしのとうがやけました。とうにすんでいた3つのせいれいは、ひのなかでいのちをおとしました。それをみたにじいろのとりが、そらからおりて、3つのせいれいをよみがえらせたといいます。せいれいはいまも、やけたとうのちかでねむっているそうです。",
+  "jp_text": "むかし、このまちには二（ふた）つのとうがありました。ある夜（よる）、かみなりが落（お）ちて、西（にし）のとうがやけました。とうにすんでいた3つのせいれいは、火（ひ）のなかでいのちを落（お）としました。それをみたにじいろの鳥（とり）が、そらから降（お）りて、3つのせいれいをよみがえらせたといいます。せいれいはいまも、やけたとうのちかでねむっているそうです。",
   "en_text": "Long ago, this city had two towers. One night, lightning struck and the western tower burned. The three spirits living in the tower lost their lives in the fire. Seeing this, the rainbow bird came down from the sky and brought the three spirits back to life, they say. Even now, the spirits are said to sleep beneath the burned tower.",
   "audio_ref": null,
   "level": "N3",
@@ -16,7 +16,7 @@
   "npc_ref": null,
   "found_object_ref": "lore_book_ecruteak",
   "event_ref": null,
-  "length_chars": 154,
+  "length_chars": 150,
   "questions": [
    {
     "type": "idee_generale",
@@ -98,8 +98,8 @@
     ],
     "correct_index": 2,
     "answer_span": {
-     "start": 49,
-     "end": 81
+     "start": 61,
+     "end": 99
     }
    },
    {
@@ -128,8 +128,8 @@
     ],
     "correct_index": 0,
     "answer_span": {
-     "start": 87,
-     "end": 119
+     "start": 105,
+     "end": 143
     }
    },
    {

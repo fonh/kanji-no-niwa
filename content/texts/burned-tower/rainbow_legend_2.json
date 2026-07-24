@@ -6,7 +6,7 @@
    "jp": "にじいろの　とり（に）",
    "en": "The Rainbow Bird (II)"
   },
-  "jp_text": "はなしのつづきじゃ。とりがさったあと、人（ひと）びとはあたらしいかねをつくり、とうにかけました。「かねのねが　きれいにひびくとき、とりはかえってくる」と、いいつたえられています。だから、まいこたちはいまも、おどりとうたでかねのねをみがいているのです。",
+  "jp_text": "はなしのつづきじゃ。鳥（とり）がさったあと、人（ひと）びとはあたらしいかねを作（つく）り、とうに掛（か）けました。「かねのねが　きれいにひびくとき、鳥（とり）は帰（かえ）ってくる」と、言（い）い伝（つた）えられています。だから、舞子（まいこ）たちはいまも、おどりとうたでかねのねをみがいているのです。",
   "en_text": "The tale continues. After the bird departed, the people forged a new bell and hung it in the tower. It is said the bird will return when the bell's tone rings pure. That is why, even now, the kimono dancers polish that tone with dance and song.",
   "audio_ref": null,
   "level": "N3",
@@ -16,7 +16,7 @@
   "npc_ref": "storyteller_burned_tower",
   "found_object_ref": null,
   "event_ref": null,
-  "length_chars": 125,
+  "length_chars": 115,
   "questions": [
    {
     "type": "detail_factuel",
@@ -71,8 +71,8 @@
     ],
     "correct_index": 1,
     "answer_span": {
-     "start": 48,
-     "end": 88
+     "start": 57,
+     "end": 109
     }
    },
    {
@@ -101,8 +101,8 @@
     ],
     "correct_index": 1,
     "answer_span": {
-     "start": 93,
-     "end": 124
+     "start": 114,
+     "end": 149
     }
    }
   ]

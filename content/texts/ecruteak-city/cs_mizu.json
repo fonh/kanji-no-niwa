@@ -6,7 +6,7 @@
    "jp": "みずの　こころ",
    "en": "The Heart of Water"
   },
-  "jp_text": "水（みず）はかたちをもちません。うつわに入（はい）ればうつわのかたちになります。だから水（みず）はどこへでも行（い）けるのです。このかんじをまなんだ人（ひと）は、うみもかわもこわくありません。水（みず）のこころをもって、すすんでください。",
+  "jp_text": "水（みず）は形（かたち）をもちません。うつわに入（はい）ればうつわの形（かたち）になります。だから水（みず）はどこへでも行（い）けるのです。このかんじをまなんだ人（ひと）は、うみも川（かわ）もこわくありません。水（みず）の心（こころ）をもって、進（すす）んでください。",
   "en_text": "Water has no shape. Poured into a vessel, it takes the vessel's shape. That is why water can go anywhere. One who has learned this kanji fears neither sea nor river. Go forward with the heart of water.",
   "audio_ref": null,
   "level": "N3",
@@ -16,7 +16,7 @@
   "npc_ref": "gentleman_theater_ecruteak",
   "found_object_ref": null,
   "event_ref": "cs_mizu_ecruteak",
-  "length_chars": 119,
+  "length_chars": 88,
   "questions": [
    {
     "type": "idee_generale",
@@ -125,8 +125,8 @@
     ],
     "correct_index": 0,
     "answer_span": {
-     "start": 40,
-     "end": 63
+     "start": 46,
+     "end": 69
     }
    },
    {
@@ -155,8 +155,8 @@
     ],
     "correct_index": 2,
     "answer_span": {
-     "start": 64,
-     "end": 69
+     "start": 70,
+     "end": 75
     }
    }
   ]

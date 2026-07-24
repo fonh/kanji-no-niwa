@@ -35,6 +35,14 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, suite (burned-tower + les 3 textes d'ecruteak-city
+  re-kanjifiés)** : `rainbow_legend_2.json` (鳥/作/掛/帰/言/伝/舞子 ajoutés),
+  `cs_mizu.json` (形/川/心/進 ajoutés), `rainbow_legend_1.json` (年/羽/大/鳥/毎日/止/夜
+  ajoutés), `three_spirits_legend.json` (二/夜/落/西/火/鳥/降 ajoutés — いのちを落とし
+  et 落ちて réutilisent le même 落 pour cohérence). `answer_span`/`length_chars`
+  recalculés programmatiquement pour les 4. 5 linters verts. Reste 7 textes
+  (azalea-town, ilex-forest, slowpoke-well, route-36, sprout-tower, route-29,
+  new-bark-town ×2) avant la passe dialogues.
 - **2026-07-24 — Phase 2, suite (mahogany-town/cs_uzu, route-42/cs_chikara,
   cianwood-city/cs_tobu re-kanjifiés)** : `cs_uzu.json` (二/流/利用/上/進/沈 ajoutés,
   海/怒/始/事/分/怖/読/船/乗 restent kana), `cs_chikara.json` (動/入/言/心/一/業 ajoutés,

@@ -6,7 +6,7 @@
    "jp": "にじいろの　とり（いち）",
    "en": "The Rainbow Bird (I)"
   },
-  "jp_text": "150ねんまえ、そらいろのはねをもつおおきなとりが、まいにちとうのうえにとまっていました。まちの人（ひと）びとは、そのとりをまもりがみとしてあがめていました。しかし、とうがやけたよる、とりはどこかへとんでいってしまいました。それからだれも、そのすがたをみていません。",
+  "jp_text": "150年（ねん）まえ、そらいろの羽（はね）をもつ大（おお）きな鳥（とり）が、毎日（まいにち）とうのうえに止（と）まっていました。まちの人（ひと）びとは、その鳥（とり）をまもりがみとしてあがめていました。しかし、とうがやけた夜（よる）、鳥（とり）はどこかへとんでいってしまいました。それからだれも、そのすがたをみていません。",
   "en_text": "A hundred and fifty years ago, a great bird with sky-colored wings perched atop the tower every day. The townspeople revered it as a guardian deity. But the night the tower burned, the bird flew away somewhere. No one has seen it since.",
   "audio_ref": null,
   "level": "N3",
@@ -16,7 +16,7 @@
   "npc_ref": "storyteller_ecruteak",
   "found_object_ref": null,
   "event_ref": null,
-  "length_chars": 133,
+  "length_chars": 120,
   "questions": [
    {
     "type": "idee_generale",
@@ -98,8 +98,8 @@
     ],
     "correct_index": 0,
     "answer_span": {
-     "start": 45,
-     "end": 78
+     "start": 64,
+     "end": 100
     }
    }
   ]
