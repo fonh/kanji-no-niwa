@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "アサギの　みなとまで　もう　すこしだ。",
+     "jp": "アサギの　港（みなと）まで　もう　すこしだ。",
      "en": "Just a bit further to Olivine's harbor."
     },
     {
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "りくの　しょうぶは　にがてだ…。",
+     "jp": "陸（りく）の　しょうぶは　にがてだ…。",
      "en": "Battles on land aren't my thing..."
     }
    ]

@@ -14,7 +14,7 @@
      "en": "The sea breeze from Olivine feels nice, right?"
     },
     {
-     "jp": "かぜに　のって、しょうぶよ！",
+     "jp": "風（かぜ）に　のって、しょうぶよ！",
      "en": "Let's battle, riding this wind!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "かぜむきが　かわっちゃった。",
+     "jp": "かぜむきが　変（か）わっちゃった。",
      "en": "The wind's changed direction."
     }
    ]

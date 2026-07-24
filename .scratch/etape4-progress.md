@@ -41,6 +41,12 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-38 (5/5 fichiers) re-kanjifié.** Kanji ajoutés :
+  知/毎日/道/広/風/変/港/行/陸. Règle tout-ou-rien sur 海風（海False）, 風向き
+  （向False）, きゅうけい/べんきょう/きけん — tous vérifiés hors studiedSet, stays
+  kana. Audit `cumulative_start` relu caractère par caractère contre la sortie
+  brute cette fois (leçon de route-39) : CLEAN du premier coup. 7 linters verts.
+  Densité globale 172→167 fichiers sous le plancher.
 - **2026-07-24 — Phase 2, route-39 (10/10 fichiers) re-kanjifié.** Kanji ajoutés :
   方/作/知/牛/病気/甘/食/元気/私/行/子/本当/前/毎週/通/心/陸. **3ᵉ erreur trouvée par
   auto-vérification** (pas par le joueur cette fois, par la routine d'audit
