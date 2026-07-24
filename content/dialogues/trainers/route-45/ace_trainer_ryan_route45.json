@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "この　みちを　くだる　トレーナーは　みんな　つよい。",
+     "jp": "この　道（みち）を　下（くだ）る　トレーナーは　みんな　強（つよ）い。",
      "en": "Every trainer who takes this road is strong."
     },
     {
-     "jp": "きみは　どうかな？",
+     "jp": "君（きみ）は　どうかな？",
      "en": "Are you?"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "うわさ　いじょうだ。",
+     "jp": "うわさ　以上（いじょう）だ。",
      "en": "Beyond the rumors."
     }
    ]

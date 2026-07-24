@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "リーグに　いどむ　ものは、まず　おれを　こえて　いけ！",
+     "jp": "リーグに　挑（いど）む　者（もの）は、先（ま）ず　俺（おれ）を　こえて　行（い）け！",
      "en": "Challengers of the League go through me first!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "リーグでも　その　ちからを　だせよ。",
+     "jp": "リーグでも　その　力（ちから）を　出（だ）せよ。",
      "en": "Bring that strength to the League."
     }
    ]

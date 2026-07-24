@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "たきの　うえの　そらは　ひろいぞ！",
+     "jp": "たきの　上（うえ）の　そらは　広（ひろ）いぞ！",
      "en": "The sky above the falls is vast!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "そらの　ひろさに　まけない　つよさだ。",
+     "jp": "そらの　広（ひろ）さに　まけない　強（つよ）さだ。",
      "en": "Strength as vast as that sky."
     }
    ]

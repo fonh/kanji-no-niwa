@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "この　みちは　29ばんどうろに　つながってる。",
+     "jp": "この　道（みち）は　29ばんどうろに　つながってる。",
      "en": "This road connects to Route 29."
     },
     {
-     "jp": "なつかしいだろ？　しょうぶだ！",
+     "jp": "懐（なつ）かしいだろ？　しょうぶだ！",
      "en": "Nostalgic, eh? Battle!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "はじまりの　みちに　もどるんだな。",
+     "jp": "はじまりの　道（みち）に　もどるんだな。",
      "en": "Back to where it all began."
     }
    ]

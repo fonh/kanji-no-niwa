@@ -41,6 +41,22 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, Tier 2 entier (route-27/route-26/route-46/dark-cave/
+  route-45, 27/27 fichiers) re-kanjifié à la main — TIER 2 ENTIÈREMENT CLOS**
+  (dragons-den déjà fait plus tôt dans la session). Kanji notables : 受付/地方/西/北/
+  開/直/水辺/手伝/力/本物/風/広/強/兄弟/実家/毎週/基/具合/元気/対/旅人/心/十分/勝/安定感/
+  違/明/庭/一方通行/転/落/以上. Fil いばしょ/相棒/しんらい/ほうび : règle tout-ou-rien
+  confirmée encore (棒/信頼/褒 hors studiedSet), sauf「しんらいし合える」où 合 seul était
+  studied — repéré et corrigé après un 1er passage incomplet (lint-kanji-density avait
+  laissé tohjo_old_lady_route27.json à 8%, sous le plancher de 2 points ; un 2ᵉ regard
+  a trouvé 合える manqué). Un vrai 兄弟（きょうだい）remplace le faux ami 強大 du rapport
+  heuristique. **Sûreté structurelle** : `git diff` confirme que seul le champ `jp`
+  a changé sur les 27 fichiers. 5 linters verts (536 fichiers, mêmes 3 WARN attendus,
+  0 FAIL). Densité globale 297→271 fichiers sous le plancher. **Le Tier 2 (studiedSet
+  700-830, 6 zones) est maintenant intégralement re-kanjifié**, comme le Tier 1 avant
+  lui. Reste le Tier 3 (blackthorn-city/ice-path déjà fait/route-44/lake-of-rage/
+  route-43/mahogany-town/mt-mortar/route-47-48-cliff-cave/safari-zone/route-42 déjà
+  fait/cianwood-city/whirl-islands vide) puis les tiers 4-5.
 - **2026-07-24 — Phase 2, vermilion-city (38/38 fichiers) re-kanjifié à la main — TIER 1
   ENTIÈREMENT CLOS** : plus gros fichier-count après goldenrod-city, traité en session
   dédiée comme prévu par le plan. Kanji ajoutés notables : 船（ふね, omniprésent — bateau/

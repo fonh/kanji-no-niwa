@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "トージョーのたきを　こえて　きたのね。",
+     "jp": "トージョーのたきを　こえて　来（き）たのね。",
      "en": "So you've crossed the Tohjo Falls."
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "たきを　こえる　ちからは　ほんものね。",
+     "jp": "たきを　こえる　力（ちから）は　本物（ほんもの）ね。",
      "en": "The strength to cross those falls is real."
     }
    ]

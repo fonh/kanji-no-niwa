@@ -90,12 +90,12 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 
 | Zone | studiedSet | Fichiers | WARN |
 |---|---:|---:|---:|
-| route-27 | 800 | 8 | 8 |
-| route-26 | 760 | 8 | 8 |
-| route-46 | 760 | 3 | — |
-| dark-cave | 740 | 1 | — |
-| route-45 | 720 | 7 | — |
-| dragons-den | 660 | 6 | 0 | ✅ fait 2026-07-24 |
+| route-27 | 800 | 8 | 0 | ✅ fait 2026-07-24. |
+| route-26 | 760 | 8 | 0 | ✅ fait 2026-07-24. |
+| route-46 | 760 | 3 | 0 | ✅ fait 2026-07-24. |
+| dark-cave | 740 | 1 | 0 | ✅ fait 2026-07-24. |
+| route-45 | 720 | 7 | 0 | ✅ fait 2026-07-24. |
+| dragons-den | 660 | 6 | 0 | ✅ fait 2026-07-24. **TIER 2 ENTIÈREMENT CLOS.** |
 
 ### Tier 3 — studiedSet 500-660 (Ebènelle → Mékanos)
 

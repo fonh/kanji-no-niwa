@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "リーグへの　さいごの　ひとふんばり、てつだって　やるよ！",
+     "jp": "リーグへの　さいごの　ひとふんばり、手伝（てつだ）って　やるよ！",
      "en": "One last push to the League — let me help!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "じゅんびは　かんぺきだ。",
+     "jp": "準備（じゅんび）は　かんぺきだ。",
      "en": "You're fully prepared."
     }
    ]

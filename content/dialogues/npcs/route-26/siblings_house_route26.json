@@ -17,15 +17,15 @@
   "welcome": {
    "pages": [
     {
-     "jp": "ここは　「ようびきょうだい」の　いえ。7にん　きょうだいの　じっかよ。",
+     "jp": "ここは　「曜日（ようび）兄弟（きょうだい）」の　家（いえ）。7人（にん）　兄弟（きょうだい）の　実家（じっか）よ。",
      "en": "This is the Weekday Siblings' home — all seven of them."
     },
     {
-     "jp": "この　ちょうに　もとづいて、みんなの　いばしょが　わかるわ。",
+     "jp": "この　ちょうに　基（もと）づいて、みんなの　いばしょが　分（わ）かるわ。",
      "en": "This ledger tells you where each of them is."
     },
     {
-     "jp": "げつようは　モニカ、にちようは　サニー…って　ぐあいにね。",
+     "jp": "月曜（げつよう）は　モニカ、日曜（にちよう）は　サニー…って　具合（ぐあい）にね。",
      "en": "Monica on Mondays, Sunny on Sundays... and so on."
     }
    ]

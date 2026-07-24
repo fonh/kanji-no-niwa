@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "がけの　うえから　ずっと　みてたぞ！",
+     "jp": "がけの　上（うえ）から　ずっと　見（み）てたぞ！",
      "en": "I've been watching you from the cliff!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "みてた　とおりの　つよさだ。",
+     "jp": "見（み）てた　通（とお）りの　強（つよ）さだ。",
      "en": "As strong as you looked."
     }
    ]

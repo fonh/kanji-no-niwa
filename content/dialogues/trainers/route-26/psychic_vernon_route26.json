@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "こころの　つよさが　ないと、リーグでは　かてない。",
+     "jp": "心（こころ）の　強（つよ）さが　ないと、リーグでは　勝（か）てない。",
      "en": "Without strength of mind, you can't win at the League."
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "きみの　こころは　じゅうぶん　つよい。",
+     "jp": "君（きみ）の　心（こころ）は　十分（じゅうぶん）　強（つよ）い。",
      "en": "Your mind is more than strong enough."
     }
    ]

@@ -17,15 +17,15 @@
   "welcome": {
    "pages": [
     {
-     "jp": "ここは　ポケモンリーグ　うけつけゲート。",
+     "jp": "ここは　ポケモンリーグ　受付（うけつけ）ゲート。",
      "en": "This is the Pokémon League Reception Gate."
     },
     {
-     "jp": "ひがしは　カントーちほう。いまは　とおれません。",
+     "jp": "東（ひがし）は　カントー地方（ちほう）。今（いま）は　通（とお）れません。",
      "en": "To the east lies Kanto — closed for now."
     },
     {
-     "jp": "にしの　シロガネやまも　まだです。きたの　チャンピオンロードだけが　あいて　います。",
+     "jp": "西（にし）の　シロガネ山（やま）も　まだです。北（きた）の　チャンピオンロードだけが　開（あ）いて　います。",
      "en": "Mt. Silver to the west is closed too. Only Victory Road, north, is open."
     }
    ]

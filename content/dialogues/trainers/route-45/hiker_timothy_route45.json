@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "この　がけみちは　わしの　にわだ！",
+     "jp": "この　がけみちは　わしの　庭（にわ）だ！",
      "en": "These cliffs are my garden!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "にわで　まけるとはな…。",
+     "jp": "庭（にわ）で　まけるとはな…。",
      "en": "Beaten in my own garden..."
     }
    ]

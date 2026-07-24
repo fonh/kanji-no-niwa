@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "リーグまえの　さいごの　つりばだぞ、ここは。",
+     "jp": "リーグ前（まえ）の　さいごの　つりばだぞ、ここは。",
      "en": "This is the last fishing spot before the League."
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "おおものが　リーグへ　むかって　いく…。",
+     "jp": "大物（おおもの）が　リーグへ　向（む）かって　行（い）く…。",
      "en": "And there goes the biggest catch of all, off to the League..."
     }
    ]

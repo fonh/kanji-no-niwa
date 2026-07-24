@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "この　みちは　チャンピオンへの　みち。",
+     "jp": "この　道（みち）は　チャンピオンへの　道（みち）。",
      "en": "This road leads to the Champion."
     },
     {
-     "jp": "かくごの　ほどを　みせて！",
+     "jp": "かくごの　ほどを　見（み）せて！",
      "en": "Show me your resolve!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "かくご、うけとったわ。",
+     "jp": "かくご、受（う）け取（と）ったわ。",
      "en": "Resolve received, loud and clear."
     }
    ]

@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "やまみちは　したりの　いっぽうつうこう！",
+     "jp": "山道（やまみち）は　したりの　一方通行（いっぽうつうこう）！",
      "en": "This mountain road only goes down!"
     },
     {
-     "jp": "くだりながらの　しょうぶ、うけて　みよ！",
+     "jp": "下（くだ）りながらの　しょうぶ、受（う）けて　見（み）よ！",
      "en": "Battle me on the descent!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ころがりおちる　ところだった…。",
+     "jp": "転（ころ）がり落（お）ちる　所（ところ）だった…。",
      "en": "I nearly tumbled all the way down..."
     }
    ]

@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "まいしゅう　ここで　リーグちょうせんしゃを　まってるんだ。",
+     "jp": "毎週（まいしゅう）　ここで　リーグちょうせんしゃを　まってるんだ。",
      "en": "Every week I wait here for League challengers."
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "きみは　ほんものだ。",
+     "jp": "君（きみ）は　本物（ほんもの）だ。",
      "en": "You're the real deal."
     }
    ]

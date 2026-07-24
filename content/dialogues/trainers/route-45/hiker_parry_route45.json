@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "この　さき、ダークどうくつは　まっくらだぞ。",
+     "jp": "この　先（さき）、ダークどうくつは　まっくらだぞ。",
      "en": "Dark Cave ahead is pitch black."
     },
     {
-     "jp": "あかるい　うちに　おれと　しょうぶ！",
+     "jp": "明（あか）るい　うちに　俺（おれ）と　しょうぶ！",
      "en": "Battle me while there's still light!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "くらやみには　きを　つけな。",
+     "jp": "くらやみには　気（き）を　付（つ）けな。",
      "en": "Watch yourself in the dark."
     }
    ]

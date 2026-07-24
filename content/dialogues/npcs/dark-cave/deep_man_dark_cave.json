@@ -26,15 +26,15 @@
   "welcome": {
    "pages": [
     {
-     "jp": "おどろいた。ここまで　こられる　ひとが　いるとは。",
+     "jp": "おどろいた。ここまで　来（こ）られる　人（ひと）が　いるとは。",
      "en": "Well, I'll be. Someone actually made it this far."
     },
     {
-     "jp": "わしは　ここで　30ねん、くらやみと　くらして　おる。",
+     "jp": "わしは　ここで　30年（ねん）、くらやみと　くらして　おる。",
      "en": "I've lived with this darkness for thirty years."
     },
     {
-     "jp": "くらい　ところでも、まなべない　ことは　ない。めが　なれれば　な。",
+     "jp": "くらい　所（ところ）でも、学（まな）べない　ことは　ない。目（め）が　なれれば　な。",
      "en": "Even in the dark, learning is not impossible — once your eyes adjust."
     },
     {
@@ -52,7 +52,7 @@
   "after": {
    "pages": [
     {
-     "jp": "めが　なれたかね？　では　つづきを　まなぼう。",
+     "jp": "目（め）が　なれたかね？　では　つづきを　学（まな）ぼう。",
      "en": "Eyes adjusted? Then let us continue our study."
     }
    ]

@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ここまでの　たびで、なにを　まなんだ？",
+     "jp": "ここまでの　旅（たび）で、何（なに）を　学（まな）んだ？",
      "en": "What have you learned on your journey so far?"
     },
     {
-     "jp": "こたえは　しょうぶで　みせて！",
+     "jp": "こたえは　しょうぶで　見（み）せて！",
      "en": "Answer me in battle!"
     }
    ]
