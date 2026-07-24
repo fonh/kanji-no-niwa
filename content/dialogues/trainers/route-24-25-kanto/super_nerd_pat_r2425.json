@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "さんにんめ。かくりつてきに　そろそろ　まける　ころだぞ？",
+     "jp": "三人目（さんにんめ）。かくりつてきに　そろそろ　まける　頃（ころ）だぞ？",
      "en": "Number three. Statistically, you're due for a loss."
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "かくりつが　くつがえった…。",
+     "jp": "かくりつが　覆（くつがえ）った…。",
      "en": "The statistics have been overturned..."
     }
    ]

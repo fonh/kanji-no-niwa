@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "みさきへの　みちは　とおさないぞ！",
+     "jp": "みさきへの　道（みち）は　通（とお）さないぞ！",
      "en": "None shall pass toward the cape!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "みさきで　なにかが　まってる　きが　するよ。",
+     "jp": "みさきで　何（なに）かが　まってる　気（き）が　するよ。",
      "en": "Something feels like it's waiting at the cape."
     }
    ]

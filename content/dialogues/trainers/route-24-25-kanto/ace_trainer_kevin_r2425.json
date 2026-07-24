@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "6にんぬきの　さいごは　この　おれ！",
+     "jp": "6にんぬきの　さいごは　この　俺（おれ）！",
      "en": "I'm the last of the six!"
     },
     {
-     "jp": "ぜんりょくで　こい！",
+     "jp": "全力（ぜんりょく）で　来（こ）い！",
      "en": "Come at me with everything!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "6にんぬき、たっせい！　ほうびの　きんかいだ！",
+     "jp": "6にんぬき、達成（たっせい）！　褒美（ほうび）の　金塊（きんかい）だ！",
      "en": "Six in a row — done! Here's your Nugget prize!"
     }
    ],

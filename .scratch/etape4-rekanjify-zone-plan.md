@@ -74,7 +74,7 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 
 | Zone | studiedSet | Fichiers | WARN | Notes |
 |---|---:|---:|---:|---|
-| route-24-25-kanto | 1350 | 12 | 12 | Finale Suicune, fil Bill — déjà écrit avec soin (Lot 13), bon candidat pour une passe complète courte. |
+| route-24-25-kanto | 1350 | 12 | 0 | ✅ fait 2026-07-24. Finale Suicune, fil Bill — déjà écrit avec soin (Lot 13), bon candidat pour une passe complète courte. |
 | cerulean-city | 1250 | 10 | 9 | Azuria, 17 leçons N1 — vocabulaire de gym/combat (力/闘 déjà enseignés à ce point). |
 | route-8-kanto | 1240 | 7 | — | Fusionné avec route-9-10 dans le texte mais garde son propre dossier dialogues. |
 | kanto-power-plant | 1240 | 3 | — | Petit, vocabulaire technique (電気/機械 — vérifier studiedSet réel avant de présumer). |

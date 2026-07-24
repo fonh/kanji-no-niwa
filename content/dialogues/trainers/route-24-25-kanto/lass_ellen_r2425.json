@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ビルさんの　おじいさんの　いえ、この　さきよ。",
+     "jp": "ビルさんの　おじいさんの　家（いえ）、この　先（さき）よ。",
      "en": "Bill's grandpa's cottage is just ahead."
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "おじいさん、やさしい　ひとよ。",
+     "jp": "おじいさん、優（やさ）しい　人（ひと）よ。",
      "en": "He's a kind old soul."
     }
    ]

@@ -41,6 +41,28 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-24-25-kanto (12/12 fichiers) re-kanjifié à la main** :
+  1ʳᵉ zone traitée selon l'ordre de priorité réel du nouveau plan
+  (`.scratch/etape4-rekanjify-zone-plan.md`, Tier 1, studiedSet 1370 — le plus riche du
+  corpus). Kanji ajoutés (dialogues Bill grand-père, scène/combat Suicune, 6 dresseurs du
+  Pont Pépite, sbire isolé) : 友達/手紙/聞/珍/物/見/石/立派/交換/行/先/北風/水/波/上/立/
+  来/瞬間/選/氷/目/試/頭/下/風/共/君/出/全力/金塊/達成/褒美/橋/一人/家/優/五人目/後/少/
+  二人目/私/三/四/五/道/通/何/気/四人目/前/三人目/頃/覆/俺/留学生/母国/団/本当/終/部品/
+  隠. Plusieurs faux amis homophoniques du rapport heuristique (`rekanjify-report.py`,
+  aide à la découverte seulement) écartés par la lecture en contexte : こうかん→交換 (pas
+  交感), やさしい→優しい « kind » (pas 易しい « easy », le rapport confond les deux),
+  さき→先 « bout/pointe » (pas 幸), もの→物 (chose, pas 者 — pas une personne ici), わし
+  laissé en kana (pronom, pas 和紙), せいせい laissé en kana (清々 réel mais 清 hors
+  studiedSet). Règle du tout-ou-rien appliquée strictement sur les composés : にんぬき
+  (人抜き) reste entièrement en kana dans les 2 fichiers qui l'utilisent car 抜 est hors
+  studiedSet, même si 人 seul est connu — pas de kanjification partielle d'un même mot.
+  0 kanji hors studiedSet ajouté. 5 linters verts (536 fichiers, mêmes 3 WARN attendus,
+  0 FAIL) ; `lint-kanji-density.py` : les 12 fichiers de la zone passent au-dessus du
+  plancher 10 %, total de fichiers sous le plancher 390→378. Plan de zone mis à jour
+  (`route-24-25-kanto` marquée ✅, WARN 12→0). Reste tout le Tier 1 (cerulean-city,
+  route-8-kanto, kanto-power-plant, lavender-town, route-9-10-rocktunnel, saffron-city,
+  route-6-kanto, les 5 mini-zones indigo-plateau, vermilion-city,
+  indigo-plateau-antichambre) puis les tiers 2-5.
 - **2026-07-24 — Phase 2, ilex-forest (3/3 fichiers) re-kanjifié à la main** : 木/鳥/
   前/行/後/羽/知 ajoutés. naoko_ilex.json laissé tel quel (道/着物/枝/友達 hors
   studiedSet, aucune amélioration sûre à ce point très précoce — 220 kanji étudiés).

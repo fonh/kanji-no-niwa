@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "よにんめ！　しゅくだいの　まえに　しょうぶ！",
+     "jp": "四人目（よにんめ）！　しゅくだいの　前（まえ）に　しょうぶ！",
      "en": "Number four! A battle before homework!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "しゅくだいに　もどるよ…。",
+     "jp": "しゅくだいに　戻（もど）るよ…。",
      "en": "Back to homework..."
     }
    ]

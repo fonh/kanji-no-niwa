@@ -11,11 +11,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "（せいれいが　こおりの　ような　めで　あなたを　ためす。）",
+     "jp": "（せいれいが　氷（こおり）の　ような　目（め）で　あなたを　試（ため）す。）",
      "en": "(The spirit tests you with eyes like ice.)"
     },
     {
-     "jp": "（きたかぜが　ほえた！）",
+     "jp": "（北風（きたかぜ）が　ほえた！）",
      "en": "(The north wind howls!)"
     }
    ]
@@ -23,15 +23,15 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "（せいれいは　しずかに　あたまを　さげた。）",
+     "jp": "（せいれいは　しずかに　頭（あたま）を　下（さ）げた。）",
      "en": "(The spirit quietly bows its head.)"
     },
     {
-     "jp": "（そして　かぜと　ともに　きえた　――　いつでも　よべる　きが　した。）",
+     "jp": "（そして　風（かぜ）と　共（とも）に　きえた　――　いつでも　呼（よ）べる　気（き）が　した。）",
      "en": "(Then it vanished with the wind — yet you feel it will answer your call.)"
     },
     {
-     "jp": "ミナキ「…まけたよ。きみが　えらばれた。10ねんの　こたえが　でたんだ。」",
+     "jp": "ミナキ「…まけたよ。君（きみ）が　選（えら）ばれた。10ねんの　こたえが　出（で）たんだ。」",
      "en": "Eusine: '...I concede. You were chosen. Ten years, and here is my answer.'"
     }
    ],

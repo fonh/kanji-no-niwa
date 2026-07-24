@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ふたりめは　わたし！",
+     "jp": "二人目（ふたりめ）は　私（わたし）！",
      "en": "I'm number two!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "さん、し、ご…　まだまだ　いるわよ。",
+     "jp": "三（さん）、四（し）、五（ご）…　まだまだ　いるわよ。",
      "en": "Three, four, five... plenty more ahead."
     }
    ]

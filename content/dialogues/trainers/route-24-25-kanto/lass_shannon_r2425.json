@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ごにんめよ。あと　すこしで　ゴールだけど、いかせない！",
+     "jp": "五人目（ごにんめ）よ。後（あと）　少（すこ）しで　ゴールだけど、行（い）かせない！",
      "en": "Number five. So close to the end — but no further!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ゴールは　めのまえよ。",
+     "jp": "ゴールは　目（め）の　前（まえ）よ。",
      "en": "The goal is right ahead."
     }
    ]

@@ -15,11 +15,11 @@
      "en": "Persistent little pest!"
     },
     {
-     "jp": "おれは　りゅうがくせいだんいん　だぞ！　ぼこくでは　エリートだったんだ！",
+     "jp": "俺（おれ）は　留学生（りゅうがくせい）だんいん　だぞ！　母国（ぼこく）では　エリートだったんだ！",
      "en": "I'm an exchange grunt! An ELITE back home!"
     },
     {
-     "jp": "だんの　さいごの　ほこり、みせて　やる！",
+     "jp": "団（だん）の　さいごの　ほこり、見（み）せて　やる！",
      "en": "I'll show you the last pride of Team Rocket!"
     }
    ]
@@ -27,15 +27,15 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "まけた…。だんは　ほんとうに　おわって　いたんだな…。",
+     "jp": "まけた…。団（だん）は　本当（ほんとう）に　終（お）わって　いたんだな…。",
      "en": "Beaten... so the team really is finished..."
     },
     {
-     "jp": "…ぶひんは　ジムの　プールに　かくした。もって　いけ。",
+     "jp": "…部品（ぶひん）は　ジムの　プールに　隠（かく）した。もって　行（い）け。",
      "en": "...I hid the part by the Gym pool. Take it."
     },
     {
-     "jp": "おれは　ぼこくに　かえるよ。せいせいした。",
+     "jp": "俺（おれ）は　母国（ぼこく）に　帰（かえ）るよ。せいせいした。",
      "en": "I'm going home. And honestly? What a relief."
     }
    ]
