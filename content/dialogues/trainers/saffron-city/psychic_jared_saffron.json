@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "スプーンまげより　むずかしい　こと、できる？",
+     "jp": "スプーン曲（ま）げより　難（むずか）しい　こと、出来（でき）る？",
      "en": "Can you do something harder than bending spoons?"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "きみの　ちからは　スプーンまげ　いじょうだ。",
+     "jp": "君（きみ）の　力（ちから）は　スプーン曲（ま）げ　以上（いじょう）だ。",
      "en": "Your power goes well beyond spoon-bending."
     }
    ]

@@ -76,15 +76,15 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 |---|---:|---:|---:|---|
 | route-24-25-kanto | 1350 | 12 | 0 | ✅ fait 2026-07-24. Finale Suicune, fil Bill — déjà écrit avec soin (Lot 13), bon candidat pour une passe complète courte. |
 | cerulean-city | 1250 | 10 | 1 | ✅ fait 2026-07-24. Azuria, 17 leçons N1 — vocabulaire de gym/combat (力/闘 déjà enseignés à ce point). 1 fichier (swimmer_diana) reste à 0% : aucun mot du fichier n'a tous ses kanji étudiés (真/勝/負/溺 hors studiedSet), aucune amélioration sûre possible. |
-| route-8-kanto | 1240 | 7 | — | Fusionné avec route-9-10 dans le texte mais garde son propre dossier dialogues. |
-| kanto-power-plant | 1240 | 3 | — | Petit, vocabulaire technique (電気/機械 — vérifier studiedSet réel avant de présumer). |
-| lavender-town | 1220 | 1 | — | 1 seul fichier, quasi gratuit à finir. |
-| route-9-10-rocktunnel | 1200 | 9 | 9 | |
-| saffron-city | 1060 | 11 | 10 | 24 leçons N1, Copycat/Sabrina — dialogues denses, bon volume de gain. |
-| route-6-kanto | 1050 | 5 | — | |
-| indigo-plateau-{koga,bruno,karen,lance,will} | 870-900 | 1 chacun | — | 5 mini-zones à 1 fichier — lot rapide, studiedSet très riche (Conseil des 4 = fin du Johto), grand-père de tests d'examens (試験/問題 déjà vus dans la passe azalea-town/ilex-forest actuelle — cohérence vocabulaire à vérifier). |
+| route-8-kanto | 1240 | 7 | 0 | ✅ fait 2026-07-24. Fusionné avec route-9-10 dans le texte mais garde son propre dossier dialogues. |
+| kanto-power-plant | 1240 | 3 | 0 | ✅ fait 2026-07-24. Vocabulaire technique (電気/機械/発電所 tous disponibles). |
+| lavender-town | 1220 | 1 | 0 | ✅ fait 2026-07-24. |
+| route-9-10-rocktunnel | 1200 | 9 | 0 | ✅ fait 2026-07-24. |
+| saffron-city | 1060 | 11 | 0 | ✅ fait 2026-07-24. 24 leçons N1, Copycat/Sabrina — dialogues denses, bon volume de gain. |
+| route-6-kanto | 1050 | 5 | 0 | ✅ fait 2026-07-24. |
+| indigo-plateau-{koga,bruno,karen,lance,will} | 870-900 | 1 chacun | 0 | ✅ fait 2026-07-24. 四天王（してんのう）devient kanjifiable dès l'antichambre (四/天/王 tous studied) — cohérence appliquée sur les 3 occurrences body-text du titre. |
 | vermilion-city | 900 | 38 | 36 | **Le plus gros fichier-count de tout le corpus après goldenrod-city.** SS Aqua (27 combats), Surge — prévoir une session dédiée, pas un lot avec d'autres zones. |
-| indigo-plateau-antichambre | 830 | 3 | — | |
+| indigo-plateau-antichambre | 830 | 3 | 0 | ✅ fait 2026-07-24 (avec le lot indigo-plateau ci-dessus). |
 
 ### Tier 2 — studiedSet 700-830 (fin de Johto)
 

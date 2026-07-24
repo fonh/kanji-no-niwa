@@ -26,15 +26,15 @@
   "gift": {
    "pages": [
     {
-     "jp": "また　あったね。この　ビルの　いしずえの　いしを　みに　きたんだ。",
+     "jp": "また　あったね。この　ビルの　いしずえの　石（いし）を　見（み）に　来（き）たんだ。",
      "en": "We meet again. I came to examine this building's foundation stones."
     },
     {
-     "jp": "そうだ、きみに　ききたい。いしと　もじ、どちらが　ながく　のこると　おもう？",
+     "jp": "そうだ、君（きみ）に　聞（き）きたい。石（いし）と　文字（もじ）、どちらが　長（なが）く　残（のこ）ると　思（おも）う？",
      "en": "Tell me — which lasts longer, stone or the written word?"
     },
     {
-     "jp": "……いい　こたえだ。この　いし、きみに　あずけよう。ホウエンの　めずらしい　いしだ。",
+     "jp": "……いい　こたえだ。この　石（いし）、君（きみ）に　あずけよう。ホウエンの　珍（めずら）しい　石（いし）だ。",
      "en": "...A fine answer. I entrust you with this rare stone from Hoenn."
     }
    ],
@@ -48,11 +48,11 @@
   "trade": {
    "pages": [
     {
-     "jp": "その　いし、だいじに　して　くれて　いるね。",
+     "jp": "その　石（いし）、大事（だいじ）に　して　くれて　いるね。",
      "en": "You've taken good care of that stone."
     },
     {
-     "jp": "べつの　いしと　こうかんも　できるが…　いや、きみには　それが　にあう。",
+     "jp": "別（べつ）の　石（いし）と　交換（こうかん）も　出来（でき）るが…　いや、君（きみ）には　それが　にあう。",
      "en": "I could trade it for another, but... no. That one suits you."
     }
    ]

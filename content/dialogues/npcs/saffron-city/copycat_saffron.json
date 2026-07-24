@@ -36,7 +36,7 @@
   "mimic": {
    "pages": [
     {
-     "jp": "ものまねむすめ！",
+     "jp": "ものまね娘（むすめ）！",
      "en": "Copycat!"
     },
     {
@@ -44,7 +44,7 @@
      "en": "...See, I just imitated you. Spot on, right?"
     },
     {
-     "jp": "わたしの　にんぎょう、どこかで　みなかった？　クチバで　なくしちゃったの…。",
+     "jp": "私（わたし）の　人形（にんぎょう）、どこかで　見（み）なかった？　クチバで　無（な）くしちゃったの…。",
      "en": "Have you seen my doll? I lost it in Vermilion..."
     }
    ]
@@ -52,7 +52,7 @@
   "doll_back": {
    "pages": [
     {
-     "jp": "それ…　わたしの　にんぎょう！！",
+     "jp": "それ…　私（わたし）の　人形（にんぎょう）！！",
      "en": "That's... MY DOLL!!"
     },
     {
@@ -60,7 +60,7 @@
      "en": "Thank you! (In your voice:) Thank you!"
     },
     {
-     "jp": "おれいに　これ！　リニアの　パスよ。ヤマブキと　コガネが　いっしゅんで　つながるの！",
+     "jp": "お礼（れい）に　これ！　リニアの　パスよ。ヤマブキと　コガネが　一瞬（いっしゅん）で　つながるの！",
      "en": "Take this Magnet Train Pass! Saffron to Goldenrod in a flash!"
     }
    ],
@@ -83,7 +83,7 @@
   "after": {
    "pages": [
     {
-     "jp": "にんぎょうと　いっしょ！　しあわせ！",
+     "jp": "人形（にんぎょう）と　いっしょ！　幸（しあわ）せ！",
      "en": "Reunited with my doll! Bliss!"
     }
    ]

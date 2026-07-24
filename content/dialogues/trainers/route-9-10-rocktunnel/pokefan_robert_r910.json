@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "はつでんしょの　けんがくかい？　いまは　むりだよ。",
+     "jp": "発電所（はつでんしょ）の　見学会（けんがくかい）？　今（いま）は　むりだよ。",
      "en": "A Power Plant tour? Not possible right now."
     },
     {
-     "jp": "その　かわり、しょうぶなら　できる！",
+     "jp": "その　代（か）わり、しょうぶなら　出来（でき）る！",
      "en": "But a battle? That we can do!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "はやく　でんきが　もどると　いいな。",
+     "jp": "早（はや）く　電気（でんき）が　戻（もど）ると　いいな。",
      "en": "I hope the power comes back soon."
     }
    ]

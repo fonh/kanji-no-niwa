@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ナツメさまの　よちは　ぜったいだ。きみが　くる　ことも　みえて　いた。",
+     "jp": "ナツメさまの　予知（よち）は　絶対（ぜったい）だ。君（きみ）が　来（く）る　ことも　見（み）えて　いた。",
      "en": "Lady Sabrina's foresight is absolute. She saw your coming."
     },
     {
-     "jp": "だが　けっかまでは　みえない！",
+     "jp": "だが　けっかまでは　見（み）えない！",
      "en": "But not the outcome!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "けっかは…　きみの　かちか。",
+     "jp": "けっかは…　君（きみ）の　勝（か）ちか。",
      "en": "And the outcome... is your victory."
     }
    ]

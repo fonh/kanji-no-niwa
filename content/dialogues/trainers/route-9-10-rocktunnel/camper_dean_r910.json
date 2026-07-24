@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "トンネルごえの　まえに、うでを　みせて　みろ！",
+     "jp": "トンネルごえの　前（まえ）に、腕（うで）を　見（み）せて　見（み）ろ！",
      "en": "Show me your skill before you brave the tunnel!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "その　うでなら　だいじょうぶだ。",
+     "jp": "その　腕（うで）なら　大丈夫（だいじょうぶ）だ。",
      "en": "With skill like that, you'll be fine."
     }
    ]

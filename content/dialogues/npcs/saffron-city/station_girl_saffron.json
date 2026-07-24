@@ -26,11 +26,11 @@
   "no_pass": {
    "pages": [
     {
-     "jp": "リニア　ライナーの　ごじょうしゃには、パスが　ひつようです。",
+     "jp": "リニア　ライナーの　ごじょうしゃには、パスが　必要（ひつよう）です。",
      "en": "Boarding the Magnet Train requires a Pass."
     },
     {
-     "jp": "パスなしでは　ごあんない　できかねます…。",
+     "jp": "パスなしでは　ごあんない　出来（でき）かねます…。",
      "en": "Without one, I cannot let you board..."
     }
    ]
@@ -42,7 +42,7 @@
      "en": "Thank you for showing your Pass!"
     },
     {
-     "jp": "コガネシティいき、まもなく　はっしゃです！",
+     "jp": "コガネシティ行（い）き、間（ま）もなく　発車（はっしゃ）です！",
      "en": "The train for Goldenrod departs shortly!"
     }
    ]

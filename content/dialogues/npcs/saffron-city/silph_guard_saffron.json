@@ -34,7 +34,7 @@
      "en": "I'm afraid the elevator is out of order."
     },
     {
-     "jp": "おわびに　こちらを。とうしゃの　きねんひんです。",
+     "jp": "おわびに　こちらを。当社（とうしゃ）の　きねんひんです。",
      "en": "Please accept this company souvenir, by way of apology."
     }
    ],
@@ -48,7 +48,7 @@
   "after": {
    "pages": [
     {
-     "jp": "エレベーターは　まだ　なおりません…。",
+     "jp": "エレベーターは　まだ　直（なお）りません…。",
      "en": "The elevator still isn't fixed..."
     }
    ]

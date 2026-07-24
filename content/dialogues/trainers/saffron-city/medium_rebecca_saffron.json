@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "さいごの　テレポートの　さきに、ナツメさまが　まって　いるわ。",
+     "jp": "さいごの　テレポートの　先（さき）に、ナツメさまが　まって　いるわ。",
      "en": "Beyond the final teleporter, Lady Sabrina awaits."
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "いって　らっしゃい。よい　しょうぶを。",
+     "jp": "行（い）って　らっしゃい。よい　しょうぶを。",
      "en": "Off you go. May it be a fine battle."
     }
    ]

@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ハイジに　かったの？　なら　わたしも！",
+     "jp": "ハイジに　勝（か）ったの？　なら　私（わたし）も！",
      "en": "You beat Heidi? Then me next!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ふたりとも　まけちゃった。",
+     "jp": "二人（ふたり）とも　まけちゃった。",
      "en": "Both of us, beaten."
     }
    ]

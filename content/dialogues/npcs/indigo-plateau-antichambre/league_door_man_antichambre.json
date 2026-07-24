@@ -17,15 +17,15 @@
   "welcome": {
    "pages": [
     {
-     "jp": "この　とびらの　さきは、してんのうの　ま。",
+     "jp": "この　とびらの　先（さき）は、四天王（してんのう）の　間（ま）。",
      "en": "Beyond this door await the Elite Four."
     },
     {
-     "jp": "ひとつ　だけ　ルールが　ある。いちど　はいったら、まけるまで　でられない。",
+     "jp": "一（ひと）つ　だけ　ルールが　ある。一度（いちど）　入（はい）ったら、まけるまで　出（で）られない。",
      "en": "One rule: once you enter, you cannot leave until defeated."
     },
     {
-     "jp": "…もしくは、ぜんいんに　かつまでだ。かくごは　いいか？",
+     "jp": "…もしくは、ぜんいんに　勝（か）つまでだ。かくごは　いいか？",
      "en": "...Or until you defeat them all. Are you ready?"
     }
    ]

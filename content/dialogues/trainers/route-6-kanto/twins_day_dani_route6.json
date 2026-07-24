@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "「カントーの　ふたごは」",
+     "jp": "「カントーの　双子（ふたご）は」",
      "en": "\"Kanto twins are\""
     },
     {
-     "jp": "「ジョウトの　ふたごより　つよい！」",
+     "jp": "「ジョウトの　双子（ふたご）より　強（つよ）い！」",
      "en": "\"stronger than Johto twins!\""
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "「ジョウトの　ひとって」「つよいんだね…」",
+     "jp": "「ジョウトの　人（ひと）って」「強（つよ）いんだね…」",
      "en": "\"Johto folks...\" \"...are strong after all.\""
     }
    ]

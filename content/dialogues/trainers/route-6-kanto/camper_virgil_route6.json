@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "カントーの　キャンパーの　いじ、みせて　やる！",
+     "jp": "カントーの　キャンパーの　いじ、見（み）せて　やる！",
      "en": "Behold the pride of a Kanto camper!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ジョウトがえりには　かなわないか。",
+     "jp": "ジョウト帰（がえ）りには　敵（かな）わないか。",
      "en": "Can't beat someone fresh from Johto, huh."
     }
    ]

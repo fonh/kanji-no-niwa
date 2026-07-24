@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ていでんの　げんいんを　ちょうさちゅうだ。",
+     "jp": "ていでんの　原因（げんいん）を　ちょうさちゅうだ。",
      "en": "I'm investigating the blackout."
     },
     {
-     "jp": "データしゅうしゅうに　きょうりょくしろ！",
+     "jp": "データ収集（しゅうしゅう）に　協力（きょうりょく）しろ！",
      "en": "Contribute to my data!"
     }
    ]

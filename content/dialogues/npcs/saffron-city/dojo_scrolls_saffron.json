@@ -17,19 +17,19 @@
   "welcome": {
    "pages": [
     {
-     "jp": "（どうじょうは　からっぽだ。かべに　かきおきが　ある。）",
+     "jp": "（道場（どうじょう）は　からっぽだ。壁（かべ）に　かきおきが　ある。）",
      "en": "(The dojo is empty. A note hangs on the wall.)"
     },
     {
-     "jp": "「しゅぎょうの　ため、ジョウトの　モルタルやまに　いく。」",
+     "jp": "「修行（しゅぎょう）の　ため、ジョウトの　モルタル山（やま）に　行（い）く。」",
      "en": "'Gone to train at Mt. Mortar, in Johto.'"
     },
     {
-     "jp": "「まきものは　じゆうに　まなぶが　よい。――カラテだいおうを　こえんと　する　もの」",
+     "jp": "「巻物（まきもの）は　自由（じゆう）に　学（まな）ぶが　よい。――カラテ大王（だいおう）を　こえんと　する　者（もの）」",
      "en": "'Study my scrolls freely. — He who would surpass the Karate King'"
     },
     {
-     "jp": "（かべの　まきものから　まなべそうだ。）",
+     "jp": "（壁（かべ）の　巻物（まきもの）から　学（まな）べそうだ。）",
      "en": "(You could learn from the scrolls on the wall.)"
     }
    ]

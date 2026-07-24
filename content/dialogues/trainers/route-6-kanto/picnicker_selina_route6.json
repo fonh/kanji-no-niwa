@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ヤマブキの　ちかくは　ピクニックの　めいしょよ。",
+     "jp": "ヤマブキの　近（ちか）くは　ピクニックの　名所（めいしょ）よ。",
      "en": "The outskirts of Saffron are prime picnic country."
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "おべんとう、はんぶん　どうぞ。",
+     "jp": "お弁当（べんとう）、半分（はんぶん）　どうぞ。",
      "en": "Here — half my lunch, you've earned it."
     }
    ]

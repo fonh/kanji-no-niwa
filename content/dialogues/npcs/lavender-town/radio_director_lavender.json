@@ -31,11 +31,11 @@
      "en": "This is the Kanto Radio station."
     },
     {
-     "jp": "でんきが　とまって、ほうそうの　いかんに　かかわらず　なにも　ながせません…。",
+     "jp": "電気（でんき）が　止（と）まって、放送（ほうそう）の　いかんに　関（かか）わらず　何（なに）も　流（なが）せません…。",
      "en": "With the power out, we can broadcast nothing at all..."
     },
     {
-     "jp": "はつでんしょが　なおれば　いいのですが。",
+     "jp": "発電所（はつでんしょ）が　直（なお）れば　いいのですが。",
      "en": "If only the Power Plant were fixed."
     }
    ]
@@ -43,15 +43,15 @@
   "power_back": {
    "pages": [
     {
-     "jp": "でんきが　もどりました！　あなたの　おかげと　ききましたよ！",
+     "jp": "電気（でんき）が　戻（もど）りました！　あなたの　お陰（かげ）と　聞（き）きましたよ！",
      "en": "The power is back! And I hear it's thanks to you!"
     },
     {
-     "jp": "おれいに　この　EXPNカードを。ポケギアの　ラジオで　カントーの　ばんぐみが　きけます。",
+     "jp": "お礼（れい）に　この　EXPNカードを。ポケギアの　ラジオで　カントーの　ばんぐみが　聞（き）けます。",
      "en": "Take this EXPN Card — your Pokégear radio can now pick up Kanto's shows."
     },
     {
-     "jp": "この　カードの　おんがくには、ねむった　ものを　おこす　ちからも　あるとか…。",
+     "jp": "この　カードの　音楽（おんがく）には、ねむった　者（もの）を　おこす　力（ちから）も　あるとか…。",
      "en": "They say its music can even wake the deepest sleeper..."
     }
    ],

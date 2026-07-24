@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "10ばんどうろの　みなみは　おれが　みはる！",
+     "jp": "10番（ばん）どうろの　南（みなみ）は　俺（おれ）が　見張（みは）る！",
      "en": "I watch the south of Route 10!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "みはりやく、こうたいだな。",
+     "jp": "見張（みは）り役（やく）、交代（こうたい）だな。",
      "en": "Time to change the watch."
     }
    ]

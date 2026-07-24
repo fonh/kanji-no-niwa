@@ -35,7 +35,7 @@
   "waiting": {
    "pages": [
     {
-     "jp": "アカジオの　「いかりまんじゅう」という　まんじゅう、もってないかい？",
+     "jp": "アカジオの　「怒（いか）りまんじゅう」と　言（い）う　まんじゅう、もってないかい？",
      "en": "Got any of that famous Mahogany RageCandyBar?"
     }
    ]
@@ -43,11 +43,11 @@
   "trade": {
    "pages": [
     {
-     "jp": "アカジオの　「いかりまんじゅう」という　まんじゅう、もってないかい？",
+     "jp": "アカジオの　「怒（いか）りまんじゅう」と　言（い）う　まんじゅう、もってないかい？",
      "en": "Got any of that famous Mahogany RageCandyBar?"
     },
     {
-     "jp": "カントーじゃ　てに　はいらなくてね。CTと　こうかんしよう！",
+     "jp": "カントーじゃ　手（て）に　入（はい）らなくてね。CTと　交換（こうかん）しよう！",
      "en": "Can't get it in Kanto. I'll trade you a TM for one!"
     }
    ],
@@ -65,7 +65,7 @@
   "after": {
    "pages": [
     {
-     "jp": "うまい！　やっぱり　ほんばの　あじだ！",
+     "jp": "うまい！　やっぱり　本場（ほんば）の　あじだ！",
      "en": "Delicious! Nothing beats the real thing!"
     }
    ]

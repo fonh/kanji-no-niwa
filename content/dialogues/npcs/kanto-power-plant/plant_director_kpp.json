@@ -36,15 +36,15 @@
   "angry": {
    "pages": [
     {
-     "jp": "ぬすまれた！　だいじな　ぶひんが！",
+     "jp": "ぬすまれた！　大事（だいじ）な　部品（ぶひん）が！",
      "en": "Stolen! Our vital machine part!"
     },
     {
-     "jp": "はんにんは　アズリアの　ほうへ　にげたと　いう　もくげきじょうほうが　ある。",
+     "jp": "犯人（はんにん）は　アズリアの　方（ほう）へ　逃（に）げたと　言（い）う　もくげきじょうほうが　ある。",
      "en": "Witnesses say the thief fled toward Cerulean."
     },
     {
-     "jp": "たのむ、とりかえして　きて　くれ！",
+     "jp": "たのむ、取（と）り替（か）えして　来（き）て　くれ！",
      "en": "Please — get it back for us!"
     }
    ],
@@ -59,15 +59,15 @@
   "give_back": {
    "pages": [
     {
-     "jp": "おお！　その　ぶひん！　とりかえして　くれたのか！",
+     "jp": "おお！　その　部品（ぶひん）！　取（と）り替（か）えして　くれたのか！",
      "en": "Oh! The part! You got it back!"
     },
     {
-     "jp": "これで　カントーに　でんきが　もどる！　きみは　おんじんだ！",
+     "jp": "これで　カントーに　電気（でんき）が　戻（もど）る！　きみは　おんじんだ！",
      "en": "Kanto's power can return! You're our savior!"
     },
     {
-     "jp": "ささやかだが、これを　うけとって　くれ。",
+     "jp": "ささやかだが、これを　受（う）け取（と）って　くれ。",
      "en": "It's humble thanks, but please take this."
     }
    ],
@@ -90,7 +90,7 @@
   "running": {
    "pages": [
     {
-     "jp": "タービンの　おとが　もどった。この　おとの　ごとき　あんしんかんは　ないよ。",
+     "jp": "タービンの　音（おと）が　戻（もど）った。この　音（おと）の　ごとき　安心感（あんしんかん）は　ないよ。",
      "en": "The turbines hum again. No sound more reassuring than this."
     }
    ]

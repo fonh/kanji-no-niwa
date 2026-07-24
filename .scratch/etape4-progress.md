@@ -41,6 +41,35 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, reste du Tier 1 (route-8-kanto/kanto-power-plant/
+  lavender-town/route-9-10-rocktunnel/saffron-city/route-6-kanto/6 fichiers
+  indigo-plateau, 44/44 fichiers) re-kanjifié à la main** : passe continue sur tout le
+  Tier 1 restant avant vermilion-city (session dédiée à part, 38 fichiers). Kanji
+  ajoutés notables : 電気/機械/発電所/部品/犯人/解散 (fil du vol à la Centrale, cohérent
+  sur les 3 zones où il se répercute) ; 道場（どうじょう）— l'exemple canonique de
+  CONTEXT.md — sur le dojo de Safran ; 四天王（してんのう）désormais kanjifiable dès
+  l'antichambre (四/天/王 tous studied à ce point) et appliqué avec cohérence sur les 3
+  occurrences body-text du titre (portier, Kyo, jamais dans les champs name/exam_name
+  qui restent exemptés) ; 行方（ゆくえ, l'issue d'un combat）et 迎え撃つ（むかえうつ）sur
+  les répliques de Sabrina/Lance sans casser le ton archaïsant-léger de la Ligue. Faux
+  amis écartés : 位次/編者/以下/万 etc. (bruit de `rekanjify-report.py`, jamais suivi
+  aveuglément). Règle tout-ou-rien confirmée sur : 人抜き/段位/団員 (連絡/真ん中/勝負 déjà
+  vus), et cette fois 世界中 (界 hors studiedSet), 挑戦者 (戦 hors studiedSet partout),
+  完璧/継承者/誕生 (Lance). **Bug linter attrapé une 2ᵉ fois** : `物々交換（ぶつぶつこうかん）`
+  rejeté par `lint-kanji-budget.py` — le caractère de répétition 々 casse la regex de
+  détection de run contigu (`KANJI_RUN_RE` ne le reconnaît pas comme kanji), donc 物
+  se retrouve traité comme un run isolé sans lecture immédiate ; pas de règle de
+  contournement documentée, phrase laissée entièrement en kana (`plant_worker_kpp.json`).
+  **Vérification de sûreté structurelle** : `git diff` sur tout le lot confirme que
+  chaque ligne modifiée ne touche que le champ `jp` — aucun `item_id`/`quest_id`/
+  `effects`/`state_rules` altéré, donc la logique de quête (power_plant_restoration,
+  copycat_doll, bill_family_thread, suicune_hunt) reste par construction identique à
+  avant la passe. **Simulation narrative (joueur)** faite sur la chaîne
+  power_plant_restoration (vol à la Centrale → indice Route 9-10/Safran → récupération
+  à Azuria → restauration → radio de Lavande → carte EXPN) : cohérente de bout en bout,
+  aucune rupture de gating. 5 linters verts (536 fichiers, mêmes 3 WARN attendus, 0
+  FAIL). Densité globale 370→332 fichiers sous le plancher. Reste vermilion-city (38
+  fichiers, session dédiée) pour clore le Tier 1, puis le Tier 2.
 - **2026-07-24 — Phase 2, cerulean-city (10/10 fichiers) re-kanjifié à la main** : 2ᵉ
   zone du Tier 1 (studiedSet 1350). Kanji ajoutés (gérant du vélo, sbire isolé du gym,
   pièce cachée, garçon récurrent, Azuria/Misty, 5 nageurs) : 今/方/年前/赤/少年/自転車/

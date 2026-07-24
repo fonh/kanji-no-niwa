@@ -15,15 +15,15 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "あら、かわいい　ちょうせんしゃ。わたしは　カリン。",
+     "jp": "あら、かわいい　ちょうせんしゃ。私（わたし）は　カリン。",
      "en": "My, what an adorable challenger. I am Karen."
     },
     {
-     "jp": "つよい　ことばも、よわい　ことばも…　ほんとうに　すきな　ことばで　たたかうのが　いちばん。",
+     "jp": "強（つよ）い　言葉（ことば）も、弱（よわ）い　言葉（ことば）も…　本当（ほんとう）に　好（す）きな　言葉（ことば）で　たたかうのが　一番（いちばん）。",
      "en": "Strong words, weak words — fight with the words you truly love."
     },
     {
-     "jp": "あなたの　「すき」、みせて　ちょうだい。",
+     "jp": "あなたの　「好（す）き」、見（み）せて　ちょうだい。",
      "en": "Show me what you love."
     }
    ]
@@ -31,11 +31,11 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "…ふふ。あなた、ことばを　あいしてるのね。",
+     "jp": "…ふふ。あなた、言葉（ことば）を　愛（あい）してるのね。",
      "en": "...Heh. You truly love words, don't you."
     },
     {
-     "jp": "わたしの　まけ。さいごの　とびらの　さきで、あの　ひとが　まってるわ。",
+     "jp": "私（わたし）の　まけ。さいごの　とびらの　先（さき）で、あの　人（ひと）が　まってるわ。",
      "en": "My loss. Beyond the last door, HE awaits."
     }
    ]

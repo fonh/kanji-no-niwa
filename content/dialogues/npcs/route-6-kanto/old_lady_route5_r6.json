@@ -26,11 +26,11 @@
   "welcome": {
    "pages": [
     {
-     "jp": "この　みちといい、あの　そらといい…　なにか　ようすが　へんじゃ。",
+     "jp": "この　道（みち）といい、あの　そらといい…　何（なに）か　様子（ようす）が　変（へん）じゃ。",
      "en": "This road, that sky... something feels off about them."
     },
     {
-     "jp": "わるい　ことが　おきる　まえに、これを　おもちなさい。",
+     "jp": "わるい　ことが　おきる　前（まえ）に、これを　おもちなさい。",
      "en": "Take this, before anything ill befalls you."
     }
    ],
@@ -44,7 +44,7 @@
   "after": {
    "pages": [
     {
-     "jp": "おまもりは　みに　つけて　おるかね。",
+     "jp": "お守（まも）りは　身（み）に　付（つ）けて　おるかね。",
      "en": "Keeping that charm close, I hope."
     }
    ]

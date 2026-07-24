@@ -15,15 +15,15 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ようこそ。ぼくは　イツキ。マスクの　したの　すがおは　ひみつだよ。",
+     "jp": "ようこそ。ぼくは　イツキ。マスクの　下（した）の　すがおは　ひみつだよ。",
      "en": "Welcome. I am Will. What's under the mask stays secret."
     },
     {
-     "jp": "せかいじゅうを　まわって　こころを　きたえた。",
+     "jp": "せかいじゅうを　回（まわ）って　心（こころ）を　きたえた。",
      "en": "I trained my mind traveling the whole world."
     },
     {
-     "jp": "きみの　こころ、よませて　もらう！",
+     "jp": "君（きみ）の　心（こころ）、よませて　もらう！",
      "en": "Allow me to read yours!"
     }
    ]
@@ -31,11 +31,11 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "…よめなかった。きみの　こころは　ぼくより　ふかい。",
+     "jp": "…よめなかった。君（きみ）の　心（こころ）は　ぼくより　深（ふか）い。",
      "en": "...I couldn't read it. Your mind runs deeper than mine."
     },
     {
-     "jp": "つぎの　へやへ　どうぞ。",
+     "jp": "次（つぎ）の　へやへ　どうぞ。",
      "en": "Proceed to the next room."
     }
    ]

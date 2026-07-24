@@ -15,7 +15,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "フフフ…　わしは　キョウ。かつて　セキチクの　ジムリーダー、いまは　してんのう。",
+     "jp": "フフフ…　わしは　キョウ。かつて　セキチクの　ジムリーダー、今（いま）は　四天王（してんのう）。",
      "en": "Heh heh... I am Koga. Once Fuchsia's Gym Leader, now Elite Four."
     },
     {
@@ -27,11 +27,11 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "…みごと。まどわされぬ　めを　もって　おるな。",
+     "jp": "…見事（みごと）。まどわされぬ　目（め）を　もって　おるな。",
      "en": "...Splendid. Eyes that cannot be fooled."
     },
     {
-     "jp": "むすめにも　あわせたい　ものだ。すすむが　よい。",
+     "jp": "娘（むすめ）にも　合（あ）わせたい　者（もの）だ。進（すす）むが　よい。",
      "en": "I'd like my daughter to meet you. Proceed."
     }
    ]

@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "この　いわ、ぜんぶ　おれの　ともだちだ！",
+     "jp": "この　いわ、全部（ぜんぶ）　俺（おれ）の　友達（ともだち）だ！",
      "en": "Every one of these rocks is my friend!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ともだちの　まえで　まけた…。",
+     "jp": "友達（ともだち）の　前（まえ）で　まけた…。",
      "en": "Beaten in front of my friends..."
     }
    ]

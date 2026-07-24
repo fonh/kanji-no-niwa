@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "でんきなしの　よるは　ほしが　きれいだぞ。",
+     "jp": "電気（でんき）なしの　夜（よる）は　星（ほし）が　きれいだぞ。",
      "en": "The stars are beautiful on blackout nights."
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ほしでも　みて　おちつくよ。",
+     "jp": "星（ほし）でも　見（み）て　落（お）ち着（つ）くよ。",
      "en": "I'll calm down with some stargazing."
     }
    ]

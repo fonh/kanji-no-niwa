@@ -11,23 +11,23 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "…きたか。この　さきが　リーグだ。",
+     "jp": "…来（き）たか。この　先（さき）が　リーグだ。",
      "en": "...So you came. The League lies ahead."
     },
     {
-     "jp": "ここまでの　みちの　トレーナーは、ぜんぶ　おれが　たおした。",
+     "jp": "ここまでの　道（みち）の　トレーナーは、全部（ぜんぶ）　俺（おれ）が　たおした。",
      "en": "I cleared every trainer on the road here."
     },
     {
-     "jp": "おまえと　さいごに　たたかう　ためだ。じゃまの　はいらない　ばしょでな。",
+     "jp": "お前（まえ）と　さいごに　たたかう　ためだ。じゃまの　入（はい）らない　場所（ばしょ）でな。",
      "en": "So that our last battle would have no interruptions."
     },
     {
-     "jp": "おれは　かわった。なかまを　しんじる　つよさを　みつけた。",
+     "jp": "俺（おれ）は　変（か）わった。なかまを　しんじる　強（つよ）さを　見（み）つけた。",
      "en": "I've changed. I found the strength of trusting companions."
     },
     {
-     "jp": "すべてを　かけて、いくぞ！",
+     "jp": "全（すべ）てを　懸（か）けて、行（い）くぞ！",
      "en": "With everything I have — here I come!"
     }
    ]
@@ -35,15 +35,15 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "…ははっ。まけたのに、わらえるなんてな。",
+     "jp": "…ははっ。まけたのに、笑（わら）えるなんてな。",
      "en": "...Ha. Losing, and yet I can smile."
     },
     {
-     "jp": "おまえの　おかげだ。おまえが　いたから、ここまで　これた。",
+     "jp": "お前（まえ）の　お陰（かげ）だ。お前（まえ）が　いたから、ここまで　来（こ）れた。",
      "en": "It's thanks to you. Because you were there, I made it this far."
     },
     {
-     "jp": "いけ。チャンピオンに　なって　みせろ。",
+     "jp": "行（い）け。チャンピオンに　なって　見（み）せろ。",
      "en": "Go. Show me you can become Champion."
     },
     {

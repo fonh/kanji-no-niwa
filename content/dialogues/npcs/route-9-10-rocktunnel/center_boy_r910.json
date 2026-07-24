@@ -17,15 +17,15 @@
   "welcome": {
    "pages": [
     {
-     "jp": "きいた？　はつでんしょで　どろぼうが　あったんだって！",
+     "jp": "聞（き）いた？　発電所（はつでんしょ）で　泥棒（どろぼう）が　あったんだって！",
      "en": "Did you hear? There was a theft at the Power Plant!"
     },
     {
-     "jp": "きかいの　ぶひんが　ぬすまれて、カントーじゅうの　ラジオが　とまってるんだ。",
+     "jp": "機械（きかい）の　部品（ぶひん）が　ぬすまれて、カントー中（じゅう）の　ラジオが　止（と）まってるんだ。",
      "en": "A machine part was stolen — radio's down all over Kanto."
     },
     {
-     "jp": "つかれた　ときは　この　センターで　やすむに　かぎるよ。",
+     "jp": "疲（つか）れた　時（とき）は　この　センターで　休（やす）むに　限（かぎ）るよ。",
      "en": "When you're tired, nothing beats resting at this Center."
     }
    ]
