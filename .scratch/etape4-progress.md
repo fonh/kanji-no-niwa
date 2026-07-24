@@ -41,6 +41,26 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, new-bark-town (6/6 fichiers vérifiés, 0
+  modification) — PASSE DIALOGUES PHASE 2 ENTIÈREMENT CLOSE.** Première
+  zone du jeu, studiedSet vide (`cumulative_start=0`) : confirmé
+  qu'aucun des 6 fichiers ne contient le moindre kanji, cohérent par
+  construction (rien n'a encore été enseigné à ce point du jeu). **Les 48
+  zones à dialogue de la passe Étape 4 phase 2 sont maintenant toutes
+  traitées, Tier 1 à Tier 5 inclus** (Tier 1 : 15 zones, Tier 2 : 6 zones,
+  Tier 3 : 11 zones incl. whirl-islands sans dialogue, Tier 4 : 10 zones,
+  Tier 5 : 16 zones dont goldenrod-city en 3 sous-sessions et ilex-forest/
+  route-42 traités hors-ordre en tout début de session). Bilan de cette
+  session : au-delà du travail de re-kanjification lui-même, **10 bugs
+  pré-existants (hors session) ont été trouvés et corrigés** par les audits
+  systématiques `cumulative_start` menés à chaque zone — 会 (burned-tower,
+  ecruteak×2, goldenrod-city×2), 来/七 (ecruteak), 塔 (violet-city), 町/店
+  (cherrygrove-city, tutoriel d'ouverture), 勝/花 (national-park), 影×3
+  (ecruteak) — tous confirmés via `git log -p` comme antérieurs à cette
+  passe, jamais introduits par le travail de cette session. Reste : la
+  relecture joueur plus large déjà notée comme possible mais non
+  obligatoire, et le chantier goldenrod-city split (déjà fait) — voir
+  `.scratch/etape4-rekanjify-zone-plan.md` pour le bilan complet par tier.
 - **2026-07-24 — Phase 2, route-29 (2/2 fichiers vérifiés, 0
   modification).** かようび (曜 jamais étudié dans tout le curriculum) et
   たいせつ (切 hors studiedSet) restent en kana — aucune amélioration sûre
