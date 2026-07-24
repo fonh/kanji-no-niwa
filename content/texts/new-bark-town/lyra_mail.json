@@ -2,7 +2,10 @@
  "_gabarit_note": "Étape 3 point 2 — première lecture possible du jeu entier (content/side-content-inventory.md A15). Zone à studiedSet vide (cumulative_start=0) : texte et questions volontairement 100% hiragana, aucun budget kanji à dépenser ici — cohérent avec mom_new_bark.json/prof_elm_lab.json, mêmes contraintes de zone.",
  "text": {
   "text_id": "lyra_mail_new_bark",
-  "title": { "jp": "コハルからの　メール", "en": "A Mail from Lyra" },
+  "title": {
+   "jp": "コハルからの　メール",
+   "en": "A Mail from Lyra"
+  },
   "jp_text": "げんきかな？　ぼうけんを　たのしんでね。コハルより。",
   "en_text": "How are you doing? Enjoy the adventure. From Lyra.",
   "audio_ref": null,
@@ -17,38 +20,83 @@
   "questions": [
    {
     "type": "idee_generale",
-    "prompt": { "jp": "この　メールは　なにについてですか。", "en": "What is this mail about?" },
+    "prompt": {
+     "jp": "この　メールは　なにについてですか。",
+     "en": "What is this mail about?"
+    },
     "options": [
-     { "jp": "ともだちからの　おうえん", "en": "Encouragement from a friend" },
-     { "jp": "テストの　もんだい", "en": "A test question" },
-     { "jp": "おみせの　あんない", "en": "A shop advertisement" },
-     { "jp": "てんきの　よほう", "en": "A weather forecast" }
+     {
+      "jp": "テストの　もんだい",
+      "en": "A test question"
+     },
+     {
+      "jp": "おみせの　あんない",
+      "en": "A shop advertisement"
+     },
+     {
+      "jp": "ともだちからの　おうえん",
+      "en": "Encouragement from a friend"
+     },
+     {
+      "jp": "てんきの　よほう",
+      "en": "A weather forecast"
+     }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": null
    },
    {
     "type": "detail_factuel",
-    "prompt": { "jp": "だれが　この　メールを　かきましたか。", "en": "Who wrote this mail?" },
+    "prompt": {
+     "jp": "だれが　この　メールを　かきましたか。",
+     "en": "Who wrote this mail?"
+    },
     "options": [
-     { "jp": "コハル", "en": "Lyra" },
-     { "jp": "エルムはかせ", "en": "Prof. Elm" },
-     { "jp": "ママ", "en": "Mom" },
-     { "jp": "おまわりさん", "en": "The officer" }
+     {
+      "jp": "エルムはかせ",
+      "en": "Prof. Elm"
+     },
+     {
+      "jp": "ママ",
+      "en": "Mom"
+     },
+     {
+      "jp": "おまわりさん",
+      "en": "The officer"
+     },
+     {
+      "jp": "コハル",
+      "en": "Lyra"
+     }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": null
    },
    {
     "type": "vocabulaire_contexte",
-    "prompt": { "jp": "「ぼうけん」の　いみは　どれですか。", "en": "What does 「ぼうけん」mean here?" },
+    "prompt": {
+     "jp": "「ぼうけん」の　いみは　どれですか。",
+     "en": "What does 「ぼうけん」mean here?"
+    },
     "options": [
-     { "jp": "たびに　でて　いろいろな　ことを　する　こと", "en": "Going on a journey and experiencing many things" },
-     { "jp": "べんきょうする　こと", "en": "Studying" },
-     { "jp": "ねる　こと", "en": "Sleeping" },
-     { "jp": "たべる　こと", "en": "Eating" }
+     {
+      "jp": "べんきょうする　こと",
+      "en": "Studying"
+     },
+     {
+      "jp": "たびに　でて　いろいろな　ことを　する　こと",
+      "en": "Going on a journey and experiencing many things"
+     },
+     {
+      "jp": "ねる　こと",
+      "en": "Sleeping"
+     },
+     {
+      "jp": "たべる　こと",
+      "en": "Eating"
+     }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": null
    }
   ]

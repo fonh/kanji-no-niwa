@@ -1,5 +1,5 @@
 {
- "_note": "Overlay grammaire — Safranville, 24 points N1-038→061 (1 exemple câblé/point — dérogation Carmin documentée ; phrases Hanabira exactes + furigana ; familles と～/なり～/なし～/ともな～ : jamais deux membres interchangeables dans un même tirage).",
+ "_note": "Overlay grammaire — Safranville, 24 points N1-038→061 (1 exemple câblé/point — dérogation Carmin documentée ; phrases Hanabira exactes + furigana ; familles と～/なり～/なし～/ともな～ : jamais deux membres interchangeables dans un même tirage). Corrections phase 2.4 (revue 2026-07-23) : N1-038, distracteur ということだ défendable dans le trou (「80%ということだ」reste grammatical, mauvais distracteur) → remplacé par というまでだ (incompatible dans ce trou). N1-042, ex0 du corpus Hanabira (寿司ときたら、彼は何も食べられない) sémantiquement incohérent (ときたら introduit normalement une plainte/admiration à propos du sujet, pas de non-séquitur) → écarté au profit de ex2 (あの店のハンバーガーときたら、本当に美味しい, usage 'admiration', cohérent), même méthode que N3-006 (national-park.json) : corpus Hanabira figé, on change d'index plutôt que de réécrire.",
  "zone_id": "saffron-city",
  "points": [
   {
@@ -14,7 +14,7 @@
      "jp_cloze": "彼（かれ）の力（ちから）は80％＿＿。",
      "distractors": [
       "というものだ",
-      "ということだ",
+      "というまでだ",
       "というわけだ"
      ],
      "conjugation_distractors": null
@@ -84,10 +84,10 @@
    "title": "Noun + ときたら (〜tokitara)",
    "selected_examples": [
     {
-     "source_example_index": 0,
-     "jp": "寿司（すし）ときたら、彼（かれ）は何（なに）も食（た）べられない。",
+     "source_example_index": 2,
+     "jp": "あの店（みせ）のハンバーガーときたら、本当（ほんとう）に美味（おい）しい。",
      "point_answer": "ときたら",
-     "jp_cloze": "寿司（すし）＿＿、彼（かれ）は何（なに）も食（た）べられない。",
+     "jp_cloze": "あの店（みせ）のハンバーガー＿＿、本当（ほんとう）に美味（おい）しい。",
      "distractors": [
       "となったら",
       "とすれば",

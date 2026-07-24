@@ -53,10 +53,6 @@
     },
     "options": [
      {
-      "jp": "かみなりが　おちたから。",
-      "en": "Lightning struck it"
-     },
-     {
       "jp": "せいれいが　もやしたから。",
       "en": "The spirits set it alight"
      },
@@ -65,11 +61,15 @@
       "en": "The bird breathed fire"
      },
      {
+      "jp": "かみなりが　おちたから。",
+      "en": "Lightning struck it"
+     },
+     {
       "jp": "ひとが　ひを　つけたから。",
       "en": "Someone set it on fire"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": null
    },
    {
@@ -80,10 +80,6 @@
     },
     "options": [
      {
-      "jp": "せいれいが　ひの　なかで　いのちを　おとした　こと。",
-      "en": "The spirits losing their lives in the fire"
-     },
-     {
       "jp": "とうが　たった　こと。",
       "en": "The tower being built"
      },
@@ -92,11 +88,15 @@
       "en": "The rain falling"
      },
      {
+      "jp": "せいれいが　ひの　なかで　いのちを　おとした　こと。",
+      "en": "The spirits losing their lives in the fire"
+     },
+     {
       "jp": "まちが　できた　こと。",
       "en": "The city being founded"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": {
      "start": 49,
      "end": 81

@@ -53,10 +53,6 @@
     },
     "options": [
      {
-      "jp": "うつわの　かたちに　なる。",
-      "en": "It takes the vessel's shape"
-     },
-     {
       "jp": "こおって　しまう。",
       "en": "It freezes"
      },
@@ -65,11 +61,15 @@
       "en": "It disappears"
      },
      {
+      "jp": "うつわの　かたちに　なる。",
+      "en": "It takes the vessel's shape"
+     },
+     {
       "jp": "あふれて　しまう。",
       "en": "It overflows"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": null
    },
    {
@@ -137,10 +137,6 @@
     },
     "options": [
      {
-      "jp": "水（みず）",
-      "en": "水 (water)"
-     },
-     {
       "jp": "火（ひ）",
       "en": "火 (fire)"
      },
@@ -149,11 +145,15 @@
       "en": "山 (mountain)"
      },
      {
+      "jp": "水（みず）",
+      "en": "水 (water)"
+     },
+     {
       "jp": "空（そら）",
       "en": "空 (sky)"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": {
      "start": 64,
      "end": 69

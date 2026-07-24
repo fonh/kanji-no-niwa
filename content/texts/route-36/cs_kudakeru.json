@@ -2,7 +2,10 @@
  "_note": "Étape 3 (extension) — devenu contenu réel : ce texte existait déjà comme gabarit de démonstration (content/gabarits/text-example.json, Étape 3 point 1) et sert maintenant pour de vrai la remise du CS-Kanji 砕 (seuil N=6, le plus bas des 8 CS) sur le chemin critique étendu jusqu'à Route 36. Contenu inchangé, text_id ajouté (absent du schéma § Textes Progressifs, implicite comme clé étrangère de text_completions.text_id — comblé ici). **Trouvaille en écrivant cette extension (2026-07-10)** : le budget kanji de ce texte avait été calibré contre cumulative_start=330 (position globale de route-36 dans l'ordre JLPT abstrait), mais un joueur du chemin critique réel n'a écrit que ~140 kanji à ce point (30+10+20+20+30+10 sur new-bark/cherrygrove/route-30/route-31/violet-city/sprout-tower — voir cumulative_end de sprout-tower). Les 6 kanji 'déjà connus' utilisés (大/父/手/帰/文/気) restent tous < position 140, donc réellement acquis. **Sauf 力** (position 43, globalement précoce mais assigné au pool de route-29/Tuscany, non enseigné sur le chemin critique — même trou que documenté à npc-inventory.md § route-29) : un joueur strictement chemin-critique voit donc 3 kanji hors studiedSet réel ici (岩/砕/力), pas 2. Furigana présente partout donc aucune barrière de lecture ; gardé tel quel plutôt que réécrit — le thème 'force/pouvoir' du texte s'appuie structurellement sur 力, le retirer changerait le texte plus qu'il ne vaut la peine pour 1 kanji de dépassement sur un texte dont le CS lui-même est déjà une exception (2 inconnus dédiés) à la règle générale.",
  "text": {
   "text_id": "cs_kudakeru_route36",
-  "title": { "jp": "いわくだき", "en": "The Rock-Breaker" },
+  "title": {
+   "jp": "いわくだき",
+   "en": "The Rock-Breaker"
+  },
   "jp_text": "ここの岩（いわ）はとても大（おお）きいです。むかし、父（ちち）はこの岩（いわ）を手（て）で砕（くだ）いたそうです。これから、その力（ちから）をあなたにみせます。しんじられないなら、ためしてください。",
   "en_text": "This rock here is very big. Long ago, apparently my father broke this rock with his bare hand. From now, I'll show you that power. If you don't believe it, please try.",
   "audio_ref": null,
@@ -17,63 +20,144 @@
   "questions": [
    {
     "type": "idee_generale",
-    "prompt": { "jp": "この　はなしは　なにについてですか。", "en": "What is this story about?" },
+    "prompt": {
+     "jp": "この　はなしは　なにについてですか。",
+     "en": "What is this story about?"
+    },
     "options": [
-     { "jp": "岩（いわ）を　くだく　力（ちから）を　おしえる　はなし。", "en": "A story about teaching the power to break rocks" },
-     { "jp": "かぞくの　おもいでの　はなしだけ。", "en": "Just a family memory" },
-     { "jp": "みちの　つくりかたの　せつめい。", "en": "An explanation of how to build a road" },
-     { "jp": "父（ちち）の　せいかくの　はなし。", "en": "A story about father's personality" }
+     {
+      "jp": "かぞくの　おもいでの　はなしだけ。",
+      "en": "Just a family memory"
+     },
+     {
+      "jp": "みちの　つくりかたの　せつめい。",
+      "en": "An explanation of how to build a road"
+     },
+     {
+      "jp": "父（ちち）の　せいかくの　はなし。",
+      "en": "A story about father's personality"
+     },
+     {
+      "jp": "岩（いわ）を　くだく　力（ちから）を　おしえる　はなし。",
+      "en": "A story about teaching the power to break rocks"
+     }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": null
    },
    {
     "type": "detail_factuel",
-    "prompt": { "jp": "父（ちち）は　なにで　岩（いわ）を　くだいたと　いっていますか。", "en": "According to the story, what did father use to break the rock?" },
+    "prompt": {
+     "jp": "父（ちち）は　なにで　岩（いわ）を　くだいたと　いっていますか。",
+     "en": "According to the story, what did father use to break the rock?"
+    },
     "options": [
-     { "jp": "手（て）で", "en": "His bare hand" },
-     { "jp": "どうぐで", "en": "A tool" },
-     { "jp": "ハンマーで", "en": "A hammer" },
-     { "jp": "まほうで", "en": "Magic" }
+     {
+      "jp": "どうぐで",
+      "en": "A tool"
+     },
+     {
+      "jp": "ハンマーで",
+      "en": "A hammer"
+     },
+     {
+      "jp": "手（て）で",
+      "en": "His bare hand"
+     },
+     {
+      "jp": "まほうで",
+      "en": "Magic"
+     }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": null
    },
    {
     "type": "vocabulaire_contexte",
-    "prompt": { "jp": "この　文（ぶん）の「力（ちから）」の　いみは？", "en": "In this passage, what does 「力」mean?" },
+    "prompt": {
+     "jp": "この　文（ぶん）の「力（ちから）」の　いみは？",
+     "en": "In this passage, what does 「力」mean?"
+    },
     "options": [
-     { "jp": "ちから（パワー）", "en": "Physical strength / power" },
-     { "jp": "どりょく", "en": "Effort" },
-     { "jp": "のうりょく", "en": "Ability / talent" },
-     { "jp": "ぐんたい", "en": "Military force" }
+     {
+      "jp": "ちから（パワー）",
+      "en": "Physical strength / power"
+     },
+     {
+      "jp": "どりょく",
+      "en": "Effort"
+     },
+     {
+      "jp": "のうりょく",
+      "en": "Ability / talent"
+     },
+     {
+      "jp": "ぐんたい",
+      "en": "Military force"
+     }
     ],
     "correct_index": 0,
     "answer_span": null
    },
    {
     "type": "inference",
-    "prompt": { "jp": "「しんじられないなら、ためしてください」と　いう　人（ひと）の　きもちとして　ただしいものは　どれですか。", "en": "What feeling does the line \"if you don't believe it, please try\" suggest about the speaker?" },
+    "prompt": {
+     "jp": "「しんじられないなら、ためしてください」と　いう　人（ひと）の　きもちとして　ただしいものは　どれですか。",
+     "en": "What feeling does the line \"if you don't believe it, please try\" suggest about the speaker?"
+    },
     "options": [
-     { "jp": "じぶんの　はなしに　じしんが　ある。", "en": "He is confident in his own story" },
-     { "jp": "はなしが　うそだと　おもっている。", "en": "He thinks the story is a lie" },
-     { "jp": "岩（いわ）を　われたくない。", "en": "He doesn't want the rock broken" },
-     { "jp": "はやく　帰（かえ）って　ほしい。", "en": "He wants the player to leave quickly" }
+     {
+      "jp": "はなしが　うそだと　おもっている。",
+      "en": "He thinks the story is a lie"
+     },
+     {
+      "jp": "じぶんの　はなしに　じしんが　ある。",
+      "en": "He is confident in his own story"
+     },
+     {
+      "jp": "岩（いわ）を　われたくない。",
+      "en": "He doesn't want the rock broken"
+     },
+     {
+      "jp": "はやく　帰（かえ）って　ほしい。",
+      "en": "He wants the player to leave quickly"
+     }
     ],
-    "correct_index": 0,
-    "answer_span": { "start": 80, "end": 99 }
+    "correct_index": 1,
+    "answer_span": {
+     "start": 80,
+     "end": 99
+    }
    },
    {
     "type": "resolution_reference",
-    "prompt": { "jp": "「その　力（ちから）」の「その」は　なにを　さしていますか。", "en": "What does \"that\" refer to in \"that power\"?" },
+    "prompt": {
+     "jp": "「その　力（ちから）」の「その」は　なにを　さしていますか。",
+     "en": "What does \"that\" refer to in \"that power\"?"
+    },
     "options": [
-     { "jp": "父（ちち）が　手（て）で　岩（いわ）を　くだいた　力（ちから）。", "en": "The power father used to break the rock with his bare hand" },
-     { "jp": "みちを　つくる　力（ちから）。", "en": "The power to build roads" },
-     { "jp": "ポケモンを　そだてる　力（ちから）。", "en": "The power to raise Pokémon" },
-     { "jp": "がっこうで　ならう　べんきょう。", "en": "Schoolwork learned at school" }
+     {
+      "jp": "みちを　つくる　力（ちから）。",
+      "en": "The power to build roads"
+     },
+     {
+      "jp": "ポケモンを　そだてる　力（ちから）。",
+      "en": "The power to raise Pokémon"
+     },
+     {
+      "jp": "がっこうで　ならう　べんきょう。",
+      "en": "Schoolwork learned at school"
+     },
+     {
+      "jp": "父（ちち）が　手（て）で　岩（いわ）を　くだいた　力（ちから）。",
+      "en": "The power father used to break the rock with his bare hand"
+     }
     ],
-    "correct_index": 0,
-    "answer_span": { "start": 34, "end": 52 }
+    "correct_index": 3,
+    "answer_span": {
+     "start": 34,
+     "end": 52
+    }
    }
   ]
  }

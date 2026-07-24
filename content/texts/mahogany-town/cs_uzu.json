@@ -26,10 +26,6 @@
     },
     "options": [
      {
-      "jp": "しずめず、ながれに　のる　こと。",
-      "en": "Not to still it, but to ride the flow"
-     },
-     {
       "jp": "うずを　こわす　こと。",
       "en": "To destroy the whirlpool"
      },
@@ -40,9 +36,13 @@
      {
       "jp": "いのる　こと。",
       "en": "To pray"
+     },
+     {
+      "jp": "しずめず、ながれに　のる　こと。",
+      "en": "Not to still it, but to ride the flow"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": {
      "start": 131,
      "end": 148
@@ -86,10 +86,6 @@
     },
     "options": [
      {
-      "jp": "こわい　ものではなく、りようできる　ながれと　みる。",
-      "en": "Not as something fearsome, but as a flow to be used"
-     },
-     {
       "jp": "うみの　いかりと　みる。",
       "en": "As the sea's anger"
      },
@@ -100,9 +96,13 @@
      {
       "jp": "ただの　かざりと　みる。",
       "en": "As mere decoration"
+     },
+     {
+      "jp": "こわい　ものではなく、りようできる　ながれと　みる。",
+      "en": "Not as something fearsome, but as a flow to be used"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": null
    },
    {

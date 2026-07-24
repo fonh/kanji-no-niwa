@@ -53,12 +53,12 @@
     },
     "options": [
      {
-      "jp": "まもる　ため。",
-      "en": "To protect"
-     },
-     {
       "jp": "ふりかざす　ため。",
       "en": "To brandish"
+     },
+     {
+      "jp": "まもる　ため。",
+      "en": "To protect"
      },
      {
       "jp": "ほこる　ため。",
@@ -69,7 +69,7 @@
       "en": "To sell"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": {
      "start": 48,
      "end": 76
@@ -83,12 +83,12 @@
     },
     "options": [
      {
-      "jp": "まなびつづける　こころを　うしなえば、せいちょうが　とまる。",
-      "en": "Lose the will to keep learning, and growth stops"
-     },
-     {
       "jp": "べんきょうは　からだに　わるい。",
       "en": "Studying is bad for the body"
+     },
+     {
+      "jp": "まなびつづける　こころを　うしなえば、せいちょうが　とまる。",
+      "en": "Lose the will to keep learning, and growth stops"
      },
      {
       "jp": "きわめる　ことは　ふかのうだ。",
@@ -99,7 +99,7 @@
       "en": "Learning requires exams"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": {
      "start": 92,
      "end": 113
@@ -113,10 +113,6 @@
     },
     "options": [
      {
-      "jp": "おしえを　うけつぐ　ひと。",
-      "en": "One who inherits the teachings"
-     },
-     {
       "jp": "けいさんを　する　ひと。",
       "en": "One who calculates"
      },
@@ -127,9 +123,13 @@
      {
       "jp": "けいびを　する　ひと。",
       "en": "One who stands guard"
+     },
+     {
+      "jp": "おしえを　うけつぐ　ひと。",
+      "en": "One who inherits the teachings"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": null
    },
    {
@@ -140,12 +140,12 @@
     },
     "options": [
      {
-      "jp": "まきものの　3つの　おしえ。",
-      "en": "The scroll's three teachings"
-     },
-     {
       "jp": "3にんの　けいしょうしゃ。",
       "en": "Three successors"
+     },
+     {
+      "jp": "まきものの　3つの　おしえ。",
+      "en": "The scroll's three teachings"
      },
      {
       "jp": "3びきの　りゅう。",
@@ -156,7 +156,7 @@
       "en": "Three shrines"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": {
      "start": 33,
      "end": 47

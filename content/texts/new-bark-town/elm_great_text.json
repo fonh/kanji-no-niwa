@@ -26,10 +26,6 @@
     },
     "options": [
      {
-      "jp": "庭（にわ）に　まく　たね。",
-      "en": "Seeds sown in a garden"
-     },
-     {
       "jp": "そらを　とぶ　とり。",
       "en": "Birds in the sky"
      },
@@ -40,9 +36,13 @@
      {
       "jp": "やまの　いし。",
       "en": "Mountain stones"
+     },
+     {
+      "jp": "庭（にわ）に　まく　たね。",
+      "en": "Seeds sown in a garden"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": null
    },
    {
@@ -83,10 +83,6 @@
     },
     "options": [
      {
-      "jp": "いちど　まなんだ　けいけんは、つぎの　まなびを　らくに　する。",
-      "en": "The experience of learning once makes the next learning easier"
-     },
-     {
       "jp": "つちを　かえれば　はやく　そだつ。",
       "en": "Changing the soil speeds growth"
      },
@@ -97,9 +93,13 @@
      {
       "jp": "にわしごとは　つかれる。",
       "en": "Gardening is tiring"
+     },
+     {
+      "jp": "いちど　まなんだ　けいけんは、つぎの　まなびを　らくに　する。",
+      "en": "The experience of learning once makes the next learning easier"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": {
      "start": 199,
      "end": 232
@@ -113,10 +113,6 @@
     },
     "options": [
      {
-      "jp": "みの　なかの　あたらしい　たね。",
-      "en": "The new seeds inside the fruit"
-     },
-     {
       "jp": "こころの　庭（にわ）。",
       "en": "The garden of the heart"
      },
@@ -127,9 +123,13 @@
      {
       "jp": "かれた　め。",
       "en": "The withered sprouts"
+     },
+     {
+      "jp": "みの　なかの　あたらしい　たね。",
+      "en": "The new seeds inside the fruit"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": {
      "start": 79,
      "end": 117

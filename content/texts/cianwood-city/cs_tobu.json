@@ -53,10 +53,6 @@
     },
     "options": [
      {
-      "jp": "そらの　みちを　おぼえて　いるから。",
-      "en": "They remember the sky roads"
-     },
-     {
       "jp": "つばさが　大（おお）きいから。",
       "en": "Their wings are big"
      },
@@ -65,11 +61,15 @@
       "en": "They have good eyes"
      },
      {
+      "jp": "そらの　みちを　おぼえて　いるから。",
+      "en": "They remember the sky roads"
+     },
+     {
       "jp": "かぜが　みちを　おしえるから。",
       "en": "The wind shows them the way"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": {
      "start": 47,
      "end": 69
@@ -83,12 +83,12 @@
     },
     "options": [
      {
-      "jp": "みちを　おぼえて　いて、まよわず　もどれる　とり。",
-      "en": "Birds, who remember roads and return without getting lost"
-     },
-     {
       "jp": "つばさを　もつ　ひこうき。",
       "en": "Airplanes with wings"
+     },
+     {
+      "jp": "みちを　おぼえて　いて、まよわず　もどれる　とり。",
+      "en": "Birds, who remember roads and return without getting lost"
      },
      {
       "jp": "そらを　ながれる　くも。",
@@ -99,7 +99,7 @@
       "en": "Leaves riding the wind"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": {
      "start": 92,
      "end": 112
@@ -113,10 +113,6 @@
     },
     "options": [
      {
-      "jp": "たびの　きおくこそが　ちからに　なる。",
-      "en": "The memory of your journey itself becomes power"
-     },
-     {
       "jp": "とりを　かう　べきだ。",
       "en": "You should keep birds"
      },
@@ -125,11 +121,15 @@
       "en": "Flying is better than walking"
      },
      {
+      "jp": "たびの　きおくこそが　ちからに　なる。",
+      "en": "The memory of your journey itself becomes power"
+     },
+     {
       "jp": "まちに　もどっては　いけない。",
       "en": "You must not return to towns"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": {
      "start": 122,
      "end": 151

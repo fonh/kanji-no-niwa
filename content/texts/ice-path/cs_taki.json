@@ -26,12 +26,12 @@
     },
     "options": [
      {
-      "jp": "ながれの　なかの　しずかな　みちを　みつければ、滝（たき）も　のぼれる。",
-      "en": "Find the quiet path within the current, and you can climb even a waterfall"
-     },
-     {
       "jp": "滝（たき）には　ちかづくな。",
       "en": "Stay away from waterfalls"
+     },
+     {
+      "jp": "ながれの　なかの　しずかな　みちを　みつければ、滝（たき）も　のぼれる。",
+      "en": "Find the quiet path within the current, and you can climb even a waterfall"
      },
      {
       "jp": "さかなは　つよい　どうぶつだ。",
@@ -42,7 +42,7 @@
       "en": "Water falls from high to low"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": null
    },
    {
@@ -53,10 +53,6 @@
     },
     "options": [
      {
-      "jp": "ながれの　なかの　しずかな　みちを　みつけて。",
-      "en": "By finding the quiet path within the current"
-     },
-     {
       "jp": "ながれに　ちからで　さからって。",
       "en": "By fighting the current with force"
      },
@@ -65,11 +61,15 @@
       "en": "By riding the wind"
      },
      {
+      "jp": "ながれの　なかの　しずかな　みちを　みつけて。",
+      "en": "By finding the quiet path within the current"
+     },
+     {
       "jp": "よるに　なってから。",
       "en": "By waiting for nightfall"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": {
      "start": 89,
      "end": 111
@@ -110,12 +110,12 @@
     },
     "options": [
      {
-      "jp": "滝（たき）は　うえから　したへ　おちる　もの、という　かんがえ。",
-      "en": "The idea that waterfalls fall from high to low"
-     },
-     {
       "jp": "さかなは　滝（たき）を　のぼる、という　かんがえ。",
       "en": "The idea that fish climb waterfalls"
+     },
+     {
+      "jp": "滝（たき）は　うえから　したへ　おちる　もの、という　かんがえ。",
+      "en": "The idea that waterfalls fall from high to low"
      },
      {
       "jp": "みちは　みつからない、という　かんがえ。",
@@ -126,7 +126,7 @@
       "en": "The idea that the current is quiet"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": {
      "start": 0,
      "end": 22

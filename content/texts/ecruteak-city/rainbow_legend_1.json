@@ -26,12 +26,12 @@
     },
     "options": [
      {
-      "jp": "むかし　まちに　いた　とりの　でんせつ。",
-      "en": "The legend of a bird that once lived in the city"
-     },
-     {
       "jp": "とうの　たてかた。",
       "en": "How the tower was built"
+     },
+     {
+      "jp": "むかし　まちに　いた　とりの　でんせつ。",
+      "en": "The legend of a bird that once lived in the city"
      },
      {
       "jp": "まもりがみの　まつり。",
@@ -42,7 +42,7 @@
       "en": "How feather colors work"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": null
    },
    {

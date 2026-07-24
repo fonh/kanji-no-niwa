@@ -17,9 +17,9 @@
       "register": "casual",
       "context": { "jp": "友（とも）だちに聞（き）く。", "en": "Asking a friend." },
       "options": [
-       { "jp": "これ、読んだ？", "en": "Did you read this?" },
-       { "jp": "これを　お読みになりましたか？", "en": "Have you (respectfully) read this?" },
-       { "jp": "これ、読んでいただけますか？", "en": "Could you (please) read this for me?" }
+       { "jp": "これ、読（よ）んだ？", "en": "Did you read this?" },
+       { "jp": "これを　お読（よ）みになりましたか？", "en": "Have you (respectfully) read this?" },
+       { "jp": "これ、読（よ）んでいただけますか？", "en": "Could you (please) read this for me?" }
       ],
       "correct_index": 0
      },
@@ -28,9 +28,9 @@
       "register": "teineigo",
       "context": { "jp": "お店（みせ）の人（ひと）に聞（き）く。", "en": "Asking a shopkeeper." },
       "options": [
-       { "jp": "これ、読んだ？", "en": "Did you read this? (casual)" },
-       { "jp": "これを　読みましたか？", "en": "Did you read this?" },
-       { "jp": "これを　読んでもらっていい？", "en": "Mind reading this for me? (casual favor)" }
+       { "jp": "これ、読（よ）んだ？", "en": "Did you read this? (casual)" },
+       { "jp": "これを　読（よ）みましたか？", "en": "Did you read this?" },
+       { "jp": "これを　読（よ）んでもらっていい？", "en": "Mind reading this for me? (casual favor)" }
       ],
       "correct_index": 1
      },
@@ -39,10 +39,10 @@
       "register": "keigo",
       "context": { "jp": "会社（かいしゃ）の　上司（じょうし）に聞（き）く。", "en": "Asking your boss." },
       "options": [
-       { "jp": "これを　読みましたか？", "en": "Did you read this? (plain polite)" },
-       { "jp": "これを　お読みになりましたか。", "en": "Have you read this? (respectful — correct)" },
-       { "jp": "これを　お読みになられましたか。", "en": "Have you read this? (double honorific — 二重敬語, incorrect)" },
-       { "jp": "これ、読んだ？", "en": "Did you read this? (casual — wrong register)" }
+       { "jp": "これを　読（よ）みましたか？", "en": "Did you read this? (plain polite)" },
+       { "jp": "これを　お読（よ）みになりましたか。", "en": "Have you read this? (respectful — correct)" },
+       { "jp": "これを　お読（よ）みになられましたか。", "en": "Have you read this? (double honorific — 二重敬語, incorrect)" },
+       { "jp": "これ、読（よ）んだ？", "en": "Did you read this? (casual — wrong register)" }
       ],
       "correct_index": 1,
       "note": "Distracteur ciblé (二重敬語, お...になる + られる cumulés) : c'est ce piège spécifique que la variante Silph Co. (N2/N1, keigo d'entreprise) doit tester systématiquement, § Vermeille City."

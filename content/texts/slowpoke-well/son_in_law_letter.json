@@ -2,7 +2,10 @@
  "_note": "Étape 4 — sourcé content/side-content-inventory.md A1 : « Lettre du gendre de Kurt, portée par le Ramoloss du fond du puits ('tenez le fort ensemble') » — texte de lecture courte explicitement noté « tout trouvé ». Budget kanji conservateur (hiragana + kanji très précoces), même prudence que les textes précédents.",
  "text": {
   "text_id": "son_in_law_letter_slowpoke_well",
-  "title": { "jp": "てがみ", "en": "A Letter" },
+  "title": {
+   "jp": "てがみ",
+   "en": "A Letter"
+  },
   "jp_text": "おとうさん、げんきですか。ぼくは　まいにち　げんきです。おかあさんと　ふたりで、いえを　まもって　ください。ぼくも　がんばります。",
   "en_text": "Father, how are you? I'm doing well every day. Please look after the house together with Mother. I'll do my best too.",
   "audio_ref": null,
@@ -17,38 +20,83 @@
   "questions": [
    {
     "type": "idee_generale",
-    "prompt": { "jp": "この　てがみは　なにについてですか。", "en": "What is this letter about?" },
+    "prompt": {
+     "jp": "この　てがみは　なにについてですか。",
+     "en": "What is this letter about?"
+    },
     "options": [
-     { "jp": "むすこから　りょうしんへの　たより", "en": "A message from a son to his parents" },
-     { "jp": "しごとの　れんらく", "en": "A work notice" },
-     { "jp": "おみせの　あんない", "en": "A shop advertisement" },
-     { "jp": "りょこうの　けいかく", "en": "Travel plans" }
+     {
+      "jp": "しごとの　れんらく",
+      "en": "A work notice"
+     },
+     {
+      "jp": "おみせの　あんない",
+      "en": "A shop advertisement"
+     },
+     {
+      "jp": "むすこから　りょうしんへの　たより",
+      "en": "A message from a son to his parents"
+     },
+     {
+      "jp": "りょこうの　けいかく",
+      "en": "Travel plans"
+     }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": null
    },
    {
     "type": "detail_factuel",
-    "prompt": { "jp": "だれと　いえを　まもって　ほしいと　いっていますか。", "en": "Who does he ask his father to look after the house with?" },
+    "prompt": {
+     "jp": "だれと　いえを　まもって　ほしいと　いっていますか。",
+     "en": "Who does he ask his father to look after the house with?"
+    },
     "options": [
-     { "jp": "おかあさん", "en": "Mother" },
-     { "jp": "おじいさん", "en": "Grandfather" },
-     { "jp": "いぬ", "en": "The dog" },
-     { "jp": "ともだち", "en": "A friend" }
+     {
+      "jp": "おじいさん",
+      "en": "Grandfather"
+     },
+     {
+      "jp": "いぬ",
+      "en": "The dog"
+     },
+     {
+      "jp": "おかあさん",
+      "en": "Mother"
+     },
+     {
+      "jp": "ともだち",
+      "en": "A friend"
+     }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": null
    },
    {
     "type": "vocabulaire_contexte",
-    "prompt": { "jp": "「まもって」の　いみは　どれですか。", "en": "What does 「まもって」mean here?" },
+    "prompt": {
+     "jp": "「まもって」の　いみは　どれですか。",
+     "en": "What does 「まもって」mean here?"
+    },
     "options": [
-     { "jp": "たいせつに　する", "en": "To take care of / protect" },
-     { "jp": "うる", "en": "To sell" },
-     { "jp": "こわす", "en": "To break" },
-     { "jp": "わすれる", "en": "To forget" }
+     {
+      "jp": "うる",
+      "en": "To sell"
+     },
+     {
+      "jp": "こわす",
+      "en": "To break"
+     },
+     {
+      "jp": "たいせつに　する",
+      "en": "To take care of / protect"
+     },
+     {
+      "jp": "わすれる",
+      "en": "To forget"
+     }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": null
    }
   ]

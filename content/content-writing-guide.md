@@ -105,6 +105,14 @@ Concrètement :
 5. **Fais-le zone par zone, pas en fin de lot** — c'est exactement l'étape qui a été oubliée sur
    6 zones lors du passage précédent, sans qu'aucun linter ne s'en aperçoive.
 
+## 4bis. `kanji.keyword` — anglais éditorialisé affiché sur la double-page (Étape 4, 2026-07-23)
+
+`meanings[0]` du dataset brut est parfois trompeur en tête de liste (ex. 校 = "exam"
+avant "school", 拉 = "Latin" avant "drag/pull") — jamais l'afficher tel quel comme mot-clé
+de la fiche. Si `keyword` est absent, on le complète au fil de l'écriture de la zone
+(un mot anglais simple, cohérent avec l'usage réellement enseigné) ; le batch des kanji
+déjà en jeu sans `keyword` se fait au fil des zones, pas en une passe unique.
+
 ## 5. Règles de contenu à ne jamais oublier
 
 - **Règle #1** (`guidebook-adapted.md`) : aucun Pokémon n'apparaît jamais comme compagnon de

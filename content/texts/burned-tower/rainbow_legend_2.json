@@ -26,10 +26,6 @@
     },
     "options": [
      {
-      "jp": "かねの　ねが　きれいに　ひびく　とき。",
-      "en": "When the bell's tone rings pure"
-     },
-     {
       "jp": "とうが　たてなおされた　とき。",
       "en": "When the tower is rebuilt"
      },
@@ -38,11 +34,15 @@
       "en": "When snow falls"
      },
      {
+      "jp": "かねの　ねが　きれいに　ひびく　とき。",
+      "en": "When the bell's tone rings pure"
+     },
+     {
       "jp": "まつりの　よる。",
       "en": "On the festival night"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 2,
     "answer_span": null
    },
    {
@@ -53,12 +53,12 @@
     },
     "options": [
      {
-      "jp": "かねの　ねが　ひびけば　とりが　かえる　という　いいつたえ。",
-      "en": "The legend that the bird returns when the bell rings pure"
-     },
-     {
       "jp": "とりが　さった　こと。",
       "en": "The bird's departure"
+     },
+     {
+      "jp": "かねの　ねが　ひびけば　とりが　かえる　という　いいつたえ。",
+      "en": "The legend that the bird returns when the bell rings pure"
      },
      {
       "jp": "とうが　やけた　こと。",
@@ -69,7 +69,7 @@
       "en": "The dancers' love of song"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": {
      "start": 48,
      "end": 88
@@ -83,12 +83,12 @@
     },
     "options": [
      {
-      "jp": "とりに　かえって　きて　ほしいから。",
-      "en": "They want the bird to return"
-     },
-     {
       "jp": "おかねを　かせぎたいから。",
       "en": "They want to earn money"
+     },
+     {
+      "jp": "とりに　かえって　きて　ほしいから。",
+      "en": "They want the bird to return"
      },
      {
       "jp": "ゆうめいに　なりたいから。",
@@ -99,7 +99,7 @@
       "en": "They want to sell the bell"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": {
      "start": 93,
      "end": 124

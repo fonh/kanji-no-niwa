@@ -35,6 +35,29 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2.4 (corrections linguistiques ponctuelles)** : lot de
+  corrections mécaniques indépendantes de la passe de re-kanjification elle-même.
+  **466 lesson_examples** de `kanji-content.json` avaient un groupement de lecture par
+  caractère (学（がっ）校（こう）) au lieu d'un run ADR-0002 (学校（がっこう）) — fusionnés
+  par script (`.scratch/scripts/fix-lesson-example-furigana-grouping.py`) ; règle ajoutée
+  à `lint-kanji-budget.py` (nouveau check `ungrouped_furigana_runs`, FAIL) pour empêcher
+  la régression, sur dialogues/textes/lesson_examples. Entrées 拉/弔 : phrases
+  agrammaticales remplacées par les phrases sourcées dans le prompt (拉麺を食べに
+  いきませんか / 弔問に行く). Champ `keyword` éditorialisé ajouté (校→« school », 拉→
+  « drag/pull » — meanings[0] brut était trompeur) ; **batch complet différé**
+  (« au fil des zones » par design, pas un big-bang). `content/gabarits/
+  keigo-session-example.json` : 11 occurrences de 読 sans lecture inline corrigées
+  (gabarit maintenant conforme avant utilisation en phase 5). `content/grammar/
+  saffron-city.json` : N1-038 distracteur ということだ (défendable dans le trou)
+  remplacé par というまでだ ; N1-042 exemple Hanabira ex0 (寿司ときたら…) sémantiquement
+  incohérent → basculé sur ex2 du corpus (ハンバーガー, usage admiration), même méthode
+  que N3-006. **correct_index randomisé** sur tout `content/texts/` (72→24 questions à
+  0 avant, hash déterministe par text_id+index — `.scratch/scripts/
+  randomize-correct-index.py`, idempotent/reproductible, pas de `random.random()`) ;
+  le linter d'uniformité (0.6) ne relève plus que 2 cas bénins (le gabarit
+  text-example.json, illustratif, et une coïncidence à 3 questions sur
+  slowpoke-well/son_in_law_letter.json — plus le pattern « toujours index 0 » que la
+  règle visait à éliminer). 5 linters verts (0 FAIL, 3 WARN attendus/documentés).
 - **2026-07-24 — Phase 1 (curriculum : promotion du noyau N5/N4)** : décision de design
   actée (§ Phase 1 du prompt). Mesuré : 195 kanji N5/N4 assignés à une position ≥300
   dans l'ordre par composants, dont les 6 exemples nommés par l'audit (本/561, 学/559,

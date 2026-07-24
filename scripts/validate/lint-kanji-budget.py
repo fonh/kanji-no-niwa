@@ -20,10 +20,14 @@ voir content/gabarits/README.md § Vérification post-écriture) :
      est calculé sur `jp_text` + les `questions[].prompt/options` combinés
      (les questions réutilisent le vocabulaire du passage, elles ne sont
      pas un budget à part, décision prise en écrivant text-example.json).
-   - **Exemple de leçon** (`kanji.lesson_examples[]`) : règle stricte,
-     zéro kanji autre que le kanji de l'entrée elle-même (§ Leçons du
-     PRD : « zéro autre kanji inconnu » — pas de tolérance proportionnelle
-     ici, contrairement aux textes).
+   - **Exemple de leçon** (`kanji.lesson_examples[]`) : aucune contrainte de
+     kanji inconnu (règle assouplie 2026-07-10, PRD.md:411 — un kanji
+     n'entre dans le studiedSet qu'à la complétion de SA PROPRE leçon,
+     son apparition incidente dans l'exemple d'un autre kanji ne
+     l'"enseigne" pas). Seule la lecture inline reste obligatoire.
+3. **Groupement des lectures par run de kanji** (Étape 4, règle nouvelle
+   2026-07-23) : 学校（がっこう）, jamais par caractère isolé
+   (学（がっ）校（こう）) — vérifié partout, y compris `lesson_examples[]`.
 
 studiedSet d'une zone = les kanji dont l'index dans `ordered_kanji` de
 `content/kanji-zone-assignment.json` est < `cumulative_start` de la zone.
@@ -100,6 +104,16 @@ def missing_inline_readings(text):
     return missing
 
 
+UNGROUPED_FURIGANA_RE = re.compile(r"(?:[一-鿿]（[^）]*）){2,}")
+
+
+def ungrouped_furigana_runs(text):
+    """Two or more adjacent single-kanji（reading） pairs with nothing between them —
+    should be one run with one combined reading (学校（がっこう）), not per-character
+    (学（がっ）校（こう）) — Étape 4 règle nouvelle #2, 2026-07-23."""
+    return UNGROUPED_FURIGANA_RE.findall(text)
+
+
 def collect_jp_strings(obj, acc, skip_keys=()):
     """Recursively collect every string found under a 'jp' key."""
     if isinstance(obj, dict):
@@ -142,6 +156,8 @@ def lint_dialogue_file(path, obj, ordered, zones, findings):
     for jp in [name_jp, *_all_jp_strings(obj, skip_keys=())]:
         for run in missing_inline_readings(jp):
             findings.append(Finding(path, "FAIL", f"lecture inline manquante sur « {run} » dans « {jp} »"))
+        for run in ungrouped_furigana_runs(jp):
+            findings.append(Finding(path, "FAIL", f"lecture par caractère au lieu d'un run groupé : « {run} » dans « {jp} »"))
 
     # budget check excludes the name field, and exam_name (師範/Jalons-examens exam title —
     # a fixed proper-noun-like label, same exemption logic as character names, CONTEXT.md
@@ -187,6 +203,8 @@ def lint_text_object(path, text_obj, ordered, zones, findings):
     for jp in all_jp:
         for run in missing_inline_readings(jp):
             findings.append(Finding(path, "FAIL", f"lecture inline manquante sur « {run} » dans « {jp} »"))
+        for run in ungrouped_furigana_runs(jp):
+            findings.append(Finding(path, "FAIL", f"lecture par caractère au lieu d'un run groupé : « {run} » dans « {jp} »"))
 
     plain_len = len(strip_furigana(jp_text))
     allowed = min(max(1, math.ceil(plain_len / 100 * 2)), 10)
@@ -216,6 +234,8 @@ def lint_lesson_examples(path, resolved_kanji, ordered, zones, findings):
             jp = ex.get("jp", "")
             for run in missing_inline_readings(jp):
                 findings.append(Finding(path, "FAIL", f"lecture inline manquante sur « {run} » dans « {jp} »"))
+            for run in ungrouped_furigana_runs(jp):
+                findings.append(Finding(path, "FAIL", f"lecture par caractère au lieu d'un run groupé : « {run} » dans « {jp} »"))
 
 
 def lint_file(path, ordered, zones, findings):

@@ -104,7 +104,15 @@ fichier de contenu concerné).
 |---|---|---|
 | `ragecandybar` | Boutique d'Acajou (manju locale), mécanique d'implémentation — pas de PNJ-boutique écrit à ce jour | `content/dialogues/npcs/route-6-kanto/underground_trader_r6.json` (troc contre une CT) |
 
-## 7. Décisions de spec issues des revues (pour l'équipe code)
+## 7. `kanji.keyword` — priorité d'affichage (phase 2.4)
+
+Quand un kanji porte un champ `keyword` (`src/data/kanji-content.json`), l'UI de la
+double-page doit l'afficher à la place de `meanings[0]` — `meanings[0]` est un artefact
+du dataset brut, pas éditorialisé, parfois trompeur (ex. 校 = "exam" avant "school").
+`keyword` n'est renseigné que sur une partie des 2136 kanji à ce jour (au fil des zones,
+§ content-writing-guide.md § 4bis) ; fallback sur `meanings[0]` tant qu'absent.
+
+## 8. Décisions de spec issues des revues (pour l'équipe code)
 
 - **Examens ≥ 70 questions : reprise par section en cas d'échec**, jamais « tout refaire »
   (Blue 98q ≈ 45-60 min de jeu ; le format mini-JLPT à sections existe déjà côté contenu — la
@@ -114,7 +122,7 @@ fichier de contenu concerné).
   à l'écriture depuis la phase 2.4, mais l'affichage doit re-mélanger dans tous les cas — ne
   jamais supposer que la position stockée reflète la position affichée).
 
-## 8. Historique
+## 9. Historique
 
 - **2026-07-23** — création (Étape 4 phase 0.5), tables § 1 et § 3 construites par grep exhaustif
   du corpus écrit à ce jour (36 zones, 536 fichiers). À réexécuter/étendre si un nouveau

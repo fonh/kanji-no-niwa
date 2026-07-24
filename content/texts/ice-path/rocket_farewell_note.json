@@ -26,10 +26,6 @@
     },
     "options": [
      {
-      "jp": "かいさんした　だんいんに　さいごの　めいれいを　つたえる　ため。",
-      "en": "To give the disbanded members a final order"
-     },
-     {
       "jp": "サカキを　よびもどす　ため。",
       "en": "To call Giovanni back"
      },
@@ -40,9 +36,13 @@
      {
       "jp": "たからの　ばしょを　しらせる　ため。",
       "en": "To reveal a treasure's location"
+     },
+     {
+      "jp": "かいさんした　だんいんに　さいごの　めいれいを　つたえる　ため。",
+      "en": "To give the disbanded members a final order"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": null
    },
    {
@@ -52,10 +52,6 @@
      "en": "What is Archer's final order?"
     },
     "options": [
-     {
-      "jp": "ぬすんだ　ものを　かえし、あやまれる　ものには　あやまる　こと。",
-      "en": "Return what was stolen and apologize where owed"
-     },
      {
       "jp": "さいごまで　たたかう　こと。",
       "en": "To fight to the end"
@@ -67,9 +63,13 @@
      {
       "jp": "とうに　あつまる　こと。",
       "en": "To gather at the tower"
+     },
+     {
+      "jp": "ぬすんだ　ものを　かえし、あやまれる　ものには　あやまる　こと。",
+      "en": "Return what was stolen and apologize where owed"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": {
      "start": 84,
      "end": 112

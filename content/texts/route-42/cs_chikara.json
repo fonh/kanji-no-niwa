@@ -26,10 +26,6 @@
     },
     "options": [
      {
-      "jp": "力（ちから）は　からだと　こころを　あわせる　わざだ。",
-      "en": "Power is the art of uniting body and mind"
-     },
-     {
       "jp": "うでを　きたえれば　いい。",
       "en": "Just train your arms"
      },
@@ -40,9 +36,13 @@
      {
       "jp": "いきを　とめる　ことが　だいじだ。",
       "en": "Holding your breath is what matters"
+     },
+     {
+      "jp": "力（ちから）は　からだと　こころを　あわせる　わざだ。",
+      "en": "Power is the art of uniting body and mind"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": null
    },
    {
@@ -52,10 +52,6 @@
      "en": "What do you push a boulder with?"
     },
     "options": [
-     {
-      "jp": "からだ　ぜんぶで。",
-      "en": "Your whole body"
-     },
      {
       "jp": "うでだけで。",
       "en": "Arms only"
@@ -67,9 +63,13 @@
      {
       "jp": "こえで。",
       "en": "Your voice"
+     },
+     {
+      "jp": "からだ　ぜんぶで。",
+      "en": "Your whole body"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": {
      "start": 63,
      "end": 77
@@ -83,10 +83,6 @@
     },
     "options": [
      {
-      "jp": "または／べつの　いいかたを　すれば。",
-      "en": "Or / to put it another way"
-     },
-     {
       "jp": "ぜったいに。",
       "en": "Absolutely"
      },
@@ -97,9 +93,13 @@
      {
       "jp": "たとえば　むかし。",
       "en": "For example, long ago"
+     },
+     {
+      "jp": "または／べつの　いいかたを　すれば。",
+      "en": "Or / to put it another way"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 3,
     "answer_span": null
    },
    {
@@ -110,12 +110,12 @@
     },
     "options": [
      {
-      "jp": "力（ちから）とは　からだと　こころを　ひとつに　する　わざ、という　いいかた。",
-      "en": "The phrasing that power is the art of uniting body and mind"
-     },
-     {
       "jp": "岩（いわ）は　おもい、という　いいかた。",
       "en": "The phrasing that boulders are heavy"
+     },
+     {
+      "jp": "力（ちから）とは　からだと　こころを　ひとつに　する　わざ、という　いいかた。",
+      "en": "The phrasing that power is the art of uniting body and mind"
      },
      {
       "jp": "うでの　力（ちから）が　すべて、という　いいかた。",
@@ -126,7 +126,7 @@
       "en": "The phrasing that you shouldn't time your breath"
      }
     ],
-    "correct_index": 0,
+    "correct_index": 1,
     "answer_span": {
      "start": 94,
      "end": 125

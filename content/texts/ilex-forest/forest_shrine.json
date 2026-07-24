@@ -2,7 +2,10 @@
  "_note": "Étape 4 (Lot 3) — Forêt Secte. Texte secondaire (tier secondaire) sourcé side-content-inventory.md A8 (« Sanctuaire du gardien de la forêt / kami / esprits protecteurs », guidebook-adapted.md L453 : découvert après l'arbre coupé). event_ref forest_shrine_ilex : l'inscription se lit après avoir franchi l'arbre 切 (obstacle cut_tree_ilex_shortcut). N4. Budget : 6 kanji, tous furigana (森人神木手風), tous < pool ilex-forest donc étudiés — 0 inconnu réel. Types de question variés (idee_generale / detail_factuel / vocabulaire_contexte / inference / resolution_reference, 2 answer_span) pour ne pas recycler les 3 mêmes (dette notée roadmap Étape 4 § audit pré-Lot 2).",
  "text": {
   "text_id": "forest_shrine_ilex",
-  "title": { "jp": "もりの　やしろ", "en": "The Forest Shrine" },
+  "title": {
+   "jp": "もりの　やしろ",
+   "en": "The Forest Shrine"
+  },
   "jp_text": "森（もり）の　おくに、ふるい　やしろが　あります。むかし、この　もりの　人（ひと）たちは、森（もり）の　神（かみ）を　まもりがみと　して　うやまいました。木（き）を　ひとつ　きる　ときも、かならず　やしろに　手（て）を　あわせたそうです。いまも、しずかな　風（かぜ）の　なかに、その　こころが　のこっています。",
   "en_text": "Deep in the forest stands an old shrine. Long ago, the people of this forest revered the forest god as their guardian deity. Even when they cut down a single tree, they say, they would always press their hands together in prayer at the shrine. Even now, that spirit lingers in the quiet wind.",
   "audio_ref": null,
@@ -17,63 +20,144 @@
   "questions": [
    {
     "type": "idee_generale",
-    "prompt": { "jp": "この　やしろは　なんの　ために　たてられましたか。", "en": "What was this shrine built for?" },
+    "prompt": {
+     "jp": "この　やしろは　なんの　ために　たてられましたか。",
+     "en": "What was this shrine built for?"
+    },
     "options": [
-     { "jp": "森（もり）の　神（かみ）を　うやまう　ため。", "en": "To revere the forest god" },
-     { "jp": "きを　うる　みせを　ひらく　ため。", "en": "To open a shop selling wood" },
-     { "jp": "まいごを　あんないする　ため。", "en": "To guide lost travellers" },
-     { "jp": "とりを　かう　ため。", "en": "To keep birds" }
+     {
+      "jp": "森（もり）の　神（かみ）を　うやまう　ため。",
+      "en": "To revere the forest god"
+     },
+     {
+      "jp": "きを　うる　みせを　ひらく　ため。",
+      "en": "To open a shop selling wood"
+     },
+     {
+      "jp": "まいごを　あんないする　ため。",
+      "en": "To guide lost travellers"
+     },
+     {
+      "jp": "とりを　かう　ため。",
+      "en": "To keep birds"
+     }
     ],
     "correct_index": 0,
     "answer_span": null
    },
    {
     "type": "detail_factuel",
-    "prompt": { "jp": "むかしの　人（ひと）たちは、きを　きる　とき　なにを　しましたか。", "en": "What did the people of long ago do when they cut a tree?" },
+    "prompt": {
+     "jp": "むかしの　人（ひと）たちは、きを　きる　とき　なにを　しましたか。",
+     "en": "What did the people of long ago do when they cut a tree?"
+    },
     "options": [
-     { "jp": "やしろで　手（て）を　あわせた。", "en": "They pressed their hands together in prayer at the shrine" },
-     { "jp": "おおきな　こえで　うたった。", "en": "They sang in a loud voice" },
-     { "jp": "きを　もって　まちへ　いった。", "en": "They carried the wood into town" },
-     { "jp": "なにも　しなかった。", "en": "They did nothing" }
+     {
+      "jp": "やしろで　手（て）を　あわせた。",
+      "en": "They pressed their hands together in prayer at the shrine"
+     },
+     {
+      "jp": "おおきな　こえで　うたった。",
+      "en": "They sang in a loud voice"
+     },
+     {
+      "jp": "きを　もって　まちへ　いった。",
+      "en": "They carried the wood into town"
+     },
+     {
+      "jp": "なにも　しなかった。",
+      "en": "They did nothing"
+     }
     ],
     "correct_index": 0,
     "answer_span": null
    },
    {
     "type": "vocabulaire_contexte",
-    "prompt": { "jp": "この　文（ぶん）の「まもりがみ」の　いみは？", "en": "In this passage, what does 「まもりがみ」mean?" },
+    "prompt": {
+     "jp": "この　文（ぶん）の「まもりがみ」の　いみは？",
+     "en": "In this passage, what does 「まもりがみ」mean?"
+    },
     "options": [
-     { "jp": "まもって　くれる　神（かみ）。", "en": "A god who protects you" },
-     { "jp": "こわい　おばけ。", "en": "A scary ghost" },
-     { "jp": "むらの　しゃちょう。", "en": "The village boss" },
-     { "jp": "とおくの　やま。", "en": "A distant mountain" }
+     {
+      "jp": "まもって　くれる　神（かみ）。",
+      "en": "A god who protects you"
+     },
+     {
+      "jp": "こわい　おばけ。",
+      "en": "A scary ghost"
+     },
+     {
+      "jp": "むらの　しゃちょう。",
+      "en": "The village boss"
+     },
+     {
+      "jp": "とおくの　やま。",
+      "en": "A distant mountain"
+     }
     ],
     "correct_index": 0,
     "answer_span": null
    },
    {
     "type": "inference",
-    "prompt": { "jp": "むかしの　人（ひと）たちの　もりへの　きもちとして　ただしいものは　どれですか。", "en": "Which best describes how the people of long ago felt about the forest?" },
+    "prompt": {
+     "jp": "むかしの　人（ひと）たちの　もりへの　きもちとして　ただしいものは　どれですか。",
+     "en": "Which best describes how the people of long ago felt about the forest?"
+    },
     "options": [
-     { "jp": "もりを　うやまい、たいせつに　した。", "en": "They revered the forest and treated it with care" },
-     { "jp": "もりを　こわがって、ちかづかなかった。", "en": "They feared the forest and kept away" },
-     { "jp": "もりを　ぜんぶ　きりたかった。", "en": "They wanted to cut the whole forest down" },
-     { "jp": "もりに　きょうみが　なかった。", "en": "They had no interest in the forest" }
+     {
+      "jp": "もりを　こわがって、ちかづかなかった。",
+      "en": "They feared the forest and kept away"
+     },
+     {
+      "jp": "もりを　うやまい、たいせつに　した。",
+      "en": "They revered the forest and treated it with care"
+     },
+     {
+      "jp": "もりを　ぜんぶ　きりたかった。",
+      "en": "They wanted to cut the whole forest down"
+     },
+     {
+      "jp": "もりに　きょうみが　なかった。",
+      "en": "They had no interest in the forest"
+     }
     ],
-    "correct_index": 0,
-    "answer_span": { "start": 52, "end": 76 }
+    "correct_index": 1,
+    "answer_span": {
+     "start": 52,
+     "end": 76
+    }
    },
    {
     "type": "resolution_reference",
-    "prompt": { "jp": "「その　こころ」の「その」は　なにを　さして　いますか。", "en": "What does \"that\" refer to in \"that spirit\"?" },
+    "prompt": {
+     "jp": "「その　こころ」の「その」は　なにを　さして　いますか。",
+     "en": "What does \"that\" refer to in \"that spirit\"?"
+    },
     "options": [
-     { "jp": "きを　きる　ときも　やしろに　手（て）を　あわせた　こころ。", "en": "The reverent heart that prayed at the shrine even when cutting a tree" },
-     { "jp": "とりを　さがす　こころ。", "en": "The wish to find the birds" },
-     { "jp": "はやく　もりを　でたい　こころ。", "en": "The wish to leave the forest quickly" },
-     { "jp": "きものを　まもる　こころ。", "en": "The wish to protect one's kimono" }
+     {
+      "jp": "とりを　さがす　こころ。",
+      "en": "The wish to find the birds"
+     },
+     {
+      "jp": "はやく　もりを　でたい　こころ。",
+      "en": "The wish to leave the forest quickly"
+     },
+     {
+      "jp": "きを　きる　ときも　やしろに　手（て）を　あわせた　こころ。",
+      "en": "The reverent heart that prayed at the shrine even when cutting a tree"
+     },
+     {
+      "jp": "きものを　まもる　こころ。",
+      "en": "The wish to protect one's kimono"
+     }
     ],
-    "correct_index": 0,
-    "answer_span": { "start": 94, "end": 114 }
+    "correct_index": 2,
+    "answer_span": {
+     "start": 94,
+     "end": 114
+    }
    }
   ]
  }

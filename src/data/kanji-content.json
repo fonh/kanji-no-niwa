@@ -360,7 +360,7 @@
   "audio": "/audio/kanji/学.mp3",
   "lesson_examples": [
    {
-    "jp": "学（がっ）校（こう）に　いきます。",
+    "jp": "学校（がっこう）に　いきます。",
     "en": "I go to school.",
     "audio_ref": "/audio/kanji_examples/学_1.webm",
     "source": "generated"
@@ -413,7 +413,7 @@
     "source": "generated"
    },
    {
-    "jp": "元（げん）気（き）ですか。",
+    "jp": "元気（げんき）ですか。",
     "en": "How are you?",
     "audio_ref": "/audio/kanji_examples/気_2.webm",
     "source": "generated"
@@ -640,7 +640,7 @@
     "source": "generated"
    },
    {
-    "jp": "一（いち）月（がつ）は　さむいです。",
+    "jp": "一月（いちがつ）は　さむいです。",
     "en": "January is cold.",
     "audio_ref": "/audio/kanji_examples/月_2.webm",
     "source": "generated"
@@ -814,7 +814,8 @@
   ],
   "etymology": "Phono-semantic: tree/wood (木) + 交 'to cross' (phonetic コウ). Originally wooden frames and fetters; settled on the wooden halls where paths cross — the school.",
   "mnemonic": "A wooden building (木) where a thousand lives crisscross (交) every morning — コウ, the school of 学校. Also the place your test gets 'crossed' with red ink.",
-  "audio": "/audio/kanji/校.mp3"
+  "audio": "/audio/kanji/校.mp3",
+  "keyword": "school"
  },
  "左": {
   "jlpt": "N5",
@@ -1597,7 +1598,7 @@
     "source": "generated"
    },
    {
-    "jp": "わたしは　学（がく）生（せい）です。",
+    "jp": "わたしは　学生（がくせい）です。",
     "en": "I am a student.",
     "audio_ref": "/audio/kanji_examples/生_2.webm",
     "source": "generated"
@@ -1944,7 +1945,7 @@
   "audio": "/audio/kanji/天.mp3",
   "lesson_examples": [
    {
-    "jp": "天（てん）気（き）が　いいですね。",
+    "jp": "天気（てんき）が　いいですね。",
     "en": "Nice weather, isn't it.",
     "audio_ref": "/audio/kanji_examples/天_1.webm",
     "source": "generated"
@@ -2093,7 +2094,7 @@
     "source": "generated"
    },
    {
-    "jp": "日（にち）曜（よう）日（び）に　やすみます。",
+    "jp": "日曜日（にちようび）に　やすみます。",
     "en": "I rest on Sunday.",
     "audio_ref": "/audio/kanji_examples/日_2.webm",
     "source": "generated"
@@ -3299,7 +3300,7 @@
   "audio": "/audio/kanji/玉.mp3",
   "lesson_examples": [
    {
-    "jp": "十（じゅう）円（えん）玉（だま）を　いれます。",
+    "jp": "十円玉（じゅうえんだま）を　いれます。",
     "en": "I insert a ten-yen coin.",
     "audio_ref": "/audio/kanji_examples/玉_1.webm",
     "source": "generated"
@@ -4139,7 +4140,7 @@
   "audio": "/audio/kanji/社.mp3",
   "lesson_examples": [
    {
-    "jp": "会（かい）社（しゃ）で　はたらきます。",
+    "jp": "会社（かいしゃ）で　はたらきます。",
     "en": "I work at a company.",
     "audio_ref": "/audio/kanji_examples/社_1.webm",
     "source": "generated"
@@ -4597,7 +4598,7 @@
   "audio": "/audio/kanji/電.mp3",
   "lesson_examples": [
    {
-    "jp": "電（でん）気（き）を　つけます。",
+    "jp": "電気（でんき）を　つけます。",
     "en": "I turn on the light.",
     "audio_ref": "/audio/kanji_examples/電_1.webm",
     "source": "generated"
@@ -4835,7 +4836,7 @@
   "audio": "/audio/kanji/半.mp3",
   "lesson_examples": [
    {
-    "jp": "半（はん）分（ぶん）こに　しましょう。",
+    "jp": "半分（はんぶん）こに　しましょう。",
     "en": "Let's split it in half.",
     "audio_ref": "/audio/kanji_examples/半_1.webm",
     "source": "generated"
@@ -5148,7 +5149,7 @@
   "audio": "/audio/kanji/万.mp3",
   "lesson_examples": [
    {
-    "jp": "一（いち）万（まん）えん　あります。",
+    "jp": "一万（いちまん）えん　あります。",
     "en": "I have ten thousand yen.",
     "audio_ref": "/audio/kanji_examples/万_1.webm",
     "source": "generated"
@@ -6111,7 +6112,7 @@
   "audio": "/audio/kanji/元.mp3",
   "lesson_examples": [
    {
-    "jp": "元（げん）気（き）に　あいさつします。",
+    "jp": "元気（げんき）に　あいさつします。",
     "en": "I greet people cheerfully.",
     "audio_ref": "/audio/kanji_examples/元_1.webm",
     "source": "generated"
@@ -6677,7 +6678,7 @@
   "audio": "/audio/kanji/自.mp3",
   "lesson_examples": [
    {
-    "jp": "自（じ）分（ぶん）で　やって　みます。",
+    "jp": "自分（じぶん）で　やって　みます。",
     "en": "I'll try it myself.",
     "audio_ref": "/audio/kanji_examples/自_1.webm",
     "source": "generated"
@@ -6924,7 +6925,7 @@
   "audio": "/audio/kanji/場.mp3",
   "lesson_examples": [
    {
-    "jp": "ばしょは　この　広（ひろ）場（ば）です。",
+    "jp": "ばしょは　この　広場（ひろば）です。",
     "en": "The place is this square.",
     "audio_ref": "/audio/kanji_examples/場_1.webm",
     "source": "generated"
@@ -7447,7 +7448,7 @@
   "audio": "/audio/kanji/地.mp3",
   "lesson_examples": [
    {
-    "jp": "この　地（ち）方（ほう）は　ゆきが　おおい。",
+    "jp": "この　地方（ちほう）は　ゆきが　おおい。",
     "en": "This region gets a lot of snow.",
     "audio_ref": "/audio/kanji_examples/地_1.webm",
     "source": "generated"
@@ -8361,7 +8362,7 @@
   "audio": "/audio/kanji/曜.mp3",
   "lesson_examples": [
    {
-    "jp": "なん曜（よう）日（び）ですか。",
+    "jp": "なん曜日（ようび）ですか。",
     "en": "What day of the week is it?",
     "audio_ref": "/audio/kanji_examples/曜_1.webm",
     "source": "generated"
@@ -8629,7 +8630,7 @@
   "audio": "/audio/kanji/科.mp3",
   "lesson_examples": [
    {
-    "jp": "りか の　科（か）目（もく）が　すきです。",
+    "jp": "りか の　科目（かもく）が　すきです。",
     "en": "I like science subjects.",
     "audio_ref": "/audio/kanji_examples/科_1.webm",
     "source": "generated"
@@ -9043,7 +9044,7 @@
   "audio": "/audio/kanji/交.mp3",
   "lesson_examples": [
    {
-    "jp": "こうさてんで　交（こう）通（つう）に　きを　つけて。",
+    "jp": "こうさてんで　交通（こうつう）に　きを　つけて。",
     "en": "Mind the traffic at the crossing.",
     "audio_ref": "/audio/kanji_examples/交_1.webm",
     "source": "generated"
@@ -9088,7 +9089,7 @@
   "audio": "/audio/kanji/公.mp3",
   "lesson_examples": [
    {
-    "jp": "公（こう）園（えん）で　やすみます。",
+    "jp": "公園（こうえん）で　やすみます。",
     "en": "I rest in the park.",
     "audio_ref": "/audio/kanji_examples/公_1.webm",
     "source": "generated"
@@ -9224,7 +9225,7 @@
   "audio": "/audio/kanji/算.mp3",
   "lesson_examples": [
    {
-    "jp": "計（けい）算（さん）を　します。",
+    "jp": "計算（けいさん）を　します。",
     "en": "I do the calculation.",
     "audio_ref": "/audio/kanji_examples/算_1.webm",
     "source": "generated"
@@ -10054,7 +10055,7 @@
   "audio": "/audio/kanji/汽.mp3",
   "lesson_examples": [
    {
-    "jp": "汽（き）車（しゃ）が　走（はし）ります。",
+    "jp": "汽車（きしゃ）が　走（はし）ります。",
     "en": "The steam train runs.",
     "audio_ref": "/audio/kanji_examples/汽_1.webm",
     "source": "generated"
@@ -10080,7 +10081,7 @@
   "audio": "/audio/kanji/弓.mp3",
   "lesson_examples": [
    {
-    "jp": "弓（ゆみ）の　練（れん）習（しゅう）を　します。",
+    "jp": "弓（ゆみ）の　練習（れんしゅう）を　します。",
     "en": "I practice archery.",
     "audio_ref": "/audio/kanji_examples/弓_1.webm",
     "source": "generated"
@@ -10821,7 +10822,7 @@
   "audio": "/audio/kanji/館.mp3",
   "lesson_examples": [
    {
-    "jp": "図（と）書（しょ）館（かん）で　べんきょうします。",
+    "jp": "図書館（としょかん）で　べんきょうします。",
     "en": "I study at the library.",
     "audio_ref": "/audio/kanji_examples/館_1.webm",
     "source": "generated"
@@ -11004,7 +11005,7 @@
   "audio": "/audio/kanji/去.mp3",
   "lesson_examples": [
    {
-    "jp": "去（きょ）年（ねん）の　なつは　あつかった。",
+    "jp": "去年（きょねん）の　なつは　あつかった。",
     "en": "Last summer was hot.",
     "audio_ref": "/audio/kanji_examples/去_1.webm",
     "source": "generated"
@@ -11295,7 +11296,7 @@
   "audio": "/audio/kanji/仕.mp3",
   "lesson_examples": [
    {
-    "jp": "仕（し）事（ごと）に　いきます。",
+    "jp": "仕事（しごと）に　いきます。",
     "en": "I go to work.",
     "audio_ref": "/audio/kanji_examples/仕_1.webm",
     "source": "generated"
@@ -11469,7 +11470,7 @@
   "audio": "/audio/kanji/事.mp3",
   "lesson_examples": [
    {
-    "jp": "だいじな　用（よう）事（じ）が　あります。",
+    "jp": "だいじな　用事（ようじ）が　あります。",
     "en": "I have important business.",
     "audio_ref": "/audio/kanji_examples/事_1.webm",
     "source": "generated"
@@ -11581,7 +11582,7 @@
   "audio": "/audio/kanji/者.mp3",
   "lesson_examples": [
    {
-    "jp": "わかい　学（がく）者（しゃ）です。",
+    "jp": "わかい　学者（がくしゃ）です。",
     "en": "He is a young scholar.",
     "audio_ref": "/audio/kanji_examples/者_1.webm",
     "source": "generated"
@@ -12178,7 +12179,7 @@
   "audio": "/audio/kanji/族.mp3",
   "lesson_examples": [
    {
-    "jp": "家（か）族（ぞく）で　でかけます。",
+    "jp": "家族（かぞく）で　でかけます。",
     "en": "We go out as a family.",
     "audio_ref": "/audio/kanji_examples/族_1.webm",
     "source": "generated"
@@ -12903,7 +12904,7 @@
   "audio": "/audio/kanji/勉.mp3",
   "lesson_examples": [
    {
-    "jp": "まいにち　勉（べん）強（きょう）します。",
+    "jp": "まいにち　勉強（べんきょう）します。",
     "en": "I study every day.",
     "audio_ref": "/audio/kanji_examples/勉_1.webm",
     "source": "generated"
@@ -12983,7 +12984,7 @@
   "audio": "/audio/kanji/問.mp3",
   "lesson_examples": [
    {
-    "jp": "先（せん）生（せい）に　質（しつ）問（もん）します。",
+    "jp": "先生（せんせい）に　質問（しつもん）します。",
     "en": "I ask the teacher a question.",
     "audio_ref": "/audio/kanji_examples/問_1.webm",
     "source": "generated"
@@ -13067,7 +13068,7 @@
   "audio": "/audio/kanji/有.mp3",
   "lesson_examples": [
    {
-    "jp": "有（ゆう）名（めい）な　おてらです。",
+    "jp": "有名（ゆうめい）な　おてらです。",
     "en": "It's a famous temple.",
     "audio_ref": "/audio/kanji_examples/有_1.webm",
     "source": "generated"
@@ -13109,7 +13110,7 @@
   "audio": "/audio/kanji/洋.mp3",
   "lesson_examples": [
    {
-    "jp": "洋（よう）服（ふく）を　えらびます。",
+    "jp": "洋服（ようふく）を　えらびます。",
     "en": "I pick out Western clothes.",
     "audio_ref": "/audio/kanji_examples/洋_1.webm",
     "source": "generated"
@@ -13306,7 +13307,7 @@
   "audio": "/audio/kanji/央.mp3",
   "lesson_examples": [
    {
-    "jp": "まちの　中（ちゅう）央（おう）に　ひろばが　ある。",
+    "jp": "まちの　中央（ちゅうおう）に　ひろばが　ある。",
     "en": "There's a square in the town center.",
     "audio_ref": "/audio/kanji_examples/央_1.webm",
     "source": "generated"
@@ -13550,7 +13551,7 @@
   "audio": "/audio/kanji/感.mp3",
   "lesson_examples": [
    {
-    "jp": "感（かん）動（どう）しました。",
+    "jp": "感動（かんどう）しました。",
     "en": "I was deeply moved.",
     "audio_ref": "/audio/kanji_examples/感_1.webm",
     "source": "generated"
@@ -13629,7 +13630,7 @@
   "audio": "/audio/kanji/期.mp3",
   "lesson_examples": [
    {
-    "jp": "つぎの　学（がっ）期（き）が　はじまります。",
+    "jp": "つぎの　学期（がっき）が　はじまります。",
     "en": "The next term begins.",
     "audio_ref": "/audio/kanji_examples/期_1.webm",
     "source": "generated"
@@ -13706,7 +13707,7 @@
   "audio": "/audio/kanji/球.mp3",
   "lesson_examples": [
    {
-    "jp": "地（ち）球（きゅう）は　まるい。",
+    "jp": "地球（ちきゅう）は　まるい。",
     "en": "The earth is round.",
     "audio_ref": "/audio/kanji_examples/球_1.webm",
     "source": "generated"
@@ -13953,7 +13954,7 @@
   "audio": "/audio/kanji/具.mp3",
   "lesson_examples": [
    {
-    "jp": "道（どう）具（ぐ）を　そろえます。",
+    "jp": "道具（どうぐ）を　そろえます。",
     "en": "I gather the tools.",
     "audio_ref": "/audio/kanji_examples/具_1.webm",
     "source": "generated"
@@ -14966,7 +14967,7 @@
   "audio": "/audio/kanji/州.mp3",
   "lesson_examples": [
    {
-    "jp": "かわの　中（なか）州（す）に　とりが　いる。",
+    "jp": "かわの　中州（なかす）に　とりが　いる。",
     "en": "There are birds on the sandbar.",
     "audio_ref": "/audio/kanji_examples/州_1.webm",
     "source": "generated"
@@ -15168,7 +15169,7 @@
   "audio": "/audio/kanji/商.mp3",
   "lesson_examples": [
    {
-    "jp": "商（しょう）売（ばい）は　じゅんちょうです。",
+    "jp": "商売（しょうばい）は　じゅんちょうです。",
     "en": "Business is going well.",
     "audio_ref": "/audio/kanji_examples/商_1.webm",
     "source": "generated"
@@ -15548,7 +15549,7 @@
   "audio": "/audio/kanji/全.mp3",
   "lesson_examples": [
    {
-    "jp": "全（ぜん）部（ぶ）　できました。",
+    "jp": "全部（ぜんぶ）　できました。",
     "en": "I finished all of it.",
     "audio_ref": "/audio/kanji_examples/全_1.webm",
     "source": "generated"
@@ -15635,7 +15636,7 @@
   "audio": "/audio/kanji/相.mp3",
   "lesson_examples": [
    {
-    "jp": "相（あい）手（て）の　目（め）を　みて　はなします。",
+    "jp": "相手（あいて）の　目（め）を　みて　はなします。",
     "en": "I look my partner in the eye when speaking.",
     "audio_ref": "/audio/kanji_examples/相_1.webm",
     "source": "generated"
@@ -16650,7 +16651,7 @@
   "audio": "/audio/kanji/反.mp3",
   "lesson_examples": [
    {
-    "jp": "はんたいの　いけんに　反（はん）論（ろん）します。",
+    "jp": "はんたいの　いけんに　反論（はんろん）します。",
     "en": "I argue against the opposing view.",
     "audio_ref": "/audio/kanji_examples/反_1.webm",
     "source": "generated"
@@ -17479,7 +17480,7 @@
   "audio": "/audio/kanji/由.mp3",
   "lesson_examples": [
    {
-    "jp": "理（り）由（ゆう）を　おしえて　ください。",
+    "jp": "理由（りゆう）を　おしえて　ください。",
     "en": "Please tell me the reason.",
     "audio_ref": "/audio/kanji_examples/由_1.webm",
     "source": "generated"
@@ -17567,7 +17568,7 @@
   "audio": "/audio/kanji/予.mp3",
   "lesson_examples": [
    {
-    "jp": "あしたの　予（よ）定（てい）は？",
+    "jp": "あしたの　予定（よてい）は？",
     "en": "What are tomorrow's plans?",
     "audio_ref": "/audio/kanji_examples/予_1.webm",
     "source": "generated"
@@ -17614,7 +17615,7 @@
   "audio": "/audio/kanji/様.mp3",
   "lesson_examples": [
    {
-    "jp": "お客（きゃく）様（さま）が　きました。",
+    "jp": "お客様（きゃくさま）が　きました。",
     "en": "A guest has arrived.",
     "audio_ref": "/audio/kanji_examples/様_1.webm",
     "source": "generated"
@@ -17849,7 +17850,7 @@
   "audio": "/audio/kanji/両.mp3",
   "lesson_examples": [
    {
-    "jp": "両（りょう）手（て）で　もちます。",
+    "jp": "両手（りょうて）で　もちます。",
     "en": "I hold it with both hands.",
     "audio_ref": "/audio/kanji_examples/両_1.webm",
     "source": "generated"
@@ -18097,7 +18098,7 @@
   "audio": "/audio/kanji/和.mp3",
   "lesson_examples": [
    {
-    "jp": "和（わ）風（ふう）の　にわですね。",
+    "jp": "和風（わふう）の　にわですね。",
     "en": "What a Japanese-style garden.",
     "audio_ref": "/audio/kanji_examples/和_1.webm",
     "source": "generated"
@@ -18210,7 +18211,7 @@
   "audio": "/audio/kanji/丁.mp3",
   "lesson_examples": [
    {
-    "jp": "丁（てい）寧（ねい）に　せつめいする。",
+    "jp": "丁寧（ていねい）に　せつめいする。",
     "en": "I explain politely and carefully.",
     "audio_ref": "/audio/kanji_examples/丁_1.webm",
     "source": "generated"
@@ -18377,7 +18378,7 @@
   "audio": "/audio/kanji/以.mp3",
   "lesson_examples": [
    {
-    "jp": "10ぷん　以（い）内（ない）に　もどります。",
+    "jp": "10ぷん　以内（いない）に　もどります。",
     "en": "I'll be back within ten minutes.",
     "audio_ref": "/audio/kanji_examples/以_1.webm",
     "source": "generated"
@@ -18515,7 +18516,7 @@
   "audio": "/audio/kanji/験.mp3",
   "lesson_examples": [
    {
-    "jp": "あたらしい　経（けい）験（けん）でした。",
+    "jp": "あたらしい　経験（けいけん）でした。",
     "en": "It was a new experience.",
     "audio_ref": "/audio/kanji_examples/験_1.webm",
     "source": "generated"
@@ -18641,7 +18642,7 @@
   "audio": "/audio/kanji/産.mp3",
   "lesson_examples": [
    {
-    "jp": "この　まちの　名（めい）産（さん）は　もちです。",
+    "jp": "この　まちの　名産（めいさん）は　もちです。",
     "en": "This town's specialty is mochi.",
     "audio_ref": "/audio/kanji_examples/産_1.webm",
     "source": "generated"
@@ -18952,7 +18953,7 @@
   "audio": "/audio/kanji/不.mp3",
   "lesson_examples": [
    {
-    "jp": "不（ふ）思（し）議（ぎ）な　はなしですね。",
+    "jp": "不思議（ふしぎ）な　はなしですね。",
     "en": "What a mysterious story.",
     "audio_ref": "/audio/kanji_examples/不_1.webm",
     "source": "generated"
@@ -19096,7 +19097,7 @@
   "audio": "/audio/kanji/民.mp3",
   "lesson_examples": [
    {
-    "jp": "この　まちの　住（じゅう）民（みん）です。",
+    "jp": "この　まちの　住民（じゅうみん）です。",
     "en": "I'm a resident of this town.",
     "audio_ref": "/audio/kanji_examples/民_1.webm",
     "source": "generated"
@@ -19136,7 +19137,7 @@
   "audio": "/audio/kanji/料.mp3",
   "lesson_examples": [
    {
-    "jp": "料（りょう）理（り）を　つくります。",
+    "jp": "料理（りょうり）を　つくります。",
     "en": "I cook a meal.",
     "audio_ref": "/audio/kanji_examples/料_1.webm",
     "source": "generated"
@@ -19536,7 +19537,7 @@
   "audio": "/audio/kanji/加.mp3",
   "lesson_examples": [
    {
-    "jp": "しあいに　参（さん）加（か）します。",
+    "jp": "しあいに　参加（さんか）します。",
     "en": "I take part in the match.",
     "audio_ref": "/audio/kanji_examples/加_1.webm",
     "source": "generated"
@@ -19589,7 +19590,7 @@
   "audio": "/audio/kanji/果.mp3",
   "lesson_examples": [
    {
-    "jp": "努（ど）力（りょく）の　結（けっ）果（か）が　でました。",
+    "jp": "努力（どりょく）の　結果（けっか）が　でました。",
     "en": "The results of the effort came through.",
     "audio_ref": "/audio/kanji_examples/果_1.webm",
     "source": "generated"
@@ -19732,7 +19733,7 @@
   "audio": "/audio/kanji/械.mp3",
   "lesson_examples": [
    {
-    "jp": "機（き）械（かい）を　なおします。",
+    "jp": "機械（きかい）を　なおします。",
     "en": "I repair the machine.",
     "audio_ref": "/audio/kanji_examples/械_1.webm",
     "source": "generated"
@@ -19815,7 +19816,7 @@
   "audio": "/audio/kanji/各.mp3",
   "lesson_examples": [
    {
-    "jp": "各（かく）地（ち）から　ひとが　あつまる。",
+    "jp": "各地（かくち）から　ひとが　あつまる。",
     "en": "People gather from every region.",
     "audio_ref": "/audio/kanji_examples/各_1.webm",
     "source": "generated"
@@ -19965,7 +19966,7 @@
   "audio": "/audio/kanji/管.mp3",
   "lesson_examples": [
    {
-    "jp": "水（すい）道（どう）管（かん）が　こおりました。",
+    "jp": "水道管（すいどうかん）が　こおりました。",
     "en": "The water pipe froze.",
     "audio_ref": "/audio/kanji_examples/管_1.webm",
     "source": "generated"
@@ -20052,7 +20053,7 @@
   "audio": "/audio/kanji/関.mp3",
   "lesson_examples": [
    {
-    "jp": "この　はなしに　関（かん）係（けい）が　あります。",
+    "jp": "この　はなしに　関係（かんけい）が　あります。",
     "en": "It's related to this matter.",
     "audio_ref": "/audio/kanji_examples/関_1.webm",
     "source": "generated"
@@ -20239,7 +20240,7 @@
   "audio": "/audio/kanji/機.mp3",
   "lesson_examples": [
    {
-    "jp": "飛（ひ）行（こう）機（き）に　のります。",
+    "jp": "飛行機（ひこうき）に　のります。",
     "en": "I board an airplane.",
     "audio_ref": "/audio/kanji_examples/機_1.webm",
     "source": "generated"
@@ -20278,7 +20279,7 @@
   "audio": "/audio/kanji/季.mp3",
   "lesson_examples": [
    {
-    "jp": "季（き）節（せつ）が　かわりました。",
+    "jp": "季節（きせつ）が　かわりました。",
     "en": "The season has changed.",
     "audio_ref": "/audio/kanji_examples/季_1.webm",
     "source": "generated"
@@ -20603,7 +20604,7 @@
   "audio": "/audio/kanji/協.mp3",
   "lesson_examples": [
    {
-    "jp": "みんなで　協（きょう）力（りょく）します。",
+    "jp": "みんなで　協力（きょうりょく）します。",
     "en": "We all cooperate.",
     "audio_ref": "/audio/kanji_examples/協_1.webm",
     "source": "generated"
@@ -20805,7 +20806,7 @@
   "audio": "/audio/kanji/景.mp3",
   "lesson_examples": [
    {
-    "jp": "山（やま）の　上（うえ）の　景（け）色（しき）は　さいこうです。",
+    "jp": "山（やま）の　上（うえ）の　景色（けしき）は　さいこうです。",
     "en": "The view from the mountaintop is superb.",
     "audio_ref": "/audio/kanji_examples/景_1.webm",
     "source": "generated"
@@ -20987,7 +20988,7 @@
   "audio": "/audio/kanji/健.mp3",
   "lesson_examples": [
    {
-    "jp": "健（けん）康（こう）が　いちばんです。",
+    "jp": "健康（けんこう）が　いちばんです。",
     "en": "Health comes first.",
     "audio_ref": "/audio/kanji_examples/健_1.webm",
     "source": "generated"
@@ -21281,7 +21282,7 @@
   "audio": "/audio/kanji/材.mp3",
   "lesson_examples": [
    {
-    "jp": "いい　木（もく）材（ざい）を　つかいます。",
+    "jp": "いい　木材（もくざい）を　つかいます。",
     "en": "We use good lumber.",
     "audio_ref": "/audio/kanji_examples/材_1.webm",
     "source": "generated"
@@ -21321,7 +21322,7 @@
   "audio": "/audio/kanji/昨.mp3",
   "lesson_examples": [
    {
-    "jp": "昨（さく）夜（や）は　よく　ねむれました。",
+    "jp": "昨夜（さくや）は　よく　ねむれました。",
     "en": "I slept well last night.",
     "audio_ref": "/audio/kanji_examples/昨_1.webm",
     "source": "generated"
@@ -21437,7 +21438,7 @@
   "audio": "/audio/kanji/札.mp3",
   "lesson_examples": [
    {
-    "jp": "千（せん）円（えん）札（さつ）で　はらいます。",
+    "jp": "千円札（せんえんさつ）で　はらいます。",
     "en": "I pay with a thousand-yen bill.",
     "audio_ref": "/audio/kanji_examples/札_1.webm",
     "source": "generated"
@@ -21635,7 +21636,7 @@
   "audio": "/audio/kanji/司.mp3",
   "lesson_examples": [
    {
-    "jp": "かれが　司（し）会（かい）を　します。",
+    "jp": "かれが　司会（しかい）を　します。",
     "en": "He will be the host.",
     "audio_ref": "/audio/kanji_examples/司_1.webm",
     "source": "generated"
@@ -21947,7 +21948,7 @@
   "audio": "/audio/kanji/順.mp3",
   "lesson_examples": [
    {
-    "jp": "順（じゅん）番（ばん）に　ならびます。",
+    "jp": "順番（じゅんばん）に　ならびます。",
     "en": "We line up in order.",
     "audio_ref": "/audio/kanji_examples/順_1.webm",
     "source": "generated"
@@ -22567,7 +22568,7 @@
   "audio": "/audio/kanji/節.mp3",
   "lesson_examples": [
    {
-    "jp": "電（でん）気（き）を　節（せつ）約（やく）します。",
+    "jp": "電気（でんき）を　節約（せつやく）します。",
     "en": "We conserve electricity.",
     "audio_ref": "/audio/kanji_examples/節_1.webm",
     "source": "generated"
@@ -22878,7 +22879,7 @@
   "audio": "/audio/kanji/束.mp3",
   "lesson_examples": [
    {
-    "jp": "花（はな）束（たば）を　おくります。",
+    "jp": "花束（はなたば）を　おくります。",
     "en": "I give a bouquet of flowers.",
     "audio_ref": "/audio/kanji_examples/束_1.webm",
     "source": "generated"
@@ -22967,7 +22968,7 @@
   "audio": "/audio/kanji/卒.mp3",
   "lesson_examples": [
    {
-    "jp": "学（がっ）校（こう）を　卒（そつ）業（ぎょう）します。",
+    "jp": "学校（がっこう）を　卒業（そつぎょう）します。",
     "en": "I graduate from school.",
     "audio_ref": "/audio/kanji_examples/卒_1.webm",
     "source": "generated"
@@ -24170,7 +24171,7 @@
   "audio": "/audio/kanji/望.mp3",
   "lesson_examples": [
    {
-    "jp": "希（き）望（ぼう）を　もって　すすみます。",
+    "jp": "希望（きぼう）を　もって　すすみます。",
     "en": "I move forward with hope.",
     "audio_ref": "/audio/kanji_examples/望_1.webm",
     "source": "generated"
@@ -24218,7 +24219,7 @@
   "audio": "/audio/kanji/末.mp3",
   "lesson_examples": [
    {
-    "jp": "週（しゅう）末（まつ）に　やまへ　いきます。",
+    "jp": "週末（しゅうまつ）に　やまへ　いきます。",
     "en": "I go to the mountains on weekends.",
     "audio_ref": "/audio/kanji_examples/末_1.webm",
     "source": "generated"
@@ -24316,7 +24317,7 @@
   "audio": "/audio/kanji/未.mp3",
   "lesson_examples": [
    {
-    "jp": "未（み）来（らい）は　じぶんで　つくる。",
+    "jp": "未来（みらい）は　じぶんで　つくる。",
     "en": "You build your own future.",
     "audio_ref": "/audio/kanji_examples/未_1.webm",
     "source": "generated"
@@ -24408,7 +24409,7 @@
   "audio": "/audio/kanji/約.mp3",
   "lesson_examples": [
    {
-    "jp": "3じに　あう　約（やく）束（そく）です。",
+    "jp": "3じに　あう　約束（やくそく）です。",
     "en": "We promised to meet at three.",
     "audio_ref": "/audio/kanji_examples/約_1.webm",
     "source": "generated"
@@ -24486,7 +24487,7 @@
   "audio": "/audio/kanji/要.mp3",
   "lesson_examples": [
    {
-    "jp": "じゅんびが　必（ひつ）要（よう）です。",
+    "jp": "じゅんびが　必要（ひつよう）です。",
     "en": "Preparation is necessary.",
     "audio_ref": "/audio/kanji_examples/要_1.webm",
     "source": "generated"
@@ -24810,7 +24811,7 @@
   "audio": "/audio/kanji/令.mp3",
   "lesson_examples": [
    {
-    "jp": "命（めい）令（れい）に　したがいます。",
+    "jp": "命令（めいれい）に　したがいます。",
     "en": "I follow the order.",
     "audio_ref": "/audio/kanji_examples/令_1.webm",
     "source": "generated"
@@ -24996,7 +24997,7 @@
   "audio": "/audio/kanji/労.mp3",
   "lesson_examples": [
    {
-    "jp": "苦（く）労（ろう）が　むくわれました。",
+    "jp": "苦労（くろう）が　むくわれました。",
     "en": "The hard work paid off.",
     "audio_ref": "/audio/kanji_examples/労_1.webm",
     "source": "generated"
@@ -25077,7 +25078,7 @@
   "audio": "/audio/kanji/録.mp3",
   "lesson_examples": [
    {
-    "jp": "こえを　録（ろく）音（おん）します。",
+    "jp": "こえを　録音（ろくおん）します。",
     "en": "I record my voice.",
     "audio_ref": "/audio/kanji_examples/録_1.webm",
     "source": "generated"
@@ -25117,7 +25118,7 @@
   "audio": "/audio/kanji/井.mp3",
   "lesson_examples": [
    {
-    "jp": "井（い）戸（ど）の　みずは　つめたい。",
+    "jp": "井戸（いど）の　みずは　つめたい。",
     "en": "Well water is cold.",
     "audio_ref": "/audio/kanji_examples/井_1.webm",
     "source": "generated"
@@ -25276,7 +25277,7 @@
   "audio": "/audio/kanji/潟.mp3",
   "lesson_examples": [
    {
-    "jp": "干（ひ）潟（がた）で　鳥（とり）を　見（み）ます。",
+    "jp": "干潟（ひがた）で　鳥（とり）を　見（み）ます。",
     "en": "I watch birds on the tidal flat.",
     "audio_ref": "/audio/kanji_examples/潟_1.webm",
     "source": "generated"
@@ -25494,7 +25495,7 @@
   "audio": "/audio/kanji/径.mp3",
   "lesson_examples": [
    {
-    "jp": "円（えん）の　直（ちょっ）径（けい）を　はかります。",
+    "jp": "円（えん）の　直径（ちょっけい）を　はかります。",
     "en": "I measure the circle's diameter.",
     "audio_ref": "/audio/kanji_examples/径_1.webm",
     "source": "generated"
@@ -25530,7 +25531,7 @@
   "audio": "/audio/kanji/功.mp3",
   "lesson_examples": [
    {
-    "jp": "成（せい）功（こう）を　いのる！",
+    "jp": "成功（せいこう）を　いのる！",
     "en": "Here's to your success!",
     "audio_ref": "/audio/kanji_examples/功_1.webm",
     "source": "generated"
@@ -25612,7 +25613,7 @@
   "audio": "/audio/kanji/氏.mp3",
   "lesson_examples": [
    {
-    "jp": "田（た）中（なか）氏（し）に　会（あ）いました。",
+    "jp": "田中氏（たなかし）に　会（あ）いました。",
     "en": "I met Mr. Tanaka.",
     "audio_ref": "/audio/kanji_examples/氏_1.webm",
     "source": "generated"
@@ -25640,7 +25641,7 @@
   "audio": "/audio/kanji/滋.mp3",
   "lesson_examples": [
    {
-    "jp": "滋（じ）養（よう）の　ある　食（た）べ物（もの）です。",
+    "jp": "滋養（じよう）の　ある　食（た）べ物（もの）です。",
     "en": "It is nourishing food.",
     "audio_ref": "/audio/kanji_examples/滋_1.webm",
     "source": "generated"
@@ -25827,7 +25828,7 @@
   "audio": "/audio/kanji/隊.mp3",
   "lesson_examples": [
    {
-    "jp": "救（きゅう）助（じょ）隊（たい）が　来（き）ました。",
+    "jp": "救助隊（きゅうじょたい）が　来（き）ました。",
     "en": "The rescue squad arrived.",
     "audio_ref": "/audio/kanji_examples/隊_1.webm",
     "source": "generated"
@@ -25931,7 +25932,7 @@
   "audio": "/audio/kanji/奈.mp3",
   "lesson_examples": [
    {
-    "jp": "奈（な）良（ら）の　おてらを　みたい。",
+    "jp": "奈良（なら）の　おてらを　みたい。",
     "en": "I want to see the temples of Nara.",
     "audio_ref": "/audio/kanji_examples/奈_1.webm",
     "source": "generated"
@@ -26031,7 +26032,7 @@
   "audio": "/audio/kanji/博.mp3",
   "lesson_examples": [
    {
-    "jp": "博（はく）物（ぶつ）館（かん）に　いく。",
+    "jp": "博物館（はくぶつかん）に　いく。",
     "en": "I go to the museum.",
     "audio_ref": "/audio/kanji_examples/博_1.webm",
     "source": "generated"
@@ -26057,7 +26058,7 @@
   "audio": "/audio/kanji/媛.mp3",
   "lesson_examples": [
    {
-    "jp": "愛（え）媛（ひめ）の　みかんは　あまい。",
+    "jp": "愛媛（えひめ）の　みかんは　あまい。",
     "en": "Ehime oranges are sweet.",
     "audio_ref": "/audio/kanji_examples/媛_1.webm",
     "source": "generated"
@@ -26083,7 +26084,7 @@
   "audio": "/audio/kanji/票.mp3",
   "lesson_examples": [
    {
-    "jp": "投（とう）票（ひょう）に　いきます。",
+    "jp": "投票（とうひょう）に　いきます。",
     "en": "I go to vote.",
     "audio_ref": "/audio/kanji_examples/票_1.webm",
     "source": "generated"
@@ -26112,7 +26113,7 @@
   "audio": "/audio/kanji/牧.mp3",
   "lesson_examples": [
    {
-    "jp": "牧（ぼく）場（じょう）で　はたらく。",
+    "jp": "牧場（ぼくじょう）で　はたらく。",
     "en": "I work on a ranch.",
     "audio_ref": "/audio/kanji_examples/牧_1.webm",
     "source": "generated"
@@ -26507,7 +26508,7 @@
   "audio": "/audio/kanji/圧.mp3",
   "lesson_examples": [
    {
-    "jp": "気（き）圧（あつ）が　さがって　います。",
+    "jp": "気圧（きあつ）が　さがって　います。",
     "en": "The air pressure is dropping.",
     "audio_ref": "/audio/kanji_examples/圧_1.webm",
     "source": "generated"
@@ -26676,7 +26677,7 @@
   "audio": "/audio/kanji/因.mp3",
   "lesson_examples": [
    {
-    "jp": "原（げん）因（いん）を　しらべます。",
+    "jp": "原因（げんいん）を　しらべます。",
     "en": "We investigate the cause.",
     "audio_ref": "/audio/kanji_examples/因_1.webm",
     "source": "generated"
@@ -26789,7 +26790,7 @@
   "audio": "/audio/kanji/液.mp3",
   "lesson_examples": [
    {
-    "jp": "液（えき）体（たい）を　こぼさないで。",
+    "jp": "液体（えきたい）を　こぼさないで。",
     "en": "Don't spill the liquid.",
     "audio_ref": "/audio/kanji_examples/液_1.webm",
     "source": "generated"
@@ -27440,7 +27441,7 @@
   "audio": "/audio/kanji/基.mp3",
   "lesson_examples": [
    {
-    "jp": "基（き）本（ほん）が　だいじです。",
+    "jp": "基本（きほん）が　だいじです。",
     "en": "The basics matter most.",
     "audio_ref": "/audio/kanji_examples/基_1.webm",
     "source": "generated"
@@ -27724,7 +27725,7 @@
   "audio": "/audio/kanji/旧.mp3",
   "lesson_examples": [
    {
-    "jp": "旧（きゅう）友（ゆう）に　あいました。",
+    "jp": "旧友（きゅうゆう）に　あいました。",
     "en": "I met an old friend.",
     "audio_ref": "/audio/kanji_examples/旧_1.webm",
     "source": "generated"
@@ -27874,7 +27875,7 @@
   "audio": "/audio/kanji/均.mp3",
   "lesson_examples": [
    {
-    "jp": "平（へい）均（きん）を　けいさんします。",
+    "jp": "平均（へいきん）を　けいさんします。",
     "en": "I calculate the average.",
     "audio_ref": "/audio/kanji_examples/均_1.webm",
     "source": "generated"
@@ -28088,7 +28089,7 @@
   "audio": "/audio/kanji/検.mp3",
   "lesson_examples": [
    {
-    "jp": "にもつを　検（けん）査（さ）します。",
+    "jp": "にもつを　検査（けんさ）します。",
     "en": "The luggage is inspected.",
     "audio_ref": "/audio/kanji_examples/検_1.webm",
     "source": "generated"
@@ -28471,7 +28472,7 @@
   "audio": "/audio/kanji/構.mp3",
   "lesson_examples": [
    {
-    "jp": "文（ぶん）の　構（こう）造（ぞう）を　まなびます。",
+    "jp": "文（ぶん）の　構造（こうぞう）を　まなびます。",
     "en": "We study sentence structure.",
     "audio_ref": "/audio/kanji_examples/構_1.webm",
     "source": "generated"
@@ -28522,7 +28523,7 @@
   "audio": "/audio/kanji/航.mp3",
   "lesson_examples": [
    {
-    "jp": "ふねが　航（こう）海（かい）に　でます。",
+    "jp": "ふねが　航海（こうかい）に　でます。",
     "en": "The ship sets out on a voyage.",
     "audio_ref": "/audio/kanji_examples/航_1.webm",
     "source": "generated"
@@ -28581,7 +28582,7 @@
   "audio": "/audio/kanji/鉱.mp3",
   "lesson_examples": [
    {
-    "jp": "鉱（こう）山（ざん）の　あとを　みました。",
+    "jp": "鉱山（こうざん）の　あとを　みました。",
     "en": "I saw the remains of a mine.",
     "audio_ref": "/audio/kanji_examples/鉱_1.webm",
     "source": "generated"
@@ -28625,7 +28626,7 @@
   "audio": "/audio/kanji/告.mp3",
   "lesson_examples": [
    {
-    "jp": "結（けっ）果（か）を　報（ほう）告（こく）します。",
+    "jp": "結果（けっか）を　報告（ほうこく）します。",
     "en": "I report the results.",
     "audio_ref": "/audio/kanji_examples/告_1.webm",
     "source": "generated"
@@ -28739,7 +28740,7 @@
   "audio": "/audio/kanji/再.mp3",
   "lesson_examples": [
    {
-    "jp": "再（らい）来（しゅう）…いや、再（ふたた）び　あいましょう。",
+    "jp": "再来（らいしゅう）…いや、再（ふたた）び　あいましょう。",
     "en": "Let us meet again.",
     "audio_ref": "/audio/kanji_examples/再_1.webm",
     "source": "generated"
@@ -29120,7 +29121,7 @@
   "audio": "/audio/kanji/史.mp3",
   "lesson_examples": [
    {
-    "jp": "この　まちの　歴（れき）史（し）は　ながい。",
+    "jp": "この　まちの　歴史（れきし）は　ながい。",
     "en": "This town's history is long.",
     "audio_ref": "/audio/kanji_examples/史_1.webm",
     "source": "generated"
@@ -29576,7 +29577,7 @@
   "audio": "/audio/kanji/術.mp3",
   "lesson_examples": [
    {
-    "jp": "けんの　技（ぎ）術（じゅつ）を　みがく。",
+    "jp": "けんの　技術（ぎじゅつ）を　みがく。",
     "en": "I polish my sword technique.",
     "audio_ref": "/audio/kanji_examples/術_1.webm",
     "source": "generated"
@@ -29916,7 +29917,7 @@
   "audio": "/audio/kanji/条.mp3",
   "lesson_examples": [
    {
-    "jp": "条（じょう）件（けん）を　たしかめます。",
+    "jp": "条件（じょうけん）を　たしかめます。",
     "en": "I check the conditions.",
     "audio_ref": "/audio/kanji_examples/条_1.webm",
     "source": "generated"
@@ -29993,7 +29994,7 @@
   "audio": "/audio/kanji/職.mp3",
   "lesson_examples": [
    {
-    "jp": "あたらしい　職（しょく）場（ば）に　なれました。",
+    "jp": "あたらしい　職場（しょくば）に　なれました。",
     "en": "I've settled into my new workplace.",
     "audio_ref": "/audio/kanji_examples/職_1.webm",
     "source": "generated"
@@ -30123,7 +30124,7 @@
   "audio": "/audio/kanji/性.mp3",
   "lesson_examples": [
    {
-    "jp": "性（せい）格（かく）が　あかるい　ひとです。",
+    "jp": "性格（せいかく）が　あかるい　ひとです。",
     "en": "She has a cheerful personality.",
     "audio_ref": "/audio/kanji_examples/性_1.webm",
     "source": "generated"
@@ -30242,7 +30243,7 @@
   "audio": "/audio/kanji/製.mp3",
   "lesson_examples": [
    {
-    "jp": "この　つくえは　木（もく）製（せい）です。",
+    "jp": "この　つくえは　木製（もくせい）です。",
     "en": "This desk is made of wood.",
     "audio_ref": "/audio/kanji_examples/製_1.webm",
     "source": "generated"
@@ -30482,7 +30483,7 @@
   "audio": "/audio/kanji/絶.mp3",
   "lesson_examples": [
    {
-    "jp": "けしきが　絶（ぜっ）景（けい）です。",
+    "jp": "けしきが　絶景（ぜっけい）です。",
     "en": "The view is breathtaking.",
     "audio_ref": "/audio/kanji_examples/絶_1.webm",
     "source": "generated"
@@ -30552,7 +30553,7 @@
   "audio": "/audio/kanji/総.mp3",
   "lesson_examples": [
    {
-    "jp": "総（そう）力（りょく）を　あげて　たたかう。",
+    "jp": "総力（そうりょく）を　あげて　たたかう。",
     "en": "We fight with all our combined strength.",
     "audio_ref": "/audio/kanji_examples/総_1.webm",
     "source": "generated"
@@ -30595,7 +30596,7 @@
   "audio": "/audio/kanji/像.mp3",
   "lesson_examples": [
    {
-    "jp": "えきまえの　銅（どう）像（ぞう）を　みました。",
+    "jp": "えきまえの　銅像（どうぞう）を　みました。",
     "en": "I saw the statue by the station.",
     "audio_ref": "/audio/kanji_examples/像_1.webm",
     "source": "generated"
@@ -30833,7 +30834,7 @@
   "audio": "/audio/kanji/団.mp3",
   "lesson_examples": [
    {
-    "jp": "楽（がく）団（だん）の　えんそうを　きく。",
+    "jp": "楽団（がくだん）の　えんそうを　きく。",
     "en": "I listen to the orchestra play.",
     "audio_ref": "/audio/kanji_examples/団_1.webm",
     "source": "generated"
@@ -31882,7 +31883,7 @@
   "audio": "/audio/kanji/婦.mp3",
   "lesson_examples": [
    {
-    "jp": "夫（ふう）婦（ふ）で　みせを　やって　います。",
+    "jp": "夫婦（ふうふ）で　みせを　やって　います。",
     "en": "The couple runs the shop together.",
     "audio_ref": "/audio/kanji_examples/婦_1.webm",
     "source": "generated"
@@ -31970,7 +31971,7 @@
   "audio": "/audio/kanji/武.mp3",
   "lesson_examples": [
    {
-    "jp": "武（ぶ）道（どう）の　こころを　まなぶ。",
+    "jp": "武道（ぶどう）の　こころを　まなぶ。",
     "en": "I learn the spirit of martial arts.",
     "audio_ref": "/audio/kanji_examples/武_1.webm",
     "source": "generated"
@@ -32590,7 +32591,7 @@
   "audio": "/audio/kanji/輸.mp3",
   "lesson_examples": [
    {
-    "jp": "くだものを　輸（ゆ）入（にゅう）します。",
+    "jp": "くだものを　輸入（ゆにゅう）します。",
     "en": "We import fruit.",
     "audio_ref": "/audio/kanji_examples/輸_1.webm",
     "source": "generated"
@@ -32681,7 +32682,7 @@
   "audio": "/audio/kanji/容.mp3",
   "lesson_examples": [
    {
-    "jp": "はなしの　内（ない）容（よう）を　まとめます。",
+    "jp": "はなしの　内容（ないよう）を　まとめます。",
     "en": "I summarize the contents of the talk.",
     "audio_ref": "/audio/kanji_examples/容_1.webm",
     "source": "generated"
@@ -32731,7 +32732,7 @@
   "audio": "/audio/kanji/率.mp3",
   "lesson_examples": [
    {
-    "jp": "成（せい）功（こう）率（りつ）が　あがりました。",
+    "jp": "成功率（せいこうりつ）が　あがりました。",
     "en": "The success rate went up.",
     "audio_ref": "/audio/kanji_examples/率_1.webm",
     "source": "generated"
@@ -32892,7 +32893,7 @@
   "audio": "/audio/kanji/歴.mp3",
   "lesson_examples": [
    {
-    "jp": "歴（れき）史（し）の　本（ほん）を　よみます。",
+    "jp": "歴史（れきし）の　本（ほん）を　よみます。",
     "en": "I read history books.",
     "audio_ref": "/audio/kanji_examples/歴_1.webm",
     "source": "generated"
@@ -32928,7 +32929,7 @@
   "audio": "/audio/kanji/衛.mp3",
   "lesson_examples": [
    {
-    "jp": "人（じん）工（こう）衛（えい）星（せい）を　みた。",
+    "jp": "人工衛星（じんこうえいせい）を　みた。",
     "en": "I saw an artificial satellite.",
     "audio_ref": "/audio/kanji_examples/衛_1.webm",
     "source": "generated"
@@ -32968,7 +32969,7 @@
   "audio": "/audio/kanji/益.mp3",
   "lesson_examples": [
    {
-    "jp": "けんこうに　有（ゆう）益（えき）だ。",
+    "jp": "けんこうに　有益（ゆうえき）だ。",
     "en": "It benefits your health.",
     "audio_ref": "/audio/kanji_examples/益_1.webm",
     "source": "generated"
@@ -33092,7 +33093,7 @@
   "audio": "/audio/kanji/眼.mp3",
   "lesson_examples": [
    {
-    "jp": "眼（がん）科（か）で　めを　みて　もらう。",
+    "jp": "眼科（がんか）で　めを　みて　もらう。",
     "en": "I have my eyes checked.",
     "audio_ref": "/audio/kanji_examples/眼_1.webm",
     "source": "generated"
@@ -33126,7 +33127,7 @@
   "audio": "/audio/kanji/紀.mp3",
   "lesson_examples": [
    {
-    "jp": "20世（せい）紀（き）の　れきし。",
+    "jp": "20世紀（せいき）の　れきし。",
     "en": "The history of the 20th century.",
     "audio_ref": "/audio/kanji_examples/紀_1.webm",
     "source": "generated"
@@ -33170,7 +33171,7 @@
   "audio": "/audio/kanji/義.mp3",
   "lesson_examples": [
    {
-    "jp": "義（ぎ）理（り）がたい　ひとだ。",
+    "jp": "義理（ぎり）がたい　ひとだ。",
     "en": "A person of strong obligation.",
     "audio_ref": "/audio/kanji_examples/義_1.webm",
     "source": "generated"
@@ -33217,7 +33218,7 @@
   "audio": "/audio/kanji/興.mp3",
   "lesson_examples": [
    {
-    "jp": "れきしに　興（きょう）味（み）が　ある。",
+    "jp": "れきしに　興味（きょうみ）が　ある。",
     "en": "I'm interested in history.",
     "audio_ref": "/audio/kanji_examples/興_1.webm",
     "source": "generated"
@@ -33306,7 +33307,7 @@
   "audio": "/audio/kanji/潔.mp3",
   "lesson_examples": [
    {
-    "jp": "清（せい）潔（けつ）な　タオルを　使（つか）います。",
+    "jp": "清潔（せいけつ）な　タオルを　使（つか）います。",
     "en": "I use a clean towel.",
     "audio_ref": "/audio/kanji_examples/潔_1.webm",
     "source": "generated"
@@ -33385,7 +33386,7 @@
   "audio": "/audio/kanji/災.mp3",
   "lesson_examples": [
    {
-    "jp": "災（さい）害（がい）に　そなえる。",
+    "jp": "災害（さいがい）に　そなえる。",
     "en": "We prepare for disasters.",
     "audio_ref": "/audio/kanji_examples/災_1.webm",
     "source": "generated"
@@ -33495,7 +33496,7 @@
   "audio": "/audio/kanji/士.mp3",
   "lesson_examples": [
    {
-    "jp": "消（しょう）防（ぼう）士（し）に　なりたいです。",
+    "jp": "消防士（しょうぼうし）に　なりたいです。",
     "en": "I want to become a firefighter.",
     "audio_ref": "/audio/kanji_examples/士_1.webm",
     "source": "generated"
@@ -33751,7 +33752,7 @@
   "audio": "/audio/kanji/素.mp3",
   "lesson_examples": [
    {
-    "jp": "素（す）直（なお）な　こですね。",
+    "jp": "素直（すなお）な　こですね。",
     "en": "What an honest child.",
     "audio_ref": "/audio/kanji_examples/素_1.webm",
     "source": "generated"
@@ -33788,7 +33789,7 @@
   "audio": "/audio/kanji/属.mp3",
   "lesson_examples": [
    {
-    "jp": "金（きん）属（ぞく）の　スプーンです。",
+    "jp": "金属（きんぞく）の　スプーンです。",
     "en": "It is a metal spoon.",
     "audio_ref": "/audio/kanji_examples/属_1.webm",
     "source": "generated"
@@ -33833,7 +33834,7 @@
   "audio": "/audio/kanji/態.mp3",
   "lesson_examples": [
    {
-    "jp": "態（たい）度（ど）が　りっぱだ。",
+    "jp": "態度（たいど）が　りっぱだ。",
     "en": "An admirable attitude.",
     "audio_ref": "/audio/kanji_examples/態_1.webm",
     "source": "generated"
@@ -34017,7 +34018,7 @@
   "audio": "/audio/kanji/弁.mp3",
   "lesson_examples": [
    {
-    "jp": "お弁（べん）当（とう）を　作（つく）ります。",
+    "jp": "お弁当（べんとう）を　作（つく）ります。",
     "en": "I make a boxed lunch.",
     "audio_ref": "/audio/kanji_examples/弁_1.webm",
     "source": "generated"
@@ -34076,7 +34077,7 @@
   "audio": "/audio/kanji/脈.mp3",
   "lesson_examples": [
    {
-    "jp": "山（さん）脈（みゃく）が　つづく。",
+    "jp": "山脈（さんみゃく）が　つづく。",
     "en": "The mountain range stretches on.",
     "audio_ref": "/audio/kanji_examples/脈_1.webm",
     "source": "generated"
@@ -34312,7 +34313,7 @@
   "audio": "/audio/kanji/域.mp3",
   "lesson_examples": [
    {
-    "jp": "この　地（ち）域（いき）は　ゆきが　おおい。",
+    "jp": "この　地域（ちいき）は　ゆきが　おおい。",
     "en": "This area gets much snow.",
     "audio_ref": "/audio/kanji_examples/域_1.webm",
     "source": "generated"
@@ -34445,7 +34446,7 @@
   "audio": "/audio/kanji/拡.mp3",
   "lesson_examples": [
    {
-    "jp": "しゃしんを　拡（かく）大（だい）します。",
+    "jp": "しゃしんを　拡大（かくだい）します。",
     "en": "I enlarge the photo.",
     "audio_ref": "/audio/kanji_examples/拡_1.webm",
     "source": "generated"
@@ -34682,7 +34683,7 @@
   "audio": "/audio/kanji/看.mp3",
   "lesson_examples": [
    {
-    "jp": "看（かん）護（ご）師（し）に　なりたい。",
+    "jp": "看護師（かんごし）に　なりたい。",
     "en": "I want to become a nurse.",
     "audio_ref": "/audio/kanji_examples/看_1.webm",
     "source": "generated"
@@ -35214,7 +35215,7 @@
   "audio": "/audio/kanji/権.mp3",
   "lesson_examples": [
    {
-    "jp": "ちょうせんする　権（けん）利（り）が　ある。",
+    "jp": "ちょうせんする　権利（けんり）が　ある。",
     "en": "You have the right to challenge.",
     "audio_ref": "/audio/kanji_examples/権_1.webm",
     "source": "generated"
@@ -35339,7 +35340,7 @@
   "audio": "/audio/kanji/紅.mp3",
   "lesson_examples": [
    {
-    "jp": "紅（こう）葉（よう）が　きれいです。",
+    "jp": "紅葉（こうよう）が　きれいです。",
     "en": "The autumn colors are beautiful.",
     "audio_ref": "/audio/kanji_examples/紅_1.webm",
     "source": "generated"
@@ -35679,7 +35680,7 @@
   "audio": "/audio/kanji/冊.mp3",
   "lesson_examples": [
    {
-    "jp": "本（ほん）を　三（さん）冊（さつ）　かいました。",
+    "jp": "本（ほん）を　三冊（さんさつ）　かいました。",
     "en": "I bought three books.",
     "audio_ref": "/audio/kanji_examples/冊_1.webm",
     "source": "generated"
@@ -35913,7 +35914,7 @@
   "audio": "/audio/kanji/純.mp3",
   "lesson_examples": [
    {
-    "jp": "純（じゅん）粋（すい）な　こころです。",
+    "jp": "純粋（じゅんすい）な　こころです。",
     "en": "A pure heart.",
     "audio_ref": "/audio/kanji_examples/純_1.webm",
     "source": "generated"
@@ -36271,7 +36272,7 @@
   "audio": "/audio/kanji/専.mp3",
   "lesson_examples": [
    {
-    "jp": "専（せん）門（もん）の　べんきょうを　します。",
+    "jp": "専門（せんもん）の　べんきょうを　します。",
     "en": "I study my specialty.",
     "audio_ref": "/audio/kanji_examples/専_1.webm",
     "source": "generated"
@@ -36308,7 +36309,7 @@
   "audio": "/audio/kanji/泉.mp3",
   "lesson_examples": [
    {
-    "jp": "温（おん）泉（せん）で　やすみます。",
+    "jp": "温泉（おんせん）で　やすみます。",
     "en": "We rest at the hot spring.",
     "audio_ref": "/audio/kanji_examples/泉_1.webm",
     "source": "generated"
@@ -36547,7 +36548,7 @@
   "audio": "/audio/kanji/臓.mp3",
   "lesson_examples": [
    {
-    "jp": "心（しん）臓（ぞう）が　はやく　うつ。",
+    "jp": "心臓（しんぞう）が　はやく　うつ。",
     "en": "My heart beats fast.",
     "audio_ref": "/audio/kanji_examples/臓_1.webm",
     "source": "generated"
@@ -37392,7 +37393,7 @@
   "audio": "/audio/kanji/乳.mp3",
   "lesson_examples": [
    {
-    "jp": "牛（ぎゅう）乳（にゅう）を　のみます。",
+    "jp": "牛乳（ぎゅうにゅう）を　のみます。",
     "en": "I drink milk.",
     "audio_ref": "/audio/kanji_examples/乳_1.webm",
     "source": "generated"
@@ -37657,7 +37658,7 @@
   "audio": "/audio/kanji/批.mp3",
   "lesson_examples": [
    {
-    "jp": "批（ひ）判（はん）だけでは　すすまない。",
+    "jp": "批判（ひはん）だけでは　すすまない。",
     "en": "Criticism alone gets you nowhere.",
     "audio_ref": "/audio/kanji_examples/批_1.webm",
     "source": "generated"
@@ -38413,7 +38414,7 @@
   "audio": "/audio/kanji/翌.mp3",
   "lesson_examples": [
    {
-    "jp": "翌（よく）日（じつ）、また　あいました。",
+    "jp": "翌日（よくじつ）、また　あいました。",
     "en": "We met again the next day.",
     "audio_ref": "/audio/kanji_examples/翌_1.webm",
     "source": "generated"
@@ -38694,7 +38695,7 @@
   "audio": "/audio/kanji/沿.mp3",
   "lesson_examples": [
    {
-    "jp": "川（かわ）沿（ぞ）いを　歩（ある）きます。",
+    "jp": "川沿（かわぞ）いを　歩（ある）きます。",
     "en": "I walk along the river.",
     "audio_ref": "/audio/kanji_examples/沿_1.webm",
     "source": "generated"
@@ -38925,7 +38926,7 @@
   "audio": "/audio/kanji/郷.mp3",
   "lesson_examples": [
    {
-    "jp": "故（こ）郷（きょう）に　帰（かえ）ります。",
+    "jp": "故郷（こきょう）に　帰（かえ）ります。",
     "en": "I'm going back to my hometown.",
     "audio_ref": "/audio/kanji_examples/郷_1.webm",
     "source": "generated"
@@ -39012,7 +39013,7 @@
   "audio": "/audio/kanji/系.mp3",
   "lesson_examples": [
    {
-    "jp": "理（り）系（けい）の　べんきょうが　すき。",
+    "jp": "理系（りけい）の　べんきょうが　すき。",
     "en": "I like science subjects.",
     "audio_ref": "/audio/kanji_examples/系_1.webm",
     "source": "generated"
@@ -39057,7 +39058,7 @@
   "audio": "/audio/kanji/激.mp3",
   "lesson_examples": [
    {
-    "jp": "激（はげ）しい　運（うん）動（どう）を　しました。",
+    "jp": "激（はげ）しい　運動（うんどう）を　しました。",
     "en": "I did some intense exercise.",
     "audio_ref": "/audio/kanji_examples/激_1.webm",
     "source": "generated"
@@ -39121,7 +39122,7 @@
   "audio": "/audio/kanji/憲.mp3",
   "lesson_examples": [
    {
-    "jp": "憲（けん）法（ぽう）を　まなぶ。",
+    "jp": "憲法（けんぽう）を　まなぶ。",
     "en": "We study the constitution.",
     "audio_ref": "/audio/kanji_examples/憲_1.webm",
     "source": "generated"
@@ -39189,7 +39190,7 @@
   "audio": "/audio/kanji/厳.mp3",
   "lesson_examples": [
    {
-    "jp": "先（せん）生（せい）は　厳（きび）しいです。",
+    "jp": "先生（せんせい）は　厳（きび）しいです。",
     "en": "The teacher is strict.",
     "audio_ref": "/audio/kanji_examples/厳_1.webm",
     "source": "generated"
@@ -39270,7 +39271,7 @@
   "audio": "/audio/kanji/己.mp3",
   "lesson_examples": [
    {
-    "jp": "自（じ）己（こ）ベストを　目（め）指（ざ）します。",
+    "jp": "自己（じこ）ベストを　目指（めざ）します。",
     "en": "I'm aiming for my personal best.",
     "audio_ref": "/audio/kanji_examples/己_1.webm",
     "source": "generated"
@@ -39301,7 +39302,7 @@
   "audio": "/audio/kanji/后.mp3",
   "lesson_examples": [
    {
-    "jp": "皇（こう）后（ごう）さまの　おことば。",
+    "jp": "皇后（こうごう）さまの　おことば。",
     "en": "The Empress's words.",
     "audio_ref": "/audio/kanji_examples/后_1.webm",
     "source": "generated"
@@ -39326,7 +39327,7 @@
   "audio": "/audio/kanji/孝.mp3",
   "lesson_examples": [
    {
-    "jp": "親（おや）孝（こう）行（こう）を　しよう。",
+    "jp": "親孝行（おやこうこう）を　しよう。",
     "en": "Be good to your parents.",
     "audio_ref": "/audio/kanji_examples/孝_1.webm",
     "source": "generated"
@@ -39383,7 +39384,7 @@
   "audio": "/audio/kanji/穀.mp3",
   "lesson_examples": [
    {
-    "jp": "穀（こく）物（もつ）を　育（そだ）てます。",
+    "jp": "穀物（こくもつ）を　育（そだ）てます。",
     "en": "We grow grain.",
     "audio_ref": "/audio/kanji_examples/穀_1.webm",
     "source": "generated"
@@ -39679,7 +39680,7 @@
   "audio": "/audio/kanji/尺.mp3",
   "lesson_examples": [
    {
-    "jp": "尺（しゃく）八（はち）の　ねいろ。",
+    "jp": "尺八（しゃくはち）の　ねいろ。",
     "en": "The tone of a shakuhachi flute.",
     "audio_ref": "/audio/kanji_examples/尺_1.webm",
     "source": "generated"
@@ -39708,7 +39709,7 @@
   "audio": "/audio/kanji/樹.mp3",
   "lesson_examples": [
    {
-    "jp": "大（たい）樹（じゅ）の　かげで　やすむ。",
+    "jp": "大樹（たいじゅ）の　かげで　やすむ。",
     "en": "We rest in the great tree's shade.",
     "audio_ref": "/audio/kanji_examples/樹_1.webm",
     "source": "generated"
@@ -39745,7 +39746,7 @@
   "audio": "/audio/kanji/宗.mp3",
   "lesson_examples": [
    {
-    "jp": "宗（しゅう）教（きょう）の　れきしを　まなぶ。",
+    "jp": "宗教（しゅうきょう）の　れきしを　まなぶ。",
     "en": "We study the history of religion.",
     "audio_ref": "/audio/kanji_examples/宗_1.webm",
     "source": "generated"
@@ -39866,7 +39867,7 @@
   "audio": "/audio/kanji/従.mp3",
   "lesson_examples": [
    {
-    "jp": "コーチの　指（し）示（じ）に　従（したが）います。",
+    "jp": "コーチの　指示（しじ）に　従（したが）います。",
     "en": "I follow the coach's instructions.",
     "audio_ref": "/audio/kanji_examples/従_1.webm",
     "source": "generated"
@@ -40004,7 +40005,7 @@
   "audio": "/audio/kanji/熟.mp3",
   "lesson_examples": [
    {
-    "jp": "よく　熟（じゅく）した　果（くだ）物（もの）です。",
+    "jp": "よく　熟（じゅく）した　果物（くだもの）です。",
     "en": "It's well-ripened fruit.",
     "audio_ref": "/audio/kanji_examples/熟_1.webm",
     "source": "generated"
@@ -40191,7 +40192,7 @@
   "audio": "/audio/kanji/推.mp3",
   "lesson_examples": [
    {
-    "jp": "新（あたら）しい　方（ほう）法（ほう）を　推（すい）薦（せん）します。",
+    "jp": "新（あたら）しい　方法（ほうほう）を　推薦（すいせん）します。",
     "en": "I recommend the new method.",
     "audio_ref": "/audio/kanji_examples/推_1.webm",
     "source": "generated"
@@ -40228,7 +40229,7 @@
   "audio": "/audio/kanji/寸.mp3",
   "lesson_examples": [
    {
-    "jp": "寸（すん）法（ぽう）を　はかります。",
+    "jp": "寸法（すんぽう）を　はかります。",
     "en": "I measure the dimensions.",
     "audio_ref": "/audio/kanji_examples/寸_1.webm",
     "source": "generated"
@@ -40399,7 +40400,7 @@
   "audio": "/audio/kanji/宣.mp3",
   "lesson_examples": [
    {
-    "jp": "たいかいの　開（かい）始（し）を　宣（せん）言（げん）します。",
+    "jp": "たいかいの　開始（かいし）を　宣言（せんげん）します。",
     "en": "The start of the tournament is declared.",
     "audio_ref": "/audio/kanji_examples/宣_1.webm",
     "source": "generated"
@@ -40482,7 +40483,7 @@
   "audio": "/audio/kanji/銭.mp3",
   "lesson_examples": [
    {
-    "jp": "小（こ）銭（ぜに）が　ありません。",
+    "jp": "小銭（こぜに）が　ありません。",
     "en": "I have no small change.",
     "audio_ref": "/audio/kanji_examples/銭_1.webm",
     "source": "generated"
@@ -40651,7 +40652,7 @@
   "audio": "/audio/kanji/腸.mp3",
   "lesson_examples": [
    {
-    "jp": "胃（い）腸（ちょう）に　やさしい　りょうり。",
+    "jp": "胃腸（いちょう）に　やさしい　りょうり。",
     "en": "Food gentle on the stomach.",
     "audio_ref": "/audio/kanji_examples/腸_1.webm",
     "source": "generated"
@@ -40725,7 +40726,7 @@
   "audio": "/audio/kanji/糖.mp3",
   "lesson_examples": [
    {
-    "jp": "砂（さ）糖（とう）を　ひかえる。",
+    "jp": "砂糖（さとう）を　ひかえる。",
     "en": "I cut back on sugar.",
     "audio_ref": "/audio/kanji_examples/糖_1.webm",
     "source": "generated"
@@ -40840,7 +40841,7 @@
   "audio": "/audio/kanji/派.mp3",
   "lesson_examples": [
    {
-    "jp": "立（りっ）派（ぱ）な　演（えん）技（ぎ）でした。",
+    "jp": "立派（りっぱ）な　演技（えんぎ）でした。",
     "en": "It was a splendid performance.",
     "audio_ref": "/audio/kanji_examples/派_1.webm",
     "source": "generated"
@@ -40870,7 +40871,7 @@
   "audio": "/audio/kanji/俳.mp3",
   "lesson_examples": [
    {
-    "jp": "俳（はい）句（く）を　つくります。",
+    "jp": "俳句（はいく）を　つくります。",
     "en": "I compose haiku.",
     "audio_ref": "/audio/kanji_examples/俳_1.webm",
     "source": "generated"
@@ -41012,7 +41013,7 @@
   "audio": "/audio/kanji/奮.mp3",
   "lesson_examples": [
    {
-    "jp": "興（こう）奮（ふん）して　ねむれない。",
+    "jp": "興奮（こうふん）して　ねむれない。",
     "en": "Too excited to sleep.",
     "audio_ref": "/audio/kanji_examples/奮_1.webm",
     "source": "generated"
@@ -41036,7 +41037,7 @@
   "audio": "/audio/kanji/陛.mp3",
   "lesson_examples": [
    {
-    "jp": "陛（へい）下（か）に　あいさつを　します。",
+    "jp": "陛下（へいか）に　あいさつを　します。",
     "en": "We greet His Majesty.",
     "audio_ref": "/audio/kanji_examples/陛_1.webm",
     "source": "generated"
@@ -41108,7 +41109,7 @@
   "audio": "/audio/kanji/密.mp3",
   "lesson_examples": [
    {
-    "jp": "秘（ひ）密（みつ）を　まもる。",
+    "jp": "秘密（ひみつ）を　まもる。",
     "en": "I keep the secret.",
     "audio_ref": "/audio/kanji_examples/密_1.webm",
     "source": "generated"
@@ -41166,7 +41167,7 @@
   "audio": "/audio/kanji/模.mp3",
   "lesson_examples": [
    {
-    "jp": "模（も）型（けい）の　ふねを　つくる。",
+    "jp": "模型（もけい）の　ふねを　つくる。",
     "en": "I build a model ship.",
     "audio_ref": "/audio/kanji_examples/模_1.webm",
     "source": "generated"
@@ -41313,7 +41314,7 @@
   "audio": "/audio/kanji/朗.mp3",
   "lesson_examples": [
    {
-    "jp": "朗（ろう）読（どく）の　じかんです。",
+    "jp": "朗読（ろうどく）の　じかんです。",
     "en": "It's time for the reading aloud.",
     "audio_ref": "/audio/kanji_examples/朗_1.webm",
     "source": "generated"
@@ -41359,7 +41360,7 @@
   "audio": "/audio/kanji/依.mp3",
   "lesson_examples": [
    {
-    "jp": "しごとを　依（い）頼（らい）します。",
+    "jp": "しごとを　依頼（いらい）します。",
     "en": "I commission the work.",
     "audio_ref": "/audio/kanji_examples/依_1.webm",
     "source": "generated"
@@ -41761,7 +41762,7 @@
   "audio": "/audio/kanji/欧.mp3",
   "lesson_examples": [
    {
-    "jp": "欧（おう）州（しゅう）を　りょこうしたい。",
+    "jp": "欧州（おうしゅう）を　りょこうしたい。",
     "en": "I want to travel Europe.",
     "audio_ref": "/audio/kanji_examples/欧_1.webm",
     "source": "generated"
@@ -41826,7 +41827,7 @@
   "audio": "/audio/kanji/介.mp3",
   "lesson_examples": [
    {
-    "jp": "友（とも）達（だち）を　紹（しょう）介（かい）します。",
+    "jp": "友達（ともだち）を　紹介（しょうかい）します。",
     "en": "I introduce my friend.",
     "audio_ref": "/audio/kanji_examples/介_1.webm",
     "source": "generated"
@@ -42034,7 +42035,7 @@
   "audio": "/audio/kanji/環.mp3",
   "lesson_examples": [
    {
-    "jp": "環（かん）境（きょう）を　まもろう。",
+    "jp": "環境（かんきょう）を　まもろう。",
     "en": "Let's protect the environment.",
     "audio_ref": "/audio/kanji_examples/環_1.webm",
     "source": "generated"
@@ -42082,7 +42083,7 @@
   "audio": "/audio/kanji/甘.mp3",
   "lesson_examples": [
    {
-    "jp": "この　お菓（か）子（し）は　甘（あま）いです。",
+    "jp": "この　お菓子（かし）は　甘（あま）いです。",
     "en": "This candy is sweet.",
     "audio_ref": "/audio/kanji_examples/甘_1.webm",
     "source": "generated"
@@ -42260,7 +42261,7 @@
   "audio": "/audio/kanji/巨.mp3",
   "lesson_examples": [
    {
-    "jp": "巨（きょ）大（だい）な　木（き）が　あります。",
+    "jp": "巨大（きょだい）な　木（き）が　あります。",
     "en": "There is a gigantic tree.",
     "audio_ref": "/audio/kanji_examples/巨_1.webm",
     "source": "generated"
@@ -43056,7 +43057,7 @@
   "audio": "/audio/kanji/更.mp3",
   "lesson_examples": [
    {
-    "jp": "よていを　変（へん）更（こう）します。",
+    "jp": "よていを　変更（へんこう）します。",
     "en": "We change the plan.",
     "audio_ref": "/audio/kanji_examples/更_1.webm",
     "source": "generated"
@@ -43112,7 +43113,7 @@
   "audio": "/audio/kanji/肯.mp3",
   "lesson_examples": [
    {
-    "jp": "ていあんに　肯（こう）定（てい）的（てき）だ。",
+    "jp": "ていあんに　肯定的（こうていてき）だ。",
     "en": "He's positive about the proposal.",
     "audio_ref": "/audio/kanji_examples/肯_1.webm",
     "source": "generated"
@@ -43577,7 +43578,7 @@
   "audio": "/audio/kanji/舟.mp3",
   "lesson_examples": [
    {
-    "jp": "川（かわ）で　小（こ）舟（ぶね）に　乗（の）ります。",
+    "jp": "川（かわ）で　小舟（こぶね）に　乗（の）ります。",
     "en": "I ride a small boat on the river.",
     "audio_ref": "/audio/kanji_examples/舟_1.webm",
     "source": "generated"
@@ -44235,7 +44236,7 @@
   "audio": "/audio/kanji/双.mp3",
   "lesson_examples": [
    {
-    "jp": "双（ふた）子（ご）の　きょうだいです。",
+    "jp": "双子（ふたご）の　きょうだいです。",
     "en": "They are twins.",
     "audio_ref": "/audio/kanji_examples/双_1.webm",
     "source": "generated"
@@ -44318,7 +44319,7 @@
   "audio": "/audio/kanji/掃.mp3",
   "lesson_examples": [
    {
-    "jp": "部屋（へや）を　掃（そう）除（じ）します。",
+    "jp": "部屋（へや）を　掃除（そうじ）します。",
     "en": "I clean the room.",
     "audio_ref": "/audio/kanji_examples/掃_1.webm",
     "source": "generated"
@@ -44355,7 +44356,7 @@
   "audio": "/audio/kanji/燥.mp3",
   "lesson_examples": [
    {
-    "jp": "くうきが　乾（かん）燥（そう）して　いる。",
+    "jp": "くうきが　乾燥（かんそう）して　いる。",
     "en": "The air is dry.",
     "audio_ref": "/audio/kanji_examples/燥_1.webm",
     "source": "generated"
@@ -44472,7 +44473,7 @@
   "audio": "/audio/kanji/替.mp3",
   "lesson_examples": [
    {
-    "jp": "シャツを　着（き）替（が）えます。",
+    "jp": "シャツを　着替（きが）えます。",
     "en": "I change my shirt.",
     "audio_ref": "/audio/kanji_examples/替_1.webm",
     "source": "generated"
@@ -44561,7 +44562,7 @@
   "audio": "/audio/kanji/濯.mp3",
   "lesson_examples": [
    {
-    "jp": "洗（せん）濯（たく）を　します。",
+    "jp": "洗濯（せんたく）を　します。",
     "en": "I do the laundry.",
     "audio_ref": "/audio/kanji_examples/濯_1.webm",
     "source": "generated"
@@ -44676,7 +44677,7 @@
   "audio": "/audio/kanji/畜.mp3",
   "lesson_examples": [
    {
-    "jp": "家（か）畜（ちく）の　せわを　する。",
+    "jp": "家畜（かちく）の　せわを　する。",
     "en": "We tend the livestock.",
     "audio_ref": "/audio/kanji_examples/畜_1.webm",
     "source": "generated"
@@ -45488,7 +45489,7 @@
   "audio": "/audio/kanji/軟.mp3",
   "lesson_examples": [
    {
-    "jp": "柔（じゅう）軟（なん）に　かんがえよう。",
+    "jp": "柔軟（じゅうなん）に　かんがえよう。",
     "en": "Let's think flexibly.",
     "audio_ref": "/audio/kanji_examples/軟_1.webm",
     "source": "generated"
@@ -45912,7 +45913,7 @@
   "audio": "/audio/kanji/般.mp3",
   "lesson_examples": [
    {
-    "jp": "一（いっ）般（ぱん）の　ひとも　はいれます。",
+    "jp": "一般（いっぱん）の　ひとも　はいれます。",
     "en": "The general public may enter too.",
     "audio_ref": "/audio/kanji_examples/般_1.webm",
     "source": "generated"
@@ -46116,7 +46117,7 @@
   "audio": "/audio/kanji/匹.mp3",
   "lesson_examples": [
    {
-    "jp": "犬（いぬ）が　二（に）匹（ひき）　います。",
+    "jp": "犬（いぬ）が　二匹（にひき）　います。",
     "en": "There are two dogs.",
     "audio_ref": "/audio/kanji_examples/匹_1.webm",
     "source": "generated"
@@ -46200,7 +46201,7 @@
   "audio": "/audio/kanji/普.mp3",
   "lesson_examples": [
    {
-    "jp": "普（ふ）通（つう）の　いちにちでした。",
+    "jp": "普通（ふつう）の　いちにちでした。",
     "en": "It was an ordinary day.",
     "audio_ref": "/audio/kanji_examples/普_1.webm",
     "source": "generated"
@@ -46790,7 +46791,7 @@
   "audio": "/audio/kanji/忙.mp3",
   "lesson_examples": [
    {
-    "jp": "今（こん）週（しゅう）は　忙（いそが）しい。",
+    "jp": "今週（こんしゅう）は　忙（いそが）しい。",
     "en": "This week is busy.",
     "audio_ref": "/audio/kanji_examples/忙_1.webm",
     "source": "generated"
@@ -47311,7 +47312,7 @@
   "audio": "/audio/kanji/療.mp3",
   "lesson_examples": [
    {
-    "jp": "病院（びょういん）で　治（ち）療（りょう）を　受（う）けます。",
+    "jp": "病院（びょういん）で　治療（ちりょう）を　受（う）けます。",
     "en": "I receive treatment at the hospital.",
     "audio_ref": "/audio/kanji_examples/療_1.webm",
     "source": "generated"
@@ -47581,7 +47582,7 @@
   "audio": "/audio/kanji/亜.mp3",
   "lesson_examples": [
    {
-    "jp": "亜（あ）熱（ねっ）帯（たい）の　しま。",
+    "jp": "亜熱帯（あねったい）の　しま。",
     "en": "A subtropical island.",
     "audio_ref": "/audio/kanji_examples/亜_1.webm",
     "source": "generated"
@@ -47752,7 +47753,7 @@
   "audio": "/audio/kanji/威.mp3",
   "lesson_examples": [
    {
-    "jp": "たきの　威（い）力（りょく）に　おどろく。",
+    "jp": "たきの　威力（いりょく）に　おどろく。",
     "en": "Awed by the waterfall's power.",
     "audio_ref": "/audio/kanji_examples/威_1.webm",
     "source": "generated"
@@ -47779,7 +47780,7 @@
   "audio": "/audio/kanji/尉.mp3",
   "lesson_examples": [
    {
-    "jp": "むかしの　軍（ぐん）の　尉（い）官（かん）。",
+    "jp": "むかしの　軍（ぐん）の　尉官（いかん）。",
     "en": "An officer of the old army.",
     "audio_ref": "/audio/kanji_examples/尉_1.webm",
     "source": "generated"
@@ -47900,7 +47901,7 @@
   "audio": "/audio/kanji/維.mp3",
   "lesson_examples": [
    {
-    "jp": "げんじょうを　維（い）持（じ）する。",
+    "jp": "げんじょうを　維持（いじ）する。",
     "en": "Maintaining the status quo.",
     "audio_ref": "/audio/kanji_examples/維_1.webm",
     "source": "generated"
@@ -47941,7 +47942,7 @@
   "audio": "/audio/kanji/緯.mp3",
   "lesson_examples": [
    {
-    "jp": "けいども　いども　――　経（けい）緯（い）を　せつめいする。",
+    "jp": "けいども　いども　――　経緯（けいい）を　せつめいする。",
     "en": "Explaining the whole sequence of events.",
     "audio_ref": "/audio/kanji_examples/緯_1.webm",
     "source": "generated"
@@ -48017,7 +48018,7 @@
   "audio": "/audio/kanji/逸.mp3",
   "lesson_examples": [
    {
-    "jp": "この　はなしは　逸（いつ）話（わ）として　ゆうめいだ。",
+    "jp": "この　はなしは　逸話（いつわ）として　ゆうめいだ。",
     "en": "This story is a famous anecdote.",
     "audio_ref": "/audio/kanji_examples/逸_1.webm",
     "source": "generated"
@@ -48349,7 +48350,7 @@
   "audio": "/audio/kanji/疫.mp3",
   "lesson_examples": [
    {
-    "jp": "疫（えき）病（びょう）から　うしを　守（まも）ります。",
+    "jp": "疫病（えきびょう）から　うしを　守（まも）ります。",
     "en": "We protect the cows from disease.",
     "audio_ref": "/audio/kanji_examples/疫_1.webm",
     "source": "generated"
@@ -48420,7 +48421,7 @@
   "audio": "/audio/kanji/閲.mp3",
   "lesson_examples": [
    {
-    "jp": "しりょうを　閲（えつ）覧（らん）する。",
+    "jp": "しりょうを　閲覧（えつらん）する。",
     "en": "Browsing the archives.",
     "audio_ref": "/audio/kanji_examples/閲_1.webm",
     "source": "generated"
@@ -48494,7 +48495,7 @@
   "audio": "/audio/kanji/援.mp3",
   "lesson_examples": [
    {
-    "jp": "友（とも）達（だち）を　応（おう）援（えん）します。",
+    "jp": "友達（ともだち）を　応援（おうえん）します。",
     "en": "I cheer on my friend.",
     "audio_ref": "/audio/kanji_examples/援_1.webm",
     "source": "generated"
@@ -48700,7 +48701,7 @@
   "audio": "/audio/kanji/鉛.mp3",
   "lesson_examples": [
    {
-    "jp": "鉛（えん）筆（ぴつ）で　メモを　とる。",
+    "jp": "鉛筆（えんぴつ）で　メモを　とる。",
     "en": "Taking notes in pencil.",
     "audio_ref": "/audio/kanji_examples/鉛_1.webm",
     "source": "generated"
@@ -48774,7 +48775,7 @@
   "audio": "/audio/kanji/旺.mp3",
   "lesson_examples": [
    {
-    "jp": "しょくよく旺（おう）盛（せい）な　こどもたち。",
+    "jp": "しょくよく旺盛（おうせい）な　こどもたち。",
     "en": "Children with hearty appetites.",
     "audio_ref": "/audio/kanji_examples/旺_1.webm",
     "source": "generated"
@@ -48954,7 +48955,7 @@
   "audio": "/audio/kanji/穏.mp3",
   "lesson_examples": [
    {
-    "jp": "穏（おだ）やかな　天（てん）気（き）です。",
+    "jp": "穏（おだ）やかな　天気（てんき）です。",
     "en": "The weather is calm.",
     "audio_ref": "/audio/kanji_examples/穏_1.webm",
     "source": "generated"
@@ -48981,7 +48982,7 @@
   "audio": "/audio/kanji/佳.mp3",
   "lesson_examples": [
    {
-    "jp": "佳（か）作（さく）に　えらばれました。",
+    "jp": "佳作（かさく）に　えらばれました。",
     "en": "It was chosen as an honorable mention.",
     "audio_ref": "/audio/kanji_examples/佳_1.webm",
     "source": "generated"
@@ -49087,7 +49088,7 @@
   "audio": "/audio/kanji/暇.mp3",
   "lesson_examples": [
    {
-    "jp": "休（きゅう）暇（か）に　たびに　でる。",
+    "jp": "休暇（きゅうか）に　たびに　でる。",
     "en": "I travel on my days off.",
     "audio_ref": "/audio/kanji_examples/暇_1.webm",
     "source": "generated"
@@ -49144,7 +49145,7 @@
   "audio": "/audio/kanji/禍.mp3",
   "lesson_examples": [
    {
-    "jp": "災（さい）禍（か）を　まぬがれました。",
+    "jp": "災禍（さいか）を　まぬがれました。",
     "en": "We escaped the calamity.",
     "audio_ref": "/audio/kanji_examples/禍_1.webm",
     "source": "generated"
@@ -49300,7 +49301,7 @@
   "audio": "/audio/kanji/雅.mp3",
   "lesson_examples": [
    {
-    "jp": "優（ゆう）雅（が）な　おどりだった。",
+    "jp": "優雅（ゆうが）な　おどりだった。",
     "en": "An elegant dance.",
     "audio_ref": "/audio/kanji_examples/雅_1.webm",
     "source": "generated"
@@ -49327,7 +49328,7 @@
   "audio": "/audio/kanji/餓.mp3",
   "lesson_examples": [
    {
-    "jp": "飢（き）餓（が）を　なくす　とりくみ。",
+    "jp": "飢餓（きが）を　なくす　とりくみ。",
     "en": "Efforts to end hunger.",
     "audio_ref": "/audio/kanji_examples/餓_1.webm",
     "source": "generated"
@@ -49569,7 +49570,7 @@
   "audio": "/audio/kanji/戒.mp3",
   "lesson_examples": [
    {
-    "jp": "自（じ）分（ぶん）を　戒（いまし）めます。",
+    "jp": "自分（じぶん）を　戒（いまし）めます。",
     "en": "I admonish myself.",
     "audio_ref": "/audio/kanji_examples/戒_1.webm",
     "source": "generated"
@@ -49593,7 +49594,7 @@
   "audio": "/audio/kanji/拐.mp3",
   "lesson_examples": [
    {
-    "jp": "誘（ゆう）拐（かい）事（じ）件（けん）の　ニュースを　見（み）ました。",
+    "jp": "誘拐事件（ゆうかいじけん）の　ニュースを　見（み）ました。",
     "en": "I saw the news about the kidnapping case.",
     "audio_ref": "/audio/kanji_examples/拐_1.webm",
     "source": "generated"
@@ -49617,7 +49618,7 @@
   "audio": "/audio/kanji/劾.mp3",
   "lesson_examples": [
    {
-    "jp": "弾（だん）劾（がい）の　ニュースを　みた。",
+    "jp": "弾劾（だんがい）の　ニュースを　みた。",
     "en": "I saw the news of the impeachment.",
     "audio_ref": "/audio/kanji_examples/劾_1.webm",
     "source": "generated"
@@ -49645,7 +49646,7 @@
   "audio": "/audio/kanji/慨.mp3",
   "lesson_examples": [
    {
-    "jp": "かんがい　――　感（かん）慨（がい）ぶかい　さいかいだ。",
+    "jp": "かんがい　――　感慨（かんがい）ぶかい　さいかいだ。",
     "en": "A deeply moving reunion.",
     "audio_ref": "/audio/kanji_examples/慨_1.webm",
     "source": "generated"
@@ -49689,7 +49690,7 @@
   "audio": "/audio/kanji/概.mp3",
   "lesson_examples": [
    {
-    "jp": "けいかくの　概（がい）要（よう）を　せつめい。",
+    "jp": "けいかくの　概要（がいよう）を　せつめい。",
     "en": "Explaining the plan's outline.",
     "audio_ref": "/audio/kanji_examples/概_1.webm",
     "source": "generated"
@@ -49717,7 +49718,7 @@
   "audio": "/audio/kanji/涯.mp3",
   "lesson_examples": [
    {
-    "jp": "生（しょう）涯（がい）の　友（とも）達（だち）です。",
+    "jp": "生涯（しょうがい）の　友達（ともだち）です。",
     "en": "A friend for life.",
     "audio_ref": "/audio/kanji_examples/涯_1.webm",
     "source": "generated"
@@ -49767,7 +49768,7 @@
   "audio": "/audio/kanji/垣.mp3",
   "lesson_examples": [
    {
-    "jp": "いしの　垣（かき）根（ね）が　つづく。",
+    "jp": "いしの　垣根（かきね）が　つづく。",
     "en": "A stone hedge runs along.",
     "audio_ref": "/audio/kanji_examples/垣_1.webm",
     "source": "generated"
@@ -49795,7 +49796,7 @@
   "audio": "/audio/kanji/嚇.mp3",
   "lesson_examples": [
    {
-    "jp": "どうぶつは　てきを　威（い）嚇（かく）する。",
+    "jp": "どうぶつは　てきを　威嚇（いかく）する。",
     "en": "Animals threaten their foes.",
     "audio_ref": "/audio/kanji_examples/嚇_1.webm",
     "source": "generated"
@@ -49826,7 +49827,7 @@
   "audio": "/audio/kanji/核.mp3",
   "lesson_examples": [
    {
-    "jp": "もんだいの　核（かく）心（しん）に　ふれる。",
+    "jp": "もんだいの　核心（かくしん）に　ふれる。",
     "en": "Touching the heart of the problem.",
     "audio_ref": "/audio/kanji_examples/核_1.webm",
     "source": "generated"
@@ -49917,7 +49918,7 @@
   "audio": "/audio/kanji/穫.mp3",
   "lesson_examples": [
    {
-    "jp": "秋（あき）に　収（しゅう）穫（かく）します。",
+    "jp": "秋（あき）に　収穫（しゅうかく）します。",
     "en": "We harvest in autumn.",
     "audio_ref": "/audio/kanji_examples/穫_1.webm",
     "source": "generated"
@@ -49945,7 +49946,7 @@
   "audio": "/audio/kanji/郭.mp3",
   "lesson_examples": [
    {
-    "jp": "まちの　輪（りん）郭（かく）が　みえて　きた。",
+    "jp": "まちの　輪郭（りんかく）が　みえて　きた。",
     "en": "The town's outline came into view.",
     "audio_ref": "/audio/kanji_examples/郭_1.webm",
     "source": "generated"
@@ -50092,7 +50093,7 @@
   "audio": "/audio/kanji/喝.mp3",
   "lesson_examples": [
    {
-    "jp": "師（し）匠（しょう）の　一（いっ）喝（かつ）で　めが　さめた。",
+    "jp": "師匠（ししょう）の　一喝（いっかつ）で　めが　さめた。",
     "en": "The master's sharp cry snapped me awake.",
     "audio_ref": "/audio/kanji_examples/喝_1.webm",
     "source": "generated"
@@ -50218,7 +50219,7 @@
   "audio": "/audio/kanji/褐.mp3",
   "lesson_examples": [
    {
-    "jp": "褐（かっ）色（しょく）の　コートを　着（き）て　います。",
+    "jp": "褐色（かっしょく）の　コートを　着（き）て　います。",
     "en": "He wears a brown coat.",
     "audio_ref": "/audio/kanji_examples/褐_1.webm",
     "source": "generated"
@@ -50244,7 +50245,7 @@
   "audio": "/audio/kanji/轄.mp3",
   "lesson_examples": [
    {
-    "jp": "この　ちいきを　管（かん）轄（かつ）する。",
+    "jp": "この　ちいきを　管轄（かんかつ）する。",
     "en": "This area falls under their jurisdiction.",
     "audio_ref": "/audio/kanji_examples/轄_1.webm",
     "source": "generated"
@@ -50362,7 +50363,7 @@
   "audio": "/audio/kanji/冠.mp3",
   "lesson_examples": [
    {
-    "jp": "優（ゆう）勝（しょう）の　冠（かんむり）を　もらいました。",
+    "jp": "優勝（ゆうしょう）の　冠（かんむり）を　もらいました。",
     "en": "I received the champion's crown.",
     "audio_ref": "/audio/kanji_examples/冠_1.webm",
     "source": "generated"
@@ -50472,7 +50473,7 @@
   "audio": "/audio/kanji/喚.mp3",
   "lesson_examples": [
    {
-    "jp": "かんきゃくが　かんせいを　あげ、場（ば）内（ない）は　興（こう）奮（ふん）の　喚（かん）声（せい）に　つつまれた。",
+    "jp": "かんきゃくが　かんせいを　あげ、場内（ばない）は　興奮（こうふん）の　喚声（かんせい）に　つつまれた。",
     "en": "The crowd erupted in excited cheers.",
     "audio_ref": "/audio/kanji_examples/喚_1.webm",
     "source": "generated"
@@ -50660,7 +50661,7 @@
   "audio": "/audio/kanji/敢.mp3",
   "lesson_examples": [
    {
-    "jp": "敢（あ）えて　挑（ちょう）戦（せん）します。",
+    "jp": "敢（あ）えて　挑戦（ちょうせん）します。",
     "en": "I dare to take on the challenge.",
     "audio_ref": "/audio/kanji_examples/敢_1.webm",
     "source": "generated"
@@ -50711,7 +50712,7 @@
   "audio": "/audio/kanji/款.mp3",
   "lesson_examples": [
    {
-    "jp": "けいやくの　条（じょう）款（かん）を　よむ。",
+    "jp": "けいやくの　条款（じょうかん）を　よむ。",
     "en": "Reading the contract's clauses.",
     "audio_ref": "/audio/kanji_examples/款_1.webm",
     "source": "generated"
@@ -50748,7 +50749,7 @@
   "audio": "/audio/kanji/歓.mp3",
   "lesson_examples": [
    {
-    "jp": "歓（かん）声（せい）が　わきあがる。",
+    "jp": "歓声（かんせい）が　わきあがる。",
     "en": "Cheers erupt.",
     "audio_ref": "/audio/kanji_examples/歓_1.webm",
     "source": "generated"
@@ -50781,7 +50782,7 @@
   "audio": "/audio/kanji/監.mp3",
   "lesson_examples": [
    {
-    "jp": "えいがの　監（かん）督（とく）に　なりたい。",
+    "jp": "えいがの　監督（かんとく）に　なりたい。",
     "en": "I want to be a film director.",
     "audio_ref": "/audio/kanji_examples/監_1.webm",
     "source": "generated"
@@ -50973,7 +50974,7 @@
   "audio": "/audio/kanji/還.mp3",
   "lesson_examples": [
    {
-    "jp": "ふるさとに　生（せい）還（かん）しました。",
+    "jp": "ふるさとに　生還（せいかん）しました。",
     "en": "He returned home safe and alive.",
     "audio_ref": "/audio/kanji_examples/還_1.webm",
     "source": "generated"
@@ -51160,7 +51161,7 @@
   "audio": "/audio/kanji/企.mp3",
   "lesson_examples": [
    {
-    "jp": "イベントを　企（き）画（かく）する。",
+    "jp": "イベントを　企画（きかく）する。",
     "en": "We plan an event.",
     "audio_ref": "/audio/kanji_examples/企_1.webm",
     "source": "generated"
@@ -51420,7 +51421,7 @@
   "audio": "/audio/kanji/棄.mp3",
   "lesson_examples": [
    {
-    "jp": "しあいを　放（ほう）棄（き）しては　いけない。",
+    "jp": "しあいを　放棄（ほうき）しては　いけない。",
     "en": "Never forfeit the match.",
     "audio_ref": "/audio/kanji_examples/棄_1.webm",
     "source": "generated"
@@ -51503,7 +51504,7 @@
   "audio": "/audio/kanji/飢.mp3",
   "lesson_examples": [
    {
-    "jp": "飢（う）えた　旅（たび）人（びと）に　パンを　あげました。",
+    "jp": "飢（う）えた　旅人（たびびと）に　パンを　あげました。",
     "en": "I gave bread to the starving traveler.",
     "audio_ref": "/audio/kanji_examples/飢_1.webm",
     "source": "generated"
@@ -51759,7 +51760,7 @@
   "audio": "/audio/kanji/擬.mp3",
   "lesson_examples": [
    {
-    "jp": "擬（ぎ）音（おん）語（ご）を　まなぶ。",
+    "jp": "擬音語（ぎおんご）を　まなぶ。",
     "en": "We study onomatopoeia.",
     "audio_ref": "/audio/kanji_examples/擬_1.webm",
     "source": "generated"
@@ -51978,7 +51979,7 @@
   "audio": "/audio/kanji/虐.mp3",
   "lesson_examples": [
    {
-    "jp": "動（どう）物（ぶつ）を　虐（いじ）めては　いけません。",
+    "jp": "動物（どうぶつ）を　虐（いじ）めては　いけません。",
     "en": "You must not mistreat animals.",
     "audio_ref": "/audio/kanji_examples/虐_1.webm",
     "source": "generated"
@@ -52159,7 +52160,7 @@
   "audio": "/audio/kanji/糾.mp3",
   "lesson_examples": [
    {
-    "jp": "もんだいを　糾（きゅう）明（めい）する。",
+    "jp": "もんだいを　糾明（きゅうめい）する。",
     "en": "Getting to the bottom of the problem.",
     "audio_ref": "/audio/kanji_examples/糾_1.webm",
     "source": "generated"
@@ -52340,7 +52341,7 @@
   "audio": "/audio/kanji/享.mp3",
   "lesson_examples": [
    {
-    "jp": "自（し）然（ぜん）を　享（きょう）受（じゅ）します。",
+    "jp": "自然（しぜん）を　享受（きょうじゅ）します。",
     "en": "We enjoy the blessings of nature.",
     "audio_ref": "/audio/kanji_examples/享_1.webm",
     "source": "generated"
@@ -52393,7 +52394,7 @@
   "audio": "/audio/kanji/峡.mp3",
   "lesson_examples": [
    {
-    "jp": "峡（きょう）谷（こく）に　はしが　かかる。",
+    "jp": "峡谷（きょうこく）に　はしが　かかる。",
     "en": "A bridge spans the gorge.",
     "audio_ref": "/audio/kanji_examples/峡_1.webm",
     "source": "generated"
@@ -52776,7 +52777,7 @@
   "audio": "/audio/kanji/斤.mp3",
   "lesson_examples": [
    {
-    "jp": "パンを　一（いっ）斤（きん）　買（か）います。",
+    "jp": "パンを　一斤（いっきん）　買（か）います。",
     "en": "I buy one loaf of bread.",
     "audio_ref": "/audio/kanji_examples/斤_1.webm",
     "source": "generated"
@@ -52841,7 +52842,7 @@
   "audio": "/audio/kanji/緊.mp3",
   "lesson_examples": [
    {
-    "jp": "緊（きん）急（きゅう）の　しらせが　とどいた。",
+    "jp": "緊急（きんきゅう）の　しらせが　とどいた。",
     "en": "An emergency notice arrived.",
     "audio_ref": "/audio/kanji_examples/緊_1.webm",
     "source": "generated"
@@ -52872,7 +52873,7 @@
   "audio": "/audio/kanji/菌.mp3",
   "lesson_examples": [
    {
-    "jp": "菌（きん）から　牛（ぎゅう）乳（にゅう）を　守（まも）ります。",
+    "jp": "菌（きん）から　牛乳（ぎゅうにゅう）を　守（まも）ります。",
     "en": "We protect the milk from germs.",
     "audio_ref": "/audio/kanji_examples/菌_1.webm",
     "source": "generated"
@@ -53034,7 +53035,7 @@
   "audio": "/audio/kanji/愚.mp3",
   "lesson_examples": [
    {
-    "jp": "愚（ぐ）痴（ち）ばかりでは　すすまない。",
+    "jp": "愚痴（ぐち）ばかりでは　すすまない。",
     "en": "Complaining gets you nowhere.",
     "audio_ref": "/audio/kanji_examples/愚_1.webm",
     "source": "generated"
@@ -53108,7 +53109,7 @@
   "audio": "/audio/kanji/遇.mp3",
   "lesson_examples": [
    {
-    "jp": "旅（たび）で　親（しん）切（せつ）な　人（ひと）に　遇（あ）いました。",
+    "jp": "旅（たび）で　親切（しんせつ）な　人（ひと）に　遇（あ）いました。",
     "en": "On my journey I happened upon a kind person.",
     "audio_ref": "/audio/kanji_examples/遇_1.webm",
     "source": "generated"
@@ -53262,7 +53263,7 @@
   "audio": "/audio/kanji/薫.mp3",
   "lesson_examples": [
    {
-    "jp": "五（ご）月（がつ）の　風（かぜ）が　薫（かお）ります。",
+    "jp": "五月（ごがつ）の　風（かぜ）が　薫（かお）ります。",
     "en": "The May breeze carries a sweet scent.",
     "audio_ref": "/audio/kanji_examples/薫_1.webm",
     "source": "generated"
@@ -53322,7 +53323,7 @@
   "audio": "/audio/kanji/啓.mp3",
   "lesson_examples": [
    {
-    "jp": "拝（はい）啓（けい）、と　てがみを　かきはじめる。",
+    "jp": "拝啓（はいけい）、と　てがみを　かきはじめる。",
     "en": "I begin the letter with a formal greeting.",
     "audio_ref": "/audio/kanji_examples/啓_1.webm",
     "source": "generated"
@@ -53388,7 +53389,7 @@
   "audio": "/audio/kanji/慶.mp3",
   "lesson_examples": [
    {
-    "jp": "慶（けい）事（じ）が　ありました。",
+    "jp": "慶事（けいじ）が　ありました。",
     "en": "There was a happy event.",
     "audio_ref": "/audio/kanji_examples/慶_1.webm",
     "source": "generated"
@@ -53467,7 +53468,7 @@
   "audio": "/audio/kanji/掲.mp3",
   "lesson_examples": [
    {
-    "jp": "目（もく）標（ひょう）を　掲（かか）げます。",
+    "jp": "目標（もくひょう）を　掲（かか）げます。",
     "en": "We set forth our goal.",
     "audio_ref": "/audio/kanji_examples/掲_1.webm",
     "source": "generated"
@@ -53512,7 +53513,7 @@
   "audio": "/audio/kanji/携.mp3",
   "lesson_examples": [
    {
-    "jp": "携（けい）帯（たい）電（でん）話（わ）を　持（も）って　います。",
+    "jp": "携帯電話（けいたいでんわ）を　持（も）って　います。",
     "en": "I have a mobile phone.",
     "audio_ref": "/audio/kanji_examples/携_1.webm",
     "source": "generated"
@@ -53539,7 +53540,7 @@
   "audio": "/audio/kanji/渓.mp3",
   "lesson_examples": [
    {
-    "jp": "渓（けい）谷（こく）を　歩（ある）きます。",
+    "jp": "渓谷（けいこく）を　歩（ある）きます。",
     "en": "We hike through the ravine.",
     "audio_ref": "/audio/kanji_examples/渓_1.webm",
     "source": "generated"
@@ -53721,7 +53722,7 @@
   "audio": "/audio/kanji/撃.mp3",
   "lesson_examples": [
    {
-    "jp": "いなずまの　一（いち）撃（げき）。",
+    "jp": "いなずまの　一撃（いちげき）。",
     "en": "A single lightning strike.",
     "audio_ref": "/audio/kanji_examples/撃_1.webm",
     "source": "generated"
@@ -53747,7 +53748,7 @@
   "audio": "/audio/kanji/傑.mp3",
   "lesson_examples": [
    {
-    "jp": "傑（けっ）作（さく）が　できました。",
+    "jp": "傑作（けっさく）が　できました。",
     "en": "A masterpiece was made.",
     "audio_ref": "/audio/kanji_examples/傑_1.webm",
     "source": "generated"
@@ -53781,7 +53782,7 @@
   "audio": "/audio/kanji/倹.mp3",
   "lesson_examples": [
    {
-    "jp": "倹（けん）約（やく）して　お金（かね）を　ためます。",
+    "jp": "倹約（けんやく）して　お金（かね）を　ためます。",
     "en": "I save money by being frugal.",
     "audio_ref": "/audio/kanji_examples/倹_1.webm",
     "source": "generated"
@@ -54144,7 +54145,7 @@
   "audio": "/audio/kanji/遣.mp3",
   "lesson_examples": [
    {
-    "jp": "お小（こ）遣（づか）いを　ためます。",
+    "jp": "お小遣（こづか）いを　ためます。",
     "en": "I save up my pocket money.",
     "audio_ref": "/audio/kanji_examples/遣_1.webm",
     "source": "generated"
@@ -54177,7 +54178,7 @@
   "audio": "/audio/kanji/顕.mp3",
   "lesson_examples": [
    {
-    "jp": "努（ど）力（りょく）の　成（せい）果（か）が　顕（あらわ）れました。",
+    "jp": "努力（どりょく）の　成果（せいか）が　顕（あらわ）れました。",
     "en": "The results of his effort became evident.",
     "audio_ref": "/audio/kanji_examples/顕_1.webm",
     "source": "generated"
@@ -54269,7 +54270,7 @@
   "audio": "/audio/kanji/玄.mp3",
   "lesson_examples": [
    {
-    "jp": "玄（げん）関（かん）で　くつを　ぬぎます。",
+    "jp": "玄関（げんかん）で　くつを　ぬぎます。",
     "en": "We take off our shoes at the entrance.",
     "audio_ref": "/audio/kanji_examples/玄_1.webm",
     "source": "generated"
@@ -54304,7 +54305,7 @@
   "audio": "/audio/kanji/孤.mp3",
   "lesson_examples": [
    {
-    "jp": "孤（こ）独（どく）でも　まなびは　つづく。",
+    "jp": "孤独（こどく）でも　まなびは　つづく。",
     "en": "Even in solitude, learning continues.",
     "audio_ref": "/audio/kanji_examples/孤_1.webm",
     "source": "generated"
@@ -54355,7 +54356,7 @@
   "audio": "/audio/kanji/虎.mp3",
   "lesson_examples": [
    {
-    "jp": "虎（とら）は　強（つよ）い　動（どう）物（ぶつ）です。",
+    "jp": "虎（とら）は　強（つよ）い　動物（どうぶつ）です。",
     "en": "The tiger is a strong animal.",
     "audio_ref": "/audio/kanji_examples/虎_1.webm",
     "source": "generated"
@@ -54505,7 +54506,7 @@
   "audio": "/audio/kanji/娯.mp3",
   "lesson_examples": [
    {
-    "jp": "まちの　娯（ご）楽（らく）しせつ。",
+    "jp": "まちの　娯楽（ごらく）しせつ。",
     "en": "The town's entertainment facilities.",
     "audio_ref": "/audio/kanji_examples/娯_1.webm",
     "source": "generated"
@@ -54586,7 +54587,7 @@
   "audio": "/audio/kanji/侯.mp3",
   "lesson_examples": [
    {
-    "jp": "侯（こう）爵（しゃく）の　やしきです。",
+    "jp": "侯爵（こうしゃく）の　やしきです。",
     "en": "It is the marquis's mansion.",
     "audio_ref": "/audio/kanji_examples/侯_1.webm",
     "source": "generated"
@@ -54610,7 +54611,7 @@
   "audio": "/audio/kanji/坑.mp3",
   "lesson_examples": [
    {
-    "jp": "ふるい　炭（たん）坑（こう）の　あと。",
+    "jp": "ふるい　炭坑（たんこう）の　あと。",
     "en": "The ruins of an old coal mine.",
     "audio_ref": "/audio/kanji_examples/坑_1.webm",
     "source": "generated"
@@ -54713,7 +54714,7 @@
   "audio": "/audio/kanji/恒.mp3",
   "lesson_examples": [
    {
-    "jp": "恒（こう）例（れい）の　まつりが　あります。",
+    "jp": "恒例（こうれい）の　まつりが　あります。",
     "en": "There's the customary festival.",
     "audio_ref": "/audio/kanji_examples/恒_1.webm",
     "source": "generated"
@@ -54791,7 +54792,7 @@
   "audio": "/audio/kanji/抗.mp3",
   "lesson_examples": [
    {
-    "jp": "決（けっ）定（てい）に　抗（こう）議（ぎ）します。",
+    "jp": "決定（けってい）に　抗議（こうぎ）します。",
     "en": "We protest the decision.",
     "audio_ref": "/audio/kanji_examples/抗_1.webm",
     "source": "generated"
@@ -54905,7 +54906,7 @@
   "audio": "/audio/kanji/攻.mp3",
   "lesson_examples": [
    {
-    "jp": "攻（こう）撃（げき）は　さいだいの　ぼうぎょ。",
+    "jp": "攻撃（こうげき）は　さいだいの　ぼうぎょ。",
     "en": "Offense is the best defense.",
     "audio_ref": "/audio/kanji_examples/攻_1.webm",
     "source": "generated"
@@ -54932,7 +54933,7 @@
   "audio": "/audio/kanji/江.mp3",
   "lesson_examples": [
    {
-    "jp": "江（え）戸（ど）じだいの　えを　みる。",
+    "jp": "江戸（えど）じだいの　えを　みる。",
     "en": "Viewing art from the Edo period.",
     "audio_ref": "/audio/kanji_examples/江_1.webm",
     "source": "generated"
@@ -55056,7 +55057,7 @@
   "audio": "/audio/kanji/稿.mp3",
   "lesson_examples": [
    {
-    "jp": "原（げん）稿（こう）を　かきあげた。",
+    "jp": "原稿（げんこう）を　かきあげた。",
     "en": "I finished the manuscript.",
     "audio_ref": "/audio/kanji_examples/稿_1.webm",
     "source": "generated"
@@ -55134,7 +55135,7 @@
   "audio": "/audio/kanji/衡.mp3",
   "lesson_examples": [
    {
-    "jp": "きん衡（こう）――　均（きん）衡（こう）を　たもつ。",
+    "jp": "きん衡（こう）――　均衡（きんこう）を　たもつ。",
     "en": "Keeping the balance.",
     "audio_ref": "/audio/kanji_examples/衡_1.webm",
     "source": "generated"
@@ -55237,7 +55238,7 @@
   "audio": "/audio/kanji/項.mp3",
   "lesson_examples": [
    {
-    "jp": "じこうを　項（こう）目（もく）ごとに　まとめる。",
+    "jp": "じこうを　項目（こうもく）ごとに　まとめる。",
     "en": "Organizing matters item by item.",
     "audio_ref": "/audio/kanji_examples/項_1.webm",
     "source": "generated"
@@ -55277,7 +55278,7 @@
   "audio": "/audio/kanji/拷.mp3",
   "lesson_examples": [
    {
-    "jp": "むかしの　拷（ごう）問（もん）の　れきし。",
+    "jp": "むかしの　拷問（ごうもん）の　れきし。",
     "en": "The history of old interrogations.",
     "audio_ref": "/audio/kanji_examples/拷_1.webm",
     "source": "generated"
@@ -55322,7 +55323,7 @@
   "audio": "/audio/kanji/豪.mp3",
   "lesson_examples": [
    {
-    "jp": "豪（ごう）華（か）な　ふねですね。",
+    "jp": "豪華（ごうか）な　ふねですね。",
     "en": "What a luxurious ship.",
     "audio_ref": "/audio/kanji_examples/豪_1.webm",
     "source": "generated"
@@ -55407,7 +55408,7 @@
   "audio": "/audio/kanji/獄.mp3",
   "lesson_examples": [
    {
-    "jp": "地（じ）獄（ごく）のように　あつい　日（ひ）です。",
+    "jp": "地獄（じごく）のように　あつい　日（ひ）です。",
     "en": "It's a hellishly hot day.",
     "audio_ref": "/audio/kanji_examples/獄_1.webm",
     "source": "generated"
@@ -55434,7 +55435,7 @@
   "audio": "/audio/kanji/墾.mp3",
   "lesson_examples": [
    {
-    "jp": "あれちを　開（かい）墾（こん）する。",
+    "jp": "あれちを　開墾（かいこん）する。",
     "en": "We break the wasteland into farmland.",
     "audio_ref": "/audio/kanji_examples/墾_1.webm",
     "source": "generated"
@@ -55499,7 +55500,7 @@
   "audio": "/audio/kanji/懇.mp3",
   "lesson_examples": [
    {
-    "jp": "懇（こん）切（せつ）ていねいな　せつめい。",
+    "jp": "懇切（こんせつ）ていねいな　せつめい。",
     "en": "A kind and thorough explanation.",
     "audio_ref": "/audio/kanji_examples/懇_1.webm",
     "source": "generated"
@@ -55524,7 +55525,7 @@
   "audio": "/audio/kanji/昆.mp3",
   "lesson_examples": [
    {
-    "jp": "昆（こん）虫（ちゅう）の　ずかんが　すきだ。",
+    "jp": "昆虫（こんちゅう）の　ずかんが　すきだ。",
     "en": "I love insect encyclopedias.",
     "audio_ref": "/audio/kanji_examples/昆_1.webm",
     "source": "generated"
@@ -55604,7 +55605,7 @@
   "audio": "/audio/kanji/唆.mp3",
   "lesson_examples": [
    {
-    "jp": "はんこうを　示（し）唆（さ）する　メモが　みつかった。",
+    "jp": "はんこうを　示唆（しさ）する　メモが　みつかった。",
     "en": "A note hinting at the crime was found.",
     "audio_ref": "/audio/kanji_examples/唆_1.webm",
     "source": "generated"
@@ -55858,7 +55859,7 @@
   "audio": "/audio/kanji/采.mp3",
   "lesson_examples": [
    {
-    "jp": "みごとな　采（さい）配（はい）だった。",
+    "jp": "みごとな　采配（さいはい）だった。",
     "en": "Masterful command decisions.",
     "audio_ref": "/audio/kanji_examples/采_1.webm",
     "source": "generated"
@@ -56053,7 +56054,7 @@
   "audio": "/audio/kanji/搾.mp3",
   "lesson_examples": [
    {
-    "jp": "牛（ぎゅう）乳（にゅう）を　搾（しぼ）ります。",
+    "jp": "牛乳（ぎゅうにゅう）を　搾（しぼ）ります。",
     "en": "I milk the cow.",
     "audio_ref": "/audio/kanji_examples/搾_1.webm",
     "source": "generated"
@@ -56090,7 +56091,7 @@
   "audio": "/audio/kanji/索.mp3",
   "lesson_examples": [
    {
-    "jp": "じしょで　検（けん）索（さく）する。",
+    "jp": "じしょで　検索（けんさく）する。",
     "en": "Looking it up in the dictionary.",
     "audio_ref": "/audio/kanji_examples/索_1.webm",
     "source": "generated"
@@ -56269,7 +56270,7 @@
   "audio": "/audio/kanji/惨.mp3",
   "lesson_examples": [
    {
-    "jp": "あらしの　あとは　惨（さん）状（じょう）だった。",
+    "jp": "あらしの　あとは　惨状（さんじょう）だった。",
     "en": "The storm left a scene of devastation.",
     "audio_ref": "/audio/kanji_examples/惨_1.webm",
     "source": "generated"
@@ -56299,7 +56300,7 @@
   "audio": "/audio/kanji/桟.mp3",
   "lesson_examples": [
    {
-    "jp": "桟（さん）橋（ばし）から　ふねに　のる。",
+    "jp": "桟橋（さんばし）から　ふねに　のる。",
     "en": "We board the ship from the pier.",
     "audio_ref": "/audio/kanji_examples/桟_1.webm",
     "source": "generated"
@@ -56396,7 +56397,7 @@
   "audio": "/audio/kanji/施.mp3",
   "lesson_examples": [
    {
-    "jp": "あたらしい　せいどを　実（じっ）施（し）する。",
+    "jp": "あたらしい　せいどを　実施（じっし）する。",
     "en": "The new system is put into effect.",
     "audio_ref": "/audio/kanji_examples/施_1.webm",
     "source": "generated"
@@ -56439,7 +56440,7 @@
   "audio": "/audio/kanji/旨.mp3",
   "lesson_examples": [
    {
-    "jp": "しゅし　――　はなしの　要（よう）旨（し）を　つかむ。",
+    "jp": "しゅし　――　はなしの　要旨（ようし）を　つかむ。",
     "en": "Grasp the gist of the talk.",
     "audio_ref": "/audio/kanji_examples/旨_1.webm",
     "source": "generated"
@@ -56469,7 +56470,7 @@
   "audio": "/audio/kanji/祉.mp3",
   "lesson_examples": [
    {
-    "jp": "福（ふく）祉（し）の　しごとに　つく。",
+    "jp": "福祉（ふくし）の　しごとに　つく。",
     "en": "She takes a job in welfare.",
     "audio_ref": "/audio/kanji_examples/祉_1.webm",
     "source": "generated"
@@ -56969,7 +56970,7 @@
   "audio": "/audio/kanji/邪.mp3",
   "lesson_examples": [
    {
-    "jp": "邪（じゃ）魔（ま）を　しないでね。",
+    "jp": "邪魔（じゃま）を　しないでね。",
     "en": "Don't get in the way, okay?",
     "audio_ref": "/audio/kanji_examples/邪_1.webm",
     "source": "generated"
@@ -56994,7 +56995,7 @@
   "audio": "/audio/kanji/爵.mp3",
   "lesson_examples": [
    {
-    "jp": "爵（しゃく）位（い）を　もつ　家（いえ）です。",
+    "jp": "爵位（しゃくい）を　もつ　家（いえ）です。",
     "en": "It's a family with a noble title.",
     "audio_ref": "/audio/kanji_examples/爵_1.webm",
     "source": "generated"
@@ -57303,7 +57304,7 @@
   "audio": "/audio/kanji/需.mp3",
   "lesson_examples": [
    {
-    "jp": "じゅようと　きょうきゅう　――　需（じゅ）要（よう）が　たかい。",
+    "jp": "じゅようと　きょうきゅう　――　需要（じゅよう）が　たかい。",
     "en": "Demand is high.",
     "audio_ref": "/audio/kanji_examples/需_1.webm",
     "source": "generated"
@@ -57331,7 +57332,7 @@
   "audio": "/audio/kanji/囚.mp3",
   "lesson_examples": [
    {
-    "jp": "とらわれの　囚（しゅう）人（じん）の　ものがたり。",
+    "jp": "とらわれの　囚人（しゅうじん）の　ものがたり。",
     "en": "A tale of a captive prisoner.",
     "audio_ref": "/audio/kanji_examples/囚_1.webm",
     "source": "generated"
@@ -57571,7 +57572,7 @@
   "audio": "/audio/kanji/充.mp3",
   "lesson_examples": [
    {
-    "jp": "電（でん）池（ち）を　充（じゅう）電（でん）します。",
+    "jp": "電池（でんち）を　充電（じゅうでん）します。",
     "en": "I charge the battery.",
     "audio_ref": "/audio/kanji_examples/充_1.webm",
     "source": "generated"
@@ -57735,7 +57736,7 @@
   "audio": "/audio/kanji/叔.mp3",
   "lesson_examples": [
    {
-    "jp": "叔（お）父（じ）さんに　あいました。",
+    "jp": "叔父（おじ）さんに　あいました。",
     "en": "I met my uncle.",
     "audio_ref": "/audio/kanji_examples/叔_1.webm",
     "source": "generated"
@@ -57843,7 +57844,7 @@
   "audio": "/audio/kanji/俊.mp3",
   "lesson_examples": [
    {
-    "jp": "俊（しゅん）足（そく）の　選（せん）手（しゅ）です。",
+    "jp": "俊足（しゅんそく）の　選手（せんしゅ）です。",
     "en": "He is a fleet-footed athlete.",
     "audio_ref": "/audio/kanji_examples/俊_1.webm",
     "source": "generated"
@@ -57912,7 +57913,7 @@
   "audio": "/audio/kanji/准.mp3",
   "lesson_examples": [
    {
-    "jp": "准（じゅん）教（きょう）授（じゅ）に　なりました。",
+    "jp": "准教授（じゅんきょうじゅ）に　なりました。",
     "en": "He became an associate professor.",
     "audio_ref": "/audio/kanji_examples/准_1.webm",
     "source": "generated"
@@ -58063,7 +58064,7 @@
   "audio": "/audio/kanji/盾.mp3",
   "lesson_examples": [
    {
-    "jp": "矛（む）盾（じゅん）した　せつめいだ。",
+    "jp": "矛盾（むじゅん）した　せつめいだ。",
     "en": "A contradictory explanation.",
     "audio_ref": "/audio/kanji_examples/盾_1.webm",
     "source": "generated"
@@ -58150,7 +58151,7 @@
   "audio": "/audio/kanji/庶.mp3",
   "lesson_examples": [
    {
-    "jp": "庶（しょ）民（みん）の　生（せい）活（かつ）を　えがいた　本（ほん）です。",
+    "jp": "庶民（しょみん）の　生活（せいかつ）を　えがいた　本（ほん）です。",
     "en": "It's a book depicting the lives of common people.",
     "audio_ref": "/audio/kanji_examples/庶_1.webm",
     "source": "generated"
@@ -58326,7 +58327,7 @@
   "audio": "/audio/kanji/奨.mp3",
   "lesson_examples": [
    {
-    "jp": "どくしょを　奨（しょう）励（れい）する。",
+    "jp": "どくしょを　奨励（しょうれい）する。",
     "en": "Reading is encouraged.",
     "audio_ref": "/audio/kanji_examples/奨_1.webm",
     "source": "generated"
@@ -58479,7 +58480,7 @@
   "audio": "/audio/kanji/晶.mp3",
   "lesson_examples": [
    {
-    "jp": "ゆきの　結（けっ）晶（しょう）を　かんさつ。",
+    "jp": "ゆきの　結晶（けっしょう）を　かんさつ。",
     "en": "Observing snow crystals.",
     "audio_ref": "/audio/kanji_examples/晶_1.webm",
     "source": "generated"
@@ -58687,7 +58688,7 @@
   "audio": "/audio/kanji/祥.mp3",
   "lesson_examples": [
    {
-    "jp": "発（はっ）祥（しょう）の　ちを　たずねる。",
+    "jp": "発祥（はっしょう）の　ちを　たずねる。",
     "en": "Visiting the birthplace of the tradition.",
     "audio_ref": "/audio/kanji_examples/祥_1.webm",
     "source": "generated"
@@ -58739,7 +58740,7 @@
   "audio": "/audio/kanji/称.mp3",
   "lesson_examples": [
    {
-    "jp": "名（めい）称（しょう）を　書（か）いて　ください。",
+    "jp": "名称（めいしょう）を　書（か）いて　ください。",
     "en": "Please write the name.",
     "audio_ref": "/audio/kanji_examples/称_1.webm",
     "source": "generated"
@@ -58774,7 +58775,7 @@
   "audio": "/audio/kanji/粧.mp3",
   "lesson_examples": [
    {
-    "jp": "け粧（しょう）――　化（け）粧（しょう）を　なおす。",
+    "jp": "け粧（しょう）――　化粧（けしょう）を　なおす。",
     "en": "Touching up one's makeup.",
     "audio_ref": "/audio/kanji_examples/粧_1.webm",
     "source": "generated"
@@ -58799,7 +58800,7 @@
   "audio": "/audio/kanji/肖.mp3",
   "lesson_examples": [
    {
-    "jp": "おうの　肖（しょう）像（ぞう）画（が）。",
+    "jp": "おうの　肖像画（しょうぞうが）。",
     "en": "A portrait of the king.",
     "audio_ref": "/audio/kanji_examples/肖_1.webm",
     "source": "generated"
@@ -58961,7 +58962,7 @@
   "audio": "/audio/kanji/丈.mp3",
   "lesson_examples": [
    {
-    "jp": "丈（じょう）夫（ぶ）な　かばんです。",
+    "jp": "丈夫（じょうぶ）な　かばんです。",
     "en": "A sturdy bag.",
     "audio_ref": "/audio/kanji_examples/丈_1.webm",
     "source": "generated"
@@ -58991,7 +58992,7 @@
   "audio": "/audio/kanji/冗.mp3",
   "lesson_examples": [
    {
-    "jp": "冗（じょう）談（だん）を　言（い）って　わらいました。",
+    "jp": "冗談（じょうだん）を　言（い）って　わらいました。",
     "en": "We told jokes and laughed.",
     "audio_ref": "/audio/kanji_examples/冗_1.webm",
     "source": "generated"
@@ -59044,7 +59045,7 @@
   "audio": "/audio/kanji/壌.mp3",
   "lesson_examples": [
    {
-    "jp": "ゆたかな　土（ど）壌（じょう）の　はたけ。",
+    "jp": "ゆたかな　土壌（どじょう）の　はたけ。",
     "en": "A field of rich soil.",
     "audio_ref": "/audio/kanji_examples/壌_1.webm",
     "source": "generated"
@@ -59208,7 +59209,7 @@
   "audio": "/audio/kanji/嘱.mp3",
   "lesson_examples": [
    {
-    "jp": "しょうらいを　嘱（しょく）望（ぼう）される　わかもの。",
+    "jp": "しょうらいを　嘱望（しょくぼう）される　わかもの。",
     "en": "A youth of great promise.",
     "audio_ref": "/audio/kanji_examples/嘱_1.webm",
     "source": "generated"
@@ -59348,7 +59349,7 @@
   "audio": "/audio/kanji/侵.mp3",
   "lesson_examples": [
    {
-    "jp": "プライバシーを　侵（しん）害（がい）しては　いけません。",
+    "jp": "プライバシーを　侵害（しんがい）しては　いけません。",
     "en": "You must not violate privacy.",
     "audio_ref": "/audio/kanji_examples/侵_1.webm",
     "source": "generated"
@@ -59409,7 +59410,7 @@
   "audio": "/audio/kanji/娠.mp3",
   "lesson_examples": [
    {
-    "jp": "妊（にん）娠（しん）中（ちゅう）は　むりを　しない。",
+    "jp": "妊娠中（にんしんちゅう）は　むりを　しない。",
     "en": "Take it easy during pregnancy.",
     "audio_ref": "/audio/kanji_examples/娠_1.webm",
     "source": "generated"
@@ -59569,7 +59570,7 @@
   "audio": "/audio/kanji/浸.mp3",
   "lesson_examples": [
    {
-    "jp": "パンを　牛（ぎゅう）乳（にゅう）に　浸（ひた）します。",
+    "jp": "パンを　牛乳（ぎゅうにゅう）に　浸（ひた）します。",
     "en": "I soak the bread in milk.",
     "audio_ref": "/audio/kanji_examples/浸_1.webm",
     "source": "generated"
@@ -59678,7 +59679,7 @@
   "audio": "/audio/kanji/刃.mp3",
   "lesson_examples": [
    {
-    "jp": "刃（は）物（もの）に　きを　つけて。",
+    "jp": "刃物（はもの）に　きを　つけて。",
     "en": "Careful with blades.",
     "audio_ref": "/audio/kanji_examples/刃_1.webm",
     "source": "generated"
@@ -59747,7 +59748,7 @@
   "audio": "/audio/kanji/甚.mp3",
   "lesson_examples": [
    {
-    "jp": "ひがいは　甚（じん）大（だい）だった。",
+    "jp": "ひがいは　甚大（じんだい）だった。",
     "en": "The damage was tremendous.",
     "audio_ref": "/audio/kanji_examples/甚_1.webm",
     "source": "generated"
@@ -59815,7 +59816,7 @@
   "audio": "/audio/kanji/迅.mp3",
   "lesson_examples": [
    {
-    "jp": "迅（じん）速（そく）に　行（こう）動（どう）します。",
+    "jp": "迅速（じんそく）に　行動（こうどう）します。",
     "en": "We act swiftly.",
     "audio_ref": "/audio/kanji_examples/迅_1.webm",
     "source": "generated"
@@ -59843,7 +59844,7 @@
   "audio": "/audio/kanji/陣.mp3",
   "lesson_examples": [
    {
-    "jp": "さきん　――　先（せん）陣（じん）を　きって　すすむ。",
+    "jp": "さきん　――　先陣（せんじん）を　きって　すすむ。",
     "en": "Leading the charge.",
     "audio_ref": "/audio/kanji_examples/陣_1.webm",
     "source": "generated"
@@ -59876,7 +59877,7 @@
   "audio": "/audio/kanji/須.mp3",
   "lesson_examples": [
    {
-    "jp": "練（れん）習（しゅう）は　必（ひっ）須（す）です。",
+    "jp": "練習（れんしゅう）は　必須（ひっす）です。",
     "en": "Practice is essential.",
     "audio_ref": "/audio/kanji_examples/須_1.webm",
     "source": "generated"
@@ -59935,7 +59936,7 @@
   "audio": "/audio/kanji/帥.mp3",
   "lesson_examples": [
    {
-    "jp": "元（げん）帥（すい）の　どうぞうが　たつ。",
+    "jp": "元帥（げんすい）の　どうぞうが　たつ。",
     "en": "A statue of the marshal stands.",
     "audio_ref": "/audio/kanji_examples/帥_1.webm",
     "source": "generated"
@@ -60140,7 +60141,7 @@
   "audio": "/audio/kanji/遂.mp3",
   "lesson_examples": [
    {
-    "jp": "計（けい）画（かく）を　遂（と）げました。",
+    "jp": "計画（けいかく）を　遂（と）げました。",
     "en": "We carried the plan through.",
     "audio_ref": "/audio/kanji_examples/遂_1.webm",
     "source": "generated"
@@ -60229,7 +60230,7 @@
   "audio": "/audio/kanji/随.mp3",
   "lesson_examples": [
    {
-    "jp": "随（ずい）分（ぶん）　強（つよ）く　なりましたね。",
+    "jp": "随分（ずいぶん）　強（つよ）く　なりましたね。",
     "en": "You've grown quite strong.",
     "audio_ref": "/audio/kanji_examples/随_1.webm",
     "source": "generated"
@@ -60302,7 +60303,7 @@
   "audio": "/audio/kanji/枢.mp3",
   "lesson_examples": [
    {
-    "jp": "けいかくの　中（ちゅう）枢（すう）を　になう。",
+    "jp": "けいかくの　中枢（ちゅうすう）を　になう。",
     "en": "He bears the core of the plan.",
     "audio_ref": "/audio/kanji_examples/枢_1.webm",
     "source": "generated"
@@ -60499,7 +60500,7 @@
   "audio": "/audio/kanji/是.mp3",
   "lesson_examples": [
    {
-    "jp": "是（ぜ）非（ひ）　あそびに　きて　ください。",
+    "jp": "是非（ぜひ）　あそびに　きて　ください。",
     "en": "Please do come visit.",
     "audio_ref": "/audio/kanji_examples/是_1.webm",
     "source": "generated"
@@ -60551,7 +60552,7 @@
   "audio": "/audio/kanji/牲.mp3",
   "lesson_examples": [
    {
-    "jp": "ぎせい　――　犠（ぎ）牲（せい）を　はらって　まもった。",
+    "jp": "ぎせい　――　犠牲（ぎせい）を　はらって　まもった。",
     "en": "It was protected at great sacrifice.",
     "audio_ref": "/audio/kanji_examples/牲_1.webm",
     "source": "generated"
@@ -60672,7 +60673,7 @@
   "audio": "/audio/kanji/斉.mp3",
   "lesson_examples": [
    {
-    "jp": "ぜんいん　一（いっ）斉（せい）に　こたえた。",
+    "jp": "ぜんいん　一斉（いっせい）に　こたえた。",
     "en": "Everyone answered in unison.",
     "audio_ref": "/audio/kanji_examples/斉_1.webm",
     "source": "generated"
@@ -60768,7 +60769,7 @@
   "audio": "/audio/kanji/斥.mp3",
   "lesson_examples": [
    {
-    "jp": "てきの　ようすを　斥（せっ）候（こう）が　みる。",
+    "jp": "てきの　ようすを　斥候（せっこう）が　みる。",
     "en": "The scout observes the enemy.",
     "audio_ref": "/audio/kanji_examples/斥_1.webm",
     "source": "generated"
@@ -60800,7 +60801,7 @@
   "audio": "/audio/kanji/析.mp3",
   "lesson_examples": [
    {
-    "jp": "データを　分（ぶん）析（せき）する。",
+    "jp": "データを　分析（ぶんせき）する。",
     "en": "We analyze the data.",
     "audio_ref": "/audio/kanji_examples/析_1.webm",
     "source": "generated"
@@ -60841,7 +60842,7 @@
   "audio": "/audio/kanji/籍.mp3",
   "lesson_examples": [
    {
-    "jp": "こ籍（せき）――　戸（こ）籍（せき）の　てつづきを　する。",
+    "jp": "こ籍（せき）――　戸籍（こせき）の　てつづきを　する。",
     "en": "Handling the family register paperwork.",
     "audio_ref": "/audio/kanji_examples/籍_1.webm",
     "source": "generated"
@@ -60928,7 +60929,7 @@
   "audio": "/audio/kanji/摂.mp3",
   "lesson_examples": [
    {
-    "jp": "栄（えい）養（よう）を　摂（と）ります。",
+    "jp": "栄養（えいよう）を　摂（と）ります。",
     "en": "I take in nutrition.",
     "audio_ref": "/audio/kanji_examples/摂_1.webm",
     "source": "generated"
@@ -60982,7 +60983,7 @@
   "audio": "/audio/kanji/仙.mp3",
   "lesson_examples": [
    {
-    "jp": "仙（せん）人（にん）の　でんせつ。",
+    "jp": "仙人（せんにん）の　でんせつ。",
     "en": "The legend of the mountain hermit.",
     "audio_ref": "/audio/kanji_examples/仙_1.webm",
     "source": "generated"
@@ -61008,7 +61009,7 @@
   "audio": "/audio/kanji/扇.mp3",
   "lesson_examples": [
    {
-    "jp": "扇（せん）子（す）で　あおぐ。",
+    "jp": "扇子（せんす）で　あおぐ。",
     "en": "I fan myself with a folding fan.",
     "audio_ref": "/audio/kanji_examples/扇_1.webm",
     "source": "generated"
@@ -61101,7 +61102,7 @@
   "audio": "/audio/kanji/旋.mp3",
   "lesson_examples": [
    {
-    "jp": "うつくしい　旋（せん）律（りつ）が　ながれる。",
+    "jp": "うつくしい　旋律（せんりつ）が　ながれる。",
     "en": "A beautiful melody flows.",
     "audio_ref": "/audio/kanji_examples/旋_1.webm",
     "source": "generated"
@@ -61132,7 +61133,7 @@
   "audio": "/audio/kanji/繊.mp3",
   "lesson_examples": [
    {
-    "jp": "繊（せん）細（さい）な　さぎょうだ。",
+    "jp": "繊細（せんさい）な　さぎょうだ。",
     "en": "Delicate work indeed.",
     "audio_ref": "/audio/kanji_examples/繊_1.webm",
     "source": "generated"
@@ -61172,7 +61173,7 @@
   "audio": "/audio/kanji/薦.mp3",
   "lesson_examples": [
    {
-    "jp": "この　本（ほん）を　推（すい）薦（せん）します。",
+    "jp": "この　本（ほん）を　推薦（すいせん）します。",
     "en": "I recommend this book.",
     "audio_ref": "/audio/kanji_examples/薦_1.webm",
     "source": "generated"
@@ -61371,7 +61372,7 @@
   "audio": "/audio/kanji/塑.mp3",
   "lesson_examples": [
    {
-    "jp": "ねんどで　塑（そ）像（ぞう）を　つくる。",
+    "jp": "ねんどで　塑像（そぞう）を　つくる。",
     "en": "We sculpt a clay figure.",
     "audio_ref": "/audio/kanji_examples/塑_1.webm",
     "source": "generated"
@@ -61651,7 +61652,7 @@
   "audio": "/audio/kanji/壮.mp3",
   "lesson_examples": [
    {
-    "jp": "壮（そう）大（だい）な　けしきだ。",
+    "jp": "壮大（そうだい）な　けしきだ。",
     "en": "A magnificent view.",
     "audio_ref": "/audio/kanji_examples/壮_1.webm",
     "source": "generated"
@@ -61728,7 +61729,7 @@
   "audio": "/audio/kanji/挿.mp3",
   "lesson_examples": [
    {
-    "jp": "花（はな）を　花（か）瓶（びん）に　挿（さ）します。",
+    "jp": "花（はな）を　花瓶（かびん）に　挿（さ）します。",
     "en": "I put the flowers in the vase.",
     "audio_ref": "/audio/kanji_examples/挿_1.webm",
     "source": "generated"
@@ -61755,7 +61756,7 @@
   "audio": "/audio/kanji/曹.mp3",
   "lesson_examples": [
    {
-    "jp": "ほうそうかいの　法（ほう）曹（そう）の　みち。",
+    "jp": "ほうそうかいの　法曹（ほうそう）の　みち。",
     "en": "The path of the legal profession.",
     "audio_ref": "/audio/kanji_examples/曹_1.webm",
     "source": "generated"
@@ -61832,7 +61833,7 @@
   "audio": "/audio/kanji/葬.mp3",
   "lesson_examples": [
    {
-    "jp": "お葬（そう）式（しき）に　出（で）ました。",
+    "jp": "お葬式（そうしき）に　出（で）ました。",
     "en": "I attended a funeral.",
     "audio_ref": "/audio/kanji_examples/葬_1.webm",
     "source": "generated"
@@ -62064,7 +62065,7 @@
   "audio": "/audio/kanji/俗.mp3",
   "lesson_examples": [
    {
-    "jp": "民（みん）俗（ぞく）の　おはなし。",
+    "jp": "民俗（みんぞく）の　おはなし。",
     "en": "Tales of folk tradition.",
     "audio_ref": "/audio/kanji_examples/俗_1.webm",
     "source": "generated"
@@ -62147,7 +62148,7 @@
   "audio": "/audio/kanji/堕.mp3",
   "lesson_examples": [
    {
-    "jp": "なまけて　堕（だ）落（らく）しては　いけない。",
+    "jp": "なまけて　堕落（だらく）しては　いけない。",
     "en": "Do not slide into idleness.",
     "audio_ref": "/audio/kanji_examples/堕_1.webm",
     "source": "generated"
@@ -62173,7 +62174,7 @@
   "audio": "/audio/kanji/妥.mp3",
   "lesson_examples": [
    {
-    "jp": "はなしあいで　妥（だ）協（きょう）する。",
+    "jp": "はなしあいで　妥協（だきょう）する。",
     "en": "We compromise through discussion.",
     "audio_ref": "/audio/kanji_examples/妥_1.webm",
     "source": "generated"
@@ -62197,7 +62198,7 @@
   "audio": "/audio/kanji/惰.mp3",
   "lesson_examples": [
    {
-    "jp": "惰（だ）性（せい）で　つづけて　います。",
+    "jp": "惰性（だせい）で　つづけて　います。",
     "en": "I keep going out of inertia.",
     "audio_ref": "/audio/kanji_examples/惰_1.webm",
     "source": "generated"
@@ -62342,7 +62343,7 @@
   "audio": "/audio/kanji/泰.mp3",
   "lesson_examples": [
    {
-    "jp": "泰（たい）然（ぜん）と　して　います。",
+    "jp": "泰然（たいぜん）と　して　います。",
     "en": "He remains calm and composed.",
     "audio_ref": "/audio/kanji_examples/泰_1.webm",
     "source": "generated"
@@ -62433,7 +62434,7 @@
   "audio": "/audio/kanji/逮.mp3",
   "lesson_examples": [
    {
-    "jp": "犯（はん）人（にん）が　逮（たい）捕（ほ）されました。",
+    "jp": "犯人（はんにん）が　逮捕（たいほ）されました。",
     "en": "The culprit was arrested.",
     "audio_ref": "/audio/kanji_examples/逮_1.webm",
     "source": "generated"
@@ -62784,7 +62785,7 @@
   "audio": "/audio/kanji/棚.mp3",
   "lesson_examples": [
    {
-    "jp": "本（ほん）棚（だな）を　せいりする。",
+    "jp": "本棚（ほんだな）を　せいりする。",
     "en": "I tidy the bookshelf.",
     "audio_ref": "/audio/kanji_examples/棚_1.webm",
     "source": "generated"
@@ -62819,7 +62820,7 @@
   "audio": "/audio/kanji/丹.mp3",
   "lesson_examples": [
    {
-    "jp": "丹（たん）念（ねん）に　じゅんびを　します。",
+    "jp": "丹念（たんねん）に　じゅんびを　します。",
     "en": "I prepare with great care.",
     "audio_ref": "/audio/kanji_examples/丹_1.webm",
     "source": "generated"
@@ -62892,7 +62893,7 @@
   "audio": "/audio/kanji/旦.mp3",
   "lesson_examples": [
    {
-    "jp": "元（がん）旦（たん）に　はつひので　を　みる。",
+    "jp": "元旦（がんたん）に　はつひので　を　みる。",
     "en": "Watching the first sunrise on New Year's Day.",
     "audio_ref": "/audio/kanji_examples/旦_1.webm",
     "source": "generated"
@@ -63075,7 +63076,7 @@
   "audio": "/audio/kanji/壇.mp3",
   "lesson_examples": [
    {
-    "jp": "花（か）壇（だん）に　みずを　やる。",
+    "jp": "花壇（かだん）に　みずを　やる。",
     "en": "I water the flower bed.",
     "audio_ref": "/audio/kanji_examples/壇_1.webm",
     "source": "generated"
@@ -63180,7 +63181,7 @@
   "audio": "/audio/kanji/稚.mp3",
   "lesson_examples": [
    {
-    "jp": "幼（よう）稚（ち）園（えん）に　かよって　います。",
+    "jp": "幼稚園（ようちえん）に　かよって　います。",
     "en": "She goes to kindergarten.",
     "audio_ref": "/audio/kanji_examples/稚_1.webm",
     "source": "generated"
@@ -63274,7 +63275,7 @@
   "audio": "/audio/kanji/逐.mp3",
   "lesson_examples": [
    {
-    "jp": "計（けい）画（かく）を　逐（ちく）一（いち）　報（ほう）告（こく）します。",
+    "jp": "計画（けいかく）を　逐一（ちくいち）　報告（ほうこく）します。",
     "en": "I report the plan point by point.",
     "audio_ref": "/audio/kanji_examples/逐_1.webm",
     "source": "generated"
@@ -63332,7 +63333,7 @@
   "audio": "/audio/kanji/嫡.mp3",
   "lesson_examples": [
    {
-    "jp": "嫡（ちゃく）子（し）が　いえを　つぐ。",
+    "jp": "嫡子（ちゃくし）が　いえを　つぐ。",
     "en": "The heir succeeds the family.",
     "audio_ref": "/audio/kanji_examples/嫡_1.webm",
     "source": "generated"
@@ -63438,8 +63439,8 @@
   "audio": "/audio/kanji/弔.mp3",
   "lesson_examples": [
    {
-    "jp": "とむらいの　弔（ちょう）もんに　いく。",
-    "en": "We pay a condolence call.",
+    "jp": "弔問（ちょうもん）に　いく。",
+    "en": "I go to pay a condolence call.",
     "audio_ref": "/audio/kanji_examples/弔_1.webm",
     "source": "generated"
    }
@@ -63503,7 +63504,7 @@
   "audio": "/audio/kanji/徴.mp3",
   "lesson_examples": [
    {
-    "jp": "特（とく）徴（ちょう）を　おぼえます。",
+    "jp": "特徴（とくちょう）を　おぼえます。",
     "en": "I memorize the distinctive features.",
     "audio_ref": "/audio/kanji_examples/徴_1.webm",
     "source": "generated"
@@ -63658,7 +63659,7 @@
   "audio": "/audio/kanji/聴.mp3",
   "lesson_examples": [
    {
-    "jp": "こうえんを　聴（ちょう）講（こう）する。",
+    "jp": "こうえんを　聴講（ちょうこう）する。",
     "en": "Attending the lecture.",
     "audio_ref": "/audio/kanji_examples/聴_1.webm",
     "source": "generated"
@@ -63812,7 +63813,7 @@
   "audio": "/audio/kanji/津.mp3",
   "lesson_examples": [
    {
-    "jp": "津（つ）波（なみ）に　注（ちゅう）意（い）して　ください。",
+    "jp": "津波（つなみ）に　注意（ちゅうい）して　ください。",
     "en": "Please beware of tsunamis.",
     "audio_ref": "/audio/kanji_examples/津_1.webm",
     "source": "generated"
@@ -63839,7 +63840,7 @@
   "audio": "/audio/kanji/墜.mp3",
   "lesson_examples": [
    {
-    "jp": "りゅうせいが　墜（つい）落（らく）した。",
+    "jp": "りゅうせいが　墜落（ついらく）した。",
     "en": "A meteor crashed down.",
     "audio_ref": "/audio/kanji_examples/墜_1.webm",
     "source": "generated"
@@ -63895,7 +63896,7 @@
   "audio": "/audio/kanji/塚.mp3",
   "lesson_examples": [
    {
-    "jp": "むかしの　貝（かい）塚（づか）を　みつけた。",
+    "jp": "むかしの　貝塚（かいづか）を　みつけた。",
     "en": "We found an ancient shell mound.",
     "audio_ref": "/audio/kanji_examples/塚_1.webm",
     "source": "generated"
@@ -64114,7 +64115,7 @@
   "audio": "/audio/kanji/呈.mp3",
   "lesson_examples": [
    {
-    "jp": "きねんひんを　贈（ぞう）呈（てい）する。",
+    "jp": "きねんひんを　贈呈（ぞうてい）する。",
     "en": "A commemorative gift is presented.",
     "audio_ref": "/audio/kanji_examples/呈_1.webm",
     "source": "generated"
@@ -64161,7 +64162,7 @@
   "audio": "/audio/kanji/帝.mp3",
   "lesson_examples": [
    {
-    "jp": "帝（てい）国（こく）の　れきしを　よむ。",
+    "jp": "帝国（ていこく）の　れきしを　よむ。",
     "en": "I read the history of an empire.",
     "audio_ref": "/audio/kanji_examples/帝_1.webm",
     "source": "generated"
@@ -64186,7 +64187,7 @@
   "audio": "/audio/kanji/廷.mp3",
   "lesson_examples": [
    {
-    "jp": "法（ほう）廷（てい）で　証（しょう）言（げん）します。",
+    "jp": "法廷（ほうてい）で　証言（しょうげん）します。",
     "en": "I will testify in court.",
     "audio_ref": "/audio/kanji_examples/廷_1.webm",
     "source": "generated"
@@ -64227,7 +64228,7 @@
   "audio": "/audio/kanji/抵.mp3",
   "lesson_examples": [
    {
-    "jp": "抵（てい）抗（こう）が　あります。",
+    "jp": "抵抗（ていこう）が　あります。",
     "en": "There is resistance.",
     "audio_ref": "/audio/kanji_examples/抵_1.webm",
     "source": "generated"
@@ -64345,7 +64346,7 @@
   "audio": "/audio/kanji/逓.mp3",
   "lesson_examples": [
    {
-    "jp": "荷（に）物（もつ）を　逓（てい）送（そう）します。",
+    "jp": "荷物（にもつ）を　逓送（ていそう）します。",
     "en": "The packages are forwarded on.",
     "audio_ref": "/audio/kanji_examples/逓_1.webm",
     "source": "generated"
@@ -64480,7 +64481,7 @@
   "audio": "/audio/kanji/徹.mp3",
   "lesson_examples": [
    {
-    "jp": "徹（てつ）夜（や）で　べんきょうしました。",
+    "jp": "徹夜（てつや）で　べんきょうしました。",
     "en": "I studied all night.",
     "audio_ref": "/audio/kanji_examples/徹_1.webm",
     "source": "generated"
@@ -64508,7 +64509,7 @@
   "audio": "/audio/kanji/撤.mp3",
   "lesson_examples": [
    {
-    "jp": "意（い）見（けん）を　撤（てっ）回（かい）します。",
+    "jp": "意見（いけん）を　撤回（てっかい）します。",
     "en": "I withdraw my opinion.",
     "audio_ref": "/audio/kanji_examples/撤_1.webm",
     "source": "generated"
@@ -64575,7 +64576,7 @@
   "audio": "/audio/kanji/添.mp3",
   "lesson_examples": [
    {
-    "jp": "手（て）紙（がみ）に　写（しゃ）真（しん）を　添（そ）えます。",
+    "jp": "手紙（てがみ）に　写真（しゃしん）を　添（そ）えます。",
     "en": "I enclose a photo with the letter.",
     "audio_ref": "/audio/kanji_examples/添_1.webm",
     "source": "generated"
@@ -64643,7 +64644,7 @@
   "audio": "/audio/kanji/斗.mp3",
   "lesson_examples": [
    {
-    "jp": "北（ほく）斗（と）七（しち）星（せい）を　さがします。",
+    "jp": "北斗七星（ほくとしちせい）を　さがします。",
     "en": "I look for the Big Dipper.",
     "audio_ref": "/audio/kanji_examples/斗_1.webm",
     "source": "generated"
@@ -64748,7 +64749,7 @@
   "audio": "/audio/kanji/搭.mp3",
   "lesson_examples": [
    {
-    "jp": "飛（ひ）行（こう）機（き）に　搭（とう）乗（じょう）します。",
+    "jp": "飛行機（ひこうき）に　搭乗（とうじょう）します。",
     "en": "I board the airplane.",
     "audio_ref": "/audio/kanji_examples/搭_1.webm",
     "source": "generated"
@@ -64816,7 +64817,7 @@
   "audio": "/audio/kanji/痘.mp3",
   "lesson_examples": [
    {
-    "jp": "種（しゅ）痘（とう）の　れきしを　まなぶ。",
+    "jp": "種痘（しゅとう）の　れきしを　まなぶ。",
     "en": "We learn the history of vaccination.",
     "audio_ref": "/audio/kanji_examples/痘_1.webm",
     "source": "generated"
@@ -64986,7 +64987,7 @@
   "audio": "/audio/kanji/陶.mp3",
   "lesson_examples": [
    {
-    "jp": "陶（とう）器（き）の　カップです。",
+    "jp": "陶器（とうき）の　カップです。",
     "en": "It's a ceramic cup.",
     "audio_ref": "/audio/kanji_examples/陶_1.webm",
     "source": "generated"
@@ -65022,7 +65023,7 @@
   "audio": "/audio/kanji/騰.mp3",
   "lesson_examples": [
    {
-    "jp": "ぶっかが　高（こう）騰（とう）して　いる。",
+    "jp": "ぶっかが　高騰（こうとう）して　いる。",
     "en": "Prices are soaring.",
     "audio_ref": "/audio/kanji_examples/騰_1.webm",
     "source": "generated"
@@ -65305,7 +65306,7 @@
   "audio": "/audio/kanji/凸.mp3",
   "lesson_examples": [
    {
-    "jp": "凸（でこ）凹（ぼこ）みちに　ちゅうい。",
+    "jp": "凸凹（でこぼこ）みちに　ちゅうい。",
     "en": "Mind the bumpy road.",
     "audio_ref": "/audio/kanji_examples/凸_1.webm",
     "source": "generated"
@@ -65393,7 +65394,7 @@
   "audio": "/audio/kanji/那.mp3",
   "lesson_examples": [
    {
-    "jp": "刹（せつ）那（な）の　できごとでした。",
+    "jp": "刹那（せつな）の　できごとでした。",
     "en": "It happened in an instant.",
     "audio_ref": "/audio/kanji_examples/那_1.webm",
     "source": "generated"
@@ -65518,7 +65519,7 @@
   "audio": "/audio/kanji/如.mp3",
   "lesson_examples": [
    {
-    "jp": "突（とつ）如（じょ）、あめが　ふりだした。",
+    "jp": "突如（とつじょ）、あめが　ふりだした。",
     "en": "Suddenly, it began to rain.",
     "audio_ref": "/audio/kanji_examples/如_1.webm",
     "source": "generated"
@@ -65545,7 +65546,7 @@
   "audio": "/audio/kanji/尿.mp3",
   "lesson_examples": [
    {
-    "jp": "けんこうしんだんで　検（けん）尿（にょう）を　する。",
+    "jp": "けんこうしんだんで　検尿（けんにょう）を　する。",
     "en": "A urine test at the checkup.",
     "audio_ref": "/audio/kanji_examples/尿_1.webm",
     "source": "generated"
@@ -65578,7 +65579,7 @@
   "audio": "/audio/kanji/妊.mp3",
   "lesson_examples": [
    {
-    "jp": "妊（にん）婦（ぷ）さんに　せきを　ゆずる。",
+    "jp": "妊婦（にんぷ）さんに　せきを　ゆずる。",
     "en": "We give up our seat for the expectant mother.",
     "audio_ref": "/audio/kanji_examples/妊_1.webm",
     "source": "generated"
@@ -65708,7 +65709,7 @@
   "audio": "/audio/kanji/把.mp3",
   "lesson_examples": [
    {
-    "jp": "内（ない）容（よう）を　把（は）握（あく）します。",
+    "jp": "内容（ないよう）を　把握（はあく）します。",
     "en": "I get a grasp of the contents.",
     "audio_ref": "/audio/kanji_examples/把_1.webm",
     "source": "generated"
@@ -65737,7 +65738,7 @@
   "audio": "/audio/kanji/覇.mp3",
   "lesson_examples": [
    {
-    "jp": "たいかいの　覇（は）者（しゃ）に　なりました。",
+    "jp": "たいかいの　覇者（はしゃ）に　なりました。",
     "en": "He became the tournament champion.",
     "audio_ref": "/audio/kanji_examples/覇_1.webm",
     "source": "generated"
@@ -65799,7 +65800,7 @@
   "audio": "/audio/kanji/廃.mp3",
   "lesson_examples": [
    {
-    "jp": "廃（はい）線（せん）の　えきを　たずねる。",
+    "jp": "廃線（はいせん）の　えきを　たずねる。",
     "en": "We visit a station on an abandoned line.",
     "audio_ref": "/audio/kanji_examples/廃_1.webm",
     "source": "generated"
@@ -65827,7 +65828,7 @@
   "audio": "/audio/kanji/排.mp3",
   "lesson_examples": [
    {
-    "jp": "くうきを　排（はい）出（しゅつ）する　そうち。",
+    "jp": "くうきを　排出（はいしゅつ）する　そうち。",
     "en": "A device that expels air.",
     "audio_ref": "/audio/kanji_examples/排_1.webm",
     "source": "generated"
@@ -65906,7 +65907,7 @@
   "audio": "/audio/kanji/培.mp3",
   "lesson_examples": [
    {
-    "jp": "やさいを　栽（さい）培（ばい）する。",
+    "jp": "やさいを　栽培（さいばい）する。",
     "en": "We cultivate vegetables.",
     "audio_ref": "/audio/kanji_examples/培_1.webm",
     "source": "generated"
@@ -65972,7 +65973,7 @@
   "audio": "/audio/kanji/陪.mp3",
   "lesson_examples": [
    {
-    "jp": "陪（ばい）審（しん）員（いん）に　えらばれました。",
+    "jp": "陪審員（ばいしんいん）に　えらばれました。",
     "en": "I was chosen as a juror.",
     "audio_ref": "/audio/kanji_examples/陪_1.webm",
     "source": "generated"
@@ -66119,7 +66120,7 @@
   "audio": "/audio/kanji/漠.mp3",
   "lesson_examples": [
    {
-    "jp": "砂（さ）漠（ばく）は　雨（あめ）が　少（すく）ないです。",
+    "jp": "砂漠（さばく）は　雨（あめ）が　少（すく）ないです。",
     "en": "Deserts get little rain.",
     "audio_ref": "/audio/kanji_examples/漠_1.webm",
     "source": "generated"
@@ -66460,7 +66461,7 @@
   "audio": "/audio/kanji/範.mp3",
   "lesson_examples": [
    {
-    "jp": "もはん　――　模（も）範（はん）に　なる　こうどうを。",
+    "jp": "もはん　――　模範（もはん）に　なる　こうどうを。",
     "en": "Act as a model for others.",
     "audio_ref": "/audio/kanji_examples/範_1.webm",
     "source": "generated"
@@ -66638,7 +66639,7 @@
   "audio": "/audio/kanji/妃.mp3",
   "lesson_examples": [
    {
-    "jp": "おうひ　――　王（おう）妃（ひ）の　ものがたり。",
+    "jp": "おうひ　――　王妃（おうひ）の　ものがたり。",
     "en": "The story of a queen consort.",
     "audio_ref": "/audio/kanji_examples/妃_1.webm",
     "source": "generated"
@@ -66701,7 +66702,7 @@
   "audio": "/audio/kanji/披.mp3",
   "lesson_examples": [
    {
-    "jp": "けっこん披（ひ）露（ろう）宴（えん）に　でる。",
+    "jp": "けっこん披露宴（ひろうえん）に　でる。",
     "en": "I attend a wedding reception.",
     "audio_ref": "/audio/kanji_examples/披_1.webm",
     "source": "generated"
@@ -66769,7 +66770,7 @@
   "audio": "/audio/kanji/罷.mp3",
   "lesson_examples": [
    {
-    "jp": "やくいんが　罷（ひ）免（めん）された。",
+    "jp": "やくいんが　罷免（ひめん）された。",
     "en": "The official was dismissed.",
     "audio_ref": "/audio/kanji_examples/罷_1.webm",
     "source": "generated"
@@ -66903,7 +66904,7 @@
   "audio": "/audio/kanji/微.mp3",
   "lesson_examples": [
    {
-    "jp": "微（び）妙（みょう）な　ちがいが　あります。",
+    "jp": "微妙（びみょう）な　ちがいが　あります。",
     "en": "There is a subtle difference.",
     "audio_ref": "/audio/kanji_examples/微_1.webm",
     "source": "generated"
@@ -67169,7 +67170,7 @@
   "audio": "/audio/kanji/敏.mp3",
   "lesson_examples": [
    {
-    "jp": "敏（びん）感（かん）に　へんかに　きづく。",
+    "jp": "敏感（びんかん）に　へんかに　きづく。",
     "en": "Keenly noticing every change.",
     "audio_ref": "/audio/kanji_examples/敏_1.webm",
     "source": "generated"
@@ -67216,7 +67217,7 @@
   "audio": "/audio/kanji/瓶.mp3",
   "lesson_examples": [
    {
-    "jp": "花（か）瓶（びん）に　みずを　いれる。",
+    "jp": "花瓶（かびん）に　みずを　いれる。",
     "en": "I fill the vase with water.",
     "audio_ref": "/audio/kanji_examples/瓶_1.webm",
     "source": "generated"
@@ -67561,7 +67562,7 @@
   "audio": "/audio/kanji/墳.mp3",
   "lesson_examples": [
    {
-    "jp": "古（こ）墳（ふん）を　けんがくする。",
+    "jp": "古墳（こふん）を　けんがくする。",
     "en": "We tour the ancient burial mound.",
     "audio_ref": "/audio/kanji_examples/墳_1.webm",
     "source": "generated"
@@ -67704,7 +67705,7 @@
   "audio": "/audio/kanji/併.mp3",
   "lesson_examples": [
    {
-    "jp": "ふたつの　会（かい）が　合（がっ）併（ぺい）します。",
+    "jp": "ふたつの　会（かい）が　合併（がっぺい）します。",
     "en": "The two clubs are merging.",
     "audio_ref": "/audio/kanji_examples/併_1.webm",
     "source": "generated"
@@ -67804,7 +67805,7 @@
   "audio": "/audio/kanji/弊.mp3",
   "lesson_examples": [
    {
-    "jp": "弊（へい）社（しゃ）の　製（せい）品（ひん）です。",
+    "jp": "弊社（へいしゃ）の　製品（せいひん）です。",
     "en": "This is our company's product.",
     "audio_ref": "/audio/kanji_examples/弊_1.webm",
     "source": "generated"
@@ -67935,7 +67936,7 @@
   "audio": "/audio/kanji/偏.mp3",
   "lesson_examples": [
    {
-    "jp": "食（しょく）事（じ）が　偏（かたよ）って　います。",
+    "jp": "食事（しょくじ）が　偏（かたよ）って　います。",
     "en": "My diet is unbalanced.",
     "audio_ref": "/audio/kanji_examples/偏_1.webm",
     "source": "generated"
@@ -67969,7 +67970,7 @@
   "audio": "/audio/kanji/遍.mp3",
   "lesson_examples": [
    {
-    "jp": "世（せ）界（かい）を　遍（あまね）く　旅（たび）しました。",
+    "jp": "世界（せかい）を　遍（あまね）く　旅（たび）しました。",
     "en": "He traveled all over the world.",
     "audio_ref": "/audio/kanji_examples/遍_1.webm",
     "source": "generated"
@@ -67994,7 +67995,7 @@
   "audio": "/audio/kanji/舗.mp3",
   "lesson_examples": [
    {
-    "jp": "この　店（てん）舗（ぽ）は　古（ふる）いです。",
+    "jp": "この　店舗（てんぽ）は　古（ふる）いです。",
     "en": "This shop building is old.",
     "audio_ref": "/audio/kanji_examples/舗_1.webm",
     "source": "generated"
@@ -68048,7 +68049,7 @@
   "audio": "/audio/kanji/慕.mp3",
   "lesson_examples": [
    {
-    "jp": "先（せん）生（せい）を　慕（した）って　います。",
+    "jp": "先生（せんせい）を　慕（した）って　います。",
     "en": "I look up to my teacher with affection.",
     "audio_ref": "/audio/kanji_examples/慕_1.webm",
     "source": "generated"
@@ -68114,7 +68115,7 @@
   "audio": "/audio/kanji/俸.mp3",
   "lesson_examples": [
    {
-    "jp": "俸（ほう）給（きゅう）を　うけとる。",
+    "jp": "俸給（ほうきゅう）を　うけとる。",
     "en": "He receives his salary.",
     "audio_ref": "/audio/kanji_examples/俸_1.webm",
     "source": "generated"
@@ -68408,7 +68409,7 @@
   "audio": "/audio/kanji/邦.mp3",
   "lesson_examples": [
    {
-    "jp": "邦（ほう）楽（がく）を　聞（き）くのが　すきです。",
+    "jp": "邦楽（ほうがく）を　聞（き）くのが　すきです。",
     "en": "I like listening to traditional Japanese music.",
     "audio_ref": "/audio/kanji_examples/邦_1.webm",
     "source": "generated"
@@ -68490,7 +68491,7 @@
   "audio": "/audio/kanji/乏.mp3",
   "lesson_examples": [
    {
-    "jp": "経（けい）験（けん）が　乏（とぼ）しいです。",
+    "jp": "経験（けいけん）が　乏（とぼ）しいです。",
     "en": "I lack experience.",
     "audio_ref": "/audio/kanji_examples/乏_1.webm",
     "source": "generated"
@@ -68634,7 +68635,7 @@
   "audio": "/audio/kanji/房.mp3",
   "lesson_examples": [
    {
-    "jp": "ぶどうの　一（ひと）房（ふさ）を　わける。",
+    "jp": "ぶどうの　一房（ひとふさ）を　わける。",
     "en": "We share a bunch of grapes.",
     "audio_ref": "/audio/kanji_examples/房_1.webm",
     "source": "generated"
@@ -68663,7 +68664,7 @@
   "audio": "/audio/kanji/某.mp3",
   "lesson_examples": [
    {
-    "jp": "某（ぼう）月（げつ）某（ぼう）日（じつ）の　できごと。",
+    "jp": "某月某日（ぼうげつぼうじつ）の　できごと。",
     "en": "An event on a certain day of a certain month.",
     "audio_ref": "/audio/kanji_examples/某_1.webm",
     "source": "generated"
@@ -68704,7 +68705,7 @@
   "audio": "/audio/kanji/冒.mp3",
   "lesson_examples": [
    {
-    "jp": "冒（ぼう）険（けん）の　たびに　でる。",
+    "jp": "冒険（ぼうけん）の　たびに　でる。",
     "en": "I set out on an adventure.",
     "audio_ref": "/audio/kanji_examples/冒_1.webm",
     "source": "generated"
@@ -68764,7 +68765,7 @@
   "audio": "/audio/kanji/肪.mp3",
   "lesson_examples": [
    {
-    "jp": "し肪（ぼう）――　脂（し）肪（ぼう）を　ひかえた　しょくじ。",
+    "jp": "し肪（ぼう）――　脂肪（しぼう）を　ひかえた　しょくじ。",
     "en": "A diet light on fat.",
     "audio_ref": "/audio/kanji_examples/肪_1.webm",
     "source": "generated"
@@ -68940,7 +68941,7 @@
   "audio": "/audio/kanji/撲.mp3",
   "lesson_examples": [
    {
-    "jp": "相（す）撲（もう）を　見（み)に　行（い）きます。",
+    "jp": "相撲（すもう）を　見（み)に　行（い）きます。",
     "en": "I'm going to watch sumo.",
     "audio_ref": "/audio/kanji_examples/撲_1.webm",
     "source": "generated"
@@ -68976,7 +68977,7 @@
   "audio": "/audio/kanji/朴.mp3",
   "lesson_examples": [
    {
-    "jp": "素（そ）朴（ぼく）な　あじわいの　りょうり。",
+    "jp": "素朴（そぼく）な　あじわいの　りょうり。",
     "en": "Simple, honest cooking.",
     "audio_ref": "/audio/kanji_examples/朴_1.webm",
     "source": "generated"
@@ -69006,7 +69007,7 @@
   "audio": "/audio/kanji/睦.mp3",
   "lesson_examples": [
    {
-    "jp": "親（しん）睦（ぼく）かいを　ひらく。",
+    "jp": "親睦（しんぼく）かいを　ひらく。",
     "en": "We hold a friendly gathering.",
     "audio_ref": "/audio/kanji_examples/睦_1.webm",
     "source": "generated"
@@ -69045,7 +69046,7 @@
   "audio": "/audio/kanji/没.mp3",
   "lesson_examples": [
    {
-    "jp": "日（にち）没（ぼつ）が　きれいです。",
+    "jp": "日没（にちぼつ）が　きれいです。",
     "en": "The sunset is beautiful.",
     "audio_ref": "/audio/kanji_examples/没_1.webm",
     "source": "generated"
@@ -69090,7 +69091,7 @@
   "audio": "/audio/kanji/奔.mp3",
   "lesson_examples": [
    {
-    "jp": "しごとに　奔（ほん）走（そう）する　まいにち。",
+    "jp": "しごとに　奔走（ほんそう）する　まいにち。",
     "en": "Days spent rushing about on business.",
     "audio_ref": "/audio/kanji_examples/奔_1.webm",
     "source": "generated"
@@ -69170,7 +69171,7 @@
   "audio": "/audio/kanji/凡.mp3",
   "lesson_examples": [
    {
-    "jp": "平（へい）凡（ぼん）な　毎（まい）日（にち）も　いいものです。",
+    "jp": "平凡（へいぼん）な　毎日（まいにち）も　いいものです。",
     "en": "Ordinary days are nice too.",
     "audio_ref": "/audio/kanji_examples/凡_1.webm",
     "source": "generated"
@@ -69421,7 +69422,7 @@
   "audio": "/audio/kanji/慢.mp3",
   "lesson_examples": [
    {
-    "jp": "我（が）慢（まん）して　います。",
+    "jp": "我慢（がまん）して　います。",
     "en": "I'm bearing with it.",
     "audio_ref": "/audio/kanji_examples/慢_1.webm",
     "source": "generated"
@@ -69467,7 +69468,7 @@
   "audio": "/audio/kanji/漫.mp3",
   "lesson_examples": [
    {
-    "jp": "漫（まん）画（が）を　読（よ）みます。",
+    "jp": "漫画（まんが）を　読（よ）みます。",
     "en": "I read manga.",
     "audio_ref": "/audio/kanji_examples/漫_1.webm",
     "source": "generated"
@@ -69628,7 +69629,7 @@
   "audio": "/audio/kanji/婿.mp3",
   "lesson_examples": [
    {
-    "jp": "花（はな）婿（むこ）が　にゅうじょうした。",
+    "jp": "花婿（はなむこ）が　にゅうじょうした。",
     "en": "The bridegroom made his entrance.",
     "audio_ref": "/audio/kanji_examples/婿_1.webm",
     "source": "generated"
@@ -69739,7 +69740,7 @@
   "audio": "/audio/kanji/免.mp3",
   "lesson_examples": [
    {
-    "jp": "運（うん）転（てん）免（めん）許（きょ）を　とります。",
+    "jp": "運転免許（うんてんめんきょ）を　とります。",
     "en": "I'm getting a driver's license.",
     "audio_ref": "/audio/kanji_examples/免_1.webm",
     "source": "generated"
@@ -69795,7 +69796,7 @@
   "audio": "/audio/kanji/妄.mp3",
   "lesson_examples": [
    {
-    "jp": "妄（もう）想（そう）に　ふけって　いる。",
+    "jp": "妄想（もうそう）に　ふけって　いる。",
     "en": "He's lost in wild fantasies.",
     "audio_ref": "/audio/kanji_examples/妄_1.webm",
     "source": "generated"
@@ -69861,7 +69862,7 @@
   "audio": "/audio/kanji/盲.mp3",
   "lesson_examples": [
    {
-    "jp": "盲（もう）導（どう）犬（けん）は　りっぱな　パートナーだ。",
+    "jp": "盲導犬（もうどうけん）は　りっぱな　パートナーだ。",
     "en": "Guide dogs are admirable partners.",
     "audio_ref": "/audio/kanji_examples/盲_1.webm",
     "source": "generated"
@@ -69917,7 +69918,7 @@
   "audio": "/audio/kanji/耗.mp3",
   "lesson_examples": [
    {
-    "jp": "たいりょくを　消（しょう）耗（もう）した。",
+    "jp": "たいりょくを　消耗（しょうもう）した。",
     "en": "My stamina is spent.",
     "audio_ref": "/audio/kanji_examples/耗_1.webm",
     "source": "generated"
@@ -70022,7 +70023,7 @@
   "audio": "/audio/kanji/弥.mp3",
   "lesson_examples": [
    {
-    "jp": "弥（や）生（よい）じだいの　どき。",
+    "jp": "弥生（やよい）じだいの　どき。",
     "en": "Pottery from the Yayoi period.",
     "audio_ref": "/audio/kanji_examples/弥_1.webm",
     "source": "generated"
@@ -70153,7 +70154,7 @@
   "audio": "/audio/kanji/愉.mp3",
   "lesson_examples": [
    {
-    "jp": "愉（ゆ）快（かい）な　仲（なか）間（ま）です。",
+    "jp": "愉快（ゆかい）な　仲間（なかま）です。",
     "en": "They're cheerful companions.",
     "audio_ref": "/audio/kanji_examples/愉_1.webm",
     "source": "generated"
@@ -70245,7 +70246,7 @@
   "audio": "/audio/kanji/唯.mp3",
   "lesson_examples": [
    {
-    "jp": "唯（ゆい）一（いつ）の　ともだちです。",
+    "jp": "唯一（ゆいいつ）の　ともだちです。",
     "en": "My one and only friend.",
     "audio_ref": "/audio/kanji_examples/唯_1.webm",
     "source": "generated"
@@ -70281,7 +70282,7 @@
   "audio": "/audio/kanji/幽.mp3",
   "lesson_examples": [
    {
-    "jp": "幽（ゆう）玄（げん）の　びを　かんじる。",
+    "jp": "幽玄（ゆうげん）の　びを　かんじる。",
     "en": "A sense of profound, mysterious beauty.",
     "audio_ref": "/audio/kanji_examples/幽_1.webm",
     "source": "generated"
@@ -70357,7 +70358,7 @@
   "audio": "/audio/kanji/憂.mp3",
   "lesson_examples": [
    {
-    "jp": "将（しょう）来（らい）を　憂（うれ）えて　います。",
+    "jp": "将来（しょうらい）を　憂（うれ）えて　います。",
     "en": "He worries about the future.",
     "audio_ref": "/audio/kanji_examples/憂_1.webm",
     "source": "generated"
@@ -70419,7 +70420,7 @@
   "audio": "/audio/kanji/猶.mp3",
   "lesson_examples": [
    {
-    "jp": "猶（ゆう）予（よ）は　あと　三（みっ）日（か）です。",
+    "jp": "猶予（ゆうよ）は　あと　三日（みっか）です。",
     "en": "There are three days of grace left.",
     "audio_ref": "/audio/kanji_examples/猶_1.webm",
     "source": "generated"
@@ -70528,7 +70529,7 @@
   "audio": "/audio/kanji/雄.mp3",
   "lesson_examples": [
    {
-    "jp": "雄（ゆう）大（だい）な　うみですね。",
+    "jp": "雄大（ゆうだい）な　うみですね。",
     "en": "What a magnificent sea.",
     "audio_ref": "/audio/kanji_examples/雄_1.webm",
     "source": "generated"
@@ -70615,7 +70616,7 @@
   "audio": "/audio/kanji/庸.mp3",
   "lesson_examples": [
    {
-    "jp": "中（ちゅう）庸（よう）が　大（たい）切（せつ）です。",
+    "jp": "中庸（ちゅうよう）が　大切（たいせつ）です。",
     "en": "Moderation is important.",
     "audio_ref": "/audio/kanji_examples/庸_1.webm",
     "source": "generated"
@@ -70658,7 +70659,7 @@
   "audio": "/audio/kanji/揚.mp3",
   "lesson_examples": [
    {
-    "jp": "国（こっ）旗（き）を　揚（あ）げます。",
+    "jp": "国旗（こっき）を　揚（あ）げます。",
     "en": "We raise the national flag.",
     "audio_ref": "/audio/kanji_examples/揚_1.webm",
     "source": "generated"
@@ -70738,7 +70739,7 @@
   "audio": "/audio/kanji/擁.mp3",
   "lesson_examples": [
    {
-    "jp": "計（けい）画（かく）を　擁（よう）護（ご）します。",
+    "jp": "計画（けいかく）を　擁護（ようご）します。",
     "en": "I defend the plan.",
     "audio_ref": "/audio/kanji_examples/擁_1.webm",
     "source": "generated"
@@ -71156,7 +71157,7 @@
   "audio": "/audio/kanji/璃.mp3",
   "lesson_examples": [
    {
-    "jp": "浄（じょう）瑠（る）璃（り）の　ぶたいを　みた。",
+    "jp": "浄瑠璃（じょうるり）の　ぶたいを　みた。",
     "en": "I watched a joruri puppet play.",
     "audio_ref": "/audio/kanji_examples/璃_1.webm",
     "source": "generated"
@@ -71265,7 +71266,7 @@
   "audio": "/audio/kanji/隆.mp3",
   "lesson_examples": [
    {
-    "jp": "この　港（みなと）まちは　隆（りゅう）盛（せい）です。",
+    "jp": "この　港（みなと）まちは　隆盛（りゅうせい）です。",
     "en": "This port town is thriving.",
     "audio_ref": "/audio/kanji_examples/隆_1.webm",
     "source": "generated"
@@ -71391,7 +71392,7 @@
   "audio": "/audio/kanji/僚.mp3",
   "lesson_examples": [
    {
-    "jp": "同（どう）僚（りょう）と　昼（ひる）ごはんを　食（た）べます。",
+    "jp": "同僚（どうりょう）と　昼（ひる）ごはんを　食（た）べます。",
     "en": "I eat lunch with my colleagues.",
     "audio_ref": "/audio/kanji_examples/僚_1.webm",
     "source": "generated"
@@ -71530,7 +71531,7 @@
   "audio": "/audio/kanji/陵.mp3",
   "lesson_examples": [
    {
-    "jp": "古（こ）代（だい）の　陵（みささぎ）を　見（けん）学（がく）しました。",
+    "jp": "古代（こだい）の　陵（みささぎ）を　見学（けんがく）しました。",
     "en": "We visited an ancient imperial tomb.",
     "audio_ref": "/audio/kanji_examples/陵_1.webm",
     "source": "generated"
@@ -71554,7 +71555,7 @@
   "audio": "/audio/kanji/倫.mp3",
   "lesson_examples": [
    {
-    "jp": "倫（りん）理（り）を　学（まな）びます。",
+    "jp": "倫理（りんり）を　学（まな）びます。",
     "en": "We study ethics.",
     "audio_ref": "/audio/kanji_examples/倫_1.webm",
     "source": "generated"
@@ -71655,7 +71656,7 @@
   "audio": "/audio/kanji/塁.mp3",
   "lesson_examples": [
    {
-    "jp": "一（いち）塁（るい）まで　はしれ！",
+    "jp": "一塁（いちるい）まで　はしれ！",
     "en": "Run to first base!",
     "audio_ref": "/audio/kanji_examples/塁_1.webm",
     "source": "generated"
@@ -71682,7 +71683,7 @@
   "audio": "/audio/kanji/累.mp3",
   "lesson_examples": [
    {
-    "jp": "累（るい）計（けい）1000もんに　こたえた。",
+    "jp": "累計（るいけい）1000もんに　こたえた。",
     "en": "A running total of 1000 questions answered.",
     "audio_ref": "/audio/kanji_examples/累_1.webm",
     "source": "generated"
@@ -71716,7 +71717,7 @@
   "audio": "/audio/kanji/励.mp3",
   "lesson_examples": [
    {
-    "jp": "友（とも）達（だち）を　励（はげ）まします。",
+    "jp": "友達（ともだち）を　励（はげ）まします。",
     "en": "I encourage my friend.",
     "audio_ref": "/audio/kanji_examples/励_1.webm",
     "source": "generated"
@@ -71765,7 +71766,7 @@
   "audio": "/audio/kanji/隷.mp3",
   "lesson_examples": [
    {
-    "jp": "むかしの　奴（ど）隷（れい）の　れきしを　学（まな）びました。",
+    "jp": "むかしの　奴隷（どれい）の　れきしを　学（まな）びました。",
     "en": "We learned the history of slavery.",
     "audio_ref": "/audio/kanji_examples/隷_1.webm",
     "source": "generated"
@@ -72046,7 +72047,7 @@
   "audio": "/audio/kanji/呂.mp3",
   "lesson_examples": [
    {
-    "jp": "お風（ふ）呂（ろ）に　はいります。",
+    "jp": "お風呂（ふろ）に　はいります。",
     "en": "I take a bath.",
     "audio_ref": "/audio/kanji_examples/呂_1.webm",
     "source": "generated"
@@ -72161,7 +72162,7 @@
   "audio": "/audio/kanji/楼.mp3",
   "lesson_examples": [
    {
-    "jp": "こうろう　――　高（こう）楼（ろう）から　まちを　みおろす。",
+    "jp": "こうろう　――　高楼（こうろう）から　まちを　みおろす。",
     "en": "Looking down on the town from a high tower.",
     "audio_ref": "/audio/kanji_examples/楼_1.webm",
     "source": "generated"
@@ -72228,7 +72229,7 @@
   "audio": "/audio/kanji/漏.mp3",
   "lesson_examples": [
    {
-    "jp": "屋（や）根（ね）から　雨（あめ）が　漏（も）れます。",
+    "jp": "屋根（やね）から　雨（あめ）が　漏（も）れます。",
     "en": "Rain leaks through the roof.",
     "audio_ref": "/audio/kanji_examples/漏_1.webm",
     "source": "generated"
@@ -72324,7 +72325,7 @@
   "audio": "/audio/kanji/惑.mp3",
   "lesson_examples": [
    {
-    "jp": "惑（わく）星（せい）の　ずかんを　よむ。",
+    "jp": "惑星（わくせい）の　ずかんを　よむ。",
     "en": "I read an encyclopedia of planets.",
     "audio_ref": "/audio/kanji_examples/惑_1.webm",
     "source": "generated"
@@ -72396,7 +72397,7 @@
   "audio": "/audio/kanji/挨.mp3",
   "lesson_examples": [
    {
-    "jp": "朝（あさ）の　挨（あい）拶（さつ）を　しましょう。",
+    "jp": "朝（あさ）の　挨拶（あいさつ）を　しましょう。",
     "en": "Let's do our morning greetings.",
     "audio_ref": "/audio/kanji_examples/挨_1.webm",
     "source": "generated"
@@ -72442,7 +72443,7 @@
   "audio": "/audio/kanji/宛.mp3",
   "lesson_examples": [
    {
-    "jp": "先（せん）生（せい）宛（あ）てに　手（て）紙（がみ）を　書（か）きます。",
+    "jp": "先生宛（せんせいあ）てに　手紙（てがみ）を　書（か）きます。",
     "en": "I write a letter addressed to my teacher.",
     "audio_ref": "/audio/kanji_examples/宛_1.webm",
     "source": "generated"
@@ -72542,7 +72543,7 @@
   "audio": "/audio/kanji/畏.mp3",
   "lesson_examples": [
    {
-    "jp": "しぜんへの　畏（い）敬（けい）の　ねん。",
+    "jp": "しぜんへの　畏敬（いけい）の　ねん。",
     "en": "Reverence for nature.",
     "audio_ref": "/audio/kanji_examples/畏_1.webm",
     "source": "generated"
@@ -73091,7 +73092,7 @@
   "audio": "/audio/kanji/韓.mp3",
   "lesson_examples": [
    {
-    "jp": "韓（かん）国（こく）に　りょこうします。",
+    "jp": "韓国（かんこく）に　りょこうします。",
     "en": "I'm traveling to Korea.",
     "audio_ref": "/audio/kanji_examples/韓_1.webm",
     "source": "generated"
@@ -73144,7 +73145,7 @@
   "audio": "/audio/kanji/畿.mp3",
   "lesson_examples": [
    {
-    "jp": "近（きん）畿（き）ちほうを　りょこうする。",
+    "jp": "近畿（きんき）ちほうを　りょこうする。",
     "en": "Traveling the Kinki region.",
     "audio_ref": "/audio/kanji_examples/畿_1.webm",
     "source": "generated"
@@ -73218,7 +73219,7 @@
   "audio": "/audio/kanji/巾.mp3",
   "lesson_examples": [
    {
-    "jp": "雑（ぞう）巾（きん）で　ゆかを　ふきます。",
+    "jp": "雑巾（ぞうきん）で　ゆかを　ふきます。",
     "en": "I wipe the floor with a cloth.",
     "audio_ref": "/audio/kanji_examples/巾_1.webm",
     "source": "generated"
@@ -73297,7 +73298,7 @@
   "audio": "/audio/kanji/稽.mp3",
   "lesson_examples": [
    {
-    "jp": "稽（けい）古（こ）を　つづけます。",
+    "jp": "稽古（けいこ）を　つづけます。",
     "en": "I keep up my training.",
     "audio_ref": "/audio/kanji_examples/稽_1.webm",
     "source": "generated"
@@ -73360,7 +73361,7 @@
   "audio": "/audio/kanji/隙.mp3",
   "lesson_examples": [
    {
-    "jp": "隙（すき）間（ま）から　風（かぜ）が　入（はい）ります。",
+    "jp": "隙間（すきま）から　風（かぜ）が　入（はい）ります。",
     "en": "Wind comes in through the gap.",
     "audio_ref": "/audio/kanji_examples/隙_1.webm",
     "source": "generated"
@@ -73472,7 +73473,7 @@
   "audio": "/audio/kanji/股.mp3",
   "lesson_examples": [
    {
-    "jp": "大（おお）股（また）で　あるく。",
+    "jp": "大股（おおまた）で　あるく。",
     "en": "Walking with long strides.",
     "audio_ref": "/audio/kanji_examples/股_1.webm",
     "source": "generated"
@@ -73532,7 +73533,7 @@
   "audio": "/audio/kanji/勾.mp3",
   "lesson_examples": [
    {
-    "jp": "この　さかは　勾（こう）配（ばい）が　きついです。",
+    "jp": "この　さかは　勾配（こうばい）が　きついです。",
     "en": "This slope has a steep grade.",
     "audio_ref": "/audio/kanji_examples/勾_1.webm",
     "source": "generated"
@@ -73811,7 +73812,7 @@
   "audio": "/audio/kanji/拶.mp3",
   "lesson_examples": [
    {
-    "jp": "あいさつは　挨（あい）拶（さつ）と　書（か）きます。",
+    "jp": "あいさつは　挨拶（あいさつ）と　書（か）きます。",
     "en": "The word aisatsu is written 挨拶.",
     "audio_ref": "/audio/kanji_examples/拶_1.webm",
     "source": "generated"
@@ -73841,7 +73842,7 @@
   "audio": "/audio/kanji/斬.mp3",
   "lesson_examples": [
    {
-    "jp": "斬（ざん）新（しん）な　アイデアだ。",
+    "jp": "斬新（ざんしん）な　アイデアだ。",
     "en": "A strikingly original idea.",
     "audio_ref": "/audio/kanji_examples/斬_1.webm",
     "source": "generated"
@@ -74167,7 +74168,7 @@
   "audio": "/audio/kanji/戚.mp3",
   "lesson_examples": [
    {
-    "jp": "親（しん）戚（せき）が　あそびに　きます。",
+    "jp": "親戚（しんせき）が　あそびに　きます。",
     "en": "Relatives are coming to visit.",
     "audio_ref": "/audio/kanji_examples/戚_1.webm",
     "source": "generated"
@@ -74351,7 +74352,7 @@
   "audio": "/audio/kanji/曽.mp3",
   "lesson_examples": [
    {
-    "jp": "曽（そう）祖（そ）父（ふ）の　はなしを　きく。",
+    "jp": "曽祖父（そうそふ）の　はなしを　きく。",
     "en": "Hearing stories of my great-grandfather.",
     "audio_ref": "/audio/kanji_examples/曽_1.webm",
     "source": "generated"
@@ -75201,7 +75202,7 @@
   "audio": "/audio/kanji/氾.mp3",
   "lesson_examples": [
    {
-    "jp": "川（かわ）が　氾（はん）濫（らん）しました。",
+    "jp": "川（かわ）が　氾濫（はんらん）しました。",
     "en": "The river flooded.",
     "audio_ref": "/audio/kanji_examples/氾_1.webm",
     "source": "generated"
@@ -75231,7 +75232,7 @@
   "audio": "/audio/kanji/汎.mp3",
   "lesson_examples": [
    {
-    "jp": "汎（はん）用（よう）の　どうぐは　べんりだ。",
+    "jp": "汎用（はんよう）の　どうぐは　べんりだ。",
     "en": "General-purpose tools are handy.",
     "audio_ref": "/audio/kanji_examples/汎_1.webm",
     "source": "generated"
@@ -75319,7 +75320,7 @@
   "audio": "/audio/kanji/蔽.mp3",
   "lesson_examples": [
    {
-    "jp": "しんじつを　隠（いん）蔽（ぺい）しては　いけません。",
+    "jp": "しんじつを　隠蔽（いんぺい）しては　いけません。",
     "en": "You must not cover up the truth.",
     "audio_ref": "/audio/kanji_examples/蔽_1.webm",
     "source": "generated"
@@ -75404,7 +75405,7 @@
   "audio": "/audio/kanji/貌.mp3",
   "lesson_examples": [
    {
-    "jp": "兄（きょう）弟（だい）で　容（よう）貌（ぼう）が　にて　います。",
+    "jp": "兄弟（きょうだい）で　容貌（ようぼう）が　にて　います。",
     "en": "The brothers look alike.",
     "audio_ref": "/audio/kanji_examples/貌_1.webm",
     "source": "generated"
@@ -75432,7 +75433,7 @@
   "audio": "/audio/kanji/勃.mp3",
   "lesson_examples": [
    {
-    "jp": "ぎろんが　勃（ぼっ）発（ぱつ）した。",
+    "jp": "ぎろんが　勃発（ぼっぱつ）した。",
     "en": "A debate broke out.",
     "audio_ref": "/audio/kanji_examples/勃_1.webm",
     "source": "generated"
@@ -75539,7 +75540,7 @@
   "audio": "/audio/kanji/冥.mp3",
   "lesson_examples": [
    {
-    "jp": "冥（めい）想（そう）で　心（こころ）を　整（ととの）えます。",
+    "jp": "冥想（めいそう）で　心（こころ）を　整（ととの）えます。",
     "en": "I settle my mind through meditation.",
     "audio_ref": "/audio/kanji_examples/冥_1.webm",
     "source": "generated"
@@ -75591,7 +75592,7 @@
   "audio": "/audio/kanji/餅.mp3",
   "lesson_examples": [
    {
-    "jp": "お正（しょう）月（がつ）に　餅（もち）を　たべます。",
+    "jp": "お正月（しょうがつ）に　餅（もち）を　たべます。",
     "en": "We eat mochi at New Year's.",
     "audio_ref": "/audio/kanji_examples/餅_1.webm",
     "source": "generated"
@@ -75647,7 +75648,7 @@
   "audio": "/audio/kanji/沃.mp3",
   "lesson_examples": [
    {
-    "jp": "肥（ひ）沃（よく）な　土（と）地（ち）です。",
+    "jp": "肥沃（ひよく）な　土地（とち）です。",
     "en": "It is fertile land.",
     "audio_ref": "/audio/kanji_examples/沃_1.webm",
     "source": "generated"
@@ -75840,7 +75841,7 @@
   "audio": "/audio/kanji/傲.mp3",
   "lesson_examples": [
    {
-    "jp": "傲（ごう）慢（まん）な　たいどは　だめです。",
+    "jp": "傲慢（ごうまん）な　たいどは　だめです。",
     "en": "An arrogant attitude is no good.",
     "audio_ref": "/audio/kanji_examples/傲_1.webm",
     "source": "generated"
@@ -75892,7 +75893,7 @@
   "audio": "/audio/kanji/哺.mp3",
   "lesson_examples": [
    {
-    "jp": "哺（ほ）乳（にゅう）るいの　ずかん。",
+    "jp": "哺乳（ほにゅう）るいの　ずかん。",
     "en": "An encyclopedia of mammals.",
     "audio_ref": "/audio/kanji_examples/哺_1.webm",
     "source": "generated"
@@ -75919,7 +75920,7 @@
   "audio": "/audio/kanji/喩.mp3",
   "lesson_examples": [
    {
-    "jp": "たとえばなし　――　比（ひ）喩（ゆ）で　せつめいする。",
+    "jp": "たとえばなし　――　比喩（ひゆ）で　せつめいする。",
     "en": "Explaining with a metaphor.",
     "audio_ref": "/audio/kanji_examples/喩_1.webm",
     "source": "generated"
@@ -76028,7 +76029,7 @@
   "audio": "/audio/kanji/彙.mp3",
   "lesson_examples": [
    {
-    "jp": "語（ご）彙（い）を　ふやしたいです。",
+    "jp": "語彙（ごい）を　ふやしたいです。",
     "en": "I want to grow my vocabulary.",
     "audio_ref": "/audio/kanji_examples/彙_1.webm",
     "source": "generated"
@@ -76093,7 +76094,7 @@
   "audio": "/audio/kanji/慄.mp3",
   "lesson_examples": [
    {
-    "jp": "こわくて　戦（せん）慄（りつ）しました。",
+    "jp": "こわくて　戦慄（せんりつ）しました。",
     "en": "I shuddered with fear.",
     "audio_ref": "/audio/kanji_examples/慄_1.webm",
     "source": "generated"
@@ -76149,12 +76150,13 @@
   "audio": "/audio/kanji/拉.mp3",
   "lesson_examples": [
    {
-    "jp": "メンの　こな　――　拉（ラー）メンの　ごとき　にんき。",
-    "en": "Popularity like ramen's.",
+    "jp": "拉麺（ラーメン）を　たべに　いきませんか。",
+    "en": "Won't you go eat ramen with me?",
     "audio_ref": "/audio/kanji_examples/拉_1.webm",
     "source": "generated"
    }
-  ]
+  ],
+  "keyword": "drag/pull"
  },
  "摯": {
   "jlpt": "N1",
@@ -76201,7 +76203,7 @@
   "audio": "/audio/kanji/曖.mp3",
   "lesson_examples": [
    {
-    "jp": "曖（あい）昧（まい）な　へんじは　だめ。",
+    "jp": "曖昧（あいまい）な　へんじは　だめ。",
     "en": "No vague answers.",
     "audio_ref": "/audio/kanji_examples/曖_1.webm",
     "source": "generated"
@@ -76314,7 +76316,7 @@
   "audio": "/audio/kanji/瘍.mp3",
   "lesson_examples": [
    {
-    "jp": "胃（い）に　潰（かい）瘍（よう）が　できました。",
+    "jp": "胃（い）に　潰瘍（かいよう）が　できました。",
     "en": "An ulcer formed in my stomach.",
     "audio_ref": "/audio/kanji_examples/瘍_1.webm",
     "source": "generated"
@@ -76593,7 +76595,7 @@
   "audio": "/audio/kanji/塡.mp3",
   "lesson_examples": [
    {
-    "jp": "あなを　補（ほ）塡（てん）する。",
+    "jp": "あなを　補塡（ほてん）する。",
     "en": "Filling in the gap.",
     "audio_ref": "/audio/kanji_examples/塡_1.webm",
     "source": "generated"
