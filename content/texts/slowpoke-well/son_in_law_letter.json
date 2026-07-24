@@ -6,7 +6,7 @@
    "jp": "てがみ",
    "en": "A Letter"
   },
-  "jp_text": "おとうさん、げんきですか。ぼくは　まいにち　げんきです。おかあさんと　ふたりで、いえを　まもって　ください。ぼくも　がんばります。",
+  "jp_text": "おとうさん、元気（げんき）ですか。ぼくは　毎日（まいにち）元気（げんき）です。お母（かあ）さんと　二人（ふたり）で、家（いえ）を　まもって　ください。ぼくも　がんばります。",
   "en_text": "Father, how are you? I'm doing well every day. Please look after the house together with Mother. I'll do my best too.",
   "audio_ref": null,
   "level": "N4",
@@ -16,7 +16,7 @@
   "npc_ref": null,
   "found_object_ref": "son_in_law_letter_object_slowpoke_well",
   "event_ref": null,
-  "length_chars": 62,
+  "length_chars": 57,
   "questions": [
    {
     "type": "idee_generale",

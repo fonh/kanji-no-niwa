@@ -35,6 +35,20 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, les 18 textes passés en revue (12 re-kanjifiés, 6 déjà
+  optimaux)** : `son_in_law_letter.json` (元気/毎日/お母さん/二人/家 ajoutés).
+  `cs_kudakeru.json`, `ancient_inscription.json`, `johto_entrance_sign.json`,
+  `lyra_mail.json` : studiedSet trop pauvre à leur position narrative (7/6/1/0) pour
+  toute amélioration sûre — vérifiés, corrects tels quels. **`elm_great_text.json` :
+  tentative de re-kanjification ANNULÉE** — ce texte a `zone_id: new-bark-town` mais
+  se lit narrativement après 8 badges (gate `count(badges_earned, 8)`) ; kanjifier
+  contre le studiedSet réel de ce point (dragons-den, 720 kanji) casse le linter, qui
+  vérifie le budget contre le `zone_id` déclaré, pas le point de lecture réel — c'est
+  déjà le correctif documenté du Lot 8 (« pages d'Elm kana-isées, le titre garde ses
+  kanji »). Pas un bug à corriger dans cette passe ; noté pour l'équipe si le modèle
+  de données gagne un jour un `reading_point_zone_id` distinct de `zone_id`. **Passe
+  textes complète** (18/18 revus) — reste la passe dialogues (~500 fichiers, 36
+  zones), le plus gros morceau de la phase 2. 5 linters verts.
 - **2026-07-24 — Phase 2, suite (azalea-town/cs_kiru + ilex-forest/forest_shrine
   re-kanjifiés)** : `cs_kiru.json` (鳥/力/入/心/込 ajoutés). `forest_shrine.json`
   (déjà 森/人/神/木/手/風 dans le texte d'origine — 心/残 ajoutés, le reste du
