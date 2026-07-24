@@ -6,7 +6,7 @@
    "jp": "うずの　よみかた",
    "en": "Reading the Whirlpool"
   },
-  "jp_text": "うずしおは　うみの　いかりでは　ありません。ふたつの　しおの　ながれが　ぶつかって、まわりはじめる　だけの　ことです。それが　わかれば、こわく　ありません。ながれを　よんで、まわる　力（ちから）を　りようすれば、ふねは　うずの　うえを　すべるように　すすめます。しずめるのではなく、ながれに　のる。それが　渦（うず）の　ひでんです。",
+  "jp_text": "うずしおは　うみの　いかりでは　ありません。二（ふた）つの　しおの　流（なが）れが　ぶつかって、まわりはじめる　だけの　ことです。それが　わかれば、こわく　ありません。流（なが）れを　よんで、まわる　力（ちから）を　利用（りよう）すれば、ふねは　うずの　上（うえ）を　すべるように　進（すす）めます。沈（しず）めるのではなく、流（なが）れに　のる。それが　渦（うず）の　ひでんです。",
   "en_text": "A maelstrom is not the sea's anger. Two currents simply collide and begin to turn — that is all. Once you understand that, there is nothing to fear. Read the flow, use the turning force, and a ship can glide right over the whirl. Not to still it, but to ride it — that is the secret of the Whirlpool.",
   "audio_ref": null,
   "level": "N2",
@@ -16,7 +16,7 @@
   "npc_ref": "lance_rocket_hq_mahogany",
   "found_object_ref": null,
   "event_ref": "cs_uzu_mahogany",
-  "length_chars": 166,
+  "length_chars": 149,
   "questions": [
    {
     "type": "idee_generale",
@@ -44,8 +44,8 @@
     ],
     "correct_index": 3,
     "answer_span": {
-     "start": 131,
-     "end": 148
+     "start": 150,
+     "end": 173
     }
    },
    {
@@ -75,7 +75,7 @@
     "correct_index": 0,
     "answer_span": {
      "start": 22,
-     "end": 49
+     "end": 55
     }
    },
    {

@@ -6,7 +6,7 @@
    "jp": "そらの　みち",
    "en": "The Sky Road"
   },
-  "jp_text": "とりは　なぜ　飛（と）べるのでしょう。つばさが　あるから？　いいえ、それだけでは　ありません。とりは　そらの　みちを　おぼえて　いるのです。一（いち）ど　とおった　みちを、わすれない。だから　まよわず、どこへでも　もどれます。あなたも　おなじ。あるいた　まちを　わすれなければ、そらから　もどれるのです。",
+  "jp_text": "鳥（とり）は　なぜ　飛（と）べるのでしょう。つばさが　あるから？　いいえ、それだけでは　ありません。鳥（とり）は　そらの　道（みち）を　おぼえて　いるのです。一度（いちど）　通（とお）った　道（みち）を、わすれない。だから　まよわず、どこへでも　もどれます。あなたも　おなじ。あるいた　まちを　わすれなければ、そらから　もどれるのです。",
   "en_text": "Why can birds fly? Because they have wings? No — that is not all. Birds remember the roads of the sky. A road once traveled is never forgotten. That is why they can return anywhere without losing their way. You are the same: as long as you don't forget the towns you have walked, you can return to them through the sky.",
   "audio_ref": null,
   "level": "N3",
@@ -16,7 +16,7 @@
   "npc_ref": "chuck_wife_cianwood",
   "found_object_ref": null,
   "event_ref": "cs_tobu_cianwood",
-  "length_chars": 152,
+  "length_chars": 140,
   "questions": [
    {
     "type": "idee_generale",
@@ -71,8 +71,8 @@
     ],
     "correct_index": 2,
     "answer_span": {
-     "start": 47,
-     "end": 69
+     "start": 50,
+     "end": 78
     }
    },
    {
@@ -101,8 +101,8 @@
     ],
     "correct_index": 1,
     "answer_span": {
-     "start": 92,
-     "end": 112
+     "start": 108,
+     "end": 128
     }
    },
    {
@@ -131,8 +131,8 @@
     ],
     "correct_index": 2,
     "answer_span": {
-     "start": 122,
-     "end": 151
+     "start": 138,
+     "end": 167
     }
    }
   ]

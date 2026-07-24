@@ -35,6 +35,15 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, suite (mahogany-town/cs_uzu, route-42/cs_chikara,
+  cianwood-city/cs_tobu re-kanjifiés)** : `cs_uzu.json` (二/流/利用/上/進/沈 ajoutés,
+  海/怒/始/事/分/怖/読/船/乗 restent kana), `cs_chikara.json` (動/入/言/心/一/業 ajoutés,
+  腕/足/置/腰/息/合/体/全/部/押/技 restent kana), `cs_tobu.json` (鳥/道/一度/通 ajoutés —
+  一（いち）ど du texte original converti en run groupé 一度（いちど）au passage ; つばさ/
+  空/覚/忘/迷/戻/同/歩/町 restent kana). `answer_span`/`length_chars` recalculés
+  programmatiquement pour les 3. 5 linters verts. Reste 11 textes (ecruteak-city ×3,
+  burned-tower, azalea-town, ilex-forest, slowpoke-well, route-36, sprout-tower,
+  route-29, new-bark-town ×2) avant la passe dialogues (~500 fichiers, 36 zones).
 - **2026-07-24 — Phase 2, suite (2 textes ice-path re-kanjifiés)** :
   `content/texts/ice-path/cs_taki.json` (滝を上る話 — 上/下/落/魚/違/流/逆/中/道/見
   ajoutés avec lecture inline, ex. 登/思/静/付 restent kana car hors studiedSet) et
