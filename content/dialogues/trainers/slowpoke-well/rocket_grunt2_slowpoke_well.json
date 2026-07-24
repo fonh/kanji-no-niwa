@@ -4,7 +4,7 @@
  "zone_id": "slowpoke-well",
  "jlpt_level": "N4",
  "dialogue_states": {
-  "battle_intro": { "pages": [{ "jp": "これより　さきは　とおさない。", "en": "You won't pass beyond here." }] },
+  "battle_intro": { "pages": [{ "jp": "これより　先（さき）は　通（とお）さない。", "en": "You won't pass beyond here." }] },
   "post_battle": { "pages": [{ "jp": "……ボスに　しかられる。", "en": "...The boss is going to scold me." }] }
  }
 }
