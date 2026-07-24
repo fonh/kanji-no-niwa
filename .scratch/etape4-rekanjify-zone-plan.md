@@ -170,7 +170,7 @@ dernier, viser la couverture plutôt que la densité par fichier.
 
 | Zone | studiedSet | Fichiers |
 |---|---:|---:|
-| goldenrod-city | 255 | 50 | **Le plus gros fichier-count du corpus entier.** studiedSet modeste (255) mais 42 fichiers sous le plancher — volume, pas densité individuelle. Découper en au moins 3 sessions par sous-lieu (magasin/Game Corner/Tour Radio déjà distincts narrativement). |
+| goldenrod-city | 255 | 50 | **Le plus gros fichier-count du corpus entier.** Découpé en 3 sous-sessions par sous-lieu : **A) PNJ de ville (15 fichiers) ✅ fait 2026-07-24** — 8 restent à 0%, vérifiés sans amélioration sûre. **B) Tour Radio / arc Rocket (25 fichiers)** — reste à faire. **C) Gym/dresseurs divers (10 fichiers)** — reste à faire. |
 | route-34 | 240 | 10 |
 | **ilex-forest** | 220 | 3 | ✅ fait 2026-07-24 (hors ordre, cf. auto-évaluation — gain réel mais aurait dû venir après le Tier 4) |
 | slowpoke-well | 210 | 5 |

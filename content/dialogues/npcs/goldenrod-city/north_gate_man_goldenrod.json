@@ -46,11 +46,11 @@
   "not_briefed": {
    "pages": [
     {
-     "jp": "たいへんだ！　だいじな　てがみを　とりに　もって　いかれた！",
+     "jp": "大変（たいへん）だ！　だいじな　てがみを　鳥（とり）に　もって　いかれた！",
      "en": "This is bad! A bird made off with my important letter!"
     },
     {
-     "jp": "きたの　きの　うえに　とまってる。",
+     "jp": "きたの　木（き）の　うえに　とまってる。",
      "en": "It's perched up in a tree to the north."
     },
     {
@@ -69,11 +69,11 @@
   "waiting": {
    "pages": [
     {
-     "jp": "とりは　まだ　きの　うえかい？",
+     "jp": "鳥（とり）は　まだ　木（き）の　うえかい？",
      "en": "Is the bird still up in that tree?"
     },
     {
-     "jp": "うしろから　そっと、だよ。",
+     "jp": "後（うし）ろから　そっと、だよ。",
      "en": "Gently, from behind, remember."
     }
    ]

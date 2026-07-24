@@ -41,6 +41,32 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, Tier 5 lancé : goldenrod-city session A (PNJ de
+  ville, 15/15 fichiers) re-kanjifié.** Découpage en 3 sous-sessions par
+  sous-lieu comme prévu par le plan (50 fichiers au total, le plus gros
+  fichier-count du corpus) : A) PNJ de ville — fait ici ; B) Tour Radio/arc
+  Rocket (25 fichiers) ; C) Gym/dresseurs divers (10 fichiers) — restent à
+  faire. Kanji ajoutés : 通/毎日/水/木/羽/時/鳥/後/大変/本当. **Erreur
+  d'oubli attrapée par l'audit** : 当 jamais vérifié dans le batch (pas une
+  mauvaise lecture cette fois, un oubli pur — comme l'erreur 今 de
+  cianwood-city) — appliqué à tort dans north_gate_man et real_director
+  (ほんとう→本当), repéré par l'audit `cumulative_start` juste après
+  l'édition, reverti en kana avant tout commit. **Bonus opportuniste** :
+  l'audit a aussi trouvé un usage pré-existant (hors session, confirmé via
+  `git log -p`) de 会 hors studiedSet dans kimono_kuni_goldenrod
+  (お会いする) → revert kana. Règle tout-ou-rien confirmée sur de nombreux
+  candidats hors studiedSet (相棒/自転車/だいじ/にんぎょう/ぜんぶ/うんどう/
+  ばんぐみ/こうかん/どうぐ/しあい/おいわい/きんちょう/べんきょう/てがみ/
+  とりかえす等の避罠含む). 8 fichiers restent à 0% densité (studiedSet très
+  modeste à ce point), vérifiés sans amélioration sûre possible. Audit
+  `cumulative_start` re-vérifié CLEAN après le correctif. 7 linters verts
+  (536 fichiers dialogue, 480 fichiers état, 36 fichiers leçons, mêmes 3
+  WARN attendus, 0 FAIL). Densité globale 141→136 fichiers sous le
+  plancher. Reste goldenrod-city sessions B et C, puis route-34 (10),
+  slowpoke-well (5), azalea-town (10), union-cave (12), route-33 (1),
+  ruins-of-alph (3), route-32 (14), sprout-tower (3), violet-city (11),
+  route-31 (3), route-30 (6), cherrygrove-city (5), route-29 (2),
+  new-bark-town (6).
 - **2026-07-24 — Phase 2, route-35 (9/9 fichiers) re-kanjifié — TIER 4
   ENTIÈREMENT CLOS** (Oliville → Doublonville). Kanji ajoutés : 目/知/先/力/
   芸/火/決/前/温/夜/入り口/用心. Règle tout-ou-rien confirmée sur de
