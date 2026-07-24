@@ -11,7 +11,7 @@
   "greeting": {
    "pages": [
     { "jp": "アプリコットボックスだよ。", "en": "It's an Apricorn Box." },
-    { "jp": "きの　みを　あつめられるよ。", "en": "Now you can collect tree fruits." }
+    { "jp": "木（き）の　みを　あつめられるよ。", "en": "Now you can collect tree fruits." }
    ],
    "effects": [
     { "type": "grant_item", "item_id": "apricorn_box" }

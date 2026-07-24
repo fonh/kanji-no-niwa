@@ -41,6 +41,12 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-30 (6/6 fichiers) re-kanjifié.** Kanji
+  ajouté : 木 (seul candidat éligible sur toute la zone — studiedSet=60,
+  tout début de partie). だいじに/ながねん/けいけん/じょういランク etc. tous
+  hors studiedSet, confirmés sans amélioration sûre. 2 fichiers restent à
+  0% densité. Audit `cumulative_start` : CLEAN. 7 linters verts. Reste dans
+  le Tier 5 : cherrygrove-city (5), route-29 (2), new-bark-town (6).
 - **2026-07-24 — Phase 2, route-31 (3/3 fichiers vérifiés, 0
   modification).** Tous les candidats (べんり/わたして) hors studiedSet à
   ce stade très précoce (80 kanji) — aucune amélioration sûre possible,
