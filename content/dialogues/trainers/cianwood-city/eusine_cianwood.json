@@ -11,15 +11,15 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "みたか！？　いま、きたの　みさきに　あの　すがたが…！",
+     "jp": "みたか！？　いま、北（きた）の　みさきに　あの　すがたが…！",
      "en": "Did you see!? Just now, on the northern cape — that form...!"
     },
     {
-     "jp": "なぜ　きみの　まえにばかり　あらわれる！？",
+     "jp": "なぜ　きみの　前（まえ）にばかり　あらわれる！？",
      "en": "Why does it only ever appear before YOU!?"
     },
     {
-     "jp": "きみの　ちからを　たしかめさせて　もらう！",
+     "jp": "きみの　力（ちから）を　たしかめさせて　もらう！",
      "en": "I must see your strength for myself!"
     }
    ]
@@ -27,11 +27,11 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "…なるほど。これが　えらばれた　ものの　ちからか。",
+     "jp": "…なるほど。これが　選（えら）ばれた　ものの　力（ちから）か。",
      "en": "...I see. So this is the power of the chosen."
     },
     {
-     "jp": "みとめよう。だが、さきに　あの　こに　あうのは　ぼくだ！",
+     "jp": "みとめよう。だが、先（さき）に　あの　こに　あうのは　ぼくだ！",
      "en": "I accept it. But I'll be the one to meet that spirit first!"
     },
     {

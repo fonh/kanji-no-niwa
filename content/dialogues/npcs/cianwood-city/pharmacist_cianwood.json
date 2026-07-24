@@ -36,15 +36,15 @@
   "give": {
    "pages": [
     {
-     "jp": "アサギの　とうだいもりが　びょうき？　それは　いかん。",
+     "jp": "アサギの　とうだいもりが　病気（びょうき）？　それは　いかん。",
      "en": "The Olivine lighthouse keeper is ill? That won't do."
     },
     {
-     "jp": "この　ひみつの　くすりを　もって　いきなさい。",
+     "jp": "この　ひみつの　くすりを　もって　行（い）きなさい。",
      "en": "Take this Secret Potion to him."
     },
     {
-     "jp": "よく　きくが、にがいぞ。びょうにんは　のんだ　あと、げんきに　なるように　なった　ためしばかりだ。",
+     "jp": "よく　きくが、にがいぞ。病人（びょうにん）は　のんだ　後（あと）、元気（げんき）に　なるように　なった　ためしばかりだ。",
      "en": "It works wonders — though it's bitter. Every patient who's drunk it has come out healthy."
     }
    ],

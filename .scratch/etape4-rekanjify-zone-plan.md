@@ -124,7 +124,7 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 | route-47-48-cliff-cave | 520 | 4 | 0 | ✅ fait 2026-07-24. |
 | safari-zone | 520 | 1 | 0 | ✅ fait 2026-07-24. |
 | **route-42** | 520 | 5 | 0 | ✅ fait 2026-07-24 (hors ordre, cf. auto-évaluation) |
-| cianwood-city | 510 | 10 | 9 |
+| cianwood-city | 510 | 10 | 2 | ✅ fait 2026-07-24. 2 fichiers (black_belt_lung/yoshi) restent à 0% : vocabulaire dont chaque kanji candidat est hors studiedSet, aucune amélioration sûre possible. **TIER 3 ENTIÈREMENT CLOS.** |
 | whirl-islands | 510 | 0 | — | Aucun dialogue (zone à 0 PNJ, déjà notée close). |
 
 ### Tier 4 — studiedSet 250-500 (Oliville → Doublonville)

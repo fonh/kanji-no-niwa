@@ -41,6 +41,21 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, cianwood-city (10/10 fichiers) re-kanjifié — TIER 3
+  ENTIÈREMENT CLOS** (whirl-islands déjà clos, 0 dialogue). Kanji ajoutés : 修行/
+  行/病気/病人/後/元気/毎日/心/流（シジマ流）/伝/一/俺/元/力/年/言/目/知/選/先. **Bug
+  attrapé par l'audit avant commit** : 今（いま）utilisé dans eusine_cianwood.json
+  sans vérification (今 hors studiedSet réel de cette zone) — reverti. Confirmé
+  distinct du seul kanji hors studiedSet restant, 飛 dans chuck_wife_cianwood.json :
+  celui-là est PRÉ-EXISTANT (le CS-kanji lui-même, remis par grant_item juste à
+  cet endroit — exception documentée du mécanisme CS, pas une erreur), vérifié via
+  `git diff` que cette ligne n'a pas été touchée. 2 fichiers (black_belt_lung/
+  yoshi) restent à 0% densité, vocabulaire vérifié sans amélioration sûre. 5
+  linters verts (536 fichiers, mêmes 2 WARN attendus, 0 FAIL). Densité globale
+  215→208 fichiers sous le plancher. **Le Tier 3 (studiedSet 500-660, 10 zones)
+  est maintenant intégralement re-kanjifié**, comme les Tiers 1 et 2 avant lui.
+  Reste le Tier 4 (Oliville→Doublonville) puis le Tier 5 (Bourg Geon→
+  Doublonville 1ʳᵉ visite) pour clore toute la passe dialogues.
 - **2026-07-24 — Phase 2, mahogany-town (23/23 fichiers) re-kanjifié en une
   passe** — le plan prévoyait 2 sessions vu le volume (arc QG Rocket complet :
   Lance/Ariana/Petrel-faux-Sakaki/Silver cameo/3 scientifiques/6 sbires/Pryce/

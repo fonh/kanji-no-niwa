@@ -15,15 +15,15 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ぬおおおお！　たきよ！　おれに　ちからを！",
+     "jp": "ぬおおおお！　たきよ！　俺（おれ）に　力（ちから）を！",
      "en": "WOOOOAH! O waterfall! Grant me power!"
     },
     {
-     "jp": "…ん？　ちょうせんしゃか！　100ねん　はやい…と　いいたいが、",
+     "jp": "…ん？　ちょうせんしゃか！　100年（ねん）　はやい…と　言（い）いたいが、",
      "en": "...Hm? A challenger! I'd say you're a hundred years too early, but..."
     },
     {
-     "jp": "その　め、きたえられて　いるな。よし、うけて　たとう！",
+     "jp": "その　目（め）、きたえられて　いるな。よし、うけて　たとう！",
      "en": "Those eyes have seen training. Very well — I accept!"
     }
    ]
@@ -35,11 +35,11 @@
      "en": "Gwahaha! I lost, I lost!"
     },
     {
-     "jp": "つよさとは　つづける　ことだ。おまえは　それを　しっている。",
+     "jp": "つよさとは　つづける　ことだ。おまえは　それを　知（し）っている。",
      "en": "Strength is continuing on. You understand that."
     },
     {
-     "jp": "ストームバッジを　もって　いけ！",
+     "jp": "ストームバッジを　もって　行（い）け！",
      "en": "Take the Storm Badge!"
     }
    ],
