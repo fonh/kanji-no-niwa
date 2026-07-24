@@ -133,9 +133,22 @@ du dataset brut, pas éditorialisé, parfois trompeur (ex. 校 = "exam" avant "s
 
 ## 8. Décisions de spec issues des revues (pour l'équipe code)
 
-- **Examens ≥ 70 questions : reprise par section en cas d'échec**, jamais « tout refaire »
-  (Blue 98q ≈ 45-60 min de jeu ; le format mini-JLPT à sections existe déjà côté contenu — la
-  politique d'échec doit le suivre).
+- **Reprise par section — TRANCHÉ, PRD amendé 2026-07-24 (§ Système de Combat, écran de
+  défaite)** : les quatre jalons terminaux (chaque membre du Conseil 4 70q, Lance 80q, Blue 98q,
+  Red 100q) reprennent par section en cas de défaite — section courante recommencée (nouveaux
+  tirages), sections validées acquises, vies restaurées à leur valeur d'entrée de section. Les
+  16 師範 (Clair 72q compris) restent tout-ou-rien. L'interruption (fermer l'app) perd tout
+  l'examen dans tous les cas — aucun état de combat persisté. La recommandation d'origine des
+  revues du 23/07 est donc close ; la formulation du PRD fait foi.
+- **Nouvelles entrées `pages[]` (PRD 2026-07-24)** : `kind: "conversation_turn"` (会話 à
+  embranchements, champ `next` = turn_id ou `end` — gabarit `conversation-example.json`) s'ajoute
+  à `instant_response`/`companion_choice` ; le moteur de dialogue doit router ces kinds. Les
+  lettres du mentor gagnent un bloc frontmatter `reply` optionnel (chunks + `accepted_orders[]` +
+  `reaction_ref`) et `mentor_messages` un champ `replied_at` ; la lettre pointée par
+  `reaction_ref` affiche son `reaction_opening` si `replied_at` est posé.
+- **Préface Carte Mot (PRD § Système SRS, 2026-07-24)** : la toute première review d'un mot
+  (aucune `srs_reviews` pour ses cartes) affiche d'abord sa Carte Mot, 1 tap, une seule fois —
+  état dérivé, aucune colonne nouvelle.
 - **Mélange obligatoire des choix de QCM à l'affichage**, indépendamment de l'ordre de
   `choices[]`/`correct_index` dans le fichier de contenu (le contenu varie déjà `correct_index`
   à l'écriture depuis la phase 2.4, mais l'affichage doit re-mélanger dans tous les cas — ne

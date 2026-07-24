@@ -314,7 +314,19 @@ Chacun a un gabarit validé dans `content/gabarits/` — corriger d'abord le gab
    besoins des Boss/examens listés dans la spec (tableau des fréquences par mode).
 5. **Achievements / milestones** : spec PRD détaillée (streak 365, Ruban de Légende…), 0
    fichier de données → créer `content/achievements.json` conforme à la spec.
-6. **Overlays grammaire des 11 zones early** (l'arc tutoriel entier : route-29, route-30,
+6. **会話 — conversations à embranchements (~15-20)** *(ajouté 2026-07-24, PRD § 会話)* :
+   4-6 tours, situation calquée sur un can-do Marugoto かつどう du palier (jamais le texte),
+   PNJ sourcés de 3ᵉ catégorie, ~1-2 par grande ville, N5→N2. Gabarit :
+   `content/gabarits/conversation-example.json` (format `kind: "conversation_turn"`,
+   `next`/`end`, un `tone: natural` par tour). Zéro SRS/stat/pénalité ; récompense
+   optionnelle = collectible idempotent (modèle keigo).
+7. **Les 36 lettres du mentor** *(trou de production repéré 2026-07-24 — aucune ligne de plan
+   ne les couvrait)* : `content/dialogues/mentors/{elm,oak}/<event_ref>.md`, indexées
+   `event_type`/`event_ref` (PRD § Mentors : 16 badges, 6 Silver, 3 Rocket, 5 Kimono,
+   3 légendaires, Lance, Red + lettre finale d'Oak en japonais pur). Personnalité canonique,
+   aucun arc inventé. **~8-10 lettres gagnent un bloc `reply`** (chunks + `accepted_orders[]`
+   + `reaction_ref`, PRD 2026-07-24) — gabarit : `content/gabarits/mentor-letter-example.md`.
+8. **Overlays grammaire des 11 zones early** (l'arc tutoriel entier : route-29, route-30,
    route-31, cherrygrove, violet-city, sprout-tower, route-32, ruins-of-alph, azalea,
    ilex-forest, route-36) : écrits aux Lots 1-2 avant l'adoption du système, alors que
    `grammar-zone-assignment.json` leur assigne des points. Produire
@@ -332,12 +344,10 @@ Chacun a un gabarit validé dans `content/gabarits/` — corriger d'abord le gab
 1. Les 5 linters + les nouveaux (densité, item_id/event_id, correct_index, groupement) sur
    tout le corpus. Vérifications manuelles du guide § 6 (noms d'espèces, lesson_examples
    complets, variété des questions).
-2. Ajouter à `content/engine-contract.md` les décisions de spec issues des revues, pour que
-   l'équipe code les voie :
-   - **Examens ≥ 70 questions : reprise par section en cas d'échec** (jamais « tout
-     refaire » — Blue 98q ≈ 45-60 min ; le format mini-JLPT à sections existe déjà, la
-     politique d'échec doit le suivre) ;
-   - mélange obligatoire des choix de QCM à l'affichage ;
+2. Vérifier que `content/engine-contract.md` § 8 est à jour *(fait le 2026-07-24 : reprise
+   par section TRANCHÉE et PRD amendé — Conseil 4/Lance/Blue/Red par section, 師範
+   tout-ou-rien ; mélange QCM consigné ; nouveaux kinds `conversation_turn` et bloc `reply`
+   des lettres consignés)* et y ajouter toute nouvelle décision prise en cours de passe :
    - liste des différés à l'implémentation : déclenchement Raikou (45q)/Entei (52q),
      barèmes Pokéathlon (gate réel de Chuck `pokeathlon_score ≥ 250`), Concours du Parc
      (mar/jeu/sam), Safari adapté, Kanji Flip/Game Corner, horaires Magnet Train/SS Aqua,

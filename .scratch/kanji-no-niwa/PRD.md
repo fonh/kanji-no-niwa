@@ -246,7 +246,7 @@ Intro identique à HGSS : transition diagonale, sprite du dresseur qui arrive pa
 - **Feedback d'échec (tranché 2026-07-07, audit 07, finding 07-D5, au grill)** : après une mauvaise réponse, **la correction s'affiche brièvement** (1-2 s — surlignage vert de la bonne option, ou la lecture/l'ordre attendus pour Saisie/Disposition), puis question suivante ; la vie est perdue quand même. Le retry-jusqu'à-correct des leçons/textes ne s'applique jamais en combat — l'erreur doit coûter, sinon les vies ne mesurent rien.
 - Barre adverse : chaque bonne réponse réduit la barre de `1/questions` (visuel uniquement, aucun effet mécanique).
 - Terminer les questions avec au moins un point de vie = victoire.
-- **Écran de défaite (tranché 2026-07-08, audit 10, point 2, au grill)** : quand la barre joueur tombe à 0, un écran bref façon Pokémon (sprite du dresseur, "Tu n'as plus de vies !") précède le retour à la carte / proposition de rejouer — pas de transition muette, pas de bilan détaillé des questions ratées (trop lourd si fréquent en début de partie). Pour les 4 combats au format examen 試練 (師範, Elite Four, Lance, Red — voir « Jalons-examens » ci-dessous), une défaite fait recommencer **tout l'examen depuis le début**, comme n'importe quel autre combat — pas de checkpoint par section, comportement inchangé malgré la longueur (§ Pas de répétition de contenu : le contenu retiré est de toute façon neuf à chaque tentative).
+- **Écran de défaite (tranché 2026-07-08, audit 10, point 2, au grill)** : quand la barre joueur tombe à 0, un écran bref façon Pokémon (sprite du dresseur, "Tu n'as plus de vies !") précède le retour à la carte / proposition de rejouer — pas de transition muette, pas de bilan détaillé des questions ratées (trop lourd si fréquent en début de partie). Pour les combats au format examen 試練 (師範, Elite Four, Lance, Red — voir « Jalons-examens » ci-dessous), la règle d'échec dépend du jalon *(révisé 2026-07-24, revue structurelle — remplace « pas de checkpoint par section, comportement inchangé malgré la longueur », qui contredisait la recommandation des revues du 23/07 consignée au contrat moteur)* : les **16 師範 (jusqu'à Blue exclu)** font recommencer tout l'examen depuis le début, comme n'importe quel combat (Clair 72q reste le plafond du tout-ou-rien) ; les **quatre jalons terminaux — chaque membre du Conseil 4 (70q), Lance (80q), Blue (98q), Red (100q)** — reprennent **par section** : une défaite fait recommencer la **section courante** (nouveaux tirages, § Pas de répétition de contenu), les sections déjà validées restent acquises, et les vies reviennent à leur valeur d'entrée de section. Rationale : à 45-60 min d'épreuve, échouer à la question 90 et tout refaire ne mesure rien de plus — ça punit la séance ; le format à sections existe déjà, la politique d'échec le suit. **L'interruption reste totale** : fermer l'app perd tout l'examen, sections validées comprises (aucun état de combat persisté — règle ci-dessous inchangée).
 - **Interruption — fermer l'app en plein combat (tranché 2026-07-08, audit 10, point 2, au grill)** : aucun état de combat n'est sauvegardé. Rouvrir l'app renvoie sur la carte, hors combat, comme une fuite — cohérent avec « rejouable immédiatement sans cooldown » (le combat n'a jamais été pensé comme un état persistant). S'applique à tout combat, y compris Red/Elite Four : un combat interrompu à la question 60/100 ne reprend pas, il faut relancer.
 
 ### Les 9 Modes de Question
@@ -510,6 +510,41 @@ Compléter une leçon déclenche un `Effect.advance_quest` sur `lessons-<zone_id
 
 ---
 
+## 会話 — Conversations à embranchements (adopté 2026-07-24, revue structurelle)
+
+**Le trou comblé** : tous les systèmes du jeu testent la réception (QCM, lecture, écoute) ou une
+production atomique (taper une lecture, un point de grammaire, ordonner des chunks) ; le 即時応答
+est mono-tour et le Salon du keigo teste un choix de registre isolé. Rien ne testait la **cohérence
+conversationnelle** — tenir sa place dans un échange sur plusieurs tours.
+
+**Mécanique** : une conversation de **4-6 tours** avec un PNJ, calquée sur une situation can-do de
+Marugoto かつどう du palier (se présenter, commander, demander son chemin, s'excuser, inviter,
+refuser poliment… — la *situation* est calquée, jamais le texte, règle habituelle § 3 du guide
+d'écriture). À chaque tour : le PNJ parle (texte + audio), 3 répliques proposées (une naturelle,
+deux à côté — registre faux, hors-sujet, réponse qui ignore le tour précédent). La conversation
+**bifurque légèrement selon le choix** (le tour suivant dépend de la réplique choisie), se termine
+toujours — aucun échec possible : la réaction du PNJ (chaleureuse ou correction gentille) EST le
+feedback. Ce qui est testé au tour N dépend de ce qui s'est dit au tour N-1 — c'est la différence
+structurelle avec le 即時応答, qu'il ne remplace pas (l'appel reste l'exercice réflexe ; la
+conversation est l'exercice de suivi).
+
+**Invariants (mêmes que 即時応答/keigo, aucun nouveau régime)** : zéro écriture SRS, zéro pénalité,
+aucune statistique affichée (08-D7) ; traduction X à la demande par page, lectures inline ADR-0002,
+budget kanji du palier ; rejouable à volonté (les bifurcations donnent une raison de rejouer) ;
+récompense optionnelle = `Effect.grant_item` collectible idempotent (modèle keigo), jamais un gate.
+
+**Modélisation — aucune nouvelle structure** : entrée spéciale de `pages[]`
+(`kind: "conversation_turn"`, champs `npc_line {jp, en, audio_ref}`, `choices[] {jp, en, tone,
+reaction {jp, en}, next}`, `next` = id du tour suivant ou `end`) — même pattern d'extension que
+`instant_response` et `companion_choice`. Gabarit : `content/gabarits/conversation-example.json`.
+
+**Placement et volume** : ~15-20 conversations sur tout le jeu, graduées N5→N2, portées par des
+PNJ **sourcés** de 3ᵉ catégorie (couleur locale recatégorisée — § Dresseurs de Route), ~1-2 par
+grande ville, choisis à la passe contenu là où la situation Marugoto colle au lieu (serveuse d'un
+restaurant de Céladia → commander ; guichet de gare → demander un horaire). Aucun PNJ inventé.
+
+---
+
 ## Système SRS
 
 Algorithme FSRS (`ts-fsrs`). Deux types de cartes :
@@ -526,6 +561,15 @@ Session SRS : esthétique Centre Pokémon, musique calme. Carte affichée → R�
 **Maîtrise** : un kanji ou mot est "maîtrisé" quand ses deux cartes ont une stabilité FSRS ≥ **14 jours** *(seuil abaissé de 30 à 14, 2026-07-07, audit 07, tranché au grill — 30 jours jugé trop tardif pour la bascule vers le japonais ; la barre reste une convention posée sur la mesure du SRS, comme le « mature » d'Anki à 21 jours d'intervalle. S'applique partout où « maîtrisé » est lu : graduation des modes de quiz, tuiles dorées du Kanjidex, achievements « kanji maîtrisés », Loterie « kanji du jour »)*.
 
 **Déblocage de vocabulaire (seuil assoupli 2026-07-01)** : dès qu'un kanji est **étudié** (leçon complétée, cartes en file — pas besoin d'attendre sa maîtrise à ≥14 jours de stabilité ; définition précisée 2026-07-06, audit 03 ; seuil aligné audit 07), les mots JLPT éligibles utilisant ce kanji rejoignent la file SRS (dus à partir du lendemain matin, comme toute nouvelle carte — voir Timing ci-dessus). **Raison du changement :** exiger la maîtrise complète de chaque kanji composant avant de débloquer un mot retardait excessivement l'acquisition de vocabulaire réel (un joueur pouvait connaître le sens isolé de dizaines de kanji sans jamais pratiquer un seul mot les combinant). Pas de plafond quotidien — le rythme d'introduction de nouveau kanji (en leçon) et de nouveau vocabulaire (dès kanji étudiés) suit librement la progression du joueur sur la carte. La seule contrainte quotidienne du jeu reste la session SRS (voir Boucle Quotidienne) : au moins une session par jour, peu importe sa taille.
+
+**Présentation des nouveaux mots — préface Carte Mot (adopté 2026-07-24, revue structurelle)** :
+un mot débloqué entre en file sans avoir jamais été introduit (contrairement aux kanji, qui ont
+leur double page de leçon). Correction minimale : **la toute première review d'un mot affiche
+d'abord sa Carte Mot en préface** (l'écran de consultation existant, 1 tap pour passer à la
+question), une seule fois par mot. Aucune donnée nouvelle — « première review » se dérive de
+l'historique FSRS de la carte (aucune `srs_reviews` pour ce mot) ; aucun contenu nouveau — la
+Carte Mot existe déjà pour chaque mot JLPT. La carte est notée normalement ensuite : la préface
+est une introduction, pas une aide permanente.
 
 **Rythme et charge assumés (documenté 2026-07-05, audit 01 — aucun chiffre cible n'existait) :** finir le jeu = 2136 kanji ×2 cartes + ~7 836 mots ×2 ≈ **19 944 cartes** à introduire. Au rythme de référence (~1 leçon/jour : 4-5 kanji en Johto, 8-12 en Kanto), le jeu se boucle en **~12-18 mois**, avec ~40-55 nouvelles cartes/jour et **~300-380 révisions FSRS/jour en régime de croisière (≈ 1h/jour)**. Assumé tel quel : la décision « pas de plafond quotidien » est conservée, et tout design SRS/leçons/textes doit être jugé contre ces chiffres — cohérent avec l'achievement streak 365 jours.
 
@@ -835,6 +879,20 @@ Le mentor actif écrit **après les grands événements** de sa région :
 **La lettre finale** (après Red) est écrite par Oak, entièrement en japonais, sans traduction — c'est l'épreuve réelle, la lettre EST l'aboutissement du combat contre Red.
 
 Tous les messages stockés dans `/content/dialogues/mentors/` en markdown (sous-dossiers `elm/` et `oak/`), indexés par `event_type` et `event_ref` *(renommés 2026-07-06, audit 04, finding 04-D2 — collision de nom avec le `trigger_type` de `map_npcs`)*. Aucune génération à runtime. **Surface de lecture (définie 2026-07-07, audit 08, finding 08-B17)** : Pokégear → でんわ → fiche du mentor actif → historique des lettres — les 36 lettres n'avaient aucun écran où être lues ; `mentor_messages.read_at` est posé à l'ouverture.
+
+**Réponses aux lettres (adopté 2026-07-24, revue structurelle)** : ~8-10 des 36 lettres (sélection
+à la passe contenu — les jalons à forte charge émotionnelle : premiers badges, rencontres Silver,
+Lance, l'avant-Red) proposent au joueur de **composer une courte réponse** : 3-4 chunks japonais à
+assembler (composant Disposition réutilisé tel quel), avec **plusieurs ordres valides acceptés**
+(`accepted_orders[]`, précalculés à l'écriture — la validation reste une comparaison de séquences,
+aucune correction libre). Répondre est **optionnel** — zéro pénalité, zéro SRS, aucune trace
+statistique ; la seule conséquence est narrative : la lettre suivante du mentor s'ouvre sur une
+ligne de réaction si une réponse a été envoyée (`mentor_messages.replied_at` ; une variante d'ouverture
+par lettre suivante, écrite à la passe contenu — pas de variante « pas de réponse », l'ouverture
+standard fait ce rôle). C'est la seule production d'énoncé complet du jeu adressée à un personnage —
+le pendant écrit du 会話. Données : bloc `reply` optionnel dans le frontmatter de la lettre
+(chunks, ordres acceptés, `reaction_ref` vers la lettre suivante). Gabarit :
+`content/gabarits/mentor-letter-example.md`.
 
 ---
 

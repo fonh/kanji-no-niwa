@@ -1,0 +1,144 @@
+{
+  "_gabarit_note": "Gabarit 会話 — conversation à embranchements (PRD § 会話, adopté 2026-07-24). Entrée spéciale de pages[] (kind: conversation_turn), même pattern d'extension que instant_response/companion_choice. Situation calquée sur un can-do Marugoto Starter A1 (demander son chemin — situation seulement, jamais le texte). PNJ porteur : à choisir en passe contenu parmi les PNJ sourcés de 3ᵉ catégorie de la zone ; ce gabarit utilise une grand-mère d'ambiance de Ville Griotte (guide gent's town, N5). tone ∈ {natural, wrong_register, off_topic} — exactement un natural par tour. next = turn_id ou \"end\". Invariants : zéro SRS, zéro stat, rejouable, traduction X par page, lectures inline ADR-0002, budget kanji du palier (ici N5 : tout kana sauf studiedSet).",
+  "npc_id": "conversation_example",
+  "name": { "jp": "おばあさん", "en": "Old Woman" },
+  "zone_id": "cherrygrove-city",
+  "jlpt_level": "N5",
+  "state_rules": [
+    { "default": true, "state": "chat" }
+  ],
+  "dialogue_states": {
+    "chat": {
+      "pages": [
+        {
+          "kind": "conversation_turn",
+          "turn_id": "t1",
+          "npc_line": {
+            "jp": "あら、たびの　ひとかい？　どこへ　いくの？",
+            "en": "Oh my, a traveler? Where are you headed?",
+            "audio_ref": "audio/conversations/cherrygrove_obaasan_t1.opus"
+          },
+          "choices": [
+            {
+              "jp": "ポケモンセンターを　さがして　います。",
+              "en": "I'm looking for the Pokémon Center.",
+              "tone": "natural",
+              "reaction": { "jp": "そう。この　みちを　まっすぐよ。", "en": "I see. Straight down this road." },
+              "next": "t2_center"
+            },
+            {
+              "jp": "きみに　かんけい　ないでしょう。",
+              "en": "That's none of your business.",
+              "tone": "off_topic",
+              "reaction": { "jp": "まあ！　しつれいねえ。でも、こまったら　きいてね。", "en": "My! How rude. But ask me if you get lost, dear." },
+              "next": "t2_lost"
+            },
+            {
+              "jp": "ポケモンセンターの　ばしょを　おしえて　いただけますでしょうか。",
+              "en": "Might I humbly inquire as to the location of the Pokémon Center?",
+              "tone": "wrong_register",
+              "reaction": { "jp": "ふふ、ていねいすぎるよ。「どこですか」で　いいのよ。", "en": "Heehee, too polite! Just 'where is it?' is fine." },
+              "next": "t2_center"
+            }
+          ]
+        },
+        {
+          "kind": "conversation_turn",
+          "turn_id": "t2_center",
+          "npc_line": {
+            "jp": "この　まちは　はじめて？",
+            "en": "First time in this town?",
+            "audio_ref": "audio/conversations/cherrygrove_obaasan_t2a.opus"
+          },
+          "choices": [
+            {
+              "jp": "はい、はじめてです。",
+              "en": "Yes, it's my first time.",
+              "tone": "natural",
+              "reaction": { "jp": "じゃあ、うみも　みて　いってね。きれいよ。", "en": "Then go see the sea too. It's beautiful." },
+              "next": "t3"
+            },
+            {
+              "jp": "ポケモンセンターは　どこですか。",
+              "en": "Where is the Pokémon Center?",
+              "tone": "off_topic",
+              "reaction": { "jp": "さっき　いった　でしょう。まっすぐよ。", "en": "I just told you, dear. Straight ahead." },
+              "next": "t3"
+            },
+            {
+              "jp": "はじめてで　ございます。",
+              "en": "It is my first time, most honored madam.",
+              "tone": "wrong_register",
+              "reaction": { "jp": "そんなに　かたく　ならないで。", "en": "No need to be so stiff!" },
+              "next": "t3"
+            }
+          ]
+        },
+        {
+          "kind": "conversation_turn",
+          "turn_id": "t2_lost",
+          "npc_line": {
+            "jp": "で、ほんとうは　どこへ　いきたいの？",
+            "en": "So, where do you really want to go?",
+            "audio_ref": "audio/conversations/cherrygrove_obaasan_t2b.opus"
+          },
+          "choices": [
+            {
+              "jp": "すみません。ポケモンセンターは　どこですか。",
+              "en": "Sorry. Where is the Pokémon Center?",
+              "tone": "natural",
+              "reaction": { "jp": "すなおで　よろしい。まっすぐよ。", "en": "That's better. Straight ahead." },
+              "next": "t3"
+            },
+            {
+              "jp": "うみは　きれいですね。",
+              "en": "The sea is beautiful, isn't it?",
+              "tone": "off_topic",
+              "reaction": { "jp": "そうねえ。……で、みちは　いいの？", "en": "It is... but didn't you need directions?" },
+              "next": "t3"
+            },
+            {
+              "jp": "みちを　おたずね　もうしあげます。",
+              "en": "I most humbly beseech thee for directions.",
+              "tone": "wrong_register",
+              "reaction": { "jp": "ふるい　ほんの　ことばみたいね。", "en": "You sound like an old book, dear." },
+              "next": "t3"
+            }
+          ]
+        },
+        {
+          "kind": "conversation_turn",
+          "turn_id": "t3",
+          "npc_line": {
+            "jp": "きを　つけてね。よい　たびを！",
+            "en": "Take care. Have a good journey!",
+            "audio_ref": "audio/conversations/cherrygrove_obaasan_t3.opus"
+          },
+          "choices": [
+            {
+              "jp": "ありがとう　ございます。",
+              "en": "Thank you very much.",
+              "tone": "natural",
+              "reaction": { "jp": "どういたしまして。", "en": "You're welcome." },
+              "next": "end"
+            },
+            {
+              "jp": "はい、さようなら。",
+              "en": "Yes, goodbye.",
+              "tone": "off_topic",
+              "reaction": { "jp": "……おれいの　ひとことが　ほしかったわね。", "en": "...A word of thanks would have been nice." },
+              "next": "end"
+            },
+            {
+              "jp": "かんしゃの　きわみに　ぞんじます。",
+              "en": "I am at the very pinnacle of gratitude.",
+              "tone": "wrong_register",
+              "reaction": { "jp": "「ありがとう」で　じゅうぶんよ。", "en": "'Thank you' is plenty, dear." },
+              "next": "end"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

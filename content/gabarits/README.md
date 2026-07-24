@@ -13,6 +13,8 @@ JSON est engagée ici, pas le contenu final.
 | `radio-show-example.json` | Émission radio (bibliothèque d'Oak) | premier épisode N5 possible, post-Radio Card |
 | `keigo-session-example.json` | Session Salon du keigo | Fan Club de Vermeille, intention "demande s'il a lu le document" |
 | `../dialogues/calls/joey_route30.json` | Appel 即時応答 | Youngster Joey (route-30), dresseur enregistrable réel |
+| `conversation-example.json` | 会話 à embranchements (PRD § 会話, 2026-07-24) | cherrygrove-city, can-do « demander son chemin » (Marugoto Starter A1), grand-mère d'ambiance |
+| `mentor-letter-example.md` | Lettre du mentor + bloc `reply` (PRD § Mentors, 2026-07-24) | Elm, lettre post-badge Falkner — frontmatter reply : chunks + accepted_orders + reaction_ref |
 
 ## Décisions de schéma prises en écrivant ces gabarits (à confirmer)
 

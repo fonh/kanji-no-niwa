@@ -88,6 +88,25 @@ _Avoid_: call quiz, phone minigame
 A dedicated mini-game (Vermeille City Fan Club; advanced variant at Silph Co., Saffron) testing register choice: one situation, three interlocutors (friend / shopkeeper / superior), the player picks the phrasing fitting each register (casual / teineigo / keigo) among 3-4 options. ~5 situations per session, graded N4→N2, zero SRS write. The advanced variant specifically traps 二重敬語 (double honorifics, e.g. お読みになられました) as a distractor. Needs no new DB table — reward is an ordinary `items.category: collectible` granted via idempotent `Effect.grant_item`; owning the item is itself the "session done" marker. Example: `content/gabarits/keigo-session-example.json`.
 _Avoid_: keigo quiz, politeness minigame
 
+**Conversation** (会話) *(added 2026-07-24, structural review)*:
+A branching multi-turn exchange (4-6 turns) with a sourced ambient NPC, modeled on a Marugoto
+かつどう can-do situation (ordering, asking directions, apologizing…). Each turn: NPC line
+(text + audio) → 3 replies (one natural, one wrong-register, one off-topic) → the chosen reply
+selects the next turn (`kind: "conversation_turn"` entries in `pages[]`, `next` pointers — same
+extension pattern as Instant Response). Always completes; the NPC reaction is the only feedback.
+Zero SRS write, zero penalty, no stats; replayable. Distinct from Instant Response (single-turn
+reflex) — a Conversation tests coherence across turns. ~15-20 in the whole game, N5→N2.
+Example: `content/gabarits/conversation-example.json`.
+_Avoid_: dialogue tree (reserved for Dialogue States), chat minigame
+
+**Mentor Reply** *(added 2026-07-24, structural review)*:
+An optional composed answer to ~8-10 of the 36 mentor letters: 3-4 Japanese chunks assembled with
+the Disposition component, several `accepted_orders[]` precomputed at authoring time. Optional,
+zero penalty/SRS/stats; the only consequence is narrative — the mentor's next letter opens with a
+`reaction_opening` line when `replied_at` is set. Lives in the letter's frontmatter `reply` block.
+Example: `content/gabarits/mentor-letter-example.md`.
+_Avoid_: free-form writing, graded composition
+
 **Companion Choice** *(added 2026-07-09, Étape 3 point 2, player-review pass)*:
 A one-time, purely cosmetic pick among 3 companions (Pikachu + 2 TBD, PRD § Compagnon) at Elm's lab. Modeled as a `kind: "companion_choice"` entry inside `pages[]` (same extension pattern as Instant Response), backed by `content/companions.json` and written once via `Effect.set_companion` into `user_map_state.companion_id` — found missing from the schema entirely until this pass (§ Compagnon referenced `companion_id` as "persisted" with no table carrying it). Never re-chosen; no stats, no SRS, no battle effect — only a map-follower sprite and a cosmetic echo at the true ending. The 2 non-Pikachu slots stay `tbd_2`/`tbd_3` until the HGSS follower-sprite dump is checked (roadmap Étape 5 point 5) — deciding their identity without that check would be unsourced content.
 _Avoid_: starter choice, starter Pokémon (no battle Pokémon exist in this game — see rule #1, `guidebook-adapted.md`)
