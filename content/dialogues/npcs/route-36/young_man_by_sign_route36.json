@@ -14,7 +14,7 @@
  "dialogue_states": {
   "waiting": {
    "pages": [
-    { "jp": "この　みちの　いわ、じゃまだよね。", "en": "The rocks on this road are in the way, huh." },
+    { "jp": "この　道（みち）の　いわ、じゃまだよね。", "en": "The rocks on this road are in the way, huh." },
     { "jp": "バッジを　とったら、また　きてね。", "en": "Come back once you've got a badge." }
    ]
   },
@@ -22,7 +22,7 @@
    "pages": [
     { "jp": "バッジ、もってるね。", "en": "You have a badge now." },
     { "jp": "これを　あげよう。", "en": "I'll give you this." },
-    { "jp": "まえに　はなした　はなし、おぼえてる？", "en": "Remember the story I told you earlier?" }
+    { "jp": "前（まえ）に　話（はな）した　話（はなし）、おぼえてる？", "en": "Remember the story I told you earlier?" }
    ],
    "effects": [
     { "type": "grant_item", "item_id": "cs_kudakeru" },

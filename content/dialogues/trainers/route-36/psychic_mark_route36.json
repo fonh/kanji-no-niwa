@@ -6,7 +6,7 @@
  "dialogue_states": {
   "battle_intro": {
    "pages": [
-    { "jp": "きみの　うごき、よめて　いるよ。", "en": "I can read your moves." }
+    { "jp": "きみの　動（うご）き、よめて　いるよ。", "en": "I can read your moves." }
    ]
   },
   "post_battle": {

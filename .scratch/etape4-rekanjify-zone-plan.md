@@ -157,7 +157,7 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 | burned-tower | 410 | 7 | 0 | ✅ fait 2026-07-24. Bonus : fixé 2 occurrences pré-existantes (hors session, Lot 3) de 会（あ）った/会（あ）おう hors studiedSet (会 non étudié à ce point). |
 | ecruteak-city | 370 | 23 | 11 |
 | route-37 | 355 | 5 | 1 | ✅ fait 2026-07-24. 1 fichier (sunny_route37) reste à 0% : にちようび/きょう ont chacun un kanji hors studiedSet (曜/今), aucune amélioration sûre possible. |
-| route-36 | 330 | 4 | — |
+| route-36 | 330 | 4 | 2 | ✅ fait 2026-07-24. 2 fichiers (arthur/school_kid_alan) restent à 0% : もくようび (曜) et べんきょう/せいか (勉/強/果) ont chacun un kanji hors studiedSet, aucune amélioration sûre possible. |
 | national-park | 310 | 9 | — |
 | route-35 | 290 | 9 | 9 |
 
