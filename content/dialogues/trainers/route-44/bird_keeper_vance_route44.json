@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "やまの　かぜは　つめたく　するどい。",
+     "jp": "山（やま）の　風（かぜ）は　つめたく　するどい。",
      "en": "The mountain wind is cold and sharp."
     },
     {
-     "jp": "するどい　しょうぶを　みせて　くれ！",
+     "jp": "するどい　しょうぶを　見（み）せて　くれ！",
      "en": "Show me a battle just as sharp!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "かぜより　するどいとは…。",
+     "jp": "風（かぜ）より　するどいとは…。",
      "en": "Sharper than the wind itself..."
     }
    ]

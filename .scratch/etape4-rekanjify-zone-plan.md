@@ -116,8 +116,8 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 |---|---:|---:|---:|
 | blackthorn-city | 610 | 14 | 1 | ✅ fait 2026-07-24. 1 fichier (effort_girl) reste à 0% : ses 2 mots (鍛えてる/似合ってる) ont un kanji hors studiedSet chacun, aucune amélioration sûre possible. |
 | ice-path | 590 | 5 | 0 | ✅ fait 2026-07-24 |
-| route-44 | 570 | 7 | — |
-| lake-of-rage | 565 | 10 | 8 |
+| route-44 | 570 | 7 | 0 | ✅ fait 2026-07-24. |
+| lake-of-rage | 565 | 10 | 0 | ✅ fait 2026-07-24. |
 | route-43 | 560 | 7 | — |
 | mahogany-town | 545 | 23 | 22 | Gros volume (arc QG Rocket) — prévoir 2 sessions. |
 | mt-mortar | 535 | 4 | — |

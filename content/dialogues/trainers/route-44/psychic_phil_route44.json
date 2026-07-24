@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "こおりの　やまの　まえは、こころが　すみわたる。",
+     "jp": "こおりの　山（やま）の　前（まえ）は、心（こころ）が　すみわたる。",
      "en": "Before the icy mountain, the mind grows clear."
     },
     {
-     "jp": "すんだ　こころで　しょうぶ！",
+     "jp": "すんだ　心（こころ）で　しょうぶ！",
      "en": "Let us battle with clear minds!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "こころが　みだれた…。",
+     "jp": "心（こころ）が　みだれた…。",
      "en": "My mind is shaken..."
     }
    ]

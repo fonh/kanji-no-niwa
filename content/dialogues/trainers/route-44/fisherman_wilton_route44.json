@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "イブキさんに　いどむのか？　その　まえに　おれだ！",
+     "jp": "イブキさんに　いどむのか？　その　前（まえ）に　俺（おれ）だ！",
      "en": "Challenging Clair? You'll get past me first!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "イブキさんは　おれの　100ばい　つよいぞ…。",
+     "jp": "イブキさんは　俺（おれ）の　100倍（ばい）　つよいぞ…。",
      "en": "Clair's a hundred times stronger than me..."
     }
    ]

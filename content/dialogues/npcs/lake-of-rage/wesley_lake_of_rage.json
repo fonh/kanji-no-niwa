@@ -26,11 +26,11 @@
   "welcome": {
    "pages": [
     {
-     "jp": "ぼく、ウェスリー。すいようびの　みずうみは　みずが　ひくく　なるんだ。",
+     "jp": "ぼく、ウェスリー。すいようびの　湖（みずうみ）は　水（みず）が　低（ひく）く　なるんだ。",
      "en": "I'm Wesley. On Wednesdays the lake water drops."
     },
     {
-     "jp": "かくれた　みちが　あらわれる。きみにも　みせて　あげる。ほら、これも！",
+     "jp": "隠（かく）れた　道（みち）が　あらわれる。きみにも　みせて　あげる。ほら、これも！",
      "en": "Hidden paths appear. Let me show you — and here, take this too!"
     }
    ],
@@ -44,7 +44,7 @@
   "after": {
    "pages": [
     {
-     "jp": "すいようびは　みずうみの　ひみつの　ひ、だよ。",
+     "jp": "すいようびは　湖（みずうみ）の　ひみつの　日（ひ）、だよ。",
      "en": "Wednesday is the lake's secret day."
     }
    ]

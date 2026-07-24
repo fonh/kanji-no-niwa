@@ -11,7 +11,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "（あかい　ひかりが　おそいかかって　きた！）",
+     "jp": "（あかい　光（ひかり）が　おそいかかって　きた！）",
      "en": "(The red light lunges at you!)"
     }
    ]
@@ -19,7 +19,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "（ひかりが　おさまり、みずうみに　しずかさが　もどった。）",
+     "jp": "（光（ひかり）が　おさまり、湖（みずうみ）に　しずかさが　もどった。）",
      "en": "(The light subsides; calm returns to the lake.)"
     },
     {

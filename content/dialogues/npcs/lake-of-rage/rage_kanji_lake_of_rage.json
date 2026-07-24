@@ -27,7 +27,7 @@
   "raging": {
    "pages": [
     {
-     "jp": "（みずうみの　まんなかで、あかい　ひかりが　あばれて　いる…！）",
+     "jp": "（湖（みずうみ）の　まんなかで、あかい　光（ひかり）が　あばれて　いる…！）",
      "en": "(In the middle of the lake, a red light thrashes wildly...!)"
     },
     {
@@ -43,11 +43,11 @@
   "calmed": {
    "pages": [
     {
-     "jp": "（みずうみは　しずかに　なった。）",
+     "jp": "（湖（みずうみ）は　しずかに　なった。）",
      "en": "(The lake has gone still.)"
     },
     {
-     "jp": "（あかい　うろこが　きらりと　ながれついた。）",
+     "jp": "（あかい　うろこが　きらりと　流（なが）れついた。）",
      "en": "(A red scale drifts glittering to your feet.)"
     }
    ]

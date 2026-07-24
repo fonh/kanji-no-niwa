@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "8つめの　バッジが　ほしいんだろ？",
+     "jp": "8つ目（め）の　バッジが　ほしいんだろ？",
      "en": "After your eighth badge, are you?"
     },
     {
-     "jp": "その　みちの　けわしさ、おしえて　やる！",
+     "jp": "その　道（みち）の　険（けわ）しさ、おしえて　やる！",
      "en": "Let me show you how steep that road is!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "けわしい　みちを　いく　しかくが　あるな。",
+     "jp": "険（けわ）しい　道（みち）を　行（い）く　しかくが　あるな。",
      "en": "You've earned the right to walk that road."
     }
    ]

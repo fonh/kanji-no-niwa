@@ -41,6 +41,20 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-44 + lake-of-rage (17/17 fichiers) re-kanjifié**,
+  méthode `cumulative_start` correcte utilisée dès le départ (script corrigé).
+  Kanji ajoutés : 道/険/行/山/風/池/魚/水/前/俺/倍/心/手前/名人/私/湖/力/貸/光/流/先/円/払/
+  水/低/隠/道/日. Notable : 来/強/全/教/礼/団/曜/以/見/団 restent hors studiedSet à ces
+  deux zones malgré des zones narrativement proches (ice-path, blackthorn) où
+  certains de ces mêmes kanji étaient déjà disponibles — confirme que l'ordre du
+  curriculum (`cumulative_start`) ne suit pas l'ordre de visite, exactement la
+  raison pour laquelle la règle #2 interdit le calcul à la main. Petite erreur de
+  lecture rattrapée par l'audit de contrôle : 以 pris pour True par erreur de
+  lecture du batch de vérification (fisherman_andre_lake_of_rage.json, 以上→revert).
+  Audit systématique (kanji réellement utilisé vs `cumulative_start`) refait après
+  coup sur les deux zones : 0 divergence après le correctif. Sûreté structurelle
+  (git diff jp-only) confirmée. 5 linters verts (536 fichiers, mêmes 3 WARN
+  attendus, 0 FAIL). Densité globale 258→243 fichiers sous le plancher.
 - **2026-07-24 — Phase 2, blackthorn-city (14/14 fichiers) re-kanjifié — BUG DE
   MÉTHODE ATTRAPÉ ET CORRIGÉ SUR TOUTE LA SESSION** : en commençant blackthorn-city
   (1ʳᵉ zone du Tier 3), `lint-kanji-budget.py` a fait échouer 6 fichiers (budget
