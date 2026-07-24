@@ -6,7 +6,7 @@
    "jp": "きこりの　やいば",
    "en": "The Woodcutter's Blade"
   },
-  "jp_text": "とりを　つれて　きて　くれて、ありがとう。おれいに、これを　わたそう。この　やいばは、とても　よく　切（き）れる。もりの　木（き）を　切（き）って、あたらしい　みちを　ひらける。ちからを　いれすぎず、こころを　こめて　切（き）れば　いい。",
+  "jp_text": "鳥（とり）を　つれて　きて　くれて、ありがとう。おれいに、これを　わたそう。この　やいばは、とても　よく　切（き）れる。もりの　木（き）を　切（き）って、あたらしい　みちを　ひらける。力（ちから）を　入（い）れすぎず、心（こころ）を　込（こ）めて　切（き）れば　いい。",
   "en_text": "Thank you for bringing my birds back. As thanks, let me give you this. This blade cuts very well. With it you can cut the forest trees and open a new path. Don't force it — cut with your heart in it, and it'll go just fine.",
   "audio_ref": null,
   "level": "N4",
@@ -16,7 +16,7 @@
   "npc_ref": "charcoal_man_azalea",
   "found_object_ref": null,
   "event_ref": "cs_kiru_azalea",
-  "length_chars": 107,
+  "length_chars": 102,
   "questions": [
    {
     "type": "idee_generale",
@@ -98,8 +98,8 @@
     ],
     "correct_index": 0,
     "answer_span": {
-     "start": 35,
-     "end": 56
+     "start": 38,
+     "end": 59
     }
    },
    {
@@ -128,8 +128,8 @@
     ],
     "correct_index": 1,
     "answer_span": {
-     "start": 89,
-     "end": 118
+     "start": 92,
+     "end": 133
     }
    },
    {

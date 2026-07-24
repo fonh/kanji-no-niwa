@@ -6,7 +6,7 @@
    "jp": "もりの　やしろ",
    "en": "The Forest Shrine"
   },
-  "jp_text": "森（もり）の　おくに、ふるい　やしろが　あります。むかし、この　もりの　人（ひと）たちは、森（もり）の　神（かみ）を　まもりがみと　して　うやまいました。木（き）を　ひとつ　きる　ときも、かならず　やしろに　手（て）を　あわせたそうです。いまも、しずかな　風（かぜ）の　なかに、その　こころが　のこっています。",
+  "jp_text": "森（もり）の　おくに、ふるい　やしろが　あります。むかし、この　もりの　人（ひと）たちは、森（もり）の　神（かみ）を　まもりがみと　して　うやまいました。木（き）を　ひとつ　きる　ときも、かならず　やしろに　手（て）を　あわせたそうです。いまも、しずかな　風（かぜ）の　なかに、その　心（こころ）が　残（のこ）っています。",
   "en_text": "Deep in the forest stands an old shrine. Long ago, the people of this forest revered the forest god as their guardian deity. Even when they cut down a single tree, they say, they would always press their hands together in prayer at the shrine. Even now, that spirit lingers in the quiet wind.",
   "audio_ref": null,
   "level": "N4",
@@ -16,7 +16,7 @@
   "npc_ref": null,
   "found_object_ref": null,
   "event_ref": "forest_shrine_ilex",
-  "length_chars": 129,
+  "length_chars": 126,
   "questions": [
    {
     "type": "idee_generale",

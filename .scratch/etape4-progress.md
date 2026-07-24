@@ -35,6 +35,12 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, suite (azalea-town/cs_kiru + ilex-forest/forest_shrine
+  re-kanjifiés)** : `cs_kiru.json` (鳥/力/入/心/込 ajoutés). `forest_shrine.json`
+  (déjà 森/人/神/木/手/風 dans le texte d'origine — 心/残 ajoutés, le reste du
+  studiedSet ilex-forest à ce point est trop pauvre pour plus). `answer_span`/
+  `length_chars` recalculés. 5 linters verts. Reste 6 textes (slowpoke-well,
+  route-36, sprout-tower, route-29, new-bark-town ×2) avant la passe dialogues.
 - **2026-07-24 — Phase 2, suite (burned-tower + les 3 textes d'ecruteak-city
   re-kanjifiés)** : `rainbow_legend_2.json` (鳥/作/掛/帰/言/伝/舞子 ajoutés),
   `cs_mizu.json` (形/川/心/進 ajoutés), `rainbow_legend_1.json` (年/羽/大/鳥/毎日/止/夜
