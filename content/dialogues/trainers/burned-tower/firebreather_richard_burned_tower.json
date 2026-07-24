@@ -14,7 +14,7 @@
      "en": "The basement's dangerous. The floor gives way."
     },
     {
-     "jp": "ここから　さきは、おれに　かってからだ！",
+     "jp": "ここから　先（さき）は、おれに　かってからだ！",
      "en": "Beat me before you go further!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "気（き）を　つけて　いけよ。",
+     "jp": "気（き）を　つけて　行（い）けよ。",
      "en": "Watch your step down there."
     }
    ]

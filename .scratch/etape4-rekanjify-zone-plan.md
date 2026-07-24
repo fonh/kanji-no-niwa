@@ -154,7 +154,7 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 | olivine-city | 460 | 19 | 6 | ✅ fait 2026-07-24. 6 fichiers restent à 0%, vérifiés sans amélioration sûre possible. |
 | route-39 | 445 | 10 | 0 | ✅ fait 2026-07-24. |
 | route-38 | 430 | 5 | 0 | ✅ fait 2026-07-24. |
-| burned-tower | 410 | 7 | — |
+| burned-tower | 410 | 7 | 0 | ✅ fait 2026-07-24. Bonus : fixé 2 occurrences pré-existantes (hors session, Lot 3) de 会（あ）った/会（あ）おう hors studiedSet (会 non étudié à ce point). |
 | ecruteak-city | 370 | 23 | 11 |
 | route-37 | 355 | 5 | — |
 | route-36 | 330 | 4 | — |

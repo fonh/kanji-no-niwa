@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "やけた　とうで　ひを　ふく。しゃれてる　だろ？",
+     "jp": "やけた　とうで　火（ひ）を　ふく。しゃれてる　だろ？",
      "en": "Breathing fire in a burned tower. Poetic, right?"
     },
     {
-     "jp": "あつい　しょうぶと　いこう！",
+     "jp": "あつい　しょうぶと　行（い）こう！",
      "en": "Let's have a blazing battle!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "おれの　ひは　けされちまった。",
+     "jp": "おれの　火（ひ）は　けされちまった。",
      "en": "My flame's been snuffed out."
     }
    ]

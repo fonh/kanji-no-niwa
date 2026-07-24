@@ -27,11 +27,11 @@
   "welcome": {
    "pages": [
     {
-     "jp": "きみ、この　とうに　なんの　ようだい？",
+     "jp": "きみ、この　とうに　何（なん）の　用（よう）だい？",
      "en": "You — what brings you to this tower?"
     },
     {
-     "jp": "ぼくは　ミナキ。10ねん　みずの　せいれいを　おいかけて　いる。",
+     "jp": "ぼくは　ミナキ。10年（ねん）　水（みず）の　せいれいを　追（お）いかけて　いる。",
      "en": "I'm Eusine. Ten years I've chased the water spirit."
     },
     {
@@ -54,11 +54,11 @@
      "en": "Did you see them!? The way they ran!"
     },
     {
-     "jp": "あの　みずいろの　せいれい…　うつくしかった…！",
+     "jp": "あの　水色（みずいろ）の　せいれい…　うつくしかった…！",
      "en": "That water-blue spirit... magnificent...!"
     },
     {
-     "jp": "ぼくは　おいかける。イリシアで　また　会（あ）おう！",
+     "jp": "ぼくは　追（お）いかける。イリシアで　また　あおう！",
      "en": "I'm going after it. We'll meet again in Cianwood!"
     }
    ]

@@ -41,6 +41,47 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, burned-tower (7/7 fichiers) re-kanjifié.** Kanji
+  ajoutés : 何/用/年/水/追/水色/前/落/鳥/私/修行/並/風/残/話/火/行/先/伝説/一人/お前.
+  Règle tout-ou-rien confirmée sur せきぞう/かげ/とびだした/ゆか/あぶない/くずれる,
+  tous vérifiés hors studiedSet, restent kana. **Bonus opportuniste** : en
+  auditant la zone, `会` (hors studiedSet à ce point) trouvé dans 2 lignes
+  NON touchées par cette session (`storyteller_burned_tower.json` : 会（あ）った,
+  `eusine_burned_tower.json` : 会（あ）おう) — confirmé via `git log -p` que ces
+  lignes datent d'un « Lot 3 » antérieur à la passe phase 2, pas une régression
+  de cette session. Corrigées quand même (revert en kana「あった」「あおう」)
+  puisque les fichiers étaient déjà ouverts. Audit `cumulative_start` : CLEAN
+  après ce correctif. 7 linters verts (536 fichiers dialogue, 480 fichiers état,
+  36 fichiers leçons, mêmes 3 WARN attendus, 0 FAIL). Densité globale 167→163
+  fichiers sous le plancher. Reste dans le Tier 4 : ecruteak-city (23), route-37
+  (5), route-36 (4), national-park (9), route-35 (9).
+- **2026-07-24 — Traitement des issues 01 et 02 de
+  `.scratch/verif-systemes-2026-07-24/issues/`, avant reprise de la phase 2**
+  (demande explicite utilisateur, issue 01 touchant des fichiers de leçons
+  susceptibles de recroiser le travail phase 2 en cours). **Issue 01** (swap
+  doublons kanji, phase 1) : `blackthorn-city.json` (言→命 seq 3, 元→定 seq 5) et
+  `national-park.json` (寸→園 seq 1) avaient un kanji enseigné deux fois à cause
+  du mécanisme d'emprunt de pool inter-zones combiné au swap de promotion phase 1
+  — corrigé dans `content/lessons/` et `content/lessons-proposal.json` (source
+  probable du bug). Nouveau linter permanent `lint-lessons-kanji-coverage.py`
+  (aucun kanji enseigné deux fois, aucun kanji emprunté qui appartient en fait à
+  une zone qui a déjà ses propres leçons), vérifié contre l'ancien ET le nouveau
+  contenu. **Issue 02** (état inexistant dans state_rules) : `default` pointait
+  vers un état absent de `dialogue_states` dans 2 fichiers
+  (`suicune_viewpoint_r2425.json` : welcome→scene, `lone_grunt_gym_cerulean.json` :
+  welcome→caught) — corrigé. Nouveau linter permanent `lint-dialogue-states.py`
+  (state_rules cohérent avec dialogue_states, un seul default en dernière
+  position, aucun état mort), vérifié contre l'ancien ET le nouveau contenu.
+  Les deux issues marquées résolues avec détails en commentaire. Issue 03 et
+  `proposals-revue-structurelle-2026-07-24.md` explicitement laissés hors
+  scope (différés, non-bloquants).
+- **2026-07-24 — Phase 2, revue point de vue joueur (2ᵉ passe, demande
+  utilisateur « you did a review step by step on a player point of view? »)** :
+  reconnu que les « simulations » précédentes étaient surtout mécaniques
+  (linters + audit + diff), une seule vraie relecture narrative séquentielle
+  avait été faite jusque-là. Sur demande explicite (« yes do it properly »),
+  relecture séquentielle réelle refaite, 2 erreurs trouvées et corrigées (cf.
+  entrée détaillée plus bas : とりかえして/取り替えして et かねのおと/金).
 - **2026-07-24 — Phase 2, route-38 (5/5 fichiers) re-kanjifié.** Kanji ajoutés :
   知/毎日/道/広/風/変/港/行/陸. Règle tout-ou-rien sur 海風（海False）, 風向き
   （向False）, きゅうけい/べんきょう/きけん — tous vérifiés hors studiedSet, stays

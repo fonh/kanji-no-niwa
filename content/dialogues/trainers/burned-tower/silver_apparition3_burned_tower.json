@@ -11,15 +11,15 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "…また　おまえか。",
+     "jp": "…また　お前（まえ）か。",
      "en": "...You again."
     },
     {
-     "jp": "おれは　でんせつの　せいれいを　しらべに　きた。よわい　やつには　ようは　ない。",
+     "jp": "おれは　伝説（でんせつ）の　せいれいを　しらべに　きた。よわい　やつには　用（よう）は　ない。",
      "en": "I came to investigate the legendary spirits. I've no use for weaklings."
     },
     {
-     "jp": "おまえが　よわいか　どうか、たしかめて　やる！",
+     "jp": "お前（まえ）が　よわいか　どうか、たしかめて　やる！",
      "en": "Let's find out if you're one of them!"
     }
    ]
@@ -27,7 +27,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "…ちっ。なんで　おまえなんかに。",
+     "jp": "…ちっ。何（なん）で　お前（まえ）なんかに。",
      "en": "...Tch. Why do I keep losing to you?"
     },
     {
@@ -35,7 +35,7 @@
      "en": "What is strength...? Am I still missing something?"
     },
     {
-     "jp": "そこを　どけ。ひとりに　なりたい。",
+     "jp": "そこを　どけ。一人（ひとり）に　なりたい。",
      "en": "Out of my way. I want to be alone."
     }
    ]
