@@ -41,6 +41,25 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, national-park (9/9 fichiers) re-kanjifié.** Kanji
+  ajoutés : 作/毎日/前/毎週/通/帰. **Erreur de transcription attrapée par
+  l'audit** : 早 pris pour True lors de la compilation manuelle du batch de
+  vérification (en réalité False) — appliqué à tort dans bench_teacher
+  (早い　もの勝ち), repéré par l'audit `cumulative_start` juste après
+  l'édition, reverti avant tout commit. **Bonus opportuniste** : l'audit a
+  aussi trouvé 2 usages pré-existants (hors session) de kanji hors
+  studiedSet — 勝（もの勝ち, bench_teacher）et 花（花だん, pokefan_beverly）—
+  confirmés via `git log -p` (commits antérieurs à cette passe), corrigés en
+  même temps (revert kana). Règle tout-ou-rien confirmée sur de nombreux
+  candidats hors studiedSet (きろく/ちょうせん/わかい/からだ/きたえて/しあい/
+  にあう/おもう/うけつけ/しゅうちゅう/うでずもう etc.) — aucune amélioration
+  sûre au-delà des 6 kanji retenus. 4 fichiers (magnus/retired_jumper/
+  whitney/pokefan_beverly) restent à 0% densité, vérifiés sans amélioration
+  sûre possible. Audit `cumulative_start` re-vérifié CLEAN après les 3
+  correctifs. 7 linters verts (536 fichiers dialogue, 480 fichiers état, 36
+  fichiers leçons, mêmes 3 WARN attendus, 0 FAIL). Densité globale 151→148
+  fichiers sous le plancher. Reste route-35 (9) pour clore le Tier 4, puis
+  le Tier 5 (Bourg Geon → Doublonville 1ʳᵉ visite, 16 zones).
 - **2026-07-24 — Phase 2, route-36 (4/4 fichiers) re-kanjifié.** Kanji
   ajoutés : 道/前/話（両occurrences, はな/はなし)/動. Règle tout-ou-rien
   confirmée sur もくようび (木True mais 曜False), べんきょう (勉/強 False),
