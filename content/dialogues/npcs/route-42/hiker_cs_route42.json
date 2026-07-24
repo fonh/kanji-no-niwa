@@ -26,7 +26,7 @@
   "welcome": {
    "pages": [
     {
-     "jp": "おっと！　すまんすまん、まえを　みて　いなかった。",
+     "jp": "おっと！　すまんすまん、前（まえ）を　みて　いなかった。",
      "en": "Oof! Sorry, sorry — wasn't watching where I was going."
     },
     {
@@ -38,7 +38,7 @@
      "en": "By way of apology, take this — the secret kanji of Power."
     },
     {
-     "jp": "おもい　いわも、これで　うごかせるように　なるぞ。",
+     "jp": "おもい　いわも、これで　動（うご）かせるように　なるぞ。",
      "en": "With it, you'll be able to move even heavy boulders."
     }
    ],
@@ -56,7 +56,7 @@
   "after": {
    "pages": [
     {
-     "jp": "いわを　うごかすには、こつが　いる。あせらず　やる　ことだ。",
+     "jp": "いわを　動（うご）かすには、こつが　いる。あせらず　やる　ことだ。",
      "en": "Moving boulders takes knack. Don't rush it."
     }
    ]

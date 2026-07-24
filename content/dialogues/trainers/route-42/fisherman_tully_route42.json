@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "みずうみの　さかなは　おおものぞろいだ。",
+     "jp": "湖（みずうみ）の　魚（さかな）は　おおものぞろいだ。",
      "en": "The lake fish here are all big ones."
     },
     {
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "にがした　さかなは　おおきい…。",
+     "jp": "にがした　魚（さかな）は　大（おお）きい…。",
      "en": "The one that got away is always the biggest..."
     }
    ]
