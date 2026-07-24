@@ -10,7 +10,7 @@
  "state_rules": [
   {
    "default": true,
-   "state": "welcome"
+   "state": "caught"
   }
  ],
  "dialogue_states": {

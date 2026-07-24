@@ -72,6 +72,25 @@ Le tableau ci-dessous corrige le tri.
 5. Mesurer la densité réelle avec `scripts/validate/lint-kanji-density.py` après
    chaque lot de zones, pas seulement à la fin — le nombre de fichiers sous le
    plancher (390/467 au 2026-07-24) est LE indicateur de progression de cette passe.
+6. **2 linters de plus depuis le 2026-07-24** (trouvés par une vérification
+   d'intégrité indépendante, `.scratch/verif-systemes-2026-07-24/issues/01` et `02`) :
+   `scripts/validate/lint-lessons-kanji-coverage.py` (aucun kanji enseigné deux fois
+   dans `content/lessons/*.json`, aucun kanji emprunté qui appartient en fait à une
+   zone déjà écrite) et `scripts/validate/lint-dialogue-states.py` (chaque
+   `state_rules[].state` existe dans `dialogue_states`, une seule règle default en
+   dernière position, aucun état mort). Aucun des deux n'est spécifique à la passe
+   dialogues — ce sont des invariants de tout le corpus — mais comme ils tournent en
+   quelques secondes, les inclure dans la routine post-zone ne coûte rien.
+7. **Les linters sont mécaniques, pas une lecture.** Ils vérifient la forme (budget,
+   lecture inline groupée, cohérence d'ids) mais jamais le SENS du mot choisi. Après un
+   lot de zones, relire une partie du contenu comme un joueur (séquentiellement, chaînes
+   de quête inter-zones en priorité) — deux vrais faux-sens trouvés ainsi le 2026-07-24
+   après coup, tous deux invisibles aux linters : とりかえして écrit 取り替えして
+   (« échanger ») au lieu de 取り返して (« récupérer », le vrai sens, en plus la
+   conjugaison 取り替える ne donne jamais とりかえして) ; mot de passe「かねのおと」
+   (« carillon ») écrit 金（かね）au lieu de 鐘（かね）— piège homophone classique. Les
+   deux sont restés en kana (le bon kanji, quand il existe, était de toute façon hors
+   studiedSet) plutôt que forcés avec le mauvais mot.
 
 ## Tableau des zones — ordre de priorité réel (studiedSet décroissant)
 
