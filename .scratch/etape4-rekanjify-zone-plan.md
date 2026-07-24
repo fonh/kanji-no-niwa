@@ -159,7 +159,7 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 | route-37 | 355 | 5 | 1 | ✅ fait 2026-07-24. 1 fichier (sunny_route37) reste à 0% : にちようび/きょう ont chacun un kanji hors studiedSet (曜/今), aucune amélioration sûre possible. |
 | route-36 | 330 | 4 | 2 | ✅ fait 2026-07-24. 2 fichiers (arthur/school_kid_alan) restent à 0% : もくようび (曜) et べんきょう/せいか (勉/強/果) ont chacun un kanji hors studiedSet, aucune amélioration sûre possible. |
 | national-park | 310 | 9 | 4 | ✅ fait 2026-07-24. Bonus : corrige 3 usages pré-existants (hors session) de kanji hors studiedSet (bench_teacher : もの勝ち, pokefan_beverly : 花だん) → revert kana. 4 fichiers (magnus/retired_jumper/whitney/pokefan_beverly) restent à 0%, vérifiés sans amélioration sûre possible. |
-| route-35 | 290 | 9 | 9 |
+| route-35 | 290 | 9 | 2 | ✅ fait 2026-07-24. 2 fichiers (camper_elliot/juggler_irwin) restent à 0%, vérifiés sans amélioration sûre possible. **TIER 4 ENTIÈREMENT CLOS.** |
 
 ### Tier 5 — studiedSet < 290 (Bourg Geon → Doublonville 1ʳᵉ visite)
 

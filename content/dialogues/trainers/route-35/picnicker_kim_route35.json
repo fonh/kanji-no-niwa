@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "こうえんの　まえで　ひとやすみ。",
+     "jp": "こうえんの　前（まえ）で　ひとやすみ。",
      "en": "Taking a breather in front of the park."
     },
     {
-     "jp": "そのまえに　ウォーミングアップ、いい？",
+     "jp": "その前（まえ）に　ウォーミングアップ、いい？",
      "en": "Mind being my warm-up first?"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "じゅうぶん　あたたまったわ。",
+     "jp": "じゅうぶん　温（あたた）まったわ。",
      "en": "Well, I'm plenty warmed up now."
     }
    ]

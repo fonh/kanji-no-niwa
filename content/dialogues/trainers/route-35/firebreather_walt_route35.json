@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "おれの　げいは　ひを　ふく　こと！",
+     "jp": "おれの　芸（げい）は　火（ひ）を　ふく　こと！",
      "en": "My art is breathing fire!"
     },
     {
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ひが　きえちまった…。",
+     "jp": "火（ひ）が　きえちまった…。",
      "en": "My flame's gone out..."
     }
    ]

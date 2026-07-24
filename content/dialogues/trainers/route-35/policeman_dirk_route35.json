@@ -11,11 +11,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "よるの　こうえんいりぐちは　ぶっそうだ。",
+     "jp": "夜（よる）の　こうえん入（い）り口（ぐち）は　ぶっそうだ。",
      "en": "The park entrance can be dodgy at night."
     },
     {
-     "jp": "きみも　ようじんの　ため、チェックさせて　もらう！",
+     "jp": "きみも　用心（ようじん）の　ため、チェックさせて　もらう！",
      "en": "For safety's sake, let me check you too!"
     }
    ]
@@ -23,7 +23,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "もんだいなし！　よい　よるを。",
+     "jp": "もんだいなし！　よい　夜（よる）を。",
      "en": "All clear! Have a good night."
     }
    ]

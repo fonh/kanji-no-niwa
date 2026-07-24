@@ -41,6 +41,21 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-35 (9/9 fichiers) re-kanjifié — TIER 4
+  ENTIÈREMENT CLOS** (Oliville → Doublonville). Kanji ajoutés : 目/知/先/力/
+  芸/火/決/前/温/夜/入り口/用心. Règle tout-ou-rien confirmée sur de
+  nombreux candidats hors studiedSet (こうえん/れんしゅう/つよい/さくせん/
+  あつい/かるく/じゅうぶん/もんだい etc.). 2 fichiers (camper_elliot/
+  juggler_irwin) restent à 0% densité, vérifiés sans amélioration sûre
+  possible. Audit `cumulative_start` : CLEAN du premier coup. 7 linters
+  verts (536 fichiers dialogue, 480 fichiers état, 36 fichiers leçons,
+  mêmes 3 WARN attendus, 0 FAIL). Densité globale 148→141 fichiers sous le
+  plancher. **Le Tier 4 (studiedSet 250-500, 10 zones) est maintenant
+  intégralement re-kanjifié**, comme les Tiers 1-3 avant lui. Reste le
+  Tier 5 (Bourg Geon → Doublonville 1ʳᵉ visite, 16 zones, gains attendus
+  plus faibles par fichier) pour clore toute la passe dialogues —
+  goldenrod-city (50 fichiers, le plus gros du corpus) à découper en
+  plusieurs sessions par sous-lieu.
 - **2026-07-24 — Phase 2, national-park (9/9 fichiers) re-kanjifié.** Kanji
   ajoutés : 作/毎日/前/毎週/通/帰. **Erreur de transcription attrapée par
   l'audit** : 早 pris pour True lors de la compilation manuelle du batch de
