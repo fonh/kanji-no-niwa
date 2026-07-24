@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "クラブの　なかまと　りょこうちゅうさ！",
+     "jp": "クラブの　なかまと　旅行（りょこう）ちゅうさ！",
      "en": "Traveling with my club mates!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "なかまに　じまんできる　まけだ。",
+     "jp": "なかまに　自慢（じまん）できる　まけだ。",
      "en": "A loss worth bragging about."
     }
    ]

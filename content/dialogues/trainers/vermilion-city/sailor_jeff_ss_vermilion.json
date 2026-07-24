@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "この　ふねの　ふなのりは　つよいぞ！",
+     "jp": "この　船（ふね）の　ふなのりは　強（つよ）いぞ！",
      "en": "This ship's sailors are strong!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "りくの　ひとに　まけるとは。",
+     "jp": "陸（りく）の　人（ひと）に　まけるとは。",
      "en": "Beaten by a landlubber."
     }
    ]

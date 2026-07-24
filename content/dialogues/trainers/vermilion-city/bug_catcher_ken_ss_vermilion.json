@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ふねにも　むしは　いるんだぜ！",
+     "jp": "船（ふね）にも　むしは　いるんだぜ！",
      "en": "There are bugs even on ships, you know!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "うみの　むしは　てごわい…。",
+     "jp": "海（うみ）の　むしは　手強（てごわ）い…。",
      "en": "Sea bugs are tough..."
     }
    ]

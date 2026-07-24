@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "おれの　エレキと　どっちが　しびれるか、ためそうぜ！",
+     "jp": "俺（おれ）の　エレキと　どっちが　しびれるか、試（ため）そうぜ！",
      "en": "Let's see who electrifies better — you or my guitar!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "きみの　ほうが　しびれたよ…。",
+     "jp": "君（きみ）の　方（ほう）が　しびれたよ…。",
      "en": "You were the more electrifying one..."
     }
    ]

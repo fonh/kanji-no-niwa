@@ -37,11 +37,11 @@
   "panic": {
    "pages": [
     {
-     "jp": "たっ、たいへんじゃ！　まごが　おらん！",
+     "jp": "たっ、大変（たいへん）じゃ！　まごが　おらん！",
      "en": "T-terrible news! My granddaughter is gone!"
     },
     {
-     "jp": "ふねを　おりた　いじょう…　いや、おりて　おらんはずじゃ！",
+     "jp": "船（ふね）を　降（お）りた　以上（いじょう）…　いや、降（お）りて　おらんはずじゃ！",
      "en": "She can't have left the ship... no, she mustn't have!"
     },
     {
@@ -60,11 +60,11 @@
   "thanks": {
    "pages": [
     {
-     "jp": "おお、みつけて　くれたか！　ありがとう、ありがとう！",
+     "jp": "おお、見（み）つけて　くれたか！　ありがとう、ありがとう！",
      "en": "You found her! Thank you, thank you!"
     },
     {
-     "jp": "これは　おれいじゃ。うけとって　くれ。",
+     "jp": "これは　お礼（れい）じゃ。受（う）け取（と）って　くれ。",
      "en": "Here — a token of my gratitude."
     }
    ],
@@ -83,7 +83,7 @@
   "after": {
    "pages": [
     {
-     "jp": "まごは　カントーの　けしきに　むちゅうじゃよ。",
+     "jp": "まごは　カントーの　景色（けしき）に　夢中（むちゅう）じゃよ。",
      "en": "She's engrossed in the Kanto scenery now."
     }
    ]

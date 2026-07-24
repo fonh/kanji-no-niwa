@@ -26,15 +26,15 @@
   "welcome": {
    "pages": [
     {
-     "jp": "おお、あたらしい　かおだね！　まあ　すわりなさい。",
+     "jp": "おお、新（あたら）しい　顔（かお）だね！　まあ　座（すわ）りなさい。",
      "en": "Ah, a new face! Sit, sit."
     },
     {
-     "jp": "わしの　じまんの　コレクションの　はなしを　しよう。ながく　なるが　の。",
+     "jp": "わしの　自慢（じまん）の　コレクションの　話（はなし）を　しよう。長（なが）く　なるが　の。",
      "en": "Let me tell you about my prized collection. It's a long story, mind you."
     },
     {
-     "jp": "……というわけで、45ねんかけて　あつめたのじゃ。さいごまで　きいて　くれたのは　きみだけじゃよ！",
+     "jp": "……というわけで、45年（ねん）かけて　集（あつ）めたのじゃ。さいごまで　聞（き）いて　くれたのは　君（きみ）だけじゃよ！",
      "en": "...and THAT is how I spent 45 years collecting. You're the only one who's ever listened to the end!"
     },
     {
@@ -52,7 +52,7 @@
   "after": {
    "pages": [
     {
-     "jp": "また　はなしを　ききに　きて　くれよ。",
+     "jp": "また　話（はなし）を　聞（き）きに　来（き）て　くれよ。",
      "en": "Come listen to my stories again, won't you."
     }
    ]

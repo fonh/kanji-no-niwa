@@ -27,7 +27,7 @@
   "hiding": {
    "pages": [
     {
-     "jp": "しーっ！　かくれんぼの　とちゅうなの！",
+     "jp": "しーっ！　隠（かく）れんぼの　とちゅうなの！",
      "en": "Shhh! I'm in the middle of hide-and-seek!"
     },
     {
@@ -35,7 +35,7 @@
      "en": "...Huh? Grandpa's crying?"
     },
     {
-     "jp": "あそびの　つもりだったのに…。ごめんなさい、もどる！",
+     "jp": "あそびの　つもりだったのに…。ごめんなさい、戻（もど）る！",
      "en": "I thought we were playing... I'm sorry, I'll go back!"
     }
    ],
@@ -50,7 +50,7 @@
   "back": {
    "pages": [
     {
-     "jp": "おじいちゃんの　ところに　もどったよ。ありがと！",
+     "jp": "おじいちゃんの　所（ところ）に　戻（もど）ったよ。ありがと！",
      "en": "I'm back with Grandpa now. Thanks!"
     }
    ]

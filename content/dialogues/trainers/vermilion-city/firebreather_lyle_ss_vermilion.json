@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "うみの　うえの　ひふきは　きけんで　いいだろ？",
+     "jp": "海（うみ）の　上（うえ）の　火吹（ひふ）きは　危険（きけん）で　いいだろ？",
      "en": "Fire-breathing at sea — thrillingly dangerous, no?"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ひが　しけっちまった。",
+     "jp": "火（ひ）が　しけっちまった。",
      "en": "My flame got damp."
     }
    ]

@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "コレクションじまん、きいて　くれよ！",
+     "jp": "コレクション自慢（じまん）、聞（き）いて　くれよ！",
      "en": "Let me show off my collection!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "きみが　いちばんの　コレクションだ。",
+     "jp": "君（きみ）が　一番（いちばん）の　コレクションだ。",
      "en": "You're the finest piece of all."
     }
    ]

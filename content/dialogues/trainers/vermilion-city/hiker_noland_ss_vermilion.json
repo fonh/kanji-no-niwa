@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "うみの　うえでも　やまおとこは　やまおとこ！",
+     "jp": "海（うみ）の　上（うえ）でも　山男（やまおとこ）は　山男（やまおとこ）！",
      "en": "A hiker's a hiker, even at sea!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "うみは　にがてだ…。",
+     "jp": "海（うみ）は　にがてだ…。",
      "en": "The sea's not my element..."
     }
    ]

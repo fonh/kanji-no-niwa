@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ふねから　つる　さかなは　おおものぞろい！",
+     "jp": "船（ふね）から　つる　魚（さかな）は　大物（おおもの）ぞろい！",
      "en": "The fish you catch from a ship are all big ones!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "いちばんの　おおものは　きみだ。",
+     "jp": "一番（いちばん）の　大物（おおもの）は　君（きみ）だ。",
      "en": "You're the biggest catch."
     }
    ]

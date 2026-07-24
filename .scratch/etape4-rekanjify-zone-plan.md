@@ -83,7 +83,7 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 | saffron-city | 1060 | 11 | 0 | ✅ fait 2026-07-24. 24 leçons N1, Copycat/Sabrina — dialogues denses, bon volume de gain. |
 | route-6-kanto | 1050 | 5 | 0 | ✅ fait 2026-07-24. |
 | indigo-plateau-{koga,bruno,karen,lance,will} | 870-900 | 1 chacun | 0 | ✅ fait 2026-07-24. 四天王（してんのう）devient kanjifiable dès l'antichambre (四/天/王 tous studied) — cohérence appliquée sur les 3 occurrences body-text du titre. |
-| vermilion-city | 900 | 38 | 36 | **Le plus gros fichier-count de tout le corpus après goldenrod-city.** SS Aqua (27 combats), Surge — prévoir une session dédiée, pas un lot avec d'autres zones. |
+| vermilion-city | 900 | 38 | 1 | ✅ fait 2026-07-24. **Le plus gros fichier-count de tout le corpus après goldenrod-city.** SS Aqua (27 combats), Surge. 1 fichier (sailor_garrett) reste à 0% : ses 2 seuls mots (乗組員/縄張り) ont un kanji hors studiedSet chacun, aucune amélioration sûre possible. **TIER 1 ENTIÈREMENT CLOS.** |
 | indigo-plateau-antichambre | 830 | 3 | 0 | ✅ fait 2026-07-24 (avec le lot indigo-plateau ci-dessus). |
 
 ### Tier 2 — studiedSet 700-830 (fin de Johto)

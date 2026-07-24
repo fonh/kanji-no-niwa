@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ゆれる　ゆかは　さいこうの　しゅぎょうば！",
+     "jp": "揺（ゆ）れる　床（ゆか）は　さいこうの　修行場（しゅぎょうば）！",
      "en": "A rolling floor is the finest training ground!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "しゅぎょうが　たりん！",
+     "jp": "修行（しゅぎょう）が　たりん！",
      "en": "More training needed!"
     }
    ]

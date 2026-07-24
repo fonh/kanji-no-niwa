@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "きかんしつの　ばんにんだ。とおるなら　かって　いけ！",
+     "jp": "きかんしつの　番人（ばんにん）だ。通（とお）るなら　勝（か）って　行（い）け！",
      "en": "I guard the engine room. Win your way past!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "とおって　よし！",
+     "jp": "通（とお）って　よし！",
      "en": "You may pass!"
     }
    ]

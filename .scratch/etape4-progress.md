@@ -41,6 +41,22 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, vermilion-city (38/38 fichiers) re-kanjifié à la main — TIER 1
+  ENTIÈREMENT CLOS** : plus gros fichier-count après goldenrod-city, traité en session
+  dédiée comme prévu par le plan. Kanji ajoutés notables : 船（ふね, omniprésent — bateau/
+  traversée）/船旅（ふなたび）/海（うみ）/波（なみ）/電気/電球/電撃/危険/芸術/修行場/自慢/
+  常連/一番/大物/景色/夢中/以上/救/命/以来/一筋（tirade de Surge）/修学旅行/引率/集中力/
+  忘れ物/人形/娘（cohérence avec le fil copycat_doll déjà vu à Safran）. Fil de quête
+  ss_aqua_granddaughter (grand-père→petite-fille cachée→retrouvailles→Manteau de Métal)
+  et copycat_doll (comptoir du fanclub→Copycat à Safran→Pass Train Aimant) simulés
+  narrativement de bout en bout, cohérents (gating par quest_step/item_owned inchangé).
+  **1 fichier (sailor_garrett_ss_vermilion) reste à 0%** : ses 2 seuls mots (乗組員/
+  縄張り) ont chacun un kanji hors studiedSet (乗/縄), vérifié sans amélioration sûre
+  possible — pas un oubli. **Sûreté structurelle re-vérifiée** (`git diff` jp-only) sur
+  les 38 fichiers. 5 linters verts (536 fichiers, mêmes 3 WARN attendus, 0 FAIL).
+  Densité globale 332→297 fichiers sous le plancher. **Le Tier 1 (studiedSet ≥ 830,
+  15 zones) est maintenant intégralement re-kanjifié.** Reste le Tier 2 (route-26/27/
+  46/dark-cave/route-45, dragons-den déjà fait) puis les tiers 3-5, cf. plan de zone.
 - **2026-07-24 — Phase 2, reste du Tier 1 (route-8-kanto/kanto-power-plant/
   lavender-town/route-9-10-rocktunnel/saffron-city/route-6-kanto/6 fichiers
   indigo-plateau, 44/44 fichiers) re-kanjifié à la main** : passe continue sur tout le

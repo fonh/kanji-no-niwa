@@ -17,7 +17,7 @@
   "welcome": {
    "pages": [
     {
-     "jp": "ようこそ　アクア号（ごう）へ！　わしが　せんちょうじゃ。",
+     "jp": "ようこそ　アクア号（ごう）へ！　わしが　船長（せんちょう）じゃ。",
      "en": "Welcome aboard the SS Aqua! I'm the captain."
     },
     {
@@ -25,7 +25,7 @@
      "en": "This is the only ship linking Johto and Kanto."
     },
     {
-     "jp": "のった　きねんに、プレートを　あつめて　みんか？　ようびごとに　ちがう　いろを　くばって　おるよ。",
+     "jp": "のった　きねんに、プレートを　集（あつ）めて　みんか？　曜日（ようび）ごとに　違（ちが）う　色（いろ）を　配（くば）って　おるよ。",
      "en": "Why not collect our Plates? A different color for each day of the week."
     }
    ],

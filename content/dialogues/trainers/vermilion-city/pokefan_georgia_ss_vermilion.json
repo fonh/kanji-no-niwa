@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "この　ふね、まいつき　のってるのよ。",
+     "jp": "この　船（ふね）、毎月（まいつき）　のってるのよ。",
      "en": "I ride this ship every month."
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "じょうれんの　いじも　ここまでね。",
+     "jp": "常連（じょうれん）の　いじも　ここまでね。",
      "en": "So much for a regular's pride."
     }
    ]

@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ふなたびの　たいくつしのぎに　どう？",
+     "jp": "船旅（ふなたび）の　たいくつしのぎに　どう？",
      "en": "Care to relieve the boredom of the crossing?"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "たいくつなんて　ふきとんだわ。",
+     "jp": "たいくつなんて　吹（ふ）き飛（と）んだわ。",
      "en": "Boredom thoroughly blown away."
     }
    ]

@@ -15,11 +15,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "ヘイ！　ジョウトの　チャンピオンが　おれさまに　なんの　ようだ！？",
+     "jp": "ヘイ！　ジョウトの　チャンピオンが　俺様（おれさま）に　何（なん）の　用（よう）だ！？",
      "en": "HEY! What does Johto's Champion want with ME!?"
     },
     {
-     "jp": "いくさで　でんきタイプに　いのちを　すくわれて　いらい、おれは　でんきひとすじよ！",
+     "jp": "いくさで　電気（でんき）タイプに　命（いのち）を　救（すく）われて　以来（いらい）、俺（おれ）は　電気（でんき）一筋（ひとすじ）よ！",
      "en": "Ever since electricity saved my life in the war, I've lived for it!"
     },
     {
@@ -31,11 +31,11 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ワッハッハ！　ビリビリ　しびれたのは　おれの　ほうか！",
+     "jp": "ワッハッハ！　ビリビリ　しびれたのは　俺（おれ）の　方（ほう）か！",
      "en": "WAHAHA! I'm the one who got shocked!"
     },
     {
-     "jp": "サンダーバッジは　おまえの　ものだ！",
+     "jp": "サンダーバッジは　お前（まえ）の　物（もの）だ！",
      "en": "The Thunder Badge is yours!"
     }
    ],

@@ -17,15 +17,15 @@
   "welcome": {
    "pages": [
     {
-     "jp": "やあ。きみが　ジョウトの　チャンピオンだね。",
+     "jp": "やあ。君（きみ）が　ジョウトの　チャンピオンだね。",
      "en": "Hello. You're the Johto Champion, I take it."
     },
     {
-     "jp": "ぼくは　ダイゴ。ホウエンちほうから　きた。めずらしい　いしを　さがして　いてね。",
+     "jp": "ぼくは　ダイゴ。ホウエン地方（ちほう）から　来（き）た。珍（めずら）しい　石（いし）を　さがして　いてね。",
      "en": "I'm Steven, from the Hoenn region. I'm hunting for rare stones."
     },
     {
-     "jp": "この　ちほうには　みた　ことの　ない　「もじ」も　あると　きく。きみと　は　また　あえる　きが　するよ。",
+     "jp": "この　地方（ちほう）には　見（み）た　ことの　ない　「文字（もじ）」も　あると　聞（き）く。君（きみ）と　は　また　会（あ）える　気（き）が　するよ。",
      "en": "They say this region holds characters never seen elsewhere. Something tells me we'll meet again."
     }
    ]

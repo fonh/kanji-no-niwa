@@ -27,11 +27,11 @@
   "welcome": {
    "pages": [
     {
-     "jp": "この　にんぎょう、ヤマブキシティの　ものまねむすめの　わすれものなんだ。",
+     "jp": "この　人形（にんぎょう）、ヤマブキシティの　ものまね娘（むすめ）の　忘（わす）れ物（もの）なんだ。",
      "en": "This doll — Copycat from Saffron left it behind."
     },
     {
-     "jp": "とどけて　あげて　くれないか。だいじな　ものらしいんだ。",
+     "jp": "とどけて　あげて　くれないか。大事（だいじ）な　物（もの）らしいんだ。",
      "en": "Would you deliver it to her? It seems precious to her."
     }
    ],
@@ -50,7 +50,7 @@
   "after": {
    "pages": [
     {
-     "jp": "にんぎょう、とどけて　くれたかい？",
+     "jp": "人形（にんぎょう）、とどけて　くれたかい？",
      "en": "Delivered the doll yet?"
     }
    ]
