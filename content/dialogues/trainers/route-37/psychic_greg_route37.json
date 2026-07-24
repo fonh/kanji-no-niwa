@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "この　さきは　れきしと　たましいの　まち。",
+     "jp": "この　先（さき）は　れきしと　たましいの　まち。",
      "en": "Beyond here lies a city of history and spirits."
     },
     {
-     "jp": "こころの　じゅんびが　できているか、みせて　もらう！",
+     "jp": "心（こころ）の　準備（じゅんび）が　できているか、みせて　もらう！",
      "en": "Show me your mind is ready!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "こころの　そこから　まいった。",
+     "jp": "心（こころ）の　底（そこ）から　まいった。",
      "en": "I concede, from the bottom of my mind."
     }
    ]

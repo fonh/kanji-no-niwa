@@ -14,7 +14,7 @@
      "en": "Headed to Ecruteak?"
     },
     {
-     "jp": "れきしの　まちに　入（はい）る　まえに、しょうぶよ！",
+     "jp": "れきしの　まちに　入（はい）る　前（まえ）に、しょうぶよ！",
      "en": "Before you enter the historic city — a battle!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "あなた、れきしに　のこる　つよさね。",
+     "jp": "あなた、れきしに　残（のこ）る　つよさね。",
      "en": "Your strength belongs in the history books."
     }
    ]

@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "この　みちは　雨（あめ）が　おおいの。",
+     "jp": "この　道（みち）は　雨（あめ）が　おおいの。",
      "en": "It rains a lot on this road."
     },
     {
-     "jp": "ぬれる　まえに、さっさと　しょうぶしましょ！",
+     "jp": "ぬれる　前（まえ）に、さっさと　しょうぶしましょ！",
      "en": "Let's battle quickly, before we get soaked!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "あめが　ふる　まえに　まけちゃった。",
+     "jp": "雨（あめ）が　ふる　前（まえ）に　まけちゃった。",
      "en": "I lost before the rain even came."
     }
    ]

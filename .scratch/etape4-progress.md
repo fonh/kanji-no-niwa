@@ -41,6 +41,16 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-37 (5/5 fichiers) re-kanjifié.** Kanji ajoutés :
+  前/残/道/雨/先/心/準備/底/二人. Règle tout-ou-rien confirmée sur にちようび
+  (日True mais 曜False), きょう (今日, 今False), だいすき (好False), れきし
+  (歴/史 False), あえた (会False) — tous vérifiés hors studiedSet, restent kana.
+  1 fichier (sunny_route37) reste à 0% densité, vérifié sans amélioration
+  sûre possible. Audit `cumulative_start` : CLEAN du premier coup. 7 linters
+  verts (536 fichiers dialogue, 480 fichiers état, 36 fichiers leçons, mêmes
+  3 WARN attendus, 0 FAIL). Densité globale 155→153 fichiers sous le
+  plancher. Reste dans le Tier 4 : route-36 (4), national-park (9),
+  route-35 (9).
 - **2026-07-24 — Phase 2, burned-tower (7/7 fichiers) re-kanjifié.** Kanji
   ajoutés : 何/用/年/水/追/水色/前/落/鳥/私/修行/並/風/残/話/火/行/先/伝説/一人/お前.
   Règle tout-ou-rien confirmée sur せきぞう/かげ/とびだした/ゆか/あぶない/くずれる,
