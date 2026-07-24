@@ -4,7 +4,7 @@
  "zone_id": "route-32",
  "jlpt_level": "N4",
  "dialogue_states": {
-  "battle_intro": { "pages": [{ "jp": "キャンプの　あとの　バトルだ！", "en": "A battle after camping!" }] },
+  "battle_intro": { "pages": [{ "jp": "キャンプの　後（あと）の　バトルだ！", "en": "A battle after camping!" }] },
   "post_battle": { "pages": [{ "jp": "テントに　もどるよ。", "en": "Back to the tent." }] }
  }
 }

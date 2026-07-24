@@ -11,7 +11,7 @@
   "intro": {
    "pages": [
     { "jp": "アプリコット、あつめてる？", "en": "Are you collecting apricorns?" },
-    { "jp": "これ、やくに　たつよ。", "en": "This will come in handy." }
+    { "jp": "これ、役（やく）に　立（た）つよ。", "en": "This will come in handy." }
    ],
    "effects": [
     { "type": "grant_item", "item_id": "lure_ball" }

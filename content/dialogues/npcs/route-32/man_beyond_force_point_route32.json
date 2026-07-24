@@ -15,7 +15,7 @@
   "greeting": {
    "pages": [
     { "jp": "この　いわ、うごかせる？", "en": "Can you move this rock?" },
-    { "jp": "ちからが　いるんだ。", "en": "It takes strength." }
+    { "jp": "力（ちから）が　いるんだ。", "en": "It takes strength." }
    ]
   },
   "reward": {

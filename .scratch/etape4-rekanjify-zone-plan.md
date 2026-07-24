@@ -178,7 +178,7 @@ dernier, viser la couverture plutôt que la densité par fichier.
 | union-cave | 180 | 12 | 5 | ✅ fait 2026-07-24. 5 fichiers restent à 0%, vérifiés sans amélioration sûre possible. |
 | route-33 | 180 | 1 | 0 | ✅ fait 2026-07-24. 通 ajouté. |
 | ruins-of-alph | 160 | 3 | 1 | ✅ fait 2026-07-24. 考/心 ajoutés. 1 fichier (young_man) reste à 0%, vérifié sans amélioration sûre. |
-| route-32 | 140 | 14 |
+| route-32 | 140 | 14 | 3 | ✅ fait 2026-07-24. 役に立つ/力/後 ajoutés. 3 fichiers restent à 0%, vérifiés sans amélioration sûre. |
 | sprout-tower | 130 | 3 |
 | violet-city | 100 | 11 |
 | route-31 | 80 | 3 |
