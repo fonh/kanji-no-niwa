@@ -35,6 +35,9 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, ice-path (5/5 fichiers) re-kanjifié à la main** : 上/落/動/
+  後/舞/人/先/光/立/俺/寒/前/分/本/当 ajoutés sur les 5 dialogues (farewell_note,
+  kimono_sayo, cs_taki_pedestal, 2 rocket_straggler). 5 linters verts.
 - **2026-07-24 — Phase 2, passe dialogues : méthode tranchée (automatisation
   rejetée), dragons-den (6/6 fichiers) re-kanjifié à la main** : tentative
   d'automatisation à l'échelle (`scripts/build/rekanjify-dialogues.py`, matching par

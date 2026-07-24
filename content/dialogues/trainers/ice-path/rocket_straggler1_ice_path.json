@@ -11,11 +11,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "だんは　かいさんした…　でも　おれたちは　どこへ　いけば　いい？",
+     "jp": "だんは　かいさんした…　でも　俺（おれ）たちは　どこへ　いけば　いい？",
      "en": "The team disbanded... but where are WE supposed to go?"
     },
     {
-     "jp": "この　さむさも、ぜんぶ　おまえの　せいだ！",
+     "jp": "この　寒（さむ）さも、ぜんぶ　お前（まえ）の　せいだ！",
      "en": "This cold — it's all YOUR fault!"
     }
    ]
@@ -23,7 +23,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "…わるかったのは　おれたちだ。わかってるさ。",
+     "jp": "…わるかったのは　俺（おれ）たちだ。分（わ）かってるさ。",
      "en": "...We were the ones in the wrong. I know that."
     }
    ]

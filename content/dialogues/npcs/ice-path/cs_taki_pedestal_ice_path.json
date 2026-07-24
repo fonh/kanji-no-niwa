@@ -26,11 +26,11 @@
   "reached": {
    "pages": [
     {
-     "jp": "（グリッサードの　さきに、こおりの　だいざが　あった。）",
+     "jp": "（グリッサードの　先（さき）に、こおりの　だいざが　あった。）",
      "en": "(Beyond the sliding puzzle stands a pedestal of ice.)"
     },
     {
-     "jp": "（だいざの　うえで、滝（たき）の　かんじが　ひかって　いる。）",
+     "jp": "（だいざの　上（うえ）で、滝（たき）の　かんじが　光（ひか）って　いる。）",
      "en": "(Atop it, the kanji of Waterfall glimmers.)"
     },
     {
@@ -52,7 +52,7 @@
   "empty": {
    "pages": [
     {
-     "jp": "（からの　だいざが　しずかに　たって　いる。）",
+     "jp": "（からの　だいざが　しずかに　立（た）って　いる。）",
      "en": "(The empty pedestal stands in silence.)"
     }
    ]
