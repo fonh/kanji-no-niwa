@@ -26,11 +26,11 @@
   "welcome": {
    "pages": [
     {
-     "jp": "ここは　マツバさまの　ジム。かげの　しゅぎょうの　ばです。",
+     "jp": "ここは　マツバさまの　ジム。かげの　修行（しゅぎょう）の　ばです。",
      "en": "This is Lord Morty's Gym — a place of shadow training."
     },
     {
-     "jp": "こわがらないで、まず　わたしと　まなびなさい。",
+     "jp": "こわがらないで、まず　わたしと　学（まな）びなさい。",
      "en": "Don't be afraid. First, study with me."
     }
    ]
@@ -38,7 +38,7 @@
   "post_badge": {
    "pages": [
     {
-     "jp": "マツバさまの　目（め）は　とおくを　みて　います。",
+     "jp": "マツバさまの　目（め）は　遠（とお）くを　みて　います。",
      "en": "Lord Morty's eyes see far into the distance."
     },
     {

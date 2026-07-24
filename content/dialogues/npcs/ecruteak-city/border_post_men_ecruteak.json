@@ -17,11 +17,11 @@
   "welcome": {
    "pages": [
     {
-     "jp": "この　さきは　スズの　とうへ　つづく　みちだ。",
+     "jp": "この　先（さき）は　スズの　とうへ　つづく　道（みち）だ。",
      "en": "Beyond here lies the path to the Bell Tower."
     },
     {
-     "jp": "むかし、にじいろの　とりが　この　まちに　すんで　いたと　いう。",
+     "jp": "むかし、にじいろの　鳥（とり）が　この　まちに　すんで　いたと　いう。",
      "en": "They say a rainbow bird once lived in this city."
     },
     {
@@ -29,7 +29,7 @@
      "en": "Only when you climb the tower will you understand what that means."
     },
     {
-     "jp": "だが　いまは　とおせない。とうは　とざされて　いる。",
+     "jp": "だが　いまは　通（とお）せない。とうは　とざされて　いる。",
      "en": "But we can't let you through now. The tower is sealed."
     }
    ]

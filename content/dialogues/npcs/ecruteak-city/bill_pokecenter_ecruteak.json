@@ -35,11 +35,11 @@
      "en": "Together with a researcher called Lanette."
     },
     {
-     "jp": "かぞくの　ようじで、コガネの　いえに　帰（かえ）るところなんだ。",
+     "jp": "かぞくの　ようじで、コガネの　家（いえ）に　帰（かえ）るところなんだ。",
      "en": "Family matters — I'm headed back home to Goldenrod."
     },
     {
-     "jp": "よかったら、あそびに　来（き）てよ！",
+     "jp": "よかったら、あそびに　きてよ！",
      "en": "Come visit me sometime!"
     }
    ],
@@ -54,7 +54,7 @@
   "after": {
    "pages": [
     {
-     "jp": "コガネの　いえで　まってるよ！",
+     "jp": "コガネの　家（いえ）で　まってるよ！",
      "en": "I'll be waiting at my house in Goldenrod!"
     }
    ]

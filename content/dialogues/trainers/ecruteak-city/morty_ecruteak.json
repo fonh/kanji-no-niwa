@@ -19,11 +19,11 @@
      "en": "We met at the Burned Tower. I am Morty."
     },
     {
-     "jp": "この　まちで　しゅぎょうを　つみ、みえない　ものを　みる　目（め）を　やしなった。",
+     "jp": "この　まちで　修行（しゅぎょう）を　つみ、みえない　ものを　みる　目（め）を　やしなった。",
      "en": "Training in this city, I learned to see what cannot be seen."
     },
     {
-     "jp": "きみの　目（め）に　なにが　みえるか、ためして　あげよう。",
+     "jp": "きみの　目（め）に　なにが　みえるか、試（ため）して　あげよう。",
      "en": "Let us test what your eyes can see."
     }
    ]
@@ -31,7 +31,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "…みえたよ。きみの　ちからは　ほんものだ。",
+     "jp": "…みえたよ。きみの　力（ちから）は　ほんものだ。",
      "en": "...I saw it. Your power is real."
     },
     {
@@ -39,7 +39,7 @@
      "en": "Please accept the Fog Badge."
     },
     {
-     "jp": "この　まちの　でんせつも、いつか　きみが　たしかめる　ことに　なるだろう。",
+     "jp": "この　まちの　伝説（でんせつ）も、いつか　きみが　たしかめる　ことに　なるだろう。",
      "en": "One day, you too will witness this city's legend."
     }
    ],

@@ -27,7 +27,7 @@
   "dance": {
    "pages": [
     {
-     "jp": "（いただきに、5にんの　まいこが　ならんで　いる。）",
+     "jp": "（いただきに、5にんの　まいこが　並（なら）んで　いる。）",
      "en": "(The five dancers stand in a row at the summit.)"
     },
     {
@@ -35,15 +35,15 @@
      "en": "Welcome. Now then... let us begin."
     },
     {
-     "jp": "（まいが　はじまった。すずの　ねと、とうの　かねが　ひびきあう…。）",
+     "jp": "（舞（まい）が　はじまった。すずの　ねと、とうの　かねが　ひびきあう…。）",
      "en": "(The dance begins. The clear bell and the tower's great bell resonate...)"
     },
     {
-     "jp": "（そらが　にじいろに　ひかった！）",
+     "jp": "（そらが　にじいろに　光（ひか）った！）",
      "en": "(The sky flashes with rainbow light!)"
     },
     {
-     "jp": "（おおきな　かげが、ゆっくりと　まいおりて　くる…！）",
+     "jp": "（大（おお）きな　かげが、ゆっくりと　舞（ま）い降（お）りて　くる…！）",
      "en": "(A great shadow slowly descends...!)"
     }
    ],
@@ -58,11 +58,11 @@
   "after": {
    "pages": [
     {
-     "jp": "とりは　あなたを　えらびました。",
+     "jp": "鳥（とり）は　あなたを　選（えら）びました。",
      "en": "The bird has chosen you."
     },
     {
-     "jp": "150ねんの　ときを　こえて。",
+     "jp": "150年（ねん）の　時（とき）を　こえて。",
      "en": "Across one hundred and fifty years."
     }
    ]

@@ -11,11 +11,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "（にじいろの　とりが、しずかに　こちらを　みて　いる。）",
+     "jp": "（にじいろの　鳥（とり）が、しずかに　こちらを　みて　いる。）",
      "en": "(The rainbow bird regards you in silence.)"
     },
     {
-     "jp": "（つばさが　ひかり、七（なな）いろの　かぜが　ふきぬけた！）",
+     "jp": "（つばさが　光（ひか）り、なないろの　風（かぜ）が　ふきぬけた！）",
      "en": "(Its wings blaze — a seven-colored wind rushes past!)"
     }
    ]
@@ -23,11 +23,11 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "（とりは　ながく　たかく　ないた。みとめられたのだ。）",
+     "jp": "（鳥（とり）は　長（なが）く　高（たか）く　ないた。みとめられたのだ。）",
      "en": "(The bird cries long and high. You are acknowledged.)"
     },
     {
-     "jp": "（にじいろの　はねが　いちまい、しずかに　まいおちた。）",
+     "jp": "（にじいろの　羽（はね）が　いちまい、しずかに　舞（ま）い落（お）ちた。）",
      "en": "(A single rainbow feather drifts quietly down.)"
     }
    ],

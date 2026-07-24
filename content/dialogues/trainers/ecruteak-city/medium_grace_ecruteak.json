@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "影（かげ）は　うそを　つきません。",
+     "jp": "かげは　うそを　つきません。",
      "en": "Shadows never lie."
     },
     {
-     "jp": "あなたの　影（かげ）を　よませて　いただきます。",
+     "jp": "あなたの　かげを　よませて　いただきます。",
      "en": "Allow me to read yours."
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "いい　影（かげ）を　して　います。おとおりなさい。",
+     "jp": "いい　かげを　して　います。お通（とお）りなさい。",
      "en": "You cast a fine shadow. You may pass."
     }
    ]

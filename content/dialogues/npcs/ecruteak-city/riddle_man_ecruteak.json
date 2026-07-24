@@ -26,7 +26,7 @@
   "welcome": {
    "pages": [
     {
-     "jp": "なぞなぞだ。「やけても　のこり、ならなくても　ひびく　ものは？」",
+     "jp": "なぞなぞだ。「やけても　残（のこ）り、ならなくても　ひびく　ものは？」",
      "en": "A riddle: what remains though burned, and echoes though it cannot ring?"
     },
     {
@@ -38,7 +38,7 @@
      "en": "As a reward, take this machine."
     },
     {
-     "jp": "よんで　いない　ほんや　てがみが　ちかくに　あると、おしえて　くれるぞ。",
+     "jp": "よんで　いない　本（ほん）や　てがみが　ちかくに　あると、おしえて　くれるぞ。",
      "en": "It tells you when an unread book or letter is nearby."
     }
    ],
@@ -52,11 +52,11 @@
   "after": {
    "pages": [
     {
-     "jp": "その　たなの　ほん、よんで　ごらん。",
+     "jp": "その　たなの　本（ほん）、よんで　ごらん。",
      "en": "Try reading that book on the shelf."
     },
     {
-     "jp": "この　まちの　でんせつが　かいて　ある。",
+     "jp": "この　まちの　伝説（でんせつ）が　かいて　ある。",
      "en": "It tells this city's legend."
     }
    ]
