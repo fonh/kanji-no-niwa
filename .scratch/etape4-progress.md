@@ -41,6 +41,23 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, cerulean-city (10/10 fichiers) re-kanjifié à la main** : 2ᵉ
+  zone du Tier 1 (studiedSet 1350). Kanji ajoutés (gérant du vélo, sbire isolé du gym,
+  pièce cachée, garçon récurrent, Azuria/Misty, 5 nageurs) : 今/方/年前/赤/少年/自転車/
+  旅立/何/お前/解散/団/聞/見/北/逃/行/浮/輪/陰/光/発電所/部品/川/水/急/北風/走/私/人魚/
+  呼/全/懸/挑/受/取/守/上/番人/俺/戻/再開/強/試合/前/準備/十分/温/本気/波/飲. Faux amis
+  écartés : かけて→懸けて (pas 賭けて, hors studiedSet de toute façon) pour le sens
+  « miser/risquer » ; お前（まえ）aligné sur le seul précédent du corpus
+  (`rocket_straggler1_ice_path.json`). Règle tout-ou-rien encore utile : れんらく
+  (連絡, 絡 hors studiedSet), まんなか (真ん中, 真 hors studiedSet) et しょうぶ/まけかた
+  (勝負/負け方, 負 hors studiedSet partout) laissés en kana. **1 fichier
+  (`swimmer_diana_cerulean.json`) reste à 0% de densité** : aucun des deux mots du
+  fichier n'a tous ses kanji étudiés — vérifié, aucune amélioration sûre possible (pas
+  un oubli). **Bug linter attrapé en cours de route** : première tentative
+  « 年（ねん）前（まえ）» rejetée par `lint-kanji-budget.py` (lecture par caractère sur
+  un run contigu de kanji, ADR-0002) — corrigée en run groupé 年前（ねんまえ）. 5 linters
+  verts (536 fichiers, mêmes 3 WARN attendus, 0 FAIL). Densité globale 378→370 fichiers
+  sous le plancher.
 - **2026-07-24 — Phase 2, route-24-25-kanto (12/12 fichiers) re-kanjifié à la main** :
   1ʳᵉ zone traitée selon l'ordre de priorité réel du nouveau plan
   (`.scratch/etape4-rekanjify-zone-plan.md`, Tier 1, studiedSet 1370 — le plus riche du

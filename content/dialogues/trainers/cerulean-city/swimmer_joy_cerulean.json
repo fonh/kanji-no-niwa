@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "カスミさんの　しあいの　まえに、じゅんびうんどう！",
+     "jp": "カスミさんの　試合（しあい）の　前（まえ）に、準備（じゅんび）うんどう！",
      "en": "A warm-up before your bout with Misty!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "じゅうぶん　あったまったでしょ。",
+     "jp": "十分（じゅうぶん）　温（あった）まったでしょ。",
      "en": "You're plenty warmed up now."
     }
    ]

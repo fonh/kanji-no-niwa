@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "みずの　ジムの　ほんきを　みせて　やる！",
+     "jp": "水（みず）の　ジムの　本気（ほんき）を　見（み）せて　やる！",
      "en": "Behold the Water Gym at full strength!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "なみに　のまれた…。",
+     "jp": "波（なみ）に　飲（の）まれた…。",
      "en": "Swallowed by the wave..."
     }
    ]

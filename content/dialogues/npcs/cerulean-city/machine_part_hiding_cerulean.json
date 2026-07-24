@@ -27,11 +27,11 @@
   "found": {
    "pages": [
     {
-     "jp": "（プールの　うきわの　かげに、なにか　ひかって　いる。）",
+     "jp": "（プールの　浮（う）き輪（わ）の　陰（かげ）に、何（なに）か　光（ひか）って　いる。）",
      "en": "(Something glints behind the pool floats.)"
     },
     {
-     "jp": "（はつでんしょの　ぶひんだ！　みつけた！）",
+     "jp": "（発電所（はつでんしょ）の　部品（ぶひん）だ！　見（み）つけた！）",
      "en": "(The Power Plant's machine part! Found it!)"
     }
    ],
@@ -50,7 +50,7 @@
   "empty": {
    "pages": [
     {
-     "jp": "（もう　なにも　ない。）",
+     "jp": "（もう　何（なに）も　ない。）",
      "en": "(Nothing left here.)"
     }
    ]

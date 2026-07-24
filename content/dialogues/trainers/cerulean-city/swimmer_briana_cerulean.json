@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "カスミさんが　もどって、ジムも　さいかいよ！",
+     "jp": "カスミさんが　戻（もど）って、ジムも　再開（さいかい）よ！",
      "en": "With Misty back, the Gym reopens!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "カスミさんは　もっと　つよいわよ！",
+     "jp": "カスミさんは　もっと　強（つよ）いわよ！",
      "en": "Misty's far stronger than me!"
     }
    ]
