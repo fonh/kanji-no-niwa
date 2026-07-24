@@ -41,6 +41,12 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-29 (2/2 fichiers vérifiés, 0
+  modification).** かようび (曜 jamais étudié dans tout le curriculum) et
+  たいせつ (切 hors studiedSet) restent en kana — aucune amélioration sûre
+  possible à ce stade quasi initial (30 kanji). Confirmé par
+  `lint-kanji-density.py`. Reste new-bark-town (6 fichiers) — dernière
+  zone du Tier 5 et de toute la passe dialogues phase 2.
 - **2026-07-24 — Phase 2, cherrygrove-city (5/5 fichiers) re-kanjifié.**
   **Bonus opportuniste** : l'audit a trouvé 2 usages pré-existants (hors
   session, confirmés via `git log -p`) de 町/店 hors studiedSet dans
