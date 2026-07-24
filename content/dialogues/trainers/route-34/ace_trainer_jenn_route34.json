@@ -11,7 +11,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "あら、みずうみの　こっちまで　くる　ひと、ひさしぶり。",
+     "jp": "あら、湖（みずうみ）の　こっちまで　くる　ひと、ひさしぶり。",
      "en": "My, it's been a while since anyone crossed the water."
     },
     {
@@ -23,7 +23,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "まだ　ふたり　いるわよ。",
+     "jp": "まだ　二人（ふたり）　いるわよ。",
      "en": "There are still two of us left."
     }
    ]
