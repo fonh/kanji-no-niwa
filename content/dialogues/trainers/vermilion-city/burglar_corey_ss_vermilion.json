@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "船（ふね）の　上（うえ）なら　逃（に）げ場（ば）が　ない…お前（まえ）がな！",
+     "jp": "船（ふね）の　上（うえ）なら　にげばが　ない…お前（まえ）がな！",
      "en": "Nowhere to run at sea... for YOU, that is!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "逃（に）げ場（ば）が　ないのは　俺（おれ）だった。",
+     "jp": "にげばが　ないのは　俺（おれ）だった。",
      "en": "I was the one with nowhere to run."
     }
    ]

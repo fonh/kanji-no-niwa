@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "りゅうの　ちからの　まえに　ひれふせ！",
+     "jp": "竜（りゅう）の　力（ちから）の　前（まえ）に　ひれふせ！",
      "en": "Bow before the power of dragons!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ひれふしたのは　おれか…。",
+     "jp": "ひれふしたのは　俺（おれ）か…。",
      "en": "I'm the one bowing..."
     }
    ]

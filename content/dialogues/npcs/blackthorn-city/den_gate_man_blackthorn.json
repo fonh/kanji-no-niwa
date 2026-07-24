@@ -27,11 +27,11 @@
   "blocking": {
    "pages": [
     {
-     "jp": "この　さきは　りゅうの　あな。りゅうつかいの　せいち だ。",
+     "jp": "この　先（さき）は　竜（りゅう）の　あな。竜使（りゅうつか）いの　せいち だ。",
      "en": "Beyond lies the Dragon's Den — sacred ground of the Dragon Tamers."
     },
     {
-     "jp": "イブキさまの　みとめた　ものしか　とおせん。",
+     "jp": "イブキさまの　みとめた　ものしか　通（とお）せん。",
      "en": "Only those Lady Clair acknowledges may pass."
     }
    ]
@@ -39,7 +39,7 @@
   "open": {
    "pages": [
     {
-     "jp": "イブキさまから　はなしは　きいた。とおりなさい。",
+     "jp": "イブキさまから　話（はなし）は　聞（き）いた。通（とお）りなさい。",
      "en": "Lady Clair told me of you. You may pass."
     },
     {

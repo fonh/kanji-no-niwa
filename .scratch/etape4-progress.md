@@ -41,6 +41,32 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, blackthorn-city (14/14 fichiers) re-kanjifié — BUG DE
+  MÉTHODE ATTRAPÉ ET CORRIGÉ SUR TOUTE LA SESSION** : en commençant blackthorn-city
+  (1ʳᵉ zone du Tier 3), `lint-kanji-budget.py` a fait échouer 6 fichiers (budget
+  dépassé, lecture ungrouped sur 竜使い). Cause racine : le script d'aide ad hoc de
+  cette session (studied.py, scratchpad) calculait le studiedSet en additionnant
+  `new_kanji` sur NARRATIVE_ORDER — exactement la méthode que
+  `rekanjify-report.py` documente comme « aide à la découverte, jamais source de
+  vérité » (règle #1 du plan de zone) — au lieu de la vraie règle du linter
+  (`ordered_kanji[:zone.cumulative_start]`, règle #2). **Corrigé immédiatement** :
+  script réécrit pour utiliser `cumulative_start`. **Audit rétroactif des 21 zones
+  déjà committées cette session** (comparaison de chaque kanji corps-de-texte
+  utilisé contre le vrai studiedSet) : 14 fichiers de plus avec exactement 1 kanji
+  non étudié chacun (母国/一瞬/怒/相棒/懸/娘/迎え撃つ/珍しい/電撃/戻る/床/一筋/逃げ場/
+  基づいて/挑む/始めましょ/付けな selon fichier) — sous le seuil de 2/fichier donc
+  invisibles au linter (budget respecté), mais contraires à la règle de fond.
+  Tous repassés en kana, ré-audit complet confirmé **0 kanji hors studiedSet sur
+  les 21 zones**. blackthorn-city lui-même re-kanjifié correctement ensuite : 竜使い
+  （りゅうつかい）en run groupé (pas 竜（りゅう）使（つか）い — piège ADR-0002 déjà
+  documenté mais reproduit une 2ᵉ fois), 安心/仕事 puis reverti (仕/事 finalement hors
+  studiedSet réel), 兄さん/残る/学問(reverti, 問 hors studiedSet)/竜/私/並ぶ/言われる/
+  厳しい/十分/学問/後 etc. **Sûreté structurelle** (git diff jp-only) reconfirmée sur
+  tout le lot corrigé. 5 linters verts (536 fichiers, mêmes 3 WARN attendus, 0 FAIL).
+  Densité globale 271→258 fichiers sous le plancher (1 fichier, effort_girl, reste
+  à 0% : 鍛/似 hors studiedSet, aucune amélioration sûre). **Leçon retenue, ajoutée
+  au plan de zone** : ne jamais recalculer le studiedSet à la main par accumulation
+  narrative — toujours `cumulative_start`, ou lancer le linter et corriger ses FAIL.
 - **2026-07-24 — Phase 2, Tier 2 entier (route-27/route-26/route-46/dark-cave/
   route-45, 27/27 fichiers) re-kanjifié à la main — TIER 2 ENTIÈREMENT CLOS**
   (dragons-den déjà fait plus tôt dans la session). Kanji notables : 受付/地方/西/北/

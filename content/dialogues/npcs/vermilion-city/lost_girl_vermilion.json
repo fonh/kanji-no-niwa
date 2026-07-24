@@ -35,7 +35,7 @@
      "en": "...Huh? Grandpa's crying?"
     },
     {
-     "jp": "あそびの　つもりだったのに…。ごめんなさい、戻（もど）る！",
+     "jp": "あそびの　つもりだったのに…。ごめんなさい、もどる！",
      "en": "I thought we were playing... I'm sorry, I'll go back!"
     }
    ],
@@ -50,7 +50,7 @@
   "back": {
    "pages": [
     {
-     "jp": "おじいちゃんの　所（ところ）に　戻（もど）ったよ。ありがと！",
+     "jp": "おじいちゃんの　所（ところ）に　もどったよ。ありがと！",
      "en": "I'm back with Grandpa now. Thanks!"
     }
    ]

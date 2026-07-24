@@ -15,11 +15,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "わたしは　イブキ。せかいいちの　りゅうつかい。",
+     "jp": "私（わたし）は　イブキ。せかいいちの　竜使（りゅうつか）い。",
      "en": "I am Clair — the world's greatest dragon master."
     },
     {
-     "jp": "ワタルと　ならぶ　ものと　いわれるのは、この　わたしだけ。",
+     "jp": "ワタルと　並（なら）ぶ　ものと　言（い）われるのは、この　私（わたし）だけ。",
      "en": "I alone am said to stand beside Lance."
     },
     {
@@ -31,7 +31,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "…まけた？　この　わたしが？",
+     "jp": "…まけた？　この　私（わたし）が？",
      "en": "...I lost? I... lost?"
     },
     {
@@ -39,11 +39,11 @@
      "en": "...I don't accept it. I won't!"
     },
     {
-     "jp": "バッジが　ほしければ、りゅうの　あなの　ほこらへ　いきなさい。",
+     "jp": "バッジが　ほしければ、竜（りゅう）の　あなの　ほこらへ　行（い）きなさい。",
      "en": "If you want the badge, go to the shrine in the Dragon's Den."
     },
     {
-     "jp": "おさに　みとめられたら…　かんがえて　あげる。",
+     "jp": "おさに　みとめられたら…　考（かんが）えて　あげる。",
      "en": "If the Elder acknowledges you... I'll consider it."
     }
    ],

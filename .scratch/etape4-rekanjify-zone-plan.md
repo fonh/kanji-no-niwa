@@ -51,6 +51,19 @@ Le tableau ci-dessous corrige le tri.
    (candidats à vérifier), jamais comme source de vérité.
 2. studiedSet exact du linter : `ordered_kanji[:zone.cumulative_start]` — jamais
    l'ordre narratif (trop permissif, cf. le bug de la phase 1 sur `elm_great_text.json`).
+   **Récidive attrapée le 2026-07-24 pendant la passe dialogues** : un script d'aide
+   ad hoc (`studied.py`, scratchpad de session) additionnait `new_kanji` sur
+   NARRATIVE_ORDER (copiant la logique de `rekanjify-report.py`, explicitement
+   « aide à la découverte, jamais source de vérité » — règle #1 ci-dessus) au lieu de
+   `cumulative_start`. `lint-kanji-budget.py` a immédiatement fait échouer
+   blackthorn-city (者/仕/事 utilisés à tort) ; un audit rétroactif complet des 21
+   zones de la session (comparant chaque kanji corps-de-texte utilisé contre le vrai
+   `cumulative_start`) a trouvé 14 fichiers de plus avec exactement 1 kanji non
+   étudié chacun — sous le seuil de 2/fichier donc invisibles au linter, mais
+   contraires à la règle de fond (n'écrire QUE des kanji réellement étudiés). Tous
+   corrigés (repassés en kana), ré-audités à zéro. **Le studiedSet ne se calcule
+   jamais à la main par accumulation narrative — toujours via `cumulative_start`,
+   ou en dernier recours en lançant le linter et en corrigeant ses FAIL.**
 3. Lecture inline immédiatement après le KANJI, avant les okurigana (学（まな）ぶ, pas
    学ぶ（まなぶ）) — vérifié par `lint-kanji-budget.py` sur chaque édition.
 4. Après chaque zone : les 5 linters (`lint-kanji-budget.py`, `lint-cross-refs.py`,
@@ -101,7 +114,7 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 
 | Zone | studiedSet | Fichiers | WARN |
 |---|---:|---:|---:|
-| blackthorn-city | 610 | 14 | 13 |
+| blackthorn-city | 610 | 14 | 1 | ✅ fait 2026-07-24. 1 fichier (effort_girl) reste à 0% : ses 2 mots (鍛えてる/似合ってる) ont un kanji hors studiedSet chacun, aucune amélioration sûre possible. |
 | ice-path | 590 | 5 | 0 | ✅ fait 2026-07-24 |
 | route-44 | 570 | 7 | — |
 | lake-of-rage | 565 | 10 | 8 |
