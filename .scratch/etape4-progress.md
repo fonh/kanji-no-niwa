@@ -41,6 +41,18 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, goldenrod-city session B (Tour Radio/arc Rocket,
+  25/25 fichiers) re-kanjifié.** Vocabulaire de cet arc très N2 (でんぱ/
+  そうび/そうこ/きょくちょう/へんそう/かいさん etc.) — quasiment tout hors
+  studiedSet à ce point du curriculum (255 kanji), confirmé mot par mot.
+  Seulement 4 conversions sûres trouvées sur 25 fichiers : 通（とお）さん/
+  通（とお）しちまった (rt_grunt1_wh), 先（さき） (rt_grunt2_3f), ご用（よう）
+  et 目（め） (petrel_5f), 力（ちから） (scientist_trenton). Règle
+  tout-ou-rien confirmée sur de très nombreux candidats composés hors
+  studiedSet. Audit `cumulative_start` : CLEAN du premier coup. 7 linters
+  verts (536 fichiers dialogue, 480 fichiers état, 36 fichiers leçons,
+  mêmes 3 WARN attendus, 0 FAIL). Reste goldenrod-city session C
+  (Gym/dresseurs divers, 10 fichiers) pour clore la zone.
 - **2026-07-24 — Phase 2, Tier 5 lancé : goldenrod-city session A (PNJ de
   ville, 15/15 fichiers) re-kanjifié.** Découpage en 3 sous-sessions par
   sous-lieu comme prévu par le plan (50 fichiers au total, le plus gros

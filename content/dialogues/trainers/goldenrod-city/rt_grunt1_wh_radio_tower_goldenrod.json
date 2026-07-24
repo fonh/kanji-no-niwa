@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "そうこの　みはりだ！　とおさん！",
+     "jp": "そうこの　みはりだ！　通（とお）さん！",
      "en": "Warehouse guard! None shall pass!"
     }
    ]
@@ -18,7 +18,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "とおしちまった…。",
+     "jp": "通（とお）しちまった…。",
      "en": "They passed..."
     }
    ]

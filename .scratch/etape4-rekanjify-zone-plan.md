@@ -170,7 +170,7 @@ dernier, viser la couverture plutôt que la densité par fichier.
 
 | Zone | studiedSet | Fichiers |
 |---|---:|---:|
-| goldenrod-city | 255 | 50 | **Le plus gros fichier-count du corpus entier.** Découpé en 3 sous-sessions par sous-lieu : **A) PNJ de ville (15 fichiers) ✅ fait 2026-07-24** — 8 restent à 0%, vérifiés sans amélioration sûre. **B) Tour Radio / arc Rocket (25 fichiers)** — reste à faire. **C) Gym/dresseurs divers (10 fichiers)** — reste à faire. |
+| goldenrod-city | 255 | 50 | **Le plus gros fichier-count du corpus entier.** Découpé en 3 sous-sessions par sous-lieu : **A) PNJ de ville (15 fichiers) ✅ fait 2026-07-24** — 8 restent à 0%. **B) Tour Radio / arc Rocket (25 fichiers) ✅ fait 2026-07-24** — vocabulaire très N2 (電波/装置/局長 etc.), quasiment tout hors studiedSet à ce point, seulement 4 kanji ajoutés (通/先/用/目/力) sur les 25 fichiers ; la plupart restent proches de 0%, vérifiés sans amélioration sûre. **C) Gym/dresseurs divers (10 fichiers)** — reste à faire. |
 | route-34 | 240 | 10 |
 | **ilex-forest** | 220 | 3 | ✅ fait 2026-07-24 (hors ordre, cf. auto-évaluation — gain réel mais aurait dû venir après le Tier 4) |
 | slowpoke-well | 210 | 5 |
