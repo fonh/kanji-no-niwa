@@ -1,23 +1,23 @@
 {
- "_note": "Étape 4 phase 1 — décision de design du 2026-07-23/24 (double revue prof+game designer). Corrige le défaut mesuré : l'ordre 'par composants' de kanji-zone-assignment.json place des kanji rares (ex. 彙/513, 鬱/544, 朕/1166) avant des mots basiques constamment utilisés en dialogue (本/561, 学/559, 時/1369, 年/1362, 校/1363, 何/1990). Echange par PAIRES A TAILLE CONSTANTE : chaque kanji promu prend la position d'un kanji démis, ordre topologique (Kahn) respectant les composants — un promu qui a lui-même besoin d'un composant tardif (ex. 話/説/試 → 言 ; 道/週/運 → 込 ; 質/員/買/頭 → 貝 ; 働/使 → 化) voit ce composant promu EN CASCADE avant lui, dans le même budget. Pool de démotion restreint aux kanji N1/N2/N3 < position 300 qui n'apparaissent comme composant kradfile d'AUCUN autre kanji du corpus entier (2136) — aucun risque de casser une chaîne de prérequis en les repoussant plus tard. Composant '乞' traité comme bruit de kradfile (associé à 8+ kanji sans rapport plausible — 知/医/年/族/短/午/教/答 — vraisemblablement un artefact de forme de trait partagée, pas une vraie décomposition ; ignoré dans le graphe de dépendances). Script : .scratch/scripts/build-core-promotion.py (lecture seule) — l'application réelle du swap est faite par scripts/build/apply-core-promotion.py (0.6/1.4).",
- "promotion_count": 69,
- "deferred_count": 33,
+ "_note": "Étape 4 phase 1 — décision de design du 2026-07-23/24 (double revue prof+game designer), reconstruit le 2026-07-24 après un accident d'exécution (build-core-promotion.py relancé par erreur après application du swap, recalculant contre l'état déjà muté et écrasant ce fichier avec une analyse fausse — corrigé en reconstruisant depuis le diff réel entre l'état pré-phase-1 (commit 1691a4cb) et l'état appliqué, sans rien réappliquer). Contenu identique en substance à la version validée par la double revue : corrige l'ordre 'par composants' de kanji-zone-assignment.json qui plaçait des kanji rares avant des mots basiques constamment utilisés en dialogue (本/561→196, 学/559→163, 時/1369→167, 年/1362→131, 校/1363→222, 何/1990→256 — les 6 exemples nommés par l'audit). Échange par paires à taille constante, ordre topologique (Kahn sur kradfile) respectant les composants — 0 violation. **Bug corrigé en cours de route** (revue Japanese-teacher) : la 1ère version utilisait une liste WRITTEN_ZONES tapée à la main qui incluait par erreur des zones sans aucune leçon (route-33/34/35, slowpoke-well) — 45 des 69 promotions du 1er jet atterrissaient sur une position sans PNJ pour les enseigner, dont 4 des 6 exemples-phares. Corrigé : le pool de démotion est maintenant restreint aux positions dans une zone qui a réellement une entrée content/lessons-proposal.json (LESSON_ZONES, calculé depuis les données, pas tapé à la main) — vérifié : 0/40 promotions atterrissent hors d'une zone à leçon. Plafond de démotion par zone relevé de 3 à 5 après cette restriction (le pool sûr s'est réduit à 124 positions sur seulement 8 zones une fois filtré aux vraies zones à leçon).",
+ "promotion_count": 40,
+ "deferred_count": 55,
  "promotions": [
-  {
-   "kanji": "九",
-   "jlpt": "N5",
-   "meaning": "nine",
-   "old_position": 550,
-   "new_position": 92,
-   "cascaded_component": false
-  },
   {
    "kanji": "又",
    "jlpt": "N2",
    "meaning": "or again/furthermore",
    "old_position": 341,
+   "new_position": 92,
+   "cascaded_component": true
+  },
+  {
+   "kanji": "寸",
+   "jlpt": "N2",
+   "meaning": "measurement/tenth of a shaku",
+   "old_position": 291,
    "new_position": 93,
-   "cascaded_component": false
+   "cascaded_component": true
   },
   {
    "kanji": "斤",
@@ -25,78 +25,46 @@
    "meaning": "axe/1.32 lb",
    "old_position": 399,
    "new_position": 94,
-   "cascaded_component": false
+   "cascaded_component": true
   },
   {
    "kanji": "爪",
    "jlpt": "N1",
    "meaning": "claw/nail",
    "old_position": 523,
-   "new_position": 106,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "白",
-   "jlpt": "N5",
-   "meaning": "white",
-   "old_position": 563,
-   "new_position": 107,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "穴",
-   "jlpt": "N2",
-   "meaning": "hole/aperture",
-   "old_position": 1009,
-   "new_position": 108,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "究",
-   "jlpt": "N4",
-   "meaning": "research/study",
-   "old_position": 1409,
-   "new_position": 130,
-   "cascaded_component": false
+   "new_position": 95,
+   "cascaded_component": true
   },
   {
    "kanji": "言",
    "jlpt": "N5",
    "meaning": "say/word",
    "old_position": 584,
-   "new_position": 131,
-   "cascaded_component": false
+   "new_position": 97,
+   "cascaded_component": true
   },
   {
    "kanji": "里",
    "jlpt": "N2",
    "meaning": "ri/village",
    "old_position": 952,
-   "new_position": 132,
-   "cascaded_component": false
+   "new_position": 106,
+   "cascaded_component": true
   },
   {
    "kanji": "元",
    "jlpt": "N4",
    "meaning": "beginning/former time",
    "old_position": 598,
-   "new_position": 140,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "邦",
-   "jlpt": "N2",
-   "meaning": "home country/country",
-   "old_position": 478,
-   "new_position": 141,
-   "cascaded_component": false
+   "new_position": 107,
+   "cascaded_component": true
   },
   {
    "kanji": "院",
    "jlpt": "N4",
    "meaning": "Inst./institution",
    "old_position": 2000,
-   "new_position": 142,
+   "new_position": 108,
    "cascaded_component": false
   },
   {
@@ -104,7 +72,7 @@
    "jlpt": "N4",
    "meaning": "ill/sick",
    "old_position": 1998,
-   "new_position": 160,
+   "new_position": 110,
    "cascaded_component": false
   },
   {
@@ -112,31 +80,23 @@
    "jlpt": "N3",
    "meaning": "crowded/mixture",
    "old_position": 945,
-   "new_position": 162,
-   "cascaded_component": false
+   "new_position": 111,
+   "cascaded_component": true
   },
   {
    "kanji": "干",
    "jlpt": "N3",
    "meaning": "dry/parch",
    "old_position": 858,
-   "new_position": 163,
-   "cascaded_component": false
+   "new_position": 130,
+   "cascaded_component": true
   },
   {
    "kanji": "年",
    "jlpt": "N5",
    "meaning": "year/counter for years",
    "old_position": 1362,
-   "new_position": 180,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "汁",
-   "jlpt": "N2",
-   "meaning": "soup/juice",
-   "old_position": 1192,
-   "new_position": 181,
+   "new_position": 131,
    "cascaded_component": false
   },
   {
@@ -144,39 +104,23 @@
    "jlpt": "N2",
    "meaning": "esteem/furthermore",
    "old_position": 349,
-   "new_position": 182,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "石",
-   "jlpt": "N3",
-   "meaning": "stone",
-   "old_position": 663,
-   "new_position": 183,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "研",
-   "jlpt": "N4",
-   "meaning": "polish/study of",
-   "old_position": 1408,
-   "new_position": 184,
-   "cascaded_component": false
+   "new_position": 132,
+   "cascaded_component": true
   },
   {
    "kanji": "舌",
    "jlpt": "N2",
    "meaning": "tongue/reed",
    "old_position": 1695,
-   "new_position": 185,
-   "cascaded_component": false
+   "new_position": 133,
+   "cascaded_component": true
   },
   {
    "kanji": "話",
    "jlpt": "N5",
    "meaning": "tale/talk",
    "old_position": 1991,
-   "new_position": 186,
+   "new_position": 135,
    "cascaded_component": false
   },
   {
@@ -184,39 +128,23 @@
    "jlpt": "N4",
    "meaning": "opinion/theory",
    "old_position": 1423,
-   "new_position": 187,
+   "new_position": 140,
    "cascaded_component": false
   },
   {
-   "kanji": "至",
+   "kanji": "豆",
    "jlpt": "N2",
-   "meaning": "climax/arrive",
-   "old_position": 1020,
-   "new_position": 188,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "走",
-   "jlpt": "N4",
-   "meaning": "run",
-   "old_position": 625,
-   "new_position": 189,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "起",
-   "jlpt": "N4",
-   "meaning": "rouse/wake up",
-   "old_position": 1412,
-   "new_position": 191,
-   "cascaded_component": false
+   "meaning": "beans/pea",
+   "old_position": 274,
+   "new_position": 141,
+   "cascaded_component": true
   },
   {
    "kanji": "週",
    "jlpt": "N5",
    "meaning": "week",
    "old_position": 1992,
-   "new_position": 192,
+   "new_position": 142,
    "cascaded_component": false
   },
   {
@@ -224,15 +152,15 @@
    "jlpt": "N2",
    "meaning": "dart/arrow",
    "old_position": 1659,
-   "new_position": 193,
-   "cascaded_component": false
+   "new_position": 143,
+   "cascaded_component": true
   },
   {
    "kanji": "医",
    "jlpt": "N4",
    "meaning": "doctor/medicine",
    "old_position": 1997,
-   "new_position": 196,
+   "new_position": 144,
    "cascaded_component": false
   },
   {
@@ -240,15 +168,15 @@
    "jlpt": "N4",
    "meaning": "know/wisdom",
    "old_position": 1994,
-   "new_position": 197,
+   "new_position": 160,
    "cascaded_component": false
   },
   {
-   "kanji": "英",
+   "kanji": "短",
    "jlpt": "N4",
-   "meaning": "England/English",
-   "old_position": 1420,
-   "new_position": 198,
+   "meaning": "short/brevity",
+   "old_position": 1999,
+   "new_position": 162,
    "cascaded_component": false
   },
   {
@@ -256,7 +184,7 @@
    "jlpt": "N5",
    "meaning": "study/learning",
    "old_position": 559,
-   "new_position": 211,
+   "new_position": 163,
    "cascaded_component": false
   },
   {
@@ -264,15 +192,15 @@
    "jlpt": "N4",
    "meaning": "reflect/reflection",
    "old_position": 1427,
-   "new_position": 212,
+   "new_position": 164,
    "cascaded_component": false
   },
   {
-   "kanji": "重",
-   "jlpt": "N4",
-   "meaning": "heavy/important",
-   "old_position": 1415,
-   "new_position": 213,
+   "kanji": "時",
+   "jlpt": "N5",
+   "meaning": "time/hour",
+   "old_position": 1369,
+   "new_position": 167,
    "cascaded_component": false
   },
   {
@@ -280,7 +208,7 @@
    "jlpt": "N5",
    "meaning": "book/present",
    "old_position": 561,
-   "new_position": 214,
+   "new_position": 196,
    "cascaded_component": false
   },
   {
@@ -288,23 +216,7 @@
    "jlpt": "N4",
    "meaning": "vegetable/side dish",
    "old_position": 1421,
-   "new_position": 215,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "薬",
-   "jlpt": "N4",
-   "meaning": "medicine/chemical",
-   "old_position": 1411,
-   "new_position": 216,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "真",
-   "jlpt": "N4",
-   "meaning": "reality/Buddhist sect",
-   "old_position": 1407,
-   "new_position": 217,
+   "new_position": 197,
    "cascaded_component": false
   },
   {
@@ -312,31 +224,23 @@
    "jlpt": "N4",
    "meaning": "oneself",
    "old_position": 624,
-   "new_position": 218,
-   "cascaded_component": false
+   "new_position": 198,
+   "cascaded_component": true
   },
   {
    "kanji": "貝",
    "jlpt": "N3",
    "meaning": "shellfish",
    "old_position": 664,
-   "new_position": 219,
-   "cascaded_component": false
+   "new_position": 199,
+   "cascaded_component": true
   },
   {
    "kanji": "質",
    "jlpt": "N4",
    "meaning": "substance/quality",
    "old_position": 1426,
-   "new_position": 220,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "題",
-   "jlpt": "N4",
-   "meaning": "topic/subject",
-   "old_position": 1416,
-   "new_position": 221,
+   "new_position": 200,
    "cascaded_component": false
   },
   {
@@ -344,7 +248,7 @@
    "jlpt": "N4",
    "meaning": "neck/counter for songs and poems",
    "old_position": 1390,
-   "new_position": 222,
+   "new_position": 220,
    "cascaded_component": false
   },
   {
@@ -352,31 +256,7 @@
    "jlpt": "N5",
    "meaning": "road-way/street",
    "old_position": 1993,
-   "new_position": 240,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "音",
-   "jlpt": "N4",
-   "meaning": "sound/noise",
-   "old_position": 597,
-   "new_position": 241,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "暗",
-   "jlpt": "N4",
-   "meaning": "darkness/disappear",
-   "old_position": 1404,
-   "new_position": 243,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "運",
-   "jlpt": "N4",
-   "meaning": "carry/luck",
-   "old_position": 1413,
-   "new_position": 244,
+   "new_position": 221,
    "cascaded_component": false
   },
   {
@@ -384,7 +264,7 @@
    "jlpt": "N5",
    "meaning": "exam/school",
    "old_position": 1363,
-   "new_position": 245,
+   "new_position": 222,
    "cascaded_component": false
   },
   {
@@ -392,7 +272,7 @@
    "jlpt": "N4",
    "meaning": "meal/boiled rice",
    "old_position": 1424,
-   "new_position": 246,
+   "new_position": 223,
    "cascaded_component": false
   },
   {
@@ -400,15 +280,7 @@
    "jlpt": "N4",
    "meaning": "move/motion",
    "old_position": 1996,
-   "new_position": 247,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "界",
-   "jlpt": "N4",
-   "meaning": "world/boundary",
-   "old_position": 1406,
-   "new_position": 248,
+   "new_position": 224,
    "cascaded_component": false
   },
   {
@@ -416,39 +288,7 @@
    "jlpt": "N4",
    "meaning": "test/try",
    "old_position": 1422,
-   "new_position": 249,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "悪",
-   "jlpt": "N4",
-   "meaning": "bad/vice",
-   "old_position": 1400,
-   "new_position": 250,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "意",
-   "jlpt": "N4",
-   "meaning": "idea/mind",
-   "old_position": 1401,
-   "new_position": 251,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "注",
-   "jlpt": "N4",
-   "meaning": "pour/irrigate",
-   "old_position": 1405,
-   "new_position": 252,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "習",
-   "jlpt": "N4",
-   "meaning": "learn",
-   "old_position": 1410,
-   "new_position": 253,
+   "new_position": 255,
    "cascaded_component": false
   },
   {
@@ -456,7 +296,7 @@
    "jlpt": "N5",
    "meaning": "what",
    "old_position": 1990,
-   "new_position": 254,
+   "new_position": 256,
    "cascaded_component": false
   },
   {
@@ -464,22 +304,6 @@
    "jlpt": "N4",
    "meaning": "use/send on a mission",
    "old_position": 1995,
-   "new_position": 255,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "便",
-   "jlpt": "N4",
-   "meaning": "convenience/facility",
-   "old_position": 1417,
-   "new_position": 256,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "借",
-   "jlpt": "N4",
-   "meaning": "borrow/rent",
-   "old_position": 1418,
    "new_position": 258,
    "cascaded_component": false
   },
@@ -488,7 +312,7 @@
    "jlpt": "N4",
    "meaning": "work/(kokuji)",
    "old_position": 2123,
-   "new_position": 290,
+   "new_position": 259,
    "cascaded_component": false
   },
   {
@@ -496,63 +320,7 @@
    "jlpt": "N4",
    "meaning": "lend",
    "old_position": 1425,
-   "new_position": 292,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "暑",
-   "jlpt": "N4",
-   "meaning": "sultry/hot",
-   "old_position": 1403,
-   "new_position": 293,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "都",
-   "jlpt": "N4",
-   "meaning": "metropolis/capital",
-   "old_position": 1414,
-   "new_position": 294,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "短",
-   "jlpt": "N4",
-   "meaning": "short/brevity",
-   "old_position": 1999,
-   "new_position": 295,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "待",
-   "jlpt": "N4",
-   "meaning": "wait/depend on",
-   "old_position": 1399,
-   "new_position": 296,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "持",
-   "jlpt": "N4",
-   "meaning": "hold/have",
-   "old_position": 1402,
-   "new_position": 297,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "時",
-   "jlpt": "N5",
-   "meaning": "time/hour",
-   "old_position": 1369,
-   "new_position": 298,
-   "cascaded_component": false
-  },
-  {
-   "kanji": "特",
-   "jlpt": "N4",
-   "meaning": "special",
-   "old_position": 1419,
-   "new_position": 299,
+   "new_position": 261,
    "cascaded_component": false
   }
  ],
@@ -562,20 +330,34 @@
    "jlpt": "N3",
    "meaning": "meadow/original",
    "old_position": 92,
-   "new_position": 341
+   "new_position": 274
   },
   {
    "kanji": "園",
    "jlpt": "N3",
    "meaning": "park/garden",
    "old_position": 93,
-   "new_position": 349
+   "new_position": 291
   },
   {
    "kanji": "当",
    "jlpt": "N3",
    "meaning": "hit/right",
    "old_position": 94,
+   "new_position": 341
+  },
+  {
+   "kanji": "形",
+   "jlpt": "N3",
+   "meaning": "shape/form",
+   "old_position": 95,
+   "new_position": 349
+  },
+  {
+   "kanji": "才",
+   "jlpt": "N3",
+   "meaning": "genius/years old",
+   "old_position": 97,
    "new_position": 399
   },
   {
@@ -583,695 +365,1418 @@
    "jlpt": "N3",
    "meaning": "other/another",
    "old_position": 106,
-   "new_position": 478
+   "new_position": 523
   },
   {
    "kanji": "倍",
    "jlpt": "N3",
    "meaning": "double/twice",
    "old_position": 107,
-   "new_position": 523
+   "new_position": 559
   },
   {
    "kanji": "列",
    "jlpt": "N3",
    "meaning": "file/row",
    "old_position": 108,
-   "new_position": 550
+   "new_position": 561
+  },
+  {
+   "kanji": "命",
+   "jlpt": "N3",
+   "meaning": "fate/command",
+   "old_position": 110,
+   "new_position": 584
+  },
+  {
+   "kanji": "定",
+   "jlpt": "N3",
+   "meaning": "determine/fix",
+   "old_position": 111,
+   "new_position": 598
   },
   {
    "kanji": "遊",
    "jlpt": "N3",
    "meaning": "play",
    "old_position": 130,
-   "new_position": 559
+   "new_position": 624
   },
   {
    "kanji": "部",
    "jlpt": "N3",
    "meaning": "section/bureau",
    "old_position": 131,
-   "new_position": 561
+   "new_position": 664
   },
   {
    "kanji": "酒",
    "jlpt": "N3",
    "meaning": "sake/alcohol",
    "old_position": 132,
-   "new_position": 563
+   "new_position": 858
+  },
+  {
+   "kanji": "陽",
+   "jlpt": "N3",
+   "meaning": "sunshine/yang principle",
+   "old_position": 133,
+   "new_position": 945
+  },
+  {
+   "kanji": "争",
+   "jlpt": "N3",
+   "meaning": "contend/dispute",
+   "old_position": 135,
+   "new_position": 952
   },
   {
    "kanji": "刷",
    "jlpt": "N3",
    "meaning": "printing/print",
    "old_position": 140,
-   "new_position": 584
+   "new_position": 1362
   },
   {
    "kanji": "副",
    "jlpt": "N3",
    "meaning": "vice-/assistant",
    "old_position": 141,
-   "new_position": 597
+   "new_position": 1363
   },
   {
    "kanji": "印",
    "jlpt": "N3",
    "meaning": "stamp/seal",
    "old_position": 142,
-   "new_position": 598
+   "new_position": 1369
+  },
+  {
+   "kanji": "参",
+   "jlpt": "N3",
+   "meaning": "nonplussed/three (in documents)",
+   "old_position": 143,
+   "new_position": 1390
+  },
+  {
+   "kanji": "器",
+   "jlpt": "N3",
+   "meaning": "utensil/vessel",
+   "old_position": 144,
+   "new_position": 1421
   },
   {
    "kanji": "満",
    "jlpt": "N3",
    "meaning": "full/fullness",
    "old_position": 160,
-   "new_position": 624
+   "new_position": 1422
   },
   {
    "kanji": "然",
    "jlpt": "N3",
    "meaning": "sort of thing/so",
    "old_position": 162,
-   "new_position": 625
+   "new_position": 1423
   },
   {
    "kanji": "熱",
    "jlpt": "N3",
    "meaning": "heat/temperature",
    "old_position": 163,
-   "new_position": 663
+   "new_position": 1424
   },
   {
-   "kanji": "備",
+   "kanji": "競",
    "jlpt": "N3",
-   "meaning": "equip/provision",
-   "old_position": 180,
-   "new_position": 664
+   "meaning": "emulate/compete with",
+   "old_position": 164,
+   "new_position": 1425
   },
   {
-   "kanji": "制",
+   "kanji": "良",
    "jlpt": "N3",
-   "meaning": "system/law",
-   "old_position": 181,
-   "new_position": 858
-  },
-  {
-   "kanji": "厚",
-   "jlpt": "N3",
-   "meaning": "thick/heavy",
-   "old_position": 182,
-   "new_position": 945
-  },
-  {
-   "kanji": "師",
-   "jlpt": "N3",
-   "meaning": "expert/teacher",
-   "old_position": 183,
-   "new_position": 952
-  },
-  {
-   "kanji": "得",
-   "jlpt": "N3",
-   "meaning": "gain/get",
-   "old_position": 184,
-   "new_position": 1009
-  },
-  {
-   "kanji": "復",
-   "jlpt": "N3",
-   "meaning": "restore/return to",
-   "old_position": 185,
-   "new_position": 1020
-  },
-  {
-   "kanji": "快",
-   "jlpt": "N3",
-   "meaning": "cheerful/pleasant",
-   "old_position": 186,
-   "new_position": 1192
-  },
-  {
-   "kanji": "接",
-   "jlpt": "N3",
-   "meaning": "touch/contact",
-   "old_position": 187,
-   "new_position": 1362
-  },
-  {
-   "kanji": "殺",
-   "jlpt": "N3",
-   "meaning": "kill/murder",
-   "old_position": 188,
-   "new_position": 1363
-  },
-  {
-   "kanji": "毒",
-   "jlpt": "N3",
-   "meaning": "poison/virus",
-   "old_position": 189,
-   "new_position": 1369
-  },
-  {
-   "kanji": "減",
-   "jlpt": "N3",
-   "meaning": "dwindle/decrease",
-   "old_position": 191,
-   "new_position": 1390
-  },
-  {
-   "kanji": "準",
-   "jlpt": "N3",
-   "meaning": "semi-/correspond to",
-   "old_position": 192,
-   "new_position": 1399
-  },
-  {
-   "kanji": "演",
-   "jlpt": "N3",
-   "meaning": "performance/act",
-   "old_position": 193,
-   "new_position": 1400
+   "meaning": "good/pleasing",
+   "old_position": 167,
+   "new_position": 1426
   },
   {
    "kanji": "税",
    "jlpt": "N3",
    "meaning": "tax/duty",
    "old_position": 196,
-   "new_position": 1401
+   "new_position": 1427
   },
   {
    "kanji": "能",
    "jlpt": "N3",
    "meaning": "ability/talent",
    "old_position": 197,
-   "new_position": 1402
+   "new_position": 1659
   },
   {
    "kanji": "複",
    "jlpt": "N3",
    "meaning": "duplicate/double",
    "old_position": 198,
-   "new_position": 1403
+   "new_position": 1695
   },
   {
-   "kanji": "処",
+   "kanji": "象",
    "jlpt": "N3",
-   "meaning": "dispose/manage",
-   "old_position": 211,
-   "new_position": 1404
+   "meaning": "elephant/pattern after",
+   "old_position": 199,
+   "new_position": 1990
   },
   {
-   "kanji": "刻",
+   "kanji": "述",
    "jlpt": "N3",
-   "meaning": "engrave/cut fine",
-   "old_position": 212,
-   "new_position": 1405
-  },
-  {
-   "kanji": "劇",
-   "jlpt": "N3",
-   "meaning": "drama/play",
-   "old_position": 213,
-   "new_position": 1406
-  },
-  {
-   "kanji": "卵",
-   "jlpt": "N3",
-   "meaning": "egg/ovum",
-   "old_position": 214,
-   "new_position": 1407
-  },
-  {
-   "kanji": "宅",
-   "jlpt": "N3",
-   "meaning": "home/house",
-   "old_position": 215,
-   "new_position": 1408
-  },
-  {
-   "kanji": "宇",
-   "jlpt": "N3",
-   "meaning": "eaves/roof",
-   "old_position": 216,
-   "new_position": 1409
-  },
-  {
-   "kanji": "将",
-   "jlpt": "N3",
-   "meaning": "leader/commander",
-   "old_position": 217,
-   "new_position": 1410
-  },
-  {
-   "kanji": "展",
-   "jlpt": "N3",
-   "meaning": "unfold/expand",
-   "old_position": 218,
-   "new_position": 1411
-  },
-  {
-   "kanji": "座",
-   "jlpt": "N3",
-   "meaning": "squat/seat",
-   "old_position": 219,
-   "new_position": 1412
+   "meaning": "mention/state",
+   "old_position": 200,
+   "new_position": 1991
   },
   {
    "kanji": "律",
    "jlpt": "N3",
    "meaning": "rhythm/law",
    "old_position": 220,
-   "new_position": 1413
+   "new_position": 1992
   },
   {
    "kanji": "拝",
    "jlpt": "N3",
    "meaning": "worship/adore",
    "old_position": 221,
-   "new_position": 1414
+   "new_position": 1993
   },
   {
    "kanji": "探",
    "jlpt": "N3",
    "meaning": "grope/search",
    "old_position": 222,
-   "new_position": 1415
+   "new_position": 1994
   },
   {
-   "kanji": "匹",
+   "kanji": "操",
    "jlpt": "N3",
-   "meaning": "equal/head",
-   "old_position": 240,
-   "new_position": 1416
+   "meaning": "maneuver/manipulate",
+   "old_position": 223,
+   "new_position": 1995
   },
   {
-   "kanji": "寝",
+   "kanji": "敬",
    "jlpt": "N3",
-   "meaning": "lie down/sleep",
-   "old_position": 241,
-   "new_position": 1417
-  },
-  {
-   "kanji": "悩",
-   "jlpt": "N3",
-   "meaning": "trouble/worry",
-   "old_position": 243,
-   "new_position": 1418
-  },
-  {
-   "kanji": "払",
-   "jlpt": "N3",
-   "meaning": "pay/clear out",
-   "old_position": 244,
-   "new_position": 1419
-  },
-  {
-   "kanji": "挟",
-   "jlpt": "N3",
-   "meaning": "pinch/between",
-   "old_position": 245,
-   "new_position": 1420
-  },
-  {
-   "kanji": "捕",
-   "jlpt": "N3",
-   "meaning": "catch/capture",
-   "old_position": 246,
-   "new_position": 1421
-  },
-  {
-   "kanji": "捜",
-   "jlpt": "N3",
-   "meaning": "search/look for",
-   "old_position": 247,
-   "new_position": 1422
-  },
-  {
-   "kanji": "掃",
-   "jlpt": "N3",
-   "meaning": "sweep/brush",
-   "old_position": 248,
-   "new_position": 1423
-  },
-  {
-   "kanji": "換",
-   "jlpt": "N3",
-   "meaning": "interchange/period",
-   "old_position": 249,
-   "new_position": 1424
-  },
-  {
-   "kanji": "殿",
-   "jlpt": "N3",
-   "meaning": "Mr./hall",
-   "old_position": 250,
-   "new_position": 1425
-  },
-  {
-   "kanji": "汚",
-   "jlpt": "N3",
-   "meaning": "dirty/pollute",
-   "old_position": 251,
-   "new_position": 1426
-  },
-  {
-   "kanji": "沈",
-   "jlpt": "N3",
-   "meaning": "sink/be submerged",
-   "old_position": 252,
-   "new_position": 1427
-  },
-  {
-   "kanji": "沸",
-   "jlpt": "N3",
-   "meaning": "seethe/boil",
-   "old_position": 253,
-   "new_position": 1659
-  },
-  {
-   "kanji": "浮",
-   "jlpt": "N3",
-   "meaning": "floating/float",
-   "old_position": 254,
-   "new_position": 1695
+   "meaning": "awe/respect",
+   "old_position": 224,
+   "new_position": 1996
   },
   {
    "kanji": "湾",
    "jlpt": "N3",
    "meaning": "gulf/bay",
    "old_position": 255,
-   "new_position": 1990
+   "new_position": 1997
   },
   {
    "kanji": "湿",
    "jlpt": "N3",
    "meaning": "damp/wet",
    "old_position": 256,
-   "new_position": 1991
+   "new_position": 1998
   },
   {
    "kanji": "濯",
    "jlpt": "N3",
    "meaning": "laundry/wash",
    "old_position": 258,
-   "new_position": 1992
-  },
-  {
-   "kanji": "宣",
-   "jlpt": "N2",
-   "meaning": "proclaim/say",
-   "old_position": 290,
-   "new_position": 1993
-  },
-  {
-   "kanji": "己",
-   "jlpt": "N2",
-   "meaning": "self",
-   "old_position": 292,
-   "new_position": 1994
-  },
-  {
-   "kanji": "従",
-   "jlpt": "N2",
-   "meaning": "accompany/obey",
-   "old_position": 293,
-   "new_position": 1995
-  },
-  {
-   "kanji": "我",
-   "jlpt": "N2",
-   "meaning": "ego/I",
-   "old_position": 294,
-   "new_position": 1996
-  },
-  {
-   "kanji": "推",
-   "jlpt": "N2",
-   "meaning": "conjecture/infer",
-   "old_position": 295,
-   "new_position": 1997
-  },
-  {
-   "kanji": "敵",
-   "jlpt": "N2",
-   "meaning": "enemy/foe",
-   "old_position": 296,
-   "new_position": 1998
-  },
-  {
-   "kanji": "沿",
-   "jlpt": "N2",
-   "meaning": "run alongside/follow along",
-   "old_position": 297,
    "new_position": 1999
   },
   {
-   "kanji": "派",
-   "jlpt": "N2",
-   "meaning": "faction/group",
-   "old_position": 298,
+   "kanji": "狭",
+   "jlpt": "N3",
+   "meaning": "cramped/narrow",
+   "old_position": 259,
    "new_position": 2000
   },
   {
-   "kanji": "激",
-   "jlpt": "N2",
-   "meaning": "violent/get excited",
-   "old_position": 299,
+   "kanji": "療",
+   "jlpt": "N3",
+   "meaning": "heal/cure",
+   "old_position": 261,
    "new_position": 2123
   }
  ],
  "deferred": [
   {
-   "kanji": "屋",
-   "jlpt": "N4",
-   "meaning": "roof/house",
-   "old_position": 1398,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "始",
-   "jlpt": "N4",
-   "meaning": "commence/begin",
-   "old_position": 1397,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "員",
-   "jlpt": "N4",
-   "meaning": "employee/member",
-   "old_position": 1396,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "味",
-   "jlpt": "N4",
-   "meaning": "flavor/taste",
-   "old_position": 1395,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "写",
-   "jlpt": "N4",
-   "meaning": "copy/be photographed",
-   "old_position": 1394,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "住",
-   "jlpt": "N4",
-   "meaning": "dwell/reside",
-   "old_position": 1393,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "乗",
-   "jlpt": "N4",
-   "meaning": "ride/power",
-   "old_position": 1392,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "黒",
-   "jlpt": "N4",
-   "meaning": "black",
-   "old_position": 1391,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "野",
-   "jlpt": "N4",
-   "meaning": "plains/field",
-   "old_position": 1389,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "計",
-   "jlpt": "N4",
-   "meaning": "plot/plan",
-   "old_position": 1388,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "親",
-   "jlpt": "N4",
-   "meaning": "parent/intimacy",
-   "old_position": 1387,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "答",
-   "jlpt": "N4",
-   "meaning": "solution/answer",
-   "old_position": 1386,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "画",
-   "jlpt": "N4",
-   "meaning": "brush-stroke/picture",
-   "old_position": 1385,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "理",
-   "jlpt": "N4",
-   "meaning": "logic/arrangement",
-   "old_position": 1384,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "歩",
-   "jlpt": "N4",
-   "meaning": "walk/counter for steps",
-   "old_position": 1383,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "昼",
-   "jlpt": "N4",
-   "meaning": "daytime/noon",
-   "old_position": 1382,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "教",
-   "jlpt": "N4",
-   "meaning": "teach/faith",
-   "old_position": 1381,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "室",
-   "jlpt": "N4",
-   "meaning": "room/apartment",
-   "old_position": 1380,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "姉",
-   "jlpt": "N4",
-   "meaning": "elder sister",
-   "old_position": 1379,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "妹",
-   "jlpt": "N4",
-   "meaning": "younger sister",
-   "old_position": 1378,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "切",
-   "jlpt": "N4",
-   "meaning": "cut/cutoff",
-   "old_position": 1377,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "体",
-   "jlpt": "N4",
-   "meaning": "body/substance",
-   "old_position": 1376,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "町",
-   "jlpt": "N4",
-   "meaning": "town/village",
-   "old_position": 1375,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "森",
-   "jlpt": "N4",
-   "meaning": "forest/woods",
-   "old_position": 1374,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "駅",
+   "kanji": "百",
    "jlpt": "N5",
-   "meaning": "station",
-   "old_position": 1373,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "買",
-   "jlpt": "N5",
-   "meaning": "buy",
-   "old_position": 1372,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "読",
-   "jlpt": "N5",
-   "meaning": "read",
-   "old_position": 1371,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "語",
-   "jlpt": "N5",
-   "meaning": "word/speech",
-   "old_position": 1370,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "店",
-   "jlpt": "N5",
-   "meaning": "store/shop",
-   "old_position": 1368,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "国",
-   "jlpt": "N5",
-   "meaning": "country",
-   "old_position": 1367,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
-  },
-  {
-   "kanji": "午",
-   "jlpt": "N5",
-   "meaning": "noon/sign of the horse",
-   "old_position": 1366,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+   "meaning": "hundred",
+   "old_position": 1364,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
   },
   {
    "kanji": "空",
    "jlpt": "N5",
    "meaning": "empty/sky",
    "old_position": 1365,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
   },
   {
-   "kanji": "百",
+   "kanji": "午",
    "jlpt": "N5",
-   "meaning": "hundred",
-   "old_position": 1364,
-   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+   "meaning": "noon/sign of the horse",
+   "old_position": 1366,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "国",
+   "jlpt": "N5",
+   "meaning": "country",
+   "old_position": 1367,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "店",
+   "jlpt": "N5",
+   "meaning": "store/shop",
+   "old_position": 1368,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "語",
+   "jlpt": "N5",
+   "meaning": "word/speech",
+   "old_position": 1370,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "読",
+   "jlpt": "N5",
+   "meaning": "read",
+   "old_position": 1371,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "買",
+   "jlpt": "N5",
+   "meaning": "buy",
+   "old_position": 1372,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "駅",
+   "jlpt": "N5",
+   "meaning": "station",
+   "old_position": 1373,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "森",
+   "jlpt": "N4",
+   "meaning": "forest/woods",
+   "old_position": 1374,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "町",
+   "jlpt": "N4",
+   "meaning": "town/village",
+   "old_position": 1375,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "体",
+   "jlpt": "N4",
+   "meaning": "body/substance",
+   "old_position": 1376,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "切",
+   "jlpt": "N4",
+   "meaning": "cut/cutoff",
+   "old_position": 1377,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "妹",
+   "jlpt": "N4",
+   "meaning": "younger sister",
+   "old_position": 1378,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "姉",
+   "jlpt": "N4",
+   "meaning": "elder sister",
+   "old_position": 1379,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "室",
+   "jlpt": "N4",
+   "meaning": "room/apartment",
+   "old_position": 1380,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "教",
+   "jlpt": "N4",
+   "meaning": "teach/faith",
+   "old_position": 1381,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "昼",
+   "jlpt": "N4",
+   "meaning": "daytime/noon",
+   "old_position": 1382,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "歩",
+   "jlpt": "N4",
+   "meaning": "walk/counter for steps",
+   "old_position": 1383,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "理",
+   "jlpt": "N4",
+   "meaning": "logic/arrangement",
+   "old_position": 1384,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "画",
+   "jlpt": "N4",
+   "meaning": "brush-stroke/picture",
+   "old_position": 1385,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "答",
+   "jlpt": "N4",
+   "meaning": "solution/answer",
+   "old_position": 1386,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "親",
+   "jlpt": "N4",
+   "meaning": "parent/intimacy",
+   "old_position": 1387,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "計",
+   "jlpt": "N4",
+   "meaning": "plot/plan",
+   "old_position": 1388,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "野",
+   "jlpt": "N4",
+   "meaning": "plains/field",
+   "old_position": 1389,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "黒",
+   "jlpt": "N4",
+   "meaning": "black",
+   "old_position": 1391,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "乗",
+   "jlpt": "N4",
+   "meaning": "ride/power",
+   "old_position": 1392,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "住",
+   "jlpt": "N4",
+   "meaning": "dwell/reside",
+   "old_position": 1393,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "写",
+   "jlpt": "N4",
+   "meaning": "copy/be photographed",
+   "old_position": 1394,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "味",
+   "jlpt": "N4",
+   "meaning": "flavor/taste",
+   "old_position": 1395,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "員",
+   "jlpt": "N4",
+   "meaning": "employee/member",
+   "old_position": 1396,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "始",
+   "jlpt": "N4",
+   "meaning": "commence/begin",
+   "old_position": 1397,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "屋",
+   "jlpt": "N4",
+   "meaning": "roof/house",
+   "old_position": 1398,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "待",
+   "jlpt": "N4",
+   "meaning": "wait/depend on",
+   "old_position": 1399,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "悪",
+   "jlpt": "N4",
+   "meaning": "bad/vice",
+   "old_position": 1400,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "意",
+   "jlpt": "N4",
+   "meaning": "idea/mind",
+   "old_position": 1401,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "持",
+   "jlpt": "N4",
+   "meaning": "hold/have",
+   "old_position": 1402,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "暑",
+   "jlpt": "N4",
+   "meaning": "sultry/hot",
+   "old_position": 1403,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "暗",
+   "jlpt": "N4",
+   "meaning": "darkness/disappear",
+   "old_position": 1404,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "注",
+   "jlpt": "N4",
+   "meaning": "pour/irrigate",
+   "old_position": 1405,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "界",
+   "jlpt": "N4",
+   "meaning": "world/boundary",
+   "old_position": 1406,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "真",
+   "jlpt": "N4",
+   "meaning": "reality/Buddhist sect",
+   "old_position": 1407,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "研",
+   "jlpt": "N4",
+   "meaning": "polish/study of",
+   "old_position": 1408,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "究",
+   "jlpt": "N4",
+   "meaning": "research/study",
+   "old_position": 1409,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "習",
+   "jlpt": "N4",
+   "meaning": "learn",
+   "old_position": 1410,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "薬",
+   "jlpt": "N4",
+   "meaning": "medicine/chemical",
+   "old_position": 1411,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "起",
+   "jlpt": "N4",
+   "meaning": "rouse/wake up",
+   "old_position": 1412,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "運",
+   "jlpt": "N4",
+   "meaning": "carry/luck",
+   "old_position": 1413,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "都",
+   "jlpt": "N4",
+   "meaning": "metropolis/capital",
+   "old_position": 1414,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "重",
+   "jlpt": "N4",
+   "meaning": "heavy/important",
+   "old_position": 1415,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "題",
+   "jlpt": "N4",
+   "meaning": "topic/subject",
+   "old_position": 1416,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "便",
+   "jlpt": "N4",
+   "meaning": "convenience/facility",
+   "old_position": 1417,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "借",
+   "jlpt": "N4",
+   "meaning": "borrow/rent",
+   "old_position": 1418,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "特",
+   "jlpt": "N4",
+   "meaning": "special",
+   "old_position": 1419,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "英",
+   "jlpt": "N4",
+   "meaning": "England/English",
+   "old_position": 1420,
+   "note": "budget de démotion sûre épuisé (restreint aux zones à leçon), ou composant tardif non résolu dans le budget — reporté à une passe future."
+  }
+ ],
+ "not_considered_this_pass": [
+  {
+   "kanji": "七",
+   "jlpt": "N5",
+   "meaning": "seven",
+   "old_position": 545,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "三",
+   "jlpt": "N5",
+   "meaning": "three",
+   "old_position": 546,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "上",
+   "jlpt": "N5",
+   "meaning": "above/up",
+   "old_position": 547,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "下",
+   "jlpt": "N5",
+   "meaning": "below/down",
+   "old_position": 548,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "中",
+   "jlpt": "N5",
+   "meaning": "in/inside",
+   "old_position": 549,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "九",
+   "jlpt": "N5",
+   "meaning": "nine",
+   "old_position": 550,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "五",
+   "jlpt": "N5",
+   "meaning": "five",
+   "old_position": 551,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "休",
+   "jlpt": "N5",
+   "meaning": "rest/day off",
+   "old_position": 552,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "六",
+   "jlpt": "N5",
+   "meaning": "six",
+   "old_position": 553,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "出",
+   "jlpt": "N5",
+   "meaning": "exit/leave",
+   "old_position": 554,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "千",
+   "jlpt": "N5",
+   "meaning": "thousand",
+   "old_position": 555,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "右",
+   "jlpt": "N5",
+   "meaning": "right",
+   "old_position": 556,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "名",
+   "jlpt": "N5",
+   "meaning": "name/noted",
+   "old_position": 557,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "天",
+   "jlpt": "N5",
+   "meaning": "heavens/sky",
+   "old_position": 558,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "左",
+   "jlpt": "N5",
+   "meaning": "left",
+   "old_position": 560,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "男",
+   "jlpt": "N5",
+   "meaning": "male",
+   "old_position": 562,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "白",
+   "jlpt": "N5",
+   "meaning": "white",
+   "old_position": 563,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "花",
+   "jlpt": "N5",
+   "meaning": "flower",
+   "old_position": 564,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "見",
+   "jlpt": "N5",
+   "meaning": "see/hopes",
+   "old_position": 565,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "足",
+   "jlpt": "N5",
+   "meaning": "leg/foot",
+   "old_position": 566,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "万",
+   "jlpt": "N5",
+   "meaning": "ten thousand/10,000",
+   "old_position": 567,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "今",
+   "jlpt": "N5",
+   "meaning": "now",
+   "old_position": 568,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "会",
+   "jlpt": "N5",
+   "meaning": "meeting/meet",
+   "old_position": 569,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "分",
+   "jlpt": "N5",
+   "meaning": "part/minute of time",
+   "old_position": 570,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "半",
+   "jlpt": "N5",
+   "meaning": "half/middle",
+   "old_position": 571,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "南",
+   "jlpt": "N5",
+   "meaning": "south",
+   "old_position": 572,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "友",
+   "jlpt": "N5",
+   "meaning": "friend",
+   "old_position": 573,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "古",
+   "jlpt": "N5",
+   "meaning": "old",
+   "old_position": 574,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "外",
+   "jlpt": "N5",
+   "meaning": "outside",
+   "old_position": 575,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "多",
+   "jlpt": "N5",
+   "meaning": "many/frequent",
+   "old_position": 576,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "少",
+   "jlpt": "N5",
+   "meaning": "few/little",
+   "old_position": 577,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "新",
+   "jlpt": "N5",
+   "meaning": "new",
+   "old_position": 578,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "書",
+   "jlpt": "N5",
+   "meaning": "write",
+   "old_position": 579,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "来",
+   "jlpt": "N5",
+   "meaning": "come/due",
+   "old_position": 580,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "東",
+   "jlpt": "N5",
+   "meaning": "east",
+   "old_position": 581,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "社",
+   "jlpt": "N5",
+   "meaning": "company/firm",
+   "old_position": 582,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "聞",
+   "jlpt": "N5",
+   "meaning": "hear/ask",
+   "old_position": 583,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "間",
+   "jlpt": "N5",
+   "meaning": "interval/space",
+   "old_position": 585,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "電",
+   "jlpt": "N5",
+   "meaning": "electricity",
+   "old_position": 586,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "安",
+   "jlpt": "N5",
+   "meaning": "relax/cheap",
+   "old_position": 587,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "飲",
+   "jlpt": "N5",
+   "meaning": "drink/smoke",
+   "old_position": 588,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "字",
+   "jlpt": "N4",
+   "meaning": "character/letter",
+   "old_position": 589,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "早",
+   "jlpt": "N4",
+   "meaning": "early/fast",
+   "old_position": 590,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "村",
+   "jlpt": "N4",
+   "meaning": "village/town",
+   "old_position": 591,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "林",
+   "jlpt": "N4",
+   "meaning": "grove/forest",
+   "old_position": 592,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "正",
+   "jlpt": "N4",
+   "meaning": "correct/justice",
+   "old_position": 593,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "犬",
+   "jlpt": "N4",
+   "meaning": "dog",
+   "old_position": 594,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "赤",
+   "jlpt": "N4",
+   "meaning": "red",
+   "old_position": 595,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "青",
+   "jlpt": "N4",
+   "meaning": "blue/green",
+   "old_position": 596,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "音",
+   "jlpt": "N4",
+   "meaning": "sound/noise",
+   "old_position": 597,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "兄",
+   "jlpt": "N4",
+   "meaning": "elder brother/big brother",
+   "old_position": 599,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "台",
+   "jlpt": "N4",
+   "meaning": "pedestal/a stand",
+   "old_position": 600,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "合",
+   "jlpt": "N4",
+   "meaning": "fit/suit",
+   "old_position": 601,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "同",
+   "jlpt": "N4",
+   "meaning": "same/agree",
+   "old_position": 602,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "回",
+   "jlpt": "N4",
+   "meaning": "-times/round",
+   "old_position": 603,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "地",
+   "jlpt": "N4",
+   "meaning": "ground/earth",
+   "old_position": 604,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "場",
+   "jlpt": "N4",
+   "meaning": "location/place",
+   "old_position": 605,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "声",
+   "jlpt": "N4",
+   "meaning": "voice",
+   "old_position": 606,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "売",
+   "jlpt": "N4",
+   "meaning": "sell",
+   "old_position": 607,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "太",
+   "jlpt": "N4",
+   "meaning": "plump/thick",
+   "old_position": 608,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "市",
+   "jlpt": "N4",
+   "meaning": "market/city",
+   "old_position": 609,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "引",
+   "jlpt": "N4",
+   "meaning": "pull/tug",
+   "old_position": 610,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "弟",
+   "jlpt": "N4",
+   "meaning": "younger brother/faithful service to elders",
+   "old_position": 611,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "弱",
+   "jlpt": "N4",
+   "meaning": "weak/frail",
+   "old_position": 612,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "強",
+   "jlpt": "N4",
+   "meaning": "strong",
+   "old_position": 613,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "思",
+   "jlpt": "N4",
+   "meaning": "think",
+   "old_position": 614,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "明",
+   "jlpt": "N4",
+   "meaning": "bright/light",
+   "old_position": 615,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "春",
+   "jlpt": "N4",
+   "meaning": "springtime/spring (season)",
+   "old_position": 616,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "曜",
+   "jlpt": "N4",
+   "meaning": "weekday",
+   "old_position": 617,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "朝",
+   "jlpt": "N4",
+   "meaning": "morning/dynasty",
+   "old_position": 618,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "楽",
+   "jlpt": "N4",
+   "meaning": "music/comfort",
+   "old_position": 619,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "歌",
+   "jlpt": "N4",
+   "meaning": "song/sing",
+   "old_position": 620,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "海",
+   "jlpt": "N4",
+   "meaning": "sea/ocean",
+   "old_position": 621,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "秋",
+   "jlpt": "N4",
+   "meaning": "autumn",
+   "old_position": 622,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "紙",
+   "jlpt": "N4",
+   "meaning": "paper",
+   "old_position": 623,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "走",
+   "jlpt": "N4",
+   "meaning": "run",
+   "old_position": 625,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "近",
+   "jlpt": "N4",
+   "meaning": "near/early",
+   "old_position": 626,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "頭",
+   "jlpt": "N4",
+   "meaning": "head/counter for large animals",
+   "old_position": 627,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "主",
+   "jlpt": "N4",
+   "meaning": "lord/chief",
+   "old_position": 628,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "事",
+   "jlpt": "N4",
+   "meaning": "matter/thing",
+   "old_position": 629,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "仕",
+   "jlpt": "N4",
+   "meaning": "attend/doing",
+   "old_position": 630,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "勉",
+   "jlpt": "N4",
+   "meaning": "exertion/endeavour",
+   "old_position": 631,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "去",
+   "jlpt": "N4",
+   "meaning": "gone/past",
+   "old_position": 632,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "品",
+   "jlpt": "N4",
+   "meaning": "goods/refinement",
+   "old_position": 633,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "問",
+   "jlpt": "N4",
+   "meaning": "question/ask",
+   "old_position": 634,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "急",
+   "jlpt": "N4",
+   "meaning": "hurry/emergency",
+   "old_position": 635,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "所",
+   "jlpt": "N4",
+   "meaning": "place/extent",
+   "old_position": 636,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "旅",
+   "jlpt": "N4",
+   "meaning": "trip/travel",
+   "old_position": 637,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "族",
+   "jlpt": "N4",
+   "meaning": "tribe/family",
+   "old_position": 638,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "有",
+   "jlpt": "N4",
+   "meaning": "possess/have",
+   "old_position": 639,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "服",
+   "jlpt": "N4",
+   "meaning": "clothing/admit",
+   "old_position": 640,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "洋",
+   "jlpt": "N4",
+   "meaning": "ocean/sea",
+   "old_position": 641,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "物",
+   "jlpt": "N4",
+   "meaning": "thing/object",
+   "old_position": 642,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "県",
+   "jlpt": "N4",
+   "meaning": "prefecture",
+   "old_position": 643,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "着",
+   "jlpt": "N4",
+   "meaning": "don/arrive",
+   "old_position": 644,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "終",
+   "jlpt": "N4",
+   "meaning": "end/finish",
+   "old_position": 645,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "者",
+   "jlpt": "N4",
+   "meaning": "someone/person",
+   "old_position": 646,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "転",
+   "jlpt": "N4",
+   "meaning": "revolve/turn around",
+   "old_position": 647,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "軽",
+   "jlpt": "N4",
+   "meaning": "lightly/trifling",
+   "old_position": 648,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "銀",
+   "jlpt": "N4",
+   "meaning": "silver",
+   "old_position": 649,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "開",
+   "jlpt": "N4",
+   "meaning": "open/unfold",
+   "old_position": 650,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "集",
+   "jlpt": "N4",
+   "meaning": "gather/meet",
+   "old_position": 651,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "館",
+   "jlpt": "N4",
+   "meaning": "building/mansion",
+   "old_position": 652,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "不",
+   "jlpt": "N4",
+   "meaning": "negative/non-",
+   "old_position": 653,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "以",
+   "jlpt": "N4",
+   "meaning": "by means of/because",
+   "old_position": 654,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "好",
+   "jlpt": "N4",
+   "meaning": "fond/pleasing",
+   "old_position": 655,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "料",
+   "jlpt": "N4",
+   "meaning": "fee/materials",
+   "old_position": 656,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "民",
+   "jlpt": "N4",
+   "meaning": "people/nation",
+   "old_position": 657,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "産",
+   "jlpt": "N4",
+   "meaning": "products/bear",
+   "old_position": 658,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "験",
+   "jlpt": "N4",
+   "meaning": "verification/effect",
+   "old_position": 659,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "堂",
+   "jlpt": "N4",
+   "meaning": "public chamber/hall",
+   "old_position": 660,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
+  },
+  {
+   "kanji": "洗",
+   "jlpt": "N4",
+   "meaning": "wash/inquire into",
+   "old_position": 661,
+   "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — jamais candidat dans cette passe (scope volontairement réduit au palier catastrophique + exemples de l'audit). Trouvé en revue (game designer, 2026-07-24) : la 1ère version de ce fichier ne listait ces kanji nulle part, ni promus ni différés — un futur script devrait les reprendre en premier (ils sont moins mal positionnés que le palier catastrophique, mais toujours hors-N5/N4-attendu à leur position)."
   }
  ]
 }

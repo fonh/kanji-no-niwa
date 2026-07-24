@@ -23,8 +23,8 @@
    "将",
    "展",
    "座",
-   "質",
-   "題"
+   "首",
+   "道"
   ],
   "grammar_id": "N4-064"
  },
@@ -33,9 +33,9 @@
   "npc_ref": "charcoal_apprentice_ilex",
   "sequence_index": 3,
   "kanji_ids": [
-   "首",
-   "操",
-   "敬",
+   "校",
+   "飯",
+   "動",
    "段",
    "片",
    "疑"

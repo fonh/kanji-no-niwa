@@ -5,10 +5,10 @@
   "npc_ref": "sages_sprout_tower",
   "sequence_index": 1,
   "kanji_ids": [
-   "究",
-   "言",
-   "里",
-   "陽",
+   "干",
+   "年",
+   "尚",
+   "舌",
    "面"
   ],
   "grammar_id": "N4-001"
@@ -18,7 +18,7 @@
   "npc_ref": "elder_li_sprout_tower",
   "sequence_index": 2,
   "kanji_ids": [
-   "争",
+   "話",
    "伝",
    "候",
    "兆",

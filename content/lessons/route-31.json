@@ -32,8 +32,8 @@
   "kanji_ids": [
    "竹",
    "糸",
-   "九",
    "又",
+   "寸",
    "斤"
   ],
   "grammar_id": "N5-087"
@@ -43,9 +43,9 @@
   "npc_ref": "black_apricorn_man_route31",
   "sequence_index": 4,
   "kanji_ids": [
-   "形",
+   "爪",
    "戸",
-   "才",
+   "言",
    "数",
    "毛"
   ],

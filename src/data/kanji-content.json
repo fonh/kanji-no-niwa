@@ -815,7 +815,21 @@
   "etymology": "Phono-semantic: tree/wood (木) + 交 'to cross' (phonetic コウ). Originally wooden frames and fetters; settled on the wooden halls where paths cross — the school.",
   "mnemonic": "A wooden building (木) where a thousand lives crisscross (交) every morning — コウ, the school of 学校. Also the place your test gets 'crossed' with red ink.",
   "audio": "/audio/kanji/校.mp3",
-  "keyword": "school"
+  "keyword": "school",
+  "lesson_examples": [
+   {
+    "jp": "まいにち、学校（がっこう）へ　いきます。",
+    "en": "I go to school every day.",
+    "audio_ref": "/audio/kanji_examples/校_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "この　学校（がっこう）は　おおきいです。",
+    "en": "This school is big.",
+    "audio_ref": "/audio/kanji_examples/校_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "左": {
   "jlpt": "N5",
@@ -2181,7 +2195,21 @@
   ],
   "etymology": "Oracle-bone ideograph: a person carrying home the ripened grain (禾) — one harvest, one year. The strokes fused over time into the modern form.",
   "mnemonic": "A farmer bent under a sheaf of rice: another harvest carried home, another year gone — とし. 今年, this crop; 来年, the next.",
-  "audio": "/audio/kanji/年.mp3"
+  "audio": "/audio/kanji/年.mp3",
+  "lesson_examples": [
+   {
+    "jp": "今年（ことし）は　いい　年（とし）に　なりますように。",
+    "en": "I hope this year will be a good year.",
+    "audio_ref": "/audio/kanji_examples/年_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "来年（らいねん）、日本（にほん）へ　いきます。",
+    "en": "Next year, I'll go to Japan.",
+    "audio_ref": "/audio/kanji_examples/年_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "白": {
   "jlpt": "N5",
@@ -3511,7 +3539,21 @@
   ],
   "etymology": "Phono-semantic: person (亻) + 可 (phonetic カ). Originally 'to shoulder a load' (the ancestor of 荷); borrowed since antiquity for the question word 'what'.",
   "mnemonic": "A person stopped by a strange box with a hook: 'What is that?' — なに. The kanji of every beginner's sentence: 何ですか.",
-  "audio": "/audio/kanji/何.mp3"
+  "audio": "/audio/kanji/何.mp3",
+  "lesson_examples": [
+   {
+    "jp": "これは　何（なん）ですか。",
+    "en": "What is this?",
+    "audio_ref": "/audio/kanji_examples/何_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "何（なに）を　たべたいですか。",
+    "en": "What do you want to eat?",
+    "audio_ref": "/audio/kanji_examples/何_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "会": {
   "jlpt": "N5",
@@ -4100,7 +4142,21 @@
   ],
   "etymology": "Phono-semantic: sun (日) gives the meaning — time measured by the sun — while 寺 (temple) lends the reading ジ. Temples were the timekeepers, ringing the hours.",
   "mnemonic": "The temple bell tolls as the sun moves: that is how you know the hour — とき, ジ. 何時ですか — 'what time is it?' asks the sun of the temple.",
-  "audio": "/audio/kanji/時.mp3"
+  "audio": "/audio/kanji/時.mp3",
+  "lesson_examples": [
+   {
+    "jp": "今（いま）、何時（なんじ）ですか。",
+    "en": "What time is it now?",
+    "audio_ref": "/audio/kanji_examples/時_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "じゅぎょうの　時間（じかん）です。",
+    "en": "It's class time.",
+    "audio_ref": "/audio/kanji_examples/時_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "社": {
   "jlpt": "N5",
@@ -4176,7 +4232,21 @@
   ],
   "etymology": "Phono-semantic: movement (辶) + 周 'circuit, all around' (phonetic シュウ) — going one full round. Applied to the seven-day cycle when Japan adopted the Western week.",
   "mnemonic": "Walk one full lap (周) around the calendar and you're back where you started: one week — シュウ. 毎週, every lap.",
-  "audio": "/audio/kanji/週.mp3"
+  "audio": "/audio/kanji/週.mp3",
+  "lesson_examples": [
+   {
+    "jp": "来週（らいしゅう）、テストが　あります。",
+    "en": "There's a test next week.",
+    "audio_ref": "/audio/kanji_examples/週_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "毎週（まいしゅう）、としょかんへ　いきます。",
+    "en": "I go to the library every week.",
+    "audio_ref": "/audio/kanji_examples/週_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "書": {
   "jlpt": "N5",
@@ -4685,7 +4755,21 @@
   ],
   "etymology": "Compound ideograph: movement (辶) + head (首) — walking with your head leading you: the road you follow, and figuratively the Way (as in 柔道, 茶道).",
   "mnemonic": "Your head out in front, feet rolling beneath it down the path — みち. Every martial art ends in this kanji: the road you walk your whole life, ドウ.",
-  "audio": "/audio/kanji/道.mp3"
+  "audio": "/audio/kanji/道.mp3",
+  "lesson_examples": [
+   {
+    "jp": "この　道（みち）を　まっすぐ　いって　ください。",
+    "en": "Please go straight down this road.",
+    "audio_ref": "/audio/kanji_examples/道_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "駅（えき）までの　道（みち）を　おしえて　ください。",
+    "en": "Please tell me the way to the station.",
+    "audio_ref": "/audio/kanji_examples/道_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "読": {
   "jlpt": "N5",
@@ -5282,7 +5366,21 @@
   ],
   "etymology": "Phono-semantic: words (言) + tongue (舌, from an older phonetic) — the tongue shaping words into a story or conversation.",
   "mnemonic": "Words (言) rolled off a tongue (舌) and braided into a tale — はなし. Phone conversations are 電話: electric talk.",
-  "audio": "/audio/kanji/話.mp3"
+  "audio": "/audio/kanji/話.mp3",
+  "lesson_examples": [
+   {
+    "jp": "その　話（はなし）は　おもしろいですね。",
+    "en": "That story is interesting, isn't it.",
+    "audio_ref": "/audio/kanji_examples/話_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "先生（せんせい）と　でんわで　話（はな）しました。",
+    "en": "I talked with the teacher on the phone.",
+    "audio_ref": "/audio/kanji_examples/話_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "引": {
   "jlpt": "N4",
@@ -6802,8 +6900,8 @@
   "audio": "/audio/kanji/首.mp3",
   "lesson_examples": [
    {
-    "jp": "ねこの　首（くび）に　すずが　あります。",
-    "en": "There's a bell on the cat's neck.",
+    "jp": "きりんは　首（くび）が　ながいです。",
+    "en": "Giraffes have long necks.",
     "audio_ref": "/audio/kanji_examples/首_1.webm",
     "source": "generated"
    },
@@ -7401,14 +7499,14 @@
   "audio": "/audio/kanji/知.mp3",
   "lesson_examples": [
    {
-    "jp": "その　はなしは　知（し）りませんでした。",
-    "en": "I didn't know that story.",
+    "jp": "その　みちを　知（し）って　いますか。",
+    "en": "Do you know that road?",
     "audio_ref": "/audio/kanji_examples/知_1.webm",
     "source": "generated"
    },
    {
-    "jp": "かれの　なまえを　知（し）って　いますか。",
-    "en": "Do you know his name?",
+    "jp": "かれの　なまえを　知（し）りませんでした。",
+    "en": "I didn't know his name.",
     "audio_ref": "/audio/kanji_examples/知_2.webm",
     "source": "generated"
    }
@@ -10148,7 +10246,21 @@
   ],
   "etymology": "Pictograph: an arrow — head at the top, fletching below.",
   "mnemonic": "Nocked and ready — や. Inside 知 it's the answer in flight.",
-  "audio": "/audio/kanji/矢.mp3"
+  "audio": "/audio/kanji/矢.mp3",
+  "lesson_examples": [
+   {
+    "jp": "矢（や）で　まとを　いました。",
+    "en": "I shot the target with an arrow.",
+    "audio_ref": "/audio/kanji_examples/矢_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "かんばんに　矢印（やじるし）が　あります。",
+    "en": "There's an arrow on the sign.",
+    "audio_ref": "/audio/kanji_examples/矢_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "里": {
   "jlpt": "N2",
@@ -10465,8 +10577,8 @@
   "audio": "/audio/kanji/医.mp3",
   "lesson_examples": [
    {
-    "jp": "父（ちち）は　この　まちの　医者（いしゃ）です。",
-    "en": "Dad is a doctor in this town.",
+    "jp": "わたしの　ちちは　医者（いしゃ）です。",
+    "en": "My father is a doctor.",
     "audio_ref": "/audio/kanji_examples/医_1.webm",
     "source": "generated"
    },
@@ -10548,8 +10660,8 @@
   "audio": "/audio/kanji/院.mp3",
   "lesson_examples": [
    {
-    "jp": "びょうきなので、病院（びょういん）へ　いきます。",
-    "en": "I'm sick, so I'm going to the hospital.",
+    "jp": "足（あし）が　いたいので、病院（びょういん）へ　いきました。",
+    "en": "My leg hurt, so I went to the hospital.",
     "audio_ref": "/audio/kanji_examples/院_1.webm",
     "source": "generated"
    },
@@ -10947,21 +11059,7 @@
   ],
   "etymology": "Phono-semantic: hole (穴) + 九 (phonetic キュウ) — probing a cave to its very last turn: to investigate exhaustively.",
   "mnemonic": "Crawl into the cave (穴) nine (九) turns deep, to the very end — キュウ. 研究 is refusing to stop at turn eight.",
-  "audio": "/audio/kanji/究.mp3",
-  "lesson_examples": [
-   {
-    "jp": "この　研究（けんきゅう）は　とても　むずかしいです。",
-    "en": "This research is very difficult.",
-    "audio_ref": "/audio/kanji_examples/究_1.webm",
-    "source": "generated"
-   },
-   {
-    "jp": "兄（あに）は　だいがくで　研究（けんきゅう）を　して　います。",
-    "en": "My older brother does research at university.",
-    "audio_ref": "/audio/kanji_examples/究_2.webm",
-    "source": "generated"
-   }
-  ]
+  "audio": "/audio/kanji/究.mp3"
  },
  "去": {
   "jlpt": "N4",
@@ -11352,8 +11450,8 @@
     "source": "generated"
    },
    {
-    "jp": "でんわを　使（つか）っても　いいですか。",
-    "en": "May I use the phone?",
+    "jp": "まいにち　にほんごを　使（つか）います。",
+    "en": "I use Japanese every day.",
     "audio_ref": "/audio/kanji_examples/使_2.webm",
     "source": "generated"
    }
@@ -12311,21 +12409,7 @@
   ],
   "etymology": "Phono-semantic: 是 (phonetic ダイ) + 頁 'head' — what stands at the head of a text: its title, its topic.",
   "mnemonic": "The heading at the top of the page, big letters, first thing your head meets — ダイ. 宿題 is the topic that follows you home; 問題 the one that fights back.",
-  "audio": "/audio/kanji/題.mp3",
-  "lesson_examples": [
-   {
-    "jp": "この　問題（もんだい）は　かんたんです。",
-    "en": "This problem is easy.",
-    "audio_ref": "/audio/kanji_examples/題_1.webm",
-    "source": "generated"
-   },
-   {
-    "jp": "きょうの　宿題（しゅくだい）は　おおいです。",
-    "en": "Today's homework is a lot.",
-    "audio_ref": "/audio/kanji_examples/題_2.webm",
-    "source": "generated"
-   }
-  ]
+  "audio": "/audio/kanji/題.mp3"
  },
  "短": {
   "jlpt": "N4",
@@ -12362,7 +12446,21 @@
   ],
   "etymology": "Compound: arrow (矢) + 豆 'stemmed vessel' — the ancients measured small lengths against arrows and cups: short.",
   "mnemonic": "Measured against a single arrow, it doesn't even reach the cup: short — みじかい. 短い夏: a summer one arrow long.",
-  "audio": "/audio/kanji/短.mp3"
+  "audio": "/audio/kanji/短.mp3",
+  "lesson_examples": [
+   {
+    "jp": "この　えんぴつは　短（みじか）いです。",
+    "en": "This pencil is short.",
+    "audio_ref": "/audio/kanji_examples/短_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "じかんが　短（みじか）いので、いそぎましょう。",
+    "en": "Time is short, so let's hurry.",
+    "audio_ref": "/audio/kanji_examples/短_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "着": {
   "jlpt": "N4",
@@ -12627,7 +12725,21 @@
   ],
   "etymology": "Phono-semantic: 重 'heavy' (phonetic ドウ) + 力 'strength' — muscle set against a heavy load until it shifts: to move.",
   "mnemonic": "Put strength (力) against the heaviest sack (重) and it finally budges — うごく. 動物 are 'the moving things'; 自動 is the sack moving itself.",
-  "audio": "/audio/kanji/動.mp3"
+  "audio": "/audio/kanji/動.mp3",
+  "lesson_examples": [
+   {
+    "jp": "この　きかいは　動（うご）きません。",
+    "en": "This machine doesn't move.",
+    "audio_ref": "/audio/kanji_examples/動_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "まいあさ、運動（うんどう）します。",
+    "en": "I exercise every morning.",
+    "audio_ref": "/audio/kanji_examples/動_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "発": {
   "jlpt": "N4",
@@ -12719,14 +12831,14 @@
   "audio": "/audio/kanji/病.mp3",
   "lesson_examples": [
    {
-    "jp": "病気（びょうき）に　なったので、がっこうを　やすみました。",
-    "en": "I got sick, so I was absent from school.",
+    "jp": "かぜで　病気（びょうき）に　なりました。",
+    "en": "I caught a cold and got sick.",
     "audio_ref": "/audio/kanji_examples/病_1.webm",
     "source": "generated"
    },
    {
-    "jp": "おばあさんは　いま　病気（びょうき）です。",
-    "en": "Grandma is sick right now.",
+    "jp": "兄（あに）は　病気（びょうき）で　がっこうを　やすみました。",
+    "en": "My older brother was absent from school due to illness.",
     "audio_ref": "/audio/kanji_examples/病_2.webm",
     "source": "generated"
    }
@@ -18415,21 +18527,7 @@
   ],
   "etymology": "Phono-semantic: plants (艹) + 央 'center' (phonetic エイ) — the central blossom, the finest flower: outstanding; chosen to transcribe 'England' (英国).",
   "mnemonic": "The one flower standing dead-center of the field, taller than the rest — エイ. It lent its brilliance to a whole language: 英語.",
-  "audio": "/audio/kanji/英.mp3",
-  "lesson_examples": [
-   {
-    "jp": "がっこうで　英語（えいご）を　ならいます。",
-    "en": "I learn English at school.",
-    "audio_ref": "/audio/kanji_examples/英_1.webm",
-    "source": "generated"
-   },
-   {
-    "jp": "この　ほんは　英語（えいご）で　かかれて　います。",
-    "en": "This book is written in English.",
-    "audio_ref": "/audio/kanji_examples/英_2.webm",
-    "source": "generated"
-   }
-  ]
+  "audio": "/audio/kanji/英.mp3"
  },
  "建": {
   "jlpt": "N4",
@@ -18597,7 +18695,21 @@
   ],
   "etymology": "Phono-semantic: plants (艹) + 采 'a hand picking from a tree' (phonetic サイ) — greens gathered by hand: vegetables, side dishes.",
   "mnemonic": "A hand in the greens, picking dinner leaf by leaf — な, サイ. 野菜: the pickings of the open field.",
-  "audio": "/audio/kanji/菜.mp3"
+  "audio": "/audio/kanji/菜.mp3",
+  "lesson_examples": [
+   {
+    "jp": "野菜（やさい）を　たくさん　たべましょう。",
+    "en": "Let's eat lots of vegetables.",
+    "audio_ref": "/audio/kanji_examples/菜_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "この　野菜（やさい）は　しんせんです。",
+    "en": "These vegetables are fresh.",
+    "audio_ref": "/audio/kanji_examples/菜_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "産": {
   "jlpt": "N4",
@@ -18685,7 +18797,21 @@
   ],
   "etymology": "Phono-semantic: words (言) + 式 'set form, ceremony' (phonetic シ) — putting performance against the set form: to test, to try.",
   "mnemonic": "Read the standard aloud (言), then try to match it (式) — ためす. 試験 measures the gap; 試着 is the fitting-room version.",
-  "audio": "/audio/kanji/試.mp3"
+  "audio": "/audio/kanji/試.mp3",
+  "lesson_examples": [
+   {
+    "jp": "あした、試験（しけん）が　あります。",
+    "en": "There's an exam tomorrow.",
+    "audio_ref": "/audio/kanji_examples/試_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "この　ふくを　試着（しちゃく）しても　いいですか。",
+    "en": "May I try on these clothes?",
+    "audio_ref": "/audio/kanji_examples/試_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "借": {
   "jlpt": "N4",
@@ -18719,21 +18845,7 @@
   ],
   "etymology": "Phono-semantic: person (亻) + 昔 'long ago' (phonetic シャク) — a person trading on old ties: to borrow.",
   "mnemonic": "'Remember old times (昔)? So… could I borrow it?' — かりる. Debts age like the kanji says: from yesterday's favor to ancient history.",
-  "audio": "/audio/kanji/借.mp3",
-  "lesson_examples": [
-   {
-    "jp": "としょかんで　ほんを　借（か）りました。",
-    "en": "I borrowed a book from the library.",
-    "audio_ref": "/audio/kanji_examples/借_1.webm",
-    "source": "generated"
-   },
-   {
-    "jp": "ともだちに　100えんを　借（か）りました。",
-    "en": "I borrowed 100 yen from a friend.",
-    "audio_ref": "/audio/kanji_examples/借_2.webm",
-    "source": "generated"
-   }
-  ]
+  "audio": "/audio/kanji/借.mp3"
  },
  "説": {
   "jlpt": "N4",
@@ -18770,7 +18882,21 @@
   ],
   "etymology": "Phono-semantic: words (言) + 兌 'to loosen, exchange' (phonetic セツ) — words that unravel a knot: to explain; a theory.",
   "mnemonic": "Talk (言) until the tangled thing comes loose (兌) — セツ. 説明 is untying in public; a 小説 unties a whole life, slowly.",
-  "audio": "/audio/kanji/説.mp3"
+  "audio": "/audio/kanji/説.mp3",
+  "lesson_examples": [
+   {
+    "jp": "先生（せんせい）が　もんだいを　説明（せつめい）しました。",
+    "en": "The teacher explained the problem.",
+    "audio_ref": "/audio/kanji_examples/説_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "かれの　説明（せつめい）は　わかりやすいです。",
+    "en": "His explanation is easy to understand.",
+    "audio_ref": "/audio/kanji_examples/説_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "低": {
   "jlpt": "N4",
@@ -18849,7 +18975,21 @@
   ],
   "etymology": "A kokuji — a kanji invented in Japan: person (亻) + 動 'move' — a person in motion: to work. China later borrowed it back.",
   "mnemonic": "A person set in motion and kept there: work — はたらく. Japan needed a kanji for it badly enough to build one from scratch.",
-  "audio": "/audio/kanji/働.mp3"
+  "audio": "/audio/kanji/働.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ちちは　ぎんこうで　働（はたら）いて　います。",
+    "en": "My father works at a bank.",
+    "audio_ref": "/audio/kanji_examples/働_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "いっしょうけんめい　働（はたら）きます。",
+    "en": "I'll work hard.",
+    "audio_ref": "/audio/kanji_examples/働_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "特": {
   "jlpt": "N4",
@@ -18914,7 +19054,21 @@
   ],
   "etymology": "Phono-semantic: food (飠) + 反 'turn over' (phonetic ハン) — rice turned in the pot as it steams: cooked rice, the meal itself.",
   "mnemonic": "Fold the rice over once more before serving — ごはん. In Japanese, 'meal' and 'rice' are the same word, and this kanji is why.",
-  "audio": "/audio/kanji/飯.mp3"
+  "audio": "/audio/kanji/飯.mp3",
+  "lesson_examples": [
+   {
+    "jp": "もう　ご飯（はん）を　たべましたか。",
+    "en": "Have you eaten yet?",
+    "audio_ref": "/audio/kanji_examples/飯_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "あさ、ご飯（はん）を　たべませんでした。",
+    "en": "I didn't eat breakfast this morning.",
+    "audio_ref": "/audio/kanji_examples/飯_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "不": {
   "jlpt": "N4",
@@ -19045,21 +19199,7 @@
   ],
   "etymology": "Compound: person (亻) + 更 'change, renew' — a person smoothing things over for others: convenience; the courier who makes distance convenient: the post.",
   "mnemonic": "The fixer who rearranges (更) everything until it's easy — ベン; and the mail (ビン) that spares you the trip. 便利: life with the fixer on call.",
-  "audio": "/audio/kanji/便.mp3",
-  "lesson_examples": [
-   {
-    "jp": "この　でんしゃは　とても　便利（べんり）です。",
-    "en": "This train is very convenient.",
-    "audio_ref": "/audio/kanji_examples/便_1.webm",
-    "source": "generated"
-   },
-   {
-    "jp": "スマホは　便利（べんり）な　どうぐです。",
-    "en": "The smartphone is a convenient tool.",
-    "audio_ref": "/audio/kanji_examples/便_2.webm",
-    "source": "generated"
-   }
-  ]
+  "audio": "/audio/kanji/便.mp3"
  },
  "民": {
   "jlpt": "N4",
@@ -26382,14 +26522,14 @@
   "audio": "/audio/kanji/質.mp3",
   "lesson_examples": [
    {
-    "jp": "いい　質問（しつもん）ですね。",
-    "en": "That's a good question.",
+    "jp": "なにか　質問（しつもん）は　ありますか。",
+    "en": "Do you have any questions?",
     "audio_ref": "/audio/kanji_examples/質_1.webm",
     "source": "generated"
    },
    {
-    "jp": "なにか　質問（しつもん）は　ありますか。",
-    "en": "Do you have any questions?",
+    "jp": "いい　質問（しつもん）ですね。",
+    "en": "That's a good question.",
     "audio_ref": "/audio/kanji_examples/質_2.webm",
     "source": "generated"
    }
@@ -26428,7 +26568,21 @@
   ],
   "etymology": "Phono-semantic: 代 'substitute' (phonetic タイ) + money (貝) — money handed over in place of trust: to lend.",
   "mnemonic": "Your cash steps in as a substitute (代) in someone else's pocket — かす. The pair to remember: 貸す lends out, 借りる borrows in.",
-  "audio": "/audio/kanji/貸.mp3"
+  "audio": "/audio/kanji/貸.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ほんを　貸（か）して　ください。",
+    "en": "Please lend me the book.",
+    "audio_ref": "/audio/kanji_examples/貸_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "かさを　貸（か）しましょうか。",
+    "en": "Shall I lend you an umbrella?",
+    "audio_ref": "/audio/kanji_examples/貸_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "堂": {
   "jlpt": "N4",
@@ -34120,7 +34274,21 @@
   ],
   "etymology": "Phono-semantic: sun (日) + 央 'center' (phonetic エイ) — light catching the center of a surface: to reflect; thrown on a screen: to project.",
   "mnemonic": "Sunlight striking dead center on the water: the world doubled — うつる. A 映画 is that trick industrialized: light, centered, forty feet tall.",
-  "audio": "/audio/kanji/映.mp3"
+  "audio": "/audio/kanji/映.mp3",
+  "lesson_examples": [
+   {
+    "jp": "しゅうまつに　映画（えいが）を　みました。",
+    "en": "I watched a movie over the weekend.",
+    "audio_ref": "/audio/kanji_examples/映_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "この　映画（えいが）は　とても　おもしろいです。",
+    "en": "This movie is very interesting.",
+    "audio_ref": "/audio/kanji_examples/映_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "私": {
   "jlpt": "N4",
@@ -40367,7 +40535,21 @@
   "examples": [],
   "etymology": "Pictograph: the tongue extended from the mouth (口).",
   "mnemonic": "Stuck out for the doctor — した. 舌 does the tasting in 味's world.",
-  "audio": "/audio/kanji/舌.mp3"
+  "audio": "/audio/kanji/舌.mp3",
+  "lesson_examples": [
+   {
+    "jp": "あついので、舌（した）を　やけどしました。",
+    "en": "It was hot, so I burned my tongue.",
+    "audio_ref": "/audio/kanji_examples/舌_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "ねこは　舌（した）で　みずを　のみます。",
+    "en": "Cats drink water with their tongue.",
+    "audio_ref": "/audio/kanji_examples/舌_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "宣": {
   "jlpt": "N2",

@@ -1,7 +1,19 @@
 #!/usr/bin/env python3
 """Étape 4 phase 1 — build the core N5/N4 promotion list.
 Produces content/kanji-core-promotion.json. Read-only on kanji-zone-assignment.json
-(the actual swap is applied by a separate script, apply-core-promotion.py)."""
+(the actual swap is applied by a separate script, apply-core-promotion.py).
+
+**DO NOT re-run this after apply-core-promotion.py has already applied its output.**
+It reads content/kanji-zone-assignment.json fresh every time — if that file already
+reflects an applied swap, this script computes candidates against the ALREADY-SWAPPED
+positions instead of the original ones, silently producing a different, wrong result
+that no longer matches what's actually in the game data (this happened once, 2026-07-24
+— see content/kanji-core-promotion.json's _note and .scratch/scripts/
+reconcile-core-promotion-json.py, the repair script). If you need to change the
+promotion logic after a swap is already applied, revert the structural files to their
+pre-swap state first (git checkout <pre-phase-1 commit> -- content/kanji-zone-assignment.json
+content/lessons-proposal.json content/lessons/*.json content/npc-inventory.md), THEN
+edit and re-run this script, THEN re-run apply-core-promotion.py."""
 import json
 import heapq
 from pathlib import Path
@@ -48,16 +60,26 @@ def main():
     # audit named, at a fraction of the already-written-content rework.
     FORCE_FIRST = ["本", "学", "時", "年", "校", "何"]
     CATASTROPHIC_THRESHOLD = 1000
+    all_n5n4_late = [k for k in order if jlpt_map.get(k) in ("N5", "N4") and pos[k] >= 300]
     promo_candidates = [k for k in order if jlpt_map.get(k) in ("N5", "N4")
                          and (pos[k] >= CATASTROPHIC_THRESHOLD or k in FORCE_FIRST)]
     promo_candidates.sort(key=lambda k: (k not in FORCE_FIRST, -pos[k]))
 
-    WRITTEN_ZONES = set("""new-bark-town route-29 cherrygrove-city route-30 route-31 violet-city
-        sprout-tower route-32 ruins-of-alph azalea-town ilex-forest goldenrod-city national-park
-        route-36 route-37 ecruteak-city route-39 olivine-city cianwood-city route-42 mahogany-town
-        route-43 lake-of-rage blackthorn-city dragons-den dark-cave route-26 route-27
-        indigo-plateau-antichambre vermilion-city route-6-kanto saffron-city route-9-10-rocktunnel
-        lavender-town kanto-power-plant cerulean-city route-24-25-kanto""".split())
+    # BUG FOUND ON REVIEW (2026-07-24, Japanese-teacher pass): an earlier version of
+    # this script capped demotions using a hand-typed WRITTEN_ZONES list meant to mean
+    # "already-written zones with real lesson content to protect" — but it wrongly
+    # included several zones (route-33, route-34, route-35, slowpoke-well) that have
+    # NO lessons-proposal.json entry at all (one of the "35 zones sans leçon"). Their
+    # positions fall inside the same <300 window as real lesson zones, so 45 of 69
+    # promoted kanji — including 学/本/年/校/何/時, 4 of the audit's 6 headline
+    # examples — landed on a position with no PNJ lesson to actually teach them: the
+    # fix looked applied (kanji-zone-assignment.json reordered) but was inert for the
+    # player (no lesson_examples, no lesson entry anywhere). Root cause: eligibility
+    # must be grounded in the real lessons-proposal.json zone set, not a hand-typed
+    # list — a promoted kanji's target position is only useful if a lesson actually
+    # lives there.
+    lessons_proposal = json.loads((ROOT / "content/lessons-proposal.json").read_text())
+    LESSON_ZONES = {e["zone_id"] for e in lessons_proposal["zones"]}
     zone_ranges = json.loads((ROOT / "content/kanji-zone-assignment.json").read_text())["zones"]
 
     def zone_for_position(p):
@@ -66,29 +88,46 @@ def main():
                 return z["zone_id"]
         return None
 
-    # Cap how many kanji can be demoted out of any single ALREADY-WRITTEN zone — an
+    # Cap how many kanji can be demoted out of any single lesson-bearing zone — an
     # earlier unbounded run gutted route-32 (19 of its 20 kanji swapped out, i.e. its
     # entire already-written lesson content). Positions <300 are almost entirely inside
     # already-written zones (there's no way around that — that's where the fix has to
-    # land), so the only lever is bounding how much any one zone gets rewritten.
-    PER_ZONE_CAP = 3
+    # land), so the only lever is bounding how much any one zone gets rewritten. A
+    # demotion target that ISN'T in a lesson zone is excluded outright (see bug note
+    # above) rather than merely uncapped.
+    # Raised 3->5 after the LESSON_ZONES fix: restricting the pool to real lesson zones
+    # already shrank the safe-slot budget to 124 across just 8 zones (goldenrod-city 25,
+    # violet-city 20, route-32 19, ilex-forest 18, ruins-of-alph 15, azalea-town 12,
+    # sprout-tower 9, route-31 6) — a flat cap of 3 left only 22 total slots and dropped
+    # 時 (one of the audit's 6 headline kanji) for lack of room. 5/<zone size> stays well
+    # under the disproportionate-rewrite threshold that motivated capping in the first
+    # place (route-32 5/20=25%, goldenrod-city 5/50=10%) except sprout-tower (5/10=50%,
+    # a small zone; accepted since its pool is only 9-10 kanji either way).
+    PER_ZONE_CAP = 5
     zone_demote_count = {}
     demote_pool_all = [k for k in order[:300] if jlpt_map.get(k) in ("N1", "N2", "N3")
                         and len(dependents.get(k, set())) == 0]
     demote_pool = []
     for k in demote_pool_all:
         z = zone_for_position(pos[k])
-        if z in WRITTEN_ZONES:
-            if zone_demote_count.get(z, 0) >= PER_ZONE_CAP:
-                continue
-            zone_demote_count[z] = zone_demote_count.get(z, 0) + 1
+        if z not in LESSON_ZONES:
+            continue
+        if zone_demote_count.get(z, 0) >= PER_ZONE_CAP:
+            continue
+        zone_demote_count[z] = zone_demote_count.get(z, 0) + 1
         demote_pool.append(k)
     BUDGET = len(demote_pool)
     demote_set_available = set(demote_pool)
+    # The real ceiling a promoted kanji can land under is the HIGHEST available target
+    # slot (bounded by whichever lesson zone reaches furthest — e.g. goldenrod-city ends
+    # at 289), not a flat 300. A component sitting between that ceiling and 300 (e.g. 寸
+    # at 291, needed by 時) would otherwise be silently treated as "already early enough"
+    # while still being unreachable as a lower bound, deferring 時 for no visible reason.
+    MAX_TARGET_POS = max((pos[k] for k in demote_pool), default=-1)
 
     # Greedily build the promoted set (worst offenders first), cascading in any
-    # component that is currently at position >= 300 (needs promoting too to keep
-    # the "component before compound" invariant satisfiable within <300).
+    # component that sits beyond the reachable ceiling (needs promoting too to keep
+    # the "component before compound" invariant satisfiable within the lesson-zone pool).
     promoted_set = set()
     promoted_order_pref = []  # discovery order, just for candidate selection
 
@@ -99,7 +138,7 @@ def main():
             return False
         trail = trail | {k}
         needed = [c for c in components.get(k, [])
-                  if c in pos and pos[c] >= 300 and c not in promoted_set and c not in trail]
+                  if c in pos and pos[c] > MAX_TARGET_POS and c not in promoted_set and c not in trail]
         for c in needed:
             if not try_add(c, trail):
                 return False
@@ -108,6 +147,8 @@ def main():
         promoted_set.add(k)
         promoted_order_pref.append(k)
         return True
+
+    promo_candidates_set = set(promo_candidates)
 
     deferred = []
     for k in promo_candidates:
@@ -217,9 +258,12 @@ def main():
             "時/1369, 年/1362, 校/1363, 何/1990). Echange par PAIRES A TAILLE CONSTANTE : "
             "chaque kanji promu prend la position d'un kanji démis, ordre topologique "
             "(Kahn) respectant les composants — un promu qui a lui-même besoin d'un "
-            "composant tardif (ex. 話/説/試 → 言 ; 道/週/運 → 込 ; 質/員/買/頭 → 貝 ; "
-            "働/使 → 化) voit ce composant promu EN CASCADE avant lui, dans le même "
-            "budget. Pool de démotion restreint aux kanji N1/N2/N3 < position 300 qui "
+            "composant encore à une position ≥300 (ex. 話/説/試 → 言 ; 道/週/運 → 込 ; "
+            "質/員/買/頭 → 貝) voit ce composant promu EN CASCADE avant lui, dans le "
+            "même budget (marqué `cascaded_component: true` ci-dessous — un composant "
+            "déjà <300 comme 化, requis par 働/使, n'a pas besoin d'être cascadé, "
+            "juste respecté comme borne basse dans le tri topologique). Pool de "
+            "démotion restreint aux kanji N1/N2/N3 < position 300 qui "
             "n'apparaissent comme composant kradfile d'AUCUN autre kanji du corpus entier "
             "(2136) — aucun risque de casser une chaîne de prérequis en les repoussant "
             "plus tard. Composant '乞' traité comme bruit de kradfile (associé à 8+ kanji "
@@ -227,7 +271,19 @@ def main():
             "artefact de forme de trait partagée, pas une vraie décomposition ; ignoré "
             "dans le graphe de dépendances). Script : .scratch/scripts/"
             "build-core-promotion.py (lecture seule) — l'application réelle du swap est "
-            "faite par scripts/build/apply-core-promotion.py (0.6/1.4)."
+            "faite par scripts/build/apply-core-promotion.py (0.6/1.4). **Corrigé "
+            "2026-07-24 (revue Japanese-teacher + game-designer sur le 1er jet)** : "
+            "le pool de démotion est maintenant restreint aux positions situées dans "
+            "une zone qui a réellement un pool de leçons (content/lessons-proposal.json) "
+            "— le 1er jet utilisait une liste WRITTEN_ZONES tapée à la main qui incluait "
+            "par erreur des zones sans aucune leçon (route-33/34/35, slowpoke-well), "
+            "faisant atterrir 45 des 69 kanji promus — dont 4 des 6 exemples-phares "
+            "本/学/年/校/何/時 — sur une position sans PNJ pour les enseigner : le swap "
+            "avait l'air appliqué (kanji-zone-assignment.json réordonné) mais était "
+            "inerte côté joueur (aucune leçon, aucun lesson_examples). Toutes les "
+            "mutations du 1er jet (kanji-zone-assignment.json, lessons-proposal.json, "
+            "content/lessons/*.json, npc-inventory.md, les 12 lesson_examples ajoutés) "
+            "ont été restaurées à leur état d'avant phase 1 avant ce second passage."
         ),
         "promotion_count": n,
         "deferred_count": len(deferred),
@@ -238,7 +294,7 @@ def main():
                 "meaning": "/".join(meanings_map.get(k, [])[:2]),
                 "old_position": pos[k],
                 "new_position": new_pos[k],
-                "cascaded_component": pos[k] < 300,
+                "cascaded_component": k not in promo_candidates_set,
             }
             for k in promoted
         ], key=lambda r: r["new_position"]),
@@ -262,6 +318,23 @@ def main():
                         "dans le budget — reporté à une passe future.",
             }
             for k in deferred
+        ],
+        "not_considered_this_pass": [
+            {
+                "kanji": k,
+                "jlpt": jlpt_map.get(k),
+                "meaning": "/".join(meanings_map.get(k, [])[:2]),
+                "old_position": pos[k],
+                "note": "N5/N4 en position ≥300 mais < CATASTROPHIC_THRESHOLD (1000) — "
+                        "jamais candidat dans cette passe (scope volontairement réduit "
+                        "au palier catastrophique + exemples de l'audit). Trouvé en revue "
+                        "(game designer, 2026-07-24) : la 1ère version de ce fichier ne "
+                        "listait ces kanji nulle part, ni promus ni différés — un futur "
+                        "script devrait les reprendre en premier (ils sont moins mal "
+                        "positionnés que le palier catastrophique, mais toujours "
+                        "hors-N5/N4-attendu à leur position).",
+            }
+            for k in all_n5n4_late if k not in promo_candidates_set
         ],
     }
     (ROOT / "content/kanji-core-promotion.json").write_text(

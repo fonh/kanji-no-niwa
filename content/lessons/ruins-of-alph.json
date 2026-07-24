@@ -4,11 +4,11 @@
   "npc_ref": "young_man_ruins_of_alph",
   "sequence_index": 1,
   "kanji_ids": [
-   "病",
+   "知",
    "無",
-   "込",
-   "干",
-   "競"
+   "短",
+   "学",
+   "映"
   ],
   "grammar_id": "N4-024"
  },
@@ -19,7 +19,7 @@
   "kanji_ids": [
    "老",
    "臣",
-   "良",
+   "時",
    "芸",
    "衣"
   ],

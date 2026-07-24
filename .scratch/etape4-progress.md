@@ -82,38 +82,61 @@ l'avancement de la *rédaction* de chaque zone.
   text-example.json, illustratif, et une coïncidence à 3 questions sur
   slowpoke-well/son_in_law_letter.json — plus le pattern « toujours index 0 » que la
   règle visait à éliminer). 5 linters verts (0 FAIL, 3 WARN attendus/documentés).
-- **2026-07-24 — Phase 1 (curriculum : promotion du noyau N5/N4)** : décision de design
-  actée (§ Phase 1 du prompt). Mesuré : 195 kanji N5/N4 assignés à une position ≥300
-  dans l'ordre par composants, dont les 6 exemples nommés par l'audit (本/561, 学/559,
-  時/1369, 年/1362, 校/1363, 何/1990). Un premier essai plein budget (169 promotions,
-  tout le pool de démotion sûr) aurait réécrit jusqu'à 50 kanji dans une seule zone déjà
-  écrite (blackthorn-city) — disproportionné ; **rescope actée avec l'utilisateur** :
-  limiter aux ~80 kanji du palier catastrophique (position ≥1000) + les 6 exemples de
-  l'audit, avec un plafond de 3 kanji démis par zone déjà écrite. Résultat : **69 kanji
-  promus** (dont 17 composants radicaux cascadés — 言/込/貝/化/矢/里/等 — pour respecter
-  l'ordre par composants, vérifié par tri topologique, 0 violation résiduelle) échangés
-  contre 69 kanji N1/N2/N3 sans AUCUN dépendant dans les 2136 kanji (donc démotion sans
-  risque de casser un prérequis). Les 6 kanji nommés par l'audit atterrissent tous en
-  position <300 (何=254, 時=298, 年=180, 校=245, 学=211, 本=214). Impact sur les zones
-  déjà écrites plafonné à ≤4 kanji changés chacune (20 zones touchées, la plupart 1-3
-  kanji). Fichiers : `content/kanji-core-promotion.json` (décision, raisonnement,
-  listes promues/démises/différées), `scripts/build/apply-core-promotion.py`
-  (application mécanique — ordered_kanji, zones[].new_kanji, lessons-proposal.json,
-  content/lessons/<zone>.json, idempotent), `.scratch/scripts/build-core-promotion.py`
-  (génère la décision, kradfile pour l'ordre des composants — radical '乞' traité
-  comme bruit de parsing, associé à 8+ kanji sans rapport plausible),
-  `.scratch/scripts/add-core-promotion-lesson-examples.py` (12 kanji nouvellement
-  enseignés dans une zone déjà écrite → nouveaux lesson_examples écrits — les autres
-  kanji arrivants avaient déjà des exemples d'un enseignement antérieur, réutilisés
-  tels quels), `.scratch/scripts/patch-npc-inventory-kanji.py` (75 substitutions dans
-  les listes « leçon #N — 漢字: » de npc-inventory.md, portée strictement scopée pour
-  ne jamais toucher les mentions homonymes hors-contexte comme « 印 n°8 » le badge).
-  **Vérifié texte-agnostique** : les dialogues des zones touchées ne référencent jamais
-  thématiquement les kanji enseignés (règle « no kanji theming » déjà en vigueur) —
-  aucune réécriture de dialogue nécessaire. 47 kanji du palier catastrophique restent
-  différés (budget de démotion sûre épuisé), listés dans `kanji-core-promotion.json`
-  § deferred pour une passe future si un nouveau pool de démotion sûre est identifié.
-  5 linters verts (536 fichiers, mêmes 20 WARN attendus qu'en phase 0, 0 FAIL).
+- **2026-07-24 — Phase 1 (curriculum : promotion du noyau N5/N4), corrigée après double
+  revue prof+game designer sur le 1er jet** : décision de design actée (§ Phase 1 du
+  prompt). Mesuré : 195 kanji N5/N4 assignés à une position ≥300 dans l'ordre par
+  composants, dont les 6 exemples nommés par l'audit (本/561, 学/559, 時/1369, 年/1362,
+  校/1363, 何/1990). Un premier essai plein budget (169 promotions) aurait réécrit
+  jusqu'à 50 kanji dans une seule zone déjà écrite (blackthorn-city) — rescopé aux ~80
+  kanji du palier catastrophique (position ≥1000) + les 6 exemples de l'audit.
+  **Bug trouvé et corrigé après un 1er jet à 69 promotions** (revue Japanese-teacher +
+  game-designer demandée par l'utilisateur sur le travail déjà committé) : le plafond
+  par zone utilisait une liste `WRITTEN_ZONES` tapée à la main qui incluait par erreur
+  des zones **sans aucune leçon** (route-33/34/35, slowpoke-well — une des « 35 zones
+  sans leçon propre »). Conséquence réelle : 45 des 69 kanji promus — dont **4 des 6
+  exemples-phares (年/校/何/時)** — atterrissaient sur une position sans PNJ pour les
+  enseigner. Le swap avait l'air appliqué (kanji-zone-assignment.json réordonné,
+  linters verts) mais était inerte côté joueur : aucune leçon, aucun `lesson_examples`
+  pour la majorité des kanji « promus ». **Corrigé** : le pool de démotion est
+  maintenant restreint aux positions situées dans une zone qui a réellement une entrée
+  `content/lessons-proposal.json` (`LESSON_ZONES`, calculé depuis les données, jamais
+  tapé à la main) ; plafond par zone relevé de 3 à 5 (le pool sûr s'est réduit à 124
+  positions sur seulement 8 zones une fois filtré aux vraies zones à leçon) ; un edge
+  case supplémentaire corrigé en cours de route (時 restait différé car son composant
+  寸 sied à la position 291, juste sous 300 mais au-dessus du plafond réel atteignable
+  par le pool restreint — le seuil de cascade de composant est maintenant calculé
+  dynamiquement contre la position max réellement disponible, pas une constante 300).
+  Résultat final, vérifié 0 promotion hors zone à leçon : **40 kanji promus** (dont 15
+  composants radicaux cascadés — 又/寸/斤/爪/言/里/元/込/干/尚/舌/豆/矢/自/貝, vérifiés un
+  par un contre kradfile par la revue : décomposition réelle, pas du bruit) échangés
+  contre 40 kanji N1/N2/N3 sans aucun dépendant dans les 2136 kanji. Les 6 kanji
+  nommés par l'audit atterrissent tous en position <300 (年=131, 学=163, 時=167,
+  本=196, 校=222, 何=256). Impact sur les zones à leçon touchées : 14-50% de leur pool
+  (8 zones : route-31, violet-city, sprout-tower, route-32, ruins-of-alph, azalea-town,
+  ilex-forest, goldenrod-city — 5-6 kanji chacune). **25 lesson_examples** écrits pour
+  les kanji nouvellement enseignés sans exemple préexistant (les autres avaient déjà
+  des exemples d'un enseignement antérieur, réutilisés tels quels). `npc-inventory.md`
+  resynchronisé (62 substitutions). **Accident opérationnel corrigé au passage** :
+  `build-core-promotion.py` a été relancé par erreur après l'application du swap,
+  recalculant contre l'état déjà muté et écrasant `kanji-core-promotion.json` avec une
+  analyse fausse (35 promotions au lieu de 40, ne correspondant plus aux fichiers réels)
+  — repéré immédiatement (vérification systématique après chaque script), réparé par
+  `.scratch/scripts/reconcile-core-promotion-json.py` qui reconstruit le fichier de
+  décision depuis le diff réel de `kanji-zone-assignment.json` plutôt que de
+  recalculer ; un garde-fou (commentaire + procédure) a été ajouté en tête de
+  `build-core-promotion.py` pour empêcher la récidive. **Transparence ajoutée** (finding
+  game-designer : ~93 kanji du problème mesuré n'apparaissaient nulle part, ni promus
+  ni différés) : `kanji-core-promotion.json` a maintenant une section
+  `not_considered_this_pass` listant les 112 kanji N5/N4 mal positionnés mais jamais
+  candidats dans cette passe (position ≥300 mais <1000, hors du scope catastrophique),
+  pour qu'une future passe les reprenne sans repartir de zéro ; `deferred` (55 kanji)
+  reste la liste des candidats catastrophiques qui n'ont pas trouvé de budget. Le champ
+  `cascaded_component` (bugué, toujours `false` dans le 1er jet) reflète maintenant
+  la réalité. Documenté dans `content/engine-contract.md` § 4bis : le motif « zone
+  sans leçon empruntant son pool à une zone voisine » (azalea-town enseigne aussi le
+  pool de route-33) n'est pas un bug — `LESSON_ZONES` l'exclut correctement par
+  construction du calcul de démotion. 5 linters verts (536 fichiers, mêmes 3 WARN
+  attendus qu'en phase 2.4, 0 FAIL).
 - **2026-07-23 — Phase 0 (corrections mécaniques, revue prof+game designer)** : suite au
   prompt `.scratch/audits/prompt-etape4-suite-et-fin.md` (double revue du 2026-07-23),
   corrections structurelles avant toute nouvelle production, ordre du prompt respecté.

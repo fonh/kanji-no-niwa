@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Étape 4 phase 1 — lesson_examples for the 12 kanji newly taught in an already-written
-zone after content/kanji-core-promotion.json (sprout-tower/route-32/ruins-of-alph/
-azalea-town/ilex-forest/goldenrod-city). Source of truth: src/data/kanji-content.json."""
+"""Étape 4 phase 1 (corrigé après revue) — lesson_examples pour les 25 kanji
+nouvellement enseignés dans une zone déjà écrite après la 2e version corrigée du swap
+(violet-city/sprout-tower/route-32/ruins-of-alph/azalea-town/ilex-forest/goldenrod-city).
+Source de vérité : src/data/kanji-content.json."""
 import json
 from pathlib import Path
 
@@ -9,53 +10,105 @@ ROOT = Path(__file__).resolve().parents[2]
 PATH = ROOT / "src/data/kanji-content.json"
 
 EXAMPLES = {
-    "究": [
-        ("この　研究（けんきゅう）は　とても　むずかしいです。", "This research is very difficult."),
-        ("兄（あに）は　だいがくで　研究（けんきゅう）を　して　います。", "My older brother does research at university."),
-    ],
     "院": [
-        ("びょうきなので、病院（びょういん）へ　いきます。", "I'm sick, so I'm going to the hospital."),
+        ("足（あし）が　いたいので、病院（びょういん）へ　いきました。", "My leg hurt, so I went to the hospital."),
         ("この　病院（びょういん）の　いしゃは　しんせつです。", "The doctor at this hospital is kind."),
     ],
     "病": [
-        ("病気（びょうき）に　なったので、がっこうを　やすみました。", "I got sick, so I was absent from school."),
-        ("おばあさんは　いま　病気（びょうき）です。", "Grandma is sick right now."),
+        ("かぜで　病気（びょうき）に　なりました。", "I caught a cold and got sick."),
+        ("兄（あに）は　病気（びょうき）で　がっこうを　やすみました。", "My older brother was absent from school due to illness."),
+    ],
+    "年": [
+        ("今年（ことし）は　いい　年（とし）に　なりますように。", "I hope this year will be a good year."),
+        ("来年（らいねん）、日本（にほん）へ　いきます。", "Next year, I'll go to Japan."),
+    ],
+    "舌": [
+        ("あついので、舌（した）を　やけどしました。", "It was hot, so I burned my tongue."),
+        ("ねこは　舌（した）で　みずを　のみます。", "Cats drink water with their tongue."),
+    ],
+    "話": [
+        ("その　話（はなし）は　おもしろいですね。", "That story is interesting, isn't it."),
+        ("先生（せんせい）と　でんわで　話（はな）しました。", "I talked with the teacher on the phone."),
+    ],
+    "説": [
+        ("先生（せんせい）が　もんだいを　説明（せつめい）しました。", "The teacher explained the problem."),
+        ("かれの　説明（せつめい）は　わかりやすいです。", "His explanation is easy to understand."),
+    ],
+    "週": [
+        ("来週（らいしゅう）、テストが　あります。", "There's a test next week."),
+        ("毎週（まいしゅう）、としょかんへ　いきます。", "I go to the library every week."),
+    ],
+    "矢": [
+        ("矢（や）で　まとを　いました。", "I shot the target with an arrow."),
+        ("かんばんに　矢印（やじるし）が　あります。", "There's an arrow on the sign."),
     ],
     "医": [
-        ("父（ちち）は　この　まちの　医者（いしゃ）です。", "Dad is a doctor in this town."),
+        ("わたしの　ちちは　医者（いしゃ）です。", "My father is a doctor."),
         ("しょうらい、医者（いしゃ）に　なりたいです。", "I want to become a doctor in the future."),
     ],
     "知": [
-        ("その　はなしは　知（し）りませんでした。", "I didn't know that story."),
-        ("かれの　なまえを　知（し）って　いますか。", "Do you know his name?"),
+        ("その　みちを　知（し）って　いますか。", "Do you know that road?"),
+        ("かれの　なまえを　知（し）りませんでした。", "I didn't know his name."),
     ],
-    "英": [
-        ("がっこうで　英語（えいご）を　ならいます。", "I learn English at school."),
-        ("この　ほんは　英語（えいご）で　かかれて　います。", "This book is written in English."),
+    "短": [
+        ("この　えんぴつは　短（みじか）いです。", "This pencil is short."),
+        ("じかんが　短（みじか）いので、いそぎましょう。", "Time is short, so let's hurry."),
+    ],
+    "映": [
+        ("しゅうまつに　映画（えいが）を　みました。", "I watched a movie over the weekend."),
+        ("この　映画（えいが）は　とても　おもしろいです。", "This movie is very interesting."),
+    ],
+    "時": [
+        ("今（いま）、何時（なんじ）ですか。", "What time is it now?"),
+        ("じゅぎょうの　時間（じかん）です。", "It's class time."),
+    ],
+    "菜": [
+        ("野菜（やさい）を　たくさん　たべましょう。", "Let's eat lots of vegetables."),
+        ("この　野菜（やさい）は　しんせんです。", "These vegetables are fresh."),
     ],
     "質": [
-        ("いい　質問（しつもん）ですね。", "That's a good question."),
         ("なにか　質問（しつもん）は　ありますか。", "Do you have any questions?"),
-    ],
-    "題": [
-        ("この　問題（もんだい）は　かんたんです。", "This problem is easy."),
-        ("きょうの　宿題（しゅくだい）は　おおいです。", "Today's homework is a lot."),
+        ("いい　質問（しつもん）ですね。", "That's a good question."),
     ],
     "首": [
-        ("ねこの　首（くび）に　すずが　あります。", "There's a bell on the cat's neck."),
+        ("きりんは　首（くび）が　ながいです。", "Giraffes have long necks."),
         ("首（くび）が　いたいです。", "My neck hurts."),
+    ],
+    "道": [
+        ("この　道（みち）を　まっすぐ　いって　ください。", "Please go straight down this road."),
+        ("駅（えき）までの　道（みち）を　おしえて　ください。", "Please tell me the way to the station."),
+    ],
+    "校": [
+        ("まいにち、学校（がっこう）へ　いきます。", "I go to school every day."),
+        ("この　学校（がっこう）は　おおきいです。", "This school is big."),
+    ],
+    "飯": [
+        ("もう　ご飯（はん）を　たべましたか。", "Have you eaten yet?"),
+        ("あさ、ご飯（はん）を　たべませんでした。", "I didn't eat breakfast this morning."),
+    ],
+    "動": [
+        ("この　きかいは　動（うご）きません。", "This machine doesn't move."),
+        ("まいあさ、運動（うんどう）します。", "I exercise every morning."),
+    ],
+    "試": [
+        ("あした、試験（しけん）が　あります。", "There's an exam tomorrow."),
+        ("この　ふくを　試着（しちゃく）しても　いいですか。", "May I try on these clothes?"),
+    ],
+    "何": [
+        ("これは　何（なん）ですか。", "What is this?"),
+        ("何（なに）を　たべたいですか。", "What do you want to eat?"),
     ],
     "使": [
         ("この　ペンを　使（つか）っても　いいですか。", "May I use this pen?"),
-        ("でんわを　使（つか）っても　いいですか。", "May I use the phone?"),
+        ("まいにち　にほんごを　使（つか）います。", "I use Japanese every day."),
     ],
-    "便": [
-        ("この　でんしゃは　とても　便利（べんり）です。", "This train is very convenient."),
-        ("スマホは　便利（べんり）な　どうぐです。", "The smartphone is a convenient tool."),
+    "働": [
+        ("ちちは　ぎんこうで　働（はたら）いて　います。", "My father works at a bank."),
+        ("いっしょうけんめい　働（はたら）きます。", "I'll work hard."),
     ],
-    "借": [
-        ("としょかんで　ほんを　借（か）りました。", "I borrowed a book from the library."),
-        ("ともだちに　100えんを　借（か）りました。", "I borrowed 100 yen from a friend."),
+    "貸": [
+        ("ほんを　貸（か）して　ください。", "Please lend me the book."),
+        ("かさを　貸（か）しましょうか。", "Shall I lend you an umbrella?"),
     ],
 }
 

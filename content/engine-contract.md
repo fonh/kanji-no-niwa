@@ -56,7 +56,7 @@ fichier, au même titre que les CS — corrigé phase 0.4.
 
 | Quest | Steps engine-only | Mécanique |
 |---|---|---|
-| `moomoo_recovery` | `fed_1` … `fed_6`, `healed` | Nourrissage de la vache malade (Route 39) : interaction Sac → baie → `remove_item` + `advance_quest`, limitée à 1×/jour calendaire (modèle PRD § time_window). `sick_found` reste posé par un dialogue (`farm_girl_left_route39.json`) ; seule la boucle de nourrissage elle-même est moteur. Voir la note dans `content/dialogues/npcs/route-39/sick_cow_route39.json`. |
+| `moomoo_recovery` | `fed_1`, `fed_2`, `fed_3`, `fed_4`, `fed_5`, `fed_6`, `healed` | Nourrissage de la vache malade (Route 39) : interaction Sac → baie → `remove_item` + `advance_quest`, limitée à 1×/jour calendaire (modèle PRD § time_window). `sick_found` reste posé par un dialogue (`farm_girl_left_route39.json`) ; seule la boucle de nourrissage elle-même est moteur. Voir la note dans `content/dialogues/npcs/route-39/sick_cow_route39.json`. |
 | `radio_tower_takeover` | `tower_occupied` (1ᵉʳ step) | La quête démarre automatiquement à `badge_earned(pryce)` (appel téléphonique d'Elm, cf. `content/quests/radio_tower_takeover.json` `_note`) — aucun PNJ ne « donne » cette quête, le moteur doit poser `tower_occupied` dès que la condition de badge est remplie. |
 
 ## 4. Politique de linter — vérifié mécaniquement (phase 0.6)
@@ -71,6 +71,25 @@ fichier, au même titre que les CS — corrigé phase 0.4.
 - aucun état `default: true` d'un `state_rules[]` ne porte d'Effect `remove_item` (anti-pattern
   du troc sans contrepartie, phase 0.2) ;
 - `correct_index` sur les questions de texte : détecte l'uniformité suspecte (ex. 0 partout).
+
+## 4bis. Zones "sans leçon" dont le pool est enseigné par une zone voisine (constaté en revue, phase 1)
+
+Trouvé en révisant la phase 1 (revue prof+game designer 2026-07-24) : `azalea-town`
+déclare un pool de 15 kanji dans `content/kanji-zone-assignment.json`
+(`kanji_count: 15`) mais ses leçons dans `content/lessons-proposal.json` en enseignent
+30 — les 15 en trop appartiennent en réalité au pool de `route-33` (une des « 35 zones
+sans leçon », vérifié position par position). **Ce n'est pas un bug** : c'est le motif
+déjà documenté (`.scratch/etape4-progress.md` : « elles n'ont pas de pool kanji propre
+et seront traitées comme sous-partie du lot de leur région ») — route-33 n'a pas de
+PNJ-leçon propre, son pool est enseigné via les PNJ d'azalea-town. Piège pour un futur
+script mécanique : `scripts/build/apply-core-promotion.py` fait correspondre les
+zone_id exactement (une leçon `zone_id: azalea-town` ne sait pas qu'elle porte aussi
+des kanji de route-33) — le pool de démotion de `.scratch/scripts/
+build-core-promotion.py` exclut donc délibérément ces zones « empruntées » (une
+position dans route-33 n'a pas d'entrée `lessons-proposal.json` sous ce zone_id, donc
+`LESSON_ZONES` ne la retient pas), ce qui est le comportement sûr, pas un manque à
+corriger. À généraliser si d'autres zones portent le même motif (chercher les zone_id
+de `lessons-proposal.json` qui enseignent plus de kanji que `kanji_count` ne le déclare).
 
 ## 5. Mécaniques différées à l'implémentation (aucun fichier de contenu à produire)
 

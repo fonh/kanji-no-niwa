@@ -336,8 +336,8 @@
    "kanji_ids": [
     "竹",
     "糸",
-    "九",
     "又",
+    "寸",
     "斤"
    ],
    "grammar_ids": [
@@ -353,9 +353,9 @@
    "npc_name": "Jeune homme près de l'Apricorn noir",
    "npc_role_origin": "Quête de livraison (\"porte ce message à mon contact\", compagnon-courrier Kenya)",
    "kanji_ids": [
-    "形",
+    "爪",
     "戸",
-    "才",
+    "言",
     "数",
     "毛"
    ],
@@ -392,12 +392,12 @@
    "npc_name": "Garçon blond",
    "npc_role_origin": "Près du Centre Pokémon, échange des Éclats contre des lots de Baies",
    "kanji_ids": [
-    "爪",
-    "白",
-    "穴",
+    "里",
+    "元",
+    "院",
     "化",
-    "命",
-    "定"
+    "病",
+    "込"
    ],
    "grammar_ids": [
     "N5-107"
@@ -472,10 +472,10 @@
    "npc_name": "Sage Neal, Troy, Jin, Nico, Edmond, Chow",
    "npc_role_origin": "6 Sages répartis sur les 3 étages",
    "kanji_ids": [
-    "究",
-    "言",
-    "里",
-    "陽",
+    "干",
+    "年",
+    "尚",
+    "舌",
     "面"
    ],
    "grammar_ids": [
@@ -491,7 +491,7 @@
    "npc_name": "Ancien Li",
    "npc_role_origin": "Sommet (3F), bat le joueur, explique la technique",
    "kanji_ids": [
-    "争",
+    "話",
     "伝",
     "候",
     "兆",
@@ -510,11 +510,11 @@
    "npc_name": "Homme sur le chemin",
    "npc_role_origin": "Cadeau gratuit sans condition",
    "kanji_ids": [
-    "元",
-    "邦",
-    "院",
-    "参",
-    "器"
+    "説",
+    "豆",
+    "週",
+    "矢",
+    "医"
    ],
    "grammar_ids": [
     "N4-009"
@@ -586,11 +586,11 @@
    "npc_name": "Jeune homme (salle souterraine)",
    "npc_role_origin": "Admiratif du 1er puzzle résolu, remet un journal qui s'auto-remplit",
    "kanji_ids": [
-    "病",
+    "知",
     "無",
-    "込",
-    "干",
-    "競"
+    "短",
+    "学",
+    "映"
    ],
    "grammar_ids": [
     "N4-024"
@@ -607,7 +607,7 @@
    "kanji_ids": [
     "老",
     "臣",
-    "良",
+    "時",
     "芸",
     "衣"
    ],
@@ -706,8 +706,8 @@
     "演",
     "犯",
     "示",
-    "医",
-    "知"
+    "本",
+    "菜"
    ],
    "grammar_ids": [
     "N4-042"
@@ -722,9 +722,9 @@
    "npc_name": "Vendeur du Mart",
    "npc_role_origin": "Comptoir du fond",
    "kanji_ids": [
-    "英",
-    "象",
-    "述",
+    "自",
+    "貝",
+    "質",
     "逆",
     "過",
     "適"
@@ -786,8 +786,8 @@
     "将",
     "展",
     "座",
-    "質",
-    "題"
+    "首",
+    "道"
    ],
    "grammar_ids": [
     "N4-064"
@@ -802,9 +802,9 @@
    "npc_name": "Apprenti du Maître du Charbon",
    "npc_role_origin": "À l'entrée, enseigne la technique de capture des 2 fuyards",
    "kanji_ids": [
-    "首",
-    "操",
-    "敬",
+    "校",
+    "飯",
+    "動",
     "段",
     "片",
     "疑"
@@ -905,8 +905,8 @@
     "沈",
     "沸",
     "浮",
-    "使",
-    "便",
+    "試",
+    "何",
     "滴"
    ],
    "grammar_ids": [
@@ -922,10 +922,10 @@
    "npc_name": "Fille évaluatrice d'affection",
    "npc_role_origin": "Maison au nord du Dept Store, évalue le lien avec le compagnon en tête",
    "kanji_ids": [
-    "借",
-    "狭",
+    "使",
+    "働",
     "甘",
-    "療",
+    "貸",
     "舞",
     "舟"
    ],
@@ -966,7 +966,7 @@
     "弓",
     "汽",
     "羊",
-    "豆"
+    "原"
    ],
    "grammar_ids": [
     "N4-091"
@@ -1215,7 +1215,7 @@
    "npc_role_origin": "Donne le CS Éclate-Roc (砕), débloqué dès le badge de Falkner *(corrigé 2026-07-06, audit 04, finding 04-A3 : « CS Marteau-Piqueur (力) » était un double contresens — 力 = Force, déjà remis par le Hiker de la Route 42, et « Marteau-Piqueur » n'est le nom d'aucun des 8 CS-Kanji (« 7 » corrigé 2026-07-07, synthèse — 登 réintégré depuis) ; voir PRD § CS-Kanji et guidebook-adapted L572/1177)*",
    "kanji_ids": [
     "厄",
-    "原",
+    "当",
     "呉",
     "唐",
     "奉"
@@ -1237,7 +1237,7 @@
     "寛",
     "寡",
     "寮",
-    "園"
+    "形"
    ],
    "grammar_ids": [
     "N3-027"
@@ -1413,7 +1413,7 @@
     "敢",
     "敷",
     "斗",
-    "当"
+    "才"
    ],
    "grammar_ids": [
     "N3-051"
@@ -1702,7 +1702,7 @@
    "npc_name": "Fille (maison nord du Mart)",
    "npc_role_origin": "Donne 3 décorations aléatoires par jour",
    "kanji_ids": [
-    "他",
+    "邦",
     "邸",
     "酌",
     "酔",
@@ -1845,7 +1845,7 @@
     "氾",
     "沃",
     "淫",
-    "倍",
+    "他",
     "牙"
    ],
    "grammar_ids": [
@@ -1956,7 +1956,7 @@
    "npc_name": "PNJ à la grille de Route 43",
    "npc_role_origin": "Mentionne que Mr. Pokémon cherche une Écaille Rouge",
    "kanji_ids": [
-    "列",
+    "九",
     "五",
     "休",
     "六",
@@ -1979,7 +1979,7 @@
     "右",
     "名",
     "天",
-    "遊"
+    "倍"
    ],
    "grammar_ids": [
     "N2-013"
@@ -1995,9 +1995,9 @@
    "npc_role_origin": "Mentionne que Mr. Pokémon cherche une Écaille Rouge",
    "kanji_ids": [
     "左",
-    "部",
+    "列",
     "男",
-    "酒",
+    "白",
     "花"
    ],
    "grammar_ids": [
@@ -2212,8 +2212,8 @@
    "npc_name": "Maniaque des capacités",
    "npc_role_origin": "Contre une Écaille de Cœur, réapprend une capacité oubliée",
    "kanji_ids": [
-    "満",
-    "然",
+    "遊",
+    "走",
     "近",
     "頭",
     "主",
@@ -2335,8 +2335,8 @@
     "堂",
     "洗",
     "玉",
-    "熱",
-    "備",
+    "石",
+    "部",
     "交"
    ],
    "grammar_ids": [
@@ -2992,7 +2992,7 @@
     "専",
     "尊",
     "巻",
-    "制",
+    "酒",
     "幼"
    ],
    "grammar_ids": [
@@ -3289,7 +3289,7 @@
     "被",
     "軟",
     "辛",
-    "厚",
+    "陽",
     "逃",
     "鈍"
    ],
@@ -3310,7 +3310,7 @@
     "雇",
     "震",
     "靴",
-    "師",
+    "争",
     "丁"
    ],
    "grammar_ids": [
@@ -3507,7 +3507,7 @@
    "npc_role_origin": "Détient l'objet perdu de Copycat, à livrer à Safranville",
    "kanji_ids": [
     "盛",
-    "得",
+    "穴",
     "筋",
     "策",
     "糖",
@@ -3546,7 +3546,7 @@
    "npc_name": "Capitaine",
    "npc_role_origin": "Héberge la petite-fille retrouvée, distribue des Plaques collectionnables",
    "kanji_ids": [
-    "復",
+    "至",
     "裁",
     "銭",
     "丈",
@@ -4124,7 +4124,7 @@
    "kanji_ids": [
     "歓",
     "殴",
-    "快",
+    "汁",
     "江",
     "浄"
    ],
@@ -4812,7 +4812,7 @@
     "親",
     "計",
     "野",
-    "減",
+    "参",
     "黒"
    ],
    "grammar_ids": [
@@ -4849,11 +4849,11 @@
    "npc_role_origin": "Objet-clé changeant la musique d'ambiance, une fois tous les badges réunis",
    "kanji_ids": [
     "屋",
-    "準",
-    "演",
-    "税",
-    "能",
-    "複"
+    "待",
+    "悪",
+    "意",
+    "持",
+    "暑"
    ],
    "grammar_ids": [
     "N1-114"
@@ -4868,12 +4868,12 @@
    "npc_name": "\"Réalisateur\" GAME FREAK",
    "npc_role_origin": "Quête en 2 étapes, récompense à chaque jalon de complétion",
    "kanji_ids": [
-    "処",
-    "刻",
-    "劇",
-    "卵",
-    "宅",
-    "宇"
+    "暗",
+    "注",
+    "界",
+    "真",
+    "研",
+    "究"
    ],
    "grammar_ids": [
     "N1-115"
@@ -4888,12 +4888,12 @@
    "npc_name": "Gentleman du comptoir d'échange",
    "npc_role_origin": "Se plaint de son manque de Jetons (flavor)",
    "kanji_ids": [
-    "将",
-    "展",
-    "座",
-    "律",
-    "拝",
-    "探"
+    "習",
+    "薬",
+    "起",
+    "運",
+    "都",
+    "重"
    ],
    "grammar_ids": [
     "N1-116"
@@ -4908,12 +4908,12 @@
    "npc_name": "Conseiller \"Pouvoir Caché\"",
    "npc_role_origin": "PNJ d'information gratuite près du Casino",
    "kanji_ids": [
-    "匹",
-    "寝",
-    "悩",
-    "払",
-    "挟",
-    "捕"
+    "題",
+    "便",
+    "借",
+    "特",
+    "英",
+    "器"
    ],
    "grammar_ids": [
     "N1-117"
@@ -4928,12 +4928,12 @@
    "npc_name": "Homme du toit des Condominiums (visible 20h–4h uniquement)",
    "npc_role_origin": "PNJ à horaire fixe",
    "kanji_ids": [
-    "捜",
-    "掃",
-    "換",
-    "殿",
-    "汚",
-    "沈"
+    "満",
+    "然",
+    "熱",
+    "競",
+    "良",
+    "税"
    ],
    "grammar_ids": [
     "N1-118"
@@ -5725,7 +5725,7 @@
     "駐",
     "髪",
     "齢",
-    "沸"
+    "能"
    ],
    "grammar_ids": [
     "N1-177"
@@ -5859,7 +5859,7 @@
     "秘",
     "納",
     "肺",
-    "浮",
+    "複",
     "衆"
    ],
    "grammar_ids": [
