@@ -5,6 +5,6 @@
  "jlpt_level": "N4",
  "dialogue_states": {
   "battle_intro": { "pages": [{ "jp": "ここは　おれの　しまだ。", "en": "This is my turf." }] },
-  "post_battle": { "pages": [{ "jp": "とおって　いいよ。", "en": "You may pass." }] }
+  "post_battle": { "pages": [{ "jp": "通（とお）って　いいよ。", "en": "You may pass." }] }
  }
 }

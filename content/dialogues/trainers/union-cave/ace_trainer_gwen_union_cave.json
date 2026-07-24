@@ -4,7 +4,7 @@
  "zone_id": "union-cave",
  "jlpt_level": "N3",
  "dialogue_states": {
-  "battle_intro": { "pages": [{ "jp": "ながく　れんしゅうしてきたんだ。", "en": "I've trained a long time for this." }] },
+  "battle_intro": { "pages": [{ "jp": "長（なが）く　れんしゅうしてきたんだ。", "en": "I've trained a long time for this." }] },
   "post_battle": { "pages": [{ "jp": "また　れんしゅうを　つづけるよ。", "en": "I'll keep on training." }] }
  }
 }

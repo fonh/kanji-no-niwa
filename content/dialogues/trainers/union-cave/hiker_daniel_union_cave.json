@@ -4,7 +4,7 @@
  "zone_id": "union-cave",
  "jlpt_level": "N4",
  "dialogue_states": {
-  "battle_intro": { "pages": [{ "jp": "やまおとこは　まけないぞ。", "en": "A mountain man never loses." }] },
+  "battle_intro": { "pages": [{ "jp": "山（やま）おとこは　まけないぞ。", "en": "A mountain man never loses." }] },
   "post_battle": { "pages": [{ "jp": "まいったな。", "en": "You got me." }] }
  }
 }

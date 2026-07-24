@@ -5,6 +5,6 @@
  "jlpt_level": "N3",
  "dialogue_states": {
   "battle_intro": { "pages": [{ "jp": "この　どうくつの　いちばん　おくで　まっていたよ。", "en": "I've been waiting at the very back of this cave." }] },
-  "post_battle": { "pages": [{ "jp": "とおって　いいよ。", "en": "You may pass." }] }
+  "post_battle": { "pages": [{ "jp": "通（とお）って　いいよ。", "en": "You may pass." }] }
  }
 }

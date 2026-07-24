@@ -4,7 +4,7 @@
  "zone_id": "union-cave",
  "jlpt_level": "N4",
  "dialogue_states": {
-  "battle_intro": { "pages": [{ "jp": "ひの　いきを　みせてやる。", "en": "I'll show you my fire breath." }] },
+  "battle_intro": { "pages": [{ "jp": "火（ひ）の　いきを　みせてやる。", "en": "I'll show you my fire breath." }] },
   "post_battle": { "pages": [{ "jp": "のどが　かわいた。", "en": "My throat is dry." }] }
  }
 }
