@@ -6798,7 +6798,21 @@
   ],
   "etymology": "Pictograph: a head with its hair (the top strokes) and its face reduced to an eye — the head, and by extension the neck it sits on.",
   "mnemonic": "Hair on top, eye in the middle: a head planted on a neck — くび. The 首相 is the 'neck minister': the head of government.",
-  "audio": "/audio/kanji/首.mp3"
+  "audio": "/audio/kanji/首.mp3",
+  "lesson_examples": [
+   {
+    "jp": "ねこの　首（くび）に　すずが　あります。",
+    "en": "There's a bell on the cat's neck.",
+    "audio_ref": "/audio/kanji_examples/首_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "首（くび）が　いたいです。",
+    "en": "My neck hurts.",
+    "audio_ref": "/audio/kanji_examples/首_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "秋": {
   "jlpt": "N4",
@@ -7383,7 +7397,21 @@
   ],
   "etymology": "Compound ideograph: arrow (矢) + mouth (口) — an answer that flies from the mouth straight as an arrow: to know.",
   "mnemonic": "Ask, and the reply hits the bullseye before you finish the question — しる. Knowledge is a mouth with good aim.",
-  "audio": "/audio/kanji/知.mp3"
+  "audio": "/audio/kanji/知.mp3",
+  "lesson_examples": [
+   {
+    "jp": "その　はなしは　知（し）りませんでした。",
+    "en": "I didn't know that story.",
+    "audio_ref": "/audio/kanji_examples/知_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "かれの　なまえを　知（し）って　いますか。",
+    "en": "Do you know his name?",
+    "audio_ref": "/audio/kanji_examples/知_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "地": {
   "jlpt": "N4",
@@ -10433,7 +10461,21 @@
   ],
   "etymology": "Simplified from 醫: an arrow (矢) in a surgeon's box (匚) — the healer who pulls arrowheads from wounds: doctor.",
   "mnemonic": "Open the doctor's case: inside, the arrow he just removed — イ. The 医者 keeps every arrow life fires at you.",
-  "audio": "/audio/kanji/医.mp3"
+  "audio": "/audio/kanji/医.mp3",
+  "lesson_examples": [
+   {
+    "jp": "父（ちち）は　この　まちの　医者（いしゃ）です。",
+    "en": "Dad is a doctor in this town.",
+    "audio_ref": "/audio/kanji_examples/医_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "しょうらい、医者（いしゃ）に　なりたいです。",
+    "en": "I want to become a doctor in the future.",
+    "audio_ref": "/audio/kanji_examples/医_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "員": {
   "jlpt": "N4",
@@ -10502,7 +10544,21 @@
   ],
   "etymology": "Phono-semantic: wall/mound (阝) + 完 'complete' (phonetic イン) — a compound completely enclosed by walls: an institution.",
   "mnemonic": "Walls (阝) all the way around until the enclosure is complete (完): hospital, temple, academy — イン. 病院: the walled place you'd rather visit than inhabit.",
-  "audio": "/audio/kanji/院.mp3"
+  "audio": "/audio/kanji/院.mp3",
+  "lesson_examples": [
+   {
+    "jp": "びょうきなので、病院（びょういん）へ　いきます。",
+    "en": "I'm sick, so I'm going to the hospital.",
+    "audio_ref": "/audio/kanji_examples/院_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "この　病院（びょういん）の　いしゃは　しんせつです。",
+    "en": "The doctor at this hospital is kind.",
+    "audio_ref": "/audio/kanji_examples/院_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "運": {
   "jlpt": "N4",
@@ -10890,7 +10946,21 @@
   ],
   "etymology": "Phono-semantic: hole (穴) + 九 (phonetic キュウ) — probing a cave to its very last turn: to investigate exhaustively.",
   "mnemonic": "Crawl into the cave (穴) nine (九) turns deep, to the very end — キュウ. 研究 is refusing to stop at turn eight.",
-  "audio": "/audio/kanji/究.mp3"
+  "audio": "/audio/kanji/究.mp3",
+  "lesson_examples": [
+   {
+    "jp": "この　研究（けんきゅう）は　とても　むずかしいです。",
+    "en": "This research is very difficult.",
+    "audio_ref": "/audio/kanji_examples/究_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "兄（あに）は　だいがくで　研究（けんきゅう）を　して　います。",
+    "en": "My older brother does research at university.",
+    "audio_ref": "/audio/kanji_examples/究_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "去": {
   "jlpt": "N4",
@@ -11272,7 +11342,21 @@
   ],
   "etymology": "Compound: person (亻) + 吏 'official' — a person dispatched on official business: an envoy; to employ, to use.",
   "mnemonic": "The boss points: you, go — you've been used, err, dispatched — つかう. The 大使 is the grandest errand-runner of all: the ambassador.",
-  "audio": "/audio/kanji/使.mp3"
+  "audio": "/audio/kanji/使.mp3",
+  "lesson_examples": [
+   {
+    "jp": "この　ペンを　使（つか）っても　いいですか。",
+    "en": "May I use this pen?",
+    "audio_ref": "/audio/kanji_examples/使_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "でんわを　使（つか）っても　いいですか。",
+    "en": "May I use the phone?",
+    "audio_ref": "/audio/kanji_examples/使_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "始": {
   "jlpt": "N4",
@@ -12226,7 +12310,21 @@
   ],
   "etymology": "Phono-semantic: 是 (phonetic ダイ) + 頁 'head' — what stands at the head of a text: its title, its topic.",
   "mnemonic": "The heading at the top of the page, big letters, first thing your head meets — ダイ. 宿題 is the topic that follows you home; 問題 the one that fights back.",
-  "audio": "/audio/kanji/題.mp3"
+  "audio": "/audio/kanji/題.mp3",
+  "lesson_examples": [
+   {
+    "jp": "この　問題（もんだい）は　かんたんです。",
+    "en": "This problem is easy.",
+    "audio_ref": "/audio/kanji_examples/題_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "きょうの　宿題（しゅくだい）は　おおいです。",
+    "en": "Today's homework is a lot.",
+    "audio_ref": "/audio/kanji_examples/題_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "短": {
   "jlpt": "N4",
@@ -12617,7 +12715,21 @@
   ],
   "etymology": "Phono-semantic: the sickbed radical (疒 — a person laid on a slanted cot) + 丙 (phonetic ビョウ/ヘイ): laid up: illness.",
   "mnemonic": "Flat on the tilted cot with a C-grade (丙) fever chart — びょうき. Everything under the 疒 roof is some way of feeling awful; 病院 is where the cots line up.",
-  "audio": "/audio/kanji/病.mp3"
+  "audio": "/audio/kanji/病.mp3",
+  "lesson_examples": [
+   {
+    "jp": "病気（びょうき）に　なったので、がっこうを　やすみました。",
+    "en": "I got sick, so I was absent from school.",
+    "audio_ref": "/audio/kanji_examples/病_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "おばあさんは　いま　病気（びょうき）です。",
+    "en": "Grandma is sick right now.",
+    "audio_ref": "/audio/kanji_examples/病_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "品": {
   "jlpt": "N4",
@@ -18302,7 +18414,21 @@
   ],
   "etymology": "Phono-semantic: plants (艹) + 央 'center' (phonetic エイ) — the central blossom, the finest flower: outstanding; chosen to transcribe 'England' (英国).",
   "mnemonic": "The one flower standing dead-center of the field, taller than the rest — エイ. It lent its brilliance to a whole language: 英語.",
-  "audio": "/audio/kanji/英.mp3"
+  "audio": "/audio/kanji/英.mp3",
+  "lesson_examples": [
+   {
+    "jp": "がっこうで　英語（えいご）を　ならいます。",
+    "en": "I learn English at school.",
+    "audio_ref": "/audio/kanji_examples/英_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "この　ほんは　英語（えいご）で　かかれて　います。",
+    "en": "This book is written in English.",
+    "audio_ref": "/audio/kanji_examples/英_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "建": {
   "jlpt": "N4",
@@ -18592,7 +18718,21 @@
   ],
   "etymology": "Phono-semantic: person (亻) + 昔 'long ago' (phonetic シャク) — a person trading on old ties: to borrow.",
   "mnemonic": "'Remember old times (昔)? So… could I borrow it?' — かりる. Debts age like the kanji says: from yesterday's favor to ancient history.",
-  "audio": "/audio/kanji/借.mp3"
+  "audio": "/audio/kanji/借.mp3",
+  "lesson_examples": [
+   {
+    "jp": "としょかんで　ほんを　借（か）りました。",
+    "en": "I borrowed a book from the library.",
+    "audio_ref": "/audio/kanji_examples/借_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "ともだちに　100えんを　借（か）りました。",
+    "en": "I borrowed 100 yen from a friend.",
+    "audio_ref": "/audio/kanji_examples/借_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "説": {
   "jlpt": "N4",
@@ -18904,7 +19044,21 @@
   ],
   "etymology": "Compound: person (亻) + 更 'change, renew' — a person smoothing things over for others: convenience; the courier who makes distance convenient: the post.",
   "mnemonic": "The fixer who rearranges (更) everything until it's easy — ベン; and the mail (ビン) that spares you the trip. 便利: life with the fixer on call.",
-  "audio": "/audio/kanji/便.mp3"
+  "audio": "/audio/kanji/便.mp3",
+  "lesson_examples": [
+   {
+    "jp": "この　でんしゃは　とても　便利（べんり）です。",
+    "en": "This train is very convenient.",
+    "audio_ref": "/audio/kanji_examples/便_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "スマホは　便利（べんり）な　どうぐです。",
+    "en": "The smartphone is a convenient tool.",
+    "audio_ref": "/audio/kanji_examples/便_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "民": {
   "jlpt": "N4",
@@ -26224,7 +26378,21 @@
   ],
   "etymology": "Compound: two axes (斤斤) over money (貝) — goods pledged against a loan, weighed at their true worth: substance, quality; a question probing that worth (質問).",
   "mnemonic": "The pawnbroker sets two axes on the counter and weighs your treasure's real worth — シツ. 質問 does the same to a claim: 'what's underneath?'",
-  "audio": "/audio/kanji/質.mp3"
+  "audio": "/audio/kanji/質.mp3",
+  "lesson_examples": [
+   {
+    "jp": "いい　質問（しつもん）ですね。",
+    "en": "That's a good question.",
+    "audio_ref": "/audio/kanji_examples/質_1.webm",
+    "source": "generated"
+   },
+   {
+    "jp": "なにか　質問（しつもん）は　ありますか。",
+    "en": "Do you have any questions?",
+    "audio_ref": "/audio/kanji_examples/質_2.webm",
+    "source": "generated"
+   }
+  ]
  },
  "貸": {
   "jlpt": "N4",

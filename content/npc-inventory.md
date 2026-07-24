@@ -142,7 +142,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 |---|---|---|---|
 | Bug Catcher Wade | Dresseur de route — corrigé 2026-07-09 (extraction ROM) : Wade appartient à Route 31, pas Route 30 (inversion trouvée dans le dépouillement d'origine, Don/Mikey déplacés vers route-30) | — | combat |
 | Lyra/Ethan | Revue sur la route, donne le Vs. Recorder | Vs. Recorder | ambiant |
-| Jeune homme près de l'Apricorn noir | Quête de livraison ("porte ce message à mon contact", compagnon-courrier Kenya) | TM44 Rest | leçon #1 — 漢字: 死・漢・発・送・進 — 文法: それから、～ (sorekara、～)<br>leçon #2 — 漢字: 低・別・建・私・王 — 文法: だいたい〜 (daitai〜)<br>leçon #3 — 漢字: 竹・糸・原・園・当 — 文法: たいてい～ (taitei～)<br>leçon #4 — 漢字: 形・戸・才・数・毛 — 文法: だから、～ (dakara、～) |
+| Jeune homme près de l'Apricorn noir | Quête de livraison ("porte ce message à mon contact", compagnon-courrier Kenya) | TM44 Rest | leçon #1 — 漢字: 死・漢・発・送・進 — 文法: それから、～ (sorekara、～)<br>leçon #2 — 漢字: 低・別・建・私・王 — 文法: だいたい〜 (daitai〜)<br>leçon #3 — 漢字: 竹・糸・九・又・斤 — 文法: たいてい～ (taitei～)<br>leçon #4 — 漢字: 形・戸・才・数・毛 — 文法: だから、～ (dakara、～) |
 
 **Side quests dans cette zone** : 1 (livraison du message pour le jeune homme de l'Apricorn noir)
 **Objets à aller chercher dans cette zone** : 2 (Vs. Recorder, TM44 Rest)
@@ -159,7 +159,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 | Bird Keeper Rod, Bird Keeper Abe | Gardiens avant Falkner | — | combat |
 | Homme à lunettes noires | Bloque l'entrée du Gym tant que Tour Grospignon n'est pas visitée | — | ambiant |
 | Earl | Instituteur ambulant de "l'École Pokémon", trouvé errant entre le Gym et le Mart | — | leçon #1 — 漢字: 米・羽・角・谷・馬・麦 — 文法: どこへも Verb ないです (doko e mo + Verb + nai desu) |
-| Garçon blond | Près du Centre Pokémon, échange des Éclats contre des lots de Baies | Baies | leçon #2 — 漢字: 他・倍・列・化・命・定 — 文法: どこへも Verb ません (doko e mo + Verb + masen) |
+| Garçon blond | Près du Centre Pokémon, échange des Éclats contre des lots de Baies | Baies | leçon #2 — 漢字: 爪・白・穴・化・命・定 — 文法: どこへも Verb ません (doko e mo + Verb + masen) |
 | Garçon à lunettes | PNJ d'échange de compagnon (maison près du Centre Pokémon) | — | leçon #3 — 漢字: 実・宿・役・投・決・流 — 文法: どこも Verb ないです (dokomo + Verb + naidesu) |
 | Garçon près du Mart | Agité, rapporte avoir vu "un arbre qui bouge" (teaser Sudowoodo/Route 36) | — | leçon #4 — 漢字: 深・温・港・湖・湯・皮 — 文法: どこも Verb ません (dokomo + Verb + masen) |
 | Teala | Sous-sol du Centre Pokémon, donne le Pal Pad après le 1er badge | Pal Pad | leçon #5 — 漢字: 皿・福・落・葉・身・追 — 文法: どちら～ (dochira～) |
@@ -179,7 +179,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Sage Neal, Troy, Jin, Nico, Edmond, Chow | 6 Sages répartis sur les 3 étages | — | leçon #1 — 漢字: 遊・部・酒・陽・面 — 文法: A とか B とか |
+| Sage Neal, Troy, Jin, Nico, Edmond, Chow | 6 Sages répartis sur les 3 étages | — | leçon #1 — 漢字: 究・言・里・陽・面 — 文法: A とか B とか |
 | Ancien Li | Sommet (3F), bat le joueur, explique la technique | TM70 Flash | leçon #2 — 漢字: 争・伝・候・兆・利 — 文法: A は B ほど～ありません (A wa B hodo ～ arimasen) |
 | Rival (Silver) | Présent au 3F, sermonné par l'Ancien Li sans écouter (scène, pas de combat) | — | ambiant |
 
@@ -197,7 +197,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 |---|---|---|---|
 | Youngster Albert, Picnicker Liz, Camper Roland, Youngster Gordon, Fisherman Henry/Justin/Ralph, Bird Keeper Peter | Dresseurs de route — 8 confirmés propres à Route 32 (extraction ROM 2026-07-09, résout l'ancien bloc combiné 32/33 : Hiker Anthony déplacé vers route-33) | — | combat |
 | Frère/sœur du jour Frieda (vendredi) | PNJ calendaire, chemin étroit derrière le Centre Pokémon | Poison Barb | ambiant |
-| Homme sur le chemin | Cadeau gratuit sans condition | Graine Miracle | leçon #1 — 漢字: 刷・副・印・参・器 — 文法: Noun に なる (Noun ni naru) |
+| Homme sur le chemin | Cadeau gratuit sans condition | Graine Miracle | leçon #1 — 漢字: 元・邦・院・参・器 — 文法: Noun に なる (Noun ni naru) |
 | Jeune homme près du Centre Pokémon | PNJ comique, tente de vendre une "queue de Ramoloss" | — | leçon #2 — 漢字: 変・官・害・富・席 — 文法: のために (no tame ni) |
 | Pêcheur (Centre Pokémon) | Donne la Vieille Canne | Vieille Canne (Old Rod) | leçon #3 — 漢字: 帯・底・康・愛・成 — 文法: Noun の 間に (〜no aida ni) |
 | Homme au-delà d'un point 力 | Récompense une fois le CS débloqué | TM05 Roar | leçon #4 — 漢字: 散・欠・残・求・浅 — 文法: Noun ばかり (〜bakari) |
@@ -215,7 +215,7 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Jeune homme (salle souterraine) | Admiratif du 1er puzzle résolu, remet un journal qui s'auto-remplit | Rapport Unown | leçon #1 — 漢字: 満・無・然・熱・競 — 文法: Verb た ところ (Verb ta tokoro)<br>leçon #3 — 漢字: 達・選・陸・類・久 — 文法: Verb ために (tame ni) |
+| Jeune homme (salle souterraine) | Admiratif du 1er puzzle résolu, remet un journal qui s'auto-remplit | Rapport Unown | leçon #1 — 漢字: 病・無・込・干・競 — 文法: Verb た ところ (Verb ta tokoro)<br>leçon #3 — 漢字: 達・選・陸・類・久 — 文法: Verb ために (tame ni) |
 | Chercheurs (PNJ ambiants) | Centre de Recherche des Ruines, discutent des découvertes | — | leçon #2 — 漢字: 老・臣・良・芸・衣 — 文法: Verb たほうがいい (〜ta hou ga ii)<br>leçon #4 — 漢字: 仏・任・価・保・修 — 文法: Verb つもり (〜tsumori) |
 | Psychic Nathan | Dresseur de combat, bordure Centre de Recherche/Union Cave | — | combat |
 
@@ -272,9 +272,9 @@ Union Cave → Force) — verrou d'exploration, pas un PNJ.
 | Kurt | Artisan Apricorn → Boule : dépose des Apricorns, reçoit un objet en 24h | Boule (selon couleur d'Apricorn apportée) | ambiant |
 | Bug Catcher Al, Josh, Benny ; Twins Amy & Mimi | Gardiens avant Bugsy — « May » corrigé en « Mimi » 2026-07-09 (extraction ROM, coquille probable) | — | combat |
 | Rival (Silver) | Défi au portail ouest, vers Forêt Secte (Silver apparition #2 — "Battle 2" au guidebook) | — | combat |
-| Charcoal Man | Ses Farfetch'd-analogues se sont enfuis en Forêt Secte ; remet le Charbon une fois résolu | Charbon | leçon #1 — 漢字: 備・制・厚・師・得・復 — 文法: Verb て くる (Verb te kuru)<br>leçon #3 — 漢字: 準・演・犯・示・税・能 — 文法: Verb て くれる (Verb-te kureru)<br>leçon #5 — 漢字: 限・険・雑・非・並・亡 — 文法: Verb てしまう (〜te shimau) |
+| Charcoal Man | Ses Farfetch'd-analogues se sont enfuis en Forêt Secte ; remet le Charbon une fois résolu | Charbon | leçon #1 — 漢字: 備・制・厚・師・得・復 — 文法: Verb て くる (Verb te kuru)<br>leçon #3 — 漢字: 準・演・犯・示・医・知 — 文法: Verb て くれる (Verb-te kureru)<br>leçon #5 — 漢字: 限・険・雑・非・並・亡 — 文法: Verb てしまう (〜te shimau) |
 | Sbire Rocket | Bloque l'entrée du Puits Ramoloss | — | ambiant |
-| Vendeur du Mart | Comptoir du fond | Bloom Mail, Heal Ball, Net Ball (vente) | leçon #2 — 漢字: 快・接・殺・毒・比・減 — 文法: Verb てくれませんか (〜te kuremasen ka)<br>leçon #4 — 漢字: 複・象・述・逆・過・適 — 文法: Verb て + さしあげる (Verb TE sashiageru) |
+| Vendeur du Mart | Comptoir du fond | Bloom Mail, Heal Ball, Net Ball (vente) | leçon #2 — 漢字: 快・接・殺・毒・比・減 — 文法: Verb てくれませんか (〜te kuremasen ka)<br>leçon #4 — 漢字: 英・象・述・逆・過・適 — 文法: Verb て + さしあげる (Verb TE sashiageru) |
 | Bug Catcher Al/Josh/Benny, Twins (Gym) | Récompense finale du Gym Bugsy | Hive Badge + TM89 U-turn | ambiant |
 
 **Side quests dans cette zone** : 1 (Charcoal Man — retrouver les 2 fuyards, résolue en Forêt Secte)
@@ -305,9 +305,9 @@ Union Cave → Force) — verrou d'exploration, pas un PNJ.
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Apprenti du Maître du Charbon | À l'entrée, enseigne la technique de capture des 2 fuyards | — | leçon #1 — 漢字: 冊・処・刻・劇・卵・宅 — 文法: Verb られる (〜rareru)<br>leçon #3 — 漢字: 探・操・敬・段・片・疑 — 文法: Verb ることができる (〜ru koto ga dekiru)<br>leçon #5 — 漢字: 難・革・了・偉・偶・刺 — 文法: Verb る ことになる (〜ru koto ni naru) |
+| Apprenti du Maître du Charbon | À l'entrée, enseigne la technique de capture des 2 fuyards | — | leçon #1 — 漢字: 冊・処・刻・劇・卵・宅 — 文法: Verb られる (〜rareru)<br>leçon #3 — 漢字: 首・操・敬・段・片・疑 — 文法: Verb ることができる (〜ru koto ga dekiru)<br>leçon #5 — 漢字: 難・革・了・偉・偶・刺 — 文法: Verb る ことになる (〜ru koto ni naru) |
 | Kimono Girl Naoko | Plus au nord, perdue, demande le chemin de la sortie | — | ambiant |
-| Jeune homme sur une corniche | Enseigne la technique "secouer les arbres" (Headbutt) | — | leçon #2 — 漢字: 宇・将・展・座・律・拝 — 文法: Verb る ことがある (〜ru koto ga aru)<br>leçon #4 — 漢字: 痛・蒸・蔵・補・退・降 — 文法: Verb ることにする (〜ru koto ni suru) |
+| Jeune homme sur une corniche | Enseigne la technique "secouer les arbres" (Headbutt) | — | leçon #2 — 漢字: 宇・将・展・座・質・題 — 文法: Verb る ことがある (〜ru koto ga aru)<br>leçon #4 — 漢字: 痛・蒸・蔵・補・退・降 — 文法: Verb ることにする (〜ru koto ni suru) |
 
 **Side quests dans cette zone** : 1 (capturer les 2 fuyards pour le Maître du Charbon d'Ecorcia — *même quête que celle comptée à azalea-town : 1 seule quête au total, à ne pas compter deux fois pour le gate de Whitney ; précisé 2026-07-05, audit 01*)
 **Objets à aller chercher dans cette zone** : 0
@@ -343,8 +343,8 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 | Beauty Victoria, Samantha ; Lass Carrie, Cathy | Gardiennes avant Whitney | — | leçon #1 — 漢字: 匹・寝・巨・悩・払・挟 — 文法: そんなに～ (sonna ni〜) |
 | Bill | Centre Pokémon (absent, parti à Rosalia) puis sa maison | Compagnon rare (Eevee-analogue) | ambiant |
 | Mr. Game | Game Corner — mini-jeu de kanji contre jetons, tables Kanji Flip + kanji jumeaux (« feature hors-scope » corrigé 2026-07-07, passe de vérification — adapté R8/I-3) | Coin Case | leçon #2 — 漢字: 捕・捜・掃・換・殿・汚 — 文法: ～たらいい (〜tara ii) |
-| Gérant du magasin de vélos | Prête une Bicyclette gratuitement, puis l'offre définitivement | Bicyclette | leçon #3 — 漢字: 沈・沸・浮・湾・湿・滴 — 文法: ～たら いかがですか (〜tara ikaga desu ka) |
-| Fille évaluatrice d'affection | Maison au nord du Dept Store, évalue le lien avec le compagnon en tête | — | leçon #4 — 漢字: 濯・狭・甘・療・舞・舟 — 文法: ～たら どうですか (〜tara doudesuka) |
+| Gérant du magasin de vélos | Prête une Bicyclette gratuitement, puis l'offre définitivement | Bicyclette | leçon #3 — 漢字: 沈・沸・浮・使・便・滴 — 文法: ～たら いかがですか (〜tara ikaga desu ka) |
+| Fille évaluatrice d'affection | Maison au nord du Dept Store, évalue le lien avec le compagnon en tête | — | leçon #4 — 漢字: 借・狭・甘・療・舞・舟 — 文法: ～たら どうですか (〜tara doudesuka) |
 | Réceptionniste Tour Radio | Quiz de 5 questions | Radio Card | leçon #5 — 漢字: 荒・薄・迎・遅・違・隅 — 文法: ～たり～たり (〜tari 〜tari) |
 | Buena | Studio radio (2F), mot de passe quotidien à deviner | Blue Card | ambiant |
 | Name Rater | Maison nord de la ville, renomme les surnoms | — | leçon #6 — 漢字: 刀・弓・汽・羊・豆 — 文法: ～だろう (〜darou) |
@@ -412,9 +412,9 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Jeune homme près d'un panneau (ouest) | Donne le CS Éclate-Roc (砕), débloqué dès le badge de Falkner *(corrigé 2026-07-06, audit 04, finding 04-A3 : « CS Marteau-Piqueur (力) » était un double contresens — 力 = Force, déjà remis par le Hiker de la Route 42, et « Marteau-Piqueur » n'est le nom d'aucun des 8 CS-Kanji (« 7 » corrigé 2026-07-07, synthèse — 登 réintégré depuis) ; voir PRD § CS-Kanji et guidebook-adapted L572/1177)* | CS Éclate-Roc (砕) | leçon #1 — 漢字: 凶・凹・刈・刑・剖 — 文法: すこしも〜ない (sukoshimo~nai)<br>leçon #3 — 漢字: 厄・又・呉・唐・奉 — 文法: ～せいで (〜sei de)<br>leçon #5 — 漢字: 尼・屯・巡・幻・幾 — 文法: ～そのために (〜sono tame ni) |
+| Jeune homme près d'un panneau (ouest) | Donne le CS Éclate-Roc (砕), débloqué dès le badge de Falkner *(corrigé 2026-07-06, audit 04, finding 04-A3 : « CS Marteau-Piqueur (力) » était un double contresens — 力 = Force, déjà remis par le Hiker de la Route 42, et « Marteau-Piqueur » n'est le nom d'aucun des 8 CS-Kanji (« 7 » corrigé 2026-07-07, synthèse — 登 réintégré depuis) ; voir PRD § CS-Kanji et guidebook-adapted L572/1177)* | CS Éclate-Roc (砕) | leçon #1 — 漢字: 凶・凹・刈・刑・剖 — 文法: すこしも〜ない (sukoshimo~nai)<br>leçon #3 — 漢字: 厄・原・呉・唐・奉 — 文法: ～せいで (〜sei de)<br>leçon #5 — 漢字: 尼・屯・巡・幻・幾 — 文法: ～そのために (〜sono tame ni) |
 | Psychic Mark, School Kid Alan | Dresseurs (cluster frontière Violet City) | — | combat |
-| Frère/sœur du jour Arthur (jeudi) | Nord des Ruines Arcaniques | Hard Stone | leçon #2 — 漢字: 剣・升・卑・即・卸 — 文法: ～ずに (〜zu ni)<br>leçon #4 — 漢字: 宴・寛・寡・寮・尚 — 文法: ～せてください (〜sete kudasai) |
+| Frère/sœur du jour Arthur (jeudi) | Nord des Ruines Arcaniques | Hard Stone | leçon #2 — 漢字: 剣・升・卑・即・卸 — 文法: ～ずに (〜zu ni)<br>leçon #4 — 漢字: 宴・寛・寡・寮・園 — 文法: ～せてください (〜sete kudasai) |
 | Obstacle Sudowoodo | Bloque la route vers Ecruteak, résolu via l'arrosoir de Floria (Doublonville) | — | ambiant |
 
 **Side quests dans cette zone** : 0
@@ -452,7 +452,7 @@ Ville très dense (~30 PNJ/rôles sourcés) — liste condensée aux PNJ avec un
 | Kimono Girl Miki | 3e Kimono Girl rencontrée (sauvée du Sbire) | — | ambiant |
 | Gentleman (public du Théâtre) | Témoin du sauvetage | HM03 Surf | leçon #3 — 漢字: 挿・掛・掲・揚・援・揺 — 文法: ですから～ (desu kara) |
 | Hommes du Poste-frontière | Racontent les légendes locales de Ho-Oh, bloquent l'accès à Tour Jo | — | leçon #4 — 漢字: 搭・携・搾・摂・摘・撤 — 文法: ～てはじめて (〜te hajimete) |
-| Homme au nord du Gym | Signale que le gardien-phare d'Oliville est malade | — | leçon #5 — 漢字: 撲・擁・敢・敷・斗・斤 — 文法: ～てほしい (〜te hoshii) |
+| Homme au nord du Gym | Signale que le gardien-phare d'Oliville est malade | — | leçon #5 — 漢字: 撲・擁・敢・敷・斗・当 — 文法: ～てほしい (〜te hoshii) |
 | Vendeur du Mart | Comptoir du fond | Air Mail, Heal Ball, Net Ball (vente) | leçon #6 — 漢字: 既・暦・殻・没・泰 — 文法: ～ても (〜temo) |
 | Rival (Silver) | Devant Tour Jo (Silver apparition #3) | — | ambiant |
 | Gauntlet des 5 Kimono Girls (post-remise du grand texte d'Elm — « post-Master Ball » adapté 2026-07-06, audit 04) | Combat récapitulatif au Théâtre, "test du lien avec ton équipe" | Clear Bell / Tidal Bell | combat |
@@ -525,7 +525,7 @@ Aucun PNJ-leçon nommé spécifique à cette route (dialogue ambiant N3 déjà p
 | Rival (Silver) | Sort du Gym juste avant le joueur, indique que Jasmine est au Phare | — | ambiant |
 | Pêcheur (maison nord du Centre Pokémon) | Donne la Bonne Canne | Bonne Canne (Good Rod) | leçon #1 — 漢字: 虎・虐・虚・褐・覇・豪 — 文法: ～まで (〜made)<br>leçon #3 — 漢字: 遍・遣・遷・避・還・那 — 文法: まるで～よう (maru de ~ you)<br>leçon #5 — 漢字: 陥・陪・陰・陵・陶・隆 — 文法: ～みたいだ (〜mitai da) |
 | Fille au Centre Pokémon | Demande l'avis du joueur puis défie en combat | — | combat |
-| Fille (maison nord du Mart) | Donne 3 décorations aléatoires par jour | Décorations | leçon #2 — 漢字: 迅・逐・逓・逮・遂・遇 — 文法: ～まま (〜mama)<br>leçon #4 — 漢字: 邦・邸・酌・酔・酢・醸 — 文法: ～てみる (〜te miru) |
+| Fille (maison nord du Mart) | Donne 3 décorations aléatoires par jour | Décorations | leçon #2 — 漢字: 迅・逐・逓・逮・遂・遇 — 文法: ～まま (〜mama)<br>leçon #4 — 漢字: 他・邸・酌・酔・酢・醸 — 文法: ～てみる (〜te miru) |
 | Sailor Ernest, Terrell, Huey, Kent ; Gentleman Alfred, Preston ; Lass Connie ; Bird Keeper Denis, Theo | Roster complet du Phare (9 dresseurs, 1F au sommet) | — | combat |
 | Jasmine | Veille le gardien malade au Phare ; demande la Potion Secrète d'Irisia ; combat de Gym après guérison | Mineral Badge + TM23 Iron Tail (vrai combat calibré ~600 kanji/N2, voir note zones revisitées) | combat |
 | Baoba (appel téléphonique) | Prévient que la réserve d'Irisia est terminée, une fois la potion livrée | — | ambiant |
@@ -647,7 +647,7 @@ original transposée). Les prises rejoignent la collection du Sac (règle P-15 :
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Fisherman Tully, Hiker Benjamin, Poké Maniac Shane | Dresseurs de route | — | combat |
-| Hiker anonyme | Sortant de Mont Mortier, bouscule le joueur et s'excuse | CS Force (力) | leçon #1 — 漢字: 氾・沃・淫・爪・牙 — 文法: A あるいは B (A aruiwa B)<br>leçon #2 — 漢字: 瓦・痕・痩・瘍・稽 — 文法: A。おまけに B。(~omake ni)<br>leçon #3 — 漢字: 羞・臼・葛・蓋・蔑 — 文法: A。さて B。(A. Sate B.) |
+| Hiker anonyme | Sortant de Mont Mortier, bouscule le joueur et s'excuse | CS Force (力) | leçon #1 — 漢字: 氾・沃・淫・倍・牙 — 文法: A あるいは B (A aruiwa B)<br>leçon #2 — 漢字: 瓦・痕・痩・瘍・稽 — 文法: A。おまけに B。(~omake ni)<br>leçon #3 — 漢字: 羞・臼・葛・蓋・蔑 — 文法: A。さて B。(A. Sate B.) |
 | Eusine | Réapparaît côté est (après Coupe), nouvel aperçu de l'esprit légendaire | — | ambiant |
 
 **Side quests dans cette zone** : 0
@@ -680,10 +680,10 @@ original transposée). Les prises rejoignent la collection du Sac (règle P-15 :
 | Vendeur RageCandyBar | Bloque la route est, vend la spécialité locale ; laisse passer une fois la Team Rocket vaincue | — (vente) | leçon #1 — 漢字: 蔽・貌・遡・隙・韓 — 文法: A。そこで B。(~sokode) |
 | Vendeur du magasin de souvenirs | "Type louche", détourne le regard du bruit suspect au sous-sol ; remplacé après la chute du QG | — (vente) | leçon #2 — 漢字: 頃・頰・顎・餅・鬱 — 文法: A。それがB。(~sorega) |
 | Homme devant le Gym | Évoque "l'homme à la cape noire" (Lance) enquêtant sur le signal brouillé | — | leçon #3 — 漢字: 七・三・上・下・中 — 文法: A。それで B。 (~sore de) |
-| PNJ à la grille de Route 43 | Mentionne que Mr. Pokémon cherche une Écaille Rouge | — | leçon #4 — 漢字: 九・五・休・六・出 — 文法: A。それでも B。(~sore demo) |
+| PNJ à la grille de Route 43 | Mentionne que Mr. Pokémon cherche une Écaille Rouge | — | leçon #4 — 漢字: 列・五・休・六・出 — 文法: A。それでも B。(~sore demo) |
 | Professeur Elm (appel) | Inquiet des émissions radio, juste après le 7e badge | — | ambiant |
 | Skier Jill, Diana ; Boarder Deandre, Gerardo, Patton | Gardiens avant Pryce | — | combat |
-| Scientist Gregg | Garde le PC qui coupe le système d'alarme du QG (B1F) | — | leçon #5 — 漢字: 千・右・名・天・学 — 文法: A。それなのに B。(~sorenanoni) |
+| Scientist Gregg | Garde le PC qui coupe le système d'alarme du QG (B1F) | — | leçon #5 — 漢字: 千・右・名・天・遊 — 文法: A。それなのに B。(~sorenanoni) |
 | Scientist Ross, Mitch | Donnent les 2 mots de passe (B3F) | — | ambiant |
 | Rival (Silver) | QG Rocket B2F, déjà vaincu par Lance (Silver apparition #4, cameo — pas un combat) | — | ambiant |
 | Lance | Soigne l'équipe au B2F, affronte Ariana+Sbire en double avec le joueur (transmetteur) | Objet de traversée d'eau (Whirlpool-équivalent) | combat |
@@ -706,7 +706,7 @@ original transposée). Les prises rejoignent la collection du Sac (règle P-15 :
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| PNJ à la grille de Route 43 | Mentionne que Mr. Pokémon cherche une Écaille Rouge | — | leçon #1 — 漢字: 左・本・男・白・花 — 文法: A。ということは B。 (A. To iu koto wa B.) |
+| PNJ à la grille de Route 43 | Mentionne que Mr. Pokémon cherche une Écaille Rouge | — | leçon #1 — 漢字: 左・部・男・酒・花 — 文法: A。ということは B。 (A. To iu koto wa B.) |
 | Poste-frontière Team Rocket (milieu de route) | Rançonne le passage (1000 ¥) tant que le QG Rocket d'Acajou n'est pas tombé ; redevient un poste normal ensuite | TM36 Sludge Bomb (après la chute du QG) | ambiant |
 | Poké Maniac Ron, Poké Maniac Beckett, Poké Maniac Brent | Dresseurs — « Ben » corrigé en « Beckett » 2026-07-09 (extraction ROM, coquille OCR probable) | — | combat |
 | Picnicker Tiffany | Dresseuse | — | ambiant |
@@ -777,7 +777,7 @@ Apricorns) — ne pas le dupliquer ici.
 |---|---|---|---|
 | Tuteur Ultime | Enseigne la "capacité ultime" à la forme finale du starter du joueur | — | leçon #1 — 漢字: 分・半・南・友・古・外 — 文法: Noun につき (〜ni tsuki)<br>leçon #8 — 漢字: 弱・強・思・明・春・曜 — 文法: Noun を めぐる Noun (Noun o meguru Noun)<br>leçon #15 — 漢字: 以・好・料・民・産・験 — 文法: ～うちに (〜uchi ni) |
 | Grand-mère Wilma | Enseigne la capacité Dragon la plus puissante à un compagnon-Dragon lié au joueur | — | leçon #2 — 漢字: 多・少・新・書・来・東 — 文法: Noun にて (Noun nite)<br>leçon #9 — 漢字: 朝・楽・歌・海・秋・紙 — 文法: Noun を もとに (Noun o moto ni) |
-| Maniaque des capacités | Contre une Écaille de Cœur, réapprend une capacité oubliée | — | leçon #3 — 漢字: 社・聞・言・間・電・安 — 文法: Noun の ことだから (Noun no koto dakara)<br>leçon #10 — 漢字: 自・走・近・頭・主・事 — 文法: Noun を もとにして (Noun wo moto ni shite) |
+| Maniaque des capacités | Contre une Écaille de Cœur, réapprend une capacité oubliée | — | leçon #3 — 漢字: 社・聞・言・間・電・安 — 文法: Noun の ことだから (Noun no koto dakara)<br>leçon #10 — 漢字: 満・然・近・頭・主・事 — 文法: Noun を もとにして (Noun wo moto ni shite) |
 | Effaceur de capacités | Fait oublier n'importe quelle capacité, y compris permanentes | — | leçon #4 — 漢字: 飲・字・早・村・林・正 — 文法: Noun を はじめ (Noun wo hajime)<br>leçon #11 — 漢字: 仕・勉・去・品・問・急 — 文法: Verb ことなく (~kotonaku) |
 | Fille de la maison nord | Donne un Ruban d'Effort si le compagnon en tête est assez endurci | Ruban d'Effort | leçon #5 — 漢字: 犬・赤・青・音・元・兄 — 文法: Noun を はじめとして (Noun wo hajime to shite)<br>leçon #12 — 漢字: 所・旅・族・有・服・洋 — 文法: Verb ないことには Verb ない (~nai koto ni wa ~ nai) |
 | Garçon local | Explique que les Dompteurs de Dragons sont tous nés à Ebènelle | — | leçon #6 — 漢字: 台・合・同・回・地・場 — 文法: Noun を はじめとする Noun (Noun o hajime to suru Noun)<br>leçon #13 — 漢字: 物・県・着・終・者・転 — 文法: ～あげく (~ageku) |
@@ -799,7 +799,7 @@ Apricorns) — ne pas le dupliquer ici.
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Ace Trainer Kobe, Piper ; Twins Clea & Gil | Dresseurs (B1F, avant le sanctuaire) | — | combat |
-| Le Maître (Ancien) | Quiz d'empathie en 5 questions, condition réelle du 印 n°8 ; révèle être le grand-père de Clair/Lance | Cadeau de "successeur" | leçon #1 — 漢字: 堂・洗・玉・石・貝・交 — 文法: ～たところ (〜ta tokoro)<br>leçon #3 — 漢字: 科・算・細・船・雪・雲 — 文法: ～だらけ (〜darake)<br>leçon #5 — 漢字: 反・取・受・号・向・君 — 文法: ～つつ (〜tsutsu)<br>leçon #7 — 漢字: 岸・島・州・幸・庫・庭 — 文法: ～っぱなし (〜ppanashi)<br>leçon #9 — 漢字: 期・根・様・橋・次・歯 — 文法: ～ていられない (〜te irarenai) |
+| Le Maître (Ancien) | Quiz d'empathie en 5 questions, condition réelle du 印 n°8 ; révèle être le grand-père de Clair/Lance | Cadeau de "successeur" | leçon #1 — 漢字: 堂・洗・玉・熱・備・交 — 文法: ～たところ (〜ta tokoro)<br>leçon #3 — 漢字: 科・算・細・船・雪・雲 — 文法: ～だらけ (〜darake)<br>leçon #5 — 漢字: 反・取・受・号・向・君 — 文法: ～つつ (〜tsutsu)<br>leçon #7 — 漢字: 岸・島・州・幸・庫・庭 — 文法: ～っぱなし (〜ppanashi)<br>leçon #9 — 漢字: 期・根・様・橋・次・歯 — 文法: ～ていられない (〜te irarenai) |
 | "Les autres vieillards du Sanctuaire" (non nommés) | PNJ ambiants, corroborent la lignée Clair/Lance/Maître | — | leçon #2 — 漢字: 公・内・寺・星・番・直 — 文法: ～たとたん (〜ta totan)<br>leçon #4 — 漢字: 鳴・両・予・全・具・勝 — 文法: ～っこない (〜kkonai)<br>leçon #6 — 漢字: 和・商・央・委・守・対 — 文法: ～つつある (〜tsutsu aru)<br>leçon #8 — 漢字: 式・悲・感・放・昔・曲 — 文法: ～っぽい (〜ppoi)<br>leçon #10 — 漢字: 氷・波・球・由・申・畑 — 文法: ～てかなわない (〜te kanawanai) |
 | Clair | Fait irruption, surprise que le joueur ait réussi, remet le 印 final | 印 n°8 | ambiant |
 
@@ -892,7 +892,7 @@ Connecteur bloqué par un rebord à sens unique côté Route 29 (accès différ�
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Rival (Silver) | Dernier combat avant le Plateau (Silver apparition #6) ; a "vidé" la route de tout dresseur | — | combat |
-| Vieil homme avec compagnon-télépathe (hall d'entrée) | PNJ ambiant, blague que son compagnon "ne pourra pas te ramener à la maison" | — | leçon #1 — 漢字: 綿・総・編・罪・職・航 — 文法: ～も～ば～も～ (〜mo〜ba〜mo〜)<br>leçon #2 — 漢字: 術・製・解・輸・迷・鉱 — 文法: ～も同然だ (〜mo douzen da)<br>leçon #3 — 漢字: 防・乳・優・券・割・勤 — 文法: ～やら～やら (〜yara〜yara)<br>leçon #4 — 漢字: 危・収・呼・善・困・域 — 文法: ～ようがない (〜you ga nai)<br>leçon #5 — 漢字: 存・専・尊・巻・干・幼 — 文法: ～よりほかない (〜yori hoka nai)<br>leçon #6 — 漢字: 忘・批・拡・晩・暖 — 文法: ～わけがない (〜wake ga nai)<br>leçon #7 — 漢字: 暮・机・枚・棒・権 — 文法: ～わけだ (〜wake da) |
+| Vieil homme avec compagnon-télépathe (hall d'entrée) | PNJ ambiant, blague que son compagnon "ne pourra pas te ramener à la maison" | — | leçon #1 — 漢字: 綿・総・編・罪・職・航 — 文法: ～も～ば～も～ (〜mo〜ba〜mo〜)<br>leçon #2 — 漢字: 術・製・解・輸・迷・鉱 — 文法: ～も同然だ (〜mo douzen da)<br>leçon #3 — 漢字: 防・乳・優・券・割・勤 — 文法: ～やら～やら (〜yara〜yara)<br>leçon #4 — 漢字: 危・収・呼・善・困・域 — 文法: ～ようがない (〜you ga nai)<br>leçon #5 — 漢字: 存・専・尊・巻・制・幼 — 文法: ～よりほかない (〜yori hoka nai)<br>leçon #6 — 漢字: 忘・批・拡・晩・暖 — 文法: ～わけがない (〜wake ga nai)<br>leçon #7 — 漢字: 暮・机・枚・棒・権 — 文法: ～わけだ (〜wake da) |
 | Homme bloquant l'entrée de la Ligue | Laisse passer une fois interpellé, rappelle la règle "pas de sortie sans défaite" | — | ambiant |
 
 Confirmé exhaustivement par le guidebook : aucun dresseur de route sur l'ensemble de la Route de la Victoire, en dehors du Rival final.
@@ -979,11 +979,11 @@ Confirmé exhaustivement par le guidebook : aucun dresseur de route sur l'ensemb
 
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
-| Grand-père paniqué (SS Aqua, arrivée) | Sa petite-fille a disparu du navire, retrouvée au sous-sol | Manteau de Métal | leçon #1 — 漢字: 欲・泉・灰・看・紅・純 — 文法: ～上は (～ue wa)<br>leçon #5 — 漢字: 双・叫・召・吹・咲・坊 — 文法: ～反面 (〜hanmen)<br>leçon #9 — 漢字: 昇・普・更・替・欧・歳 — 文法: ～末 (～sue)<br>leçon #13 — 漢字: 被・軟・辛・込・逃・鈍 — 文法: ～気味 (〜gimi)<br>leçon #17 — 漢字: 熊・牧・票・縄・芽・街 — 文法: A うと B うと (A uto B uto)<br>leçon #21 — 漢字: 仁・俳・后・奮・孝・宗 — 文法: A であれ B であれ (A deare B deare)<br>leçon #25 — 漢字: 絹・縦・縮・聖・腸・臨 — 文法: A にせよ B にせよ (A ni seyo B ni seyo)<br>leçon #29 — 漢字: 刃・励・劾・勧・匠・及 — 文法: Noun1 も Noun1 なら、Noun2 も Noun2 だ (A mo A nara, B mo B da) |
+| Grand-père paniqué (SS Aqua, arrivée) | Sa petite-fille a disparu du navire, retrouvée au sous-sol | Manteau de Métal | leçon #1 — 漢字: 欲・泉・灰・看・紅・純 — 文法: ～上は (～ue wa)<br>leçon #5 — 漢字: 双・叫・召・吹・咲・坊 — 文法: ～反面 (〜hanmen)<br>leçon #9 — 漢字: 昇・普・更・替・欧・歳 — 文法: ～末 (～sue)<br>leçon #13 — 漢字: 被・軟・辛・厚・逃・鈍 — 文法: ～気味 (〜gimi)<br>leçon #17 — 漢字: 熊・牧・票・縄・芽・街 — 文法: A うと B うと (A uto B uto)<br>leçon #21 — 漢字: 仁・俳・后・奮・孝・宗 — 文法: A であれ B であれ (A deare B deare)<br>leçon #25 — 漢字: 絹・縦・縮・聖・腸・臨 — 文法: A にせよ B にせよ (A ni seyo B ni seyo)<br>leçon #29 — 漢字: 刃・励・劾・勧・匠・及 — 文法: Noun1 も Noun1 なら、Noun2 も Noun2 だ (A mo A nara, B mo B da) |
 | Marin du mess | Cherche un collègue endormi dans une cabine (déclenche un combat) | — | combat |
-| Capitaine | Héberge la petite-fille retrouvée, distribue des Plaques collectionnables | Plaques (selon jour de la semaine) | leçon #2 — 漢字: 翌・胃・背・胸・脳・腹 — 文法: ～以上 (〜ijou)<br>leçon #6 — 漢字: 塔・塗・壁・奥・姓・娘 — 文法: ～向け (〜muke)<br>leçon #10 — 漢字: 泥・涼・渡・煙・燥・珍 — 文法: ～次第 (〜shidai)<br>leçon #14 — 漢字: 鋭・雇・震・靴・里・丁 — 文法: ～限り (〜kagiri)<br>leçon #18 — 漢字: 鏡・養・句・墓・態・桜 — 文法: A かたわら B (A katawara B)<br>leçon #22 — 漢字: 密・射・就・尺・幕・憲 — 文法: A というか B というか (A to iu ka B to iu ka)<br>leçon #26 — 漢字: 至・裁・銭・丈・且・丘 — 文法: A につけ B につけ (A ni tsuke B ni tsuke)<br>leçon #30 — 漢字: 叔・吉・吐・呂・呈・哀 — 文法: Noun + あっての + Noun (A atte no B) |
+| Capitaine | Héberge la petite-fille retrouvée, distribue des Plaques collectionnables | Plaques (selon jour de la semaine) | leçon #2 — 漢字: 翌・胃・背・胸・脳・腹 — 文法: ～以上 (〜ijou)<br>leçon #6 — 漢字: 塔・塗・壁・奥・姓・娘 — 文法: ～向け (〜muke)<br>leçon #10 — 漢字: 泥・涼・渡・煙・燥・珍 — 文法: ～次第 (〜shidai)<br>leçon #14 — 漢字: 鋭・雇・震・靴・師・丁 — 文法: ～限り (〜kagiri)<br>leçon #18 — 漢字: 鏡・養・句・墓・態・桜 — 文法: A かたわら B (A katawara B)<br>leçon #22 — 漢字: 密・射・就・尺・幕・憲 — 文法: A というか B というか (A to iu ka B to iu ka)<br>leçon #26 — 漢字: 復・裁・銭・丈・且・丘 — 文法: A につけ B につけ (A ni tsuke B ni tsuke)<br>leçon #30 — 漢字: 叔・吉・吐・呂・呈・哀 — 文法: Noun + あっての + Noun (A atte no B) |
 | Président du Club des Fans | Récompense qui écoute son histoire jusqu'au bout | Super Bonbon | leçon #3 — 漢字: 臓・裏・針・閉・骨・与 — 文法: ～以来 (〜irai)<br>leçon #7 — 漢字: 婚・封・幅・床・彼・御 — 文法: ～恐れがある (〜osore ga aru)<br>leçon #11 — 漢字: 環・畜・畳・疲・祈・粒 — 文法: ～次第で (〜shidai de)<br>leçon #15 — 漢字: 帳・井・倉・功・博・唱 — 文法: ～際に (〜sai ni)<br>leçon #19 — 漢字: 災・益・眼・紀・素・統 — 文法: A かれ B かれ (A kare B kare)<br>leçon #23 — 漢字: 朗・染・模・樹・源・班 — 文法: A とも B とも (A tomo B tomo)<br>leçon #27 — 漢字: 亜・仙・企・侮・俗・俸 — 文法: A のやら B のやら (A no yara B no yara) |
-| Homme du comptoir du Club des Fans | Détient l'objet perdu de Copycat, à livrer à Safranville | Poupée de Copycat | leçon #4 — 漢字: 互・介・依・傾・募・占 — 文法: ～切る (〜kiru)<br>leçon #8 — 漢字: 忙・恋・恐・恥・恵・戻 — 文法: ～折には (〜ori ni wa)<br>leçon #12 — 漢字: 肌・肩・肯・腕・般・袋 — 文法: ～次第です (〜shidai desu)<br>leçon #16 — 漢字: 奈・媛・挙・旗・梅・梨 — 文法: A うが B うが (A uga B uga)<br>leçon #20 — 漢字: 織・義・肥・脈・興・衛 — 文法: A だの B だの (A dano B dano)<br>leçon #24 — 漢字: 盛・穴・筋・策・糖・系 — 文法: A にしろ B にしろ (A nishiro B nishiro)<br>leçon #28 — 漢字: 偽・傘・兼・冒・凝・凸 — 文法: Noun1 が Noun1 なら、 Noun2 も Noun2 だ (A ga A nara, B mo B da) |
+| Homme du comptoir du Club des Fans | Détient l'objet perdu de Copycat, à livrer à Safranville | Poupée de Copycat | leçon #4 — 漢字: 互・介・依・傾・募・占 — 文法: ～切る (〜kiru)<br>leçon #8 — 漢字: 忙・恋・恐・恥・恵・戻 — 文法: ～折には (〜ori ni wa)<br>leçon #12 — 漢字: 肌・肩・肯・腕・般・袋 — 文法: ～次第です (〜shidai desu)<br>leçon #16 — 漢字: 奈・媛・挙・旗・梅・梨 — 文法: A うが B うが (A uga B uga)<br>leçon #20 — 漢字: 織・義・肥・脈・興・衛 — 文法: A だの B だの (A dano B dano)<br>leçon #24 — 漢字: 盛・得・筋・策・糖・系 — 文法: A にしろ B にしろ (A nishiro B nishiro)<br>leçon #28 — 漢字: 偽・傘・兼・冒・凝・凸 — 文法: Noun1 が Noun1 なら、 Noun2 も Noun2 だ (A ga A nara, B mo B da) |
 | Steven (1ère apparition, cameo) | Intercepte le joueur, intrigué par une espèce hors-région | — | ambiant |
 | Eusine (cameo) | Aperçu sur la jetée en pleine chasse à Suicune | — | ambiant |
 | Gentleman Gregory, Guitarist Vincent, Juggler Horton | Gardiens avant Lt. Surge (3 confirmés) | — | combat |
@@ -1028,7 +1028,7 @@ Confirmé exhaustivement par le guidebook : aucun dresseur de route sur l'ensemb
 | Vigile du hall Silph Co. | Explique l'ascenseur en panne | Amélioration (objet-souvenir) | leçon #2 — 漢字: 堕・塀・塁・塊・塑・塚 — 文法: Noun + というもの (~ to iu mono)<br>leçon #8 — 漢字: 尉・尋・尾・尿・履・峠 — 文法: Noun ともなると (〜to mo naru to)<br>leçon #14 — 漢字: 扇・扉・披・拒・拠・拳 — 文法: Noun ならいざ知らず (~nara izashirazu)<br>leçon #20 — 漢字: 柳・核・栽・桃・桑・桟 — 文法: Noun にあるまじき Noun (Noun ni aru majiki Noun) |
 | Copycat | Imite instantanément le joueur à la rencontre (flavor) | — | leçon #3 — 漢字: 塾・墜・墳・墾・壇・壊 — 文法: Noun といったところだ (Noun to itta tokoro da)<br>leçon #9 — 漢字: 峡・峰・崩・嵐・巧・帆 — 文法: Noun ともなれば (〜to mo nareba)<br>leçon #15 — 漢字: 拷・挑・掌・排・撃・擬 — 文法: Noun + ならでは (~nara de wa)<br>leçon #21 — 漢字: 棄・棋・棚・棺・椎 — 文法: Noun にして (Noun ni shite) |
 | Fille de la gare de Safranville | Explique qu'un Pass Train Aimant est requis | — | leçon #4 — 漢字: 壌・壮・壱・契・奔・奨 — 文法: Noun といわず Noun といわず (A to iwazu B to iwazu)<br>leçon #10 — 漢字: 帝・帥・幣・幽・廃・弐 — 文法: Noun と相まって (~ to aimatte)<br>leçon #16 — 漢字: 攻・敏・斉・斥・施・旋 — 文法: Noun なり Noun なり (A nari B nari)<br>leçon #22 — 漢字: 楼・概・欄・欺・款 — 文法: Noun にして初めて (Noun nishite hajimete) |
-| Karatéka du dojo | Absent — parti s'entraîner au Mont Mortier, Johto (callback direct) | — | leçon #5 — 漢字: 奪・奴・如・妃・妄・妊 — 文法: Noun + ときたら (〜tokitara)<br>leçon #11 — 漢字: 弔・弥・弦・弧・忌・悔 — 文法: Noun なくして～はない (Noun nakushite ~ wa nai)<br>leçon #17 — 漢字: 旦・旨・旬・旺・昆・是 — 文法: Noun なりとも (~nari tomo)<br>leçon #23 — 漢字: 歓・殴・汁・江・浄 — 文法: Noun にすら (〜ni sura) |
+| Karatéka du dojo | Absent — parti s'entraîner au Mont Mortier, Johto (callback direct) | — | leçon #5 — 漢字: 奪・奴・如・妃・妄・妊 — 文法: Noun + ときたら (〜tokitara)<br>leçon #11 — 漢字: 弔・弥・弦・弧・忌・悔 — 文法: Noun なくして～はない (Noun nakushite ~ wa nai)<br>leçon #17 — 漢字: 旦・旨・旬・旺・昆・是 — 文法: Noun なりとも (~nari tomo)<br>leçon #23 — 漢字: 歓・殴・快・江・浄 — 文法: Noun にすら (〜ni sura) |
 | Copycat (résolution) | Poupée rapportée depuis Vermeille → donne le Pass Train Aimant | Pass Train Aimant | leçon #6 — 漢字: 妥・妨・姫・威・娠・娯 — 文法: Noun とは比べものにならない (~to wa kurabemono ni naranai)<br>leçon #12 — 漢字: 悠・惑・惨・愚・慈・慌 — 文法: Noun なしでは～ない (Noun nashi de wa ~nai)<br>leçon #18 — 漢字: 晶・暁・暇・曹・朕・朴 — 文法: Noun に Noun を重ねて (A ni B wo kasanete)<br>leçon #24 — 漢字: 浪・滝・滞・炉・炊 — 文法: Noun にとどまらず～も (~ ni todomarazu ~ mo) |
 | Steven (Silph Co., 1ère rencontre) | Répond à une question pour recevoir un compagnon-cadeau | Compagnon-cadeau | ambiant |
 | Steven (Silph Co., revisite) | Propose un échange direct contre un compagnon différent | Compagnon (échange) | ambiant |
@@ -1187,14 +1187,14 @@ distinguer) ; déplacés là-bas, voir cette section pour le roster complet.
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Wake (cameo, déguisé) | Champion d'arène visiteur d'une autre région | 3 masques-accessoires | ambiant |
-| Homme du toit des Condominiums (visible 20h–4h uniquement) | PNJ à horaire fixe | Grigri Esprit | leçon #1 — 漢字: 脊・腎・膝・舷・芯・酎 — 文法: Noun を皮切りにして (Noun wo kawakiri ni shite)<br>leçon #7 — 漢字: 答・親・計・野・首・黒 — 文法: Noun + 前提で (Noun + zentei de)<br>leçon #13 — 漢字: 試・説・飯・貸・質・映 — 文法: Verb ずじまい (~zu jimai)<br>leçon #19 — 漢字: 神・秒・章・童・等・箱 — 文法: Verb そばから (〜soba kara)<br>leçon #25 — 漢字: 案・標・治・法・清・灯 — 文法: Verb つ Verb つ (Verb tsu Verb tsu) |
+| Homme du toit des Condominiums (visible 20h–4h uniquement) | PNJ à horaire fixe | Grigri Esprit | leçon #1 — 漢字: 脊・腎・膝・舷・芯・酎 — 文法: Noun を皮切りにして (Noun wo kawakiri ni shite)<br>leçon #7 — 漢字: 答・親・計・野・減・黒 — 文法: Noun + 前提で (Noun + zentei de)<br>leçon #13 — 漢字: 捜・掃・換・殿・汚・沈 — 文法: Verb ずじまい (~zu jimai)<br>leçon #19 — 漢字: 神・秒・章・童・等・箱 — 文法: Verb そばから (〜soba kara)<br>leçon #25 — 漢字: 案・標・治・法・清・灯 — 文法: Verb つ Verb つ (Verb tsu Verb tsu) |
 | Rival (bureaux GAME FREAK, cameo) | Taquine sur une récompense musicale une fois tous les badges réunis | — | ambiant |
 | "Président" GAME FREAK (cameo) | Dialogue d'ambiance sur le développement du jeu | — | leçon #2 — 漢字: 釜・鍋・鍵・頓・餌・麺 — 文法: Noun を禁じ得ない (〜wo kinjienai)<br>leçon #8 — 漢字: 乗・住・写・味・員・始 — 文法: Verbる / Noun(である) + 限り(は) (kagiri (wa))<br>leçon #14 — 漢字: 草・虫・丸・岩・晴・点 — 文法: Verb ずとも (〜zu tomo)<br>leçon #20 — 漢字: 級・練・苦・談・負・路 — 文法: Verb たが最後 (〜ta ga saigo) |
-| "Directeur son" GAME FREAK | Objet-clé changeant la musique d'ambiance, une fois tous les badges réunis | Objet-clé musique | leçon #3 — 漢字: 年・校・百・空・午・国 — 文法: Noun を経て (〜wo hete)<br>leçon #9 — 漢字: 屋・待・悪・意・持・暑 — 文法: Verb がてら (~ gatera)<br>leçon #15 — 漢字: 組・絵・線・記・黄・係 — 文法: Verb ずにはおかない (~zuni wa okanai)<br>leçon #21 — 漢字: 農・返・速・鼻・仲・信 — 文法: Verb たことにしてください (~ ta koto ni shite kudasai) |
-| "Réalisateur" GAME FREAK | Quête en 2 étapes, récompense à chaque jalon de complétion | Récompenses par jalon | leçon #4 — 漢字: 店・時・語・読・買・駅 — 文法: Noun を踏まえて (〜wo fumaete)<br>leçon #10 — 漢字: 暗・注・界・真・研・究 — 文法: Verb こそすれ (~koso sure)<br>leçon #16 — 漢字: 助・坂・客・局・平・息 — 文法: Verb ずにはすまない (Verb zuni wa sumanai)<br>leçon #22 — 漢字: 児・兵・冷・努・勇・単 — 文法: Verb たら Verb たで (~ tara ~ tade) |
+| "Directeur son" GAME FREAK | Objet-clé changeant la musique d'ambiance, une fois tous les badges réunis | Objet-clé musique | leçon #3 — 漢字: 年・校・百・空・午・国 — 文法: Noun を経て (〜wo hete)<br>leçon #9 — 漢字: 屋・準・演・税・能・複 — 文法: Verb がてら (~ gatera)<br>leçon #15 — 漢字: 組・絵・線・記・黄・係 — 文法: Verb ずにはおかない (~zuni wa okanai)<br>leçon #21 — 漢字: 農・返・速・鼻・仲・信 — 文法: Verb たことにしてください (~ ta koto ni shite kudasai) |
+| "Réalisateur" GAME FREAK | Quête en 2 étapes, récompense à chaque jalon de complétion | Récompenses par jalon | leçon #4 — 漢字: 店・時・語・読・買・駅 — 文法: Noun を踏まえて (〜wo fumaete)<br>leçon #10 — 漢字: 処・刻・劇・卵・宅・宇 — 文法: Verb こそすれ (~koso sure)<br>leçon #16 — 漢字: 助・坂・客・局・平・息 — 文法: Verb ずにはすまない (Verb zuni wa sumanai)<br>leçon #22 — 漢字: 児・兵・冷・努・勇・単 — 文法: Verb たら Verb たで (~ tara ~ tade) |
 | Maylene (cameo) | Championne visiteuse, scène comique en restaurant | — | ambiant |
-| Gentleman du comptoir d'échange | Se plaint de son manque de Jetons (flavor) | — | leçon #5 — 漢字: 森・町・体・切・妹・姉 — 文法: Noun を限りに (Noun wo kagiri ni)<br>leçon #11 — 漢字: 習・薬・起・運・都・重 — 文法: Verb させられる (~saserareru)<br>leçon #17 — 漢字: 想・打・拾・指・整・板 — 文法: Verb そうにない (Verb sou ni nai)<br>leçon #23 — 漢字: 周・固・失・孫・完・察 — 文法: Verb たら きりがない (Verb tara kiri ga nai) |
-| Conseiller "Pouvoir Caché" | PNJ d'information gratuite près du Casino | — | leçon #6 — 漢字: 室・教・昼・歩・理・画 — 文法: Noun 並み (~nami)<br>leçon #12 — 漢字: 題・便・借・特・英・菜 — 文法: Verb ざるを得ない (~ zaru wo enai)<br>leçon #18 — 漢字: 柱・植・油・泳・消・炭 — 文法: Verb そうもない (〜sou mo nai)<br>leçon #24 — 漢字: 希・府・徒・念・敗・最 — 文法: Verb たら最後 (〜tara saigo) |
+| Gentleman du comptoir d'échange | Se plaint de son manque de Jetons (flavor) | — | leçon #5 — 漢字: 森・町・体・切・妹・姉 — 文法: Noun を限りに (Noun wo kagiri ni)<br>leçon #11 — 漢字: 将・展・座・律・拝・探 — 文法: Verb させられる (~saserareru)<br>leçon #17 — 漢字: 想・打・拾・指・整・板 — 文法: Verb そうにない (Verb sou ni nai)<br>leçon #23 — 漢字: 周・固・失・孫・完・察 — 文法: Verb たら きりがない (Verb tara kiri ga nai) |
+| Conseiller "Pouvoir Caché" | PNJ d'information gratuite près du Casino | — | leçon #6 — 漢字: 室・教・昼・歩・理・画 — 文法: Noun 並み (~nami)<br>leçon #12 — 漢字: 匹・寝・悩・払・挟・捕 — 文法: Verb ざるを得ない (~ zaru wo enai)<br>leçon #18 — 漢字: 柱・植・油・泳・消・炭 — 文法: Verb そうもない (〜sou mo nai)<br>leçon #24 — 漢字: 希・府・徒・念・敗・最 — 文法: Verb たら最後 (〜tara saigo) |
 | Picnicker Tanya, Beauty Julia, Twins Jo & Zoe, Lass Michelle | Gardiens avant Erika (4 confirmés) | — | combat |
 | Erika | 師範 Plante, 12e badge | — | combat |
 
@@ -1250,7 +1250,7 @@ distinguer) ; déplacés là-bas, voir cette section pour le roster complet.
 |---|---|---|---|
 | Twins Kay & Tia, Pokéfan Eleanor, Enseignante Colette/Hillary, 2 Écoliers dont Billy, Pokéfan Boone (Route 15) | Dresseurs — Billy ajouté par recoupement registre téléphonique (source Serebii, 2026-07-09), classe non confirmée par cette source, un des 2 Écoliers jusque-là non nommés | — | combat |
 | Bird Keeper Josh/Roy, School Kid Torin/Connor/Travis, Pokéfan Trevor/Carter, Enseignante Clarice (Route 14) | Dresseurs — roster complet (8) confirmé par extraction ROM (2026-07-09), classe School Kid confirmée pour Torin (précédemment ajouté sans classe via le registre téléphonique) | — | combat |
-| Fille dans les hautes herbes (Route 14, ouest) | Demande à voir un compagnon précis | Objet porté rare | leçon #1 — 漢字: 軒・較・途・郊・零 — 文法: Verbる 嫌いがある (～ru kirai ga aru)<br>leçon #2 — 漢字: 頼・駐・髪・齢・矢 — 文法: いつまで～のやら (itsumade ~ no yara)<br>leçon #3 — 漢字: 宮・昭・笛・詩・佐 — 文法: ～が Verb られる (〜ga Verb rareru)<br>leçon #4 — 漢字: 典・岐・巣・松・沖 — 文法: ～かと思いきや (〜ka to omoikiya) |
+| Fille dans les hautes herbes (Route 14, ouest) | Demande à voir un compagnon précis | Objet porté rare | leçon #1 — 漢字: 軒・較・途・郊・零 — 文法: Verbる 嫌いがある (～ru kirai ga aru)<br>leçon #2 — 漢字: 頼・駐・髪・齢・沸 — 文法: いつまで～のやら (itsumade ~ no yara)<br>leçon #3 — 漢字: 宮・昭・笛・詩・佐 — 文法: ～が Verb られる (〜ga Verb rareru)<br>leçon #4 — 漢字: 典・岐・巣・松・沖 — 文法: ～かと思いきや (〜ka to omoikiya) |
 
 📍 Première apparition à pied de l'esprit légendaire (Suicune-analogue), Eusine en poursuite, oriente vers Route 25. 🔒 Coupe requis ; rebords à sens unique imposant un ordre de traversée.
 | School Kid Kipp, School Kid Tommy, School Kid Johnny (Route 15) | Dresseurs — roster trouvé par extraction ROM (`~/pokeheartgold`, 2026-07-09), absent du dépouillement guidebook initial | — | combat |
@@ -1291,7 +1291,7 @@ distinguer) ; déplacés là-bas, voir cette section pour le roster complet.
 | PNJ / rôle sourcé | Rôle d'origine (jeu Pokémon) | Objet/quête remis | Type assigné |
 |---|---|---|---|
 | Vieil homme sur la colline (près du Poké Mart) | Donne l'Aile Argent/Arc-en-ciel (callback direct vers le climax Tour Jo, Johto) | Aile Argent/Arc-en-ciel | leçon #1 — 漢字: 忠・恩・揮・潮・皇・盟 — 文法: ～こととて (〜koto tote)<br>leçon #3 — 漢字: 視・覧・討・訳・誠・貴 — 文法: ～だろうとなかろうと (〜darou to nakarou to)<br>leçon #5 — 漢字: 伯・伴・但・侍・促・倣 — 文法: ～つもりで (〜tsumori de)<br>leçon #7 — 漢字: 剛・剤・劣・勅・勘・卓 — 文法: ～とあって (〜to atte)<br>leçon #9 — 漢字: 唄・嗣・圏・堤・堪・妙 — 文法: ～といえども (〜to iedomo)<br>leçon #11 — 漢字: 宵・寂・寧・審・寿・尽 — 文法: ～といったらありゃしない (〜to ittara arya shinai)<br>leçon #13 — 漢字: 彩・影・征・徐・循・忍 — 文法: ～ときている (〜to kite iru)<br>leçon #15 — 漢字: 憾・扱・扶・抄・択・抹 — 文法: ～とされる (〜to sareru)<br>leçon #17 — 漢字: 措・描・搬・斎・斜 — 文法: ～とすると (〜to suru to)<br>leçon #19 — 漢字: 槽・殉・殖・汰・沙 — 文法: ～となったら (〜to nattara) |
-| Comptoir du Musée des Sciences | Restaure un fossile-objet en compagnon | Compagnon (fossile) | leçon #2 — 漢字: 磁・秘・納・肺・舌・衆 — 文法: ～ずにすんだ (〜zuni sunda)<br>leçon #4 — 漢字: 鋼・閣・丙・亭・伎・伏 — 文法: ～つもりだ (〜tsumori da)<br>leçon #6 — 漢字: 僧・儀・儒・克・冶・削 — 文法: ～ではすまない (〜dewa sumanai)<br>leçon #8 — 漢字: 却・厘・叙・吏・吟・哲 — 文法: ～とあれば (〜to areba)<br>leçon #10 — 漢字: 姻・婆・媒・嫌・宜・宰 — 文法: ～といったらありはしない (〜to ittara ari wa shinai)<br>leçon #12 — 漢字: 屈・岬・岳・崇・廉・廊 — 文法: ～といったらない (〜to ittara nai)<br>leçon #14 — 漢字: 怠・恭・惜・愁・慮・慰 — 文法: ～ところを (〜tokoro wo)<br>leçon #16 — 漢字: 抽・拍・拓・拘・拙 — 文法: ～としたところで (〜to shita tokoro de)<br>leçon #18 — 漢字: 暫・朱・架・栓・棟 — 文法: ～とすれば (～to sureba)<br>leçon #20 — 漢字: 沢・沼・泌・泡・洞 — 文法: ～となると (〜to naru to) |
+| Comptoir du Musée des Sciences | Restaure un fossile-objet en compagnon | Compagnon (fossile) | leçon #2 — 漢字: 磁・秘・納・肺・浮・衆 — 文法: ～ずにすんだ (〜zuni sunda)<br>leçon #4 — 漢字: 鋼・閣・丙・亭・伎・伏 — 文法: ～つもりだ (〜tsumori da)<br>leçon #6 — 漢字: 僧・儀・儒・克・冶・削 — 文法: ～ではすまない (〜dewa sumanai)<br>leçon #8 — 漢字: 却・厘・叙・吏・吟・哲 — 文法: ～とあれば (〜to areba)<br>leçon #10 — 漢字: 姻・婆・媒・嫌・宜・宰 — 文法: ～といったらありはしない (〜to ittara ari wa shinai)<br>leçon #12 — 漢字: 屈・岬・岳・崇・廉・廊 — 文法: ～といったらない (〜to ittara nai)<br>leçon #14 — 漢字: 怠・恭・惜・愁・慮・慰 — 文法: ～ところを (〜tokoro wo)<br>leçon #16 — 漢字: 抽・拍・拓・拘・拙 — 文法: ～としたところで (〜to shita tokoro de)<br>leçon #18 — 漢字: 暫・朱・架・栓・棟 — 文法: ～とすれば (～to sureba)<br>leçon #20 — 漢字: 沢・沼・泌・泡・洞 — 文法: ～となると (〜to naru to) |
 | Steven (cameo) | Champion visiteur, absorbé dans une expo minérale ; prérequis silencieux du fil Steven (résolu à Safranville) | — | ambiant |
 
 Aucun dresseur devant le Gym — Brock est explicitement le seul 師範 Kanto sans garde ("on peut marcher droit jusqu'à lui").

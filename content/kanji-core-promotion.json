@@ -1,0 +1,1277 @@
+{
+ "_note": "Étape 4 phase 1 — décision de design du 2026-07-23/24 (double revue prof+game designer). Corrige le défaut mesuré : l'ordre 'par composants' de kanji-zone-assignment.json place des kanji rares (ex. 彙/513, 鬱/544, 朕/1166) avant des mots basiques constamment utilisés en dialogue (本/561, 学/559, 時/1369, 年/1362, 校/1363, 何/1990). Echange par PAIRES A TAILLE CONSTANTE : chaque kanji promu prend la position d'un kanji démis, ordre topologique (Kahn) respectant les composants — un promu qui a lui-même besoin d'un composant tardif (ex. 話/説/試 → 言 ; 道/週/運 → 込 ; 質/員/買/頭 → 貝 ; 働/使 → 化) voit ce composant promu EN CASCADE avant lui, dans le même budget. Pool de démotion restreint aux kanji N1/N2/N3 < position 300 qui n'apparaissent comme composant kradfile d'AUCUN autre kanji du corpus entier (2136) — aucun risque de casser une chaîne de prérequis en les repoussant plus tard. Composant '乞' traité comme bruit de kradfile (associé à 8+ kanji sans rapport plausible — 知/医/年/族/短/午/教/答 — vraisemblablement un artefact de forme de trait partagée, pas une vraie décomposition ; ignoré dans le graphe de dépendances). Script : .scratch/scripts/build-core-promotion.py (lecture seule) — l'application réelle du swap est faite par scripts/build/apply-core-promotion.py (0.6/1.4).",
+ "promotion_count": 69,
+ "deferred_count": 33,
+ "promotions": [
+  {
+   "kanji": "九",
+   "jlpt": "N5",
+   "meaning": "nine",
+   "old_position": 550,
+   "new_position": 92,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "又",
+   "jlpt": "N2",
+   "meaning": "or again/furthermore",
+   "old_position": 341,
+   "new_position": 93,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "斤",
+   "jlpt": "N2",
+   "meaning": "axe/1.32 lb",
+   "old_position": 399,
+   "new_position": 94,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "爪",
+   "jlpt": "N1",
+   "meaning": "claw/nail",
+   "old_position": 523,
+   "new_position": 106,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "白",
+   "jlpt": "N5",
+   "meaning": "white",
+   "old_position": 563,
+   "new_position": 107,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "穴",
+   "jlpt": "N2",
+   "meaning": "hole/aperture",
+   "old_position": 1009,
+   "new_position": 108,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "究",
+   "jlpt": "N4",
+   "meaning": "research/study",
+   "old_position": 1409,
+   "new_position": 130,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "言",
+   "jlpt": "N5",
+   "meaning": "say/word",
+   "old_position": 584,
+   "new_position": 131,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "里",
+   "jlpt": "N2",
+   "meaning": "ri/village",
+   "old_position": 952,
+   "new_position": 132,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "元",
+   "jlpt": "N4",
+   "meaning": "beginning/former time",
+   "old_position": 598,
+   "new_position": 140,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "邦",
+   "jlpt": "N2",
+   "meaning": "home country/country",
+   "old_position": 478,
+   "new_position": 141,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "院",
+   "jlpt": "N4",
+   "meaning": "Inst./institution",
+   "old_position": 2000,
+   "new_position": 142,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "病",
+   "jlpt": "N4",
+   "meaning": "ill/sick",
+   "old_position": 1998,
+   "new_position": 160,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "込",
+   "jlpt": "N3",
+   "meaning": "crowded/mixture",
+   "old_position": 945,
+   "new_position": 162,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "干",
+   "jlpt": "N3",
+   "meaning": "dry/parch",
+   "old_position": 858,
+   "new_position": 163,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "年",
+   "jlpt": "N5",
+   "meaning": "year/counter for years",
+   "old_position": 1362,
+   "new_position": 180,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "汁",
+   "jlpt": "N2",
+   "meaning": "soup/juice",
+   "old_position": 1192,
+   "new_position": 181,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "尚",
+   "jlpt": "N2",
+   "meaning": "esteem/furthermore",
+   "old_position": 349,
+   "new_position": 182,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "石",
+   "jlpt": "N3",
+   "meaning": "stone",
+   "old_position": 663,
+   "new_position": 183,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "研",
+   "jlpt": "N4",
+   "meaning": "polish/study of",
+   "old_position": 1408,
+   "new_position": 184,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "舌",
+   "jlpt": "N2",
+   "meaning": "tongue/reed",
+   "old_position": 1695,
+   "new_position": 185,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "話",
+   "jlpt": "N5",
+   "meaning": "tale/talk",
+   "old_position": 1991,
+   "new_position": 186,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "説",
+   "jlpt": "N4",
+   "meaning": "opinion/theory",
+   "old_position": 1423,
+   "new_position": 187,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "至",
+   "jlpt": "N2",
+   "meaning": "climax/arrive",
+   "old_position": 1020,
+   "new_position": 188,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "走",
+   "jlpt": "N4",
+   "meaning": "run",
+   "old_position": 625,
+   "new_position": 189,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "起",
+   "jlpt": "N4",
+   "meaning": "rouse/wake up",
+   "old_position": 1412,
+   "new_position": 191,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "週",
+   "jlpt": "N5",
+   "meaning": "week",
+   "old_position": 1992,
+   "new_position": 192,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "矢",
+   "jlpt": "N2",
+   "meaning": "dart/arrow",
+   "old_position": 1659,
+   "new_position": 193,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "医",
+   "jlpt": "N4",
+   "meaning": "doctor/medicine",
+   "old_position": 1997,
+   "new_position": 196,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "知",
+   "jlpt": "N4",
+   "meaning": "know/wisdom",
+   "old_position": 1994,
+   "new_position": 197,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "英",
+   "jlpt": "N4",
+   "meaning": "England/English",
+   "old_position": 1420,
+   "new_position": 198,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "学",
+   "jlpt": "N5",
+   "meaning": "study/learning",
+   "old_position": 559,
+   "new_position": 211,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "映",
+   "jlpt": "N4",
+   "meaning": "reflect/reflection",
+   "old_position": 1427,
+   "new_position": 212,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "重",
+   "jlpt": "N4",
+   "meaning": "heavy/important",
+   "old_position": 1415,
+   "new_position": 213,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "本",
+   "jlpt": "N5",
+   "meaning": "book/present",
+   "old_position": 561,
+   "new_position": 214,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "菜",
+   "jlpt": "N4",
+   "meaning": "vegetable/side dish",
+   "old_position": 1421,
+   "new_position": 215,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "薬",
+   "jlpt": "N4",
+   "meaning": "medicine/chemical",
+   "old_position": 1411,
+   "new_position": 216,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "真",
+   "jlpt": "N4",
+   "meaning": "reality/Buddhist sect",
+   "old_position": 1407,
+   "new_position": 217,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "自",
+   "jlpt": "N4",
+   "meaning": "oneself",
+   "old_position": 624,
+   "new_position": 218,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "貝",
+   "jlpt": "N3",
+   "meaning": "shellfish",
+   "old_position": 664,
+   "new_position": 219,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "質",
+   "jlpt": "N4",
+   "meaning": "substance/quality",
+   "old_position": 1426,
+   "new_position": 220,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "題",
+   "jlpt": "N4",
+   "meaning": "topic/subject",
+   "old_position": 1416,
+   "new_position": 221,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "首",
+   "jlpt": "N4",
+   "meaning": "neck/counter for songs and poems",
+   "old_position": 1390,
+   "new_position": 222,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "道",
+   "jlpt": "N5",
+   "meaning": "road-way/street",
+   "old_position": 1993,
+   "new_position": 240,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "音",
+   "jlpt": "N4",
+   "meaning": "sound/noise",
+   "old_position": 597,
+   "new_position": 241,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "暗",
+   "jlpt": "N4",
+   "meaning": "darkness/disappear",
+   "old_position": 1404,
+   "new_position": 243,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "運",
+   "jlpt": "N4",
+   "meaning": "carry/luck",
+   "old_position": 1413,
+   "new_position": 244,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "校",
+   "jlpt": "N5",
+   "meaning": "exam/school",
+   "old_position": 1363,
+   "new_position": 245,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "飯",
+   "jlpt": "N4",
+   "meaning": "meal/boiled rice",
+   "old_position": 1424,
+   "new_position": 246,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "動",
+   "jlpt": "N4",
+   "meaning": "move/motion",
+   "old_position": 1996,
+   "new_position": 247,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "界",
+   "jlpt": "N4",
+   "meaning": "world/boundary",
+   "old_position": 1406,
+   "new_position": 248,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "試",
+   "jlpt": "N4",
+   "meaning": "test/try",
+   "old_position": 1422,
+   "new_position": 249,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "悪",
+   "jlpt": "N4",
+   "meaning": "bad/vice",
+   "old_position": 1400,
+   "new_position": 250,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "意",
+   "jlpt": "N4",
+   "meaning": "idea/mind",
+   "old_position": 1401,
+   "new_position": 251,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "注",
+   "jlpt": "N4",
+   "meaning": "pour/irrigate",
+   "old_position": 1405,
+   "new_position": 252,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "習",
+   "jlpt": "N4",
+   "meaning": "learn",
+   "old_position": 1410,
+   "new_position": 253,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "何",
+   "jlpt": "N5",
+   "meaning": "what",
+   "old_position": 1990,
+   "new_position": 254,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "使",
+   "jlpt": "N4",
+   "meaning": "use/send on a mission",
+   "old_position": 1995,
+   "new_position": 255,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "便",
+   "jlpt": "N4",
+   "meaning": "convenience/facility",
+   "old_position": 1417,
+   "new_position": 256,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "借",
+   "jlpt": "N4",
+   "meaning": "borrow/rent",
+   "old_position": 1418,
+   "new_position": 258,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "働",
+   "jlpt": "N4",
+   "meaning": "work/(kokuji)",
+   "old_position": 2123,
+   "new_position": 290,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "貸",
+   "jlpt": "N4",
+   "meaning": "lend",
+   "old_position": 1425,
+   "new_position": 292,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "暑",
+   "jlpt": "N4",
+   "meaning": "sultry/hot",
+   "old_position": 1403,
+   "new_position": 293,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "都",
+   "jlpt": "N4",
+   "meaning": "metropolis/capital",
+   "old_position": 1414,
+   "new_position": 294,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "短",
+   "jlpt": "N4",
+   "meaning": "short/brevity",
+   "old_position": 1999,
+   "new_position": 295,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "待",
+   "jlpt": "N4",
+   "meaning": "wait/depend on",
+   "old_position": 1399,
+   "new_position": 296,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "持",
+   "jlpt": "N4",
+   "meaning": "hold/have",
+   "old_position": 1402,
+   "new_position": 297,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "時",
+   "jlpt": "N5",
+   "meaning": "time/hour",
+   "old_position": 1369,
+   "new_position": 298,
+   "cascaded_component": false
+  },
+  {
+   "kanji": "特",
+   "jlpt": "N4",
+   "meaning": "special",
+   "old_position": 1419,
+   "new_position": 299,
+   "cascaded_component": false
+  }
+ ],
+ "demotions": [
+  {
+   "kanji": "原",
+   "jlpt": "N3",
+   "meaning": "meadow/original",
+   "old_position": 92,
+   "new_position": 341
+  },
+  {
+   "kanji": "園",
+   "jlpt": "N3",
+   "meaning": "park/garden",
+   "old_position": 93,
+   "new_position": 349
+  },
+  {
+   "kanji": "当",
+   "jlpt": "N3",
+   "meaning": "hit/right",
+   "old_position": 94,
+   "new_position": 399
+  },
+  {
+   "kanji": "他",
+   "jlpt": "N3",
+   "meaning": "other/another",
+   "old_position": 106,
+   "new_position": 478
+  },
+  {
+   "kanji": "倍",
+   "jlpt": "N3",
+   "meaning": "double/twice",
+   "old_position": 107,
+   "new_position": 523
+  },
+  {
+   "kanji": "列",
+   "jlpt": "N3",
+   "meaning": "file/row",
+   "old_position": 108,
+   "new_position": 550
+  },
+  {
+   "kanji": "遊",
+   "jlpt": "N3",
+   "meaning": "play",
+   "old_position": 130,
+   "new_position": 559
+  },
+  {
+   "kanji": "部",
+   "jlpt": "N3",
+   "meaning": "section/bureau",
+   "old_position": 131,
+   "new_position": 561
+  },
+  {
+   "kanji": "酒",
+   "jlpt": "N3",
+   "meaning": "sake/alcohol",
+   "old_position": 132,
+   "new_position": 563
+  },
+  {
+   "kanji": "刷",
+   "jlpt": "N3",
+   "meaning": "printing/print",
+   "old_position": 140,
+   "new_position": 584
+  },
+  {
+   "kanji": "副",
+   "jlpt": "N3",
+   "meaning": "vice-/assistant",
+   "old_position": 141,
+   "new_position": 597
+  },
+  {
+   "kanji": "印",
+   "jlpt": "N3",
+   "meaning": "stamp/seal",
+   "old_position": 142,
+   "new_position": 598
+  },
+  {
+   "kanji": "満",
+   "jlpt": "N3",
+   "meaning": "full/fullness",
+   "old_position": 160,
+   "new_position": 624
+  },
+  {
+   "kanji": "然",
+   "jlpt": "N3",
+   "meaning": "sort of thing/so",
+   "old_position": 162,
+   "new_position": 625
+  },
+  {
+   "kanji": "熱",
+   "jlpt": "N3",
+   "meaning": "heat/temperature",
+   "old_position": 163,
+   "new_position": 663
+  },
+  {
+   "kanji": "備",
+   "jlpt": "N3",
+   "meaning": "equip/provision",
+   "old_position": 180,
+   "new_position": 664
+  },
+  {
+   "kanji": "制",
+   "jlpt": "N3",
+   "meaning": "system/law",
+   "old_position": 181,
+   "new_position": 858
+  },
+  {
+   "kanji": "厚",
+   "jlpt": "N3",
+   "meaning": "thick/heavy",
+   "old_position": 182,
+   "new_position": 945
+  },
+  {
+   "kanji": "師",
+   "jlpt": "N3",
+   "meaning": "expert/teacher",
+   "old_position": 183,
+   "new_position": 952
+  },
+  {
+   "kanji": "得",
+   "jlpt": "N3",
+   "meaning": "gain/get",
+   "old_position": 184,
+   "new_position": 1009
+  },
+  {
+   "kanji": "復",
+   "jlpt": "N3",
+   "meaning": "restore/return to",
+   "old_position": 185,
+   "new_position": 1020
+  },
+  {
+   "kanji": "快",
+   "jlpt": "N3",
+   "meaning": "cheerful/pleasant",
+   "old_position": 186,
+   "new_position": 1192
+  },
+  {
+   "kanji": "接",
+   "jlpt": "N3",
+   "meaning": "touch/contact",
+   "old_position": 187,
+   "new_position": 1362
+  },
+  {
+   "kanji": "殺",
+   "jlpt": "N3",
+   "meaning": "kill/murder",
+   "old_position": 188,
+   "new_position": 1363
+  },
+  {
+   "kanji": "毒",
+   "jlpt": "N3",
+   "meaning": "poison/virus",
+   "old_position": 189,
+   "new_position": 1369
+  },
+  {
+   "kanji": "減",
+   "jlpt": "N3",
+   "meaning": "dwindle/decrease",
+   "old_position": 191,
+   "new_position": 1390
+  },
+  {
+   "kanji": "準",
+   "jlpt": "N3",
+   "meaning": "semi-/correspond to",
+   "old_position": 192,
+   "new_position": 1399
+  },
+  {
+   "kanji": "演",
+   "jlpt": "N3",
+   "meaning": "performance/act",
+   "old_position": 193,
+   "new_position": 1400
+  },
+  {
+   "kanji": "税",
+   "jlpt": "N3",
+   "meaning": "tax/duty",
+   "old_position": 196,
+   "new_position": 1401
+  },
+  {
+   "kanji": "能",
+   "jlpt": "N3",
+   "meaning": "ability/talent",
+   "old_position": 197,
+   "new_position": 1402
+  },
+  {
+   "kanji": "複",
+   "jlpt": "N3",
+   "meaning": "duplicate/double",
+   "old_position": 198,
+   "new_position": 1403
+  },
+  {
+   "kanji": "処",
+   "jlpt": "N3",
+   "meaning": "dispose/manage",
+   "old_position": 211,
+   "new_position": 1404
+  },
+  {
+   "kanji": "刻",
+   "jlpt": "N3",
+   "meaning": "engrave/cut fine",
+   "old_position": 212,
+   "new_position": 1405
+  },
+  {
+   "kanji": "劇",
+   "jlpt": "N3",
+   "meaning": "drama/play",
+   "old_position": 213,
+   "new_position": 1406
+  },
+  {
+   "kanji": "卵",
+   "jlpt": "N3",
+   "meaning": "egg/ovum",
+   "old_position": 214,
+   "new_position": 1407
+  },
+  {
+   "kanji": "宅",
+   "jlpt": "N3",
+   "meaning": "home/house",
+   "old_position": 215,
+   "new_position": 1408
+  },
+  {
+   "kanji": "宇",
+   "jlpt": "N3",
+   "meaning": "eaves/roof",
+   "old_position": 216,
+   "new_position": 1409
+  },
+  {
+   "kanji": "将",
+   "jlpt": "N3",
+   "meaning": "leader/commander",
+   "old_position": 217,
+   "new_position": 1410
+  },
+  {
+   "kanji": "展",
+   "jlpt": "N3",
+   "meaning": "unfold/expand",
+   "old_position": 218,
+   "new_position": 1411
+  },
+  {
+   "kanji": "座",
+   "jlpt": "N3",
+   "meaning": "squat/seat",
+   "old_position": 219,
+   "new_position": 1412
+  },
+  {
+   "kanji": "律",
+   "jlpt": "N3",
+   "meaning": "rhythm/law",
+   "old_position": 220,
+   "new_position": 1413
+  },
+  {
+   "kanji": "拝",
+   "jlpt": "N3",
+   "meaning": "worship/adore",
+   "old_position": 221,
+   "new_position": 1414
+  },
+  {
+   "kanji": "探",
+   "jlpt": "N3",
+   "meaning": "grope/search",
+   "old_position": 222,
+   "new_position": 1415
+  },
+  {
+   "kanji": "匹",
+   "jlpt": "N3",
+   "meaning": "equal/head",
+   "old_position": 240,
+   "new_position": 1416
+  },
+  {
+   "kanji": "寝",
+   "jlpt": "N3",
+   "meaning": "lie down/sleep",
+   "old_position": 241,
+   "new_position": 1417
+  },
+  {
+   "kanji": "悩",
+   "jlpt": "N3",
+   "meaning": "trouble/worry",
+   "old_position": 243,
+   "new_position": 1418
+  },
+  {
+   "kanji": "払",
+   "jlpt": "N3",
+   "meaning": "pay/clear out",
+   "old_position": 244,
+   "new_position": 1419
+  },
+  {
+   "kanji": "挟",
+   "jlpt": "N3",
+   "meaning": "pinch/between",
+   "old_position": 245,
+   "new_position": 1420
+  },
+  {
+   "kanji": "捕",
+   "jlpt": "N3",
+   "meaning": "catch/capture",
+   "old_position": 246,
+   "new_position": 1421
+  },
+  {
+   "kanji": "捜",
+   "jlpt": "N3",
+   "meaning": "search/look for",
+   "old_position": 247,
+   "new_position": 1422
+  },
+  {
+   "kanji": "掃",
+   "jlpt": "N3",
+   "meaning": "sweep/brush",
+   "old_position": 248,
+   "new_position": 1423
+  },
+  {
+   "kanji": "換",
+   "jlpt": "N3",
+   "meaning": "interchange/period",
+   "old_position": 249,
+   "new_position": 1424
+  },
+  {
+   "kanji": "殿",
+   "jlpt": "N3",
+   "meaning": "Mr./hall",
+   "old_position": 250,
+   "new_position": 1425
+  },
+  {
+   "kanji": "汚",
+   "jlpt": "N3",
+   "meaning": "dirty/pollute",
+   "old_position": 251,
+   "new_position": 1426
+  },
+  {
+   "kanji": "沈",
+   "jlpt": "N3",
+   "meaning": "sink/be submerged",
+   "old_position": 252,
+   "new_position": 1427
+  },
+  {
+   "kanji": "沸",
+   "jlpt": "N3",
+   "meaning": "seethe/boil",
+   "old_position": 253,
+   "new_position": 1659
+  },
+  {
+   "kanji": "浮",
+   "jlpt": "N3",
+   "meaning": "floating/float",
+   "old_position": 254,
+   "new_position": 1695
+  },
+  {
+   "kanji": "湾",
+   "jlpt": "N3",
+   "meaning": "gulf/bay",
+   "old_position": 255,
+   "new_position": 1990
+  },
+  {
+   "kanji": "湿",
+   "jlpt": "N3",
+   "meaning": "damp/wet",
+   "old_position": 256,
+   "new_position": 1991
+  },
+  {
+   "kanji": "濯",
+   "jlpt": "N3",
+   "meaning": "laundry/wash",
+   "old_position": 258,
+   "new_position": 1992
+  },
+  {
+   "kanji": "宣",
+   "jlpt": "N2",
+   "meaning": "proclaim/say",
+   "old_position": 290,
+   "new_position": 1993
+  },
+  {
+   "kanji": "己",
+   "jlpt": "N2",
+   "meaning": "self",
+   "old_position": 292,
+   "new_position": 1994
+  },
+  {
+   "kanji": "従",
+   "jlpt": "N2",
+   "meaning": "accompany/obey",
+   "old_position": 293,
+   "new_position": 1995
+  },
+  {
+   "kanji": "我",
+   "jlpt": "N2",
+   "meaning": "ego/I",
+   "old_position": 294,
+   "new_position": 1996
+  },
+  {
+   "kanji": "推",
+   "jlpt": "N2",
+   "meaning": "conjecture/infer",
+   "old_position": 295,
+   "new_position": 1997
+  },
+  {
+   "kanji": "敵",
+   "jlpt": "N2",
+   "meaning": "enemy/foe",
+   "old_position": 296,
+   "new_position": 1998
+  },
+  {
+   "kanji": "沿",
+   "jlpt": "N2",
+   "meaning": "run alongside/follow along",
+   "old_position": 297,
+   "new_position": 1999
+  },
+  {
+   "kanji": "派",
+   "jlpt": "N2",
+   "meaning": "faction/group",
+   "old_position": 298,
+   "new_position": 2000
+  },
+  {
+   "kanji": "激",
+   "jlpt": "N2",
+   "meaning": "violent/get excited",
+   "old_position": 299,
+   "new_position": 2123
+  }
+ ],
+ "deferred": [
+  {
+   "kanji": "屋",
+   "jlpt": "N4",
+   "meaning": "roof/house",
+   "old_position": 1398,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "始",
+   "jlpt": "N4",
+   "meaning": "commence/begin",
+   "old_position": 1397,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "員",
+   "jlpt": "N4",
+   "meaning": "employee/member",
+   "old_position": 1396,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "味",
+   "jlpt": "N4",
+   "meaning": "flavor/taste",
+   "old_position": 1395,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "写",
+   "jlpt": "N4",
+   "meaning": "copy/be photographed",
+   "old_position": 1394,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "住",
+   "jlpt": "N4",
+   "meaning": "dwell/reside",
+   "old_position": 1393,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "乗",
+   "jlpt": "N4",
+   "meaning": "ride/power",
+   "old_position": 1392,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "黒",
+   "jlpt": "N4",
+   "meaning": "black",
+   "old_position": 1391,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "野",
+   "jlpt": "N4",
+   "meaning": "plains/field",
+   "old_position": 1389,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "計",
+   "jlpt": "N4",
+   "meaning": "plot/plan",
+   "old_position": 1388,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "親",
+   "jlpt": "N4",
+   "meaning": "parent/intimacy",
+   "old_position": 1387,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "答",
+   "jlpt": "N4",
+   "meaning": "solution/answer",
+   "old_position": 1386,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "画",
+   "jlpt": "N4",
+   "meaning": "brush-stroke/picture",
+   "old_position": 1385,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "理",
+   "jlpt": "N4",
+   "meaning": "logic/arrangement",
+   "old_position": 1384,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "歩",
+   "jlpt": "N4",
+   "meaning": "walk/counter for steps",
+   "old_position": 1383,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "昼",
+   "jlpt": "N4",
+   "meaning": "daytime/noon",
+   "old_position": 1382,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "教",
+   "jlpt": "N4",
+   "meaning": "teach/faith",
+   "old_position": 1381,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "室",
+   "jlpt": "N4",
+   "meaning": "room/apartment",
+   "old_position": 1380,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "姉",
+   "jlpt": "N4",
+   "meaning": "elder sister",
+   "old_position": 1379,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "妹",
+   "jlpt": "N4",
+   "meaning": "younger sister",
+   "old_position": 1378,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "切",
+   "jlpt": "N4",
+   "meaning": "cut/cutoff",
+   "old_position": 1377,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "体",
+   "jlpt": "N4",
+   "meaning": "body/substance",
+   "old_position": 1376,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "町",
+   "jlpt": "N4",
+   "meaning": "town/village",
+   "old_position": 1375,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "森",
+   "jlpt": "N4",
+   "meaning": "forest/woods",
+   "old_position": 1374,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "駅",
+   "jlpt": "N5",
+   "meaning": "station",
+   "old_position": 1373,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "買",
+   "jlpt": "N5",
+   "meaning": "buy",
+   "old_position": 1372,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "読",
+   "jlpt": "N5",
+   "meaning": "read",
+   "old_position": 1371,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "語",
+   "jlpt": "N5",
+   "meaning": "word/speech",
+   "old_position": 1370,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "店",
+   "jlpt": "N5",
+   "meaning": "store/shop",
+   "old_position": 1368,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "国",
+   "jlpt": "N5",
+   "meaning": "country",
+   "old_position": 1367,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "午",
+   "jlpt": "N5",
+   "meaning": "noon/sign of the horse",
+   "old_position": 1366,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "空",
+   "jlpt": "N5",
+   "meaning": "empty/sky",
+   "old_position": 1365,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  },
+  {
+   "kanji": "百",
+   "jlpt": "N5",
+   "meaning": "hundred",
+   "old_position": 1364,
+   "note": "budget de démotion sûre épuisé, ou composant tardif non résolu dans le budget — reporté à une passe future."
+  }
+ ]
+}

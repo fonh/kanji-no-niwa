@@ -4,14 +4,26 @@
   "zone_id": "sprout-tower",
   "npc_ref": "sages_sprout_tower",
   "sequence_index": 1,
-  "kanji_ids": ["遊", "部", "酒", "陽", "面"],
+  "kanji_ids": [
+   "究",
+   "言",
+   "里",
+   "陽",
+   "面"
+  ],
   "grammar_id": "N4-001"
  },
  {
   "zone_id": "sprout-tower",
   "npc_ref": "elder_li_sprout_tower",
   "sequence_index": 2,
-  "kanji_ids": ["争", "伝", "候", "兆", "利"],
+  "kanji_ids": [
+   "争",
+   "伝",
+   "候",
+   "兆",
+   "利"
+  ],
   "grammar_id": "N4-002"
  }
 ]

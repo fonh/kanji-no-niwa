@@ -4,35 +4,70 @@
   "zone_id": "azalea-town",
   "npc_ref": "charcoal_man_azalea",
   "sequence_index": 1,
-  "kanji_ids": ["備", "制", "厚", "師", "得", "復"],
+  "kanji_ids": [
+   "備",
+   "制",
+   "厚",
+   "師",
+   "得",
+   "復"
+  ],
   "grammar_id": "N4-040"
  },
  {
   "zone_id": "azalea-town",
   "npc_ref": "mart_vendor_azalea",
   "sequence_index": 2,
-  "kanji_ids": ["快", "接", "殺", "毒", "比", "減"],
+  "kanji_ids": [
+   "快",
+   "接",
+   "殺",
+   "毒",
+   "比",
+   "減"
+  ],
   "grammar_id": "N4-041"
  },
  {
   "zone_id": "azalea-town",
   "npc_ref": "charcoal_man_azalea",
   "sequence_index": 3,
-  "kanji_ids": ["準", "演", "犯", "示", "税", "能"],
+  "kanji_ids": [
+   "準",
+   "演",
+   "犯",
+   "示",
+   "医",
+   "知"
+  ],
   "grammar_id": "N4-042"
  },
  {
   "zone_id": "azalea-town",
   "npc_ref": "mart_vendor_azalea",
   "sequence_index": 4,
-  "kanji_ids": ["複", "象", "述", "逆", "過", "適"],
+  "kanji_ids": [
+   "英",
+   "象",
+   "述",
+   "逆",
+   "過",
+   "適"
+  ],
   "grammar_id": "N4-043"
  },
  {
   "zone_id": "azalea-town",
   "npc_ref": "charcoal_man_azalea",
   "sequence_index": 5,
-  "kanji_ids": ["限", "険", "雑", "非", "並", "亡"],
+  "kanji_ids": [
+   "限",
+   "険",
+   "雑",
+   "非",
+   "並",
+   "亡"
+  ],
   "grammar_id": "N4-044"
  }
 ]

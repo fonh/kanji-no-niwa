@@ -35,6 +35,38 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 1 (curriculum : promotion du noyau N5/N4)** : décision de design
+  actée (§ Phase 1 du prompt). Mesuré : 195 kanji N5/N4 assignés à une position ≥300
+  dans l'ordre par composants, dont les 6 exemples nommés par l'audit (本/561, 学/559,
+  時/1369, 年/1362, 校/1363, 何/1990). Un premier essai plein budget (169 promotions,
+  tout le pool de démotion sûr) aurait réécrit jusqu'à 50 kanji dans une seule zone déjà
+  écrite (blackthorn-city) — disproportionné ; **rescope actée avec l'utilisateur** :
+  limiter aux ~80 kanji du palier catastrophique (position ≥1000) + les 6 exemples de
+  l'audit, avec un plafond de 3 kanji démis par zone déjà écrite. Résultat : **69 kanji
+  promus** (dont 17 composants radicaux cascadés — 言/込/貝/化/矢/里/等 — pour respecter
+  l'ordre par composants, vérifié par tri topologique, 0 violation résiduelle) échangés
+  contre 69 kanji N1/N2/N3 sans AUCUN dépendant dans les 2136 kanji (donc démotion sans
+  risque de casser un prérequis). Les 6 kanji nommés par l'audit atterrissent tous en
+  position <300 (何=254, 時=298, 年=180, 校=245, 学=211, 本=214). Impact sur les zones
+  déjà écrites plafonné à ≤4 kanji changés chacune (20 zones touchées, la plupart 1-3
+  kanji). Fichiers : `content/kanji-core-promotion.json` (décision, raisonnement,
+  listes promues/démises/différées), `scripts/build/apply-core-promotion.py`
+  (application mécanique — ordered_kanji, zones[].new_kanji, lessons-proposal.json,
+  content/lessons/<zone>.json, idempotent), `.scratch/scripts/build-core-promotion.py`
+  (génère la décision, kradfile pour l'ordre des composants — radical '乞' traité
+  comme bruit de parsing, associé à 8+ kanji sans rapport plausible),
+  `.scratch/scripts/add-core-promotion-lesson-examples.py` (12 kanji nouvellement
+  enseignés dans une zone déjà écrite → nouveaux lesson_examples écrits — les autres
+  kanji arrivants avaient déjà des exemples d'un enseignement antérieur, réutilisés
+  tels quels), `.scratch/scripts/patch-npc-inventory-kanji.py` (75 substitutions dans
+  les listes « leçon #N — 漢字: » de npc-inventory.md, portée strictement scopée pour
+  ne jamais toucher les mentions homonymes hors-contexte comme « 印 n°8 » le badge).
+  **Vérifié texte-agnostique** : les dialogues des zones touchées ne référencent jamais
+  thématiquement les kanji enseignés (règle « no kanji theming » déjà en vigueur) —
+  aucune réécriture de dialogue nécessaire. 47 kanji du palier catastrophique restent
+  différés (budget de démotion sûre épuisé), listés dans `kanji-core-promotion.json`
+  § deferred pour une passe future si un nouveau pool de démotion sûre est identifié.
+  5 linters verts (536 fichiers, mêmes 20 WARN attendus qu'en phase 0, 0 FAIL).
 - **2026-07-23 — Phase 0 (corrections mécaniques, revue prof+game designer)** : suite au
   prompt `.scratch/audits/prompt-etape4-suite-et-fin.md` (double revue du 2026-07-23),
   corrections structurelles avant toute nouvelle production, ordre du prompt respecté.

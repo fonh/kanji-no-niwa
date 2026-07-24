@@ -35,8 +35,8 @@
    "沈",
    "沸",
    "浮",
-   "湾",
-   "湿",
+   "使",
+   "便",
    "滴"
   ],
   "grammar_id": "N4-088"
@@ -46,7 +46,7 @@
   "npc_ref": "affection_evaluator_goldenrod",
   "sequence_index": 4,
   "kanji_ids": [
-   "濯",
+   "借",
    "狭",
    "甘",
    "療",

@@ -4,7 +4,13 @@
   "zone_id": "route-36",
   "npc_ref": "young_man_by_sign_route36",
   "sequence_index": 1,
-  "kanji_ids": ["凶", "凹", "刈", "刑", "剖"],
+  "kanji_ids": [
+   "凶",
+   "凹",
+   "刈",
+   "刑",
+   "剖"
+  ],
   "grammar_id": "N3-024"
  },
  {
@@ -12,28 +18,52 @@
   "zone_id": "route-36",
   "npc_ref": "arthur_route36",
   "sequence_index": 2,
-  "kanji_ids": ["剣", "升", "卑", "即", "卸"],
+  "kanji_ids": [
+   "剣",
+   "升",
+   "卑",
+   "即",
+   "卸"
+  ],
   "grammar_id": "N3-025"
  },
  {
   "zone_id": "route-36",
   "npc_ref": "young_man_by_sign_route36",
   "sequence_index": 3,
-  "kanji_ids": ["厄", "又", "呉", "唐", "奉"],
+  "kanji_ids": [
+   "厄",
+   "原",
+   "呉",
+   "唐",
+   "奉"
+  ],
   "grammar_id": "N3-026"
  },
  {
   "zone_id": "route-36",
   "npc_ref": "arthur_route36",
   "sequence_index": 4,
-  "kanji_ids": ["宴", "寛", "寡", "寮", "尚"],
+  "kanji_ids": [
+   "宴",
+   "寛",
+   "寡",
+   "寮",
+   "園"
+  ],
   "grammar_id": "N3-027"
  },
  {
   "zone_id": "route-36",
   "npc_ref": "young_man_by_sign_route36",
   "sequence_index": 5,
-  "kanji_ids": ["尼", "屯", "巡", "幻", "幾"],
+  "kanji_ids": [
+   "尼",
+   "屯",
+   "巡",
+   "幻",
+   "幾"
+  ],
   "grammar_id": "N3-028"
  }
 ]
