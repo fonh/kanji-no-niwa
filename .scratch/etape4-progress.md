@@ -41,6 +41,37 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, revue point de vue joueur, 2 vraies erreurs trouvées et
+  corrigées.** Demande explicite de l'utilisateur : les vérifications précédentes
+  (linters + audit `cumulative_start` + `git diff` jp-only) sont mécaniques et ne
+  lisent pas le sens ; une relecture séquentielle, comme un joueur, était encore
+  due. Relecture faite sur les chaînes de quête à risque (power_plant_restoration,
+  copycat_doll, ss_aqua_granddaughter, l'arc QG Rocket de mahogany-town, la scène
+  Conseil 4/Champion) + recherche systématique (`grep`) des kanji homophones à
+  risque déjà documentés comme piège méthodologique du projet. **2 erreurs
+  réelles trouvées, toutes deux invisibles aux linters (kanji bien dans le
+  studiedSet, lecture bien groupée — juste le mauvais mot)** :
+  1. `kanto-power-plant/plant_director_kpp.json` — 「とりかえして」 (取り返す,
+     « récupérer ») écrit à tort 取（と）り替（か）えして (取り替える, « échanger »)
+     ; en plus d'être le mauvais mot, la conjugaison ne correspond même pas
+     (取り替える → とりかえて, pas とりかえして — la présence du し confirmait déjà
+     取り返す). 返 hors studiedSet de toute façon → reverti en kana intégral.
+  2. `mahogany-town/scientist_mitch_mahogany.json` — mot de passe
+     「かねのおと」(« Bell Chime », un carillon) écrit à tort 金（かね）のおと
+     (« le son de l'argent ») au lieu de 鐘（かね）のおと (« le son d'une cloche »)
+     — piège par homophone かね classique (金 vs 鐘), le studiedSet confirme 鐘 non
+     étudié de toute façon → reverti en kana intégral.
+  **Contrôles complémentaires sans erreur trouvée** : toutes les distinctions
+  者/物 (personne/chose) sur 11 occurrences vérifiées correctes ; disambiguïsation
+  systématique 開く/付ける/着る/早い-速い/北-来た sur 10 occurrences, toutes correctes.
+  La séquence climactique Conseil4/Champion (silver_apparition6, will/koga/bruno/
+  karen/lance) relue intégralement, cohérente de bout en bout, les reverts de
+  l'audit précédent (けんしん/むかえうつ en kana) s'intègrent naturellement à la
+  prose. 5 linters verts après les 2 correctifs. **Portée de cette relecture** :
+  couvre les chaînes de quête à fort enjeu narratif + une recherche ciblée des
+  pièges homophoniques connus — n'est PAS une relecture exhaustive ligne par
+  ligne des ~320 fichiers de la session ; une lecture plus large reste possible
+  si utile plus tard.
 - **2026-07-24 — Phase 2, olivine-city (19/19 fichiers) re-kanjifié.** Kanji
   ajoutés : 私/毎日/病気/寝/鳥/行/顔/本気/前/先/本当/心/人/長/方/一流. 6 fichiers
   restent à 0% densité, vérifiés sans amélioration sûre. Audit `cumulative_start` :
