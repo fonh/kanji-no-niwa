@@ -35,6 +35,30 @@ l'avancement de la *rédaction* de chaque zone.
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, lancement (re-kanjification : règle + outillage +
+  1er texte)** : ajouté à `content-writing-guide.md` § 3bis la règle du plancher de
+  kanji connus (≥15-20% des mots kanjifiables-connus effectivement en kanji). Outils
+  construits : `scripts/build/rekanjify-report.py` (studiedSet réel par
+  NARRATIVE_ORDER — pas cumulative_start aveugle —, scan heuristique par
+  correspondance de plus longue chaîne contre un lexique dérivé de JMDict, aucun
+  tokenizer disponible dans cet environnement donc RAPPORT SEULEMENT, édition
+  manuelle obligatoire) et `scripts/validate/lint-kanji-density.py` (même mesure,
+  WARN uniquement pour l'instant — 0,17% de densité mesurée à l'audit, un FAIL
+  immédiat rougirait tout le corpus d'un coup ; passer une zone en FAIL via
+  `STRICT_ZONES` une fois sa passe de re-kanjification vérifiée complète). **Bug
+  trouvé en testant l'outillage** : `collect_jp_strings` ne captait que la clé `jp`,
+  jamais `jp_text` (le champ réel du corps des textes progressifs) — corrigé dans les
+  deux scripts avant tout comptage de référence, sinon toute mesure de densité sur
+  `content/texts/` aurait été silencieusement fausse. **1 texte re-kanjifié
+  intégralement et vérifié** : `content/texts/dragons-den/successor_scroll.json`
+  (l'exemple nommé par l'audit — « archaïsant N2 sans un seul kanji ») : 竜/私/残/一/
+  言葉/力/振/守/学/終/思/時/死/強/者/三/真 ajoutés avec lecture inline, `answer_span`
+  des 3 questions concernées recalculés programmatiquement (positions caractère
+  décalées par l'ajout des lectures), `length_chars` remis à jour. **Portée réaliste
+  restante** : 17 autres textes + ~500 fichiers de dialogue sur 36 zones sont encore
+  sous le plancher (411/466 fichiers avec du texte kanjifiable-connu, mesuré après le
+  fix du bug) — une passe complète est un chantier à l'échelle des 13 lots déjà
+  écrits, pas une session. 5 linters verts (0 FAIL, 2 WARN attendus/documentés).
 - **2026-07-24 — Phase 2.4 (corrections linguistiques ponctuelles)** : lot de
   corrections mécaniques indépendantes de la passe de re-kanjification elle-même.
   **466 lesson_examples** de `kanji-content.json` avaient un groupement de lecture par

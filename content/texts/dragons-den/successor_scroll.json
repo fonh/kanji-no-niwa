@@ -6,7 +6,7 @@
    "jp": "けいしょうしゃの　まきもの",
    "en": "The Successor's Scroll"
   },
-  "jp_text": "りゅうと　ともに　いきた　わたしたちの　おしえを、ここに　のこす。ひとつ、ことばは　ちからなり。ちからは　ふりかざす　ためではなく、まもる　ために　ある。ひとつ、まなびに　おわりなし。きわめたと　おもった　とき、まなびは　しぬ。ひとつ、つよき　ものほど、しずかで　あれ。りゅうが　ほえるのは、たたかいの　ときのみ。この　みっつを　まもる　ものこそ、まことの　けいしょうしゃなり。",
+  "jp_text": "竜（りゅう）と　ともに　生（い）きた　私（わたし）たちの　おしえを、ここに　残（のこ）す。一（ひと）つ、言葉（ことば）は　力（ちから）なり。力（ちから）は　振（ふ）りかざす　ためではなく、守（まも）る　ために　ある。一（ひと）つ、学（まな）びに　終（お）わりなし。きわめたと　思（おも）った　時（とき）、学（まな）びは　死（し）ぬ。一（ひと）つ、強（つよ）き者（もの）ほど、しずかで　あれ。竜（りゅう）が　ほえるのは、たたかいの　時（とき）のみ。この　三（みっ）つを　守（まも）る　者（もの）こそ、真（まこと）の　けいしょうしゃなり。",
   "en_text": "Here we leave the teachings of those who lived alongside dragons. One: words are power — power exists not to be brandished, but to protect. One: learning has no end — the moment you believe you have mastered it, learning dies. One: let the strong be quiet — a dragon roars only in battle. Whoever keeps these three is a true successor.",
   "audio_ref": null,
   "level": "N2",
@@ -16,7 +16,7 @@
   "npc_ref": "elder_master_dragons_den",
   "found_object_ref": null,
   "event_ref": null,
-  "length_chars": 189,
+  "length_chars": 160,
   "questions": [
    {
     "type": "idee_generale",
@@ -71,8 +71,8 @@
     ],
     "correct_index": 1,
     "answer_span": {
-     "start": 48,
-     "end": 76
+     "start": 70,
+     "end": 107
     }
    },
    {
@@ -101,8 +101,8 @@
     ],
     "correct_index": 1,
     "answer_span": {
-     "start": 92,
-     "end": 113
+     "start": 132,
+     "end": 165
     }
    },
    {
@@ -158,8 +158,8 @@
     ],
     "correct_index": 1,
     "answer_span": {
-     "start": 33,
-     "end": 47
+     "start": 45,
+     "end": 69
     }
    }
   ]

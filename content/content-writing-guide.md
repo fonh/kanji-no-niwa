@@ -105,6 +105,24 @@ Concrètement :
 5. **Fais-le zone par zone, pas en fin de lot** — c'est exactement l'étape qui a été oubliée sur
    6 zones lors du passage précédent, sans qu'aucun linter ne s'en aperçoive.
 
+## 3bis. Plancher de kanji connus — le jeu doit faire LIRE ce qu'il enseigne (Étape 4, règle nouvelle 2026-07-23)
+
+> Tout mot dont TOUS les kanji sont dans le studiedSet du point de progression s'écrit
+> en kanji, avec sa lecture inline (le bouton Y couvre la révélation). Cible : ≥ 15-20 %
+> des mots kanjifiables-connus effectivement écrits en kanji par dialogue — en pratique,
+> kanjifier partout où c'est naturel. Le budget d'INCONNUS reste inchangé (2/dialogue,
+> ~2/100 car. plafond 10 pour les textes) : cette règle ajoute un plancher, elle ne
+> touche pas au plafond.
+
+Mesuré à l'audit du 2026-07-23 : 0,17 % de densité kanji sur le corpus écrit (Lots 1-13),
+0 % à Blackthorn/Safran/Azuria — l'écriture avait convergé vers le tout-kana, qui crée
+même des ambiguïtés réelles (「とうに　いる」 lu « depuis longtemps » au lieu de 塔に
+« dans la tour »). Outil : `scripts/build/rekanjify-report.py` calcule le studiedSet réel
+d'un dialogue/texte (ordre narratif, pas `cumulative_start` aveugle) et liste les mots
+kana kanjifiables ; `scripts/validate/lint-kanji-density.py` fait respecter le plancher.
+Groupement des lectures : toujours par run de kanji (学校（がっこう）), jamais par
+caractère (§ 4).
+
 ## 4bis. `kanji.keyword` — anglais éditorialisé affiché sur la double-page (Étape 4, 2026-07-23)
 
 `meanings[0]` du dataset brut est parfois trompeur en tête de liste (ex. 校 = "exam"
