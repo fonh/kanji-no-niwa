@@ -11,7 +11,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "アカネさまに　あう　まえに、わたしを　とおして　いってね。",
+     "jp": "アカネさまに　あう　前（まえ）に、わたしを　通（とお）して　いってね。",
      "en": "Before you see Lady Whitney, you'll have to get past me."
     },
     {
@@ -23,7 +23,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "つよさは　ほんものね。どうぞ、すすんで。",
+     "jp": "つよさは　ほんものね。どうぞ、進（すす）んで。",
      "en": "Your strength is the real deal. Go on ahead."
     }
    ]

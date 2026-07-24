@@ -41,6 +41,22 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, goldenrod-city session C (Gym/dresseurs divers,
+  10/10 fichiers) re-kanjifié — ZONE ENTIÈREMENT CLOSE** (3 sous-sessions,
+  50 fichiers au total). Kanji ajoutés : 気/前/通/進/実/道/毎日. Règle
+  tout-ou-rien confirmée sur de nombreux candidats (ほんばん/うつくしく/
+  おたから/しごと/ちかどう/けいさんずみ/だいじょうぶ/ほんとう etc.). Audit
+  `cumulative_start` : CLEAN du premier coup. 7 linters verts (536 fichiers
+  dialogue, 480 fichiers état, 36 fichiers leçons, mêmes 3 WARN attendus, 0
+  FAIL). Densité globale 141→129 fichiers sous le plancher (sur les 3
+  sessions de la zone combinées). **goldenrod-city (50 fichiers, le plus
+  gros du corpus) est maintenant intégralement re-kanjifié**, traité en 3
+  sessions par sous-lieu (PNJ de ville / Tour Radio-arc Rocket / Gym-
+  dresseurs) sans jamais les mélanger, comme prévu par le plan. Reste dans
+  le Tier 5 : route-34 (10), slowpoke-well (5), azalea-town (10),
+  union-cave (12), route-33 (1), ruins-of-alph (3), route-32 (14),
+  sprout-tower (3), violet-city (11), route-31 (3), route-30 (6),
+  cherrygrove-city (5), route-29 (2), new-bark-town (6).
 - **2026-07-24 — Phase 2, goldenrod-city session B (Tour Radio/arc Rocket,
   25/25 fichiers) re-kanjifié.** Vocabulaire de cet arc très N2 (でんぱ/
   そうび/そうこ/きょくちょう/へんそう/かいさん etc.) — quasiment tout hors
