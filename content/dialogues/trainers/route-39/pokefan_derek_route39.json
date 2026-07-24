@@ -14,7 +14,7 @@
      "en": "Had any of the farm's milk yet?"
     },
     {
-     "jp": "のむ　まえに、ひとしょうぶ　どう？",
+     "jp": "のむ　前（まえ）に、ひとしょうぶ　どう？",
      "en": "How about a battle before you drink up?"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "ミルクで　げんきを　とりもどすぞ。",
+     "jp": "ミルクで　元気（げんき）を　とりもどすぞ。",
      "en": "I'll get my energy back with some milk."
     }
    ]

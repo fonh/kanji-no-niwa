@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "うしの　きもち、わかるかい？",
+     "jp": "牛（うし）の　きもち、わかるかい？",
      "en": "Can you tell how the cow feels?"
     },
     {
-     "jp": "こころを　よむ　しょうぶと　いこう。",
+     "jp": "心（こころ）を　よむ　しょうぶと　行（い）こう。",
      "en": "Let's have a battle of reading minds."
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "きみの　こころは　よめなかった…。",
+     "jp": "きみの　心（こころ）は　よめなかった…。",
      "en": "I couldn't read your mind at all..."
     }
    ]

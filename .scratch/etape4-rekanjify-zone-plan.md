@@ -152,7 +152,7 @@ le meilleur retour sur investissement en densité. **Priorité absolue pour la s
 |---|---:|---:|---:|
 | route-40 / route-41 | 490 | 7+10 | 2 | ✅ fait 2026-07-24. 2 fichiers (monica, swimmer_randall) restent à 0% : げつようび/こんじょう/かなわない ont chacun un kanji hors studiedSet, aucune amélioration sûre possible. |
 | olivine-city | 460 | 19 | 6 | ✅ fait 2026-07-24. 6 fichiers restent à 0%, vérifiés sans amélioration sûre possible. |
-| route-39 | 445 | 10 | 10 |
+| route-39 | 445 | 10 | 0 | ✅ fait 2026-07-24. |
 | route-38 | 430 | 5 | — |
 | burned-tower | 410 | 7 | — |
 | ecruteak-city | 370 | 23 | 11 |

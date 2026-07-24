@@ -41,6 +41,18 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-39 (10/10 fichiers) re-kanjifié.** Kanji ajoutés :
+  方/作/知/牛/病気/甘/食/元気/私/行/子/本当/前/毎週/通/心/陸. **3ᵉ erreur trouvée par
+  auto-vérification** (pas par le joueur cette fois, par la routine d'audit
+  post-édition elle-même) : 思 et 海 utilisés dans `sailor_eugene_route39.json`
+  sur la foi d'une mauvaise lecture de ma propre sortie de vérification (les deux
+  étaient en réalité `False` dans le batch check, mal recopiés en `True` dans le
+  plan d'édition — erreur de transcription, pas de méthode). Repéré par l'audit
+  `cumulative_start` de routine tout de suite après l'édition (avant tout commit),
+  reverti en kana. Confirme la valeur de faire tourner l'audit sur CHAQUE zone,
+  pas seulement en cas de doute. 7 linters verts (536 fichiers dialogue + 36
+  fichiers leçons + 480 fichiers état, mêmes 3 WARN attendus, 0 FAIL). Densité
+  globale 182→172 fichiers sous le plancher.
 - **2026-07-24 — Phase 2, revue point de vue joueur, 2 vraies erreurs trouvées et
   corrigées.** Demande explicite de l'utilisateur : les vérifications précédentes
   (linters + audit `cumulative_start` + `git diff` jp-only) sont mécaniques et ne
