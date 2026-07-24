@@ -41,6 +41,19 @@ référence pour « que faire ensuite ».
 - Textes : **17 écrits** (7 CS remis, reste 登 au Mont Gris)
 
 ### Journal
+- **2026-07-24 — Phase 2, route-40 + route-41 (17/17 fichiers) re-kanjifié —
+  1ʳᵉ zone du Tier 4.** Kanji ajoutés : 私（わたし/私たち, cohérent sur les 10
+  fichiers nageurs de route-41 qui partagent le même battle_intro）/知/作/言/考/
+  広/大変/代/止/気/水/光/時/羽/落. 2 fichiers restent à 0% (monica/swimmer_randall),
+  vérifiés sans amélioration sûre. **Détail d'outillage** : patch batch par script
+  Python (`json.dump`) sur les 10 fichiers route-41 pour la ligne de battle_intro
+  partagée — a fait sauter le retour à la ligne final (`\ No newline at end of
+  file` au diff), repéré et corrigé avant commit (tous les fichiers du corpus se
+  terminent par un retour à la ligne). Audit `cumulative_start` : CLEAN. 5 linters
+  verts (536 fichiers, mêmes 3 WARN attendus, 0 FAIL). Densité globale 208→194
+  fichiers sous le plancher. Reste dans le Tier 4 : olivine-city (19), route-39
+  (10), route-38 (5), burned-tower (7), ecruteak-city (23), route-37 (5),
+  route-36 (4), national-park (9), route-35 (9).
 - **2026-07-24 — Phase 2, cianwood-city (10/10 fichiers) re-kanjifié — TIER 3
   ENTIÈREMENT CLOS** (whirl-islands déjà clos, 0 dialogue). Kanji ajoutés : 修行/
   行/病気/病人/後/元気/毎日/心/流（シジマ流）/伝/一/俺/元/力/年/言/目/知/選/先. **Bug

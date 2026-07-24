@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "うずまきじまの　ちかくで　およぐのは　わたしたちだけ！",
+     "jp": "うずまきじまの　ちかくで　およぐのは　私（わたし）たちだけ！",
      "en": "We're the only ones who swim near the Whirl Islands!"
     },
     {
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "うずまきじまの　みずは　そこまで　すきとおってるのよ。",
+     "jp": "うずまきじまの　水（みず）は　そこまで　すきとおってるのよ。",
      "en": "The water at the Whirl Islands is clear all the way down."
     }
    ]

@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "うずまきじまの　ちかくで　およぐのは　わたしたちだけ！",
+     "jp": "うずまきじまの　ちかくで　およぐのは　私（わたし）たちだけ！",
      "en": "We're the only ones who swim near the Whirl Islands!"
     },
     {
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "よなかに　しまから　ひかりが　みえた　ことが　ある。",
+     "jp": "よなかに　しまから　光（ひかり）が　みえた　ことが　ある。",
      "en": "I once saw a light from the islands at night."
     }
    ]

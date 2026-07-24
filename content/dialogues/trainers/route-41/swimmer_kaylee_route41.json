@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "うずまきじまの　ちかくで　およぐのは　わたしたちだけ！",
+     "jp": "うずまきじまの　ちかくで　およぐのは　私（わたし）たちだけ！",
      "en": "We're the only ones who swim near the Whirl Islands!"
     },
     {
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "しまの　おくには　ぎんいろの　はねが　おちてるって。",
+     "jp": "しまの　おくには　ぎんいろの　羽（はね）が　落（お）ちてるって。",
      "en": "They say silver feathers lie deep in the islands."
     }
    ]

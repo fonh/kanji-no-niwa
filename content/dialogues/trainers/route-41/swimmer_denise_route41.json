@@ -11,7 +11,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "うずまきじまの　ちかくで　およぐのは　わたしたちだけ！",
+     "jp": "うずまきじまの　ちかくで　およぐのは　私（わたし）たちだけ！",
      "en": "We're the only ones who swim near the Whirl Islands!"
     },
     {
@@ -23,7 +23,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "うずの　ぬしは　うたが　すきだと　いうぜ。",
+     "jp": "うずの　ぬしは　うたが　すきだと　言（い）うぜ。",
      "en": "They say the whirlpool master loves song."
     }
    ]

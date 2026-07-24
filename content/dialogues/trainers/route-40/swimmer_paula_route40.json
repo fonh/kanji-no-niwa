@@ -10,11 +10,11 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "うみは　ひろいわよ。まよったら　たいへん。",
+     "jp": "うみは　広（ひろ）いわよ。まよったら　大変（たいへん）。",
      "en": "The sea is vast. Get lost and you're in trouble."
     },
     {
-     "jp": "みちしるべの　かわりに、わたしが　とめて　あげる！",
+     "jp": "みちしるべの　代（か）わりに、私（わたし）が　止（と）めて　あげる！",
      "en": "Instead of a signpost, I'll stop you myself!"
     }
    ]
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "イリシアは　みなみよ。きを　つけて。",
+     "jp": "イリシアは　みなみよ。気（き）を　つけて。",
      "en": "Cianwood is to the south. Take care."
     }
    ]

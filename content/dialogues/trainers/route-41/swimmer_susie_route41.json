@@ -10,7 +10,7 @@
   "battle_intro": {
    "pages": [
     {
-     "jp": "うずまきじまの　ちかくで　およぐのは　わたしたちだけ！",
+     "jp": "うずまきじまの　ちかくで　およぐのは　私（わたし）たちだけ！",
      "en": "We're the only ones who swim near the Whirl Islands!"
     },
     {
@@ -22,7 +22,7 @@
   "post_battle": {
    "pages": [
     {
-     "jp": "しまに　ちかづく　ときは、れいぎを　わすれるな。",
+     "jp": "しまに　ちかづく　時（とき）は、れいぎを　わすれるな。",
      "en": "When you near the islands, don't forget your manners."
     }
    ]
