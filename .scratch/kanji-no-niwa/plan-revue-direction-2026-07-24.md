@@ -126,11 +126,22 @@ findings A1-A7 remontent comme issues `ready-for-agent` ou comme amendements PRD
   refus des stats de performance, refus du tracé. Ces fondations sont bonnes — les
   remettre en question serait du churn.
 
-## Ordre recommandé
+## Ordre recommandé — état au 2026-07-25
 
-1. C1 (solveur de progression) — automatisable, protège tous les lots suivants.
-2. B1 + B2 (simulations FSRS/grammaire) — peuvent invalider le rythme AVANT les 12
-   dernières zones.
-3. Tranche verticale (D1) en parallèle de la fin de production.
+1. ~~C1 (solveur de progression)~~ **FAIT** : `scripts/validate/solve-progression.py`,
+   traversée complète prouvée (60 zones, 16/16 quêtes, 18/18 textes, 0 deadlock),
+   sensibilité vérifiée, intégré à l'auto-test par zone. 2 text_id du contrat corrigés.
+2. ~~B1 (simulation FSRS)~~ **FAIT** : `scripts/analysis/simulate-srs-load.py` — verdict
+   « optimiste » : croisière réelle 400-530 rev/j (pics 630), divergence à 70 % Good.
+   → **issue 04** (plafond 13-15 mots/jour recommandé, ready-for-human) et **issue 05**
+   (186 kanji sans leçon, 876 mots kana-only, 302 mots hors-joyo — ready-for-human).
+   ~~B2 (simulation grammaire)~~ **FAIT** : `scripts/analysis/simulate-grammar-retention.py`
+   — verdict : le mécanisme hors-SRS suffit 3-4 mois puis s'effondre (47 % du pool perdu
+   à fin Johto, 100 % à M11 ; le boost est cosmétique, c'est le débit qui manque ; SRS
+   grammaire = 12 rev/j pour ~0 perte). → **issue 06** (ready-for-human, renverse une
+   décision de grill).
+3. Tranche verticale (D1) en parallèle de la fin de production — **prochaine étape**.
 4. A1-A7 sur la tranche (14 jours) → verdict D2/D3/D6.
-5. B3-B6, C2-C6 au fil de l'eau ; D4/D5 tranchés avec les données de C3/B3.
+5. B3-B6, C2-C6 au fil de l'eau ; D4 tranché avec C3 ; **D5 a maintenant ses données**
+   (issue 05 : la queue au-delà de 1950 n'est déjà pas enseignée — la décision de scope
+   est devenue concrète).
