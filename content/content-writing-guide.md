@@ -157,7 +157,15 @@ python3 scripts/validate/lint-kanji-budget.py
 python3 scripts/validate/lint-cross-refs.py
 python3 scripts/validate/check-cs-kanji-deadlock.py
 python3 scripts/validate/calc-cs-corpus.py
+python3 scripts/validate/solve-progression.py
 ```
+
+Le 5ᵉ (ajouté 2026-07-25) rejoue toute la partie comme une traversée de graphe
+(Conditions/Effects/quêtes/leçons/textes, point fixe avec retours en arrière) et échoue si
+une entité, une quête, une leçon ou un texte devient inatteignable — il partage le
+`NARRATIVE_ORDER` de `calc-cs-corpus.py` (donc l'étendre là-bas suffit) et lit les règles
+moteur d'`engine-contract.md` § 1-3 (encodées en tête de script : les étendre en même temps
+que le contrat si un lot ajoute un event/step moteur).
 
 Le 4ᵉ script a une liste `NARRATIVE_ORDER` en dur en tête de fichier — l'étendre avec les
 nouvelles zones dans leur vrai ordre de visite (pas `story-beats.json § order`, qui suit l'ordre

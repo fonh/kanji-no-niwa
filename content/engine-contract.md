@@ -44,8 +44,8 @@ le contenu. **Le moteur doit émettre l'Effect `unlock_text` lui-même**, au mom
 | `forest_shrine_ilex` | `forest_shrine_ilex` (event_ref) | Franchissement de l'obstacle `cut_tree_ilex_shortcut` (Forêt Secte, arbre coupé) |
 | `lyra_mail_new_bark` | `player_pc_new_bark` | Ouverture du PC du joueur à Bourg Geon (mail de Lyra) |
 | `johto_entrance_sign_route29` | `sign_johto_entrance_route29` | Interaction avec le panneau d'entrée de Route 29 (tuile de carte, pas un NPC) |
-| `son_in_law_letter_object_slowpoke_well` | `son_in_law_letter_object_slowpoke_well` | Objet trouvé au Puits Ramoloss (pas de fichier dialogue dédié) |
-| `inscription_sprout_tower` | `inscription_sprout_tower` | Inscription murale de la Tour Grospignon (tuile de carte) |
+| `son_in_law_letter_slowpoke_well` | `son_in_law_letter_object_slowpoke_well` | Objet trouvé au Puits Ramoloss (pas de fichier dialogue dédié) — *text_id corrigé 2026-07-25, solveur de progression : la table donnait le found_object_ref en colonne text_id, le texte réel s'appelle `son_in_law_letter_slowpoke_well`* |
+| `ancient_inscription_sprout_tower` | `inscription_sprout_tower` | Inscription murale de la Tour Grospignon (tuile de carte) — *text_id corrigé 2026-07-25, même erreur : le texte réel s'appelle `ancient_inscription_sprout_tower`* |
 
 Les 4 autres textes non-CS trouvés avec un `found_object_ref`/`npc_ref` correspondant à un
 vrai fichier dialogue (`storyteller_burned_tower`, `storyteller_ecruteak`,
