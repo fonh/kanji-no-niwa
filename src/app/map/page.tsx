@@ -5,32 +5,31 @@ import { getAllZones, getZoneByName, getZoneNames } from '@/lib/zones'
 import { getNpcsForZone } from '@/lib/npcs'
 import { getTrainersForZone } from '@/lib/trainers'
 import { parseProgress } from '@/lib/obstacles'
+import { getPlayerState } from '@/lib/player-state'
+import { filterVisibleNpcs, filterVisibleTrainers } from '@/lib/map-visibility'
 import MapClient, { type PlayerPos } from './MapClient'
-
-const DEFAULT_ZONE = 'MAP_NEW_BARK'
-const DEFAULT_POS: PlayerPos = { world_x: 695, world_z: 396 }
 
 export default async function MapPage() {
   const session = await auth()
   if (!session?.user) redirect('/')
   const userId = session.user.id
 
-  const [userRow] = await sql`
-    select map_zone, map_x, map_z, map_progress from users where id = ${userId}
-  `
+  // Position + progression : user_map_state via la couche PlayerState ;
+  // le blob MapProgress legacy (tiroir dev, obstacles) reste sur users
+  // jusqu'à l'issue 10.
+  const [playerState, [userRow]] = await Promise.all([
+    getPlayerState(userId),
+    sql`select map_progress from users where id = ${userId}`,
+  ])
 
-  const zoneName = userRow?.map_zone ?? DEFAULT_ZONE
-  const zone = getZoneByName(zoneName) ?? getAllZones()[0]
-  const initialPos: PlayerPos =
-    userRow?.map_x != null && userRow?.map_z != null
-      ? { world_x: userRow.map_x, world_z: userRow.map_z }
-      : DEFAULT_POS
+  const zone = getZoneByName(playerState.current_zone) ?? getAllZones()[0]
+  const initialPos: PlayerPos = { world_x: playerState.avatar_x, world_z: playerState.avatar_y }
 
   return (
     <MapClient
       zone={zone}
-      npcs={getNpcsForZone(zone)}
-      trainers={getTrainersForZone(zone)}
+      npcs={filterVisibleNpcs(getNpcsForZone(zone), playerState)}
+      trainers={filterVisibleTrainers(getTrainersForZone(zone), playerState)}
       initialPos={initialPos}
       initialProgress={parseProgress(userRow?.map_progress)}
       allZoneNames={getZoneNames()}

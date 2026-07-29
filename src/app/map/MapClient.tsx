@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { saveMapProgress, saveMapPosition } from './actions'
+import { saveMapProgress, saveMapPosition, reachDialogueState } from './actions'
 import {
   canTraverse,
   terrainAt,
@@ -283,12 +283,19 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     setActiveDialogue({ name, pages, pageIndex: 0 })
   }, [])
 
+  // Server action : sélectionne le dialogue_state actif contre le vrai état
+  // joueur et applique ses Effect[] côté serveur (issue 02) — remplace
+  // l'ancien GET /api/dialogue qui servait toujours l'état default.
   const fetchDialogue = useCallback(
     (ref: string) => {
-      fetch(`/api/dialogue?ref=${encodeURIComponent(ref)}`)
-        .then(res => (res.ok && res.headers.get('content-type')?.includes('application/json') ? res.json() : null))
+      reachDialogueState(ref)
         .then(data => {
-          if (data?.pages?.length) openDialogue(data.name, data.pages)
+          // Les entrées à `kind` spécial (companion_choice…) seront routées
+          // par l'issue 03 — ici on ne rend que les pages de texte.
+          const pages = (data?.pages ?? [])
+            .filter(p => typeof p.jp === 'string')
+            .map(p => ({ jp: p.jp as string, en: typeof p.en === 'string' ? p.en : '' }))
+          if (data && pages.length) openDialogue(data.name, pages)
         })
         .catch(err => console.error('Failed to load dialogue', err))
     },

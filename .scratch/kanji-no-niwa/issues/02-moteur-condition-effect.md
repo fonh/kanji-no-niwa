@@ -1,6 +1,6 @@
 # 02 — Moteur Condition/Effect + sélection d'état de dialogue (le cœur)
 
-Status: ready-for-agent
+Status: ready-for-human
 Bloqué par: —
 Bloque: 03, 05, 08
 
@@ -67,3 +67,54 @@ Sémantique de référence : `CONTEXT.md` (Condition, Effect, State Rule, Quest,
 Les events moteur-only de `engine-contract.md` § 1 (zones lointaines) — seule
 l'**API** `clearEvent(event_id)` doit exister. Le gate SRS quotidien (jamais une
 Condition — PRD § Boucle Quotidienne) → issue 06/10.
+
+## Comments
+
+**2026-07-29 (agent, implémentation)** — Fait, en TDD strict (tests écrits avant chaque module).
+
+Livré :
+- `db/migrations/002_progression.sql` — `user_map_state` + `npc_quest_progress` (noms PRD),
+  backfill SQL depuis `users.map_zone/map_x/map_z/map_progress` (visited → `visited_zones`,
+  cleared → `cleared_events` préfixés `obstacle:`, drapeaux CS/objets-clés → items d'inventaire
+  `cs_*`/`squirtbottle`/`radio_card`). Additive ; colonnes `users.*` conservées. **Non appliquée**
+  (DATABASE_URL vide ici) — à passer via `npm run db:migrate -- db/migrations/002_progression.sql`.
+- `src/lib/condition-effect.ts` — lib pure zéro I/O. Types `Condition` (7 + `negate`), `Effect` (7),
+  `StateRule`, `PlayerState` (miroir snake_case de `user_map_state` + `quest_progress` indexé par
+  quest_id + `metrics` hydratés pour `count`). `evalCondition`/`evalConditions` (ET pur),
+  `selectDialogueState` (premier match, `default`), `isUnlocked`, `applyEffect`/`applyEffects`.
+  Idempotence par identité : un Effect no-op retourne le **même objet** (`===`) → la couche
+  serveur sait qu'il n'y a rien à persister. Contexts injectés : `questSteps` (ordre des steps),
+  `now` (horloge, jamais implicite), `itemKinds` (défaut `unique`).
+- `src/lib/content.ts` — loader serveur unique de `content/` (dialogues par `dialogue_ref`,
+  quêtes + `getQuestStepsIndex()`, npcs/trainers/obstacles, leçons par zone), cache module,
+  refs validées (pas de traversée `..`).
+- `src/lib/player-state.ts` — DAL fin : `getPlayerState` (user_map_state + npc_quest_progress +
+  `kanji_studied` dérivé de `cards`), `savePlayerState` (upserts). Ligne absente → état par défaut.
+- Intégration : server action `reachDialogueState(dialogue_ref)` (sélection d'état contre le vrai
+  état joueur + application des Effect[] horodatés serveur) **remplace** `GET /api/dialogue`
+  (supprimé — il servait toujours `default`) ; `clearEvent(event_id)` (moteur-only § 1, sans
+  consommateur) ; `saveMapPosition` écrit `user_map_state` (+ `visited_zones` première entrée) ;
+  `/api/zone` et `map/page.tsx` filtrent PNJ/dresseurs via `unlock_conditions` côté serveur
+  (`src/lib/map-visibility.ts`) — MapClient ne reçoit jamais les entités masquées (2 changements
+  minimaux seulement dans MapClient : `fetchDialogue` → action, filtrage des pages à `kind`).
+
+Preuves de test : `npm run check` tout vert — 108 tests (39 sur la lib pure : 7 types × negate,
+at-or-after, séquences adverses C6 re-talk/re-visite/ordre inattendu ; 11 loader ; walkthrough
+d'intégration `src/lib/mystery-egg-walkthrough.test.ts` qui charge les vrais fichiers de
+new-bark-town + `mystery_egg_errand.json` + `mr_pokemon_route30.json` et vérifie les 3 critères
+d'acceptation : Mom change d'état, Silver apparaît/disparaît, aucun Effect rejoué).
+
+Écarts/décisions :
+- `npc_cleared` lit `defeated_trainers[]` (l'unique magasin de « cleared » ; tous les usages réels
+  du contenu gatent sur des dresseurs).
+- `advance_quest` vers la dernière étape ajoute la quête à `completed_quests[]` (dérivation
+  documentée, idempotente).
+- `time_window` est évaluée avec l'horloge du serveur dans le filtrage de présence (l'écart de
+  fuseau client/serveur est accepté pour le jalon ; « évalué client » restera vrai pour l'UI).
+- `item_kind` : aucun registre d'items n'existe dans `content/` — `ApplyContext.itemKinds` en
+  attend un (défaut `unique`, correct pour tout le jalon 1) ; à brancher quand la table `items`
+  ou son fichier de contenu existera.
+- Blob `MapProgress` legacy (tiroir dev, obstacles client) : reste sur `users.map_progress`
+  jusqu'à l'issue 10 (bascule des obstacles sur le modèle Condition/Effect).
+- `npm run build` échoue AVANT comme APRÈS ces changements sur cette machine (DATABASE_URL vide :
+  `neon()` jette au chargement du module pendant la collecte de pages) — hors périmètre.
