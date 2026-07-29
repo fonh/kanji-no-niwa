@@ -171,6 +171,24 @@ export function getMapObstacles(): MapObstacleEntry[] {
   return (readContentJson('map/obstacles.json') as MapObstacleEntry[] | null) ?? []
 }
 
+// ── Compagnons ────────────────────────────────────────────────────────────────
+
+/** Une entrée du roster content/companions.json (CONTEXT.md § Companion
+ * Choice) : seul un slot `status: "confirmed"` est choisissable — tbd_2/tbd_3
+ * restent affichés comme indisponibles tant que leur identité n'est pas
+ * tranchée (roadmap Étape 5 point 5). */
+export interface CompanionEntry {
+  companion_id: string
+  name: BilingualText
+  sprite_ref: string | null
+  status: string
+}
+
+export function getCompanions(): CompanionEntry[] {
+  const file = readContentJson('companions.json') as { companions?: CompanionEntry[] } | null
+  return file?.companions ?? []
+}
+
 // ── Leçons ────────────────────────────────────────────────────────────────────
 
 /** Les leçons d'une zone (content/lessons/<zone_id>.json), triées par

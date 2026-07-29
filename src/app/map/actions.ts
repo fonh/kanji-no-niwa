@@ -2,8 +2,9 @@
 
 import { requireUserId } from '@/lib/auth'
 import { sql } from '@/lib/db'
-import { applyEffects, selectDialogueState } from '@/lib/condition-effect'
-import { getDialogue, getQuestStepsIndex, type DialoguePageEntry } from '@/lib/content'
+import { applyEffect, applyEffects, selectDialogueState } from '@/lib/condition-effect'
+import { getCompanions, getDialogue, getQuestStepsIndex, type DialoguePageEntry } from '@/lib/content'
+import { attachCompanionOptions } from '@/lib/dialogue-pages'
 import { getPlayerState, savePlayerState } from '@/lib/player-state'
 
 // Blob MapProgress legacy (tiroir dev + obstacles côté client) — reste sur
@@ -67,8 +68,32 @@ export async function reachDialogueState(dialogueRef: string): Promise<ReachedDi
   return {
     name: typeof dialogue.name === 'string' ? dialogue.name : dialogue.name.jp,
     state: stateId,
-    pages: dialogueState.pages,
+    // Enrichissement issue 03 : les entrées companion_choice reçoivent le
+    // roster de content/companions.json (le client ne lit jamais content/).
+    // attachCompanionOptions retourne de nouvelles entrées — le cache module
+    // du loader n'est pas muté.
+    pages: attachCompanionOptions(dialogueState.pages, getCompanions()),
   }
+}
+
+// Persistance du choix du compagnon (kind: companion_choice, labo d'Elm) via
+// Effect.set_companion — écrit UNE fois, jamais re-choisi (PRD § Compagnon,
+// idempotence portée par la lib issue 02). Seul un slot `confirmed` du roster
+// est acceptable : tbd_2/tbd_3 sont affichés indisponibles côté client et
+// re-refusés ici (ne jamais faire confiance au client).
+export async function chooseCompanion(companionId: string): Promise<{ companion_id: string | null }> {
+  const userId = await requireUserId()
+  const state = await getPlayerState(userId)
+  const entry = getCompanions().find(c => c.companion_id === companionId)
+  if (!entry || entry.status !== 'confirmed') return { companion_id: state.companion_id }
+
+  const next = applyEffect(
+    { type: 'set_companion', companion_id: companionId },
+    state,
+    { questSteps: getQuestStepsIndex(), now: new Date() }
+  )
+  if (next !== state) await savePlayerState(userId, next)
+  return { companion_id: next.companion_id }
 }
 
 // Events moteur-only (engine-contract.md § 1) : posés par une mécanique de

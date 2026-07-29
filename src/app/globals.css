@@ -25,6 +25,47 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Deux registres typographiques japonais (PRD § Typographie, tranché au
+   grill) : chrome/overworld (menus, HUD, combat) en DotGothic16, lecture
+   (boîtes de dialogue, écran-livre, textes) en BIZ UDGothic. Les variables
+   sont posées par next/font dans layout.tsx. */
+.font-chrome {
+  font-family: var(--font-dotgothic16), 'DotGothic16', monospace;
+}
+
+.font-reading {
+  font-family: var(--font-biz-udgothic), 'BIZ UDGothic', 'Hiragino Sans', sans-serif;
+}
+
+/* Cadre de dialogue HGSS — 9-slice du textbox extrait (24×24, bords de 8px).
+   `fill` peint le centre (blanc) : le texte du dialogue est sombre dessus. */
+.dialogue-frame {
+  border: 12px solid transparent;
+  border-image: url('/sprites/ui/dialogue/textbox_000.png') 8 fill;
+  border-image-repeat: stretch;
+  image-rendering: pixelated;
+  padding: 4px 8px;
+}
+
+/* Lectures inline (ADR-0002) : ruby toujours dans le DOM (hauteur stable),
+   contenu du <rt> injecté seulement quand Y est actif. Furigana jamais sous
+   10px (issue 03). */
+.jp-inline rt {
+  font-size: max(10px, 0.5em);
+  line-height: 1;
+}
+
+/* Curseur ▼ de fin de frappe de la boîte de dialogue. */
+@keyframes dialogue-cursor-blink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0.15; }
+}
+
+.dialogue-cursor {
+  display: inline-block;
+  animation: dialogue-cursor-blink 0.9s steps(1) infinite;
+}
+
 /* Overworld sprite sheets are always 8 columns of 32px — cycling only
    background-position-x across a row with steps() gives a real walk/idle
    animation. The Y offset (facing-direction row: 0=south, 1=north, 2=west,

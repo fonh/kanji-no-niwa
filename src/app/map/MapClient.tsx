@@ -1,7 +1,9 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { saveMapProgress, saveMapPosition, reachDialogueState } from './actions'
+import { saveMapProgress, saveMapPosition, reachDialogueState, chooseCompanion } from './actions'
+import DialogueBox, { type DialogueBoxHandle } from './DialogueBox'
+import type { DialoguePageEntry } from '@/lib/content'
 import {
   canTraverse,
   terrainAt,
@@ -37,15 +39,12 @@ export interface PlayerPos {
   world_z: number
 }
 
-interface DialoguePage {
-  jp: string
-  en: string
-}
-
+// La boîte elle-même (pagination, X/Y, kinds spéciaux, machine à écrire) vit
+// dans DialogueBox.tsx — MapClient ne garde que l'ouverture/fermeture et le
+// relais des boutons.
 interface ActiveDialogue {
   name: string
-  pages: DialoguePage[]
-  pageIndex: number
+  pages: DialoguePageEntry[]
 }
 
 interface Props {
@@ -78,12 +77,6 @@ function idDelay(id: string): number {
   let hash = 0
   for (let i = 0; i < id.length; i++) hash = (hash * 31 + id.charCodeAt(i)) | 0
   return (Math.abs(hash) % 240) / 100
-}
-
-// Dialogue text carries readings inline as 漢字（かな） — hidden by default
-// (PRD: furigana are never auto-shown; Y reveals them on demand).
-function stripReadings(jp: string): string {
-  return jp.replace(/（[ぁ-ゖァ-ヶー・]+）/g, '')
 }
 
 /** Collision-grid rendering for the 23 zones with no screenshot asset:
@@ -163,8 +156,6 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const [viewSize, setViewSize] = useState({ w: 375, h: 667 })
   const [showZonePicker, setShowZonePicker] = useState(false)
   const [activeDialogue, setActiveDialogue] = useState<ActiveDialogue | null>(null)
-  const [showEn, setShowEn] = useState(false)
-  const [showFurigana, setShowFurigana] = useState(false)
   const [banner, setBanner] = useState<{ label: string; key: number } | null>(null)
 
   // Refs mirroring state that the movement loop reads synchronously —
@@ -276,26 +267,21 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const offsetX = viewSize.w / 2 - avatarPx.x
   const offsetY = viewSize.h / 2 - avatarPx.y
 
-  const openDialogue = useCallback((name: string, pages: DialoguePage[]) => {
+  const openDialogue = useCallback((name: string, pages: DialoguePageEntry[]) => {
     if (pages.length === 0) return
-    setShowEn(false)
-    setShowFurigana(false)
-    setActiveDialogue({ name, pages, pageIndex: 0 })
+    setActiveDialogue({ name, pages })
   }, [])
 
   // Server action : sélectionne le dialogue_state actif contre le vrai état
   // joueur et applique ses Effect[] côté serveur (issue 02) — remplace
   // l'ancien GET /api/dialogue qui servait toujours l'état default.
+  // Les pages partent brutes à DialogueBox, qui route les kinds spéciaux
+  // (companion_choice, instant_response, conversation_turn — issue 03).
   const fetchDialogue = useCallback(
     (ref: string) => {
       reachDialogueState(ref)
         .then(data => {
-          // Les entrées à `kind` spécial (companion_choice…) seront routées
-          // par l'issue 03 — ici on ne rend que les pages de texte.
-          const pages = (data?.pages ?? [])
-            .filter(p => typeof p.jp === 'string')
-            .map(p => ({ jp: p.jp as string, en: typeof p.en === 'string' ? p.en : '' }))
-          if (data && pages.length) openDialogue(data.name, pages)
+          if (data && data.pages.length) openDialogue(data.name, data.pages)
         })
         .catch(err => console.error('Failed to load dialogue', err))
     },
@@ -532,18 +518,15 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   )
 
   // ── A / B / X / Y ─────────────────────────────────────────────────────────
+  // Pendant un dialogue, A/X/Y sont relayés à DialogueBox (ref impérative) ;
+  // B ferme à tout moment (PRD § Mouvement de l'avatar).
 
-  const advanceDialogue = useCallback(() => {
-    setActiveDialogue(current => {
-      if (!current) return current
-      if (current.pageIndex + 1 >= current.pages.length) return null
-      return { ...current, pageIndex: current.pageIndex + 1 }
-    })
-  }, [])
+  const dialogueBoxRef = useRef<DialogueBoxHandle>(null)
+  const closeDialogue = useCallback(() => setActiveDialogue(null), [])
 
   const onA = useCallback(() => {
     if (dialogueRef.current) {
-      advanceDialogue()
+      dialogueBoxRef.current?.pressA()
       return
     }
     if (floorPickerRef.current) return
@@ -588,19 +571,19 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     // ROM-extracted background characters have no authored dialogue yet —
     // a wordless beat instead of dead air (no invented content).
     openDialogue('', [{ jp: '・・・・・・', en: '' }])
-  }, [advanceDialogue, fetchDialogue, enterWarp, openDialogue, isCleared, updateProgress])
+  }, [fetchDialogue, enterWarp, openDialogue, isCleared, updateProgress])
 
   const onB = useCallback(() => {
-    if (dialogueRef.current) setActiveDialogue(null)
+    if (dialogueRef.current) closeDialogue()
     else if (floorPickerRef.current) setFloorPicker(false)
-  }, [])
+  }, [closeDialogue])
 
   const onX = useCallback(() => {
-    if (dialogueRef.current) setShowEn(v => !v)
+    if (dialogueRef.current) dialogueBoxRef.current?.pressX()
   }, [])
 
   const onY = useCallback(() => {
-    if (dialogueRef.current) setShowFurigana(v => !v)
+    if (dialogueRef.current) dialogueBoxRef.current?.pressY()
   }, [])
 
   // ── Keyboard ──────────────────────────────────────────────────────────────
@@ -737,11 +720,10 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     </button>
   )
 
-  const currentPage = activeDialogue?.pages[activeDialogue.pageIndex]
   const beatCount = allZoneNames.find(z => z.name === zone.name)?.beat_count ?? 0
 
   return (
-    <div className="fixed inset-0 overflow-hidden bg-black select-none">
+    <div className="fixed inset-0 overflow-hidden bg-black select-none font-chrome">
       {/* World — translates to keep player centered */}
       <div
         style={{
@@ -998,28 +980,17 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         </div>
       )}
 
-      {/* Dialogue overlay */}
-      {activeDialogue && currentPage && (
-        <div
-          className="fixed inset-0 z-[60] flex items-end justify-center bg-black/20"
-          onClick={e => {
-            e.stopPropagation()
-            advanceDialogue()
+      {/* Dialogue overlay — pagination, X/Y, kinds spéciaux (issue 03) */}
+      {activeDialogue && (
+        <DialogueBox
+          ref={dialogueBoxRef}
+          name={activeDialogue.name}
+          pages={activeDialogue.pages}
+          onClose={closeDialogue}
+          onChooseCompanion={async id => {
+            await chooseCompanion(id)
           }}
-        >
-          <div className="w-full max-w-md m-4 mb-24 bg-gray-900 border-2 border-white rounded-lg p-5">
-            {activeDialogue.name && (
-              <p className="text-xs text-amber-400 uppercase tracking-widest mb-2">{activeDialogue.name}</p>
-            )}
-            <p className="text-white text-lg leading-relaxed mb-1">
-              {showFurigana ? currentPage.jp : stripReadings(currentPage.jp)}
-            </p>
-            {showEn && currentPage.en && <p className="text-white/50 text-sm">{currentPage.en}</p>}
-            <p className="text-white/30 text-xs mt-3 text-right">
-              {activeDialogue.pageIndex + 1}/{activeDialogue.pages.length} ▼
-            </p>
-          </div>
-        </div>
+        />
       )}
 
       {/* DS-style controls — D-pad bottom-left, A/B bottom-right, X/Y only
@@ -1040,29 +1011,9 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         </div>
       </div>
 
+      {/* A/B toujours visibles ; X/Y sont rendus par DialogueBox, uniquement
+          pendant un dialogue (PRD § Interface) */}
       <div className="fixed bottom-20 right-3 z-[70] flex flex-col items-end gap-2" onClick={e => e.stopPropagation()}>
-        {activeDialogue && (
-          <div className="flex gap-2 mb-1">
-            <button
-              onClick={onX}
-              className={`w-9 h-9 rounded-full border text-xs font-bold ${
-                showEn ? 'bg-amber-400/90 border-amber-600 text-black' : 'bg-white/10 border-white/25 text-white/70'
-              }`}
-              title="EN"
-            >
-              X
-            </button>
-            <button
-              onClick={onY}
-              className={`w-9 h-9 rounded-full border text-xs font-bold ${
-                showFurigana ? 'bg-amber-400/90 border-amber-600 text-black' : 'bg-white/10 border-white/25 text-white/70'
-              }`}
-              title="かな"
-            >
-              Y
-            </button>
-          </div>
-        )}
         <div className="flex items-center gap-2">
           <button
             onClick={onB}
