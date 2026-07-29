@@ -1,0 +1,12 @@
+{
+  "_comment": "Chaînes système, japonais seul, jamais de bouton X (PRD § Chaînes système). Domicile provisoire : le PRD vise content/ui-strings.json quand le pipeline contenu l'ingérera — migrer ce fichier tel quel (issue 04).",
+  "title_press_start": { "jp": "スタートを　おしてね" },
+  "sign_in_google": { "jp": "Googleで　ログイン" },
+  "avatar_prompt": { "jp": "おとこのこ？　おんなのこ？" },
+  "avatar_boy": { "jp": "おとこのこ" },
+  "avatar_girl": { "jp": "おんなのこ" },
+  "name_prompt": { "jp": "きみの　なまえは？" },
+  "confirm": { "jp": "けってい" },
+  "back": { "jp": "もどる" },
+  "save_failed": { "jp": "セーブできませんでした。　もういちど　ためしてね" }
+}

@@ -7,6 +7,7 @@ import { getTrainersForZone } from '@/lib/trainers'
 import { parseProgress } from '@/lib/obstacles'
 import { getPlayerState } from '@/lib/player-state'
 import { filterVisibleNpcs, filterVisibleTrainers } from '@/lib/map-visibility'
+import { avatarOverworldSprite, isAvatar, isOnboarded } from '@/lib/onboarding'
 import MapClient, { type PlayerPos } from './MapClient'
 
 export default async function MapPage() {
@@ -19,8 +20,12 @@ export default async function MapPage() {
   // jusqu'à l'issue 10.
   const [playerState, [userRow]] = await Promise.all([
     getPlayerState(userId),
-    sql`select map_progress from users where id = ${userId}`,
+    sql`select map_progress, trainer_name, avatar from users where id = ${userId}`,
   ])
+
+  // Nouveau compte (ou compte d'avant l'issue 04, sans avatar) : la carte
+  // n'existe pas encore pour lui — flux d'ouverture d'abord.
+  if (!isOnboarded(userRow)) redirect('/onboarding')
 
   const zone = getZoneByName(playerState.current_zone) ?? getAllZones()[0]
   const initialPos: PlayerPos = { world_x: playerState.avatar_x, world_z: playerState.avatar_y }
@@ -33,6 +38,7 @@ export default async function MapPage() {
       initialPos={initialPos}
       initialProgress={parseProgress(userRow?.map_progress)}
       allZoneNames={getZoneNames()}
+      playerSpriteUrl={isAvatar(userRow.avatar) ? avatarOverworldSprite(userRow.avatar) : undefined}
     />
   )
 }

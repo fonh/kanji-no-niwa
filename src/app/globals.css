@@ -104,3 +104,13 @@ body {
 .zone-banner {
   animation: zone-banner 1.8s ease both;
 }
+
+/* « Presse START » de l'écran-titre (issue 04) — clignotement DS. */
+@keyframes title-blink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0; }
+}
+
+.title-blink {
+  animation: title-blink 1.2s steps(1) infinite;
+}

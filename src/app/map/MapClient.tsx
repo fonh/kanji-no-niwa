@@ -54,6 +54,9 @@ interface Props {
   initialPos: PlayerPos
   initialProgress: MapProgress
   allZoneNames: ZoneListEntry[]
+  // Planche overworld de l'avatar choisi à l'onboarding (issue 04) — même
+  // géométrie 8×4 que la planche Ethan par défaut.
+  playerSpriteUrl?: string
 }
 
 // One tile per input (PRD "Mouvement de l'avatar"); holding a direction
@@ -136,7 +139,7 @@ function CollisionCanvas({ zone }: { zone: Zone }) {
   )
 }
 
-export default function MapClient({ zone: initialZone, npcs: initialNpcs, trainers: initialTrainers, initialPos, initialProgress, allZoneNames }: Props) {
+export default function MapClient({ zone: initialZone, npcs: initialNpcs, trainers: initialTrainers, initialPos, initialProgress, allZoneNames, playerSpriteUrl = PLAYER_SPRITE_URL }: Props) {
   const [zone, setZone] = useState(initialZone)
   const [npcs, setNpcs] = useState(initialNpcs)
   const [trainers, setTrainers] = useState(initialTrainers)
@@ -928,7 +931,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                 {
                   width: SPRITE_FRAME_SIZE,
                   height: SPRITE_FRAME_SIZE,
-                  backgroundImage: `url(${PLAYER_SPRITE_URL})`,
+                  backgroundImage: `url(${playerSpriteUrl})`,
                   backgroundPositionX: 0,
                   backgroundPositionY: -SPRITE_ROW[facing] * SPRITE_FRAME_SIZE,
                   imageRendering: 'pixelated',
