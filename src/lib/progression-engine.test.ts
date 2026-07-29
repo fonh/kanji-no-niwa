@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import {
   getTrainerRank, getLessonQueue, getAvailableKanji,
   selectQuestionMode, getDispositionChunks, BATTLE_WEIGHTS,
-  type Lesson, type KanjiInfo, type QuestionMode,
+  type Lesson, type QuestionMode,
 } from './progression-engine'
 
 describe('getTrainerRank', () => {
