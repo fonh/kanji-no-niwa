@@ -19,7 +19,8 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { rateCard, checkDailyStatus, type SrsRating } from './actions'
+import { rateCard, checkDailyStatus, continueSession, type SrsRating } from './actions'
+import type { DailyStatusResult } from '@/lib/daily-srs'
 import uiStrings from '@/data/ui-strings.json'
 
 export interface SessionKanjiData {
@@ -69,22 +70,30 @@ function formatKun(kun: string): string {
 
 export default function StudyClient({ cards, reviewedToday }: Props) {
   const router = useRouter()
+  // M3 (revue jalon 1) : la file vit en state — elle peut être RECHARGÉE en
+  // cours de session (continueSession) quand une carte もういちど redevient
+  // due le jour même. La fin de session n'est plus « file locale épuisée »
+  // mais « le statut serveur dit sessionDone » (retourné par chaque rateCard).
+  const [queue, setQueue] = useState(cards)
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [ratedCount, setRatedCount] = useState(0)
   const [saving, setSaving] = useState(false)
+  const [serverStatus, setServerStatus] = useState<DailyStatusResult | null>(null)
   // Mots notés pendant CETTE session : leur 2e facette ne re-préface pas
   const [ratedItems, setRatedItems] = useState<Set<string>>(new Set())
   const [prefaceDismissed, setPrefaceDismissed] = useState(false)
 
-  const current = index < cards.length ? cards[index] : null
+  const current = index < queue.length ? queue[index] : null
 
   // File vide au chargement : le ✓ « aucune carte due » se pose côté
   // serveur même en arrivant ici directement (l'appel du mentor le fait
   // déjà depuis la carte — filet idempotent).
   useEffect(() => {
     if (cards.length === 0) {
-      checkDailyStatus(new Date().getTimezoneOffset()).catch(() => {})
+      checkDailyStatus(new Date().getTimezoneOffset())
+        .then(setServerStatus)
+        .catch(() => {})
     }
   }, [cards.length])
 
@@ -93,7 +102,8 @@ export default function StudyClient({ cards, reviewedToday }: Props) {
       if (!current || saving) return
       setSaving(true)
       try {
-        await rateCard(current.id, rating, new Date().getTimezoneOffset())
+        const status = await rateCard(current.id, rating, new Date().getTimezoneOffset())
+        setServerStatus(status)
         setRatedItems(prev => new Set(prev).add(current.item_id))
         setRatedCount(c => c + 1)
         setRevealed(false)
@@ -108,8 +118,51 @@ export default function StudyClient({ cards, reviewedToday }: Props) {
     [current, saving]
   )
 
-  // ── Fin de session (file épuisée / aucune carte due) ──────────────────────
+  // M3 : recharge la file du jour (cartes redevenues dues — Encore) et repart
+  // du début de la nouvelle file. Le statut retourné fait foi : s'il dit
+  // sessionDone (✓ posé entre-temps), l'écran de fin s'affiche directement.
+  const handleContinue = useCallback(async () => {
+    if (saving) return
+    setSaving(true)
+    try {
+      const { cards: fresh, status } = await continueSession(new Date().getTimezoneOffset())
+      setServerStatus(status)
+      setQueue(fresh)
+      setIndex(0)
+      setRevealed(false)
+      setPrefaceDismissed(false)
+    } catch (err) {
+      console.error('Failed to reload session queue', err)
+    } finally {
+      setSaving(false)
+    }
+  }, [saving])
+
+  // ── Fin de file locale ─────────────────────────────────────────────────────
   if (!current) {
+    // Le serveur dit « pas fini » (cartes redevenues dues pendant la session,
+    // ex. もういちど) : proposer de continuer — jamais un faux « おわり ».
+    if (serverStatus !== null && !serverStatus.sessionDone) {
+      return (
+        <main className="center-chrome min-h-screen flex flex-col items-center justify-center px-4 font-chrome">
+          <div className="center-panel w-full max-w-md p-6 text-center">
+            <div className="center-accent text-5xl mb-4">！</div>
+            <p className="font-reading text-lg mb-6">{uiStrings.srs_more_due.jp}</p>
+            <button
+              onClick={handleContinue}
+              disabled={saving}
+              className="center-accent-bg px-6 py-3 rounded-lg text-white font-semibold w-full disabled:opacity-60"
+            >
+              {uiStrings.srs_continue.jp}
+            </button>
+          </div>
+        </main>
+      )
+    }
+
+    // ✓ : file du jour vide (ou plafond) — confirmé par le statut serveur
+    // quand il existe ; l'arrivée directe sur une file vide passe par le
+    // checkDailyStatus ci-dessus (filet idempotent, même règle).
     const anyReviewed = reviewedToday + ratedCount > 0
     return (
       <main className="center-chrome min-h-screen flex flex-col items-center justify-center px-4 font-chrome">
@@ -170,11 +223,11 @@ export default function StudyClient({ cards, reviewedToday }: Props) {
         <div className="flex-1 mx-3 h-2 rounded bg-white/30 overflow-hidden">
           <div
             className="h-2 bg-white/90 transition-all duration-300"
-            style={{ width: `${Math.round((index / cards.length) * 100)}%` }}
+            style={{ width: `${Math.round((index / queue.length) * 100)}%` }}
           />
         </div>
         <span className="text-xs font-mono">
-          {index}/{cards.length}
+          {index}/{queue.length}
         </span>
       </div>
 

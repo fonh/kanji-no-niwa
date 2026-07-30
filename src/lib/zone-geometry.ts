@@ -191,6 +191,38 @@ export function warpAt(zone: Zone, worldX: number, worldZ: number): ZoneWarp | u
 // every out-of-bounds lookup if not excluded.
 const NOT_A_REAL_ZONE = 'MAP_EVERYWHERE'
 
+/** Is a world point inside a zone's bounding box? */
+export function isWithinZoneBounds(zone: ZoneBounds, worldX: number, worldZ: number): boolean {
+  return (
+    worldX >= zone.world_origin_x &&
+    worldX < zone.world_origin_x + zone.tile_width &&
+    worldZ >= zone.world_origin_y &&
+    worldZ < zone.world_origin_y + zone.tile_height
+  )
+}
+
+/** C1 (revue jalon 1) : une écriture de position n'accepte que les zones
+ * atteignables en UN mouvement depuis la zone courante — la zone elle-même,
+ * une destination de warp (portes) ou d'ascenseur de la zone courante, ou une
+ * zone extérieure CONTIGUË (le continuum outdoor : marcher hors du bord,
+ * boîtes englobantes à ±1 tuile — le saut de corniche reste borné à t1 hors
+ * zone). La méta-zone MAP_EVERYWHERE n'est jamais une destination. */
+export function canReachZone(current: Zone, target: Zone): boolean {
+  if (current.name === target.name) return true
+  if (target.name === NOT_A_REAL_ZONE) return false
+  if (current.warps.some(w => w.header === target.name)) return true
+  if (current.elevator_floors.some(f => f.name === target.name)) return true
+  if (current.is_outdoor && target.is_outdoor && current.name !== NOT_A_REAL_ZONE) {
+    return (
+      current.world_origin_x < target.world_origin_x + target.tile_width + 1 &&
+      current.world_origin_x + current.tile_width + 1 > target.world_origin_x &&
+      current.world_origin_y < target.world_origin_y + target.tile_height + 1 &&
+      current.world_origin_y + current.tile_height + 1 > target.world_origin_y
+    )
+  }
+  return false
+}
+
 /** Finds which outdoor zone (if any) contains a world point outside the
  * current zone — used to detect "walked off this route's edge into the
  * next one", since outdoor zones share one continuous coordinate space.

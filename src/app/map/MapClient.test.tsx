@@ -163,7 +163,37 @@ describe('MapClient — fidélité des interactions (issue 12)', () => {
     )
     expect(buttonA).toBeDefined()
     click(buttonA!)
-    expect(interactWithNpcMock).toHaveBeenCalledWith('npc_test', 'npcs/test-town/npc_test')
+    // C1 : le client n'envoie plus que l'id — le dialogue_ref vient du registre serveur
+    expect(interactWithNpcMock).toHaveBeenCalledWith('npc_test')
+  })
+
+  // M4 (revue jalon 1) : le tiroir dev (téléport toutes zones + octroi des
+  // CS-Kanji) n'existe pas dans un build de production — ni le panneau, ni
+  // le toggle du HUD.
+  it('M4 — en production, taper le nom de zone n’ouvre JAMAIS le tiroir dev', () => {
+    vi.stubEnv('NODE_ENV', 'production')
+    try {
+      render()
+      const hudToggle = Array.from(container.querySelectorAll('button')).find(b =>
+        b.textContent?.includes('TEST TOWN')
+      )
+      expect(hudToggle).toBeDefined()
+      click(hudToggle!)
+      expect(container.textContent).not.toContain('砕')
+      expect(container.textContent).not.toContain('dev')
+    } finally {
+      vi.unstubAllEnvs()
+    }
+  })
+
+  it('M4 — hors production, le tiroir dev reste disponible (chips CS + badge dev)', () => {
+    render()
+    const hudToggle = Array.from(container.querySelectorAll('button')).find(b =>
+      b.textContent?.includes('TEST TOWN')
+    )
+    click(hudToggle!)
+    expect(container.textContent).toContain('砕')
+    expect(container.textContent).toContain('dev')
   })
 
   it('le D-pad d’UI reste tactile : un appui fait avancer d’une case', () => {

@@ -192,7 +192,12 @@ export default function BattleScreen({
             frame={64}
             className="translate-y-2"
           />
-          <span className="text-amber-400 text-5xl font-bold italic tracking-widest">VS</span>
+          {/* 「たい」 (対) plutôt que « VS » : l'écran d'engagement HGSS affiche
+              VS, mais le latin visible joueur est hors exceptions PRD (revue
+              jalon 1, m1) — kana, pas le kanji 対 (N3, jamais pré-enseigné). */}
+          <span className="font-reading text-amber-400 text-5xl font-bold italic tracking-widest">
+            たい
+          </span>
           <div className="flex flex-col items-center gap-2">
             <TrainerSprite src={battle.battle_sprite} />
             <span className="font-reading text-white/90 text-sm">{battle.trainer_name_jp}</span>

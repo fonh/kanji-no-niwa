@@ -14,8 +14,28 @@ import { fsrs, generatorParameters, type Card, type Grade } from 'ts-fsrs'
 import { requireUserId } from '@/lib/auth'
 import { sql } from '@/lib/db'
 import { ensureDailyStatus, type DailyStatusResult } from '@/lib/daily-srs'
+import { buildSessionQueue } from './session'
+import type { SessionCard } from './StudyClient'
 
 export type SrsRating = 1 | 2 | 3 | 4 // Encore | Difficile | Bien | Facile
+
+export interface ContinueSessionResult {
+  cards: SessionCard[]
+  status: DailyStatusResult
+}
+
+/** M3 (revue jalon 1) : recharge de la file EN COURS de session. Une carte
+ * notée もういちど (learning steps courts ts-fsrs) redevient due le jour
+ * même : elle fait partie de la file du jour (PRD — la session est finie
+ * quand la file du jour est vide), le client la re-demande ici quand sa file
+ * locale est épuisée mais que le statut serveur dit « pas fini ». Le statut
+ * est re-vérifié (et le ✓ posé s'il vient d'être atteint — filet idempotent). */
+export async function continueSession(tzOffsetMinutes: number): Promise<ContinueSessionResult> {
+  const userId = await requireUserId()
+  const { cards } = await buildSessionQueue(userId, tzOffsetMinutes)
+  const status = await ensureDailyStatus(userId, tzOffsetMinutes, new Date())
+  return { cards, status }
+}
 
 /** Statut du jour, en re-vérifiant côté serveur et en posant le ✓ s'il
  * vient d'être atteint (dont le chemin « aucune carte due » → ✓ immédiat).

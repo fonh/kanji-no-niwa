@@ -174,6 +174,10 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   // la passe assets.
   const [followerPos, setFollowerPos] = useState<PlayerPos | null>(null)
   const [viewSize, setViewSize] = useState({ w: 375, h: 667 })
+  // M4 (revue jalon 1) : le tiroir dev (téléport toutes zones + octroi des
+  // CS-Kanji) est un outil de développement — jamais accessible dans un
+  // build de production (rendu ET toggle gatés).
+  const devDrawerEnabled = process.env.NODE_ENV !== 'production'
   const [showZonePicker, setShowZonePicker] = useState(false)
   const [activeDialogue, setActiveDialogue] = useState<ActiveDialogue | null>(null)
   const [banner, setBanner] = useState<{ label: string; key: number } | null>(null)
@@ -328,7 +332,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const router = useRouter()
   const startNpcInteraction = useCallback(
     (npc: ZoneNpc) => {
-      interactWithNpc(npc.npc_id, npc.dialogue_ref)
+      interactWithNpc(npc.npc_id)
         .then(result => {
           if (!result) return
           if (result.kind === 'lesson') {
@@ -562,7 +566,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           interceptTimerRef.current = setTimeout(advance, STEP_MS)
           return
         }
-        interactWithNpc(blocker.npc_id, blocker.dialogue_ref)
+        interactWithNpc(blocker.npc_id)
           .then(result => {
             if (result?.kind === 'lesson') {
               // PNJ-leçon à cône dont la leçon est DISPONIBLE : pas un
@@ -1378,8 +1382,11 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       <div className="fixed bottom-0 left-0 right-0 z-50" onClick={e => e.stopPropagation()}>
         {/* Zone picker drawer (dev navigation) with CS-Kanji dev toggles —
             the real acquisition flow (gym rewards) isn't built yet, so the
-            three chips grant/revoke 力/水/飛 directly for testing. */}
-        {showZonePicker && (
+            chips grant/revoke abilities directly for testing.
+            M4 (revue jalon 1) : dev uniquement — jamais rendu en production
+            (et le serveur refuse de toute façon le téléport / les drapeaux
+            CS : saveMapPosition C1, saveMapProgress M4). */}
+        {devDrawerEnabled && showZonePicker && (
           <div className="bg-black/90 border-t border-white/20 max-h-60 overflow-y-auto">
             <div className="flex flex-wrap items-center gap-1.5 px-4 py-2 border-b border-white/10 sticky top-0 bg-black/90">
               {(
@@ -1428,7 +1435,10 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
 
         {/* Main HUD bar */}
         <div className="bg-black/80 backdrop-blur-sm border-t border-white/10 px-4 py-3 flex items-center gap-3">
-          <button onClick={() => setShowZonePicker(v => !v)} className="flex-1 text-left">
+          <button
+            onClick={() => devDrawerEnabled && setShowZonePicker(v => !v)}
+            className="flex-1 text-left"
+          >
             <div className="text-white font-semibold text-sm leading-tight">{zoneLabel(zone.name)}</div>
             <div className="text-white/40 text-xs mt-0.5">
               💬 {npcs.length} · 🚪 {zone.warps.filter(w => typeof w.header === 'string').length}

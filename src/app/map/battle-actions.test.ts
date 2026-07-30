@@ -37,10 +37,29 @@ vi.mock('@/lib/player-state', () => ({
 
 import { engageTrainer, winBattle } from './battle-actions'
 
+// C1 (revue jalon 1) : les écritures re-vérifient la présence du dresseur —
+// zone courante (current_zone) + visibilité (unlock_conditions). Les états
+// légitimes des tests posent donc la zone du dresseur et, pour Silver, son
+// étape de quête (il n'apparaît qu'une fois l'œuf reçu).
 function stateWithLessons(lessons: string[], defeated: string[] = []): PlayerState {
   const state = defaultPlayerState()
   state.completed_lessons = lessons
   state.defeated_trainers = defeated
+  return state
+}
+
+function stateAtSilver(lessons: string[], defeated: string[] = []): PlayerState {
+  const state = stateWithLessons(lessons, defeated)
+  state.current_zone = 'MAP_CHERRYGROVE'
+  state.quest_progress = {
+    mystery_egg_errand: { current_step: 'egg_received', step_entered_at: '2026-07-30T00:00:00.000Z' },
+  }
+  return state
+}
+
+function stateAtJoey(lessons: string[], defeated: string[] = []): PlayerState {
+  const state = stateWithLessons(lessons, defeated)
+  state.current_zone = 'MAP_ROUTE_30'
   return state
 }
 
@@ -54,7 +73,7 @@ beforeEach(() => {
 
 describe('engageTrainer', () => {
   it('Silver #1 non battu : combat de 12 questions / 2 vies, accroche jp, nom jp', async () => {
-    stateRef.current = stateWithLessons(['new-bark-town#1', 'new-bark-town#2'])
+    stateRef.current = stateAtSilver(['new-bark-town#1', 'new-bark-town#2'])
     grammarRows.current = [{ grammar_id: 'N5-001' }]
 
     const result = await engageTrainer('silver_apparition1_cherrygrove')
@@ -71,7 +90,7 @@ describe('engageTrainer', () => {
   })
 
   it('incrémente times_drawn/last_drawn_at pour chaque point de grammaire tiré', async () => {
-    stateRef.current = stateWithLessons(['new-bark-town#1', 'new-bark-town#2'])
+    stateRef.current = stateAtSilver(['new-bark-town#1', 'new-bark-town#2'])
     grammarRows.current = [{ grammar_id: 'N5-001' }, { grammar_id: 'N5-002' }]
 
     const result = await engageTrainer('silver_apparition1_cherrygrove')
@@ -86,14 +105,14 @@ describe('engageTrainer', () => {
   })
 
   it('aucune grammaire rencontrée → aucune question grammaire (garde d’exclusion)', async () => {
-    stateRef.current = stateWithLessons(['new-bark-town#1', 'new-bark-town#2'])
+    stateRef.current = stateAtJoey(['new-bark-town#1', 'new-bark-town#2'])
     const result = await engageTrainer('youngster_joey_route30')
     if (result?.kind !== 'battle') throw new Error('expected battle')
     expect(result.questions.some(q => q.mode === 'grammaire')).toBe(false)
   })
 
   it('dresseur déjà battu : dialogue post_battle, jamais de re-combat auto', async () => {
-    stateRef.current = stateWithLessons(
+    stateRef.current = stateAtSilver(
       ['new-bark-town#1', 'new-bark-town#2'],
       ['silver_apparition1_cherrygrove']
     )
@@ -106,7 +125,7 @@ describe('engageTrainer', () => {
   })
 
   it('dresseur inconnu → null', async () => {
-    stateRef.current = stateWithLessons(['new-bark-town#1'])
+    stateRef.current = stateAtJoey(['new-bark-town#1'])
     expect(await engageTrainer('nobody_nowhere')).toBeNull()
   })
 })
@@ -115,7 +134,7 @@ describe('winBattle', () => {
   const stats = { lives_lost: 1, modes_used: ['sens', 'lecture'], accuracy: 11 / 12 }
 
   it('première victoire : defeated_trainers mis à jour + battle_results écrit + post_battle retourné', async () => {
-    stateRef.current = stateWithLessons(['new-bark-town#1', 'new-bark-town#2'])
+    stateRef.current = stateAtSilver(['new-bark-town#1', 'new-bark-town#2'])
 
     const result = await winBattle('silver_apparition1_cherrygrove', stats)
     expect(result).not.toBeNull()
@@ -133,7 +152,7 @@ describe('winBattle', () => {
   })
 
   it('re-victoire (re-combat) : idempotente — aucune réécriture', async () => {
-    stateRef.current = stateWithLessons(
+    stateRef.current = stateAtSilver(
       ['new-bark-town#1', 'new-bark-town#2'],
       ['silver_apparition1_cherrygrove']
     )
@@ -144,10 +163,47 @@ describe('winBattle', () => {
   })
 
   it('borne les stats client (accuracy > 1, lives_lost négatif)', async () => {
-    stateRef.current = stateWithLessons(['new-bark-town#1'])
+    stateRef.current = stateAtJoey(['new-bark-town#1'])
     await winBattle('youngster_joey_route30', { lives_lost: -3, modes_used: [], accuracy: 42 })
     const [insert] = sqlCalls.filter(c => c.text.includes('insert into battle_results'))
     expect(insert.values).toContain(0) // lives_lost clampé
     expect(insert.values).toContain(1) // accuracy clampée
+  })
+})
+
+describe('C1 — un combat ne s’engage/ne se « gagne » pas depuis une autre zone', () => {
+  const stats = { lives_lost: 0, modes_used: [], accuracy: 1 }
+
+  it('engageTrainer(Silver) depuis Bourg Geon → null, aucun tirage grammaire', async () => {
+    const state = stateAtSilver(['new-bark-town#1', 'new-bark-town#2'])
+    state.current_zone = 'MAP_NEW_BARK' // état de quête valide, mais pas la zone
+    stateRef.current = state
+    grammarRows.current = [{ grammar_id: 'N5-001' }]
+    expect(await engageTrainer('silver_apparition1_cherrygrove')).toBeNull()
+    expect(sqlCalls.some(c => c.text.includes('update grammar_encounters'))).toBe(false)
+  })
+
+  it('engageTrainer(Silver) à Cherrygrove SANS egg_received (invisible) → null', async () => {
+    const state = stateWithLessons(['new-bark-town#1', 'new-bark-town#2'])
+    state.current_zone = 'MAP_CHERRYGROVE' // bonne zone, mais unlock_conditions non remplies
+    stateRef.current = state
+    expect(await engageTrainer('silver_apparition1_cherrygrove')).toBeNull()
+  })
+
+  it('LE contournement du rapport : winBattle(Silver) depuis Bourg Geon → null, AUCUNE écriture', async () => {
+    const state = stateAtSilver(['new-bark-town#1', 'new-bark-town#2'])
+    state.current_zone = 'MAP_NEW_BARK'
+    stateRef.current = state
+    expect(await winBattle('silver_apparition1_cherrygrove', stats)).toBeNull()
+    expect(savedStates).toHaveLength(0)
+    expect(sqlCalls.filter(c => c.text.includes('insert into battle_results'))).toHaveLength(0)
+  })
+
+  it('winBattle(Silver) sans son étape de quête (invisible sur la tuile) → null, aucune écriture', async () => {
+    const state = stateWithLessons(['new-bark-town#1', 'new-bark-town#2'])
+    state.current_zone = 'MAP_CHERRYGROVE'
+    stateRef.current = state
+    expect(await winBattle('silver_apparition1_cherrygrove', stats)).toBeNull()
+    expect(savedStates).toHaveLength(0)
   })
 })

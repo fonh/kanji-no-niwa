@@ -37,6 +37,8 @@
   "srs_rate_easy": { "jp": "かんたん" },
   "srs_session_done": { "jp": "きょうの　ふくしゅう　おわり！" },
   "srs_no_cards": { "jp": "きょうは　ふくしゅうする　カードが　ないよ" },
+  "srs_more_due": { "jp": "まだ　ふくしゅうする　カードが　あるよ！" },
+  "srs_continue": { "jp": "ふくしゅうを　つづける" },
   "srs_word_preface": { "jp": "あたらしい　ことば！" },
   "srs_word_preface_continue": { "jp": "つづける" },
   "srs_gate_blocked": { "jp": "さきに　きょうの　ふくしゅうを　すませよう！" },

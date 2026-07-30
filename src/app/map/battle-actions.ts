@@ -30,6 +30,7 @@ import {
   type DialoguePageEntry,
   type GrammarOverlayPoint,
 } from '@/lib/content'
+import { accessibleTrainer } from '@/lib/map-visibility'
 import { getPlayerState, savePlayerState } from '@/lib/player-state'
 import {
   battleTypeForTrainer,
@@ -102,6 +103,10 @@ export async function engageTrainer(trainerId: string): Promise<TrainerEngagemen
   if (!trainer || trainer.role !== 'battle') return null
 
   const state = await getPlayerState(userId)
+  // C1 (revue jalon 1) : le dresseur doit être servi au joueur dans sa zone
+  // courante et visible (unlock_conditions) — sinon « il n'existe pas sur la
+  // tuile », aucun script assemblé, aucun tirage grammaire compté.
+  if (!accessibleTrainer(state, trainerId)) return null
   const nameJp = dialogueNameJp(trainer.dialogue_ref)
 
   // Battu → dialogue post_battle (les Effects éventuels ont été appliqués à
@@ -203,6 +208,12 @@ export async function winBattle(
   if (!trainer || trainer.role !== 'battle') return null
 
   const state = await getPlayerState(userId)
+  // C1 (revue jalon 1) : un combat ne se « gagne » pas depuis une autre zone
+  // ni contre un dresseur masqué — mêmes vérifications qu'engageTrainer
+  // (pendant un combat le mouvement est bloqué : la zone n'a pas pu changer).
+  // Pas de jeton d'engagement serveur (l'état du combat reste 100 % client,
+  // « fermer l'app = fuite ») : la garantie est présence + zone, documenté.
+  if (!accessibleTrainer(state, trainerId)) return null
   const alreadyDefeated = state.defeated_trainers.includes(trainerId)
 
   if (!alreadyDefeated) {

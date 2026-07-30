@@ -16,17 +16,51 @@ import {
 import { attachCompanionOptions } from '@/lib/dialogue-pages'
 import { getDailySRSStatusForUser } from '@/lib/daily-srs'
 import { resolveLessonInteraction } from '@/lib/lessons'
+import {
+  accessibleNpc,
+  findAccessibleDialogueCarrier,
+} from '@/lib/map-visibility'
 import { getPlayerState, savePlayerState } from '@/lib/player-state'
 import { gateBlocksEntry } from '@/lib/zone-gate'
+import { canReachZone, isWithinZoneBounds } from '@/lib/zone-geometry'
 import { getZoneByName } from '@/lib/zones'
 import uiStrings from '@/data/ui-strings.json'
 
 // Blob MapProgress legacy (tiroir dev + obstacles côté client) — reste sur
 // users.map_progress tant que l'issue 10 (traversée + gates) n'a pas basculé
 // les obstacles sur le modèle Condition/Effect.
+//
+// M4 (revue jalon 1) : les drapeaux de capacités (CS-Kanji, objets-clés) ne
+// sont posés que par le tiroir dev — retiré du build de production côté
+// MapClient. Filet serveur symétrique : en production, ces drapeaux gardent
+// leur valeur STOCKÉE (le client ne peut pas s'octroyer 水/渦/滝 par appel
+// direct) ; seuls visited/cleared restent déclarés client (dette obstacles
+// notée à l'issue 10, à migrer sur Condition/Effect).
+const CLIENT_LOCKED_PROGRESS_FLAGS = [
+  'tobu',
+  'mizu',
+  'chikara',
+  'kiru',
+  'kudaku',
+  'taki',
+  'uzu',
+  'arrosoir',
+  'radio',
+] as const
+
 export async function saveMapProgress(progress: unknown) {
   const userId = await requireUserId()
-  await sql`update users set map_progress = ${JSON.stringify(progress)} where id = ${userId}`
+  let blob = progress
+  if (process.env.NODE_ENV === 'production' && progress && typeof progress === 'object') {
+    const [row] = await sql`select map_progress from users where id = ${userId}`
+    const stored = (row?.map_progress ?? {}) as Record<string, unknown>
+    const sanitized: Record<string, unknown> = { ...(progress as Record<string, unknown>) }
+    for (const flag of CLIENT_LOCKED_PROGRESS_FLAGS) {
+      sanitized[flag] = stored[flag] ?? false
+    }
+    blob = sanitized
+  }
+  await sql`update users set map_progress = ${JSON.stringify(blob)} where id = ${userId}`
 }
 
 // ── Gate SRS quotidien (issue 10) ─────────────────────────────────────────────
@@ -69,12 +103,29 @@ export async function saveMapPosition(
   tzOffsetMinutes = 0
 ) {
   const userId = await requireUserId()
+  const zone = getZoneByName(zoneName)
+  const state = await getPlayerState(userId)
+
+  // C1 (revue jalon 1) : refuser une zone non atteignable. Niveau de garantie
+  // choisi : la cible doit être la zone courante, une zone extérieure
+  // contiguë (continuum outdoor), ou une destination de warp/ascenseur de la
+  // zone courante (canReachZone, géométrie réelle) — ET la position doit être
+  // dans les bornes de la cible. Pas de re-simulation de la marche tuile à
+  // tuile (la position client n'est pas fiable à ce grain) ; une zone
+  // courante hors registre (état corrompu) reste fail-open pour ne jamais
+  // soft-locker. En développement, le tiroir dev téléporte librement (M4 :
+  // il n'existe pas dans le build de production).
+  if (process.env.NODE_ENV !== 'development') {
+    if (!zone) return
+    const current = getZoneByName(state.current_zone)
+    if (current && !canReachZone(current, zone)) return
+    if (!isWithinZoneBounds(zone, x, z)) return
+  }
+
   // Filet serveur du gate SRS : n'écrit jamais une PREMIÈRE visite de zone
   // extérieure quand la session du jour n'est pas ✓ (le client a déjà bloqué
   // le pas — ce chemin ne se prend que via un client contourné).
-  const zone = getZoneByName(zoneName)
   if (zone?.is_outdoor) {
-    const state = await getPlayerState(userId)
     if (!state.visited_zones.includes(zoneName)) {
       const status = await getDailySRSStatusForUser(userId, tzOffsetMinutes)
       if (gateBlocksEntry(zone, state.visited_zones, status.sessionDone)) return
@@ -106,13 +157,32 @@ export interface ReachedDialogue {
 // Effect[] de l'état atteint (horodatage serveur), persiste si quelque chose
 // a changé. Idempotent par construction : rejouer les effets d'un état déjà
 // atteint retourne le même PlayerState (===), donc zéro écriture.
+//
+// C1 (revue jalon 1) : le ref est re-vérifié — seule une entité que la
+// lecture aurait servie dans la zone courante du joueur (présence + zone,
+// src/lib/map-visibility.ts) peut porter ce dialogue. L'appel direct
+// reachDialogueState('npcs/route-30/mr_pokemon_route30') depuis Bourg Geon
+// échoue désormais sans effet.
 export async function reachDialogueState(dialogueRef: string): Promise<ReachedDialogue | null> {
   const userId = await requireUserId()
+  const state = await getPlayerState(userId)
+  const now = new Date()
+  if (!findAccessibleDialogueCarrier(state, dialogueRef, now)) return null
+  return applyDialogueState(userId, state, dialogueRef, now)
+}
+
+/** Corps commun de reachDialogueState / interactWithNpc — les appelants ont
+ * DÉJÀ prouvé que l'entité porteuse est servie dans la zone courante. */
+async function applyDialogueState(
+  userId: string,
+  state: Awaited<ReturnType<typeof getPlayerState>>,
+  dialogueRef: string,
+  now: Date
+): Promise<ReachedDialogue | null> {
   const dialogue = getDialogue(dialogueRef)
   if (!dialogue) return null
 
-  const state = await getPlayerState(userId)
-  const ctx = { questSteps: getQuestStepsIndex(), now: new Date() }
+  const ctx = { questSteps: getQuestStepsIndex(), now }
 
   const stateId = selectDialogueState(dialogue.state_rules, state, ctx)
   if (!stateId) return null
@@ -150,10 +220,19 @@ export type NpcInteraction =
   | { kind: 'dialogue'; dialogue: ReachedDialogue }
   | { kind: 'text'; text_id: string }
 
-export async function interactWithNpc(
-  npcId: string,
-  dialogueRef?: string
-): Promise<NpcInteraction | null> {
+export async function interactWithNpc(npcId: string): Promise<NpcInteraction | null> {
+  const userId = await requireUserId()
+  const state = await getPlayerState(userId)
+  const now = new Date()
+
+  // C1 (revue jalon 1) : le PNJ/objet doit être servi au joueur dans sa zone
+  // courante (le PC ne se débloque que depuis la chambre, le panneau depuis
+  // la Route 29) et visible (unlock_conditions) — sinon « il n'existe pas
+  // sur la tuile », rien n'est appliqué. Le dialogue_ref vient toujours du
+  // REGISTRE, plus jamais du client.
+  const served = accessibleNpc(state, npcId, now)
+  if (!served) return null
+
   // Émission moteur des unlock_text (issue 08, engine-contract § 2) : les
   // entrées kind object/sign du registre (PC du joueur, panneau de Route 29)
   // n'ont AUCUN fichier dialogue — le moteur applique lui-même l'Effect
@@ -161,22 +240,18 @@ export async function interactWithNpc(
   // puis le client ouvre la fenêtre de lecture.
   const engineTextId = getEngineUnlockTextId(npcId)
   if (engineTextId) {
-    const userId = await requireUserId()
-    const state = await getPlayerState(userId)
     const next = applyEffect(
       { type: 'unlock_text', text_id: engineTextId },
       state,
-      { questSteps: getQuestStepsIndex(), now: new Date() }
+      { questSteps: getQuestStepsIndex(), now }
     )
     if (next !== state) await savePlayerState(userId, next)
     return { kind: 'text', text_id: engineTextId }
   }
   const npc = getMapNpcs().find(n => n.npc_id === npcId)
   if (npc?.role === 'lesson') {
-    const userId = await requireUserId()
     const lessons = getLessonsForZone(npc.zone_id)
-    const state = await getPlayerState(userId)
-    const ctx = { questSteps: getQuestStepsIndex(), now: new Date() }
+    const ctx = { questSteps: getQuestStepsIndex(), now }
     const resolution = resolveLessonInteraction(npc.npc_id, lessons, state, ctx)
     if (resolution.kind === 'lesson') {
       return {
@@ -190,7 +265,7 @@ export async function interactWithNpc(
       const jp = pool.length
         ? pool[Math.floor(Math.random() * pool.length)]
         : uiStrings.lesson_blocked.jp
-      const dialogue = dialogueRef ? getDialogue(dialogueRef) : null
+      const dialogue = npc.dialogue_ref ? getDialogue(npc.dialogue_ref) : null
       const name = dialogue
         ? typeof dialogue.name === 'string'
           ? dialogue.name
@@ -200,8 +275,8 @@ export async function interactWithNpc(
     }
     // fallback_dialogue → dialogue ordinaire ci-dessous
   }
-  if (!dialogueRef) return null // entrée sans dialogue ni texte moteur : rien
-  const dialogue = await reachDialogueState(dialogueRef)
+  if (!served.dialogue_ref) return null // entrée sans dialogue ni texte moteur : rien
+  const dialogue = await applyDialogueState(userId, state, served.dialogue_ref, now)
   return dialogue ? { kind: 'dialogue', dialogue } : null
 }
 

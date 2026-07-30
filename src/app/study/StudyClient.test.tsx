@@ -17,9 +17,21 @@ const rateCardMock = vi.hoisted(() =>
 const checkDailyStatusMock = vi.hoisted(() =>
   vi.fn(async () => ({ sessionDone: true, cardsPending: 0, reviewedToday: 0, path: 'no_cards_due' }))
 )
+const continueSessionMock = vi.hoisted(() =>
+  vi.fn(async () => ({
+    cards: [] as unknown[],
+    status: {
+      sessionDone: true,
+      cardsPending: 0,
+      reviewedToday: 1,
+      path: 'session' as 'session' | 'no_cards_due' | null,
+    },
+  }))
+)
 vi.mock('./actions', () => ({
   rateCard: rateCardMock,
   checkDailyStatus: checkDailyStatusMock,
+  continueSession: continueSessionMock,
 }))
 
 let container: HTMLDivElement
@@ -32,6 +44,8 @@ beforeEach(() => {
   pushMock.mockClear()
   rateCardMock.mockClear()
   checkDailyStatusMock.mockClear()
+  continueSessionMock.mockClear()
+  rateCardMock.mockResolvedValue({ sessionDone: false, cardsPending: 1, reviewedToday: 1, path: null })
 })
 
 afterEach(() => {
@@ -175,6 +189,65 @@ describe('fins de session', () => {
 
   it('file épuisée avec des reviews déjà faites (reprise) → écran ✓ aussi', async () => {
     render([], { reviewedToday: 12 })
+    await flush()
+    expect(container.textContent).toContain('きょうの　ふくしゅう　おわり！')
+  })
+})
+
+// M3 (revue jalon 1) : le statut serveur retourné par rateCard fait foi —
+// la fin de la file LOCALE n'est pas la fin de la session. Une carte
+// もういちど (learning steps courts ts-fsrs) redevenue due pendant la session
+// fait partie de la file du jour : l'écran propose de CONTINUER (recharge la
+// file serveur) au lieu d'afficher « session finie » à tort.
+describe('M3 — Encore → continuer (le ✓ ne s’affiche que si le serveur dit sessionDone)', () => {
+  it('file locale épuisée mais cardsPending ≥ 1 → PAS de ✓ ni d’« おわり », bouton continuer', async () => {
+    rateCardMock.mockResolvedValue({ sessionDone: false, cardsPending: 1, reviewedToday: 1, path: null })
+    render([kanjiCard()])
+    click(buttonByText('こたえを　みる'))
+    click(buttonByText('もういちど'))
+    await flush()
+    expect(container.textContent).not.toContain('きょうの　ふくしゅう　おわり！')
+    expect(container.textContent).toContain('まだ　ふくしゅうする　カードが　あるよ')
+    expect(container.textContent).not.toContain('✓')
+    expect(buttonByText('ふくしゅうを　つづける')).toBeDefined()
+  })
+
+  it('continuer recharge la file serveur et re-présente la carte ratée', async () => {
+    rateCardMock.mockResolvedValue({ sessionDone: false, cardsPending: 1, reviewedToday: 1, path: null })
+    continueSessionMock.mockResolvedValue({
+      cards: [kanjiCard({ id: 'c-1b', item_id: '一' })],
+      status: { sessionDone: false, cardsPending: 1, reviewedToday: 1, path: null },
+    })
+    render([kanjiCard()])
+    click(buttonByText('こたえを　みる'))
+    click(buttonByText('もういちど'))
+    await flush()
+    click(buttonByText('ふくしゅうを　つづける'))
+    await flush()
+    expect(continueSessionMock).toHaveBeenCalledWith(new Date().getTimezoneOffset())
+    // La carte re-due est re-présentée, réponse masquée
+    expect(container.querySelector('[data-testid="srs-character"]')!.textContent).toBe('一')
+    expect(buttonByText('こたえを　みる')).toBeDefined()
+    // …et la re-noter passe par rateCard normalement
+    click(buttonByText('こたえを　みる'))
+    rateCardMock.mockResolvedValue({ sessionDone: true, cardsPending: 0, reviewedToday: 2, path: 'session' })
+    click(buttonByText('できた'))
+    await flush()
+    expect(container.textContent).toContain('きょうの　ふくしゅう　おわり！')
+    expect(container.textContent).toContain('✓')
+  })
+
+  it('la recharge peut dire « session finie » (✓ posé entre-temps) : écran ✓ direct', async () => {
+    rateCardMock.mockResolvedValue({ sessionDone: false, cardsPending: 1, reviewedToday: 1, path: null })
+    continueSessionMock.mockResolvedValue({
+      cards: [],
+      status: { sessionDone: true, cardsPending: 0, reviewedToday: 1, path: 'session' },
+    })
+    render([kanjiCard()])
+    click(buttonByText('こたえを　みる'))
+    click(buttonByText('もういちど'))
+    await flush()
+    click(buttonByText('ふくしゅうを　つづける'))
     await flush()
     expect(container.textContent).toContain('きょうの　ふくしゅう　おわり！')
   })
