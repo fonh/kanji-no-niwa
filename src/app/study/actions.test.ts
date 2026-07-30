@@ -57,7 +57,7 @@ const sqlMock = vi.hoisted(() =>
       }
       return []
     }
-    if (text.includes('select fsrs_state from cards')) {
+    if (text.includes('select fsrs_state, next_review_at from cards')) {
       const [cardId, userId] = values as [string, string]
       return db.cards.filter(c => c.id === cardId && c.user_id === userId)
     }
@@ -172,8 +172,40 @@ describe('boucle quotidienne — critères d’acceptation', () => {
   it('rateCard refuse une carte qui n’appartient pas au joueur', async () => {
     seedLessonCards()
     db.cards[0].user_id = 'quelqu-un-d-autre'
+    vi.setSystemTime(new Date('2026-07-31T08:00:00Z')) // carte due — seul l'owner manque
     await expect(rateCard('card-0', 3, 0)).rejects.toThrow('Card not found')
     expect(db.reviews).toHaveLength(0)
+  })
+
+  // M2 (revue jalon 1) : rating jamais validé au runtime — un client peut
+  // envoyer 0/9/NaN/2.5 ; l'update cards partirait avant que le CHECK SQL de
+  // reviews ne rejette (état incohérent).
+  it('M2 — rateCard refuse un rating hors 1..4 (0, 5, NaN, non-entier) sans AUCUNE écriture', async () => {
+    seedLessonCards()
+    vi.setSystemTime(new Date('2026-07-31T08:00:00Z')) // cartes dues
+    const before = JSON.stringify(db.cards)
+    for (const bad of [0, 5, -1, Number.NaN, 2.5]) {
+      await expect(rateCard('card-0', bad as 1, 0)).rejects.toThrow('Invalid rating')
+    }
+    expect(db.reviews).toHaveLength(0)
+    expect(JSON.stringify(db.cards)).toBe(before) // fsrs_state/next_review_at intacts
+  })
+
+  // M2 : noter une carte NON due (y compris re-noter la même carte) ne doit
+  // rien écrire — sinon le plafond 200 se gonfle en re-notant en boucle.
+  it('M2 — rateCard refuse une carte non due (cartes du jour J dues demain) sans écriture', async () => {
+    seedLessonCards() // jour J : tout est dû DEMAIN
+    await expect(rateCard('card-0', 3, 0)).rejects.toThrow('Card not due')
+    expect(db.reviews).toHaveLength(0)
+  })
+
+  it('M2 — re-noter une carte tout juste notée (replanifiée dans le futur) est refusé', async () => {
+    seedLessonCards()
+    vi.setSystemTime(new Date('2026-07-31T08:00:00Z'))
+    await rateCard('card-0', 3, 0) // légitime : due → replanifiée dans le futur
+    expect(db.reviews).toHaveLength(1)
+    await expect(rateCard('card-0', 3, 0)).rejects.toThrow('Card not due')
+    expect(db.reviews).toHaveLength(1) // le compteur du jour n'est pas gonflable
   })
 
   it('les 4 notes FSRS passent telles quelles (Encore=1 … Facile=4)', async () => {

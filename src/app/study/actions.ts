@@ -36,11 +36,23 @@ export async function rateCard(
   const userId = await requireUserId()
   const now = new Date()
 
+  // M2 (revue jalon 1) : le rating est typé mais arrive du client — valider
+  // AVANT toute écriture (sinon l'update cards part avec un grade hors
+  // domaine avant que le CHECK SQL de reviews ne rejette : état incohérent).
+  if (!Number.isInteger(rating) || rating < 1 || rating > 4) {
+    throw new Error('Invalid rating')
+  }
+
   const rows = await sql`
-    select fsrs_state from cards where id = ${cardId} and user_id = ${userId}
+    select fsrs_state, next_review_at from cards where id = ${cardId} and user_id = ${userId}
   `
   // Carte inconnue ou pas au joueur : refuser plutôt que noter dans le vide
   if (rows.length === 0) throw new Error('Card not found')
+  // M2 : seule une carte DUE se note — re-noter une carte déjà replanifiée
+  // dans le futur gonflerait reviewedToday jusqu'au ✓ plafond sans traiter
+  // la file. (Les cartes « Encore » redeviennent dues à leur heure : les
+  // re-noter alors est légitime.)
+  if (new Date(rows[0].next_review_at as string) > now) throw new Error('Card not due')
 
   const f = fsrs(generatorParameters())
   const { card } = f.next(rows[0].fsrs_state as Card, now, rating as Grade)

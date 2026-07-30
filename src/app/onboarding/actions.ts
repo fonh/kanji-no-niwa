@@ -27,6 +27,14 @@ export async function completeOnboarding(avatar: string, name: string) {
     where id = ${userId}
   `
 
+  // M1 (revue jalon 1) : le spawn chambre ne concerne que les comptes SANS
+  // état de carte. Un compte legacy (trainer_name posé, avatar null — renvoyé
+  // ici par isOnboarded) possède un user_map_state backfillé par la migration
+  // 002 (visited_zones, cleared_events, inventaire CS) : on ne pose alors que
+  // trainer_name/avatar ci-dessus, l'état de carte est conservé intégralement.
+  const mapRows = await sql`select user_id from user_map_state where user_id = ${userId}`
+  if (mapRows.length > 0) return
+
   // Spawn chambre : état neuf, la chambre comme première zone visitée —
   // même sémantique que saveMapPosition (première entrée de visited_zones).
   await savePlayerState(userId, {
