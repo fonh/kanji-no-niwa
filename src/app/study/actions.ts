@@ -1,23 +1,59 @@
 'use server'
 
+// Session SRS quotidienne (issue 06) — refonte du prototype.
+//
+// L'ancien submitReview faisait confiance au client pour l'état FSRS et le
+// prochain due : ici la notation est entièrement re-calculée SERVEUR
+// (ts-fsrs sur l'état stocké, horloge serveur), et reviews.reviewed_at est
+// le now() Postgres par défaut — jamais une valeur client (PRD § Jour
+// calendaire). Chaque note re-vérifie ensuite le statut du jour et pose le
+// ✓ (daily_status) dès qu'il est atteint : file vidée ou plafond de
+// rattrapage 200 (idempotent, une ligne par jour local).
+
+import { fsrs, generatorParameters, type Card, type Grade } from 'ts-fsrs'
 import { requireUserId } from '@/lib/auth'
 import { sql } from '@/lib/db'
+import { ensureDailyStatus, type DailyStatusResult } from '@/lib/daily-srs'
 
-export async function submitReview(cardId: string, fsrsState: unknown, nextReviewAt: string, rating: number) {
+export type SrsRating = 1 | 2 | 3 | 4 // Encore | Difficile | Bien | Facile
+
+/** Statut du jour, en re-vérifiant côté serveur et en posant le ✓ s'il
+ * vient d'être atteint (dont le chemin « aucune carte due » → ✓ immédiat).
+ * Appelé par l'appel du mentor (carte) et par l'écran de session. */
+export async function checkDailyStatus(tzOffsetMinutes: number): Promise<DailyStatusResult> {
   const userId = await requireUserId()
+  return ensureDailyStatus(userId, tzOffsetMinutes, new Date())
+}
 
-  const updated = await sql`
-    update cards set fsrs_state = ${JSON.stringify(fsrsState)}, next_review_at = ${nextReviewAt}
-    where id = ${cardId} and user_id = ${userId}
-    returning id
+/** Note une carte (4 notes FSRS), écrit la review horodatée serveur, et
+ * retourne le statut du jour mis à jour (le client sait ainsi quand la
+ * session est finie — file vidée ou plafond atteint). */
+export async function rateCard(
+  cardId: string,
+  rating: SrsRating,
+  tzOffsetMinutes: number
+): Promise<DailyStatusResult> {
+  const userId = await requireUserId()
+  const now = new Date()
+
+  const rows = await sql`
+    select fsrs_state from cards where id = ${cardId} and user_id = ${userId}
   `
-  // No row matched = cardId doesn't belong to this user (or doesn't exist) —
-  // refuse to record a review against it instead of silently no-oping the
-  // update and still inserting the review row.
-  if (updated.length === 0) throw new Error('Card not found')
+  // Carte inconnue ou pas au joueur : refuser plutôt que noter dans le vide
+  if (rows.length === 0) throw new Error('Card not found')
+
+  const f = fsrs(generatorParameters())
+  const { card } = f.next(rows[0].fsrs_state as Card, now, rating as Grade)
 
   await sql`
-    insert into reviews (user_id, card_id, rating, new_fsrs_state)
-    values (${userId}, ${cardId}, ${rating}, ${JSON.stringify(fsrsState)})
+    update cards set fsrs_state = ${JSON.stringify(card)}, next_review_at = ${card.due.toISOString()}
+    where id = ${cardId} and user_id = ${userId}
   `
+  // reviewed_at : défaut now() Postgres — l'horodatage reste serveur
+  await sql`
+    insert into reviews (user_id, card_id, rating, new_fsrs_state)
+    values (${userId}, ${cardId}, ${rating}, ${JSON.stringify(card)})
+  `
+
+  return ensureDailyStatus(userId, tzOffsetMinutes, now)
 }

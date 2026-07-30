@@ -90,6 +90,29 @@ body {
   color: #a4452e;
 }
 
+/* Session SRS (issue 06) — habillage Centre Pokémon simple : chaleur crème,
+   accents rouges (le comptoir/la croix des Centres), panneau blanc arrondi.
+   Création CSS en attendant les assets dédiés. */
+.center-chrome {
+  background: linear-gradient(180deg, #fbeeea 0%, #f6e3d5 55%, #efd8c2 100%);
+  color: #3d2a22;
+}
+
+.center-panel {
+  background: #fffdf8;
+  border: 3px solid #d8544f;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(90, 40, 30, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.center-accent {
+  color: #c8433e;
+}
+
+.center-accent-bg {
+  background: linear-gradient(180deg, #e2635e, #c8433e);
+}
+
 /* Curseur ▼ de fin de frappe de la boîte de dialogue. */
 @keyframes dialogue-cursor-blink {
   0%, 55% { opacity: 1; }

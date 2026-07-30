@@ -1,153 +1,253 @@
 'use client'
 
-import { useState } from 'react'
+// Session SRS quotidienne (issue 06) — refonte du prototype.
+//
+// Esthétique Centre Pokémon (habillage simple : chaleur crème, accents
+// rouges, identité DS existante). Carte affichée → Révéler → 4 notes FSRS
+// (Encore/Difficile/Bien/Facile) ; le kanji en grand en `.font-reading`,
+// facette sens vs lecture distinguées (badge + réponse). La notation est
+// re-calculée serveur (actions.ts) — le client n'envoie que (carte, note,
+// fuseau).
+//
+// Préface Carte Mot (engine-contract § 8) : la toute première review d'un
+// mot affiche d'abord sa Carte Mot, 1 tap, une seule fois — dérivée de
+// l'absence de review pour ce mot (serveur) et des notes de la session en
+// cours (client). Inactif au jalon 1 (aucune carte word), prévu et testé.
+//
+// Aucun français visible joueur (chaînes système : ui-strings.json) ;
+// l'anglais des meanings/mnémoniques est pédagogique.
+
+import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { submitReview } from './actions'
-import { fsrs, generatorParameters, Rating, type Card, type Grade } from 'ts-fsrs'
+import { rateCard, checkDailyStatus, type SrsRating } from './actions'
+import uiStrings from '@/data/ui-strings.json'
 
-const RATING_LABELS: { label: string; rating: Rating; style: string }[] = [
-  { label: 'Again', rating: Rating.Again, style: 'bg-red-600 hover:bg-red-500' },
-  { label: 'Hard',  rating: Rating.Hard,  style: 'bg-orange-500 hover:bg-orange-400' },
-  { label: 'Good',  rating: Rating.Good,  style: 'bg-green-600 hover:bg-green-500' },
-  { label: 'Easy',  rating: Rating.Easy,  style: 'bg-blue-600 hover:bg-blue-500' },
-]
-
-interface KanjiData {
-  character: string
+export interface SessionKanjiData {
+  keyword: string | null
   meanings: string[]
   on_readings: string[]
   kun_readings: string[]
-  etymology?: string | null
-  mnemonic?: string | null
+  mnemonic: string | null
 }
 
-interface DueCard {
+export interface SessionWordData {
+  word: string
+  reading: string
+  meanings: string[]
+}
+
+export interface SessionCard {
   id: string
-  kanji_id: string
-  card_type: 'meaning' | 'reading'
-  fsrs_state: Card
-  kanji: KanjiData
+  item_type: 'kanji' | 'word'
+  item_id: string
+  facet: 'sens' | 'lecture'
+  kanji: SessionKanjiData | null
+  word: SessionWordData | null
+  /** Aucune review serveur pour ce mot → Carte Mot d'abord (contrat § 8). */
+  needs_preface: boolean
 }
 
 interface Props {
-  cards: DueCard[]
+  cards: SessionCard[]
+  /** Cartes déjà notées ce jour local (reprise de session, plafond). */
+  reviewedToday: number
 }
 
-export default function StudyClient({ cards }: Props) {
+const RATINGS: { label: string; rating: SrsRating; style: string }[] = [
+  { label: uiStrings.srs_rate_again.jp, rating: 1, style: 'bg-red-700 active:bg-red-600' },
+  { label: uiStrings.srs_rate_hard.jp, rating: 2, style: 'bg-orange-600 active:bg-orange-500' },
+  { label: uiStrings.srs_rate_good.jp, rating: 3, style: 'bg-emerald-700 active:bg-emerald-600' },
+  { label: uiStrings.srs_rate_easy.jp, rating: 4, style: 'bg-sky-700 active:bg-sky-600' },
+]
+
+/** Lecture kun affichée : ひと.つ → ひと（つ）, tirets d'okurigana retirés. */
+function formatKun(kun: string): string {
+  const cleaned = kun.replace(/-/g, '')
+  const dot = cleaned.indexOf('.')
+  return dot === -1 ? cleaned : `${cleaned.slice(0, dot)}（${cleaned.slice(dot + 1)}）`
+}
+
+export default function StudyClient({ cards, reviewedToday }: Props) {
   const router = useRouter()
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
-  const [reviewed, setReviewed] = useState(0)
+  const [ratedCount, setRatedCount] = useState(0)
+  const [saving, setSaving] = useState(false)
+  // Mots notés pendant CETTE session : leur 2e facette ne re-préface pas
+  const [ratedItems, setRatedItems] = useState<Set<string>>(new Set())
+  const [prefaceDismissed, setPrefaceDismissed] = useState(false)
 
-  const f = fsrs(generatorParameters())
+  const current = index < cards.length ? cards[index] : null
 
-  const current = cards[index]
+  // File vide au chargement : le ✓ « aucune carte due » se pose côté
+  // serveur même en arrivant ici directement (l'appel du mentor le fait
+  // déjà depuis la carte — filet idempotent).
+  useEffect(() => {
+    if (cards.length === 0) {
+      checkDailyStatus(new Date().getTimezoneOffset()).catch(() => {})
+    }
+  }, [cards.length])
 
-  const handleReveal = () => setRevealed(true)
+  const handleRate = useCallback(
+    async (rating: SrsRating) => {
+      if (!current || saving) return
+      setSaving(true)
+      try {
+        await rateCard(current.id, rating, new Date().getTimezoneOffset())
+        setRatedItems(prev => new Set(prev).add(current.item_id))
+        setRatedCount(c => c + 1)
+        setRevealed(false)
+        setPrefaceDismissed(false)
+        setIndex(i => i + 1)
+      } catch (err) {
+        console.error('Failed to rate card', err)
+      } finally {
+        setSaving(false)
+      }
+    },
+    [current, saving]
+  )
 
-  const handleRate = async (rating: Rating) => {
-    if (!current) return
-    const now = new Date()
-    const item = f.next(current.fsrs_state, now, rating as Grade)
-    const newCard = item.card
-
-    await submitReview(current.id, newCard, newCard.due.toISOString(), rating)
-
-    setReviewed(r => r + 1)
-    setRevealed(false)
-    setIndex(i => i + 1)
-  }
-
-  // Session complete
-  if (index >= cards.length) {
+  // ── Fin de session (file épuisée / aucune carte due) ──────────────────────
+  if (!current) {
+    const anyReviewed = reviewedToday + ratedCount > 0
     return (
-      <main className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-4">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-2">Session complete</h2>
-          <p className="text-gray-400 mb-8">{reviewed} card{reviewed !== 1 ? 's' : ''} reviewed</p>
+      <main className="center-chrome min-h-screen flex flex-col items-center justify-center px-4 font-chrome">
+        <div className="center-panel w-full max-w-md p-6 text-center">
+          <div className="center-accent text-5xl mb-4">✓</div>
+          <p className="font-reading text-lg mb-6">
+            {anyReviewed ? uiStrings.srs_session_done.jp : uiStrings.srs_no_cards.jp}
+          </p>
           <button
-            onClick={() => router.push('/dashboard')}
-            className="px-8 py-3 rounded-full bg-amber-400 text-gray-900 font-semibold hover:bg-amber-300 transition-colors"
+            onClick={() => router.push('/map')}
+            className="center-accent-bg px-6 py-3 rounded-lg text-white font-semibold"
           >
-            Back to dashboard
+            {uiStrings.back_to_map.jp}
           </button>
         </div>
       </main>
     )
   }
 
-  if (!cards.length) {
+  // ── Préface Carte Mot ──────────────────────────────────────────────────────
+  const showPreface =
+    current.item_type === 'word' &&
+    current.needs_preface &&
+    !ratedItems.has(current.item_id) &&
+    !prefaceDismissed
+
+  if (showPreface && current.word) {
     return (
-      <main className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-4">
-        <h2 className="text-xl font-bold mb-4">No cards due</h2>
-        <button onClick={() => router.push('/dashboard')} className="text-amber-400 underline">Back to dashboard</button>
+      <main className="center-chrome min-h-screen flex flex-col items-center justify-center px-4 font-chrome">
+        <div className="center-panel w-full max-w-md p-6 text-center">
+          <p className="center-accent text-sm mb-4">{uiStrings.srs_word_preface.jp}</p>
+          <div className="font-reading text-6xl mb-3">{current.word.word}</div>
+          <div className="font-reading center-accent text-xl mb-2">{current.word.reading}</div>
+          <p className="text-sm mb-6">{current.word.meanings.join(', ')}</p>
+          <button
+            onClick={() => setPrefaceDismissed(true)}
+            className="center-accent-bg px-6 py-3 rounded-lg text-white font-semibold w-full"
+          >
+            {uiStrings.srs_word_preface_continue.jp}
+          </button>
+        </div>
       </main>
     )
   }
 
-  const prompt = current.card_type === 'meaning'
-    ? `What does ${current.kanji.character} mean?`
-    : `How do you read ${current.kanji.character}?`
-
-  const answer = current.card_type === 'meaning'
-    ? (current.kanji.meanings ?? []).join(', ')
-    : (current.kanji.on_readings ?? []).join(', ') + (current.kanji.kun_readings?.length ? ' / ' + current.kanji.kun_readings.join(', ') : '')
-
-  const progress = Math.round((index / cards.length) * 100)
+  // ── Carte courante ─────────────────────────────────────────────────────────
+  const facetLabel =
+    current.facet === 'sens' ? uiStrings.srs_facet_sens.jp : uiStrings.srs_facet_lecture.jp
+  const prompt =
+    current.facet === 'sens' ? uiStrings.srs_prompt_sens.jp : uiStrings.srs_prompt_lecture.jp
+  const character = current.item_type === 'kanji' ? current.item_id : (current.word?.word ?? '')
 
   return (
-    <main className="min-h-screen bg-gray-900 text-white flex flex-col">
-      {/* Progress bar */}
-      <div className="h-1 bg-gray-700">
-        <div className="h-1 bg-amber-400 transition-all duration-300" style={{ width: `${progress}%` }} />
+    <main className="center-chrome min-h-screen flex flex-col font-chrome">
+      {/* Barre Centre Pokémon : progression du jour */}
+      <div className="center-accent-bg text-white px-4 py-2 flex items-center justify-between">
+        <span className="text-sm font-bold">＋</span>
+        <div className="flex-1 mx-3 h-2 rounded bg-white/30 overflow-hidden">
+          <div
+            className="h-2 bg-white/90 transition-all duration-300"
+            style={{ width: `${Math.round((index / cards.length) * 100)}%` }}
+          />
+        </div>
+        <span className="text-xs font-mono">
+          {index}/{cards.length}
+        </span>
       </div>
 
-      <div className="flex-1 relative flex flex-col">
-        {/* Upper right: kanji (opposing Pokémon position) */}
-        <div className="flex justify-end pr-12 pt-12">
-          <span className="text-9xl font-bold text-white drop-shadow-lg">{current.kanji.character}</span>
-        </div>
-
-        {/* Lower left: trainer silhouette */}
-        <div className="flex justify-start pl-12 pb-4">
-          <div className="w-24 h-24 bg-gray-700 rounded-full flex items-center justify-center text-4xl opacity-60">?</div>
-        </div>
-      </div>
-
-      {/* Dialogue box */}
-      <div className="bg-gray-800 border-t-2 border-white p-4 pb-8">
-        <p className="text-white text-base mb-4">{prompt}</p>
-        {!revealed ? (
-          <button
-            onClick={handleReveal}
-            className="w-full py-3 rounded-lg border border-white text-white hover:bg-gray-700 transition-colors"
+      <div className="flex-1 flex flex-col items-center justify-center px-4 py-6">
+        <div className="center-panel w-full max-w-md p-6 text-center">
+          <span
+            className={`inline-block text-xs px-2 py-0.5 rounded-full border mb-4 ${
+              current.facet === 'sens'
+                ? 'border-emerald-700 text-emerald-800 bg-emerald-50'
+                : 'border-red-700 center-accent bg-red-50'
+            }`}
           >
-            Reveal answer
-          </button>
-        ) : (
-          <>
-            <p className="text-amber-400 font-bold text-lg mb-2">→ {answer}</p>
-            {current.kanji.etymology && (
-              <p className="text-gray-400 text-sm mb-1 italic">
-                {current.kanji.etymology.split('.')[0].trim()}.
-              </p>
-            )}
-            {current.kanji.mnemonic && (
-              <p className="text-gray-300 text-sm mb-4">{current.kanji.mnemonic}</p>
-            )}
-            <div className="grid grid-cols-2 gap-2">
-              {RATING_LABELS.map(({ label, rating, style }) => (
-                <button
-                  key={label}
-                  onClick={() => handleRate(rating)}
-                  className={`py-3 rounded-lg text-white font-semibold transition-colors ${style}`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </>
-        )}
+            {facetLabel}
+          </span>
+          <div data-testid="srs-character" className="font-reading text-8xl leading-tight mb-4">
+            {character}
+          </div>
+          <p className="font-reading text-base mb-4">{prompt}</p>
+
+          {!revealed ? (
+            <button
+              onClick={() => setRevealed(true)}
+              className="w-full py-3 rounded-lg border-2 border-current center-accent font-semibold"
+            >
+              {uiStrings.srs_reveal.jp}
+            </button>
+          ) : (
+            <>
+              <div data-testid="srs-answer" className="mb-4">
+                {current.item_type === 'kanji' && current.kanji ? (
+                  current.facet === 'sens' ? (
+                    <>
+                      <p className="text-2xl font-bold mb-1">
+                        {current.kanji.keyword ?? current.kanji.meanings[0] ?? ''}
+                      </p>
+                      <p className="text-sm opacity-70">{current.kanji.meanings.join(', ')}</p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="font-reading center-accent text-2xl mb-1">
+                        {current.kanji.on_readings.join('・')}
+                      </p>
+                      <p className="font-reading text-lg">
+                        {current.kanji.kun_readings.map(formatKun).join('・')}
+                      </p>
+                    </>
+                  )
+                ) : current.word ? (
+                  current.facet === 'sens' ? (
+                    <p className="text-2xl font-bold">{current.word.meanings.join(', ')}</p>
+                  ) : (
+                    <p className="font-reading center-accent text-2xl">{current.word.reading}</p>
+                  )
+                ) : null}
+              </div>
+              {current.item_type === 'kanji' && current.kanji?.mnemonic && (
+                <p className="text-xs opacity-60 mb-4">{current.kanji.mnemonic}</p>
+              )}
+              <div className="grid grid-cols-2 gap-2">
+                {RATINGS.map(({ label, rating, style }) => (
+                  <button
+                    key={rating}
+                    onClick={() => handleRate(rating)}
+                    disabled={saving}
+                    className={`py-3 rounded-lg text-white font-semibold ${style} disabled:opacity-60`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </main>
   )

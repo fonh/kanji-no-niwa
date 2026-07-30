@@ -9,6 +9,7 @@ import { getPlayerState } from '@/lib/player-state'
 import { filterVisibleNpcs, filterVisibleTrainers } from '@/lib/map-visibility'
 import { avatarOverworldSprite, isAvatar, isOnboarded } from '@/lib/onboarding'
 import MapClient, { type PlayerPos } from './MapClient'
+import DailyLoop from './DailyLoop'
 
 export default async function MapPage() {
   const session = await auth()
@@ -31,14 +32,19 @@ export default async function MapPage() {
   const initialPos: PlayerPos = { world_x: playerState.avatar_x, world_z: playerState.avatar_y }
 
   return (
-    <MapClient
-      zone={zone}
-      npcs={filterVisibleNpcs(getNpcsForZone(zone), playerState)}
-      trainers={filterVisibleTrainers(getTrainersForZone(zone), playerState)}
-      initialPos={initialPos}
-      initialProgress={parseProgress(userRow?.map_progress)}
-      allZoneNames={getZoneNames()}
-      playerSpriteUrl={isAvatar(userRow.avatar) ? avatarOverworldSprite(userRow.avatar) : undefined}
-    />
+    <>
+      <MapClient
+        zone={zone}
+        npcs={filterVisibleNpcs(getNpcsForZone(zone), playerState)}
+        trainers={filterVisibleTrainers(getTrainersForZone(zone), playerState)}
+        initialPos={initialPos}
+        initialProgress={parseProgress(userRow?.map_progress)}
+        allZoneNames={getZoneNames()}
+        playerSpriteUrl={isAvatar(userRow.avatar) ? avatarOverworldSprite(userRow.avatar) : undefined}
+      />
+      {/* Boucle quotidienne (issue 06) : appel du mentor au premier lancement
+          du jour + badge Pokégear — overlay dédié, MapClient inchangé */}
+      <DailyLoop />
+    </>
   )
 }
