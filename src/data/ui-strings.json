@@ -44,5 +44,11 @@
   "battle_prompt_saisie": { "jp": "よみを　にゅうりょくしてね" },
   "battle_prompt_composition": { "jp": "２まいで　ことばを　つくってね" },
   "battle_answer_label": { "jp": "こたえ" },
-  "battle_defeat": { "jp": "めのまえが　まっくらに　なった・・・" }
+  "battle_defeat": { "jp": "めのまえが　まっくらに　なった・・・" },
+  "text_quiz_start": { "jp": "クイズを　はじめる" },
+  "text_quiz_title": { "jp": "どっかいクイズ" },
+  "text_close_confirm": { "jp": "とじる？　（クイズは　つづきから　できるよ）" },
+  "text_read_done": { "jp": "よみおわった！" },
+  "text_gold_done": { "jp": "パーフェクト！　きんいろに　かがやいた！" },
+  "text_scaffold_hint": { "jp": "ヒント：　ひかっている　ところを　よんでみてね" }
 }

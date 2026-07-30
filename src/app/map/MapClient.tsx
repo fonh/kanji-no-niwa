@@ -311,6 +311,10 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           if (!result) return
           if (result.kind === 'lesson') {
             router.push(`/lesson/${result.zone_id}/${result.sequence_index}`)
+          } else if (result.kind === 'text') {
+            // Textes débloqués par le moteur (issue 08) : PC du joueur,
+            // panneau de Route 29 — la fenêtre de lecture est une route.
+            router.push(`/text/${result.text_id}`)
           } else if (result.dialogue.pages.length) {
             openDialogue(result.dialogue.name, result.dialogue.pages)
           }

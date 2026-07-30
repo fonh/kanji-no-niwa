@@ -6,6 +6,7 @@ import { applyEffect, applyEffects, selectDialogueState } from '@/lib/condition-
 import {
   getCompanions,
   getDialogue,
+  getEngineUnlockTextId,
   getLessonBlockedLines,
   getLessonsForZone,
   getMapNpcs,
@@ -99,11 +100,29 @@ export async function reachDialogueState(dialogueRef: string): Promise<ReachedDi
 export type NpcInteraction =
   | { kind: 'lesson'; zone_id: string; sequence_index: number }
   | { kind: 'dialogue'; dialogue: ReachedDialogue }
+  | { kind: 'text'; text_id: string }
 
 export async function interactWithNpc(
   npcId: string,
-  dialogueRef: string
+  dialogueRef?: string
 ): Promise<NpcInteraction | null> {
+  // Émission moteur des unlock_text (issue 08, engine-contract § 2) : les
+  // entrées kind object/sign du registre (PC du joueur, panneau de Route 29)
+  // n'ont AUCUN fichier dialogue — le moteur applique lui-même l'Effect
+  // unlock_text (idempotent, lib 02 : no-op → même objet → zéro écriture)
+  // puis le client ouvre la fenêtre de lecture.
+  const engineTextId = getEngineUnlockTextId(npcId)
+  if (engineTextId) {
+    const userId = await requireUserId()
+    const state = await getPlayerState(userId)
+    const next = applyEffect(
+      { type: 'unlock_text', text_id: engineTextId },
+      state,
+      { questSteps: getQuestStepsIndex(), now: new Date() }
+    )
+    if (next !== state) await savePlayerState(userId, next)
+    return { kind: 'text', text_id: engineTextId }
+  }
   const npc = getMapNpcs().find(n => n.npc_id === npcId)
   if (npc?.role === 'lesson') {
     const userId = await requireUserId()
@@ -123,7 +142,7 @@ export async function interactWithNpc(
       const jp = pool.length
         ? pool[Math.floor(Math.random() * pool.length)]
         : uiStrings.lesson_blocked.jp
-      const dialogue = getDialogue(dialogueRef)
+      const dialogue = dialogueRef ? getDialogue(dialogueRef) : null
       const name = dialogue
         ? typeof dialogue.name === 'string'
           ? dialogue.name
@@ -133,6 +152,7 @@ export async function interactWithNpc(
     }
     // fallback_dialogue → dialogue ordinaire ci-dessous
   }
+  if (!dialogueRef) return null // entrée sans dialogue ni texte moteur : rien
   const dialogue = await reachDialogueState(dialogueRef)
   return dialogue ? { kind: 'dialogue', dialogue } : null
 }

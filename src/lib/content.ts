@@ -324,6 +324,91 @@ export function getCompositionLexiconWords(): { word: string; reading: string }[
   return words
 }
 
+// ── Textes progressifs (issue 08) ─────────────────────────────────────────────
+
+export interface TextQuestionOption {
+  jp: string
+  en: string
+}
+
+export interface TextQuestion {
+  type: string
+  prompt: BilingualText
+  options: TextQuestionOption[]
+  correct_index: number
+  /** Intervalle de caractères dans jp_text (brut, lectures inline comprises)
+   * — obligatoire pour inférence/référence, null pour factuel/idée générale
+   * (PRD § Schéma, table `texts`). */
+  answer_span: { start: number; end: number } | null
+}
+
+export interface ProgressiveText {
+  text_id: string
+  title: BilingualText
+  jp_text: string
+  en_text: string
+  audio_ref: string | null
+  level: string
+  source: string
+  tier: string
+  zone_id: string
+  npc_ref: string | null
+  found_object_ref: string | null
+  event_ref: string | null
+  length_chars: number
+  questions: TextQuestion[]
+}
+
+let textIndex: Map<string, ProgressiveText> | null = null
+
+/** Index text_id → texte, toutes zones confondues (le nom de fichier n'est
+ * PAS le text_id : new-bark-town/lyra_mail.json porte `lyra_mail_new_bark`).
+ * Construit une fois par process, comme getGrammarPointById. */
+export function getTextById(textId: string): ProgressiveText | null {
+  if (!textIndex) {
+    textIndex = new Map()
+    for (const zoneDir of readdirSync(path.join(CONTENT_ROOT, 'texts'))) {
+      let files: string[]
+      try {
+        files = readdirSync(path.join(CONTENT_ROOT, 'texts', zoneDir))
+      } catch {
+        continue // pas un dossier
+      }
+      for (const file of files) {
+        if (!file.endsWith('.json')) continue
+        const parsed = readContentJson(`texts/${zoneDir}/${file}`) as {
+          text?: ProgressiveText
+        } | null
+        if (parsed?.text?.text_id && !textIndex.has(parsed.text.text_id)) {
+          textIndex.set(parsed.text.text_id, parsed.text)
+        }
+      }
+    }
+  }
+  return textIndex.get(textId) ?? null
+}
+
+/** Table des `unlock_text` émis PAR LE MOTEUR (content/engine-contract.md
+ * § 2) : ces 5 textes n'ont aucun dialogue porteur — leur found_object_ref /
+ * event_ref ne correspond à aucun fichier content/dialogues/, donc aucun
+ * Effect de contenu ne peut les débloquer. Clé = found_object_ref (ou
+ * event_ref pour forest_shrine_ilex), valeur = text_id. Seules les 2
+ * premières entrées ont leur zone au jalon 1 ; les 5 sont encodées pour que
+ * les zones suivantes n'aient rien à ajouter ici. */
+const ENGINE_UNLOCK_TEXTS: Record<string, string> = {
+  player_pc_new_bark: 'lyra_mail_new_bark',
+  sign_johto_entrance_route29: 'johto_entrance_sign_route29',
+  forest_shrine_ilex: 'forest_shrine_ilex',
+  son_in_law_letter_object_slowpoke_well: 'son_in_law_letter_slowpoke_well',
+  inscription_sprout_tower: 'ancient_inscription_sprout_tower',
+}
+
+/** text_id à débloquer quand le moteur voit une interaction avec cet objet /
+ * cette tuile / cet event ; null si l'id n'est pas dans la table. */
+export function getEngineUnlockTextId(refId: string): string | null {
+  return ENGINE_UNLOCK_TEXTS[refId] ?? null
+}
+
 // ── Lignes de blocage de leçon ────────────────────────────────────────────────
 
 /** Banque partagée de lignes « tu vas trop vite » (PRD § Ordre des leçons :

@@ -12,6 +12,8 @@ import {
   getGrammarSource,
   getGrammarSourceEntry,
   getLessonBlockedLines,
+  getTextById,
+  getEngineUnlockTextId,
 } from './content'
 
 describe('getDialogue', () => {
@@ -125,5 +127,55 @@ describe('grammaire (issue 05)', () => {
 describe('getLessonBlockedLines', () => {
   it('[] tant que le fichier partagé n’existe pas (passe contenu à venir)', () => {
     expect(getLessonBlockedLines('N5')).toEqual([])
+  })
+})
+
+describe('textes progressifs (issue 08)', () => {
+  it('getTextById retrouve un texte par son text_id (≠ nom de fichier)', () => {
+    const text = getTextById('lyra_mail_new_bark') // fichier : new-bark-town/lyra_mail.json
+    expect(text!.zone_id).toBe('new-bark-town')
+    expect(text!.found_object_ref).toBe('player_pc_new_bark')
+    expect(text!.title.jp).toBe('コハルからの　メール')
+    expect(text!.questions).toHaveLength(3)
+    expect(text!.questions[0].options).toHaveLength(4)
+    expect(typeof text!.questions[0].correct_index).toBe('number')
+  })
+
+  it('getTextById couvre le panneau de Route 29 et le grand texte d’Elm', () => {
+    expect(getTextById('johto_entrance_sign_route29')!.found_object_ref).toBe(
+      'sign_johto_entrance_route29'
+    )
+    expect(getTextById('elm_great_text_new_bark')!.npc_ref).toBe('prof_elm_lab')
+    expect(getTextById('nope')).toBe(null)
+  })
+
+  it('cache : même objet au second appel', () => {
+    expect(getTextById('lyra_mail_new_bark')).toBe(getTextById('lyra_mail_new_bark'))
+  })
+
+  it('getEngineUnlockTextId encode la table complète du contrat § 2 (5 entrées)', () => {
+    // Seules les 2 premières ont leur zone dans le jalon 1 ; les 5 sont
+    // encodées pour que l'ajout des zones suivantes ne demande rien ici.
+    expect(getEngineUnlockTextId('player_pc_new_bark')).toBe('lyra_mail_new_bark')
+    expect(getEngineUnlockTextId('sign_johto_entrance_route29')).toBe('johto_entrance_sign_route29')
+    expect(getEngineUnlockTextId('forest_shrine_ilex')).toBe('forest_shrine_ilex')
+    expect(getEngineUnlockTextId('son_in_law_letter_object_slowpoke_well')).toBe(
+      'son_in_law_letter_slowpoke_well'
+    )
+    expect(getEngineUnlockTextId('inscription_sprout_tower')).toBe('ancient_inscription_sprout_tower')
+    expect(getEngineUnlockTextId('prof_elm_lab')).toBe(null)
+  })
+
+  it('chaque text_id de la table moteur correspond à un vrai fichier de contenu', () => {
+    for (const ref of [
+      'player_pc_new_bark',
+      'sign_johto_entrance_route29',
+      'forest_shrine_ilex',
+      'son_in_law_letter_object_slowpoke_well',
+      'inscription_sprout_tower',
+    ]) {
+      const textId = getEngineUnlockTextId(ref)!
+      expect(getTextById(textId), textId).not.toBe(null)
+    }
   })
 })

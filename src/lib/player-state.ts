@@ -16,12 +16,15 @@ function asStringArray(value: unknown): string[] {
 }
 
 export async function getPlayerState(userId: string): Promise<PlayerState> {
-  const [rows, questRows, cardRows] = await Promise.all([
+  const [rows, questRows, cardRows, textRows] = await Promise.all([
     sql`select * from user_map_state where user_id = ${userId}`,
     sql`select quest_id, current_step, step_entered_at from npc_quest_progress where user_id = ${userId}`,
     // Compteur hydraté pour Condition.count(kanji_studied, N) — jamais stocké
     // dans user_map_state (dérivé du SRS)
     sql`select count(distinct kanji_id)::int as kanji_studied from cards where user_id = ${userId}`,
+    // Condition.count(texts_read, N) — seuils CS-Kanji (PRD § CS-Kanji) :
+    // textes COMPLÉTÉS (quiz passé), jamais les simples déblocages (issue 08)
+    sql`select count(*)::int as texts_read from text_completions where user_id = ${userId}`,
   ])
 
   const quest_progress: Record<string, QuestProgress> = {}
@@ -32,7 +35,10 @@ export async function getPlayerState(userId: string): Promise<PlayerState> {
     }
   }
 
-  const metrics = { kanji_studied: (cardRows[0]?.kanji_studied as number) ?? 0 }
+  const metrics = {
+    kanji_studied: (cardRows[0]?.kanji_studied as number) ?? 0,
+    texts_read: (textRows[0]?.texts_read as number) ?? 0,
+  }
 
   const row = rows[0]
   // Utilisateur d'avant la première sauvegarde (le backfill de la migration

@@ -90,6 +90,48 @@ body {
   color: #a4452e;
 }
 
+/* Fenêtre de lecture des textes progressifs (issue 08) — même famille
+   visuelle que l'écran-livre (fond .book-chrome + cadre .book-frame), mais
+   la page porte une TEXTURE selon le type de document (PRD § Textes
+   Progressifs : « un seul chrome, plusieurs habillages ») : lettre (papier à
+   lignes pâle), panneau (bois), parchemin (défaut, palette du livre). */
+.text-doc-letter {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 1.9em,
+      rgba(122, 90, 51, 0.16) 1.9em calc(1.9em + 1px)
+    ),
+    linear-gradient(150deg, #fdfaf0 0%, #f6efdd 100%);
+  color: #3b2c1a;
+}
+
+.text-doc-sign {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(43, 26, 14, 0.1) 0 2px,
+      transparent 2px 26px
+    ),
+    linear-gradient(135deg, #c9a06a 0%, #b58a52 55%, #a97e46 100%);
+  color: #2b1a0e;
+}
+
+.text-doc-scroll {
+  background:
+    radial-gradient(ellipse at top left, rgba(255, 250, 235, 0.55), transparent 60%),
+    linear-gradient(135deg, #f7eed8 0%, #efe3c4 70%, #e8d9b0 100%);
+  color: #3b2c1a;
+}
+
+/* Passage surligné par le scaffolding (answer_span, 2ᵉ échec). */
+.text-scaffold-mark {
+  background: rgba(228, 178, 60, 0.45);
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 /* Session SRS (issue 06) — habillage Centre Pokémon simple : chaleur crème,
    accents rouges (le comptoir/la croix des Centres), panneau blanc arrondi.
    Création CSS en attendant les assets dédiés. */
