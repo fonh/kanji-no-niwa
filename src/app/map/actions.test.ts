@@ -23,12 +23,22 @@ vi.mock('@/lib/player-state', () => ({
   savePlayerState: savePlayerStateMock,
 }))
 
-import { interactWithNpc, reachDialogueState } from './actions'
+// Gate SRS (issue 10) : le statut du jour est mocké — la règle pure vit dans
+// src/lib/zone-gate.ts (testée à part), ici on vérifie le branchement.
+const dailyStatusMock = vi.hoisted(() =>
+  vi.fn(async () => ({ sessionDone: true, cardsPending: 0, reviewedToday: 0, path: null }))
+)
+vi.mock('@/lib/daily-srs', () => ({ getDailySRSStatusForUser: dailyStatusMock }))
+
+import { checkZoneEntry, interactWithNpc, reachDialogueState, saveMapPosition } from './actions'
+import uiStrings from '@/data/ui-strings.json'
 
 beforeEach(() => {
   stateRef.current = defaultPlayerState()
   savePlayerStateMock.mockClear()
   sqlMock.mockClear()
+  dailyStatusMock.mockClear()
+  dailyStatusMock.mockResolvedValue({ sessionDone: true, cardsPending: 0, reviewedToday: 0, path: null })
 })
 
 describe('interactWithNpc — unlock_text émis par le moteur (objet PC, panneau)', () => {
@@ -84,5 +94,71 @@ describe('elm_great_text — unlock_text porté par un dialogue (lib 02, vérifi
     const again = await reachDialogueState('npcs/new-bark-town/prof_elm_lab')
     expect(again!.state).toBe('after_great_text')
     expect(savePlayerStateMock).not.toHaveBeenCalled()
+  })
+})
+
+describe('checkZoneEntry — gate SRS au franchissement (issue 10, jamais une Condition)', () => {
+  const srsNotDone = () =>
+    dailyStatusMock.mockResolvedValue({ sessionDone: false, cardsPending: 12, reviewedToday: 0, path: null })
+
+  it('zone extérieure jamais visitée + SRS non fait → refus avec la ligne jp', async () => {
+    srsNotDone()
+    stateRef.current.visited_zones = ['MAP_NEW_BARK']
+    const result = await checkZoneEntry('MAP_ROUTE_29', 60)
+    expect(result).toEqual({ allowed: false, jp: uiStrings.srs_gate_blocked.jp })
+    expect(dailyStatusMock).toHaveBeenCalledWith('user-1', 60)
+  })
+
+  it('zone déjà visitée → autorisé SANS lire le statut SRS (retour jamais gaté)', async () => {
+    srsNotDone()
+    stateRef.current.visited_zones = ['MAP_NEW_BARK', 'MAP_ROUTE_29']
+    expect(await checkZoneEntry('MAP_ROUTE_29', 0)).toEqual({ allowed: true })
+    expect(dailyStatusMock).not.toHaveBeenCalled()
+  })
+
+  it('intérieur/étage → autorisé sans lire le statut (jamais gaté, finding 03-D5)', async () => {
+    srsNotDone()
+    expect(await checkZoneEntry('MAP_NEW_BARK_ELMS_LAB_1F', 0)).toEqual({ allowed: true })
+    expect(dailyStatusMock).not.toHaveBeenCalled()
+  })
+
+  it('SRS fait → autorisé', async () => {
+    stateRef.current.visited_zones = []
+    expect(await checkZoneEntry('MAP_ROUTE_29', 0)).toEqual({ allowed: true })
+  })
+
+  it('zone inconnue du registre → autorisé (ne bloque jamais le moteur)', async () => {
+    srsNotDone()
+    expect(await checkZoneEntry('MAP_NOPE', 0)).toEqual({ allowed: true })
+  })
+})
+
+describe('saveMapPosition — filet serveur du gate à l’écriture', () => {
+  it('refuse la première visite d’une zone extérieure quand le SRS n’est pas fait', async () => {
+    dailyStatusMock.mockResolvedValue({ sessionDone: false, cardsPending: 12, reviewedToday: 0, path: null })
+    stateRef.current.visited_zones = ['MAP_NEW_BARK']
+    await saveMapPosition('MAP_ROUTE_29', 600, 400, 0)
+    expect(sqlMock).not.toHaveBeenCalled()
+  })
+
+  it('écrit normalement une zone déjà visitée, même SRS non fait (sans lire le statut)', async () => {
+    dailyStatusMock.mockResolvedValue({ sessionDone: false, cardsPending: 12, reviewedToday: 0, path: null })
+    stateRef.current.visited_zones = ['MAP_ROUTE_29']
+    await saveMapPosition('MAP_ROUTE_29', 600, 400, 0)
+    expect(sqlMock).toHaveBeenCalledTimes(1)
+    expect(dailyStatusMock).not.toHaveBeenCalled()
+  })
+
+  it('écrit un intérieur jamais visité, même SRS non fait', async () => {
+    dailyStatusMock.mockResolvedValue({ sessionDone: false, cardsPending: 12, reviewedToday: 0, path: null })
+    stateRef.current.visited_zones = []
+    await saveMapPosition('MAP_NEW_BARK_ELMS_LAB_1F', 4, 10, 0)
+    expect(sqlMock).toHaveBeenCalledTimes(1)
+  })
+
+  it('écrit la première visite quand le SRS est fait', async () => {
+    stateRef.current.visited_zones = []
+    await saveMapPosition('MAP_ROUTE_29', 600, 400, 0)
+    expect(sqlMock).toHaveBeenCalledTimes(1)
   })
 })

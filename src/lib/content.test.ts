@@ -17,6 +17,7 @@ import {
   getLessonBlockedLines,
   getTextById,
   getEngineUnlockTextId,
+  getZoneRegistryNames,
 } from './content'
 
 describe('getDialogue', () => {
@@ -212,5 +213,20 @@ describe('loaders du menu START (issue 09)', () => {
   it('getTextsForZone sert les MÊMES objets que getTextById (index partagé)', () => {
     const [first] = getTextsForZone('route-29')
     expect(first).toBe(getTextById(first.text_id))
+  })
+})
+
+describe('getZoneRegistryNames (issue 10 — LA source des noms de zones jp)', () => {
+  it('sert name {jp, en} par slug depuis content/zone-registry-names.json', () => {
+    const names = getZoneRegistryNames()
+    expect(names['new-bark-town']).toEqual({ jp: 'ワカバタウン', en: 'New Bark Town' })
+    expect(names['route-29'].jp).toBe('29ばんどうろ')
+    expect(names['cherrygrove-city'].jp).toBe('ヨシノシティ')
+    expect(names['route-30'].jp).toBe('30ばんどうろ')
+  })
+
+  it('couvre les zones du jalon et au-delà (le registre contenu est complet)', () => {
+    const names = getZoneRegistryNames()
+    expect(Object.keys(names).length).toBeGreaterThan(50)
   })
 })

@@ -457,3 +457,23 @@ export function getLessonBlockedLines(jlptLevel = 'N5'): string[] {
   > | null
   return file?.[jlptLevel] ?? []
 }
+
+// ── Noms de zones (jp/en) ─────────────────────────────────────────────────────
+
+interface ZoneRegistryNamesFile {
+  zones: { zone_id: string; name: { jp: string; en: string } }[]
+}
+
+let zoneNamesCache: Record<string, { jp: string; en: string }> | null = null
+
+/** LA source des noms de zones affichables (issue 10) : le champ `name
+ * {jp, en}` par slug de `content/zone-registry-names.json` — le registre
+ * contenu voulu par le PRD § Noms de lieux (les display_name du registre ROM
+ * sont en français, interdits d'écran). L'ancien src/data/zone-labels.json
+ * (issue 09) en dupliquait un sous-ensemble : supprimé, tout passe par ici. */
+export function getZoneRegistryNames(): Record<string, { jp: string; en: string }> {
+  if (zoneNamesCache) return zoneNamesCache
+  const file = readContentJson('zone-registry-names.json') as ZoneRegistryNamesFile | null
+  zoneNamesCache = Object.fromEntries((file?.zones ?? []).map(z => [z.zone_id, z.name]))
+  return zoneNamesCache
+}

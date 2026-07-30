@@ -2,7 +2,7 @@
 // — posé proprement à l'issue 09 (l'heuristique vivait locale dans npcs.ts,
 // écart noté par l'issue 05).
 import { describe, it, expect } from 'vitest'
-import { visitedZoneSlugs, zoneSlugForMapName } from './zone-slug'
+import { visitedZoneSlugs, zoneSlugForMapName, zoneSlugForMapNameOrParent } from './zone-slug'
 
 const SLUGS = ['new-bark-town', 'route-29', 'cherrygrove-city', 'route-30']
 
@@ -23,6 +23,26 @@ describe('zoneSlugForMapName', () => {
 
   it('zone inconnue → undefined', () => {
     expect(zoneSlugForMapName('MAP_GOLDENROD', SLUGS)).toBeUndefined()
+  })
+})
+
+describe('zoneSlugForMapNameOrParent (issue 10 — libellé jp du HUD/bandeau)', () => {
+  it('zone extérieure : même résultat que zoneSlugForMapName', () => {
+    expect(zoneSlugForMapNameOrParent('MAP_ROUTE_29', SLUGS)).toBe('route-29')
+    expect(zoneSlugForMapNameOrParent('MAP_NEW_BARK', SLUGS)).toBe('new-bark-town')
+  })
+
+  it('intérieur : remonte au rattachement extérieur (le bâtiment appartient à la ville)', () => {
+    expect(zoneSlugForMapNameOrParent('MAP_NEW_BARK_ELMS_LAB_1F', SLUGS)).toBe('new-bark-town')
+    expect(zoneSlugForMapNameOrParent('MAP_ROUTE_30_MR_POKEMON_HOUSE', SLUGS)).toBe('route-30')
+    expect(zoneSlugForMapNameOrParent('MAP_CHERRYGROVE_POKECENTER_1F', SLUGS)).toBe(
+      'cherrygrove-city'
+    )
+  })
+
+  it('zone sans rattachement connu → undefined (repli latin dev à l’appelant)', () => {
+    expect(zoneSlugForMapNameOrParent('MAP_GOLDENROD_RADIO_TOWER_3F', SLUGS)).toBeUndefined()
+    expect(zoneSlugForMapNameOrParent('MAP_EVERYWHERE', SLUGS)).toBeUndefined()
   })
 })
 

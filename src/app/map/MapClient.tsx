@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { saveMapProgress, saveMapPosition, reachDialogueState, chooseCompanion, interactWithNpc } from './actions'
+import { saveMapProgress, saveMapPosition, reachDialogueState, chooseCompanion, interactWithNpc, checkZoneEntry } from './actions'
 import { engageTrainer, type TrainerBattleStart } from './battle-actions'
 import BattleScreen from './BattleScreen'
 import DialogueBox, { type DialogueBoxHandle } from './DialogueBox'
@@ -21,6 +21,7 @@ import {
   type ZoneWarp,
 } from '@/lib/zone-geometry'
 import type { ZoneNpc } from '@/lib/npcs'
+import { findInterceptingNpc, interceptionApproach, pushBackTile, type RoadblockSource } from '@/lib/roadblock'
 import { isInSightLine, type ZoneTrainer } from '@/lib/trainers'
 import type { ZoneListEntry } from '@/lib/zones'
 import { resolveNpcSprite, PLAYER_SPRITE_URL, SPRITE_FRAME_SIZE } from '@/lib/npc-sprites'
@@ -60,6 +61,9 @@ interface Props {
   // Planche overworld de l'avatar choisi à l'onboarding (issue 04) — même
   // géométrie 8×4 que la planche Ethan par défaut.
   playerSpriteUrl?: string
+  // Planche overworld du compagnon choisi (issue 10) — null si aucun
+  // compagnon ou pas de planche exploitable (le suivi n'apparaît pas).
+  followerSpriteUrl?: string | null
 }
 
 // One tile per input (PRD "Mouvement de l'avatar"); holding a direction
@@ -142,7 +146,7 @@ function CollisionCanvas({ zone }: { zone: Zone }) {
   )
 }
 
-export default function MapClient({ zone: initialZone, npcs: initialNpcs, trainers: initialTrainers, initialPos, initialProgress, allZoneNames, playerSpriteUrl = PLAYER_SPRITE_URL }: Props) {
+export default function MapClient({ zone: initialZone, npcs: initialNpcs, trainers: initialTrainers, initialPos, initialProgress, allZoneNames, playerSpriteUrl = PLAYER_SPRITE_URL, followerSpriteUrl = null }: Props) {
   const [zone, setZone] = useState(initialZone)
   const [npcs, setNpcs] = useState(initialNpcs)
   const [trainers, setTrainers] = useState(initialTrainers)
@@ -161,6 +165,14 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   // temps que la server action assemble le script.
   const [battle, setBattle] = useState<TrainerBattleStart | null>(null)
   const [engagingTrainer, setEngagingTrainer] = useState<string | null>(null)
+  // Interception Roadblock (issue 10) : PNJ bloqueur en train de marcher vers
+  // le joueur / de livrer sa ligne — mouvement gelé pendant toute la séquence.
+  const [interceptingNpc, setInterceptingNpc] = useState<string | null>(null)
+  // Suivi du compagnon : la tuile que le joueur vient de quitter. Les
+  // planches follower extraites (pikachu) n'ont que la rangée « face sud »
+  // fiable (voir npc-sprites.ts) — une seule rangée rendue, documenté pour
+  // la passe assets.
+  const [followerPos, setFollowerPos] = useState<PlayerPos | null>(null)
   const [viewSize, setViewSize] = useState({ w: 375, h: 667 })
   const [showZonePicker, setShowZonePicker] = useState(false)
   const [activeDialogue, setActiveDialogue] = useState<ActiveDialogue | null>(null)
@@ -179,6 +191,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const floorPickerRef = useRef(floorPicker)
   const battleRef = useRef(battle)
   const engagingRef = useRef(engagingTrainer)
+  const interceptingRef = useRef(interceptingNpc)
   zoneRef.current = zone
   playerPosRef.current = playerPos
   facingRef.current = facing
@@ -189,6 +202,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   floorPickerRef.current = floorPicker
   battleRef.current = battle
   engagingRef.current = engagingTrainer
+  interceptingRef.current = interceptingNpc
 
   // A ref, not state: read synchronously within the same input, before any
   // render has a chance to commit — a state flag would let two inputs in
@@ -212,10 +226,14 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     []
   )
 
-  const displayNameByZone = useRef(new Map(allZoneNames.map(z => [z.name, z.display_name]))).current
+  // Libellés d'écran (issue 10, PRD § Noms de lieux) : jp_label = nom VO jp
+  // (propre ou hérité de la ville) — le display_name français du registre ROM
+  // n'est plus jamais affiché. Repli latin prettifié pour les zones hors
+  // contenu (dev). jp_name (nom PROPRE seulement) pilote le bandeau d'entrée.
+  const zoneEntryByName = useRef(new Map(allZoneNames.map(z => [z.name, z]))).current
   const zoneLabel = useCallback(
-    (name: string) => displayNameByZone.get(name) || formatZoneName(name),
-    [displayNameByZone]
+    (name: string) => zoneEntryByName.get(name)?.jp_label || formatZoneName(name),
+    [zoneEntryByName]
   )
 
   useEffect(() => {
@@ -259,7 +277,11 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     (zoneName: string, x: number, z: number) => {
       if (persistTimeoutRef.current) clearTimeout(persistTimeoutRef.current)
       persistTimeoutRef.current = setTimeout(() => {
-        saveMapPosition(zoneName, x, z).catch(err => console.error('Failed to save map position', err))
+        // tz : le filet serveur du gate SRS re-calcule le jour local du
+        // joueur à l'écriture (issue 10).
+        saveMapPosition(zoneName, x, z, new Date().getTimezoneOffset()).catch(err =>
+          console.error('Failed to save map position', err)
+        )
       }, 400)
     },
     []
@@ -431,67 +453,6 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [startBattleEngagement]
   )
 
-  const showBanner = useCallback((label: string) => {
-    if (bannerTimeoutRef.current) clearTimeout(bannerTimeoutRef.current)
-    setBanner({ label, key: Date.now() })
-    bannerTimeoutRef.current = setTimeout(() => setBanner(null), 1900)
-  }, [])
-
-  const goToZone = useCallback(
-    async (targetName: string, resolveSpawn?: (newZone: Zone) => PlayerPos | null) => {
-      if (isTransitioningRef.current) return
-      isTransitioningRef.current = true
-      try {
-        const res = await fetch(`/api/zone?name=${encodeURIComponent(targetName)}`)
-        // A 307 to the sign-in page (expired session) resolves as `ok` once
-        // fetch follows the redirect, but the body is HTML, not JSON.
-        if (!res.ok || !res.headers.get('content-type')?.includes('application/json')) return
-        const { zone: newZone, npcs: newNpcs, trainers: newTrainers } = (await res.json()) as {
-          zone: Zone
-          npcs: ZoneNpc[]
-          trainers: ZoneTrainer[]
-        }
-        const pos = resolveSpawn ? resolveSpawn(newZone) : zoneSpawn(newZone)
-        if (!pos) return // e.g. the exact tile crossed into turned out not to be walkable there
-        setZone(newZone)
-        setNpcs(newNpcs)
-        setTrainers(newTrainers)
-        setPlayerPos(pos)
-        setFloorPicker(false)
-        showBanner(zoneLabel(newZone.name))
-        markVisited(newZone.name)
-        persistPosition(newZone.name, pos.world_x, pos.world_z)
-        checkSightLine(newTrainers, pos.world_x, pos.world_z)
-      } catch (err) {
-        console.error('Zone transition failed', err)
-      } finally {
-        isTransitioningRef.current = false
-      }
-    },
-    [persistPosition, checkSightLine, showBanner, zoneLabel, markVisited]
-  )
-
-  const enterWarp = useCallback(
-    (warp: ZoneWarp) => {
-      // 0xFFF marks the ROM's dynamic warps: elevators and the Safari gate.
-      // Their real destination is "whichever floor you came from" (RAM state)
-      // — we surface the precomputed floor list as a picker instead.
-      if (typeof warp.header !== 'string') {
-        if (zoneRef.current.elevator_floors.length > 0) setFloorPicker(true)
-        return
-      }
-      // The destination tile depends on the target zone's own warp list
-      // (warp.anchor points back to the matching door there), so it can only
-      // be resolved once that zone's data has been fetched.
-      goToZone(warp.header, newZone => {
-        const anchorWarp = newZone.warps[warp.anchor]
-        if (anchorWarp) return { world_x: anchorWarp.x, world_z: anchorWarp.z }
-        return zoneSpawn(newZone)
-      })
-    },
-    [goToZone]
-  )
-
   /** Obstacle already cleared by the player (力/水/飛 interactions)? */
   const isCleared = useCallback(
     (obj: Zone['objects'][number]) =>
@@ -514,6 +475,198 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       )
     },
     [isCleared]
+  )
+
+  // ── Interception Roadblock (issue 10, CONTEXT.md « Roadblock NPC ») ───────
+  // Sight Cone d'un PNJ à sight_auto_result `block` : le PNJ marche vers le
+  // joueur (une tuile par STEP_MS — animation simple, pas de pathfinding : il
+  // suit son axe de vue), livre sa ligne (interactWithNpc → DialogueBox — un
+  // PNJ-leçon à cône livrerait ici sa ligne de blocage via la règle serveur),
+  // repousse le joueur d'une case, puis REGAGNE sa position d'origine
+  // (téléport assumé, comme documenté dans l'issue). Se re-déclenche à chaque
+  // entrée dans le cône tant que sa condition n'est pas levée (la présence du
+  // PNJ est déjà filtrée serveur par unlock_conditions).
+  const afterDialogueCloseRef = useRef<(() => void) | null>(null)
+  const interceptTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const npcHomeRef = useRef<{ x: number; z: number } | null>(null)
+
+  useEffect(
+    () => () => {
+      if (interceptTimerRef.current) clearTimeout(interceptTimerRef.current)
+    },
+    []
+  )
+
+  const finishInterception = useCallback(
+    (blocker: ZoneNpc & RoadblockSource, pushBack: boolean) => {
+      if (pushBack) {
+        const pos = playerPosRef.current
+        const back = pushBackTile(blocker, pos.world_x, pos.world_z)
+        const z = zoneRef.current
+        const abilities = {
+          surf: progressRef.current.mizu,
+          whirlpool: progressRef.current.uzu,
+          waterfall: progressRef.current.taki,
+        }
+        if (canTraverse(z, back.x, back.z, abilities) && !isTileOccupied(back.x, back.z)) {
+          // Le joueur fait face au PNJ qui vient de le sermonner.
+          const facePairs: Record<Direction, Direction> = {
+            south: 'north',
+            north: 'south',
+            east: 'west',
+            west: 'east',
+          }
+          setFacing(facePairs[blocker.facing])
+          setFollowerPos({ world_x: pos.world_x, world_z: pos.world_z })
+          setPlayerPos({ world_x: back.x, world_z: back.z })
+          persistPosition(z.name, back.x, back.z)
+        }
+      }
+      const home = npcHomeRef.current
+      if (home) {
+        setNpcs(prev =>
+          prev.map(n =>
+            n.npc_id === blocker.npc_id ? { ...n, world_x: home.x, world_z: home.z } : n
+          )
+        )
+      }
+      npcHomeRef.current = null
+      interceptingRef.current = null
+      setInterceptingNpc(null)
+    },
+    [isTileOccupied, persistPosition]
+  )
+
+  const checkNpcInterception = useCallback(
+    (npcList: ZoneNpc[], wx: number, wz: number) => {
+      if (battleRef.current || engagingRef.current || dialogueRef.current) return
+      if (interceptingRef.current) return
+      const sightNpcs = npcList.filter(
+        (n): n is ZoneNpc & RoadblockSource => n.facing !== undefined && n.sight_range !== undefined
+      )
+      const blocker = findInterceptingNpc(sightNpcs, wx, wz)
+      if (!blocker) return
+      interceptingRef.current = blocker.npc_id
+      setInterceptingNpc(blocker.npc_id)
+      npcHomeRef.current = { x: blocker.world_x, z: blocker.world_z }
+      const path = interceptionApproach(blocker, wx, wz)
+      let step = 0
+      const advance = () => {
+        if (step < path.length) {
+          const tile = path[step++]
+          setNpcs(prev =>
+            prev.map(n =>
+              n.npc_id === blocker.npc_id ? { ...n, world_x: tile.x, world_z: tile.z } : n
+            )
+          )
+          interceptTimerRef.current = setTimeout(advance, STEP_MS)
+          return
+        }
+        interactWithNpc(blocker.npc_id, blocker.dialogue_ref)
+          .then(result => {
+            if (result?.kind === 'lesson') {
+              // PNJ-leçon à cône dont la leçon est DISPONIBLE : pas un
+              // blocage — le Book Screen s'ouvre, sans repoussée.
+              finishInterception(blocker, false)
+              router.push(`/lesson/${result.zone_id}/${result.sequence_index}`)
+              return
+            }
+            const pages = result?.kind === 'dialogue' ? result.dialogue.pages : []
+            if (pages.length) {
+              afterDialogueCloseRef.current = () => finishInterception(blocker, true)
+              openDialogue(result?.kind === 'dialogue' ? result.dialogue.name : '', pages)
+            } else {
+              finishInterception(blocker, true)
+            }
+          })
+          .catch(err => {
+            console.error('Roadblock interception failed', err)
+            finishInterception(blocker, false)
+          })
+      }
+      advance()
+    },
+    [finishInterception, openDialogue, router]
+  )
+
+  const showBanner = useCallback((label: string) => {
+    if (bannerTimeoutRef.current) clearTimeout(bannerTimeoutRef.current)
+    setBanner({ label, key: Date.now() })
+    bannerTimeoutRef.current = setTimeout(() => setBanner(null), 1900)
+  }, [])
+
+  const goToZone = useCallback(
+    async (targetName: string, resolveSpawn?: (newZone: Zone) => PlayerPos | null) => {
+      if (isTransitioningRef.current) return
+      isTransitioningRef.current = true
+      try {
+        // Gate SRS quotidien (issue 10, PRD § Boucle Quotidienne pt 5) :
+        // l'entrée en zone EXTÉRIEURE jamais visitée est vérifiée serveur au
+        // moment précis du franchissement — les deux chemins (continuité
+        // outdoor→outdoor d'attemptStep ET warps) passent ici. Refus → le pas
+        // est annulé (le joueur n'a pas bougé), même ressort que le blocage.
+        const target = zoneEntryByName.get(targetName)
+        if (target?.is_outdoor && !progressRef.current.visited.includes(targetName)) {
+          const entry = await checkZoneEntry(targetName, new Date().getTimezoneOffset())
+          if (!entry.allowed) {
+            setBumpKey(k => k + 1)
+            openDialogue('', [{ jp: entry.jp }])
+            return
+          }
+        }
+        const res = await fetch(`/api/zone?name=${encodeURIComponent(targetName)}`)
+        // A 307 to the sign-in page (expired session) resolves as `ok` once
+        // fetch follows the redirect, but the body is HTML, not JSON.
+        if (!res.ok || !res.headers.get('content-type')?.includes('application/json')) return
+        const { zone: newZone, npcs: newNpcs, trainers: newTrainers } = (await res.json()) as {
+          zone: Zone
+          npcs: ZoneNpc[]
+          trainers: ZoneTrainer[]
+        }
+        const pos = resolveSpawn ? resolveSpawn(newZone) : zoneSpawn(newZone)
+        if (!pos) return // e.g. the exact tile crossed into turned out not to be walkable there
+        setZone(newZone)
+        setNpcs(newNpcs)
+        setTrainers(newTrainers)
+        setPlayerPos(pos)
+        setFollowerPos(null) // le compagnon ré-émerge derrière le premier pas
+        setFloorPicker(false)
+        // Bandeau : le nom VO jp PROPRE de la zone (ワカバタウン…). Les
+        // intérieurs n'ont pas de nom propre dans le contenu → pas de bandeau
+        // (comme HGSS ; leur libellé hérité reste visible au HUD).
+        if (target?.jp_name) showBanner(target.jp_name)
+        markVisited(newZone.name)
+        persistPosition(newZone.name, pos.world_x, pos.world_z)
+        checkSightLine(newTrainers, pos.world_x, pos.world_z)
+        if (!engagingRef.current) checkNpcInterception(newNpcs, pos.world_x, pos.world_z)
+      } catch (err) {
+        console.error('Zone transition failed', err)
+      } finally {
+        isTransitioningRef.current = false
+      }
+    },
+    [persistPosition, checkSightLine, checkNpcInterception, showBanner, zoneEntryByName, markVisited, openDialogue]
+  )
+
+  const enterWarp = useCallback(
+    (warp: ZoneWarp) => {
+      // 0xFFF marks the ROM's dynamic warps: elevators and the Safari gate.
+      // Their real destination is "whichever floor you came from" (RAM state)
+      // — we surface the precomputed floor list as a picker instead.
+      if (typeof warp.header !== 'string') {
+        if (zoneRef.current.elevator_floors.length > 0) setFloorPicker(true)
+        return
+      }
+      // The destination tile depends on the target zone's own warp list
+      // (warp.anchor points back to the matching door there), so it can only
+      // be resolved once that zone's data has been fetched.
+      goToZone(warp.header, newZone => {
+        const anchorWarp = newZone.warps[warp.anchor]
+        if (anchorWarp) return { world_x: anchorWarp.x, world_z: anchorWarp.z }
+        return zoneSpawn(newZone)
+      })
+    },
+    [goToZone]
   )
 
   const settleStep = useCallback(
@@ -552,11 +705,16 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         }
         setStepping(false)
       }, durationMs)
+      // Suivi du compagnon : il occupe la tuile que le joueur quitte, tourné
+      // dans la direction du pas (issue 10).
+      const from = playerPosRef.current
+      setFollowerPos({ world_x: from.world_x, world_z: from.world_z })
       setPlayerPos(pos)
       persistPosition(zoneRef.current.name, pos.world_x, pos.world_z)
       checkSightLine(trainersRef.current, pos.world_x, pos.world_z)
+      if (!engagingRef.current) checkNpcInterception(npcsRef.current, pos.world_x, pos.world_z)
     },
-    [persistPosition, checkSightLine, enterWarp, isTileOccupied]
+    [persistPosition, checkSightLine, checkNpcInterception, enterWarp, isTileOccupied]
   )
 
   const attemptStep = useCallback(
@@ -564,7 +722,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       if (dialogueRef.current || floorPickerRef.current || isTransitioningRef.current) return
       // Mouvement bloqué dès l'engagement d'un combat (« ! ») et pendant
       // toute sa durée (l'overlay couvre l'écran, la garde couvre le clavier)
-      if (battleRef.current || engagingRef.current) return
+      // — idem pendant une interception Roadblock (marche du PNJ + repoussée).
+      if (battleRef.current || engagingRef.current || interceptingRef.current) return
       if (Date.now() < stepBusyUntilRef.current) return
 
       setFacing(dir)
@@ -653,10 +812,20 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   // B ferme à tout moment (PRD § Mouvement de l'avatar).
 
   const dialogueBoxRef = useRef<DialogueBoxHandle>(null)
-  const closeDialogue = useCallback(() => setActiveDialogue(null), [])
+  const closeDialogue = useCallback(() => {
+    setActiveDialogue(null)
+    // Fin d'une interception Roadblock : la ligne livrée, la fermeture de la
+    // boîte déclenche la repoussée + le retour du PNJ (issue 10).
+    const after = afterDialogueCloseRef.current
+    afterDialogueCloseRef.current = null
+    if (after) after()
+  }, [])
 
   const onA = useCallback(() => {
     if (battleRef.current || engagingRef.current) return
+    // Pendant la marche d'interception (avant la boîte), A/B sont inertes ;
+    // une fois la boîte ouverte, dialogueRef reprend la main normalement.
+    if (interceptingRef.current && !dialogueRef.current) return
     if (dialogueRef.current) {
       dialogueBoxRef.current?.pressA()
       return
@@ -708,6 +877,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const onB = useCallback(() => {
     // En combat, B n'abandonne pas (PRD) — BattleScreen gère ses entrées.
     if (battleRef.current || engagingRef.current) return
+    if (interceptingRef.current && !dialogueRef.current) return
     if (dialogueRef.current) closeDialogue()
     else if (floorPickerRef.current) setFloorPicker(false)
   }, [closeDialogue])
@@ -948,9 +1118,12 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             )
           })}
 
-          {/* Curated NPC markers — face them and press A (or click) */}
+          {/* Curated NPC markers — face them and press A (or click). Un
+              Roadblock en interception glisse vers le joueur (transition sur
+              left/top) avec un ！ au-dessus, comme l'embuscade des dresseurs. */}
           {npcs.map(npc => {
             const px = worldToPixel(npc.world_x, npc.world_z)
+            const intercepting = interceptingNpc === npc.npc_id
             return (
               <div
                 key={npc.npc_id}
@@ -963,9 +1136,15 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                   height: 18,
                   cursor: 'pointer',
                   zIndex: 5,
+                  transition: `left ${STEP_MS / 1000}s linear, top ${STEP_MS / 1000}s linear`,
                 }}
                 title={npc.name}
               >
+                {intercepting && (
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-amber-300 text-base font-bold animate-bounce">
+                    ！
+                  </div>
+                )}
                 <div
                   style={{ width: 18, height: 18, borderRadius: '50%' }}
                   className="bg-emerald-400 border-2 border-emerald-700 shadow-sm hover:scale-110 transition-transform flex items-center justify-center text-[9px]"
@@ -978,7 +1157,10 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
 
           {/* Trainer markers — entrer dans la ligne de vue d'un dresseur
               rôle battle non battu déclenche le combat (checkSightLine) ;
-              battu = gris, Talk → post_battle. */}
+              battu = gris, Talk → post_battle. Tap = Talk (même geste que
+              les PNJ — indispensable tant que des placements contenu comme
+              Silver #1 vivent sur des tuiles injoignables à pied, voir
+              a1-traversal.test.ts). */}
           {trainers.map(trainer => {
             const px = worldToPixel(trainer.world_x, trainer.world_z)
             const defeated = trainer.defeated === true
@@ -986,13 +1168,19 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             return (
               <div
                 key={trainer.trainer_id}
+                onClick={e => {
+                  e.stopPropagation()
+                  if (!battleRef.current && !engagingRef.current && !interceptingRef.current) {
+                    startTrainerInteraction(trainer)
+                  }
+                }}
                 style={{
                   position: 'absolute',
                   left: px.x - 9 + zone.scale_x / 2,
                   top: px.y - 16 + zone.scale_y,
                   width: 18,
                   height: 18,
-                  pointerEvents: 'none',
+                  cursor: 'pointer',
                   zIndex: 5,
                 }}
                 title={trainer.name}
@@ -1047,6 +1235,38 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
               </div>
             )
           })}
+
+          {/* Suivi du compagnon (issue 10) : une case derrière le joueur, sur
+              la tuile qu'il vient de quitter — planche follower row 0 (face
+              sud, seule rangée fiable des planches extraites), animée idle. */}
+          {followerSpriteUrl &&
+            followerPos &&
+            (followerPos.world_x !== playerPos.world_x ||
+              followerPos.world_z !== playerPos.world_z) && (
+              <div
+                style={{
+                  position: 'absolute',
+                  left: worldToPixel(followerPos.world_x, followerPos.world_z).x - SPRITE_FRAME_SIZE / 2 + zone.scale_x / 2,
+                  top: worldToPixel(followerPos.world_x, followerPos.world_z).y - SPRITE_FRAME_SIZE + zone.scale_y,
+                  width: SPRITE_FRAME_SIZE,
+                  height: SPRITE_FRAME_SIZE,
+                  transition: `left ${STEP_MS / 1000}s linear, top ${STEP_MS / 1000}s linear`,
+                  pointerEvents: 'none',
+                  zIndex: 9,
+                }}
+              >
+                <div
+                  className="ow-sprite-idle"
+                  style={{
+                    width: SPRITE_FRAME_SIZE,
+                    height: SPRITE_FRAME_SIZE,
+                    backgroundImage: `url(${followerSpriteUrl})`,
+                    backgroundPosition: '0 0',
+                    imageRendering: 'pixelated',
+                  }}
+                />
+              </div>
+            )}
 
           {/* Player avatar — direction row from the sheet, walk cycle while
               a step is in flight */}

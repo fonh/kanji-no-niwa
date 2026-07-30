@@ -22,6 +22,17 @@ function fromLabel(label: string): ResolvedSprite | null {
   return entry ? { url: `/sprites/overworld/${label}.png`, cols: entry.cols } : null
 }
 
+/** Planche overworld du compagnon choisi (issue 10) — le suivi derrière le
+ * joueur. Le dump contient une planche `pikachu` (8 colonnes × 32 px, rangée
+ * 0 = face sud animée, comme les autres planches ROM) ; un compagnon sans
+ * planche exploitable rend null et le suivi n'apparaît pas (noté pour la
+ * passe assets — content/companions.json vise public/sprites/followers/,
+ * répertoire encore inexistant : la planche overworld extraite fait foi). */
+export function followerSpriteForCompanion(companionId: string | null): string | null {
+  if (!companionId) return null
+  return fromLabel(companionId)?.url ?? null
+}
+
 /** SPRITE_VAR_n is a reused "whichever character the story needs here" slot
  * — not one fixed sprite in the original game. It's your rival/friend
  * (opposite-gender protagonist) in most towns, but Silver at Dragon's Den,

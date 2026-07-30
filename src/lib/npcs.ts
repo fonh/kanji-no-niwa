@@ -9,6 +9,12 @@ interface RawNpc {
   tile_y: number
   trigger_type: string
   dialogue_ref: string
+  // Champs de cône de vision (Roadblock NPC, issue 10) — présents seulement
+  // sur les PNJ à trigger_type sight_auto (ex. rocket_grunt_azalea).
+  facing?: 'north' | 'south' | 'east' | 'west'
+  sight_range?: number
+  sight_auto_result?: string
+  repeats?: boolean
 }
 
 export interface ZoneNpc {
@@ -18,6 +24,13 @@ export interface ZoneNpc {
   world_x: number
   world_z: number
   dialogue_ref: string
+  /** talk (défaut) ou sight_auto — un sight_auto à résultat `block` déclenche
+   * l'interception Roadblock (CONTEXT.md) dès l'entrée dans la ligne de vue. */
+  trigger_type: string
+  facing?: 'north' | 'south' | 'east' | 'west'
+  sight_range?: number
+  sight_auto_result?: string
+  repeats?: boolean
 }
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -46,5 +59,10 @@ export function getNpcsForZone(zone: Zone): ZoneNpc[] {
       world_x: zone.world_origin_x + n.tile_x,
       world_z: zone.world_origin_y + n.tile_y,
       dialogue_ref: n.dialogue_ref,
+      trigger_type: n.trigger_type,
+      facing: n.facing,
+      sight_range: n.sight_range,
+      sight_auto_result: n.sight_auto_result,
+      repeats: n.repeats,
     }))
 }

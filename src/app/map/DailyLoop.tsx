@@ -84,8 +84,11 @@ export default function DailyLoop({ now = () => new Date() }: { now?: () => Date
   return (
     <>
       {/* Icône Pokégear + badge : ✓ du jour (acquis jusqu'à la bascule) ou
-          rappel si la session n'est pas faite */}
-      <div className="fixed top-3 right-3 z-[80] font-chrome" onClick={e => e.stopPropagation()}>
+          rappel si la session n'est pas faite. z-76/78/79 : au-dessus des
+          contrôles carte (70), SOUS l'overlay de combat (80) — l'appel du
+          mentor ne recouvre jamais un combat engagé (écart noté issue 07,
+          soldé ici). */}
+      <div className="fixed top-3 right-3 z-[76] font-chrome" onClick={e => e.stopPropagation()}>
         <button
           onClick={() => setView(v => (v === null ? 'gear' : null))}
           className="relative bg-black/70 border border-white/30 rounded-lg px-3 py-2 text-white/90 text-xs font-bold"
@@ -110,7 +113,7 @@ export default function DailyLoop({ now = () => new Date() }: { now?: () => Date
           attendra) */}
       {(view === 'gear' || view === 'contacts') && (
         <div
-          className="fixed inset-0 z-[85] flex items-center justify-center bg-black/50 font-chrome"
+          className="fixed inset-0 z-[78] flex items-center justify-center bg-black/50 font-chrome"
           onClick={() => setView(null)}
         >
           <div
@@ -148,7 +151,7 @@ export default function DailyLoop({ now = () => new Date() }: { now?: () => Date
       {/* L'appel du mentor — sprite d'Elm + invite (ou appel court si tout
           est en ordre) */}
       {view === 'call' && (
-        <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/40 font-chrome pb-6 px-3">
+        <div className="fixed inset-0 z-[79] flex items-end justify-center bg-black/40 font-chrome pb-6 px-3">
           <div className="dialogue-frame w-full max-w-xl text-gray-900">
             <div className="flex items-center gap-3 p-2">
               <div

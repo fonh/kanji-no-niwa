@@ -66,10 +66,20 @@ export function getTrainersForZone(zone: Zone): ZoneTrainer[] {
     }))
 }
 
+/** Minimal shape a sight check needs — shared between trainers (ambush) and
+ * Roadblock NPCs (interception, issue 10) : CONTEXT.md « Sight Cone » is one
+ * geometry for both. */
+export interface SightSource {
+  world_x: number
+  world_z: number
+  facing: 'north' | 'south' | 'east' | 'west'
+  sight_range: number
+}
+
 /** Straight line-of-sight in front of the trainer, matching the classic
  * mainline-game mechanic (not a widening cone despite the name in ADR-0001)
  * — one tile wide, `sight_range` tiles long, in the direction `facing`. */
-export function isInSightLine(trainer: ZoneTrainer, worldX: number, worldZ: number): boolean {
+export function isInSightLine(trainer: SightSource, worldX: number, worldZ: number): boolean {
   const { world_x, world_z, facing, sight_range } = trainer
   switch (facing) {
     case 'south':

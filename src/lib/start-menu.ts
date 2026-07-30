@@ -202,7 +202,8 @@ export function kanjidexStatusMap(cards: readonly KanjidexCard[]): Record<string
 
 // ── Libellés jp de zones ──────────────────────────────────────────────────────
 
-/** Libellé jp d'un slug de zone : registre (src/data/zone-labels.json) →
+/** Libellé jp d'un slug de zone : registre (content/zone-registry-names.json,
+ * via getZoneRegistryNames — LA source unique depuis l'issue 10) →
  * dérivation route-N → 「Nばんどうろ」 → repli prettifié (latin, dev — les
  * zones hors jalon recevront leur libellé à la passe contenu). */
 export function zoneJpLabel(slug: string, labels: Record<string, { jp: string }>): string {

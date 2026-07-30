@@ -8,6 +8,7 @@ import { parseProgress } from '@/lib/obstacles'
 import { getPlayerState } from '@/lib/player-state'
 import { filterVisibleNpcs, filterVisibleTrainers } from '@/lib/map-visibility'
 import { avatarOverworldSprite, isAvatar, isOnboarded } from '@/lib/onboarding'
+import { followerSpriteForCompanion } from '@/lib/npc-sprites'
 import MapClient, { type PlayerPos } from './MapClient'
 import DailyLoop from './DailyLoop'
 import StartMenu, { type StartMenuScreen } from '@/app/menu/StartMenu'
@@ -53,6 +54,7 @@ export default async function MapPage({ searchParams }: Props) {
         initialProgress={parseProgress(userRow?.map_progress)}
         allZoneNames={getZoneNames()}
         playerSpriteUrl={isAvatar(userRow.avatar) ? avatarOverworldSprite(userRow.avatar) : undefined}
+        followerSpriteUrl={followerSpriteForCompanion(playerState.companion_id)}
       />
       {/* Boucle quotidienne (issue 06) : appel du mentor au premier lancement
           du jour + badge Pokégear — overlay dédié, MapClient inchangé */}

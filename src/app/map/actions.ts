@@ -14,8 +14,11 @@ import {
   type DialoguePageEntry,
 } from '@/lib/content'
 import { attachCompanionOptions } from '@/lib/dialogue-pages'
+import { getDailySRSStatusForUser } from '@/lib/daily-srs'
 import { resolveLessonInteraction } from '@/lib/lessons'
 import { getPlayerState, savePlayerState } from '@/lib/player-state'
+import { gateBlocksEntry } from '@/lib/zone-gate'
+import { getZoneByName } from '@/lib/zones'
 import uiStrings from '@/data/ui-strings.json'
 
 // Blob MapProgress legacy (tiroir dev + obstacles côté client) — reste sur
@@ -26,12 +29,57 @@ export async function saveMapProgress(progress: unknown) {
   await sql`update users set map_progress = ${JSON.stringify(progress)} where id = ${userId}`
 }
 
+// ── Gate SRS quotidien (issue 10) ─────────────────────────────────────────────
+// PRD § Boucle Quotidienne pt 5 — JAMAIS une Condition (finding 02-D4) : la
+// règle pure vit dans src/lib/zone-gate.ts. Choix de robustesse documenté :
+// le statut SRS n'est PAS poussé au client au chargement — le client appelle
+// checkZoneEntry au moment précis du franchissement d'une zone extérieure
+// jamais visitée (événement rare, qui déclenche déjà un fetch de zone), donc
+// jamais un aller-retour par pas ; et saveMapPosition re-vérifie à l'écriture
+// (filet anti-triche, seulement quand la sauvegarde ajouterait une nouvelle
+// zone extérieure à visited_zones).
+
+/** Le franchissement vers cette zone est-il permis maintenant ?
+ * Zone visitée, intérieur, ou zone inconnue → toujours oui (et sans lire le
+ * statut SRS). Sinon la ligne jp de blocage accompagne le refus. */
+export async function checkZoneEntry(
+  zoneName: string,
+  tzOffsetMinutes: number
+): Promise<{ allowed: true } | { allowed: false; jp: string }> {
+  const zone = getZoneByName(zoneName)
+  if (!zone || !zone.is_outdoor) return { allowed: true }
+  const userId = await requireUserId()
+  const state = await getPlayerState(userId)
+  if (state.visited_zones.includes(zoneName)) return { allowed: true }
+  const status = await getDailySRSStatusForUser(userId, tzOffsetMinutes)
+  if (gateBlocksEntry(zone, state.visited_zones, status.sessionDone)) {
+    return { allowed: false, jp: uiStrings.srs_gate_blocked.jp }
+  }
+  return { allowed: true }
+}
+
 // Position : écrit user_map_state (les colonnes users.map_* restent en place
 // mais ne sont plus alimentées — retrait dans une migration ultérieure).
 // Trace aussi la première entrée effective dans la zone (visited_zones,
 // PRD finding 03-B3 : débloquée ≠ visitée).
-export async function saveMapPosition(zoneName: string, x: number, z: number) {
+export async function saveMapPosition(
+  zoneName: string,
+  x: number,
+  z: number,
+  tzOffsetMinutes = 0
+) {
   const userId = await requireUserId()
+  // Filet serveur du gate SRS : n'écrit jamais une PREMIÈRE visite de zone
+  // extérieure quand la session du jour n'est pas ✓ (le client a déjà bloqué
+  // le pas — ce chemin ne se prend que via un client contourné).
+  const zone = getZoneByName(zoneName)
+  if (zone?.is_outdoor) {
+    const state = await getPlayerState(userId)
+    if (!state.visited_zones.includes(zoneName)) {
+      const status = await getDailySRSStatusForUser(userId, tzOffsetMinutes)
+      if (gateBlocksEntry(zone, state.visited_zones, status.sessionDone)) return
+    }
+  }
   await sql`
     insert into user_map_state (user_id, current_zone, avatar_x, avatar_y, visited_zones)
     values (${userId}, ${zoneName}, ${x}, ${z}, array[${zoneName}])

@@ -39,6 +39,7 @@
   "srs_no_cards": { "jp": "きょうは　ふくしゅうする　カードが　ないよ" },
   "srs_word_preface": { "jp": "あたらしい　ことば！" },
   "srs_word_preface_continue": { "jp": "つづける" },
+  "srs_gate_blocked": { "jp": "さきに　きょうの　ふくしゅうを　すませよう！" },
   "battle_prompt_sens": { "jp": "いみは？" },
   "battle_prompt_lecture": { "jp": "よみかたは？" },
   "battle_prompt_saisie": { "jp": "よみを　にゅうりょくしてね" },

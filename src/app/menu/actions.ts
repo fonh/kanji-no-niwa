@@ -25,6 +25,7 @@ import {
   getQuestStepsIndex,
   getTextZoneIds,
   getTextsForZone,
+  getZoneRegistryNames,
 } from '@/lib/content'
 import { getLessonBook, withLessonQuestSteps, type LessonBookLine } from '@/lib/lessons'
 import { getPlayerState } from '@/lib/player-state'
@@ -44,7 +45,6 @@ import { visitedZoneSlugs } from '@/lib/zone-slug'
 import itemLabels from '@/data/item-labels.json'
 import textHolderLabels from '@/data/text-holder-labels.json'
 import uiStrings from '@/data/ui-strings.json'
-import zoneLabels from '@/data/zone-labels.json'
 
 // ── Types du payload ──────────────────────────────────────────────────────────
 
@@ -127,7 +127,7 @@ export async function getStartMenuData(): Promise<StartMenuData> {
     now,
   }).map(chapter => ({
     ...chapter,
-    zone_jp: zoneJpLabel(chapter.zone_id, zoneLabels as unknown as JpLabelMap),
+    zone_jp: zoneJpLabel(chapter.zone_id, getZoneRegistryNames()),
     lines: chapter.lines.map(line => ({
       ...line,
       npc_jp: line.npc_ref ? npcJpName(line.npc_ref) : null,
@@ -138,7 +138,7 @@ export async function getStartMenuData(): Promise<StartMenuData> {
   const questJournal: QuestJournalView[] = buildQuestJournal(state, getQuest).map(entry => ({
     ...entry,
     target_zone_jp: entry.target_zone_id
-      ? zoneJpLabel(entry.target_zone_id, zoneLabels as unknown as JpLabelMap)
+      ? zoneJpLabel(entry.target_zone_id, getZoneRegistryNames())
       : null,
   }))
 

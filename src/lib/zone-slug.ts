@@ -21,6 +21,23 @@ export function zoneSlugForMapName(
   return knownSlugs.find(slug => slug === normalized || slug.startsWith(`${normalized}-`))
 }
 
+/** Comme zoneSlugForMapName, mais un intérieur remonte à son rattachement
+ * extérieur : MAP_NEW_BARK_ELMS_LAB_1F → "new-bark-elms-lab-1f" ne matche
+ * rien, on retire les segments de queue jusqu'à "new-bark" → new-bark-town.
+ * Pour le libellé jp du HUD et des écrans (issue 10) — le bâtiment appartient
+ * à la ville, comme la localisation affichée des jeux d'origine. */
+export function zoneSlugForMapNameOrParent(
+  mapName: string,
+  knownSlugs: readonly string[]
+): string | undefined {
+  const segments = normalizeMapName(mapName).split('-')
+  for (let len = segments.length; len >= 1; len--) {
+    const slug = zoneSlugForMapName(`MAP_${segments.slice(0, len).join('_').toUpperCase()}`, knownSlugs)
+    if (slug) return slug
+  }
+  return undefined
+}
+
 /** Les slugs de zones visitées, dans l'ordre du voyage (visited_zones[] est
  * append-only : première entrée = première visite), sans doublon, intérieurs
  * filtrés. */
