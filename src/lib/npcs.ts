@@ -5,6 +5,12 @@ interface RawNpc {
   npc_id: string
   zone_id: string
   name: string
+  // Zone MAP_* explicite (issue 12) — pour les PNJ qui vivent DANS un
+  // intérieur (Mom au 1F de la maison, Elm dans son labo…) : le slug de
+  // contenu `zone_id` ne désigne que la zone extérieure de rattachement,
+  // et l'heuristique zone-slug ne sert jamais les intérieurs. tile_x/tile_y
+  // sont alors locaux à cette zone-là.
+  map_zone?: string
   tile_x: number
   tile_y: number
   trigger_type: string
@@ -48,10 +54,12 @@ function zoneIdForMapName(mapName: string): string | undefined {
 
 export function getNpcsForZone(zone: Zone): ZoneNpc[] {
   const zoneId = zoneIdForMapName(zone.name)
-  if (!zoneId) return []
 
+  // Un PNJ à `map_zone` explicite n'est servi QUE dans cette zone (c'est ce
+  // qui place Mom dans sa maison et Elm dans son labo — issue 12) ; les
+  // autres suivent l'heuristique de slug (zone extérieure de rattachement).
   return rawNpcs
-    .filter(n => n.zone_id === zoneId)
+    .filter(n => (n.map_zone ? n.map_zone === zone.name : zoneId !== undefined && n.zone_id === zoneId))
     .map(n => ({
       npc_id: n.npc_id,
       zone_id: n.zone_id,

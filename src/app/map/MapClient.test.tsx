@@ -1,0 +1,182 @@
+// Fidélité des interactions (issue 12) — jsdom, react-dom/client + act.
+//
+// Contrat PRD § Mouvement de l'avatar + CONTEXT.md « Talk » / « Sight Cone » :
+// on interagit avec le contenu de la carte (PNJ, dresseurs, portes) comme dans
+// le jeu d'origine — se placer à côté et appuyer sur A, ou entrer dans une
+// ligne de vue. AUCUNE interaction au tap/clic sur les marqueurs de la carte
+// (le contournement « dresseurs tapables » de l'issue 10 est supprimé). Les
+// contrôles d'UI (D-pad, A/B), eux, restent évidemment tactiles.
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import { act } from 'react'
+import { createRoot, type Root } from 'react-dom/client'
+import MapClient, { type Zone, type ZoneNpc, type ZoneTrainer } from './MapClient'
+import { DEFAULT_PROGRESS } from '@/lib/obstacles'
+
+;(globalThis as Record<string, unknown>).IS_REACT_ACT_ENVIRONMENT = true
+
+const interactWithNpcMock = vi.hoisted(() => vi.fn(async () => null))
+const engageTrainerMock = vi.hoisted(() => vi.fn(async () => null))
+
+vi.mock('./actions', () => ({
+  saveMapProgress: vi.fn(async () => {}),
+  saveMapPosition: vi.fn(async () => {}),
+  reachDialogueState: vi.fn(async () => null),
+  chooseCompanion: vi.fn(async () => ({ companion_id: null })),
+  interactWithNpc: interactWithNpcMock,
+  checkZoneEntry: vi.fn(async () => ({ allowed: true })),
+}))
+vi.mock('./battle-actions', () => ({
+  engageTrainer: engageTrainerMock,
+  winBattle: vi.fn(async () => null),
+}))
+vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }) }))
+// npc-sprites charge le manifeste de planches via require('@/data/…'), que le
+// projet jsdom de vitest ne résout pas — sans objet ici (marqueurs génériques).
+vi.mock('@/lib/npc-sprites', () => ({
+  resolveNpcSprite: () => null,
+  PLAYER_SPRITE_URL: '/sprites/characters/protagonist_test_ow.png',
+  SPRITE_FRAME_SIZE: 32,
+}))
+
+// Zone synthétique 8×8 tout sol : le joueur en (3,3) fait face au sud (défaut),
+// le PNJ est donc la tuile devant lui ; une porte inerte en (6,6).
+const zone: Zone = {
+  name: 'MAP_TEST_TOWN',
+  map_id: 999,
+  screenshot: '',
+  screenshot_w: 128,
+  screenshot_h: 128,
+  tile_width: 8,
+  tile_height: 8,
+  scale_x: 16,
+  scale_y: 16,
+  world_origin_x: 0,
+  world_origin_y: 0,
+  objects: [],
+  warps: [{ x: 6, z: 6, header: 'MAP_TEST_HOUSE', anchor: 0 }],
+  terrain: '.'.repeat(64),
+  ledges: [],
+  elevator_floors: [],
+  display_name: null,
+  is_outdoor: false,
+}
+
+const npc: ZoneNpc = {
+  npc_id: 'npc_test',
+  zone_id: 'test-town',
+  name: 'TestNpc',
+  world_x: 3,
+  world_z: 4,
+  dialogue_ref: 'npcs/test-town/npc_test',
+  trigger_type: 'talk',
+}
+
+const trainer: ZoneTrainer = {
+  trainer_id: 'trainer_test',
+  zone_id: 'test-town',
+  name: 'TestTrainer',
+  world_x: 5,
+  world_z: 3,
+  facing: 'south',
+  sight_range: 0,
+  role: 'battle',
+  trigger_type: 'talk',
+  dialogue_ref: 'trainers/test-town/trainer_test',
+  defeated: false,
+}
+
+let container: HTMLDivElement
+let root: Root
+
+beforeEach(() => {
+  container = document.createElement('div')
+  document.body.appendChild(container)
+  root = createRoot(container)
+  interactWithNpcMock.mockClear()
+  engageTrainerMock.mockClear()
+  vi.stubGlobal('fetch', vi.fn())
+  // jsdom n'implémente pas la capture de pointeur utilisée par le D-pad.
+  HTMLElement.prototype.setPointerCapture ??= () => {}
+})
+
+afterEach(() => {
+  act(() => root.unmount())
+  container.remove()
+  vi.unstubAllGlobals()
+})
+
+function render() {
+  act(() => {
+    root.render(
+      <MapClient
+        zone={zone}
+        npcs={[npc]}
+        trainers={[trainer]}
+        initialPos={{ world_x: 3, world_z: 3 }}
+        initialProgress={DEFAULT_PROGRESS}
+        allZoneNames={[]}
+      />
+    )
+  })
+}
+
+const click = (el: Element) =>
+  act(() => {
+    el.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+  })
+
+describe('MapClient — fidélité des interactions (issue 12)', () => {
+  it('un clic/tap sur un PNJ de la carte ne déclenche RIEN (marqueur inerte au pointeur)', () => {
+    render()
+    const marker = container.querySelector<HTMLElement>('[title="TestNpc"]')
+    expect(marker).not.toBeNull()
+    expect(marker!.style.pointerEvents).toBe('none')
+    click(marker!)
+    expect(interactWithNpcMock).not.toHaveBeenCalled()
+  })
+
+  it('un clic/tap sur un dresseur ne déclenche RIEN (ni Talk ni combat)', () => {
+    render()
+    const marker = container.querySelector<HTMLElement>('[title="TestTrainer"]')
+    expect(marker).not.toBeNull()
+    expect(marker!.style.pointerEvents).toBe('none')
+    click(marker!)
+    expect(engageTrainerMock).not.toHaveBeenCalled()
+    expect(interactWithNpcMock).not.toHaveBeenCalled()
+  })
+
+  it('un clic/tap sur une porte (warp) ne déclenche AUCUNE transition de zone', () => {
+    render()
+    // Le marqueur de porte porte le libellé de sa destination.
+    const marker = container.querySelector<HTMLElement>('[title="TEST HOUSE"]')
+    expect(marker).not.toBeNull()
+    expect(marker!.style.pointerEvents).toBe('none')
+    click(marker!)
+    expect(fetch).not.toHaveBeenCalled()
+  })
+
+  it('A face à une entité adjacente reste LE geste d’interaction (bouton d’UI tactile)', () => {
+    render()
+    // Joueur en (3,3) face au sud, le PNJ en (3,4) : A → Talk.
+    const buttonA = Array.from(container.querySelectorAll('button')).find(
+      b => b.textContent === 'A'
+    )
+    expect(buttonA).toBeDefined()
+    click(buttonA!)
+    expect(interactWithNpcMock).toHaveBeenCalledWith('npc_test', 'npcs/test-town/npc_test')
+  })
+
+  it('le D-pad d’UI reste tactile : un appui fait avancer d’une case', () => {
+    render()
+    expect(container.textContent).toContain('3,3')
+    const north = container.querySelector<HTMLButtonElement>('button[aria-label="north"]')
+    expect(north).not.toBeNull()
+    act(() => {
+      north!.dispatchEvent(new Event('pointerdown', { bubbles: true }))
+    })
+    act(() => {
+      north!.dispatchEvent(new Event('pointerup', { bubbles: true }))
+    })
+    expect(container.textContent).toContain('3,2')
+  })
+})

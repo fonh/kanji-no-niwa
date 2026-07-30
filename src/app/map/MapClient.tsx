@@ -971,22 +971,6 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [goToZone]
   )
 
-  const handleNpcClick = useCallback(
-    (e: React.MouseEvent, npc: ZoneNpc) => {
-      e.stopPropagation()
-      startNpcInteraction(npc)
-    },
-    [startNpcInteraction]
-  )
-
-  const handleWarpClick = useCallback(
-    (e: React.MouseEvent, warp: ZoneWarp) => {
-      e.stopPropagation()
-      enterWarp(warp)
-    },
-    [enterWarp]
-  )
-
   // Adjacent outdoor zones drawn around the current one so the shared
   // world reads as continuous instead of an island on black. Their images
   // are rescaled to this zone's px/tile so world coordinates line up.
@@ -1118,23 +1102,24 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             )
           })}
 
-          {/* Curated NPC markers — face them and press A (or click). Un
-              Roadblock en interception glisse vers le joueur (transition sur
-              left/top) avec un ！ au-dessus, comme l'embuscade des dresseurs. */}
+          {/* Curated NPC markers — comme dans le jeu d'origine : on se place
+              à côté et on appuie sur A (issue 12 : plus AUCUNE interaction au
+              tap sur le contenu de la carte). Un Roadblock en interception
+              glisse vers le joueur (transition sur left/top) avec un ！
+              au-dessus, comme l'embuscade des dresseurs. */}
           {npcs.map(npc => {
             const px = worldToPixel(npc.world_x, npc.world_z)
             const intercepting = interceptingNpc === npc.npc_id
             return (
               <div
                 key={npc.npc_id}
-                onClick={e => handleNpcClick(e, npc)}
                 style={{
                   position: 'absolute',
                   left: px.x - 9 + zone.scale_x / 2,
                   top: px.y - 16 + zone.scale_y,
                   width: 18,
                   height: 18,
-                  cursor: 'pointer',
+                  pointerEvents: 'none',
                   zIndex: 5,
                   transition: `left ${STEP_MS / 1000}s linear, top ${STEP_MS / 1000}s linear`,
                 }}
@@ -1147,7 +1132,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                 )}
                 <div
                   style={{ width: 18, height: 18, borderRadius: '50%' }}
-                  className="bg-emerald-400 border-2 border-emerald-700 shadow-sm hover:scale-110 transition-transform flex items-center justify-center text-[9px]"
+                  className="bg-emerald-400 border-2 border-emerald-700 shadow-sm flex items-center justify-center text-[9px]"
                 >
                   💬
                 </div>
@@ -1157,10 +1142,10 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
 
           {/* Trainer markers — entrer dans la ligne de vue d'un dresseur
               rôle battle non battu déclenche le combat (checkSightLine) ;
-              battu = gris, Talk → post_battle. Tap = Talk (même geste que
-              les PNJ — indispensable tant que des placements contenu comme
-              Silver #1 vivent sur des tuiles injoignables à pied, voir
-              a1-traversal.test.ts). */}
+              battu = gris, Talk (A adjacent) → post_battle. Le tap de
+              contournement de l'issue 10 est supprimé (issue 12) : les
+              placements injoignables — Silver #1 en tête — sont corrigés
+              dans le contenu, voir a1-traversal.test.ts. */}
           {trainers.map(trainer => {
             const px = worldToPixel(trainer.world_x, trainer.world_z)
             const defeated = trainer.defeated === true
@@ -1168,19 +1153,13 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             return (
               <div
                 key={trainer.trainer_id}
-                onClick={e => {
-                  e.stopPropagation()
-                  if (!battleRef.current && !engagingRef.current && !interceptingRef.current) {
-                    startTrainerInteraction(trainer)
-                  }
-                }}
                 style={{
                   position: 'absolute',
                   left: px.x - 9 + zone.scale_x / 2,
                   top: px.y - 16 + zone.scale_y,
                   width: 18,
                   height: 18,
-                  cursor: 'pointer',
+                  pointerEvents: 'none',
                   zIndex: 5,
                 }}
                 title={trainer.name}
@@ -1202,7 +1181,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             )
           })}
 
-          {/* Warp door markers — step on them (or click) to enter. Dynamic
+          {/* Warp door markers — step on them (walking) or press A facing
+              the door, comme dans le jeu (issue 12 : plus de tap). Dynamic
               (elevator) warps are inert and rendered dimmer. */}
           {zone.warps.map((warp, i) => {
             const px = worldToPixel(warp.x, warp.z)
@@ -1211,14 +1191,13 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             return (
               <div
                 key={i}
-                onClick={active ? e => handleWarpClick(e, warp) : undefined}
                 style={{
                   position: 'absolute',
                   left: px.x + zone.scale_x / 2 - 7,
                   top: px.y + zone.scale_y / 2 - 7,
                   width: 14,
                   height: 14,
-                  cursor: active ? 'pointer' : 'default',
+                  pointerEvents: 'none',
                 }}
                 title={isElevator ? undefined : zoneLabel(warp.header as string)}
               >
@@ -1228,8 +1207,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                     !active
                       ? 'bg-gray-500 border-gray-700 opacity-40'
                       : isElevator
-                        ? 'bg-violet-400 border-violet-700 opacity-80 hover:opacity-100'
-                        : 'bg-sky-400 border-sky-700 opacity-80 hover:opacity-100'
+                        ? 'bg-violet-400 border-violet-700 opacity-80'
+                        : 'bg-sky-400 border-sky-700 opacity-80'
                   }`}
                 />
               </div>

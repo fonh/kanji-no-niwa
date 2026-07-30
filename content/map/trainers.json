@@ -3,16 +3,23 @@
   "trainer_id": "silver_apparition1_cherrygrove",
   "zone_id": "cherrygrove-city",
   "name": "Boy with Red Hair",
-  "tile_x": 63,
-  "tile_y": 0,
+  "tile_x": 60,
+  "tile_y": 13,
   "facing": "south",
   "sight_range": 4,
-  "position_status": "ROM-matched, voir content/map/placements/cherrygrove-city.json (obj_T21_gsrivel)",
+  "position_status": "fix issue 12 (2026-07-30) : était (63,0), coin eau/solide dont la ligne de vue (sud, portée 4) était entièrement non-marchable — l'embuscade ne pouvait JAMAIS se déclencher. La coordonnée ROM matchée (obj_T21_gsrivel, placements/cherrygrove-city.json) est la tuile de parcage d'un objet piloté par script en HGSS (caché puis déplacé par la cinématique), pas sa position d'embuscade. Désormais posté sur le corridor est de la ville (retour du chemin vers Route 29, npc-inventory.md § cherrygrove-city) : sa ligne de vue (60,14)-(60,17) barre TOUTE traversée est-ouest du goulot (60,13) étant occupée par lui — prouvé par BFS dans a1-traversal.test.ts. unlock_conditions = l'équivalent du drapeau de script HGSS : il n'apparaît qu'une fois l'œuf reçu (embuscade au retour, jamais à l'aller)",
   "trigger_type": "sight_auto",
   "sight_auto_result": "battle",
   "repeats": false,
   "role": "battle",
   "battle_length": 12,
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "mystery_egg_errand",
+    "step": "egg_received"
+   }
+  ],
   "dialogue_ref": "trainers/cherrygrove-city/silver_apparition1_cherrygrove"
  },
  {

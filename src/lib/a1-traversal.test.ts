@@ -6,9 +6,11 @@
 // Partie 1 — géométrie : le monde extérieur du jalon (Bourg Geon → Route 29 →
 // Ville Griotte → Route 30) est continûment marchable, chaque intérieur est
 // navigable (entrer par le warp, en ressortir), le spawn d'onboarding mène
-// dehors. Les PNJ/objets posés sur des tuiles injoignables à pied sont listés
-// EXPLICITEMENT (placements contenu à corriger — hors périmètre moteur, le
-// tap-marqueur les rend interactifs en attendant).
+// dehors. Fidélité des interactions (issue 12) : CHAQUE PNJ/dresseur/objet du
+// jalon est interagible par A depuis une tuile adjacente marchable atteinte à
+// pied — aucun clic nécessaire nulle part (le tap-marqueur de contournement
+// de l'issue 10 est supprimé de MapClient) ; l'embuscade de Silver #1 barre
+// OBLIGATOIREMENT le chemin de retour de chez Mr. Pokémon, comme en HGSS.
 //
 // Partie 2 — gate SRS : jour 1 (aucune carte) le monde s'ouvre, leçons 1-2 →
 // cartes dues demain, la course de l'œuf se joue, leçons 3-5 ; jour 2 les
@@ -46,7 +48,8 @@ import {
 import { getDailySRSStatus } from './progression-engine'
 import { gateBlocksEntry } from './zone-gate'
 import { getNpcsForZone } from './npcs'
-import { getTrainersForZone } from './trainers'
+import { getTrainersForZone, isInSightLine } from './trainers'
+import { filterVisibleNpcs, filterVisibleTrainers } from './map-visibility'
 
 const NO_ABILITIES = { surf: false, whirlpool: false, waterfall: false }
 const OUTDOOR_NAMES = ['MAP_NEW_BARK', 'MAP_ROUTE_29', 'MAP_CHERRYGROVE', 'MAP_ROUTE_30']
@@ -201,51 +204,207 @@ describe('A1 — géométrie du jalon (registre réel)', () => {
     expect(bfsInZone(h1, arrival.x, arrival.z).has(`${exit.x},${exit.z}`)).toBe(true)
   })
 
-  it('PNJ du parcours approchables à pied — et liste EXPLICITE des placements contenu défaillants', () => {
+  // Fidélité des interactions (issue 12) : plus AUCUN tap-marqueur — chaque
+  // entité doit donc être interagible par A depuis une tuile adjacente
+  // marchable atteinte à pied. Les placements épinglés par l'issue 10
+  // (Silver #1, Mom sur la porte, Elm/assistant/PC/panneau injoignables)
+  // sont corrigés dans content/map/ — ces assertions les verrouillent.
+  it('CHAQUE PNJ/dresseur/objet extérieur du jalon est interagible par A depuis une tuile adjacente atteinte à pied', () => {
     const adjacentReachable = (zoneName: string, wx: number, wz: number) =>
       Object.values(DIRECTION_DELTA).some(({ dx, dz }) => reached(zoneName, wx + dx, wz + dz))
-    const spots = new Map<string, boolean>()
+    let checked = 0
     for (const name of OUTDOOR_NAMES) {
       const zone = zoneOf(name)
       for (const npc of getNpcsForZone(zone)) {
-        spots.set(npc.npc_id, adjacentReachable(name, npc.world_x, npc.world_z))
+        expect(adjacentReachable(name, npc.world_x, npc.world_z), `${npc.npc_id} (${name})`).toBe(true)
+        checked++
       }
       for (const trainer of getTrainersForZone(zone)) {
-        spots.set(trainer.trainer_id, adjacentReachable(name, trainer.world_x, trainer.world_z))
+        expect(
+          adjacentReachable(name, trainer.world_x, trainer.world_z),
+          `${trainer.trainer_id} (${name})`
+        ).toBe(true)
+        checked++
       }
     }
-    // Le chemin nominal de la course de l'œuf est approchable.
-    for (const id of [
-      'mom_new_bark',
-      'mr_pokemon_route30',
-      'guide_gent_cherrygrove',
-      'youngster_joey_route30',
-      'bug_catcher_don_route30',
-      'youngster_mikey_route30',
-      // Le PC est adjacent à la tuile-PORTE du labo : on l'atteint en
-      // sortant du labo (on se tient alors sur la porte) — praticable mais
-      // à re-placer dans la chambre à la passe contenu.
-      'player_pc_new_bark',
-    ]) {
-      expect(spots.get(id), id).toBe(true)
+    // Garde-fou : le panneau de Route 29, Silver #1 et sa carte (ex-cassés,
+    // corrigés) sont bien passés dans la boucle.
+    expect(checked).toBeGreaterThanOrEqual(15)
+  })
+
+  // Les PNJ d'intérieur (issue 12) : Mom vit dans SA maison (plus sur la
+  // tuile-porte extérieure), Elm et son assistant dans le labo, le PC dans
+  // la chambre, l'employée dans le Centre Pokémon — servis via `map_zone`
+  // (npcs.ts) et interagibles par A depuis une tuile adjacente atteinte
+  // depuis la porte de la pièce.
+  const INTERIOR_NPCS: Record<string, string[]> = {
+    MAP_NEW_BARK_PLAYER_HOUSE_1F: ['mom_new_bark'],
+    MAP_NEW_BARK_PLAYER_HOUSE_2F: ['player_pc_new_bark'],
+    MAP_NEW_BARK_ELMS_LAB_1F: ['prof_elm_lab', 'elm_assistant_new_bark'],
+    MAP_CHERRYGROVE_POKECENTER_1F: ['pokecenter_clerk_cherrygrove'],
+  }
+
+  it('les PNJ d’intérieur sont servis DANS leur pièce et interagibles par A depuis la porte', () => {
+    for (const [zoneName, expected] of Object.entries(INTERIOR_NPCS)) {
+      const zone = zoneOf(zoneName)
+      const npcs = getNpcsForZone(zone)
+      expect(npcs.map(n => n.npc_id).sort(), zoneName).toEqual([...expected].sort())
+      for (const npc of npcs) {
+        // Jamais posé sur une porte (la classe de bug « Mom bloque l'entrée »).
+        expect(warpAt(zone, npc.world_x, npc.world_z), `${npc.npc_id} sur une tuile-porte`).toBeUndefined()
+        // Une tuile adjacente marchable est atteignable depuis chaque porte.
+        const adjacentOk = zone.warps.some(door => {
+          const reach = bfsInZone(zone, door.x, door.z)
+          return Object.values(DIRECTION_DELTA).some(({ dx, dz }) =>
+            reach.has(`${npc.world_x + dx},${npc.world_z + dz}`)
+          )
+        })
+        expect(adjacentOk, `${npc.npc_id} (${zoneName})`).toBe(true)
+      }
     }
-    // Placements contenu DÉFAILLANTS connus (tuile solide sans voisin
-    // marchable — interaction possible uniquement au tap sur le marqueur ;
-    // à corriger à la passe contenu, ce test flanchera quand ce sera fait) :
-    // Elm et son assistant devraient vivre DANS le labo, le panneau de
-    // Route 29 contre le chemin, Silver #1 et la carte de dresseur près de
-    // la sortie nord de Ville Griotte (sa ligne de vue est entièrement dans
-    // le solide/l'eau : l'embuscade ne peut JAMAIS se déclencher — le tap
-    // sur son marqueur engage le combat en attendant).
-    for (const id of [
-      'prof_elm_lab',
-      'elm_assistant_new_bark',
-      'sign_johto_entrance_route29',
-      'silver_apparition1_cherrygrove',
-      'silver_card_cherrygrove',
-    ]) {
-      expect(spots.get(id), `${id} (placement contenu à corriger)`).toBe(false)
+    // Et ils ne sont PLUS servis dans la zone extérieure de rattachement.
+    const outdoorIds = new Set(
+      OUTDOOR_NAMES.flatMap(name => getNpcsForZone(zoneOf(name)).map(n => n.npc_id))
+    )
+    for (const id of Object.values(INTERIOR_NPCS).flat()) {
+      expect(outdoorIds.has(id), `${id} encore servi dehors`).toBe(false)
     }
+  })
+
+  it('aucune entité du jalon ne se tient sur une tuile-porte (warp)', () => {
+    const zonesToCheck = [...OUTDOOR_NAMES, ...Object.keys(INTERIOR_NPCS)]
+    for (const name of zonesToCheck) {
+      const zone = zoneOf(name)
+      for (const npc of getNpcsForZone(zone)) {
+        expect(warpAt(zone, npc.world_x, npc.world_z), `${npc.npc_id} (${name})`).toBeUndefined()
+      }
+      for (const trainer of getTrainersForZone(zone)) {
+        expect(warpAt(zone, trainer.world_x, trainer.world_z), `${trainer.trainer_id} (${name})`).toBeUndefined()
+      }
+    }
+  })
+})
+
+// Silver #1 (issue 12) — l'embuscade HGSS : au retour de chez Mr. Pokémon
+// (Route 30 → Ville Griotte → Route 29), Silver intercepte OBLIGATOIREMENT le
+// joueur sur le corridor est de la ville. Prouvé en géométrie réelle : tout
+// chemin du bord Route 30 au bord Route 29 traverse sa ligne de vue. Et comme
+// en HGSS (objet caché piloté par script), il n'existe PAS à l'aller :
+// unlock_conditions le fait apparaître à egg_received seulement.
+describe('A1 — embuscade de Silver #1 (Ville Griotte, retour de chez Mr. Pokémon)', () => {
+  const zone = zoneOf('MAP_CHERRYGROVE')
+  const silver = getTrainersForZone(zone).find(t => t.trainer_id === 'silver_apparition1_cherrygrove')!
+
+  const sightTiles = (): [number, number][] => {
+    const tiles: [number, number][] = []
+    const { dx, dz } = DIRECTION_DELTA[silver.facing]
+    for (let i = 1; i <= silver.sight_range; i++) {
+      tiles.push([silver.world_x + i * dx, silver.world_z + i * dz])
+    }
+    return tiles
+  }
+
+  // Bord d'entrée depuis Route 30 (nord) et bord de sortie vers Route 29
+  // (est) — les tuiles de Ville Griotte marchables des deux côtés du
+  // franchissement continu (règle findOutdoorZoneAt de MapClient).
+  const borderTiles = (neighbor: string) => {
+    const other = zoneOf(neighbor)
+    const tiles: [number, number][] = []
+    for (let x = zone.world_origin_x; x < zone.world_origin_x + zone.tile_width; x++) {
+      for (let z = zone.world_origin_y; z < zone.world_origin_y + zone.tile_height; z++) {
+        if (!dry(zone, x, z)) continue
+        for (const { dx, dz } of Object.values(DIRECTION_DELTA)) {
+          if (terrainAt(zone, x + dx, z + dz) === null && dry(other, x + dx, z + dz)) {
+            tiles.push([x, z])
+          }
+        }
+      }
+    }
+    return tiles
+  }
+
+  /** BFS dans Ville Griotte, dresseur solide (règle isTileOccupied de
+   * MapClient), tuiles `blocked` interdites. */
+  const bfsAvoiding = (starts: [number, number][], blocked: Set<string>) => {
+    const key = (x: number, z: number) => `${x},${z}`
+    const seen = new Set(starts.map(([x, z]) => key(x, z)))
+    const queue = [...starts]
+    while (queue.length) {
+      const [x, z] = queue.shift()!
+      for (const { dx, dz } of Object.values(DIRECTION_DELTA)) {
+        const nx = x + dx
+        const nz = z + dz
+        const k = key(nx, nz)
+        if (seen.has(k) || blocked.has(k)) continue
+        if (nx === silver.world_x && nz === silver.world_z) continue // dresseur solide
+        if (!dry(zone, nx, nz)) continue
+        seen.add(k)
+        if (!warpAt(zone, nx, nz)) queue.push([nx, nz])
+      }
+    }
+    return seen
+  }
+
+  it('sa position et toute sa ligne de vue sont marchables : l’embuscade PEUT se déclencher', () => {
+    expect(dry(zone, silver.world_x, silver.world_z)).toBe(true)
+    for (const [x, z] of sightTiles()) {
+      expect(dry(zone, x, z), `tuile de vue (${x},${z})`).toBe(true)
+      expect(isInSightLine(silver, x, z)).toBe(true)
+    }
+  })
+
+  it('TOUT chemin de retour Route 30 → Route 29 traverse sa ligne de vue (embuscade inévitable)', () => {
+    const fromRoute30 = borderTiles('MAP_ROUTE_30')
+    const toRoute29 = borderTiles('MAP_ROUTE_29')
+    expect(fromRoute30.length).toBeGreaterThan(0)
+    expect(toRoute29.length).toBeGreaterThan(0)
+
+    // Ligne de vue interdite → la sortie est est INATTEIGNABLE : pas de
+    // chemin qui esquive l'embuscade.
+    const cone = new Set(sightTiles().map(([x, z]) => `${x},${z}`))
+    const avoiding = bfsAvoiding(fromRoute30, cone)
+    for (const [x, z] of toRoute29) {
+      expect(avoiding.has(`${x},${z}`), `sortie est (${x},${z}) atteinte en esquivant le cône`).toBe(false)
+    }
+
+    // Sanité : en acceptant de traverser le cône, le retour passe.
+    const through = bfsAvoiding(fromRoute30, new Set())
+    expect(toRoute29.some(([x, z]) => through.has(`${x},${z}`))).toBe(true)
+  })
+
+  it('comme le script HGSS : absent à l’aller, présent au retour (egg_received), la carte tombe après le combat', () => {
+    const ctx: ApplyContext = { questSteps: getQuestStepsIndex(), now: new Date('2026-07-30T12:00:00Z') }
+    const trainers = getTrainersForZone(zone)
+
+    // À l'aller (aucune quête avancée) : Silver n'existe pas sur la carte.
+    const before = defaultPlayerState()
+    expect(
+      filterVisibleTrainers(trainers, before).map(t => t.trainer_id)
+    ).not.toContain('silver_apparition1_cherrygrove')
+
+    // Au retour (œuf reçu) : il est là, embuscade armée (sight_auto).
+    const after = applyEffects(
+      [{ type: 'advance_quest', quest_id: 'mystery_egg_errand', step_id: 'egg_received' }],
+      before,
+      ctx
+    )
+    const visible = filterVisibleTrainers(trainers, after)
+    const present = visible.find(t => t.trainer_id === 'silver_apparition1_cherrygrove')
+    expect(present).toBeDefined()
+    expect(present!.trigger_type).toBe('sight_auto')
+    expect(present!.role).toBe('battle')
+
+    // Sa carte de dresseur n'apparaît qu'une fois Silver battu, une tuile à
+    // côté de sa position (ramassable par A).
+    const npcs = getNpcsForZone(zone)
+    expect(filterVisibleNpcs(npcs, after).map(n => n.npc_id)).not.toContain('silver_card_cherrygrove')
+    const cleared = {
+      ...after,
+      defeated_trainers: [...after.defeated_trainers, 'silver_apparition1_cherrygrove'],
+    }
+    const card = filterVisibleNpcs(npcs, cleared).find(n => n.npc_id === 'silver_card_cherrygrove')
+    expect(card).toBeDefined()
+    expect(Math.abs(card!.world_x - silver.world_x) + Math.abs(card!.world_z - silver.world_z)).toBe(1)
   })
 })
 

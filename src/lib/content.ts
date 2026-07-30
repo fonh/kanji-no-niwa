@@ -54,10 +54,13 @@ export interface QuestFile {
   steps: QuestStep[]
 }
 
+// `map_zone` (optionnel) : zone MAP_* explicite pour les PNJ d'intérieur
+// (issue 12) — voir src/lib/npcs.ts. tile_x/tile_y sont locaux à cette zone.
 export interface MapNpcEntry {
   npc_id: string
   zone_id: string
   name: string
+  map_zone?: string
   tile_x: number
   tile_y: number
   trigger_type: string
