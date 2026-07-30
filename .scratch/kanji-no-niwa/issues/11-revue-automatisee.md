@@ -334,3 +334,59 @@ première erreur de révision au jour 2), et **C1** (contournement complet de la
 progression par appel direct des actions — acceptable de le différer seulement
 si l'on assume explicitement un modèle de menace « client de confiance » pour
 un jeu solo, auquel cas l'assumer par écrit dans un ADR).
+
+---
+
+## Corrections appliquées
+
+**2026-07-31 (agent, corrections)** — TDD (test adversarial rouge d'abord pour
+chaque contournement), `npm run check` tout vert (539 tests).
+
+- **C1 — CORRIGÉ** (`5a88e3d8`) : les écritures re-vérifient la présence.
+  `reachDialogueState`/`interactWithNpc`/`engageTrainer`/`winBattle` exigent
+  que l'entité soit servie dans la **zone courante** du joueur
+  (`user_map_state.current_zone`, même règle de rattachement que la lecture)
+  ET visible (`unlock_conditions`) — helpers `accessibleNpc`/
+  `accessibleTrainer`/`findAccessibleDialogueCarrier` dans
+  `src/lib/map-visibility.ts` ; le `dialogueRef` client n'est plus jamais
+  accepté (registre seul). `saveMapPosition` refuse une zone non atteignable
+  en un mouvement (`canReachZone`, `src/lib/zone-geometry.ts` : zone
+  courante, contiguïté outdoor ±1 tuile, warps/ascenseurs de la zone
+  courante) et une position hors des bornes de la cible. **Niveau de garantie
+  documenté** : zone + visibilité, jamais l'adjacence de tuile (position
+  client non fiable à ce grain) ; pas de jeton de combat serveur (l'état du
+  combat reste 100 % client, « fermer l'app = fuite »). Tests :
+  `reachDialogueState('npcs/route-30/mr_pokemon_route30')` depuis Bourg Geon
+  → null sans effet (`actions.test.ts`), `winBattle(Silver)` hors zone/hors
+  quête → null sans écriture (`battle-actions.test.ts`), téléport
+  `saveMapPosition` refusé (`actions.test.ts`).
+- **M1 — CORRIGÉ** (`0bbbe8de`) : `completeOnboarding` ne pose le spawn
+  chambre que si `user_map_state` n'a PAS de ligne — un compte legacy garde
+  intégralement son état backfillé (seuls `trainer_name`/`avatar` s'écrivent).
+  Test : `src/app/onboarding/actions.test.ts`.
+- **M2 — CORRIGÉ** (`0bbbe8de`) : `rateCard` valide le rating (entier 1..4)
+  AVANT toute écriture et refuse une carte non due (`next_review_at > now`)
+  — le plafond 200 n'est plus gonflable en re-notant la même carte. Tests :
+  `src/app/study/actions.test.ts`.
+- **M3 — CORRIGÉ** (`5a88e3d8`) : `StudyClient` garde le `DailyStatusResult`
+  retourné par chaque `rateCard` ; file locale épuisée + statut « pas fini »
+  (carte もういちど redevenue due) → écran « continuer » qui recharge la file
+  serveur (`continueSession`, assemblage partagé `src/app/study/session.ts`)
+  ; le ✓/「おわり」 ne s'affiche que si le serveur dit `sessionDone`. Fidèle
+  au PRD : la session est finie quand la file du JOUR est vide. Tests jsdom
+  du flux Encore → continuer (`StudyClient.test.tsx`).
+- **M4 — CORRIGÉ** (`5a88e3d8`) : tiroir dev gaté
+  `process.env.NODE_ENV !== 'production'` au rendu ET au toggle du HUD ;
+  filet serveur symétrique : en production `saveMapProgress` ne prend jamais
+  les drapeaux de capacités (CS-Kanji/objets-clés) du client — valeur
+  stockée conservée, seuls `visited`/`cleared` restent déclarés client
+  (dette obstacles de l'issue 10, inchangée) ; le téléport du tiroir est de
+  toute façon refusé par C1. Tests : `MapClient.test.tsx` (rendu prod),
+  `actions.test.ts` (blob sanitized).
+- **m1 — partiellement corrigé** (`5a88e3d8`) : le « VS » en dur de l'écran
+  d'engagement remplacé par 「たい」 (kana — pas le kanji 対, jamais
+  pré-enseigné). Les autres replis latins (HUD/Carnet/title) restent ouverts.
+
+**Reste ouvert** : M5 (`time_window` au fuseau serveur), m1 (replis latins
+hors « VS »), m2-m8, et la recommandation d'ADR sur le modèle de menace
+(caduque pour l'essentiel : C1 corrigé, le serveur re-vérifie désormais).
