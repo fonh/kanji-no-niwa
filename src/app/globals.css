@@ -55,6 +55,41 @@ body {
   line-height: 1;
 }
 
+/* Écran-livre des leçons (issue 05) — chrome livre original « entre Pokémon
+   et Japon ancien » (PRD § Leçons) : fond de table sombre, cadre bois/laque,
+   double page parchemin, lecture en couleur distincte (à la Wagotabi).
+   Création CSS en attendant les assets dédiés (aucun précédent HGSS). */
+.book-chrome {
+  background: radial-gradient(ellipse at center, #3a2417 0%, #1c0f08 100%);
+}
+
+.book-frame {
+  background: linear-gradient(160deg, #5a3a20, #43290f);
+  border: 3px solid #2b1a0e;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 235, 190, 0.15);
+}
+
+.book-page {
+  background:
+    radial-gradient(ellipse at top left, rgba(255, 250, 235, 0.55), transparent 60%),
+    linear-gradient(135deg, #f7eed8 0%, #efe3c4 70%, #e8d9b0 100%);
+  color: #3b2c1a;
+}
+
+/* Pli central de la double page */
+.book-spine {
+  width: 10px;
+  flex: none;
+  background: linear-gradient(to right, rgba(59, 44, 26, 0.25), rgba(59, 44, 26, 0.55), rgba(59, 44, 26, 0.25));
+}
+
+/* Lecture / accents — vermillon, distinct du texte (PRD § Leçons) */
+.book-accent {
+  color: #a4452e;
+}
+
 /* Curseur ▼ de fin de frappe de la boîte de dialogue. */
 @keyframes dialogue-cursor-blink {
   0%, 55% { opacity: 1; }

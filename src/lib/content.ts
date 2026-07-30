@@ -197,3 +197,86 @@ export function getLessonsForZone(zoneId: string): LessonEntry[] {
   const lessons = readContentJson(`lessons/${zoneId}.json`) as LessonEntry[] | null
   return lessons ? [...lessons].sort((a, b) => a.sequence_index - b.sequence_index) : []
 }
+
+// ── Grammaire (issue 05) ──────────────────────────────────────────────────────
+// L'overlay de zone (content/grammar/<zone>.json) référence la base Hanabira
+// (scripts/sources/grammar_JLPT_N*.json) par grammar_id → source_index ; rien
+// du contenu Hanabira n'est dupliqué dans l'overlay (voir le _note du fichier).
+
+export interface GrammarOverlayExample {
+  source_example_index: number
+  jp: string
+  jp_cloze: string
+  point_answer: string
+  /** Sous-chaîne exacte effacée du jp (défaut si absent : point_answer). */
+  point_surface?: string
+  distractors: string[]
+  conjugation_distractors: string[] | null
+}
+
+export interface GrammarOverlayPoint {
+  grammar_id: string
+  source_index: number
+  title: string
+  selected_examples: GrammarOverlayExample[]
+}
+
+export function getGrammarForZone(zoneId: string): GrammarOverlayPoint[] {
+  const file = readContentJson(`grammar/${zoneId}.json`) as { points?: GrammarOverlayPoint[] } | null
+  return file?.points ?? []
+}
+
+export function getGrammarPoint(zoneId: string, grammarId: string): GrammarOverlayPoint | null {
+  return getGrammarForZone(zoneId).find(p => p.grammar_id === grammarId) ?? null
+}
+
+/** Une entrée de la base Hanabira — explications en anglais, réutilisées
+ * telles quelles (PRD § Langue du Jeu). */
+export interface GrammarSourceEntry {
+  title: string
+  short_explanation: string
+  long_explanation: string
+  formation: string
+  examples: { jp: string; romaji: string; en: string; grammar_audio?: string }[]
+}
+
+const SOURCES_ROOT = path.join(process.cwd(), 'scripts', 'sources')
+const sourcesCache = new Map<string, unknown>()
+
+/** La base Hanabira d'un palier JLPT (N5..N1) ; null si palier inconnu. */
+export function getGrammarSource(level: string): GrammarSourceEntry[] | null {
+  if (!/^N[1-5]$/.test(level)) return null
+  const cached = sourcesCache.get(level)
+  if (cached !== undefined) return cached as GrammarSourceEntry[] | null
+  let parsed: GrammarSourceEntry[] | null
+  try {
+    parsed = JSON.parse(
+      readFileSync(path.join(SOURCES_ROOT, `grammar_JLPT_${level}.json`), 'utf-8')
+    ) as GrammarSourceEntry[]
+  } catch {
+    parsed = null
+  }
+  sourcesCache.set(level, parsed)
+  return parsed
+}
+
+/** L'entrée Hanabira d'un point de l'overlay (grammar_id "N5-001" → palier
+ * N5, ligne source_index). */
+export function getGrammarSourceEntry(point: GrammarOverlayPoint): GrammarSourceEntry | null {
+  const level = point.grammar_id.split('-')[0]
+  return getGrammarSource(level)?.[point.source_index] ?? null
+}
+
+// ── Lignes de blocage de leçon ────────────────────────────────────────────────
+
+/** Banque partagée de lignes « tu vas trop vite » (PRD § Ordre des leçons :
+ * content/dialogues/shared/lesson-blocked.json, pool par palier JLPT).
+ * Le fichier n'existe pas encore (passe contenu à venir) — [] dans ce cas,
+ * l'appelant retombe sur la ligne système de ui-strings. */
+export function getLessonBlockedLines(jlptLevel = 'N5'): string[] {
+  const file = readContentJson('dialogues/shared/lesson-blocked.json') as Record<
+    string,
+    string[]
+  > | null
+  return file?.[jlptLevel] ?? []
+}

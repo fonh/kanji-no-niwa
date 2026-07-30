@@ -8,5 +8,14 @@
   "name_prompt": { "jp": "きみの　なまえは？" },
   "confirm": { "jp": "けってい" },
   "back": { "jp": "もどる" },
-  "save_failed": { "jp": "セーブできませんでした。　もういちど　ためしてね" }
+  "save_failed": { "jp": "セーブできませんでした。　もういちど　ためしてね" },
+  "lesson_blocked": { "jp": "まだ　はやいよ。　じゅんばんに　まなぼうね。" },
+  "lesson_close_confirm": { "jp": "レッスンを　やめる？　（さいしょから　やりなおしに　なるよ）" },
+  "yes": { "jp": "はい" },
+  "no": { "jp": "いいえ" },
+  "quiz_retry": { "jp": "ざんねん・・・　もういちど！" },
+  "retry": { "jp": "もういちど" },
+  "quiz_title": { "jp": "ふくしゅうクイズ" },
+  "lesson_done": { "jp": "レッスン　おわり！" },
+  "back_to_map": { "jp": "マップへ　もどる" }
 }

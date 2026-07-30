@@ -7,6 +7,11 @@ import {
   getMapTrainers,
   getMapObstacles,
   getLessonsForZone,
+  getGrammarForZone,
+  getGrammarPoint,
+  getGrammarSource,
+  getGrammarSourceEntry,
+  getLessonBlockedLines,
 } from './content'
 
 describe('getDialogue', () => {
@@ -85,5 +90,40 @@ describe('getLessonsForZone', () => {
   it('returns [] for a zone without lessons', () => {
     expect(getLessonsForZone('route-33')).toEqual([])
     expect(getLessonsForZone('../evil')).toEqual([])
+  })
+})
+
+describe('grammaire (issue 05)', () => {
+  it('getGrammarForZone charge l’overlay réel de new-bark-town (5 points)', () => {
+    const points = getGrammarForZone('new-bark-town')
+    expect(points.map(p => p.grammar_id)).toEqual(['N5-001', 'N5-002', 'N5-003', 'N5-004', 'N5-005'])
+  })
+
+  it('getGrammarPoint retrouve un point avec ses exemples sélectionnés', () => {
+    const point = getGrammarPoint('new-bark-town', 'N5-001')
+    expect(point!.selected_examples).toHaveLength(2)
+    expect(point!.selected_examples[0].point_answer).toBe('いちばん')
+    expect(getGrammarPoint('new-bark-town', 'N5-999')).toBe(null)
+    expect(getGrammarForZone('route-33')).toEqual([])
+  })
+
+  it('getGrammarSourceEntry fusionne avec la base Hanabira (title, en, audio)', () => {
+    const point = getGrammarPoint('new-bark-town', 'N5-001')!
+    const source = getGrammarSourceEntry(point)
+    expect(source!.title).toContain('いちばん')
+    expect(source!.short_explanation.length).toBeGreaterThan(0)
+    const example = source!.examples[point.selected_examples[0].source_example_index]
+    expect(example.en).toContain('sushi')
+  })
+
+  it('getGrammarSource refuse un palier inconnu', () => {
+    expect(getGrammarSource('N9')).toBe(null)
+    expect(getGrammarSource('../../etc')).toBe(null)
+  })
+})
+
+describe('getLessonBlockedLines', () => {
+  it('[] tant que le fichier partagé n’existe pas (passe contenu à venir)', () => {
+    expect(getLessonBlockedLines('N5')).toEqual([])
   })
 })

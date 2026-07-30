@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { saveMapProgress, saveMapPosition, reachDialogueState, chooseCompanion } from './actions'
+import { useRouter } from 'next/navigation'
+import { saveMapProgress, saveMapPosition, reachDialogueState, chooseCompanion, interactWithNpc } from './actions'
 import DialogueBox, { type DialogueBoxHandle } from './DialogueBox'
 import type { DialoguePageEntry } from '@/lib/content'
 import {
@@ -291,6 +292,26 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [openDialogue]
   )
 
+  // Interaction PNJ (issue 05) : la server action applique la règle
+  // leçon-ou-blocage — un PNJ-leçon dont la leçon est disponible ouvre le
+  // Book Screen (route /lesson/<zone>/<seq>) au lieu du dialogue.
+  const router = useRouter()
+  const startNpcInteraction = useCallback(
+    (npc: ZoneNpc) => {
+      interactWithNpc(npc.npc_id, npc.dialogue_ref)
+        .then(result => {
+          if (!result) return
+          if (result.kind === 'lesson') {
+            router.push(`/lesson/${result.zone_id}/${result.sequence_index}`)
+          } else if (result.dialogue.pages.length) {
+            openDialogue(result.dialogue.name, result.dialogue.pages)
+          }
+        })
+        .catch(err => console.error('Failed to interact with NPC', err))
+    },
+    [router, openDialogue]
+  )
+
   // Line-of-sight trigger (ADR-0001): no battle system exists yet to
   // actually fight, so "spotted" just opens the trainer's battle_intro
   // dialogue once per session — a stub for the real trigger.
@@ -541,7 +562,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
 
     const npc = npcsRef.current.find(n => n.world_x === fx && n.world_z === fz)
     if (npc) {
-      fetchDialogue(npc.dialogue_ref)
+      startNpcInteraction(npc)
       return
     }
     const trainer = trainersRef.current.find(t => t.world_x === fx && t.world_z === fz)
@@ -574,7 +595,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     // ROM-extracted background characters have no authored dialogue yet —
     // a wordless beat instead of dead air (no invented content).
     openDialogue('', [{ jp: '・・・・・・', en: '' }])
-  }, [fetchDialogue, enterWarp, openDialogue, isCleared, updateProgress])
+  }, [startNpcInteraction, fetchDialogue, enterWarp, openDialogue, isCleared, updateProgress])
 
   const onB = useCallback(() => {
     if (dialogueRef.current) closeDialogue()
@@ -673,9 +694,9 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const handleNpcClick = useCallback(
     (e: React.MouseEvent, npc: ZoneNpc) => {
       e.stopPropagation()
-      fetchDialogue(npc.dialogue_ref)
+      startNpcInteraction(npc)
     },
-    [fetchDialogue]
+    [startNpcInteraction]
   )
 
   const handleWarpClick = useCallback(

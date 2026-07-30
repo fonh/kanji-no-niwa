@@ -3,9 +3,19 @@
 import { requireUserId } from '@/lib/auth'
 import { sql } from '@/lib/db'
 import { applyEffect, applyEffects, selectDialogueState } from '@/lib/condition-effect'
-import { getCompanions, getDialogue, getQuestStepsIndex, type DialoguePageEntry } from '@/lib/content'
+import {
+  getCompanions,
+  getDialogue,
+  getLessonBlockedLines,
+  getLessonsForZone,
+  getMapNpcs,
+  getQuestStepsIndex,
+  type DialoguePageEntry,
+} from '@/lib/content'
 import { attachCompanionOptions } from '@/lib/dialogue-pages'
+import { resolveLessonInteraction } from '@/lib/lessons'
 import { getPlayerState, savePlayerState } from '@/lib/player-state'
+import uiStrings from '@/data/ui-strings.json'
 
 // Blob MapProgress legacy (tiroir dev + obstacles côté client) — reste sur
 // users.map_progress tant que l'issue 10 (traversée + gates) n'a pas basculé
@@ -74,6 +84,57 @@ export async function reachDialogueState(dialogueRef: string): Promise<ReachedDi
     // du loader n'est pas muté.
     pages: attachCompanionOptions(dialogueState.pages, getCompanions()),
   }
+}
+
+// Interaction PNJ (issue 05) : si le PNJ est un PNJ-leçon (référencé par
+// npc_ref dans content/lessons/<zone>.json), la règle leçon-ou-blocage
+// (src/lib/lessons.ts) décide de la résolution AVANT le dialogue :
+//  - leçon en tête + déverrouillée → le client ouvre le Book Screen
+//    (route /lesson/<zone>/<seq>) au lieu de la boîte de dialogue ;
+//  - hors d'ordre → ligne de blocage en boîte de dialogue (banque partagée
+//    content/dialogues/shared/lesson-blocked.json quand elle existera,
+//    ligne système de ui-strings en attendant) ;
+//  - sinon (tête verrouillée par ses unlock_conditions, ou zone finie) →
+//    le dialogue_ref ordinaire, comme n'importe quel PNJ.
+export type NpcInteraction =
+  | { kind: 'lesson'; zone_id: string; sequence_index: number }
+  | { kind: 'dialogue'; dialogue: ReachedDialogue }
+
+export async function interactWithNpc(
+  npcId: string,
+  dialogueRef: string
+): Promise<NpcInteraction | null> {
+  const npc = getMapNpcs().find(n => n.npc_id === npcId)
+  if (npc?.role === 'lesson') {
+    const userId = await requireUserId()
+    const lessons = getLessonsForZone(npc.zone_id)
+    const state = await getPlayerState(userId)
+    const ctx = { questSteps: getQuestStepsIndex(), now: new Date() }
+    const resolution = resolveLessonInteraction(npc.npc_id, lessons, state, ctx)
+    if (resolution.kind === 'lesson') {
+      return {
+        kind: 'lesson',
+        zone_id: npc.zone_id,
+        sequence_index: resolution.lesson.sequence_index,
+      }
+    }
+    if (resolution.kind === 'blocked') {
+      const pool = getLessonBlockedLines('N5')
+      const jp = pool.length
+        ? pool[Math.floor(Math.random() * pool.length)]
+        : uiStrings.lesson_blocked.jp
+      const dialogue = getDialogue(dialogueRef)
+      const name = dialogue
+        ? typeof dialogue.name === 'string'
+          ? dialogue.name
+          : dialogue.name.jp
+        : ''
+      return { kind: 'dialogue', dialogue: { name, state: 'lesson_blocked', pages: [{ jp }] } }
+    }
+    // fallback_dialogue → dialogue ordinaire ci-dessous
+  }
+  const dialogue = await reachDialogueState(dialogueRef)
+  return dialogue ? { kind: 'dialogue', dialogue } : null
 }
 
 // Persistance du choix du compagnon (kind: companion_choice, labo d'Elm) via
