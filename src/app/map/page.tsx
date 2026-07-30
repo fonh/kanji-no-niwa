@@ -10,8 +10,15 @@ import { filterVisibleNpcs, filterVisibleTrainers } from '@/lib/map-visibility'
 import { avatarOverworldSprite, isAvatar, isOnboarded } from '@/lib/onboarding'
 import MapClient, { type PlayerPos } from './MapClient'
 import DailyLoop from './DailyLoop'
+import StartMenu, { type StartMenuScreen } from '@/app/menu/StartMenu'
 
-export default async function MapPage() {
+const START_MENU_SCREENS: StartMenuScreen[] = ['zukan', 'lessons', 'bag', 'journal']
+
+interface Props {
+  searchParams: Promise<{ menu?: string }>
+}
+
+export default async function MapPage({ searchParams }: Props) {
   const session = await auth()
   if (!session?.user) redirect('/')
   const userId = session.user.id
@@ -31,6 +38,11 @@ export default async function MapPage() {
   const zone = getZoneByName(playerState.current_zone) ?? getAllZones()[0]
   const initialPos: PlayerPos = { world_x: playerState.avatar_x, world_z: playerState.avatar_y }
 
+  // Retour d'une fiche Kanjidex (/map?menu=zukan) : le menu START se rouvre
+  // directement sur l'écran demandé (issue 09).
+  const { menu } = await searchParams
+  const initialMenuScreen = START_MENU_SCREENS.find(s => s === menu) ?? null
+
   return (
     <>
       <MapClient
@@ -45,6 +57,9 @@ export default async function MapPage() {
       {/* Boucle quotidienne (issue 06) : appel du mentor au premier lancement
           du jour + badge Pokégear — overlay dédié, MapClient inchangé */}
       <DailyLoop />
+      {/* Menu START (issue 09) : bouton START/SELECT centre bas + overlay —
+          même patron, MapClient inchangé */}
+      <StartMenu initialScreen={initialMenuScreen} />
     </>
   )
 }

@@ -198,6 +198,19 @@ export function getLessonsForZone(zoneId: string): LessonEntry[] {
   return lessons ? [...lessons].sort((a, b) => a.sequence_index - b.sequence_index) : []
 }
 
+let lessonZoneIds: string[] | null = null
+
+/** Slugs des zones qui ont un fichier de leçons — sert de « slugs connus » au
+ * mapping MAP_* → slug des chapitres du Carnet de leçons (issue 09). */
+export function getLessonZoneIds(): string[] {
+  if (!lessonZoneIds) {
+    lessonZoneIds = readdirSync(path.join(CONTENT_ROOT, 'lessons'))
+      .filter(file => file.endsWith('.json'))
+      .map(file => file.replace(/\.json$/, ''))
+  }
+  return lessonZoneIds
+}
+
 // ── Grammaire (issue 05) ──────────────────────────────────────────────────────
 // L'overlay de zone (content/grammar/<zone>.json) référence la base Hanabira
 // (scripts/sources/grammar_JLPT_N*.json) par grammar_id → source_index ; rien
@@ -360,32 +373,54 @@ export interface ProgressiveText {
 }
 
 let textIndex: Map<string, ProgressiveText> | null = null
+let textsByZone: Map<string, ProgressiveText[]> | null = null
 
-/** Index text_id → texte, toutes zones confondues (le nom de fichier n'est
- * PAS le text_id : new-bark-town/lyra_mail.json porte `lyra_mail_new_bark`).
- * Construit une fois par process, comme getGrammarPointById. */
-export function getTextById(textId: string): ProgressiveText | null {
-  if (!textIndex) {
-    textIndex = new Map()
-    for (const zoneDir of readdirSync(path.join(CONTENT_ROOT, 'texts'))) {
-      let files: string[]
-      try {
-        files = readdirSync(path.join(CONTENT_ROOT, 'texts', zoneDir))
-      } catch {
-        continue // pas un dossier
-      }
-      for (const file of files) {
-        if (!file.endsWith('.json')) continue
-        const parsed = readContentJson(`texts/${zoneDir}/${file}`) as {
-          text?: ProgressiveText
-        } | null
-        if (parsed?.text?.text_id && !textIndex.has(parsed.text.text_id)) {
-          textIndex.set(parsed.text.text_id, parsed.text)
-        }
+/** Construit une fois par process les deux index des textes : text_id →
+ * texte (le nom de fichier n'est PAS le text_id : new-bark-town/lyra_mail
+ * .json porte `lyra_mail_new_bark`) et dossier de zone → textes (Journal de
+ * lecture, issue 09). */
+function buildTextIndexes(): void {
+  if (textIndex && textsByZone) return
+  textIndex = new Map()
+  textsByZone = new Map()
+  for (const zoneDir of readdirSync(path.join(CONTENT_ROOT, 'texts'))) {
+    let files: string[]
+    try {
+      files = readdirSync(path.join(CONTENT_ROOT, 'texts', zoneDir))
+    } catch {
+      continue // pas un dossier
+    }
+    for (const file of files) {
+      if (!file.endsWith('.json')) continue
+      const parsed = readContentJson(`texts/${zoneDir}/${file}`) as {
+        text?: ProgressiveText
+      } | null
+      if (parsed?.text?.text_id && !textIndex.has(parsed.text.text_id)) {
+        textIndex.set(parsed.text.text_id, parsed.text)
+        if (!textsByZone.has(zoneDir)) textsByZone.set(zoneDir, [])
+        textsByZone.get(zoneDir)!.push(parsed.text)
       }
     }
   }
-  return textIndex.get(textId) ?? null
+}
+
+export function getTextById(textId: string): ProgressiveText | null {
+  buildTextIndexes()
+  return textIndex!.get(textId) ?? null
+}
+
+/** Les textes d'une zone (dossier content/texts/<zone_id>/) ; [] si la zone
+ * n'a aucun texte. */
+export function getTextsForZone(zoneId: string): ProgressiveText[] {
+  buildTextIndexes()
+  return textsByZone!.get(zoneId) ?? []
+}
+
+/** Slugs des zones qui ont au moins un texte — « slugs connus » du mapping
+ * MAP_* → slug pour le Journal de lecture (issue 09). */
+export function getTextZoneIds(): string[] {
+  buildTextIndexes()
+  return Array.from(textsByZone!.keys())
 }
 
 /** Table des `unlock_text` émis PAR LE MOTEUR (content/engine-contract.md

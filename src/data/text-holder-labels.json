@@ -1,0 +1,8 @@
+{
+  "_comment": "Indices de porteur du Journal de lecture (issue 09) pour les textes NON découverts dont le porteur est un OBJET/une tuile (found_object_ref) — les porteurs PNJ (npc_ref) n'ont pas besoin d'entrée : leur nom jp est résolu depuis le fichier dialogue du PNJ (src/app/menu/actions.ts). Les 5 refs sont ceux de la table moteur ENGINE_UNLOCK_TEXTS (content/engine-contract.md § 2). Ref inconnu → 「？？？」.",
+  "player_pc_new_bark": { "jp": "じぶんの　パソコン" },
+  "sign_johto_entrance_route29": { "jp": "みちの　かんばん" },
+  "forest_shrine_ilex": { "jp": "もりの　ほこら" },
+  "son_in_law_letter_object_slowpoke_well": { "jp": "いどの　てがみ" },
+  "inscription_sprout_tower": { "jp": "とうの　いしぶみ" }
+}

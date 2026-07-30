@@ -1,4 +1,5 @@
 import type { Zone } from '@/lib/zone-geometry'
+import { zoneSlugForMapName } from '@/lib/zone-slug'
 
 interface RawNpc {
   npc_id: string
@@ -24,16 +25,12 @@ const rawNpcs = require('../../content/map/npcs.json') as RawNpc[]
 
 const knownZoneIds = Array.from(new Set(rawNpcs.map(n => n.zone_id)))
 
-function normalizeMapName(mapName: string): string {
-  return mapName.replace(/^MAP_/, '').toLowerCase().replace(/_/g, '-')
-}
-
 // content/map/npcs.json uses human zone_id slugs ("new-bark-town") while the
-// zone registry uses ROM map names ("MAP_NEW_BARK") — there's no stored
-// mapping between them, so match by prefix (e.g. "new-bark" -> "new-bark-town").
+// zone registry uses ROM map names ("MAP_NEW_BARK") — the shared mapping
+// heuristic lives in zone-slug.ts (issue 09), applied here to the slugs the
+// NPC registry actually uses.
 function zoneIdForMapName(mapName: string): string | undefined {
-  const normalized = normalizeMapName(mapName)
-  return knownZoneIds.find(zoneId => zoneId === normalized || zoneId.startsWith(`${normalized}-`))
+  return zoneSlugForMapName(mapName, knownZoneIds)
 }
 
 export function getNpcsForZone(zone: Zone): ZoneNpc[] {

@@ -1,0 +1,23 @@
+{
+  "_comment": "Registre MINIMAL de libellés d'items pour le Sac du menu START (issue 09). Les items n'ont pas de registre de métadonnées au jalon 1 (la table `items` du PRD § Schéma attend l'ingestion) : ce fichier fait le pont — item_id → libellé jp (noms VO HGSS) + catégorie (sous-ensemble de items.category du PRD). Un item absent d'ici tombe dans `other` avec son item_id brut (repli dev, voir src/lib/start-menu.ts groupBagItems). À remplacer par la vraie table items à l'échelle.",
+  "categories": [
+    { "id": "key_items", "jp": "たいせつなもの" },
+    { "id": "tools", "jp": "どうぐ" },
+    { "id": "other", "jp": "そのほか" }
+  ],
+  "items": {
+    "running_shoes": { "jp": "ランニングシューズ", "category": "key_items" },
+    "pokegear": { "jp": "ポケギア", "category": "key_items" },
+    "map_card": { "jp": "マップカード", "category": "key_items" },
+    "pokedex": { "jp": "ポケモンずかん", "category": "key_items" },
+    "mystery_egg": { "jp": "ふしぎな　タマゴ", "category": "key_items" },
+    "apricorn_box": { "jp": "ぼんぐりケース", "category": "key_items" },
+    "red_scale": { "jp": "あかい　ウロコ", "category": "key_items" },
+    "old_rod": { "jp": "ボロの　つりざお", "category": "key_items" },
+    "exp_share": { "jp": "がくしゅうそうち", "category": "tools" },
+    "twisted_spoon": { "jp": "まがった　スプーン", "category": "tools" },
+    "miracle_seed": { "jp": "きせきの　タネ", "category": "tools" },
+    "lure_ball": { "jp": "ルアーボール", "category": "tools" },
+    "poison_barb": { "jp": "どくバリ", "category": "tools" }
+  }
+}

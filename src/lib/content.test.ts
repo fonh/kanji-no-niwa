@@ -7,6 +7,9 @@ import {
   getMapTrainers,
   getMapObstacles,
   getLessonsForZone,
+  getLessonZoneIds,
+  getTextZoneIds,
+  getTextsForZone,
   getGrammarForZone,
   getGrammarPoint,
   getGrammarSource,
@@ -177,5 +180,37 @@ describe('textes progressifs (issue 08)', () => {
       const textId = getEngineUnlockTextId(ref)!
       expect(getTextById(textId), textId).not.toBe(null)
     }
+  })
+})
+
+describe('loaders du menu START (issue 09)', () => {
+  it('getLessonZoneIds liste les zones à leçons (slugs des fichiers)', () => {
+    const ids = getLessonZoneIds()
+    expect(ids).toContain('new-bark-town')
+    expect(ids).toContain('route-29')
+    expect(ids).toContain('cherrygrove-city')
+    expect(ids).toContain('route-30')
+  })
+
+  it('getTextZoneIds liste les zones à textes (dossiers de content/texts)', () => {
+    const ids = getTextZoneIds()
+    expect(ids).toContain('new-bark-town')
+    expect(ids).toContain('route-29')
+    expect(ids).not.toContain('cherrygrove-city') // aucun texte écrit là
+  })
+
+  it('getTextsForZone retourne les textes d’une zone ; [] pour une zone sans texte', () => {
+    const texts = getTextsForZone('new-bark-town')
+    expect(texts.map(t => t.text_id).sort()).toEqual([
+      'elm_great_text_new_bark',
+      'lyra_mail_new_bark',
+    ])
+    expect(getTextsForZone('cherrygrove-city')).toEqual([])
+    expect(getTextsForZone('../evil')).toEqual([])
+  })
+
+  it('getTextsForZone sert les MÊMES objets que getTextById (index partagé)', () => {
+    const [first] = getTextsForZone('route-29')
+    expect(first).toBe(getTextById(first.text_id))
   })
 })
