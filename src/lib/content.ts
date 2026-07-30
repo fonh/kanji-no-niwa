@@ -230,6 +230,27 @@ export function getGrammarPoint(zoneId: string, grammarId: string): GrammarOverl
   return getGrammarForZone(zoneId).find(p => p.grammar_id === grammarId) ?? null
 }
 
+let grammarPointIndex: Map<string, GrammarOverlayPoint> | null = null
+
+/** Index grammar_id → point d'overlay, toutes zones confondues (issue 07 :
+ * grammar_encounters ne stocke que le grammar_id, le combat doit retrouver
+ * l'overlay sans connaître la zone d'origine). Construit une fois. */
+export function getGrammarPointById(grammarId: string): GrammarOverlayPoint | null {
+  if (!grammarPointIndex) {
+    grammarPointIndex = new Map()
+    for (const file of readdirSync(path.join(CONTENT_ROOT, 'grammar'))) {
+      if (!file.endsWith('.json')) continue
+      const zone = file.replace(/\.json$/, '')
+      for (const point of getGrammarForZone(zone)) {
+        if (!grammarPointIndex.has(point.grammar_id)) {
+          grammarPointIndex.set(point.grammar_id, point)
+        }
+      }
+    }
+  }
+  return grammarPointIndex.get(grammarId) ?? null
+}
+
 /** Une entrée de la base Hanabira — explications en anglais, réutilisées
  * telles quelles (PRD § Langue du Jeu). */
 export interface GrammarSourceEntry {
@@ -265,6 +286,42 @@ export function getGrammarSource(level: string): GrammarSourceEntry[] | null {
 export function getGrammarSourceEntry(point: GrammarOverlayPoint): GrammarSourceEntry | null {
   const level = point.grammar_id.split('-')[0]
   return getGrammarSource(level)?.[point.source_index] ?? null
+}
+
+// ── Lexique de mots pour le mode Composition (issue 07) ───────────────────────
+// La table `vocabulary` de Neon n'est pas ingérée au jalon 1 (décision board :
+// contenu servi depuis les fichiers) — la source fichier disponible est la
+// liste JLPT yomitan (scripts/sources/yomitan-jlpt/, ~8 100 mots avec
+// lecture, CC BY-SA). Même précédent que la base Hanabira ci-dessus pour la
+// lecture de scripts/sources côté serveur. Le filtrage « 2 kanji exactement »
+// et la garde d'unicité vivent dans src/lib/battle.ts (pur, testé).
+
+type YomitanTermMeta = [string, string, { reading?: string }]
+
+let lexiconWordsCache: { word: string; reading: string }[] | null = null
+
+/** Tous les mots JLPT (avec lecture) de la source yomitan — bruts, non
+ * filtrés. [] si la source manque (le mode Composition sera exclu par sa
+ * garde, jamais un crash). */
+export function getCompositionLexiconWords(): { word: string; reading: string }[] {
+  if (lexiconWordsCache) return lexiconWordsCache
+  const words: { word: string; reading: string }[] = []
+  for (let bank = 1; bank <= 5; bank++) {
+    try {
+      const entries = JSON.parse(
+        readFileSync(path.join(SOURCES_ROOT, 'yomitan-jlpt', `term_meta_bank_${bank}.json`), 'utf-8')
+      ) as YomitanTermMeta[]
+      for (const [word, , meta] of entries) {
+        if (typeof word === 'string' && typeof meta?.reading === 'string') {
+          words.push({ word, reading: meta.reading })
+        }
+      }
+    } catch {
+      // banque absente : on continue avec ce qu'on a
+    }
+  }
+  lexiconWordsCache = words
+  return words
 }
 
 // ── Lignes de blocage de leçon ────────────────────────────────────────────────

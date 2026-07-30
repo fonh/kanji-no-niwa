@@ -9,6 +9,7 @@ interface RawTrainer {
   facing: 'north' | 'south' | 'east' | 'west'
   sight_range: number
   role: string
+  trigger_type: string
   dialogue_ref: string
 }
 
@@ -20,7 +21,14 @@ export interface ZoneTrainer {
   world_z: number
   facing: 'north' | 'south' | 'east' | 'west'
   sight_range: number
+  /** battle/lesson (registre map_trainers) — seul `battle` déclenche un combat. */
+  role: string
+  /** sight_auto = embuscade dans la ligne de vue ; talk = A seulement. */
+  trigger_type: string
   dialogue_ref: string
+  /** Posé côté serveur (defeated_trainers[]) — un dresseur battu ne
+   * re-déclenche jamais automatiquement (issue 07). */
+  defeated?: boolean
 }
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -52,6 +60,8 @@ export function getTrainersForZone(zone: Zone): ZoneTrainer[] {
       world_z: zone.world_origin_y + t.tile_y,
       facing: t.facing,
       sight_range: t.sight_range,
+      role: t.role,
+      trigger_type: t.trigger_type,
       dialogue_ref: t.dialogue_ref,
     }))
 }

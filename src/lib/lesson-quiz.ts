@@ -36,6 +36,9 @@ export interface KanjiContentEntry {
   etymology?: string
   mnemonic?: string
   lesson_examples?: KanjiLessonExample[]
+  /** Mots d'exemple du pipeline (issue 07 : ceux de 2 kanji nourrissent la
+   * garde d'unicité du mode Composition). */
+  examples?: { word: string; reading: string; audio?: string | null }[]
 }
 
 export type KanjiContentMap = Record<string, KanjiContentEntry>

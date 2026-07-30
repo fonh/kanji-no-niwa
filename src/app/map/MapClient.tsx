@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { saveMapProgress, saveMapPosition, reachDialogueState, chooseCompanion, interactWithNpc } from './actions'
+import { engageTrainer, type TrainerBattleStart } from './battle-actions'
+import BattleScreen from './BattleScreen'
 import DialogueBox, { type DialogueBoxHandle } from './DialogueBox'
 import type { DialoguePageEntry } from '@/lib/content'
 import {
@@ -154,9 +156,11 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const [facing, setFacing] = useState<Direction>('south')
   const [stepping, setStepping] = useState(false)
   const [bumpKey, setBumpKey] = useState(0)
-  // Trainers spotted this session — client-only, since there's no battle
-  // system yet to actually clear them server-side (see ADR-0001/0003).
-  const [spottedTrainers, setSpottedTrainers] = useState<Set<string>>(new Set())
+  // Combat (issue 07) : l'état du combat vit CLIENT, jamais persisté (PRD :
+  // fermer l'app = fuite). `engagingTrainer` = « ! » + mouvement bloqué le
+  // temps que la server action assemble le script.
+  const [battle, setBattle] = useState<TrainerBattleStart | null>(null)
+  const [engagingTrainer, setEngagingTrainer] = useState<string | null>(null)
   const [viewSize, setViewSize] = useState({ w: 375, h: 667 })
   const [showZonePicker, setShowZonePicker] = useState(false)
   const [activeDialogue, setActiveDialogue] = useState<ActiveDialogue | null>(null)
@@ -173,6 +177,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const dialogueRef = useRef(activeDialogue)
   const progressRef = useRef(progress)
   const floorPickerRef = useRef(floorPicker)
+  const battleRef = useRef(battle)
+  const engagingRef = useRef(engagingTrainer)
   zoneRef.current = zone
   playerPosRef.current = playerPos
   facingRef.current = facing
@@ -181,6 +187,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   dialogueRef.current = activeDialogue
   progressRef.current = progress
   floorPickerRef.current = floorPicker
+  battleRef.current = battle
+  engagingRef.current = engagingTrainer
 
   // A ref, not state: read synchronously within the same input, before any
   // render has a chance to commit — a state flag would let two inputs in
@@ -312,19 +320,111 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [router, openDialogue]
   )
 
-  // Line-of-sight trigger (ADR-0001): no battle system exists yet to
-  // actually fight, so "spotted" just opens the trainer's battle_intro
-  // dialogue once per session — a stub for the real trigger.
+  // ── Combat (issue 07) ─────────────────────────────────────────────────────
+  // Engagement : « ! », mouvement bloqué (engagingRef), la server action
+  // engageTrainer assemble le script complet, courte pause façon HGSS puis
+  // l'overlay BattleScreen prend l'écran.
+  const engageTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  useEffect(
+    () => () => {
+      if (engageTimeoutRef.current) clearTimeout(engageTimeoutRef.current)
+    },
+    []
+  )
+
+  const startBattleEngagement = useCallback(
+    (trainer: ZoneTrainer) => {
+      if (battleRef.current || engagingRef.current) return
+      engagingRef.current = trainer.trainer_id
+      setEngagingTrainer(trainer.trainer_id)
+      engageTrainer(trainer.trainer_id)
+        .then(result => {
+          if (result?.kind === 'battle') {
+            engageTimeoutRef.current = setTimeout(() => {
+              setEngagingTrainer(null)
+              setBattle(result)
+            }, 700)
+            return
+          }
+          setEngagingTrainer(null)
+          engagingRef.current = null
+          if (result?.kind === 'dialogue' && result.pages.length) {
+            openDialogue(result.name, result.pages)
+          }
+        })
+        .catch(err => {
+          console.error('Failed to engage trainer', err)
+          setEngagingTrainer(null)
+          engagingRef.current = null
+        })
+    },
+    [openDialogue]
+  )
+
+  // Talk sur un dresseur : non battu (rôle battle) → combat aussi ; battu →
+  // dialogue post_battle (serveur), plus jamais de re-combat automatique.
+  const startTrainerInteraction = useCallback(
+    (trainer: ZoneTrainer) => {
+      if (trainer.role === 'battle' && !trainer.defeated) {
+        startBattleEngagement(trainer)
+        return
+      }
+      engageTrainer(trainer.trainer_id)
+        .then(result => {
+          if (result?.kind === 'dialogue' && result.pages.length) {
+            openDialogue(result.name, result.pages)
+          } else if (!result) {
+            fetchDialogue(trainer.dialogue_ref)
+          }
+        })
+        .catch(err => console.error('Failed to talk to trainer', err))
+    },
+    [startBattleEngagement, openDialogue, fetchDialogue]
+  )
+
+  // Rafraîchit PNJ/dresseurs après une victoire (le serveur re-filtre :
+  // dresseur marqué battu, entités gated sur npc_cleared révélées).
+  const refreshZoneEntities = useCallback(async () => {
+    try {
+      const res = await fetch(`/api/zone?name=${encodeURIComponent(zoneRef.current.name)}`)
+      if (!res.ok || !res.headers.get('content-type')?.includes('application/json')) return
+      const { npcs: freshNpcs, trainers: freshTrainers } = (await res.json()) as {
+        npcs: ZoneNpc[]
+        trainers: ZoneTrainer[]
+      }
+      setNpcs(freshNpcs)
+      setTrainers(freshTrainers)
+    } catch (err) {
+      console.error('Failed to refresh zone entities', err)
+    }
+  }, [])
+
+  const finishBattle = useCallback(
+    (result: { won: boolean }) => {
+      setBattle(null)
+      engagingRef.current = null
+      // Défaite : rien n'est écrit, le dresseur reste engageable (rejouable
+      // immédiatement). Victoire : l'état serveur a changé, on resynchronise.
+      if (result.won) refreshZoneEntities()
+    },
+    [refreshZoneEntities]
+  )
+
+  // Ligne de vue (Sight Cone, ADR-0001) : dresseur rôle battle, non battu,
+  // trigger sight_auto + joueur dans la ligne → embuscade.
   const checkSightLine = useCallback(
     (trainerList: ZoneTrainer[], wx: number, wz: number) => {
+      if (battleRef.current || engagingRef.current || dialogueRef.current) return
       const spotted = trainerList.find(
-        t => !spottedTrainers.has(t.trainer_id) && isInSightLine(t, wx, wz)
+        t =>
+          t.role === 'battle' &&
+          !t.defeated &&
+          t.trigger_type === 'sight_auto' &&
+          isInSightLine(t, wx, wz)
       )
-      if (!spotted) return
-      setSpottedTrainers(prev => new Set(prev).add(spotted.trainer_id))
-      fetchDialogue(spotted.dialogue_ref)
+      if (spotted) startBattleEngagement(spotted)
     },
-    [spottedTrainers, fetchDialogue]
+    [startBattleEngagement]
   )
 
   const showBanner = useCallback((label: string) => {
@@ -458,6 +558,9 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const attemptStep = useCallback(
     (dir: Direction) => {
       if (dialogueRef.current || floorPickerRef.current || isTransitioningRef.current) return
+      // Mouvement bloqué dès l'engagement d'un combat (« ! ») et pendant
+      // toute sa durée (l'overlay couvre l'écran, la garde couvre le clavier)
+      if (battleRef.current || engagingRef.current) return
       if (Date.now() < stepBusyUntilRef.current) return
 
       setFacing(dir)
@@ -549,6 +652,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const closeDialogue = useCallback(() => setActiveDialogue(null), [])
 
   const onA = useCallback(() => {
+    if (battleRef.current || engagingRef.current) return
     if (dialogueRef.current) {
       dialogueBoxRef.current?.pressA()
       return
@@ -567,7 +671,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     }
     const trainer = trainersRef.current.find(t => t.world_x === fx && t.world_z === fz)
     if (trainer) {
-      fetchDialogue(trainer.dialogue_ref)
+      startTrainerInteraction(trainer)
       return
     }
     const warp = warpAt(z, fx, fz)
@@ -595,9 +699,11 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     // ROM-extracted background characters have no authored dialogue yet —
     // a wordless beat instead of dead air (no invented content).
     openDialogue('', [{ jp: '・・・・・・', en: '' }])
-  }, [startNpcInteraction, fetchDialogue, enterWarp, openDialogue, isCleared, updateProgress])
+  }, [startNpcInteraction, startTrainerInteraction, enterWarp, openDialogue, isCleared, updateProgress])
 
   const onB = useCallback(() => {
+    // En combat, B n'abandonne pas (PRD) — BattleScreen gère ses entrées.
+    if (battleRef.current || engagingRef.current) return
     if (dialogueRef.current) closeDialogue()
     else if (floorPickerRef.current) setFloorPicker(false)
   }, [closeDialogue])
@@ -866,11 +972,13 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             )
           })}
 
-          {/* Trainer markers — walking into their line of sight triggers the
-              battle_intro dialogue once (see checkSightLine). */}
+          {/* Trainer markers — entrer dans la ligne de vue d'un dresseur
+              rôle battle non battu déclenche le combat (checkSightLine) ;
+              battu = gris, Talk → post_battle. */}
           {trainers.map(trainer => {
             const px = worldToPixel(trainer.world_x, trainer.world_z)
-            const spotted = spottedTrainers.has(trainer.trainer_id)
+            const defeated = trainer.defeated === true
+            const engaging = engagingTrainer === trainer.trainer_id
             return (
               <div
                 key={trainer.trainer_id}
@@ -885,13 +993,18 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                 }}
                 title={trainer.name}
               >
+                {engaging && (
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-amber-300 text-base font-bold animate-bounce">
+                    ！
+                  </div>
+                )}
                 <div
                   style={{ width: 18, height: 18, borderRadius: '50%' }}
                   className={`border-2 shadow-sm flex items-center justify-center text-[9px] ${
-                    spotted ? 'bg-gray-400 border-gray-600' : 'bg-red-500 border-red-800'
+                    defeated ? 'bg-gray-400 border-gray-600' : 'bg-red-500 border-red-800'
                   }`}
                 >
-                  {spotted ? '·' : '!'}
+                  {defeated ? '·' : '!'}
                 </div>
               </div>
             )
@@ -1003,6 +1116,10 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           </div>
         </div>
       )}
+
+      {/* Combat (issue 07) — overlay plein écran au-dessus de tout le chrome
+          carte ; état 100 % client, un remount = un nouveau combat */}
+      {battle && <BattleScreen battle={battle} onFinish={finishBattle} />}
 
       {/* Dialogue overlay — pagination, X/Y, kinds spéciaux (issue 03) */}
       {activeDialogue && (

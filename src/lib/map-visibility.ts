@@ -32,5 +32,13 @@ export function filterVisibleTrainers(
   now = new Date()
 ): ZoneTrainer[] {
   const unlocked = unlockedIds(state, now)
-  return trainers.filter(trainer => unlocked.has(trainer.trainer_id))
+  return trainers
+    .filter(trainer => unlocked.has(trainer.trainer_id))
+    .map(trainer => ({
+      // Battu (defeated_trainers[]) : reste visible si le contenu ne le
+      // masque pas, mais ne re-déclenche jamais un combat automatique —
+      // le client a besoin du drapeau (issue 07).
+      ...trainer,
+      defeated: state.defeated_trainers.includes(trainer.trainer_id),
+    }))
 }
