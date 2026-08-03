@@ -303,6 +303,45 @@ OUTDOOR_TERRAIN_PATCHES: dict[str, list[tuple[int, int, int]]] = {
     # (x_start, x_end_inclusive, z) — une entrée par ligne de la bande ;
     # (76, 24) volontairement absente (seule case du massif qui doit rester
     # praticable, voir commentaire ci-dessus).
+    #
+    # 2026-08-03 (suite) — 2ᵉ signalement utilisateur (capture d'écran), joueur
+    # visiblement « dans les arbres » plus à l'ouest/au centre de la même
+    # Route 29, cette fois dans la bordure sud de canopée (z 23-28), pas la
+    # lisière est du massif corrigée ci-dessus (z 20-26, x 76-89). Deux poches
+    # distinctes trouvées et confirmées par rendu composite (capture réelle +
+    # grille de collision superposée) puis par classification couleur tuile
+    # par tuile (même méthode que le scanner `canopy_scan_draft.py`, mais
+    # sans le filtre « ≥60% voisins murés » qui sous-compte les gros trous :
+    # une tuile au MILIEU d'un trou n'a quasi aucun voisin mur, seulement des
+    # voisins eux-mêmes trous — le filtre ne capte que la bordure d'un trou
+    # large, voir issue 13) :
+    #   - poche ouest (x 6-11, z 23-28) : petite poche isolée dans la canopée,
+    #     juste au sud d'une entrée d'eau (non touchée, hors périmètre).
+    #   - poche centrale (x 30-75, z 24-28) : bien plus grande, ~30 tuiles de
+    #     large, forme en escalier (le trou se décale vers l'est à mesure que
+    #     z augmente, suit le contour de la canopée) — c'est celle visible
+    #     dans la 2ᵉ capture d'écran de l'utilisateur.
+    # Hypothèse initiale erronée, corrigée avant commit : cette poche a
+    # d'abord semblé être un cul-de-sac isolé (atteint uniquement via les
+    # ledges à sens unique de la rangée z=23, mur ouest x0-5 déjà présent) —
+    # un premier essai a muré la totalité des 188 tuiles couleur-canopée d'un
+    # coup. `npm run check` a rougi (3 tests `a1-traversal.test.ts` : guérite,
+    # PNJ, continuum Route 29 → Ville Griotte/Route 30 tous cassés). BFS
+    # Python de diagnostic (même sémantique que `bfsOutdoor` : ledges à sens
+    # unique, franchissement de bord via `findOutdoorZoneAt`, warps = sorties)
+    # a montré que le chemin ouest-est de la bande z10-18 (la voie « normale »)
+    # est en réalité coupé en plusieurs segments par les massifs de pins de
+    # cette même bande — le vrai chemin contourne PAR le sud, plonge dans
+    # cette poche via les ledges, la traverse partiellement, et en ressort
+    # par un passage à pied (pas un ledge, donc à double sens) cousu dans le
+    # coin sud-est de la poche. Reproduit le même principe que (76, 24) pour
+    # la bande corrigée plus haut, à plus grande échelle. Recherche gloutonne
+    # tuile par tuile (même méthode que la 1ʳᵉ correction, chaque tuile testée
+    # contre un BFS complet — guérite, adjacence des 2 PNJ, les 4 zones du
+    # continuum toutes atteintes — gardée si aucun de ces points ne casse,
+    # sinon laissée praticable) sur les 188 tuiles candidates : 167 murables,
+    # 21 doivent rester praticables (le passage réel, invisible à l'image).
+    # `npm run check` vert avec ce sous-ensemble.
     "MAP_ROUTE_29": [
         (84, 89, 20),
         (80, 89, 21),
@@ -311,6 +350,20 @@ OUTDOOR_TERRAIN_PATCHES: dict[str, list[tuple[int, int, int]]] = {
         (77, 81, 24),
         (76, 79, 25),
         (76, 79, 26),
+        (6, 7, 23),
+        (6, 7, 24),
+        (30, 41, 24),
+        (6, 11, 25),
+        (30, 60, 25),
+        (66, 74, 25),
+        (6, 11, 26),
+        (30, 60, 26),
+        (66, 72, 26),
+        (6, 11, 27),
+        (42, 60, 27),
+        (62, 72, 27),
+        (6, 11, 28),
+        (42, 60, 28),
     ],
 }
 

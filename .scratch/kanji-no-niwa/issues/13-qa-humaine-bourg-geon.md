@@ -1292,3 +1292,187 @@ tuile par tuile comme sur Route 29 (qui n'a été faite qu'après avoir
 localisé le bug via la capture), donc ne pas exclure un cas similaire
 ailleurs dans le jeu si signalé — mais rien trouvé sur les 4 zones du
 jalon 1 en dehors de Route 29.
+
+---
+
+## 2026-08-03 — 2ᵉ trou « arbres traversables » sur Route 29 (capture
+## différente), + triage d'un scanner automatique de trous de collision
+
+**Contexte** : nouveau signalement utilisateur, nouvelle capture d'écran
+(le joueur toujours visiblement planté dans les pins de Route 29, mais un
+amas différent — plus central/occidental — de celui corrigé ci-dessus,
+qui était près de la guérite est). Un outil de scan a aussi été fourni en
+tâche (`​.scratch/kanji-no-niwa/canopy_scan_draft.py`, brouillon non
+testé en profondeur) : échantillonne la couleur de chaque tuile
+praticable, la compare à la couleur moyenne des tuiles murées de la même
+zone contre celle des autres tuiles, et flague les tuiles praticables
+« couleur mur » qui ont ≥60 % de voisins murés — 60 zones extérieures sur
+72 flaguées, présumé bruyant. Deux volets : (1) confirmer et corriger le
+nouveau trou, (2) trier le scanner sur plusieurs zones pour juger s'il est
+exploitable.
+
+### Localisation du nouveau trou
+
+Identification visuelle rigoureuse comme la 1ʳᵉ fois : la capture montre
+6 personnages distincts ; en comparant chacun à la planche de sprite du
+joueur (`protagonist_ethan_ow.png`, casquette noire/jaune, veste
+rouge/noire) plutôt qu'en supposant que le personnage le plus visible est
+le joueur, **le vrai joueur est celui en bas au centre de la capture,
+debout au milieu d'une canopée de pins dense et uniforme** — les 5 autres
+personnages (dont un dans une petite clairière clôturée à un seul pin,
+souvent prise à tort pour « le » joueur car plus proéminente) sont des
+PNJ ROM de la zone (gsboy2, gsbigman, gsman1, gswoman2…), identifiables
+par leur tenue différente (pas de casquette noire/jaune ni de veste
+rouge/noire).
+
+Recalage précis capture↔asset : plusieurs méthodes pixel (corrélation
+croisée sur le motif répétitif des pins pour mesurer l'échelle réelle du
+rendu en jeu — ~51 px/tuile en largeur contre les 16,47 px/tuile de la
+capture statique enregistrée, soit un facteur d'agrandissement ~3,1× côté
+utilisateur — puis ancrage sur un repère non ambigu, le perron de la
+guérite, présent et mesurable dans les deux images) situent le joueur
+autour de la tuile locale **x≈43**, confirmé ensuite par recherche visuelle
+directe (comparaison de la texture — grille uniforme de pins avec points
+cyan, distincte du style « amas de tuftes arrondis » du centre de la
+carte) : la vraie bordure sud de canopée (z 23-31), pas la zone centrale
+déjà vérifiée saine par la passe précédente.
+
+**Cause confirmée par rendu composite + classification couleur tuile par
+tuile** (même principe que le scanner fourni, mais sans le filtre
+« ≥60 % voisins murés » — voir plus bas pourquoi il ne suffit pas ici) :
+deux poches de tuiles `terrain='.'` (praticables) dont la couleur
+échantillonnée est objectivement plus proche de la moyenne des tuiles
+murées de la zone que de la moyenne du reste, à l'intérieur d'une canopée
+visuellement continue :
+- **poche ouest** (x 6-11, z 23-28) : petite, en bordure d'une entrée
+  d'eau (non touchée).
+- **poche centrale** (x 30-75, z 24-28) : bien plus grande — ~30 tuiles
+  de large, en forme d'escalier (le trou se décale vers l'est à mesure
+  que z augmente, suit le contour réel de la canopée) — c'est celle
+  visible dans la capture de l'utilisateur (x≈43 tombe dedans, dans les
+  deux poches à z 25-28 selon la ligne).
+
+188 tuiles candidates au total (identifiées par comparaison de couleur,
+pas par simple étendue de `terrain='.'` contiguë — important : certaines
+tuiles `.` adjacentes à la canopée, ex. x 42-61 à z=24, ont une couleur
+d'herbe/eau normale, pas de pin — les murer aurait introduit un NOUVEAU
+bug, un carré d'herbe visible devenu invisible-mur).
+
+### Piste initiale erronée, corrigée avant tout commit
+
+Premier essai : murer les 188 tuiles d'un coup, en supposant (par analogie
+avec la 1ʳᵉ correction, où la bande était un cul-de-sac atteint seulement
+par des ledges à sens unique) que cette poche était elle aussi un
+cul-de-sac. `npm run check` a rougi : 3 tests `a1-traversal.test.ts`
+(guérite injoignable, PNJ Tuscany injoignable, Route 29 ne relie plus
+Ville Griotte ni Route 30). Diagnostic par BFS Python répliquant fidèlement
+`bfsOutdoor`/`canTraverse`/les ledges à sens unique de `zone-geometry.ts`
+(vérifié en reproduisant exactement l'échec du test réel avant de creuser)
+a montré l'hypothèse fausse : contrairement à la bande de la 1ʳᵉ
+correction, le chemin ouest-est de la bande z10-18 (la voie « normale »)
+est en réalité coupé en plusieurs segments par les massifs de pins de
+cette même bande (vérifié : `z=18` est la seule ligne quasi entièrement
+ouverte sur toute la largeur, les lignes voisines ont des murs qui
+segmentent la traversée) — le chemin réel contourne par le sud, plonge
+dans cette poche via les ledges de la rangée z=23, la traverse
+partiellement, et en ressort par un passage à pied ordinaire (pas un
+ledge, donc à double sens) cousu dans son coin sud-est. Reproduit le même
+principe que la tuile résiduelle `(76, 24)` de la 1ʳᵉ correction, à plus
+grande échelle.
+
+**Corrigé par recherche gloutonne tuile par tuile** (même méthode que la
+1ʳᵉ correction : chaque tuile testée une à une contre un BFS complet —
+les 2 tuiles de la guérite, l'adjacence des 2 PNJ de la zone, les 4 zones
+du continuum toutes atteintes depuis le spawn — gardée murée si rien ne
+casse, sinon rendue praticable) sur les 188 tuiles candidates : **167
+murables, 21 doivent rester praticables** (le passage réel, invisible à
+l'image — concentré autour de x=61 et x=62-75 en bas de la poche).
+`scripts/build/build-zone-registry.py`, `OUTDOOR_TERRAIN_PATCHES["MAP_ROUTE_29"]` étendu (portée strictement
+limitée à cette zone, comme la 1ʳᵉ correction). Registre régénéré, diff
+vérifié exhaustivement : seul le `terrain` de `MAP_ROUTE_29` change, rien
+d'autre. `npm run check` vert (550/550 tests, y compris les 3 qui avaient
+rougi au premier essai).
+
+### Triage du scanner (`canopy_scan_draft.py`) sur d'autres zones
+
+Vérification visuelle (rendu composite) de plusieurs candidats du scanner
+en dehors de Route 29 :
+
+- **`MAP_ROUTE_30`** (dans le périmètre du jalon 1) : 477 tuiles flaguées
+  par simple classification couleur (sans le filtre voisinage — avec, le
+  scanner original n'en trouve que 21, très bruités). 4 zones de la carte
+  vérifiées par rendu composite (nord, un pont/rivière avec falaises,
+  un amas d'arbres près d'une maison, le bord ouest de canopée) :
+  **toutes des faux positifs** — la couleur moyenne « mur » de cette zone
+  mélange arbres ET falaises/pont en pierre grise, donc les tuiles d'eau
+  ou de falaise sombres matchent par coïncidence la même moyenne que les
+  pins. Aucun vrai trou trouvé, cohérent avec la vérification (plus
+  sommaire) de la session précédente sur cette même zone. **Non modifié.**
+- **`MAP_ROUTE_36`** (hors périmètre) : un vrai trou confirmé visuellement
+  (rendu composite, tuiles locales ≈ x 50-53, z 4-9, canopée dense
+  identique à ses voisines murées) — même classe de bug que Route 29,
+  plus petit (~20 tuiles). **Non corrigé** (hors périmètre jalon 1),
+  signalé pour un futur passage.
+- **`MAP_VIRIDIAN`** (Forêt de Jade, hors périmètre) : 1 zone vérifiée par
+  rendu composite (amas d'arbres arrondis type « tuftes », proche du
+  style qui a produit du bruit ailleurs) — correctement murée, pas de
+  trou visible. Vérification partielle (une seule zone sur une carte de
+  64×64), pas concluante à 100 % mais aucun signal fort.
+- **`MAP_RUINS_OF_ALPH`** (hors périmètre) : zone à part — `scale_y=2,5`
+  (image quasi non lisible une fois rendue, texture pierre/eau très
+  écrasée verticalement) et terrain rocheux/aquatique, pas une canopée.
+  Le scanner suppose implicitement un terrain « arbres sur herbe » (sa
+  moyenne « mur » vs « reste » n'a de sens que pour ce cas) ; sur cette
+  zone la comparaison couleur mélange roche grise et eau turquoise sans
+  rapport avec le bug recherché. Non concluant, probablement pas
+  applicable tel quel.
+
+### Recommandation sur le scanner
+
+**Vaut la peine d'être gardé comme outil de présélection, pas comme
+détecteur autonome, et pas sans les correctifs suivants :**
+
+1. **Le filtre « ≥60 % voisins murés » sous-compte les gros trous.** Une
+   tuile au MILIEU d'un trou large (comme la poche centrale de cette
+   correction, ~30 tuiles de côté) n'a presque aucun voisin mur — juste
+   d'autres tuiles-trou — donc le filtre ne capte que sa bordure. C'est
+   ce qui a fait rater ce 2ᵉ trou par une lecture superficielle des
+   résultats du scanner (candidats épars, pas de « bloc » visible dans
+   la sortie brute) alors que le trou réel faisait ~190 tuiles. **Piste
+   de correctif** : remplacer le filtre de voisinage par une analyse en
+   composantes connexes — regrouper les tuiles couleur-mur contiguës en
+   îlots, garder l'îlot si sa bordure EXTÉRIEURE (pas chaque tuile
+   individuelle) est majoritairement murée.
+2. **La comparaison de couleur globale par zone est trop grossière pour
+   les zones à plusieurs textures de mur** (Route 30 : arbres + falaises
+   + pont en pierre dans la même moyenne « mur ») — cause principale du
+   bruit observé. **Piste de correctif** : clustering (k-means, 2-4
+   classes) des couleurs de tuiles murées par zone au lieu d'une moyenne
+   unique, comparer chaque tuile candidate à la classe la plus proche
+   plutôt qu'à une moyenne globale.
+3. **Le scanner suppose implicitement une zone « canopée sur herbe ».**
+   Zones à faible variance de couleur mur/reste (Ruins of Alph, roche
+   uniforme) ou à échelle de rendu dégénérée (`scale_y` très petit)
+   produisent du bruit sans rapport. Piste : ignorer les zones où
+   `dist(solid_mean, other_mean)` est trop faible (peu de contraste entre
+   mur et sol — la méthode n'a alors aucun pouvoir discriminant) plutôt
+   que de les scanner quand même.
+4. Même avec ces trois correctifs, **une confirmation visuelle humaine
+   (rendu composite) reste nécessaire avant toute correction** — la
+   sémantique couleur seule ne suffit jamais à distinguer un vrai trou
+   d'un chemin en terre discret ou d'un effet de bord d'eau/ombre, comme
+   déjà établi pour la 1ʳᵉ correction Route 29.
+
+**Verdict** : promouvoir sous `scripts/validate/` en outil de
+présélection (« liste de zones/tuiles à vérifier à l'œil », jamais
+« liste de tuiles à corriger automatiquement »), après les correctifs 1
+et 2 ci-dessus. Sur cette session, sur 5 zones effectivement vérifiées à
+l'œil (Route 29 ×2 poches, Route 30, Route 36, Viridian), 2 vrais trous
+trouvés (dont un raté par la première lecture du scanner à cause du
+défaut n°1) et le reste bruit confirmé — un taux qui justifie l'outil
+comme point de départ d'une QA zone-par-zone future, à condition de
+toujours vérifier à l'œil avant de corriger.
+
+**Fichiers modifiés** : `scripts/build/build-zone-registry.py`
+(`OUTDOOR_TERRAIN_PATCHES["MAP_ROUTE_29"]`), `src/data/zone-registry.json`
+(régénéré, seul `MAP_ROUTE_29.terrain` change). `npm run check` vert.
