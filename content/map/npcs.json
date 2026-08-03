@@ -9,6 +9,7 @@
   "facing": "east",
   "position_status": "fix issue 12 (2026-07-30) : était (23,12) extérieur = LA tuile-porte de la maison (elle bloquait l'entrée à pied). L'objet ROM matché (obj_T20_gsmama, placements/new-bark-town.json) vit DANS la maison en HGSS — le pipeline aplatissait tout sur la zone extérieure. Désormais au 1F de la maison du joueur, à côté de la table (7-8,5-8 de la grille de collision), face à elle, interagible par A depuis une tuile adjacente",
   "trigger_type": "talk",
+  "sprite_id": "SPRITE_GSMAMA",
   "dialogue_ref": "npcs/new-bark-town/mom_new_bark"
  },
  {
@@ -22,6 +23,7 @@
   "position_status": "fix issue 12 (2026-07-30) : était (31,0) extérieur, tuile solide sans voisin marchable (injoignable). L'objet ROM matché (obj_T20_doctor, placements/new-bark-town.json) vit DANS le labo en HGSS. Désormais au fond du labo 1F (rangée nord, devant ses machines, comme HGSS), face au sud, interagible par A depuis (5,5)",
   "trigger_type": "talk",
   "role": "lesson",
+  "sprite_id": "SPRITE_DOCTOR",
   "dialogue_ref": "npcs/new-bark-town/prof_elm_lab"
  },
  {
@@ -44,6 +46,7 @@
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/new-bark-town.json",
   "trigger_type": "talk",
+  "sprite_id": "SPRITE_POLICEMAN",
   "unlock_conditions": [
    {
     "type": "quest_step",
@@ -57,11 +60,12 @@
   "npc_id": "silver_spying_new_bark",
   "zone_id": "new-bark-town",
   "name": "Boy with Red Hair",
-  "tile_x": 3,
-  "tile_y": 12,
+  "tile_x": 9,
+  "tile_y": 10,
   "facing": "south",
-  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/new-bark-town.json",
+  "position_status": "repositionné 2026-08-03 (issue 13, bug D) : (3,12) était généré sans repère ROM et tombait en pleine forêt, hors de tout chemin — repéré en jeu par l'utilisateur (« PNJ dans les arbres »). (9,10) est en herbe praticable contre la clôture du labo, cohérent avec role_origin (« aperçu en train d'espionner le labo »), 3 tuiles adjacentes praticables vérifiées.",
   "trigger_type": "talk",
+  "sprite_id": "SPRITE_HNS_SILVER",
   "unlock_conditions": [
    {
     "type": "quest_step",

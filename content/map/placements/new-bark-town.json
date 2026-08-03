@@ -54,12 +54,13 @@
       "role_origin": "Aperçu en train d'espionner le labo",
       "item": "—",
       "map_zone": "MAP_NEW_BARK",
-      "tile_x": 3,
-      "tile_y": 12,
+      "tile_x": 9,
+      "tile_y": 10,
       "facing": "south",
       "source": "generated",
       "matched_object_id": null,
-      "matched_sprite_id": null
+      "matched_sprite_id": null,
+      "position_status": "repositionné 2026-08-03 (issue 13, bug D) : (3,12), sans repère ROM, tombait en pleine forêt — voir content/map/npcs.json pour le détail"
     },
     {
       "name": "Assistant du Pr. Elm",

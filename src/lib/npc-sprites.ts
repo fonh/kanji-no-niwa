@@ -7,12 +7,20 @@ const overworldSprites = require('@/data/overworld-sprite-labels.json') as { lab
 // are 8, some are single-frame icons), so it's carried alongside the URL
 // instead of assumed.
 export const SPRITE_FRAME_SIZE = 32
-export const PLAYER_SPRITE_URL = '/sprites/characters/protagonist_ethan_ow.png'
+// Version query bump — voir onboarding.ts SPRITE_ASSET_VERSION (même fichier,
+// contenu différent depuis la refonte 4-directions de l'issue 13 : sans ce
+// cache-bust, un navigateur qui a déjà chargé l'ancienne planche la garde).
+export const PLAYER_SPRITE_URL = '/sprites/characters/protagonist_ethan_ow.png?v=3'
 export const PLAYER_SPRITE_COLS = 8
 
 export interface ResolvedSprite {
   url: string
   cols: number
+  /** Nombre de rangées fiables (sud/nord/ouest/est, SPRITE_ROW), 1 par défaut
+   * — la quasi-totalité des planches ROM-extraites (voir commentaire ci-dessus)
+   * n'ont qu'une rangée exploitable. `4` seulement pour les planches où les 4
+   * rangées ont été vérifiées correctes une par une (voir HNS_PEOPLE). */
+  rows?: number
 }
 
 const spriteByLabel = new Map(overworldSprites.map(s => [s.label, s]))
@@ -20,6 +28,35 @@ const spriteByLabel = new Map(overworldSprites.map(s => [s.label, s]))
 function fromLabel(label: string): ResolvedSprite | null {
   const entry = spriteByLabel.get(label)
   return entry ? { url: `/sprites/overworld/${label}.png`, cols: entry.cols } : null
+}
+
+/** Planches à 4 directions vérifiées, converties depuis PokemonHnS
+ * (github.com/PokemonHnS-Development/pokemonHnS — projet fan open source
+ * basé sur pokeemerald ; dépôt public, aucun fichier de licence explicite
+ * trouvé au moment de l'écriture — à re-vérifier avant tout usage
+ * commercial), via
+ * `scripts/build/convert-hns-people-sprite.py` — format standard Gen 3
+ * (9 frames 16×32 : sud/nord/ouest fixes + marche, est en miroir),
+ * recentré sur la géométrie 32×32 de ce moteur. Contrairement au reste des
+ * planches ROM (une seule rangée fiable), celles-ci ont les 4 rangées
+ * vérifiées une par une — `rows: 4` l'indique au renderer (MapClient) pour
+ * qu'il utilise réellement `facingDirection`/`facing` au lieu de rester
+ * figé sur la rangée 0. Style Gen 3/GBA, pas HGSS/DS natif — écart
+ * assumé : mieux vaut une direction correcte dans un style un peu
+ * différent qu'une planche DS qui tourne le dos en permanence (issue 13).
+ * Étendre cette liste au cas par cas, un match vérifié à la fois — ne pas
+ * mapper à l'aveugle les ~120 spriteId ROM restants. */
+const HNS_PEOPLE: Record<string, string> = {
+  SPRITE_DOCTOR: 'elm', // Pr. Elm — Bourg Geon
+  SPRITE_POLICEMAN: 'policeman', // Bourg Geon (labo + PNJ curaté en ville)
+  SPRITE_GSMAMA: 'mom', // Maman — Bourg Geon
+  SPRITE_HNS_SILVER: 'silver', // identifiant synthétique : Silver n'a jamais eu
+  // de spriteId ROM à Bourg Geon (PNJ curaté généré, pas d'objet décor matché)
+}
+
+function fromHnsPeople(spriteId: string): ResolvedSprite | null {
+  const name = HNS_PEOPLE[spriteId]
+  return name ? { url: `/sprites/hns/people/${name}.png`, cols: 8, rows: 4 } : null
 }
 
 /** Planche overworld du compagnon choisi (issue 10) — le suivi derrière le
@@ -60,6 +97,9 @@ function resolveVarSlot(spriteId: string, eventFlag: string | undefined): Resolv
  * Kanto Trainer House's rotating trainers and a handful of gate/fence props
  * with no fixed visual in this NARC. */
 export function resolveNpcSprite(spriteId: string, eventFlag?: string): ResolvedSprite | null {
+  const hns = fromHnsPeople(spriteId)
+  if (hns) return hns
+
   const varSlot = resolveVarSlot(spriteId, eventFlag)
   if (varSlot) return varSlot
 

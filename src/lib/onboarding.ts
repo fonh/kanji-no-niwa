@@ -14,10 +14,16 @@ export function isAvatar(value: unknown): value is Avatar {
   return typeof value === 'string' && (AVATARS as readonly string[]).includes(value)
 }
 
+// Query-string version bump — même fichier, contenu différent (issue 13,
+// bug A : planche 4 directions refaite) — sans ça un navigateur qui a déjà
+// mis l'ancienne planche en cache ne revoit jamais la bonne tant que l'URL
+// ne change pas. À incrémenter à chaque remplacement de ces fichiers.
+const SPRITE_ASSET_VERSION = 3
+
 /** Planche overworld 8×4 frames de 32px — même géométrie que la planche
  * Ethan que MapClient utilisait en dur avant cette issue. */
 export function avatarOverworldSprite(avatar: Avatar): string {
-  return `/sprites/characters/protagonist_${avatar}_ow.png`
+  return `/sprites/characters/protagonist_${avatar}_ow.png?v=${SPRITE_ASSET_VERSION}`
 }
 
 /** Portrait 80×80 (sprite de combat, vue de face) pour l'écran de choix. */

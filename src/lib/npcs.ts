@@ -21,6 +21,11 @@ interface RawNpc {
   sight_range?: number
   sight_auto_result?: string
   repeats?: boolean
+  // Identifiant de sprite optionnel (issue 13) — absent pour l'immense
+  // majorité des PNJ curatés (contenu séparé des objets de décor ROM, voir
+  // src/lib/npc-sprites.ts), posé au cas par cas quand un vrai sprite
+  // 4-directions vérifié existe (HNS_PEOPLE).
+  sprite_id?: string
 }
 
 export interface ZoneNpc {
@@ -37,6 +42,7 @@ export interface ZoneNpc {
   sight_range?: number
   sight_auto_result?: string
   repeats?: boolean
+  sprite_id?: string
 }
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -72,5 +78,6 @@ export function getNpcsForZone(zone: Zone): ZoneNpc[] {
       sight_range: n.sight_range,
       sight_auto_result: n.sight_auto_result,
       repeats: n.repeats,
+      sprite_id: n.sprite_id,
     }))
 }

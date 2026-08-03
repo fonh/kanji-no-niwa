@@ -77,16 +77,13 @@ const SLIDE_MS = 110
 // 8×4 frames of 32px): 0=south, 1=north, 2=west, 3=east.
 const SPRITE_ROW: Record<Direction, number> = { south: 0, north: 1, west: 2, east: 3 }
 
+// Decor spriteId -> curated npc sprite_id that represents the SAME character
+// through a different mechanism (issue 13) — used to suppress the decor
+// duplicate zone-wide, not just when they happen to sit on the same tile.
+const SPRITE_ALIASES: Record<string, string> = { SPRITE_GSRIVEL: 'SPRITE_HNS_SILVER' }
+
 function formatZoneName(name: string): string {
   return name.replace(/^MAP_/, '').replace(/_/g, ' ')
-}
-
-// Deterministic per-object offset so idle sprite animations aren't all in
-// lockstep — real value doesn't matter, just needs to spread across [0, 2.4).
-function idDelay(id: string): number {
-  let hash = 0
-  for (let i = 0; i < id.length; i++) hash = (hash * 31 + id.charCodeAt(i)) | 0
-  return (Math.abs(hash) % 240) / 100
 }
 
 /** Collision-grid rendering for the 23 zones with no screenshot asset:
@@ -465,9 +462,15 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   )
 
   /** Solid occupants: NPCs, trainers, and visible decorative objects all
-   * block movement, like in the original game — minus cleared obstacles. */
+   * block movement, like in the original game — minus cleared obstacles.
+   * A door tile is always the exception (issue 13, bug H): several ROM
+   * placements sit an object directly on a zone's exit (e.g. Elm's Lab 1F,
+   * SPRITE_VAR_1 on the only door out) — never let one make a zone's exit
+   * permanently unreachable, same principle as isWarpTile at the terrain
+   * level (zone-geometry.ts). */
   const isTileOccupied = useCallback(
     (wx: number, wz: number) => {
+      if (warpAt(zoneRef.current, wx, wz)) return false
       if (npcsRef.current.some(n => n.world_x === wx && n.world_z === wz)) return true
       if (trainersRef.current.some(t => t.world_x === wx && t.world_z === wz)) return true
       return zoneRef.current.objects.some(
@@ -975,24 +978,6 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [goToZone]
   )
 
-  // Adjacent outdoor zones drawn around the current one so the shared
-  // world reads as continuous instead of an island on black. Their images
-  // are rescaled to this zone's px/tile so world coordinates line up.
-  const neighborZones =
-    zone.is_outdoor && zone.name !== 'MAP_EVERYWHERE'
-      ? allZoneNames.filter(
-          nz =>
-            nz.is_outdoor &&
-            nz.name !== zone.name &&
-            nz.name !== 'MAP_EVERYWHERE' &&
-            nz.screenshot &&
-            nz.world_origin_x < zone.world_origin_x + zone.tile_width + 40 &&
-            nz.world_origin_x + nz.tile_width > zone.world_origin_x - 40 &&
-            nz.world_origin_y < zone.world_origin_y + zone.tile_height + 40 &&
-            nz.world_origin_y + nz.tile_height > zone.world_origin_y - 40
-        )
-      : []
-
   const dirButton = (dir: Direction, label: string, gridArea: string) => (
     <button
       key={dir}
@@ -1025,28 +1010,6 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           willChange: 'transform',
         }}
       >
-        {/* Neighboring outdoor zones, underneath the active zone */}
-        {neighborZones.map(nz => (
-          <img
-            key={nz.name}
-            src={nz.screenshot}
-            alt=""
-            draggable={false}
-            style={{
-              position: 'absolute',
-              left: (nz.world_origin_x - zone.world_origin_x) * zone.scale_x,
-              top: (nz.world_origin_y - zone.world_origin_y) * zone.scale_y,
-              width: nz.tile_width * zone.scale_x,
-              height: nz.tile_height * zone.scale_y,
-              // Visited zones read almost live; unvisited ones sit greyed
-              // out until entered (PRD § Affichage de la carte).
-              filter: progress.visited.includes(nz.name)
-                ? 'brightness(0.75)'
-                : 'brightness(0.45) saturate(0.35)',
-            }}
-          />
-        ))}
-
         <div style={{ position: 'relative', width: zone.screenshot_w, height: zone.screenshot_h }}>
           {zone.screenshot ? (
             <img
@@ -1062,15 +1025,55 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           )}
 
           {/* Decorative object markers (background NPCs, items, props) —
-              rendered as the real overworld sprite (idle-animated, row 0 of
-              the sheet, for the ~90% of matches that have a standard 8-frame
-              layout) for the ~98% of instances resolved via resolveNpcSprite,
-              falling back to a plain dot for the rest. Solid to walk into;
-              A in front of one gives a wordless beat. */}
+              rendered as the real overworld sprite (row 0 of the sheet, for
+              the ~90% of matches that have a standard 8-frame layout — or
+              the row matching the ROM's authored facingDirection, for the
+              handful of verified 4-row sheets, `sprite.rows === 4`, see
+              HNS_PEOPLE in npc-sprites.ts) for the ~98% of instances
+              resolved via resolveNpcSprite, falling back to a plain dot for
+              the rest. Static pose : nothing here ever walks
+              on its own (no patrol logic), so no walk-cycle animation — a
+              standing NPC that endlessly cycles its walk frames looks like
+              it's marching in place forever (issue 13, bug B). Solid to walk
+              into; A in front of one gives a wordless beat. Never rendered
+              on a door tile : ROM objects with a `FLAG_HIDE_*` eventFlag
+              (715 in the whole game) are conditional cameos our engine has
+              no state to gate — unconditionally showing them is wrong in
+              general, and glaringly so on a door (Mom stuck in her own
+              front door at Bourg Geon, issue 13). A door is always
+              traversable regardless of its contents (bug H) ; not drawing
+              anyone on it removes the visual half of the same bug. Skipped
+              too when a curated NPC with the same `sprite_id` sits within a
+              tile of this object : same character placed twice in the data
+              (ROM decor object + curated dialogue entry), and now that
+              curated NPCs can carry their own verified sprite (HNS_PEOPLE),
+              both would otherwise render side by side — e.g. two Pr. Elm at
+              Bourg Geon's lab (issue 13, regression from that change). The
+              curated NPC wins : it's the one with working interaction.
+              Same idea for `SPRITE_ALIASES` pairs, but zone-wide (no
+              adjacency check) — the ROM's `SPRITE_GSRIVEL` (a permanent,
+              un-gated decor object) and our curated Silver (`sprite_id:
+              SPRITE_HNS_SILVER`, gated by `unlock_conditions`, positioned
+              apart on purpose — spying from a distance, not greeting at the
+              door) are the same red-haired character rendered by two
+              different mechanisms ; showing both reads as an obvious
+              duplicate even a few tiles apart (issue 13). */}
           {zone.objects.map(obj => {
             if (progress.cleared.includes(`${zone.name}#${obj.id}`)) return null
+            if (warpAt(zone, obj.x, obj.z)) return null
+            if (
+              npcs.some(n => {
+                if (!n.sprite_id) return false
+                if (n.sprite_id === obj.spriteId) {
+                  return Math.abs(n.world_x - obj.x) <= 1 && Math.abs(n.world_z - obj.z) <= 1
+                }
+                return SPRITE_ALIASES[obj.spriteId] === n.sprite_id
+              })
+            )
+              return null
             const px = worldToPixel(obj.x, obj.z)
             const sprite = resolveNpcSprite(obj.spriteId, obj.eventFlag)
+            const spriteRow = sprite && sprite.rows === 4 ? SPRITE_ROW[DIRECTION_BY_CODE[obj.facingDirection]] : 0
             return (
               <div
                 key={obj.id}
@@ -1084,22 +1087,15 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                 }}
                 title={obj.id}
               >
-                {sprite ? (
+                {sprite && (
                   <div
-                    className={sprite.cols === 8 ? 'ow-sprite-idle' : undefined}
                     style={{
                       width: SPRITE_FRAME_SIZE,
                       height: SPRITE_FRAME_SIZE,
                       backgroundImage: `url(${sprite.url})`,
-                      backgroundPosition: '0 0',
+                      backgroundPosition: `0 -${spriteRow * SPRITE_FRAME_SIZE}px`,
                       imageRendering: 'pixelated',
-                      animationDelay: `-${idDelay(obj.id)}s`,
                     }}
-                  />
-                ) : (
-                  <div
-                    style={{ width: 16, height: 16, borderRadius: '50%' }}
-                    className="bg-amber-400 border-2 border-amber-700 shadow-sm opacity-90"
                   />
                 )}
               </div>
@@ -1108,21 +1104,31 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
 
           {/* Curated NPC markers — comme dans le jeu d'origine : on se place
               à côté et on appuie sur A (issue 12 : plus AUCUNE interaction au
-              tap sur le contenu de la carte). Un Roadblock en interception
-              glisse vers le joueur (transition sur left/top) avec un ！
-              au-dessus, comme l'embuscade des dresseurs. */}
+              tap sur le contenu de la carte). Aucun badge « je suis
+              parlable » (issue 13, bug C, durci ensuite sur demande
+              explicite) — HGSS n'affiche aucune icône flottante sur un PNJ
+              au repos, seulement le sprite du personnage. La plupart des
+              PNJ curatés n'ont pas de sprite (contenu séparé des objets de
+              décor ROM) → invisibles jusqu'à ce qu'un `sprite_id` vérifié
+              (issue 13, HNS_PEOPLE) leur en donne un, affiché dans la bonne
+              direction (`facing`). Un Roadblock en interception glisse vers
+              le joueur (transition sur left/top) avec un ！ au-dessus,
+              comme l'embuscade des dresseurs — ce signal-là est fidèle au
+              jeu et reste. */}
           {npcs.map(npc => {
             const px = worldToPixel(npc.world_x, npc.world_z)
             const intercepting = interceptingNpc === npc.npc_id
+            const sprite = npc.sprite_id ? resolveNpcSprite(npc.sprite_id) : null
+            const spriteRow = sprite ? SPRITE_ROW[npc.facing ?? 'south'] : 0
             return (
               <div
                 key={npc.npc_id}
                 style={{
                   position: 'absolute',
-                  left: px.x - 9 + zone.scale_x / 2,
-                  top: px.y - 16 + zone.scale_y,
-                  width: 18,
-                  height: 18,
+                  left: px.x - (sprite ? SPRITE_FRAME_SIZE / 2 : 9) + zone.scale_x / 2,
+                  top: px.y - (sprite ? SPRITE_FRAME_SIZE : 16) + zone.scale_y,
+                  width: sprite ? SPRITE_FRAME_SIZE : 18,
+                  height: sprite ? SPRITE_FRAME_SIZE : 18,
                   pointerEvents: 'none',
                   zIndex: 5,
                   transition: `left ${STEP_MS / 1000}s linear, top ${STEP_MS / 1000}s linear`,
@@ -1134,25 +1140,32 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                     ！
                   </div>
                 )}
-                <div
-                  style={{ width: 18, height: 18, borderRadius: '50%' }}
-                  className="bg-emerald-400 border-2 border-emerald-700 shadow-sm flex items-center justify-center text-[9px]"
-                >
-                  💬
-                </div>
+                {sprite && (
+                  <div
+                    style={{
+                      width: SPRITE_FRAME_SIZE,
+                      height: SPRITE_FRAME_SIZE,
+                      backgroundImage: `url(${sprite.url})`,
+                      backgroundPosition: `0 -${spriteRow * SPRITE_FRAME_SIZE}px`,
+                      imageRendering: 'pixelated',
+                    }}
+                  />
+                )}
               </div>
             )
           })}
 
           {/* Trainer markers — entrer dans la ligne de vue d'un dresseur
               rôle battle non battu déclenche le combat (checkSightLine) ;
-              battu = gris, Talk (A adjacent) → post_battle. Le tap de
+              battu = éteint, Talk (A adjacent) → post_battle. Le tap de
               contournement de l'issue 10 est supprimé (issue 12) : les
               placements injoignables — Silver #1 en tête — sont corrigés
-              dans le contenu, voir a1-traversal.test.ts. */}
+              dans le contenu, voir a1-traversal.test.ts. Aucun badge combat
+              permanent au repos (issue 13, durci — même principe que les
+              PNJ : pas d'icône flottante fidèle au jeu) — seul le ！
+              d'embuscade, déjà fidèle au jeu, reste. */}
           {trainers.map(trainer => {
             const px = worldToPixel(trainer.world_x, trainer.world_z)
-            const defeated = trainer.defeated === true
             const engaging = engagingTrainer === trainer.trainer_id
             return (
               <div
@@ -1173,51 +1186,14 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                     ！
                   </div>
                 )}
-                <div
-                  style={{ width: 18, height: 18, borderRadius: '50%' }}
-                  className={`border-2 shadow-sm flex items-center justify-center text-[9px] ${
-                    defeated ? 'bg-gray-400 border-gray-600' : 'bg-red-500 border-red-800'
-                  }`}
-                >
-                  {defeated ? '·' : '!'}
-                </div>
               </div>
             )
           })}
 
-          {/* Warp door markers — step on them (walking) or press A facing
-              the door, comme dans le jeu (issue 12 : plus de tap). Dynamic
-              (elevator) warps are inert and rendered dimmer. */}
-          {zone.warps.map((warp, i) => {
-            const px = worldToPixel(warp.x, warp.z)
-            const isElevator = typeof warp.header !== 'string'
-            const active = !isElevator || zone.elevator_floors.length > 0
-            return (
-              <div
-                key={i}
-                style={{
-                  position: 'absolute',
-                  left: px.x + zone.scale_x / 2 - 7,
-                  top: px.y + zone.scale_y / 2 - 7,
-                  width: 14,
-                  height: 14,
-                  pointerEvents: 'none',
-                }}
-                title={isElevator ? undefined : zoneLabel(warp.header as string)}
-              >
-                <div
-                  style={{ width: 14, height: 14, borderRadius: 3 }}
-                  className={`border-2 shadow-sm transition-opacity ${
-                    !active
-                      ? 'bg-gray-500 border-gray-700 opacity-40'
-                      : isElevator
-                        ? 'bg-violet-400 border-violet-700 opacity-80'
-                        : 'bg-sky-400 border-sky-700 opacity-80'
-                  }`}
-                />
-              </div>
-            )
-          })}
+          {/* Portes/warps : ni carré ni icône (issue 13, demande explicite —
+              HGSS ne les indique jamais visuellement, une porte se reconnaît
+              au décor lui-même). On marche dessus, ou A face à elle
+              (issue 12 : plus de tap sur un marqueur, qui n'existe plus). */}
 
           {/* Suivi du compagnon (issue 10) : une case derrière le joueur, sur
               la tuile qu'il vient de quitter — planche follower row 0 (face
