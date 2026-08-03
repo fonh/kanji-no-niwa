@@ -228,8 +228,12 @@ describe('A1 — géométrie du jalon (registre réel)', () => {
       }
     }
     // Garde-fou : le panneau de Route 29, Silver #1 et sa carte (ex-cassés,
-    // corrigés) sont bien passés dans la boucle.
-    expect(checked).toBeGreaterThanOrEqual(15)
+    // corrigés) sont bien passés dans la boucle. Seuil abaissé de 15 à 12
+    // (QA Route 30 + Cherrygrove, 2026-08-03) : 4 PNJ (Mr. Pokémon, Pr. Oak,
+    // Apricorn Man, Vendeuse du Mart) servis à tort sur leur zone extérieure
+    // sont sortis de cette boucle en rejoignant leur intérieur réel (voir
+    // INTERIOR_NPCS ci-dessous) — ils restent comptés, juste dans l'autre test.
+    expect(checked).toBeGreaterThanOrEqual(12)
   })
 
   // Les PNJ d'intérieur (issue 12) : Mom vit dans SA maison (plus sur la
@@ -242,6 +246,18 @@ describe('A1 — géométrie du jalon (registre réel)', () => {
     MAP_NEW_BARK_PLAYER_HOUSE_2F: ['player_pc_new_bark'],
     MAP_NEW_BARK_ELMS_LAB_1F: ['prof_elm_lab', 'elm_assistant_new_bark'],
     MAP_CHERRYGROVE_POKECENTER_1F: ['pokecenter_clerk_cherrygrove'],
+    // QA Route 30 (2026-08-03) : Mr. Pokémon et le Pr. Oak (présent chez lui,
+    // role_origin « Présent chez Mr. Pokémon ») vivent tous deux DANS
+    // obj_R30R0201_gsgentleman/obj_R30R0201_ookido (MAP_ROUTE_30_MR_POKEMON_HOUSE),
+    // pas dehors sur la route — même bug que Mom/Elm avant issue 12, jamais
+    // corrigé pour Route 30. L'Apricorn Man (donne l'Apricorn Box) vit de la
+    // même façon dans obj_R30R0101_gsmiddleman1 (MAP_ROUTE_30_APRICORN_HOUSE).
+    MAP_ROUTE_30_MR_POKEMON_HOUSE: ['mr_pokemon_route30', 'prof_oak_route30'],
+    MAP_ROUTE_30_APRICORN_HOUSE: ['man_in_house_route30'],
+    // QA Cherrygrove (2026-08-03) : même bug, la Vendeuse du Mart
+    // (role_origin « Comptoir du fond ») vit DANS obj_T21FS0101_shopm1_2
+    // (MAP_CHERRYGROVE_POKEMART), pas dehors sur la place de la ville.
+    MAP_CHERRYGROVE_POKEMART: ['shopkeeper_cherrygrove'],
   }
 
   it('les PNJ d’intérieur sont servis DANS leur pièce et interagibles par A depuis la porte', () => {

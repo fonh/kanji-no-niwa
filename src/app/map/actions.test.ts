@@ -97,8 +97,12 @@ describe('C1 — re-vérification serveur des écritures (zone courante + visibi
     expect(savePlayerStateMock).not.toHaveBeenCalled()
   })
 
-  it('le même appel depuis la Route 30 (zone de Mr. Pokémon) sert le dialogue et applique ses Effects', async () => {
-    stateRef.current.current_zone = 'MAP_ROUTE_30'
+  it('le même appel depuis la maison de Mr. Pokémon (Route 30) sert le dialogue et applique ses Effects', async () => {
+    // QA Route 30 (2026-08-03) : Mr. Pokémon vit DANS sa maison
+    // (MAP_ROUTE_30_MR_POKEMON_HOUSE, map_zone explicite depuis le fix de
+    // placement), plus sur la zone extérieure MAP_ROUTE_30 — voir
+    // content/map/npcs.json.
+    stateRef.current.current_zone = 'MAP_ROUTE_30_MR_POKEMON_HOUSE'
     const result = await reachDialogueState('npcs/route-30/mr_pokemon_route30')
     expect(result).not.toBeNull()
     expect(savePlayerStateMock).toHaveBeenCalled()

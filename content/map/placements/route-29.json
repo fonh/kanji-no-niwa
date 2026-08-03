@@ -6,12 +6,13 @@
       "role_origin": "Attend sur la route une fois l'œuf livré, apprend au joueur à attraper (tutoriel)",
       "item": "—",
       "map_zone": "MAP_ROUTE_29",
-      "tile_x": 64,
-      "tile_y": 2,
-      "facing": "south",
-      "source": "generated",
-      "matched_object_id": null,
-      "matched_sprite_id": null
+      "tile_x": 85,
+      "tile_y": 16,
+      "facing": "west",
+      "source": "rom_matched",
+      "matched_object_id": "obj_R29_var_2",
+      "matched_sprite_id": "SPRITE_VAR_2",
+      "position_status": "fix QA route-29 (2026-08-03) : était (64,2), position 'generated' (placeholder sans repère ROM) tombant dans une clairière isolée en pleine canopée, à 21 tuiles du seul autre indice de la scène. Repositionné sur obj_R29_var_2 (spriteId SPRITE_VAR_2, eventFlag FLAG_HIDE_ROUTE_29_FRIEND — se résout déjà en sprite 'heroine' via resolveVarSlot) qui est adjacent à obj_R29_tsure_poke_static_marill (Marill caché du tutoriel), sur le chemin principal. facing repris du facingDirection ROM de l'objet (2 = ouest, vers le Marill)."
     },
     {
       "name": "Frère/sœur du jour Tuscany",

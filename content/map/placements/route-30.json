@@ -41,37 +41,40 @@
       "name": "Homme dans une maison (nord)",
       "role_origin": "Donne l'Apricorn Box (objet-clé, débloque la cueillette d'Apricorns)",
       "item": "Apricorn Box",
-      "map_zone": "MAP_ROUTE_30",
-      "tile_x": 21,
-      "tile_y": 33,
+      "map_zone": "MAP_ROUTE_30_APRICORN_HOUSE",
+      "tile_x": 5,
+      "tile_y": 5,
       "facing": "south",
-      "source": "generated",
-      "matched_object_id": null,
-      "matched_sprite_id": null
+      "source": "rom_matched",
+      "matched_object_id": "obj_R30R0101_gsmiddleman1",
+      "matched_sprite_id": "SPRITE_GSMIDDLEMAN1",
+      "position_status": "fix QA Route 30 (2026-08-03) : était généré sur la zone extérieure MAP_ROUTE_30 (21,33), incohérent avec son propre role_origin (« dans une maison ») — repositionné DANS MAP_ROUTE_30_APRICORN_HOUSE sur son objet ROM"
     },
     {
       "name": "Mr. Pokémon",
       "role_origin": "Confie un \"œuf mystère\" au joueur",
       "item": "Mystery Egg (+ Exp. Share bien plus tard, contre l'Écaille du Lac Colère)",
-      "map_zone": "MAP_ROUTE_30",
-      "tile_x": 22,
-      "tile_y": 45,
-      "facing": "south",
-      "source": "generated",
-      "matched_object_id": null,
-      "matched_sprite_id": null
+      "map_zone": "MAP_ROUTE_30_MR_POKEMON_HOUSE",
+      "tile_x": 9,
+      "tile_y": 7,
+      "facing": "west",
+      "source": "rom_matched",
+      "matched_object_id": "obj_R30R0201_gsgentleman",
+      "matched_sprite_id": "SPRITE_GSGENTLEMAN",
+      "position_status": "fix QA Route 30 (2026-08-03) : était généré sur la zone extérieure MAP_ROUTE_30 (22,45) — Mr. Pokémon vit dans sa maison en HGSS, pas en plein air. Repositionné DANS MAP_ROUTE_30_MR_POKEMON_HOUSE sur son objet ROM"
     },
     {
       "name": "Professeur Oak",
       "role_origin": "Présent chez Mr. Pokémon, donne le Pokédex, anime ensuite une émission radio",
       "item": "Pokédex",
-      "map_zone": "MAP_ROUTE_30",
-      "tile_x": 6,
-      "tile_y": 54,
-      "facing": "south",
-      "source": "generated",
-      "matched_object_id": null,
-      "matched_sprite_id": null
+      "map_zone": "MAP_ROUTE_30_MR_POKEMON_HOUSE",
+      "tile_x": 8,
+      "tile_y": 7,
+      "facing": "east",
+      "source": "rom_matched",
+      "matched_object_id": "obj_R30R0201_ookido",
+      "matched_sprite_id": "SPRITE_OOKIDO",
+      "position_status": "fix QA Route 30 (2026-08-03) : était généré sur la zone extérieure MAP_ROUTE_30 (6,54), incohérent avec son propre role_origin (« Présent chez Mr. Pokémon ») — repositionné DANS MAP_ROUTE_30_MR_POKEMON_HOUSE, adjacent à Mr. Pokémon, sur son objet ROM"
     }
   ]
 }

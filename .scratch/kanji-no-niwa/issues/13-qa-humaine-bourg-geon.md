@@ -186,6 +186,75 @@ refaire ; rangée est = ouest corrigée, miroir. Même traitement appliqué
 ouest anormale, largeur de bbox 27px contre ~21px pour les 7 autres).
 Cache-bust `?v=3`. `npm run check` vert.
 
+**2026-08-03 (suite 3) — toujours signalé cassé après V3, cause enfin isolée
+pixel par pixel (pas de correctif visuel « à l'œil » cette fois).** Ancien
+diagnostic (V3) supposé correct mais jamais vérifié quantitativement : les
+rangées ouest/est n'avaient jamais été comparées colonne par colonne à un
+critère objectif (position du patch de peau — teinte `(248,208,184)` —
+relative au centre de la bbox du sprite). Fait avec un script Python
+(`PIL`, crop + centroïde par canal couleur) sur les deux planches :
+**rangée ouest (row 2), colonnes 5, 6, 7 (0-indexées) faisaient face à
+l'EST** (patch de peau à droite du centre, comme en rangée est), pas à
+l'ouest — et **colonne 0 était carrément une pose de face (sud), pas un
+profil du tout** (visible à l'œil une fois zoomée : mêmes bras/jambes
+écartés symétriques que la colonne 0 de la rangée sud, composition
+différente donc pas un doublon exact, mais clairement pas un profil).
+Seules les colonnes 1, 2, 3(=1), 4 étaient de vrais profils ouest propres
+et cohérents (vérifié par le même critère : centroïde de peau à
+gauche du centre pour les 8 colonnes attendu, confirmé seulement sur
+celles-ci). La rangée est était bien un miroir horizontal fidèle de la
+rangée ouest colonne par colonne (`diff(ouest, miroir(est)) = 0` exact
+pour la colonne 0 par exemple) — donc **le miroir lui-même n'a jamais été
+le problème** ; il propageait fidèlement les 4 colonnes fautives de la
+rangée ouest en 4 colonnes fautives (à l'envers) dans la rangée est.
+Explique le symptôme rapporté (« gauche/droite pas bon ») de façon stable
+à travers plusieurs sessions : marcher à gauche affichait un mélange de
+profils gauche et droite selon la frame du cycle.
+
+**Tentative de récupérer une planche de référence externe** (comme
+demandé) **infructueuse** : `spriters-resource.com` renvoie maintenant un
+challenge Cloudflare (« Just a moment... ») sur la page asset ET sur
+l'URL image directe précédemment utilisée
+(`/media/assets/24/26778.png`), via `WebFetch` et `curl` (User-Agent
+navigateur inclus) — 403 systématique, confirmant la mise en garde du
+prompt (« les URLs sur ce site peuvent changer/ne plus marcher »). Pas de
+miroir de la planche complète trouvé ailleurs (DeviantArt/Pinterest
+n'indexent que des aperçus, pas le fichier source).
+
+**CORRIGÉ sans dépendance externe** : plutôt que retenter un rippage
+externe (échec la 3ᵉ fois de suite sur ce point précis), les 4 colonnes
+fautives de la rangée ouest ont été reconstruites à partir des 4 colonnes
+déjà vérifiées bonnes de la **même rangée** (mêmes pixels sources, aucun
+nouvel asset) : colonne 0 ← copie de la colonne 2 ; colonnes 5, 6, 7 ←
+copies des colonnes 1, 2, 4 respectivement. La rangée est a été
+entièrement régénérée en miroir horizontal de la rangée ouest corrigée
+(colonne par colonne), conforme à la convention déjà en place dans ce
+fichier. Rangées sud et nord vérifiées **bit-à-bit identiques** à avant
+(diff `numpy` = 0) — non touchées, confirmé ne pas les avoir cassées.
+Même traitement appliqué à Lyra (défaut identique aux mêmes indices de
+colonne, trouvé indépendamment par le même script).
+
+**Vérification** : script de centroïde re-exécuté après correctif — les 8
+colonnes des deux rangées (ouest ET est) sont maintenant unanimement du
+bon côté pour Ethan et pour Lyra (aucune ambiguïté, marge ≥4px sur 32px de
+large). Inspection visuelle de la planche complète (grille 8×4 zoomée)
+cohérente avec ça. Cache-bust `?v=4` (`SPRITE_ASSET_VERSION` dans
+`onboarding.ts`, littéral dans `npc-sprites.ts` `PLAYER_SPRITE_URL`, test
+`onboarding.test.ts` mis à jour). `npm run check` vert (typecheck, lint,
+550 tests, validation contenu).
+
+**Honnêteté sur la limite de cette correction** : le cycle de marche
+ouest reconstruit réutilise seulement 3 poses distinctes existantes
+(colonnes 1, 2, 4 — la colonne 3 était déjà un doublon exact de la 1) sur
+8 emplacements, donc l'animation est moins variée qu'un vrai cycle à 4
+poses uniques répété ×2 (comme la rangée nord) — visuellement acceptable
+(marche fluide, bonne direction) mais pas une planche « idéale ». Aucun
+test ne couvre le contenu pixel des sprites (comme noté dans les entrées
+précédentes) : seule cette vérification manuelle par script fait foi. Vu
+l'historique (3 tentatives précédentes toutes déclarées correctes puis
+re-signalées cassées), une revérification humaine en jeu reste
+recommandée avant de considérer ce point définitivement clos.
+
 ### Le joueur voit une deuxième zone entière à côté de la sienne
 
 **Confirmé sur capture d'écran.** `neighborZones` (`MapClient.tsx`)
@@ -727,3 +796,499 @@ d'onboarding). Préexistant, sans lien avec les corrections E/C/B du jour
 `/onboarding`, pas ce chemin. **CORRIGÉ** : `dest` pointe maintenant vers
 `/map`. `npm run typecheck` + `npm run test` verts (542 tests, pas de
 test dédié à `proxy.ts`).
+
+---
+
+## 2026-08-03 — passe exhaustive sur Route 29 (zone 2 du parcours)
+
+Suite de la passe zone par zone après Bourg Geon (mêmes 6 points de
+contrôle, même méthode : rendu composite Python/PIL — capture + grille de
+tuiles + repères objets/PNJ superposés — pour vérifier placements et
+collision sans avoir besoin de jouer). Deux zones : `MAP_ROUTE_29`
+(extérieur) et `MAP_ROUTE_29_ROUTE_46_GATEHOUSE` (la guérite, un
+intérieur).
+
+### Confirmé déjà correct grâce aux correctifs génériques précédents
+
+`MAP_ROUTE_29` (extérieur, 96×32, capture `Johto Route 29 HGSS.png`) :
+aucun des 11 objets ROM ni des 2 tuiles de warp vers la guérite n'est sur
+du terrain mur ('#') — tous vérifiés `.` (praticable) et visuellement sur
+chemin/herbe via le rendu composite, pas juste la grille brute. La guérite
+`MAP_ROUTE_29_ROUTE_46_GATEHOUSE` (11×14, collision resserrée par le
+correctif G — pas gonflée) a ses 2 PNJ de décor (`counterm`, `gsboy1`) sur
+des tuiles praticables, pas sur les portes (5,2)/(5,12). Aucun doublon
+décor+PNJ-curaté même-tuile sur ces deux zones. La zone extérieure borde
+Ville Griotte à l'ouest (tuile locale 0) et Bourg Geon à l'est (tuile
+locale 96) — cohérent avec le sens de parcours du jalon.
+
+### CONFIRMÉ ET CORRIGÉ — mauvaise capture pour la guérite Route 29/46 (et
+6 autres guérites dans tout le jeu, même classe de bug que E)
+
+**Piste donnée en tâche, vérifiée et confirmée** : `MAP_ROUTE_29_ROUTE_46_GATEHOUSE`
+(`is_outdoor: false`) pointait vers `/maps/Johto Route 46 HGSS.png` —
+l'extérieur de la Route 46, pas un intérieur de guérite — alors que
+`GENERIC_TEMPLATES` prévoit justement `("gatehouse", "Gate inside HGSS.png")`
+comme repli pour ce cas. Cause isolée dans `build-zone-registry.py` :
+`find_generic_template` n'est appelé QUE si `find_screenshot` (le matching
+spécifique) a renvoyé `None` — et ici il renvoyait bien un résultat, à
+tort. `zone_name_to_keywords("MAP_ROUTE_29_ROUTE_46_GATEHOUSE")` donne
+`["route","29","route","46","gatehouse"]` : le nom complet d'une AUTRE
+zone bien réelle (`MAP_ROUTE_46`, mots-clés `["route","46"]`) est incrusté
+au milieu du nom, pas en préfixe. L'ancien `known_prefix_len` ne réduisait
+le poids que d'un préfixe en position 0 (utile pour Bourg Geon/bug E :
+`NEW_BARK_ELMS_LAB` partage un préfixe `["new","bark"]` avec la ville-mère)
+— ici « route 46 » est au milieu/à la fin, jamais réduit, et compte comme
+« discriminant » : ça suffit à faire gagner la capture de la Route 46 avec
+un score non nul, en passant la garde anti-« ne matche que le nom d'une
+autre zone connue ». Seul « gatehouse » décrit vraiment cette zone, et ne
+matche aucune capture dédiée — mais comme `find_screenshot` avait déjà
+répondu (à tort), le repli générique n'était jamais atteint. Vérification
+systémique (comme pour E) : **7 guérites** dans tout le jeu avaient ce
+défaut, pas seulement Route 29/46 — `MAP_ROUTE_36_RUINS_OF_ALPH_GATEHOUSE`
+et `MAP_ROUTE_32_RUINS_OF_ALPH_GATEHOUSE` (capture des ruines d'Alph),
+`MAP_VIOLET_ROUTE_36_GATEHOUSE` (capture Route 36), `MAP_VIRIDIAN_ROUTE_1_GATEHOUSE`
+(capture Route 1 Kanto), `MAP_ROUTE_19_ROUTE_12_GATEHOUSE` (capture Route
+12 Kanto), `MAP_AZALEA_ILEX_FOREST_GATEHOUSE` (capture forêt Ilex,
+extérieure).
+
+**CORRIGÉ** (`scripts/build/build-zone-registry.py`) : généralisation de
+`known_prefix_len` (préfixe seul) en `discounted_keyword_indices` — repère
+TOUTE sous-séquence contiguë de mots-clés, à n'importe quelle position
+(début, milieu, fin), qui reconstitue exactement le nom complet d'une
+autre zone connue, et lui applique le même poids réduit (0,3 au lieu de
+1,0) que l'ancien préfixe. `score_against` prend maintenant un ensemble
+d'indices réduits plutôt qu'un simple `prefix_len` entier ; la garde
+anti-« que le nom d'une autre zone » (`matched_discriminating == 0`)
+s'applique à cet ensemble généralisé. Registre régénéré : diff exhaustif
+vérifié — **exactement les 7 guérites identifiées** ont changé de capture
+(toutes vers `Gate inside HGSS.png`, le repli générique attendu), aucun
+autre des 462 zones touché, aucun champ modifié en dehors de
+`screenshot`/`screenshot_w`/`screenshot_h`/`scale_x`/`scale_y` sur ces 7
+entrées. Vérifié visuellement (rendu composite avant/après) : la guérite
+Route 29/46 affiche maintenant un intérieur de guérite plausible (comptoir
++ portes nord/sud), taille 11×14 à l'échelle correcte, au lieu d'une photo
+de route extérieure démesurément étirée (601×797 sur une grille 11×14).
+`npm run check` vert (550 tests).
+
+### CONFIRMÉ ET CORRIGÉ — le PNJ tutoriel « Lyra/Ethan » était à 21 tuiles
+de son propre décor ROM, dans une clairière isolée sans rapport avec la
+scène
+
+Rendu composite de `MAP_ROUTE_29` : le PNJ curaté « Lyra/Ethan »
+(`content/map/placements/route-29.json` + `content/map/npcs.json`,
+`"source": "generated"`, `matched_object_id: null` — jamais issu d'un
+repère ROM, même défaut que Silver à Bourg Geon, bug D) était à
+`tile (64,2)`, praticable au sens strict (`terrain='.'`) mais tout au bord
+d'une poche de clairière encaissée entre deux murs de canopée, séparée du
+reste de la carte — confirmé visuellement (capture brute sans overlay :
+canopée dense de tous côtés visibles). Or les données ROM contiennent déjà
+tout ce qu'il faut pour placer ce PNJ correctement : `obj_R29_var_2`
+(`SPRITE_VAR_2`, `eventFlag: FLAG_HIDE_ROUTE_29_FRIEND`) à `(85,16)`, à une
+tuile de `obj_R29_tsure_poke_static_marill` (le Marill caché du tutoriel)
+à `(84,16)` — exactement la scène décrite par `role_origin` (« Attend sur
+la route une fois l'œuf livré, apprend au joueur à attraper ») et par
+`npc-inventory.md`. `SPRITE_VAR_2` + `FLAG_HIDE_ROUTE_29_FRIEND` se
+résout déjà en sprite « heroine » via `resolveVarSlot`
+(`src/lib/npc-sprites.ts`) — ce décor s'affichait donc déjà, visible mais
+muet (aucune interaction), pendant qu'un point neutre invisible et sans
+rapport attendait 21 tuiles plus loin pour déclencher le vrai dialogue.
+Position vérifiée praticable et bien reliée au chemin principal (zone
+entièrement en `.` sur 7×5 tuiles autour, sur le sentier visible à
+l'image).
+
+**CORRIGÉ** : repositionné en `(85,16)`, `facing: "west"` (repris du
+`facingDirection` ROM de l'objet, code 2 = ouest, vers le Marill).
+`content/map/placements/route-29.json` : `source` passé de `"generated"`
+à `"rom_matched"`, `matched_object_id: "obj_R29_var_2"`,
+`matched_sprite_id: "SPRITE_VAR_2"` ajoutés (le générateur
+`build-npc-placements.py` ne l'avait pas trouvé faute de mot-clé
+« friend »/« lyra »/« ethan » dans `KEYWORD_HINTS` — non modifié, ce
+correctif est une fixation manuelle ciblée comme pour Silver, pas un
+changement de générateur). `content/map/npcs.json` mis à jour en miroir
+(`tile_x`/`tile_y`/`facing`/`position_status`). Pas de `sprite_id` ajouté
+côté PNJ curaté : `resolveNpcSprite` appelé sur un PNJ curaté ne passe pas
+`eventFlag`, donc `SPRITE_VAR_2` seul ne résoudrait rien (`resolveVarSlot`
+a besoin du flag pour choisir entre rival et ami) — en le laissant vide,
+le décor ROM continue de fournir le sprite visible (« heroine ») et le PNJ
+curaté (co-localisé, invisible) fournit l'interaction, sans déclencher la
+déduplication décor/curaté (qui ne s'active que si `sprite_id` est
+renseigné). Vérifié par rendu composite : le repère PNJ tombe pile à côté
+du repère Marill, sur le chemin. `npm run check` vert (550 tests,
+`validate:content` : 0 échec, traversée toujours complète).
+
+### Confirmé correct sans changement — Tuscany (PNJ calendaire)
+
+`(38,8)`, également `"source": "generated"` (mais ici légitimement : ce
+PNJ calendaire n'existe pas dans le jeu d'origine, aucun objet ROM à lui
+associer). Vérifié praticable et visuellement sur l'herbe, en bordure d'un
+arbre (le marqueur chevauche légèrement le feuillage à l'image, effet de
+rendu normal — sprite ancré en bas, chevauchement du décor au-dessus
+attendu, pas un bug). Pas de piste ROM alternative plausible parmi les
+objets non appariés de la zone (gsboy2, gsbigman, gsman1, 2×gswoman2,
+2×tree, bonguri, itemball) — aucun ne correspond à un PNJ calendaire.
+Laissé tel quel.
+
+### Bilan de la passe Route 29
+
+Les 2 zones vérifiées une par une (rendu composite capture+repères) :
+extérieur Route 29 et guérite Route 29/46. Un bug de contenu trouvé et
+corrigé sur chacune — la guérite (mauvaise capture, généralisé à 7 zones
+dans tout le jeu) et le PNJ tutoriel (position fantaisiste loin de son
+vrai repère ROM, même classe que le bug D de Bourg Geon). Rien trouvé côté
+moteur ; tous les correctifs génériques précédents (E, G, H, I, C, B)
+tiennent sur ces deux zones. `npm run check` vert (typecheck, lint, 550
+tests, `validate:content` 0 échec).
+
+---
+
+## 2026-08-03 — passe exhaustive sur Ville Griotte + Route 30 (zones 3 et 4),
+## + re-vérification systémique des doublons PNJ/décor (suite à un signalement utilisateur)
+
+Suite de la passe zone par zone (même méthode : rendu composite Python/PIL
+— capture + grille de collision + repères objets/PNJ/portes superposés —
+pour vérifier placements et collision sans jouer). **10 zones** cette
+fois : `MAP_CHERRYGROVE` (extérieur) + 6 intérieurs (`POKECENTER_1F`,
+`POKECENTER_B1F`, `POKEMART`, `SOUTHWEST_HOUSE`, `GUIDE_GENT_HOUSE`,
+`SOUTHEAST_HOUSE`) et `MAP_ROUTE_30` (extérieur) + 2 intérieurs
+(`MR_POKEMON_HOUSE`, `APRICORN_HOUSE`).
+
+### Partie B d'abord — re-vérification systémique des doublons PNJ/décor
+
+**Contexte** : un utilisateur a signalé un PNJ dupliqué dans une maison.
+Root-cause déjà établie (hors de cette session, par script live
+`getZoneByName`/`getNpcsForZone`) : Elm's Lab (`MAP_NEW_BARK_ELMS_LAB_1F`)
+— la règle de suppression existante dans `MapClient.tsx` (objet de décor
+masqué quand un PNJ curaté au même `sprite_id` est à distance de Chebyshev
+≤ 1) supprime déjà correctement le doublon pour ce cas précis. Fausse
+alerte confirmée pour Elm — **non re-corrigé**, conformément à la
+consigne.
+
+**Vérification demandée** : le seuil « 1 tuile » a été choisi pour Elm's
+Lab spécifiquement et pourrait être trop étroit ailleurs. Recherche
+systémique : `grep '"sprite_id"' content/map/npcs.json` → **seulement 4
+entrées dans tout le jeu** portent un `sprite_id` (`mom_new_bark` →
+`SPRITE_GSMAMA`, `prof_elm_lab` → `SPRITE_DOCTOR`, `policeman_new_bark` →
+`SPRITE_POLICEMAN`, `silver_spying_new_bark` → `SPRITE_HNS_SILVER`), toutes
+à Bourg Geon. Pour chacune, distance réelle au décor ROM du même
+`sprite_id` dans la même zone, calculée directement sur
+`src/data/zone-registry.json` :
+
+| PNJ curaté | Décor ROM même `sprite_id` | Distance (Chebyshev) | Couvert par la règle actuelle ? |
+|---|---|---|---|
+| `mom_new_bark` (6,6) | `obj_T20R0201_gsmama` (6,7) | 1 | Oui |
+| `prof_elm_lab` (5,4) | `obj_T20R0101_doctor` (6,5) | 1 | Oui |
+| `policeman_new_bark` | *aucun décor `SPRITE_POLICEMAN` dans sa zone* | — | Sans objet (pas de doublon possible) |
+| `silver_spying_new_bark` | `obj_T20_gsrivel` (`SPRITE_GSRIVEL`, alias via `SPRITE_ALIASES`) | — | Oui, **zone-wide sans condition de distance** (voir commentaire `MapClient.tsx` — l'alias n'a jamais eu de garde de distance, contrairement au cas `sprite_id` exact) |
+
+**Conclusion Partie B : aucune brèche trouvée.** Les 4 seuls PNJ curatés
+du jeu entier à porter un `sprite_id` sont soit à distance 1 (couverts par
+la règle exacte), soit sans décor concurrent dans leur zone, soit couverts
+sans condition de distance via `SPRITE_ALIASES`. Aucun des deux nouvelles
+zones de cette passe (Ville Griotte, Route 30) n'a de PNJ curaté avec
+`sprite_id` du tout. Le seuil « 1 tuile » n'a donc besoin d'être élargi
+nulle part avec le contenu actuel — **pas de changement de code fait ici**
+(élargir un seuil sans cas réel à couvrir aurait été une modification
+spéculative, contraire à la méthode de cette session). Le signalement
+utilisateur reste très probablement un cache navigateur/déploiement
+obsolète de son côté, pas un bug de contenu.
+
+**Effet de bord découvert en passant, hors du périmètre strict de la
+Partie B mais du même esprit** (recherche exhaustive `content/map/npcs.json`
+× `zone-registry.json`) : **20 paires d'objets de décor** (pas
+décor+PNJ-curaté, deux OBJETS DE DÉCOR entre eux) partagent exactement la
+même tuile dans le jeu, motif déjà identifié et volontairement laissé de
+côté lors de la passe Bourg Geon (« pattern différent — à trancher
+séparément si ça gêne en jeu »). Deux nouvelles occurrences trouvées à
+Ville Griotte, dans `MAP_CHERRYGROVE_POKECENTER_1F` (6,4) et (11,4) :
+`pcwoman2_2`/`pcwoman2_4` et `pcwoman2_3`/`pcwoman2_5` — des variantes
+ROM du même emploi de guichetière selon l'état club Wifi ouvert/fermé
+(flags `FLAG_HIDE_COMM_CLUB_RECEPTIONISTS` vs
+`FLAG_HIDE_COMM_CLUB_CLOSED_LADIES`, jamais modélisés côté moteur donc les
+deux s'affichent). Même nature que les 20 déjà recensés — **pas corrigé
+ici**, conforme à la décision déjà prise de traiter ce pattern séparément.
+
+### Ville Griotte (Cherrygrove) — bugs trouvés et corrigés
+
+**Captures d'écran, 2 bugs systémiques trouvés en vérifiant Ville
+Griotte, corrigés dans `build-zone-registry.py` (s'appliquent à tout le
+jeu, pas qu'à cette ville)** :
+
+1. **`MAP_CHERRYGROVE_POKEMART` avait un `screenshot` VIDE** (repli sur la
+   grille de collision colorée, aucune image). Cause : le mot-clé de zone
+   `pokemart` (un seul mot, `MAP_CHERRYGROVE_POKEMART` n'a pas de
+   séparateur entre POKE et MART) ne matchait jamais les fichiers
+   disponibles (`Poké Mart HGSS.png`, `Poké Mart interior HGSS.png`, deux
+   mots dans le nom de fichier) — `matched_count` restait à 0 dans
+   `score_against`, et `pokemart` n'était pas dans `GENERIC_TEMPLATES`
+   pour retomber sur un repli générique. **13 zones `*_POKEMART`** dans
+   tout le jeu avaient ce défaut (vérifié : les 13 avaient `screenshot:
+   ""`, seule `MAP_FRONTIER_ACCESS_POKEMART` y échappait via un autre
+   match). **CORRIGÉ** : `("pokemart", "Poké Mart interior HGSS.png")`
+   ajouté à `GENERIC_TEMPLATES`.
+2. **`MAP_CHERRYGROVE_POKECENTER_B1F` affichait EXACTEMENT la même image
+   que son propre 1F** (`Pokémon Center inside HGSS.png`, le comptoir
+   d'accueil) alors que son contenu réel (`obj_..._wifisf`,
+   `script:std_wifi_reception`, 2× `pcwoman2`) est le Club Wifi/salle
+   d'échange, une pièce visuellement différente — même classe de bug que
+   « la chambre à l'étage affiche la cuisine du dessous » déjà corrigée
+   pour les maisons (§ G/2ᵉ étage), jamais étendue au repli `pokecenter`
+   qui restait un mot-clé plat sans distinction d'étage. Vérifié
+   systémique : **23 zones `*_POKECENTER_B1F`/`_2F`** dans tout le jeu
+   avaient ce défaut, toutes avec le même contenu ROM standard (Club
+   Wifi). **CORRIGÉ** : repli `pokecenter` rendu sensible à l'étage comme
+   `house` (`zone_floor_token`), avec `Union Room HGSS.png` (capture
+   trouvée dans `public/maps/`, salle verte à plots d'échange — bien plus
+   proche visuellement du contenu réel que le comptoir du 1F) comme repli
+   étage non-rez-de-chaussée. Registre régénéré, diff exhaustif vérifié :
+   exactement 43 zones changées (13 Pokémarts + 23 Pokémon Centers B1F/2F
+   + 7 guérites — un correctif de la passe Route 29 resté non commité,
+   pas introduit ici), aucun champ hors `screenshot`/`scale_x`/`scale_y`/
+   `screenshot_w`/`screenshot_h` touché.
+
+**Deux PNJ curatés vivaient à tort sur la zone EXTÉRIEURE alors que leur
+propre `role_origin` dit explicitement qu'ils sont À L'INTÉRIEUR** — même
+bug de fond que Mom/Elm avant issue 12 (« PNJ d'intérieur aplati sur la
+zone extérieure »), jamais détecté pour Ville Griotte faute de couverture
+de test (le test `les PNJ d'intérieur sont servis DANS leur pièce`
+n'incluait que Bourg Geon) :
+
+- **Vendeuse du Mart** (role_origin « Comptoir du fond ») : était générée
+  en `(44,8)` sur `MAP_CHERRYGROVE` (zone extérieure), sans repère ROM.
+  L'objet ROM `obj_T21FS0101_shopm1_2` (sans flag conditionnel, donc
+  toujours présent) vit DANS `MAP_CHERRYGROVE_POKEMART` en `(2,6)` — mais
+  cette tuile s'est révélée être dans une alcôve murée sans AUCUN voisin
+  marchable (vérifié par BFS exhaustif sur les 70 tuiles praticables de la
+  pièce : `(2,6)` n'en fait pas partie, même défaut « injoignable » que
+  Elm avant issue 12). **CORRIGÉE** : repositionnée en `(8,3)`, la tuile
+  de comptoir la plus proche réellement atteignable (dos au mur nord,
+  face au sud vers le joueur qui approche par `(8,4)`), toujours dans
+  `MAP_CHERRYGROVE_POKEMART`.
+- **Guide Gent** (role_origin « Accueille le joueur à l'entrée, fait
+  visiter la ville ») : était généré en `(35,0)`, un point arbitraire en
+  haut de carte sans rapport avec la scène, `source: "generated"`.
+  L'objet ROM `obj_T21_gsoldman1` porte le flag
+  `FLAG_HIDE_CHERRYGROVE_GUIDE_GENT` — qui NOMME explicitement ce
+  personnage — en `(54,12)` sur la zone extérieure elle-même (pas un
+  intérieur cette fois), face au sud (`facingDirection` ROM 1, déjà la
+  valeur retenue). **CORRIGÉE** : repositionné dessus, walkable, 4
+  voisins praticables vérifiés.
+
+Les deux corrections mises à jour dans `content/map/npcs.json` ET
+`content/map/placements/cherrygrove-city.json` (`source: "rom_matched"`,
+`matched_object_id`/`matched_sprite_id` renseignés), même convention que
+les corrections Silver/Lyra de Route 29.
+
+**Reste de Ville Griotte vérifié sans changement** : les 11 objets de
+décor + 5 warps de la zone extérieure, tous walkable et à l'écart des
+portes (vérifié programmatiquement : aucun objet exactement sur une tuile
+de warp dans les 7 zones de Ville Griotte). Les 3 maisons génériques
+(southwest, southeast, guide-gent) : chacune a son unique objet de décor
+sur une tuile praticable, repli écran générique déjà documenté comme
+limite connue (aucune capture dédiée disponible pour ces maisons
+d'habitants quelconques, § dédié plus haut). Le Centre Pokémon 1F
+(`pokecenter_clerk_cherrygrove`, déjà corrigé à l'issue 12) reste
+cohérent avec le nouveau screenshot correct. `silver_card_cherrygrove`
+(trophée après embuscade) et `silver_apparition1_cherrygrove` (embuscade,
+déjà réglée à l'issue 12 avec preuve BFS dans `a1-traversal.test.ts`) :
+inchangés, toujours corrects.
+
+### Route 30 — bug trouvé et corrigé (le plus significatif de cette passe)
+
+**Trois PNJ majeurs de la quête de l'œuf mystère — Mr. Pokémon, le
+Pr. Oak et l'Apricorn Man — vivaient à tort sur la zone EXTÉRIEURE
+`MAP_ROUTE_30` au lieu de leurs maisons respectives**, alors que leurs
+`role_origin` le disent explicitement (« Confie un œuf mystère », «
+Présent CHEZ Mr. Pokémon », « Homme DANS UNE MAISON »). Les trois étaient
+`source: "generated"`, aucun repère ROM, positions arbitraires (`(22,45)`,
+`(6,54)`, `(21,33)`) sur la carte extérieure. Croisement avec
+`scripts/sources/zone-data.json` : les objets ROM existent bel et bien,
+DANS les deux intérieurs dédiés (`MAP_ROUTE_30_MR_POKEMON_HOUSE`,
+`MAP_ROUTE_30_APRICORN_HOUSE`) :
+
+- `obj_R30R0201_gsgentleman` (`SPRITE_GSGENTLEMAN`, Mr. Pokémon) en
+  `(9,7)`, face à l'ouest — dans `MAP_ROUTE_30_MR_POKEMON_HOUSE`.
+- `obj_R30R0201_ookido` (`SPRITE_OOKIDO`, Pr. Oak — flag
+  `FLAG_HIDE_MR_POKEMONS_HOUSE_OAK`) en `(8,7)`, adjacent, face à l'est
+  (vers Mr. Pokémon) — même zone. Les deux se font face, cohérent avec la
+  scène HGSS (Oak en visite chez Mr. Pokémon).
+- `obj_R30R0101_gsmiddleman1` (`SPRITE_GSMIDDLEMAN1`, Apricorn Man) en
+  `(5,5)`, face au sud — dans `MAP_ROUTE_30_APRICORN_HOUSE` (l'objet du
+  même nom sur la zone extérieure, à `(11,67)`, exactement sur la tuile
+  de porte de cette maison et flaggé `FLAG_HIDE_ROUTE_30_APRICORN_MAN`,
+  n'est qu'un doublon-parking ROM déjà neutralisé par la règle générique
+  « rien ne se dessine sur une porte » — H/I — pas sa vraie position).
+
+Les trois tuiles ROM sont walkable et ont un voisin marchable (vérifié
+programmatiquement). **CORRIGÉES** : `map_zone` + position + `facing`
+(repris du `facingDirection` ROM) posés dans `content/map/npcs.json` pour
+`mr_pokemon_route30`, `prof_oak_route30`, `man_in_house_route30` ;
+`content/map/placements/route-30.json` mis à jour en miroir
+(`source: "rom_matched"`, `matched_object_id`/`matched_sprite_id`).
+
+**Pourquoi c'est significatif** : c'est le PNJ qui donne l'objet-clé
+central du jalon 1 (l'œuf mystère). Avant cette correction, il apparaissait
+en plein air au milieu de la route au lieu de dans sa maison — sans
+casser la mécanique de jeu (le dialogue restait accessible par A depuis
+une tuile adjacente atteinte à pied, donc **aucun test existant n'avait
+détecté le problème**, `checked >= 15` passait toujours), mais visuellement
+et narrativement faux, et un vrai risque de confusion en jeu (« pourquoi
+Mr. Pokémon marche sur la route et pas dans sa maison ? »).
+
+**TDD** : `src/lib/a1-traversal.test.ts`, `INTERIOR_NPCS` étendu avec
+`MAP_ROUTE_30_MR_POKEMON_HOUSE`/`MAP_ROUTE_30_APRICORN_HOUSE` (test rouge
+d'abord — `expected [] to deeply equal ['mr_pokemon_route30', …]` —
+confirmant que ces PNJ n'étaient PAS servis dans leur pièce), puis
+correctif de contenu, test vert. Effet de bord attendu et corrigé en
+cascade : le compteur de garde-fou `checked >= 15` (PNJ extérieurs
+comptés) est descendu à 12 (4 PNJ sortis du comptage extérieur : les 3 de
+Route 30 + la Vendeuse du Mart de Ville Griotte) — seuil abaissé en
+conséquence, commentaire mis à jour. Un test de sécurité serveur
+préexistant (`src/app/map/actions.test.ts`, « C1 ») affirmait
+explicitement `current_zone = 'MAP_ROUTE_30'` pour accéder au dialogue de
+Mr. Pokémon — mis à jour vers `MAP_ROUTE_30_MR_POKEMON_HOUSE`, cohérent
+avec le nouveau `map_zone`.
+
+**Reste de Route 30 vérifié sans changement** : les 3 dresseurs (Bug
+Catcher Don, Youngster Joey, Youngster Mikey) déjà bien placés (source ROM
+correcte, corrigés à une session précédente le 2026-07-09 selon
+`placements/route-30.json`) ; les objets de décor (arbres coupables,
+Apricorn trees, itemballs) tous sur du terrain praticable et à l'écart des
+portes ; les 2 warps (maisons) atteignables. `MAP_ROUTE_30_MR_POKEMON_HOUSE`
+et `MAP_ROUTE_30_APRICORN_HOUSE` : collision resserrée (correctif G),
+walkable, écrans génériques (pas de capture dédiée, limite déjà connue).
+
+### État concurrent du dépôt pendant cette session (transparence)
+
+Un second agent travaillait en parallèle sur un bug « arbres traversables
+» de Route 29 (`OUTDOOR_TERRAIN_PATCHES` dans `build-zone-registry.py`,
+zone non touchée par cette passe). Une régénération intermédiaire de
+`zone-registry.json` a temporairement cassé la traversée Bourg Geon→Route
+30 (patch de collision trop large, `MAP_ROUTE_29` scindée en îlots) —
+confirmé et isolé sans y toucher (désactivation temporaire du patch dans
+une copie de travail, tests repassés au vert modulo un seuil déjà corrigé
+ici, fichiers réels restaurés à l'identique ensuite). Résolu de son côté
+avant la fin de cette session ; `npm run check` final est vert avec les
+deux jeux de correctifs en place simultanément.
+
+### Bilan de la passe Ville Griotte + Route 30
+
+**10 zones vérifiées une par une** (rendu composite capture+repères,
+BFS de connectivité, vérification programmatique porte/doublon) : 2
+bugs de captures d'écran systémiques (Pokémarts, Pokémon Centers
+B1F/2F — 43 zones dans tout le jeu), 3 PNJ Route 30 hors de leur maison
+(le plus significatif — PNJ de quête centrale), 2 PNJ Ville Griotte hors
+de leur lieu logique (dont un cas « injoignable » nécessitant un
+repositionnement, pas juste un `map_zone`). Partie B (re-vérification
+systémique des doublons PNJ/décor, suite au signalement utilisateur) :
+**aucune brèche trouvée** dans la règle de suppression existante — les 4
+seuls PNJ curatés à `sprite_id` du jeu entier sont tous correctement
+couverts (distance 1 ou alias zone-wide) ; le signalement reste attribué
+à un cache obsolète côté utilisateur. `npm run check` vert (typecheck,
+lint 0 erreur, 550 tests, `validate:content` 0 échec).
+
+## 2026-08-03 — « Arbres traversables » : zone identifiée, cause confirmée, corrigé à 98 % (1 tuile reste ouverte, sciemment)
+
+Reprend l'item laissé ouvert dans le RÉSUMÉ DE SESSION (Bourg Geon extérieur
+vérifié sain, mais sans savoir sur quelle zone le joueur avait réellement pu
+traverser des arbres). L'utilisateur a fourni une capture d'écran du bug en
+jeu.
+
+**Zone identifiée** : `MAP_ROUTE_29`, pas Bourg Geon — comparaison visuelle
+de la capture (panneau + PNJ âgé sur parcelle en terre + joueur dans un
+amas de pins) contre les 4 captures candidates du jalon (`Johto Route 29
+HGSS.png`, `Johto Route 30 HGSS.png`, `Cherrygrove City HGSS.png`, `New Bark
+Town HGSS.png`) : correspondance exacte avec la bordure est de Route 29
+(quart droit du screenshot, près de la guérite Route 29/46) — même forme de
+haie sombre en L, même parcelle en terre allongée, même amas de pins, même
+panneau. La 2ᵉ capture jointe (intérieur sombre à deux PNJ) est une zone
+sans rapport (grotte/intérieur, aucun arbre) — écartée sans investigation.
+
+**Cause confirmée par rendu composite** (grille de collision superposée au
+vrai screenshot, PIL, comme les passes précédentes) : sur une bande
+diagonale d'environ 45 tuiles (bord ouest d'un massif de pins, coordonnées
+locales approx. x 76-89 / z 20-26, world x 652-665 / z 404-410),
+`terrain` déclare praticable (`.`) alors que le screenshot y montre une
+canopée de pins continue, **visuellement indissociable** des tuiles
+voisines du même massif correctement murées (`#`). Vérifié tuile par tuile
+(crops zoomés x5, pas juste la vue d'ensemble) : ce n'est ni un problème
+d'alignement échelle/origine (bug G, contrôlé — `scale_x`/`scale_y`/
+`world_origin_*` sont corrects sur toute la zone, les bordures nord/sud/
+est/ouest du massif sont, elles, correctement murées) ni les 2 objets
+`SPRITE_TREE` individuels de la zone (`obj_R29_tree`/`obj_R29_tree_2`,
+ailleurs sur la carte, en dehors de la bande — et de toute façon
+`resolveNpcSprite('SPRITE_TREE', …)` résout bien via
+`overworld-sprite-labels.json` → `isTileOccupied` les rend déjà solides,
+mécanisme (b) de la piste donnée, vérifié non fautif ici). C'est un vrai
+trou dans la grille brute : **présent tel quel dans
+`scripts/sources/zone-data.json`** (pas introduit par
+`build-zone-registry.py`), donc fidèle à l'extraction ROM, pas un bug de
+génération.
+
+**Piste naïve rejetée (testée, pas supposée) : murer toute la bande casse
+la traversée du jalon.** Premier réflexe (cohérent avec le principe déjà
+appliqué à H/I : faire confiance à l'image plutôt qu'à la sémantique ROM
+brute) — murer les 45 tuiles pour coller au screenshot. Régénéré,
+`npm run check` → **3 tests rouges** dans `a1-traversal.test.ts` : plus
+moyen d'atteindre la guérite Route 29/46, ni Ville Griotte, ni le PNJ
+tutoriel Tuscany. BFS de vérification (même sémantique que `canTraverse`,
+en Python sur la grille patchée) : la zone accessible depuis l'entrée est
+(Bourg Geon) se retrouve enfermée dans une poche de 174 tuiles, alors que
+la zone originale en a 1354 atteignables jusqu'à Ville Griotte. Recoupé
+avec la grille NON patchée (source ROM brute) : **les 45 tuiles de la
+bande sont TOUTES sur l'unique chemin réel** reliant l'entrée est au reste
+de la zone (Ville Griotte, la guérite, les 2 PNJ) — pas une redondance,
+l'unique corridor. Vérifié aussi qu'aucun sentier visible n'est caché dans
+l'image à cet endroit (échantillonnage de couleur systématique sur les 45
+tuiles, recherche de la teinte « chemin en terre » type parcelle du PNJ :
+aucune correspondance) — le jeu original semble vraiment router le seul
+passage à travers ce qui est dessiné comme une canopée pleine, sans aucun
+indice visuel, un artefact qu'un vrai rendu par sprites en profondeur (le
+joueur peut passer visuellement « sous » le haut d'un arbre dans le vrai
+jeu DS) masquerait, mais que ce moteur (image plate + grille, sans calque)
+ne peut pas masquer. Patch annulé, code entièrement retiré, `npm run
+check` revert-vérifié vert (550 tests) avant de retenter autrement.
+
+**Deuxième passe — sous-ensemble sûr, trouvé par recherche gloutonne
+vérifiée** : plutôt que tout ou rien, recherche du plus grand sous-ensemble
+de ces 45 tuiles muable sans casser aucun chemin obligatoire réel (les 2
+tuiles de la porte de la guérite, l'adjacence des 2 PNJ de la zone —
+Lyra/Ethan tutoriel en `(85,16)`, Tuscany en `(38,8)` —, le bord ouest vers
+Ville Griotte). Chaque tuile testée une par une contre un BFS complet
+(garder si le mur ne casse aucun des points obligatoires, sinon la laisser
+praticable) : **44 des 45 tuiles peuvent être murées sans casser aucun
+chemin obligatoire** — une seule, `(76, 24)`, doit rester praticable (le
+passage réel ne fait qu'une tuile de large à cet endroit précis, un
+goulot). Implémenté dans `build-zone-registry.py`
+(`OUTDOOR_TERRAIN_PATCHES`, appliqué juste après `trim_terrain`, portée
+strictement limitée à `MAP_ROUTE_29` — pas une correction générique par
+couleur appliquée à tout le jeu, testée séparément et bien trop de faux
+positifs sur le reste de la carte pour être fiable sans vérification
+tuile par tuile). Registre régénéré et diff vérifié : **seul le `terrain`
+de `MAP_ROUTE_29` change** (`scripts/sources/zone-data.json` comparé au
+registre final pour `MAP_NEW_BARK`/`MAP_CHERRYGROVE`/`MAP_ROUTE_30` :
+identique bit à bit, aucune des 3 autres zones du jalon touchée).
+`npm run check` vert (550 tests, y compris les 3 qui avaient rougi à la
+première tentative). Rendu composite avant/après : l'amas de pins visible
+sur la capture de l'utilisateur (près du panneau/de la parcelle en terre)
+est maintenant intégralement muré ; la seule tuile encore praticable de
+la bande (`76,24`) est excentrée (coin sud-ouest du massif, contre la
+haie déjà praticable), hors du cadre de la capture fournie.
+
+**Statut : fermé pour la zone et la scène précisément signalées** (le
+joueur ne peut plus se retrouver visuellement dans l'amas de pins près du
+panneau). **Limite assumée, pas cachée** : une seule tuile
+(monde `652,408`) reste praticable sans indice visuel — un joueur qui
+marche pile dessus verrait encore le même artefact sur 1 tuile au lieu de
+45 ; corriger ce dernier cas demanderait soit un vrai calque de profondeur
+sprite (fonctionnalité moteur hors périmètre), soit repeindre le
+screenshot pour y dessiner un sentier visible (retouche d'asset graphique,
+pas tentée ici, à rouvrir en tâche de contenu dédiée si ça gêne en jeu).
+
+**Autres zones du jalon vérifiées, aucune trace du même défaut** :
+rendu composite (grille superposée) sur `MAP_NEW_BARK`, `MAP_CHERRYGROVE`,
+`MAP_ROUTE_30` — les trois ont leurs bordures de forêt intégralement
+murées, aucun trou visible de cette classe. Pas une recherche exhaustive
+tuile par tuile comme sur Route 29 (qui n'a été faite qu'après avoir
+localisé le bug via la capture), donc ne pas exclure un cas similaire
+ailleurs dans le jeu si signalé — mais rien trouvé sur les 4 zones du
+jalon 1 en dehors de Route 29.
