@@ -18,7 +18,9 @@ export function isAvatar(value: unknown): value is Avatar {
 // bug A : planche 4 directions refaite) — sans ça un navigateur qui a déjà
 // mis l'ancienne planche en cache ne revoit jamais la bonne tant que l'URL
 // ne change pas. À incrémenter à chaque remplacement de ces fichiers.
-const SPRITE_ASSET_VERSION = 3
+// v4 (2026-08-03) : rangées ouest/est reconstruites — v3 contenait encore
+// des colonnes faisant face à l'est dans la rangée ouest (et vice versa).
+const SPRITE_ASSET_VERSION = 4
 
 /** Planche overworld 8×4 frames de 32px — même géométrie que la planche
  * Ethan que MapClient utilisait en dur avant cette issue. */

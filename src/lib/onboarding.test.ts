@@ -30,8 +30,8 @@ describe('avatars', () => {
   })
 
   it('les sprites pointent vers des planches existantes', () => {
-    expect(avatarOverworldSprite('ethan')).toBe('/sprites/characters/protagonist_ethan_ow.png?v=3')
-    expect(avatarOverworldSprite('lyra')).toBe('/sprites/characters/protagonist_lyra_ow.png?v=3')
+    expect(avatarOverworldSprite('ethan')).toBe('/sprites/characters/protagonist_ethan_ow.png?v=4')
+    expect(avatarOverworldSprite('lyra')).toBe('/sprites/characters/protagonist_lyra_ow.png?v=4')
     expect(avatarPortrait('ethan')).toBe('/sprites/characters/battle_000_ethan.png')
     expect(avatarPortrait('lyra')).toBe('/sprites/characters/battle_001_lyra.png')
   })

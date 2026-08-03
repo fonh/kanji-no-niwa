@@ -10,7 +10,7 @@ export const SPRITE_FRAME_SIZE = 32
 // Version query bump — voir onboarding.ts SPRITE_ASSET_VERSION (même fichier,
 // contenu différent depuis la refonte 4-directions de l'issue 13 : sans ce
 // cache-bust, un navigateur qui a déjà chargé l'ancienne planche la garde).
-export const PLAYER_SPRITE_URL = '/sprites/characters/protagonist_ethan_ow.png?v=3'
+export const PLAYER_SPRITE_URL = '/sprites/characters/protagonist_ethan_ow.png?v=4'
 export const PLAYER_SPRITE_COLS = 8
 
 export interface ResolvedSprite {
