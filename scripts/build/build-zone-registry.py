@@ -79,15 +79,33 @@ for f in map_files:
 # quand il correspond exactement au nom (en mots-clés) d'une autre zone
 # connue, et on lui donne un poids réduit face à la partie réellement
 # distinctive du nom ("elms", "lab").
+#
+# Le même problème se pose ailleurs qu'en tête de nom : une guérite entre
+# deux routes s'appelle "ROUTE_29_ROUTE_46_GATEHOUSE" — le nom entier d'une
+# AUTRE zone bien réelle (MAP_ROUTE_46) est incrusté au milieu, pas en
+# préfixe. Sans traitement, "route"+"46" comptent comme discriminants,
+# suffisent à faire gagner la capture EXTÉRIEURE de la Route 46 (score non
+# nul, garde anti-préfixe-seul contournée) alors que "gatehouse" — le seul
+# mot qui décrit vraiment cette zone — ne matche aucune capture dédiée et
+# que le repli générique (`find_generic_template`, "gatehouse" →
+# "Gate inside HGSS.png") ne se déclenche jamais puisque `find_screenshot`
+# a déjà renvoyé un résultat. Généralisation : repérer TOUTE sous-séquence
+# contiguë de mots-clés (pas seulement en position 0) qui reconstitue
+# exactement le nom complet d'une autre zone connue, et la traiter avec le
+# même poids réduit que le préfixe — qu'elle soit au début, au milieu ou à
+# la fin du nom.
 all_keyword_tuples = {tuple(zone_name_to_keywords(z["name"])) for z in zones}
 
-def known_prefix_len(keywords: list[str]) -> int:
-    for i in range(len(keywords) - 1, 0, -1):
-        if tuple(keywords[:i]) in all_keyword_tuples:
-            return i
-    return 0
+def discounted_keyword_indices(keywords: list[str]) -> set[int]:
+    n = len(keywords)
+    discounted: set[int] = set()
+    for length in range(n - 1, 0, -1):  # exclut l'auto-match (length == n)
+        for start in range(0, n - length + 1):
+            if tuple(keywords[start:start + length]) in all_keyword_tuples:
+                discounted.update(range(start, start + length))
+    return discounted
 
-def score_against(keywords: list[str], zone_name: str, prefix_len: int, zone_floor: str | None, is_outdoor: bool):
+def score_against(keywords: list[str], zone_name: str, discounted: set[int], zone_floor: str | None, is_outdoor: bool):
     best_path  = None
     best_score = 0
     for norm_stem, path in screenshot_index:
@@ -112,7 +130,7 @@ def score_against(keywords: list[str], zone_name: str, prefix_len: int, zone_flo
             if kw not in stem_words:
                 continue
             matched_count += 1
-            if idx < prefix_len:
+            if idx in discounted:
                 matched_weight += 0.3
             else:
                 matched_weight += 1.0
@@ -120,9 +138,14 @@ def score_against(keywords: list[str], zone_name: str, prefix_len: int, zone_flo
         if matched_count == 0:
             continue
         # Une zone avec une partie distinctive doit matcher au moins ce
-        # bout-là — sinon on ne fait que reconnaître le nom de la ville-mère,
-        # ce qui pointerait vers la mauvaise capture (celle de la ville).
-        if prefix_len < len(keywords) and matched_discriminating == 0:
+        # bout-là — sinon on ne fait que reconnaître le nom d'une AUTRE zone
+        # connue (ville-mère en préfixe, ou route/lieu voisin incrusté
+        # ailleurs dans le nom, ex. une guérite "ROUTE_29_ROUTE_46_..."), ce
+        # qui pointerait vers la mauvaise capture (celle de cette autre
+        # zone). Ne s'applique que si le nom a au moins un mot NON réduit à
+        # décharge — sinon (toute la zone n'est faite que de mots-clés
+        # connus d'ailleurs) rien à comparer, on laisse la suite juger.
+        if len(discounted) < len(keywords) and matched_discriminating == 0:
             continue
         # Bonus de spécificité : préfère une capture qui correspond de près
         # dans les deux sens plutôt qu'un simple chevauchement partiel.
@@ -141,17 +164,34 @@ def score_against(keywords: list[str], zone_name: str, prefix_len: int, zone_flo
     return best_path
 
 # (keyword, generic capture filename) — order matters, first match wins.
-# "house" has two entries : an upper floor never looks like the ground floor
+# "house" and "pokecenter" have floor-aware handling below instead of a flat
+# entry here : an upper/basement floor never looks like the ground floor
 # (different furniture, no kitchen/entryway) — reusing the 1F capture for a
 # zone's own 2F is the most visible case of this (issue 13 : the player's
-# own bedroom rendered as their kitchen), so a floor-2+ zone prefers a
-# generic *upstairs* capture over the ground-floor one.
+# own bedroom rendered as their kitchen), so a non-ground floor prefers a
+# distinct generic capture over the ground-floor one.
 GENERIC_TEMPLATES = [
     ("gatehouse", "Gate inside HGSS.png"),
-    ("pokecenter", "Pokémon Center inside HGSS.png"),
+    # "Poké Mart" is two words in every source filename ("Poké Mart HGSS.png",
+    # "Poké Mart interior HGSS.png") but one merged keyword here (no
+    # underscore between POKE and MART in e.g. MAP_CHERRYGROVE_POKEMART) — it
+    # never matches a stem word in score_against/find_screenshot at all
+    # (matched_count stays 0), so every *_POKEMART zone (13 of them) fell
+    # through with an empty screenshot. Interior shot, not the storefront.
+    ("pokemart", "Poké Mart interior HGSS.png"),
 ]
 GENERIC_HOUSE_GROUND = "Player House 1F HGSS.png"
 GENERIC_HOUSE_UPPER  = "Red House 2F HGSS.png"
+# Every *_POKECENTER_B1F/2F zone's objects are the same standard Wifi Club /
+# Union Room content (std_wifi_reception + 2× std_wifi_pichu_check/
+# std_teala_subsequent_talk pcwoman2, verified across 23+ zones) — a
+# genuinely different room from the 1F lobby, not a variant of it. Before
+# this, "pokecenter" was a flat GENERIC_TEMPLATES entry with no floor
+# awareness, so every basement/upper Pokémon Center reused the exact same
+# capture as its own 1F lobby (same bug class as the house 1F/2F mixup
+# above, just never given the same floor-aware treatment).
+GENERIC_POKECENTER_GROUND = "Pokémon Center inside HGSS.png"
+GENERIC_POKECENTER_UPPER  = "Union Room HGSS.png"
 
 def find_generic_template(zone_name: str):
     # Whole-keyword membership, not a raw substring check — "lighthouse" and
@@ -163,9 +203,14 @@ def find_generic_template(zone_name: str):
             path = MAPS_DIR / filename
             if path.exists():
                 return path
+    floor = zone_floor_token(zone_name)
     if "house" in keywords:
-        floor = zone_floor_token(zone_name)
         filename = GENERIC_HOUSE_UPPER if floor and floor != "1f" else GENERIC_HOUSE_GROUND
+        path = MAPS_DIR / filename
+        if path.exists():
+            return path
+    if "pokecenter" in keywords:
+        filename = GENERIC_POKECENTER_UPPER if floor and floor != "1f" else GENERIC_POKECENTER_GROUND
         path = MAPS_DIR / filename
         if path.exists():
             return path
@@ -175,16 +220,18 @@ def find_screenshot(zone_name: str, is_outdoor: bool):
     keywords = zone_name_to_keywords(zone_name)
     if not keywords:
         return None
-    prefix_len = known_prefix_len(keywords)
+    discounted = discounted_keyword_indices(keywords)
     zone_floor = zone_floor_token(zone_name)
-    # A single pass: prefix_len is already 0 for zones with no known parent
-    # (the discount is a no-op then), so a second prefix_len=0 attempt would
-    # only ever matter for zones that DO have a parent — and there, it would
-    # re-run the match without the "must match something distinctive" guard,
-    # letting the parent zone's own screenshot (e.g. the whole town) win for
-    # rooms that have no dedicated capture at all. That's exactly wrong:
-    # those rooms should fall through to find_generic_template instead.
-    return score_against(keywords, zone_name, prefix_len, zone_floor, is_outdoor)
+    # A single pass: discounted is already empty for zones with no keyword
+    # sequence matching another known zone (the discount is a no-op then),
+    # so a second empty-discount attempt would only ever matter for zones
+    # that DO embed another zone's name — and there, it would re-run the
+    # match without the "must match something distinctive" guard, letting
+    # that other zone's own screenshot (e.g. the whole town, or a
+    # neighbouring route for a gatehouse) win for rooms that have no
+    # dedicated capture at all. That's exactly wrong: those rooms should
+    # fall through to find_generic_template instead.
+    return score_against(keywords, zone_name, discounted, zone_floor, is_outdoor)
 
 # Interior rooms are ROM-extracted onto a generic block grid (32×32 for
 # most, 96-wide for a few) padded FAR beyond the actual walled room with
@@ -222,6 +269,62 @@ def trim_terrain(terrain: str, old_w: int, new_w: int, new_h: int) -> str:
     if not terrain:
         return terrain
     return "".join(terrain[z * old_w : z * old_w + new_w] for z in range(new_h))
+
+# Issue 13 (« arbres traversables », capture d'écran jointe — Route 29, lisière
+# est du massif de pins au sud du panneau/de la clairière du PNJ tutoriel).
+# `terrain` vient de zone-data.json (extraction ROM, pas de bug de génération
+# ici — vérifié : identique dans la source) et déclare praticable une bande
+# diagonale (bord ouest du massif) que le screenshot dessine en canopée dense,
+# visuellement indissociable des tuiles voisines correctement murées ('#') du
+# même massif — aucune trace de sentier (testé par échantillonnage de couleur :
+# aucun pixel de la teinte "chemin" dans toute la bande). Le moteur n'ayant
+# aucun calque de profondeur (contrairement au vrai jeu DS, qui peut faire
+# passer le joueur "derrière" le haut d'un arbre), cette tuile praticable
+# rendue en canopée pleine reproduit exactement le bug rapporté.
+#
+# Piste naïve (murer toute la bande pour coller à l'image) rejetée : vérifiée
+# **cassante** — BFS + `a1-traversal.test.ts` confirment que cette bande est
+# l'unique corridor reliant l'entrée est de la zone (depuis Bourg Geon) au
+# reste de Route 29 (Ville Griotte, Route 30, PNJ, la guérite) ; la murer en
+# entier isole toute la suite du parcours. Recherche du sous-ensemble maximal
+# sûr (glouton, chaque tuile testée une à une contre BFS + les points
+# obligatoires réels — les 2 tuiles de la guérite, l'adjacence des 2 PNJ de la
+# zone, le bord ouest vers Ville Griotte) : sur les 45 tuiles suspectes,
+# 44 peuvent être murées sans casser aucun chemin obligatoire — seule (76,24)
+# doit rester praticable (le passage réel, invisible à l'image, ne fait qu'une
+# tuile de large à cet endroit). Résultat déterministe (chaque tuile
+# gardée/murée revérifiée contre les mêmes points obligatoires après coup,
+# pas juste au moment du glouton) ; `npm run check` (a1-traversal.test.ts)
+# reste vert avec ce sous-ensemble. Portée strictement limitée à cette bande
+# précisément vérifiée à l'œil et au graphe — pas une correction générique
+# (testée par couleur sur tout le jeu, bien trop de faux positifs, voir
+# issue 13) ; si un autre zone a le même défaut, à traiter au cas par cas.
+OUTDOOR_TERRAIN_PATCHES: dict[str, list[tuple[int, int, int]]] = {
+    # (x_start, x_end_inclusive, z) — une entrée par ligne de la bande ;
+    # (76, 24) volontairement absente (seule case du massif qui doit rester
+    # praticable, voir commentaire ci-dessus).
+    "MAP_ROUTE_29": [
+        (84, 89, 20),
+        (80, 89, 21),
+        (79, 89, 22),
+        (78, 81, 23),
+        (77, 81, 24),
+        (76, 79, 25),
+        (76, 79, 26),
+    ],
+}
+
+def apply_outdoor_terrain_patches(name: str, terrain: str, tile_w: int) -> str:
+    patches = OUTDOOR_TERRAIN_PATCHES.get(name)
+    if not patches or not terrain:
+        return terrain
+    chars = list(terrain)
+    for x_start, x_end, tz in patches:
+        for tx in range(x_start, x_end + 1):
+            idx = tz * tile_w + tx
+            if 0 <= idx < len(chars):
+                chars[idx] = "#"
+    return "".join(chars)
 
 def get_dimensions(path: Path, tile_w: int, tile_h: int) -> tuple[int, int]:
     if HAS_PIL and path and path.exists():
@@ -265,6 +368,7 @@ for z in zones:
 
     tile_w, tile_h = interior_bounds(z, tile_w_raw, tile_h_raw, is_outdoor)
     terrain_raw = trim_terrain(z.get("terrain", ""), tile_w_raw, tile_w, tile_h)
+    terrain_raw = apply_outdoor_terrain_patches(name, terrain_raw, tile_w)
 
     # Coordonnées monde du coin supérieur gauche de la zone
     world_origin_x = grid_x * TILE_UNIT
