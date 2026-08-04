@@ -88,16 +88,16 @@ describe('double page kanji', () => {
     expect(container.querySelector('[data-testid="book-character"]')!.textContent).toBe('一')
     expect(container.textContent).toContain('one') // keyword ?? meanings[0]
     expect(container.textContent).toContain('イチ')
-    expect(container.textContent).toContain('これは') // lesson_examples[0]
+    expect(container.textContent).toContain('一緒に') // lesson_examples[0] (source: tatoeba)
   })
 
   it('lectures inline des exemples masquées par défaut, Y les révèle', () => {
     render(makeLesson())
     const rts = () => Array.from(container.querySelectorAll('rt')).map(rt => rt.textContent)
-    expect(container.textContent).not.toContain('ひとつ')
+    expect(container.textContent).not.toContain('いっしょ')
     expect(rts().every(t => t === '')).toBe(true)
     click(buttonByLabel('readings'))
-    expect(rts().some(t => t === 'ひと')).toBe(true)
+    expect(rts().some(t => t === 'いっしょ')).toBe(true)
   })
 
   it('bouton audio actif si audio présent, désactivé sinon — jamais un crash', () => {

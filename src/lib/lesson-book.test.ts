@@ -28,7 +28,11 @@ describe('buildKanjiPages', () => {
     expect(first.icon).toBe(null) // icon_ref absent → pas d'illustration forcée
     expect(first.audio).toBe('/audio/kanji/一.mp3')
     expect(first.examples.length).toBeGreaterThan(0)
-    expect(first.examples[0].jp).toContain('一（')
+    // Lecture inline présente (ADR-0002) ; le run couvrant 一 peut être groupé
+    // avec un kanji voisin (一緒（いっしょ）, etc.), donc on vérifie la
+    // présence d'une lecture plutôt qu'un run exact « 一（ » figé.
+    expect(first.examples[0].jp).toContain('一')
+    expect(first.examples[0].jp).toContain('（')
   })
 
   it('kanji sans audio ni exemples : champs null/[] — jamais un crash', () => {

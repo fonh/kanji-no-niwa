@@ -1476,3 +1476,460 @@ toujours vérifier à l'œil avant de corriger.
 **Fichiers modifiés** : `scripts/build/build-zone-registry.py`
 (`OUTDOOR_TERRAIN_PATCHES["MAP_ROUTE_29"]`), `src/data/zone-registry.json`
 (régénéré, seul `MAP_ROUTE_29.terrain` change). `npm run check` vert.
+
+## 2026-08-03 — « セーブできませんでした » (écran de sauvegarde impossible) en
+fin de leçon : `public.kanji` n'avait qu'1 ligne en base Neon — PAS un bug de
+logique/ordre de leçon
+
+**Signalement utilisateur** : bloqué à l'écran « セーブできませんでした »
+(sauvegarde impossible) à la toute fin de la 1ʳᵉ leçon (Bourg Geon,
+séquence 1, PNJ Elm, kanji 一二人先入八) — le bouton retenter ne fait rien,
+la leçon est rejouable à l'infini sans jamais se compléter.
+
+### Cause racine — pas une régression du moteur de leçon
+
+La table `public.kanji` (contenu, censée porter les ~2136 kanji Jōyō —
+`db/migrations/001_initial_schema.sql`) **n'avait qu'une seule ligne en
+base Neon réelle : `一`**. `public.cards.kanji_id references public.kanji`
+— donc `completeLesson()` (`src/app/lesson/actions.ts`) plante avec
+`cards_kanji_id_fkey` (violation de clé étrangère) au premier kanji de la
+boucle d'insertion des cartes SRS qui n'est PAS `一`, c'est-à-dire dans
+quasiment toute vraie leçon (une leçon typique a 5-6 kanji). Le client
+(`src/app/lesson/BookScreen.tsx`) attrape l'erreur générique et affiche
+l'écran de sauvegarde impossible — d'où l'apparence d'un bug de logique
+(ordre des leçons, session SRS, etc.) alors qu'il s'agit d'un trou de
+seeding de base de données pur, en amont de tout code applicatif.
+
+Vérifié directement en rejouant l'insertion réelle pour la leçon en
+attente de l'utilisatrice bloquée : `insert or update on table "cards"
+violates foreign key constraint "cards_kanji_id_fkey"` pour chacun des
+6 kanji sauf `一`.
+
+**Pourquoi ce trou était invisible en dev** : des scripts d'import
+existent déjà et font exactement ce travail —
+`scripts/import/import-kanjidic2.ts` (peuple `kanji` depuis
+`kanjidic2.xml.gz`), `import-kanjivg.ts` et `import-kradfile.ts` (peuplent
+`kanji_components`) — mais n'avaient jamais été exécutés contre la base
+Neon réelle (seulement, vraisemblablement, contre une base locale/de test
+à un moment donné, ou pas du tout — un seul kanji de smoke-test `一`,
+avec des lectures on en hiragane minuscule non standard, trainait dans la
+table réelle). `vocabulary`, `sentences`, `dialogues` et la table DB
+`lessons` sont elles-mêmes mortes/jamais lues à l'exécution (tout le vrai
+contenu vient de `content/*.json` / `src/data/kanji-content.json`
+— seule `kanji` (+ `kanji_components`) est une vraie dépendance runtime,
+via la FK `cards.kanji_id`).
+
+### Correctif
+
+Migration `db/migrations/008_seed_kanji.sql`, générée par un script
+one-off (`scripts/build/_tmp_generate_kanji_seed.mjs`, non committé —
+usage unique) à partir de :
+- `src/data/kanji-content.json` (2136 entrées : id/meanings/on/kun/jlpt/
+  grade/etymology/mnemonic — mappés vers les colonnes réelles, ex.
+  `on`→`on_readings`, `jlpt`→`jlpt_level`) ;
+- `scripts/sources/kanjidic2.xml.gz` (stroke_count, apparié par literal —
+  **piège trouvé en générant** : kanjidic2 répète parfois `<stroke_count>`
+  dans un même `<misc>` [ex. 緻 : 16 puis 15], et fast-xml-parser
+  arrayifie silencieusement l'élément répété → `Number([...])` = `NaN`
+  si on ne prend pas le premier. Corrigé dans le générateur ; **ce même
+  piège existe tel quel dans `scripts/import/import-kanjidic2.ts`**, pas
+  corrigé là — à surveiller si ce script est un jour rejoué) ;
+- `unicode_hex` dérivé trivialement du codepoint du caractère ;
+- `scripts/sources/kradfile` + `kradfile2` (décomposition en composants,
+  restreinte aux deux côtés dans l'ensemble des 2136 kanji Jōyō) pour
+  `kanji_components` (source `'kradfile'`) — **2ᵉ piège trouvé** :
+  `scripts/import/import-kradfile.ts` lit ces fichiers avec
+  `Buffer.toString('latin1')`, alors qu'ils sont encodés EUC-JP ; Node n'a
+  pas de décodeur EUC-JP intégré sur `Buffer`, donc ce script de la
+  pipeline lit en réalité du charabia et ne matche jamais aucun kanji
+  connu (`known.has(kanji)` toujours faux) — **probablement un no-op
+  silencieux depuis toujours, à corriger séparément si la pipeline est
+  reprise**. Le générateur one-off contourne le problème avec le
+  `TextDecoder('euc-jp')` global de Node (ICU complet, décode
+  correctement — vérifié). `kanji.component_ids` (colonne jsonb sur
+  `kanji` elle-même) reste à son défaut `'[]'` : aucun script de la
+  pipeline existante ne la peuple non plus, seul `kanji_components` l'est.
+
+Résultat en base (vérifié par requête directe) : **2136 lignes dans
+`kanji`** (compte exact attendu, = nombre de clés de
+`kanji-content.json`), **4828 arêtes dans `kanji_components`** (toutes
+`source='kradfile'`). Migration idempotente (`on conflict ... do
+nothing`) — safe à rejouer.
+
+**Non touché, sciemment** : la ligne préexistante `一` (déjà en base
+avant cette migration) garde ses valeurs `stroke_count`/`grade`/
+`unicode_hex` à `null` et ses lectures on en hiragane minuscule
+non standard (`いち`/`いつ` au lieu de `イチ`/`イツ`) — visiblement une
+ligne de smoke-test insérée à la main tôt dans le projet.
+`on conflict (id) do nothing` ne l'a pas mise à jour. Sans impact
+fonctionnel (la FK est satisfaite, seul le contenu affiché pour ce
+kanji spécifique est légèrement daté) — followup mineur possible :
+un `update` ciblé sur cette seule ligne pour l'aligner sur le reste.
+
+### Déblocage direct de l'utilisatrice réelle
+
+Base Neon dev n'a qu'un seul vrai compte (`id` `111715249172582191124`,
+nom dresseuse « りこ »). Après la migration, rejoué le corps exact de
+`completeLesson('new-bark-town', 1, tzOffset)`
+(`src/app/lesson/actions.ts`) via un script one-off qui importe les mêmes
+modules que l'action réelle (`@/lib/content`, `@/lib/player-state`,
+`@/lib/lessons`, `@/lib/condition-effect`, `@/lib/db`) avec l'id
+utilisateur en dur — seul `requireUserId()` (session Auth.js, pas
+appelable hors requête HTTP) est contourné, toute la logique métier
+tourne inchangée. Résultat :
+- `resolveLessonInteraction` confirme la leçon en tête, déverrouillée
+  (re-validation serveur passe) ;
+- 12 cartes SRS au total pour 一二人先入八 (2 facettes × 6 kanji) — 10
+  nouvelles + les 2 déjà présentes (orphelines de la 1ʳᵉ tentative
+  échouée avant le correctif, `一`/sens+lecture, laissées telles quelles,
+  sans impact — l'insert est `on conflict do nothing`) ;
+- `user_map_state.completed_lessons` contient désormais `new-bark-town#1`
+  (format confirmé via `lessonId()` dans `src/lib/lessons.ts`) ;
+- `npc_quest_progress` a une nouvelle ligne
+  `lessons-new-bark-town` → `current_step: 'lesson-1'` (quête implicite
+  d'ordre des leçons, avancée) ;
+- `grammar_encounters` a une ligne `N5-001` (point de grammaire de la
+  leçon, first-seen).
+
+La leçon en attente de l'utilisatrice réelle est donc bel et bien
+complétée de bout en bout, en base — au prochain login elle devrait
+voir la leçon 2 disponible plutôt que de rester coincée sur la leçon 1.
+
+### `npm run check`
+
+Vert après la migration : typecheck OK, lint 0 erreur (3 warnings
+préexistants sans rapport), **39 fichiers de tests / 550 tests passés**,
+`validate:content` sans bloquant (warnings de densité kanji préexistants,
+sans rapport avec ce correctif).
+
+### Recommandation non traitée (followup, pas bloquant)
+
+Rien dans ce dépôt ne vérifie qu'une base Neon fraîchement provisionnée a
+bien tout son contenu de référence (`kanji` en particulier) avant mise en
+service — c'est exactement ce qui a permis à ce trou de rester invisible
+jusqu'à une vraie session de jeu. Une vérification serait utile (ex. un
+script qui compare le compte de `kanji-content.json` à
+`select count(*) from kanji`, et idéalement une assertion que
+`cards.kanji_id` n'a aucune valeur orpheline potentielle) mais nécessite
+une dépendance Postgres côté Python (aucune dans ce dépôt aujourd'hui —
+la convention `scripts/validate/*.py` est jusqu'ici 100% fichiers
+statiques, zéro accès DB) ou un script Node/TS séparé de la convention
+`scripts/validate/`. Laissé en l'état, à trancher avec l'utilisateur.
+
+**Fichiers modifiés** : `db/migrations/008_seed_kanji.sql` (nouveau —
+2136 lignes `kanji`, 4828 lignes `kanji_components`), appliqué à la base
+Neon réelle. `public.user_map_state`, `public.cards`,
+`public.npc_quest_progress`, `public.grammar_encounters` du compte réel
+`111715249172582191124` mis à jour via le rejeu légitime de
+`completeLesson`. Aucun fichier de contenu/sprite touché. `npm run check`
+vert (550 tests).
+
+---
+
+## Audio humain Tatoeba pour `lesson_examples` (2026-08-04)
+
+Contexte : le premier passage de `lesson_examples[]` (audio `say` macOS,
+qualité jugée insuffisante par l'utilisateur) est remplacé, là où
+possible, par du vrai audio humain sous licence permissive tiré du corpus
+Tatoeba, avec repli TTS pour le reste — cf. `scripts/sources/tatoeba_jpn_eng.json`
+(231 674 phrases JP avec `kanji_set` précalculé) et l'export officiel
+`sentences_with_audio.tar.bz2`.
+
+### Couverture obtenue
+
+- **404 / 2136 kanji** ont reçu 2 exemples Tatoeba (audio humain réel,
+  remplacement intégral de `lesson_examples[]`).
+- **1072 kanji** ont exactement 1 candidat Tatoeba qualifiant identifié
+  mais **non utilisé** dans cette passe (règle : remplacement intégral ou
+  report, jamais de mélange TTS+Tatoeba dans un même kanji — voir
+  « Décisions » ci-dessous) — conservé en méta-donnée bonus dans le fichier
+  de trous pour la passe de suivi.
+- **654 kanji** n'ont aucun candidat Tatoeba qualifiant.
+- Total : **1726 kanji** encore en attente d'un passage TTS cloud
+  (`still_needed: 1` × 1072, `still_needed: 2` × 654), listés dans
+  `.scratch/kanji-no-niwa/tatoeba-audio-gaps.json`.
+
+Le filtre de licence est le facteur limitant principal : sur les
+1 239 255 enregistrements audio Tatoeba (toutes langues), la licence
+`CC BY-NC-ND 3.0` (« pas de dérivés », explicitement exclue par consigne)
+représente à elle seule ~77 % du total ; une fois restreint à
+CC0/CC-BY/CC-BY-NC **et** à la langue japonaise, il ne reste que **1292
+phrases JP** avec audio licite (sur 231 674 phrases JP au total) — d'où
+une couverture par kanji nécessairement modeste malgré une bonne
+correspondance phrase→kanji.
+
+### Méthodologie
+
+1. **Index audio** : téléchargement de `sentences_with_audio.tar.bz2`
+   (export officiel), filtrage aux licences CC0/CC-BY/CC-BY-NC (strict,
+   `CC BY-NC-ND`/`CC BY-SA` explicitement exclues malgré leur volume).
+   **Piège rencontré** : l'ordre des colonnes de ce CSV est
+   `sentence_id, audio_id, username, license, url` — l'hypothèse initiale
+   inversait les deux premières colonnes, ce qui produisait des
+   correspondances kanji→phrase en apparence plausibles mais un `audio_id`
+   bogué (`/audio/download/<id>` sur un id en réalité un `sentence_id` →
+   404 dans ~90 % des cas). Détecté par vérification manuelle d'un
+   échantillon téléchargé avant de lancer le gros du volume — cf. la
+   description officielle du format sur `tatoeba.org/en/downloads`.
+2. **Sélection par kanji** : parmi les phrases JP dont `kanji_set` contient
+   le kanji ET qui ont un enregistrement licite, tri par (longueur,
+   nombre de `、`, ponctuation « littéraire » `「」…` etc., nombre de
+   kanji distincts) croissant — proxy simple pour « courte, une seule
+   proposition, adaptée à un débutant ». Jusqu'à 2 retenues par kanji ;
+   les 4 kanji restants du gabarit initial (0 ou 1 trouvé) ne sont pas
+   forcés (aucune correspondance fabriquée).
+3. **Lectures inline** : généré via `kuromoji` (déjà une dépendance du
+   dépôt, cf. `scripts/import/import-tatoeba.ts`). **Écart assumé par
+   rapport à la consigne initiale** : la tâche demandait de n'annoter que
+   le kanji cible, mais l'inspection de `kanji-content.json` (636 exemples
+   existants multi-kanji, ex. `あの　女（おんな）の　人（ひと）は
+   げんきです。`) et ADR-0002 (« tout kanji du texte joueur porte une
+   lecture… qu'il soit étudié ou non ») confirment la vraie convention du
+   projet : **toute** lecture kanji de la phrase est annotée, groupée par
+   run contigu (règle Étape 4 du 2026-07-23). L'annotateur a donc été
+   écrit pour couvrir tous les kanji, pas seulement la cible — vérifié à
+   l'échelle avec les fonctions réelles de `lint-kanji-budget.py`
+   (`missing_inline_readings`, `ungrouped_furigana_runs`) et avec
+   `parseInlineReadings` (`src/lib/inline-reading.ts`) : 0 échec sur les
+   808 exemples retenus. Un espacement par « chunk » (particules/auxiliaires
+   collés au mot précédent) a aussi été ajouté pour matcher la convention
+   majoritaire déjà en place (1384/1407 anciens exemples espacés ainsi).
+4. **Cas limites corrigés à la main** (échantillonnage manuel demandé par
+   la consigne, plusieurs vagues) :
+   - Fusion incorrecte de runs kanji adjacents à travers une frontière de
+     mot réelle : `昭和生まれ` fusionnait à tort en
+     `昭和生（しょうわう）まれ` au lieu de `昭和（しょうわ）　生（う）まれ` ;
+     corrigé en n'autorisant la fusion qu'à l'intérieur d'un même « chunk ».
+   - `何` (pos_detail `数`) se collait au nom qui précède
+     (`お土産何（みやげなん）買ったの？` au lieu de `お　土産（みやげ）
+     何（なん）買ったの？`) — `数` ne doit s'attacher en arrière qu'à un
+     autre `数` (chiffres consécutifs `１８`), pas à un nom ordinaire.
+   - `ください` (pos_detail `非自立`) se collait à tort à un compteur qui
+     précède sans `て/で` (`1枚下さい` → `枚下（まいくだ）さい` au lieu de
+     `1枚　下（くだ）さい。`) — restreint à n'attacher qu'après un
+     `助詞,接続助詞` (`て`/`で`), le vrai contexte grammatical de
+     `～てください`/`～でいる`.
+   Ces trois bugs ont été trouvés par lecture manuelle d'échantillons
+   aléatoires (pas par un test automatisé) — après correction, 1225/1226
+   phrases candidates s'annotent sans erreur (le seul échec restant est
+   un kanji hors dictionnaire kuromoji dans une phrase littéraire).
+5. **Téléchargement audio** : `https://tatoeba.org/audio/download/<audio_id>`,
+   converti en opus/webm mono 48kHz ~28kbps (`ffmpeg`) pour matcher le
+   format existant (`ffprobe` vérifié contre `public/audio/words/*.webm`).
+   **Rate limiting rencontré** : une première tentative à 12 requêtes
+   concurrentes a déclenché un vrai `429 Too Many Requests` de
+   `nginx` après ~100 requêtes — repli à 3 workers avec détection
+   explicite du code HTTP et cooldown partagé entre threads sur 429.
+   1013 fichiers distincts nécessaires (avec marge de repli — jusqu'à 6
+   phrases candidates par kanji, pour absorber d'éventuels 404 ponctuels
+   sur des enregistrements retirés depuis l'export) ; **1013/1013
+   téléchargés avec succès, 0 échec** après le repli sur 3 workers
+   (~931 nouveaux + 82 déjà en cache d'un essai précédent).
+6. **Attribution** : chaque exemple `source: "tatoeba"` porte
+   `tatoeba_sentence_id`, `tatoeba_audio_id`, `contributor`, `license`
+   pour une future surface crédits. 4 contributeurs Tatoeba pour les 596
+   fichiers audio distincts effectivement utilisés (808 slots, certains
+   fichiers réutilisés tels quels sur 2 kanji d'une même phrase) :
+   yomi (343 exemples), Mizu (223), huizi99 (222), fal (20). Licences :
+   CC BY-NC 4.0 (788 exemples), CC BY 4.0 (20).
+
+### Décision assumée : pas de mélange TTS+Tatoeba par kanji
+
+La consigne contenait une tension entre « remplace intégralement les
+kanji qui ont des correspondances Tatoeba » et « pour 0 ou 1
+correspondance, garde les entrées TTS existantes telles quelles ». Choix
+retenu : un kanji est **soit** intégralement Tatoeba (2/2), **soit**
+intégralement laissé pour la passe TTS de suivi (0 ou 1 correspondance
+trouvée, même si 1 était utilisable) — jamais un mélange 1 Tatoeba + 1
+ancien `say`. Le candidat Tatoeba trouvé-mais-non-utilisé est conservé en
+métadonnée bonus (`tatoeba_candidate_found_but_unused`) dans le fichier de
+trous pour que la passe de suivi puisse l'adopter directement plutôt que
+de re-dériver la recherche.
+
+### Fichiers modifiés par cette passe
+
+`src/data/kanji-content.json` (404 kanji réécrits intégralement),
+`public/audio/kanji_examples/*.webm` (808 fichiers écrits, 1892 fichiers
+au total dans le dossier — **note** : ce dossier n'est pas suivi par git
+dans ce dépôt, `git status` le montre comme un seul répertoire non
+tracké, préexistant à cette session). Tests mis à jour pour matcher le
+nouveau contenu réel de `一` (`src/app/lesson/BookScreen.test.tsx`,
+`src/lib/lesson-book.test.ts` — les deux assertions étaient couplées au
+texte exact du premier exemple `generated` de `一`, remplacé par
+`一緒（いっしょ）に　行（い）かない？`). Nouveau :
+`.scratch/kanji-no-niwa/tatoeba-audio-gaps.json` (1726 entrées, pour la
+passe TTS cloud de suivi). `npm run check` vert (typecheck, lint, 550
+tests, tous les validateurs de contenu — `lint-kanji-budget.py` ne scanne
+pas `kanji-content.json` par défaut, vérifié séparément avec ses
+fonctions réelles comme décrit plus haut).
+
+## Google Cloud TTS pour le reliquat + adoption des candidats Tatoeba en attente (2026-08-04)
+
+Suite de la passe précédente : les 1726 kanji du fichier de trous
+(`.scratch/kanji-no-niwa/tatoeba-audio-gaps.json`) sont traités, **plus 6
+kanji absents de ce fichier** (八, 首, 矢, 医, 短, 舌) — trouvés en
+recomptant moi-même plutôt qu'en faisant confiance au récapitulatif de la
+passe précédente (consigne explicite) : ils avaient déjà 2 exemples
+`generated` (donc jamais remontés comme « trou »), mais restaient malgré
+tout de l'ancien audio `say` à remplacer. 1726 + 6 = 1732, cohérent avec
+2136 − 404.
+
+### Vérification des chiffres du fichier de trous
+
+Le récapitulatif de la passe précédente affirmait une répartition propre
+« 1072 kanji à 1 candidat trouvé / 654 sans candidat ». En recomptant :
+sur les 1072 `still_needed:1`, seuls **162** portent en réalité un
+`tatoeba_candidate_found_but_unused` (910 n'en ont aucun) ; sur les 654
+`still_needed:2`, **93** en portent un (561 aucun). Total candidats
+réels : 255 (162+93), pas 1072. `still_needed` compte les slots
+manquants pour atteindre 2, pas la présence d'un candidat — les deux
+informations sont indépendantes dans le fichier.
+
+### Stratégie retenue (place chaque kanji à exactement 2 `lesson_examples`)
+
+- **Candidat Tatoeba présent (255 kanji)** : adopté comme 1 slot (audio
+  réel téléchargé), le slot restant généré en TTS.
+- **`still_needed:1`, pas de candidat (910 kanji + resynthèse du cas
+  particulier ci-dessous)** : la phrase JP existante (de l'ancienne passe
+  `say`) est **conservée telle quelle** — ce n'était que la voix qui posait
+  problème, pas le texte — mais son audio est **resynthétisé** en Google
+  Cloud TTS (`source` passe de `generated` à `tts_google`) ; le 2ᵉ slot
+  manquant reçoit une phrase neuve.
+- **`still_needed:2`, pas de candidat (561 + 6 kanji hors fichier)** :
+  2 phrases neuves écrites et synthétisées.
+
+Décision : ne jamais jeter une phrase existante correcte juste pour
+« homogénéiser » — seule la voix macOS `say` était le problème signalé
+par l'utilisateur, donc conservation + resynthèse partout où c'était
+possible (922 slots resynthétisés sur les 3209 slots non-Tatoeba, plus
+de la moitié).
+
+### Génération des 2287 phrases neuves
+
+Pas de dictionnaire d'exemples tout fait pour ~2300 phrases N5→N1 sur des
+kanji parfois très rares (謁, 妥, 朕…) — écrites par un petit moteur de
+gabarits plutôt qu'une à une à la main, avec des garde-fous grammaticaux
+vérifiés par échantillonnage puis par balayage exhaustif :
+
+- **Source du vocabulaire** : priorité au vocabulaire JLPT déjà présent
+  dans `examples[]` du kanji lui-même (mots déjà vus par l'apprenant sur
+  la fiche du kanji — cohérence pédagogique), repli sur les lectures kun
+  (notation kanjidic `stem.okurigana`), repli final sur un dictionnaire
+  écrit à la main pour les **150 kanji sans kun ET sans vocabulaire**
+  (謁見, 折衷, 硫黄, 抹茶, 括弧… — composés réels choisis un par un).
+- **Classement grammatical automatique** à partir du suffixe okurigana
+  (`.い` → adjectif en い, terminaison godan/ichidan → verbe, sinon nom/
+  adjectif en な) pour choisir un gabarit de phrase qui reste correct
+  dans tous les cas — ex. `これは　{mot}です。` fonctionne aussi bien pour
+  un nom que pour un adjectif en い (高いです) ou en な (静かです, な
+  supprimé avant です).
+- **Bugs trouvés et corrigés** avant le lancement du batch (balayage
+  exhaustif du plan, pas un échantillon) :
+  - doublon な+です (「円滑なです」au lieu de「円滑です」) sur tout
+    suffixe se terminant par な ;
+  - gabarit「とても　Xです」invalide sur des noms composés non-graduables
+    (「とても栓抜きです」) — retiré du pool « autre » ;
+  - adverbes en に (ex. ついでに) cassaient pareil avec です — famille de
+    gabarits dédiée sans です ;
+  - lecture collée après tout le mot au lieu d'après la seule partie
+    kanji sur une entrée du dictionnaire écrit à la main (栓抜き（せんぬき）
+    au lieu de 栓抜（せんぬき）き) — répare en réutilisant le même
+    découpeur kanji/kana que pour le vocabulaire JLPT ;
+  - **2 lectures corrompues préexistantes** dans `examples[]` (hors
+    scope de cette passe mais lues en essayant de les réutiliser) :
+    `事業` → `"じぎょう<br>ことわざ"`, `頰` → `"ほお, ほほ"` — fragments
+    HTML/lectures alternatives concaténés tels quels dans le JSON source
+    (25 occurrences au total dans tout `kanji-content.json`, non
+    corrigées puisque hors du champ `lesson_examples` de cette tâche) ;
+    filtrées par une regex de lecture « kana pur uniquement » pour ne
+    jamais les utiliser comme candidat de génération.
+  - **2 coquilles préexistantes** dans le texte `lesson_examples` déjà
+    présent (換, 撲) : parenthèse fermante demi-chasse `)` au lieu de
+    pleine chasse `）`, invisible à l'œil mais cassant le parseur de
+    lecture inline (`parseInlineReadings`) — corrigées à la main en les
+    conservant (`resynth`).
+  - **1 lecture groupée à tort caractère par caractère** déjà présente
+    (悠 : `悠（ゆう）々（ゆう）` au lieu de `悠々（ゆうゆう）`, exactement
+    l'anti-pattern documenté le 2026-08-04 précédent) — fusion
+    automatique de tout run de blocs `kanji（lecture）` adjacents
+    appliquée à toute phrase conservée par `resynth`.
+  Vérifié après coup par balayage complet des 2136 kanji avec la même
+  logique de parsing que `src/lib/inline-reading.ts` (regex Python
+  reproduisant exactement la classe de caractères kanji incluant
+  々〆〇ヵヶ, pas la classe plus étroite de `lint-kanji-budget.py`) :
+  **0 run de kanji sans lecture, 0 lecture par caractère au lieu de
+  groupée**, sur l'intégralité du fichier, pas seulement les entrées
+  touchées par cette passe.
+
+### Synthèse audio
+
+- **Tatoeba (255 fichiers)** : `https://tatoeba.org/audio/download/<audio_id>`
+  (redirection HTTP suivie), 3 workers, palier de recul partagé sur 429
+  — même méthode que la passe précédente. **255/255 réussis, 0 échec.**
+- **Google Cloud TTS (3209 fichiers)** : voix unique `ja-JP-Neural2-B`
+  (choisie et gardée fixe pour toute la passe, comme demandé). Le texte
+  envoyé à l'API n'est **pas** la phrase affichée telle quelle : les runs
+  `kanji（lecture）` sont remplacés par la lecture seule et les espaces
+  pleine chasse de mise en forme retirés avant synthèse (`これは　円滑
+  （えんかつ）です。` → `これはえんかつです。`) — pour forcer la
+  prononciation exacte annotée plutôt que de laisser le moteur TTS
+  deviner une lecture parmi plusieurs possibles sur des kanji ambigus.
+  6 workers, 429/503 gérés avec un palier de recul partagé. **3209/3209
+  réussis, 0 échec.** Aucun mur de quota rencontré (~48 000 caractères
+  JP au total, largement sous les paliers gratuits).
+- Conversion identique aux passes précédentes : `ffmpeg` vers opus/webm
+  mono 48 kHz ~28 kbps, mêmes chemins `public/audio/kanji_examples/
+  <caractère>_1.webm` / `_2.webm` (écrasés).
+
+### Chiffres finaux — les 2136 kanji
+
+| source | slots | kanji entièrement sur cette source |
+|---|---|---|
+| `tatoeba` (audio humain réel) | 1063 | 404 (2/2) |
+| `tts_google` (Google Cloud TTS, voix Neural2-B) | 3209 | 1477 (2/2) |
+| mixte (1 Tatoeba adopté cette passe + 1 TTS) | — | 255 |
+
+**1063/4272 slots = 24,9 % d'audio humain réel** ; le reste (3209 slots,
+1477 kanji intégralement + le slot restant des 255 mixtes) en TTS Google
+Neural2, qui remplace intégralement la voix macOS `say` d'origine —
+**plus aucun `lesson_examples` du jeu ne pointe vers de l'audio `say`.**
+Tous les kanji ont exactement 2 `lesson_examples` (vérifié : distribution
+de longueur = {2: 2136}, aucun à 0/1/3+).
+
+`public/audio/kanji_examples/` : 4272 fichiers, 36 Mo.
+
+### `npm run check`
+
+Vert : typecheck OK, lint 0 erreur (3 warnings préexistants sans
+rapport, `<img>` non optimisé), **39 fichiers de tests / 550 tests
+passés**, `validate:content` sans bloquant (mêmes avertissements
+préexistants de densité kanji, sans rapport). `lint-kanji-budget.py` ne
+scanne toujours pas `kanji-content.json` par défaut — revérifié
+séparément avec ses fonctions réelles (cf. ci-dessus), 0 échec réel sur
+l'intégralité du fichier.
+
+### Limites connues, assumées
+
+- Les ~2287 phrases neuves sont générées par gabarits, pas écrites une à
+  une à la main comme les phrases Tatoeba ou une partie de l'ancienne
+  passe `say` — moins variées stylistiquement (un nombre restreint de
+  tournures répété sur 2136 kanji), mais grammaticalement vérifiées à
+  l'échelle (voir bugs corrigés ci-dessus) et toujours ancrées sur du
+  vrai vocabulaire JLPT du kanji quand disponible.
+- Le champ `en` (traduction) est une approximation construite depuis
+  `meanings[0]` du kanji, pas une vraie traduction de la phrase JP
+  générée — champ non validé par les linters, risque purement cosmétique
+  documenté ici plutôt que corrigé (hors budget de cette passe).
+- Les 25 lectures corrompues préexistantes dans `examples[]` (hors
+  `lesson_examples`, donc hors scope) restent en l'état — followup
+  possible si quelqu'un rejoue l'import JLPT Tango d'origine.
+
+**Fichiers modifiés** : `src/data/kanji-content.json` (1732 kanji
+réécrits — les 404 kanji Tatoeba de la passe précédente n'étaient pas
+encore commités et sont inclus tels quels dans le même diff en attente),
+`public/audio/kanji_examples/*.webm` (3464 fichiers écrits/écrasés sur
+cette passe, 4272 au total dans le dossier non suivi par git). `npm run
+check` vert. Ceci clôt de bout en bout le signalement initial « l'audio
+des phrases d'exemple ne fonctionne pas » et « la voix est mauvaise » —
+tous les kanji ont un audio qui fonctionne, et plus aucun n'utilise la
+voix macOS `say`.
