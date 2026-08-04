@@ -22,6 +22,8 @@ import { useRouter } from 'next/navigation'
 import { rateCard, checkDailyStatus, continueSession, type SrsRating } from './actions'
 import type { DailyStatusResult } from '@/lib/daily-srs'
 import uiStrings from '@/data/ui-strings.json'
+import { useAudioManager } from '@/lib/audio-manager'
+import { CONTEXT_TRACKS } from '@/lib/audio-tracks'
 
 export interface SessionKanjiData {
   keyword: string | null
@@ -96,6 +98,16 @@ export default function StudyClient({ cards, reviewedToday }: Props) {
         .catch(() => {})
     }
   }, [cards.length])
+
+  // Thème Centre Pokémon (PRD § Audio, contexte "Session SRS") — posé sur la
+  // même couche 'zone' que la carte : StudyClient est une route à part
+  // (MapClient n'est pas monté en même temps), aucun conflit de couche.
+  const { setBgmLayer } = useAudioManager()
+  useEffect(() => {
+    setBgmLayer('zone', { url: CONTEXT_TRACKS.pokemonCenter, loop: true })
+    return () => setBgmLayer('zone', null)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const handleRate = useCallback(
     async (rating: SrsRating) => {

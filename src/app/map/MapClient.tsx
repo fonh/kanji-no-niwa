@@ -33,6 +33,8 @@ import {
   clearedLine,
   type MapProgress,
 } from '@/lib/obstacles'
+import { useAudioManager, MuteToggleButton } from '@/lib/audio-manager'
+import { musicRefForMapName } from '@/lib/audio-tracks'
 
 export type { Zone, ZoneObject, ZoneWarp } from '@/lib/zone-geometry'
 export type { ZoneNpc } from '@/lib/npcs'
@@ -178,6 +180,17 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const [showZonePicker, setShowZonePicker] = useState(false)
   const [activeDialogue, setActiveDialogue] = useState<ActiveDialogue | null>(null)
   const [banner, setBanner] = useState<{ label: string; key: number } | null>(null)
+
+  // BGM de zone (issue audio jalon 1) : relancée à chaque changement de zone
+  // (PRD § Audio, "la piste music_ref se (re)lance à l'entrée de zone") — la
+  // couche 'battle' (posée par BattleScreen le temps du combat) la recouvre
+  // sans que ce composant ait à s'en soucier (voir audio-manager.tsx).
+  const { setBgmLayer } = useAudioManager()
+  useEffect(() => {
+    const musicRef = musicRefForMapName(zone.name)
+    setBgmLayer('zone', musicRef ? { url: musicRef, loop: true } : null)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [zone.name])
 
   // Refs mirroring state that the movement loop reads synchronously —
   // interval callbacks and keydown handlers would otherwise close over
@@ -1336,8 +1349,11 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       </div>
 
       {/* A/B toujours visibles ; X/Y sont rendus par DialogueBox, uniquement
-          pendant un dialogue (PRD § Interface) */}
+          pendant un dialogue (PRD § Interface). Bouton muet (issue audio
+          jalon 1) au même niveau visuel, une seule instance globale (le
+          Provider vit à la racine, l'état survit la navigation) */}
       <div className="fixed bottom-20 right-3 z-[70] flex flex-col items-end gap-2" onClick={e => e.stopPropagation()}>
+        <MuteToggleButton />
         <div className="flex items-center gap-2">
           <button
             onClick={onB}

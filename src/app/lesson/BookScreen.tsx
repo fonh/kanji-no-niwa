@@ -26,6 +26,8 @@ import type { GrammarPageData, KanjiPageData } from '@/lib/lesson-book'
 import type { LessonQuizQuestion } from '@/lib/lesson-quiz'
 import uiStrings from '@/data/ui-strings.json'
 import { completeLesson } from './actions'
+import { useAudioManager } from '@/lib/audio-manager'
+import { lessonTrackForLesson } from '@/lib/audio-tracks'
 
 export interface BookScreenLesson {
   zoneId: string
@@ -71,6 +73,18 @@ export default function BookScreen({ lesson }: { lesson: BookScreenLesson }) {
   const [quizIndex, setQuizIndex] = useState(0)
   const [attempt, setAttempt] = useState(0)
   const [wrongFlash, setWrongFlash] = useState(false)
+
+  // Musique calme de l'écran-livre (PRD § Audio) — PAS l'OST HGSS (contexte
+  // carte uniquement) : rotation de pistes libres de droits, choix
+  // déterministe par leçon (voir audio-tracks.ts). Couche 'zone' : BookScreen
+  // est une route à part, MapClient n'est jamais monté en même temps.
+  const { setBgmLayer } = useAudioManager()
+  useEffect(() => {
+    const track = lessonTrackForLesson(lesson.zoneId, lesson.sequenceIndex)
+    setBgmLayer('zone', { url: track, loop: true })
+    return () => setBgmLayer('zone', null)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lesson.zoneId, lesson.sequenceIndex])
 
   const question = phase === 'quiz' ? (lesson.quiz?.[quizIndex] ?? null) : null
   // Mélange des choix À L'AFFICHAGE, re-tiré à chaque question ET à chaque

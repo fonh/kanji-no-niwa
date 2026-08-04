@@ -1933,3 +1933,210 @@ check` vert. Ceci clôt de bout en bout le signalement initial « l'audio
 des phrases d'exemple ne fonctionne pas » et « la voix est mauvaise » —
 tous les kanji ont un audio qui fonctionne, et plus aucun n'utilise la
 voix macOS `say`.
+
+---
+
+## Musique et SFX — MVP jalon 1 (2026-08-04)
+
+Signalement initial : « pas de musique, pas d'effet sonore, nulle part
+dans l'app ». Confirmé comme fonctionnalité jamais construite (pas un
+bug) — aucune référence bgm/sfx/musique dans `src/app`/`src/lib` avant
+cette passe, `content/map/zones.json` référencé par 8 tables (PRD §
+Implémentation, `zone_id`) mais jamais créé. Portée confirmée avant de
+commencer, restreinte au **MVP jalon 1** (les 4 zones extérieures du
+parcours A1 + intérieurs, contextes universels SRS/leçon/combat, mute
+minimal) — pas les ~458 autres zones, pas les thèmes badge/rival/
+rocket/chef d'arène/légendaire, pas un mixer.
+
+### Registre `content/map/zones.json` (créé)
+
+20 entrées : les 4 zones extérieures du jalon 1 (`MAP_NEW_BARK`,
+`MAP_ROUTE_29`, `MAP_CHERRYGROVE`, `MAP_ROUTE_30`) + leurs 16 intérieurs
+(labo d'Elm 1F/2F, maisons du joueur/rival, gatehouse Route 46, Centre
+Pokémon/Mart/maisons de Ville Griotte, maisons de Route 30). Clé de
+recherche runtime = `map_name` (le `zone.name` MAP_* que MapClient
+traverse réellement, aligné sur `src/data/zone-registry.json`) ; `zone_id`
+porte le slug de contenu déjà utilisé par les 8 autres tables
+(`trainers.json`, `texts`, `lessons`...) quand il existe, sinon un slug
+dérivé du nom MAP_* pour les intérieurs qui n'en ont pas. Mapping des
+pistes = `content/guidebook-adapted.md` § Musique — Mapping Zone par Zone
+(fait foi) : chaque zone extérieure reçoit sa propre piste OST HGSS ; un
+intérieur sans piste dédiée retombe sur la piste de sa zone d'accès
+(règle générale du guidebook), sauf le Centre Pokémon de Ville Griotte
+qui garde sa propre piste (les Centres Pokémon ont toujours leur thème
+dans HGSS, y compris hors session SRS). Scope volontairement restreint —
+structuré pour qu'ajouter une zone plus tard soit juste une entrée de
+plus (documenté en tête du fichier).
+
+### Pistes OST utilisées (rippées depuis `public/audio/ost/`, ré-encodées 128 kbps mp3 → `public/audio/bgm/`)
+
+| Fichier source (Disc 1) | Sert pour | Fichier servi |
+|---|---|---|
+| `04 - New Bark Town.mp3` | Carte, Bourg Geon | `bgm/new-bark-town.mp3` |
+| `09 - Route 29.mp3` | Carte, Route 29 | `bgm/route-29.mp3` |
+| `13 - Cherrygrove City.mp3` | Carte, Ville Griotte | `bgm/cherrygrove-city.mp3` |
+| `20 - Route 30.mp3` | Carte, Route 30 | `bgm/route-30.mp3` |
+| `15 - Pokémon Center.mp3` | Session SRS + intérieur Centre Pokémon | `bgm/pokemon-center.mp3` |
+| `18 - Battle! (Trainer - Johto) .mp3` | Combat dresseur (couche 'battle', prioritaire sur la zone) | `bgm/battle-trainer.mp3` |
+
+`19 - Victory! (Trainer).mp3` a aussi été ré-encodé, vers
+`public/audio/bgm/victory-trainer.mp3`, mais **non branché** cette passe
+— le point d'ancrage SFX victoire (voir plus bas) utilise le petit
+jingle `.opus`, pas ce morceau de 41 s, pour rester dans le scope « SFX
+court » demandé plutôt que dupliquer un second mécanisme de piste
+longue. Fichier laissé en place, prêt pour une passe future qui
+voudrait la vraie transition OST à la victoire.
+
+Ré-encodage : sources ~190 kbps mp3 → 128 kbps mp3 (`ffmpeg -codec:a
+libmp3lame -b:a 128k`), gain de taille ~35 % sans dégradation
+perceptible pour de la BGM en boucle. mp3 choisi plutôt qu'opus pour la
+BGM (a contrario du vocabulaire `.opus` lazy-loadé) : plus simple, et
+les tailles restent raisonnables pour une PWA (1,2–3,8 Mo par piste).
+
+### SFX (`public/audio/sfx/game/`, `.opus` — même échelle que l'audio vocabulaire)
+
+- `menu-confirm.opus` (depuis `menu_get.wav`, 1,5 s) — confirmation
+  menu/dialogue.
+- `victory-jingle.opus` (depuis `fanfare.wav`, 4,2 s) — victoire de
+  combat.
+
+### Musique de l'écran-livre (leçons) — PAS l'OST, calme, libre de droits
+
+**Pixabay inaccessible cette passe** : les 4 candidats nommés au PRD
+(« Japanese Relaxing Koto », « Japan Koto Folk Background Music », « In
+the place far away », « Japanese Shakuhachi Flute - Zen ») n'ont pas pu
+être récupérés — `pixabay.com` bloque le scraping derrière un challenge
+JS Cloudflare (`cf-mitigated: challenge`), qui a rejeté aussi bien
+`WebFetch` (403) que `curl` avec un User-Agent de navigateur (403) ;
+aucune clé API Pixabay disponible dans cet environnement pour la voie
+officielle. Signalé honnêtement plutôt que forcé.
+
+**Repli sur `free-stock-music.com`** (accessible via `curl` en fournissant
+un en-tête `Referer` — la protection anti-hotlink de leurs mp3 exige un
+Referer venant de leur propre domaine, sinon ils renvoient silencieusement
+la page d'accueil au lieu du fichier, piège vérifié en inspectant le
+`file` du téléchargement). Leur tag « japanese »/recherche « koto » est
+dominé par de l'EDM/trap/J-pop électronique estampillé « Japanese » plutôt
+que du koto/shakuhachi calme (vérifié un par un via les meta-descriptions
+de chaque page piste avant de télécharger quoi que ce soit — ex.
+`roa-music-sakura-breeze` = « bright and uplifting electronic pop »,
+pas du tout calme malgré le nom). Recherche élargie (`ambient`,
+`meditation`, `japanese garden`...) jusqu'à trouver 2 pistes réellement
+calmes/instrumentales, aujourd'hui dans `public/audio/bgm/lesson/` :
+
+| Piste | Source | Licence | Attribution requise |
+|---|---|---|---|
+| 日本庭園 (Japanese Garden) — ambient piano, 2:32 | Alex-Productions, via free-stock-music.com | CC BY 3.0 | `日本庭園 (Japanese Garden) by Alex-Productions \| https://onsound.eu/` + `Royalty Free Music by https://www.free-stock-music.com` + lien CC BY 3.0 |
+| One With Everything — méditatif, influences indiennes/asiatiques, 5:12 | Shane Ivers, via free-stock-music.com | CC BY 4.0 | `One With Everything by Shane Ivers \| https://www.silvermansound.com` + `Royalty Free Music by https://www.free-stock-music.com` + lien CC BY 4.0 |
+
+**Attribution non affichée dans l'app cette passe** (CC BY l'exige) —
+seulement consignée ici ; à ajouter quelque part avant un vrai
+lancement (écran crédits/mentions légales, pas encore construit). Rotation
+2/6 assumée, pas forcée à 6 (consigne explicite de la tâche) —
+`LESSON_TRACKS` dans `src/lib/audio-tracks.ts` est un simple tableau,
+en ajouter suffit pour étoffer la rotation plus tard.
+
+### Architecture
+
+- `src/lib/audio-tracks.ts` — logique pure (lookup zone→piste depuis
+  `zones.json`, constantes de contexte, rotation leçon déterministe par
+  hash `zoneId#sequenceIndex`, lecture/écriture de la préférence muet)
+  — testé isolément (`src/lib/audio-tracks.test.ts`, 12 tests). Fichier
+  `.ts` distinct de `audio-manager.tsx` (deux fichiers `audio-manager.*`
+  auraient créé une résolution de module ambiguë — piège identifié
+  avant d'écrire le code, pas après).
+- `src/lib/audio-manager.tsx` — Provider React (`AudioManagerProvider`,
+  monté une seule fois à la racine `src/app/layout.tsx` pour que la BGM
+  survive la navigation client entre routes), hook `useAudioManager()`
+  (contexte avec valeur par défaut no-op — les tests de composants qui
+  ne montent pas le Provider ne créent jamais de vrai `<audio>`),
+  composant `MuteToggleButton`. Modèle à 2 couches BGM fixes : `'zone'`
+  (carte/SRS/leçon, mutuellement exclusives par route) et `'battle'`
+  (toujours prioritaire quand posée — BattleScreen est un overlay DANS
+  l'arbre de MapClient, poser/retirer la couche à son montage/démontage
+  restaure automatiquement la musique de zone sans que MapClient n'ait
+  besoin de rien savoir du combat). Politique autoplay navigateur :
+  tentative de lecture immédiate, promesse rejetée avalée, nouvelle
+  tentative au premier `pointerdown`/`keydown` global (pattern standard,
+  non testé unitairement — jsdom n'a pas de vrai lecteur audio, cf. tâche).
+  Non testé directement (React + Audio réel, hors du testable
+  raisonnablement) — seule la logique pure de `audio-tracks.ts` est
+  couverte.
+
+### Points de branchement
+
+- `src/app/map/MapClient.tsx` — BGM de zone (`useEffect` sur
+  `zone.name` → `musicRefForMapName` → couche `'zone'`) ; bouton muet
+  ajouté au cluster bas-droite existant (au-dessus de B/A, même langage
+  visuel — cercle bordé, comme X/Y de `DialogueBox`/`BookScreen`).
+- `src/app/study/StudyClient.tsx` — thème Centre Pokémon posé au montage
+  sur la couche `'zone'` (retiré au démontage) — route à part, jamais
+  montée en même temps que MapClient, aucun conflit de couche.
+- `src/app/lesson/BookScreen.tsx` — piste de la rotation leçon (choix
+  déterministe par `zoneId`/`sequenceIndex`), même mécanisme de couche
+  `'zone'`.
+- `src/app/map/BattleScreen.tsx` — thème dresseur pour toute la durée du
+  combat (couche `'battle'`, posée au montage/retirée au démontage) ;
+  jingle de victoire (`playSfx`) déclenché une seule fois exactement au
+  moment où `progress.outcome` bascule à `'victory'` (même garde
+  anti-double-déclenchement que `winBattle`).
+- `src/app/map/DialogueBox.tsx` — SFX confirmation menu sur `pressA`
+  (avance de page ou complète la frappe en cours) et sur chaque choix
+  sélectionné (`companion_choice`/`instant_response`/`conversation_turn`)
+  — couvre tout le point d'entrée « A / sélection » utilisé par la carte
+  ET par les intros/victoires de combat (qui réutilisent `DialogueBox`).
+
+### Explicitement hors scope cette passe (assumé, pas oublié)
+
+- `music_ref` des ~458 autres zones (Johto restant + tout Kanto) —
+  `zones.json` est structuré pour recevoir ces entrées au fur et à
+  mesure sans refonte.
+- Fanfare cérémonie badge, thèmes Silver/Rocket/Chef d'Arène/Kimono
+  Girl/légendaire/Elite Four/Champion — jalon 1 n'a que le combat
+  dresseur générique.
+- Catalogue SFX complet (pas de son de pas — HGSS n'en a pas non plus,
+  volontairement pas inventé), pas de sons de menu carte/inventaire.
+- Écran de réglages / mixer volume — un seul bouton muet binaire,
+  persisté `localStorage` (`audio-muted`), pas de table `user_settings`
+  (n'existe pas encore).
+- Crédits/attribution CC BY affichés en jeu pour les pistes leçon —
+  consignés ici seulement.
+
+### `npm run check`
+
+Vert : typecheck OK, lint 0 erreur (3 warnings préexistants sans
+rapport, `<img>` non optimisé), **40 fichiers de tests / 562 tests
+passés** (12 nouveaux dans `src/lib/audio-tracks.test.ts`),
+`validate:content` sans bloquant (mêmes avertissements préexistants,
+sans rapport avec cette passe).
+
+**Fichiers créés** : `content/map/zones.json`, `src/lib/audio-tracks.ts`
+(+ `.test.ts`), `src/lib/audio-manager.tsx`, `public/audio/bgm/*.mp3`
+(6 pistes OST + 1 non branchée), `public/audio/bgm/lesson/*.mp3` (2
+pistes CC BY), `public/audio/sfx/game/*.opus` (2 SFX). **Fichiers
+modifiés** : `src/app/layout.tsx` (Provider), `src/app/map/MapClient.tsx`,
+`src/app/map/BattleScreen.tsx`, `src/app/map/DialogueBox.tsx`,
+`src/app/study/StudyClient.tsx`, `src/app/lesson/BookScreen.tsx`.
+
+### 2026-08-04 — CORRIGÉ : « la musique ne se lance pas »
+
+Signalé par l'utilisateur immédiatement après le déploiement de la passe
+ci-dessus — testé en jeu, silence total. **Root cause** :
+`AudioManagerProvider` créait son élément `<audio>` dans un `useEffect`
+(effect passif). Dans React, à l'intérieur d'un même commit, **tous les
+effects passifs de l'arbre entier s'exécutent enfant-avant-parent** — au
+premier chargement de `/map` (SSR + hydratation, un seul commit), l'effect
+de `MapClient` (`setBgmLayer('zone', …)`, lui aussi un `useEffect`) tournait
+donc AVANT celui du Provider, trouvait `audioElRef.current === null`,
+et `applyActiveLayer()` abandonnait silencieusement (`if (!el) return`) —
+plus rien ne rappelait cette fonction ensuite tant que `zone.name` ne
+changeait pas (l'utilisateur n'a pas changé de zone pendant son test, donc
+jamais de second appel). **Corrigé** : création de l'élément déplacée dans
+un `useLayoutEffect` — tous les layout effects de l'arbre s'exécutent
+avant tous les effects passifs, quel que soit l'ordre parent/enfant, donc
+l'élément existe garanti avant le premier `useEffect` de n'importe quel
+enfant (MapClient, StudyClient, BookScreen, BattleScreen). TDD : test rouge
+d'abord (`src/lib/audio-manager.test.tsx`, un enfant synthétique qui pose
+une couche BGM dans son propre `useEffect` au tout premier rendu — échoue
+contre l'ancien code, passe contre le correctif ; vérifié dans les deux
+sens). `npm run check` vert (41 fichiers / 563 tests).

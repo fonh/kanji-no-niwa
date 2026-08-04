@@ -29,6 +29,8 @@ import {
   type RoutedPage,
 } from '@/lib/dialogue-pages'
 import type { DialoguePageEntry } from '@/lib/content'
+import { useAudioManager } from '@/lib/audio-manager'
+import { SFX } from '@/lib/audio-tracks'
 
 export interface DialogueBoxHandle {
   /** Bouton A : complète la frappe, sinon avance (inerte sur une page à choix). */
@@ -245,10 +247,12 @@ function DialogueLineView({
     return () => clearInterval(timer)
   }, [typewriterMsPerChar, totalChars])
 
+  const { playSfx } = useAudioManager()
   const pressA = useCallback(() => {
+    playSfx(SFX.menuConfirm)
     if (!typingDone) setTypedCount(Number.MAX_SAFE_INTEGER)
     else onAdvance()
-  }, [typingDone, onAdvance])
+  }, [typingDone, onAdvance, playSfx])
 
   const pressX = useCallback(() => setShowEn(v => !v), [])
   const pressY = useCallback(() => setShowReadings(v => !v), [])
@@ -265,6 +269,7 @@ function DialogueLineView({
       disabled={disabled}
       onClick={e => {
         e.stopPropagation()
+        playSfx(SFX.menuConfirm)
         onPick()
       }}
       className={`block w-full text-left px-3 py-2 rounded border-2 text-base leading-relaxed ${

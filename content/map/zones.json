@@ -1,0 +1,167 @@
+{
+  "_comment": "Registre des zones (PRD § Audio, créé issue audio jalon 1 — zone_id référencé par 8 tables sans qu'aucun registre n'existe, corrigé 2026-07-07 audit 08 finding 08-C1). Scope volontairement restreint aux 4 zones extérieures du jalon 1 (New Bark Town, Route 29, Cherrygrove City, Route 30) + leurs intérieurs navigables (ADR-0004 : un zone_id par pièce/étage) — les ~458 autres zones ajouteront leur entrée au fur et à mesure de la passe assets (mapping complet : content/guidebook-adapted.md § Musique — Mapping Zone par Zone). `map_name` est la clé de recherche runtime (= zone.name de src/data/zone-registry.json, ce que MapClient traverse réellement) ; `zone_id` est le slug de contenu utilisé par les 8 autres tables (trainers.json, texts, lessons, quests...) quand il existe, sinon un slug dérivé de `map_name` (voir src/lib/zone-slug.ts normalizeMapName) pour les intérieurs qui n'ont pas de zone_id de contenu propre.",
+  "zones": [
+    {
+      "zone_id": "new-bark-town",
+      "map_name": "MAP_NEW_BARK",
+      "name": { "jp": "ワカバタウン", "en": "New Bark Town" },
+      "region": "johto",
+      "music_ref": "/audio/bgm/new-bark-town.mp3",
+      "is_interior": false
+    },
+    {
+      "zone_id": "new-bark-elms-lab-1f",
+      "map_name": "MAP_NEW_BARK_ELMS_LAB_1F",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/new-bark-town.mp3",
+      "is_interior": true,
+      "note": "Pas de piste dédiée au mapping guidebook — règle générale : intérieur sans piste propre = piste de la zone d'accès."
+    },
+    {
+      "zone_id": "new-bark-elms-lab-2f",
+      "map_name": "MAP_NEW_BARK_ELMS_LAB_2F",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/new-bark-town.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "new-bark-player-house-1f",
+      "map_name": "MAP_NEW_BARK_PLAYER_HOUSE_1F",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/new-bark-town.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "new-bark-player-house-2f",
+      "map_name": "MAP_NEW_BARK_PLAYER_HOUSE_2F",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/new-bark-town.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "new-bark-rival-house-1f",
+      "map_name": "MAP_NEW_BARK_RIVAL_HOUSE_1F",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/new-bark-town.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "new-bark-rival-house-2f",
+      "map_name": "MAP_NEW_BARK_RIVAL_HOUSE_2F",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/new-bark-town.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "new-bark-southwest-house",
+      "map_name": "MAP_NEW_BARK_SOUTHWEST_HOUSE",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/new-bark-town.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "route-29",
+      "map_name": "MAP_ROUTE_29",
+      "name": { "jp": "29ばんどうろ", "en": "Route 29" },
+      "region": "johto",
+      "music_ref": "/audio/bgm/route-29.mp3",
+      "is_interior": false
+    },
+    {
+      "zone_id": "route-29-route-46-gatehouse",
+      "map_name": "MAP_ROUTE_29_ROUTE_46_GATEHOUSE",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/route-29.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "cherrygrove-city",
+      "map_name": "MAP_CHERRYGROVE",
+      "name": { "jp": "ヨシノシティ", "en": "Cherrygrove City" },
+      "region": "johto",
+      "music_ref": "/audio/bgm/cherrygrove-city.mp3",
+      "is_interior": false
+    },
+    {
+      "zone_id": "cherrygrove-pokecenter-1f",
+      "map_name": "MAP_CHERRYGROVE_POKECENTER_1F",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/pokemon-center.mp3",
+      "is_interior": true,
+      "note": "Piste dédiée (règle « piste du bâtiment si elle existe ») — les Centres Pokémon ont toujours leur thème propre dans HGSS, même hors session SRS."
+    },
+    {
+      "zone_id": "cherrygrove-pokecenter-b1f",
+      "map_name": "MAP_CHERRYGROVE_POKECENTER_B1F",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/pokemon-center.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "cherrygrove-pokemart",
+      "map_name": "MAP_CHERRYGROVE_POKEMART",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/cherrygrove-city.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "cherrygrove-southwest-house",
+      "map_name": "MAP_CHERRYGROVE_SOUTHWEST_HOUSE",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/cherrygrove-city.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "cherrygrove-guide-gent-house",
+      "map_name": "MAP_CHERRYGROVE_GUIDE_GENT_HOUSE",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/cherrygrove-city.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "cherrygrove-southeast-house",
+      "map_name": "MAP_CHERRYGROVE_SOUTHEAST_HOUSE",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/cherrygrove-city.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "route-30",
+      "map_name": "MAP_ROUTE_30",
+      "name": { "jp": "30ばんどうろ", "en": "Route 30" },
+      "region": "johto",
+      "music_ref": "/audio/bgm/route-30.mp3",
+      "is_interior": false
+    },
+    {
+      "zone_id": "route-30-mr-pokemon-house",
+      "map_name": "MAP_ROUTE_30_MR_POKEMON_HOUSE",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/route-30.mp3",
+      "is_interior": true
+    },
+    {
+      "zone_id": "route-30-apricorn-house",
+      "map_name": "MAP_ROUTE_30_APRICORN_HOUSE",
+      "name": null,
+      "region": "johto",
+      "music_ref": "/audio/bgm/route-30.mp3",
+      "is_interior": true
+    }
+  ]
+}

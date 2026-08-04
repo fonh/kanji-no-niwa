@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { BIZ_UDGothic, DotGothic16, Geist } from 'next/font/google'
 import ServiceWorkerRegistration from './ServiceWorkerRegistration'
+import { AudioManagerProvider } from '@/lib/audio-manager'
 import './globals.css'
 
 const geist = Geist({ variable: '--font-geist', subsets: ['latin'] })
@@ -47,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="min-h-full flex flex-col bg-gray-900">
         <ServiceWorkerRegistration />
-        {children}
+        <AudioManagerProvider>{children}</AudioManagerProvider>
       </body>
     </html>
   )

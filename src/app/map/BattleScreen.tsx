@@ -31,6 +31,8 @@ import {
 } from '@/lib/battle'
 import { winBattle, type BattleVictory, type TrainerBattleStart } from './battle-actions'
 import uiStrings from '@/data/ui-strings.json'
+import { useAudioManager } from '@/lib/audio-manager'
+import { CONTEXT_TRACKS, SFX } from '@/lib/audio-tracks'
 
 const TRANSITION_FRAMES = [
   '/sprites/ui/battle/transition/transition_00_rcsn22.png',
@@ -92,6 +94,26 @@ export default function BattleScreen({
   const [transitionFrame, setTransitionFrame] = useState(0)
   const dialogueRef = useRef<DialogueBoxHandle>(null)
   const winCalledRef = useRef(false)
+  const jingleCalledRef = useRef(false)
+
+  // Thème dresseur (PRD § Audio) — posé le temps du combat entier (couche
+  // 'battle' : gagne toujours sur la BGM de zone posée par MapClient en
+  // dessous, restaurée automatiquement au démontage de cet overlay, voir
+  // audio-manager.tsx). Jingle de victoire (SFX court, pas l'OST) au moment
+  // exact où l'issue bascule — même garde anti-double-déclenchement que
+  // winBattle ci-dessous.
+  const { setBgmLayer, playSfx } = useAudioManager()
+  useEffect(() => {
+    setBgmLayer('battle', { url: CONTEXT_TRACKS.battleTrainer, loop: true })
+    return () => setBgmLayer('battle', null)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  useEffect(() => {
+    if (progress.outcome !== 'victory' || jingleCalledRef.current) return
+    jingleCalledRef.current = true
+    playSfx(SFX.victoryJingle)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [progress.outcome])
 
   // ── Cinématique d'entrée ────────────────────────────────────────────────────
 
