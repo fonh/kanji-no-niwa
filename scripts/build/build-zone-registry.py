@@ -16,6 +16,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from collections import deque
 from pathlib import Path
 
 try:
@@ -518,17 +519,85 @@ OUTDOOR_TERRAIN_PATCHES: dict[str, list[tuple[int, int, int]]] = {
         (23, 23, 8),
         (25, 25, 8),
         (14, 18, 9),
-        (21, 23, 9),
+        # (21, 23, 9) EXCLU (2026-08-05, `verify_full_connectivity`, voir
+        # plus bas) : muré isolait (22,8) du reste de la carte — trouvé par
+        # la nouvelle garde de connectivité exhaustive avant même d'être
+        # signalé en jeu (même incident de méthode qui a piégé le joueur
+        # sur (73,74,24) plus haut, ici attrapé en amont).
         (25, 25, 9),
         (14, 14, 10),
         (16, 16, 10),
         (18, 18, 10),
         (14, 14, 11),
-        (16, 16, 11),
+        # (16, 16, 11) EXCLU, même raison : isolait (15,10) et (15,11).
     ],
 }
 
-def apply_outdoor_terrain_patches(name: str, terrain: str, tile_w: int) -> str:
+def _flood_fill(terrain: str, tile_w: int, tile_h: int, start_idx: int) -> set[int]:
+    """BFS 4-connexe sur la grille de terrain aplatie — utilisé uniquement
+    par `verify_full_connectivity` (murs = '#', tout le reste praticable)."""
+    if terrain[start_idx] == "#":
+        return set()
+    seen = {start_idx}
+    queue = deque([start_idx])
+    while queue:
+        idx = queue.popleft()
+        x, z = idx % tile_w, idx // tile_w
+        for dx, dz in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            nx, nz = x + dx, z + dz
+            if 0 <= nx < tile_w and 0 <= nz < tile_h:
+                nidx = nz * tile_w + nx
+                if nidx not in seen and terrain[nidx] != "#":
+                    seen.add(nidx)
+                    queue.append(nidx)
+    return seen
+
+def verify_full_connectivity(name: str, before_terrain: str, after_terrain: str, tile_w: int, tile_h: int) -> None:
+    """Garde de sécurité EXHAUSTIVE pour tout patch de terrain extérieur
+    (2026-08-05, tirée d'un incident réel — voir le commentaire daté
+    « CORRECTIF D'URGENCE » sur MAP_ROUTE_29 plus haut dans ce fichier).
+    L'ancienne garde (a1-traversal.test.ts) ne vérifie que la joignabilité
+    d'une poignée de points nommés (portes, PNJ) — insuffisant : un patch
+    peut murer une paire de tuiles contiguës qui isole une poche locale du
+    reste de la carte SANS jamais toucher le chemin qu'empruntent ces points
+    nommés, donc invisible à cette garde. Un joueur s'est réellement retrouvé
+    enfermé dans une poche de 7 tuiles créée exactement ainsi.
+    Ici : flood-fill complet depuis un point de référence AVANT patch, puis
+    depuis le même point (ou le premier voisin encore praticable si le
+    patch a justement muré ce point) APRÈS patch — toute tuile qui reste
+    praticable après le patch mais devient inatteignable depuis ce point de
+    référence est un signal d'erreur : le patch a coupé un passage sans le
+    refermer des deux côtés à la fois. Lève une exception qui interrompt la
+    génération plutôt que produire silencieusement une carte cassée."""
+    if not before_terrain or before_terrain == after_terrain:
+        return
+    try:
+        seed = next(i for i, c in enumerate(before_terrain) if c != "#")
+    except StopIteration:
+        return  # zone entièrement murée avant patch, rien à vérifier
+    reachable_before = _flood_fill(before_terrain, tile_w, tile_h, seed)
+    if after_terrain[seed] == "#":
+        # Le patch a muré le seed lui-même : reprendre depuis n'importe
+        # quelle tuile qui était atteignable ET reste praticable.
+        candidates = [i for i in reachable_before if after_terrain[i] != "#"]
+        if not candidates:
+            return  # tout ce qui était atteignable a été muré — voulu, rien à signaler
+        seed = candidates[0]
+    reachable_after = _flood_fill(after_terrain, tile_w, tile_h, seed)
+    newly_stranded = {
+        i for i in reachable_before if after_terrain[i] != "#" and i not in reachable_after
+    }
+    if newly_stranded:
+        examples = sorted((i % tile_w, i // tile_w) for i in newly_stranded)[:10]
+        raise SystemExit(
+            f"verify_full_connectivity: OUTDOOR_TERRAIN_PATCHES sur {name} isole "
+            f"{len(newly_stranded)} tuile(s) auparavant atteignable(s) depuis le reste "
+            f"de la zone (ex. tuiles locales {examples}) — un patch a muré un passage "
+            f"sans le refermer des deux côtés, créant une poche inatteignable. "
+            f"Revoir OUTDOOR_TERRAIN_PATCHES['{name}']."
+        )
+
+def apply_outdoor_terrain_patches(name: str, terrain: str, tile_w: int, tile_h: int) -> str:
     patches = OUTDOOR_TERRAIN_PATCHES.get(name)
     if not patches or not terrain:
         return terrain
@@ -538,7 +607,9 @@ def apply_outdoor_terrain_patches(name: str, terrain: str, tile_w: int) -> str:
             idx = tz * tile_w + tx
             if 0 <= idx < len(chars):
                 chars[idx] = "#"
-    return "".join(chars)
+    patched = "".join(chars)
+    verify_full_connectivity(name, terrain, patched, tile_w, tile_h)
+    return patched
 
 # Issue 13 (QA humaine, 3ᵉ signalement Route 29) : pendant la vérification
 # NPC-dans-les-arbres qui a suivi les 2 corrections de terrain ci-dessus
@@ -621,7 +692,7 @@ for z in zones:
 
     tile_w, tile_h = interior_bounds(z, tile_w_raw, tile_h_raw, is_outdoor)
     terrain_raw = trim_terrain(z.get("terrain", ""), tile_w_raw, tile_w, tile_h)
-    terrain_raw = apply_outdoor_terrain_patches(name, terrain_raw, tile_w)
+    terrain_raw = apply_outdoor_terrain_patches(name, terrain_raw, tile_w, tile_h)
 
     # Coordonnées monde du coin supérieur gauche de la zone
     world_origin_x = grid_x * TILE_UNIT

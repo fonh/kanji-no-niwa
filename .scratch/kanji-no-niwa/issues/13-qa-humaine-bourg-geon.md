@@ -2774,3 +2774,31 @@ rouge d'abord (`audio-manager.test.tsx`).
 `scripts/build/build-zone-registry.py`, `src/data/zone-registry.json`
 (Route 29 seulement), `src/lib/audio-manager.tsx`,
 `src/lib/audio-manager.test.tsx`.
+
+### 2026-08-05 (suite) — garde de connectivité exhaustive implémentée (`verify_full_connectivity`)
+
+Suite immédiate promise ci-dessus. Ajoutée dans
+`scripts/build/build-zone-registry.py` : `_flood_fill` (BFS 4-connexe) +
+`verify_full_connectivity`, appelée automatiquement par
+`apply_outdoor_terrain_patches` sur CHAQUE zone patchée — flood-fill
+complet depuis un point de référence avant/après patch, lève une
+exception (interrompt la génération) si une tuile auparavant atteignable
+devient isolée. Bien plus fort que `a1-traversal.test.ts` (qui ne
+prouve que la joignabilité d'une poignée de points nommés).
+
+**A immédiatement porté ses fruits** : en la faisant tourner sur
+l'ensemble des patches Route 29 déjà en place, elle a trouvé — avant
+tout signalement utilisateur — **une 2ᵉ poche isolée non détectée**, 3
+tuiles ((22,8), (15,10), (15,11)) coupées du reste de la carte par deux
+patches de la passe scanner-v2 (`(21,23,9)` et `(16,16,11)`, north
+border fix). Bissection automatisée (rejouer les patches un par un avec
+flood-fill à chaque étape) pour identifier précisément les 2 coupables
+parmi la quarantaine de patches Route 29. Les deux exclus (commentés,
+pas supprimés silencieusement). Regénéré, `verify_full_connectivity` ne
+lève plus rien sur aucune zone. `npm run check` vert (570 tests,
+inchangé — ces 3 tuiles n'étaient testées par aucun point nommé).
+
+Portée actuelle : appelée uniquement pour les zones ayant une entrée
+`OUTDOOR_TERRAIN_PATCHES` (Route 29 pour l'instant). S'appliquera
+automatiquement à toute future zone patchée par ce mécanisme — plus
+besoin d'y repenser zone par zone.
