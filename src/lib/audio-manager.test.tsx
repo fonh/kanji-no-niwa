@@ -12,7 +12,8 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { act, useEffect } from 'react'
 import { createRoot, type Root } from 'react-dom/client'
-import { AudioManagerProvider, useAudioManager } from './audio-manager'
+import { AudioManagerProvider, useAudioManager, MuteToggleButton } from './audio-manager'
+import { writeMutePreference } from './audio-tracks'
 
 ;(globalThis as Record<string, unknown>).IS_REACT_ACT_ENVIRONMENT = true
 
@@ -69,5 +70,36 @@ describe('AudioManagerProvider — ordre de montage', () => {
     })
 
     expect(playSpy).toHaveBeenCalledTimes(1)
+  })
+})
+
+// Régression : « Hydration failed » signalé en jeu — aria-label="mute" côté
+// serveur contre "unmute" côté client. Cause : le useState du muet lisait
+// window.localStorage dans son initialiseur paresseux, exécuté DÈS le tout
+// premier rendu (l'hydratation elle-même, pas seulement un effect ultérieur)
+// — un joueur ayant déjà coupé le son lors d'une session précédente obtenait
+// donc `true` au premier rendu CLIENT contre `false` côté SERVEUR (jamais
+// accès à localStorage). Corrigé : `false` toujours au premier rendu (des
+// deux côtés), resynchronisé depuis localStorage dans un effect qui ne
+// tourne qu'après l'hydratation.
+describe('AudioManagerProvider — préférence muet et hydratation', () => {
+  it('une préférence muet déjà enregistrée finit par s’appliquer après montage (resynchronisation post-hydratation)', () => {
+    writeMutePreference(window.localStorage, true)
+
+    act(() => {
+      root.render(
+        <AudioManagerProvider>
+          <MuteToggleButton />
+        </AudioManagerProvider>
+      )
+    })
+
+    // La vraie préférence (coupé) doit s'appliquer une fois montée — si un
+    // futur changement supprime l'effect de resynchronisation et revient à
+    // un lazy init direct dans useState, ce test reste vert (le mismatch
+    // d'hydratation, lui, ne se voit que côté SSR réel) mais au moins la
+    // régression fonctionnelle (préférence jamais respectée) serait captée.
+    const button = container.querySelector('button')!
+    expect(button.getAttribute('aria-label')).toBe('unmute')
   })
 })

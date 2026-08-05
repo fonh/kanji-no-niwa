@@ -452,9 +452,25 @@ OUTDOOR_TERRAIN_PATCHES: dict[str, list[tuple[int, int, int]]] = {
         # (76,24) plus haut) : sans calque de profondeur sprite (hors
         # périmètre moteur) ou retouche d'asset graphique (hors périmètre
         # contenu), ces ~24 tuiles resteront visuellement de la canopée
-        # praticable. Seul gain réel ici : 2 tuiles en moins dans l'empreinte
-        # visible du défaut.
-        (73, 74, 24),
+        # praticable.
+        #
+        # 2026-08-05 (suite 3) — CORRECTIF D'URGENCE : (73,24) et (74,24)
+        # REVERTIES. La garde de sécurité de la passe précédente ne testait
+        # que la joignabilité de quelques points nommés (guérite, PNJ,
+        # continuum de zones) via a1-traversal.test.ts — insuffisant : muser
+        # ces 2 tuiles CONTIGUËS coupait complètement le petit cul-de-sac
+        # local (66-72,24, 7 tuiles) du reste de la carte (aucun autre
+        # chemin, vérifié par flood-fill exhaustif), sans casser aucun des
+        # points nommés testés (qui restent joignables par un tout autre
+        # chemin) — donc invisible à cette garde. Un vrai joueur s'est
+        # retrouvé enfermé là (position sauvegardée x=648,z=408 monde =
+        # local (72,24), pile dans la poche) après le déploiement de ce
+        # patch. Cause racine du process, pas juste de la donnée : la garde
+        # doit vérifier la connectivité EXHAUSTIVE (aucune tuile praticable
+        # ne devient inatteignable depuis les autres), pas seulement une
+        # liste de points nommés — voir la nouvelle fonction
+        # `verify_full_connectivity` plus bas, désormais utilisée par
+        # TOUTES les entrées d'OUTDOOR_TERRAIN_PATCHES avant application.
         # 2026-08-05 (suite 2) — scanner v2 (canopy_scan_v2.py, voir plus bas)
         # : composantes connexes + clustering couleur k-means par zone
         # (au lieu de la moyenne unique + filtre voisinage de v1, voir

@@ -23,8 +23,39 @@
 // un lecteur indisponible (jsdom des tests, navigateur qui refuse) ne doit
 // jamais faire planter l'app, seulement rester silencieux.
 
-import { createContext, useCallback, useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useSyncExternalStore,
+} from 'react'
 import { readMutePreference, writeMutePreference } from './audio-tracks'
+
+// Store externe minimal pour la préférence muet (bug hydratation corrigé
+// ici — voir le commentaire détaillé sur son usage plus bas) : un seul
+// abonné possible en pratique (le Provider est monté une seule fois à la
+// racine), mais useSyncExternalStore exige la forme subscribe/getSnapshot
+// même pour un store à un seul lecteur.
+type MuteListener = () => void
+let muteListeners: MuteListener[] = []
+function subscribeMute(listener: MuteListener): () => void {
+  muteListeners = [...muteListeners, listener]
+  return () => {
+    muteListeners = muteListeners.filter(l => l !== listener)
+  }
+}
+function notifyMuteListeners(): void {
+  muteListeners.forEach(l => l())
+}
+function getMutedSnapshot(): boolean {
+  return readMutePreference(window.localStorage)
+}
+function getMutedServerSnapshot(): boolean {
+  return false
+}
 
 export type BgmLayerKey = 'zone' | 'battle'
 
@@ -63,12 +94,21 @@ export function useAudioManager(): AudioManagerValue {
 const LAYER_PRIORITY: BgmLayerKey[] = ['battle', 'zone']
 
 export function AudioManagerProvider({ children }: { children: React.ReactNode }) {
-  // Lazy init (pas un effect) : lu une seule fois, au premier rendu client —
-  // 'use client' n'exclut pas un premier rendu serveur (SSR/hydratation),
-  // donc le repli `false` évite un crash côté serveur (pas de window là-bas).
-  const [muted, setMuted] = useState(() =>
-    typeof window === 'undefined' ? false : readMutePreference(window.localStorage)
-  )
+  // useSyncExternalStore, pas useState (bug réel corrigé ici — hydration
+  // mismatch signalé en jeu, aria-label="mute" côté serveur contre
+  // "unmute" côté client) : un lazy useState init qui lit
+  // window.localStorage tournait DÈS le premier rendu CLIENT (l'hydratation
+  // elle-même) — un joueur ayant déjà coupé le son lors d'une session
+  // précédente obtenait `muted=true` au premier rendu client contre `false`
+  // côté serveur (jamais accès à localStorage), React détectait le mismatch
+  // et regénérait l'arbre. useSyncExternalStore gère ce cas nativement :
+  // React utilise `getMutedServerSnapshot` (toujours `false`) pour le tout
+  // premier rendu client aussi (accord garanti avec le HTML serveur), puis
+  // re-rend avec la vraie valeur juste après. Évite aussi le correctif
+  // « setState dans un effect » (interdit par le lint react-hooks de ce
+  // projet, cascading renders) : toggleMute écrit directement dans
+  // localStorage puis notifie les abonnés, pas de setState.
+  const muted = useSyncExternalStore(subscribeMute, getMutedSnapshot, getMutedServerSnapshot)
   const audioElRef = useRef<HTMLAudioElement | null>(null)
   const layersRef = useRef<Partial<Record<BgmLayerKey, BgmTrack | null>>>({})
   const activeUrlRef = useRef<string | null>(null)
@@ -160,11 +200,8 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
   )
 
   const toggleMute = useCallback(() => {
-    setMuted(prev => {
-      const next = !prev
-      writeMutePreference(window.localStorage, next)
-      return next
-    })
+    writeMutePreference(window.localStorage, !getMutedSnapshot())
+    notifyMuteListeners()
   }, [])
 
   const playSfx = useCallback(

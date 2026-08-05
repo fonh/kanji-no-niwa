@@ -2728,3 +2728,49 @@ test direct sur ce module). 1 PNJ dans les arbres trouvé et corrigé
 ramassage) laissé tel quel après investigation. `npm run check` vert
 (569 tests).
 optimisé), `validate:content` sans nouveau bloquant.
+
+## 2026-08-05 — CORRECTIF D'URGENCE : joueur réellement enfermé par la passe précédente + hydratation cassée
+
+Deux bugs signalés par l'utilisateur juste après le déploiement de la
+passe ci-dessus.
+
+**Joueur bloqué dans un rectangle invisible** — l'utilisateur avait
+raison de soupçonner que la correction en cours l'avait piégé. Position
+sauvegardée vérifiée en base (`user_map_state`, monde x=648 z=408 sur
+`MAP_ROUTE_29` = tuile locale (72,24)) : flood-fill sur le terrain
+généré révélait seulement **7 tuiles atteignables** (66-72,24), une
+poche totalement isolée. Cause : le patch `(73, 74, 24)` de la passe
+précédente (« 3ᵉ signalement ») murait DEUX tuiles contiguës qui étaient
+le seul lien entre cette poche et le reste de la carte — la garde de
+sécurité utilisée (`a1-traversal.test.ts`) ne teste que la joignabilité
+de quelques points nommés (guérite, PNJ, continuum de zones), tous
+restés atteignables par un tout autre chemin, donc invisible à cette
+garde. **Ce n'est pas juste un bug de donnée, c'est une faille de
+méthode** : une garde par points nommés ne prouve jamais l'absence de
+poche isolée ailleurs sur la carte. Patch reverti (flood-fill vérifié :
+1044 tuiles atteignables depuis la position du joueur après revert,
+contre 7 avant). Le vrai correctif méthodologique (garde de
+connectivité exhaustive avant tout futur patch de terrain) reste à
+implémenter — noté comme suite immédiate, pas encore fait à l'heure de
+cet écrit.
+
+**Hydration mismatch (« la musique ne se lance pas » nouvelle forme)** —
+`AudioManagerProvider.muted` utilisait un lazy `useState` qui lisait
+`window.localStorage` dès le tout premier rendu CLIENT (l'hydratation
+elle-même), pas seulement après : un joueur ayant déjà coupé le son lors
+d'une session précédente obtenait `muted=true` au premier rendu client
+contre `muted=false` côté serveur (jamais accès à localStorage) — React
+détecte le mismatch et regénère tout l'arbre (perceptible comme un
+flash/reset). Corrigé avec `useSyncExternalStore` (l'API React conçue
+pour exactement ce cas : snapshot serveur explicite `false`, snapshot
+client réel resynchronisé automatiquement après hydratation, sans le
+`setState`-dans-un-effect que le lint `react-hooks/set-state-in-effect`
+de ce projet interdit par ailleurs). `toggleMute` écrit dans
+localStorage puis notifie un petit store d'abonnés maison (un seul
+abonné en pratique, le Provider n'est monté qu'une fois). TDD : test
+rouge d'abord (`audio-manager.test.tsx`).
+
+`npm run check` vert (570 tests, +1). Fichiers touchés :
+`scripts/build/build-zone-registry.py`, `src/data/zone-registry.json`
+(Route 29 seulement), `src/lib/audio-manager.tsx`,
+`src/lib/audio-manager.test.tsx`.
