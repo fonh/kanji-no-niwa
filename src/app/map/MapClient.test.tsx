@@ -37,10 +37,15 @@ vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }) }))
 const resolveNpcSpriteMock = vi.hoisted(() =>
   vi.fn(() => null as { url: string; cols: number; rows?: number } | null)
 )
-vi.mock('@/lib/npc-sprites', () => ({
+// Mock PARTIEL : seule la résolution de sprite est simulée (elle dépend du
+// dump d'assets). `spriteFrameOffset`/`SPRITE_ROW` restent les vrais — ce sont
+// eux qui décident quelle frame de la planche s'affiche, donc les mocker
+// reviendrait à tester le mock (issue 13, « tous les PNJ nous tournent le dos »
+// est passé sous les radars exactement comme ça).
+vi.mock('@/lib/npc-sprites', async importOriginal => ({
+  ...(await importOriginal<typeof import('@/lib/npc-sprites')>()),
   resolveNpcSprite: resolveNpcSpriteMock,
   PLAYER_SPRITE_URL: '/sprites/characters/protagonist_test_ow.png',
-  SPRITE_FRAME_SIZE: 32,
 }))
 
 // Zone synthétique 8×8 tout sol : le joueur en (3,3) fait face au sud (défaut),
@@ -55,6 +60,8 @@ const zone: Zone = {
   tile_height: 8,
   scale_x: 16,
   scale_y: 16,
+  origin_px: 0,
+  origin_py: 0,
   world_origin_x: 0,
   world_origin_y: 0,
   objects: [],
@@ -668,5 +675,80 @@ describe('MapClient — fondu de warp (issue 13)', () => {
     })
     expect(container.textContent).toContain('4,1')
     expect(overlay.style.opacity).toBe('0')
+  })
+})
+
+// Issue 13 (QA humaine) — un PNJ flottait dans le noir, au coin haut-droit
+// hors de la carte de Bourg Geon : l'objet ROM `obj_T20_doctor` (le Pr. Elm)
+// garé en (31,0), une tuile de mur. 93 objets du jeu sont ainsi rangés dans un
+// mur ou hors grille — la ROM s'en sert d'emplacements de garage pour des
+// figurants qu'un script fera apparaître ailleurs.
+describe('MapClient — objets de décor garés hors carte (issue 13)', () => {
+  it('un objet posé sur une tuile de mur ne se dessine pas', () => {
+    resolveNpcSpriteMock.mockReturnValue({ url: '/sprites/overworld/gsbigman.png', cols: 8 })
+    const walled: Zone = {
+      ...zone,
+      // Colonne 7 entièrement murée : l'objet y est « garé ».
+      terrain: Array.from({ length: 64 }, (_, i) => (i % 8 === 7 ? '#' : '.')).join(''),
+      objects: [
+        {
+          id: 'obj_parked',
+          spriteId: 'SPRITE_GSBIGMAN',
+          x: 7,
+          z: 0,
+          eventFlag: 'FLAG_NOTHING',
+          facingDirection: 1,
+          movement: 0,
+          xRange: 0,
+          yRange: 0,
+        },
+      ],
+    }
+    act(() => {
+      root.render(
+        <MapClient
+          zone={walled}
+          npcs={[]}
+          trainers={[]}
+          initialPos={{ world_x: 3, world_z: 3 }}
+          initialProgress={DEFAULT_PROGRESS}
+          allZoneNames={[]}
+        />
+      )
+    })
+    expect(container.querySelector('[title="obj_parked"]')).toBeNull()
+  })
+
+  it('le même objet sur une tuile praticable se dessine normalement', () => {
+    resolveNpcSpriteMock.mockReturnValue({ url: '/sprites/overworld/gsbigman.png', cols: 8 })
+    const ok: Zone = {
+      ...zone,
+      objects: [
+        {
+          id: 'obj_ok',
+          spriteId: 'SPRITE_GSBIGMAN',
+          x: 2,
+          z: 0,
+          eventFlag: 'FLAG_NOTHING',
+          facingDirection: 1,
+          movement: 0,
+          xRange: 0,
+          yRange: 0,
+        },
+      ],
+    }
+    act(() => {
+      root.render(
+        <MapClient
+          zone={ok}
+          npcs={[]}
+          trainers={[]}
+          initialPos={{ world_x: 3, world_z: 3 }}
+          initialProgress={DEFAULT_PROGRESS}
+          allZoneNames={[]}
+        />
+      )
+    })
+    expect(container.querySelector('[title="obj_ok"]')).not.toBeNull()
   })
 })

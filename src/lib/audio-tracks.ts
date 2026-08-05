@@ -48,7 +48,15 @@ export const CONTEXT_TRACKS = {
 } as const
 
 export const SFX = {
-  menuConfirm: '/audio/sfx/game/menu-confirm.opus',
+  // Avancée de texte / confirmation : SEQ_SE_DP_SELECT extrait de la banque
+  // sonore de la ROM (scripts/build/extract-hgss-sfx.py) — un bip de 70 ms.
+  // Avant, c'était `menu-confirm.opus`, en réalité `menu_get.wav` : le jingle
+  // « objet obtenu », 1,5 SECONDE, rejoué à chaque ligne de dialogue
+  // (issue 13, « les bruits de DS ne sont pas les bons »). Le décompilé
+  // confirme le bon son : src/oaks_speech.c fait avancer son texte avec
+  // PlaySE(SEQ_SE_DP_SELECT), et list_menu_2d.c s'en sert aussi pour les
+  // menus — c'est bien le même bip pour les deux usages.
+  textAdvance: '/audio/sfx/game/text-advance.opus',
   victoryJingle: '/audio/sfx/game/victory-jingle.opus',
 } as const
 

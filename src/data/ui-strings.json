@@ -1,82 +1,318 @@
 {
-  "_comment": "Chaînes système, japonais seul, jamais de bouton X (PRD § Chaînes système). Domicile provisoire : le PRD vise content/ui-strings.json quand le pipeline contenu l'ingérera — migrer ce fichier tel quel (issue 04).",
-  "title_press_start": { "jp": "スタートを　おしてね" },
-  "sign_in_google": { "jp": "Googleで　ログイン" },
-  "avatar_prompt": { "jp": "おとこのこ？　おんなのこ？" },
-  "avatar_boy": { "jp": "おとこのこ" },
-  "avatar_girl": { "jp": "おんなのこ" },
-  "name_prompt": { "jp": "きみの　なまえは？" },
-  "confirm": { "jp": "けってい" },
-  "back": { "jp": "もどる" },
-  "save_failed": { "jp": "セーブできませんでした。　もういちど　ためしてね" },
-  "lesson_blocked": { "jp": "まだ　はやいよ。　じゅんばんに　まなぼうね。" },
-  "lesson_close_confirm": { "jp": "レッスンを　やめる？　（さいしょから　やりなおしに　なるよ）" },
-  "yes": { "jp": "はい" },
-  "no": { "jp": "いいえ" },
-  "quiz_retry": { "jp": "ざんねん・・・　もういちど！" },
-  "retry": { "jp": "もういちど" },
-  "quiz_title": { "jp": "ふくしゅうクイズ" },
-  "lesson_done": { "jp": "レッスン　おわり！" },
-  "back_to_map": { "jp": "マップへ　もどる" },
-  "mentor_name_elm": { "jp": "ウツギはかせ" },
-  "mentor_call_invite": { "jp": "おはよう！　きょうの　ふくしゅうが　まってるよ！" },
-  "mentor_call_start": { "jp": "はじめる" },
-  "mentor_call_later": { "jp": "あとで" },
-  "mentor_call_all_clear": { "jp": "きょうは　ふくしゅう　なしだよ。　そのちょうしでね！" },
-  "mentor_call_ok": { "jp": "わかった" },
-  "pokegear": { "jp": "ポケギア" },
-  "phone": { "jp": "でんわ" },
-  "srs_facet_sens": { "jp": "いみ" },
-  "srs_facet_lecture": { "jp": "よみ" },
-  "srs_prompt_sens": { "jp": "いみは？" },
-  "srs_prompt_lecture": { "jp": "よみかたは？" },
-  "srs_reveal": { "jp": "こたえを　みる" },
-  "srs_rate_again": { "jp": "もういちど" },
-  "srs_rate_hard": { "jp": "むずかしい" },
-  "srs_rate_good": { "jp": "できた" },
-  "srs_rate_easy": { "jp": "かんたん" },
-  "srs_session_done": { "jp": "きょうの　ふくしゅう　おわり！" },
-  "srs_no_cards": { "jp": "きょうは　ふくしゅうする　カードが　ないよ" },
-  "srs_more_due": { "jp": "まだ　ふくしゅうする　カードが　あるよ！" },
-  "srs_continue": { "jp": "ふくしゅうを　つづける" },
-  "srs_word_preface": { "jp": "あたらしい　ことば！" },
-  "srs_word_preface_continue": { "jp": "つづける" },
-  "srs_gate_blocked": { "jp": "さきに　きょうの　ふくしゅうを　すませよう！" },
-  "battle_prompt_sens": { "jp": "いみは？" },
-  "battle_prompt_lecture": { "jp": "よみかたは？" },
-  "battle_prompt_saisie": { "jp": "よみを　にゅうりょくしてね" },
-  "battle_prompt_composition": { "jp": "２まいで　ことばを　つくってね" },
-  "battle_answer_label": { "jp": "こたえ" },
-  "battle_defeat": { "jp": "めのまえが　まっくらに　なった・・・" },
-  "text_quiz_start": { "jp": "クイズを　はじめる" },
-  "text_quiz_title": { "jp": "どっかいクイズ" },
-  "text_close_confirm": { "jp": "とじる？　（クイズは　つづきから　できるよ）" },
-  "text_read_done": { "jp": "よみおわった！" },
-  "text_gold_done": { "jp": "パーフェクト！　きんいろに　かがやいた！" },
-  "text_scaffold_hint": { "jp": "ヒント：　ひかっている　ところを　よんでみてね" },
-  "menu_slot_zukan": { "jp": "図鑑" },
-  "menu_slot_lessons": { "jp": "レッスン" },
-  "menu_slot_bag": { "jp": "バッグ" },
-  "menu_slot_profile": { "jp": "プロフィール" },
-  "menu_slot_journal": { "jp": "ぼうけんノート" },
-  "menu_slot_settings": { "jp": "せってい" },
-  "menu_slot_disabled": { "jp": "じゅんびちゅう" },
-  "menu_close": { "jp": "とじる" },
-  "menu_lesson_next": { "jp": "つぎの　レッスン" },
-  "menu_lesson_locked": { "jp": "まだ　じゅんびが　できていないみたい" },
-  "menu_lesson_masked": { "jp": "？？？" },
-  "menu_lesson_reread": { "jp": "よみなおす" },
-  "menu_bag_tab_items": { "jp": "もちもの" },
-  "menu_bag_tab_reading": { "jp": "どくしょノート" },
-  "menu_bag_empty": { "jp": "なにも　もっていないよ" },
-  "menu_reading_holder_npc": { "jp": "もちぬし" },
-  "menu_reading_holder_place": { "jp": "ありか" },
-  "menu_reading_holder_unknown": { "jp": "？？？" },
-  "menu_reading_in_progress": { "jp": "よみかけ" },
-  "menu_journal_empty": { "jp": "いま　すすんでいる　クエストは　ないよ" },
-  "menu_journal_target": { "jp": "いきさき" },
-  "menu_kanjidex_unseen": { "jp": "べんきょうまえ" },
-  "menu_kanjidex_studied": { "jp": "べんきょうちゅう" },
-  "menu_kanjidex_mastered": { "jp": "マスター" },
-  "menu_kanjidex_filter_all": { "jp": "ぜんぶ" }
+ "_comment": "Chaînes système, japonais seul, jamais de bouton X (PRD § Chaînes système). Domicile provisoire : le PRD vise content/ui-strings.json quand le pipeline contenu l'ingérera — migrer ce fichier tel quel (issue 04).",
+ "title_press_start": {
+  "jp": "スタートを　おしてね"
+ },
+ "sign_in_google": {
+  "jp": "Googleで　ログイン"
+ },
+ "avatar_prompt": {
+  "jp": "おとこのこ？　おんなのこ？"
+ },
+ "avatar_boy": {
+  "jp": "おとこのこ"
+ },
+ "avatar_girl": {
+  "jp": "おんなのこ"
+ },
+ "name_prompt": {
+  "jp": "きみの　なまえは？"
+ },
+ "confirm": {
+  "jp": "けってい"
+ },
+ "back": {
+  "jp": "もどる"
+ },
+ "save_failed": {
+  "jp": "セーブできませんでした。　もういちど　ためしてね"
+ },
+ "lesson_blocked": {
+  "jp": "まだ　はやいよ。　じゅんばんに　まなぼうね。"
+ },
+ "lesson_close_confirm": {
+  "jp": "レッスンを　やめる？　（さいしょから　やりなおしに　なるよ）"
+ },
+ "yes": {
+  "jp": "はい"
+ },
+ "no": {
+  "jp": "いいえ"
+ },
+ "quiz_retry": {
+  "jp": "ざんねん・・・　もういちど！"
+ },
+ "retry": {
+  "jp": "もういちど"
+ },
+ "quiz_title": {
+  "jp": "ふくしゅうクイズ"
+ },
+ "lesson_done": {
+  "jp": "レッスン　おわり！"
+ },
+ "back_to_map": {
+  "jp": "マップへ　もどる"
+ },
+ "mentor_name_elm": {
+  "jp": "ウツギはかせ"
+ },
+ "mentor_call_invite": {
+  "jp": "おはよう！　きょうの　ふくしゅうが　まってるよ！"
+ },
+ "mentor_call_start": {
+  "jp": "はじめる"
+ },
+ "mentor_call_later": {
+  "jp": "あとで"
+ },
+ "mentor_call_all_clear": {
+  "jp": "きょうは　ふくしゅう　なしだよ。　そのちょうしでね！"
+ },
+ "mentor_call_ok": {
+  "jp": "わかった"
+ },
+ "pokegear": {
+  "jp": "ポケギア"
+ },
+ "phone": {
+  "jp": "でんわ"
+ },
+ "srs_facet_sens": {
+  "jp": "いみ"
+ },
+ "srs_facet_lecture": {
+  "jp": "よみ"
+ },
+ "srs_prompt_sens": {
+  "jp": "いみは？"
+ },
+ "srs_prompt_lecture": {
+  "jp": "よみかたは？"
+ },
+ "srs_reveal": {
+  "jp": "こたえを　みる"
+ },
+ "srs_rate_again": {
+  "jp": "もういちど"
+ },
+ "srs_rate_hard": {
+  "jp": "むずかしい"
+ },
+ "srs_rate_good": {
+  "jp": "できた"
+ },
+ "srs_rate_easy": {
+  "jp": "かんたん"
+ },
+ "srs_session_done": {
+  "jp": "きょうの　ふくしゅう　おわり！"
+ },
+ "srs_no_cards": {
+  "jp": "きょうは　ふくしゅうする　カードが　ないよ"
+ },
+ "srs_more_due": {
+  "jp": "まだ　ふくしゅうする　カードが　あるよ！"
+ },
+ "srs_continue": {
+  "jp": "ふくしゅうを　つづける"
+ },
+ "srs_word_preface": {
+  "jp": "あたらしい　ことば！"
+ },
+ "srs_word_preface_continue": {
+  "jp": "つづける"
+ },
+ "srs_gate_blocked": {
+  "jp": "さきに　きょうの　ふくしゅうを　すませよう！"
+ },
+ "battle_prompt_sens": {
+  "jp": "いみは？"
+ },
+ "battle_prompt_lecture": {
+  "jp": "よみかたは？"
+ },
+ "battle_prompt_saisie": {
+  "jp": "よみを　にゅうりょくしてね"
+ },
+ "battle_prompt_composition": {
+  "jp": "２まいで　ことばを　つくってね"
+ },
+ "battle_answer_label": {
+  "jp": "こたえ"
+ },
+ "battle_defeat": {
+  "jp": "めのまえが　まっくらに　なった・・・"
+ },
+ "text_quiz_start": {
+  "jp": "クイズを　はじめる"
+ },
+ "text_quiz_title": {
+  "jp": "どっかいクイズ"
+ },
+ "text_close_confirm": {
+  "jp": "とじる？　（クイズは　つづきから　できるよ）"
+ },
+ "text_read_done": {
+  "jp": "よみおわった！"
+ },
+ "text_gold_done": {
+  "jp": "パーフェクト！　きんいろに　かがやいた！"
+ },
+ "text_scaffold_hint": {
+  "jp": "ヒント：　ひかっている　ところを　よんでみてね"
+ },
+ "menu_slot_zukan": {
+  "jp": "図鑑"
+ },
+ "menu_slot_lessons": {
+  "jp": "レッスン"
+ },
+ "menu_slot_bag": {
+  "jp": "バッグ"
+ },
+ "menu_slot_profile": {
+  "jp": "プロフィール"
+ },
+ "menu_slot_journal": {
+  "jp": "ぼうけんノート"
+ },
+ "menu_slot_settings": {
+  "jp": "せってい"
+ },
+ "menu_slot_disabled": {
+  "jp": "じゅんびちゅう"
+ },
+ "menu_close": {
+  "jp": "とじる"
+ },
+ "menu_lesson_next": {
+  "jp": "つぎの　レッスン"
+ },
+ "menu_lesson_locked": {
+  "jp": "まだ　じゅんびが　できていないみたい"
+ },
+ "menu_lesson_masked": {
+  "jp": "？？？"
+ },
+ "menu_lesson_reread": {
+  "jp": "よみなおす"
+ },
+ "menu_bag_tab_items": {
+  "jp": "もちもの"
+ },
+ "menu_bag_tab_reading": {
+  "jp": "どくしょノート"
+ },
+ "menu_bag_empty": {
+  "jp": "なにも　もっていないよ"
+ },
+ "menu_reading_holder_npc": {
+  "jp": "もちぬし"
+ },
+ "menu_reading_holder_place": {
+  "jp": "ありか"
+ },
+ "menu_reading_holder_unknown": {
+  "jp": "？？？"
+ },
+ "menu_reading_in_progress": {
+  "jp": "よみかけ"
+ },
+ "menu_journal_empty": {
+  "jp": "いま　すすんでいる　クエストは　ないよ"
+ },
+ "menu_journal_target": {
+  "jp": "いきさき"
+ },
+ "menu_kanjidex_unseen": {
+  "jp": "べんきょうまえ"
+ },
+ "menu_kanjidex_studied": {
+  "jp": "べんきょうちゅう"
+ },
+ "menu_kanjidex_mastered": {
+  "jp": "マスター"
+ },
+ "menu_kanjidex_filter_all": {
+  "jp": "ぜんぶ"
+ },
+ "settings_title": {
+  "jp": "せってい"
+ },
+ "settings_text_speed": {
+  "jp": "もじの　はやさ"
+ },
+ "settings_speed_slow": {
+  "jp": "おそい"
+ },
+ "settings_speed_normal": {
+  "jp": "ふつう"
+ },
+ "settings_speed_fast": {
+  "jp": "はやい"
+ },
+ "settings_speed_instant": {
+  "jp": "すぐに"
+ },
+ "settings_text_sound": {
+  "jp": "テキストおん"
+ },
+ "settings_bgm": {
+  "jp": "おんがく"
+ },
+ "settings_sfx": {
+  "jp": "こうかおん"
+ },
+ "settings_readings": {
+  "jp": "よみがな"
+ },
+ "settings_english": {
+  "jp": "えいご"
+ },
+ "settings_on": {
+  "jp": "オン"
+ },
+ "settings_off": {
+  "jp": "オフ"
+ },
+ "settings_vol_0": {
+  "jp": "なし"
+ },
+ "settings_vol_1": {
+  "jp": "ちいさく"
+ },
+ "settings_vol_2": {
+  "jp": "ふつう"
+ },
+ "settings_vol_3": {
+  "jp": "おおきく"
+ },
+ "settings_hint": {
+  "jp": "↑↓　えらぶ　　←→　かえる"
+ },
+ "settings_readings_hint": {
+  "jp": "オンに　すると　よみがなが　さいしょから　みえるよ"
+ },
+ "settings_reset": {
+  "jp": "データを　けす"
+ },
+ "settings_reset_confirm": {
+  "jp": "ぼうけんの　きろくを　ぜんぶ　けすよ。　もどせないけど　いい？"
+ },
+ "settings_reset_yes": {
+  "jp": "けす"
+ },
+ "settings_reset_no": {
+  "jp": "やめる"
+ },
+ "settings_reset_doing": {
+  "jp": "けしています…"
+ },
+ "settings_reset_failed": {
+  "jp": "けせなかった。　もういちど　ためしてね"
+ },
+ "battle_no_kanji": {
+  "jp": "…でも　きみ、まだ　なにも　まなんで　いないね。　レッスンを　うけてから　おいで。"
+ }
 }

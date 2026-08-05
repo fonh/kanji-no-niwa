@@ -41,8 +41,17 @@ export interface Zone {
   screenshot_h: number
   tile_width: number
   tile_height: number
+  // Placement de la grille de collision sur le screenshot, MESURÉ image par
+  // image (scripts/build/fit-map-alignment.py), jamais déduit des dimensions :
+  // scale_* = pas d'une tuile en pixels, origin_p* = pixel du coin haut-gauche
+  // de la tuile (0,0). Les captures HGSS sont des rendus à caméra oblique
+  // (~16 px de large pour ~12 px de haut par tuile) recadrés à la main avec
+  // une marge variable de décor hors carte — d'où deux échelles distinctes ET
+  // une origine non nulle. Toujours passer par `worldToPixel`.
   scale_x: number
   scale_y: number
+  origin_px: number
+  origin_py: number
   world_origin_x: number
   world_origin_y: number
   objects: ZoneObject[]
@@ -84,6 +93,21 @@ export interface ZoneBounds {
 // Pure geometry helpers with no data dependency — safe to import from both
 // server code and 'use client' components (unlike src/lib/zones.ts, which
 // pulls in the multi-MB zone registry JSON at module scope).
+
+/** Pixel du coin haut-gauche d'une tuile monde dans le screenshot de la zone.
+ * Source unique du placement écran ↔ grille : tout ce qui se dessine sur la
+ * carte (avatar, PNJ, suiveur, marqueurs) doit passer par ici, sinon les
+ * calques divergent au premier changement d'alignement. */
+export function worldToPixel(
+  zone: Zone,
+  worldX: number,
+  worldZ: number
+): { x: number; y: number } {
+  return {
+    x: zone.origin_px + (worldX - zone.world_origin_x) * zone.scale_x,
+    y: zone.origin_py + (worldZ - zone.world_origin_y) * zone.scale_y,
+  }
+}
 
 /** Terrain char at a world tile, or null when outside the zone. */
 export function terrainAt(zone: Zone, worldX: number, worldZ: number): string | null {

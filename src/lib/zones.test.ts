@@ -29,13 +29,12 @@ describe('getZoneNames — libellés jp (PRD § Noms de lieux : jamais le franç
   })
 })
 
-describe('screenshots mal attribués (jalon 1) → repli CollisionCanvas', () => {
-  it('un intérieur qui réutilise l’art d’une autre zone est servi sans screenshot', () => {
-    // La maison du joueur (1F/2F) pointe « Player House exterior », la maison
-    // du rival et la maison sud-ouest pointent l'art de la VILLE entière, la
-    // maison de Mr. Pokémon pointe l'art de la maison du joueur (grille de
-    // collision DIFFÉRENTE, vérifié) — l'art recyclé ment sur les murs, la
-    // grille CollisionCanvas ne ment pas.
+describe('captures d’intérieur : c’était l’alignement, pas l’image (issue 13)', () => {
+  it('les 15 intérieurs autrefois servis sans capture ont retrouvé leur décor', () => {
+    // Ils étaient blacklistés à la main au motif que « l'art recyclé ment sur
+    // les murs ». En réalité la grille de collision était mal posée sur
+    // l'image (ADR-0006) ; une fois l'alignement mesuré, ces captures se
+    // calent proprement et il n'y a plus de raison de les écarter.
     for (const name of [
       'MAP_NEW_BARK_PLAYER_HOUSE_1F',
       'MAP_NEW_BARK_PLAYER_HOUSE_2F',
@@ -53,14 +52,8 @@ describe('screenshots mal attribués (jalon 1) → repli CollisionCanvas', () =>
       'MAP_ROUTE_30_APRICORN_HOUSE',
       'MAP_ROUTE_30_MR_POKEMON_HOUSE',
     ]) {
-      expect(getZoneByName(name)!.screenshot, name).toBe('')
-      expect(byName.get(name)!.screenshot, name).toBe('')
+      expect(getZoneByName(name)!.screenshot, name).not.toBe('')
+      expect(byName.get(name)!.screenshot, name).not.toBe('')
     }
-  })
-
-  it('les screenshots corrects restent servis', () => {
-    expect(getZoneByName('MAP_NEW_BARK')!.screenshot).toContain('New Bark Town')
-    expect(getZoneByName('MAP_NEW_BARK_ELMS_LAB_1F')!.screenshot).toContain('Elms lab 1F')
-    expect(getZoneByName('MAP_ROUTE_30')!.screenshot).toContain('Route 30')
   })
 })

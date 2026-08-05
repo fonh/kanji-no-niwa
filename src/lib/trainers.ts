@@ -3,6 +3,13 @@ import type { Zone } from '@/lib/zone-geometry'
 interface RawTrainer {
   trainer_id: string
   zone_id: string
+  /** MAP_* exact quand la position vient de l'objet ROM (issue 13). Il prime
+   * sur `zone_id` : un dresseur d'arène porte le zone_id de la ville côté
+   * contenu mais se tient dans MAP_*_GYM. */
+  map_zone?: string
+  /** SPRITE_* de l'objet ROM correspondant — sans lui le dresseur était
+   * dessiné comme un carré vide, donc invisible (issue 13). */
+  sprite_id?: string
   name: string
   tile_x: number
   tile_y: number
@@ -16,6 +23,7 @@ interface RawTrainer {
 export interface ZoneTrainer {
   trainer_id: string
   zone_id: string
+  sprite_id?: string
   name: string
   world_x: number
   world_z: number
@@ -48,13 +56,13 @@ function zoneIdForMapName(mapName: string): string | undefined {
 
 export function getTrainersForZone(zone: Zone): ZoneTrainer[] {
   const zoneId = zoneIdForMapName(zone.name)
-  if (!zoneId) return []
 
   return rawTrainers
-    .filter(t => t.zone_id === zoneId)
+    .filter(t => (t.map_zone ? t.map_zone === zone.name : t.zone_id === zoneId))
     .map(t => ({
       trainer_id: t.trainer_id,
       zone_id: t.zone_id,
+      sprite_id: t.sprite_id,
       name: t.name,
       world_x: zone.world_origin_x + t.tile_x,
       world_z: zone.world_origin_y + t.tile_y,

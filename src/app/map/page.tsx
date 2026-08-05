@@ -54,7 +54,7 @@ export default async function MapPage({ searchParams }: Props) {
         initialProgress={parseProgress(userRow?.map_progress)}
         allZoneNames={getZoneNames()}
         playerSpriteUrl={isAvatar(userRow.avatar) ? avatarOverworldSprite(userRow.avatar) : undefined}
-        followerSpriteUrl={followerSpriteForCompanion(playerState.companion_id)}
+        followerSprite={followerSpriteForCompanion(playerState.companion_id)}
       />
       {/* Boucle quotidienne (issue 06) : appel du mentor au premier lancement
           du jour + badge Pokégear — overlay dédié, MapClient inchangé */}

@@ -5,13 +5,28 @@
 // so the alias was never actually exercised). `src/lib/zones.ts` already
 // requires its own JSON data file this same relative way — same convention.
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const overworldSprites = require('../data/overworld-sprite-labels.json') as { label: string; cols: number }[]
+const overworldSprites = require('../data/overworld-sprite-labels.json') as OverworldSheet[]
 
-// Overworld sprite sheets are 32x32 tiles, first row = facing down (idle) —
-// the only direction these ROM-extracted sheets reliably have more than one
-// frame for (see MapClient comments). Column count varies per sprite (most
-// are 8, some are single-frame icons), so it's carried alongside the URL
-// instead of assumed.
+import type { Direction } from '@/lib/zone-geometry'
+
+/** Rangée par direction des planches converties 4-rangées (HNS_PEOPLE) —
+ * ces planches-là, et elles seules, sont organisées une direction par rangée. */
+export const SPRITE_ROW: Record<Direction, number> = { south: 0, north: 1, west: 2, east: 3 }
+
+interface OverworldSheet {
+  label: string
+  cols: number
+  rows?: number
+  /** Index de frame par direction, quand la disposition de la planche est
+   * décodée (scripts/build/tag-overworld-sprite-directions.py). */
+  dirs?: Record<Direction, number>
+}
+
+// Les planches overworld sont des grilles de frames 32×32. La frame (0,0)
+// n'est PAS le personnage de face : c'est son DOS, sur toutes les planches
+// ROM vérifiées — d'où « tous les PNJ nous tournent le dos » (issue 13). Les
+// 4 directions existent bel et bien, à des index décodés hors ligne et
+// stockés dans overworld-sprite-labels.json (`dirs`).
 export const SPRITE_FRAME_SIZE = 32
 // Version query bump — voir onboarding.ts SPRITE_ASSET_VERSION (même fichier,
 // contenu différent depuis la refonte 4-directions de l'issue 13 : sans ce
@@ -22,18 +37,49 @@ export const PLAYER_SPRITE_COLS = 8
 export interface ResolvedSprite {
   url: string
   cols: number
-  /** Nombre de rangées fiables (sud/nord/ouest/est, SPRITE_ROW), 1 par défaut
-   * — la quasi-totalité des planches ROM-extraites (voir commentaire ci-dessus)
-   * n'ont qu'une rangée exploitable. `4` seulement pour les planches où les 4
-   * rangées ont été vérifiées correctes une par une (voir HNS_PEOPLE). */
+  /** Nombre de rangées de la planche. `4` marque les planches converties
+   * (HNS_PEOPLE) où une rangée = une direction, col 0 (voir SPRITE_ROW). */
   rows?: number
+  /** Index de frame par direction pour les planches ROM dont la disposition
+   * est décodée. Absent = planche non orientable, on reste sur la frame 0. */
+  dirs?: Record<Direction, number>
 }
 
 const spriteByLabel = new Map(overworldSprites.map(s => [s.label, s]))
 
 function fromLabel(label: string): ResolvedSprite | null {
   const entry = spriteByLabel.get(label)
-  return entry ? { url: `/sprites/overworld/${label}.png`, cols: entry.cols } : null
+  return entry
+    ? { url: `/sprites/overworld/${label}.png`, cols: entry.cols, dirs: entry.dirs }
+    : null
+}
+
+/** Décalage `background-position` de la frame à afficher pour une direction.
+ *
+ * Trois cas, du plus fidèle au plus dégradé :
+ *  - planche convertie 4 rangées (HNS_PEOPLE) : une rangée par direction ;
+ *  - planche ROM décodée (`dirs`) : un index de frame par direction, converti
+ *    en (colonne, rangée) avec le nombre de colonnes de la planche ;
+ *  - planche non décodée : frame 0, faute de mieux — c'est un dos, mais on ne
+ *    sait pas où est la face, et inventer serait pire.
+ */
+export function spriteFrameOffset(
+  sprite: ResolvedSprite,
+  direction: Direction
+): { x: number; y: number } {
+  // `+ 0` normalise le -0 de JavaScript (0 * -32), qui traverse `toEqual`
+  // et rendrait `background-position: -0px` — inoffensif à l'écran, mais
+  // c'est une valeur en trop dans les comparaisons.
+  if (sprite.rows === 4) {
+    return { x: 0, y: -SPRITE_ROW[direction] * SPRITE_FRAME_SIZE + 0 }
+  }
+  const frame = sprite.dirs?.[direction]
+  if (frame === undefined) return { x: 0, y: 0 }
+  const cols = Math.max(1, sprite.cols)
+  return {
+    x: -(frame % cols) * SPRITE_FRAME_SIZE + 0,
+    y: -Math.floor(frame / cols) * SPRITE_FRAME_SIZE + 0,
+  }
 }
 
 /** A handful of ROM-extracted overworld sheets resolve to a real file that's
@@ -65,15 +111,18 @@ function fromBrokenSpriteFallback(spriteId: string): ResolvedSprite | null {
  * commercial), via
  * `scripts/build/convert-hns-people-sprite.py` — format standard Gen 3
  * (9 frames 16×32 : sud/nord/ouest fixes + marche, est en miroir),
- * recentré sur la géométrie 32×32 de ce moteur. Contrairement au reste des
- * planches ROM (une seule rangée fiable), celles-ci ont les 4 rangées
- * vérifiées une par une — `rows: 4` l'indique au renderer (MapClient) pour
- * qu'il utilise réellement `facingDirection`/`facing` au lieu de rester
- * figé sur la rangée 0. Style Gen 3/GBA, pas HGSS/DS natif — écart
- * assumé : mieux vaut une direction correcte dans un style un peu
- * différent qu'une planche DS qui tourne le dos en permanence (issue 13).
- * Étendre cette liste au cas par cas, un match vérifié à la fois — ne pas
- * mapper à l'aveugle les ~120 spriteId ROM restants. */
+ * recentré sur la géométrie 32×32 de ce moteur. `rows: 4` = une direction
+ * par rangée, col 0 (voir SPRITE_ROW).
+ *
+ * À RÉSORBER : ces planches n'ont été importées que parce qu'on croyait les
+ * planches ROM limitées à une seule rangée exploitable. C'était faux — elles
+ * ont bien les 4 directions, à des index de frame décodés depuis
+ * (`dirs`, scripts/build/tag-overworld-sprite-directions.py). Ces 4 sprites
+ * restent donc les seuls du jeu en style Gen 3/GBA au milieu de sprites DS,
+ * pour un bénéfice devenu nul, avec en prime une licence non vérifiée. Les
+ * repasser sur leur planche ROM native est une suppression de lignes, pas un
+ * chantier — laissé de côté ici pour ne pas mélanger avec la correction
+ * d'orientation elle-même. */
 const HNS_PEOPLE: Record<string, string> = {
   SPRITE_DOCTOR: 'elm', // Pr. Elm — Bourg Geon
   SPRITE_POLICEMAN: 'policeman', // Bourg Geon (labo + PNJ curaté en ville)
@@ -88,14 +137,15 @@ function fromHnsPeople(spriteId: string): ResolvedSprite | null {
 }
 
 /** Planche overworld du compagnon choisi (issue 10) — le suivi derrière le
- * joueur. Le dump contient une planche `pikachu` (8 colonnes × 32 px, rangée
- * 0 = face sud animée, comme les autres planches ROM) ; un compagnon sans
- * planche exploitable rend null et le suivi n'apparaît pas (noté pour la
- * passe assets — content/companions.json vise public/sprites/followers/,
- * répertoire encore inexistant : la planche overworld extraite fait foi). */
-export function followerSpriteForCompanion(companionId: string | null): string | null {
+ * joueur. Rend la planche résolue (pas juste son URL) pour que le suiveur
+ * puisse s'orienter comme les PNJ : ces planches ont bien 4 directions
+ * (issue 13, cf. `dirs`). Un compagnon sans planche exploitable rend null et
+ * le suivi n'apparaît pas (noté pour la passe assets — content/companions.json
+ * vise public/sprites/followers/, répertoire encore inexistant : la planche
+ * overworld extraite fait foi). */
+export function followerSpriteForCompanion(companionId: string | null): ResolvedSprite | null {
   if (!companionId) return null
-  return fromLabel(companionId)?.url ?? null
+  return fromLabel(companionId)
 }
 
 /** SPRITE_VAR_n is a reused "whichever character the story needs here" slot

@@ -31,6 +31,8 @@ import {
 import type { DialoguePageEntry } from '@/lib/content'
 import { useAudioManager } from '@/lib/audio-manager'
 import { SFX } from '@/lib/audio-tracks'
+import { useSettings } from '@/lib/use-settings'
+import { TEXT_SPEED_MS } from '@/lib/settings'
 
 export interface DialogueBoxHandle {
   /** Bouton A : complète la frappe, sinon avance (inerte sur une page à choix). */
@@ -50,8 +52,8 @@ interface DialogueBoxProps {
   onClose: () => void
   /** Persistance du companion_choice (server action chooseCompanion). */
   onChooseCompanion?: (companionId: string) => void | Promise<void>
-  /** Vitesse machine à écrire (ms/caractère) ; 0 = instantané. Le réglage
-   * おそい/ふつう/はやい attendra l'écran Settings. */
+  /** Vitesse machine à écrire (ms/caractère) ; 0 = instantané. Non fourni :
+   * le réglage もじの はやさ de l'écran せってい fait foi. */
   typewriterMsPerChar?: number
   ref?: Ref<DialogueBoxHandle>
 }
@@ -77,16 +79,16 @@ interface ActiveReaction {
   resumeIndex: number
 }
 
-const DEFAULT_TYPEWRITER_MS = 28
-
 export default function DialogueBox({
   name,
   pages,
   onClose,
   onChooseCompanion,
-  typewriterMsPerChar = DEFAULT_TYPEWRITER_MS,
+  typewriterMsPerChar,
   ref,
 }: DialogueBoxProps) {
+  const settings = useSettings()
+  const msPerChar = typewriterMsPerChar ?? TEXT_SPEED_MS[settings.textSpeed]
   const routed = useMemo(() => routeDialoguePages(pages), [pages])
   const [pageIndex, setPageIndex] = useState(0)
   const [reaction, setReaction] = useState<ActiveReaction | null>(null)
@@ -181,7 +183,7 @@ export default function DialogueBox({
       line={line}
       inReaction={reaction !== null}
       counter={`${pageIndex + 1}/${routed.length}`}
-      typewriterMsPerChar={typewriterMsPerChar}
+      typewriterMsPerChar={msPerChar}
       onAdvance={advance}
       onChooseCompanion={chooseCompanion}
       onChooseResponse={chooseResponse}
@@ -220,8 +222,12 @@ function DialogueLineView({
   onChooseConversation,
   ref,
 }: DialogueLineViewProps) {
-  const [showEn, setShowEn] = useState(false)
-  const [showReadings, setShowReadings] = useState(false)
+  // X/Y partent de la préférence de l'écran せってい, et restent basculables
+  // à la volée sur la ligne en cours (le réglage donne le défaut, pas une
+  // contrainte).
+  const settings = useSettings()
+  const [showEn, setShowEn] = useState(settings.showEnglish)
+  const [showReadings, setShowReadings] = useState(settings.showReadings)
   // Mélange obligatoire des choix affichés (engine-contract § 8) : le contenu
   // liste la réponse naturelle en premier — l'ordre stocké ne doit jamais
   // transparaître. Tiré une fois par ligne (remontage par key).
@@ -249,10 +255,12 @@ function DialogueLineView({
 
   const { playSfx } = useAudioManager()
   const pressA = useCallback(() => {
-    playSfx(SFX.menuConfirm)
+    // テキストおん : le bip d'avancée est le son le plus répété du jeu, il se
+    // coupe seul sans toucher au reste des bruitages.
+    if (settings.textSound) playSfx(SFX.textAdvance)
     if (!typingDone) setTypedCount(Number.MAX_SAFE_INTEGER)
     else onAdvance()
-  }, [typingDone, onAdvance, playSfx])
+  }, [typingDone, onAdvance, playSfx, settings.textSound])
 
   const pressX = useCallback(() => setShowEn(v => !v), [])
   const pressY = useCallback(() => setShowReadings(v => !v), [])
@@ -269,7 +277,7 @@ function DialogueLineView({
       disabled={disabled}
       onClick={e => {
         e.stopPropagation()
-        playSfx(SFX.menuConfirm)
+        if (settings.textSound) playSfx(SFX.textAdvance)
         onPick()
       }}
       className={`block w-full text-left px-3 py-2 rounded border-2 text-base leading-relaxed ${

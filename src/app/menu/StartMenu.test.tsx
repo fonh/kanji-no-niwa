@@ -3,6 +3,7 @@
 // fermeture directe où qu'on soit, SELECT inerte, et le rendu des 4 écrans
 // (Carnet 4 états, Journal de quêtes + X, Sac + どくしょノート, Kanjidex).
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
+import { getSettingsSnapshot, resetSettingsCache } from '@/lib/settings'
 import { act } from 'react'
 import { createRoot, type Root } from 'react-dom/client'
 import type { StartMenuData } from './actions'
@@ -14,6 +15,11 @@ const pushMock = vi.hoisted(() => vi.fn())
 vi.mock('next/navigation', () => ({
   useRouter: () => ({ push: pushMock }),
 }))
+// L'effacement de partie est une server action : elle tire next-auth, que le
+// projet jsdom de vitest ne sait pas résoudre. Seul le parcours d'UI est testé
+// ici (le contenu de l'action a son propre test, reset-actions.test.ts).
+const resetMock = vi.hoisted(() => vi.fn(async () => ({ ok: true })))
+vi.mock('./reset-actions', () => ({ resetPlayerData: resetMock }))
 
 const menuData = vi.hoisted(() => ({ current: null as unknown as StartMenuData }))
 const getStartMenuDataMock = vi.hoisted(() => vi.fn(async () => menuData.current))
@@ -117,6 +123,7 @@ beforeEach(() => {
   pushMock.mockClear()
   getStartMenuDataMock.mockClear()
   menuData.current = fixture()
+  resetSettingsCache()
 })
 
 afterEach(() => {
@@ -148,18 +155,52 @@ async function openMenu() {
 }
 
 describe('ouverture / fermeture', () => {
-  it('START ouvre le menu : 6 slots en VO, プロフィール et せってい grisés', async () => {
+  it('START ouvre le menu : 6 slots en VO, seul プロフィール reste grisé', async () => {
     await openMenu()
     for (const label of ['図鑑', 'レッスン', 'バッグ', 'プロフィール', 'ぼうけんノート', 'せってい']) {
       expect(container.textContent).toContain(label)
     }
     const profile = buttonByText('プロフィール')!
-    const settings = buttonByText('せってい')!
     expect(profile.getAttribute('aria-disabled')).toBe('true')
-    expect(settings.getAttribute('aria-disabled')).toBe('true')
+    expect(buttonByText('せってい')!.getAttribute('aria-disabled')).toBe('false')
     // A sur un slot grisé : inerte
     click(profile)
     expect(container.querySelector('[data-testid="menu-root"]')).not.toBeNull()
+  })
+
+  // Issue 13 — l'écran せってい était un slot grisé « じゅんびちゅう ».
+  it('せってい ouvre un écran de réglages qui persiste ce qu’on y change', async () => {
+    await openMenu()
+    click(buttonByText('せってい'))
+    const screen = container.querySelector('[data-testid="screen-settings"]')
+    expect(screen).not.toBeNull()
+    // Vitesse d'écriture : ふつう par défaut, un clic passe au cran suivant.
+    const speed = container.querySelector('[data-testid="setting-textSpeed"]')!
+    expect(speed.textContent).toContain('ふつう')
+    click(speed)
+    expect(
+      container.querySelector('[data-testid="setting-textSpeed"]')!.textContent
+    ).toContain('はやい')
+    expect(getSettingsSnapshot().textSpeed).toBe('fast')
+  })
+
+  // Issue 13 — « un bouton reset qui supprime ma partie ».
+  it('l’effacement de partie demande confirmation avant d’effacer quoi que ce soit', async () => {
+    await openMenu()
+    click(buttonByText('せってい'))
+    // Le bouton seul n'efface rien.
+    click(container.querySelector('[data-testid="reset-open"]')!)
+    expect(resetMock).not.toHaveBeenCalled()
+    expect(container.querySelector('[data-testid="reset-confirm"]')).not.toBeNull()
+    // On peut renoncer.
+    click(container.querySelector('[data-testid="reset-no"]')!)
+    expect(resetMock).not.toHaveBeenCalled()
+    expect(container.querySelector('[data-testid="reset-confirm"]')).toBeNull()
+    // C'est la confirmation qui efface.
+    click(container.querySelector('[data-testid="reset-open"]')!)
+    click(container.querySelector('[data-testid="reset-yes"]')!)
+    await flush()
+    expect(resetMock).toHaveBeenCalledTimes(1)
   })
 
   it('SELECT est présent mais inerte (le Pokégear complet est hors jalon)', async () => {

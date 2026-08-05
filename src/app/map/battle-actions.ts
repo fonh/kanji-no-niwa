@@ -18,6 +18,7 @@
 // persisté : fermer l'app = fuite.
 
 import { requireUserId } from '@/lib/auth'
+import uiStrings from '@/data/ui-strings.json'
 import { sql } from '@/lib/db'
 import { applyEffects } from '@/lib/condition-effect'
 import {
@@ -121,12 +122,22 @@ export async function engageTrainer(trainerId: string): Promise<TrainerEngagemen
 
   const studiedItems = studiedKanjiInOrder(state.completed_lessons, getLessonsForZone)
   if (studiedItems.length === 0) {
-    // Inatteignable sur le chemin critique (le premier dresseur exige déjà
-    // des leçons) — filet : l'accroche seule, pas de combat impossible.
+    // Un combat se joue sur les kanji étudiés : sans une seule leçon finie, il
+    // n'y a rien à demander au joueur. On sert donc l'accroche du dresseur —
+    // mais SUIVIE d'une ligne qui dit pourquoi il ne se passe rien.
+    //
+    // Ce chemin était annoté « inatteignable sur le chemin critique (le
+    // premier dresseur exige déjà des leçons) ». Il l'est parfaitement : rien
+    // sur la carte n'oblige à faire une leçon avant d'arriver sur Route 30
+    // (issue 13, § gating). Le joueur croisait donc des dresseurs qui
+    // lançaient une phrase et... rien. « Les dresseurs ne font rien. »
     return {
       kind: 'dialogue',
       name: nameJp,
-      pages: dialogueStatePages(trainer.dialogue_ref, 'battle_intro'),
+      pages: [
+        ...dialogueStatePages(trainer.dialogue_ref, 'battle_intro'),
+        { jp: uiStrings.battle_no_kanji.jp },
+      ],
     }
   }
 

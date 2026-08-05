@@ -107,7 +107,7 @@ describe('contextes universels', () => {
   it('CONTEXT_TRACKS et SFX exposent des chemins servis sous /audio', () => {
     expect(CONTEXT_TRACKS.pokemonCenter).toMatch(/^\/audio\//)
     expect(CONTEXT_TRACKS.battleTrainer).toMatch(/^\/audio\//)
-    expect(SFX.menuConfirm).toMatch(/^\/audio\//)
+    expect(SFX.textAdvance).toMatch(/^\/audio\//)
     expect(SFX.victoryJingle).toMatch(/^\/audio\//)
   })
 })

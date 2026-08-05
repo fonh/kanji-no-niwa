@@ -3064,3 +3064,350 @@ comparer, au moment même du blocage, une capture d'écran ET la position
 DB fraîche, pour établir si le rebond correspond à un mur réel (comme
 ici) ou à un faux mur (ce qui pointerait enfin vers un vrai bug, de
 données ou de code).
+
+---
+
+## 2026-08-05 (suite 4) — CAUSE RACINE de toute la série « arbres/obstacles » : la grille de collision n'était pas posée au bon endroit sur l'image
+
+**Signalement** : « j'ai l'impression que les arbres sont mal gérés de manière
+générale, pareil pour les obstacles » — trois captures : (1) impossible d'aller
+à gauche, rebond sans obstacle visible ; (2) le joueur passe par-dessus les
+arbres ; (3) un passage complètement fermé. Conclusion de l'utilisateur : « il
+faut revoir comment les maps sont créées ». Elle était juste.
+
+### Ce qui n'allait pas
+
+`build-zone-registry.py` posait la grille ROM sur la capture avec
+
+    scale_x = screenshot_w / tile_width
+    scale_y = screenshot_h / tile_height
+
+c'est-à-dire « la capture couvre exactement la grille, sans marge, tuile (0,0)
+au coin haut-gauche ». Les deux moitiés de l'hypothèse sont fausses :
+
+- les cartes HGSS publiées sont des rendus à **caméra oblique** — une tuile
+  fait ~16 px de large pour ~12 px de haut. La hauteur de l'image ne porte
+  aucune information sur le pas vertical ;
+- elles sont **recadrées à la main**, avec une marge variable de décor hors
+  carte (le border block dessiné autour de la zone).
+
+Mesuré sur Route 29 : pas réel **(16.00, 12.06)** px/tuile, origine **(23, 80)**.
+La formule donnait (16.47, 17.44) et (0, 0) → la grille était étirée pour
+remplir l'image et dérivait jusqu'à **~20 tuiles** en bas de carte. C'est
+l'explication unique et complète des trois captures, et de tous les
+signalements précédents : arbres traversables, murs invisibles, passages
+fermés, PNJ dans la canopée, « je rebondis ».
+
+Méthode de diagnostic (reproductible) : superposer la grille brute à l'image et
+chercher (pas, origine) maximisant la séparabilité couleur entre tuiles murées
+et tuiles praticables. Le score double d'un coup (Route 29 : 0.83 → 1.91 ;
+Route 30 : 0.71 → 1.71), et sur le rendu superposé chaque arbre, bâtiment et
+falaise tombe exactement sous une tuile rouge, chaque chemin, herbe et bande de
+sable reste libre.
+
+### Ce qui a été fait
+
+- **Nouveau** `scripts/build/fit-map-alignment.py` : recale chaque zone et écrit
+  `scripts/sources/map-alignment.json` (mis en cache par nom+taille de fichier
+  image ; à relancer quand une capture change).
+- `build-zone-registry.py` lit ce fichier ; le registre porte désormais
+  `origin_px`/`origin_py` en plus de `scale_x`/`scale_y`, qui deviennent un
+  **pas de tuile mesuré**, plus un rapport de dimensions.
+- **Garde qualité** : sous le seuil de recalage, la capture ne montre pas cette
+  grille (mauvaise attribution, template générique) → zone servie sans
+  screenshot, donc rendu `CollisionCanvas`, fidèle par construction.
+- `src/lib/zone-geometry.ts` expose `worldToPixel(zone, x, z)`, seul chemin
+  monde → écran ; `MapClient` l'utilise partout.
+- **Nouveau** `scripts/validate/render-collision-overlay.py` : rend une zone avec
+  sa grille superposée, aux valeurs exactes du registre. Contrôle visuel de
+  référence pour tout futur signalement de ce type.
+- **Reverté** : `OUTDOOR_TERRAIN_PATCHES` (~300 tuiles murées à la main sur
+  Route 29 en trois passes) et `OUTDOOR_OBJECT_POSITION_PATCHES`. Avec eux,
+  `verify_full_connectivity`, qui n'existait que pour rattraper ces patches.
+  Le terrain servi est de nouveau **strictement celui de la ROM** — vérifié
+  identique caractère par caractère.
+- `src/lib/map-alignment.test.ts` : 9 tests verrouillant l'invariant (pas ≈
+  16×12, origine non nulle prise en compte, terrain Route 29 non muré,
+  grille contenue dans son image pour les 406 zones à capture).
+- `docs/adr/0006-map-alignment-is-measured-data.md`.
+
+### Leçon de méthode (la vraie sortie de cette passe)
+
+Les trois passes précédentes ont muré des centaines de tuiles pour faire coller
+la collision à ce que l'image *semblait* montrer — en traitant l'image comme la
+vérité et la donnée ROM comme le bug. C'était l'inverse. Le coût de cette
+inversion n'a pas été théorique : un de ces patches a réellement enfermé un
+joueur dans une poche de 7 tuiles. Un scanner de plus en plus sophistiqué
+(v1 puis v2, clustering couleur, composantes connexes) a été construit pour
+trouver des « trous » qui n'existaient pas — il mesurait le décalage, pas un
+défaut de donnée. **Quand une correction locale doit être refaite une 3ᵉ fois
+au même endroit, le défaut n'est pas local.**
+
+### Reste ouvert
+
+- Le recalage complet des 406 zones à capture tourne (~2 h) ; les 4 zones du
+  jalon 1 sont faites et vérifiées à l'œil. Les zones non encore recalées
+  gardent l'ancien comportement (donc potentiellement faux) et sont listées à
+  chaque build.
+- Pas de calque de profondeur : un arbre dont la canopée déborde sur la tuile
+  au nord la couvre à l'écran, et le joueur qui s'y tient est dessiné
+  par-dessus. Défaut cosmétique de quelques pixels désormais, plus une cause de
+  blocage — chantier séparé si ça gêne encore en jeu.
+
+---
+
+## 2026-08-05 (suite 5) — écran せってい, doublons de PNJ peints, bruitages extraits de la ROM, décor des intérieurs
+
+Quatre signalements en une passe, plus la fin du recalage des 406 zones.
+
+### « Compte tous les npc en double » (labo d'Elm) — 3
+
+La capture `Elms lab 1F HGSS.png` n'est pas un rendu de décor : c'est une
+**capture de partie**, personnages compris. Le moteur dessinant ensuite ses
+propres sprites par-dessus, chacun apparaissait deux fois :
+
+| doublon | peint dans l'image | sprite du moteur |
+|---|---|---|
+| Pr. Elm | tuile (6,4) | tuile (5,4) |
+| Assistant | tuile (9,12) | même tuile |
+| Dresseur + Chikorita | milieu de l'allée | — c'est le joueur qui a pris la capture |
+
+Le troisième n'était pas un doublon de PNJ mais du **joueur**. Corrigé par
+`scripts/build/scrub-baked-npcs.py` : chaque personnage est recouvert par du
+sol pris ailleurs dans la même image, décalé d'un nombre entier de tuiles pour
+que le carrelage retombe en phase (ou, quand aucun voisin n'est libre, par
+répétition de la tuile de sol la plus uniforme de l'image — écart-type 4.9).
+L'original n'est pas modifié : sortie dans un fichier `(sans PNJ)`. D'autres
+captures ont le même défaut (Player House 1F en a aussi) : ajouter une entrée
+suffit.
+
+### « Le professeur ne dit que "..." »
+
+Celui du bas à droite est l'**assistant**, et même pas le PNJ curaté : l'objet
+de décor ROM, qui n'a pas de dialogue — d'où le « ... ». Le vrai Elm est en
+(5,4) avec son dialogue complet. Il était juste indiscernable de son sosie
+peint ; la retouche ci-dessus règle la confusion.
+
+### « Le bruit de dialogue n'est toujours pas le bon »
+
+La source était bonne, le rendu incomplet. `SEQ_SE_DP_SELECT` n'est pas une
+note : la séquence en enchaîne **quatre** (94, puis 103 trois fois) avec des
+changements de volume entre. `extract-hgss-sfx.py` ne lisait que la première.
+Il joue maintenant la séquence entière (mini-séquenceur : notes, repos, tempo,
+volume, pitch bend) → 131 ms, deux tons (1.9 kHz puis 3.2 kHz).
+
+### « Mets des paramètres »
+
+Le slot せってい était grisé. Écran réel, navigable au clavier (↑↓ choisir,
+←→ changer) comme au clic : vitesse d'écriture (おそい/ふつう/はやい/すぐに),
+son du texte, volume musique, volume bruitages, よみがな par défaut, えいご par
+défaut. `src/lib/settings.ts` + `use-settings.ts`.
+
+Deux points de robustesse, tous deux des rechutes évitées :
+- `useSyncExternalStore` et pas `useState(() => readSettings(...))` — lire le
+  stockage au premier rendu client rejouerait l'erreur d'hydratation déjà
+  corrigée sur le bouton muet ;
+- `localStorage` indisponible (navigation privée, iframe, jsdom sans origine)
+  → repli mémoire au lieu d'une exception.
+
+Les deux derniers réglages (よみがな/えいご) n'existent pas dans HGSS mais sont
+les seuls qui changent la façon d'apprendre. Ils donnent l'état de départ ;
+X et Y restent basculables ligne par ligne.
+
+### « Le nom de zone comme dans le vrai jeu »
+
+Cherché : Bulbapedia documente les « location preview » (cartes illustrées de
+Saya Tsuruta) mais seulement pour certains lieux marquants — ni villes ni
+routes — et ne décrit nulle part l'habillage à l'écran. Les assets d'interface
+extraits de la ROM (`public/sprites/ui/menus/`) sont inexploitables, palettes
+perdues. Reconstruit en CSS : plaque arrondie **en haut à gauche** (l'ancienne
+était centrée), double liseré bleu nuit + filet blanc, fond dégradé clair, qui
+glisse depuis le bord et repart du même côté.
+
+### « L'intérieur des maisons n'a pas de décor »
+
+C'était `MISATTRIBUTED_SCREENSHOTS` : 15 intérieurs du jalon 1 servis sans
+capture, liste écrite à la main, au motif que « l'art recyclé ment sur les
+murs ». Le symptôme était réel, la cause non — c'est la grille qui était mal
+posée. Une fois l'alignement mesuré, les 15 se recalent proprement (0.82 à
+1.64, contre 0.33 à 1.40 avant). Liste supprimée, le tri se fait par mesure.
+
+### Recalage terminé — et deux défauts de conception trouvés en route
+
+406 zones recalées. **375 servies avec leur décor, 31 rejetées.**
+Les 27 zones des jalons 1 et 2 ont toutes leur décor.
+
+- **Boucle fermée** : le recalage lisait la capture de chaque zone dans le
+  registre. Une capture rejetée disparaissant du registre, la zone n'était plus
+  recalée — donc plus jamais ré-évaluable. Rejet définitif par accident.
+  L'association zone → capture est désormais écrite AVANT le filtre
+  (`scripts/sources/zone-screenshots.json`) et c'est elle que lit le recalage.
+- **Verdict déplacé** : le recalage MESURE, le build DÉCIDE. La politique
+  change sans relancer 20 minutes de calcul. Trois signaux au lieu d'un seul
+  seuil de score : score, pas trouvé (une arène peu contrastée plafonne à 0.47
+  tout en étant parfaitement calée — mais son pas retombe sur celui de la
+  caméra, contrairement à un recalage dégénéré), couverture.
+- Garde de coût : une capture 208×192 px pour une grille de 160×128 tuiles
+  faisait balayer des millions de décalages — plus d'une heure sur une seule
+  zone. Un candidat de pas qui ne peut pas couvrir le minimum requis est
+  écarté avant le balayage.
+
+### Reste ouvert
+
+Les 31 captures rejetées le sont pour la plupart parce que le script leur a
+attribué la **mauvaise image** : `MAP_CERULEAN` pointe l'arène, `MAP_VIRIDIAN`
+la forêt — alors que `Cerulean City HGSS.png` et `Viridian City HGSS.png` sont
+dans le dépôt. L'attribution se fait encore par mots-clés dans le nom de
+fichier (c'est déjà ce qui avait mal attribué 171 zones). La suite logique :
+la faire trancher par la mesure — essayer les meilleurs candidats, garder
+celui qui se cale réellement.
+
+---
+
+## 2026-08-05 (suite 6) — effacement de partie, dresseurs reposés sur la ROM, et le constat sur le gating
+
+### « Un bouton reset qui supprime ma partie »
+
+Écran せってい → `データを　けす`, avec confirmation obligatoire (le bouton
+ouvre, c'est la confirmation qui efface). `src/app/menu/reset-actions.ts`.
+
+Efface la PARTIE, pas le COMPTE : les 8 tables porteuses d'un `user_id`, plus
+`trainer_name`/`avatar` remis à null pour que `isOnboarded()` renvoie faux et
+que la page d'accueil renvoie sur /onboarding, comme un compte neuf. La ligne
+`users` reste : la supprimer casserait la session en cours et le joueur serait
+recréé au chargement suivant sans que rien de plus soit effacé.
+
+`reset-actions.test.ts` lit les migrations et exige que toute table portant un
+`user_id` soit dans la liste — un oubli le jour où on ajoute une table ferait
+mentir une action qui promet d'effacer tout.
+
+### « Les dresseurs sur la route ne font rien »
+
+Deux causes, l'une invisible, l'autre littéralement.
+
+**1. Ils n'étaient pas dessinés.** Le bloc de rendu des dresseurs produisait un
+`<div>` vide de 18 px : aucun sprite, jamais. On ne pouvait ni les voir ni
+deviner où passait leur ligne de vue.
+
+**2. Ils n'étaient pas au bon endroit.** Leurs positions étaient
+`source: "generated"` — inventées au dépouillement, jamais confrontées à la
+ROM. Sur Route 30 : posés en (6,0), (19,13), (23,23), tous face au sud, alors
+que le jeu les place en (6,10), (9,44), (8,37) et que deux regardent l'est et
+l'ouest. Mal placé + mal orienté = une ligne de vue qui ne croise jamais le
+chemin du joueur.
+
+L'identité était pourtant déjà dans les données extraites : le `scriptId` des
+objets vaut littéralement `std_trainer(TRAINER_BUG_CATCHER_DON)`. Personne ne
+l'avait lu. `scripts/build/match-trainers-to-rom.py` apparie les noms de
+contenu aux constantes ROM (sous-séquence de mots, parce que la ROM insère des
+infixes : `TRAINER_BIRD_KEEPER_GS_ROD` pour « Bird Keeper Rod »), départage par
+zone, et repose position + orientation + sprite.
+
+**191 dresseurs sur 307 reposés — les 191 avaient tous une position fausse.**
+23 ambigus (les sbires Rocket, tous homonymes) et 93 sans correspondance (chefs
+d'arène et personnages scénarisés, qui n'utilisent pas `std_trainer`) sont
+laissés tels quels : mieux vaut une position inventée qu'une position
+confidente et fausse.
+
+Effet de bord utile : les dresseurs d'arène étaient rangés sous le `zone_id` de
+la ville alors qu'ils se tiennent dans `MAP_*_GYM`. `map_zone` prime désormais,
+comme pour les PNJ.
+
+### « On peut se déplacer partout sans que personne ne nous arrête »
+
+Constat, et ce n'est pas un bug : **la couche de gating n'a jamais été écrite.**
+
+- `gateBlocksEntry` (src/lib/zone-gate.ts) est le SEUL contrôle à l'entrée
+  d'une zone extérieure, et sa question unique est « la session SRS du jour
+  est-elle faite ? ». Une fois les révisions du jour terminées, tout Johto et
+  tout Kanto sont ouverts.
+- Un seul PNJ bloquant existe dans TOUT le contenu : `rocket_grunt_azalea`.
+  176 PNJ, 1 barrage.
+- `unlocked_zones` existe en base et n'est lu par aucun contrôle de
+  déplacement.
+
+Le jeu d'origine, lui, verrouille par variable de scène et déclencheur de
+tuile : à Bourg Geon, `VAR_SCENE_NEW_BARK_WEST_EXIT` fait sortir Elm en courant
+pour vous barrer la route tant qu'il ne vous a pas donné de starter (vérifié
+dans le décompilé, `scr_seq_0842_T20.s`).
+
+**Ce que ça implique pour le correctif.** Le mécanisme Roadblock de ce moteur
+est un cône de vue : il barre UNE ligne. Or la sortie ouest de Bourg Geon fait
+7 tuiles de haut — il faudrait 7 PNJ pour la fermer. Le bon niveau est donc un
+**gate de zone piloté par la donnée** (une table MAP_* → conditions + message,
+lue par `checkZoneEntry`), et non des PNJ bloquants. Le vocabulaire nécessaire
+existe déjà (Condition/quest_step, ADR-0003) ; c'est la table et son contenu
+qui manquent.
+
+Même cause pour « les missions vont trop vite » : rien ne séquence les quêtes
+sur la carte. Elles avancent dès qu'on croise le bon PNJ, et rien n'empêche de
+croiser le PNJ de l'étape 5 avant celui de l'étape 1.
+
+Périmètre à décider avant d'écrire : gating du seul jalon 1, ou de tout le
+parcours ? Ça conditionne le volume de contenu (83 zones ont déjà un champ
+`locks` dans story-beats.json, jamais exploité).
+
+---
+
+## 2026-08-05 (suite 7) — répliques d'ambiance pour les 2093 figurants, et pourquoi les dresseurs ne se battent pas
+
+### « On n'avait pas déjà écrit tout ça ? » — si, mais pas pour eux
+
+Deux populations très différentes peuplent la carte :
+
+| population | nombre | dialogue |
+|---|---|---|
+| PNJ **curatés** (content/map/npcs.json) | 176 | 172 fichiers écrits à la main |
+| Personnages de **décor** (objets de la ROM) | ~2093 | aucun |
+
+Le contenu existe donc bel et bien — pour les 176. Les figurants, eux, viennent
+des objets de carte : ni fiche, ni `dialogue_ref`, et le moteur leur servait un
+`・・・・・・` muet, avec ce commentaire assumé : « no authored dialogue yet —
+a wordless beat instead of dead air (no invented content) ».
+
+Ce sont eux qu'on croise partout, d'où l'impression que personne n'a rien à dire.
+
+### Ce qui a été ajouté
+
+`content/dialogues/ambient/lines.json` — 50 répliques réparties en cinq
+registres : point de japonais glissé dans une remarque (`tip`), formule du
+quotidien dite dans sa vraie situation (`phrase`), tranche de vie japonaise
+(`life`), だじゃれ (`joke`, le registre d'humour le plus courant au Japon), et
+remarque de voyageur (`road`). Même style que les PNJ curatés : kana
+majoritaire, espaces pleine largeur, lectures inline.
+
+`src/lib/ambient-lines.ts` sert une réplique par figurant, **de façon
+déterministe** (hash FNV-1a de l'identifiant d'objet) : le même villageois dit
+toujours la même chose. C'est le point qui fait tenir l'illusion — un figurant
+qui change de phrase à chaque interaction est plus faux que muet. Le battement
+muet reste le repli si le pool est vide.
+
+Piste laissée ouverte : une affinité sprite → registre (un pêcheur parlerait de
+la mer). Le pool est aujourd'hui commun, ce qui est honnête mais uniforme.
+
+### « Les dresseurs ne lancent toujours aucun combat »
+
+Ce n'est pas la position (corrigée à la passe précédente) ni le rendu. C'est
+`engageTrainer` :
+
+```
+const studiedItems = studiedKanjiInOrder(state.completed_lessons, ...)
+if (studiedItems.length === 0) { /* pas de combat */ }
+```
+
+Un combat se joue sur les kanji étudiés. **La sauvegarde du joueur a
+`completed_lessons` VIDE** (vérifié en base : 0 leçon finie, 0 carte SRS, 0
+révision) — donc aucun combat n'est constructible, pour aucun dresseur.
+
+Le code portait l'annotation « inatteignable sur le chemin critique (le premier
+dresseur exige déjà des leçons) ». Elle est fausse depuis que le gating manque :
+rien n'oblige à faire une leçon avant d'arriver sur Route 30. Le joueur croisait
+donc des dresseurs qui lançaient leur accroche et… rien.
+
+Correctif immédiat : la réponse dit maintenant pourquoi
+(`ui-strings.battle_no_kanji`), au lieu de laisser croire à un bug. Le vrai
+correctif est le gating — c'est le même trou que « personne ne m'arrête ».
+
+**Reste à élucider** : pourquoi 0 leçon terminée alors qu'une leçon a été jouée
+avec succès le 04/08 ? Soit la complétion n'a jamais été écrite, soit elle l'a
+été puis perdue. À instrumenter au prochain passage sur une leçon.

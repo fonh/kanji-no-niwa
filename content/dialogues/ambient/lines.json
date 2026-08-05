@@ -1,0 +1,216 @@
+{
+ "_note": "Répliques d'ambiance servies aux ~2093 personnages de décor extraits de la ROM (issue 13, « je veux que tous les PNJ aient quelque chose à dire »). Ces figurants n'ont PAS de fiche dans content/map/npcs.json — ils viennent des objets de carte — donc aucun dialogue_ref, et le moteur leur servait un « ・・・・・・ » muet. Une réplique est tirée ici, de façon DÉTERMINISTE par personnage (src/lib/ambient-lines.ts) : un villageois qui change de phrase à chaque fois casse l'illusion plus qu'un villageois muet. Style : même registre que les PNJ curatés (kana majoritaire, espaces pleine largeur, lectures inline entre parenthèses pleine largeur). `theme` sert à l'équilibrage éditorial et au repérage, pas à la sélection.",
+ "themes": {
+  "tip": "Un point de japonais glissé dans une remarque de personnage — jamais une leçon déguisée.",
+  "phrase": "Une formule du quotidien, dite dans la situation où on l'emploie vraiment.",
+  "life": "Une tranche de vie japonaise : saisons, nourriture, habitudes.",
+  "joke": "Un だじゃれ (jeu de mots), le registre d'humour le plus courant au Japon.",
+  "road": "Une remarque de voyageur, dans le ton du jeu."
+ },
+ "lines": [
+  { "id": "tip_counters_hon", "theme": "tip", "pages": [
+    { "jp": "ながい　ものを　かぞえる　とき、「ぽん」って　いうんだ。", "en": "For long thin things, you count with \"-hon\"." },
+    { "jp": "えんぴつ　いっぽん、にほん、さんぼん…　あれ、かわるね。", "en": "One pencil, two, three... huh, it keeps changing." }
+  ]},
+  { "id": "tip_wa_ga", "theme": "tip", "pages": [
+    { "jp": "「は」と「が」、どっち？　まよったら　「は」に　するよ。", "en": "\"Wa\" or \"ga\"? When I'm unsure I just go with \"wa\"." }
+  ]},
+  { "id": "tip_arigatou", "theme": "tip", "pages": [
+    { "jp": "「ありがとう」に　「ございます」を　つけると、ていねいに　なるよ。", "en": "Add \"gozaimasu\" to \"arigatou\" and it becomes polite." }
+  ]},
+  { "id": "tip_sumimasen", "theme": "tip", "pages": [
+    { "jp": "「すみません」は　あやまる　ときにも、よぶ　ときにも　つかえる。", "en": "\"Sumimasen\" works both to apologise and to get someone's attention." },
+    { "jp": "べんりな　ことばだよ。", "en": "Handy word." }
+  ]},
+  { "id": "tip_katakana", "theme": "tip", "pages": [
+    { "jp": "そとから　きた　ことばは　カタカナで　かくんだ。", "en": "Words that came from abroad are written in katakana." },
+    { "jp": "パン、コーヒー、テレビ…　ぜんぶ　そう。", "en": "Bread, coffee, television... all of them." }
+  ]},
+  { "id": "tip_yoroshiku", "theme": "tip", "pages": [
+    { "jp": "「よろしく」は　やくす　のが　むずかしい　ことばらしいよ。", "en": "They say \"yoroshiku\" is a hard word to translate." }
+  ]},
+  { "id": "tip_ne_yo", "theme": "tip", "pages": [
+    { "jp": "さいごに　「ね」を　つけると、あいてに　きいて　いる　かんじに　なる。", "en": "Ending with \"ne\" makes it feel like you're asking the other person." },
+    { "jp": "「よ」だと、おしえて　いる　かんじ。", "en": "With \"yo\", it feels like you're telling them something." }
+  ]},
+  { "id": "tip_kudasai", "theme": "tip", "pages": [
+    { "jp": "なにか　ほしい　とき、「〜を　ください」だよ。", "en": "When you want something: \"...wo kudasai\"." }
+  ]},
+  { "id": "tip_ohayou", "theme": "tip", "pages": [
+    { "jp": "あさは　「おはよう」、ひるは　「こんにちは」。", "en": "Morning is \"ohayou\", daytime is \"konnichiwa\"." },
+    { "jp": "よるは　「こんばんは」。　かんたんでしょ？", "en": "Evening is \"konbanwa\". Easy, right?" }
+  ]},
+  { "id": "tip_onaji_oto", "theme": "tip", "pages": [
+    { "jp": "おなじ　おとでも　いみが　ちがう　ことばが　たくさん　ある。", "en": "Lots of words sound the same but mean different things." },
+    { "jp": "だから　かんじが　あるんだって。", "en": "That's supposedly why kanji exist." }
+  ]},
+  { "id": "tip_kanji_yomi", "theme": "tip", "pages": [
+    { "jp": "かんじは　よみかたが　ふたつ　いじょう　ある　ことが　おおい。", "en": "A kanji often has two or more readings." },
+    { "jp": "ぼくも　まだ　なれない。", "en": "I'm still not used to it either." }
+  ]},
+  { "id": "tip_hidari_migi", "theme": "tip", "pages": [
+    { "jp": "みぎは　「みぎ」、ひだりは　「ひだり」。", "en": "Right is \"migi\", left is \"hidari\"." },
+    { "jp": "みちを　きく　とき　いるよ。", "en": "You'll need them when asking directions." }
+  ]},
+
+  { "id": "phrase_ittekimasu", "theme": "phrase", "pages": [
+    { "jp": "でかける　ときは　「いってきます」。", "en": "When you head out, you say \"ittekimasu\"." },
+    { "jp": "のこる　ひとは　「いってらっしゃい」って　こたえる。", "en": "The one staying answers \"itterasshai\"." }
+  ]},
+  { "id": "phrase_tadaima", "theme": "phrase", "pages": [
+    { "jp": "かえったら　「ただいま」。", "en": "When you get home: \"tadaima\"." },
+    { "jp": "「おかえり」って　いって　もらえると　うれしいよね。", "en": "It's nice when someone answers \"okaeri\"." }
+  ]},
+  { "id": "phrase_itadakimasu", "theme": "phrase", "pages": [
+    { "jp": "たべる　まえに　「いただきます」。", "en": "Before eating: \"itadakimasu\"." },
+    { "jp": "たべたら　「ごちそうさま」。", "en": "After eating: \"gochisousama\"." }
+  ]},
+  { "id": "phrase_otsukare", "theme": "phrase", "pages": [
+    { "jp": "しごとの　あとは　「おつかれさま」。", "en": "After work, you say \"otsukaresama\"." },
+    { "jp": "きみにも　いって　あげる。　おつかれさま！", "en": "I'll say it to you too. Good work out there!" }
+  ]},
+  { "id": "phrase_ganbatte", "theme": "phrase", "pages": [
+    { "jp": "「がんばって」！　たびは　まだまだ　これからだよ。", "en": "Ganbatte! Your journey's only just starting." }
+  ]},
+  { "id": "phrase_kiwotsukete", "theme": "phrase", "pages": [
+    { "jp": "「きを　つけてね」。　くさむらは　あぶないよ。", "en": "\"Take care.\" The tall grass is dangerous." }
+  ]},
+  { "id": "phrase_odaijini", "theme": "phrase", "pages": [
+    { "jp": "つかれて　いる　ひとには　「おだいじに」って　いうんだ。", "en": "To someone who's worn out, you say \"odaiji ni\"." }
+  ]},
+  { "id": "phrase_omedetou", "theme": "phrase", "pages": [
+    { "jp": "いい　ことが　あったら　「おめでとう」！", "en": "When something good happens: \"omedetou\"!" }
+  ]},
+  { "id": "phrase_hisashiburi", "theme": "phrase", "pages": [
+    { "jp": "ひさしぶりに　あった　ひとには　「おひさしぶり」。", "en": "To someone you haven't seen in ages: \"ohisashiburi\"." }
+  ]},
+  { "id": "phrase_douzo", "theme": "phrase", "pages": [
+    { "jp": "「どうぞ」と　「どうも」、にて　いるけど　ちがうよ。", "en": "\"Douzo\" and \"doumo\" look alike but they're different." },
+    { "jp": "わたす　ときが　「どうぞ」。", "en": "\"Douzo\" is when you hand something over." }
+  ]},
+  { "id": "phrase_mata_ne", "theme": "phrase", "pages": [
+    { "jp": "またね！　どこかで　あおうね。", "en": "See you! Let's meet again somewhere." }
+  ]},
+
+  { "id": "life_seasons", "theme": "life", "pages": [
+    { "jp": "この　くには　きせつが　よっつ　あるんだ。", "en": "This country has four seasons." },
+    { "jp": "どれも　すきだけど、あきが　いちばん　かな。", "en": "I like them all, but autumn's my favourite." }
+  ]},
+  { "id": "life_sakura", "theme": "life", "pages": [
+    { "jp": "はるに　なると　みんな　きの　したで　ごはんを　たべる。", "en": "In spring, everyone eats under the trees." },
+    { "jp": "はなを　みながら　ね。", "en": "While looking at the blossoms." }
+  ]},
+  { "id": "life_tsuyu", "theme": "life", "pages": [
+    { "jp": "ろくがつは　あめばかり。　かさを　わすれないで。", "en": "June is nothing but rain. Don't forget an umbrella." }
+  ]},
+  { "id": "life_natsu", "theme": "life", "pages": [
+    { "jp": "なつは　あつい。　ほんとうに　あつい。", "en": "Summer is hot. Really hot." },
+    { "jp": "むしの　こえが　うるさいくらい。", "en": "The insects are almost too loud." }
+  ]},
+  { "id": "life_onsen", "theme": "life", "pages": [
+    { "jp": "つかれたら　おふろが　いちばん。", "en": "When you're tired, nothing beats a bath." },
+    { "jp": "あついのを　がまんするのが　いいんだよ。", "en": "Bearing the heat is the whole point." }
+  ]},
+  { "id": "life_konbini", "theme": "life", "pages": [
+    { "jp": "よるでも　あいて　いる　みせが　ある　って　しって　た？", "en": "Did you know there are shops open even at night?" },
+    { "jp": "べんりな　よの　なかに　なったね。", "en": "The world's got convenient." }
+  ]},
+  { "id": "life_onigiri", "theme": "life", "pages": [
+    { "jp": "おにぎりは　さんかくが　もちやすい。", "en": "Triangular rice balls are the easiest to hold." },
+    { "jp": "まるいのも　あるけどね。", "en": "There are round ones too, mind you." }
+  ]},
+  { "id": "life_ramen", "theme": "life", "pages": [
+    { "jp": "ラーメンは　おとを　たてて　たべても　いいんだ。", "en": "It's fine to slurp your ramen." },
+    { "jp": "そのほうが　おいしいって　いう　ひとも　いる。", "en": "Some say it even tastes better that way." }
+  ]},
+  { "id": "life_ocha", "theme": "life", "pages": [
+    { "jp": "おちゃを　いれるね。　すわって　いって。", "en": "I'll make some tea. Sit down a while." }
+  ]},
+  { "id": "life_matsuri", "theme": "life", "pages": [
+    { "jp": "なつの　まつりは　たのしいよ。", "en": "Summer festivals are great." },
+    { "jp": "たいこの　おとが　とおくから　きこえて　くる。", "en": "You hear the drums from far away." }
+  ]},
+  { "id": "life_soji", "theme": "life", "pages": [
+    { "jp": "がっこうでは　じぶんたちで　そうじを　するんだよ。", "en": "At school, the students clean up themselves." }
+  ]},
+  { "id": "life_kutsu", "theme": "life", "pages": [
+    { "jp": "いえに　はいる　ときは　くつを　ぬぐよ。", "en": "You take your shoes off when you enter a house." },
+    { "jp": "わすれると　おこられる。", "en": "Forget and you'll get told off." }
+  ]},
+  { "id": "life_ojigi", "theme": "life", "pages": [
+    { "jp": "あいさつは　あたまを　さげる。　てを　にぎらない。", "en": "Greetings mean bowing, not shaking hands." }
+  ]},
+  { "id": "life_hanabi", "theme": "life", "pages": [
+    { "jp": "よぞらに　あがる　はなびは　いいよね。", "en": "Fireworks in the night sky are something." },
+    { "jp": "おとが　あとから　くるのが　すきなんだ。", "en": "I like how the sound arrives late." }
+  ]},
+
+  { "id": "joke_futon", "theme": "joke", "pages": [
+    { "jp": "だじゃれ、ひとつ　いい？", "en": "Mind if I tell you a pun?" },
+    { "jp": "ふとんが　ふっとんだ！", "en": "\"Futon ga futtonda\" — the futon flew off!" },
+    { "jp": "…わらって　くれないの？", "en": "...You're not laughing?" }
+  ]},
+  { "id": "joke_pan", "theme": "joke", "pages": [
+    { "jp": "なぞなぞ！　パンは　パンでも　たべられない　パンは？", "en": "Riddle! What kind of \"pan\" can't you eat?" },
+    { "jp": "こたえは　フライパン！", "en": "A frying pan!" }
+  ]},
+  { "id": "joke_neko", "theme": "joke", "pages": [
+    { "jp": "ねこが　ねころんだ。", "en": "\"Neko ga nekoronda\" — the cat lay down." },
+    { "jp": "…いま　の、うまく　ない？", "en": "...Pretty good, no?" }
+  ]},
+  { "id": "joke_iruka", "theme": "joke", "pages": [
+    { "jp": "「イルカは　いるか？」", "en": "\"Iruka wa iruka?\" — are there any dolphins?" },
+    { "jp": "うみで　いって　みてよ。", "en": "Try saying it at the sea." }
+  ]},
+  { "id": "joke_denwa", "theme": "joke", "pages": [
+    { "jp": "でんわに　でんわ。", "en": "\"Denwa ni denwa\" — answer the phone with a phone." },
+    { "jp": "…つまらなかった？　ごめんね。", "en": "...Not funny? Sorry." }
+  ]},
+  { "id": "joke_kaeru", "theme": "joke", "pages": [
+    { "jp": "かえるが　かえる。", "en": "\"Kaeru ga kaeru\" — the frog goes home." },
+    { "jp": "この　てのは　いくらでも　つくれるよ。", "en": "I can make these up all day." }
+  ]},
+  { "id": "joke_yama", "theme": "joke", "pages": [
+    { "jp": "なぞなぞ。　のぼれない　やまは　なんだ？", "en": "Riddle. What mountain can't be climbed?" },
+    { "jp": "たからやま！　…えっと、ゆめの　なかにしか　ないから。", "en": "A treasure mountain! ...Because it only exists in dreams." }
+  ]},
+  { "id": "joke_kuma", "theme": "joke", "pages": [
+    { "jp": "こまった　くまは　こまぐま。", "en": "A troubled bear is a \"komaguma\"." },
+    { "jp": "…いまのは　なしで。", "en": "...Forget I said that." }
+  ]},
+
+  { "id": "road_kusa", "theme": "road", "pages": [
+    { "jp": "たかい　くさには　はいらない　ほうが　いい。", "en": "Best not to walk into the tall grass." },
+    { "jp": "なにか　でて　くるからね。", "en": "Something comes out, you know." }
+  ]},
+  { "id": "road_michi", "theme": "road", "pages": [
+    { "jp": "この　みちは　ずっと　むこうまで　つづいて　いるよ。", "en": "This road carries on a long way." }
+  ]},
+  { "id": "road_kanban", "theme": "road", "pages": [
+    { "jp": "かんばんは　よんだ？　よんで　おくと　いいよ。", "en": "Did you read the sign? Worth reading." }
+  ]},
+  { "id": "road_yasumi", "theme": "road", "pages": [
+    { "jp": "あるきつづけると　つかれる。　やすみながら　いこう。", "en": "You'll wear out if you keep walking. Take breaks." }
+  ]},
+  { "id": "road_yoru", "theme": "road", "pages": [
+    { "jp": "よるは　ひるとは　ちがう　ものが　でる　んだって。", "en": "They say different things come out at night." }
+  ]},
+  { "id": "road_tegami", "theme": "road", "pages": [
+    { "jp": "むかしは　てがみを　かいたんだ。　いまは　でんわだね。", "en": "We used to write letters. Now it's phone calls." }
+  ]},
+  { "id": "road_omoide", "theme": "road", "pages": [
+    { "jp": "たびは　いく　ばしょより、みちの　ことを　おぼえて　いる　ものだよ。", "en": "On a journey, you remember the road more than the destination." }
+  ]},
+  { "id": "road_kotoba", "theme": "road", "pages": [
+    { "jp": "ことばは　あるいた　ぶんだけ　おぼえる。", "en": "You learn words in proportion to how far you walk." },
+    { "jp": "ぼくの　もっとうさ。", "en": "That's my motto." }
+  ]},
+  { "id": "road_machi", "theme": "road", "pages": [
+    { "jp": "つぎの　まちまでは　まだ　ちょっと　あるよ。", "en": "It's still a fair way to the next town." }
+  ]},
+  { "id": "road_hito", "theme": "road", "pages": [
+    { "jp": "いろんな　ひとに　はなしかけて　みると　いいよ。", "en": "Try talking to all sorts of people." },
+    { "jp": "みんな　なにか　しって　いる　ものさ。", "en": "Everyone knows something." }
+  ]}
+ ]
+}

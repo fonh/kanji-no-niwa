@@ -28,6 +28,12 @@ const READING_RE = /([㐀-䶿一-鿿々〆〇ヵヶ]+)（([ぁ-ゖァ-ヶー・]
 /** Découpe une chaîne `jp` en segments {base, reading?}. Les parties sans
  * lecture sont fusionnées en segments plats. */
 export function parseInlineReadings(jp: string): ReadingSegment[] {
+  // Un trou de contenu (un `label` écrit en chaîne nue au lieu de {jp, en},
+  // vu sur cherrygrove_welcome.json) ne doit pas faire tomber tout un écran :
+  // le journal de quêtes plantait avec « Cannot read properties of undefined
+  // (reading 'matchAll') » dès que la quête concernée était en cours. Le trou
+  // se corrige dans le contenu ; ici on refuse juste de crasher.
+  if (typeof jp !== 'string' || jp === '') return []
   const segments: ReadingSegment[] = []
   let plainStart = 0
   for (const match of jp.matchAll(READING_RE)) {

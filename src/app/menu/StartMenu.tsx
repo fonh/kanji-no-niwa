@@ -28,11 +28,21 @@ import { useRouter } from 'next/navigation'
 import JpText from '@/components/JpText'
 import uiStrings from '@/data/ui-strings.json'
 import { getStartMenuData, type StartMenuData } from './actions'
+import { useSettings } from '@/lib/use-settings'
+import { resetPlayerData } from './reset-actions'
+import {
+  SETTING_VALUES,
+  cycle,
+  updateSettings,
+  type GameSettings,
+  type TextSpeed,
+  type VolumeLevel,
+} from '@/lib/settings'
 
-export type StartMenuScreen = 'zukan' | 'lessons' | 'bag' | 'journal'
+export type StartMenuScreen = 'zukan' | 'lessons' | 'bag' | 'journal' | 'settings'
 
 interface SlotDef {
-  id: StartMenuScreen | 'profile' | 'settings'
+  id: StartMenuScreen | 'profile'
   jp: string
   disabled: boolean
   /** Icône de la tuile (issue 13 — restyle START menu HGSS). Un vrai sprite
@@ -56,7 +66,7 @@ const SLOTS: SlotDef[] = [
   { id: 'bag', jp: uiStrings.menu_slot_bag.jp, disabled: false, icon: { kind: 'emoji', glyph: '🎒' } },
   { id: 'profile', jp: uiStrings.menu_slot_profile.jp, disabled: true, icon: { kind: 'emoji', glyph: '👤' } },
   { id: 'journal', jp: uiStrings.menu_slot_journal.jp, disabled: false, icon: { kind: 'emoji', glyph: '🧭' } },
-  { id: 'settings', jp: uiStrings.menu_slot_settings.jp, disabled: true, icon: { kind: 'emoji', glyph: '⚙️' } },
+  { id: 'settings', jp: uiStrings.menu_slot_settings.jp, disabled: false, icon: { kind: 'emoji', glyph: '⚙️' } },
 ]
 
 /** Icône d'une tuile — sprite ROM pixelisé ou pictogramme emoji de repli. */
@@ -254,8 +264,11 @@ function LessonBookScreen({ data, onReread }: { data: StartMenuData; onReread: (
 }
 
 function QuestJournalScreen({ data }: { data: StartMenuData }) {
-  const [showEn, setShowEn] = useState(false)
-  const [showReadings, setShowReadings] = useState(false)
+  // Comme dans la boîte de dialogue : le réglage de l'écran せってい donne
+  // l'état de départ, X et Y restent basculables sur l'écran.
+  const settings = useSettings()
+  const [showEn, setShowEn] = useState(settings.showEnglish)
+  const [showReadings, setShowReadings] = useState(settings.showReadings)
   return (
     <MenuFrame
       title={uiStrings.menu_slot_journal.jp}
@@ -402,6 +415,180 @@ function BagScreen({ data, onOpenText }: { data: StartMenuData; onOpenText: (tex
   )
 }
 
+
+// ── Réglages ──────────────────────────────────────────────────────────────────
+
+/** Une ligne de l'écran せってい : un libellé, une valeur, et de quoi passer
+ * à la valeur suivante. Le jeu d'origine se règle entièrement à la manette —
+ * gauche/droite sur la ligne sélectionnée — donc chaque ligne expose la même
+ * opération dans les deux sens, et le clic la déclenche vers l'avant. */
+interface SettingRow {
+  key: keyof GameSettings
+  label: string
+  value: string
+  step: (direction: 1 | -1) => void
+  hint?: string
+}
+
+const SPEED_LABELS: Record<TextSpeed, string> = {
+  slow: uiStrings.settings_speed_slow.jp,
+  normal: uiStrings.settings_speed_normal.jp,
+  fast: uiStrings.settings_speed_fast.jp,
+  instant: uiStrings.settings_speed_instant.jp,
+}
+
+const VOLUME_LABELS: Record<VolumeLevel, string> = {
+  0: uiStrings.settings_vol_0.jp,
+  1: uiStrings.settings_vol_1.jp,
+  2: uiStrings.settings_vol_2.jp,
+  3: uiStrings.settings_vol_3.jp,
+}
+
+const onOff = (v: boolean) => (v ? uiStrings.settings_on.jp : uiStrings.settings_off.jp)
+
+export function buildSettingRows(s: GameSettings): SettingRow[] {
+  return [
+    {
+      key: 'textSpeed',
+      label: uiStrings.settings_text_speed.jp,
+      value: SPEED_LABELS[s.textSpeed],
+      step: d => updateSettings({ textSpeed: cycle(SETTING_VALUES.textSpeed, s.textSpeed, d) }),
+    },
+    {
+      key: 'textSound',
+      label: uiStrings.settings_text_sound.jp,
+      value: onOff(s.textSound),
+      step: () => updateSettings({ textSound: !s.textSound }),
+    },
+    {
+      key: 'bgmVolume',
+      label: uiStrings.settings_bgm.jp,
+      value: VOLUME_LABELS[s.bgmVolume],
+      step: d => updateSettings({ bgmVolume: cycle(SETTING_VALUES.bgmVolume, s.bgmVolume, d) }),
+    },
+    {
+      key: 'sfxVolume',
+      label: uiStrings.settings_sfx.jp,
+      value: VOLUME_LABELS[s.sfxVolume],
+      step: d => updateSettings({ sfxVolume: cycle(SETTING_VALUES.sfxVolume, s.sfxVolume, d) }),
+    },
+    {
+      key: 'showReadings',
+      label: uiStrings.settings_readings.jp,
+      value: onOff(s.showReadings),
+      step: () => updateSettings({ showReadings: !s.showReadings }),
+      hint: uiStrings.settings_readings_hint.jp,
+    },
+    {
+      key: 'showEnglish',
+      label: uiStrings.settings_english.jp,
+      value: onOff(s.showEnglish),
+      step: () => updateSettings({ showEnglish: !s.showEnglish }),
+    },
+  ]
+}
+
+function SettingsScreen({ cursor, onCursor }: { cursor: number; onCursor: (i: number) => void }) {
+  const settings = useSettings()
+  const rows = buildSettingRows(settings)
+  // Effacement de la partie : jamais en un geste. Le bouton ouvre une
+  // confirmation, et c'est elle qui efface — même principe que le jeu
+  // d'origine pour l'effacement de sauvegarde.
+  const [confirming, setConfirming] = useState(false)
+  const [resetState, setResetState] = useState<'idle' | 'doing' | 'failed'>('idle')
+  return (
+    <MenuFrame title={uiStrings.settings_title.jp} testId="screen-settings">
+      <div className="space-y-1.5">
+        {rows.map((row, i) => (
+          <button
+            key={row.key}
+            data-testid={`setting-${row.key}`}
+            data-selected={i === cursor ? 'true' : 'false'}
+            onClick={() => {
+              onCursor(i)
+              row.step(1)
+            }}
+            className={`w-full flex items-center justify-between gap-3 px-3 py-2 rounded border-2 text-left ${
+              i === cursor
+                ? 'bg-white/15 border-amber-300'
+                : 'bg-white/5 border-white/15'
+            }`}
+          >
+            <span className="text-white text-sm font-reading">{row.label}</span>
+            <span className="flex items-center gap-2 text-amber-200 text-sm font-reading">
+              <span className="text-white/30">◀</span>
+              <span className="min-w-20 text-center">{row.value}</span>
+              <span className="text-white/30">▶</span>
+            </span>
+          </button>
+        ))}
+      </div>
+      {rows[cursor]?.hint && (
+        <p className="mt-3 text-white/45 text-[11px] font-reading leading-relaxed">
+          {rows[cursor].hint}
+        </p>
+      )}
+      <p className="mt-3 text-white/30 text-[10px]">{uiStrings.settings_hint.jp}</p>
+
+      <div className="mt-6 pt-3 border-t border-white/10">
+        {!confirming ? (
+          <button
+            data-testid="reset-open"
+            onClick={() => setConfirming(true)}
+            className="px-3 py-1.5 rounded border-2 border-red-500/60 bg-red-500/10 text-red-200 text-xs font-reading"
+          >
+            {uiStrings.settings_reset.jp}
+          </button>
+        ) : (
+          <div data-testid="reset-confirm" className="rounded border-2 border-red-500/60 bg-red-500/10 p-3">
+            <p className="text-red-100 text-sm font-reading leading-relaxed">
+              {uiStrings.settings_reset_confirm.jp}
+            </p>
+            <div className="mt-2 flex gap-2">
+              <button
+                data-testid="reset-yes"
+                disabled={resetState === 'doing'}
+                onClick={async () => {
+                  setResetState('doing')
+                  try {
+                    await resetPlayerData()
+                    // Rechargement complet plutôt qu'un router.push : tout
+                    // l'état client (progression, menu, audio) décrit une
+                    // partie qui n'existe plus.
+                    window.location.href = '/'
+                  } catch {
+                    setResetState('failed')
+                  }
+                }}
+                className="px-3 py-1.5 rounded border-2 border-red-400 bg-red-600/70 text-white text-xs font-reading disabled:opacity-50"
+              >
+                {resetState === 'doing'
+                  ? uiStrings.settings_reset_doing.jp
+                  : uiStrings.settings_reset_yes.jp}
+              </button>
+              <button
+                data-testid="reset-no"
+                onClick={() => {
+                  setConfirming(false)
+                  setResetState('idle')
+                }}
+                className="px-3 py-1.5 rounded border-2 border-white/25 bg-white/10 text-white text-xs font-reading"
+              >
+                {uiStrings.settings_reset_no.jp}
+              </button>
+            </div>
+            {resetState === 'failed' && (
+              <p className="mt-2 text-red-200 text-xs font-reading">
+                {uiStrings.settings_reset_failed.jp}
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+    </MenuFrame>
+  )
+}
+
 // ── Le menu ───────────────────────────────────────────────────────────────────
 
 export default function StartMenu({ initialScreen = null }: Props) {
@@ -409,12 +596,17 @@ export default function StartMenu({ initialScreen = null }: Props) {
   const [open, setOpen] = useState(initialScreen !== null)
   const [screen, setScreen] = useState<StartMenuScreen | 'root'>(initialScreen ?? 'root')
   const [slotIndex, setSlotIndex] = useState(0)
+  // Curseur de l'écran せってい : une ligne de réglage, indépendant du curseur
+  // de tuiles de l'écran racine.
+  const [settingCursor, setSettingCursor] = useState(0)
+  const settings = useSettings()
   const [data, setData] = useState<StartMenuData | null>(null)
 
   const closeMenu = useCallback(() => {
     setOpen(false)
     setScreen('root')
     setSlotIndex(0)
+    setSettingCursor(0)
   }, [])
 
   const toggleMenu = useCallback(() => {
@@ -452,6 +644,13 @@ export default function StartMenu({ initialScreen = null }: Props) {
         case 'ArrowUp':
         case 'ArrowDown': {
           e.preventDefault()
+          if (screen === 'settings') {
+            const rows = buildSettingRows(settings)
+            if (e.code === 'ArrowDown') setSettingCursor(i => Math.min(i + 1, rows.length - 1))
+            else if (e.code === 'ArrowUp') setSettingCursor(i => Math.max(i - 1, 0))
+            else rows[settingCursor]?.step(e.code === 'ArrowRight' ? 1 : -1)
+            return
+          }
           if (screen !== 'root') return
           setSlotIndex(index => {
             if (e.code === 'ArrowRight') return index % 2 === 0 ? index + 1 : index
@@ -465,6 +664,7 @@ export default function StartMenu({ initialScreen = null }: Props) {
         case 'Enter':
           e.preventDefault()
           if (screen === 'root') activateSlot(SLOTS[slotIndex])
+          else if (screen === 'settings') buildSettingRows(settings)[settingCursor]?.step(1)
           break
         case 'Escape':
         case 'Backspace':
@@ -477,7 +677,7 @@ export default function StartMenu({ initialScreen = null }: Props) {
     }
     window.addEventListener('keydown', handler, { capture: true })
     return () => window.removeEventListener('keydown', handler, { capture: true })
-  }, [open, screen, slotIndex, activateSlot, pressB, closeMenu])
+  }, [open, screen, slotIndex, settingCursor, settings, activateSlot, pressB, closeMenu])
 
   const openKanji = useCallback(
     (id: string) => router.push(`/kanji/${encodeURIComponent(id)}`),
@@ -573,6 +773,8 @@ export default function StartMenu({ initialScreen = null }: Props) {
                   <span>B・START　{uiStrings.menu_close.jp}</span>
                 </div>
               </div>
+            ) : screen === 'settings' ? (
+              <SettingsScreen cursor={settingCursor} onCursor={setSettingCursor} />
             ) : data === null ? (
               <div className="h-full flex items-center justify-center text-white/50">・・・</div>
             ) : screen === 'zukan' ? (

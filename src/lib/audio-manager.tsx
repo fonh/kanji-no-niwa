@@ -33,6 +33,8 @@ import {
   useSyncExternalStore,
 } from 'react'
 import { readMutePreference, writeMutePreference } from './audio-tracks'
+import { VOLUME_GAIN } from './settings'
+import { useSettings } from './use-settings'
 
 // Store externe minimal pour la préférence muet (bug hydratation corrigé
 // ici — voir le commentaire détaillé sur son usage plus bas) : un seul
@@ -109,6 +111,11 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
   // projet, cascading renders) : toggleMute écrit directement dans
   // localStorage puis notifie les abonnés, pas de setState.
   const muted = useSyncExternalStore(subscribeMute, getMutedSnapshot, getMutedServerSnapshot)
+  // Volumes de l'écran せってい. Le bouton muet reste au-dessus : c'est la
+  // coupure d'urgence (« je suis dans le train »), pas un réglage.
+  const settings = useSettings()
+  const bgmGain = VOLUME_GAIN[settings.bgmVolume]
+  const sfxGain = VOLUME_GAIN[settings.sfxVolume]
   const audioElRef = useRef<HTMLAudioElement | null>(null)
   const layersRef = useRef<Partial<Record<BgmLayerKey, BgmTrack | null>>>({})
   const activeUrlRef = useRef<string | null>(null)
@@ -157,8 +164,20 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
 
   useEffect(() => {
     const el = audioElRef.current
-    if (el) el.muted = muted
-  }, [muted])
+    if (!el) return
+    el.muted = muted
+    el.volume = bgmGain
+  }, [muted, bgmGain])
+
+  // Le volume est lu par une ref dans applyActiveLayer : le rebrancher en
+  // dépendance recréerait le callback à chaque changement de volume, donc
+  // relancerait la piste en cours. Écriture dans un effect, pas pendant le
+  // rendu (react-hooks/refs) — l'effect de volume plus haut applique de toute
+  // façon la nouvelle valeur à la piste déjà en cours.
+  const bgmGainRef = useRef(bgmGain)
+  useEffect(() => {
+    bgmGainRef.current = bgmGain
+  }, [bgmGain])
 
   const applyActiveLayer = useCallback(() => {
     const el = audioElRef.current
@@ -177,6 +196,7 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
     activeUrlRef.current = active.url
     try {
       el.src = active.url
+      el.volume = bgmGainRef.current
       el.loop = active.loop ?? true
       pendingPlayRef.current = true
       el.play()
@@ -206,14 +226,16 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
 
   const playSfx = useCallback(
     (url: string) => {
-      if (muted) return
+      if (muted || sfxGain === 0) return
       try {
-        void new Audio(url).play()?.catch(() => {})
+        const el = new Audio(url)
+        el.volume = sfxGain
+        void el.play()?.catch(() => {})
       } catch {
         /* best-effort, même filet que BookScreen.playAudio */
       }
     },
-    [muted]
+    [muted, sfxGain]
   )
 
   return (

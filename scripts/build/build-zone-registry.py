@@ -7,8 +7,12 @@ Construit src/data/zone-registry.json à partir de :
 Formules déduites du système de coordonnées HGSS :
   world_origin_x = grid_x × 32
   world_origin_y = grid_y × 32
-  scale_x = screenshot_w / tile_width    (pixel screen / pixel monde)
-  scale_y = screenshot_h / tile_height
+
+Le placement de la grille sur le screenshot (scale_x/scale_y = pas d'une tuile
+en pixels, origin_px/origin_py = pixel de la tuile (0,0)) n'est PAS déduit des
+dimensions de l'image : il est mesuré par scripts/build/fit-map-alignment.py
+et lu depuis scripts/sources/map-alignment.json — voir la section « Recalage »
+plus bas pour le pourquoi.
 """
 
 from __future__ import annotations
@@ -16,7 +20,7 @@ from __future__ import annotations
 import json
 import os
 import re
-from collections import deque
+import sys
 from pathlib import Path
 
 try:
@@ -26,10 +30,18 @@ except ImportError:
     HAS_PIL = False
     print("PIL absent — utilisation des dimensions tile_width/tile_height directement")
 
+sys.path.insert(0, str(Path(__file__).parent))
+from zone_grid import interior_bounds, trim_terrain  # noqa: E402
+
 ZONE_DATA  = Path("scripts/sources/zone-data.json")
 NAMES_FR   = Path("scripts/sources/zone-names-fr.json")
 MAPS_DIR   = Path("public/maps")
 OUT        = Path("src/data/zone-registry.json")
+# Capture ASSOCIÉE à chaque zone, avant le filtre qualité. Le recalage doit
+# lire ce fichier, pas le registre : une capture écartée disparaît du registre,
+# et si le recalage se basait dessus il oublierait la zone — plus personne ne
+# pourrait alors la ré-évaluer. Boucle fermée, zone perdue pour de bon.
+MATCHED    = Path("scripts/sources/zone-screenshots.json")
 
 names_fr: dict = json.load(open(NAMES_FR)) if NAMES_FR.exists() else {}
 if names_fr:
@@ -52,7 +64,15 @@ print(f"{len(zones)} zones dans zone-data.json")
 # le commentaire détaillé près de `find_generic_template` pour la source de
 # chaque image (une vraie capture pour Mr Pokémon, 5 compositions à partir
 # d'assets HGSS réels déjà dans ce dépôt pour les autres).
+#
+# Cas à part : « (sans PNJ) » = capture retouchée par
+# scripts/build/scrub-baked-npcs.py. Les captures de cartes sont des captures
+# de PARTIE : les PNJ y sont peints dans les pixels, et pour le labo d'Elm
+# l'avatar du joueur qui a pris la capture aussi, son Chikorita avec. Le moteur
+# dessinant ensuite ses propres sprites par-dessus, chaque personnage
+# apparaissait deux fois (issue 13, « compte tous les npc en double »).
 ZONE_SCREENSHOT_OVERRIDES = {
+    "MAP_NEW_BARK_ELMS_LAB_1F":          "Elms lab 1F HGSS (sans PNJ).png",
     "MAP_ROUTE_30_MR_POKEMON_HOUSE":     "Mr Pokemon House HGSS.png",
     "MAP_ROUTE_30_APRICORN_HOUSE":       "Apricorn Man House HGSS.png",
     "MAP_CHERRYGROVE_SOUTHWEST_HOUSE":   "Cherrygrove Southwest House HGSS.png",
@@ -296,359 +316,48 @@ def find_screenshot(zone_name: str, is_outdoor: bool):
     # fall through to find_generic_template instead.
     return score_against(keywords, zone_name, discounted, zone_floor, is_outdoor)
 
-# Interior rooms are ROM-extracted onto a generic block grid (32×32 for
-# most, 96-wide for a few) padded FAR beyond the actual walled room with
-# walkable filler — nothing in the collision grid stops a player from
-# wandering into the padding, but the screenshot is cropped tight to the
-# real room, so scale (screenshot_px / tile_w) computed against the padded
-# width squeezes the whole visible room into a small corner: a player
-# walking toward what the picture shows as the far wall is still deep in
-# "padding space" well before hitting anything solid, and the far wall /
-# exit door end up unreachable. Trim tile_w/tile_h (and the terrain string)
-# to the real bounding box — walls plus every object/warp/ledge actually
-# placed in the room, so no legitimate content (e.g. a scripted NPC posed
-# past the nearest wall for a cutscene) ends up outside the new bounds.
-def interior_bounds(z: dict, tile_w: int, tile_h: int, is_outdoor: bool) -> tuple[int, int]:
-    if is_outdoor:
-        return tile_w, tile_h
-    terrain = z.get("terrain", "")
-    solid = [i for i, c in enumerate(terrain) if c != "."]
-    if not solid:
-        return tile_w, tile_h
-    max_x = max(i % tile_w for i in solid)
-    max_z = max(i // tile_w for i in solid)
-    for o in z.get("objects", []):
-        max_x = max(max_x, o.get("x", 0))
-        max_z = max(max_z, o.get("z", 0))
-    for w in z.get("warps", []):
-        max_x = max(max_x, w.get("x", 0))
-        max_z = max(max_z, w.get("z", 0))
-    for lx, lz, _ldir in z.get("ledges", []):
-        max_x = max(max_x, lx)
-        max_z = max(max_z, lz)
-    return min(max_x + 1, tile_w), min(max_z + 1, tile_h)
+# interior_bounds / trim_terrain vivent dans scripts/build/zone_grid.py :
+# fit-map-alignment.py doit travailler sur EXACTEMENT la même grille rognée
+# que celle écrite ici, sinon le recalage porterait sur une autre grille.
 
-def trim_terrain(terrain: str, old_w: int, new_w: int, new_h: int) -> str:
-    if not terrain:
-        return terrain
-    return "".join(terrain[z * old_w : z * old_w + new_w] for z in range(new_h))
-
-# Issue 13 (« arbres traversables », capture d'écran jointe — Route 29, lisière
-# est du massif de pins au sud du panneau/de la clairière du PNJ tutoriel).
-# `terrain` vient de zone-data.json (extraction ROM, pas de bug de génération
-# ici — vérifié : identique dans la source) et déclare praticable une bande
-# diagonale (bord ouest du massif) que le screenshot dessine en canopée dense,
-# visuellement indissociable des tuiles voisines correctement murées ('#') du
-# même massif — aucune trace de sentier (testé par échantillonnage de couleur :
-# aucun pixel de la teinte "chemin" dans toute la bande). Le moteur n'ayant
-# aucun calque de profondeur (contrairement au vrai jeu DS, qui peut faire
-# passer le joueur "derrière" le haut d'un arbre), cette tuile praticable
-# rendue en canopée pleine reproduit exactement le bug rapporté.
+# ── Recalage grille de collision ↔ screenshot ────────────────────────────────
 #
-# Piste naïve (murer toute la bande pour coller à l'image) rejetée : vérifiée
-# **cassante** — BFS + `a1-traversal.test.ts` confirment que cette bande est
-# l'unique corridor reliant l'entrée est de la zone (depuis Bourg Geon) au
-# reste de Route 29 (Ville Griotte, Route 30, PNJ, la guérite) ; la murer en
-# entier isole toute la suite du parcours. Recherche du sous-ensemble maximal
-# sûr (glouton, chaque tuile testée une à une contre BFS + les points
-# obligatoires réels — les 2 tuiles de la guérite, l'adjacence des 2 PNJ de la
-# zone, le bord ouest vers Ville Griotte) : sur les 45 tuiles suspectes,
-# 44 peuvent être murées sans casser aucun chemin obligatoire — seule (76,24)
-# doit rester praticable (le passage réel, invisible à l'image, ne fait qu'une
-# tuile de large à cet endroit). Résultat déterministe (chaque tuile
-# gardée/murée revérifiée contre les mêmes points obligatoires après coup,
-# pas juste au moment du glouton) ; `npm run check` (a1-traversal.test.ts)
-# reste vert avec ce sous-ensemble. Portée strictement limitée à cette bande
-# précisément vérifiée à l'œil et au graphe — pas une correction générique
-# (testée par couleur sur tout le jeu, bien trop de faux positifs, voir
-# issue 13) ; si un autre zone a le même défaut, à traiter au cas par cas.
-OUTDOOR_TERRAIN_PATCHES: dict[str, list[tuple[int, int, int]]] = {
-    # (x_start, x_end_inclusive, z) — une entrée par ligne de la bande ;
-    # (76, 24) volontairement absente (seule case du massif qui doit rester
-    # praticable, voir commentaire ci-dessus).
-    #
-    # 2026-08-03 (suite) — 2ᵉ signalement utilisateur (capture d'écran), joueur
-    # visiblement « dans les arbres » plus à l'ouest/au centre de la même
-    # Route 29, cette fois dans la bordure sud de canopée (z 23-28), pas la
-    # lisière est du massif corrigée ci-dessus (z 20-26, x 76-89). Deux poches
-    # distinctes trouvées et confirmées par rendu composite (capture réelle +
-    # grille de collision superposée) puis par classification couleur tuile
-    # par tuile (même méthode que le scanner `canopy_scan_draft.py`, mais
-    # sans le filtre « ≥60% voisins murés » qui sous-compte les gros trous :
-    # une tuile au MILIEU d'un trou n'a quasi aucun voisin mur, seulement des
-    # voisins eux-mêmes trous — le filtre ne capte que la bordure d'un trou
-    # large, voir issue 13) :
-    #   - poche ouest (x 6-11, z 23-28) : petite poche isolée dans la canopée,
-    #     juste au sud d'une entrée d'eau (non touchée, hors périmètre).
-    #   - poche centrale (x 30-75, z 24-28) : bien plus grande, ~30 tuiles de
-    #     large, forme en escalier (le trou se décale vers l'est à mesure que
-    #     z augmente, suit le contour de la canopée) — c'est celle visible
-    #     dans la 2ᵉ capture d'écran de l'utilisateur.
-    # Hypothèse initiale erronée, corrigée avant commit : cette poche a
-    # d'abord semblé être un cul-de-sac isolé (atteint uniquement via les
-    # ledges à sens unique de la rangée z=23, mur ouest x0-5 déjà présent) —
-    # un premier essai a muré la totalité des 188 tuiles couleur-canopée d'un
-    # coup. `npm run check` a rougi (3 tests `a1-traversal.test.ts` : guérite,
-    # PNJ, continuum Route 29 → Ville Griotte/Route 30 tous cassés). BFS
-    # Python de diagnostic (même sémantique que `bfsOutdoor` : ledges à sens
-    # unique, franchissement de bord via `findOutdoorZoneAt`, warps = sorties)
-    # a montré que le chemin ouest-est de la bande z10-18 (la voie « normale »)
-    # est en réalité coupé en plusieurs segments par les massifs de pins de
-    # cette même bande — le vrai chemin contourne PAR le sud, plonge dans
-    # cette poche via les ledges, la traverse partiellement, et en ressort
-    # par un passage à pied (pas un ledge, donc à double sens) cousu dans le
-    # coin sud-est de la poche. Reproduit le même principe que (76, 24) pour
-    # la bande corrigée plus haut, à plus grande échelle. Recherche gloutonne
-    # tuile par tuile (même méthode que la 1ʳᵉ correction, chaque tuile testée
-    # contre un BFS complet — guérite, adjacence des 2 PNJ, les 4 zones du
-    # continuum toutes atteintes — gardée si aucun de ces points ne casse,
-    # sinon laissée praticable) sur les 188 tuiles candidates : 167 murables,
-    # 21 doivent rester praticables (le passage réel, invisible à l'image).
-    # `npm run check` vert avec ce sous-ensemble.
-    "MAP_ROUTE_29": [
-        (84, 89, 20),
-        (80, 89, 21),
-        (79, 89, 22),
-        (78, 81, 23),
-        (77, 81, 24),
-        (76, 79, 25),
-        (76, 79, 26),
-        (6, 7, 23),
-        (6, 7, 24),
-        (30, 41, 24),
-        (6, 11, 25),
-        (30, 60, 25),
-        (66, 74, 25),
-        (6, 11, 26),
-        (30, 60, 26),
-        (66, 72, 26),
-        (6, 11, 27),
-        (42, 60, 27),
-        (62, 72, 27),
-        (6, 11, 28),
-        (42, 60, 28),
-        # 2026-08-05 (suite) — 3ᵉ signalement utilisateur (2 captures d'écran,
-        # joueur + suiveur Pikachu coincé côté ouest d'un petit amas de pins,
-        # près de la guérite mais à un endroit différent des deux corrections
-        # ci-dessus). Localisé précisément par recalage image (ORB/RANSAC,
-        # 628 points d'intérêt appariés entre la capture utilisateur et
-        # `Johto Route 29 HGSS.png`, échelle ~1.6×, pas d'estimation à l'œil)
-        # → joueur en tuile locale ≈(66,24). Le scanner v2 (canopy_scan_v2.py,
-        # voir plus bas) confirme indépendamment un candidat couvrant x61-76,
-        # z23-28 à cet endroit précis.
-        #
-        # Recherche gloutonne (même méthode, testée dans les deux sens —
-        # ordre croissant ET décroissant des tuiles — pour écarter un biais
-        # d'ordre glouton, résultat IDENTIQUE dans les deux cas) sur les 26
-        # tuiles candidates (x61 colonne + x62-72 rangée z28 + x73-76 coin
-        # sud-est, z23-28) : **seules (73,24) et (74,24) sont murables**, les
-        # 24 autres cassent `a1-traversal.test.ts` (guérite ou continuum
-        # Route 29 → Ville Griotte/Route 30 injoignables) quel que soit
-        # l'ordre testé — CE N'EST PAS UN NOUVEAU TROU, c'est la continuation
-        # directe du passage déjà identifié comme obligatoire à la correction
-        # précédente (« 21 doivent rester praticables… concentré autour de
-        # x=61 et x=62-75 en bas de la poche ») : le joueur du 3ᵉ signalement
-        # a simplement marché sur cette même poche visuellement fausse mais
-        # structurellement nécessaire. Limite assumée, pas cachée (comme pour
-        # (76,24) plus haut) : sans calque de profondeur sprite (hors
-        # périmètre moteur) ou retouche d'asset graphique (hors périmètre
-        # contenu), ces ~24 tuiles resteront visuellement de la canopée
-        # praticable.
-        #
-        # 2026-08-05 (suite 3) — CORRECTIF D'URGENCE : (73,24) et (74,24)
-        # REVERTIES. La garde de sécurité de la passe précédente ne testait
-        # que la joignabilité de quelques points nommés (guérite, PNJ,
-        # continuum de zones) via a1-traversal.test.ts — insuffisant : muser
-        # ces 2 tuiles CONTIGUËS coupait complètement le petit cul-de-sac
-        # local (66-72,24, 7 tuiles) du reste de la carte (aucun autre
-        # chemin, vérifié par flood-fill exhaustif), sans casser aucun des
-        # points nommés testés (qui restent joignables par un tout autre
-        # chemin) — donc invisible à cette garde. Un vrai joueur s'est
-        # retrouvé enfermé là (position sauvegardée x=648,z=408 monde =
-        # local (72,24), pile dans la poche) après le déploiement de ce
-        # patch. Cause racine du process, pas juste de la donnée : la garde
-        # doit vérifier la connectivité EXHAUSTIVE (aucune tuile praticable
-        # ne devient inatteignable depuis les autres), pas seulement une
-        # liste de points nommés — voir la nouvelle fonction
-        # `verify_full_connectivity` plus bas, désormais utilisée par
-        # TOUTES les entrées d'OUTDOOR_TERRAIN_PATCHES avant application.
-        # 2026-08-05 (suite 2) — scanner v2 (canopy_scan_v2.py, voir plus bas)
-        # : composantes connexes + clustering couleur k-means par zone
-        # (au lieu de la moyenne unique + filtre voisinage de v1, voir
-        # commentaire détaillé au-dessus de la définition du scanner). Testé
-        # d'abord sur cette même zone en ignorant les patches ci-dessus (pour
-        # retrouver, sur les données brutes, les deux trous déjà connus et
-        # corrigés plus haut — calibration avant de faire confiance à un
-        # candidat nouveau) : 96% de rappel (203/211 tuiles déjà connues),
-        # 0 faux positif sur 2 zones saines (Bourg Geon, Ville Griotte), et
-        # ramène le bruit de Route 30 de 477 (v1 sans filtre) / 21 (v1 avec
-        # filtre) à 1 candidat. Deux NOUVEAUX trous trouvés en tournant le
-        # scanner sur Route 29 (données déjà patchées), chacun confirmé par
-        # rendu composite avant correction (même discipline que les trous
-        # précédents) puis vérifié BFS-safe (mure tout le candidat d'un coup,
-        # `a1-traversal.test.ts` reste vert dans les deux cas — aucune des
-        # deux poches n'est sur un chemin obligatoire, contrairement à la
-        # poche centrale ci-dessus) :
-        #   - bordure nord (x64-81, z2-6) : pins vert clair, texture
-        #     distincte du reste de la canopée (vert olive/brun) — c'est
-        #     justement ce 2ᵉ cluster couleur que v1 (une seule moyenne
-        #     « mur ») ne pouvait pas voir. 55 tuiles.
-        #   - lisière ouest de la petite clairière boisée (x14-26, z6-9,
-        #     plus une poche z8-11 x14-18) — bordure de canopée normale
-        #     (brun/orange) juste au-dessus de la clairière au PNJ Tuscany.
-        #     41 tuiles.
-        # Deux candidats supplémentaires du scanner vérifiés et REJETÉS
-        # (faux positifs confirmés à l'œil, non corrigés) : x9-11,z12-13 —
-        # c'est de l'eau (lac), pas de la canopée ; sur Route 30, x11,z28-34
-        # — une bande de fleurs décoratives, pas des arbres. Les deux
-        # coïncident en couleur avec un cluster « mur » mais ne sont ni l'un
-        # ni l'autre visuellement un trou — gardés praticables, aucune
-        # correction.
-        (64, 81, 2),
-        (64, 79, 3),
-        (64, 79, 4),
-        (64, 64, 5),
-        (66, 66, 5),
-        (68, 68, 5),
-        (70, 70, 5),
-        (70, 70, 6),
-        (18, 26, 6),
-        (18, 26, 7),
-        (14, 19, 8),
-        (21, 21, 8),
-        (23, 23, 8),
-        (25, 25, 8),
-        (14, 18, 9),
-        # (21, 23, 9) EXCLU (2026-08-05, `verify_full_connectivity`, voir
-        # plus bas) : muré isolait (22,8) du reste de la carte — trouvé par
-        # la nouvelle garde de connectivité exhaustive avant même d'être
-        # signalé en jeu (même incident de méthode qui a piégé le joueur
-        # sur (73,74,24) plus haut, ici attrapé en amont).
-        (25, 25, 9),
-        (14, 14, 10),
-        (16, 16, 10),
-        (18, 18, 10),
-        (14, 14, 11),
-        # (16, 16, 11) EXCLU, même raison : isolait (15,10) et (15,11).
-    ],
-}
+# Issue 13 (QA humaine, « les arbres et les obstacles sont mal gérés en
+# général »). L'ancienne formule posait la grille sur l'image en supposant
+# `scale = screenshot_px / nb_tuiles`, c'est-à-dire « la capture couvre
+# exactement la grille, sans marge, coin haut-gauche sur la tuile (0,0) ».
+# Les deux moitiés de l'hypothèse sont fausses :
+#
+#   * les cartes HGSS publiées sont des rendus à caméra oblique — une tuile
+#     fait ~16 px de large mais ~12 px de haut (raccourci vertical ≈ 0.75) ;
+#     la hauteur d'image ne donne donc AUCUNE information sur le pas vertical ;
+#   * elles sont recadrées à la main, avec une marge variable de décor hors
+#     carte (le « border block » que le jeu dessine autour de la zone).
+#
+# La grille était donc étirée pour remplir l'image et dérivait — jusqu'à ~20
+# tuiles verticalement sur Route 29 (pas déduit 17.44 px/tuile au lieu de 12).
+# Tous les symptômes remontés en QA sont ce seul décalage vu à des endroits
+# différents : arbres qu'on traverse, murs invisibles en pleine herbe,
+# passages « fermés », PNJ posés dans la canopée.
+#
+# Historique assumé : trois passes de correction précédentes ont muré à la
+# main des centaines de tuiles de terrain (OUTDOOR_TERRAIN_PATCHES) et
+# déplacé un objet (OUTDOOR_OBJECT_POSITION_PATCHES) pour faire coller la
+# collision à ce que l'image *semblait* montrer — en traitant l'image comme
+# la vérité et la ROM comme le bug. C'était l'inverse : la donnée ROM était
+# juste depuis le début, seul son placement à l'écran était faux. Ces patches
+# sont supprimés (l'un d'eux avait enfermé un joueur dans une poche de 7
+# tuiles), avec eux la garde `verify_full_connectivity` qui n'existait que
+# pour les rattraper. Le recalage vit maintenant dans
+# scripts/build/fit-map-alignment.py → scripts/sources/map-alignment.json.
 
-def _flood_fill(terrain: str, tile_w: int, tile_h: int, start_idx: int) -> set[int]:
-    """BFS 4-connexe sur la grille de terrain aplatie — utilisé uniquement
-    par `verify_full_connectivity` (murs = '#', tout le reste praticable)."""
-    if terrain[start_idx] == "#":
-        return set()
-    seen = {start_idx}
-    queue = deque([start_idx])
-    while queue:
-        idx = queue.popleft()
-        x, z = idx % tile_w, idx // tile_w
-        for dx, dz in ((1, 0), (-1, 0), (0, 1), (0, -1)):
-            nx, nz = x + dx, z + dz
-            if 0 <= nx < tile_w and 0 <= nz < tile_h:
-                nidx = nz * tile_w + nx
-                if nidx not in seen and terrain[nidx] != "#":
-                    seen.add(nidx)
-                    queue.append(nidx)
-    return seen
-
-def verify_full_connectivity(name: str, before_terrain: str, after_terrain: str, tile_w: int, tile_h: int) -> None:
-    """Garde de sécurité EXHAUSTIVE pour tout patch de terrain extérieur
-    (2026-08-05, tirée d'un incident réel — voir le commentaire daté
-    « CORRECTIF D'URGENCE » sur MAP_ROUTE_29 plus haut dans ce fichier).
-    L'ancienne garde (a1-traversal.test.ts) ne vérifie que la joignabilité
-    d'une poignée de points nommés (portes, PNJ) — insuffisant : un patch
-    peut murer une paire de tuiles contiguës qui isole une poche locale du
-    reste de la carte SANS jamais toucher le chemin qu'empruntent ces points
-    nommés, donc invisible à cette garde. Un joueur s'est réellement retrouvé
-    enfermé dans une poche de 7 tuiles créée exactement ainsi.
-    Ici : flood-fill complet depuis un point de référence AVANT patch, puis
-    depuis le même point (ou le premier voisin encore praticable si le
-    patch a justement muré ce point) APRÈS patch — toute tuile qui reste
-    praticable après le patch mais devient inatteignable depuis ce point de
-    référence est un signal d'erreur : le patch a coupé un passage sans le
-    refermer des deux côtés à la fois. Lève une exception qui interrompt la
-    génération plutôt que produire silencieusement une carte cassée."""
-    if not before_terrain or before_terrain == after_terrain:
-        return
-    try:
-        seed = next(i for i, c in enumerate(before_terrain) if c != "#")
-    except StopIteration:
-        return  # zone entièrement murée avant patch, rien à vérifier
-    reachable_before = _flood_fill(before_terrain, tile_w, tile_h, seed)
-    if after_terrain[seed] == "#":
-        # Le patch a muré le seed lui-même : reprendre depuis n'importe
-        # quelle tuile qui était atteignable ET reste praticable.
-        candidates = [i for i in reachable_before if after_terrain[i] != "#"]
-        if not candidates:
-            return  # tout ce qui était atteignable a été muré — voulu, rien à signaler
-        seed = candidates[0]
-    reachable_after = _flood_fill(after_terrain, tile_w, tile_h, seed)
-    newly_stranded = {
-        i for i in reachable_before if after_terrain[i] != "#" and i not in reachable_after
-    }
-    if newly_stranded:
-        examples = sorted((i % tile_w, i // tile_w) for i in newly_stranded)[:10]
-        raise SystemExit(
-            f"verify_full_connectivity: OUTDOOR_TERRAIN_PATCHES sur {name} isole "
-            f"{len(newly_stranded)} tuile(s) auparavant atteignable(s) depuis le reste "
-            f"de la zone (ex. tuiles locales {examples}) — un patch a muré un passage "
-            f"sans le refermer des deux côtés, créant une poche inatteignable. "
-            f"Revoir OUTDOOR_TERRAIN_PATCHES['{name}']."
-        )
-
-def apply_outdoor_terrain_patches(name: str, terrain: str, tile_w: int, tile_h: int) -> str:
-    patches = OUTDOOR_TERRAIN_PATCHES.get(name)
-    if not patches or not terrain:
-        return terrain
-    chars = list(terrain)
-    for x_start, x_end, tz in patches:
-        for tx in range(x_start, x_end + 1):
-            idx = tz * tile_w + tx
-            if 0 <= idx < len(chars):
-                chars[idx] = "#"
-    patched = "".join(chars)
-    verify_full_connectivity(name, terrain, patched, tile_w, tile_h)
-    return patched
-
-# Issue 13 (QA humaine, 3ᵉ signalement Route 29) : pendant la vérification
-# NPC-dans-les-arbres qui a suivi les 2 corrections de terrain ci-dessus
-# (cross-référencer chaque objet de décor de Route 29 contre la grille de
-# collision maintenant corrigée), `obj_R29_gsboy2` (SPRITE_GSBOY2, un simple
-# objet de décor ROM — pas un PNJ curaté, aucune entrée content/map/ à faire
-# correspondre, donc pas de `role_origin` disponible ici contrairement à
-# Silver) s'est révélé posé en (50,26), en PLEINE canopée du massif sud (bord
-# de carte, aucun chemin à proximité) — confirmé par rendu composite : aucune
-# tuile praticable avant (50,24), 2 tuiles plus au nord. Son `movement`/
-# `yRange:1` (patrouille verticale d'une tuile) suggère un figurant d'arrière-
-# plan du jeu original, cohérent avec un design HGSS "personnage entraperçu
-# entre les arbres" — plausible en 3D avec occlusion de profondeur, mais ce
-# moteur (image plate + grille, sans calque, voir `OUTDOOR_TERRAIN_PATCHES`
-# ci-dessus) ne peut pas le rendre autrement qu'un sprite flottant sur de la
-# canopée pleine, même bug visuel que Silver à Bourg Geon (issue 13, bug D) —
-# reposition vers la tuile praticable la plus proche qui reste dans le même
-# contexte (lisière de la forêt), pas de mécanisme content/map/ pour un objet
-# de décor brut donc corrigé ici, même précédent que OUTDOOR_TERRAIN_PATCHES
-# (portée strictement scoped, documentée, pas une correction générique).
-OUTDOOR_OBJECT_POSITION_PATCHES: dict[str, dict[str, tuple[int, int]]] = {
-    # object id -> (new_local_x, new_local_z)
-    "MAP_ROUTE_29": {
-        "obj_R29_gsboy2": (50, 24),
-    },
-}
-
-def apply_outdoor_object_position_patches(name: str, objects: list[dict], world_origin_x: int, world_origin_y: int) -> list[dict]:
-    patches = OUTDOOR_OBJECT_POSITION_PATCHES.get(name)
-    if not patches:
-        return objects
-    result = []
-    for obj in objects:
-        patch = patches.get(obj.get("id"))
-        if patch:
-            new_x, new_z = patch
-            obj = {**obj, "x": world_origin_x + new_x, "z": world_origin_y + new_z}
-        result.append(obj)
-    return result
+ALIGNMENT = Path("scripts/sources/map-alignment.json")
+_align_file = json.load(open(ALIGNMENT)) if ALIGNMENT.exists() else {"zones": {}}
+alignment: dict = _align_file.get("zones", {})
+if alignment:
+    print(f"{len(alignment)} zones recalées chargées depuis {ALIGNMENT}")
+else:
+    print(f"ATTENTION : {ALIGNMENT} absent — lancer scripts/build/fit-map-alignment.py")
 
 def get_dimensions(path: Path, tile_w: int, tile_h: int) -> tuple[int, int]:
     if HAS_PIL and path and path.exists():
@@ -661,9 +370,64 @@ def get_dimensions(path: Path, tile_w: int, tile_h: int) -> tuple[int, int]:
 TILE_UNIT = 32  # 1 unité de grille = 32px en coordonnées monde
 DEFAULT_SCALE = 12.0  # px/tile fallback for zones with no screenshot (~médiane observée)
 
+# ── Verdict sur une capture ──────────────────────────────────────────────────
+#
+# fit-map-alignment.py MESURE (pas, origine, séparabilité) ; c'est ici qu'on
+# décide si la capture illustre vraiment la zone. Politique modifiable sans
+# relancer les 20 minutes de recalage.
+#
+# Deux signaux, parce qu'un seul ne suffit pas :
+#
+#  * le SCORE (séparabilité couleur mur/sol). Élevé = la grille tombe sur des
+#    structures réelles. Mais il dépend du contraste de la zone : une arène au
+#    sol et aux murs de teintes voisines plafonne bas même parfaitement calée
+#    (Violet Gym : 0.47) ;
+#  * le PAS trouvé. La caméra HGSS est fixe : ~16 px de large, ~12 de haut.
+#    Un recalage qui retombe dessus a trouvé la vraie grille ; un recalage
+#    dégénéré (image bien trop petite pour la zone) s'effondre sur des valeurs
+#    sans rapport — 6.76, 1.98, 3.68 px/tuile observés. C'est ce second signal
+#    qui rattrape les zones peu contrastées sans laisser passer les dégénérées.
+TRUST_SCORE = 0.60          # suffit à lui seul, quel que soit le pas
+TRUST_SCORE_WITH_PITCH = 0.35  # suffit si le pas est celui de la caméra
+PLAUSIBLE_PITCH_X = (15.0, 16.8)
+PLAUSIBLE_PITCH_Y = (11.2, 13.0)
+
+# Part de la grille qui doit tomber DANS l'image. Une capture peut être un
+# cadrage partiel de la zone (Sprout Tower, Bell Tower, Ilex Forest) — le
+# joueur marche alors hors de l'image, dans le noir, sans que rien ne le
+# signale. Couverture médiane observée : 0.97 ; à 0.60 on garde les cadrages
+# un peu courts (mieux qu'une grille nue) et on écarte les captures qui ne
+# montrent qu'un coin de la zone.
+MIN_COVERAGE = 0.60
+
+def alignment_trusted(fit: dict) -> bool:
+    px, py = fit["pitch_x"], fit["pitch_y"]
+    plausible = (
+        PLAUSIBLE_PITCH_X[0] <= px <= PLAUSIBLE_PITCH_X[1]
+        and PLAUSIBLE_PITCH_Y[0] <= py <= PLAUSIBLE_PITCH_Y[1]
+    )
+    return fit["score"] >= TRUST_SCORE or (plausible and fit["score"] >= TRUST_SCORE_WITH_PITCH)
+
+def grid_coverage(fit: dict, scr_w: int, scr_h: int, tile_w: int, tile_h: int) -> float:
+    """Fraction de l'emprise de la grille qui tombe dans l'image."""
+    x0, y0 = fit["origin_x"], fit["origin_y"]
+    x1 = x0 + fit["pitch_x"] * tile_w
+    y1 = y0 + fit["pitch_y"] * tile_h
+    area = (x1 - x0) * (y1 - y0)
+    if area <= 0:
+        return 0.0
+    ox = max(0.0, min(x1, scr_w) - max(x0, 0.0))
+    oy = max(0.0, min(y1, scr_h) - max(y0, 0.0))
+    return (ox * oy) / area
+
 registry_zones = []
+matched_files: dict[str, str] = {}
 matched   = 0
 unmatched = 0
+aligned: list[str]   = []   # recalage mesuré et crédible
+untrusted: list[str] = []   # capture rejetée (ne montre pas cette grille)
+unfitted: list[str]  = []   # pas encore passée au recalage
+stale: list[str]     = []   # recalage périmé (la capture a changé depuis)
 
 # Ascenseurs : les warps 4095 (0xFFF) sont "dynamiques" dans la ROM (la
 # destination est l'étage d'où l'on vient, stocké en RAM). On reconstruit la
@@ -692,7 +456,6 @@ for z in zones:
 
     tile_w, tile_h = interior_bounds(z, tile_w_raw, tile_h_raw, is_outdoor)
     terrain_raw = trim_terrain(z.get("terrain", ""), tile_w_raw, tile_w, tile_h)
-    terrain_raw = apply_outdoor_terrain_patches(name, terrain_raw, tile_w, tile_h)
 
     # Coordonnées monde du coin supérieur gauche de la zone
     world_origin_x = grid_x * TILE_UNIT
@@ -714,6 +477,7 @@ for z in zones:
         screenshot_path = find_generic_template(name)
 
     if screenshot_path:
+        matched_files[name] = str(screenshot_path.relative_to(MAPS_DIR))
         matched += 1
         scr_w, scr_h = get_dimensions(screenshot_path, tile_w, tile_h)
         screenshot_url = "/" + str(screenshot_path.relative_to(Path("public")))
@@ -727,11 +491,54 @@ for z in zones:
         scr_w, scr_h = round(tile_w * DEFAULT_SCALE), round(tile_h * DEFAULT_SCALE)
         screenshot_url = ""
 
-    # Scale : pixels écran par unité monde
-    scale_x = scr_w / tile_w if tile_w > 0 else 1.0
-    scale_y = scr_h / tile_h if tile_h > 0 else 1.0
-
-    objects = apply_outdoor_object_position_patches(name, objects, world_origin_x, world_origin_y)
+    # Placement de la grille sur l'image : `origin` = pixel du coin haut-gauche
+    # de la tuile (0,0), `scale` = pas d'une tuile en pixels. Les deux viennent
+    # du recalage mesuré (fit-map-alignment.py), jamais d'une déduction à
+    # partir des dimensions de l'image.
+    fit = alignment.get(name) if screenshot_url else None
+    # Le recalage vaut pour UNE image précise : si la capture servie a changé
+    # depuis (nouvelle attribution, retouche), l'entrée en cache ne la décrit
+    # plus. On la jette plutôt que de poser une grille mesurée sur une autre
+    # image — c'est exactement le genre de décalage silencieux qui a coûté
+    # trois passes de fausses corrections (issue 13).
+    if fit and screenshot_path is not None:
+        expected = f"{screenshot_path.name}:{screenshot_path.stat().st_size}"
+        if fit.get("key") != expected:
+            fit = None
+            stale.append(name)
+    if not screenshot_url:
+        scale_x = scale_y = DEFAULT_SCALE
+        origin_px = origin_py = 0.0
+    elif fit and alignment_trusted(fit) and grid_coverage(fit, scr_w, scr_h, tile_w, tile_h) >= MIN_COVERAGE:
+        scale_x, scale_y = fit["pitch_x"], fit["pitch_y"]
+        origin_px, origin_py = fit["origin_x"], fit["origin_y"]
+        aligned.append(name)
+    elif fit:
+        # Soit le recalage n'a rien trouvé de crédible, soit la capture ne
+        # couvre qu'une partie de la zone (voir MIN_COVERAGE) : cette capture ne montre
+        # pas cette grille (attribuée à la mauvaise zone, template générique
+        # réutilisé…). On N'INVENTE PAS un alignement — la zone est servie
+        # sans screenshot pour que MapClient bascule sur son CollisionCanvas,
+        # laid mais fidèle à la collision par construction. Un joueur qui voit
+        # une grille comprend qu'il voit une grille ; un joueur qui voit une
+        # jolie carte fausse croit à un bug de collision (tout l'historique
+        # de l'issue 13).
+        untrusted.append(name)
+        screenshot_url = ""
+        matched -= 1
+        unmatched += 1
+        scr_w, scr_h = round(tile_w * DEFAULT_SCALE), round(tile_h * DEFAULT_SCALE)
+        scale_x = scale_y = DEFAULT_SCALE
+        origin_px = origin_py = 0.0
+    else:
+        # Pas encore recalée (fit-map-alignment.py pas passé sur cette zone) :
+        # on garde l'ancien comportement — carte affichée, alignement déduit
+        # des dimensions, donc potentiellement faux. Compté et listé en fin de
+        # build pour que ça ne passe pas inaperçu.
+        unfitted.append(name)
+        scale_x = scr_w / tile_w if tile_w > 0 else 1.0
+        scale_y = scr_h / tile_h if tile_h > 0 else 1.0
+        origin_px = origin_py = 0.0
 
     # Formatter les objets (garder seulement les champs utiles pour la carte)
     clean_objects = [
@@ -771,8 +578,13 @@ for z in zones:
         "screenshot_h":   scr_h,
         "tile_width":     tile_w,
         "tile_height":    tile_h,
+        # Pas d'une tuile en pixels d'image (pitch), et pixel du coin
+        # haut-gauche de la tuile (0,0) — mesurés, pas déduits des
+        # dimensions de l'image (voir « Recalage » plus haut).
         "scale_x":        round(scale_x, 4),
         "scale_y":        round(scale_y, 4),
+        "origin_px":      round(origin_px, 2),
+        "origin_py":      round(origin_py, 2),
         "world_origin_x": world_origin_x,
         "world_origin_y": world_origin_y,
         "objects":        clean_objects,
@@ -795,8 +607,22 @@ for z in zones:
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
 json.dump({"zones": registry_zones}, open(OUT, "w"), ensure_ascii=False, indent=2)
+json.dump(dict(sorted(matched_files.items())), open(MATCHED, "w"), ensure_ascii=False, indent=1)
 
 print()
 print(f"Done → {OUT}")
 print(f"  {len(registry_zones)} zones")
 print(f"  {matched} avec screenshot, {unmatched} sans")
+print(f"  {len(aligned)} recalées sur mesure, {len(unfitted)} non recalées, "
+      f"{len(untrusted)} captures rejetées")
+if unfitted:
+    print(f"  ATTENTION — alignement encore déduit des dimensions (donc suspect) pour "
+          f"{len(unfitted)} zones ; lancer scripts/build/fit-map-alignment.py")
+    print("    " + ", ".join(sorted(unfitted)[:12]) + (" …" if len(unfitted) > 12 else ""))
+if stale:
+    print(f"  {len(stale)} zone(s) dont le recalage ne correspond plus à la capture servie "
+          f"— relancer scripts/build/fit-map-alignment.py : "
+          + ", ".join(sorted(stale)[:8]) + (" …" if len(stale) > 8 else ""))
+if untrusted:
+    print("  Captures rejetées (servies en CollisionCanvas) : "
+          + ", ".join(sorted(untrusted)[:12]) + (" …" if len(untrusted) > 12 else ""))

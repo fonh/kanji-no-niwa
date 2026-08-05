@@ -9,11 +9,13 @@ import DialogueBox, { type DialogueBoxHandle } from './DialogueBox'
 import type { DialoguePageEntry } from '@/lib/content'
 import {
   canTraverse,
+  isWalkable,
   terrainAt,
   zoneSpawn,
   findOutdoorZoneAt,
   ledgeDirAt,
   warpAt,
+  worldToPixel as zoneWorldToPixel,
   DIRECTION_BY_CODE,
   DIRECTION_DELTA,
   type Direction,
@@ -23,8 +25,16 @@ import {
 import type { ZoneNpc } from '@/lib/npcs'
 import { findInterceptingNpc, interceptionApproach, pushBackTile, type RoadblockSource } from '@/lib/roadblock'
 import { isInSightLine, type ZoneTrainer } from '@/lib/trainers'
+import { ambientLineFor } from '@/lib/ambient-lines'
 import type { ZoneListEntry } from '@/lib/zones'
-import { resolveNpcSprite, PLAYER_SPRITE_URL, SPRITE_FRAME_SIZE } from '@/lib/npc-sprites'
+import {
+  resolveNpcSprite,
+  spriteFrameOffset,
+  type ResolvedSprite,
+  SPRITE_ROW,
+  PLAYER_SPRITE_URL,
+  SPRITE_FRAME_SIZE,
+} from '@/lib/npc-sprites'
 import {
   obstacleKindOf,
   obstacleKey,
@@ -65,7 +75,7 @@ interface Props {
   playerSpriteUrl?: string
   // Planche overworld du compagnon choisi (issue 10) — null si aucun
   // compagnon ou pas de planche exploitable (le suivi n'apparaît pas).
-  followerSpriteUrl?: string | null
+  followerSprite?: ResolvedSprite | null
 }
 
 // One tile per input (PRD "Mouvement de l'avatar"); holding a direction
@@ -89,7 +99,6 @@ const WARP_FADE_MS = 150
 
 // Player sheet rows (public/sprites/characters/protagonist_ethan_ow.png,
 // 8×4 frames of 32px): 0=south, 1=north, 2=west, 3=east.
-const SPRITE_ROW: Record<Direction, number> = { south: 0, north: 1, west: 2, east: 3 }
 
 // Decor spriteId -> curated npc sprite_id that represents the SAME character
 // through a different mechanism (issue 13) — used to suppress the decor
@@ -157,7 +166,7 @@ function CollisionCanvas({ zone }: { zone: Zone }) {
   )
 }
 
-export default function MapClient({ zone: initialZone, npcs: initialNpcs, trainers: initialTrainers, initialPos, initialProgress, allZoneNames, playerSpriteUrl = PLAYER_SPRITE_URL, followerSpriteUrl = null }: Props) {
+export default function MapClient({ zone: initialZone, npcs: initialNpcs, trainers: initialTrainers, initialPos, initialProgress, allZoneNames, playerSpriteUrl = PLAYER_SPRITE_URL, followerSprite = null }: Props) {
   const [zone, setZone] = useState(initialZone)
   const [npcs, setNpcs] = useState(initialNpcs)
   const [trainers, setTrainers] = useState(initialTrainers)
@@ -323,10 +332,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   )
 
   const worldToPixel = useCallback(
-    (wx: number, wz: number) => ({
-      x: (wx - zone.world_origin_x) * zone.scale_x,
-      y: (wz - zone.world_origin_y) * zone.scale_y,
-    }),
+    (wx: number, wz: number) => zoneWorldToPixel(zone, wx, wz),
     [zone]
   )
 
@@ -932,9 +938,13 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       }
       return
     }
-    // ROM-extracted background characters have no authored dialogue yet —
-    // a wordless beat instead of dead air (no invented content).
-    openDialogue('', [{ jp: '・・・・・・', en: '' }])
+    // Personnages de décor extraits de la ROM : pas de fiche, pas de dialogue
+    // écrit à la main — ils servaient un « ・・・・・・ » muet. Ils reçoivent
+    // maintenant une réplique du pool d'ambiance, tirée de façon déterministe
+    // sur leur identifiant : le même figurant dit toujours la même chose
+    // (issue 13). Le battement muet reste le repli si le pool est vide.
+    const ambient = ambientLineFor(obj.id)
+    openDialogue('', ambient ? ambient.pages : [{ jp: '・・・・・・', en: '' }])
   }, [startNpcInteraction, startTrainerInteraction, enterWarp, openDialogue, isCleared, updateProgress])
 
   const onB = useCallback(() => {
@@ -1117,6 +1127,17 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           {zone.objects.map(obj => {
             if (progress.cleared.includes(`${zone.name}#${obj.id}`)) return null
             if (warpAt(zone, obj.x, obj.z)) return null
+            // Objet posé dans un mur ou hors de la grille : ce n'est pas un
+            // figurant, c'est un emplacement de garage. La ROM y range les
+            // objets qu'un script fera apparaître ailleurs (coin haut-droit
+            // d'une cellule de carte — (31,0) à Bourg Geon, (63,0) à Ville
+            // Griotte — ou coordonnées carrément négatives). 93 objets dans
+            // tout le jeu. Les dessiner donnait des PNJ en lévitation hors
+            // carte : le Pr. Elm flottait dans le noir au coin de Bourg Geon,
+            // ce qui explique aussi qu'on ne le trouvait nulle part en ville
+            // (issue 13). Personne ne peut se tenir dans un mur — s'il y est,
+            // c'est qu'il n'y est pas.
+            if (!isWalkable(zone, obj.x, obj.z)) return null
             if (
               npcs.some(n => {
                 if (!n.sprite_id) return false
@@ -1129,7 +1150,9 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
               return null
             const px = worldToPixel(obj.x, obj.z)
             const sprite = resolveNpcSprite(obj.spriteId, obj.eventFlag)
-            const spriteRow = sprite && sprite.rows === 4 ? SPRITE_ROW[DIRECTION_BY_CODE[obj.facingDirection]] : 0
+            const frame = sprite
+              ? spriteFrameOffset(sprite, DIRECTION_BY_CODE[obj.facingDirection] ?? 'south')
+              : null
             return (
               <div
                 key={obj.id}
@@ -1149,7 +1172,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                       width: SPRITE_FRAME_SIZE,
                       height: SPRITE_FRAME_SIZE,
                       backgroundImage: `url(${sprite.url})`,
-                      backgroundPosition: `0 -${spriteRow * SPRITE_FRAME_SIZE}px`,
+                      backgroundPosition: `${frame?.x ?? 0}px ${frame?.y ?? 0}px`,
                       backgroundRepeat: 'no-repeat',
                       imageRendering: 'pixelated',
                     }}
@@ -1176,7 +1199,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             const px = worldToPixel(npc.world_x, npc.world_z)
             const intercepting = interceptingNpc === npc.npc_id
             const sprite = npc.sprite_id ? resolveNpcSprite(npc.sprite_id) : null
-            const spriteRow = sprite ? SPRITE_ROW[npc.facing ?? 'south'] : 0
+            const frame = sprite ? spriteFrameOffset(sprite, npc.facing ?? 'south') : null
             return (
               <div
                 key={npc.npc_id}
@@ -1203,7 +1226,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                       width: SPRITE_FRAME_SIZE,
                       height: SPRITE_FRAME_SIZE,
                       backgroundImage: `url(${sprite.url})`,
-                      backgroundPosition: `0 -${spriteRow * SPRITE_FRAME_SIZE}px`,
+                      backgroundPosition: `${frame?.x ?? 0}px ${frame?.y ?? 0}px`,
                       backgroundRepeat: 'no-repeat',
                       imageRendering: 'pixelated',
                     }}
@@ -1225,20 +1248,39 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           {trainers.map(trainer => {
             const px = worldToPixel(trainer.world_x, trainer.world_z)
             const engaging = engagingTrainer === trainer.trainer_id
+            // Un dresseur se dessine comme un PNJ. Il ne l'était pas : ce bloc
+            // ne rendait qu'un div vide de 18px, donc RIEN à l'écran — d'où
+            // « les dresseurs ne font rien », on ne pouvait pas les voir, et
+            // encore moins deviner où passait leur ligne de vue (issue 13).
+            const sprite = trainer.sprite_id ? resolveNpcSprite(trainer.sprite_id) : null
+            const frame = sprite ? spriteFrameOffset(sprite, trainer.facing) : null
             return (
               <div
                 key={trainer.trainer_id}
                 style={{
                   position: 'absolute',
-                  left: px.x - 9 + zone.scale_x / 2,
-                  top: px.y - 16 + zone.scale_y,
-                  width: 18,
-                  height: 18,
+                  left: px.x - (sprite ? SPRITE_FRAME_SIZE / 2 : 9) + zone.scale_x / 2,
+                  top: px.y - (sprite ? SPRITE_FRAME_SIZE : 16) + zone.scale_y,
+                  width: sprite ? SPRITE_FRAME_SIZE : 18,
+                  height: sprite ? SPRITE_FRAME_SIZE : 18,
                   pointerEvents: 'none',
                   zIndex: 5,
                 }}
                 title={trainer.name}
               >
+                {sprite && (
+                  <div
+                    style={{
+                      width: SPRITE_FRAME_SIZE,
+                      height: SPRITE_FRAME_SIZE,
+                      backgroundImage: `url(${sprite.url})`,
+                      backgroundPosition: `${frame?.x ?? 0}px ${frame?.y ?? 0}px`,
+                      backgroundRepeat: 'no-repeat',
+                      imageRendering: 'pixelated',
+                      opacity: trainer.defeated ? 0.75 : 1,
+                    }}
+                  />
+                )}
                 {engaging && (
                   <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-amber-300 text-base font-bold animate-bounce">
                     ！
@@ -1254,9 +1296,12 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
               (issue 12 : plus de tap sur un marqueur, qui n'existe plus). */}
 
           {/* Suivi du compagnon (issue 10) : une case derrière le joueur, sur
-              la tuile qu'il vient de quitter — planche follower row 0 (face
-              sud, seule rangée fiable des planches extraites), animée idle. */}
-          {followerSpriteUrl &&
+              la tuile qu'il vient de quitter, tourné dans la même direction
+              que lui. Pose fixe : l'ancien cycle `ow-sprite-idle` (8 pas)
+              parcourait en fait les 4 directions de la planche — le compagnon
+              tournoyait sur lui-même (issue 13, même famille que la frame 0
+              « de dos » des PNJ). */}
+          {followerSprite &&
             followerPos &&
             (followerPos.world_x !== playerPos.world_x ||
               followerPos.world_z !== playerPos.world_z) && (
@@ -1273,12 +1318,14 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                 }}
               >
                 <div
-                  className="ow-sprite-idle"
                   style={{
                     width: SPRITE_FRAME_SIZE,
                     height: SPRITE_FRAME_SIZE,
-                    backgroundImage: `url(${followerSpriteUrl})`,
-                    backgroundPosition: '0 0',
+                    backgroundImage: `url(${followerSprite.url})`,
+                    backgroundPosition: (() => {
+                      const f = spriteFrameOffset(followerSprite, facing)
+                      return `${f.x}px ${f.y}px`
+                    })(),
                     backgroundRepeat: 'no-repeat',
                     imageRendering: 'pixelated',
                   }}
@@ -1321,12 +1368,20 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         </div>
       </div>
 
-      {/* Zone-name banner */}
+      {/* Panneau de nom de zone, à l'entrée d'une nouvelle zone. Le jeu
+          d'origine le pose en HAUT À GAUCHE (pas centré), sous la forme d'une
+          plaque arrondie à double liseré — bord extérieur sombre, filet blanc
+          intérieur, fond dégradé clair, nom en texte foncé — qui glisse depuis
+          le bord puis se retire. Reconstruit en CSS : les assets de chrome
+          extraits de la ROM (public/sprites/ui/menus/) sont inexploitables,
+          palettes perdues à l'extraction (issue 13). */}
       {banner && (
-        <div key={banner.key} className="zone-banner fixed top-4 left-1/2 -translate-x-1/2 z-50 pointer-events-none">
-          <div className="bg-black/80 border border-white/30 rounded px-4 py-1.5 text-white text-sm font-semibold tracking-wide">
-            {banner.label}
-          </div>
+        <div
+          key={banner.key}
+          data-testid="zone-banner"
+          className="zone-banner fixed top-3 left-3 z-50 pointer-events-none"
+        >
+          <div className="zone-banner-plate font-reading">{banner.label}</div>
         </div>
       )}
 

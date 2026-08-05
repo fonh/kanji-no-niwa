@@ -9,36 +9,19 @@ export type { Zone, ZoneObject, ZoneWarp, ZoneBounds } from '@/lib/zone-geometry
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const rawRegistry = require('../data/zone-registry.json') as { zones: Zone[] }
 
-// Screenshots mal attribués (issue 10, zones du jalon 1) : le pipeline
-// d'extraction a recyclé l'art d'une AUTRE zone (extérieur de la ville,
-// autre pièce) pour ces intérieurs — la grille de collision ne correspond
-// pas à l'image (vérifié : Mr. Pokémon house ≠ Player House 1F), le joueur
-// marcherait à travers des murs peints. Servis sans screenshot → le repli
-// CollisionCanvas de MapClient (jouable, fidèle à la collision) prend le
-// relais. Liste à résorber à la passe assets (capturer les vrais intérieurs).
-const MISATTRIBUTED_SCREENSHOTS = new Set([
-  'MAP_NEW_BARK_PLAYER_HOUSE_1F',
-  'MAP_NEW_BARK_PLAYER_HOUSE_2F',
-  'MAP_NEW_BARK_RIVAL_HOUSE_1F',
-  'MAP_NEW_BARK_RIVAL_HOUSE_2F',
-  'MAP_NEW_BARK_SOUTHWEST_HOUSE',
-  'MAP_NEW_BARK_ELMS_LAB_2F',
-  'MAP_CHERRYGROVE_POKECENTER_1F',
-  'MAP_CHERRYGROVE_POKECENTER_B1F',
-  'MAP_CHERRYGROVE_POKEMART',
-  'MAP_CHERRYGROVE_GUIDE_GENT_HOUSE',
-  'MAP_CHERRYGROVE_SOUTHWEST_HOUSE',
-  'MAP_CHERRYGROVE_SOUTHEAST_HOUSE',
-  'MAP_ROUTE_29_ROUTE_46_GATEHOUSE',
-  'MAP_ROUTE_30_APRICORN_HOUSE',
-  'MAP_ROUTE_30_MR_POKEMON_HOUSE',
-])
-
-// Patch appliqué une fois au chargement du module (le registre est immuable
-// pendant la vie du process, comme le cache de src/lib/content.ts).
-for (const zone of rawRegistry.zones) {
-  if (MISATTRIBUTED_SCREENSHOTS.has(zone.name)) zone.screenshot = ''
-}
+// L'ancienne liste MISATTRIBUTED_SCREENSHOTS vivait ici : 15 intérieurs du
+// jalon 1 servis sans capture, au motif que « l'art recyclé ment sur les murs,
+// le joueur marcherait à travers des murs peints ». Le diagnostic était juste,
+// la cause non : ces captures ne mentaient pas, c'est la grille de collision
+// qui était mal POSÉE dessus (voir ADR-0006). Une fois l'alignement mesuré,
+// les 15 se recalent toutes proprement (scores 0.82 à 1.64, contre 0.33 à 1.40
+// avec l'ancienne formule) — et les maisons ont enfin un décor plutôt qu'une
+// grille de collision nue.
+//
+// Le tri ne se fait plus par liste écrite à la main mais par mesure, dans
+// build-zone-registry.py : une capture qui ne se cale sur aucune grille, ou
+// qui ne couvre qu'un bout de la zone, sort du registre avec `screenshot: ''`
+// et MapClient bascule alors sur son rendu CollisionCanvas.
 
 const zonesByName = new Map<string, Zone>(rawRegistry.zones.map(z => [z.name, z]))
 
