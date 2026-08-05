@@ -1,5 +1,11 @@
+// Relative path, not the `@/` alias: unlike `import`, Vitest's node-project
+// `require()` doesn't consistently resolve `resolve.alias` for JSON targets
+// (confirmed: this file had zero direct test coverage before issue 13's
+// SPRITE_BONGURI fix — every existing test mocked resolveNpcSprite entirely,
+// so the alias was never actually exercised). `src/lib/zones.ts` already
+// requires its own JSON data file this same relative way — same convention.
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const overworldSprites = require('@/data/overworld-sprite-labels.json') as { label: string; cols: number }[]
+const overworldSprites = require('../data/overworld-sprite-labels.json') as { label: string; cols: number }[]
 
 // Overworld sprite sheets are 32x32 tiles, first row = facing down (idle) —
 // the only direction these ROM-extracted sheets reliably have more than one
@@ -28,6 +34,28 @@ const spriteByLabel = new Map(overworldSprites.map(s => [s.label, s]))
 function fromLabel(label: string): ResolvedSprite | null {
   const entry = spriteByLabel.get(label)
   return entry ? { url: `/sprites/overworld/${label}.png`, cols: entry.cols } : null
+}
+
+/** A handful of ROM-extracted overworld sheets resolve to a real file that's
+ * simply broken content, not a missing/wrong lookup — verified pixel-by-pixel
+ * (PIL getcolors): `bonguri.png` and its 7 unused colour variants
+ * (bonguri_b/bk/g/p/r/w/y) are 100% solid black (0,0,0), unlike `bonmi_r`/
+ * `bonmi_y` (the same berry as a held-item icon), which have the expected
+ * distinct colours — a lost palette at ROM extraction, scoped to this one
+ * sprite family (issue 13: reported as an unidentifiable black silhouette
+ * floating near a Route 29 clearing; `SPRITE_BONGURI` decorates 31 objects
+ * across ~24 outdoor zones game-wide, not just Route 29). No committed
+ * extraction script reproduces this pipeline to re-derive the right palette,
+ * so this redirects to `tree` — a different, already-verified-correct
+ * plant-decor sprite already used elsewhere on these same routes — rather
+ * than either an invented recolour or a floating black blob. */
+const BROKEN_SPRITE_FALLBACKS: Record<string, string> = {
+  SPRITE_BONGURI: 'tree',
+}
+
+function fromBrokenSpriteFallback(spriteId: string): ResolvedSprite | null {
+  const label = BROKEN_SPRITE_FALLBACKS[spriteId]
+  return label ? fromLabel(label) : null
 }
 
 /** Planches à 4 directions vérifiées, converties depuis PokemonHnS
@@ -99,6 +127,9 @@ function resolveVarSlot(spriteId: string, eventFlag: string | undefined): Resolv
 export function resolveNpcSprite(spriteId: string, eventFlag?: string): ResolvedSprite | null {
   const hns = fromHnsPeople(spriteId)
   if (hns) return hns
+
+  const brokenFallback = fromBrokenSpriteFallback(spriteId)
+  if (brokenFallback) return brokenFallback
 
   const varSlot = resolveVarSlot(spriteId, eventFlag)
   if (varSlot) return varSlot

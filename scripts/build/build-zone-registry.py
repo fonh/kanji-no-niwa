@@ -40,10 +40,44 @@ data  = json.load(open(ZONE_DATA))
 zones = data["zones"]
 print(f"{len(zones)} zones dans zone-data.json")
 
+# ── Associations explicites zone → capture (issue 13, § « intérieurs
+# génériques ») ────────────────────────────────────────────────────────────
+#
+# 6 zones dont le nom ne contient aucun mot assez discriminant pour qu'un
+# matching par mots-clés les distingue correctement (même limite que
+# gatehouse/pokemart plus haut, traitée au cas par cas plutôt qu'en
+# généralisant le scoring) : chacune pointe explicitement vers sa propre
+# capture, comme un GENERIC_TEMPLATES mais à la granularité de la zone. Voir
+# le commentaire détaillé près de `find_generic_template` pour la source de
+# chaque image (une vraie capture pour Mr Pokémon, 5 compositions à partir
+# d'assets HGSS réels déjà dans ce dépôt pour les autres).
+ZONE_SCREENSHOT_OVERRIDES = {
+    "MAP_ROUTE_30_MR_POKEMON_HOUSE":     "Mr Pokemon House HGSS.png",
+    "MAP_ROUTE_30_APRICORN_HOUSE":       "Apricorn Man House HGSS.png",
+    "MAP_CHERRYGROVE_SOUTHWEST_HOUSE":   "Cherrygrove Southwest House HGSS.png",
+    "MAP_CHERRYGROVE_GUIDE_GENT_HOUSE":  "Cherrygrove Guide Gent House HGSS.png",
+    "MAP_CHERRYGROVE_SOUTHEAST_HOUSE":   "Cherrygrove Southeast House HGSS.png",
+    "MAP_NEW_BARK_SOUTHWEST_HOUSE":      "New Bark Southwest House HGSS.png",
+}
+
 # ── Indexer les screenshots disponibles ──────────────────────────────────────
 
 map_files = list(MAPS_DIR.glob("*.png")) + list(MAPS_DIR.glob("*.jpg")) + list(MAPS_DIR.glob("*.webp"))
 print(f"{len(map_files)} screenshots dans {MAPS_DIR}")
+
+# Les captures ci-dessus ne doivent JAMAIS être trouvées par le matching par
+# mots-clés (`find_screenshot`) pour une AUTRE zone que celle à laquelle
+# elles sont explicitement assignées — sans cette exclusion, un nom de
+# fichier contenant "House"/"New Bark"/etc. (inévitable, ce sont de vraies
+# maisons) se fait repérer par le scoring générique et court-circuite le
+# repli `find_generic_template` prévu pour toutes les AUTRES zones sans
+# capture dédiée (constaté : "New Bark Southwest House HGSS.png" gagnait
+# contre le repli Red House 2F pour MAP_NEW_BARK_PLAYER_HOUSE_2F/
+# _RIVAL_HOUSE_2F, et contre Player House 1F pour MAP_NEW_BARK_RIVAL_HOUSE_1F
+# et plusieurs maisons génériques d'autres villes — testé en régénérant
+# et en diffant le registre zone par zone avant ce correctif).
+_override_filenames = set(ZONE_SCREENSHOT_OVERRIDES.values())
+map_files = [f for f in map_files if f.name not in _override_filenames]
 
 def normalize(s: str) -> str:
     """Normalise un nom pour la comparaison : minuscules, sans accents, sans ponctuation."""
@@ -192,6 +226,34 @@ GENERIC_HOUSE_UPPER  = "Red House 2F HGSS.png"
 # above, just never given the same floor-aware treatment).
 GENERIC_POKECENTER_GROUND = "Pokémon Center inside HGSS.png"
 GENERIC_POKECENTER_UPPER  = "Union Room HGSS.png"
+
+# Issue 13 (QA humaine, passe « intérieurs génériques ») : détail des 6
+# associations `ZONE_SCREENSHOT_OVERRIDES` définies plus haut (avant
+# l'indexation des screenshots, pour pouvoir en exclure ces fichiers du
+# matching générique — voir le commentaire à cet endroit). 6 zones
+# retombaient toutes sur le même repli générique GENERIC_HOUSE_GROUND alors
+# qu'elles devraient être visuellement distinctes — 2 lieux nommés et
+# scénaristiquement notables (la maison de M. Pokémon, où l'Œuf Mystère est
+# remis ; la maison de l'Homme aux Baies Cocor) et 4 maisons d'habitants
+# quelconques (3 à Ville Griotte, 1 à Bourg Geon).
+# - MAP_ROUTE_30_MR_POKEMON_HOUSE : vraie capture d'écran trouvée (voir
+#   fichier) — pas une capture de la version finale mais d'une version
+#   préversion (« prerelease ») de HGSS archivée par Bulbapedia (licence CC
+#   BY-NC-SA 2.5 / fair use revendiqué, cohérent avec le seuil déjà accepté
+#   ailleurs dans ce projet pour du contenu non commercial) ; texte de
+#   dialogue rogné (recadrage à la pièce seule, la boîte de dialogue en bas
+#   de l'image d'origine ne fait pas partie du décor).
+# - Les 5 autres : aucune capture dédiée trouvée nulle part (recherché :
+#   Bulbapedia, StrategyWiki, The Models Resource — qui n'a qu'un modèle 3D
+#   d'extérieur sans aucun mobilier, même conclusion que l'investigation
+#   « rendu 3D » déjà classée plus haut dans ce fichier) — composées à la
+#   place à partir de vraies captures HGSS déjà présentes dans ce dépôt
+#   (`public/maps/`) : une capture de « coquille » (murs/sol) différente
+#   pour chacune, chacune enrichie d'un meuble découpé dans une AUTRE
+#   capture puis recollé (fond quasi-noir de la vignette d'écran DS retiré
+#   par seuillage avant collage), pour que chaque pièce ait un agencement de
+#   mobilier propre et non un copier-coller 1-pour-1 d'une zone existante.
+#   Voir l'entrée d'issue 13 correspondante pour le détail pièce par pièce.
 
 def find_generic_template(zone_name: str):
     # Whole-keyword membership, not a raw substring check — "lighthouse" and
@@ -364,6 +426,89 @@ OUTDOOR_TERRAIN_PATCHES: dict[str, list[tuple[int, int, int]]] = {
         (62, 72, 27),
         (6, 11, 28),
         (42, 60, 28),
+        # 2026-08-05 (suite) — 3ᵉ signalement utilisateur (2 captures d'écran,
+        # joueur + suiveur Pikachu coincé côté ouest d'un petit amas de pins,
+        # près de la guérite mais à un endroit différent des deux corrections
+        # ci-dessus). Localisé précisément par recalage image (ORB/RANSAC,
+        # 628 points d'intérêt appariés entre la capture utilisateur et
+        # `Johto Route 29 HGSS.png`, échelle ~1.6×, pas d'estimation à l'œil)
+        # → joueur en tuile locale ≈(66,24). Le scanner v2 (canopy_scan_v2.py,
+        # voir plus bas) confirme indépendamment un candidat couvrant x61-76,
+        # z23-28 à cet endroit précis.
+        #
+        # Recherche gloutonne (même méthode, testée dans les deux sens —
+        # ordre croissant ET décroissant des tuiles — pour écarter un biais
+        # d'ordre glouton, résultat IDENTIQUE dans les deux cas) sur les 26
+        # tuiles candidates (x61 colonne + x62-72 rangée z28 + x73-76 coin
+        # sud-est, z23-28) : **seules (73,24) et (74,24) sont murables**, les
+        # 24 autres cassent `a1-traversal.test.ts` (guérite ou continuum
+        # Route 29 → Ville Griotte/Route 30 injoignables) quel que soit
+        # l'ordre testé — CE N'EST PAS UN NOUVEAU TROU, c'est la continuation
+        # directe du passage déjà identifié comme obligatoire à la correction
+        # précédente (« 21 doivent rester praticables… concentré autour de
+        # x=61 et x=62-75 en bas de la poche ») : le joueur du 3ᵉ signalement
+        # a simplement marché sur cette même poche visuellement fausse mais
+        # structurellement nécessaire. Limite assumée, pas cachée (comme pour
+        # (76,24) plus haut) : sans calque de profondeur sprite (hors
+        # périmètre moteur) ou retouche d'asset graphique (hors périmètre
+        # contenu), ces ~24 tuiles resteront visuellement de la canopée
+        # praticable. Seul gain réel ici : 2 tuiles en moins dans l'empreinte
+        # visible du défaut.
+        (73, 74, 24),
+        # 2026-08-05 (suite 2) — scanner v2 (canopy_scan_v2.py, voir plus bas)
+        # : composantes connexes + clustering couleur k-means par zone
+        # (au lieu de la moyenne unique + filtre voisinage de v1, voir
+        # commentaire détaillé au-dessus de la définition du scanner). Testé
+        # d'abord sur cette même zone en ignorant les patches ci-dessus (pour
+        # retrouver, sur les données brutes, les deux trous déjà connus et
+        # corrigés plus haut — calibration avant de faire confiance à un
+        # candidat nouveau) : 96% de rappel (203/211 tuiles déjà connues),
+        # 0 faux positif sur 2 zones saines (Bourg Geon, Ville Griotte), et
+        # ramène le bruit de Route 30 de 477 (v1 sans filtre) / 21 (v1 avec
+        # filtre) à 1 candidat. Deux NOUVEAUX trous trouvés en tournant le
+        # scanner sur Route 29 (données déjà patchées), chacun confirmé par
+        # rendu composite avant correction (même discipline que les trous
+        # précédents) puis vérifié BFS-safe (mure tout le candidat d'un coup,
+        # `a1-traversal.test.ts` reste vert dans les deux cas — aucune des
+        # deux poches n'est sur un chemin obligatoire, contrairement à la
+        # poche centrale ci-dessus) :
+        #   - bordure nord (x64-81, z2-6) : pins vert clair, texture
+        #     distincte du reste de la canopée (vert olive/brun) — c'est
+        #     justement ce 2ᵉ cluster couleur que v1 (une seule moyenne
+        #     « mur ») ne pouvait pas voir. 55 tuiles.
+        #   - lisière ouest de la petite clairière boisée (x14-26, z6-9,
+        #     plus une poche z8-11 x14-18) — bordure de canopée normale
+        #     (brun/orange) juste au-dessus de la clairière au PNJ Tuscany.
+        #     41 tuiles.
+        # Deux candidats supplémentaires du scanner vérifiés et REJETÉS
+        # (faux positifs confirmés à l'œil, non corrigés) : x9-11,z12-13 —
+        # c'est de l'eau (lac), pas de la canopée ; sur Route 30, x11,z28-34
+        # — une bande de fleurs décoratives, pas des arbres. Les deux
+        # coïncident en couleur avec un cluster « mur » mais ne sont ni l'un
+        # ni l'autre visuellement un trou — gardés praticables, aucune
+        # correction.
+        (64, 81, 2),
+        (64, 79, 3),
+        (64, 79, 4),
+        (64, 64, 5),
+        (66, 66, 5),
+        (68, 68, 5),
+        (70, 70, 5),
+        (70, 70, 6),
+        (18, 26, 6),
+        (18, 26, 7),
+        (14, 19, 8),
+        (21, 21, 8),
+        (23, 23, 8),
+        (25, 25, 8),
+        (14, 18, 9),
+        (21, 23, 9),
+        (25, 25, 9),
+        (14, 14, 10),
+        (16, 16, 10),
+        (18, 18, 10),
+        (14, 14, 11),
+        (16, 16, 11),
     ],
 }
 
@@ -378,6 +523,45 @@ def apply_outdoor_terrain_patches(name: str, terrain: str, tile_w: int) -> str:
             if 0 <= idx < len(chars):
                 chars[idx] = "#"
     return "".join(chars)
+
+# Issue 13 (QA humaine, 3ᵉ signalement Route 29) : pendant la vérification
+# NPC-dans-les-arbres qui a suivi les 2 corrections de terrain ci-dessus
+# (cross-référencer chaque objet de décor de Route 29 contre la grille de
+# collision maintenant corrigée), `obj_R29_gsboy2` (SPRITE_GSBOY2, un simple
+# objet de décor ROM — pas un PNJ curaté, aucune entrée content/map/ à faire
+# correspondre, donc pas de `role_origin` disponible ici contrairement à
+# Silver) s'est révélé posé en (50,26), en PLEINE canopée du massif sud (bord
+# de carte, aucun chemin à proximité) — confirmé par rendu composite : aucune
+# tuile praticable avant (50,24), 2 tuiles plus au nord. Son `movement`/
+# `yRange:1` (patrouille verticale d'une tuile) suggère un figurant d'arrière-
+# plan du jeu original, cohérent avec un design HGSS "personnage entraperçu
+# entre les arbres" — plausible en 3D avec occlusion de profondeur, mais ce
+# moteur (image plate + grille, sans calque, voir `OUTDOOR_TERRAIN_PATCHES`
+# ci-dessus) ne peut pas le rendre autrement qu'un sprite flottant sur de la
+# canopée pleine, même bug visuel que Silver à Bourg Geon (issue 13, bug D) —
+# reposition vers la tuile praticable la plus proche qui reste dans le même
+# contexte (lisière de la forêt), pas de mécanisme content/map/ pour un objet
+# de décor brut donc corrigé ici, même précédent que OUTDOOR_TERRAIN_PATCHES
+# (portée strictement scoped, documentée, pas une correction générique).
+OUTDOOR_OBJECT_POSITION_PATCHES: dict[str, dict[str, tuple[int, int]]] = {
+    # object id -> (new_local_x, new_local_z)
+    "MAP_ROUTE_29": {
+        "obj_R29_gsboy2": (50, 24),
+    },
+}
+
+def apply_outdoor_object_position_patches(name: str, objects: list[dict], world_origin_x: int, world_origin_y: int) -> list[dict]:
+    patches = OUTDOOR_OBJECT_POSITION_PATCHES.get(name)
+    if not patches:
+        return objects
+    result = []
+    for obj in objects:
+        patch = patches.get(obj.get("id"))
+        if patch:
+            new_x, new_z = patch
+            obj = {**obj, "x": world_origin_x + new_x, "z": world_origin_y + new_z}
+        result.append(obj)
+    return result
 
 def get_dimensions(path: Path, tile_w: int, tile_h: int) -> tuple[int, int]:
     if HAS_PIL and path and path.exists():
@@ -428,7 +612,12 @@ for z in zones:
     world_origin_y = grid_y * TILE_UNIT
 
     # Screenshot
-    screenshot_path = find_screenshot(name, is_outdoor)
+    override_filename = ZONE_SCREENSHOT_OVERRIDES.get(name)
+    screenshot_path = (MAPS_DIR / override_filename) if override_filename else None
+    if screenshot_path and not screenshot_path.exists():
+        screenshot_path = None
+    if not screenshot_path:
+        screenshot_path = find_screenshot(name, is_outdoor)
     if not screenshot_path:
         # No dedicated capture exists (small single-purpose rooms — random
         # NPC houses, gatehouses — were never individually screenshotted by
@@ -454,6 +643,8 @@ for z in zones:
     # Scale : pixels écran par unité monde
     scale_x = scr_w / tile_w if tile_w > 0 else 1.0
     scale_y = scr_h / tile_h if tile_h > 0 else 1.0
+
+    objects = apply_outdoor_object_position_patches(name, objects, world_origin_x, world_origin_y)
 
     # Formatter les objets (garder seulement les champs utiles pour la carte)
     clean_objects = [
