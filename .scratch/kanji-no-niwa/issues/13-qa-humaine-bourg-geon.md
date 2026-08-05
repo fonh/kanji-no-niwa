@@ -2140,3 +2140,591 @@ d'abord (`src/lib/audio-manager.test.tsx`, un enfant synthétique qui pose
 une couche BGM dans son propre `useEffect` au tout premier rendu — échoue
 contre l'ancien code, passe contre le correctif ; vérifié dans les deux
 sens). `npm run check` vert (41 fichiers / 563 tests).
+
+## Transitions de zone — fondu de warp façon HGSS (2026-08-05)
+
+Signalé par l'utilisateur après test en jeu : les transitions entre zones
+(entrer/sortir d'un bâtiment, franchir une route) « ne sont pas vraiment
+bien faites » visuellement — demande explicite de vérifier le comportement
+réel de HGSS avant d'implémenter, plutôt que de deviner.
+
+### Recherche — ce que fait vraiment HGSS (et les jeux Pokémon 2D en général)
+
+Le moteur Pokémon (Gen 1 à 5, DS compris) distingue nettement deux
+mécanismes de changement de carte, avec un traitement visuel différent :
+
+- **Warps** (portes, escaliers, entrées de grotte, ascenseurs) : une
+  commande de script « warp » dédiée déclenche une **fadescreen** —
+  fondu au noir (parfois au blanc selon la paire de types de cartes),
+  la carte cible se charge et positionne le joueur PENDANT que l'écran
+  est noir, puis fondu retour. C'est un mécanisme générique du moteur,
+  pas un script par carte — confirmé par la doc technique de la
+  décompilation communautaire de Pokémon Emerald (`pret/pokeemerald`,
+  page wiki « Remove Warp Fadescreen », qui documente le flag
+  `FLAG_REMOVE_WARP_FADE` utilisé par les hackers pour désactiver CE
+  fondu automatique quand ils veulent le contrôler eux-mêmes dans un
+  script). Le même family-wide design (warp = téléportation entre
+  cartes non contiguës) s'applique à HGSS.
+- **Connections** (route → route, route → ville contiguës) : les cartes
+  extérieures voisines sont chargées ensemble et rendues comme un seul
+  espace continu — franchir la limite ne fait QUE continuer le défilement
+  de caméra, sans fondu ni coupure, parce qu'il n'y a pas de warp
+  scripté à cette frontière. Confirmé par la documentation communautaire
+  du moteur (Pokémon Essentials Docs Wiki, pages « Connecting maps » et
+  « Map transfers » — même distinction warp/connection, héritée du même
+  design que les jeux officiels).
+
+Confirme la prior de départ : fondu bref sur les warps, aucun fondu sur
+les franchissements route-à-route. Sources consultées via WebSearch/
+WebFetch (pas de doc officielle Nintendo/Game Freak publique sur le
+sujet — la doc technique communautaire des décompilations est la
+source la plus fiable disponible).
+
+### État avant correctif (lu dans `MapClient.tsx`)
+
+`goToZone` (le swap de zone : fetch `/api/zone`, puis `setZone` +
+`setNpcs` + `setTrainers` + `setPlayerPos` synchrones) était appelé
+directement par les trois chemins de transition — `enterWarp` (portes),
+la sélection d'étage de l'ascenseur, ET le franchissement de bord
+outdoor→outdoor dans `attemptStep` — sans aucun habillage visuel : la
+zone changeait d'un coup dès que le fetch répondait, pop instantané.
+Rien de spécifique aux warps par rapport aux connections.
+
+### Implémenté
+
+- `WARP_FADE_MS = 150` (à côté de `STEP_MS`/`HOP_MS`) — bref, comme le
+  jeu (pas de fondu cinématique).
+- `goToZoneWithFade` (nouveau, enveloppe `goToZone`) : pose `warpFading`
+  à `true` (l'overlay noir devient opaque via une transition CSS
+  inline, même convention que le reste du fichier — `transition:
+  opacity ${WARP_FADE_MS}ms ease`, à l'image de `transition: left/top
+  ${STEP_MS/1000}s linear` déjà utilisé pour le joueur/le suivi), attend
+  `WARP_FADE_MS` (le temps que l'écran soit bien noir), APPELLE
+  `goToZone` seulement à ce moment (le swap de données a donc lieu
+  entièrement derrière l'écran noir, aucun pop visible), puis repasse
+  `warpFading` à `false` une fois le swap terminé (fondu retour).
+  Un ref `warpFadeActiveRef` (même pattern que `isTransitioningRef`
+  existant) empêche un second warp de partir en parallèle pendant la
+  fenêtre du fondu — y compris pendant l'attente AVANT que `goToZone`
+  lui-même ne pose son propre ref de garde.
+- `enterWarp` (portes/escaliers) et la sélection d'étage de l'ascenseur
+  appellent désormais `goToZoneWithFade` au lieu de `goToZone`.
+- Un overlay plein écran (`position: fixed, inset: 0, z-[90]`, fond
+  noir, `opacity` piloté par `warpFading`, `pointerEvents: 'none'`)
+  ajouté en fin de rendu de `MapClient` — au-dessus de tout le chrome
+  (D-pad/A-B compris), fidèle à une vraie coupure d'écran.
+- Garde d'entrée ajoutée sur `attemptStep` et `onA`
+  (`warpFadeActiveRef.current`) : mouvement et interactions gelés
+  pendant tout le fondu, pas seulement pendant le fetch réseau lui-même
+  (couvre aussi la fenêtre du délai de fondu-out, avant que `goToZone`
+  ne démarre) — sinon un appui rapide pendant le noir pourrait lancer un
+  second warp en parallèle.
+
+### Explicitement NON changé (fidélité au jeu, pas un oubli)
+
+- Le franchissement outdoor→outdoor dans `attemptStep`
+  (`findOutdoorZoneAt` + `goToZone` direct) reste **sans aucun fondu** —
+  conforme au comportement d'origine (connections, pas warps). Vérifié
+  qu'il n'y avait pas d'autre défaut visuel à corriger à cette frontière
+  (flash, saut de caméra, mauvaise position initiale) : le swap est
+  déjà synchrone (`setPlayerPos`/`setZone` dans le même appel), et
+  l'offset de caméra (`offsetX`/`offsetY`) se recalcule au rendu suivant
+  à partir de la nouvelle zone — pas de pop de caméra observé ni de
+  raison structurelle d'en avoir un.
+- Le tiroir dev (téléport vers n'importe quelle zone, `handleZoneChange`)
+  reste instantané, sans fondu — outil de développement, jamais en
+  production (M4), aucune exigence de fidélité visuelle.
+- Le refus de la porte de zone SRS (`checkZoneEntry` non autorisé,
+  dialogue « repasse demain ») peut, en théorie, faire fondre au noir
+  puis rouvrir immédiatement sur le dialogue de refus si le warp cible
+  une zone extérieure jamais visitée — mécanique propre à ce jeu
+  (gate SRS), sans équivalent HGSS à respecter ; cas limite accepté
+  tel quel, non traité comme un bug.
+
+### Tests (TDD, jsdom, `react-dom/client` + `act`, comme le reste du fichier)
+
+3 tests ajoutés dans `src/app/map/MapClient.test.tsx` (nouveau describe
+« fondu de warp ») :
+
+- l'overlay existe et est invisible (`opacity: '0'`) au repos ;
+- franchir une porte (`vi.useFakeTimers`, même pattern que le test
+  D-pad ouest existant) fait apparaître l'overlay à `opacity: '1'`
+  AVANT même que le fetch de la nouvelle zone ne parte, le tient noir
+  pendant tout le fetch (zone inchangée observable pendant ce temps),
+  puis referme le fondu une fois la nouvelle zone en place ;
+  couvre l'état React/DOM déterministe, pas le timing d'animation CSS
+  lui-même (non testable en jsdom, comme signalé dans la consigne).
+- un franchissement route-à-route (zones outdoor contiguës, sans porte)
+  ne fait apparaître AUCUN fondu — garde-fou explicite pour la fidélité
+  « pas de fondu sur les connections », pour que ça ne régresse pas
+  silencieusement plus tard.
+
+### `npm run check`
+
+Vert : typecheck OK, lint 0 erreur (3 warnings préexistants sans
+rapport — `<img>` non optimisé dans `BattleScreen.tsx`/`MapClient.tsx`),
+**41 fichiers de tests / 567 tests passés** (564 existants + 3 nouveaux),
+`validate:content` sans bloquant (mêmes avertissements préexistants).
+
+**Fichier modifié** : `src/app/map/MapClient.tsx` (localisé à la
+logique de warp/transition — `enterWarp`, l'overlay de fondu, les
+gardes d'entrée ; aucun changement à la collision, au rendu NPC, ni aux
+placements). **Fichier de test modifié** : `src/app/map/MapClient.test.tsx`.
+
+## 2026-08-05 — 6 intérieurs qui partageaient tous `Player House 1F` reçoivent enfin une image dédiée
+
+Reprise du chantier laissé ouvert plus haut (§ « Les maisons "normales"...
+ont un intérieur inventé ») mais **scopée à 6 zones précises et déjà en
+jeu** (pas les 53 maisons génériques de tout le jeu, hors périmètre) :
+`MAP_ROUTE_30_MR_POKEMON_HOUSE`, `MAP_ROUTE_30_APRICORN_HOUSE`,
+`MAP_CHERRYGROVE_SOUTHWEST_HOUSE`, `MAP_CHERRYGROVE_GUIDE_GENT_HOUSE`,
+`MAP_CHERRYGROVE_SOUTHEAST_HOUSE`, `MAP_NEW_BARK_SOUTHWEST_HOUSE` —
+toutes affichaient l'image de la maison du joueur, y compris deux lieux
+nommés et scénaristiquement notables (chez M. Pokémon, où l'Œuf Mystère
+est remis ; chez l'Homme aux Baies Cocor). `MAP_NEW_BARK_PLAYER_HOUSE_1F`
+(la vraie maison du joueur) n'a pas été touché.
+
+### Phase 1 — recherche de vraies captures pour les 2 lieux nommés
+
+**M. Pokémon : capture réelle trouvée.** La piste précédente
+(spriters-resource.com) a été retentée en `curl` avec un User-Agent
+navigateur (plutôt que `WebFetch`, qui se heurte au challenge Cloudflare
+constaté la session précédente) : `models.spriters-resource.com` répond
+en HTTP 200 et héberge bien une page dédiée « Mr. Pokémon's House » —
+mais c'est un modèle 3D d'EXTÉRIEUR seul (vignette vérifiée : la maison
+vue de dehors, aucun mobilier), confirmant à l'identique la conclusion
+déjà actée sur le rendu 3D des intérieurs (un seul modèle par bâtiment,
+partagé extérieur/intérieur, sans détail de pièce) — cette piste
+n'apporte donc rien de plus ici, comme prévu.
+Recherche élargie à Bulbapedia Archives (`archives.bulbagarden.net`,
+accessible en `curl` direct, contrairement à `WebFetch` qui reçoit un 403
+sur StrategyWiki) : la page de M. Pokémon référence
+`HGSS_Prerelease_Mr_Pokemon_House.png` — une capture d'écran d'une
+version préversion (« prerelease », 2009) de HGSS, catégorisée par les
+éditeurs de Bulbapedia comme montrant explicitement « Ethan, Oak, and
+Mr. Pokémon » dans cette maison. Vérifié comme fidèle : `zone-data.json`
+contient bien un objet `obj_R30R0201_ookido` (`SPRITE_OOKIDO`,
+`FLAG_HIDE_MR_POKEMONS_HOUSE_OAK`) dans cette zone dans la ROM FINALE —
+la caméo du Pr. Chen (Oak) sur cette capture préversion n'est donc pas
+un artefact de build abandonné, c'est bien la même scène que celle
+présente dans le jeu final, juste avec un texte de dialogue différent
+(la préversion parle de recevoir le Pokédex ; le jeu final donne l'Œuf
+Mystère à cet endroit). Licence de la page fichier Bulbapedia Archives :
+« fair use » revendiqué + CC BY-NC-SA 2.5 pour le contenu du wiki
+lui-même — usage non commercial, cohérent avec le seuil déjà accepté
+dans ce projet pour les sprites externes (session précédente,
+spriters-resource « Credit Not Required »). Recadrage effectué avant
+usage : la boîte de dialogue japonaise en bas de la capture d'origine
+(254×190) a été rognée (image finale 193×130) — ce n'est pas du décor,
+et sa présence aurait pollué le rendu composite capture+collision.
+
+**Homme aux Baies Cocor : aucune capture dédiée trouvée**, malgré
+recherche ciblée (Bulbapedia — page Route 30, catégorie « Early HeartGold
+and SoulSilver images » listée intégralement, aucun fichier
+« Apricorn »/« Route 30 house » —, StrategyWiki, The Models Resource :
+pas de page dédiée pour ce bâtiment contrairement à M. Pokémon). Ce
+personnage n'a même pas de page perso sur Bulbapedia (juste mentionné
+dans la page Route 30) — moins documenté que M. Pokémon, cohérent avec
+son statut de PNJ plus mineur. Passé en synthèse (phase 2).
+
+### Phase 2 — synthèse des 5 autres par recomposition d'assets HGSS réels
+
+Pas de génération IA (refusée explicitement dans la consigne, pour
+rester cohérent avec le pixel art DS authentique du reste du jeu).
+Méthode : pour chacune, une image « coquille » (murs + sol, une vraie
+capture HGSS déjà dans `public/maps/`, différente pour chacune des 5 et
+différente de `Player House 1F`) reçoit un meuble découpé dans une
+AUTRE capture HGSS puis recollé dessus — le fond quasi-noir de la
+vignette d'écran DS (présent sur tous les screenshots de ce projet,
+visible aux 4 coins arrondis) est retiré par seuillage RGB avant collage
+(sinon un rectangle noir opaque suivait le meuble découpé). Chaque pièce
+a donc un agencement propre, pas un copier-coller 1-pour-1 d'une zone
+existante — mais la coquille de base, elle, reste identique pixel pour
+pixel à la capture dédiée d'une autre zone réelle du jeu (limite
+assumée, voir plus bas) :
+
+| Zone | Coquille (base) | Meuble ajouté (source) |
+|---|---|---|
+| `MAP_ROUTE_30_APRICORN_HOUSE` | `Mr Psychic House HGSS.png` | 2 pots de plante (`Player House 1F HGSS.png`, coins bas) |
+| `MAP_CHERRYGROVE_SOUTHWEST_HOUSE` | `MooMoo Farm House HGSS.png` | lit bleu (`Elms lab 2F HGSS.png`, coin bas-gauche) |
+| `MAP_CHERRYGROVE_GUIDE_GENT_HOUSE` | `Red House HGSS.png` | étagère/console (`Mr Psychic House HGSS.png`, coin bas-gauche) |
+| `MAP_CHERRYGROVE_SOUTHEAST_HOUSE` | `Elms lab 2F HGSS.png` | fauteuil jaune (`Copycat House 2F HGSS.png`, coin bas-droit) |
+| `MAP_NEW_BARK_SOUTHWEST_HOUSE` | `Copycat House 1F HGSS.png` | téléviseur (`MooMoo Farm House HGSS.png`, coin bas-droit) |
+
+Script Python (PIL, `crop` + seuillage alpha + `paste` avec masque
+alpha), pas conservé dans le dépôt (travail en scratchpad, comme le
+reste des outils ponctuels de cette session). Chaque coquille choisie
+n'est PAS l'une des images déjà utilisées comme repli générique
+(`Player House 1F`, `Red House 2F`, `Poké Mart interior`, `Pokémon
+Center inside`, `Union Room`, `Gate inside`) — donc ces 5 zones ne
+ressemblent ni à la maison du joueur ni au repli générique déjà vu des
+centaines de fois ailleurs dans le jeu.
+
+**Limite assumée** : la coquille de base de chacune des 5 reste
+identique à la capture dédiée d'une autre zone réelle (`Mr Psychic
+House`, `MooMoo Farm House`, `Red House`, `Elms lab 2F`,
+`Copycat House 1F`) hormis le meuble ajouté — donc quelqu'un qui a déjà
+visité ces 5 lieux dans le jeu reconnaîtra la pièce à un meuble près.
+Compromis jugé raisonnable dans le temps disponible : les 6 zones
+cibles sont maintenant visuellement distinctes ENTRE ELLES et de
+`Player House 1F`, ce qui était le défaut signalé — la ressemblance
+résiduelle avec un lieu tiers, plus lointain dans le parcours, est un
+défaut nettement moins visible.
+
+### Câblage (`scripts/build/build-zone-registry.py`)
+
+Nouveau dict `ZONE_SCREENSHOT_OVERRIDES` (zone → nom de fichier),
+vérifié avant `find_screenshot`/`find_generic_template` dans la boucle
+principale — même esprit que `GENERIC_TEMPLATES` mais à la granularité
+d'une zone précise plutôt que d'un mot-clé partagé par plusieurs zones.
+
+**Piège trouvé et corrigé avant de considérer ça fini** : la première
+version ajoutait juste les 6 fichiers dans `public/maps/` sans les
+exclure du matching par mots-clés générique — régénération diffée
+zone-par-zone (registre avant/après, en dehors des 6 zones cibles) a
+montré **8 zones tierces cassées par effet de bord** :
+`MAP_NEW_BARK_PLAYER_HOUSE_2F`/`_RIVAL_HOUSE_2F` (repli `Red House 2F`
+détourné vers `New Bark Southwest House HGSS.png`, un nom qui matche
+« new »+« bark »+« house »), `MAP_NEW_BARK_RIVAL_HOUSE_1F` et 4 maisons
+sud-ouest génériques d'autres villes (Pewter, Ecruteak, Lavender,
+Fuchsia — leur repli `Player House 1F` détourné par un match sur
+« house » avec l'une des 5 nouvelles images synthétisées), plus
+`MAP_LAVENDER_VOLUNTEER_POKEMON_HOUSE` détournée vers l'image de M.
+Pokémon. Cause : `find_screenshot` fait un matching par mots-clés sur
+TOUS les fichiers de `public/maps/`, et ces noms de fichiers neufs
+contiennent forcément des mots comme « house »/« new »/« bark » (ce sont
+de vraies maisons) — un fichier normalement invisible au reste du
+système gagnait quand même par accident sur des zones jamais visées.
+**Corrigé** : les 6 noms de fichiers listés dans
+`ZONE_SCREENSHOT_OVERRIDES` sont désormais retirés de `map_files` avant
+la construction de `screenshot_index` (donc invisibles à
+`find_screenshot`/`find_generic_template` pour toute zone autre que
+celle qui les référence explicitement). Réappliqué : diff
+avant/après-correctif du registre entier montre **0 changement
+inattendu**, seules les 6 zones cibles diffèrent.
+
+### Vérification collision (rendu composite capture+grille, même
+méthode que le reste de cette session)
+
+Script Python ponctuel (scratchpad) : superpose la grille de collision
+(`terrain`, rouge translucide = mur, vert = sol), les warps (bleu) et
+les objets (jaune) sur le screenshot, à l'échelle `scale_x`/`scale_y`
+du registre. Les 6 zones rendues et inspectées à l'œil : bande de murs
+en haut cohérente avec le haut de chaque image (mobilier contre le mur
+du fond), porte/warp alignée sur un tapis ou une zone de sortie visible
+dans l'image, sol praticable sur le reste de la pièce. Aucun ajustement
+de `interior_bounds`/collision nécessaire : `tile_width`/`tile_height`
+viennent de la grille ROM (`zone-data.json`), pas de l'image, et
+`interior_bounds` (bug G, déjà en place) les recadre déjà à la vraie
+pièce indépendamment de quelle capture est utilisée — remplacer l'image
+ne change que le facteur d'étirement `scale_x`/`scale_y`, déjà
+non-uniforme même pour l'assignation « correcte » préexistante
+(`Player House 1F` sur `MAP_NEW_BARK_PLAYER_HOUSE_1F` : `scale_x=19.69`
+contre `scale_y=16.0`) — donc rien de nouveau structurellement, même
+tolérance déjà acceptée ailleurs dans ce pipeline.
+
+**Fichiers ajoutés** : `public/maps/Mr Pokemon House HGSS.png`,
+`public/maps/Apricorn Man House HGSS.png`,
+`public/maps/Cherrygrove Southwest House HGSS.png`,
+`public/maps/Cherrygrove Guide Gent House HGSS.png`,
+`public/maps/Cherrygrove Southeast House HGSS.png`,
+`public/maps/New Bark Southwest House HGSS.png`.
+**Fichier modifié** : `scripts/build/build-zone-registry.py`
+(`ZONE_SCREENSHOT_OVERRIDES` + exclusion de `map_files`).
+**Régénéré** : `src/data/zone-registry.json` (seules les 6 zones cibles
+changent, diff vérifié).
+
+`npm run check` vert : 567/567 tests (inchangé — aucun test ne couvre
+le choix de capture d'écran par zone, comme déjà noté pour E plus haut),
+0 erreur de lint (3 warnings préexistants sans rapport, `<img>` non
+optimisé)
+
+---
+
+## 2026-08-05 — 3ᵉ signalement Route 29 (2 captures), scanner v2 (composantes
+## connexes + clustering couleur), 2 nouveaux trous, blob noir identifié,
+## PNJ dans les arbres
+
+**Contexte** : 2 nouvelles captures d'écran de l'utilisateur (joueur +
+suiveur Pikachu bloqué à l'ouest d'un petit amas de pins, près de la
+guérite Route 29/46 mais à un endroit différent des deux trous déjà
+corrigés) + consigne explicite : ne pas se contenter de corriger ce point
+précis, améliorer le scanner (`canopy_scan_draft.py`) pour que cette
+classe de bug arrête d'avoir besoin de signalements utilisateur zone par
+zone. Deux faiblesses connues du brouillon (voir entrée du 2026-08-03
+ci-dessus) à corriger : (1) le filtre « ≥60% voisins murés » sous-compte
+les gros trous (une tuile au milieu d'un trou large n'a presque aucun
+voisin mur) ; (2) une seule moyenne couleur « mur » par zone mélange
+arbres/falaise/eau et produit du bruit.
+
+### Localisation précise du joueur — nouvelle méthode (recalage image)
+
+Au lieu d'estimer la position à l'œil (méthode des sessions précédentes),
+recalage automatique par points d'intérêt : ORB (OpenCV) sur la capture
+utilisateur (rognée du letterboxing noir, canvas réel 2100×893 sur les
+2124×932 du fichier) contre `Johto Route 29 HGSS.png`, appariement
+`BFMatcher` + ratio de Lowe, transformation affine par `estimateAffinePartial2D`
+(RANSAC) — **628 points d'intérêt appariés comme inliers** (bien plus fiable
+qu'un recalage à 1-2 repères choisis à l'œil) : échelle 1.60×, rotation
+~0°, translation (-429, +0.7). Vérifié cohérent sur 2 repères indépendants
+(porte de la guérite, clairière au PNJ calendaire) avant d'en tirer une
+position. Joueur → tuile locale **≈(66,24)**, dans la zone que
+`OUTDOOR_TERRAIN_PATCHES["MAP_ROUTE_29"]` documentait déjà comme « 21
+tuiles qui doivent rester praticables » de la correction précédente.
+Technique à réutiliser pour de futurs signalements (bien plus rapide et
+fiable que le recalage manuel des sessions précédentes) — nécessite
+`opencv-python-headless` (`pip install`, pas dans les dépendances du
+projet, à réinstaller si besoin dans une nouvelle session).
+
+### Le « 3ᵉ trou » n'en est pas un nouveau — c'est la continuation du
+### passage déjà documenté comme obligatoire
+
+Recherche gloutonne (même méthode que les 2 corrections précédentes,
+**testée dans les deux sens** — ordre croissant ET décroissant des 26
+tuiles candidates de la poche x61-76/z23-28 — pour écarter un biais
+d'ordre glouton, résultat strictement identique dans les deux cas, chaque
+tuile revérifiée contre `a1-traversal.test.ts` réel, pas une resimulation) :
+**seules 2 tuiles sur 26 sont murables** ((73,24) et (74,24)) — les 24
+autres cassent la guérite ou le continuum Route 29 → Ville
+Griotte/Route 30 quel que soit l'ordre testé. Ce n'est pas un nouveau
+trou : c'est la continuation directe de la poche déjà identifiée comme
+« 21 tuiles doivent rester praticables… concentré autour de x=61 et
+x=62-75 en bas de la poche » à la correction du 2ᵉ trou (2026-08-03,
+ci-dessus) — le joueur de ce 3ᵉ signalement a simplement marché sur cette
+même poche visuellement fausse mais structurellement nécessaire, un peu
+plus à l'ouest que le point déjà mesuré. **Limite assumée, pas cachée**
+(même principe que la tuile résiduelle `(76,24)` de la 1ʳᵉ correction) :
+sans calque de profondeur sprite (hors périmètre moteur) ou retouche
+d'asset graphique (hors périmètre contenu), ~24 tuiles de cette poche
+resteront visuellement de la canopée praticable. Seul gain réel : 2
+tuiles de moins dans l'empreinte visible du défaut.
+
+### Scanner v2 (`canopy_scan_v2.py`) — composantes connexes + k-means
+
+Réécrit en profondeur (`.scratch/kanji-no-niwa/canopy_scan_v2.py`,
+remplace le brouillon) :
+
+1. **Composantes connexes** au lieu du comptage de voisins par tuile :
+   les tuiles suspectes (couleur plus proche d'un cluster « mur » que du
+   reste) sont d'abord regroupées en régions contiguës (4-connexité),
+   puis c'est la **bordure extérieure de toute la région** (pas chaque
+   tuile individuellement) qui est comparée au seuil de % de murs — fixe
+   directement le défaut n°1 (un trou large n'a quasi aucun voisin mur en
+   son centre, seulement sa bordure en a).
+2. **Clustering k-means (k=3) par zone** des couleurs des tuiles murées,
+   au lieu d'une moyenne unique : chaque tuile candidate est comparée à
+   son cluster « mur » le plus proche, pas à une moyenne qui mélange
+   plusieurs matériaux (arbre vert olive + arbre vert clair + falaise
+   grise, par ex.).
+3. **Garde de contraste** (nouveau, absent du brouillon) : zones où
+   couleur-mur et couleur-reste ne sont pas assez séparées (ex. Ruines
+   d'Alph, roche/eau uniforme) sont ignorées plutôt que scannées avec une
+   méthode qui n'a aucun pouvoir discriminant là.
+
+**Calibration** (avant de faire confiance à un nouveau candidat — même
+principe que demandé) : scanné sur `MAP_ROUTE_29` avec `--source raw`
+(lit `scripts/sources/zone-data.json` directement, ignore les patches
+déjà appliqués) — doit retrouver les 2 trous déjà connus et corrigés.
+**96% de rappel** (203-206 / 211 tuiles déjà connues comme réel trou,
+regroupées en quelques régions connexes plutôt qu'éparpillées) — pas
+100%, mais très largement suffisant pour repérer la bonne zone à l'œil.
+
+**Bruit, avant/après** (paramètres retenus : `--wall-dist 30 --border-frac
+0.55 --min-size 4`) :
+
+| Zone | v1 (brouillon) | v2 (cette session) |
+|---|---|---|
+| Bourg Geon, Ville Griotte (zones saines connues) | non testé formellement | **0 région** flaguée sur les deux |
+| Route 30 | 477 tuiles (sans filtre) / 21 tuiles (avec filtre « ≥60% voisins »), **0 réel trou parmi elles** | **1 région** (7 tuiles) — toujours un faux positif (fleurs décoratives), mais 30 à 680× moins de tuiles à vérifier à l'œil |
+| Route 36 (hors périmètre, zone de validation bonus) | trou réel raté par une lecture superficielle (candidats épars) | retrouve correctement le trou déjà confirmé visuellement la session précédente |
+| Route 29 (recherche du 3ᵉ trou) | — | 2 nouveaux trous réels trouvés (voir ci-dessous) + re-signale correctement la poche déjà connue comme praticable de force + 1 faux positif (étang décoratif) |
+
+### 2 nouveaux trous trouvés et corrigés sur Route 29 (grâce au scanner v2)
+
+Chacun vérifié par rendu composite (capture réelle + grille de collision
+superposée, même discipline que les 3 corrections précédentes) **avant**
+tout correctif, puis muré d'un coup et revérifié contre
+`a1-traversal.test.ts` réel (pas une resimulation) :
+
+1. **Bordure nord** (x64-81 environ, z2-6, **55 tuiles**) : pins vert
+   clair, texture visuellement distincte du reste de la canopée de la
+   zone (vert olive/brun) — c'est exactement ce 2ᵉ cluster de couleur que
+   le scanner v1 (une seule moyenne « mur » par zone) ne pouvait pas
+   voir. `a1-traversal.test.ts` reste vert en murant toute la région d'un
+   coup : elle n'est sur aucun chemin obligatoire (contrairement à la
+   poche centrale du 2ᵉ trou).
+2. **Lisière ouest de la petite clairière boisée** (x14-26 environ,
+   z6-11, **41 tuiles**) : bordure de canopée normale (brun/orange) juste
+   au-dessus de la clairière au tronc unique où vit le PNJ calendaire
+   Tuscany. Même vérification, également pas sur un chemin obligatoire.
+
+**2 faux positifs du scanner confirmés et REJETÉS** (pas corrigés,
+laissés praticables) : x9-11/z12-13 et x43-54/z20-24 sur Route 29, x11/
+z28-34 sur Route 30 — tous les trois sont de l'eau décorative (un étang,
+marqué `.` praticable et non `w` dans les données source — donc
+légitimement praticable, juste coloré comme de l'eau) ou une bande de
+fleurs, pas de la canopée. C'est la principale source de faux positifs
+restante du scanner : ni l'eau décorative ni les parterres de fleurs
+n'ont de détecteur dédié.
+
+**Fichier modifié** : `scripts/build/build-zone-registry.py`
+(`OUTDOOR_TERRAIN_PATCHES["MAP_ROUTE_29"]` étendu — 2 tuiles pour la
+continuation du 3ᵉ signalement + 96 tuiles pour les 2 nouveaux trous).
+Diff du registre vérifié exhaustivement : **seul `MAP_ROUTE_29.terrain`
+change** (98 tuiles), rien d'autre.
+
+**Verdict sur le scanner : gardé comme outil manuel
+(`.scratch/kanji-no-niwa/canopy_scan_v2.py`), PAS promu dans
+`scripts/validate/`.** Raison assumée : la convention de ce dossier
+(vérifiée : `calc-cs-corpus.py`, `check-cs-kanji-deadlock.py`,
+`lint-*.py`, `solve-progression.py`) est un linter déterministe câblé
+dans `npm run validate:content` (0 échec ou ça casse `npm run check`).
+Ce scanner ne peut structurellement pas atteindre cette barre, même à
+cette précision : l'eau décorative et les parterres de fleurs aliaseront
+toujours partiellement avec les couleurs arbre/falaise sur une palette
+de capture d'écran compressée — chaque région flaguée a besoin d'un œil
+humain sur un rendu composite avant toute conclusion, ce n'est pas un
+problème de calibrage supplémentaire. C'est en revanche un **très bon
+outil de présélection** maintenant (voir tableau ci-dessus) — à relancer
+sur la zone précise à chaque futur signalement « je marche dans les
+arbres », plutôt que de re-signaler tuile par tuile à l'œil depuis zéro.
+
+### Blob noir identifié : `obj_R29_bonguri` (SPRITE_BONGURI), sprite
+### source cassé — pas un bug de rendu MapClient
+
+Localisé précisément par la même méthode de recalage image (628 points
+ORB) : position écran → tuile locale **(20,8)**, qui correspond
+EXACTEMENT à la position déjà connue de `obj_R29_bonguri`
+(`SPRITE_BONGURI`, un objet de décor ROM — pas un PNJ curaté — près de la
+petite clairière boisée où vit Tuscany).
+
+**Cause investiguée avant toute conclusion** (comme demandé) : ce n'est
+PAS un bug de `resolveNpcSprite` (`src/lib/npc-sprites.ts`) — la
+résolution vers `/sprites/overworld/bonguri.png` était déjà correcte
+avant ce correctif. Le fichier PNG source lui-même est cassé, vérifié
+pixel par pixel (`PIL.Image.getcolors`) : `bonguri.png` (7 frames) ET
+ses 7 variantes couleur inutilisées (`bonguri_b/bk/g/p/r/w/y`, aucune
+référencée par aucun objet dans `zone-data.json`) sont **100% des pixels
+non transparents en noir pur (0,0,0)**, sans AUCUNE variation de couleur
+— y compris les variantes qui ne devraient PAS être noires (rouge, vert,
+jaune, blanc…). Comparaison de contrôle : `bonmi_r`/`bonmi_y` (la même
+baie, mais l'icône d'objet UNE FOIS RAMASSÉ) ont bien 7 couleurs
+distinctes chacune, correctement rouge/orange vs jaune/or respectivement
+— la palette a donc bien été perdue à l'extraction ROM, mais seulement
+pour la famille « bonguri » (l'apparence de la baie encore sur l'arbre),
+pas pour toutes les extractions de ce projet.
+
+**Recherche systémique** : `SPRITE_BONGURI` est posé sur **31 objets dans
+~24 zones extérieures** de tout le jeu (Bourg Geon exclu — toutes des
+routes, dont Route 30 ×2 dans le jalon 1), pas seulement Route 29 — donc
+un vrai bug systémique, pas un cas isolé.
+
+**Aucun script d'extraction committé ne reproduit ce pipeline précis**
+pour retenter une extraction propre dans le temps disponible
+(`extract_hgss_sprites.py` couvre d'autres catégories NARC —
+trainers/UI/badges/etc., pas les objets de décor overworld ;
+`extract-sprites.py` découpe une planche de trainers déjà assemblée,
+sans rapport ; aucun des deux ne produit `public/sprites/overworld/*` —
+ce dossier vient d'un script ponctuel d'une session antérieure, jamais
+committé, comme d'autres outils mentionnés dans le RÉSUMÉ DE SESSION).
+
+**CORRIGÉ sans deviner de nouvelles couleurs** : `resolveNpcSprite`
+redirige maintenant `SPRITE_BONGURI` vers `tree` — un autre sprite
+végétal déjà vérifié correctement coloré (8 couleurs distinctes),
+utilisé ailleurs sur cette même Route 29 pour `SPRITE_TREE` — plutôt que
+d'inventer une recoloration ou de laisser un blob noir non identifiable.
+Mécanisme : nouvelle table `BROKEN_SPRITE_FALLBACKS` dans
+`npc-sprites.ts`, même style que `HNS_PEOPLE`, consultée avant la
+résolution générique. Corrige les 31 occurrences du jeu entier en un
+seul endroit (pas une correction Route 29 seule).
+
+**TDD** : `src/lib/npc-sprites.test.ts` (nouveau fichier — ce module
+n'avait JAMAIS eu de couverture directe, toujours mocké dans
+`MapClient.test.tsx`) — test rouge d'abord (`resolveNpcSprite('SPRITE_BONGURI')`
+résolvait vers `bonguri.png`), puis correctif. **Bug latent trouvé en
+écrivant le test rouge** : le fichier importe `overworld-sprite-labels.json`
+via `require('@/data/...')` (alias), qui échoue sous Vitest en
+environnement `node` (`Cannot find module '@/data/...'`) — jamais détecté
+avant car aucun test n'avait jamais réellement chargé ce module. Corrigé
+en passant à un chemin relatif (`require('../data/...')`), même
+convention déjà utilisée avec succès par `src/lib/zones.ts` pour son
+propre JSON. `npm run check` vert (569 tests, +2).
+
+### PNJ dans les arbres : `obj_R29_gsboy2` trouvé et corrigé, `obj_R29_monstarball` investigué et laissé tel quel
+
+Cross-référencé les 11 objets de décor de Route 29 contre la grille de
+collision corrigée (script Python, comme au § précédent) : 2 objets sur
+une tuile `#` (mur) :
+
+- **`obj_R29_gsboy2`** (`SPRITE_GSBOY2`, simple objet de décor ROM — pas
+  de PNJ curaté associé dans `content/map/`, donc pas de `role_origin` à
+  respecter contrairement à Silver) en `(50,26)`, confirmé par rendu
+  composite **en pleine canopée du massif sud**, aucune tuile praticable
+  avant `(50,24)` (2 tuiles plus au nord). Son `movement`/`yRange:1`
+  (patrouille verticale d'une tuile) suggère un figurant d'arrière-plan
+  du jeu original (cohérent avec un vrai calque de profondeur 3D, que ce
+  moteur 2D à plat ne peut pas reproduire) — même classe de bug que
+  Silver à Bourg Geon (issue 13, bug D). **CORRIGÉ** : repositionné en
+  `(50,24)`, praticable, à la lisière de l'étang/clairière juste au nord
+  de la canopée — cohérent visuellement (« personnage en bordure de
+  forêt » plutôt qu'« encastré dans les arbres »). Pas d'entrée
+  `content/map/` à éditer (objet de décor brut, pas un PNJ curaté) :
+  nouveau mécanisme `OUTDOOR_OBJECT_POSITION_PATCHES` dans
+  `build-zone-registry.py`, même principe de table scoped-et-documentée
+  que `OUTDOOR_TERRAIN_PATCHES`.
+- **`obj_R29_monstarball`** (`SPRITE_MONSTARBALL`, objet-ball caché,
+  `FLAG_HIDE_ITEMBALL_R29_POTION`) en `(78,2)` : cette tuile est tombée
+  DANS la région de 55 tuiles murée ci-dessus par cette même session (le
+  ball était déjà sur une tuile praticable-mais-canopée avant ce
+  correctif — donc déjà le même bug de fond, pas une régression
+  introduite). Investigué avant d'y toucher : `grep` sur `src/` ne trouve
+  **aucune logique de ramassage d'objet** nulle part dans le moteur
+  (aucune référence à `MONSTARBALL`/`itemball` en dehors du rendu du
+  sprite) — la balle est purement décorative dans ce projet, sa
+  praticabilité n'a aucune conséquence fonctionnelle. La murer ne fait
+  que rendre cohérents visuel et collision (même chose que les 2 trous
+  ci-dessus) ; avant ce correctif, un joueur pouvait déjà « marcher à
+  travers » la canopée pour l'atteindre — exactement le bug qu'on
+  corrige. **Laissé tel quel** (mur), aucune tuile supplémentaire
+  exemptée pour cet objet.
+
+Reste de Route 29 vérifié sans changement : les 9 autres objets de décor
+sont sur du terrain praticable hors mur (vérifié programmatiquement, pas
+seulement à l'œil), y compris `obj_R29_var_2`/`obj_R29_tsure_poke_static_marill`
+(le duo Lyra/Marill du tutoriel, déjà corrigés) et `obj_R29_bonguri`
+(déjà praticable en `(20,8)`, seul son sprite était cassé, pas sa
+position).
+
+### `npm run check`
+
+Vert : typecheck 0 erreur, lint 0 erreur (3 warnings préexistants sans
+rapport, `<img>` non optimisé), **569 tests** (+2 vs la session
+précédente : les 2 nouveaux tests `npc-sprites.test.ts`),
+`validate:content` 0 échec, traversée toujours complète. Fichiers
+modifiés par cette passe : `scripts/build/build-zone-registry.py`,
+`src/data/zone-registry.json` (régénéré — seul `MAP_ROUTE_29` change,
+diff vérifié exhaustivement, 98 tuiles de terrain + 1 objet
+repositionné), `src/lib/npc-sprites.ts`, `src/lib/npc-sprites.test.ts`
+(nouveau). Fichier ajouté : `.scratch/kanji-no-niwa/canopy_scan_v2.py`.
+
+### Bilan de la passe
+
+3ᵉ signalement utilisateur : **pas un nouveau trou** — la continuation
+documentée d'un passage déjà connu comme obligatoire (2 tuiles fermées
+en plus, sur les 26 candidates, limite assumée pour le reste). Scanner
+reconstruit avec composantes connexes + clustering couleur : 96% de
+rappel en calibration, 0 faux positif sur zones saines, bruit de Route 30
+réduit d'un facteur 30-680×, retrouve correctement un trou déjà connu
+hors périmètre (Route 36) — gardé comme outil de présélection manuel,
+pas promu en linter automatique (raison assumée : nécessite toujours un
+œil humain, ce n'est pas un défaut de calibrage). 2 nouveaux vrais trous
+trouvés et corrigés sur Route 29 grâce au scanner (96 tuiles). Blob noir
+identifié comme un défaut d'asset source (palette perdue à l'extraction,
+pas un bug MapClient), corrigé pour les 31 occurrences du jeu entier en
+un seul endroit, avec un bug de couverture de test latent trouvé et
+corrigé au passage (import cassé sous Vitest, jamais détecté faute de
+test direct sur ce module). 1 PNJ dans les arbres trouvé et corrigé
+(même classe que Silver), 1 objet décoratif (item ball sans mécanique de
+ramassage) laissé tel quel après investigation. `npm run check` vert
+(569 tests).
+optimisé), `validate:content` sans nouveau bloquant.

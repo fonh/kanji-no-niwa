@@ -11,6 +11,7 @@ import { act } from 'react'
 import { createRoot, type Root } from 'react-dom/client'
 import MapClient, { type Zone, type ZoneNpc, type ZoneTrainer } from './MapClient'
 import { DEFAULT_PROGRESS } from '@/lib/obstacles'
+import type { ZoneListEntry } from '@/lib/zones'
 
 ;(globalThis as Record<string, unknown>).IS_REACT_ACT_ENVIRONMENT = true
 
@@ -290,6 +291,47 @@ describe('MapClient — fidélité des interactions (issue 12)', () => {
     expect(sprite!.className).not.toContain('ow-sprite-walk')
   })
 
+  // Issue 13 (QA humaine 05/08) — signalé « pokeball dupliquée en 2×2 » sur
+  // Route 29 : une planche source plus petite que SPRITE_FRAME_SIZE (ex.
+  // monstarball.png, 16×16, plaquée dans une case 32×32) était tuilée par le
+  // repli CSS par défaut de background-repeat, jamais désactivé explicitement
+  // — même défaut sur les 4 planches de sprite du rendu (décor, PNJ curaté,
+  // suivi, joueur).
+  it('un sprite source plus petit que SPRITE_FRAME_SIZE ne se tuile pas (background-repeat: no-repeat)', () => {
+    resolveNpcSpriteMock.mockReturnValue({ url: '/sprites/overworld/monstarball.png', cols: 1 })
+    act(() => {
+      root.render(
+        <MapClient
+          zone={{
+            ...zone,
+            objects: [
+              {
+                id: 'obj_ball',
+                spriteId: 'SPRITE_MONSTARBALL',
+                x: 2,
+                z: 2,
+                eventFlag: 'FLAG_NOTHING',
+                facingDirection: 0,
+                movement: 0,
+                xRange: 0,
+                yRange: 0,
+              },
+            ],
+          }}
+          npcs={[npc]}
+          trainers={[trainer]}
+          initialPos={{ world_x: 3, world_z: 3 }}
+          initialProgress={DEFAULT_PROGRESS}
+          allZoneNames={[]}
+        />
+      )
+    })
+    const marker = container.querySelector<HTMLElement>('[title="obj_ball"]')
+    const sprite = marker!.querySelector('div')
+    expect(sprite).not.toBeNull()
+    expect(sprite!.style.backgroundRepeat).toBe('no-repeat')
+  })
+
   // Issue 13 (QA humaine 03/08) — bug H : un objet de décor posé exactement
   // sur la tuile d'une porte bloquait la seule sortie de plusieurs intérieurs
   // (ex. Elm's Lab 1F : SPRITE_VAR_1 sur la tuile de sortie). Une porte doit
@@ -481,5 +523,150 @@ describe('MapClient — fidélité des interactions (issue 12)', () => {
     })
     expect(container.querySelector('[title="obj_gsrivel"]')).toBeNull()
     expect(container.querySelector('[title="TestNpc"]')).not.toBeNull()
+  })
+})
+
+// Issue 13 (QA humaine — transitions de zone) : recherche HGSS confirmée —
+// les WARPS (portes, escaliers, ascenseurs) fondent au noir pendant le swap
+// de zone ; le continuum route→route (aucune porte, cartes extérieures
+// contiguës) ne fond JAMAIS dans le jeu d'origine et reste donc instantané
+// ici. Timing piloté par de vrais timers (vi.useFakeTimers), comme le test
+// D-pad ouest existant plus haut dans ce fichier.
+describe('MapClient — fondu de warp (issue 13)', () => {
+  it('reste invisible (opacity 0) au repos', () => {
+    render()
+    const overlay = container.querySelector<HTMLElement>('[data-testid="warp-fade"]')
+    expect(overlay).not.toBeNull()
+    expect(overlay!.style.opacity).toBe('0')
+    expect(overlay!.style.pointerEvents).toBe('none')
+  })
+
+  it('un franchissement de porte (warp) fait apparaître le fondu PENDANT le swap, puis le referme une fois la nouvelle zone en place', async () => {
+    vi.useFakeTimers()
+    let resolveFetch: (value: unknown) => void = () => {}
+    const fetchPromise = new Promise(resolve => {
+      resolveFetch = resolve
+    })
+    vi.mocked(fetch).mockReturnValue(fetchPromise as unknown as ReturnType<typeof fetch>)
+    try {
+      act(() => {
+        root.render(
+          <MapClient
+            zone={zone}
+            npcs={[]}
+            trainers={[]}
+            // Une case au nord de la porte (6,6) : un pas au sud l'atteint.
+            initialPos={{ world_x: 6, world_z: 5 }}
+            initialProgress={DEFAULT_PROGRESS}
+            allZoneNames={[]}
+          />
+        )
+      })
+      const overlay = () => container.querySelector<HTMLElement>('[data-testid="warp-fade"]')!
+      expect(overlay().style.opacity).toBe('0')
+
+      const south = container.querySelector<HTMLButtonElement>('button[aria-label="south"]')!
+      act(() => {
+        south.dispatchEvent(new Event('pointerdown', { bubbles: true }))
+      })
+      act(() => {
+        south.dispatchEvent(new Event('pointerup', { bubbles: true }))
+      })
+      // Le joueur occupe déjà (6,6) — le franchissement du warp, lui,
+      // n'est vérifié qu'à l'issue du pas (STEP_MS).
+      expect(container.textContent).toContain('6,6')
+      act(() => {
+        vi.advanceTimersByTime(170) // STEP_MS : détecte le warp, lance le fondu
+      })
+      expect(overlay().style.opacity).toBe('1')
+      // La zone n'a pas encore changé : l'écran est déjà noir AVANT même que
+      // le fetch de la nouvelle zone ne parte (fondu tenu WARP_FADE_MS avant
+      // le swap, pour ne jamais laisser voir un pop/flash de la zone cible).
+      expect(container.textContent).toContain('TEST TOWN')
+      act(() => {
+        vi.advanceTimersByTime(150) // WARP_FADE_MS : déclenche le fetch, tenu derrière le noir
+      })
+      expect(overlay().style.opacity).toBe('1')
+      expect(container.textContent).toContain('TEST TOWN')
+
+      resolveFetch({
+        ok: true,
+        headers: { get: () => 'application/json' },
+        json: async () => ({
+          zone: { ...zone, name: 'MAP_TEST_HOUSE', warps: [] },
+          npcs: [],
+          trainers: [],
+        }),
+      })
+      await act(async () => {
+        await fetchPromise
+        await Promise.resolve()
+        await Promise.resolve()
+      })
+      expect(container.textContent).toContain('TEST HOUSE')
+      expect(overlay().style.opacity).toBe('0')
+    } finally {
+      vi.useRealTimers()
+    }
+  })
+
+  it('un franchissement de route à route (pas de porte) ne déclenche AUCUN fondu, fidèle au jeu', async () => {
+    const outdoorZone: Zone = {
+      ...zone,
+      name: 'MAP_TEST_ROUTE',
+      is_outdoor: true,
+      tile_width: 4,
+      tile_height: 4,
+      terrain: '.'.repeat(16),
+      warps: [],
+    }
+    const nextZone: Zone = { ...outdoorZone, name: 'MAP_TEST_ROUTE_2', world_origin_x: 4 }
+    const nextZoneEntry: ZoneListEntry = {
+      name: 'MAP_TEST_ROUTE_2',
+      is_outdoor: true,
+      world_origin_x: 4,
+      world_origin_y: 0,
+      tile_width: 4,
+      tile_height: 4,
+      map_id: 998,
+      display_name: null,
+      jp_name: null,
+      jp_label: 'ROUTE 2',
+      screenshot: '',
+      screenshot_w: 64,
+      screenshot_h: 64,
+      beat_count: 0,
+    }
+    vi.mocked(fetch).mockResolvedValue({
+      ok: true,
+      headers: { get: () => 'application/json' },
+      json: async () => ({ zone: nextZone, npcs: [], trainers: [] }),
+    } as unknown as Response)
+
+    act(() => {
+      root.render(
+        <MapClient
+          zone={outdoorZone}
+          npcs={[]}
+          trainers={[]}
+          initialPos={{ world_x: 3, world_z: 1 }}
+          initialProgress={DEFAULT_PROGRESS}
+          allZoneNames={[nextZoneEntry]}
+        />
+      )
+    })
+    const overlay = container.querySelector<HTMLElement>('[data-testid="warp-fade"]')!
+    expect(overlay.style.opacity).toBe('0')
+
+    const east = container.querySelector<HTMLButtonElement>('button[aria-label="east"]')!
+    await act(async () => {
+      east.dispatchEvent(new Event('pointerdown', { bubbles: true }))
+      east.dispatchEvent(new Event('pointerup', { bubbles: true }))
+      await Promise.resolve()
+      await Promise.resolve()
+      await Promise.resolve()
+    })
+    expect(container.textContent).toContain('4,1')
+    expect(overlay.style.opacity).toBe('0')
   })
 })

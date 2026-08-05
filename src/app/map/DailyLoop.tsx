@@ -161,6 +161,7 @@ export default function DailyLoop({ now = () => new Date() }: { now?: () => Date
                   height: SPRITE_FRAME,
                   backgroundImage: `url(${ELM_SPRITE_URL})`,
                   backgroundPosition: '0 0',
+                  backgroundRepeat: 'no-repeat',
                   imageRendering: 'pixelated',
                   transform: 'scale(1.6)',
                   transformOrigin: 'center',

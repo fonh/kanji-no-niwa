@@ -75,6 +75,18 @@ const STEP_MS = 170
 const HOP_MS = 280
 const SLIDE_MS = 110
 
+// Warp fade (issue 13, QA humaine — transitions de zone) : HGSS fait un
+// bref fondu au noir sur les WARPS (portes, escaliers, grottes, ascenseurs)
+// — l'écran noircit, la zone cible se charge/positionne le joueur pendant
+// que l'écran est noir, puis s'éclaircit. Recherche : la fadescreen est un
+// mécanisme générique du moteur Pokémon déclenché par les commandes "warp"
+// (voir pret/pokeemerald wiki « Remove Warp Fadescreen »), distinct des
+// "connections" de cartes extérieures contiguës qui ne fondent JAMAIS — le
+// franchissement route→route reste donc sans fondu ici, fidèle au jeu
+// (Essentials Docs Wiki, « Connecting maps » / « Map transfers »). Rapide
+// (comme dans le jeu), pas un fondu cinématique.
+const WARP_FADE_MS = 150
+
 // Player sheet rows (public/sprites/characters/protagonist_ethan_ow.png,
 // 8×4 frames of 32px): 0=south, 1=north, 2=west, 3=east.
 const SPRITE_ROW: Record<Direction, number> = { south: 0, north: 1, west: 2, east: 3 }
@@ -180,6 +192,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const [showZonePicker, setShowZonePicker] = useState(false)
   const [activeDialogue, setActiveDialogue] = useState<ActiveDialogue | null>(null)
   const [banner, setBanner] = useState<{ label: string; key: number } | null>(null)
+  // Fondu au noir des warps (portes/escaliers/ascenseurs) — voir WARP_FADE_MS.
+  const [warpFading, setWarpFading] = useState(false)
 
   // BGM de zone (issue audio jalon 1) : relancée à chaque changement de zone
   // (PRD § Audio, "la piste music_ref se (re)lance à l'entrée de zone") — la
@@ -229,6 +243,12 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const persistTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const bannerTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pressedKeysRef = useRef<Set<string>>(new Set())
+  // Ref, pas state (même raison que isTransitioningRef) : le fondu couvre
+  // aussi la fenêtre AVANT que goToZone lui-même ne pose isTransitioningRef
+  // (le temps du fade-out) — sans ce ref un second warp déclenché pendant
+  // cette fenêtre partirait en parallèle.
+  const warpFadeActiveRef = useRef(false)
+  const warpFadeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(
     () => () => {
@@ -236,6 +256,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       if (stepSettleTimeoutRef.current) clearTimeout(stepSettleTimeoutRef.current)
       if (persistTimeoutRef.current) clearTimeout(persistTimeoutRef.current)
       if (bannerTimeoutRef.current) clearTimeout(bannerTimeoutRef.current)
+      if (warpFadeTimeoutRef.current) clearTimeout(warpFadeTimeoutRef.current)
     },
     []
   )
@@ -668,6 +689,25 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [persistPosition, checkSightLine, checkNpcInterception, showBanner, zoneEntryByName, markVisited, openDialogue]
   )
 
+  // Warps only (portes, escaliers, ascenseurs) : fondu au noir avant le swap
+  // de zone, tenu pendant le fetch, puis fondu retour — jamais utilisé pour
+  // le continuum outdoor→outdoor (attemptStep appelle goToZone directement,
+  // fidèle au jeu : les cartes extérieures contiguës ne fondent pas).
+  const goToZoneWithFade = useCallback(
+    (targetName: string, resolveSpawn?: (newZone: Zone) => PlayerPos | null) => {
+      if (warpFadeActiveRef.current || isTransitioningRef.current) return
+      warpFadeActiveRef.current = true
+      setWarpFading(true)
+      warpFadeTimeoutRef.current = setTimeout(() => {
+        goToZone(targetName, resolveSpawn).finally(() => {
+          setWarpFading(false)
+          warpFadeActiveRef.current = false
+        })
+      }, WARP_FADE_MS)
+    },
+    [goToZone]
+  )
+
   const enterWarp = useCallback(
     (warp: ZoneWarp) => {
       // 0xFFF marks the ROM's dynamic warps: elevators and the Safari gate.
@@ -680,13 +720,13 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       // The destination tile depends on the target zone's own warp list
       // (warp.anchor points back to the matching door there), so it can only
       // be resolved once that zone's data has been fetched.
-      goToZone(warp.header, newZone => {
+      goToZoneWithFade(warp.header, newZone => {
         const anchorWarp = newZone.warps[warp.anchor]
         if (anchorWarp) return { world_x: anchorWarp.x, world_z: anchorWarp.z }
         return zoneSpawn(newZone)
       })
     },
-    [goToZone]
+    [goToZoneWithFade]
   )
 
   const settleStep = useCallback(
@@ -739,7 +779,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
 
   const attemptStep = useCallback(
     (dir: Direction) => {
-      if (dialogueRef.current || floorPickerRef.current || isTransitioningRef.current) return
+      if (dialogueRef.current || floorPickerRef.current || isTransitioningRef.current || warpFadeActiveRef.current)
+        return
       // Mouvement bloqué dès l'engagement d'un combat (« ! ») et pendant
       // toute sa durée (l'overlay couvre l'écran, la garde couvre le clavier)
       // — idem pendant une interception Roadblock (marche du PNJ + repoussée).
@@ -843,6 +884,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
 
   const onA = useCallback(() => {
     if (battleRef.current || engagingRef.current) return
+    // Fondu de warp en cours : entrée gelée, comme le mouvement.
+    if (warpFadeActiveRef.current) return
     // Pendant la marche d'interception (avant la boîte), A/B sont inertes ;
     // une fois la boîte ouverte, dialogueRef reprend la main normalement.
     if (interceptingRef.current && !dialogueRef.current) return
@@ -1107,6 +1150,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                       height: SPRITE_FRAME_SIZE,
                       backgroundImage: `url(${sprite.url})`,
                       backgroundPosition: `0 -${spriteRow * SPRITE_FRAME_SIZE}px`,
+                      backgroundRepeat: 'no-repeat',
                       imageRendering: 'pixelated',
                     }}
                   />
@@ -1160,6 +1204,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                       height: SPRITE_FRAME_SIZE,
                       backgroundImage: `url(${sprite.url})`,
                       backgroundPosition: `0 -${spriteRow * SPRITE_FRAME_SIZE}px`,
+                      backgroundRepeat: 'no-repeat',
                       imageRendering: 'pixelated',
                     }}
                   />
@@ -1234,6 +1279,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                     height: SPRITE_FRAME_SIZE,
                     backgroundImage: `url(${followerSpriteUrl})`,
                     backgroundPosition: '0 0',
+                    backgroundRepeat: 'no-repeat',
                     imageRendering: 'pixelated',
                   }}
                 />
@@ -1264,6 +1310,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                   backgroundImage: `url(${playerSpriteUrl})`,
                   backgroundPositionX: 0,
                   backgroundPositionY: -SPRITE_ROW[facing] * SPRITE_FRAME_SIZE,
+                  backgroundRepeat: 'no-repeat',
                   imageRendering: 'pixelated',
                   '--bump-x': `${DIRECTION_DELTA[facing].dx * 3}px`,
                   '--bump-y': `${DIRECTION_DELTA[facing].dz * 3}px`,
@@ -1302,7 +1349,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                 key={floor.name}
                 onClick={() => {
                   setFloorPicker(false)
-                  goToZone(floor.name, () => ({ world_x: floor.x, world_z: floor.z }))
+                  goToZoneWithFade(floor.name, () => ({ world_x: floor.x, world_z: floor.z }))
                 }}
                 className="w-full text-left px-3 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/10 rounded"
               >
@@ -1446,6 +1493,25 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           </div>
         </div>
       </div>
+
+      {/* Fondu de warp (issue 13, QA humaine) — écran plein, au-dessus de
+          tout le chrome (D-pad/A-B compris, comme une vraie transition
+          d'écran). Purement visuel : l'entrée est déjà gelée par
+          warpFadeActiveRef côté attemptStep/onA, pointer-events reste
+          'none' pour ne rien changer d'autre au DOM pendant les tests. */}
+      <div
+        aria-hidden="true"
+        data-testid="warp-fade"
+        style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: 90,
+          background: '#000',
+          opacity: warpFading ? 1 : 0,
+          pointerEvents: 'none',
+          transition: `opacity ${WARP_FADE_MS}ms ease`,
+        }}
+      />
     </div>
   )
 }
