@@ -2802,3 +2802,120 @@ Portée actuelle : appelée uniquement pour les zones ayant une entrée
 `OUTDOOR_TERRAIN_PATCHES` (Route 29 pour l'instant). S'appliquera
 automatiquement à toute future zone patchée par ce mécanisme — plus
 besoin d'y repenser zone par zone.
+
+## 2026-08-05 (suite 2) — boîte de dialogue et menu START restylés d'après une capture de référence HGSS réelle
+
+Demande utilisateur : faire ressembler la boîte de dialogue et le menu
+START à l'UI HGSS réelle (capture d'écran fournie : écran du haut =
+overworld + boîte de dialogue fond blanc/bordure fine or, écran du bas
+= menu START vert tactile, bandeau « ⊗ MENU », grille 2 colonnes
+d'icônes rondes vert foncé). Consigne explicite : vérifier d'abord les
+assets déjà extraits de la ROM (`public/sprites/ui/UI_SCREENS_INDEX.md`)
+avant d'inventer quoi que ce soit.
+
+### Boîte de dialogue — l'asset déjà câblé n'était pas le bon
+
+`.dialogue-frame` (`globals.css`) utilisait déjà la technique
+`border-image` sur `textbox_000.png` (dossier `ui/dialogue/`, NARC
+`/a/1/0/0`, 26 PNG) — la bonne approche, mais le mauvais fichier
+visuellement : vérification pixel par pixel (`PIL.getcolors`) des 26
+PNG de ce dossier → **les 26 sont un seul et même thème bleu/turquoise**
+(couleurs `(49,74,99)`/`(74,99,123)`/`(173,189,198)`, cadre de
+communication sans fil façon Union Room), aucun thème or/tan malgré la
+mention « 6 color themes » de l'index. Un poste de la référence
+utilisateur a aussi été échantillonné pixel par pixel (`PIL.getpixel`
+sur la capture) pour extraire les vraies couleurs du cadre or HGSS :
+contour quasi-noir → bande or moyen → bande or clair (bevel) → blanc.
+
+**Décision** : pas d'asset ROM gold disponible → recolorisation
+dérivée, pas une invention à partir de rien. Script Python a mappé les
+4 couleurs de `textbox_000.png` (D=contour, M=corps, L=bevel, W=fond)
+vers une palette or basée sur l'échantillonnage ci-dessus, en
+conservant à 100% la silhouette pixel-art réelle (mêmes coins
+« encochés » arrondis, même structure 9-slice 24×24/8px). Résultat :
+`public/sprites/ui/dialogue/textbox_overworld_gold.png` (nouveau
+fichier, dérivé — pas une extraction ROM brute, documenté comme tel en
+commentaire dans `globals.css`). `.dialogue-frame` pointe maintenant
+dessus (`border-image ... 8 fill`, `border-image-repeat: stretch`
+conservé — pas de risque de tuilage). Bordure réduite de 12px à 10px
+(plus fine, plus fidèle à la capture).
+
+Retouches `DialogueBox.tsx` (visuel seulement, contrat X/Y/A/B et
+`DialogueBoxHandle` intacts, aucun test cassé) :
+- Overlay `bg-black/20` → `bg-black/10` : le vrai jeu ne tamise pas
+  l'overworld derrière la boîte, mais un fond totalement transparent
+  laissait la carte transparaître dans les coins encochés (pixels
+  alpha=0 du cadre) — compromis documenté en commentaire.
+- Nom du PNJ : `text-amber-700` → `text-amber-800` (cohérence avec le
+  nouveau cadre or).
+- Compteur de page (`1/2`) et curseur `▼` : gardés tels quels dans le
+  DOM (les tests asserent `toContain('1/2')` etc. — texte inchangé),
+  juste restylés (`text-gray-400`/`text-[10px]` pour le compteur,
+  discret ; curseur `▼` en `text-gray-600 text-sm`, plus proche du
+  triangle sombre plein de la référence).
+
+### Menu START — le dossier `menus/` extrait n'est PAS le menu START
+
+Vérification asset par asset (pas supposition depuis les noms de
+fichiers, comme demandé) : `menu_002.png`/`003`/`004` = fond diagonal
+façon trainer card + sprite de dresseur de VS screen corrompu/mal
+décodé (lignes en tirets = artefact de décodage) ; `menu_006.png` =
+bandeau **« VICTOIRE DEFAITE EGALITE »** (français, écran de résultat
+de combat) ; `options_004-019` = chrome de l'écran **Options**
+(flèches de pagination grises, grilles à clé magenta) — pas des icônes
+de menu. **Aucun des 15 PNG de `ui/menus/` n'est le panneau vert du
+menu START** malgré ce que suggérait l'entrée d'index — confirmé en
+affichant chaque fichier à l'échelle, pas en lisant les noms.
+
+**Décision** : chrome du menu (bandeau, panneau, grille, tuiles)
+reconstruit en CSS/Tailwind pur, pas d'asset — documenté en commentaire
+dans `StartMenu.tsx`. Palette vert émeraude Tailwind (`emerald-600`
+corps, `emerald-800` bandeau, `emerald-950` contours) choisie par
+jugement visuel contre la capture de référence, pas mesurée
+pixel-par-pixel (contrairement au cadre or, où l'échantillonnage était
+direct et fiable).
+
+**Icônes par tuile** — un seul vrai asset ROM exploitable trouvé après
+recherche dans `pokedex/`, `bag/`, `items/`, `badges/` :
+`pokedex/pokedex_030.png` (16×16, poké ball rouge/blanche propre,
+pixel-art) → utilisé pour 図鑑 (Kanjidex), rendu à `image-rendering:
+pixelated`. Les autres dossiers ne contiennent que des écrans complets
+(fond de pochette du Sac, écran de la Pokédex, planches de badges) ou
+des tuiles décoratives sans rapport (étoiles d'effet, icônes d'étage
+numérotées) — rien de la taille/forme d'une icône de tuile de menu
+pour バッグ/レッスン/プロフィール/ぼうけんノート/せってい. Pour ces 5
+slots, repli assumé en pictogramme emoji (📖/🎒/👤/🧭/⚙️), cohérent
+avec le précédent déjà posé pour `.book-chrome` (« pas de précédent
+HGSS », assumé). `SlotIcon` (nouveau composant local) distingue les
+deux cas (`{kind:'sprite', src}` vs `{kind:'emoji', glyph}`) ; les
+tuiles désactivées (プロフィール/せってい) reçoivent `grayscale
+opacity-40` sur l'icône, cohérent avec le style de tuile grisée déjà
+en place.
+
+Structure/attributs de test préservés à l'identique
+(`data-testid="menu-root"`, `data-selected`, `aria-disabled`,
+`buttonByText` — le jp reste dans le `textContent` du bouton) :
+`StartMenu.test.tsx` passe sans modification.
+
+### Vérification visuelle
+
+Impossible de capturer l'app réelle en marche : `/map` et le menu
+START exigent une session Google OAuth (`src/lib/auth.ts`, pas de
+bypass dev) derrière `proxy.ts`, qui redirige aussi bien les pages que
+les assets statiques (`/sprites/...`) tant que non connecté — et
+forger une session aurait nécessité soit toucher la table `users`
+(interdit pour cette tâche), soit lire dans Neon (évité par prudence).
+Vérifié à la place par une page HTML statique isolée (Tailwind CDN +
+les mêmes classes exactes + les mêmes fichiers PNG réels, servie en
+`file://`, capturée avec Playwright/Chromium déjà en cache local) —
+fidèle au rendu réel puisqu'elle utilise exactement les mêmes classes
+utilitaires et les mêmes assets, juste hors du flux serveur/auth de
+l'app. Résultat jugé visuellement proche de la référence (cadre or fin
+sur fond blanc, panneau vert 2 colonnes avec bandeau « ⊗ MENU »).
+
+**`npm run check` vert (570 tests, inchangé — restyle visuel pur,
+aucun test de structure cassé).** Fichiers touchés :
+`src/app/globals.css`, `src/app/map/DialogueBox.tsx`,
+`src/app/menu/StartMenu.tsx`,
+`public/sprites/ui/dialogue/textbox_overworld_gold.png` (nouveau,
+dérivé de `textbox_000.png`).

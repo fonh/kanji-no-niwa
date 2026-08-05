@@ -284,9 +284,14 @@ function DialogueLineView({
 
   return (
     <>
-      {/* Overlay — un tap n'importe où vaut A (comme le bouton) */}
+      {/* Overlay — un tap n'importe où vaut A (comme le bouton). Léger
+          assombrissement (10%) : le vrai jeu ne tamise pas la vue de
+          l'overworld derrière la boîte, mais un fond totalement transparent
+          laisse transparaître la carte dans les coins arrondis (notches
+          transparents du cadre pixel-art) — compromis pour rester lisible
+          sur n'importe quel décor. */}
       <div
-        className="fixed inset-0 z-[60] flex items-end justify-center bg-black/20"
+        className="fixed inset-0 z-[60] flex items-end justify-center bg-black/10"
         onClick={e => {
           e.stopPropagation()
           pressA()
@@ -294,7 +299,7 @@ function DialogueLineView({
       >
         <div className="w-full max-w-md m-4 mb-24 dialogue-frame text-gray-900">
           {name && (
-            <p className="font-chrome text-xs text-amber-700 tracking-widest mb-1">{name}</p>
+            <p className="font-chrome text-xs text-amber-800 tracking-widest mb-1">{name}</p>
           )}
           <p className="font-reading text-lg leading-loose min-h-14">
             <JpText jp={line.jp} showReadings={showReadings} visibleChars={typedCount} />
@@ -335,9 +340,11 @@ function DialogueLineView({
             </div>
           )}
 
-          <p className="font-chrome text-gray-500 text-xs mt-2 text-right">
+          <p className="font-chrome text-gray-400 text-[10px] mt-2 text-right">
             {counter}
-            {canAdvance && <span className="ml-1 dialogue-cursor">▼</span>}
+            {canAdvance && (
+              <span className="ml-1 text-sm text-gray-600 dialogue-cursor">▼</span>
+            )}
           </p>
         </div>
       </div>

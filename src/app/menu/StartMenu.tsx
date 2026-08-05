@@ -35,16 +35,51 @@ interface SlotDef {
   id: StartMenuScreen | 'profile' | 'settings'
   jp: string
   disabled: boolean
+  /** Icône de la tuile (issue 13 — restyle START menu HGSS). Un vrai sprite
+   * ROM n'existe que pour 図鑑 (poké ball, pokedex_030.png — /a/1/1/0) ; les
+   * autres entrées de ce jeu (レッスン, バッグ...) n'ont pas d'équivalent
+   * HGSS extrait (dossier `menus/` = chrome de l'écran Options + assets
+   * hors-sujet, pas d'icônes de tuiles) — pictogramme emoji en repli,
+   * cohérent avec le précédent déjà posé pour `.book-chrome` (PRD : « pas de
+   * précédent HGSS », création assumée). */
+  icon: { kind: 'sprite'; src: string } | { kind: 'emoji'; glyph: string }
 }
 
 const SLOTS: SlotDef[] = [
-  { id: 'zukan', jp: uiStrings.menu_slot_zukan.jp, disabled: false },
-  { id: 'lessons', jp: uiStrings.menu_slot_lessons.jp, disabled: false },
-  { id: 'bag', jp: uiStrings.menu_slot_bag.jp, disabled: false },
-  { id: 'profile', jp: uiStrings.menu_slot_profile.jp, disabled: true },
-  { id: 'journal', jp: uiStrings.menu_slot_journal.jp, disabled: false },
-  { id: 'settings', jp: uiStrings.menu_slot_settings.jp, disabled: true },
+  {
+    id: 'zukan',
+    jp: uiStrings.menu_slot_zukan.jp,
+    disabled: false,
+    icon: { kind: 'sprite', src: '/sprites/ui/pokedex/pokedex_030.png' },
+  },
+  { id: 'lessons', jp: uiStrings.menu_slot_lessons.jp, disabled: false, icon: { kind: 'emoji', glyph: '📖' } },
+  { id: 'bag', jp: uiStrings.menu_slot_bag.jp, disabled: false, icon: { kind: 'emoji', glyph: '🎒' } },
+  { id: 'profile', jp: uiStrings.menu_slot_profile.jp, disabled: true, icon: { kind: 'emoji', glyph: '👤' } },
+  { id: 'journal', jp: uiStrings.menu_slot_journal.jp, disabled: false, icon: { kind: 'emoji', glyph: '🧭' } },
+  { id: 'settings', jp: uiStrings.menu_slot_settings.jp, disabled: true, icon: { kind: 'emoji', glyph: '⚙️' } },
 ]
+
+/** Icône d'une tuile — sprite ROM pixelisé ou pictogramme emoji de repli. */
+function SlotIcon({ icon, disabled }: { icon: SlotDef['icon']; disabled: boolean }) {
+  if (icon.kind === 'sprite') {
+    return (
+      <img
+        src={icon.src}
+        alt=""
+        width={16}
+        height={16}
+        draggable={false}
+        className={`w-8 h-8 ${disabled ? 'opacity-40 grayscale' : ''}`}
+        style={{ imageRendering: 'pixelated' }}
+      />
+    )
+  }
+  return (
+    <span className={`text-3xl leading-none ${disabled ? 'opacity-40 grayscale' : ''}`} aria-hidden="true">
+      {icon.glyph}
+    </span>
+  )
+}
 
 interface Props {
   /** Écran à ouvrir directement au montage (retour de fiche : /map?menu=zukan). */
@@ -482,34 +517,59 @@ export default function StartMenu({ initialScreen = null }: Props) {
 
       {open && (
         <div className="fixed inset-0 z-[85] bg-black/60 font-chrome flex items-center justify-center p-3 pb-8">
-          <div className="w-full max-w-2xl h-full max-h-[85vh] bg-gray-900 border-2 border-white rounded-lg overflow-hidden">
+          <div
+            className={
+              screen === 'root'
+                ? 'w-full max-w-2xl h-full max-h-[85vh] rounded-2xl border-4 border-emerald-950 overflow-hidden shadow-2xl'
+                : 'w-full max-w-2xl h-full max-h-[85vh] bg-gray-900 border-2 border-white rounded-lg overflow-hidden'
+            }
+          >
             {screen === 'root' ? (
-              <div data-testid="menu-root" className="flex flex-col h-full">
-                <div className="grid grid-cols-2 gap-2 p-3">
+              // Écran racine — panneau vert tactile HGSS (issue 13) : pas
+              // d'asset ROM pour ce chrome (dossier `menus/` extrait =
+              // chrome de l'écran Options + assets hors-sujet, pas le menu
+              // START vert) — reconstruit en CSS à partir de la capture de
+              // référence (bandeau vert foncé « ⊗ MENU », tuiles vert clair
+              // arrondies, icône + libellé jp sous chaque tuile).
+              <div data-testid="menu-root" className="flex flex-col h-full bg-emerald-600">
+                <div className="flex items-center gap-1.5 bg-emerald-800 px-3 py-2 border-b-2 border-emerald-950/40">
+                  <span className="text-white text-base leading-none" aria-hidden="true">
+                    ⊗
+                  </span>
+                  <span className="text-white font-bold text-sm tracking-widest">MENU</span>
+                </div>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-1 p-4 flex-1 content-start">
                   {SLOTS.map((slot, index) => (
                     <button
                       key={slot.id}
                       data-selected={index === slotIndex ? 'true' : 'false'}
                       aria-disabled={slot.disabled ? 'true' : 'false'}
                       onClick={() => activateSlot(slot)}
-                      className={`px-3 py-3 rounded border text-left text-sm font-bold ${
-                        slot.disabled
-                          ? 'bg-white/5 border-white/10 text-white/25'
-                          : index === slotIndex
-                            ? 'bg-amber-400/20 border-amber-300 text-white'
-                            : 'bg-white/10 border-white/20 text-white/85'
-                      }`}
+                      className="flex flex-col items-center gap-1 py-2"
                     >
-                      {slot.jp}
+                      <span
+                        className={`w-16 h-16 flex items-center justify-center rounded-2xl border-2 ${
+                          slot.disabled
+                            ? 'bg-emerald-700/40 border-emerald-900/40'
+                            : index === slotIndex
+                              ? 'bg-emerald-700 border-amber-300 shadow-[inset_0_2px_0_rgba(255,255,255,0.25)]'
+                              : 'bg-emerald-700 border-emerald-950/50 shadow-[inset_0_2px_0_rgba(255,255,255,0.2)]'
+                        }`}
+                      >
+                        <SlotIcon icon={slot.icon} disabled={slot.disabled} />
+                      </span>
+                      <span className={`text-xs font-bold ${slot.disabled ? 'text-white/40' : 'text-white'}`}>
+                        {slot.jp}
+                      </span>
                       {slot.disabled && (
-                        <span className="block text-[9px] font-normal mt-0.5">
+                        <span className="text-[9px] font-normal text-white/35 -mt-0.5">
                           {uiStrings.menu_slot_disabled.jp}
                         </span>
                       )}
                     </button>
                   ))}
                 </div>
-                <div className="mt-auto border-t border-white/15 px-3 py-1.5 text-[10px] text-white/40 flex gap-3">
+                <div className="mt-auto border-t border-emerald-950/40 bg-emerald-700/60 px-3 py-1.5 text-[10px] text-white/70 flex gap-3">
                   <span>B・START　{uiStrings.menu_close.jp}</span>
                 </div>
               </div>

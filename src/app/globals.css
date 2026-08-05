@@ -37,11 +37,18 @@ body {
   font-family: var(--font-biz-udgothic), 'BIZ UDGothic', 'Hiragino Sans', sans-serif;
 }
 
-/* Cadre de dialogue HGSS — 9-slice du textbox extrait (24×24, bords de 8px).
-   `fill` peint le centre (blanc) : le texte du dialogue est sombre dessus. */
+/* Cadre de dialogue HGSS — 9-slice d'un textbox recoloré (24×24, bords de
+   8px). `fill` peint le centre (blanc) : le texte du dialogue est sombre
+   dessus. La silhouette pixel-art vient de l'asset ROM réel
+   (textbox_000.png, NARC /a/1/0/0) ; les 26 frames extraits ne couvrent
+   qu'un seul thème bleu/turquoise (communication sans fil), aucun thème
+   or/tan — la palette a donc été remplacée (voir
+   textbox_overworld_gold.png) pour matcher le cadre or fin de la boîte de
+   dialogue overworld HGSS réelle (couleurs vérifiées sur capture d'écran de
+   référence). */
 .dialogue-frame {
-  border: 12px solid transparent;
-  border-image: url('/sprites/ui/dialogue/textbox_000.png') 8 fill;
+  border: 10px solid transparent;
+  border-image: url('/sprites/ui/dialogue/textbox_overworld_gold.png') 8 fill;
   border-image-repeat: stretch;
   image-rendering: pixelated;
   padding: 4px 8px;
