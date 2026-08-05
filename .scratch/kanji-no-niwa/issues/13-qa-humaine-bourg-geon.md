@@ -2919,3 +2919,148 @@ aucun test de structure cassé).** Fichiers touchés :
 `src/app/menu/StartMenu.tsx`,
 `public/sprites/ui/dialogue/textbox_overworld_gold.png` (nouveau,
 dérivé de `textbox_000.png`).
+
+## 2026-08-05 (suite 3) — 4ᵉ signalement « je ne peux pas aller à gauche » : ni un trou de données, ni le bug client jamais reproduit — un vrai mur, au bon endroit, dans la poche de canopée déjà documentée comme limite acceptée
+
+**Contexte** : nouveau signalement, distinct des 3 précédents sur Route 29
+(tous des trous de données confirmés puis corrigés) et distinct aussi du
+très vieux point resté ouvert « Mouvement gauche/droite : investigué en
+profondeur, non reproduit » (ci-dessus, 2026-08-03). Un premier relevé de
+position (avant cette entrée) donnait monde (655,399) → tuile locale
+(79,15), avec l'ouest praticable sur au moins 3 tuiles avant un vrai mur
+— terrain propre à cet endroit précis, rien à corriger là. Question
+initiale posée par l'utilisateur ensuite : « il rebondit contre quelque
+chose en haut, à gauche, en bas » (nord/ouest/sud bloqués, seul l'est
+ouvert) — un vrai rebond (`setBumpKey`), pas une absence totale de
+réaction, donc pas un blocage d'input générique.
+
+### Position revérifiée EN DIRECT (pas le relevé précédent, devenu obsolète)
+
+Requête fraîche sur `user_map_state` (lecture seule) : le joueur avait
+bougé depuis le premier relevé — position actuelle monde **(642,408)**
+sur `MAP_ROUTE_29`, `updated_at` à la seconde près de cette
+investigation. Avec `world_origin_x=576`, `world_origin_y=384`
+(`src/data/zone-registry.json`, revérifié directement, pas supposé) :
+tuile locale **(66,24)** — un tout autre endroit de la carte que le
+premier relevé (79,15), à 14 tuiles à l'ouest et 9 au sud.
+
+### Le terrain confirme EXACTEMENT le rebond signalé
+
+Lu directement dans `zone-registry.json` (`terrain`, grille aplatie
+96×32) : depuis (66,24) — **nord `#`, sud `#`, ouest `#`, est `.`** —
+correspond au signalement mot pour mot (« en haut, à gauche, en bas »
+bloqués ; seul un côté, l'est, ouvert — l'utilisateur n'a pas nommé
+« est » explicitement mais par élimination c'est cohérent avec
+« seulement en haut/gauche/bas » listés comme bloqués). Donc : à
+l'instant précis où l'utilisateur a testé, le moteur a **correctement**
+détecté un mur sur 3 des 4 directions et a fait rebondir le joueur —
+comportement de collision qui fonctionne comme prévu, pas un bug
+d'input.
+
+### Ce n'est pas une poche isolée (flood-fill exhaustif, même méthode que `verify_full_connectivity`)
+
+BFS 4-connexe (murs = `#`, reproduisant exactement `_flood_fill` de
+`build-zone-registry.py`) depuis (66,24) : **1051 tuiles atteignables**,
+strictement le même ensemble que depuis un point de référence connu-bon
+près de la guérite Route 29/46 (tuile locale (50,5)) — même composante
+connexe, donc **pas** un nouveau cas du bug d'urgence du 2026-08-05
+(« joueur enfermé dans une poche de 7 tuiles ») déjà corrigé par revert.
+Sortie confirmée : **est × 10 tuiles puis nord × 4 tuiles** (chemin le
+plus court calculé par BFS, vérifié explicitement praticable case par
+case) ramène à un endroit clairement dégagé au nord de la bande de
+canopée — pas une impasse, juste un passage étroit qui oblige à
+continuer vers l'est avant de pouvoir remonter.
+
+### Rendu composite (capture réelle + grille de collision superposée) : la tuile du joueur EST dans la poche de canopée déjà actée comme limite connue
+
+Superposition Python (même technique que tout le reste de cette session)
+de `Johto Route 29 HGSS.png` et de la grille de collision, centrée sur
+(66,24) : la tuile du joueur et ses voisines à l'est (le seul côté
+ouvert) sont du **même pixel-art de pin dense** que les tuiles
+immédiatement au nord, au sud et à l'ouest (marquées mur, correctement,
+ce sont de vrais pins) — aucune différence visuelle entre une tuile
+praticable et une tuile murée adjacente. Coordonnées de cette tuile
+recoupées avec l'entrée du **3ᵉ signalement Route 29** plus haut dans ce
+fichier (2026-08-05) : le recalage ORB de cette session-là avait déjà
+localisé le joueur à « tuile locale ≈(66,24) », dans la zone que
+`OUTDOOR_TERRAIN_PATCHES["MAP_ROUTE_29"]` documentait comme « 21 tuiles
+qui doivent rester praticables » — **c'est la même poche**, retrouvée
+indépendamment un jour plus tard par un joueur différent (l'utilisateur)
+qui n'a pas pu deviner à l'œil quelle tuile de canopée identique aux
+autres était praticable. Cette session-là avait déjà noté la limite en
+toutes lettres : « sans calque de profondeur sprite (hors périmètre
+moteur)… ~24 tuiles de cette poche resteront visuellement de la canopée
+praticable » — le rebond sur 3 côtés est la manifestation concrète et
+prévisible de cette limite déjà actée, pas une régression ni un nouveau
+trou.
+
+**Pourquoi ne pas corriger davantage le terrain ici** : la même
+investigation avait déjà testé exhaustivement (recherche gloutonne dans
+les deux sens) combien de tuiles de cette poche précise peuvent être
+murées sans casser la connectivité — seulement **2 sur 26** candidates
+testées, le reste (dont la position exacte du joueur ici) doit rester
+praticable pour ne pas couper le seul chemin vers la guérite Route
+29/46 et Ville Griotte/Route 30. Remurer davantage romprait
+`verify_full_connectivity` (vérifié : muré (66,24) seul isole
+immédiatement le reste de la poche à l'est, murer toute la bande casse
+la continuité de la route). Un vrai correctif visuel demanderait soit un
+calque de profondeur sprite (le joueur devant apparaître visuellement
+« sous » la canopée sur ces tuiles précises — hors périmètre du moteur
+2D à plat actuel), soit une retouche d'asset graphique distinguant la
+canopée praticable de la canopée murée (hors périmètre contenu) — les
+deux déjà écartés dans l'entrée du 3ᵉ signalement pour la même raison.
+
+### Piste bug client : écartée par cette même preuve, pas juste par manque de reproduction
+
+Un rebond visible (`setBumpKey` incrémenté, animation de bump déclenchée)
+est incompatible avec les hypothèses de bug client envisagées au départ
+de cette investigation (`warpFadeActiveRef`/`isTransitioningRef` coincés
+à `true`, D-pad ouest qui ne reçoit pas les événements pointeur) : dans
+ces cas-là, `attemptStep` retournerait tôt (`return` silencieux) sans
+jamais atteindre le test de collision qui déclenche le bump — l'input
+ouest/nord/sud n'aurait produit AUCUNE animation, pas un rebond. Lecture
+de code de contrôle (pas seulement déduction) : `goToZone` (ligne 639)
+enveloppe tout son corps dans `try/catch/finally`, `finally` remet
+toujours `isTransitioningRef.current = false` ; `goToZoneWithFade`
+(ligne 696) enchaîne sur `goToZone(...).finally(...)`, qui ne peut donc
+jamais rester bloqué puisque la promesse interne ne rejette jamais.
+Aucun scénario de ref coincée trouvé. Le D-pad (`z-[70]`, ligne 1382) et
+l'overlay de fondu (`z-[90]`, `pointerEvents: 'none'`, ligne ~1508) ne se
+chevauchent pas fonctionnellement (l'overlay ne bloque jamais les clics,
+qu'il soit visible ou non) — de toute façon sans objet ici puisque le
+bump prouve que le clic/la touche a bien été reçu(e) et traité(e). Le
+très vieux point ouvert « mouvement gauche/droite non reproduit »
+(2026-08-03) reste donc un mystère à part entière, non expliqué ni
+résolu par cette investigation — mais ce 4ᵉ signalement-ci, lui, est
+maintenant pleinement expliqué et n'a pas besoin d'un bug client pour
+l'être.
+
+### Conclusion — aucun correctif appliqué (aucun bug trouvé à corriger)
+
+Pas un trou de données (terrain vérifié deux fois, cohérent avec le
+rebond signalé, connectivité complète confirmée par flood-fill exhaustif)
+et pas un bug client (le rebond lui-même exclut les pistes de ref
+coincée/CSS envisagées). C'est un mur réel, à l'endroit exact rapporté,
+qui fait partie d'une poche de canopée déjà identifiée et volontairement
+laissée praticable-mais-visuellement-fausse à la session précédente,
+faute de calque de profondeur ou de retouche d'asset (tous deux hors
+périmètre). **Aucun fichier modifié**, `npm run check` non re-testé après
+coup côté code (rien n'a changé) — dernier run de contrôle avant cette
+entrée : **570/570 tests verts**, `validate:content` sans nouveau
+bloquant.
+
+**Pour l'utilisateur, immédiatement** : depuis cette position précise,
+avancer vers l'**est** (une dizaine de tuiles) puis vers le **nord**
+(quelques tuiles) fait sortir de la poche de canopée — le chemin le plus
+court calculé confirme que ce n'est pas une impasse.
+
+**Ce qui manque encore pour le point resté ouvert du 2026-08-03**
+(mouvement gauche/droite jamais reproduit, cas général, hors Route 29) :
+une observation précise sur une zone où le rebond ne correspond PAS à un
+vrai mur des données (i.e. l'utilisateur voit de l'herbe/un chemin
+dégagé au même endroit où le jeu refuse le pas) — ce signalement-ci,
+lui, avait un vrai mur ; le prochain test de diagnostic utile serait de
+comparer, au moment même du blocage, une capture d'écran ET la position
+DB fraîche, pour établir si le rebond correspond à un mur réel (comme
+ici) ou à un faux mur (ce qui pointerait enfin vers un vrai bug, de
+données ou de code).
