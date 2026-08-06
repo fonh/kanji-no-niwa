@@ -41,12 +41,24 @@ export interface BookScreenLesson {
 type Phase = 'book' | 'quiz' | 'saving' | 'done' | 'error'
 
 /** Audio best-effort : fichier manquant ou lecteur indisponible → silence,
- * jamais un crash (l'icône est déjà désactivée quand la ref est nulle). */
-function playAudio(src: string) {
+ * jamais un crash (l'icône est déjà désactivée quand la ref est nulle).
+ *
+ * `onDone` remonte la musique : sans ça, la piste de leçon couvrait la voix
+ * qui prononce la phrase d'exemple (issue 13). Il est appelé à la fin, à
+ * l'erreur, ET si la lecture ne démarre jamais — une musique restée baissée
+ * pour toujours serait pire que le problème d'origine. */
+function playAudio(src: string, onDone?: () => void) {
   try {
-    void new Audio(src).play()?.catch(() => {})
+    const el = new Audio(src)
+    if (onDone) {
+      el.addEventListener('ended', onDone, { once: true })
+      el.addEventListener('error', onDone, { once: true })
+    }
+    const p = el.play()
+    if (p) p.catch(() => onDone?.())
+    else onDone?.()
   } catch {
-    /* noop */
+    onDone?.()
   }
 }
 
@@ -78,7 +90,7 @@ export default function BookScreen({ lesson }: { lesson: BookScreenLesson }) {
   // carte uniquement) : rotation de pistes libres de droits, choix
   // déterministe par leçon (voir audio-tracks.ts). Couche 'zone' : BookScreen
   // est une route à part, MapClient n'est jamais monté en même temps.
-  const { setBgmLayer } = useAudioManager()
+  const { setBgmLayer, duckBgm } = useAudioManager()
   useEffect(() => {
     const track = lessonTrackForLesson(lesson.zoneId, lesson.sequenceIndex)
     setBgmLayer('zone', { url: track, loop: true })
@@ -187,7 +199,7 @@ export default function BookScreen({ lesson }: { lesson: BookScreenLesson }) {
       disabled={src === null}
       onClick={e => {
         e.stopPropagation()
-        if (src) playAudio(src)
+        if (src) playAudio(src, duckBgm())
       }}
       className={`${large ? 'w-9 h-9 text-lg' : 'w-7 h-7 text-sm'} shrink-0 rounded-full border-2 font-chrome ${
         src === null

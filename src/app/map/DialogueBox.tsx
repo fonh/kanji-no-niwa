@@ -357,28 +357,12 @@ function DialogueLineView({
         </div>
       </div>
 
-      {/* Boutons overlay X / Y — n'existent que pendant un dialogue
-          (PRD § Interface), au-dessus du bloc A/B de MapClient */}
-      <div className="fixed bottom-36 right-3 z-[70] flex gap-2" onClick={e => e.stopPropagation()}>
-        <button
-          onClick={pressX}
-          className={`w-9 h-9 rounded-full border text-xs font-bold ${
-            showEn ? 'bg-amber-400/90 border-amber-600 text-black' : 'bg-white/10 border-white/25 text-white/70'
-          }`}
-          title="EN"
-        >
-          X
-        </button>
-        <button
-          onClick={pressY}
-          className={`w-9 h-9 rounded-full border text-xs font-bold ${
-            showReadings ? 'bg-amber-400/90 border-amber-600 text-black' : 'bg-white/10 border-white/25 text-white/70'
-          }`}
-          title="かな"
-        >
-          Y
-        </button>
-      </div>
+      {/* Les boutons X (traduction) et Y (lectures) vivaient ICI, donc
+          n'existaient que pendant un dialogue — invisibles le reste du temps,
+          au point qu'on oubliait qu'ils existaient (issue 13). Ils sont
+          désormais permanents, au même rang que A et B, rendus par MapClient
+          et relayés à cette boîte par la ref impérative. */}
+
     </>
   )
 }

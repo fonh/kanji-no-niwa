@@ -368,6 +368,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [zone]
   )
 
+  const dialogueOpen = activeDialogue !== null
   const avatarPx = worldToPixel(playerPos.world_x, playerPos.world_z)
 
   // Map container offset so avatar is centered in viewport
@@ -1645,6 +1646,39 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             className="w-12 h-12 rounded-full bg-white/15 active:bg-white/35 border border-white/30 text-white font-bold"
           >
             A
+          </button>
+        </div>
+
+        {/* X et Y au même rang que A et B (issue 13, demande explicite) : ils
+            étaient rendus DANS la boîte de dialogue, donc invisibles hors
+            dialogue — le joueur ne savait plus qu'ils existaient. Ils sont
+            désormais permanents et grisés quand ils ne servent à rien. */}
+        <div className="flex gap-2 justify-end mt-2">
+          <button
+            data-testid="button-x"
+            onClick={onX}
+            aria-disabled={dialogueOpen ? 'false' : 'true'}
+            title="X"
+            className={`w-9 h-9 rounded-full border text-xs font-bold ${
+              dialogueOpen
+                ? 'bg-white/15 active:bg-white/35 border-white/30 text-white'
+                : 'bg-white/5 border-white/15 text-white/25'
+            }`}
+          >
+            X
+          </button>
+          <button
+            data-testid="button-y"
+            onClick={onY}
+            aria-disabled={dialogueOpen ? 'false' : 'true'}
+            title="Y"
+            className={`w-9 h-9 rounded-full border text-xs font-bold ${
+              dialogueOpen
+                ? 'bg-white/15 active:bg-white/35 border-white/30 text-white'
+                : 'bg-white/5 border-white/15 text-white/25'
+            }`}
+          >
+            Y
           </button>
         </div>
       </div>

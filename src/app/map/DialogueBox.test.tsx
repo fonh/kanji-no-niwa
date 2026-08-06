@@ -111,10 +111,14 @@ describe('DialogueBox — boutons Y (lectures) et X (traduction)', () => {
     act(() => ref.current!.pressA())
   })
 
-  it('les boutons overlay X et Y sont rendus (visibles uniquement pendant un dialogue)', () => {
+  it('la boîte ne rend plus ses propres boutons X et Y', () => {
+    // Ils vivaient ici, donc n'existaient que pendant un dialogue — invisibles
+    // le reste du temps, au point qu'on oubliait qu'ils existaient (issue 13).
+    // MapClient les rend désormais en permanence, au rang de A et B, et les
+    // relaie par la ref impérative (pressX/pressY, testés plus haut).
     render({ pages: TWO_PAGES })
-    expect(buttonByText('X')).toBeDefined()
-    expect(buttonByText('Y')).toBeDefined()
+    expect(buttonByText('X')).toBeUndefined()
+    expect(buttonByText('Y')).toBeUndefined()
   })
 })
 

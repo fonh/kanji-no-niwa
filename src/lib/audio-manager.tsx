@@ -59,6 +59,11 @@ function getMutedServerSnapshot(): boolean {
   return false
 }
 
+/** Volume de la musique pendant qu'une voix parle : assez bas pour laisser
+ * passer une phrase d'exemple, assez haut pour que l'ambiance ne disparaisse
+ * pas d'un coup. */
+const DUCK_FACTOR = 0.25
+
 export type BgmLayerKey = 'zone' | 'battle'
 
 export interface BgmTrack {
@@ -74,6 +79,9 @@ interface AudioManagerValue {
   setBgmLayer: (key: BgmLayerKey, track: BgmTrack | null) => void
   /** SFX ponctuel (menu confirm, jingle victoire...) — jamais bloquant. */
   playSfx: (url: string) => void
+  /** Baisse la musique tant qu'une voix parle par-dessus ; rend une fonction
+   * qui la remonte. Appels imbriqués comptés. */
+  duckBgm: () => () => void
 }
 
 const noop = () => {}
@@ -87,6 +95,7 @@ const AudioManagerContext = createContext<AudioManagerValue>({
   toggleMute: noop,
   setBgmLayer: noop,
   playSfx: noop,
+  duckBgm: () => noop,
 })
 
 export function useAudioManager(): AudioManagerValue {
@@ -224,6 +233,28 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
     notifyMuteListeners()
   }, [])
 
+  /** Baisse la musique le temps qu'une voix parle par-dessus (issue 13 : « on
+   * n'entend pas la voix qui prononce les phrases d'exemple »). Rendre la main
+   * restaure le volume — plusieurs appels imbriqués sont comptés, la musique ne
+   * remonte qu'au dernier. */
+  const duckCountRef = useRef(0)
+  const duckBgm = useCallback(() => {
+    const el = audioElRef.current
+    duckCountRef.current += 1
+    if (el) el.volume = bgmGainRef.current * DUCK_FACTOR
+    let released = false
+    return () => {
+      if (released) return
+      released = true
+      duckCountRef.current -= 1
+      if (duckCountRef.current <= 0) {
+        duckCountRef.current = 0
+        const cur = audioElRef.current
+        if (cur) cur.volume = bgmGainRef.current
+      }
+    }
+  }, [])
+
   const playSfx = useCallback(
     (url: string) => {
       if (muted || sfxGain === 0) return
@@ -239,7 +270,7 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
   )
 
   return (
-    <AudioManagerContext.Provider value={{ muted, toggleMute, setBgmLayer, playSfx }}>
+    <AudioManagerContext.Provider value={{ muted, toggleMute, setBgmLayer, playSfx, duckBgm }}>
       {children}
     </AudioManagerContext.Provider>
   )

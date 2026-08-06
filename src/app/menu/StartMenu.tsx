@@ -715,6 +715,33 @@ export default function StartMenu({ initialScreen = null }: Props) {
         </button>
       </div>
 
+      {/* A et B du menu (issue 13) : les boutons de la carte sont SOUS l'overlay
+          du menu, donc inertes une fois celui-ci ouvert — B ne revenait jamais
+          en arrière au doigt. Le menu porte donc les siens, au même endroit. */}
+      {open && (
+        <div
+          className="fixed bottom-2 right-3 z-[96] flex gap-2 font-chrome"
+          onClick={e => e.stopPropagation()}
+        >
+          <button
+            data-testid="menu-button-b"
+            onClick={pressB}
+            className="w-12 h-12 rounded-full bg-white/15 active:bg-white/35 border border-white/30 text-white font-bold"
+          >
+            B
+          </button>
+          <button
+            data-testid="menu-button-a"
+            onClick={() => {
+              if (screen === 'root') activateSlot(SLOTS[slotIndex])
+            }}
+            className="w-12 h-12 rounded-full bg-white/15 active:bg-white/35 border border-white/30 text-white font-bold"
+          >
+            A
+          </button>
+        </div>
+      )}
+
       {open && (
         <div className="fixed inset-0 z-[85] bg-black/60 font-chrome flex items-center justify-center p-3 pb-8">
           <div

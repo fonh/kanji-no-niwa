@@ -39,16 +39,32 @@ describe('musicRefForMapName', () => {
 })
 
 describe('getZoneMusicEntries', () => {
-  it('couvre exactement les 4 zones extérieures du jalon 1 + leurs intérieurs (20 entrées)', () => {
-    const entries = getZoneMusicEntries()
-    expect(entries).toHaveLength(20)
-    const outdoor = entries.filter(z => !z.is_interior)
-    expect(outdoor.map(z => z.map_name).sort()).toEqual([
-      'MAP_CHERRYGROVE',
+  it('couvre tout le parcours jouable, pas seulement le jalon 1', () => {
+    // Le registre s'arrêtait aux 4 zones du jalon 1 : sortir de la Route 30
+    // coupait la musique, sans que rien ne le signale (issue 13, « il n'y a
+    // plus de musique »). Il est désormais généré depuis la table des pistes
+    // et la BO du dépôt — scripts/build/build-zone-music.py.
+    const names = new Set(getZoneMusicEntries().map(z => z.map_name))
+    for (const required of [
       'MAP_NEW_BARK',
       'MAP_ROUTE_29',
+      'MAP_CHERRYGROVE',
       'MAP_ROUTE_30',
-    ])
+      'MAP_ROUTE_31',
+      'MAP_VIOLET',
+      'MAP_SPROUT_TOWER_1F',
+      'MAP_VIOLET_GYM',
+    ]) {
+      expect(names.has(required), required).toBe(true)
+    }
+  })
+
+  it('les lieux à musique propre ne prennent pas celle de leur ville', () => {
+    // On n'entend pas le thème de la ville dans un Centre Pokémon.
+    const byName = new Map(getZoneMusicEntries().map(z => [z.map_name, z]))
+    expect(byName.get('MAP_VIOLET_GYM')!.music_ref).toMatch(/Gym/)
+    expect(byName.get('MAP_VIOLET_POKECENTER_1F')!.music_ref).toMatch(/Center/)
+    expect(byName.get('MAP_VIOLET')!.music_ref).not.toMatch(/Gym/)
   })
 
   it('chaque entrée a un zone_id unique (clé de jointure avec les 8 autres tables)', () => {
