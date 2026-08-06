@@ -1,17 +1,80 @@
 {
- "_note": "Étape 3 point 2, repositionné audit G5 2026-07-21 : ワカバタウン n'a ni Mart ni Centre en canon — l'aide est dans le LABO (tuile près d'Elm), comme en HGSS, uniquement après l'obtention de l'œuf (unlock_conditions sur l'entrée map_npcs : quest_step(mystery_egg_errand, egg_received)) — rien à garder avant.",
+ "_note": "Étape 3 point 2 ; repositionné audit G5 2026-07-21 (dans le LABO, comme en HGSS). | 2026-08-06 (issue 13, carte de conception) : l'état « mart_call » situait l'assistant au comptoir du Mart de VILLE GRIOTTE entre la remise de l'œuf et sa livraison, avec pour source « c'est là que HGSS le poste ». C'est faux : le clerc que HGSS fait apparaître au Mart de Griotte est un SECOND VENDEUR (FLAG_HIDE_CHERRYGROVE_MART_SPECIAL_CLERK → std_special_mart, scr_seq_0851_T21FS0101.s), levé lui aussi à la livraison de l'œuf. L'assistant, lui, quitte le labo pour le Mart de MAUVILLE au moment de l'appel d'Elm qui suit le PREMIER BADGE (scr_seq_0857_T22.s:28-30 : ClearFlag FLAG_HIDE_VIOLET_SHOP_LAB_AIDE + SetFlag FLAG_HIDE_ELMS_LAB_AIDE), et Elm le dit mot pour mot : « He should have met you with the Egg at Violet City's Poké Mart » (msg_0543_T20R0101_00042). Le guidebook curaté le disait déjà (§ violet-city). Les trois états suivent désormais ses trois moments : au labo avant la course, au labo pendant qu'on garde l'œuf, au Mart de Mauville après le badge. Présence rendue inconditionnelle : dans HGSS il est dans le labo dès la première visite.",
  "npc_id": "elm_assistant_new_bark",
- "name": { "jp": "エルムはかせの　じょしゅ", "en": "Prof. Elm's Assistant" },
+ "name": {
+  "jp": "エルムはかせの　じょしゅ",
+  "en": "Prof. Elm's Assistant"
+ },
  "zone_id": "new-bark-town",
  "jlpt_level": "N5",
  "state_rules": [
-  { "default": true, "state": "intro" }
+  {
+   "if": [
+    {
+     "type": "badge_earned",
+     "badge_id": "falkner"
+    }
+   ],
+   "state": "violet_mart"
+  },
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "mystery_egg_errand",
+     "step": "egg_delivered"
+    }
+   ],
+   "state": "egg_kept"
+  },
+  {
+   "default": true,
+   "state": "not_the_professor"
+  }
  ],
  "dialogue_states": {
-  "intro": {
+  "not_the_professor": {
    "pages": [
-    { "jp": "たまごは　ここで　あずかっているよ。", "en": "We're keeping the egg here." },
-    { "jp": "あんしんしてね。", "en": "Don't worry." }
+    {
+     "jp": "え、ぼく？　はかせじゃ　ないよ。",
+     "en": "Huh, me? I'm not the professor."
+    },
+    {
+     "jp": "はかせは　おくに　いるよ。",
+     "en": "He's at the back of the room."
+    }
+   ]
+  },
+  "egg_kept": {
+   "pages": [
+    {
+     "jp": "たまごは　ここで　あずかっているよ。",
+     "en": "We're keeping the egg here."
+    },
+    {
+     "jp": "あんしんしてね。",
+     "en": "Don't worry."
+    }
+   ]
+  },
+  "violet_mart": {
+   "pages": [
+    {
+     "jp": "あ、きみか！　さがして　いたんだ。",
+     "en": "Ah, it's you! I've been looking for you."
+    },
+    {
+     "jp": "はかせから　でんわが　あってね。",
+     "en": "The professor called."
+    },
+    {
+     "jp": "たまごを　かえすように　って。",
+     "en": "He says to give the egg back to you."
+    },
+    {
+     "jp": "きみと　いっしょの　ほうが　いいって。",
+     "en": "It's better off travelling with you, he says."
+    }
    ]
   }
  }

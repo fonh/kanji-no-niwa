@@ -9,7 +9,6 @@
 import { readFileSync, rmSync, existsSync, statSync } from 'fs'
 import { execSync } from 'child_process'
 import { createInterface } from 'readline'
-import { dirname } from 'path'
 
 const MODULES_PATH = 'scripts/modules.json'
 
@@ -21,7 +20,7 @@ if (!existsSync(MODULES_PATH)) {
   process.exit(1)
 }
 
-const { orphans, modules } = JSON.parse(readFileSync(MODULES_PATH, 'utf-8')) as {
+const { orphans } = JSON.parse(readFileSync(MODULES_PATH, 'utf-8')) as {
   orphans: string[]
   modules: Record<string, string[]>
 }

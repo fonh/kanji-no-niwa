@@ -8,6 +8,11 @@
     "start": "next start",
     "test": "vitest run",
     "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "validate:content": "python3 scripts/validate/lint-kanji-budget.py && python3 scripts/validate/lint-cross-refs.py && python3 scripts/validate/lint-roadblocks.py && python3 scripts/validate/lint-npc-placements.py && python3 scripts/validate/lint-dialogue-states.py && python3 scripts/validate/lint-kanji-density.py && python3 scripts/validate/lint-lessons-kanji-coverage.py && python3 scripts/validate/lint-grammar-overlay.py && python3 scripts/validate/check-cs-kanji-deadlock.py && python3 scripts/validate/solve-progression.py && python3 scripts/validate/audit-first-gym-run.py",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run validate:content",
+    "db:migrate": "tsx --env-file=.env.local scripts/db/migrate.ts",
     "import:kanjidic2": "tsx --env-file=.env.local scripts/import/import-kanjidic2.ts",
     "import:kanjivg": "tsx --env-file=.env.local scripts/import/import-kanjivg.ts",
     "import:kradfile": "tsx --env-file=.env.local scripts/import/import-kradfile.ts",
@@ -22,7 +27,8 @@
     "next-auth": "5.0.0-beta.31",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "ts-fsrs": "^5.4.1"
+    "ts-fsrs": "^5.4.1",
+    "wanakana": "^5.3.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -32,7 +38,10 @@
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^6.0.3",
     "dotenv": "^17.4.2",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.9",
     "fast-xml-parser": "^5.9.3",
+    "jsdom": "^29.1.1",
     "kuromoji": "^0.1.2",
     "tailwindcss": "^4",
     "tsx": "^4.22.4",

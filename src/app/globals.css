@@ -25,6 +25,154 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Deux registres typographiques japonais (PRD § Typographie, tranché au
+   grill) : chrome/overworld (menus, HUD, combat) en DotGothic16, lecture
+   (boîtes de dialogue, écran-livre, textes) en BIZ UDGothic. Les variables
+   sont posées par next/font dans layout.tsx. */
+.font-chrome {
+  font-family: var(--font-dotgothic16), 'DotGothic16', monospace;
+}
+
+.font-reading {
+  font-family: var(--font-biz-udgothic), 'BIZ UDGothic', 'Hiragino Sans', sans-serif;
+}
+
+/* Cadre de dialogue HGSS — 9-slice d'un textbox recoloré (24×24, bords de
+   8px). `fill` peint le centre (blanc) : le texte du dialogue est sombre
+   dessus. La silhouette pixel-art vient de l'asset ROM réel
+   (textbox_000.png, NARC /a/1/0/0) ; les 26 frames extraits ne couvrent
+   qu'un seul thème bleu/turquoise (communication sans fil), aucun thème
+   or/tan — la palette a donc été remplacée (voir
+   textbox_overworld_gold.png) pour matcher le cadre or fin de la boîte de
+   dialogue overworld HGSS réelle (couleurs vérifiées sur capture d'écran de
+   référence). */
+.dialogue-frame {
+  border: 10px solid transparent;
+  border-image: url('/sprites/ui/dialogue/textbox_overworld_gold.png') 8 fill;
+  border-image-repeat: stretch;
+  image-rendering: pixelated;
+  padding: 4px 8px;
+}
+
+/* Lectures inline (ADR-0002) : ruby toujours dans le DOM (hauteur stable),
+   contenu du <rt> injecté seulement quand Y est actif. Furigana jamais sous
+   10px (issue 03). */
+.jp-inline rt {
+  font-size: max(10px, 0.5em);
+  line-height: 1;
+}
+
+/* Écran-livre des leçons (issue 05) — chrome livre original « entre Pokémon
+   et Japon ancien » (PRD § Leçons) : fond de table sombre, cadre bois/laque,
+   double page parchemin, lecture en couleur distincte (à la Wagotabi).
+   Création CSS en attendant les assets dédiés (aucun précédent HGSS). */
+.book-chrome {
+  background: radial-gradient(ellipse at center, #3a2417 0%, #1c0f08 100%);
+}
+
+.book-frame {
+  background: linear-gradient(160deg, #5a3a20, #43290f);
+  border: 3px solid #2b1a0e;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 235, 190, 0.15);
+}
+
+.book-page {
+  background:
+    radial-gradient(ellipse at top left, rgba(255, 250, 235, 0.55), transparent 60%),
+    linear-gradient(135deg, #f7eed8 0%, #efe3c4 70%, #e8d9b0 100%);
+  color: #3b2c1a;
+}
+
+/* Pli central de la double page */
+.book-spine {
+  width: 10px;
+  flex: none;
+  background: linear-gradient(to right, rgba(59, 44, 26, 0.25), rgba(59, 44, 26, 0.55), rgba(59, 44, 26, 0.25));
+}
+
+/* Lecture / accents — vermillon, distinct du texte (PRD § Leçons) */
+.book-accent {
+  color: #a4452e;
+}
+
+/* Fenêtre de lecture des textes progressifs (issue 08) — même famille
+   visuelle que l'écran-livre (fond .book-chrome + cadre .book-frame), mais
+   la page porte une TEXTURE selon le type de document (PRD § Textes
+   Progressifs : « un seul chrome, plusieurs habillages ») : lettre (papier à
+   lignes pâle), panneau (bois), parchemin (défaut, palette du livre). */
+.text-doc-letter {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 1.9em,
+      rgba(122, 90, 51, 0.16) 1.9em calc(1.9em + 1px)
+    ),
+    linear-gradient(150deg, #fdfaf0 0%, #f6efdd 100%);
+  color: #3b2c1a;
+}
+
+.text-doc-sign {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(43, 26, 14, 0.1) 0 2px,
+      transparent 2px 26px
+    ),
+    linear-gradient(135deg, #c9a06a 0%, #b58a52 55%, #a97e46 100%);
+  color: #2b1a0e;
+}
+
+.text-doc-scroll {
+  background:
+    radial-gradient(ellipse at top left, rgba(255, 250, 235, 0.55), transparent 60%),
+    linear-gradient(135deg, #f7eed8 0%, #efe3c4 70%, #e8d9b0 100%);
+  color: #3b2c1a;
+}
+
+/* Passage surligné par le scaffolding (answer_span, 2ᵉ échec). */
+.text-scaffold-mark {
+  background: rgba(228, 178, 60, 0.45);
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Session SRS (issue 06) — habillage Centre Pokémon simple : chaleur crème,
+   accents rouges (le comptoir/la croix des Centres), panneau blanc arrondi.
+   Création CSS en attendant les assets dédiés. */
+.center-chrome {
+  background: linear-gradient(180deg, #fbeeea 0%, #f6e3d5 55%, #efd8c2 100%);
+  color: #3d2a22;
+}
+
+.center-panel {
+  background: #fffdf8;
+  border: 3px solid #d8544f;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(90, 40, 30, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.center-accent {
+  color: #c8433e;
+}
+
+.center-accent-bg {
+  background: linear-gradient(180deg, #e2635e, #c8433e);
+}
+
+/* Curseur ▼ de fin de frappe de la boîte de dialogue. */
+@keyframes dialogue-cursor-blink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0.15; }
+}
+
+.dialogue-cursor {
+  display: inline-block;
+  animation: dialogue-cursor-blink 0.9s steps(1) infinite;
+}
+
 /* Overworld sprite sheets are always 8 columns of 32px — cycling only
    background-position-x across a row with steps() gives a real walk/idle
    animation. The Y offset (facing-direction row: 0=south, 1=north, 2=west,
@@ -53,13 +201,58 @@ body {
   animation: ow-bump 0.16s ease-out;
 }
 
-/* Zone-name banner (HGSS-style), shown briefly after a zone change. */
+/* Plaque de nom de lieu (issue 13, géométrie et rythme repris du décompilé
+   2026-08-06 — src/field/draw_map_name.c).
+   Le jeu la fait DESCENDRE depuis le haut de l'écran (layerY 38 → 0, 4 px par
+   image), la tient 60 images (1 s), puis la REMONTE. Aucun mouvement latéral.
+   Les proportions sont conservées, le palier allongé (le nom est en japonais,
+   voir BANNER_MS dans MapClient.tsx) — d'où 8 % / 8 % de glissement pour
+   84 % de palier sur les 2,4 s.
+   Durée à garder EN PHASE avec BANNER_MS : si le CSS dure plus longtemps que
+   le minuteur JS, la plaque est retirée du DOM en plein écran. */
 @keyframes zone-banner {
-  0% { opacity: 0; transform: translateY(-8px); }
-  12%, 82% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-8px); }
+  0% { opacity: 0; transform: translateY(-100%); }
+  8%, 92% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-100%); }
 }
 
 .zone-banner {
-  animation: zone-banner 1.8s ease both;
+  animation: zone-banner 2.4s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+/* Double liseré : bord extérieur bleu nuit, filet blanc intérieur (box-shadow
+   plutôt qu'une deuxième bordure, pour garder un seul rayon d'arrondi).
+   Coin haut-gauche carré : la plaque sort du bord de l'écran, elle n'y flotte
+   pas — c'est ce que fait la fenêtre du jeu, calée en tuile (0,0). */
+.zone-banner-plate {
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  border: 2px solid #23386b;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0 0 0.7rem 0;
+  background: linear-gradient(#fdfdff 0%, #e6edf8 55%, #c9d8ee 100%);
+  box-shadow:
+    inset -2px -2px 0 0 #ffffff,
+    0 2px 0 rgba(20, 30, 60, 0.35),
+    0 3px 8px rgba(0, 0, 0, 0.4);
+  color: #1b2a4d;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* « Presse START » de l'écran-titre (issue 04) — clignotement DS. */
+@keyframes title-blink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0; }
+}
+
+.title-blink {
+  animation: title-blink 1.2s steps(1) infinite;
 }

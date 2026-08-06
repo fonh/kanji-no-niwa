@@ -57,8 +57,9 @@
   "grammar_id": "N5-109"
  },
  {
+  "_note": "Porteur changé 2026-08-06 (issue 13, carte de conception) : la leçon #5 était sur Teala, dont la présence est gatée par badge_earned(falkner) (sous-sol du Centre, Pal Pad remis après le 1er badge — sourcé). 6 des 140 kanji « d'avant la première arène » n'étaient donc atteignables qu'après. Reportée sur le vendeur du Mart de Mauville, toujours présent — même précédent qu'à Ville Griotte, où le vendeur porte déjà la leçon #2. Curriculum inchangé ; Teala garde son Pal Pad.",
   "zone_id": "violet-city",
-  "npc_ref": "teala_violet_city",
+  "npc_ref": "mart_vendor_violet_city",
   "sequence_index": 5,
   "kanji_ids": [
    "皿",

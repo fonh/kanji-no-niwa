@@ -1,0 +1,2294 @@
+{
+ "_comment": "Registre des zones (PRD § Audio, créé issue audio jalon 1 — zone_id référencé par 8 tables sans qu'aucun registre n'existe, corrigé 2026-07-07 audit 08 finding 08-C1). Scope volontairement restreint aux 4 zones extérieures du jalon 1 (New Bark Town, Route 29, Cherrygrove City, Route 30) + leurs intérieurs navigables (ADR-0004 : un zone_id par pièce/étage) — les ~458 autres zones ajouteront leur entrée au fur et à mesure de la passe assets (mapping complet : content/guidebook-adapted.md § Musique — Mapping Zone par Zone). `map_name` est la clé de recherche runtime (= zone.name de src/data/zone-registry.json, ce que MapClient traverse réellement) ; `zone_id` est le slug de contenu utilisé par les 8 autres tables (trainers.json, texts, lessons, quests...) quand il existe, sinon un slug dérivé de `map_name` (voir src/lib/zone-slug.ts normalizeMapName) pour les intérieurs qui n'ont pas de zone_id de contenu propre.",
+ "zones": [
+  {
+   "zone_id": "new-bark-town",
+   "map_name": "MAP_NEW_BARK",
+   "name": {
+    "jp": "ワカバタウン",
+    "en": "New Bark Town"
+   },
+   "region": "johto",
+   "music_ref": "/audio/bgm/new-bark-town.mp3",
+   "is_interior": false
+  },
+  {
+   "zone_id": "new-bark-elms-lab-1f",
+   "map_name": "MAP_NEW_BARK_ELMS_LAB_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/new-bark-town.mp3",
+   "is_interior": true,
+   "note": "Pas de piste dédiée au mapping guidebook — règle générale : intérieur sans piste propre = piste de la zone d'accès."
+  },
+  {
+   "zone_id": "new-bark-elms-lab-2f",
+   "map_name": "MAP_NEW_BARK_ELMS_LAB_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/new-bark-town.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "new-bark-player-house-1f",
+   "map_name": "MAP_NEW_BARK_PLAYER_HOUSE_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/new-bark-town.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "new-bark-player-house-2f",
+   "map_name": "MAP_NEW_BARK_PLAYER_HOUSE_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/new-bark-town.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "new-bark-rival-house-1f",
+   "map_name": "MAP_NEW_BARK_RIVAL_HOUSE_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/new-bark-town.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "new-bark-rival-house-2f",
+   "map_name": "MAP_NEW_BARK_RIVAL_HOUSE_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/new-bark-town.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "new-bark-southwest-house",
+   "map_name": "MAP_NEW_BARK_SOUTHWEST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/new-bark-town.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "route-29",
+   "map_name": "MAP_ROUTE_29",
+   "name": {
+    "jp": "29ばんどうろ",
+    "en": "Route 29"
+   },
+   "region": "johto",
+   "music_ref": "/audio/bgm/route-29.mp3",
+   "is_interior": false
+  },
+  {
+   "zone_id": "route-29-route-46-gatehouse",
+   "map_name": "MAP_ROUTE_29_ROUTE_46_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/route-29.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "cherrygrove-city",
+   "map_name": "MAP_CHERRYGROVE",
+   "name": {
+    "jp": "ヨシノシティ",
+    "en": "Cherrygrove City"
+   },
+   "region": "johto",
+   "music_ref": "/audio/bgm/cherrygrove-city.mp3",
+   "is_interior": false
+  },
+  {
+   "zone_id": "cherrygrove-pokecenter-1f",
+   "map_name": "MAP_CHERRYGROVE_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/pokemon-center.mp3",
+   "is_interior": true,
+   "note": "Piste dédiée (règle « piste du bâtiment si elle existe ») — les Centres Pokémon ont toujours leur thème propre dans HGSS, même hors session SRS."
+  },
+  {
+   "zone_id": "cherrygrove-pokecenter-b1f",
+   "map_name": "MAP_CHERRYGROVE_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/pokemon-center.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "cherrygrove-pokemart",
+   "map_name": "MAP_CHERRYGROVE_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/cherrygrove-city.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "cherrygrove-southwest-house",
+   "map_name": "MAP_CHERRYGROVE_SOUTHWEST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/cherrygrove-city.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "cherrygrove-guide-gent-house",
+   "map_name": "MAP_CHERRYGROVE_GUIDE_GENT_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/cherrygrove-city.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "cherrygrove-southeast-house",
+   "map_name": "MAP_CHERRYGROVE_SOUTHEAST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/cherrygrove-city.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "route-30",
+   "map_name": "MAP_ROUTE_30",
+   "name": {
+    "jp": "30ばんどうろ",
+    "en": "Route 30"
+   },
+   "region": "johto",
+   "music_ref": "/audio/bgm/route-30.mp3",
+   "is_interior": false
+  },
+  {
+   "zone_id": "route-30-mr-pokemon-house",
+   "map_name": "MAP_ROUTE_30_MR_POKEMON_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/route-30.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "route-30-apricorn-house",
+   "map_name": "MAP_ROUTE_30_APRICORN_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/bgm/route-30.mp3",
+   "is_interior": true
+  },
+  {
+   "zone_id": "lake-of-rage",
+   "map_name": "MAP_LAKE_OF_RAGE",
+   "name": {
+    "jp": "いかりのみずうみ",
+    "en": "Lake of Rage"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/75 - Route 42.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "pewter",
+   "map_name": "MAP_PEWTER",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/20 - Pewter City.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-43",
+   "map_name": "MAP_ROUTE_43",
+   "name": {
+    "jp": "４３ばんどうろ",
+    "en": "Route 43"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/75 - Route 42.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "cerulean",
+   "map_name": "MAP_CERULEAN",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/09 - Cerulean City.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ecruteak",
+   "map_name": "MAP_ECRUTEAK",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/62 - Ecruteak City.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-39",
+   "map_name": "MAP_ROUTE_39",
+   "name": {
+    "jp": "３９ばんどうろ",
+    "en": "Route 39"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/68 - Route 38.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "route-38",
+   "map_name": "MAP_ROUTE_38",
+   "name": {
+    "jp": "38ばんどうろ",
+    "en": "Route 38"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/68 - Route 38.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "route-42",
+   "map_name": "MAP_ROUTE_42",
+   "name": {
+    "jp": "42ばんどうろ",
+    "en": "Route 42"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/75 - Route 42.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "route-44",
+   "map_name": "MAP_ROUTE_44",
+   "name": {
+    "jp": "４４ばんどうろ",
+    "en": "Route 44"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/75 - Route 42.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "violet-city",
+   "map_name": "MAP_VIOLET",
+   "name": {
+    "jp": "キキョウシティ",
+    "en": "Violet City"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/22 - Violet City.mp3",
+   "is_interior": false,
+   "note": "zone_id corrigé 2026-08-06 : le registre disait « violet », tout le contenu (npcs, trainers, lessons, dialogues, quêtes) dit « violet-city ». Personne ne cassait parce que le seul lecteur de ce fichier cherche par map_name — mais un lookup par zone_id y serait tombé silencieusement à côté. `name` renseigné au passage (il était null alors que le nom VO existe dans content/zone-registry-names.json)."
+  },
+  {
+   "zone_id": "celadon",
+   "map_name": "MAP_CELADON",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "lavender",
+   "map_name": "MAP_LAVENDER",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/05 - Lavender Town.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "safari-zone-gate",
+   "map_name": "MAP_SAFARI_ZONE_GATE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/33 - Safari Zone.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-40",
+   "map_name": "MAP_ROUTE_40",
+   "name": {
+    "jp": "４０ばんすいどう",
+    "en": "Route 40"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/33 - Safari Zone.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "ruins-of-alph",
+   "map_name": "MAP_RUINS_OF_ALPH",
+   "name": {
+    "jp": "アルフのいせき",
+    "en": "Ruins of Alph"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "route-31",
+   "map_name": "MAP_ROUTE_31",
+   "name": {
+    "jp": "３１ばんどうろ",
+    "en": "Route 31"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/20 - Route 30.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "route-26",
+   "map_name": "MAP_ROUTE_26",
+   "name": {
+    "jp": "26ばんどうろ",
+    "en": "Route 26"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/01 - Route 26.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "vermilion",
+   "map_name": "MAP_VERMILION",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/03 - Vermilion City.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cianwood",
+   "map_name": "MAP_CIANWOOD",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/73 - Cianwood City.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-41",
+   "map_name": "MAP_ROUTE_41",
+   "name": {
+    "jp": "４１ばんすいどう",
+    "en": "Route 41"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/33 - Safari Zone.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "goldenrod",
+   "map_name": "MAP_GOLDENROD",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "pallet",
+   "map_name": "MAP_PALLET",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/25 - Pallet Town.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-34",
+   "map_name": "MAP_ROUTE_34",
+   "name": {
+    "jp": "34ばんどうろ",
+    "en": "Route 34"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/36 - Route 34.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "route-27",
+   "map_name": "MAP_ROUTE_27",
+   "name": {
+    "jp": "２７ばんどうろ",
+    "en": "Route 27"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/01 - Route 26.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "azalea",
+   "map_name": "MAP_AZALEA",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/33 - Azalea Town.mp3",
+   "is_interior": false,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cinnabar-island",
+   "map_name": "MAP_CINNABAR_ISLAND",
+   "name": {
+    "jp": "グレンじま",
+    "en": "Cinnabar Island"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/30 - Cinnabar Island.mp3",
+   "is_interior": false,
+   "note": null
+  },
+  {
+   "zone_id": "lake-of-rage-hidden-power-house",
+   "map_name": "MAP_LAKE_OF_RAGE_HIDDEN_POWER_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/75 - Route 42.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "lake-of-rage-fishing-guru-house",
+   "map_name": "MAP_LAKE_OF_RAGE_FISHING_GURU_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/75 - Route 42.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "pewter-museum-of-science",
+   "map_name": "MAP_PEWTER_MUSEUM_OF_SCIENCE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/20 - Pewter City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "pewter-northeast-house",
+   "map_name": "MAP_PEWTER_NORTHEAST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/20 - Pewter City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "pewter-gym",
+   "map_name": "MAP_PEWTER_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "pewter-pokemart",
+   "map_name": "MAP_PEWTER_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "pewter-pokecenter-1f",
+   "map_name": "MAP_PEWTER_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "pewter-southwest-house",
+   "map_name": "MAP_PEWTER_SOUTHWEST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/20 - Pewter City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-43-mahogany-gatehouse",
+   "map_name": "MAP_ROUTE_43_MAHOGANY_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/75 - Route 42.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-43-gatehouse",
+   "map_name": "MAP_ROUTE_43_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/75 - Route 42.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cerulean-north-house",
+   "map_name": "MAP_CERULEAN_NORTH_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/09 - Cerulean City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cerulean-east-house",
+   "map_name": "MAP_CERULEAN_EAST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/09 - Cerulean City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cerulean-west-house",
+   "map_name": "MAP_CERULEAN_WEST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/09 - Cerulean City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cerulean-pokecenter-1f",
+   "map_name": "MAP_CERULEAN_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "cerulean-gym",
+   "map_name": "MAP_CERULEAN_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "cerulean-pokemart",
+   "map_name": "MAP_CERULEAN_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "cerulean-bike-maniac-house",
+   "map_name": "MAP_CERULEAN_BIKE_MANIAC_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/09 - Cerulean City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "burned-tower-1f",
+   "map_name": "MAP_BURNED_TOWER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/64 - Burned Tower.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ecruteak-southwest-house",
+   "map_name": "MAP_ECRUTEAK_SOUTHWEST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/62 - Ecruteak City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ecruteak-bell-tower-barrier-station",
+   "map_name": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/62 - Ecruteak City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ecruteak-dowsing-machine-house",
+   "map_name": "MAP_ECRUTEAK_DOWSING_MACHINE_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/62 - Ecruteak City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ecruteak-dance-theater",
+   "map_name": "MAP_ECRUTEAK_DANCE_THEATER",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/62 - Ecruteak City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ecruteak-pokecenter-1f",
+   "map_name": "MAP_ECRUTEAK_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "ecruteak-pokemart",
+   "map_name": "MAP_ECRUTEAK_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "ecruteak-gym",
+   "map_name": "MAP_ECRUTEAK_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "route-38-ecruteak-gatehouse",
+   "map_name": "MAP_ROUTE_38_ECRUTEAK_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/68 - Route 38.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-42-ecruteak-gatehouse",
+   "map_name": "MAP_ROUTE_42_ECRUTEAK_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/75 - Route 42.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "blackthorn-gym",
+   "map_name": "MAP_BLACKTHORN_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "dragons-den-entrance",
+   "map_name": "MAP_DRAGONS_DEN_ENTRANCE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/83 - Dragon's Den.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "blackthorn-pokemart",
+   "map_name": "MAP_BLACKTHORN_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "blackthorn-pokecenter-1f",
+   "map_name": "MAP_BLACKTHORN_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "route-39-moomoo-farm-house",
+   "map_name": "MAP_ROUTE_39_MOOMOO_FARM_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/68 - Route 38.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-39-moomoo-farm-stable",
+   "map_name": "MAP_ROUTE_39_MOOMOO_FARM_STABLE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/68 - Route 38.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "mahogany-gym-room-1",
+   "map_name": "MAP_MAHOGANY_GYM_ROOM_1",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "mahogany-pokecenter-1f",
+   "map_name": "MAP_MAHOGANY_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "saffron-gym",
+   "map_name": "MAP_SAFFRON_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "saffron-pokemart",
+   "map_name": "MAP_SAFFRON_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "saffron-pokecenter-1f",
+   "map_name": "MAP_SAFFRON_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "olivine-gym",
+   "map_name": "MAP_OLIVINE_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "olivine-pokecenter-1f",
+   "map_name": "MAP_OLIVINE_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "olivine-pokemart",
+   "map_name": "MAP_OLIVINE_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "violet-route-36-gatehouse",
+   "map_name": "MAP_VIOLET_ROUTE_36_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/22 - Violet City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-31-violet-gatehouse",
+   "map_name": "MAP_ROUTE_31_VIOLET_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/20 - Route 30.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "violet-gym",
+   "map_name": "MAP_VIOLET_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "sprout-tower-1f",
+   "map_name": "MAP_SPROUT_TOWER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/23 - Sprout Tower.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "violet-pokemon-school",
+   "map_name": "MAP_VIOLET_POKEMON_SCHOOL",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/22 - Violet City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "violet-pokecenter-1f",
+   "map_name": "MAP_VIOLET_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "violet-northwest-house",
+   "map_name": "MAP_VIOLET_NORTHWEST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/22 - Violet City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "violet-bellsprout-onyx-trade-house",
+   "map_name": "MAP_VIOLET_BELLSPROUT_ONYX_TRADE_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/22 - Violet City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "violet-pokemart",
+   "map_name": "MAP_VIOLET_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "viridian-gym",
+   "map_name": "MAP_VIRIDIAN_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "viridian-pokemart",
+   "map_name": "MAP_VIRIDIAN_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "viridian-pokecenter-1f",
+   "map_name": "MAP_VIRIDIAN_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "celadon-department-store-1f",
+   "map_name": "MAP_CELADON_DEPARTMENT_STORE_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-condominiums-1f",
+   "map_name": "MAP_CELADON_CONDOMINIUMS_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-pokecenter-1f",
+   "map_name": "MAP_CELADON_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "celadon-game-corner",
+   "map_name": "MAP_CELADON_GAME_CORNER",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/49 - Game Corner.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Game Corner)."
+  },
+  {
+   "zone_id": "celadon-prize-corner",
+   "map_name": "MAP_CELADON_PRIZE_CORNER",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-gym",
+   "map_name": "MAP_CELADON_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "celadon-restaurant",
+   "map_name": "MAP_CELADON_RESTAURANT",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "lavender-pokecenter-1f",
+   "map_name": "MAP_LAVENDER_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "lavender-volunteer-pokemon-house",
+   "map_name": "MAP_LAVENDER_VOLUNTEER_POKEMON_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/05 - Lavender Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "lavender-southwest-house",
+   "map_name": "MAP_LAVENDER_SOUTHWEST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/05 - Lavender Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "lavender-name-rater",
+   "map_name": "MAP_LAVENDER_NAME_RATER",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/05 - Lavender Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "lavender-pokemart",
+   "map_name": "MAP_LAVENDER_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "lavender-house-of-memories",
+   "map_name": "MAP_LAVENDER_HOUSE_OF_MEMORIES",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/05 - Lavender Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "lavender-radio-station",
+   "map_name": "MAP_LAVENDER_RADIO_STATION",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/05 - Lavender Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "safari-zone-entrance-interior",
+   "map_name": "MAP_SAFARI_ZONE_ENTRANCE_INTERIOR",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/33 - Safari Zone.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "safari-zone-gate-pokecenter-1f",
+   "map_name": "MAP_SAFARI_ZONE_GATE_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "route-40-battle-frontier-gatehouse",
+   "map_name": "MAP_ROUTE_40_BATTLE_FRONTIER_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/33 - Safari Zone.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-northeast-entrance-first-room",
+   "map_name": "MAP_RUINS_OF_ALPH_NORTHEAST_ENTRANCE_FIRST_ROOM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-southeast-entrance-first-room",
+   "map_name": "MAP_RUINS_OF_ALPH_SOUTHEAST_ENTRANCE_FIRST_ROOM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-southwest-entrance-first-room",
+   "map_name": "MAP_RUINS_OF_ALPH_SOUTHWEST_ENTRANCE_FIRST_ROOM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-northwest-entrance-first-room",
+   "map_name": "MAP_RUINS_OF_ALPH_NORTHWEST_ENTRANCE_FIRST_ROOM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-hall-entrance",
+   "map_name": "MAP_RUINS_OF_ALPH_HALL_ENTRANCE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-research-center",
+   "map_name": "MAP_RUINS_OF_ALPH_RESEARCH_CENTER",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-hall-entrance-sinjoh-event",
+   "map_name": "MAP_RUINS_OF_ALPH_HALL_ENTRANCE_SINJOH_EVENT",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "union-cave-1f",
+   "map_name": "MAP_UNION_CAVE_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-32-pokecenter-1f",
+   "map_name": "MAP_ROUTE_32_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "route-26-north-house",
+   "map_name": "MAP_ROUTE_26_NORTH_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/01 - Route 26.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-26-week-siblings-house",
+   "map_name": "MAP_ROUTE_26_WEEK_SIBLINGS_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/01 - Route 26.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "vermilion-fishing-dude-house",
+   "map_name": "MAP_VERMILION_FISHING_DUDE_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/03 - Vermilion City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "vermilion-pokecenter-1f",
+   "map_name": "MAP_VERMILION_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "vermilion-pokemon-fan-club",
+   "map_name": "MAP_VERMILION_POKEMON_FAN_CLUB",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/03 - Vermilion City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "vermilion-central-house",
+   "map_name": "MAP_VERMILION_CENTRAL_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/03 - Vermilion City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "vermilion-pokemart",
+   "map_name": "MAP_VERMILION_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "vermilion-south-house",
+   "map_name": "MAP_VERMILION_SOUTH_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/03 - Vermilion City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "vermilion-gym",
+   "map_name": "MAP_VERMILION_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "cianwood-gym",
+   "map_name": "MAP_CIANWOOD_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "cianwood-pokecenter-1f",
+   "map_name": "MAP_CIANWOOD_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "cianwood-pharmacy",
+   "map_name": "MAP_CIANWOOD_PHARMACY",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/73 - Cianwood City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cianwood-kirks-house",
+   "map_name": "MAP_CIANWOOD_KIRKS_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/73 - Cianwood City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cianwood-central-house",
+   "map_name": "MAP_CIANWOOD_CENTRAL_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/73 - Cianwood City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cianwood-camerons-house",
+   "map_name": "MAP_CIANWOOD_CAMERONS_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/73 - Cianwood City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cianwood-north-house",
+   "map_name": "MAP_CIANWOOD_NORTH_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/73 - Cianwood City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "whirl-islands-1f",
+   "map_name": "MAP_WHIRL_ISLANDS_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-gym",
+   "map_name": "MAP_GOLDENROD_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "goldenrod-bike-shop",
+   "map_name": "MAP_GOLDENROD_BIKE_SHOP",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-flower-shop",
+   "map_name": "MAP_GOLDENROD_FLOWER_SHOP",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-pokecenter-1f",
+   "map_name": "MAP_GOLDENROD_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "goldenrod-game-corner",
+   "map_name": "MAP_GOLDENROD_GAME_CORNER",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/49 - Game Corner.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Game Corner)."
+  },
+  {
+   "zone_id": "goldenrod-radio-tower-1f",
+   "map_name": "MAP_GOLDENROD_RADIO_TOWER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-department-store-1f",
+   "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-magnet-train-station-1f",
+   "map_name": "MAP_GOLDENROD_MAGNET_TRAIN_STATION_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-tunnel-1f",
+   "map_name": "MAP_GOLDENROD_TUNNEL_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-bills-house",
+   "map_name": "MAP_GOLDENROD_BILLS_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-friendship-checker-house",
+   "map_name": "MAP_GOLDENROD_FRIENDSHIP_CHECKER_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-northeast-house",
+   "map_name": "MAP_GOLDENROD_NORTHEAST_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-name-rater-house",
+   "map_name": "MAP_GOLDENROD_NAME_RATER_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-global-terminal-1f",
+   "map_name": "MAP_GOLDENROD_GLOBAL_TERMINAL_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/54 - Global Terminal.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Global Terminal)."
+  },
+  {
+   "zone_id": "pallet-town-reds-house-1f",
+   "map_name": "MAP_PALLET_TOWN_REDS_HOUSE_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/25 - Pallet Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "pallet-town-blues-house-1f",
+   "map_name": "MAP_PALLET_TOWN_BLUES_HOUSE_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/25 - Pallet Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "pallet-town-oaks-lab",
+   "map_name": "MAP_PALLET_TOWN_OAKS_LAB",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/25 - Pallet Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-34-ilex-forest-gatehouse",
+   "map_name": "MAP_ROUTE_34_ILEX_FOREST_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/36 - Route 34.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-34-daycare",
+   "map_name": "MAP_ROUTE_34_DAYCARE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/36 - Route 34.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-27-house",
+   "map_name": "MAP_ROUTE_27_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/01 - Route 26.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "fuchsia-pokemart",
+   "map_name": "MAP_FUCHSIA_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "fuchsia-gym",
+   "map_name": "MAP_FUCHSIA_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "fuchsia-pokecenter-1f",
+   "map_name": "MAP_FUCHSIA_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "azalea-ilex-forest-gatehouse",
+   "map_name": "MAP_AZALEA_ILEX_FOREST_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/33 - Azalea Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "azalea-gym-entrance",
+   "map_name": "MAP_AZALEA_GYM_ENTRANCE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "azalea-pokecenter-1f",
+   "map_name": "MAP_AZALEA_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "azalea-charcoal-kiln",
+   "map_name": "MAP_AZALEA_CHARCOAL_KILN",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/33 - Azalea Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "azalea-pokemart",
+   "map_name": "MAP_AZALEA_POKEMART",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/25 - Poké Mart.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Poké Mart)."
+  },
+  {
+   "zone_id": "azalea-kurt-house",
+   "map_name": "MAP_AZALEA_KURT_HOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/33 - Azalea Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "slowpoke-well-entrance",
+   "map_name": "MAP_SLOWPOKE_WELL_ENTRANCE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cinnabar-island-pokecenter-1f",
+   "map_name": "MAP_CINNABAR_ISLAND_POKECENTER_1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "pewter-pokecenter-b1f",
+   "map_name": "MAP_PEWTER_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "cerulean-pokecenter-b1f",
+   "map_name": "MAP_CERULEAN_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "burned-tower-b1f",
+   "map_name": "MAP_BURNED_TOWER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/64 - Burned Tower.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ecruteak-bell-tower-barrier-station-corridor",
+   "map_name": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION_CORRIDOR",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/62 - Ecruteak City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ecruteak-pokecenter-b1f",
+   "map_name": "MAP_ECRUTEAK_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "dragons-den",
+   "map_name": "MAP_DRAGONS_DEN",
+   "name": {
+    "jp": "りゅうのあな",
+    "en": "Dragon's Den"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/83 - Dragon's Den.mp3",
+   "is_interior": true,
+   "note": null
+  },
+  {
+   "zone_id": "blackthorn-pokecenter-b1f",
+   "map_name": "MAP_BLACKTHORN_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "mahogany-gym-room-2",
+   "map_name": "MAP_MAHOGANY_GYM_ROOM_2",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "mahogany-pokecenter-b1f",
+   "map_name": "MAP_MAHOGANY_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "saffron-pokecenter-2f",
+   "map_name": "MAP_SAFFRON_POKECENTER_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "olivine-pokecenter-b1f",
+   "map_name": "MAP_OLIVINE_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "national-park",
+   "map_name": "MAP_NATIONAL_PARK",
+   "name": {
+    "jp": "しぜんこうえん",
+    "en": "National Park"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/60 - National Park.mp3",
+   "is_interior": true,
+   "note": null
+  },
+  {
+   "zone_id": "sprout-tower-2f",
+   "map_name": "MAP_SPROUT_TOWER_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/23 - Sprout Tower.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "violet-pokecenter-b1f",
+   "map_name": "MAP_VIOLET_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "viridian-pokecenter-b1f",
+   "map_name": "MAP_VIRIDIAN_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "celadon-department-store-2f",
+   "map_name": "MAP_CELADON_DEPARTMENT_STORE_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-department-store-elevator",
+   "map_name": "MAP_CELADON_DEPARTMENT_STORE_ELEVATOR",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-condominiums-2f",
+   "map_name": "MAP_CELADON_CONDOMINIUMS_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-condominiums-left-elevator",
+   "map_name": "MAP_CELADON_CONDOMINIUMS_LEFT_ELEVATOR",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-pokecenter-b1f",
+   "map_name": "MAP_CELADON_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "lavender-pokecenter-b1f",
+   "map_name": "MAP_LAVENDER_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "safari-zone-entrance-exterior",
+   "map_name": "MAP_SAFARI_ZONE_ENTRANCE_EXTERIOR",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/33 - Safari Zone.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "safari-zone-gate-pokecenter-b1f",
+   "map_name": "MAP_SAFARI_ZONE_GATE_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "ruins-of-alph-northeast-entrance-second-room",
+   "map_name": "MAP_RUINS_OF_ALPH_NORTHEAST_ENTRANCE_SECOND_ROOM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-southeast-entrance-second-room",
+   "map_name": "MAP_RUINS_OF_ALPH_SOUTHEAST_ENTRANCE_SECOND_ROOM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-southwest-entrance-second-room",
+   "map_name": "MAP_RUINS_OF_ALPH_SOUTHWEST_ENTRANCE_SECOND_ROOM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-northwest-entrance-second-room",
+   "map_name": "MAP_RUINS_OF_ALPH_NORTHWEST_ENTRANCE_SECOND_ROOM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-underground-hall",
+   "map_name": "MAP_RUINS_OF_ALPH_UNDERGROUND_HALL",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-underground-hall-sinjoh-event",
+   "map_name": "MAP_RUINS_OF_ALPH_UNDERGROUND_HALL_SINJOH_EVENT",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ruins-of-alph-underground-hall-sinjoh-event-2",
+   "map_name": "MAP_RUINS_OF_ALPH_UNDERGROUND_HALL_SINJOH_EVENT_2",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "union-cave-b1f",
+   "map_name": "MAP_UNION_CAVE_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "union-cave-b2f",
+   "map_name": "MAP_UNION_CAVE_B2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "route-32-pokecenter-b1f",
+   "map_name": "MAP_ROUTE_32_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "vermilion-pokecenter-b1f",
+   "map_name": "MAP_VERMILION_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "cianwood-pokecenter-b1f",
+   "map_name": "MAP_CIANWOOD_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "whirl-islands-b1f",
+   "map_name": "MAP_WHIRL_ISLANDS_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-pokecenter-b1f",
+   "map_name": "MAP_GOLDENROD_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "goldenrod-radio-tower-2f",
+   "map_name": "MAP_GOLDENROD_RADIO_TOWER_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-department-store-2f",
+   "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-department-store-elevator",
+   "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_ELEVATOR",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-magnet-train-station-2f-empty",
+   "map_name": "MAP_GOLDENROD_MAGNET_TRAIN_STATION_2F_EMPTY",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-tunnel-b1f",
+   "map_name": "MAP_GOLDENROD_TUNNEL_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-tunnel-b2f",
+   "map_name": "MAP_GOLDENROD_TUNNEL_B2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-global-terminal-2f",
+   "map_name": "MAP_GOLDENROD_GLOBAL_TERMINAL_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/54 - Global Terminal.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Global Terminal)."
+  },
+  {
+   "zone_id": "goldenrod-global-terminal-3f",
+   "map_name": "MAP_GOLDENROD_GLOBAL_TERMINAL_3F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/54 - Global Terminal.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Global Terminal)."
+  },
+  {
+   "zone_id": "pallet-town-reds-house-2f",
+   "map_name": "MAP_PALLET_TOWN_REDS_HOUSE_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/25 - Pallet Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "pallet-town-blues-house-2f",
+   "map_name": "MAP_PALLET_TOWN_BLUES_HOUSE_2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/25 - Pallet Town.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "ilex-forest",
+   "map_name": "MAP_ILEX_FOREST",
+   "name": {
+    "jp": "ウバメの森",
+    "en": "Ilex Forest"
+   },
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": null
+  },
+  {
+   "zone_id": "fuchsia-pokecenter-b1f",
+   "map_name": "MAP_FUCHSIA_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "azalea-gym",
+   "map_name": "MAP_AZALEA_GYM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "azalea-pokecenter-b1f",
+   "map_name": "MAP_AZALEA_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "slowpoke-well-b1f",
+   "map_name": "MAP_SLOWPOKE_WELL_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "cinnabar-island-pokecenter-b1f",
+   "map_name": "MAP_CINNABAR_ISLAND_POKECENTER_B1F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/15 - Pokémon Center.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Center)."
+  },
+  {
+   "zone_id": "dragons-den-shrine",
+   "map_name": "MAP_DRAGONS_DEN_SHRINE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/83 - Dragon's Den.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "mahogany-gym-leader-room",
+   "map_name": "MAP_MAHOGANY_GYM_LEADER_ROOM",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/42 - Pokémon Gym.mp3",
+   "is_interior": true,
+   "note": "Piste propre du lieu (Pokémon Gym)."
+  },
+  {
+   "zone_id": "national-park-unused-gatehouse",
+   "map_name": "MAP_NATIONAL_PARK_UNUSED_GATEHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/60 - National Park.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "sprout-tower-3f",
+   "map_name": "MAP_SPROUT_TOWER_3F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/23 - Sprout Tower.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-department-store-3f",
+   "map_name": "MAP_CELADON_DEPARTMENT_STORE_3F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-condominiums-right-elevator",
+   "map_name": "MAP_CELADON_CONDOMINIUMS_RIGHT_ELEVATOR",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "whirl-islands-b2f",
+   "map_name": "MAP_WHIRL_ISLANDS_B2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-radio-tower-3f",
+   "map_name": "MAP_GOLDENROD_RADIO_TOWER_3F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-department-store-3f",
+   "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_3F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-tunnel-warehouse",
+   "map_name": "MAP_GOLDENROD_TUNNEL_WAREHOUSE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "slowpoke-well-b2f",
+   "map_name": "MAP_SLOWPOKE_WELL_B2F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-department-store-4f",
+   "map_name": "MAP_CELADON_DEPARTMENT_STORE_4F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "whirl-islands-b3f",
+   "map_name": "MAP_WHIRL_ISLANDS_B3F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "whirl-islands-b3f-lugia-cave",
+   "map_name": "MAP_WHIRL_ISLANDS_B3F_LUGIA_CAVE",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/28 - Union Cave.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-radio-tower-4f",
+   "map_name": "MAP_GOLDENROD_RADIO_TOWER_4F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-department-store-4f",
+   "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_4F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-department-store-basement",
+   "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_BASEMENT",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-department-store-5f",
+   "map_name": "MAP_CELADON_DEPARTMENT_STORE_5F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-radio-tower-5f",
+   "map_name": "MAP_GOLDENROD_RADIO_TOWER_5F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-department-store-5f",
+   "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_5F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "celadon-department-store-roof",
+   "map_name": "MAP_CELADON_DEPARTMENT_STORE_ROOF",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 2/14 - Celadon City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-radio-tower-elevator",
+   "map_name": "MAP_GOLDENROD_RADIO_TOWER_ELEVATOR",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  },
+  {
+   "zone_id": "goldenrod-department-store-6f",
+   "map_name": "MAP_GOLDENROD_DEPARTMENT_STORE_6F",
+   "name": null,
+   "region": "johto",
+   "music_ref": "/audio/ost/Disc 1/41 - Goldenrod City.mp3",
+   "is_interior": true,
+   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+  }
+ ]
+}

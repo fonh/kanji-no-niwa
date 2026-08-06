@@ -6,12 +6,13 @@
       "role_origin": "Accueille le joueur à l'entrée, fait visiter la ville",
       "item": "Running Shoes, Map Card",
       "map_zone": "MAP_CHERRYGROVE",
-      "tile_x": 35,
-      "tile_y": 0,
+      "tile_x": 54,
+      "tile_y": 12,
       "facing": "south",
-      "source": "generated",
-      "matched_object_id": null,
-      "matched_sprite_id": null
+      "source": "rom_matched",
+      "matched_object_id": "obj_T21_gsoldman1",
+      "matched_sprite_id": "SPRITE_GSOLDMAN1",
+      "position_status": "fix QA Cherrygrove (2026-08-03) : était généré (35,0), sans repère ROM. obj_T21_gsoldman1 porte FLAG_HIDE_CHERRYGROVE_GUIDE_GENT, qui nomme explicitement ce personnage"
     },
     {
       "name": "Rival (Silver)",
@@ -29,13 +30,14 @@
       "name": "Vendeuse du Mart",
       "role_origin": "Comptoir du fond",
       "item": "Air Mail, Heal Ball (vente)",
-      "map_zone": "MAP_CHERRYGROVE",
-      "tile_x": 44,
-      "tile_y": 8,
+      "map_zone": "MAP_CHERRYGROVE_POKEMART",
+      "tile_x": 8,
+      "tile_y": 3,
       "facing": "south",
-      "source": "generated",
-      "matched_object_id": null,
-      "matched_sprite_id": null
+      "source": "rom_matched",
+      "matched_object_id": "obj_T21FS0101_shopm1_2",
+      "matched_sprite_id": "SPRITE_SHOPM1_2",
+      "position_status": "fix QA Cherrygrove (2026-08-03) : était généré sur la zone extérieure MAP_CHERRYGROVE (44,8), incohérent avec son propre role_origin (« Comptoir du fond »). L'objet ROM (2,6) s'est révélé être dans une alcôve murée sans voisin marchable (BFS) — repositionné en (8,3), tuile de comptoir la plus proche réellement atteignable depuis la porte"
     },
     {
       "name": "Employé Centre Pokémon",

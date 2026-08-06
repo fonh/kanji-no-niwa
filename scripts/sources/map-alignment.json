@@ -1,0 +1,4065 @@
+{
+ "threshold": 0.6,
+ "zones": {
+  "MAP_AZALEA": {
+   "pitch_x": 6.76,
+   "pitch_y": 11.96,
+   "origin_x": -17.5,
+   "origin_y": 174.5,
+   "score": 0.4355,
+   "naive_score": 0.1263,
+   "trusted": false,
+   "key": "Azalea Gym HGSS.png:44032"
+  },
+  "MAP_AZALEA_GYM": {
+   "pitch_x": 15.63,
+   "pitch_y": 12.35,
+   "origin_x": 43.5,
+   "origin_y": 62.0,
+   "score": 1.8678,
+   "naive_score": 0.2037,
+   "trusted": true,
+   "key": "Azalea Gym HGSS.png:44032"
+  },
+  "MAP_AZALEA_ILEX_FOREST_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_AZALEA_KURT_HOUSE": {
+   "pitch_x": 14.2022,
+   "pitch_y": 12.02,
+   "origin_x": 7.5,
+   "origin_y": 29.0,
+   "score": 0.8362,
+   "naive_score": 0.4526,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_AZALEA_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_AZALEA_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_AZALEA_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_BATTLE_FRONTIER": {
+   "pitch_x": 3.2267,
+   "pitch_y": 2.0,
+   "origin_x": 3.0,
+   "origin_y": 0.5,
+   "score": 0.4218,
+   "naive_score": -1.0,
+   "trusted": false,
+   "key": "Battle Frontier entrance HGSS.png:16819"
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_ARCADE": {
+   "pitch_x": 11.2504,
+   "pitch_y": 12.56,
+   "origin_x": 10.0,
+   "origin_y": -1.0,
+   "score": 0.6635,
+   "naive_score": 0.4521,
+   "trusted": true,
+   "key": "Battle Frontier entrance HGSS.png:16819"
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_CASTLE": {
+   "pitch_x": 12.0104,
+   "pitch_y": 12.56,
+   "origin_x": -3.0,
+   "origin_y": -1.0,
+   "score": 0.9857,
+   "naive_score": 0.8076,
+   "trusted": true,
+   "key": "Battle Frontier entrance HGSS.png:16819"
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_FACTORY": {
+   "pitch_x": 9.6015,
+   "pitch_y": 11.55,
+   "origin_x": 6.0,
+   "origin_y": -7.5,
+   "score": 0.9643,
+   "naive_score": 0.5294,
+   "trusted": true,
+   "key": "Battle Frontier entrance HGSS.png:16819"
+  },
+  "MAP_BATTLE_FRONTIER_BATTLE_HALL": {
+   "pitch_x": 9.2615,
+   "pitch_y": 12.48,
+   "origin_x": 12.5,
+   "origin_y": 0.0,
+   "score": 1.0405,
+   "naive_score": 0.7886,
+   "trusted": true,
+   "key": "Battle Frontier entrance HGSS.png:16819"
+  },
+  "MAP_BATTLE_FRONTIER_FRONTIER_ACCESS": {
+   "pitch_x": 15.83,
+   "pitch_y": 6.8362,
+   "origin_x": -25.5,
+   "origin_y": 25.0,
+   "score": 0.3844,
+   "naive_score": 0.1789,
+   "trusted": false,
+   "key": "Frontier Access HGSS.png:54687"
+  },
+  "MAP_BATTLE_FRONTIER_FRONTIER_ACCESS_GATEHOUSE": {
+   "pitch_x": 13.4267,
+   "pitch_y": 7.9218,
+   "origin_x": 2.0,
+   "origin_y": -5.0,
+   "score": 0.6107,
+   "naive_score": 0.2984,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_BATTLE_TOWER": {
+   "pitch_x": 15.3839,
+   "pitch_y": 18.8571,
+   "origin_x": 2.0,
+   "origin_y": 13.0,
+   "score": 1.5373,
+   "naive_score": 1.3019,
+   "trusted": true,
+   "key": "Battle Tower HGSS.png:33390"
+  },
+  "MAP_BELLCHIME_TOWER": {
+   "pitch_x": 4.6492,
+   "pitch_y": 8.1237,
+   "origin_x": -9.5,
+   "origin_y": 1.5,
+   "score": 0.814,
+   "naive_score": 0.5942,
+   "trusted": true,
+   "key": "Sprout Tower HGSS.png:18208"
+  },
+  "MAP_BELL_TOWER_10F": {
+   "pitch_x": 16.04,
+   "pitch_y": 12.42,
+   "origin_x": -56.5,
+   "origin_y": -6.5,
+   "score": 2.4502,
+   "naive_score": 1.5304,
+   "trusted": true,
+   "key": "Bell Tower 10F HGSS.png:25551"
+  },
+  "MAP_BELL_TOWER_1F": {
+   "pitch_x": 16.13,
+   "pitch_y": 12.21,
+   "origin_x": -58.0,
+   "origin_y": -8.0,
+   "score": 1.9437,
+   "naive_score": 0.9312,
+   "trusted": true,
+   "key": "Bell Tower 1F HGSS.png:25628"
+  },
+  "MAP_BELL_TOWER_2F": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.4,
+   "origin_x": -55.0,
+   "origin_y": -15.5,
+   "score": 1.8701,
+   "naive_score": 1.1974,
+   "trusted": true,
+   "key": "Bell Tower 2F HGSS.png:25874"
+  },
+  "MAP_BELL_TOWER_3F": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.29,
+   "origin_x": -55.0,
+   "origin_y": -3.0,
+   "score": 2.0463,
+   "naive_score": 0.4495,
+   "trusted": true,
+   "key": "Bell Tower 3F HGSS.png:16479"
+  },
+  "MAP_BELL_TOWER_4F": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.0,
+   "origin_x": -57.0,
+   "origin_y": 0.0,
+   "score": 1.6464,
+   "naive_score": 0.6685,
+   "trusted": true,
+   "key": "Bell Tower 4F HGSS.png:19408"
+  },
+  "MAP_BELL_TOWER_5F": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.15,
+   "origin_x": -55.0,
+   "origin_y": -8.0,
+   "score": 1.3851,
+   "naive_score": 0.6729,
+   "trusted": true,
+   "key": "Bell Tower 5F HGSS.png:20481"
+  },
+  "MAP_BELL_TOWER_6F": {
+   "pitch_x": 16.04,
+   "pitch_y": 12.15,
+   "origin_x": -56.5,
+   "origin_y": -8.0,
+   "score": 1.9565,
+   "naive_score": 1.0636,
+   "trusted": true,
+   "key": "Bell Tower 6F HGSS.png:15501"
+  },
+  "MAP_BELL_TOWER_7F": {
+   "pitch_x": 16.04,
+   "pitch_y": 11.43,
+   "origin_x": -56.5,
+   "origin_y": 0.0,
+   "score": 1.517,
+   "naive_score": 0.849,
+   "trusted": true,
+   "key": "Bell Tower 7F HGSS.png:19576"
+  },
+  "MAP_BELL_TOWER_8F": {
+   "pitch_x": 15.89,
+   "pitch_y": 12.15,
+   "origin_x": -50.5,
+   "origin_y": 3.0,
+   "score": 2.2033,
+   "naive_score": 0.9361,
+   "trusted": true,
+   "key": "Bell Tower 8F HGSS.png:18526"
+  },
+  "MAP_BELL_TOWER_9F": {
+   "pitch_x": 15.96,
+   "pitch_y": 12.18,
+   "origin_x": -52.0,
+   "origin_y": 2.5,
+   "score": 1.6414,
+   "naive_score": 0.932,
+   "trusted": true,
+   "key": "Bell Tower 9F HGSS.png:19782"
+  },
+  "MAP_BLACKTHORN": {
+   "pitch_x": 15.98,
+   "pitch_y": 12.4,
+   "origin_x": -102.5,
+   "origin_y": 20.5,
+   "score": 0.8874,
+   "naive_score": 0.329,
+   "trusted": true,
+   "key": "Blackthorn City HGSS.png:217539"
+  },
+  "MAP_BLACKTHORN_EAST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_BLACKTHORN_GYM": {
+   "pitch_x": 16.11,
+   "pitch_y": 12.5,
+   "origin_x": -10.5,
+   "origin_y": 32.0,
+   "score": 1.2899,
+   "naive_score": 0.7405,
+   "trusted": true,
+   "key": "Blackthorn Gym HGSS.png:103070"
+  },
+  "MAP_BLACKTHORN_MOVE_TUTOR_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_BLACKTHORN_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_BLACKTHORN_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_BLACKTHORN_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_BLACKTHORN_WEST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_BURNED_TOWER_1F": {
+   "pitch_x": 11.76,
+   "pitch_y": 12.5,
+   "origin_x": -8.0,
+   "origin_y": -32.5,
+   "score": 0.7959,
+   "naive_score": 0.1305,
+   "trusted": true,
+   "key": "Burned Tower 1F HGSS.png:38744"
+  },
+  "MAP_BURNED_TOWER_B1F": {
+   "pitch_x": 10.5,
+   "pitch_y": 12.5,
+   "origin_x": 7.0,
+   "origin_y": -67.0,
+   "score": 0.4446,
+   "naive_score": 0.1321,
+   "trusted": false,
+   "key": "Burned Tower B1F HGSS.png:32015"
+  },
+  "MAP_CELADON": {
+   "pitch_x": 1.9756,
+   "pitch_y": 1.8056,
+   "origin_x": -4.5,
+   "origin_y": 2.5,
+   "score": 0.3672,
+   "naive_score": 0.1575,
+   "trusted": false,
+   "key": "Celadon Condominiums HGSS.png:4233"
+  },
+  "MAP_CELADON_CONDOMINIUMS_1F": {
+   "pitch_x": 16.16,
+   "pitch_y": 11.9,
+   "origin_x": -7.5,
+   "origin_y": 7.5,
+   "score": 1.5499,
+   "naive_score": 0.6409,
+   "trusted": true,
+   "key": "Celadon Condominiums 1F HGSS.png:5636"
+  },
+  "MAP_CELADON_CONDOMINIUMS_2F": {
+   "pitch_x": 14.5376,
+   "pitch_y": 11.98,
+   "origin_x": -1.0,
+   "origin_y": 7.0,
+   "score": 1.5967,
+   "naive_score": 0.8831,
+   "trusted": true,
+   "key": "Celadon Condominiums 2F HGSS.png:5614"
+  },
+  "MAP_CELADON_DEPARTMENT_STORE_1F": {
+   "pitch_x": 15.71,
+   "pitch_y": 11.73,
+   "origin_x": -3.25,
+   "origin_y": -8.0,
+   "score": 1.3661,
+   "naive_score": 1.0333,
+   "trusted": true,
+   "key": "Celadon Department Store 1F HGSS.png:13221"
+  },
+  "MAP_CELADON_DEPARTMENT_STORE_2F": {
+   "pitch_x": 16.14,
+   "pitch_y": 11.62,
+   "origin_x": -8.5,
+   "origin_y": -7.5,
+   "score": 1.2252,
+   "naive_score": 0.9925,
+   "trusted": true,
+   "key": "Celadon Department Store 2F HGSS.png:15330"
+  },
+  "MAP_CELADON_DEPARTMENT_STORE_3F": {
+   "pitch_x": 16.04,
+   "pitch_y": 14.4943,
+   "origin_x": -10.5,
+   "origin_y": -10.0,
+   "score": 1.6328,
+   "naive_score": 1.1206,
+   "trusted": true,
+   "key": "Celadon Department Store 3F HGSS.png:15186"
+  },
+  "MAP_CELADON_DEPARTMENT_STORE_4F": {
+   "pitch_x": 16.18,
+   "pitch_y": 14.0743,
+   "origin_x": -11.0,
+   "origin_y": -2.5,
+   "score": 1.2253,
+   "naive_score": 0.9751,
+   "trusted": true,
+   "key": "Celadon Department Store 4F HGSS.png:12998"
+  },
+  "MAP_CELADON_DEPARTMENT_STORE_5F": {
+   "pitch_x": 16.1,
+   "pitch_y": 13.7943,
+   "origin_x": -10.0,
+   "origin_y": 1.5,
+   "score": 1.143,
+   "naive_score": 0.8999,
+   "trusted": true,
+   "key": "Celadon Department Store 5F HGSS.png:12897"
+  },
+  "MAP_CELADON_GAME_CORNER": {
+   "pitch_x": 13.72,
+   "pitch_y": 12.75,
+   "origin_x": -0.5,
+   "origin_y": -8.5,
+   "score": 0.888,
+   "naive_score": 0.5368,
+   "trusted": true,
+   "key": "Celadon Game Corner HGSS.png:6536"
+  },
+  "MAP_CELADON_GYM": {
+   "pitch_x": 16.85,
+   "pitch_y": 12.4,
+   "origin_x": 9.5,
+   "origin_y": 28.0,
+   "score": 1.3145,
+   "naive_score": 0.1,
+   "trusted": true,
+   "key": "Celadon Gym HGSS.png:33878"
+  },
+  "MAP_CELADON_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_CELADON_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_CELADON_PRIZE_CORNER": {
+   "pitch_x": 15.57,
+   "pitch_y": 12.62,
+   "origin_x": -4.75,
+   "origin_y": 14.5,
+   "score": 1.9134,
+   "naive_score": 0.9115,
+   "trusted": true,
+   "key": "Celadon Game Prize Corner HGSS.png:5271"
+  },
+  "MAP_CERULEAN": {
+   "pitch_x": 5.62,
+   "pitch_y": 7.07,
+   "origin_x": -1.0,
+   "origin_y": -18.5,
+   "score": 0.5605,
+   "naive_score": 0.4472,
+   "trusted": false,
+   "key": "Cerulean Gym HGSS.png:19381"
+  },
+  "MAP_CERULEAN_BIKE_MANIAC_HOUSE": {
+   "pitch_x": 15.45,
+   "pitch_y": 13.04,
+   "origin_x": 20.0,
+   "origin_y": -5.0,
+   "score": 1.5029,
+   "naive_score": 0.3899,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_CERULEAN_CAVE_1F": {
+   "pitch_x": 16.15,
+   "pitch_y": 11.94,
+   "origin_x": 19.0,
+   "origin_y": -6.5,
+   "score": 0.7717,
+   "naive_score": 0.1073,
+   "trusted": true,
+   "key": "Cerulean Cave 1F HGSS.png:194109"
+  },
+  "MAP_CERULEAN_CAVE_2F": {
+   "pitch_x": 16.06,
+   "pitch_y": 12.23,
+   "origin_x": -11.5,
+   "origin_y": -46.75,
+   "score": 1.8408,
+   "naive_score": 0.0568,
+   "trusted": true,
+   "key": "Cerulean Cave 2F HGSS.png:154280"
+  },
+  "MAP_CERULEAN_CAVE_B1F": {
+   "pitch_x": 16.08,
+   "pitch_y": 12.56,
+   "origin_x": -10.5,
+   "origin_y": 0.0,
+   "score": 1.1498,
+   "naive_score": 0.2582,
+   "trusted": true,
+   "key": "Cerulean Cave B1F HGSS.png:184946"
+  },
+  "MAP_CERULEAN_EAST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_CERULEAN_GYM": {
+   "pitch_x": 16.7019,
+   "pitch_y": 12.17,
+   "origin_x": 1.5,
+   "origin_y": 98.0,
+   "score": 1.3979,
+   "naive_score": 0.9817,
+   "trusted": true,
+   "key": "Cerulean Gym HGSS.png:19381"
+  },
+  "MAP_CERULEAN_NORTH_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_CERULEAN_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_CERULEAN_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_CERULEAN_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_CERULEAN_WEST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_CHERRYGROVE": {
+   "pitch_x": 15.99,
+   "pitch_y": 12.45,
+   "origin_x": -10.5,
+   "origin_y": -8.0,
+   "score": 1.1046,
+   "naive_score": 0.8256,
+   "trusted": true,
+   "key": "Cherrygrove City HGSS.png:108899"
+  },
+  "MAP_CHERRYGROVE_GUIDE_GENT_HOUSE": {
+   "pitch_x": 17.0745,
+   "pitch_y": 15.62,
+   "origin_x": 11.5,
+   "origin_y": -1.0,
+   "score": 1.2898,
+   "naive_score": 1.1007,
+   "trusted": true,
+   "key": "Cherrygrove Guide Gent House HGSS.png:7428"
+  },
+  "MAP_CHERRYGROVE_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_CHERRYGROVE_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_CHERRYGROVE_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_CHERRYGROVE_SOUTHEAST_HOUSE": {
+   "pitch_x": 20.1127,
+   "pitch_y": 11.9,
+   "origin_x": 2.5,
+   "origin_y": 64.5,
+   "score": 1.1009,
+   "naive_score": 0.7096,
+   "trusted": true,
+   "key": "Cherrygrove Southeast House HGSS.png:9434"
+  },
+  "MAP_CHERRYGROVE_SOUTHWEST_HOUSE": {
+   "pitch_x": 19.7691,
+   "pitch_y": 11.97,
+   "origin_x": -4.5,
+   "origin_y": 26.5,
+   "score": 1.4222,
+   "naive_score": 0.9546,
+   "trusted": true,
+   "key": "Cherrygrove Southwest House HGSS.png:9294"
+  },
+  "MAP_CIANWOOD": {
+   "pitch_x": 16.25,
+   "pitch_y": 6.59,
+   "origin_x": -60.0,
+   "origin_y": -3.5,
+   "score": 0.4819,
+   "naive_score": 0.2157,
+   "trusted": false,
+   "key": "Cianwood Gym HGSS.png:31839"
+  },
+  "MAP_CIANWOOD_CAMERONS_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_CIANWOOD_CENTRAL_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_CIANWOOD_GYM": {
+   "pitch_x": 16.14,
+   "pitch_y": 18.1038,
+   "origin_x": -10.5,
+   "origin_y": -4.5,
+   "score": 1.5136,
+   "naive_score": 1.2495,
+   "trusted": true,
+   "key": "Cianwood Gym HGSS.png:31839"
+  },
+  "MAP_CIANWOOD_KIRKS_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_CIANWOOD_NORTH_HOUSE": {
+   "pitch_x": 16.65,
+   "pitch_y": 11.81,
+   "origin_x": 36.5,
+   "origin_y": 65.5,
+   "score": 1.0296,
+   "naive_score": 0.5604,
+   "trusted": true,
+   "key": "North Cianwood HGSS.png:16719"
+  },
+  "MAP_CIANWOOD_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_CIANWOOD_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_CINNABAR_ISLAND": {
+   "pitch_x": 16.12,
+   "pitch_y": 12.39,
+   "origin_x": -11.5,
+   "origin_y": 60.0,
+   "score": 0.7189,
+   "naive_score": 0.1167,
+   "trusted": true,
+   "key": "Cinnabar Island HGSS.png:91416"
+  },
+  "MAP_CINNABAR_ISLAND_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_CINNABAR_ISLAND_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_CLIFF_CAVE": {
+   "pitch_x": 7.2775,
+   "pitch_y": 3.8937,
+   "origin_x": -3.5,
+   "origin_y": -2.0,
+   "score": 0.5915,
+   "naive_score": 0.3566,
+   "trusted": false,
+   "key": "Cliff Cave 1F HGSS.png:17067"
+  },
+  "MAP_CLIFF_EDGE_GATE": {
+   "pitch_x": 11.4546,
+   "pitch_y": 10.0951,
+   "origin_x": -7.0,
+   "origin_y": 1.0,
+   "score": 0.3065,
+   "naive_score": 0.198,
+   "trusted": false,
+   "key": "Cliff Edge Gate HGSS.png:103300"
+  },
+  "MAP_DARK_CAVE_ROUTE_31_SIDE": {
+   "pitch_x": 3.68,
+   "pitch_y": 2.18,
+   "origin_x": 2.5,
+   "origin_y": 23.5,
+   "score": 0.4025,
+   "naive_score": 0.2059,
+   "trusted": false,
+   "key": "HGSS Dark Cave-Route 31-Morning.png:11744"
+  },
+  "MAP_DARK_CAVE_ROUTE_45_SIDE": {
+   "pitch_x": 15.65,
+   "pitch_y": 2.1806,
+   "origin_x": -713.5,
+   "origin_y": 22.0,
+   "score": 0.203,
+   "naive_score": 0.0987,
+   "trusted": false,
+   "key": "HGSS Dark Cave-Route 45-Day.png:11643"
+  },
+  "MAP_DIGLETT_CAVE": {
+   "pitch_x": 15.39,
+   "pitch_y": 12.57,
+   "origin_x": -9.0,
+   "origin_y": -1.25,
+   "score": 1.0949,
+   "naive_score": 0.1111,
+   "trusted": true,
+   "key": "Diglett Cave HGSS.png:128494"
+  },
+  "MAP_DRAGONS_DEN": {
+   "pitch_x": 16.23,
+   "pitch_y": 12.52,
+   "origin_x": 1.5,
+   "origin_y": 0.5,
+   "score": 0.8971,
+   "naive_score": 0.6043,
+   "trusted": true,
+   "key": "Dragons Den HGSS.png:218852"
+  },
+  "MAP_DRAGONS_DEN_ENTRANCE": {
+   "pitch_x": 15.65,
+   "pitch_y": 11.39,
+   "origin_x": 4.0,
+   "origin_y": 2.0,
+   "score": 1.3737,
+   "naive_score": 0.3627,
+   "trusted": true,
+   "key": "Dragons Den Entrance HGSS.png:16122"
+  },
+  "MAP_DRAGONS_DEN_SHRINE": {
+   "pitch_x": 16.39,
+   "pitch_y": 12.25,
+   "origin_x": -23.75,
+   "origin_y": 7.25,
+   "score": 0.4359,
+   "naive_score": 0.1036,
+   "trusted": false,
+   "key": "Dragons Den Dragon Shrine HGSS.png:19904"
+  },
+  "MAP_ECRUTEAK": {
+   "pitch_x": 15.41,
+   "pitch_y": 11.31,
+   "origin_x": -10.0,
+   "origin_y": -7.5,
+   "score": 1.1558,
+   "naive_score": 0.4085,
+   "trusted": true,
+   "key": "Ecruteak City HGSS.png:183428"
+  },
+  "MAP_ECRUTEAK_DOWSING_MACHINE_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_ECRUTEAK_GYM": {
+   "pitch_x": 8.48,
+   "pitch_y": 12.27,
+   "origin_x": -1.5,
+   "origin_y": -23.0,
+   "score": 0.5459,
+   "naive_score": 0.2655,
+   "trusted": false,
+   "key": "Ecruteak Gym HGSS.png:37408"
+  },
+  "MAP_ECRUTEAK_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_ECRUTEAK_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_ECRUTEAK_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_ECRUTEAK_SOUTHWEST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_EMBEDDED_TOWER_GROUDON_ROOM": {
+   "pitch_x": 10.8123,
+   "pitch_y": 16.03,
+   "origin_x": -7.0,
+   "origin_y": -11.0,
+   "score": 0.7956,
+   "naive_score": 0.4869,
+   "trusted": true,
+   "key": "Embedded Tower Groudon HGSS.png:42862"
+  },
+  "MAP_EMBEDDED_TOWER_KYOGRE_ROOM": {
+   "pitch_x": 10.7923,
+   "pitch_y": 16.07,
+   "origin_x": -7.0,
+   "origin_y": -10.5,
+   "score": 0.7666,
+   "naive_score": 0.4969,
+   "trusted": true,
+   "key": "Embedded Tower Kyogre HGSS.png:43161"
+  },
+  "MAP_EMBEDDED_TOWER_RAYQUAZA_ROOM": {
+   "pitch_x": 10.7923,
+   "pitch_y": 16.09,
+   "origin_x": -7.0,
+   "origin_y": -10.5,
+   "score": 0.8211,
+   "naive_score": 0.481,
+   "trusted": true,
+   "key": "Embedded Tower Rayquaza HGSS.png:43673"
+  },
+  "MAP_FRONTIER_ACCESS_MOVE_TUTOR_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_FRONTIER_ACCESS_POKECENTER_1F": {
+   "pitch_x": 25.5012,
+   "pitch_y": 11.41,
+   "origin_x": 0.0,
+   "origin_y": 16.0,
+   "score": 0.7373,
+   "naive_score": 0.2323,
+   "trusted": true,
+   "key": "Frontier Access HGSS.png:54687"
+  },
+  "MAP_FRONTIER_ACCESS_POKECENTER_B1F": {
+   "pitch_x": 24.8612,
+   "pitch_y": 13.34,
+   "origin_x": 4.0,
+   "origin_y": 31.5,
+   "score": 0.8796,
+   "naive_score": 0.4683,
+   "trusted": true,
+   "key": "Frontier Access HGSS.png:54687"
+  },
+  "MAP_FRONTIER_ACCESS_POKEMART": {
+   "pitch_x": 31.1657,
+   "pitch_y": 12.08,
+   "origin_x": -14.5,
+   "origin_y": 15.5,
+   "score": 0.8579,
+   "naive_score": 0.4704,
+   "trusted": true,
+   "key": "Frontier Access HGSS.png:54687"
+  },
+  "MAP_FUCHSIA": {
+   "pitch_x": 16.02,
+   "pitch_y": 12.33,
+   "origin_x": -24.5,
+   "origin_y": -151.0,
+   "score": 0.5051,
+   "naive_score": 0.3696,
+   "trusted": false,
+   "key": "Fuchsia City HGSS.png:140634"
+  },
+  "MAP_FUCHSIA_GYM": {
+   "pitch_x": 16.33,
+   "pitch_y": 12.8696,
+   "origin_x": 5.5,
+   "origin_y": 2.0,
+   "score": 1.7944,
+   "naive_score": 1.5003,
+   "trusted": true,
+   "key": "Fuchsia Gym HGSS.png:7536"
+  },
+  "MAP_FUCHSIA_PAL_PARK_ENTRANCE": {
+   "pitch_x": 16.13,
+   "pitch_y": 11.69,
+   "origin_x": 689.5,
+   "origin_y": 45.5,
+   "score": 0.9553,
+   "naive_score": 0.2377,
+   "trusted": true,
+   "key": "Pal Park HGSS.png:297423"
+  },
+  "MAP_FUCHSIA_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_FUCHSIA_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_FUCHSIA_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_FUCHSIA_SAFARI_ZONE_WARDEN_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_FUCHSIA_SOUTHWEST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_GOLDENROD": {
+   "pitch_x": 14.0342,
+   "pitch_y": 12.31,
+   "origin_x": -9.5,
+   "origin_y": 105.5,
+   "score": 0.7429,
+   "naive_score": 0.5769,
+   "trusted": true,
+   "key": "Goldenrod City HGSS.png:312174"
+  },
+  "MAP_GOLDENROD_BILLS_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_GOLDENROD_DEPARTMENT_STORE_1F": {
+   "pitch_x": 15.57,
+   "pitch_y": 14.4892,
+   "origin_x": -2.25,
+   "origin_y": -10.0,
+   "score": 1.6128,
+   "naive_score": 0.8767,
+   "trusted": true,
+   "key": "Goldenrod Department Store 1F HGSS.png:14011"
+  },
+  "MAP_GOLDENROD_DEPARTMENT_STORE_2F": {
+   "pitch_x": 15.67,
+   "pitch_y": 14.7092,
+   "origin_x": -5.75,
+   "origin_y": -8.0,
+   "score": 1.4759,
+   "naive_score": 0.7412,
+   "trusted": true,
+   "key": "Goldenrod Department Store 2F HGSS.png:15639"
+  },
+  "MAP_GOLDENROD_DEPARTMENT_STORE_3F": {
+   "pitch_x": 15.67,
+   "pitch_y": 14.5092,
+   "origin_x": -5.75,
+   "origin_y": -4.0,
+   "score": 1.4327,
+   "naive_score": 0.721,
+   "trusted": true,
+   "key": "Goldenrod Department Store 3F HGSS.png:14750"
+  },
+  "MAP_GOLDENROD_DEPARTMENT_STORE_4F": {
+   "pitch_x": 15.87,
+   "pitch_y": 12.76,
+   "origin_x": -7.25,
+   "origin_y": 8.0,
+   "score": 1.5748,
+   "naive_score": 0.8933,
+   "trusted": true,
+   "key": "Goldenrod Department Store 4F HGSS.png:14225"
+  },
+  "MAP_GOLDENROD_DEPARTMENT_STORE_5F": {
+   "pitch_x": 16.02,
+   "pitch_y": 14.4892,
+   "origin_x": -10.0,
+   "origin_y": -10.0,
+   "score": 1.4431,
+   "naive_score": 0.7253,
+   "trusted": true,
+   "key": "Goldenrod Department Store 5F HGSS.png:14148"
+  },
+  "MAP_GOLDENROD_DEPARTMENT_STORE_6F": {
+   "pitch_x": 15.86,
+   "pitch_y": 14.7692,
+   "origin_x": -10.5,
+   "origin_y": -10.0,
+   "score": 1.4669,
+   "naive_score": 0.835,
+   "trusted": true,
+   "key": "Goldenrod Department Store 6F HGSS.png:13386"
+  },
+  "MAP_GOLDENROD_DEPARTMENT_STORE_BASEMENT": {
+   "pitch_x": 15.86,
+   "pitch_y": 12.5,
+   "origin_x": -2.0,
+   "origin_y": -2.0,
+   "score": 2.4067,
+   "naive_score": 2.043,
+   "trusted": true,
+   "key": "Goldenrod Department Store Basement HGSS.png:21084"
+  },
+  "MAP_GOLDENROD_FRIENDSHIP_CHECKER_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_GOLDENROD_GAME_CORNER": {
+   "pitch_x": 14.6867,
+   "pitch_y": 11.39,
+   "origin_x": -8.0,
+   "origin_y": 11.5,
+   "score": 1.3115,
+   "naive_score": 0.4892,
+   "trusted": true,
+   "key": "HGSS Goldenrod Game Corner.png:12437"
+  },
+  "MAP_GOLDENROD_GLOBAL_TERMINAL_1F": {
+   "pitch_x": 15.75,
+   "pitch_y": 11.94,
+   "origin_x": -10.0,
+   "origin_y": 22.5,
+   "score": 1.3502,
+   "naive_score": 0.924,
+   "trusted": true,
+   "key": "Global Terminal 1F PtHGSS.png:29988"
+  },
+  "MAP_GOLDENROD_GLOBAL_TERMINAL_2F": {
+   "pitch_x": 15.37,
+   "pitch_y": 12.18,
+   "origin_x": -2.75,
+   "origin_y": 26.0,
+   "score": 1.7702,
+   "naive_score": 1.4418,
+   "trusted": true,
+   "key": "Global Terminal 2F PtHGSS.png:19182"
+  },
+  "MAP_GOLDENROD_GLOBAL_TERMINAL_3F": {
+   "pitch_x": 15.59,
+   "pitch_y": 14.2084,
+   "origin_x": -1.0,
+   "origin_y": -6.5,
+   "score": 1.7252,
+   "naive_score": 1.2919,
+   "trusted": true,
+   "key": "Global Terminal 3F PtHGSS.png:17570"
+  },
+  "MAP_GOLDENROD_GYM": {
+   "pitch_x": 16.8733,
+   "pitch_y": 11.61,
+   "origin_x": -2.0,
+   "origin_y": 46.5,
+   "score": 0.7007,
+   "naive_score": 0.1437,
+   "trusted": true,
+   "key": "Goldenrod Gym HGSS.png:41048"
+  },
+  "MAP_GOLDENROD_NAME_RATER_HOUSE": {
+   "pitch_x": 15.31,
+   "pitch_y": 11.97,
+   "origin_x": 50.0,
+   "origin_y": 30.0,
+   "score": 1.3438,
+   "naive_score": 0.2983,
+   "trusted": true,
+   "key": "Name Rater HGSS.png:12592"
+  },
+  "MAP_GOLDENROD_NORTHEAST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_GOLDENROD_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_GOLDENROD_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_GOLDENROD_RADIO_TOWER_1F": {
+   "pitch_x": 16.63,
+   "pitch_y": 6.5846,
+   "origin_x": -5.75,
+   "origin_y": -3.0,
+   "score": 0.9932,
+   "naive_score": 0.3674,
+   "trusted": true,
+   "key": "Goldenrod Radio Tower 1F HGSS.png:14570"
+  },
+  "MAP_GOLDENROD_RADIO_TOWER_2F": {
+   "pitch_x": 15.96,
+   "pitch_y": 12.0,
+   "origin_x": -4.5,
+   "origin_y": -7.5,
+   "score": 1.3782,
+   "naive_score": 0.8484,
+   "trusted": true,
+   "key": "Goldenrod Radio Tower 2F HGSS.png:15607"
+  },
+  "MAP_GOLDENROD_RADIO_TOWER_3F": {
+   "pitch_x": 16.07,
+   "pitch_y": 12.0,
+   "origin_x": -5.75,
+   "origin_y": -7.5,
+   "score": 1.9117,
+   "naive_score": 1.0912,
+   "trusted": true,
+   "key": "Goldenrod Radio Tower 3F HGSS.png:11524"
+  },
+  "MAP_GOLDENROD_RADIO_TOWER_4F": {
+   "pitch_x": 16.06,
+   "pitch_y": 12.1,
+   "origin_x": -6.0,
+   "origin_y": -8.0,
+   "score": 1.6548,
+   "naive_score": 1.105,
+   "trusted": true,
+   "key": "Goldenrod Radio Tower 4F HGSS.png:14411"
+  },
+  "MAP_GOLDENROD_RADIO_TOWER_5F": {
+   "pitch_x": 15.57,
+   "pitch_y": 13.42,
+   "origin_x": 4.75,
+   "origin_y": 0.5,
+   "score": 1.5851,
+   "naive_score": 1.1592,
+   "trusted": true,
+   "key": "Goldenrod Radio Tower 5F HGSS.png:12750"
+  },
+  "MAP_GOLDENROD_TUNNEL_1F": {
+   "pitch_x": 15.8,
+   "pitch_y": 12.6,
+   "origin_x": -31.0,
+   "origin_y": 34.0,
+   "score": 0.6189,
+   "naive_score": 0.32,
+   "trusted": true,
+   "key": "Goldenrod Tunnel HGSS.png:31183"
+  },
+  "MAP_GOLDENROD_TUNNEL_B1F": {
+   "pitch_x": 16.22,
+   "pitch_y": 7.8705,
+   "origin_x": -11.0,
+   "origin_y": 4.0,
+   "score": 0.6031,
+   "naive_score": 0.489,
+   "trusted": true,
+   "key": "Goldenrod Tunnel HGSS.png:31183"
+  },
+  "MAP_GOLDENROD_TUNNEL_B2F": {
+   "pitch_x": 16.55,
+   "pitch_y": 15.64,
+   "origin_x": -84.25,
+   "origin_y": -4.5,
+   "score": 0.2812,
+   "naive_score": 0.1981,
+   "trusted": false,
+   "key": "Goldenrod Tunnel HGSS.png:31183"
+  },
+  "MAP_ICE_PATH_1F": {
+   "pitch_x": 15.52,
+   "pitch_y": 12.5,
+   "origin_x": -53.5,
+   "origin_y": -8.0,
+   "score": 1.551,
+   "naive_score": 0.7367,
+   "trusted": true,
+   "key": "Ice Path 1F HGSS.png:164977"
+  },
+  "MAP_ICE_PATH_B1F": {
+   "pitch_x": 16.25,
+   "pitch_y": 11.52,
+   "origin_x": 11.5,
+   "origin_y": 18.0,
+   "score": 2.0424,
+   "naive_score": 1.0024,
+   "trusted": true,
+   "key": "Ice Path B1F HGSS.png:90417"
+  },
+  "MAP_ICE_PATH_B2F": {
+   "pitch_x": 15.55,
+   "pitch_y": 11.95,
+   "origin_x": -0.5,
+   "origin_y": 8.5,
+   "score": 1.0706,
+   "naive_score": 0.0412,
+   "trusted": true,
+   "key": "Ice Path B2F HGSS.png:91348"
+  },
+  "MAP_ICE_PATH_B3F": {
+   "pitch_x": 15.83,
+   "pitch_y": 12.6,
+   "origin_x": 11.5,
+   "origin_y": -8.5,
+   "score": 1.3914,
+   "naive_score": 0.3783,
+   "trusted": true,
+   "key": "Ice Path B3F HGSS.png:36284"
+  },
+  "MAP_ILEX_FOREST": {
+   "pitch_x": 15.96,
+   "pitch_y": 12.33,
+   "origin_x": -90.5,
+   "origin_y": -72.0,
+   "score": 1.9513,
+   "naive_score": 0.4152,
+   "trusted": true,
+   "key": "Ilex Forest HGSS.png:220507"
+  },
+  "MAP_INDIGO_PLATEAU": {
+   "pitch_x": 15.49,
+   "pitch_y": 12.88,
+   "origin_x": -25.0,
+   "origin_y": 0.5,
+   "score": 0.9767,
+   "naive_score": 0.4881,
+   "trusted": true,
+   "key": "Indigo Plateau HGSS.png:42477"
+  },
+  "MAP_LAKE_OF_RAGE": {
+   "pitch_x": 16.02,
+   "pitch_y": 11.79,
+   "origin_x": -26.0,
+   "origin_y": 111.0,
+   "score": 1.2766,
+   "naive_score": 0.3541,
+   "trusted": true,
+   "key": "Lake of Rage HGSS dry.png:230935"
+  },
+  "MAP_LAKE_OF_RAGE_FISHING_GURU_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_LAKE_OF_RAGE_HIDDEN_POWER_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_LAVENDER": {
+   "pitch_x": 15.53,
+   "pitch_y": 15.4925,
+   "origin_x": -28.0,
+   "origin_y": 15.0,
+   "score": 0.6351,
+   "naive_score": 0.4593,
+   "trusted": true,
+   "key": "Lavender Town HGSS.png:60352"
+  },
+  "MAP_LAVENDER_HOUSE_OF_MEMORIES": {
+   "pitch_x": 16.03,
+   "pitch_y": 10.3853,
+   "origin_x": -9.0,
+   "origin_y": 1.5,
+   "score": 0.6206,
+   "naive_score": 0.3056,
+   "trusted": true,
+   "key": "House of Memories HGSS.png:13344"
+  },
+  "MAP_LAVENDER_NAME_RATER": {
+   "pitch_x": 15.31,
+   "pitch_y": 11.97,
+   "origin_x": 50.0,
+   "origin_y": 30.0,
+   "score": 1.3438,
+   "naive_score": 0.2983,
+   "trusted": true,
+   "key": "Name Rater HGSS.png:12592"
+  },
+  "MAP_LAVENDER_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_LAVENDER_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_LAVENDER_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_LAVENDER_RADIO_STATION": {
+   "pitch_x": 4.64,
+   "pitch_y": 17.0829,
+   "origin_x": 2.0,
+   "origin_y": -7.0,
+   "score": 0.804,
+   "naive_score": 0.6062,
+   "trusted": true,
+   "key": "Lavender Radio Tower HGSS.png:4386"
+  },
+  "MAP_LAVENDER_SOUTHWEST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_LAVENDER_VOLUNTEER_POKEMON_HOUSE": {
+   "pitch_x": 15.72,
+   "pitch_y": 12.37,
+   "origin_x": 17.5,
+   "origin_y": -4.0,
+   "score": 1.4908,
+   "naive_score": 0.5172,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_MAHOGANY": {
+   "pitch_x": 6.18,
+   "pitch_y": 11.32,
+   "origin_x": 19.5,
+   "origin_y": 232.0,
+   "score": 0.7582,
+   "naive_score": 0.3682,
+   "trusted": true,
+   "key": "Mahogany Gym HGSS.png:28341"
+  },
+  "MAP_MAHOGANY_EAST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_MAHOGANY_GYM_LEADER_ROOM": {
+   "pitch_x": 18.2891,
+   "pitch_y": 11.39,
+   "origin_x": -0.5,
+   "origin_y": -7.5,
+   "score": 2.0385,
+   "naive_score": 0.4435,
+   "trusted": true,
+   "key": "Mahogany Gym HGSS.png:28341"
+  },
+  "MAP_MAHOGANY_GYM_ROOM_1": {
+   "pitch_x": 22.4311,
+   "pitch_y": 11.43,
+   "origin_x": 3.5,
+   "origin_y": 34.0,
+   "score": 1.5386,
+   "naive_score": 0.6956,
+   "trusted": true,
+   "key": "Mahogany Gym HGSS.png:28341"
+  },
+  "MAP_MAHOGANY_GYM_ROOM_2": {
+   "pitch_x": 17.11,
+   "pitch_y": 11.39,
+   "origin_x": -6.75,
+   "origin_y": 255.5,
+   "score": 2.6148,
+   "naive_score": 0.7711,
+   "trusted": true,
+   "key": "Mahogany Gym HGSS.png:28341"
+  },
+  "MAP_MAHOGANY_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_MAHOGANY_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_MAHOGANY_SOUVENIR_SHOP": {
+   "pitch_x": 5.46,
+   "pitch_y": 13.6309,
+   "origin_x": 1.5,
+   "origin_y": -5.0,
+   "score": 0.8686,
+   "naive_score": 0.7895,
+   "trusted": true,
+   "key": "Mahogany Town Shop HGSS.png:10610"
+  },
+  "MAP_MOUNT_MOON": {
+   "pitch_x": 15.94,
+   "pitch_y": 12.08,
+   "origin_x": 186.0,
+   "origin_y": 74.5,
+   "score": 0.4822,
+   "naive_score": 0.2229,
+   "trusted": false,
+   "key": "Mt Moon Square HGSS.png:75974"
+  },
+  "MAP_MOUNT_MOON_SQUARE": {
+   "pitch_x": 15.81,
+   "pitch_y": 12.14,
+   "origin_x": 42.5,
+   "origin_y": 84.0,
+   "score": 1.0662,
+   "naive_score": 0.2978,
+   "trusted": true,
+   "key": "Mt Moon Square HGSS.png:75974"
+  },
+  "MAP_MOUNT_MORTAR_1F_ENTRANCE": {
+   "pitch_x": 15.9,
+   "pitch_y": 11.77,
+   "origin_x": -52.5,
+   "origin_y": 53.0,
+   "score": 0.6568,
+   "naive_score": 0.4247,
+   "trusted": true,
+   "key": "Mt Mortar Entrance HGSS.png:206217"
+  },
+  "MAP_MOUNT_MORTAR_2F": {
+   "pitch_x": 15.73,
+   "pitch_y": 12.48,
+   "origin_x": 4.0,
+   "origin_y": 218.0,
+   "score": 0.3856,
+   "naive_score": 0.1733,
+   "trusted": false,
+   "key": "Mt Mortar Basement HGSS.png:191223"
+  },
+  "MAP_MOUNT_MORTAR_B1F": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.27,
+   "origin_x": -39.25,
+   "origin_y": -61.75,
+   "score": 1.1781,
+   "naive_score": 0.8677,
+   "trusted": true,
+   "key": "Mt Mortar Basement HGSS.png:191223"
+  },
+  "MAP_MOUNT_SILVER": {
+   "pitch_x": 16.67,
+   "pitch_y": 11.91,
+   "origin_x": -3.0,
+   "origin_y": 97.0,
+   "score": 0.7944,
+   "naive_score": 0.3432,
+   "trusted": true,
+   "key": "Mt. Silver Summit HGSS.png:96553"
+  },
+  "MAP_MOUNT_SILVER_CAVE_1F": {
+   "pitch_x": 4.229,
+   "pitch_y": 12.02,
+   "origin_x": -8.5,
+   "origin_y": -740.5,
+   "score": 0.6546,
+   "naive_score": 0.1251,
+   "trusted": true,
+   "key": "Silver Cave entrance HGSS.png:28375"
+  },
+  "MAP_MOUNT_SILVER_CAVE_2F": {
+   "pitch_x": 6.2439,
+   "pitch_y": 4.8029,
+   "origin_x": 4.0,
+   "origin_y": -2.5,
+   "score": 0.2384,
+   "naive_score": 0.0414,
+   "trusted": false,
+   "key": "Silver Cave entrance HGSS.png:28375"
+  },
+  "MAP_MOUNT_SILVER_CAVE_3F": {
+   "pitch_x": 4.7845,
+   "pitch_y": 6.2935,
+   "origin_x": 12.5,
+   "origin_y": -1.0,
+   "score": 0.6168,
+   "naive_score": 0.5664,
+   "trusted": true,
+   "key": "Silver Cave entrance HGSS.png:28375"
+  },
+  "MAP_MOUNT_SILVER_CAVE_EXPERT_BELT_CHAMBER": {
+   "pitch_x": 16.67,
+   "pitch_y": 12.56,
+   "origin_x": 18.5,
+   "origin_y": 33.0,
+   "score": 2.7104,
+   "naive_score": 0.9935,
+   "trusted": true,
+   "key": "Mt. Silver Expert Belt HGSS.png:14432"
+  },
+  "MAP_MOUNT_SILVER_CAVE_LOWER_MOUNTAINSIDE": {
+   "pitch_x": 9.5344,
+   "pitch_y": 11.73,
+   "origin_x": -5.5,
+   "origin_y": -78.5,
+   "score": 0.2869,
+   "naive_score": 0.0717,
+   "trusted": false,
+   "key": "Mt. Silver Lower Mountainside HGSS.png:122304"
+  },
+  "MAP_MOUNT_SILVER_CAVE_SUMMIT": {
+   "pitch_x": 12.76,
+   "pitch_y": 9.46,
+   "origin_x": 9.5,
+   "origin_y": 13.0,
+   "score": 1.18,
+   "naive_score": 1.0446,
+   "trusted": true,
+   "key": "Mt. Silver Summit HGSS.png:96553"
+  },
+  "MAP_MOUNT_SILVER_CAVE_UPPER_MOUNTAINSIDE": {
+   "pitch_x": 16.02,
+   "pitch_y": 11.65,
+   "origin_x": 1.5,
+   "origin_y": 20.0,
+   "score": 0.6433,
+   "naive_score": 0.305,
+   "trusted": true,
+   "key": "Mt. Silver Upper Mountainside HGSS.png:206022"
+  },
+  "MAP_MOUNT_SILVER_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_MOUNT_SILVER_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_NATIONAL_PARK": {
+   "pitch_x": 15.77,
+   "pitch_y": 11.97,
+   "origin_x": -279.0,
+   "origin_y": -68.0,
+   "score": 0.7411,
+   "naive_score": 0.273,
+   "trusted": true,
+   "key": "National Park HGSS.png:205135"
+  },
+  "MAP_NATIONAL_PARK_UNUSED_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_NEW_BARK": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.27,
+   "origin_x": -11.0,
+   "origin_y": 7.0,
+   "score": 1.8687,
+   "naive_score": 1.5392,
+   "trusted": true,
+   "key": "New Bark Town HGSS.png:47337"
+  },
+  "MAP_NEW_BARK_ELMS_LAB_1F": {
+   "pitch_x": 15.49,
+   "pitch_y": 11.94,
+   "origin_x": -7.5,
+   "origin_y": 17.5,
+   "score": 1.7285,
+   "naive_score": 0.6069,
+   "trusted": true,
+   "key": "Elms lab 1F HGSS (sans PNJ).png:9025"
+  },
+  "MAP_NEW_BARK_ELMS_LAB_2F": {
+   "pitch_x": 16.24,
+   "pitch_y": 12.55,
+   "origin_x": -10.0,
+   "origin_y": 8.5,
+   "score": 1.307,
+   "naive_score": 0.8488,
+   "trusted": true,
+   "key": "Elms lab 2F HGSS.png:8527"
+  },
+  "MAP_NEW_BARK_PLAYER_HOUSE_1F": {
+   "pitch_x": 16.2,
+   "pitch_y": 12.9,
+   "origin_x": 28.5,
+   "origin_y": 7.5,
+   "score": 1.3279,
+   "naive_score": 0.5002,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_NEW_BARK_PLAYER_HOUSE_2F": {
+   "pitch_x": 16.97,
+   "pitch_y": 12.6667,
+   "origin_x": -4.5,
+   "origin_y": 0.0,
+   "score": 1.5606,
+   "naive_score": 1.4007,
+   "trusted": true,
+   "key": "Red House 2F HGSS.png:3566"
+  },
+  "MAP_NEW_BARK_RIVAL_HOUSE_1F": {
+   "pitch_x": 16.2,
+   "pitch_y": 12.9,
+   "origin_x": 28.5,
+   "origin_y": 7.5,
+   "score": 1.3279,
+   "naive_score": 0.5002,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_NEW_BARK_RIVAL_HOUSE_2F": {
+   "pitch_x": 16.97,
+   "pitch_y": 12.6667,
+   "origin_x": -4.5,
+   "origin_y": 0.0,
+   "score": 1.5606,
+   "naive_score": 1.4007,
+   "trusted": true,
+   "key": "Red House 2F HGSS.png:3566"
+  },
+  "MAP_NEW_BARK_SOUTHWEST_HOUSE": {
+   "pitch_x": 15.03,
+   "pitch_y": 15.02,
+   "origin_x": 19.5,
+   "origin_y": 12.5,
+   "score": 1.2694,
+   "naive_score": 0.6824,
+   "trusted": true,
+   "key": "New Bark Southwest House HGSS.png:7375"
+  },
+  "MAP_OLIVINE": {
+   "pitch_x": 2.92,
+   "pitch_y": 5.48,
+   "origin_x": -5.5,
+   "origin_y": -8.5,
+   "score": 0.2591,
+   "naive_score": 0.0606,
+   "trusted": false,
+   "key": "Olivine Gym HGSS.png:13726"
+  },
+  "MAP_OLIVINE_GYM": {
+   "pitch_x": 7.0711,
+   "pitch_y": 12.46,
+   "origin_x": -2.0,
+   "origin_y": -1.0,
+   "score": 0.6477,
+   "naive_score": 0.4313,
+   "trusted": true,
+   "key": "Olivine Gym HGSS.png:13726"
+  },
+  "MAP_OLIVINE_LIGHTHOUSE_1F": {
+   "pitch_x": 15.43,
+   "pitch_y": 12.13,
+   "origin_x": -10.75,
+   "origin_y": 2.25,
+   "score": 0.6338,
+   "naive_score": 0.191,
+   "trusted": true,
+   "key": "Glitter Lighthouse 1F HGSS.png:11049"
+  },
+  "MAP_OLIVINE_LIGHTHOUSE_2F": {
+   "pitch_x": 15.54,
+   "pitch_y": 12.32,
+   "origin_x": -11.0,
+   "origin_y": -23.5,
+   "score": 0.9714,
+   "naive_score": 0.2402,
+   "trusted": true,
+   "key": "Glitter Lighthouse 2F HGSS.png:8974"
+  },
+  "MAP_OLIVINE_LIGHTHOUSE_3F": {
+   "pitch_x": 16.77,
+   "pitch_y": 13.38,
+   "origin_x": -10.75,
+   "origin_y": -22.5,
+   "score": 1.6435,
+   "naive_score": 0.8903,
+   "trusted": true,
+   "key": "Glitter Lighthouse 3F HGSS.png:13375"
+  },
+  "MAP_OLIVINE_LIGHTHOUSE_4F": {
+   "pitch_x": 16.29,
+   "pitch_y": 13.32,
+   "origin_x": -4.75,
+   "origin_y": -9.0,
+   "score": 1.3653,
+   "naive_score": 0.9375,
+   "trusted": true,
+   "key": "Glitter Lighthouse 4F HGSS.png:12025"
+  },
+  "MAP_OLIVINE_LIGHTHOUSE_5F": {
+   "pitch_x": 16.09,
+   "pitch_y": 12.9,
+   "origin_x": -5.25,
+   "origin_y": -1.5,
+   "score": 1.5455,
+   "naive_score": 1.2255,
+   "trusted": true,
+   "key": "Glitter Lighthouse 5F HGSS.png:12943"
+  },
+  "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR": {
+   "pitch_x": 15.5188,
+   "pitch_y": 12.21,
+   "origin_x": -10.5,
+   "origin_y": -7.75,
+   "score": 0.6212,
+   "naive_score": 0.2749,
+   "trusted": true,
+   "key": "Olivine Gym Exterior HGSS screenshot.png:49785"
+  },
+  "MAP_OLIVINE_NORTHEAST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_OLIVINE_NORTHWEST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_OLIVINE_NORTH_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_OLIVINE_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_OLIVINE_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_OLIVINE_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_PALLET": {
+   "pitch_x": 15.9,
+   "pitch_y": 12.78,
+   "origin_x": -37.5,
+   "origin_y": -8.0,
+   "score": 1.6877,
+   "naive_score": 1.0443,
+   "trusted": true,
+   "key": "Pallet Town HGSS.png:37266"
+  },
+  "MAP_PALLET_TOWN_BLUES_HOUSE_1F": {
+   "pitch_x": 32.7338,
+   "pitch_y": 12.06,
+   "origin_x": 4.5,
+   "origin_y": 98.0,
+   "score": 1.1029,
+   "naive_score": 0.8331,
+   "trusted": true,
+   "key": "Pallet Town HGSS.png:37266"
+  },
+  "MAP_PALLET_TOWN_BLUES_HOUSE_2F": {
+   "pitch_x": 15.35,
+   "pitch_y": 11.27,
+   "origin_x": 206.0,
+   "origin_y": 146.5,
+   "score": 1.4257,
+   "naive_score": 0.8207,
+   "trusted": true,
+   "key": "Pallet Town HGSS.png:37266"
+  },
+  "MAP_PALLET_TOWN_OAKS_LAB": {
+   "pitch_x": 16.08,
+   "pitch_y": 12.62,
+   "origin_x": 11.5,
+   "origin_y": 118.5,
+   "score": 0.9579,
+   "naive_score": 0.5183,
+   "trusted": true,
+   "key": "Pallet Town HGSS.png:37266"
+  },
+  "MAP_PALLET_TOWN_REDS_HOUSE_1F": {
+   "pitch_x": 14.93,
+   "pitch_y": 11.27,
+   "origin_x": 207.0,
+   "origin_y": 147.5,
+   "score": 1.2437,
+   "naive_score": 0.7715,
+   "trusted": true,
+   "key": "Pallet Town HGSS.png:37266"
+  },
+  "MAP_PALLET_TOWN_REDS_HOUSE_2F": {
+   "pitch_x": 14.91,
+   "pitch_y": 11.27,
+   "origin_x": 201.0,
+   "origin_y": 146.5,
+   "score": 1.5278,
+   "naive_score": 0.8401,
+   "trusted": true,
+   "key": "Pallet Town HGSS.png:37266"
+  },
+  "MAP_PEWTER": {
+   "pitch_x": 15.88,
+   "pitch_y": 12.48,
+   "origin_x": -39.5,
+   "origin_y": -38.0,
+   "score": 0.5708,
+   "naive_score": 0.368,
+   "trusted": false,
+   "key": "Pewter City HGSS.png:183948"
+  },
+  "MAP_PEWTER_GYM": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.0,
+   "origin_x": 104.0,
+   "origin_y": 35.5,
+   "score": 1.2344,
+   "naive_score": 0.5278,
+   "trusted": true,
+   "key": "Pewter Gym HGSS.png:33255"
+  },
+  "MAP_PEWTER_MUSEUM_OF_SCIENCE": {
+   "pitch_x": 9.7379,
+   "pitch_y": 11.37,
+   "origin_x": 7.5,
+   "origin_y": -30.75,
+   "score": 0.5086,
+   "naive_score": 0.2069,
+   "trusted": false,
+   "key": "Pewter Museum of Science HGSS.png:8653"
+  },
+  "MAP_PEWTER_NORTHEAST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_PEWTER_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_PEWTER_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_PEWTER_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_PEWTER_SOUTHWEST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_POKEATHLON_DOME": {
+   "pitch_x": 15.75,
+   "pitch_y": 5.96,
+   "origin_x": -55.5,
+   "origin_y": -48.5,
+   "score": 0.3644,
+   "naive_score": 0.0357,
+   "trusted": false,
+   "key": "Pokeathlon Dome Interior 1F HGSS.png:42811"
+  },
+  "MAP_POKEATHLON_DOME_INTERIOR_1F": {
+   "pitch_x": 15.96,
+   "pitch_y": 11.83,
+   "origin_x": 30.0,
+   "origin_y": 42.5,
+   "score": 0.7232,
+   "naive_score": 0.1403,
+   "trusted": true,
+   "key": "Pokeathlon Dome Interior 1F HGSS.png:42811"
+  },
+  "MAP_POKEATHLON_DOME_INTERIOR_2F_ENTRANCE": {
+   "pitch_x": 16.45,
+   "pitch_y": 13.4724,
+   "origin_x": -1.25,
+   "origin_y": -9.0,
+   "score": 0.7675,
+   "naive_score": 0.5938,
+   "trusted": true,
+   "key": "Pok\u00e9athlon Dome 2F Entrance HGSS.png:6152"
+  },
+  "MAP_POKEMON_LEAGUE_BRUNO_ROOM": {
+   "pitch_x": 15.45,
+   "pitch_y": 11.59,
+   "origin_x": 74.0,
+   "origin_y": 79.5,
+   "score": 1.0691,
+   "naive_score": 0.5382,
+   "trusted": true,
+   "key": "Bruno Room HGSS.png:33281"
+  },
+  "MAP_POKEMON_LEAGUE_ENTRANCE": {
+   "pitch_x": 16.22,
+   "pitch_y": 12.36,
+   "origin_x": -10.0,
+   "origin_y": -55.5,
+   "score": 0.5513,
+   "naive_score": 0.0722,
+   "trusted": false,
+   "key": "Pokemon League Entrance HGSS.png:13471"
+  },
+  "MAP_POKEMON_LEAGUE_HALL_OF_FAME": {
+   "pitch_x": 16.49,
+   "pitch_y": 12.06,
+   "origin_x": -8.5,
+   "origin_y": -8.0,
+   "score": 1.0334,
+   "naive_score": 0.6362,
+   "trusted": true,
+   "key": "Hall of Fame HGSS.png:25237"
+  },
+  "MAP_POKEMON_LEAGUE_KAREN_ROOM": {
+   "pitch_x": 23.2031,
+   "pitch_y": 11.65,
+   "origin_x": -4.5,
+   "origin_y": -7.5,
+   "score": 0.8297,
+   "naive_score": 0.4998,
+   "trusted": true,
+   "key": "Karen Room HGSS.png:26547"
+  },
+  "MAP_POKEMON_LEAGUE_KOGA_ROOM": {
+   "pitch_x": 24.1323,
+   "pitch_y": 12.12,
+   "origin_x": 6.5,
+   "origin_y": 115.0,
+   "score": 1.2802,
+   "naive_score": 0.8889,
+   "trusted": true,
+   "key": "Koga Room HGSS.png:49474"
+  },
+  "MAP_POKEMON_LEAGUE_LANCE_ROOM": {
+   "pitch_x": 16.43,
+   "pitch_y": 12.27,
+   "origin_x": -17.75,
+   "origin_y": -47.5,
+   "score": 0.4548,
+   "naive_score": 0.0749,
+   "trusted": false,
+   "key": "Pokemon League Entrance HGSS.png:13471"
+  },
+  "MAP_POKEMON_LEAGUE_WILL_ROOM": {
+   "pitch_x": 15.71,
+   "pitch_y": 12.5,
+   "origin_x": 22.5,
+   "origin_y": 57.0,
+   "score": 2.1735,
+   "naive_score": 0.8178,
+   "trusted": true,
+   "key": "Will Room HGSS.png:25747"
+  },
+  "MAP_ROCK_TUNNEL_1F": {
+   "pitch_x": 16.31,
+   "pitch_y": 12.46,
+   "origin_x": -10.5,
+   "origin_y": -8.5,
+   "score": 0.6502,
+   "naive_score": 0.1717,
+   "trusted": true,
+   "key": "Rock Tunnel 2 HGSS.png:127237"
+  },
+  "MAP_ROCK_TUNNEL_B1F": {
+   "pitch_x": 15.83,
+   "pitch_y": 12.46,
+   "origin_x": -10.5,
+   "origin_y": -7.0,
+   "score": 0.892,
+   "naive_score": 0.2116,
+   "trusted": true,
+   "key": "Rock Tunnel 2 HGSS.png:127237"
+  },
+  "MAP_ROUTE_1": {
+   "pitch_x": 15.82,
+   "pitch_y": 12.79,
+   "origin_x": -22.5,
+   "origin_y": 82.5,
+   "score": 1.4221,
+   "naive_score": 0.6213,
+   "trusted": true,
+   "key": "Kanto Route 1 HGSS.png:89769"
+  },
+  "MAP_ROUTE_10": {
+   "pitch_x": 15.63,
+   "pitch_y": 11.65,
+   "origin_x": 10.0,
+   "origin_y": 148.0,
+   "score": 1.183,
+   "naive_score": 0.3798,
+   "trusted": true,
+   "key": "Kanto Route 10 HGSS.png:101380"
+  },
+  "MAP_ROUTE_10_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_ROUTE_10_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_ROUTE_11": {
+   "pitch_x": 16.02,
+   "pitch_y": 16.0,
+   "origin_x": -4.0,
+   "origin_y": -4.0,
+   "score": 1.2717,
+   "naive_score": 1.1715,
+   "trusted": true,
+   "key": "Kanto Route 11 HGSS.png:84115"
+  },
+  "MAP_ROUTE_12": {
+   "pitch_x": 15.92,
+   "pitch_y": 15.9842,
+   "origin_x": 2.0,
+   "origin_y": 8.0,
+   "score": 1.1412,
+   "naive_score": 1.0979,
+   "trusted": true,
+   "key": "Kanto Route 12 HGSS.png:191007"
+  },
+  "MAP_ROUTE_12_FISHING_BROTHER_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_ROUTE_13": {
+   "pitch_x": 16.0,
+   "pitch_y": 15.96,
+   "origin_x": -0.5,
+   "origin_y": 4.5,
+   "score": 1.4195,
+   "naive_score": 1.3,
+   "trusted": true,
+   "key": "Kanto Route 13 HGSS.png:92860"
+  },
+  "MAP_ROUTE_14": {
+   "pitch_x": 16.53,
+   "pitch_y": 16.42,
+   "origin_x": -7.5,
+   "origin_y": -19.5,
+   "score": 1.4604,
+   "naive_score": 1.1917,
+   "trusted": true,
+   "key": "Kanto Route 14 HGSS.png:107665"
+  },
+  "MAP_ROUTE_15": {
+   "pitch_x": 16.0,
+   "pitch_y": 16.18,
+   "origin_x": 1.0,
+   "origin_y": 0.0,
+   "score": 2.1266,
+   "naive_score": 1.8165,
+   "trusted": true,
+   "key": "Kanto Route 15 HGSS.png:75582"
+  },
+  "MAP_ROUTE_15_FUCHSIA_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_16": {
+   "pitch_x": 15.77,
+   "pitch_y": 15.355,
+   "origin_x": 4.0,
+   "origin_y": -3.5,
+   "score": 1.8348,
+   "naive_score": 0.3569,
+   "trusted": true,
+   "key": "Kanto Route 16 HGSS.png:95345"
+  },
+  "MAP_ROUTE_16_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_16_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_ROUTE_17": {
+   "pitch_x": 15.9,
+   "pitch_y": 12.52,
+   "origin_x": 9.0,
+   "origin_y": 109.5,
+   "score": 1.1074,
+   "naive_score": 0.8151,
+   "trusted": true,
+   "key": "Kanto Route 17 HGSS.png:230458"
+  },
+  "MAP_ROUTE_18": {
+   "pitch_x": 15.41,
+   "pitch_y": 12.68,
+   "origin_x": -8.0,
+   "origin_y": 39.5,
+   "score": 1.7013,
+   "naive_score": 1.0543,
+   "trusted": true,
+   "key": "Kanto Route 18 HGSS.png:77827"
+  },
+  "MAP_ROUTE_18_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_19": {
+   "pitch_x": 15.87,
+   "pitch_y": 15.8,
+   "origin_x": 3.0,
+   "origin_y": 8.5,
+   "score": 1.9072,
+   "naive_score": 1.7872,
+   "trusted": true,
+   "key": "Kanto Route 19 HGSS.png:106028"
+  },
+  "MAP_ROUTE_19_FUCHSIA_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_19_ROUTE_12_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_2": {
+   "pitch_x": 15.83,
+   "pitch_y": 12.66,
+   "origin_x": 3.0,
+   "origin_y": 1076.5,
+   "score": 1.0553,
+   "naive_score": 0.4733,
+   "trusted": true,
+   "key": "Kanto Route 2 HGSS.png:132385"
+  },
+  "MAP_ROUTE_20": {
+   "pitch_x": 16.0,
+   "pitch_y": 15.6,
+   "origin_x": 0.5,
+   "origin_y": 7.0,
+   "score": 1.7065,
+   "naive_score": 1.5481,
+   "trusted": true,
+   "key": "Kanto Route 20 HGSS.png:149060"
+  },
+  "MAP_ROUTE_21": {
+   "pitch_x": 16.0,
+   "pitch_y": 16.04,
+   "origin_x": -0.5,
+   "origin_y": -6.5,
+   "score": 1.5421,
+   "naive_score": 1.4252,
+   "trusted": true,
+   "key": "Kanto Route 21 HGSS.png:141105"
+  },
+  "MAP_ROUTE_22": {
+   "pitch_x": 15.96,
+   "pitch_y": 16.015,
+   "origin_x": 3.0,
+   "origin_y": 1.5,
+   "score": 1.1449,
+   "naive_score": 0.9939,
+   "trusted": true,
+   "key": "Kanto Route 22 HGSS.png:97152"
+  },
+  "MAP_ROUTE_22_POKEMON_LEAGUE_RECEPTION_GATE": {
+   "pitch_x": 15.89,
+   "pitch_y": 12.38,
+   "origin_x": -5.75,
+   "origin_y": -4.0,
+   "score": 2.4983,
+   "naive_score": 2.176,
+   "trusted": true,
+   "key": "Pok\u00e9mon League Reception Gate HGSS.png:13471"
+  },
+  "MAP_ROUTE_24": {
+   "pitch_x": 16.39,
+   "pitch_y": 11.83,
+   "origin_x": -6.5,
+   "origin_y": 11.5,
+   "score": 1.0762,
+   "naive_score": 0.976,
+   "trusted": true,
+   "key": "Kanto Route 24 HGSS.png:63669"
+  },
+  "MAP_ROUTE_25": {
+   "pitch_x": 16.02,
+   "pitch_y": 12.14,
+   "origin_x": 91.5,
+   "origin_y": 22.5,
+   "score": 0.9932,
+   "naive_score": 0.5611,
+   "trusted": true,
+   "key": "Kanto Route 25 HGSS.png:166197"
+  },
+  "MAP_ROUTE_26": {
+   "pitch_x": 15.96,
+   "pitch_y": 16.4469,
+   "origin_x": 0.5,
+   "origin_y": 15.0,
+   "score": 1.067,
+   "naive_score": 0.9962,
+   "trusted": true,
+   "key": "Kanto Route 26 HGSS.png:275777"
+  },
+  "MAP_ROUTE_26_NORTH_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_ROUTE_26_WEEK_SIBLINGS_HOUSE": {
+   "pitch_x": 15.81,
+   "pitch_y": 12.38,
+   "origin_x": 0.5,
+   "origin_y": -16.5,
+   "score": 1.1892,
+   "naive_score": 0.4175,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_ROUTE_27": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.0,
+   "origin_x": 56.0,
+   "origin_y": 80.0,
+   "score": 1.5423,
+   "naive_score": 0.9438,
+   "trusted": true,
+   "key": "Kanto Route 27 HGSS.png:371537"
+  },
+  "MAP_ROUTE_27_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_ROUTE_28": {
+   "pitch_x": 15.96,
+   "pitch_y": 12.17,
+   "origin_x": 2.0,
+   "origin_y": 81.5,
+   "score": 0.9203,
+   "naive_score": 0.4036,
+   "trusted": true,
+   "key": "Kanto Route 28 HGSS.png:121936"
+  },
+  "MAP_ROUTE_28_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_ROUTE_29": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.06,
+   "origin_x": 23.0,
+   "origin_y": 80.0,
+   "score": 1.9118,
+   "naive_score": 0.8246,
+   "trusted": true,
+   "key": "Johto Route 29 HGSS.png:127137"
+  },
+  "MAP_ROUTE_29_ROUTE_46_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_2_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_ROUTE_2_SOUTHEAST_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_2_VIRIDIAN_FOREST_NORTH_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_2_VIRIDIAN_FOREST_SOUTH_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_3": {
+   "pitch_x": 16.08,
+   "pitch_y": 15.5875,
+   "origin_x": -1.5,
+   "origin_y": 24.5,
+   "score": 1.0966,
+   "naive_score": 0.7674,
+   "trusted": true,
+   "key": "Kanto Route 3 HGSS.png:134516"
+  },
+  "MAP_ROUTE_30": {
+   "pitch_x": 15.85,
+   "pitch_y": 12.4583,
+   "origin_x": 58.0,
+   "origin_y": 8.0,
+   "score": 1.7087,
+   "naive_score": 0.7116,
+   "trusted": true,
+   "key": "Johto Route 30 HGSS.png:263744"
+  },
+  "MAP_ROUTE_30_APRICORN_HOUSE": {
+   "pitch_x": 16.67,
+   "pitch_y": 11.5,
+   "origin_x": -5.75,
+   "origin_y": 4.0,
+   "score": 1.3785,
+   "naive_score": 0.9195,
+   "trusted": true,
+   "key": "Apricorn Man House HGSS.png:8811"
+  },
+  "MAP_ROUTE_30_MR_POKEMON_HOUSE": {
+   "pitch_x": 15.63,
+   "pitch_y": 11.3982,
+   "origin_x": -15.5,
+   "origin_y": 10.5,
+   "score": 0.8188,
+   "naive_score": 0.3337,
+   "trusted": true,
+   "key": "Mr Pokemon House HGSS.png:10931"
+  },
+  "MAP_ROUTE_31": {
+   "pitch_x": 16.0,
+   "pitch_y": 11.19,
+   "origin_x": -10.0,
+   "origin_y": 60.5,
+   "score": 1.5311,
+   "naive_score": 1.0068,
+   "trusted": true,
+   "key": "Johto Route 31 HGSS.png:133830"
+  },
+  "MAP_ROUTE_31_VIOLET_GATEHOUSE": {
+   "pitch_x": 16.17,
+   "pitch_y": 6.1269,
+   "origin_x": 3.25,
+   "origin_y": -10.0,
+   "score": 0.5517,
+   "naive_score": 0.1182,
+   "trusted": false,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_32": {
+   "pitch_x": 15.95,
+   "pitch_y": 12.52,
+   "origin_x": -9.5,
+   "origin_y": 76.0,
+   "score": 0.9058,
+   "naive_score": 0.4072,
+   "trusted": true,
+   "key": "Johto Route 32 HGSS.png:506291"
+  },
+  "MAP_ROUTE_32_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_ROUTE_32_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_ROUTE_32_RUINS_OF_ALPH_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_33": {
+   "pitch_x": 16.08,
+   "pitch_y": 11.39,
+   "origin_x": -7.5,
+   "origin_y": 30.0,
+   "score": 1.5203,
+   "naive_score": 0.506,
+   "trusted": true,
+   "key": "Johto Route 33 HGSS.png:66018"
+  },
+  "MAP_ROUTE_34": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.29,
+   "origin_x": 20.0,
+   "origin_y": 13.0,
+   "score": 1.3081,
+   "naive_score": 0.8031,
+   "trusted": true,
+   "key": "Johto Route 34 HGSS.png:255520"
+  },
+  "MAP_ROUTE_34_ILEX_FOREST_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_35": {
+   "pitch_x": 15.89,
+   "pitch_y": 12.31,
+   "origin_x": -8.5,
+   "origin_y": -10.5,
+   "score": 1.3515,
+   "naive_score": 0.6943,
+   "trusted": true,
+   "key": "Johto Route 35 HGSS.png:167755"
+  },
+  "MAP_ROUTE_35_GOLDENROD_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_35_NATIONAL_PARK_POKEATHALON_GATEHOUSE": {
+   "pitch_x": 6.8333,
+   "pitch_y": 13.8062,
+   "origin_x": -1.5,
+   "origin_y": -8.0,
+   "score": 0.7292,
+   "naive_score": 0.3233,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_36": {
+   "pitch_x": 16.05,
+   "pitch_y": 12.5,
+   "origin_x": -316.0,
+   "origin_y": 27.0,
+   "score": 1.4062,
+   "naive_score": 0.2971,
+   "trusted": true,
+   "key": "Johto Route 36 HGSS.png:146798"
+  },
+  "MAP_ROUTE_36_NATIONAL_PARK_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_36_RUINS_OF_ALPH_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_37": {
+   "pitch_x": 15.99,
+   "pitch_y": 12.31,
+   "origin_x": 56.0,
+   "origin_y": 49.5,
+   "score": 1.989,
+   "naive_score": 0.5552,
+   "trusted": true,
+   "key": "Johto Route 37 HGSS.png:69746"
+  },
+  "MAP_ROUTE_38": {
+   "pitch_x": 15.94,
+   "pitch_y": 12.74,
+   "origin_x": 4.0,
+   "origin_y": 57.0,
+   "score": 1.4831,
+   "naive_score": 0.7781,
+   "trusted": true,
+   "key": "Johto Route 38 HGSS.png:140449"
+  },
+  "MAP_ROUTE_38_ECRUTEAK_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_39": {
+   "pitch_x": 16.12,
+   "pitch_y": 12.86,
+   "origin_x": 81.5,
+   "origin_y": 80.0,
+   "score": 1.493,
+   "naive_score": 0.7796,
+   "trusted": true,
+   "key": "Johto Route 39 HGSS.png:144015"
+  },
+  "MAP_ROUTE_39_MOOMOO_FARM_HOUSE": {
+   "pitch_x": 15.67,
+   "pitch_y": 12.48,
+   "origin_x": -10.5,
+   "origin_y": -2.0,
+   "score": 1.283,
+   "naive_score": 0.9523,
+   "trusted": true,
+   "key": "MooMoo Farm House HGSS.png:6973"
+  },
+  "MAP_ROUTE_3_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_ROUTE_3_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_ROUTE_4": {
+   "pitch_x": 16.0,
+   "pitch_y": 16.26,
+   "origin_x": 3.5,
+   "origin_y": 1.5,
+   "score": 1.8357,
+   "naive_score": 1.5005,
+   "trusted": true,
+   "key": "Kanto Route 4 HGSS.png:120351"
+  },
+  "MAP_ROUTE_40": {
+   "pitch_x": 15.51,
+   "pitch_y": 11.77,
+   "origin_x": -10.5,
+   "origin_y": 16.0,
+   "score": 1.2233,
+   "naive_score": 0.7817,
+   "trusted": true,
+   "key": "Johto Route 40 HGSS.png:119574"
+  },
+  "MAP_ROUTE_40_BATTLE_FRONTIER_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_41": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.25,
+   "origin_x": 9.0,
+   "origin_y": 17.0,
+   "score": 1.4604,
+   "naive_score": 0.9077,
+   "trusted": true,
+   "key": "Johto Route 41 HGSS.png:262328"
+  },
+  "MAP_ROUTE_42": {
+   "pitch_x": 16.01,
+   "pitch_y": 11.45,
+   "origin_x": -43.0,
+   "origin_y": 43.0,
+   "score": 1.2027,
+   "naive_score": 0.49,
+   "trusted": true,
+   "key": "Johto Route 42 HGSS.png:161292"
+  },
+  "MAP_ROUTE_42_ECRUTEAK_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_43": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.38,
+   "origin_x": 25.0,
+   "origin_y": 25.5,
+   "score": 1.3108,
+   "naive_score": 0.6009,
+   "trusted": true,
+   "key": "Johto Route 43 HGSS.png:222660"
+  },
+  "MAP_ROUTE_43_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_43_MAHOGANY_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_44": {
+   "pitch_x": 16.02,
+   "pitch_y": 12.48,
+   "origin_x": -7.0,
+   "origin_y": 59.5,
+   "score": 1.2563,
+   "naive_score": 0.7441,
+   "trusted": true,
+   "key": "Johto Route 44 HGSS.png:202345"
+  },
+  "MAP_ROUTE_45": {
+   "pitch_x": 15.9687,
+   "pitch_y": 12.64,
+   "origin_x": 2.5,
+   "origin_y": 6.0,
+   "score": 1.0081,
+   "naive_score": 0.7006,
+   "trusted": true,
+   "key": "Johto Route 45 HGSS.png:480312"
+  },
+  "MAP_ROUTE_46": {
+   "pitch_x": 16.06,
+   "pitch_y": 12.56,
+   "origin_x": 68.0,
+   "origin_y": -13.0,
+   "score": 1.4355,
+   "naive_score": 0.713,
+   "trusted": true,
+   "key": "Johto Route 46 HGSS.png:157608"
+  },
+  "MAP_ROUTE_47": {
+   "pitch_x": 16.04,
+   "pitch_y": 12.04,
+   "origin_x": -97.0,
+   "origin_y": 184.5,
+   "score": 1.2496,
+   "naive_score": 0.9503,
+   "trusted": true,
+   "key": "Johto Route 47 HGSS.png:355279"
+  },
+  "MAP_ROUTE_48": {
+   "pitch_x": 15.69,
+   "pitch_y": 12.39,
+   "origin_x": -25.5,
+   "origin_y": 109.5,
+   "score": 0.9327,
+   "naive_score": 0.4867,
+   "trusted": true,
+   "key": "Johto Route 48 HGSS.png:95579"
+  },
+  "MAP_ROUTE_5": {
+   "pitch_x": 16.35,
+   "pitch_y": 11.61,
+   "origin_x": -10.5,
+   "origin_y": 98.0,
+   "score": 1.4643,
+   "naive_score": 1.396,
+   "trusted": true,
+   "key": "Kanto Route 5 HGSS.png:56519"
+  },
+  "MAP_ROUTE_5_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_ROUTE_5_SAFFRON_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_5_UNDERGROUND_PATH": {
+   "pitch_x": 15.47,
+   "pitch_y": 11.03,
+   "origin_x": -10.0,
+   "origin_y": 19.5,
+   "score": 2.9805,
+   "naive_score": 2.0368,
+   "trusted": true,
+   "key": "Underground Path 5-6 HGSS.png:14151"
+  },
+  "MAP_ROUTE_6": {
+   "pitch_x": 15.8,
+   "pitch_y": 15.86,
+   "origin_x": -42.5,
+   "origin_y": 4.5,
+   "score": 0.9167,
+   "naive_score": 0.6293,
+   "trusted": true,
+   "key": "Kanto Route 6 HGSS.png:39641"
+  },
+  "MAP_ROUTE_6_SAFFRON_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_6_UNDERGROUND_PATH_GATE": {
+   "pitch_x": 15.39,
+   "pitch_y": 10.93,
+   "origin_x": -87.25,
+   "origin_y": 44.0,
+   "score": 1.0655,
+   "naive_score": 0.2152,
+   "trusted": true,
+   "key": "Underground Path 5-6 HGSS.png:14151"
+  },
+  "MAP_ROUTE_7": {
+   "pitch_x": 15.95,
+   "pitch_y": 15.9675,
+   "origin_x": 3.0,
+   "origin_y": 2.0,
+   "score": 1.478,
+   "naive_score": 1.3912,
+   "trusted": true,
+   "key": "Kanto Route 7 HGSS.png:49259"
+  },
+  "MAP_ROUTE_7_SAFFRON_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_8": {
+   "pitch_x": 15.98,
+   "pitch_y": 12.18,
+   "origin_x": 60.0,
+   "origin_y": -56.5,
+   "score": 0.9605,
+   "naive_score": 0.5955,
+   "trusted": true,
+   "key": "Kanto Route 8 HGSS.png:82643"
+  },
+  "MAP_ROUTE_8_SAFFRON_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_ROUTE_9": {
+   "pitch_x": 16.02,
+   "pitch_y": 16.2275,
+   "origin_x": 3.0,
+   "origin_y": -6.5,
+   "score": 1.2456,
+   "naive_score": 1.0833,
+   "trusted": true,
+   "key": "Kanto Route 9 HGSS.png:136805"
+  },
+  "MAP_RUINS_OF_ALPH": {
+   "pitch_x": 7.7,
+   "pitch_y": 2.64,
+   "origin_x": -4.5,
+   "origin_y": -4.0,
+   "score": 0.2135,
+   "naive_score": 0.1581,
+   "trusted": false,
+   "key": "HGSS Ruins of Alph-Day.png:11525"
+  },
+  "MAP_RUINS_OF_ALPH_HALL_ENTRANCE": {
+   "pitch_x": 7.1,
+   "pitch_y": 6.46,
+   "origin_x": 35.0,
+   "origin_y": -40.5,
+   "score": 0.8194,
+   "naive_score": 0.0408,
+   "trusted": true,
+   "key": "Ruins of Alph Entrance HGSS.png:10675"
+  },
+  "MAP_RUINS_OF_ALPH_NORTHEAST_ENTRANCE_FIRST_ROOM": {
+   "pitch_x": 17.7733,
+   "pitch_y": 9.8253,
+   "origin_x": -12.5,
+   "origin_y": -6.5,
+   "score": 1.6362,
+   "naive_score": 0.9748,
+   "trusted": true,
+   "key": "Ruins of Alph Entrance HGSS.png:10675"
+  },
+  "MAP_RUINS_OF_ALPH_NORTHEAST_ENTRANCE_SECOND_ROOM": {
+   "pitch_x": 18.0333,
+   "pitch_y": 10.0453,
+   "origin_x": -13.5,
+   "origin_y": -6.0,
+   "score": 2.5801,
+   "naive_score": 1.5327,
+   "trusted": true,
+   "key": "Ruins of Alph Entrance HGSS.png:10675"
+  },
+  "MAP_RUINS_OF_ALPH_NORTHWEST_ENTRANCE_FIRST_ROOM": {
+   "pitch_x": 17.7733,
+   "pitch_y": 9.8253,
+   "origin_x": -12.5,
+   "origin_y": -6.5,
+   "score": 1.6362,
+   "naive_score": 0.9748,
+   "trusted": true,
+   "key": "Ruins of Alph Entrance HGSS.png:10675"
+  },
+  "MAP_RUINS_OF_ALPH_NORTHWEST_ENTRANCE_SECOND_ROOM": {
+   "pitch_x": 18.0333,
+   "pitch_y": 10.0453,
+   "origin_x": -13.5,
+   "origin_y": -6.0,
+   "score": 2.5801,
+   "naive_score": 1.5327,
+   "trusted": true,
+   "key": "Ruins of Alph Entrance HGSS.png:10675"
+  },
+  "MAP_RUINS_OF_ALPH_RESEARCH_CENTER": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.37,
+   "origin_x": -11.75,
+   "origin_y": -12.5,
+   "score": 0.9953,
+   "naive_score": 0.568,
+   "trusted": true,
+   "key": "Ruins of Alph Research Center HGSS.png:7384"
+  },
+  "MAP_RUINS_OF_ALPH_SOUTHEAST_ENTRANCE_FIRST_ROOM": {
+   "pitch_x": 17.7733,
+   "pitch_y": 9.8253,
+   "origin_x": -12.5,
+   "origin_y": -6.5,
+   "score": 1.6362,
+   "naive_score": 0.9748,
+   "trusted": true,
+   "key": "Ruins of Alph Entrance HGSS.png:10675"
+  },
+  "MAP_RUINS_OF_ALPH_SOUTHEAST_ENTRANCE_SECOND_ROOM": {
+   "pitch_x": 18.0333,
+   "pitch_y": 10.0453,
+   "origin_x": -13.5,
+   "origin_y": -6.0,
+   "score": 2.5801,
+   "naive_score": 1.5327,
+   "trusted": true,
+   "key": "Ruins of Alph Entrance HGSS.png:10675"
+  },
+  "MAP_RUINS_OF_ALPH_SOUTHWEST_ENTRANCE_FIRST_ROOM": {
+   "pitch_x": 17.7733,
+   "pitch_y": 9.8253,
+   "origin_x": -12.5,
+   "origin_y": -6.5,
+   "score": 1.6362,
+   "naive_score": 0.9748,
+   "trusted": true,
+   "key": "Ruins of Alph Entrance HGSS.png:10675"
+  },
+  "MAP_RUINS_OF_ALPH_SOUTHWEST_ENTRANCE_SECOND_ROOM": {
+   "pitch_x": 18.0333,
+   "pitch_y": 10.0453,
+   "origin_x": -13.5,
+   "origin_y": -6.0,
+   "score": 2.5801,
+   "naive_score": 1.5327,
+   "trusted": true,
+   "key": "Ruins of Alph Entrance HGSS.png:10675"
+  },
+  "MAP_SAFARI_ZONE_ENTRANCE_EXTERIOR": {
+   "pitch_x": 1.0,
+   "pitch_y": 1.5,
+   "origin_x": 11.0,
+   "origin_y": -15.5,
+   "score": 0.8244,
+   "naive_score": 0.4338,
+   "trusted": true,
+   "key": "Johto Safari Zone HGSS.png:9042"
+  },
+  "MAP_SAFARI_ZONE_ENTRANCE_INTERIOR": {
+   "pitch_x": 7.68,
+   "pitch_y": 12.2,
+   "origin_x": -2.5,
+   "origin_y": -20.5,
+   "score": 0.5926,
+   "naive_score": 0.4339,
+   "trusted": false,
+   "key": "Johto Safari Zone HGSS.png:9042"
+  },
+  "MAP_SAFARI_ZONE_GATE": {
+   "pitch_x": 10.3544,
+   "pitch_y": 7.2775,
+   "origin_x": -6.5,
+   "origin_y": 15.5,
+   "score": 0.3519,
+   "naive_score": 0.278,
+   "trusted": false,
+   "key": "Safari Zone Gate.png:86839"
+  },
+  "MAP_SAFARI_ZONE_GATE_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_SAFARI_ZONE_GATE_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_SAFFRON": {
+   "pitch_x": 8.1194,
+   "pitch_y": 5.7587,
+   "origin_x": 5.0,
+   "origin_y": -4.0,
+   "score": 0.2824,
+   "naive_score": 0.1167,
+   "trusted": false,
+   "key": "Saffron Gym HGSS.png:39299"
+  },
+  "MAP_SAFFRON_COPYCAT_HOUSE_1F": {
+   "pitch_x": 16.07,
+   "pitch_y": 11.65,
+   "origin_x": -7.25,
+   "origin_y": 6.5,
+   "score": 1.74,
+   "naive_score": 0.7228,
+   "trusted": true,
+   "key": "Copycat House 1F HGSS.png:8029"
+  },
+  "MAP_SAFFRON_COPYCAT_HOUSE_2F": {
+   "pitch_x": 13.8067,
+   "pitch_y": 11.91,
+   "origin_x": 8.5,
+   "origin_y": -3.25,
+   "score": 0.807,
+   "naive_score": 0.6132,
+   "trusted": true,
+   "key": "Copycat House 2F HGSS.png:7100"
+  },
+  "MAP_SAFFRON_FIGHTING_DOJO": {
+   "pitch_x": 17.7867,
+   "pitch_y": 12.74,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 2.0272,
+   "naive_score": 1.47,
+   "trusted": true,
+   "key": "Fighting Dojo HGSS.png:13421"
+  },
+  "MAP_SAFFRON_GYM": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.27,
+   "origin_x": -0.5,
+   "origin_y": 6.5,
+   "score": 2.0732,
+   "naive_score": 0.6211,
+   "trusted": true,
+   "key": "Saffron Gym HGSS.png:39299"
+  },
+  "MAP_SAFFRON_MR_PSYCHIC_HOUSE": {
+   "pitch_x": 15.31,
+   "pitch_y": 11.5,
+   "origin_x": 4.25,
+   "origin_y": 4.0,
+   "score": 1.3866,
+   "naive_score": 0.9866,
+   "trusted": true,
+   "key": "Mr Psychic House HGSS.png:6566"
+  },
+  "MAP_SAFFRON_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_SAFFRON_POKECENTER_2F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_SAFFRON_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_SAFFRON_SILPH_CO_ELEVATOR": {
+   "pitch_x": 23.72,
+   "pitch_y": 12.25,
+   "origin_x": 1.5,
+   "origin_y": 73.5,
+   "score": 1.8924,
+   "naive_score": 0.6749,
+   "trusted": true,
+   "key": "Silph Co HGSS.png:3140"
+  },
+  "MAP_SAFFRON_SILPH_CO_HQ": {
+   "pitch_x": 6.36,
+   "pitch_y": 12.78,
+   "origin_x": 5.5,
+   "origin_y": -21.5,
+   "score": 0.7165,
+   "naive_score": 0.1711,
+   "trusted": true,
+   "key": "Silph Co HGSS.png:3140"
+  },
+  "MAP_SEAFOAM_ISLANDS_1F": {
+   "pitch_x": 9.5381,
+   "pitch_y": 8.5968,
+   "origin_x": -3.5,
+   "origin_y": -6.0,
+   "score": 0.2663,
+   "naive_score": 0.1619,
+   "trusted": false,
+   "key": "Seafoam Islands 1F HGSS.png:149655"
+  },
+  "MAP_SEAFOAM_ISLANDS_B1F": {
+   "pitch_x": 16.08,
+   "pitch_y": 12.04,
+   "origin_x": 29.5,
+   "origin_y": 44.0,
+   "score": 1.1562,
+   "naive_score": 0.0405,
+   "trusted": true,
+   "key": "Seafoam Islands B1F HGSS.png:96101"
+  },
+  "MAP_SEAFOAM_ISLANDS_B2F": {
+   "pitch_x": 16.13,
+   "pitch_y": 12.64,
+   "origin_x": 3.0,
+   "origin_y": 20.5,
+   "score": 0.9979,
+   "naive_score": 0.3073,
+   "trusted": true,
+   "key": "Seafoam Islands B2F HGSS.png:120716"
+  },
+  "MAP_SEAFOAM_ISLANDS_B3F": {
+   "pitch_x": 16.15,
+   "pitch_y": 12.78,
+   "origin_x": 27.5,
+   "origin_y": 18.5,
+   "score": 1.0843,
+   "naive_score": 0.0434,
+   "trusted": true,
+   "key": "Seafoam Islands B3F HGSS.png:110457"
+  },
+  "MAP_SEAFOAM_ISLANDS_B4F": {
+   "pitch_x": 15.83,
+   "pitch_y": 11.71,
+   "origin_x": 10.5,
+   "origin_y": 55.0,
+   "score": 0.7343,
+   "naive_score": 0.3034,
+   "trusted": true,
+   "key": "Seafoam Islands B4F HGSS.png:108383"
+  },
+  "MAP_SEAFOAM_ISLANDS_CINNABAR_GYM": {
+   "pitch_x": 15.75,
+   "pitch_y": 12.82,
+   "origin_x": -4.5,
+   "origin_y": -21.5,
+   "score": 0.9863,
+   "naive_score": 0.4286,
+   "trusted": true,
+   "key": "Cinnabar Gym HGSS.png:24965"
+  },
+  "MAP_SLOWPOKE_WELL_B1F": {
+   "pitch_x": 15.72,
+   "pitch_y": 12.29,
+   "origin_x": -199.5,
+   "origin_y": 50.0,
+   "score": 0.6881,
+   "naive_score": 0.094,
+   "trusted": true,
+   "key": "Slowpoke Well B1F HGSS.png:86950"
+  },
+  "MAP_SLOWPOKE_WELL_B2F": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.84,
+   "origin_x": 31.0,
+   "origin_y": 58.5,
+   "score": 1.0185,
+   "naive_score": 0.6168,
+   "trusted": true,
+   "key": "Slowpoke Well B2F HGSS.png:59110"
+  },
+  "MAP_SLOWPOKE_WELL_ENTRANCE": {
+   "pitch_x": 9.5748,
+   "pitch_y": 13.32,
+   "origin_x": -4.5,
+   "origin_y": 70.5,
+   "score": 1.1952,
+   "naive_score": 0.6236,
+   "trusted": true,
+   "key": "Slowpoke Well entrance HGSS.png:26403"
+  },
+  "MAP_SPROUT_TOWER_1F": {
+   "pitch_x": 16.18,
+   "pitch_y": 11.24,
+   "origin_x": -58.0,
+   "origin_y": -7.5,
+   "score": 1.1115,
+   "naive_score": 0.5422,
+   "trusted": true,
+   "key": "Sprout Tower 1F HGSS.png:27384"
+  },
+  "MAP_SPROUT_TOWER_2F": {
+   "pitch_x": 16.18,
+   "pitch_y": 11.26,
+   "origin_x": -58.0,
+   "origin_y": -7.5,
+   "score": 1.3036,
+   "naive_score": 0.6673,
+   "trusted": true,
+   "key": "Sprout Tower 2F HGSS.png:26197"
+  },
+  "MAP_SPROUT_TOWER_3F": {
+   "pitch_x": 11.84,
+   "pitch_y": 10.76,
+   "origin_x": 9.0,
+   "origin_y": 7.0,
+   "score": 1.5562,
+   "naive_score": 1.3121,
+   "trusted": true,
+   "key": "Sprout Tower 3F HGSS.png:36228"
+  },
+  "MAP_SS_AQUA_1F": {
+   "pitch_x": 16.1,
+   "pitch_y": 14.1143,
+   "origin_x": -3.5,
+   "origin_y": -9.5,
+   "score": 1.6132,
+   "naive_score": 1.3866,
+   "trusted": true,
+   "key": "SS Aqua 1F HGSS.png:26182"
+  },
+  "MAP_SS_AQUA_1F_NORTHEAST_ROOMS": {
+   "pitch_x": 16.69,
+   "pitch_y": 12.78,
+   "origin_x": -11.5,
+   "origin_y": 177.0,
+   "score": 1.5047,
+   "naive_score": 0.1093,
+   "trusted": true,
+   "key": "SS Aqua 1F Rooms HGSS.png:52726"
+  },
+  "MAP_SS_AQUA_1F_NORTHWEST_ROOMS": {
+   "pitch_x": 16.77,
+   "pitch_y": 12.1,
+   "origin_x": -10.5,
+   "origin_y": 177.0,
+   "score": 1.6786,
+   "naive_score": 0.1914,
+   "trusted": true,
+   "key": "SS Aqua 1F Rooms HGSS.png:52726"
+  },
+  "MAP_SS_AQUA_1F_SOUTHEAST_ROOMS": {
+   "pitch_x": 16.43,
+   "pitch_y": 11.35,
+   "origin_x": 458.5,
+   "origin_y": 177.0,
+   "score": 1.5776,
+   "naive_score": 0.1004,
+   "trusted": true,
+   "key": "SS Aqua 1F Rooms HGSS.png:52726"
+  },
+  "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS": {
+   "pitch_x": 16.63,
+   "pitch_y": 11.15,
+   "origin_x": 456.0,
+   "origin_y": 178.5,
+   "score": 1.9293,
+   "naive_score": 0.0544,
+   "trusted": true,
+   "key": "SS Aqua 1F Rooms HGSS.png:52726"
+  },
+  "MAP_SS_AQUA_B1F": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.33,
+   "origin_x": 11.5,
+   "origin_y": -8.0,
+   "score": 1.1423,
+   "naive_score": 0.4304,
+   "trusted": true,
+   "key": "SS Aqua B1F HGSS.png:41826"
+  },
+  "MAP_SS_AQUA_CAPTAIN_ROOM": {
+   "pitch_x": 16.45,
+   "pitch_y": 12.7,
+   "origin_x": -11.5,
+   "origin_y": 5.5,
+   "score": 1.7968,
+   "naive_score": 0.2635,
+   "trusted": true,
+   "key": "SS Aqua Captain Cabin HGSS.png:10436"
+  },
+  "MAP_TOHJO_FALLS": {
+   "pitch_x": 11.1375,
+   "pitch_y": 13.8574,
+   "origin_x": -5.5,
+   "origin_y": -9.5,
+   "score": 0.7419,
+   "naive_score": 0.6003,
+   "trusted": true,
+   "key": "Tohjo Falls HGSS.png:88591"
+  },
+  "MAP_TOHJO_FALLS_HIDDEN_ROOM": {
+   "pitch_x": 17.15,
+   "pitch_y": 13.1138,
+   "origin_x": -7.25,
+   "origin_y": -9.0,
+   "score": 1.715,
+   "naive_score": 0.6438,
+   "trusted": true,
+   "key": "Tohjo Falls Hidden Room HGSS.png:16646"
+  },
+  "MAP_UNION": {
+   "pitch_x": 15.83,
+   "pitch_y": 13.41,
+   "origin_x": -2.25,
+   "origin_y": -3.0,
+   "score": 2.6483,
+   "naive_score": 2.1881,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_UNION_CAVE_1F": {
+   "pitch_x": 16.35,
+   "pitch_y": 12.32,
+   "origin_x": 11.0,
+   "origin_y": -242.0,
+   "score": 0.9838,
+   "naive_score": 0.0604,
+   "trusted": true,
+   "key": "Union Cave 1F HGSS.png:152954"
+  },
+  "MAP_UNION_CAVE_B1F": {
+   "pitch_x": 16.37,
+   "pitch_y": 12.48,
+   "origin_x": 25.0,
+   "origin_y": 17.5,
+   "score": 1.5771,
+   "naive_score": 0.6487,
+   "trusted": true,
+   "key": "Union Cave B1F HGSS.png:109672"
+  },
+  "MAP_UNION_CAVE_B2F": {
+   "pitch_x": 16.35,
+   "pitch_y": 12.01,
+   "origin_x": 27.0,
+   "origin_y": -430.5,
+   "score": 0.7117,
+   "naive_score": 0.0922,
+   "trusted": true,
+   "key": "Union Cave B2F HGSS.png:118844"
+  },
+  "MAP_VERMILION": {
+   "pitch_x": 3.27,
+   "pitch_y": 4.45,
+   "origin_x": 7.0,
+   "origin_y": -0.5,
+   "score": 0.3648,
+   "naive_score": 0.1933,
+   "trusted": false,
+   "key": "Vermilion Gym HGSS.png:7548"
+  },
+  "MAP_VERMILION_CENTRAL_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_VERMILION_FISHING_DUDE_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_VERMILION_GYM": {
+   "pitch_x": 17.15,
+   "pitch_y": 12.48,
+   "origin_x": -8.25,
+   "origin_y": 10.5,
+   "score": 1.5513,
+   "naive_score": 1.0866,
+   "trusted": true,
+   "key": "Vermilion Gym HGSS.png:7548"
+  },
+  "MAP_VERMILION_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_VERMILION_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_VERMILION_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_VERMILION_POKEMON_FAN_CLUB": {
+   "pitch_x": 3.7824,
+   "pitch_y": 5.48,
+   "origin_x": 0.0,
+   "origin_y": -1.0,
+   "score": 0.8892,
+   "naive_score": 0.5861,
+   "trusted": true,
+   "key": "Pok\u00e9mon Fan Club HGSS.png:1283"
+  },
+  "MAP_VERMILION_SOUTH_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_VICTORY_ROAD_1F": {
+   "pitch_x": 14.91,
+   "pitch_y": 12.6,
+   "origin_x": -125.75,
+   "origin_y": -2.0,
+   "score": 0.9373,
+   "naive_score": 0.3183,
+   "trusted": true,
+   "key": "Victory Road 1F HGSS.png:143999"
+  },
+  "MAP_VICTORY_ROAD_2F": {
+   "pitch_x": 15.94,
+   "pitch_y": 12.27,
+   "origin_x": 37.5,
+   "origin_y": -57.0,
+   "score": 0.5285,
+   "naive_score": 0.0197,
+   "trusted": false,
+   "key": "Victory Road 2F HGSS.png:140521"
+  },
+  "MAP_VICTORY_ROAD_3F": {
+   "pitch_x": 16.19,
+   "pitch_y": 11.76,
+   "origin_x": -0.5,
+   "origin_y": -66.5,
+   "score": 1.1311,
+   "naive_score": 0.2521,
+   "trusted": true,
+   "key": "Victory Road 3F HGSS.png:159328"
+  },
+  "MAP_VIOLET": {
+   "pitch_x": 16.0,
+   "pitch_y": 18.0,
+   "origin_x": 0.0,
+   "origin_y": 12.5,
+   "score": 1.1828,
+   "naive_score": 1.0591,
+   "trusted": true,
+   "key": "Violet City HGSS.png:193011"
+  },
+  "MAP_VIOLET_BELLSPROUT_ONYX_TRADE_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_VIOLET_GYM": {
+   "pitch_x": 15.11,
+   "pitch_y": 12.18,
+   "origin_x": -15.0,
+   "origin_y": 44.0,
+   "score": 0.4729,
+   "naive_score": 0.0836,
+   "trusted": false,
+   "key": "Violet Gym HGSS.png:16990"
+  },
+  "MAP_VIOLET_NORTHWEST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0938,
+   "naive_score": 0.5333,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_VIOLET_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_VIOLET_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_VIOLET_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_VIOLET_ROUTE_36_GATEHOUSE": {
+   "pitch_x": 16.21,
+   "pitch_y": 12.19,
+   "origin_x": 15.5,
+   "origin_y": 26.5,
+   "score": 1.0615,
+   "naive_score": 0.4471,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_VIRIDIAN": {
+   "pitch_x": 15.83,
+   "pitch_y": 12.62,
+   "origin_x": -41.0,
+   "origin_y": 102.0,
+   "score": 0.1962,
+   "naive_score": 0.0702,
+   "trusted": false,
+   "key": "Viridian Forest HGSS.png:216384"
+  },
+  "MAP_VIRIDIAN_FOREST": {
+   "pitch_x": 16.0,
+   "pitch_y": 12.58,
+   "origin_x": -80.0,
+   "origin_y": -42.0,
+   "score": 0.3412,
+   "naive_score": 0.1559,
+   "trusted": false,
+   "key": "Viridian Forest HGSS.png:216384"
+  },
+  "MAP_VIRIDIAN_GYM": {
+   "pitch_x": 16.43,
+   "pitch_y": 11.65,
+   "origin_x": 34.5,
+   "origin_y": -5.0,
+   "score": 0.7758,
+   "naive_score": 0.2172,
+   "trusted": true,
+   "key": "Viridian Gym HGSS.png:45985"
+  },
+  "MAP_VIRIDIAN_NORTHEAST_HOUSE": {
+   "pitch_x": 16.29,
+   "pitch_y": 11.9,
+   "origin_x": 31.5,
+   "origin_y": 40.5,
+   "score": 1.0956,
+   "naive_score": 0.4966,
+   "trusted": true,
+   "key": "Player House 1F HGSS.png:11104"
+  },
+  "MAP_VIRIDIAN_POKECENTER_1F": {
+   "pitch_x": 16.29,
+   "pitch_y": 14.6029,
+   "origin_x": -9.75,
+   "origin_y": -9.5,
+   "score": 1.3419,
+   "naive_score": 0.9278,
+   "trusted": true,
+   "key": "Pok\u00e9mon Center inside HGSS.png:18568"
+  },
+  "MAP_VIRIDIAN_POKECENTER_B1F": {
+   "pitch_x": 15.6188,
+   "pitch_y": 15.2914,
+   "origin_x": 1.0,
+   "origin_y": -4.0,
+   "score": 1.6399,
+   "naive_score": 1.3949,
+   "trusted": true,
+   "key": "Union Room HGSS.png:2274"
+  },
+  "MAP_VIRIDIAN_POKEMART": {
+   "pitch_x": 16.8371,
+   "pitch_y": 13.5415,
+   "origin_x": -8.0,
+   "origin_y": 1.5,
+   "score": 1.3579,
+   "naive_score": 1.1539,
+   "trusted": true,
+   "key": "Pok\u00e9 Mart interior HGSS.png:10479"
+  },
+  "MAP_VIRIDIAN_ROUTE_1_GATEHOUSE": {
+   "pitch_x": 19.7145,
+   "pitch_y": 13.7371,
+   "origin_x": -2.0,
+   "origin_y": -8.5,
+   "score": 1.0538,
+   "naive_score": 0.6556,
+   "trusted": true,
+   "key": "Gate inside HGSS.png:8154"
+  },
+  "MAP_VIRIDIAN_TRAINER_HOUSE_1F": {
+   "pitch_x": 15.55,
+   "pitch_y": 12.27,
+   "origin_x": 3.25,
+   "origin_y": 7.0,
+   "score": 1.3688,
+   "naive_score": 0.3911,
+   "trusted": true,
+   "key": "Trainer House 1F HGSS.png:13390"
+  },
+  "MAP_VIRIDIAN_TRAINER_HOUSE_B1F": {
+   "pitch_x": 15.63,
+   "pitch_y": 12.6,
+   "origin_x": 2.25,
+   "origin_y": 8.0,
+   "score": 1.4604,
+   "naive_score": 0.5252,
+   "trusted": true,
+   "key": "Trainer House B1F HGSS.png:10604"
+  },
+  "MAP_WHIRL_ISLANDS_1F": {
+   "pitch_x": 7.2767,
+   "pitch_y": 4.9516,
+   "origin_x": -1.5,
+   "origin_y": -8.0,
+   "score": 0.3563,
+   "naive_score": 0.1507,
+   "trusted": false,
+   "key": "Whirl Islands 1F NE HGSS.png:28410"
+  },
+  "MAP_WHIRL_ISLANDS_B1F": {
+   "pitch_x": 15.89,
+   "pitch_y": 12.02,
+   "origin_x": -194.75,
+   "origin_y": -8.0,
+   "score": 0.8183,
+   "naive_score": 0.0395,
+   "trusted": true,
+   "key": "Whirl Islands B1F HGSS.png:119225"
+  },
+  "MAP_WHIRL_ISLANDS_B2F": {
+   "pitch_x": 5.85,
+   "pitch_y": 12.15,
+   "origin_x": -3.5,
+   "origin_y": 49.0,
+   "score": 0.6151,
+   "naive_score": 0.4967,
+   "trusted": true,
+   "key": "Whirl Islands B2F HGSS.png:52911"
+  },
+  "MAP_WHIRL_ISLANDS_B3F": {
+   "pitch_x": 7.6,
+   "pitch_y": 5.22,
+   "origin_x": -9.0,
+   "origin_y": -6.5,
+   "score": 0.7047,
+   "naive_score": 0.439,
+   "trusted": true,
+   "key": "Whirl Islands B3F HGSS.png:20551"
+  },
+  "MAP_WHIRL_ISLANDS_B3F_LUGIA_CAVE": {
+   "pitch_x": 15.09,
+   "pitch_y": 9.34,
+   "origin_x": 23.0,
+   "origin_y": 11.5,
+   "score": 0.3873,
+   "naive_score": 0.2681,
+   "trusted": false,
+   "key": "Whirl Islands B3F Lugia HGSS.png:127543"
+  }
+ }
+}

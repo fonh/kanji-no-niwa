@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { auth } from '@/lib/auth'
 import { sql } from '@/lib/db'
 import QueueButton from './QueueButton'
+import { MASTERED_STABILITY_DAYS } from '@/lib/start-menu'
 import kanjiContent from '@/data/kanji-content.json'
 
 interface Props {
@@ -17,6 +18,8 @@ export default async function KanjiCardPage({ params }: Props) {
   const userId = session.user.id
 
   // None of these four depend on each other's results — fetch concurrently.
+  // Cartes lues sur le schéma étendu item_type/item_id/facet (issue 05) —
+  // les colonnes legacy kanji_id/card_type ne sont plus lues (issue 09).
   const [[kanji], componentEdges, userCards, [profile]] = await Promise.all([
     sql`
       select id, character, meanings, on_readings, kun_readings, jlpt_level, grade, stroke_count
@@ -28,7 +31,7 @@ export default async function KanjiCardPage({ params }: Props) {
       join kanji k on k.id = c.component_id
       where c.parent_id = ${character}
     `,
-    sql`select kanji_id, card_type, fsrs_state from cards where user_id = ${userId}`,
+    sql`select item_id, facet, fsrs_state from cards where user_id = ${userId} and item_type = 'kanji'`,
     sql`select queued_kanji from users where id = ${userId}`,
   ])
 
@@ -36,14 +39,15 @@ export default async function KanjiCardPage({ params }: Props) {
 
   if (!kanji) notFound()
 
-  const studiedSet = new Set(userCards.map(c => c.kanji_id))
+  const studiedSet = new Set(userCards.map(c => c.item_id))
   const queuedKanji: string[] = profile?.queued_kanji ?? []
 
-  // Derive status of this kanji
-  const meaningStability = userCards.find(c => c.kanji_id === character && c.card_type === 'meaning')?.fsrs_state?.stability ?? 0
-  const readingStability = userCards.find(c => c.kanji_id === character && c.card_type === 'reading')?.fsrs_state?.stability ?? 0
+  // Statut du kanji — maîtrisé = stabilité FSRS ≥ 14 j sur les DEUX facettes
+  // (PRD § Système SRS, seuil abaissé de 30 à 14 le 2026-07-07)
+  const sensStability = userCards.find(c => c.item_id === character && c.facet === 'sens')?.fsrs_state?.stability ?? 0
+  const lectureStability = userCards.find(c => c.item_id === character && c.facet === 'lecture')?.fsrs_state?.stability ?? 0
   const status: 'unseen' | 'studied' | 'mastered' =
-    meaningStability >= 30 && readingStability >= 30 ? 'mastered'
+    sensStability >= MASTERED_STABILITY_DAYS && lectureStability >= MASTERED_STABILITY_DAYS ? 'mastered'
     : studiedSet.has(character) ? 'studied'
     : 'unseen'
 
@@ -61,8 +65,9 @@ export default async function KanjiCardPage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-gray-900 text-white px-4 py-10 max-w-xl mx-auto">
-      {/* Back */}
-      <Link href="/explorer" className="text-gray-500 text-sm hover:text-gray-300 mb-6 inline-block">← Explorer</Link>
+      {/* Retour à la grille du Kanjidex (menu START, rouvert sur 図鑑) —
+          chaîne B « fiche → grille → carte » (PRD § Navigation des surfaces) */}
+      <Link href="/map?menu=zukan" className="text-gray-500 text-sm hover:text-gray-300 mb-6 inline-block">← 図鑑</Link>
 
       {/* Hero */}
       <div className="text-center mb-8">

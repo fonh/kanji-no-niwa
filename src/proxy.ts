@@ -11,12 +11,12 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(new URL('/', request.url))
   }
 
-  // Authenticated on sign-in page → onboarding (no trainer name yet) or dashboard.
-  // Only queried here, once, on the single "just landed on /" transition —
-  // not on every request.
+  // Authenticated on sign-in page → onboarding (no trainer name yet) or the
+  // map. Only queried here, once, on the single "just landed on /" transition
+  // — not on every request.
   if (session?.user && pathname === '/') {
     const [profile] = await sql`select trainer_name from users where id = ${session.user.id}`
-    const dest = profile?.trainer_name ? '/dashboard' : '/onboarding'
+    const dest = profile?.trainer_name ? '/map' : '/onboarding'
     return NextResponse.redirect(new URL(dest, request.url))
   }
 

@@ -1,0 +1,152 @@
+{
+ "_comment": "Registre des items pour le Sac (issue 09) ET pour la scène « objet obtenu » (2026-08-06). item_id → libellé jp, catégorie (= la poche du Sac), et `jp_description` : ce que l'objet EST, en une ou deux phrases. La description n'est pas de la décoration : le jeu d'origine explique TOUJOURS un objet-clé au moment de le remettre (le guide de Ville Griotte détaille les Running Shoes, Falkner explique ce qu'est une CT). Sans elle, le joueur reçoit un Pokédex et rien ne lui dit ce que c'est. src/lib/item-get.ts la sert automatiquement à chaque grant_item, donc écrire cette ligne SUFFIT pour qu'un nouvel objet soit correctement annoncé — rien à câbler par PNJ. | `fanfare` : le jeu d'origine distingue SEQ_ME_ITEM (objet ordinaire) de SEQ_ME_KEYITEM (objet-clé) ; défaut = celle de la catégorie (key_items/cs_kanji → keyitem). | Les items non listés tombent en 「？？？」 sans description — voir groupBagItems. À remplacer par la vraie table `items` du PRD à l'ingestion.",
+ "categories": [
+  {
+   "id": "key_items",
+   "jp": "たいせつなもの"
+  },
+  {
+   "id": "cs_kanji",
+   "jp": "かんじの　ひでん"
+  },
+  {
+   "id": "tm",
+   "jp": "わざマシン"
+  },
+  {
+   "id": "tools",
+   "jp": "どうぐ"
+  },
+  {
+   "id": "other",
+   "jp": "そのほか"
+  }
+ ],
+ "items": {
+  "apricorn_box": {
+   "jp": "ぼんぐりケース",
+   "category": "key_items",
+   "jp_description": "木（き）の　みを　いれる　はこ。もちきれない　ほど　あつめられる。"
+  },
+  "cs_chikara": {
+   "jp": "力（ちから）の　かんじの　ひでん",
+   "category": "cs_kanji",
+   "jp_description": "力（ちから）の　かんじの　ちから。おおきな　いわを　おせる。"
+  },
+  "cs_kiru": {
+   "jp": "切（き）る　かんじの　ひでん",
+   "category": "cs_kanji",
+   "jp_description": "切（き）る　かんじの　ちから。じゃまな　木（き）を　きって　みちを　ひらける。"
+  },
+  "cs_kudakeru": {
+   "jp": "砕（くだ）く　かんじの　ひでん",
+   "category": "cs_kanji",
+   "jp_description": "砕（くだ）く　かんじの　ちから。ひびわれた　いわを　こわせる。"
+  },
+  "cs_mizu": {
+   "jp": "水（みず）の　かんじの　ひでん",
+   "category": "cs_kanji",
+   "jp_description": "水（みず）の　かんじの　ちから。うみも　川（かわ）も　わたれる。"
+  },
+  "cs_taki": {
+   "jp": "滝（たき）の　かんじの　ひでん",
+   "category": "cs_kanji",
+   "jp_description": "滝（たき）の　かんじの　ちから。たきを　のぼれる。"
+  },
+  "cs_tobu": {
+   "jp": "飛（と）ぶ　かんじの　ひでん",
+   "category": "cs_kanji",
+   "jp_description": "飛（と）ぶ　かんじの　ちから。いった　ことの　ある　まちへ　そらから　もどれる。"
+  },
+  "cs_uzu": {
+   "jp": "渦（うず）の　かんじの　ひでん",
+   "category": "cs_kanji",
+   "jp_description": "渦（うず）の　かんじの　ちから。うずしおを　こえて　すすめる。"
+  },
+  "exp_share": {
+   "jp": "がくしゅうそうち",
+   "category": "tools",
+   "jp_description": "もつと　けいけんが　わけて　もらえる　ふしぎな　どうぐ。"
+  },
+  "lure_ball": {
+   "jp": "ルアーボール",
+   "category": "tools",
+   "jp_description": "つりで　つかう　ボール。"
+  },
+  "map_card": {
+   "jp": "マップカード",
+   "category": "key_items",
+   "jp_description": "ポケギアに　いれる　カード。いま　どこに　いるかが　わかる　ちずが　みられる。"
+  },
+  "miracle_seed": {
+   "jp": "きせきの　タネ",
+   "category": "tools",
+   "jp_description": "げんきの　いい　タネ。もつと　くさの　ちからが　つよく　なる。"
+  },
+  "mystery_egg": {
+   "jp": "ふしぎな　タマゴ",
+   "category": "key_items",
+   "jp_description": "Mr.ポケモンから　あずかった　たまご。なにが　うまれるのか、まだ　だれも　しらない。"
+  },
+  "old_rod": {
+   "jp": "ボロの　つりざお",
+   "category": "key_items",
+   "jp_description": "ふるい　つりざお。みずべで　つりが　できる。"
+  },
+  "pal_pad": {
+   "jp": "ともだちてちょう",
+   "category": "key_items",
+   "jp_description": "ともだちの　なまえを　かいて　おく　てちょう。"
+  },
+  "poison_barb": {
+   "jp": "どくバリ",
+   "category": "tools",
+   "jp_description": "とがった　どくの　はり。さわると　あぶない。"
+  },
+  "pokedex": {
+   "jp": "ポケモンずかん",
+   "category": "key_items",
+   "jp_description": "であった　かんじを　じどうで　きろくする　ほん。おぼえた　かんじが　ふえると、ページも　ふえる。"
+  },
+  "pokegear": {
+   "jp": "ポケギア",
+   "category": "key_items",
+   "jp_description": "でんわと　とけいが　ついた　きかい。みちで　だれかに　でんわ　できる。"
+  },
+  "red_scale": {
+   "jp": "あかい　ウロコ",
+   "category": "key_items",
+   "jp_description": "あかい　ギャラドスの　うろこ。めずらしいと　いわれて　いる。"
+  },
+  "running_shoes": {
+   "jp": "ランニングシューズ",
+   "category": "key_items",
+   "jp_description": "はしる　ための　くつ。おすと　はやく　あるける。"
+  },
+  "tm44_rest": {
+   "jp": "わざマシン44",
+   "category": "tm",
+   "jp_description": "わざマシン44。ねむって　たいりょくを　ぜんぶ　かいふくする。ひとつの　ポケモンに　いちどだけ　つかえる。"
+  },
+  "tm51_roost": {
+   "jp": "わざマシン51",
+   "category": "tm",
+   "jp_description": "わざマシン51。たいりょくを　はんぶん　かいふくする。ひとつの　ポケモンに　いちどだけ　つかえる。"
+  },
+  "tm70_flash": {
+   "jp": "わざマシン70",
+   "category": "tm",
+   "jp_description": "わざマシン70。くらい　ところを　あかるく　てらす。ひとつの　ポケモンに　いちどだけ　つかえる。"
+  },
+  "twisted_spoon": {
+   "jp": "まがった　スプーン",
+   "category": "tools",
+   "jp_description": "まがった　スプーン。もつと　ちょうのうりょくが　つよく　なる。"
+  },
+  "vs_recorder": {
+   "jp": "VSレコーダー",
+   "category": "key_items",
+   "jp_description": "たたかいを　きろくする　きかい。あとから　みなおせる。"
+  }
+ }
+}

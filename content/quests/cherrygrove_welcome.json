@@ -1,17 +1,20 @@
 {
  "quest_id": "cherrygrove_welcome",
- "name": "Cherrygrove Welcome",
+ "name": {
+  "jp": "ヨシノシティの　あんない",
+  "en": "Cherrygrove Welcome"
+ },
  "zone_ids": [
   "cherrygrove-city"
  ],
  "steps": [
   {
-   "step_id": "shoes_given",
-   "label": "Guide Gent gave the Running Shoes"
-  },
-  {
    "step_id": "map_given",
-   "label": "Guide Gent gave the Map Card, ready to head to Route 30"
+   "label": {
+    "jp": "あんないの　おじさんに　まちを　あんないして　もらった。30ばんどうろへ　いこう。",
+    "en": "The Guide Gent showed me around town. Time to head for Route 30."
+   },
+   "target_zone_id": "route-30"
   }
  ]
 }

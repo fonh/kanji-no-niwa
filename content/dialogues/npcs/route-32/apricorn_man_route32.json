@@ -1,20 +1,56 @@
 {
- "_note": "Étape 4 — sourcé : demande si le joueur collectionne les Apricorns, donne 2 Lure Balls (npc-inventory.md § route-32).",
+ "_note": "Étape 4 — sourcé : demande si le joueur collectionne les Apricorns, donne 2 Lure Balls (npc-inventory.md § route-32). | 2026-08-06 : état d'après-remise. L'état par défaut remettait son objet et se rejouait à l'identique à chaque fois qu'on lui reparlait — le `grant_item` est idempotent, donc rien n'était cassé, mais le personnage re-offrait éternellement ce qu'il avait déjà donné (constaté en jeu sur le Pr. Chen et le Pokédex). Sélection sur `item_owned` de l'objet remis : monotone, aucune donnée nouvelle. lint-cross-refs.py refuse désormais ce motif.",
  "npc_id": "apricorn_man_route32",
- "name": { "jp": "つりびとの　そばの　ひと", "en": "Man by the Fisherman" },
+ "name": {
+  "jp": "つりびとの　そばの　ひと",
+  "en": "Man by the Fisherman"
+ },
  "zone_id": "route-32",
  "jlpt_level": "N4",
  "state_rules": [
-  { "default": true, "state": "intro" }
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "lure_ball"
+    }
+   ],
+   "state": "after_gift"
+  },
+  {
+   "default": true,
+   "state": "intro"
+  }
  ],
  "dialogue_states": {
   "intro": {
    "pages": [
-    { "jp": "アプリコット、あつめてる？", "en": "Are you collecting apricorns?" },
-    { "jp": "これ、役（やく）に　立（た）つよ。", "en": "This will come in handy." }
+    {
+     "jp": "アプリコット、あつめてる？",
+     "en": "Are you collecting apricorns?"
+    },
+    {
+     "jp": "これ、役（やく）に　立（た）つよ。",
+     "en": "This will come in handy."
+    }
    ],
    "effects": [
-    { "type": "grant_item", "item_id": "lure_ball" }
+    {
+     "type": "grant_item",
+     "item_id": "lure_ball"
+    }
+   ]
+  },
+  "after_gift": {
+   "pages": [
+    {
+     "jp": "アプリコットは　木（き）に　なるんだ。",
+     "en": "Apricorns grow on trees."
+    },
+    {
+     "jp": "1日（にち）に　1かい、みが　なるよ。",
+     "en": "They bear fruit once a day."
+    }
    ]
   }
  }

@@ -1,21 +1,60 @@
 {
- "_note": "Étape 3 (extension) — remise du Vs. Recorder, sourcé npc-inventory.md § route-31.",
+ "_note": "Étape 3 (extension) — remise du Vs. Recorder, sourcé npc-inventory.md § route-31. | 2026-08-06 (issue 13, carte de conception) : deuxième état. Le moteur sert le dialogue AVANT d'ouvrir l'écran-livre (« l'histoire d'abord », src/app/map/actions.ts) — un PNJ-leçon à plusieurs leçons rejouait donc sa réplique de remise de cadeau, Effect compris, à chaque leçon. L'Effect est idempotent, rien n'était cassé, mais le joueur s'entendait offrir quatre fois le même objet. L'état d'après-cadeau se sélectionne sur item_owned de l'objet remis : monotone, aucune donnée nouvelle.",
  "npc_id": "lyra_ethan_route31",
- "name": { "jp": "コハル", "en": "Lyra" },
+ "name": {
+  "jp": "コハル",
+  "en": "Lyra"
+ },
  "zone_id": "route-31",
  "jlpt_level": "N5",
  "state_rules": [
-  { "default": true, "state": "intro" }
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "vs_recorder"
+    }
+   ],
+   "state": "after_gift"
+  },
+  {
+   "default": true,
+   "state": "intro"
+  }
  ],
  "dialogue_states": {
   "intro": {
    "pages": [
-    { "jp": "また　あったね！", "en": "We meet again!" },
-    { "jp": "これ、あげる。", "en": "Here, take this." },
-    { "jp": "べんりだよ。", "en": "It's handy." }
+    {
+     "jp": "また　あったね！",
+     "en": "We meet again!"
+    },
+    {
+     "jp": "これ、あげる。",
+     "en": "Here, take this."
+    },
+    {
+     "jp": "べんりだよ。",
+     "en": "It's handy."
+    }
    ],
    "effects": [
-    { "type": "grant_item", "item_id": "vs_recorder" }
+    {
+     "type": "grant_item",
+     "item_id": "vs_recorder"
+    }
+   ]
+  },
+  "after_gift": {
+   "pages": [
+    {
+     "jp": "キキョウシティの　ジムは　とりの　ジムだよ。",
+     "en": "The Gym in Violet City is a bird Gym."
+    },
+    {
+     "jp": "がんばってね！",
+     "en": "Good luck!"
+    }
    ]
   }
  }

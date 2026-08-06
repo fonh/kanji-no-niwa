@@ -1,0 +1,36 @@
+{
+ "_note": "Étape 2026-08-06 (issue 13, audit première arène) — les quatre sages de la Tour Grospignon manquaient au contenu alors que la visite de la tour conditionne l'accès à l'arène de Violet (content/guidebook-adapted.md § violet-city). Positions et noms de classe sourcés des objets ROM (std_trainer(TRAINER_SAGE_*)). Registre : sobre, quelques mots, thème de la tour (le pilier qui oscille sans tomber) réutilisé pour parler de lecture — cohérent avec « les Sages gardent les premiers kanji cursifs de Johto ».",
+ "trainer_id": "sage_neal_sprout_tower",
+ "name": {
+  "jp": "しゅぎょうそうの　ニール",
+  "en": "Sage Neal"
+ },
+ "zone_id": "sprout-tower",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "はしらは　ゆれる。　でも　たおれない。",
+     "en": "The pillar sways. But it does not fall."
+    },
+    {
+     "jp": "もじも　おなじだ。",
+     "en": "Letters are the same."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "ゆれても　たおれなかったな。",
+     "en": "You swayed, but you didn't fall."
+    },
+    {
+     "jp": "それが　だいじ。",
+     "en": "That is what matters."
+    }
+   ]
+  }
+ }
+}

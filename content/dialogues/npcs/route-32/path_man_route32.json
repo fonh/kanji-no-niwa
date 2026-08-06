@@ -1,20 +1,52 @@
 {
- "_note": "Étape 4 — PNJ-leçon (content/lessons/route-32.json, leçon #1). Sourcé : cadeau gratuit sans condition (npc-inventory.md § route-32).",
+ "_note": "Étape 4 — PNJ-leçon (content/lessons/route-32.json, leçon #1). Sourcé : cadeau gratuit sans condition (npc-inventory.md § route-32). | 2026-08-06 : état d'après-remise. L'état par défaut remettait son objet et se rejouait à l'identique à chaque fois qu'on lui reparlait — le `grant_item` est idempotent, donc rien n'était cassé, mais le personnage re-offrait éternellement ce qu'il avait déjà donné (constaté en jeu sur le Pr. Chen et le Pokédex). Sélection sur `item_owned` de l'objet remis : monotone, aucune donnée nouvelle. lint-cross-refs.py refuse désormais ce motif.",
  "npc_id": "path_man_route32",
- "name": { "jp": "みちの　ひと", "en": "Man on the Path" },
+ "name": {
+  "jp": "みちの　ひと",
+  "en": "Man on the Path"
+ },
  "zone_id": "route-32",
  "jlpt_level": "N4",
  "state_rules": [
-  { "default": true, "state": "greeting" }
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "miracle_seed"
+    }
+   ],
+   "state": "after_gift"
+  },
+  {
+   "default": true,
+   "state": "greeting"
+  }
  ],
  "dialogue_states": {
   "greeting": {
    "pages": [
-    { "jp": "やあ。", "en": "Hey." },
-    { "jp": "これ、いる？　ただで　あげるよ。", "en": "Want this? I'll give it to you for free." }
+    {
+     "jp": "やあ。",
+     "en": "Hey."
+    },
+    {
+     "jp": "これ、いる？　ただで　あげるよ。",
+     "en": "Want this? I'll give it to you for free."
+    }
    ],
    "effects": [
-    { "type": "grant_item", "item_id": "miracle_seed" }
+    {
+     "type": "grant_item",
+     "item_id": "miracle_seed"
+    }
+   ]
+  },
+  "after_gift": {
+   "pages": [
+    {
+     "jp": "もう　あげたよ。だいじに　してね。",
+     "en": "I've already given you one. Take care of it."
+    }
    ]
   }
  }

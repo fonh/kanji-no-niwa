@@ -78,88 +78,11 @@ export type Lesson = {
 }
 
 // ── Battle mode selection ─────────────────────────────────────────────────────
-
-export type QuestionMode =
-  | 'sens'
-  | 'lecture'
-  | 'ecriture'
-  | 'composition'
-  | 'grammaire'
-  | 'conjugaison'
-  | 'traduction'
-  | 'disposition'
-
-export type BattleType = 'route' | 'boss'
-
-export const BATTLE_WEIGHTS: Record<BattleType, Record<QuestionMode, number>> = {
-  route: {
-    sens: 0.28,
-    lecture: 0.22,
-    ecriture: 0.18,
-    composition: 0.10,
-    grammaire: 0.07,
-    conjugaison: 0.07,
-    traduction: 0.03,
-    disposition: 0.05,
-  },
-  boss: {
-    sens: 0.12,
-    lecture: 0.12,
-    ecriture: 0.10,
-    composition: 0.05,
-    grammaire: 0.13,
-    conjugaison: 0.13,
-    traduction: 0.05,
-    disposition: 0.30,
-  },
-}
-
-/**
- * Picks a question mode using weighted random selection.
- * Modes with no eligible content (grammar not yet encountered, no Disposition
- * sentences matching the player's studied set) have their weight redistributed
- * proportionally to the remaining modes.
- */
-export function selectQuestionMode(
-  battleType: BattleType,
-  encounteredGrammarCount: number,
-  hasDispositionSentences: boolean
-): QuestionMode {
-  const weights = { ...BATTLE_WEIGHTS[battleType] }
-
-  if (encounteredGrammarCount < 5) {
-    weights.grammaire = 0
-    weights.conjugaison = 0
-  }
-  if (!hasDispositionSentences) {
-    weights.disposition = 0
-  }
-
-  const total = Object.values(weights).reduce((s, w) => s + w, 0)
-  const modes = Object.keys(weights) as QuestionMode[]
-  for (const mode of modes) weights[mode] /= total
-
-  const roll = Math.random()
-  let cumulative = 0
-  for (const mode of modes) {
-    cumulative += weights[mode]
-    if (roll < cumulative) return mode
-  }
-  return modes[0]
-}
-
-/**
- * Returns the sentence chunks in a random order (Fisher-Yates shuffle).
- * The caller validates the answer by comparing surface_form sequences.
- */
-export function getDispositionChunks(chunks: string[]): string[] {
-  const arr = [...chunks]
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[arr[i], arr[j]] = [arr[j], arr[i]]
-  }
-  return arr
-}
+// Le prototype qui vivait ici (BATTLE_WEIGHTS à 8 modes, selectQuestionMode
+// avec garde grammaire < 5, getDispositionChunks) datait d'avant le PRD
+// courant et n'avait aucun consommateur — remplacé par le moteur de combat
+// réel de src/lib/battle.ts (issue 07 : poids PRD 2026-07-21, garde
+// grammaire == 0, redistribution à chaque tirage, rng injecté).
 
 export function getLessonQueue(
   availableKanji: string[],
@@ -176,4 +99,104 @@ export function getLessonQueue(
   )
   const hasQueued = (lesson: Lesson) => lesson.kanjiIds.some(k => queued.has(k))
   return [...eligible.filter(hasQueued), ...eligible.filter(l => !hasQueued(l))]
+}
+
+// ── Boucle quotidienne SRS (issue 06) ─────────────────────────────────────────
+//
+// PRD § Boucle Quotidienne / § Système SRS. Le « jour » bascule à minuit,
+// heure locale de l'appareil (offset client borné ±14 h, même approche que
+// nextMorningDue de lessons.ts) ; toute ÉCRITURE qui matérialise le statut
+// (daily_status, reviews.reviewed_at) est horodatée serveur. Le gate SRS
+// n'est jamais une Condition (invariant de monotonie, PRD 02-D4) : l'issue
+// 10 lit getDailySRSStatus.
+
+/** Plafond de rattrapage : en backlog, le ✓ du jour s'obtient après 200
+ * cartes notées ce jour calendaire local (PRD 03-D1). */
+export const DAILY_CATCH_UP_CAP = 200
+
+/** Offset client borné à ±14 h (fuseaux réels : UTC-12..+14). */
+const MAX_TZ_OFFSET_MINUTES = 14 * 60
+
+function clampTzOffset(tzOffsetMinutes: number): number {
+  return Math.max(-MAX_TZ_OFFSET_MINUTES, Math.min(MAX_TZ_OFFSET_MINUTES, tzOffsetMinutes))
+}
+
+/** Jour calendaire local 'YYYY-MM-DD' du joueur. `tzOffsetMinutes` vient du
+ * client (Date.getTimezoneOffset() : UTC − local, en minutes). */
+export function localDayKey(serverNow: Date, tzOffsetMinutes: number): string {
+  const offset = clampTzOffset(tzOffsetMinutes)
+  const local = new Date(serverNow.getTime() - offset * 60_000)
+  const y = local.getUTCFullYear()
+  const m = String(local.getUTCMonth() + 1).padStart(2, '0')
+  const d = String(local.getUTCDate()).padStart(2, '0')
+  return `${y}-${m}-${d}`
+}
+
+/** Le minuit local qui a ouvert le jour courant, sur l'axe serveur (borne
+ * basse des reviews « d'aujourd'hui »). */
+export function localDayStart(serverNow: Date, tzOffsetMinutes: number): Date {
+  const offset = clampTzOffset(tzOffsetMinutes)
+  const local = new Date(serverNow.getTime() - offset * 60_000)
+  const localMidnightMs = Date.UTC(local.getUTCFullYear(), local.getUTCMonth(), local.getUTCDate())
+  return new Date(localMidnightMs + offset * 60_000)
+}
+
+export interface DailySRSStatus {
+  /** File du jour vidée OU plafond de rattrapage atteint ce jour local
+   * (OU ✓ déjà posé dans daily_status — acquis jusqu'à la bascule). */
+  sessionDone: boolean
+  /** Cartes encore dues maintenant (en rattrapage plafonné : le reste du
+   * backlog, qui s'étale sur les jours suivants). */
+  cardsPending: number
+  /** Cartes notées ce jour calendaire local. */
+  reviewedToday: number
+}
+
+/** Statut SRS du jour — fonction pure (PRD § Implémentation :
+ * getDailySRSStatus(srsReviews, dueCards, today)). L'issue 10 s'en sert
+ * pour le gate d'entrée en nouvelle zone. */
+export function getDailySRSStatus(
+  srsReviews: { reviewed_at: string | Date }[],
+  dueCards: { next_review_at: string | Date }[],
+  today: { serverNow: Date; tzOffsetMinutes: number },
+  /** ✓ déjà écrit dans daily_status pour ce jour : reste acquis même si de
+   * nouvelles cartes deviennent éligibles entre-temps (PRD pt 4). */
+  checkedToday = false
+): DailySRSStatus {
+  const { serverNow, tzOffsetMinutes } = today
+  const todayKey = localDayKey(serverNow, tzOffsetMinutes)
+  const reviewedToday = srsReviews.filter(
+    r => localDayKey(new Date(r.reviewed_at), tzOffsetMinutes) === todayKey
+  ).length
+  const cardsPending = dueCards.filter(c => new Date(c.next_review_at) <= serverNow).length
+  const sessionDone = checkedToday || cardsPending === 0 || reviewedToday >= DAILY_CATCH_UP_CAP
+  return { sessionDone, cardsPending, reviewedToday }
+}
+
+/** File du jour : cartes dues + nouvelles cartes MÉLANGÉES en une seule file
+ * (pas de bloc « reviews d'abord », PRD 03-D6), tronquée au quota restant du
+ * plafond de rattrapage (200 − déjà notées ce jour). Fisher-Yates, rng
+ * injectable pour les tests. Ne mute pas l'entrée. */
+export function buildDailyQueue<T>(
+  dueCards: T[],
+  reviewedToday: number,
+  rng: () => number = Math.random
+): T[] {
+  const arr = [...dueCards]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr.slice(0, Math.max(0, DAILY_CATCH_UP_CAP - reviewedToday))
+}
+
+/** Préface Carte Mot (engine-contract § 8) : la toute première review d'un
+ * mot (aucune review existante pour AUCUNE facette de ce mot) affiche
+ * d'abord sa Carte Mot — état dérivé, aucune colonne nouvelle. Inactif au
+ * jalon 1 (aucune carte word), mais le code le prévoit. */
+export function needsWordCardPreface(
+  card: { item_type: string; item_id: string },
+  reviewedWordIds: ReadonlySet<string>
+): boolean {
+  return card.item_type === 'word' && !reviewedWordIds.has(card.item_id)
 }

@@ -3,24 +3,40 @@ import type { Zone } from '@/lib/zone-geometry'
 interface RawTrainer {
   trainer_id: string
   zone_id: string
+  /** MAP_* exact quand la position vient de l'objet ROM (issue 13). Il prime
+   * sur `zone_id` : un dresseur d'arène porte le zone_id de la ville côté
+   * contenu mais se tient dans MAP_*_GYM. */
+  map_zone?: string
+  /** SPRITE_* de l'objet ROM correspondant — sans lui le dresseur était
+   * dessiné comme un carré vide, donc invisible (issue 13). */
+  sprite_id?: string
   name: string
   tile_x: number
   tile_y: number
   facing: 'north' | 'south' | 'east' | 'west'
   sight_range: number
   role: string
+  trigger_type: string
   dialogue_ref: string
 }
 
 export interface ZoneTrainer {
   trainer_id: string
   zone_id: string
+  sprite_id?: string
   name: string
   world_x: number
   world_z: number
   facing: 'north' | 'south' | 'east' | 'west'
   sight_range: number
+  /** battle/lesson (registre map_trainers) — seul `battle` déclenche un combat. */
+  role: string
+  /** sight_auto = embuscade dans la ligne de vue ; talk = A seulement. */
+  trigger_type: string
   dialogue_ref: string
+  /** Posé côté serveur (defeated_trainers[]) — un dresseur battu ne
+   * re-déclenche jamais automatiquement (issue 07). */
+  defeated?: boolean
 }
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -40,26 +56,38 @@ function zoneIdForMapName(mapName: string): string | undefined {
 
 export function getTrainersForZone(zone: Zone): ZoneTrainer[] {
   const zoneId = zoneIdForMapName(zone.name)
-  if (!zoneId) return []
 
   return rawTrainers
-    .filter(t => t.zone_id === zoneId)
+    .filter(t => (t.map_zone ? t.map_zone === zone.name : t.zone_id === zoneId))
     .map(t => ({
       trainer_id: t.trainer_id,
       zone_id: t.zone_id,
+      sprite_id: t.sprite_id,
       name: t.name,
       world_x: zone.world_origin_x + t.tile_x,
       world_z: zone.world_origin_y + t.tile_y,
       facing: t.facing,
       sight_range: t.sight_range,
+      role: t.role,
+      trigger_type: t.trigger_type,
       dialogue_ref: t.dialogue_ref,
     }))
+}
+
+/** Minimal shape a sight check needs — shared between trainers (ambush) and
+ * Roadblock NPCs (interception, issue 10) : CONTEXT.md « Sight Cone » is one
+ * geometry for both. */
+export interface SightSource {
+  world_x: number
+  world_z: number
+  facing: 'north' | 'south' | 'east' | 'west'
+  sight_range: number
 }
 
 /** Straight line-of-sight in front of the trainer, matching the classic
  * mainline-game mechanic (not a widening cone despite the name in ADR-0001)
  * — one tile wide, `sight_range` tiles long, in the direction `facing`. */
-export function isInSightLine(trainer: ZoneTrainer, worldX: number, worldZ: number): boolean {
+export function isInSightLine(trainer: SightSource, worldX: number, worldZ: number): boolean {
   const { world_x, world_z, facing, sight_range } = trainer
   switch (facing) {
     case 'south':

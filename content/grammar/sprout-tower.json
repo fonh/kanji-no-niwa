@@ -1,0 +1,68 @@
+{
+ "_note": "Overlay grammaire de zone — même contrat de fusion que le pilote de Bourg Geon (content/grammar/new-bark-town.json) et content/grammar-wiring-spec.md : rien du corpus Hanabira n'est dupliqué ici, seule la couche ajoutée (furigana ADR-0002, cloze, réponse, distracteurs). | Créé 2026-08-06 : 21 des 26 leçons du chemin critique « début → première arène » portaient un grammar_id sans aucun point d'overlay — l'écran-livre servait donc des pages kanji et RIEN de grammatical, et le mini-quiz perdait sa question de grammaire, en silence. Constaté en jeu (« aucune leçon de japonais, style grammaire »). Distracteurs rédigés à la main, règle du spec appliquée : jamais un quasi-synonyme de la réponse (ませんか écarté face à ましょう, や écarté face à とか), toujours un « presque-juste » (いつも face à いつか, ときどき face à たいてい, より face à ほど, います face à あります).",
+ "zone_id": "sprout-tower",
+ "points": [
+  {
+   "grammar_id": "N4-001",
+   "source_index": 0,
+   "title": "A とか B とか",
+   "selected_examples": [
+    {
+     "source_example_index": 1,
+     "jp": "彼女（かのじょ）は英語（えいご）とかフランス語（ご）とかいろいろな言葉（ことば）を話（はな）せます。",
+     "jp_cloze": "彼女（かのじょ）は英語（えいご）＿＿フランス語（ご）とかいろいろな言葉（ことば）を話（はな）せます。",
+     "point_answer": "とか",
+     "distractors": [
+      "だけ",
+      "しか",
+      "ほど"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 2,
+     "jp": "この店（みせ）は寿司（すし）とか刺身（さしみ）とか日本料理（にほんりょうり）を提供（ていきょう）しています。",
+     "jp_cloze": "この店（みせ）は寿司（すし）＿＿刺身（さしみ）とか日本料理（にほんりょうり）を提供（ていきょう）しています。",
+     "point_answer": "とか",
+     "distractors": [
+      "だけ",
+      "しか",
+      "ほど"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  },
+  {
+   "grammar_id": "N4-002",
+   "source_index": 1,
+   "title": "A は B ほど～ありません (A wa B hodo ～ arimasen)",
+   "selected_examples": [
+    {
+     "source_example_index": 0,
+     "jp": "今日（きょう）は昨日（きのう）ほど寒（さむ）くありません。",
+     "jp_cloze": "今日（きょう）は昨日（きのう）＿＿寒（さむ）くありません。",
+     "point_answer": "ほど",
+     "distractors": [
+      "より",
+      "まで",
+      "とか"
+     ],
+     "conjugation_distractors": null
+    },
+    {
+     "source_example_index": 3,
+     "jp": "彼女（かのじょ）は彼（かれ）ほど忙（いそが）しくありません。",
+     "jp_cloze": "彼女（かのじょ）は彼（かれ）＿＿忙（いそが）しくありません。",
+     "point_answer": "ほど",
+     "distractors": [
+      "より",
+      "まで",
+      "とか"
+     ],
+     "conjugation_distractors": null
+    }
+   ]
+  }
+ ]
+}

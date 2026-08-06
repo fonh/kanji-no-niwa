@@ -1,0 +1,36 @@
+{
+ "_note": "2026-08-06 (issue 13, carte de conception) — le 2F de la Tour Grospignon était vide alors que le joueur doit le traverser pour monter au 3F. Les deux sages qui y vivent existent dans la ROM (150_D15R0102.json, std_trainer(TRAINER_SAGE_NICO) et TRAINER_SAGE_EDMOND) et dans le guidebook (§ sprout-tower, les six sages nommés). Même registre que Neal/Troy/Jin/Chow : sobre, quelques mots, le pilier de la tour comme métaphore de lecture.",
+ "trainer_id": "sage_nico_sprout_tower",
+ "name": {
+  "jp": "しゅぎょうそうの　ニコ",
+  "en": "Sage Nico"
+ },
+ "zone_id": "sprout-tower",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "ここは　2かい。　まだ　とちゅうだよ。",
+     "en": "This is the second floor. You're only halfway."
+    },
+    {
+     "jp": "いそぐ　ひとは　うえまで　いけない。",
+     "en": "Those who hurry never reach the top."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "うん、いそがなかったね。",
+     "en": "Right — you didn't hurry."
+    },
+    {
+     "jp": "うえに　いって　ごらん。",
+     "en": "Go on up, then."
+    }
+   ]
+  }
+ }
+}

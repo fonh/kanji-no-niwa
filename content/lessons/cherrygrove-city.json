@@ -4,17 +4,33 @@
   "zone_id": "cherrygrove-city",
   "npc_ref": "guide_gent_cherrygrove",
   "sequence_index": 1,
-  "kanji_ids": ["冬", "図", "夏", "夜", "家"],
+  "kanji_ids": [
+   "冬",
+   "図",
+   "夏",
+   "夜",
+   "家"
+  ],
   "grammar_id": "N5-053",
   "unlock_conditions": [
-   { "type": "quest_step", "quest_id": "cherrygrove_welcome", "step": "shoes_given" }
+   {
+    "type": "quest_step",
+    "quest_id": "cherrygrove_welcome",
+    "step": "map_given"
+   }
   ]
  },
  {
   "zone_id": "cherrygrove-city",
   "npc_ref": "shopkeeper_cherrygrove",
   "sequence_index": 2,
-  "kanji_ids": ["工", "帰", "広", "心", "方"],
+  "kanji_ids": [
+   "工",
+   "帰",
+   "広",
+   "心",
+   "方"
+  ],
   "grammar_id": "N5-054"
  }
 ]

@@ -1,0 +1,123 @@
+{
+ "_note": "Verrous de progression (issue 13, « on peut se déplacer partout sans que personne nous arrête »). Un verrou barre un FRANCHISSEMENT précis (zone de départ → zone d'arrivée) tant que ses `unlock_conditions` ne sont pas remplies, et le fait barrer par un personnage : « ! », il marche jusqu'au joueur, parle, le joueur ne passe pas, il regagne son poste. Le jeu d'origine procède exactement ainsi (vérifié dans le décompilé : à Bourg Geon, `VAR_SCENE_NEW_BARK_WEST_EXIT` fait sortir le Pr. Elm en courant tant qu'il n'a pas donné de starter). Sources des verrous : content/guidebook-adapted.md (marqueurs 🔒 et « bloque »), décompilé pokeheartgold. Le garde est un acteur d'interception, PAS un PNJ permanent : il n'apparaît que pour barrer la route, puis repart — un garde planté là en permanence n'existe pas dans le jeu d'origine pour ces scènes. Les obstacles de terrain (CS-Kanji, Simularbre, Ronflex) ne passent PAS par ici : ils vivent dans content/map/obstacles.json. GARDE-FOU : scripts/validate/lint-roadblocks.py refuse tout verrou dont la condition n'est atteignable qu'APRÈS le franchissement qu'il barre — c'est-à-dire un blocage définitif.",
+ "roadblocks": [
+  {
+   "roadblock_id": "elm_west_exit_new_bark",
+   "source": "Décompilé pokeheartgold, scr_seq_0842_T20.s : VAR_SCENE_NEW_BARK_WEST_EXIT. Le Pr. Elm sort en courant du labo et barre la sortie ouest tant que le joueur n'a pas de starter.",
+   "from_zone": "MAP_NEW_BARK",
+   "to_zone": "MAP_ROUTE_29",
+   "guard": {
+    "sprite_id": "SPRITE_DOCTOR",
+    "name": {
+     "jp": "エルムはかせ",
+     "en": "Prof. Elm"
+    },
+    "post": {
+     "tile_x": 6,
+     "tile_y": 14
+    },
+    "facing": "west"
+   },
+   "unlock_conditions": [
+    {
+     "type": "quest_step",
+     "quest_id": "mystery_egg_errand",
+     "step": "sent_by_elm"
+    }
+   ],
+   "pages": [
+    {
+     "jp": "まって、まって！",
+     "en": "Wait, wait!"
+    },
+    {
+     "jp": "ひとりで　いくのは　あぶないよ。",
+     "en": "It's dangerous to go alone."
+    },
+    {
+     "jp": "ラボに　きて。　わたして　おきたい　ものが　あるんだ。",
+     "en": "Come to the lab. There's something I want to give you."
+    }
+   ]
+  },
+  {
+   "roadblock_id": "guide_gent_cherrygrove_tour",
+   "source": "HGSS : le guide de Ville Griotte impose sa visite guidée avant de laisser partir vers la Route 30, et remet la Carte à la fin (content/guidebook-adapted.md § cherrygrove-city). | 2026-08-06 : le verrou délègue au PNJ curaté guide_gent_cherrygrove — sans ça il arrêtait le joueur sans jamais pouvoir lui faire la visite ni lui remettre la carte, donc sans jamais se lever. | 2026-08-06 (2) : la condition était « map_given », soit la DEUXIÈME réplique du guide — il fallait donc buter trois fois contre la sortie pour passer, et sa réplique d'adieu était livrée comme un blocage. Le verrou se lève désormais dès sa PREMIÈRE réplique (shoes_given) : il t'arrête une fois, te parle, tu passes. La carte reste à récupérer en lui parlant en ville, comme n'importe quel PNJ. | 2026-08-06 (3) : la visite remet chaussures ET carte en une seule fois, donc sa première réplique accorde map_given et le verrou se lève du premier coup.",
+   "from_zone": "MAP_CHERRYGROVE",
+   "to_zone": "MAP_ROUTE_30",
+   "guard": {
+    "sprite_id": "SPRITE_GSOLDMAN1",
+    "name": {
+     "jp": "あんないの　おじさん",
+     "en": "Guide Gent"
+    },
+    "post": {
+     "tile_x": 36,
+     "tile_y": 5
+    },
+    "facing": "north"
+   },
+   "unlock_conditions": [
+    {
+     "type": "quest_step",
+     "quest_id": "cherrygrove_welcome",
+     "step": "map_given"
+    }
+   ],
+   "pages": [
+    {
+     "jp": "おっと、そんなに　いそがないで。",
+     "en": "Whoa there, not so fast."
+    },
+    {
+     "jp": "この　まちを　あんないさせて　おくれよ。",
+     "en": "Let me show you around town first."
+    },
+    {
+     "jp": "そのあとで　マップカードを　あげるからね。",
+     "en": "I'll give you the Map Card afterwards."
+    }
+   ],
+   "npc_id": "guide_gent_cherrygrove"
+  },
+  {
+   "roadblock_id": "gym_guide_violet_sprout_tower",
+   "source": "Décompilé pokeheartgold : l'arène de Mauville a DEUX guides d'arène, chacun sur son propre drapeau (131_T22GYM0101.json : obj_T22GYM0101_sunglasses / FLAG_HIDE_VIOLET_GYM_GYM_GUY_BEFORE_SPROUT en (17,26), et obj_T22GYM0101_sunglasses_2 / FLAG_HIDE_VIOLET_GYM_GYM_GUY_AFTER_SPROUT en (15,20), au milieu du couloir). Battre l'Ancien Li au sommet de la Tour Grospignon échange les deux (scr_seq_0018_D15R0103.s:126-127), et celui d'avant-la-tour dit exactement ce verrou : « You must be here to challenge Falkner, right? You are quite welcome. ...Almost! This city has a tower called the Sprout Tower... Challenging Falkner may be too difficult if you haven't gone through their training » (msg_0558_T22GYM0101_00006). | ÉCART ASSUMÉ, à ne pas relire comme de la fidélité : dans HGSS ce guide ne barre RIEN — le couloir de l'arène fait 15 tuiles de large à sa hauteur, on le contourne, l'avertissement est consultatif. Ici la visite de la tour est une VRAIE condition d'accès (content/guidebook-adapted.md § violet-city, « Homme à lunettes noires — bloque l'entrée du Gym tant que Tour Grospignon n'est pas visitée » ; scripts/validate/audit-first-gym-run.py, chemin critique). Raison : la tour porte 2 des 26 leçons d'avant la première arène et le TM70 ; la sauter c'est arriver chez Falkner avec 10 kanji de moins que ce que le combat suppose. | 2026-08-06 : jusqu'ici ce verrou n'existait que comme réplique de PNJ (glasses_man_violet_city, état « blocking ») — un PNJ bavard qui ne barrait aucun franchissement. Il est maintenant un vrai verrou, et ce PNJ en est le délégué.",
+   "from_zone": "MAP_VIOLET",
+   "to_zone": "MAP_VIOLET_GYM",
+   "guard": {
+    "sprite_id": "SPRITE_SUNGLASSES",
+    "name": {
+     "jp": "サングラスの　ひと",
+     "en": "Man in Sunglasses"
+    },
+    "post": {
+     "tile_x": 31,
+     "tile_y": 35
+    },
+    "facing": "north"
+   },
+   "unlock_conditions": [
+    {
+     "type": "item_owned",
+     "item_id": "tm70_flash"
+    }
+   ],
+   "pages": [
+    {
+     "jp": "まって。　ハヤトに　かちに　きたんだね。",
+     "en": "Hold on. You've come to beat Falkner, haven't you."
+    },
+    {
+     "jp": "でも　まだ　はやいよ。",
+     "en": "But it's too soon."
+    },
+    {
+     "jp": "きたの　とうで　しゅぎょうしてから　おいで。",
+     "en": "Go and train at the tower to the north first."
+    }
+   ],
+   "npc_id": "glasses_man_violet_city"
+  }
+ ]
+}

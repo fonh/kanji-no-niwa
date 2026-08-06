@@ -1,20 +1,56 @@
 {
- "_note": "Étape 3 point 2 — PNJ-leçon (content/lessons/route-30.json, 4 leçons). Cette state 'greeting' ne se voit qu'une fois ses 4 leçons épuisées.",
+ "_note": "Étape 3 point 2 — PNJ-leçon (content/lessons/route-30.json, 4 leçons). Cette state 'greeting' ne se voit qu'une fois ses 4 leçons épuisées. | 2026-08-06 (issue 13, carte de conception) : deuxième état. Le moteur sert le dialogue AVANT d'ouvrir l'écran-livre (« l'histoire d'abord », src/app/map/actions.ts) — un PNJ-leçon à plusieurs leçons rejouait donc sa réplique de remise de cadeau, Effect compris, à chaque leçon. L'Effect est idempotent, rien n'était cassé, mais le joueur s'entendait offrir quatre fois le même objet. L'état d'après-cadeau se sélectionne sur item_owned de l'objet remis : monotone, aucune donnée nouvelle.",
  "npc_id": "man_in_house_route30",
- "name": { "jp": "いえの　ひと", "en": "Man in the House" },
+ "name": {
+  "jp": "いえの　ひと",
+  "en": "Man in the House"
+ },
  "zone_id": "route-30",
  "jlpt_level": "N5",
  "state_rules": [
-  { "default": true, "state": "greeting" }
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "apricorn_box"
+    }
+   ],
+   "state": "after_gift"
+  },
+  {
+   "default": true,
+   "state": "greeting"
+  }
  ],
  "dialogue_states": {
   "greeting": {
    "pages": [
-    { "jp": "アプリコットボックスだよ。", "en": "It's an Apricorn Box." },
-    { "jp": "木（き）の　みを　あつめられるよ。", "en": "Now you can collect tree fruits." }
+    {
+     "jp": "アプリコットボックスだよ。",
+     "en": "It's an Apricorn Box."
+    },
+    {
+     "jp": "木（き）の　みを　あつめられるよ。",
+     "en": "Now you can collect tree fruits."
+    }
    ],
    "effects": [
-    { "type": "grant_item", "item_id": "apricorn_box" }
+    {
+     "type": "grant_item",
+     "item_id": "apricorn_box"
+    }
+   ]
+  },
+  "after_gift": {
+   "pages": [
+    {
+     "jp": "あつめた　みは　その　はこに　いれると　いいよ。",
+     "en": "Put the ones you gather in that box."
+    },
+    {
+     "jp": "この　さきに　Mr.ポケモンの　いえが　あるよ。",
+     "en": "Mr. Pokémon's house is further along."
+    }
    ]
   }
  }
