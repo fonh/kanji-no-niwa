@@ -97,11 +97,21 @@ interface Props {
 const DS_SCREEN_W = 256
 const DS_SCREEN_H = 192
 
-/** Nombre de tuiles visibles en hauteur. La DS en montre une douzaine ; c'est
- * ce cadrage serré qui fait l'exploration. Sans zoom, une capture de carte
- * dessinée à ~12 px la tuile n'occupait qu'une bande au milieu d'un grand
- * écran, le reste en noir (issue 13). */
+/** Cadrage. La DS montre 16×12 tuiles sur un écran de 3 pouces ; reproduire ce
+ * compte tel quel sur un moniteur donne des tuiles de 4 cm de côté — c'est ce
+ * qui a été essayé, et c'était trop gros (issue 13). Deux contraintes qui se
+ * contredisent, donc un arbitrage :
+ *
+ *  - on VISE le cadrage serré de la DS (12 rangées) ;
+ *  - mais on PLAFONNE l'agrandissement à 4×, la valeur usuelle d'une fenêtre
+ *    d'émulateur sur ordinateur. Au-delà, on ne gagne plus en lisibilité, on
+ *    perd juste le monde autour.
+ *
+ * Sur un grand écran c'est donc le plafond qui décide (on voit un peu plus que
+ * sur DS, à taille de pixel raisonnable) ; sur un téléphone, c'est le cadrage
+ * (12 rangées, comme la console). */
 const VISIBLE_TILES_Y = 12
+const MAX_ZOOM = 4
 
 const BANG_MS = 550
 
@@ -399,7 +409,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   // Facteur d'agrandissement : on veut VISIBLE_TILES_Y tuiles sur la hauteur du
   // cadre. Le monde est ensuite translaté DANS l'espace non zoomé, d'où la
   // division par `zoom` pour recentrer sur le joueur.
-  const zoom = Math.max(1, viewSize.h / (VISIBLE_TILES_Y * zone.scale_y))
+  const zoom = Math.min(MAX_ZOOM, Math.max(1, viewSize.h / (VISIBLE_TILES_Y * zone.scale_y)))
   const stageW = viewSize.w / zoom
   const stageH = viewSize.h / zoom
   const offsetX = stageW / 2 - avatarPx.x
