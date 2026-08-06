@@ -3534,3 +3534,51 @@ son second état de dialogue, qui manquait.
 Le reste des déplacements de l'ouverture (Lyra/Ethan, le guide de Griotte, Elm
 qui rattrape le joueur sur la Route 29, Silver à la fenêtre) est documenté et
 prêt à poser : c'est de la donnée, plus du moteur.
+
+---
+
+## 2026-08-06 (suite 2) — audit « début de partie → première arène »
+
+Question : le début du jeu est-il livrable ? Elle ne se répond pas à l'œil — la
+réponse dépend de dizaines de fichiers qui doivent tous être là EN MÊME TEMPS.
+D'où `scripts/validate/audit-first-gym-run.py`, qui parcourt le chemin critique
+(Bourg Geon → Route 29 → Ville Griotte → Route 30 → Route 31 → Violet City →
+Tour Grospignon) et vérifie, zone par zone : chaque kanji enseigné existe, a des
+phrases d'exemple et leur audio ; chaque PNJ a un dialogue avec un état par
+défaut et des pages non vides ; chaque dresseur a `battle_intro` et
+`post_battle` ; chaque entité est joignable ; les panneaux ont bien leur texte.
+
+### Ce qu'il a trouvé — 6 bloquants, tous réels ou révélateurs
+
+| trouvé | verdict |
+|---|---|
+| **Falkner en (70,30) de violet-city** — hors grille | vrai bug : il n'était atteignable par personne. Reposé sur son objet ROM `obj_T22GYM0101_gsleader1`, DANS `MAP_VIOLET_GYM` (15,4) |
+| **Silver de la Tour en (12,12) dans un mur** | la tuile était juste, c'est l'ÉTAGE qui manquait : l'objet ROM est au **3F**, sans `map_zone` il était servi au 1F |
+| **Les 4 sages de la Tour absents du contenu** | vrai trou : la visite de la tour conditionne l'accès à l'arène. Reposés sur leurs objets ROM (`std_trainer(TRAINER_SAGE_*)`), 4 dialogues écrits |
+| **2 dresseurs sans sprite** (Silver, Falkner) | invisibles à l'écran. Corrigé |
+| 3 « PNJ muets » (PC, panneau, inscription) | faux positifs de mon audit : ce sont des `kind: sign/object`, le moteur leur sert un texte. L'audit apprend la règle — et vérifie désormais qu'un panneau a bien une tuile praticable **devant** lui, pas sous lui |
+
+### Le parcours, prouvé
+
+`src/lib/first-gym-run.test.ts` : BFS depuis la porte de la maison du joueur
+jusqu'à Falkner. Il a fallu apprendre à la marche à **traverser les guérites** —
+Route 31 et Violet City ne se touchent pas, elles sont reliées par
+`MAP_ROUTE_31_VIOLET_GATEHOUSE`. Une marche qui ignore les portes conclut à tort
+que la carte est coupée (c'est ce que mon premier jet a fait).
+
+Vérifié : les 6 zones atteintes à pied, la porte de la tour et celle de l'arène
+atteignables, les 4 sages joignables dans leur étage, Falkner et ses 2 gardes
+joignables dans l'arène, Silver au 3F et pas au 1F, et un plancher de volume
+pédagogique (≥ 20 leçons, ≥ 100 kanji) pour que l'arène n'arrive pas trop tôt.
+
+### État
+
+**26 leçons · 140 kanji · 280 phrases d'exemple avec audio · 159 pages de
+dialogue japonais · 12 dresseurs · 31 PNJ.** Aucun bloquant.
+
+### Ce qu'aucun script ne dira
+
+La qualité du japonais (naturel, registre, cohérence de niveau) et le rythme de
+game design. L'audit vérifie que la matière EXISTE et se tient, pas qu'elle est
+bonne. 159 pages + 280 phrases d'exemple, c'est un volume de relecture humaine
+réel, à faire avant de parler de livraison.

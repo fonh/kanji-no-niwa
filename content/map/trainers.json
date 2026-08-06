@@ -20,7 +20,8 @@
     "step": "egg_received"
    }
   ],
-  "dialogue_ref": "trainers/cherrygrove-city/silver_apparition1_cherrygrove"
+  "dialogue_ref": "trainers/cherrygrove-city/silver_apparition1_cherrygrove",
+  "sprite_id": "SPRITE_HNS_SILVER"
  },
  {
   "trainer_id": "bug_catcher_don_route30",
@@ -146,10 +147,10 @@
   "trainer_id": "falkner_violet_city",
   "zone_id": "violet-city",
   "name": "Falkner",
-  "tile_x": 70,
-  "tile_y": 30,
+  "tile_x": 15,
+  "tile_y": 4,
   "facing": "south",
-  "position_status": "provisional — intérieur du Gym Falkner non tile-authored, coordonnées placeholder distinctes de l'overworld",
+  "position_status": "2026-08-06 (issue 13, audit première arène) : était en (70,30) de violet-city — hors grille, donc inaccessible. Reposé sur son objet ROM obj_T22GYM0101_gsleader1, DANS MAP_VIOLET_GYM comme dans le jeu.",
   "trigger_type": "talk",
   "unlock_conditions": [
    {
@@ -163,7 +164,10 @@
   ],
   "role": "battle",
   "battle_length": 24,
-  "dialogue_ref": "trainers/violet-city/falkner_violet_city"
+  "dialogue_ref": "trainers/violet-city/falkner_violet_city",
+  "map_zone": "MAP_VIOLET_GYM",
+  "sprite_id": "SPRITE_GSLEADER1",
+  "matched_object_id": "obj_T22GYM0101_gsleader1"
  },
  {
   "trainer_id": "psychic_mark_route36",
@@ -6407,5 +6411,85 @@
     "step": "vermilion_pier"
    }
   ]
+ },
+ {
+  "trainer_id": "sage_chow_sprout_tower",
+  "zone_id": "sprout-tower",
+  "name": "Sage Chow",
+  "map_zone": "MAP_SPROUT_TOWER_1F",
+  "tile_x": 5,
+  "tile_y": 10,
+  "facing": "east",
+  "sight_range": 4,
+  "sprite_id": "SPRITE_BOZU",
+  "trigger_type": "sight_auto",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "role": "battle",
+  "battle_length": 6,
+  "matched_object_id": "obj_D15R0101_bozu_3",
+  "rom_trainer": "TRAINER_SAGE_CHOW",
+  "position_status": "2026-08-06 (issue 13, audit première arène) : les sages de la Tour Grospignon manquaient au contenu alors que la visite de la tour conditionne l'accès à l'arène. Reposés sur leurs objets ROM (std_trainer).",
+  "dialogue_ref": "trainers/sprout-tower/sage_chow_sprout_tower"
+ },
+ {
+  "trainer_id": "sage_neal_sprout_tower",
+  "zone_id": "sprout-tower",
+  "name": "Sage Neal",
+  "map_zone": "MAP_SPROUT_TOWER_3F",
+  "tile_x": 13,
+  "tile_y": 22,
+  "facing": "east",
+  "sight_range": 4,
+  "sprite_id": "SPRITE_BOZU",
+  "trigger_type": "sight_auto",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "role": "battle",
+  "battle_length": 6,
+  "matched_object_id": "obj_D15R0103_bozu_2",
+  "rom_trainer": "TRAINER_SAGE_NEAL",
+  "position_status": "2026-08-06 (issue 13, audit première arène) : les sages de la Tour Grospignon manquaient au contenu alors que la visite de la tour conditionne l'accès à l'arène. Reposés sur leurs objets ROM (std_trainer).",
+  "dialogue_ref": "trainers/sprout-tower/sage_neal_sprout_tower"
+ },
+ {
+  "trainer_id": "sage_troy_sprout_tower",
+  "zone_id": "sprout-tower",
+  "name": "Sage Troy",
+  "map_zone": "MAP_SPROUT_TOWER_3F",
+  "tile_x": 17,
+  "tile_y": 19,
+  "facing": "south",
+  "sight_range": 4,
+  "sprite_id": "SPRITE_BOZU",
+  "trigger_type": "sight_auto",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "role": "battle",
+  "battle_length": 6,
+  "matched_object_id": "obj_D15R0103_bozu_3",
+  "rom_trainer": "TRAINER_SAGE_TROY",
+  "position_status": "2026-08-06 (issue 13, audit première arène) : les sages de la Tour Grospignon manquaient au contenu alors que la visite de la tour conditionne l'accès à l'arène. Reposés sur leurs objets ROM (std_trainer).",
+  "dialogue_ref": "trainers/sprout-tower/sage_troy_sprout_tower"
+ },
+ {
+  "trainer_id": "sage_jin_sprout_tower",
+  "zone_id": "sprout-tower",
+  "name": "Sage Jin",
+  "map_zone": "MAP_SPROUT_TOWER_3F",
+  "tile_x": 18,
+  "tile_y": 25,
+  "facing": "west",
+  "sight_range": 4,
+  "sprite_id": "SPRITE_BOZU",
+  "trigger_type": "sight_auto",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "role": "battle",
+  "battle_length": 6,
+  "matched_object_id": "obj_D15R0103_bozu",
+  "rom_trainer": "TRAINER_SAGE_JIN",
+  "position_status": "2026-08-06 (issue 13, audit première arène) : les sages de la Tour Grospignon manquaient au contenu alors que la visite de la tour conditionne l'accès à l'arène. Reposés sur leurs objets ROM (std_trainer).",
+  "dialogue_ref": "trainers/sprout-tower/sage_jin_sprout_tower"
  }
 ]

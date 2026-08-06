@@ -436,9 +436,11 @@
   "tile_x": 12,
   "tile_y": 12,
   "facing": "north",
-  "position_status": "ROM-matched, voir content/map/placements/sprout-tower.json (obj_D15R0103_gsrivel)",
+  "position_status": "2026-08-06 (issue 13, audit première arène) : la tuile (12,12) était juste — c'est l'ÉTAGE qui manquait. L'objet ROM obj_D15R0103_gsrivel est au 3F ; sans map_zone, le PNJ était servi au 1F, dans un mur.",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/sprout-tower/silver_sprout_tower"
+  "dialogue_ref": "npcs/sprout-tower/silver_sprout_tower",
+  "map_zone": "MAP_SPROUT_TOWER_3F",
+  "sprite_id": "SPRITE_HNS_SILVER"
  },
  {
   "npc_id": "inscription_sprout_tower",
