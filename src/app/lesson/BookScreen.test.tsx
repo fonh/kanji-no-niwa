@@ -83,12 +83,22 @@ const turnPagesToQuiz = (spreads: number) => {
 }
 
 describe('double page kanji', () => {
-  it('gauche : caractère très grand, mot-clé anglais, lecture ; droite : exemples', () => {
+  it('gauche : caractère très grand, lectures ; droite : exemples', () => {
     render(makeLesson())
     expect(container.querySelector('[data-testid="book-character"]')!.textContent).toBe('一')
-    expect(container.textContent).toContain('one') // keyword ?? meanings[0]
     expect(container.textContent).toContain('イチ')
     expect(container.textContent).toContain('一緒に') // lesson_examples[0] (source: tatoeba)
+  })
+
+  it('mot-clé anglais masqué par défaut, X le révèle (2026-08-06)', () => {
+    // Il était affiché d'office — donc la réponse du quiz de fin, donnée avant
+    // la question. Même traitement que les lectures (Y) et les traductions (X)
+    // partout ailleurs : on tente, puis on vérifie.
+    render(makeLesson())
+    const keyword = () => container.querySelector('[data-testid="book-keyword"]')!.textContent
+    expect(keyword()).not.toContain('one') // keyword ?? meanings[0]
+    click(buttonByLabel('translation'))
+    expect(keyword()).toContain('one')
   })
 
   it('lectures inline des exemples masquées par défaut, Y les révèle', () => {

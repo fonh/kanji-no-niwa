@@ -135,10 +135,20 @@ export interface BagCategoryView {
 
 const FALLBACK_CATEGORY = 'other'
 
+/** Libellé d'un item hors registre.
+ *
+ * C'était l'item_id brut — donc « tm70_flash » affiché tel quel dans un jeu
+ * qui n'écrit jamais un caractère latin à l'écran (PRD § Langue du Jeu), et
+ * 74 des 87 items accordés par le contenu étaient dans ce cas (2026-08-06).
+ * Le repli est maintenant muet : le joueur voit qu'il possède quelque chose
+ * sans lire un identifiant de code. Le trou, lui, se voit là où il doit se
+ * voir — scripts/validate/audit-first-gym-run.py refuse un item du chemin
+ * critique sans libellé. */
+const FALLBACK_LABEL = '？？？'
+
 /** Inventaire groupé par catégorie, dans l'ordre déclaré du registre ;
  * catégories vides omises. Item hors registre → catégorie `other`, libellé
- * = item_id brut (repli dev : visible uniquement si la passe contenu a
- * oublié un item — le lint humain le repère immédiatement). */
+ * `？？？`. */
 export function groupBagItems(
   inventory: Record<string, number>,
   labels: BagItemLabels
@@ -149,7 +159,7 @@ export function groupBagItems(
     const label = labels.items[itemId]
     const category = label?.category ?? FALLBACK_CATEGORY
     if (!byCategory.has(category)) byCategory.set(category, [])
-    byCategory.get(category)!.push({ item_id: itemId, jp: label?.jp ?? itemId, quantity })
+    byCategory.get(category)!.push({ item_id: itemId, jp: label?.jp ?? FALLBACK_LABEL, quantity })
   }
   const orderedCategories = labels.categories.some(c => c.id === FALLBACK_CATEGORY)
     ? labels.categories

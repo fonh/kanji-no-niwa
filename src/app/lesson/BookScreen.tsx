@@ -270,8 +270,22 @@ export default function BookScreen({ lesson }: { lesson: BookScreenLesson }) {
                       {spread.data.kunReadings.map(formatKun).join('・')}
                     </div>
                   )}
-                  <div className="font-chrome text-lg tracking-wide text-[#3b2c1a]">
-                    {spread.data.keyword}
+                  {/* Mot-clé anglais : derrière le bouton X, comme toute autre
+                      langue étrangère à l'écran (2026-08-06). Il était affiché
+                      d'office — le seul mot d'anglais permanent du jeu, et
+                      surtout la réponse au quiz qui suit, donnée avant la
+                      question. Masqué, la double page ne montre plus que le
+                      kanji et ses lectures : on tente le sens, puis on
+                      vérifie. La place reste réservée (aucun saut de mise en
+                      page au basculement) et l'espace réservé dit qu'il y a
+                      quelque chose à révéler. */}
+                  <div
+                    data-testid="book-keyword"
+                    className={`font-chrome text-lg tracking-wide ${
+                      showEn ? 'text-[#3b2c1a]' : 'text-[#b3a184] select-none'
+                    }`}
+                  >
+                    {showEn ? spread.data.keyword : '・・・・・・'}
                   </div>
                 </div>
                 <div className="book-spine" />

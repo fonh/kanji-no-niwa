@@ -41,6 +41,29 @@ export interface ZoneListEntry extends ZoneBounds {
   // extérieure de rattachement (le labo « appartient » à ワカバタウン) →
   // repli latin prettifié (dev, zones hors contenu).
   jp_label: string
+  // Nom à afficher sur la plaque d'entrée de zone, ou null si cette zone n'en
+  // mérite pas (2026-08-06).
+  //
+  // Le jeu d'origine tranche par une seule condition (décompilé,
+  // src/field/draw_map_name.c) :
+  //
+  //     if (MapHeader_GetAreaIcon(...) == 0 || MapHeader_IsInBuilding(...))
+  //         return;
+  //
+  // — autrement dit : pas de plaque DANS UN BÂTIMENT, plaque partout ailleurs,
+  // et le texte affiché est celui de la SECTION de carte (mapsec), pas de la
+  // carte. Les trois étages de la Tour Grospignon partagent MAPSEC_SPROUT_TOWER
+  // et affichent donc tous « マダツボミのとう » : un donjon n'est pas un
+  // bâtiment.
+  //
+  // `jp_name` seul ne suffisait pas : il ne vaut que pour une zone dont le slug
+  // de contenu existe tel quel, donc null pour MAP_SPROUT_TOWER_1F
+  // ("sprout-tower-1f" ≠ "sprout-tower") — la tour n'avait aucune plaque.
+  // La règle ici reproduit celle du jeu avec les données qu'on a : le
+  // rattachement (`parentSlug`) fait foi, sauf s'il désigne une zone
+  // EXTÉRIEURE, auquel cas l'intérieur est un bâtiment de cette ville et
+  // n'affiche rien.
+  banner_name: string | null
   // Screenshot reference so adjacent outdoor zones can be drawn around the
   // current one (continuous world rendering) without fetching their full
   // data (collision grids are megabytes; these three fields are not).
@@ -64,15 +87,27 @@ export function getZoneNames(): ZoneListEntry[] {
   if (zoneNamesCache) return zoneNamesCache
   const names = getZoneRegistryNames()
   const slugs = Object.keys(names)
+  // Slugs qui possèdent une zone EXTÉRIEURE : leurs intérieurs sont des
+  // bâtiments (maison, Mart, Centre, arène) et n'affichent pas de plaque. Un
+  // slug sans zone extérieure est un donjon (Tour Grospignon, Grotte Sombre,
+  // Tour Cendrée…) — ses étages en affichent une, comme dans le jeu d'origine.
+  const outdoorSlugs = new Set(
+    rawRegistry.zones
+      .filter(z => z.is_outdoor)
+      .map(z => zoneSlugForMapName(z.name, slugs))
+      .filter((s): s is string => s !== undefined)
+  )
   zoneNamesCache = rawRegistry.zones.map(z => {
     const ownSlug = zoneSlugForMapName(z.name, slugs)
     const parentSlug = ownSlug ?? zoneSlugForMapNameOrParent(z.name, slugs)
+    const bannerSlug = ownSlug ?? (parentSlug && !outdoorSlugs.has(parentSlug) ? parentSlug : undefined)
     return {
       name: z.name,
       map_id: z.map_id,
       display_name: z.display_name,
       jp_name: ownSlug ? names[ownSlug].jp : null,
       jp_label: parentSlug ? names[parentSlug].jp : latinFallback(z.name),
+      banner_name: bannerSlug ? names[bannerSlug].jp : null,
       is_outdoor: z.is_outdoor,
       world_origin_x: z.world_origin_x,
       world_origin_y: z.world_origin_y,

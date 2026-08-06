@@ -131,6 +131,23 @@ const SLIDE_MS = 110
 // (comme dans le jeu), pas un fondu cinématique.
 const WARP_FADE_MS = 150
 
+/** Durée totale de la plaque de nom de lieu, animation comprise.
+ *
+ * Le jeu d'origine (décompilé, src/field/draw_map_name.c, Task_MapNameAndIcon)
+ * la descend de 38 px par pas de 4 px/image (≈ 10 images), la tient
+ * `framesFullyOnscreen >= 60` — soit exactement 1 seconde à 60 im/s — puis la
+ * remonte pareil : ≈ 1,33 s en tout.
+ *
+ * On tient plus longtemps (1,9 s de palier, 2,4 s en tout) pour une seule
+ * raison : le nom est en japonais et le joueur APPREND à le lire. Une seconde
+ * suffit à reconnaître « Violet City » ; pas à déchiffrer « キキョウシティ ».
+ * Les deux glissements gardent la proportion d'origine.
+ *
+ * DOIT rester égal à la durée de l'animation `zone-banner` de globals.css —
+ * sinon la plaque est retirée du DOM en plein écran (c'était le cas : 1,9 s
+ * ici contre 2,4 s en CSS, elle disparaissait d'un coup au lieu de remonter). */
+const BANNER_MS = 2400
+
 // Player sheet rows (public/sprites/characters/protagonist_ethan_ow.png,
 // 8×4 frames of 32px): 0=south, 1=north, 2=west, 3=east.
 
@@ -306,6 +323,12 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const stepSettleTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const persistTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const bannerTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  // Dernier nom affiché sur la plaque. Le jeu d'origine affiche la SECTION de
+  // carte (mapsec), pas la carte : monter du 1F au 2F de la Tour Grospignon ne
+  // change pas de section, donc pas de nouvelle plaque. On reproduit ça en
+  // comparant le nom lui-même — sortir d'une maison RE-montre bien le nom de
+  // la ville (la maison n'en avait aucun).
+  const lastBannerNameRef = useRef<string | null>(null)
   const pressedKeysRef = useRef<Set<string>>(new Set())
   // Ref, pas state (même raison que isTransitioningRef) : le fondu couvre
   // aussi la fenêtre AVANT que goToZone lui-même ne pose isTransitioningRef
@@ -719,10 +742,26 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [finishInterception, openDialogue, router]
   )
 
-  const showBanner = useCallback((label: string) => {
+  // Plaque de nom de lieu. `null` = cette zone n'en a pas (bâtiment) : on ne
+  // montre rien ET on oublie le dernier nom, pour que la sortie du bâtiment
+  // re-annonce la ville, comme dans le jeu d'origine.
+  const showBanner = useCallback((label: string | null | undefined) => {
+    if (!label) return
+    if (label === lastBannerNameRef.current) return
+    lastBannerNameRef.current = label
     if (bannerTimeoutRef.current) clearTimeout(bannerTimeoutRef.current)
     setBanner({ label, key: Date.now() })
-    bannerTimeoutRef.current = setTimeout(() => setBanner(null), 1900)
+    bannerTimeoutRef.current = setTimeout(() => setBanner(null), BANNER_MS)
+  }, [])
+
+  // Arrivée sur la carte (chargement de page, retour d'une leçon, d'un combat,
+  // du menu) : la plaque n'était jouée QUE par une transition de zone, donc
+  // jamais après un rechargement — on pouvait jouer une session entière sans
+  // la voir une seule fois. Le jeu d'origine l'affiche à chaque entrée sur la
+  // carte, reprise de sauvegarde comprise.
+  useEffect(() => {
+    showBanner(zoneEntryByName.get(initialZone.name)?.banner_name)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // ── Verrou de progression (issue 13) ──────────────────────────────────────
@@ -823,7 +862,15 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   )
 
   const goToZone = useCallback(
-    async (targetName: string, resolveSpawn?: (newZone: Zone) => PlayerPos | null) => {
+    async (
+      targetName: string,
+      resolveSpawn?: (newZone: Zone) => PlayerPos | null,
+      /** Son de franchissement (porte, escalier) — joué SEULEMENT une fois
+       * l'entrée autorisée. Il partait avant la vérification serveur : buter
+       * sur le verrou de l'arène de Mauville ouvrait quand même la porte à
+       * l'oreille (2026-08-06). */
+      enterSfx?: string
+    ) => {
       if (isTransitioningRef.current) return
       isTransitioningRef.current = true
       try {
@@ -847,6 +894,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           else openDialogue('', [{ jp: entry.jp }])
           return
         }
+        if (enterSfx) playSfx(enterSfx)
         const res = await fetch(`/api/zone?name=${encodeURIComponent(targetName)}`)
         // A 307 to the sign-in page (expired session) resolves as `ok` once
         // fetch follows the redirect, but the body is HTML, not JSON.
@@ -864,10 +912,11 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         setPlayerPos(pos)
         setFollowerPos(null) // le compagnon ré-émerge derrière le premier pas
         setFloorPicker(false)
-        // Bandeau : le nom VO jp PROPRE de la zone (ワカバタウン…). Les
-        // intérieurs n'ont pas de nom propre dans le contenu → pas de bandeau
-        // (comme HGSS ; leur libellé hérité reste visible au HUD).
-        if (target?.jp_name) showBanner(target.jp_name)
+        // Plaque de nom de lieu : le nom VO jp de la SECTION de carte
+        // (ワカバタウン, マダツボミのとう…). null pour un bâtiment — comme
+        // dans le jeu d'origine, qui ne l'affiche jamais à l'intérieur (voir
+        // ZoneListEntry.banner_name). Le libellé hérité reste visible au HUD.
+        showBanner(target?.banner_name)
         markVisited(newZone.name)
         persistPosition(newZone.name, pos.world_x, pos.world_z)
         checkSightLine(newTrainers, pos.world_x, pos.world_z)
@@ -887,6 +936,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       markVisited,
       openDialogue,
       playRoadblockScene,
+      playSfx,
     ]
   )
 
@@ -895,12 +945,16 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   // le continuum outdoor→outdoor (attemptStep appelle goToZone directement,
   // fidèle au jeu : les cartes extérieures contiguës ne fondent pas).
   const goToZoneWithFade = useCallback(
-    (targetName: string, resolveSpawn?: (newZone: Zone) => PlayerPos | null) => {
+    (
+      targetName: string,
+      resolveSpawn?: (newZone: Zone) => PlayerPos | null,
+      enterSfx?: string
+    ) => {
       if (warpFadeActiveRef.current || isTransitioningRef.current) return
       warpFadeActiveRef.current = true
       setWarpFading(true)
       warpFadeTimeoutRef.current = setTimeout(() => {
-        goToZone(targetName, resolveSpawn).finally(() => {
+        goToZone(targetName, resolveSpawn, enterSfx).finally(() => {
           setWarpFading(false)
           warpFadeActiveRef.current = false
         })
@@ -922,15 +976,19 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       // (warp.anchor points back to the matching door there), so it can only
       // be resolved once that zone's data has been fetched.
       // Son de porte ou d'escalier selon la destination — c'est ce qui donne
-      // sa matière au franchissement (issue 13, sons d'action).
-      playSfx(/STAIR|_[0-9]F$|B[0-9]F$/.test(String(warp.header)) ? SFX.stairs : SFX.doorOpen)
-      goToZoneWithFade(warp.header, newZone => {
-        const anchorWarp = newZone.warps[warp.anchor]
-        if (anchorWarp) return { world_x: anchorWarp.x, world_z: anchorWarp.z }
-        return zoneSpawn(newZone)
-      })
+      // sa matière au franchissement (issue 13, sons d'action). Confié à
+      // goToZone : il ne doit sonner que si l'entrée est réellement accordée.
+      goToZoneWithFade(
+        warp.header,
+        newZone => {
+          const anchorWarp = newZone.warps[warp.anchor]
+          if (anchorWarp) return { world_x: anchorWarp.x, world_z: anchorWarp.z }
+          return zoneSpawn(newZone)
+        },
+        /STAIR|_[0-9]F$|B[0-9]F$/.test(String(warp.header)) ? SFX.stairs : SFX.doorOpen
+      )
     },
-    [goToZoneWithFade, playSfx]
+    [goToZoneWithFade]
   )
 
   const settleStep = useCallback(
@@ -1302,6 +1360,30 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         className="relative overflow-hidden"
         style={{ width: viewSize.w, height: viewSize.h }}
       >
+      {/* Plaque de nom de lieu, à l'entrée d'une section de carte.
+          Décompilé (src/field/draw_map_name.c) : la fenêtre est posée en
+          tuile (0,0) de la couche BG3 de l'écran principal — donc COLLÉE au
+          coin HAUT-GAUCHE de l'écran de jeu — et l'illustration de plaque fait
+          17×4 tuiles, soit 136×32 px sur les 256×192 de la DS : un peu plus de
+          la moitié de la largeur, un sixième de la hauteur. Le nom est centré
+          dedans. Elle glisse VERTICALEMENT (descend, tient, remonte), jamais
+          latéralement.
+          Elle vit DANS le cadre DS : posée en `fixed` elle se calait sur la
+          fenêtre du navigateur, donc dans la bordure noire, à côté du jeu.
+          Reconstruite en CSS : les assets de chrome extraits de la ROM
+          (public/sprites/ui/menus/) sont inexploitables, palettes perdues à
+          l'extraction (issue 13). */}
+      {banner && (
+        <div
+          key={banner.key}
+          data-testid="zone-banner"
+          className="zone-banner absolute top-0 left-0 z-50 pointer-events-none"
+          style={{ width: `${(136 / DS_SCREEN_W) * 100}%` }}
+        >
+          <div className="zone-banner-plate font-reading">{banner.label}</div>
+        </div>
+      )}
+
       <div
         style={{
           position: 'absolute',
@@ -1659,23 +1741,6 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       </div>
       </div>
       </div>
-
-      {/* Panneau de nom de zone, à l'entrée d'une nouvelle zone. Le jeu
-          d'origine le pose en HAUT À GAUCHE (pas centré), sous la forme d'une
-          plaque arrondie à double liseré — bord extérieur sombre, filet blanc
-          intérieur, fond dégradé clair, nom en texte foncé — qui glisse depuis
-          le bord puis se retire. Reconstruit en CSS : les assets de chrome
-          extraits de la ROM (public/sprites/ui/menus/) sont inexploitables,
-          palettes perdues à l'extraction (issue 13). */}
-      {banner && (
-        <div
-          key={banner.key}
-          data-testid="zone-banner"
-          className="zone-banner fixed top-3 left-3 z-50 pointer-events-none"
-        >
-          <div className="zone-banner-plate font-reading">{banner.label}</div>
-        </div>
-      )}
 
       {/* Elevator floor picker — step on the elevator panel (violet tile)
           to open; B closes */}

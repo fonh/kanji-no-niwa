@@ -644,6 +644,7 @@ describe('MapClient — fondu de warp (issue 13)', () => {
       display_name: null,
       jp_name: null,
       jp_label: 'ROUTE 2',
+      banner_name: null,
       screenshot: '',
       screenshot_w: 64,
       screenshot_h: 64,
@@ -815,5 +816,59 @@ describe('MapClient — verrou de progression (issue 13)', () => {
     expect(container.querySelector('[data-testid="roadblock-guard"]')).not.toBeNull()
     // Le serveur a bien été consulté avec la zone de départ.
     expect(checkZoneEntryMock).toHaveBeenCalledWith('MAP_NEXT', expect.any(Number), 'MAP_TEST_TOWN')
+  })
+})
+
+// Plaque de nom de lieu (2026-08-06) — trois défauts corrigés d'un coup :
+// elle ne se jouait qu'après une transition (donc jamais après un
+// rechargement), elle était posée en `fixed` donc à côté de l'écran de jeu, et
+// son minuteur (1,9 s) coupait avant la fin de son animation (2,4 s).
+describe('MapClient — plaque de nom de lieu', () => {
+  const entry = (name: string, banner: string | null): ZoneListEntry =>
+    ({
+      name,
+      is_outdoor: true,
+      world_origin_x: 0,
+      world_origin_y: 0,
+      tile_width: 8,
+      tile_height: 8,
+      banner_name: banner,
+    }) as unknown as ZoneListEntry
+
+  function renderWith(zoneNames: ZoneListEntry[]) {
+    act(() => {
+      root.render(
+        <MapClient
+          zone={zone}
+          npcs={[]}
+          trainers={[]}
+          initialPos={{ world_x: 3, world_z: 3 }}
+          initialProgress={DEFAULT_PROGRESS}
+          allZoneNames={zoneNames}
+        />
+      )
+    })
+  }
+
+  it('s’affiche à l’arrivée sur la carte, sans attendre un changement de zone', () => {
+    renderWith([entry('MAP_TEST_TOWN', 'ワカバタウン')])
+    const plate = container.querySelector('[data-testid="zone-banner"]')
+    expect(plate).not.toBeNull()
+    expect(plate!.textContent).toBe('ワカバタウン')
+  })
+
+  it('vit DANS le cadre DS, collée au coin haut-gauche — pas dans la bordure noire', () => {
+    renderWith([entry('MAP_TEST_TOWN', 'ワカバタウン')])
+    const screen = container.querySelector('[data-testid="ds-screen"]')!
+    const plate = container.querySelector('[data-testid="zone-banner"]')!
+    expect(screen.contains(plate)).toBe(true)
+    expect(plate.className).toContain('absolute')
+    expect(plate.className).toContain('top-0')
+    expect(plate.className).toContain('left-0')
+  })
+
+  it('une zone sans nom de section (bâtiment) n’en affiche aucune', () => {
+    renderWith([entry('MAP_TEST_TOWN', null)])
+    expect(container.querySelector('[data-testid="zone-banner"]')).toBeNull()
   })
 })

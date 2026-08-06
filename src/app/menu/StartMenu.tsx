@@ -323,12 +323,26 @@ function QuestJournalScreen({ data }: { data: StartMenuData }) {
 
 function BagScreen({ data, onOpenText }: { data: StartMenuData; onOpenText: (textId: string) => void }) {
   const [tab, setTab] = useState<'items' | 'reading'>('items')
+  // ADR-0002 sans exception : tout kanji affiché porte sa lecture inline. Les
+  // libellés du sac étaient rendus en texte brut — un objet nommé avec un
+  // kanji (« ひでんの かんじ・切 ») s'affichait donc sans lecture, seul écran
+  // du jeu dans ce cas (2026-08-06).
+  const settings = useSettings()
+  const [showReadings, setShowReadings] = useState(settings.showReadings)
   return (
     <MenuFrame
       title={uiStrings.menu_slot_bag.jp}
       testId="screen-bag"
       actions={
         <>
+          <button
+            onClick={() => setShowReadings(v => !v)}
+            className={`w-7 h-7 rounded-full border text-xs font-bold ${
+              showReadings ? 'bg-white/30 border-white/50 text-white' : 'bg-white/10 border-white/25 text-white/70'
+            }`}
+          >
+            Y
+          </button>
           <button
             onClick={() => setTab('items')}
             className={`px-2 py-1 rounded text-xs ${
@@ -360,7 +374,7 @@ function BagScreen({ data, onOpenText }: { data: StartMenuData; onOpenText: (tex
               </div>
               {category.items.map(item => (
                 <div key={item.item_id} className="flex items-baseline px-2 py-1 text-sm text-white/90">
-                  <span>{item.jp}</span>
+                  <JpText jp={item.jp} showReadings={showReadings} />
                   {item.quantity > 1 && <span className="ml-auto text-white/50 text-xs">×{item.quantity}</span>}
                 </div>
               ))}

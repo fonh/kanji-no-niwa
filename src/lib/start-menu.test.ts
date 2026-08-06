@@ -202,10 +202,12 @@ describe('groupBagItems — inventaire par catégorie', () => {
     expect(grouped[1].items).toEqual([{ item_id: 'old_rod', jp: 'ボロの　つりざお', quantity: 1 }])
   })
 
-  it('item hors registre → catégorie other, libellé = item_id (repli dev, documenté)', () => {
+  it('item hors registre → catégorie other, libellé 「？？？」 — jamais l’item_id latin', () => {
+    // Le repli affichait l'identifiant de code (« tm70_flash ») dans un jeu qui
+    // n'écrit jamais de latin à l'écran (2026-08-06).
     const grouped = groupBagItems({ unknown_thing: 3 }, LABELS)
     expect(grouped).toEqual([
-      { id: 'other', jp: 'そのほか', items: [{ item_id: 'unknown_thing', jp: 'unknown_thing', quantity: 3 }] },
+      { id: 'other', jp: 'そのほか', items: [{ item_id: 'unknown_thing', jp: '？？？', quantity: 3 }] },
     ])
   })
 

@@ -1,23 +1,127 @@
 {
-  "_comment": "Registre MINIMAL de libellés d'items pour le Sac du menu START (issue 09). Les items n'ont pas de registre de métadonnées au jalon 1 (la table `items` du PRD § Schéma attend l'ingestion) : ce fichier fait le pont — item_id → libellé jp (noms VO HGSS) + catégorie (sous-ensemble de items.category du PRD). Un item absent d'ici tombe dans `other` avec son item_id brut (repli dev, voir src/lib/start-menu.ts groupBagItems). À remplacer par la vraie table items à l'échelle.",
-  "categories": [
-    { "id": "key_items", "jp": "たいせつなもの" },
-    { "id": "tools", "jp": "どうぐ" },
-    { "id": "other", "jp": "そのほか" }
-  ],
-  "items": {
-    "running_shoes": { "jp": "ランニングシューズ", "category": "key_items" },
-    "pokegear": { "jp": "ポケギア", "category": "key_items" },
-    "map_card": { "jp": "マップカード", "category": "key_items" },
-    "pokedex": { "jp": "ポケモンずかん", "category": "key_items" },
-    "mystery_egg": { "jp": "ふしぎな　タマゴ", "category": "key_items" },
-    "apricorn_box": { "jp": "ぼんぐりケース", "category": "key_items" },
-    "red_scale": { "jp": "あかい　ウロコ", "category": "key_items" },
-    "old_rod": { "jp": "ボロの　つりざお", "category": "key_items" },
-    "exp_share": { "jp": "がくしゅうそうち", "category": "tools" },
-    "twisted_spoon": { "jp": "まがった　スプーン", "category": "tools" },
-    "miracle_seed": { "jp": "きせきの　タネ", "category": "tools" },
-    "lure_ball": { "jp": "ルアーボール", "category": "tools" },
-    "poison_barb": { "jp": "どくバリ", "category": "tools" }
+ "_comment": "Registre MINIMAL de libellés d'items pour le Sac du menu START (issue 09). Les items n'ont pas de registre de métadonnées au jalon 1 (la table `items` du PRD § Schéma attend l'ingestion) : ce fichier fait le pont — item_id → libellé jp + catégorie (sous-ensemble de items.category du PRD). | 2026-08-06 : complété pour tout le chemin critique « début → première arène » et pour les 7 CS-Kanji. Un item accordé par du contenu SANS entrée ici s'affichait avec son item_id brut, donc en caractères latins, dans un jeu où le PRD interdit le latin à l'écran (§ Langue du Jeu) — 74 des 87 items accordés étaient dans ce cas. Le repli est désormais 「？？？」 (src/lib/start-menu.ts groupBagItems), et scripts/validate/audit-first-gym-run.py refuse un item du chemin critique sans libellé. Les items des zones plus tardives restent à nommer au fil des lots — les nommer ici sans source serait inventer des noms VO. | Noms des CS-Kanji repris de nos propres dialogues de remise (« 水（みず）の かんじの ひでん »), pas d'un nom HGSS : les CS-Kanji sont une mécanique de ce jeu-ci.",
+ "categories": [
+  {
+   "id": "key_items",
+   "jp": "たいせつなもの"
+  },
+  {
+   "id": "cs_kanji",
+   "jp": "かんじの　ひでん"
+  },
+  {
+   "id": "tm",
+   "jp": "わざマシン"
+  },
+  {
+   "id": "tools",
+   "jp": "どうぐ"
+  },
+  {
+   "id": "other",
+   "jp": "そのほか"
   }
+ ],
+ "items": {
+  "apricorn_box": {
+   "jp": "ぼんぐりケース",
+   "category": "key_items"
+  },
+  "cs_chikara": {
+   "jp": "力（ちから）の　かんじの　ひでん",
+   "category": "cs_kanji"
+  },
+  "cs_kiru": {
+   "jp": "切（き）る　かんじの　ひでん",
+   "category": "cs_kanji"
+  },
+  "cs_kudakeru": {
+   "jp": "砕（くだ）く　かんじの　ひでん",
+   "category": "cs_kanji"
+  },
+  "cs_mizu": {
+   "jp": "水（みず）の　かんじの　ひでん",
+   "category": "cs_kanji"
+  },
+  "cs_taki": {
+   "jp": "滝（たき）の　かんじの　ひでん",
+   "category": "cs_kanji"
+  },
+  "cs_tobu": {
+   "jp": "飛（と）ぶ　かんじの　ひでん",
+   "category": "cs_kanji"
+  },
+  "cs_uzu": {
+   "jp": "渦（うず）の　かんじの　ひでん",
+   "category": "cs_kanji"
+  },
+  "exp_share": {
+   "jp": "がくしゅうそうち",
+   "category": "tools"
+  },
+  "lure_ball": {
+   "jp": "ルアーボール",
+   "category": "tools"
+  },
+  "map_card": {
+   "jp": "マップカード",
+   "category": "key_items"
+  },
+  "miracle_seed": {
+   "jp": "きせきの　タネ",
+   "category": "tools"
+  },
+  "mystery_egg": {
+   "jp": "ふしぎな　タマゴ",
+   "category": "key_items"
+  },
+  "old_rod": {
+   "jp": "ボロの　つりざお",
+   "category": "key_items"
+  },
+  "pal_pad": {
+   "jp": "ともだちてちょう",
+   "category": "key_items"
+  },
+  "poison_barb": {
+   "jp": "どくバリ",
+   "category": "tools"
+  },
+  "pokedex": {
+   "jp": "ポケモンずかん",
+   "category": "key_items"
+  },
+  "pokegear": {
+   "jp": "ポケギア",
+   "category": "key_items"
+  },
+  "red_scale": {
+   "jp": "あかい　ウロコ",
+   "category": "key_items"
+  },
+  "running_shoes": {
+   "jp": "ランニングシューズ",
+   "category": "key_items"
+  },
+  "tm44_rest": {
+   "jp": "わざマシン44",
+   "category": "tm"
+  },
+  "tm51_roost": {
+   "jp": "わざマシン51",
+   "category": "tm"
+  },
+  "tm70_flash": {
+   "jp": "わざマシン70",
+   "category": "tm"
+  },
+  "twisted_spoon": {
+   "jp": "まがった　スプーン",
+   "category": "tools"
+  },
+  "vs_recorder": {
+   "jp": "VSレコーダー",
+   "category": "key_items"
+  }
+ }
 }

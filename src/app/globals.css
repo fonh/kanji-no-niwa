@@ -201,13 +201,19 @@ body {
   animation: ow-bump 0.16s ease-out;
 }
 
-/* Zone-name banner (HGSS-style), shown briefly after a zone change. */
-/* Panneau de nom de zone (issue 13) — plaque façon HGSS : elle entre en
-   glissant depuis la gauche, tient, puis repart du même côté. */
+/* Plaque de nom de lieu (issue 13, géométrie et rythme repris du décompilé
+   2026-08-06 — src/field/draw_map_name.c).
+   Le jeu la fait DESCENDRE depuis le haut de l'écran (layerY 38 → 0, 4 px par
+   image), la tient 60 images (1 s), puis la REMONTE. Aucun mouvement latéral.
+   Les proportions sont conservées, le palier allongé (le nom est en japonais,
+   voir BANNER_MS dans MapClient.tsx) — d'où 8 % / 8 % de glissement pour
+   84 % de palier sur les 2,4 s.
+   Durée à garder EN PHASE avec BANNER_MS : si le CSS dure plus longtemps que
+   le minuteur JS, la plaque est retirée du DOM en plein écran. */
 @keyframes zone-banner {
-  0% { opacity: 0; transform: translateX(-14px); }
-  10%, 84% { opacity: 1; transform: translateX(0); }
-  100% { opacity: 0; transform: translateX(-14px); }
+  0% { opacity: 0; transform: translateY(-100%); }
+  8%, 92% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-100%); }
 }
 
 .zone-banner {
@@ -215,20 +221,29 @@ body {
 }
 
 /* Double liseré : bord extérieur bleu nuit, filet blanc intérieur (box-shadow
-   plutôt qu'une deuxième bordure, pour garder un seul rayon d'arrondi). */
+   plutôt qu'une deuxième bordure, pour garder un seul rayon d'arrondi).
+   Coin haut-gauche carré : la plaque sort du bord de l'écran, elle n'y flotte
+   pas — c'est ce que fait la fenêtre du jeu, calée en tuile (0,0). */
 .zone-banner-plate {
-  padding: 0.3rem 1.1rem;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
   border: 2px solid #23386b;
-  border-radius: 9999px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0 0 0.7rem 0;
   background: linear-gradient(#fdfdff 0%, #e6edf8 55%, #c9d8ee 100%);
   box-shadow:
-    inset 0 0 0 2px #ffffff,
+    inset -2px -2px 0 0 #ffffff,
     0 2px 0 rgba(20, 30, 60, 0.35),
     0 3px 8px rgba(0, 0, 0, 0.4);
   color: #1b2a4d;
   font-size: 0.95rem;
+  line-height: 1.35;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 

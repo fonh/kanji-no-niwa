@@ -46,6 +46,7 @@ KANJI = json.load(open("src/data/kanji-content.json"))
 NPCS = json.load(open("content/map/npcs.json"))
 TRAINERS = json.load(open("content/map/trainers.json"))
 REGISTRY = {z["name"]: z for z in json.load(open("src/data/zone-registry.json"))["zones"]}
+ITEM_LABELS = json.load(open("src/data/item-labels.json"))["items"]
 
 verbose = "--verbose" in sys.argv
 problems: list[tuple[str, str]] = []  # (gravité, message)
@@ -263,6 +264,32 @@ def audit_positions(zone_id: str, map_name: str) -> None:
                 blocker(f"{zone_id} : {kind} {ident} en ({x},{y}) — injoignable, aucun voisin praticable")
 
 
+def audit_items(zone_id: str) -> None:
+    """Tout objet remis dans cette zone doit avoir un libellé japonais.
+
+    Ajouté 2026-08-06. Le Sac affichait l'`item_id` brut faute de libellé —
+    donc « tm70_flash », « vs_recorder », « pal_pad » en caractères latins,
+    dans un jeu dont le PRD interdit le latin à l'écran (§ Langue du Jeu).
+    74 des 87 objets accordés par du contenu étaient dans ce cas ; le repli
+    est maintenant muet (「？？？」), et le chemin critique, lui, doit être
+    complet — c'est le seul parcours qu'on prétend livrable.
+    """
+    for path in (ROOT / "content/dialogues").rglob("*.json"):
+        if f"/{zone_id}/" not in str(path):
+            continue
+        doc = json.load(open(path))
+        for state in (doc.get("dialogue_states") or {}).values():
+            for effect in state.get("effects") or []:
+                if effect.get("type") != "grant_item":
+                    continue
+                item_id = effect["item_id"]
+                if item_id not in ITEM_LABELS:
+                    blocker(
+                        f"{zone_id} : {path.stem} remet « {item_id} », qui n'a aucun libellé "
+                        f"japonais (src/data/item-labels.json) — le Sac l'afficherait 「？？？」"
+                    )
+
+
 def audit_zone_playable(map_name: str) -> None:
     zone = REGISTRY.get(map_name)
     if zone is None:
@@ -280,6 +307,7 @@ def main() -> None:
         n_lessons, taught = audit_lessons(zone_id)
         n_npcs = audit_npcs(zone_id)
         n_trainers = audit_trainers(zone_id)
+        audit_items(zone_id)
         audit_positions(zone_id, map_name)
         audit_zone_playable(map_name)
         total_lessons += n_lessons

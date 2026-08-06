@@ -275,13 +275,16 @@
    "note": null
   },
   {
-   "zone_id": "violet",
+   "zone_id": "violet-city",
    "map_name": "MAP_VIOLET",
-   "name": null,
+   "name": {
+    "jp": "キキョウシティ",
+    "en": "Violet City"
+   },
    "region": "johto",
    "music_ref": "/audio/ost/Disc 1/22 - Violet City.mp3",
    "is_interior": false,
-   "note": "Intérieur sans piste propre : piste de la zone d'accès (règle du registre)."
+   "note": "zone_id corrigé 2026-08-06 : le registre disait « violet », tout le contenu (npcs, trainers, lessons, dialogues, quêtes) dit « violet-city ». Personne ne cassait parce que le seul lecteur de ce fichier cherche par map_name — mais un lookup par zone_id y serait tombé silencieusement à côté. `name` renseigné au passage (il était null alors que le nom VO existe dans content/zone-registry-names.json)."
   },
   {
    "zone_id": "celadon",
