@@ -267,7 +267,14 @@ async function applyDialogueState(
 //    le dialogue_ref ordinaire, comme n'importe quel PNJ.
 export type NpcInteraction =
   | { kind: 'lesson'; zone_id: string; sequence_index: number }
-  | { kind: 'dialogue'; dialogue: ReachedDialogue }
+  /** `lesson` présent : le personnage a une leçon à donner, mais on sert
+   * d'abord son dialogue — l'écran-livre s'ouvre à la fermeture de la boîte
+   * (issue 13, « l'histoire d'abord, toujours »). */
+  | {
+      kind: 'dialogue'
+      dialogue: ReachedDialogue
+      lesson?: { zone_id: string; sequence_index: number }
+    }
   | { kind: 'text'; text_id: string }
 
 export async function interactWithNpc(npcId: string): Promise<NpcInteraction | null> {
@@ -304,11 +311,20 @@ export async function interactWithNpc(npcId: string): Promise<NpcInteraction | n
     const ctx = { questSteps: getQuestStepsIndex(), now }
     const resolution = resolveLessonInteraction(npc.npc_id, lessons, state, ctx)
     if (resolution.kind === 'lesson') {
-      return {
-        kind: 'lesson',
+      // L'HISTOIRE D'ABORD, TOUJOURS (issue 13, décision produit). Un
+      // personnage qui a une leçon à donner ouvrait l'écran-livre SANS jamais
+      // dire sa réplique : Mr. Pokémon lançait une leçon au lieu de parler de
+      // l'œuf qu'on venait chercher de la part d'Elm. On sert donc son
+      // dialogue, et la leçon suit à la fermeture de la boîte.
+      const lesson = {
         zone_id: npc.zone_id,
         sequence_index: resolution.lesson.sequence_index,
       }
+      if (served.dialogue_ref) {
+        const dialogue = await applyDialogueState(userId, state, served.dialogue_ref, now)
+        if (dialogue) return { kind: 'dialogue', dialogue, lesson }
+      }
+      return { kind: 'lesson', ...lesson }
     }
     if (resolution.kind === 'blocked') {
       const pool = getLessonBlockedLines('N5')

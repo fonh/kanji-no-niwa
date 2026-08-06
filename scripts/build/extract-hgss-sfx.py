@@ -133,21 +133,13 @@ class Note:
         self.program, self.volume, self.bend, self.bend_range = program, volume, bend, bend_range
 
 
-def parse_sequence(sseq: bytes) -> tuple[list[Note], int]:
-    """Joue la séquence « sur le papier » et rend la liste des notes.
-
-    Un bruitage d'interface n'est pas une note isolée : SEQ_SE_DP_SELECT en
-    enchaîne trois (94, puis 103 deux fois) avec des changements de volume
-    entre — ne rendre que la première donnait un son proche mais pas le bon
-    (issue 13). On ne gère que le déroulé linéaire : boucles, sauts et pistes
-    multiples sortent en erreur plutôt que de rendre un à-peu-près.
-    """
-    body = sseq[0x1C:]
-    i = tick = 0
+def _parse_track(body: bytes, start: int, notes: list, tempo_box: list) -> None:
+    """Déroule UNE piste depuis `start` et empile ses notes. Le tempo est
+    partagé (une seule horloge pour toute la séquence, comme sur la console)."""
+    i = start
+    tick = 0
     program = volume = 0
     bend, bend_range = 0, 2
-    tempo = 120
-    notes: list[Note] = []
     while i < len(body):
         c = body[i]
         i += 1
@@ -156,19 +148,23 @@ def parse_sequence(sseq: bytes) -> tuple[list[Note], int]:
             ticks, i = read_varlen(body, i + 1)
             notes.append(Note(tick, c, velocity, ticks, program, volume, bend, bend_range))
             continue
-        if c == 0x80:  # repos — la seule commande qui fait avancer le temps
+        if c == 0x80:
             delta, i = read_varlen(body, i)
             tick += delta
             continue
         if c == 0x81:
             program, i = read_varlen(body, i)
             continue
-        if c == 0xFF:  # fin de piste
-            break
-        if c in (0xFC, 0xFD):  # fin de boucle / retour
-            raise SystemExit("séquence à boucle ou sous-routine : hors de portée de ce script")
+        if c in (0xFF, 0xFD):  # fin de piste / retour
+            return
+        if c == 0xFC:
+            raise SystemExit("séquence à boucle : hors de portée de ce script")
+        if c == 0x93:  # ouverture de piste : déjà traitée par l'appelant
+            i += 4
+            continue
         if c == 0xFE:
-            raise SystemExit("séquence multi-pistes : hors de portée de ce script")
+            i += 2
+            continue
         n = CMD_ARGS.get(c, 0)
         if n is None:
             _, i = read_varlen(body, i)
@@ -180,11 +176,41 @@ def parse_sequence(sseq: bytes) -> tuple[list[Note], int]:
         elif c == 0xC5:
             bend_range = body[i]
         elif c == 0xE1:
-            tempo = struct.unpack_from("<H", body, i)[0]
+            tempo_box[0] = struct.unpack_from("<H", body, i)[0]
         i += n
+
+
+def parse_sequence(sseq: bytes) -> tuple[list[Note], int]:
+    """Joue la séquence « sur le papier » et rend toutes ses notes.
+
+    Un bruitage d'interface n'est pas une note isolée : SEQ_SE_DP_SELECT en
+    enchaîne quatre. Et la plupart des sons d'ACTION (porte, escalier, objet
+    obtenu, sauvegarde) sont MULTI-PISTES — deux ou trois voix jouées
+    ensemble. Ne gérer qu'une piste les rendait tous inextractibles
+    (issue 13). On lit donc la table d'ouverture de pistes (0xFE puis 0x93) et
+    on déroule chacune sur la même horloge.
+    """
+    body = sseq[0x1C:]
+    notes: list[Note] = []
+    tempo_box = [120]
+
+    starts = [0]
+    if body and body[0] == 0xFE:
+        # 0xFE <masque u16>, puis un 0x93 <piste> <offset u24> par piste
+        # supplémentaire ; la piste 0 démarre juste après ces déclarations.
+        i = 3
+        while i + 4 <= len(body) and body[i] == 0x93:
+            starts.append(int.from_bytes(body[i + 2 : i + 5], "little"))
+            i += 5
+        starts[0] = i
+
+    for start in starts:
+        _parse_track(body, start, notes, tempo_box)
+
     if not notes:
         raise SystemExit("aucune note dans la séquence")
-    return notes, tempo
+    notes.sort(key=lambda n: n.tick)
+    return notes, tempo_box[0]
 
 
 def instrument(sbnk: bytes, program: int, note: int):

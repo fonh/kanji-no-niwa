@@ -58,6 +58,16 @@ export const SFX = {
   // menus — c'est bien le même bip pour les deux usages.
   textAdvance: '/audio/sfx/game/text-advance.opus',
   victoryJingle: '/audio/sfx/game/victory-jingle.opus',
+  // Sons d'action, extraits de la banque sonore de la ROM
+  // (scripts/build/extract-hgss-sfx.py). La plupart sont MULTI-PISTES —
+  // deux ou trois voix jouées ensemble — ce que l'extracteur ne savait pas
+  // faire, d'où leur absence jusqu'ici (issue 13).
+  doorOpen: '/audio/sfx/game/door-open.opus', // SEQ_SE_DP_DOOR
+  stairs: '/audio/sfx/game/stairs.opus', // SEQ_SE_DP_KAIDAN2
+  itemGet: '/audio/sfx/game/item-get.opus', // SEQ_SE_DP_GETTING
+  save: '/audio/sfx/game/save.opus', // SEQ_SE_DP_SAVE
+  bike: '/audio/sfx/game/bike.opus', // SEQ_SE_DP_JITENSYA
+  bump: '/audio/sfx/game/bump.opus', // SEQ_SE_GS_TOUMEINAKABEHIT
 } as const
 
 // ── Rotation de l'écran-livre (leçons) ──────────────────────────────────────

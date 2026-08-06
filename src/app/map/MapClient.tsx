@@ -53,7 +53,7 @@ import {
 } from '@/lib/obstacles'
 import { useAudioManager } from '@/lib/audio-manager'
 import uiStrings from '@/data/ui-strings.json'
-import { musicRefForMapName } from '@/lib/audio-tracks'
+import { musicRefForMapName, SFX } from '@/lib/audio-tracks'
 
 export type { Zone, ZoneObject, ZoneWarp } from '@/lib/zone-geometry'
 export type { ZoneNpc } from '@/lib/npcs'
@@ -263,7 +263,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   // (PRD § Audio, "la piste music_ref se (re)lance à l'entrée de zone") — la
   // couche 'battle' (posée par BattleScreen le temps du combat) la recouvre
   // sans que ce composant ait à s'en soucier (voir audio-manager.tsx).
-  const { setBgmLayer } = useAudioManager()
+  const { setBgmLayer, playSfx } = useAudioManager()
   useEffect(() => {
     const musicRef = musicRefForMapName(zone.name)
     setBgmLayer('zone', musicRef ? { url: musicRef, loop: true } : null)
@@ -447,6 +447,13 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           if (!result) return
           if (result.kind === 'lesson') {
             router.push(`/lesson/${result.zone_id}/${result.sequence_index}`)
+          } else if (result.kind === 'dialogue' && result.lesson) {
+            // L'histoire d'abord : on lit sa réplique, l'écran-livre s'ouvre
+            // en refermant la boîte (issue 13).
+            const { zone_id, sequence_index } = result.lesson
+            afterDialogueCloseRef.current = () =>
+              router.push(`/lesson/${zone_id}/${sequence_index}`)
+            openDialogue(result.dialogue.name, result.dialogue.pages)
           } else if (result.kind === 'text') {
             // Textes débloqués par le moteur (issue 08) : PC du joueur,
             // panneau de Route 29 — la fenêtre de lecture est une route.
@@ -914,13 +921,16 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       // The destination tile depends on the target zone's own warp list
       // (warp.anchor points back to the matching door there), so it can only
       // be resolved once that zone's data has been fetched.
+      // Son de porte ou d'escalier selon la destination — c'est ce qui donne
+      // sa matière au franchissement (issue 13, sons d'action).
+      playSfx(/STAIR|_[0-9]F$|B[0-9]F$/.test(String(warp.header)) ? SFX.stairs : SFX.doorOpen)
       goToZoneWithFade(warp.header, newZone => {
         const anchorWarp = newZone.warps[warp.anchor]
         if (anchorWarp) return { world_x: anchorWarp.x, world_z: anchorWarp.z }
         return zoneSpawn(newZone)
       })
     },
-    [goToZoneWithFade]
+    [goToZoneWithFade, playSfx]
   )
 
   const settleStep = useCallback(
@@ -1001,6 +1011,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       if (inBounds) {
         if (isTileOccupied(t1.world_x, t1.world_z)) {
           setBumpKey(k => k + 1)
+          playSfx(SFX.bump)
           return
         }
         if (canTraverse(z, t1.world_x, t1.world_z, abilities)) {
@@ -1018,6 +1029,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           }
         }
         setBumpKey(k => k + 1)
+        playSfx(SFX.bump)
         return
       }
 
@@ -1034,7 +1046,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       }
       setBumpKey(k => k + 1)
     },
-    [allZoneNames, goToZone, isTileOccupied, settleStep]
+    [allZoneNames, goToZone, isTileOccupied, settleStep, playSfx]
   )
 
   // ── Held-direction movement loop ──────────────────────────────────────────

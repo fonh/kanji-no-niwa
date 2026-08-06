@@ -12,7 +12,7 @@
     {
      "type": "quest_step",
      "quest_id": "cherrygrove_welcome",
-     "step": "shoes_given"
+     "step": "map_given"
     }
    ],
    "state": "farewell"
@@ -26,24 +26,36 @@
   "intro": {
    "pages": [
     {
-     "jp": "ようこそ！",
-     "en": "Welcome!"
+     "jp": "ようこそ　ヨシノシティへ！",
+     "en": "Welcome to Cherrygrove City!"
     },
     {
-     "jp": "ここは　まちです。",
-     "en": "This is a town."
+     "jp": "わたしが　まちを　あんないしよう。",
+     "en": "Let me show you around town."
     },
     {
-     "jp": "みせが　あります。",
-     "en": "There is a shop."
+     "jp": "あそこが　ポケモンセンター。　やすめる　ところだよ。",
+     "en": "Over there is the Pokémon Center. A place to rest."
     },
     {
-     "jp": "くつを　あげます。",
-     "en": "I'll give you shoes."
+     "jp": "そのとなりが　みせ。　どうぐが　かえる。",
+     "en": "Next to it is the shop. You can buy supplies."
     },
     {
-     "jp": "どうぞ。",
-     "en": "Here you go."
+     "jp": "きたに　いくと　30ばんどうろ。　そのさきに　ひとが　すんで　いる。",
+     "en": "North of here is Route 30. Someone lives further along it."
+    },
+    {
+     "jp": "あるくのが　はやく　なる　くつを　あげよう。",
+     "en": "I'll give you shoes that make you walk faster."
+    },
+    {
+     "jp": "それと　これ。　マップカードだ。",
+     "en": "And this too. A Map Card."
+    },
+    {
+     "jp": "もう　まよわないね。　きを　つけて。",
+     "en": "You won't get lost now. Take care."
     }
    ],
    "effects": [
@@ -51,33 +63,6 @@
      "type": "grant_item",
      "item_id": "running_shoes"
     },
-    {
-     "type": "advance_quest",
-     "quest_id": "cherrygrove_welcome",
-     "step_id": "shoes_given"
-    }
-   ]
-  },
-  "farewell": {
-   "pages": [
-    {
-     "jp": "また　きましたね。",
-     "en": "You came again, huh."
-    },
-    {
-     "jp": "これを　どうぞ。",
-     "en": "Here, take this."
-    },
-    {
-     "jp": "ちずです。",
-     "en": "It's a map."
-    },
-    {
-     "jp": "きを　つけてね。",
-     "en": "Take care."
-    }
-   ],
-   "effects": [
     {
      "type": "grant_item",
      "item_id": "map_card"
@@ -88,6 +73,19 @@
      "step_id": "map_given"
     }
    ]
+  },
+  "farewell": {
+   "pages": [
+    {
+     "jp": "また　あったね。",
+     "en": "We meet again."
+    },
+    {
+     "jp": "きたの　みちは　まだ　さきが　ながいよ。",
+     "en": "The road north still goes a long way."
+    }
+   ]
   }
- }
+ },
+ "_note": " | 2026-08-06 (issue 13) : la visite se fait EN UNE FOIS. Elle était coupée en deux états — chaussures d'abord, carte à la visite suivante — ce qui obligeait à revenir lui parler pour un objet dont on a besoin tout de suite, et que personne ne pensait à réclamer. Le jeu d'origine remet les deux pendant la même visite guidée. L'état `farewell` devient sa réplique d'après-visite, sans effet."
 }

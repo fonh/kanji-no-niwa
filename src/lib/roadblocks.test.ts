@@ -71,7 +71,7 @@ describe('blockingRoadblock', () => {
     const before = blockingRoadblock('MAP_CHERRYGROVE', 'MAP_ROUTE_30', emptyState, ctx)
     expect(before?.roadblock_id).toBe('guide_gent_cherrygrove_tour')
     expect(before?.npc_id).toBe('guide_gent_cherrygrove')
-    const afterFirstLine = withQuest('cherrygrove_welcome', 'shoes_given')
+    const afterFirstLine = withQuest('cherrygrove_welcome', 'map_given')
     expect(blockingRoadblock('MAP_CHERRYGROVE', 'MAP_ROUTE_30', afterFirstLine, ctx)).toBeNull()
   })
 })
