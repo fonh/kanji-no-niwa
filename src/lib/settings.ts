@@ -107,6 +107,18 @@ export function cycle<T>(values: readonly T[], current: T, direction: 1 | -1): T
   return values[next]
 }
 
+/** Comme `cycle`, mais SANS boucler : on s'arrête aux extrémités.
+ *
+ * Réservé aux volumes. Avec le bouclage, un clic de trop sur おんがく passait
+ * de « おおきく » à « なし » — le jeu devenait muet d'un geste, sans que rien
+ * ne l'annonce, et le réglage étant persistant, il le restait. Un volume ne
+ * doit jamais tomber à zéro par accident. */
+export function step<T>(values: readonly T[], current: T, direction: 1 | -1): T {
+  const i = values.indexOf(current)
+  const next = Math.min(values.length - 1, Math.max(0, (i < 0 ? 0 : i) + direction))
+  return values[next]
+}
+
 export const SETTING_VALUES = {
   textSpeed: TEXT_SPEEDS,
   bgmVolume: VOLUMES,

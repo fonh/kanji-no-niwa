@@ -263,7 +263,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   // (PRD § Audio, "la piste music_ref se (re)lance à l'entrée de zone") — la
   // couche 'battle' (posée par BattleScreen le temps du combat) la recouvre
   // sans que ce composant ait à s'en soucier (voir audio-manager.tsx).
-  const { setBgmLayer, audioBlocked } = useAudioManager()
+  const { setBgmLayer } = useAudioManager()
   useEffect(() => {
     const musicRef = musicRefForMapName(zone.name)
     setBgmLayer('zone', musicRef ? { url: musicRef, loop: true } : null)
@@ -1647,19 +1647,6 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       </div>
       </div>
       </div>
-
-      {/* Le navigateur a refusé de lancer la musique et attend un geste. On le
-          DIT, au lieu de laisser croire que le jeu n'a pas de musique : c'est
-          resté un mystère plusieurs jours faute du moindre signe à l'écran
-          (issue 13). Disparaît dès que le son part. */}
-      {audioBlocked && (
-        <div
-          data-testid="audio-blocked"
-          className="fixed top-3 left-1/2 -translate-x-1/2 z-[60] pointer-events-none rounded-full bg-black/70 border border-white/25 px-3 py-1 text-white/80 text-xs font-reading"
-        >
-          {uiStrings.audio_blocked_hint.jp}
-        </div>
-      )}
 
       {/* Panneau de nom de zone, à l'entrée d'une nouvelle zone. Le jeu
           d'origine le pose en HAUT À GAUCHE (pas centré), sous la forme d'une

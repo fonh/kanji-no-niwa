@@ -11,6 +11,7 @@ import {
   cycle,
   getSettingsServerSnapshot,
   readSettings,
+  step,
   writeSettings,
   type GameSettings,
 } from './settings'
@@ -77,6 +78,24 @@ describe('cycle', () => {
   it('recule et boucle', () => {
     expect(cycle(SETTING_VALUES.textSpeed, 'slow', -1)).toBe('instant')
     expect(cycle(SETTING_VALUES.bgmVolume, 0, -1)).toBe(3)
+  })
+})
+
+describe('step (volumes) — ne boucle jamais', () => {
+  it('au maximum, un cran de plus ne retombe pas à zéro', () => {
+    // Avec le bouclage, un clic de trop sur おんがく passait de « おおきく » à
+    // « なし » : le jeu devenait muet d'un geste, sans rien annoncer, et le
+    // réglage étant persistant, il le restait (issue 13).
+    expect(step(SETTING_VALUES.bgmVolume, 3, 1)).toBe(3)
+  })
+
+  it('au minimum, un cran de moins ne remonte pas au maximum', () => {
+    expect(step(SETTING_VALUES.bgmVolume, 0, -1)).toBe(0)
+  })
+
+  it('avance et recule normalement entre les bornes', () => {
+    expect(step(SETTING_VALUES.bgmVolume, 1, 1)).toBe(2)
+    expect(step(SETTING_VALUES.bgmVolume, 2, -1)).toBe(1)
   })
 })
 

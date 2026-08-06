@@ -33,6 +33,7 @@ import { resetPlayerData } from './reset-actions'
 import {
   SETTING_VALUES,
   cycle,
+  step as clampStep,
   updateSettings,
   type GameSettings,
   type TextSpeed,
@@ -464,13 +465,13 @@ export function buildSettingRows(s: GameSettings): SettingRow[] {
       key: 'bgmVolume',
       label: uiStrings.settings_bgm.jp,
       value: VOLUME_LABELS[s.bgmVolume],
-      step: d => updateSettings({ bgmVolume: cycle(SETTING_VALUES.bgmVolume, s.bgmVolume, d) }),
+      step: d => updateSettings({ bgmVolume: clampStep(SETTING_VALUES.bgmVolume, s.bgmVolume, d) }),
     },
     {
       key: 'sfxVolume',
       label: uiStrings.settings_sfx.jp,
       value: VOLUME_LABELS[s.sfxVolume],
-      step: d => updateSettings({ sfxVolume: cycle(SETTING_VALUES.sfxVolume, s.sfxVolume, d) }),
+      step: d => updateSettings({ sfxVolume: clampStep(SETTING_VALUES.sfxVolume, s.sfxVolume, d) }),
     },
     {
       key: 'showReadings',
@@ -743,7 +744,7 @@ export default function StartMenu({ initialScreen = null }: Props) {
       )}
 
       {open && (
-        <div className="fixed inset-0 z-[85] bg-black/60 font-chrome flex items-center justify-center p-3 pb-8">
+        <div className="fixed inset-0 z-[85] bg-black font-chrome flex items-center justify-center p-3 pb-8">
           <div
             className={
               screen === 'root'
