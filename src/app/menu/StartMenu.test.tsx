@@ -346,3 +346,25 @@ describe('図鑑 — Kanjidex', () => {
     expect(container.querySelector('[data-testid="kanjidex-tile-一"]')).not.toBeNull()
   })
 })
+
+// La manette du menu (2026-08-06) : mêmes boutons que la carte, même
+// composant, même losange, même place. Avant, le menu dessinait deux ronds A/B
+// d'un autre diamètre et d'une autre couleur, et X/Y n'existaient qu'en
+// pastilles dans l'en-tête de certains écrans.
+describe('manette du menu', () => {
+  it('ouvre les quatre boutons A/B/X/Y du losange, pas seulement A et B', async () => {
+    await openMenu()
+    for (const area of ['a', 'b', 'x', 'y']) {
+      expect(
+        document.querySelector(`[data-testid="button-${area}"]`),
+        `bouton ${area}`
+      ).not.toBeNull()
+    }
+  })
+
+  it('X et Y sont estompés sur l’écran racine (rien à basculer)', async () => {
+    await openMenu()
+    const x = document.querySelector('[data-testid="button-x"]')!
+    expect(x.className).toContain('text-white/60')
+  })
+})

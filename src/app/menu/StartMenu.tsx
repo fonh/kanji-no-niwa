@@ -23,11 +23,13 @@
 // Les données arrivent entièrement résolues du serveur (getStartMenuData) —
 // le client ne lit jamais content/.
 
-import { useCallback, useEffect, useState, type ReactNode } from 'react'
+import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import JpText from '@/components/JpText'
 import uiStrings from '@/data/ui-strings.json'
 import { getStartMenuData, type StartMenuData } from './actions'
+import DsFacePad from '@/components/DsFacePad'
+import { useDsScreenSize } from '@/lib/ds-screen'
 import { useSettings } from '@/lib/use-settings'
 import { resetPlayerData } from './reset-actions'
 import {
@@ -41,6 +43,22 @@ import {
 } from '@/lib/settings'
 
 export type StartMenuScreen = 'zukan' | 'lessons' | 'bag' | 'journal' | 'settings'
+
+// X et Y du menu (2026-08-06). Chaque écran avait SA paire de pastilles dans
+// son en-tête, avec son propre état : trois implémentations du même geste, et
+// aucune au même endroit que les boutons de la carte. L'état vit maintenant
+// dans la coquille du menu, les écrans le lisent, et la vraie manette (losange
+// A/B/X/Y, en bas à droite, comme sur la carte) le pilote.
+interface MenuToggles {
+  showEn: boolean
+  showReadings: boolean
+}
+
+const MenuToggleContext = createContext<MenuToggles>({ showEn: false, showReadings: false })
+
+function useMenuToggles(): MenuToggles {
+  return useContext(MenuToggleContext)
+}
 
 interface SlotDef {
   id: StartMenuScreen | 'profile'
@@ -267,36 +285,9 @@ function LessonBookScreen({ data, onReread }: { data: StartMenuData; onReread: (
 function QuestJournalScreen({ data }: { data: StartMenuData }) {
   // Comme dans la boîte de dialogue : le réglage de l'écran せってい donne
   // l'état de départ, X et Y restent basculables sur l'écran.
-  const settings = useSettings()
-  const [showEn, setShowEn] = useState(settings.showEnglish)
-  const [showReadings, setShowReadings] = useState(settings.showReadings)
+  const { showEn, showReadings } = useMenuToggles()
   return (
-    <MenuFrame
-      title={uiStrings.menu_slot_journal.jp}
-      testId="screen-journal"
-      actions={
-        <>
-          {/* Même pattern X/Y que la boîte de dialogue : jp d'office,
-              X = traduction en, Y = lectures */}
-          <button
-            onClick={() => setShowEn(v => !v)}
-            className={`w-7 h-7 rounded-full border text-xs font-bold ${
-              showEn ? 'bg-white/30 border-white/50 text-white' : 'bg-white/10 border-white/25 text-white/70'
-            }`}
-          >
-            X
-          </button>
-          <button
-            onClick={() => setShowReadings(v => !v)}
-            className={`w-7 h-7 rounded-full border text-xs font-bold ${
-              showReadings ? 'bg-white/30 border-white/50 text-white' : 'bg-white/10 border-white/25 text-white/70'
-            }`}
-          >
-            Y
-          </button>
-        </>
-      }
-    >
+    <MenuFrame title={uiStrings.menu_slot_journal.jp} testId="screen-journal">
       {data.questJournal.length === 0 && (
         <div className="text-white/50 text-sm py-4 text-center">{uiStrings.menu_journal_empty.jp}</div>
       )}
@@ -327,22 +318,13 @@ function BagScreen({ data, onOpenText }: { data: StartMenuData; onOpenText: (tex
   // libellés du sac étaient rendus en texte brut — un objet nommé avec un
   // kanji (« ひでんの かんじ・切 ») s'affichait donc sans lecture, seul écran
   // du jeu dans ce cas (2026-08-06).
-  const settings = useSettings()
-  const [showReadings, setShowReadings] = useState(settings.showReadings)
+  const { showReadings } = useMenuToggles()
   return (
     <MenuFrame
       title={uiStrings.menu_slot_bag.jp}
       testId="screen-bag"
       actions={
         <>
-          <button
-            onClick={() => setShowReadings(v => !v)}
-            className={`w-7 h-7 rounded-full border text-xs font-bold ${
-              showReadings ? 'bg-white/30 border-white/50 text-white' : 'bg-white/10 border-white/25 text-white/70'
-            }`}
-          >
-            Y
-          </button>
           <button
             onClick={() => setTab('items')}
             className={`px-2 py-1 rounded text-xs ${
@@ -615,6 +597,12 @@ export default function StartMenu({ initialScreen = null }: Props) {
   // de tuiles de l'écran racine.
   const [settingCursor, setSettingCursor] = useState(0)
   const settings = useSettings()
+  const dsScreen = useDsScreenSize()
+  // X/Y du menu : l'état vit ici, la manette le pilote, les écrans le lisent
+  // (MenuToggleContext). Départ = le réglage de せってい, comme la boîte de
+  // dialogue.
+  const [showEn, setShowEn] = useState(settings.showEnglish)
+  const [showReadings, setShowReadings] = useState(settings.showReadings)
   const [data, setData] = useState<StartMenuData | null>(null)
 
   const closeMenu = useCallback(() => {
@@ -730,42 +718,56 @@ export default function StartMenu({ initialScreen = null }: Props) {
         </button>
       </div>
 
-      {/* A et B du menu (issue 13) : les boutons de la carte sont SOUS l'overlay
-          du menu, donc inertes une fois celui-ci ouvert — B ne revenait jamais
-          en arrière au doigt. Le menu porte donc les siens, au même endroit. */}
+      {/* La manette de la console, à sa place habituelle (2026-08-06). Les
+          boutons de la carte passent SOUS l'overlay du menu, donc inertes une
+          fois celui-ci ouvert : le menu porte les siens — mais désormais les
+          MÊMES, même composant, même losange, même endroit. X et Y y pilotent
+          la traduction et les lectures, comme partout ailleurs. */}
       {open && (
-        <div
-          className="fixed bottom-2 right-3 z-[96] flex gap-2 font-chrome"
-          onClick={e => e.stopPropagation()}
-        >
-          <button
-            data-testid="menu-button-b"
-            onClick={pressB}
-            className="w-12 h-12 rounded-full bg-white/15 active:bg-white/35 border border-white/30 text-white font-bold"
-          >
-            B
-          </button>
-          <button
-            data-testid="menu-button-a"
-            onClick={() => {
-              if (screen === 'root') activateSlot(SLOTS[slotIndex])
-            }}
-            className="w-12 h-12 rounded-full bg-white/15 active:bg-white/35 border border-white/30 text-white font-bold"
-          >
-            A
-          </button>
-        </div>
+        <DsFacePad
+          className="fixed bottom-6 right-4 z-[96]"
+          buttons={[
+            {
+              area: 'x',
+              label: 'X',
+              onPress: () => setShowEn(v => !v),
+              dimmed: screen === 'root' || screen === 'settings',
+              lit: showEn && screen !== 'root' && screen !== 'settings',
+            },
+            {
+              area: 'y',
+              label: 'Y',
+              onPress: () => setShowReadings(v => !v),
+              dimmed: screen === 'root' || screen === 'settings',
+              lit: showReadings && screen !== 'root' && screen !== 'settings',
+            },
+            {
+              area: 'a',
+              label: 'A',
+              onPress: () => {
+                if (screen === 'root') activateSlot(SLOTS[slotIndex])
+              },
+            },
+            { area: 'b', label: 'B', onPress: pressB },
+          ]}
+        />
       )}
 
       {open && (
-        <div className="fixed inset-0 z-[85] bg-black font-chrome flex items-center justify-center p-3 pb-8">
+        <div className="fixed inset-0 z-[85] bg-black font-chrome flex items-center justify-center">
+          {/* Le menu occupe EXACTEMENT l'écran de la console, pas la fenêtre du
+              navigateur (2026-08-06). En `inset-0`, sur un moniteur large, il
+              s'étirait en un panneau très haut dont les deux tiers du bas
+              étaient vides — six tuiles en haut, puis rien. */}
           <div
+            style={{ width: dsScreen.w, height: dsScreen.h }}
             className={
               screen === 'root'
-                ? 'w-full max-w-2xl h-full max-h-[85vh] rounded-2xl border-4 border-emerald-950 overflow-hidden shadow-2xl'
-                : 'w-full max-w-2xl h-full max-h-[85vh] bg-gray-900 border-2 border-white rounded-lg overflow-hidden'
+                ? 'overflow-hidden shadow-2xl'
+                : 'bg-gray-900 overflow-hidden'
             }
           >
+            <MenuToggleContext.Provider value={{ showEn, showReadings }}>
             {screen === 'root' ? (
               // Écran racine — panneau vert tactile HGSS (issue 13) : pas
               // d'asset ROM pour ce chrome (dossier `menus/` extrait =
@@ -778,9 +780,11 @@ export default function StartMenu({ initialScreen = null }: Props) {
                   <span className="text-white text-base leading-none" aria-hidden="true">
                     ⊗
                   </span>
-                  <span className="text-white font-bold text-sm tracking-widest">MENU</span>
+                  <span className="text-white font-bold text-sm tracking-widest">
+                    {uiStrings.menu_title.jp}
+                  </span>
                 </div>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-1 p-4 flex-1 content-start">
+                <div className="grid grid-cols-2 gap-x-6 gap-y-2 px-6 py-3 flex-1 content-center">
                   {SLOTS.map((slot, index) => (
                     <button
                       key={slot.id}
@@ -828,6 +832,7 @@ export default function StartMenu({ initialScreen = null }: Props) {
             ) : (
               <BagScreen data={data} onOpenText={openText} />
             )}
+            </MenuToggleContext.Provider>
           </div>
         </div>
       )}

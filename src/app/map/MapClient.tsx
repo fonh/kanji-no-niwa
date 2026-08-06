@@ -53,6 +53,8 @@ import {
 import { visibleRomObjects } from '@/lib/rom-decor'
 import { useAudioManager } from '@/lib/audio-manager'
 import { musicRefForMapName, SFX } from '@/lib/audio-tracks'
+import DsFacePad from '@/components/DsFacePad'
+import { DS_SCREEN_W, fitDsScreen } from '@/lib/ds-screen'
 
 export type { Zone, ZoneObject, ZoneWarp } from '@/lib/zone-geometry'
 export type { ZoneNpc } from '@/lib/npcs'
@@ -93,11 +95,6 @@ interface Props {
 // repeats at this cadence. The avatar's CSS transition matches it so steps
 // chain into a continuous walk.
 /** Temps d'arrêt sur le « ! » avant que le garde ne se mette en marche. */
-/** Écran bas de la DS : 256×192. On ne reproduit pas la résolution (les
- * captures de cartes sont à une autre échelle) mais bien le RATIO — c'est lui
- * qui donne le cadrage du jeu d'origine. */
-const DS_SCREEN_W = 256
-const DS_SCREEN_H = 192
 
 /** Cadrage. La DS montre 16×12 tuiles sur un écran de 3 pouces ; reproduire ce
  * compte tel quel sur un moniteur donne des tuiles de 4 cm de côté — c'est ce
@@ -368,14 +365,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   // aucune sensation d'exploration, et un rendu qui n'a rien à voir avec une
   // DS. On cadre donc une fenêtre 4:3 centrée, et le monde y défile.
   useEffect(() => {
-    const update = () => {
-      const w = window.innerWidth
-      const h = window.innerHeight
-      const ratio = DS_SCREEN_W / DS_SCREEN_H
-      // La plus grande boîte 4:3 qui tient dans la fenêtre.
-      const boxW = Math.min(w, h * ratio)
-      setViewSize({ w: Math.floor(boxW), h: Math.floor(boxW / ratio) })
-    }
+    const update = () => setViewSize(fitDsScreen(window.innerWidth, window.innerHeight))
     update()
     window.addEventListener('resize', update)
     return () => window.removeEventListener('resize', update)
@@ -1326,28 +1316,6 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   /** Bouton de face, style émulateur : rond translucide, grisé quand il ne
    * sert à rien (X et Y hors dialogue) mais jamais retiré — un bouton qui
    * apparaît et disparaît est plus déroutant qu'un bouton éteint. */
-  const faceButton = (
-    area: string,
-    label: string,
-    onPress: () => void,
-    dimmed: boolean
-  ) => (
-    <button
-      key={area}
-      data-testid={`button-${area}`}
-      aria-label={label}
-      style={{ gridArea: area, touchAction: 'none' }}
-      onClick={onPress}
-      className={`w-12 h-12 rounded-full border backdrop-blur-[2px] font-bold ${
-        dimmed
-          ? 'bg-black/45 border-white/35 text-white/60'
-          : 'bg-black/45 active:bg-white/25 border-white/60 text-white'
-      }`}
-    >
-      {label}
-    </button>
-  )
-
   const beatCount = allZoneNames.find(z => z.name === zone.name)?.beat_count ?? 0
 
   return (
@@ -1767,23 +1735,14 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         </div>
       </div>
 
-      <div
-        className="fixed bottom-6 right-4 z-[70]"
-        onClick={e => e.stopPropagation()}
-      >
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateAreas: `". x ." "y . a" ". b ."`,
-            gap: 2,
-          }}
-        >
-          {faceButton('x', 'X', onX, !dialogueOpen)}
-          {faceButton('y', 'Y', onY, !dialogueOpen)}
-          {faceButton('a', 'A', onA, false)}
-          {faceButton('b', 'B', onB, false)}
-        </div>
-      </div>
+      <DsFacePad
+        buttons={[
+          { area: 'x', label: 'X', onPress: onX, dimmed: !dialogueOpen },
+          { area: 'y', label: 'Y', onPress: onY, dimmed: !dialogueOpen },
+          { area: 'a', label: 'A', onPress: onA },
+          { area: 'b', label: 'B', onPress: onB },
+        ]}
+      />
 
       {/* HUD overlay — stopPropagation so taps on it never fall through */}
       <div className="fixed bottom-0 left-0 right-0 z-50" onClick={e => e.stopPropagation()}>

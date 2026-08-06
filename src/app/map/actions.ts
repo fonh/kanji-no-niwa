@@ -14,6 +14,7 @@ import {
   type DialoguePageEntry,
 } from '@/lib/content'
 import { attachCompanionOptions } from '@/lib/dialogue-pages'
+import { buildItemGetPages, newlyGrantedItems } from '@/lib/item-get'
 import { getDailySRSStatusForUser } from '@/lib/daily-srs'
 import { resolveLessonInteraction } from '@/lib/lessons'
 import {
@@ -26,6 +27,7 @@ import { blockingRoadblock, type RoadblockGuard, type RoadblockPage } from '@/li
 import { canReachZone, isWithinZoneBounds } from '@/lib/zone-geometry'
 import { getZoneByName } from '@/lib/zones'
 import uiStrings from '@/data/ui-strings.json'
+import itemLabels from '@/data/item-labels.json'
 
 // Blob MapProgress legacy (tiroir dev + obstacles côté client) — reste sur
 // users.map_progress tant que l'issue 10 (traversée + gates) n'a pas basculé
@@ -239,9 +241,19 @@ async function applyDialogueState(
   const dialogueState = dialogue.dialogue_states[stateId]
   if (!dialogueState) return null
 
+  // Scène « objet obtenu » (2026-08-06) : construite ICI, donc servie sur TOUS
+  // les chemins d'interaction (parler, verrou qui délègue, PNJ-leçon dont on
+  // lit d'abord la réplique). Écrire un `grant_item` suffit — voir
+  // src/lib/item-get.ts. On compare les inventaires avant/après plutôt que de
+  // lire les Effects : `grant_item` est idempotent, et reparler à Mr. Pokémon
+  // ne doit pas rejouer la remise de l'œuf.
+  let granted: string[] = []
   if (dialogueState.effects?.length) {
     const next = applyEffects(dialogueState.effects, state, ctx)
-    if (next !== state) await savePlayerState(userId, next)
+    if (next !== state) {
+      granted = newlyGrantedItems(state.inventory, next.inventory)
+      await savePlayerState(userId, next)
+    }
   }
 
   return {
@@ -251,7 +263,10 @@ async function applyDialogueState(
     // roster de content/companions.json (le client ne lit jamais content/).
     // attachCompanionOptions retourne de nouvelles entrées — le cache module
     // du loader n'est pas muté.
-    pages: attachCompanionOptions(dialogueState.pages, getCompanions()),
+    pages: [
+      ...attachCompanionOptions(dialogueState.pages, getCompanions()),
+      ...buildItemGetPages(granted, itemLabels),
+    ],
   }
 }
 

@@ -18,6 +18,8 @@ Vérifie que :
   listé dans content/engine-contract.md § 3 (steps moteur-only) ;
 - (0.6) aucun état `default: true` d'un state_rules[] ne porte d'Effect `remove_item`
   (anti-pattern du troc sans contrepartie, phase 0.2) ;
+- (2026-08-06) un état `default: true` qui REMET un objet doit avoir un état d'après —
+  sinon le personnage re-offre éternellement ce qu'il a déjà donné ;
 - (0.6) `correct_index` des questions de texte : avertit (WARN, pas FAIL — le nettoyage
   est prévu phase 2.4) si un fichier a ≥2 questions et un unique correct_index partout.
 
@@ -168,6 +170,66 @@ def check_default_state_no_remove_item(dialogue, path, errors, warnings):
                     errors.append(msg)
 
 
+def check_gift_state_has_an_after(dialogue, path, errors):
+    """Un état `default: true` qui REMET un objet doit avoir un état d'après.
+
+    Ajouté 2026-08-06, sur un constat de jeu : « je récupère le Pokédex […] il
+    se répète quand tu lui reparles ». `grant_item` est idempotent, donc rien
+    n'est cassé — mais le personnage re-offre éternellement ce qu'il a déjà
+    donné, et le joueur ne sait jamais si ça a marché. 13 dialogues étaient
+    dans ce cas.
+
+    La règle : si l'état par défaut porte un `grant_item`, une règle PLACÉE
+    AU-DESSUS de lui doit se déclencher sur quelque chose que cet état rend
+    vrai (l'objet possédé, l'étape de quête avancée, le badge obtenu) — sinon
+    la sélection retombera toujours sur le même état.
+    """
+    rules = dialogue.get("state_rules")
+    states = dialogue.get("dialogue_states")
+    if not isinstance(rules, list) or not isinstance(states, dict):
+        return
+    default = next((r for r in rules if r.get("default")), None)
+    if default is None:
+        return
+    effects = states.get(default.get("state"), {}).get("effects") or []
+    gifts = [e["item_id"] for e in effects if e.get("type") == "grant_item"]
+    if not gifts:
+        return
+
+    made_true = set()
+    for eff in effects:
+        kind = eff.get("type")
+        if kind == "grant_item":
+            made_true.add(("item_owned", eff["item_id"]))
+        elif kind == "advance_quest":
+            made_true.add(("quest_step", eff["quest_id"], eff["step_id"]))
+        elif kind == "grant_badge":
+            made_true.add(("badge_earned", eff["badge_id"]))
+
+    for rule in rules:
+        if rule.get("default"):
+            break  # les règles APRÈS le défaut ne sont jamais atteintes
+        for cond in rule.get("if") or []:
+            if cond.get("negate"):
+                continue
+            kind = cond.get("type")
+            key = None
+            if kind == "item_owned":
+                key = ("item_owned", cond.get("item_id"))
+            elif kind == "quest_step":
+                key = ("quest_step", cond.get("quest_id"), cond.get("step"))
+            elif kind == "badge_earned":
+                key = ("badge_earned", cond.get("badge_id"))
+            if key in made_true:
+                return
+
+    errors.append(
+        f"{path}: l'état default '{default.get('state')}' remet {gifts} mais aucune règle "
+        f"au-dessus ne s'appuie sur ce qu'il rend vrai — le personnage re-offrira "
+        f"éternellement le même objet"
+    )
+
+
 def check_text_correct_index_uniformity(text_obj, path, warnings):
     questions = (text_obj.get("text") or {}).get("questions")
     if not isinstance(questions, list) or len(questions) < 2:
@@ -249,6 +311,7 @@ def main():
         collect_event_cleared_refs(obj, event_refs, rel)
         if isinstance(obj, dict) and "state_rules" in obj and "dialogue_states" in obj:
             check_default_state_no_remove_item(obj, rel, errors, warnings)
+            check_gift_state_has_an_after(obj, rel, errors)
         if isinstance(obj, dict) and isinstance(obj.get("text"), dict) and "questions" in obj["text"]:
             check_text_correct_index_uniformity(obj, rel, warnings)
 

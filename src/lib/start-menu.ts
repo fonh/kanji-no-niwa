@@ -124,7 +124,16 @@ export function buildReadingJournal(
  * `items` du PRD attend l'ingestion) ; ce fichier fait le pont, documenté. */
 export interface BagItemLabels {
   categories: { id: string; jp: string }[]
-  items: Record<string, { jp: string; category: string }>
+  items: Record<
+    string,
+    {
+      jp: string
+      category: string
+      /** Ce que l'objet EST, en une ou deux phrases — servi par la scène
+       * « objet obtenu » (src/lib/item-get.ts), pas seulement par le Sac. */
+      jp_description?: string
+    }
+  >
 }
 
 export interface BagCategoryView {

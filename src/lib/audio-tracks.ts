@@ -65,6 +65,15 @@ export const SFX = {
   doorOpen: '/audio/sfx/game/door-open.opus', // SEQ_SE_DP_DOOR
   stairs: '/audio/sfx/game/stairs.opus', // SEQ_SE_DP_KAIDAN2
   itemGet: '/audio/sfx/game/item-get.opus', // SEQ_SE_DP_GETTING
+  // Fanfares « objet obtenu » (2026-08-06). Le jeu d'origine ne joue PAS un
+  // bruitage court à la remise d'un objet : il joue une fanfare de ~2 s
+  // (PlayFanfare SEQ_ME_ITEM puis WaitFanfare), et en réserve une plus longue
+  // et plus solennelle aux objets-clés. Extraites de la même banque que les
+  // autres (scripts/build/extract-hgss-sfx.py, séquences multi-pistes :
+  // 97 notes pour ME_ITEM, 101 pour ME_KEYITEM, 201 pour ME_BADGE).
+  itemFanfare: '/audio/sfx/game/item-fanfare.opus', // SEQ_ME_ITEM
+  keyItemFanfare: '/audio/sfx/game/keyitem-fanfare.opus', // SEQ_ME_KEYITEM
+  badgeFanfare: '/audio/sfx/game/badge-fanfare.opus', // SEQ_ME_BADGE
   save: '/audio/sfx/game/save.opus', // SEQ_SE_DP_SAVE
   bike: '/audio/sfx/game/bike.opus', // SEQ_SE_DP_JITENSYA
   bump: '/audio/sfx/game/bump.opus', // SEQ_SE_GS_TOUMEINAKABEHIT

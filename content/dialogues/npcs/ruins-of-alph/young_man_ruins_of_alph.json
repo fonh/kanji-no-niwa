@@ -1,21 +1,56 @@
 {
- "_note": "Étape 4 — PNJ-leçon (leçons #1/#3). Sourcé : admiratif du 1er puzzle résolu, remet un journal qui s'auto-remplit (npc-inventory.md § ruins-of-alph).",
+ "_note": "Étape 4 — PNJ-leçon (leçons #1/#3). Sourcé : admiratif du 1er puzzle résolu, remet un journal qui s'auto-remplit (npc-inventory.md § ruins-of-alph). | 2026-08-06 : état d'après-remise. L'état par défaut remettait son objet et se rejouait à l'identique à chaque fois qu'on lui reparlait — le `grant_item` est idempotent, donc rien n'était cassé, mais le personnage re-offrait éternellement ce qu'il avait déjà donné (constaté en jeu sur le Pr. Chen et le Pokédex). Sélection sur `item_owned` de l'objet remis : monotone, aucune donnée nouvelle. lint-cross-refs.py refuse désormais ce motif.",
  "npc_id": "young_man_ruins_of_alph",
- "name": { "jp": "ちかしつの　わかもの", "en": "Young Man in the Underground Room" },
+ "name": {
+  "jp": "ちかしつの　わかもの",
+  "en": "Young Man in the Underground Room"
+ },
  "zone_id": "ruins-of-alph",
  "jlpt_level": "N4",
  "state_rules": [
-  { "default": true, "state": "greeting" }
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "unknown_report"
+    }
+   ],
+   "state": "after_gift"
+  },
+  {
+   "default": true,
+   "state": "greeting"
+  }
  ],
  "dialogue_states": {
   "greeting": {
    "pages": [
-    { "jp": "パズルを　といたんだね！", "en": "You solved the puzzle!" },
-    { "jp": "これ、あげる。", "en": "Here, take this." },
-    { "jp": "じぶんで　かきこんで　いくんだ。", "en": "It fills itself in as you go." }
+    {
+     "jp": "パズルを　といたんだね！",
+     "en": "You solved the puzzle!"
+    },
+    {
+     "jp": "これ、あげる。",
+     "en": "Here, take this."
+    },
+    {
+     "jp": "じぶんで　かきこんで　いくんだ。",
+     "en": "It fills itself in as you go."
+    }
    ],
    "effects": [
-    { "type": "grant_item", "item_id": "unknown_report" }
+    {
+     "type": "grant_item",
+     "item_id": "unknown_report"
+    }
+   ]
+  },
+  "after_gift": {
+   "pages": [
+    {
+     "jp": "かきこんだ？　パズルは　まだ　あるよ。",
+     "en": "Written it up? There are more puzzles."
+    }
    ]
   }
  }

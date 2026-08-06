@@ -1,5 +1,5 @@
 {
- "_note": "Étape 4 Lot 6 — vrai Directeur : captif au Tunnel B2F (Card Key), puis remet la **Plume Arc-en-ciel** à la libération (fin d'arc, ouvre bell_tower_gate_ecruteak). Deux positions successives = une seule entrée re-localisée par états ; sur la carte, l'entrée B2F porte negate(tower_liberated) et une entrée jumelle 1F l'inverse — même personnage, deux npc_id serait plus lourd ; choix documenté.",
+ "_note": "Étape 4 Lot 6 — vrai Directeur : captif au Tunnel B2F (Card Key), puis remet la **Plume Arc-en-ciel** à la libération (fin d'arc, ouvre bell_tower_gate_ecruteak). Deux positions successives = une seule entrée re-localisée par états ; sur la carte, l'entrée B2F porte negate(tower_liberated) et une entrée jumelle 1F l'inverse — même personnage, deux npc_id serait plus lourd ; choix documenté. | 2026-08-06 : état d'après-remise. L'état par défaut remettait son objet et se rejouait à l'identique à chaque fois qu'on lui reparlait — le `grant_item` est idempotent, donc rien n'était cassé, mais le personnage re-offrait éternellement ce qu'il avait déjà donné (constaté en jeu sur le Pr. Chen et le Pokédex). Sélection sur `item_owned` de l'objet remis : monotone, aucune donnée nouvelle. lint-cross-refs.py refuse désormais ce motif. | 2026-08-06 (correctif) : la règle after_gift est placée JUSTE AU-DESSUS du défaut, jamais en tête. Posée en tête, elle masquait les états plus tardifs du même personnage — le directeur de la Tour Radio ne remettait plus jamais l'Aile Arc-en-ciel une fois sa carte-clé donnée, et le Clocher Carillon devenait inatteignable (attrapé par solve-progression.py).",
  "npc_id": "real_director_goldenrod",
  "name": {
   "jp": "ラジオきょくの　きょくちょう",
@@ -17,6 +17,15 @@
     }
    ],
    "state": "freed"
+  },
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "card_key"
+    }
+   ],
+   "state": "after_gift"
   },
   {
    "default": true,
@@ -74,6 +83,14 @@
     {
      "type": "grant_item",
      "item_id": "rainbow_wing"
+    }
+   ]
+  },
+  "after_gift": {
+   "pages": [
+    {
+     "jp": "たのんだぞ。3がいの　とびらが　あくはずだ。",
+     "en": "I'm counting on you. The third-floor door should open."
     }
    ]
   }

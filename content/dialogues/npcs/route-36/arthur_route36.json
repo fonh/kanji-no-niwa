@@ -1,20 +1,56 @@
 {
- "_note": "Étape 3 (extension) — PNJ-leçon calendaire (content/lessons/route-36.json, leçons #2/#4), même mécanique que Tuscany route-29. Sourcé : nord des Ruines Arcaniques, donne Hard Stone (npc-inventory.md § route-36).",
+ "_note": "Étape 3 (extension) — PNJ-leçon calendaire (content/lessons/route-36.json, leçons #2/#4), même mécanique que Tuscany route-29. Sourcé : nord des Ruines Arcaniques, donne Hard Stone (npc-inventory.md § route-36). | 2026-08-06 : état d'après-remise. L'état par défaut remettait son objet et se rejouait à l'identique à chaque fois qu'on lui reparlait — le `grant_item` est idempotent, donc rien n'était cassé, mais le personnage re-offrait éternellement ce qu'il avait déjà donné (constaté en jeu sur le Pr. Chen et le Pokédex). Sélection sur `item_owned` de l'objet remis : monotone, aucune donnée nouvelle. lint-cross-refs.py refuse désormais ce motif.",
  "npc_id": "arthur_route36",
- "name": { "jp": "アーサー", "en": "Arthur" },
+ "name": {
+  "jp": "アーサー",
+  "en": "Arthur"
+ },
  "zone_id": "route-36",
  "jlpt_level": "N3",
  "state_rules": [
-  { "default": true, "state": "greeting" }
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "hard_stone"
+    }
+   ],
+   "state": "after_gift"
+  },
+  {
+   "default": true,
+   "state": "greeting"
+  }
  ],
  "dialogue_states": {
   "greeting": {
    "pages": [
-    { "jp": "もくようびだけ　ここに　いるんだ。", "en": "I'm only here on Thursdays." },
-    { "jp": "これ、あげるよ。", "en": "Here, take this." }
+    {
+     "jp": "もくようびだけ　ここに　いるんだ。",
+     "en": "I'm only here on Thursdays."
+    },
+    {
+     "jp": "これ、あげるよ。",
+     "en": "Here, take this."
+    }
    ],
    "effects": [
-    { "type": "grant_item", "item_id": "hard_stone" }
+    {
+     "type": "grant_item",
+     "item_id": "hard_stone"
+    }
+   ]
+  },
+  "after_gift": {
+   "pages": [
+    {
+     "jp": "ぼくは　もくようびの　むすこ。",
+     "en": "I'm the Thursday brother."
+    },
+    {
+     "jp": "きょうだいは　7にん　いるんだ。",
+     "en": "There are seven of us."
+    }
    ]
   }
  }

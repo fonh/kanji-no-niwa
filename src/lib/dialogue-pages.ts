@@ -5,6 +5,9 @@
 //  - companion_choice   (choix unique du compagnon, labo d'Elm — requis jalon 1)
 //  - instant_response   (即時応答, appels Pokégear)
 //  - conversation_turn  (会話 à embranchements, champ next = turn_id | "end")
+//  - item_get           (annonce « objet obtenu », fabriquée par le serveur —
+//                        src/lib/item-get.ts ; une page de texte qui déclenche
+//                        en plus la fanfare du jeu d'origine)
 // Un kind inconnu ne crashe JAMAIS : il est loggué et sauté.
 //
 // Le serveur (src/app/map/actions.ts) enrichit les entrées companion_choice
@@ -45,6 +48,7 @@ export interface ConversationChoice {
 
 export type RoutedPage =
   | { kind: 'text'; jp: string; en: string }
+  | { kind: 'item_get'; jp: string; en: string; fanfare: 'item' | 'keyitem' }
   | { kind: 'companion_choice'; prompt: BilingualLine; options: CompanionOption[] }
   | { kind: 'instant_response'; prompt: BilingualLine; choices: ResponseChoice[] }
   | { kind: 'conversation_turn'; turn_id: string; npc_line: BilingualLine; choices: ConversationChoice[] }
@@ -110,6 +114,19 @@ export function routeDialoguePages(
           break
         }
         routed.push({ kind: 'text', jp: entry.jp, en: typeof entry.en === 'string' ? entry.en : '' })
+        break
+      }
+      case 'item_get': {
+        if (typeof entry.jp !== 'string') {
+          warn('item_get sans jp ignorée', entry)
+          break
+        }
+        routed.push({
+          kind: 'item_get',
+          jp: entry.jp,
+          en: typeof entry.en === 'string' ? entry.en : '',
+          fanfare: entry.fanfare === 'keyitem' ? 'keyitem' : 'item',
+        })
         break
       }
       case 'companion_choice': {

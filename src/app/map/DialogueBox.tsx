@@ -68,6 +68,7 @@ interface DialogueBoxProps {
 function lineOfPage(page: RoutedPage): BilingualLine {
   switch (page.kind) {
     case 'text':
+    case 'item_get':
       return { jp: page.jp, en: page.en }
     case 'companion_choice':
     case 'instant_response':
@@ -134,7 +135,7 @@ export default function DialogueBox({
       }
       return
     }
-    if (page && page.kind !== 'text') return
+    if (page && page.kind !== 'text' && page.kind !== 'item_get') return
     goTo(pageIndex + 1)
   }, [reaction, page, pageIndex, goTo])
 
@@ -185,7 +186,10 @@ export default function DialogueBox({
   // que la fermeture automatique a un sens (une page à choix n'avance que par
   // un choix, et couper une réaction en cours de lecture serait pire).
   const autoAdvanceMs =
-    autoCloseMs && !reaction && page.kind === 'text' && pageIndex === routed.length - 1
+    autoCloseMs &&
+    !reaction &&
+    (page.kind === 'text' || page.kind === 'item_get') &&
+    pageIndex === routed.length - 1
       ? autoCloseMs
       : undefined
 
@@ -281,6 +285,16 @@ function DialogueLineView({
     else onAdvance()
   }, [typingDone, onAdvance, playSfx, settings.textSound])
 
+  // Fanfare « objet obtenu » — jouée à l'AFFICHAGE de la page d'annonce, pas à
+  // sa fermeture : dans le jeu d'origine le jingle tourne pendant que la ligne
+  // est à l'écran (PlayFanfare puis WaitFanfare, cf. src/lib/item-get.ts). Le
+  // jeu distingue l'objet ordinaire de l'objet-clé, nous aussi.
+  useEffect(() => {
+    if (page.kind !== 'item_get') return
+    playSfx(page.fanfare === 'keyitem' ? SFX.keyItemFanfare : SFX.itemFanfare)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   // Fermeture automatique de la dernière page (leçon qui suit). Le délai part
   // de la FIN de la frappe, pas de l'affichage : sinon une longue réplique se
   // fermerait avant d'être lue.
@@ -296,7 +310,7 @@ function DialogueLineView({
   useImperativeHandle(ref, () => ({ pressA, pressX, pressY }), [pressA, pressX, pressY])
 
   const showChoices = typingDone && !inReaction
-  const isChoicePage = page.kind !== 'text'
+  const isChoicePage = page.kind !== 'text' && page.kind !== 'item_get'
   const canAdvance = typingDone && (!isChoicePage || inReaction)
 
   const choiceButton = (key: string, label: string, onPick: () => void, disabled = false) => (
