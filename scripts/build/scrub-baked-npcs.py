@@ -54,21 +54,13 @@ REGISTRY = Path("src/data/zone-registry.json")
 #     plus à celui de la destination. C'est ce pourtour qui décide, parce que
 #     c'est lui qu'on verra se raccorder — ou pas.
 #
-# ÉTAT AU 2026-08-06 : le REPÉRAGE marche (--preview encadre chaque personnage
-# incrusté, la liste ci-dessous a été établie comme ça, planche-contact à
-# l'appui). Le BOUCHAGE, lui, n'est pas au niveau : deux méthodes essayées —
-# recopier le rectangle voisin décalé d'un nombre entier de tuiles, puis
-# répéter la tuile de sol la plus uniforme du voisinage — et les deux abîment
-# la carte plus qu'elles ne la réparent (un bloc d'arbres recopié sur le
-# chemin, une bande de sable en travers de la route, des moitiés de
-# personnages qui restent). Le mode automatique n'est donc PAS branché sur la
-# sortie : `run_auto` ne produit une image qu'en --preview.
-#
-# Ce qui manquerait pour le faire proprement : détourer le sprite (on connaît
-# son spriteId, donc sa planche dans public/sprites/overworld/) au lieu de
-# deviner un rectangle, et reconstruire le sol tuile par tuile d'après la
-# grille de collision plutôt qu'à la ressemblance de couleur. À reprendre à
-# tête reposée — une carte abîmée se voit plus qu'un doublon.
+# MÉTHODE (arrêtée 2026-08-07, après deux essais ratés) : on remplace TUILE PAR
+# TUILE, jamais le rectangle du personnage d'un bloc. Un personnage fait deux
+# tuiles de haut et chevauche presque toujours deux terrains ; recopier deux
+# tuiles depuis un seul endroit plaquait un bloc d'arbres en travers d'un
+# chemin. Une tuile, elle, est d'un seul tenant : on lui cherche une jumelle
+# dans le voisinage, choisie sur son POURTOUR — la partie qui devra se
+# raccorder, et celle que le personnage ne recouvre presque pas.
 #
 # COMMENT ÉTABLIR LA LISTE D'UNE ZONE : `render-zone-preview.py <zone>` compose
 # la capture et marque chaque endroit où le moteur dessinera quelqu'un — un
@@ -77,17 +69,21 @@ REGISTRY = Path("src/data/zone-registry.json")
 # les coordonnées des objets ROM : beaucoup de ces figurants errent, la capture
 # les a figés ailleurs.
 AUTO_JOBS: dict[str, list[tuple[int, int]]] = {
-    # Route 30 : la capture a été prise en cours de partie, avec les dresseurs
-    # et les figurants du jeu d'origine en place. Sept personnages peints.
-    "MAP_ROUTE_30": [(6, 10), (4, 18), (8, 37), (8, 38), (8, 39), (8, 41), (9, 44), (10, 47), (13, 78)],
-    # Route 31 — tuiles MESURÉES sur la capture (grille rouge, 2026-08-07), pas
-    # déduites des objets ROM : ces figurants-là ERRENT (movement 3/14/15), et
-    # la capture les a figés là où ils se trouvaient ce jour-là, une à deux
-    # tuiles à côté de leur position de spawn. C'est l'erreur de la première
-    # liste, qui reprenait les coordonnées ROM.
-    "MAP_ROUTE_31": [(15, 14), (28, 16), (28, 25)],
-    # Tour Grospignon 1F : les deux sages et les deux visiteuses du rez.
-    "MAP_SPROUT_TOWER_1F": [(17, 24), (15, 20), (11, 19), (11, 15)],
+    # Route 30 et Tour Grospignon : listes RETIRÉES le 2026-08-07. Elles
+    # avaient été dérivées des coordonnées des objets ROM, et la vérification
+    # visuelle du bouchage l'a prouvé faux — le patch tombait à côté (un tronçon
+    # de rondin et un pan d'arbres recopiés sur le chemin) et laissait deux
+    # personnages en place. Il faut les MESURER à la grille, comme la Route 31 :
+    # `render-zone-preview.py MAP_ROUTE_30 --around <tuile>`, puis zoom avec
+    # grille numérotée, et relever la tuile des PIEDS de chaque personnage.
+    # Tant que ce n'est pas fait, ne rien boucher : une carte abîmée se voit
+    # plus qu'un doublon.
+    # Route 31 — tuiles MESURÉES sur la capture (grille numérotée, zoom ×8),
+    # pas déduites des objets ROM : ces figurants-là ERRENT (movement 3/14/15),
+    # et la capture les a figés là où ils se trouvaient ce jour-là, une à deux
+    # tuiles à côté de leur position de spawn. La tuile relevée est celle des
+    # PIEDS, pas du corps — un décalage d'une rangée laisse l'ombre en place.
+    "MAP_ROUTE_31": [(15, 15), (28, 17), (28, 26)],
 }
 
 # Combien de tuiles autour de la destination on accepte d'aller chercher du sol.
@@ -136,10 +132,10 @@ def tile_rect(zone: dict, tx: int, ty: int) -> tuple[int, int, int, int]:
     px = zone["origin_px"] + tx * sx
     py = zone["origin_py"] + ty * sy
     return (
-        int(round(px - 0.5 * sx)),
-        int(round(py - 2.0 * sy)),
-        int(round(px + 1.5 * sx)),
-        int(round(py + 0.5 * sy)),
+        int(round(px - 0.2 * sx)),
+        int(round(py - 1.6 * sy)),
+        int(round(px + 1.2 * sx)),
+        int(round(py + 0.4 * sy)),
     )
 
 
@@ -157,60 +153,136 @@ def _edge_pixels(im: Image.Image, rect: tuple[int, int, int, int]) -> list:
     return out
 
 
+def _variance(im: Image.Image, rect) -> float:
+    """Écart-type des luminances d'un rectangle — une tuile de sol nu est
+    plate, une tuile qui porte un buisson ou un arbre ne l'est pas."""
+    px = im.load()
+    vals = [
+        sum(px[x, y]) / 3
+        for y in range(rect[1], rect[3])
+        for x in range(rect[0], rect[2])
+    ]
+    if not vals:
+        return 0.0
+    mean = sum(vals) / len(vals)
+    return (sum((v - mean) ** 2 for v in vals) / len(vals)) ** 0.5
+
+
 def _rects_overlap(a, b) -> bool:
     return not (a[2] <= b[0] or b[2] <= a[0] or a[3] <= b[1] or b[3] <= a[1])
 
 
-def _stats(im: Image.Image, rect):
-    """Moyenne et écart-type d'un rectangle, par canal confondu."""
+def _ring(im: Image.Image, rect):
+    """Le pourtour d'un rectangle — la seule partie qui doit se raccorder, et
+    la seule que le personnage ne recouvre presque jamais."""
+    x0, y0, x1, y1 = rect
     px = im.load()
-    n = 0
-    total = 0
-    sq = 0
-    for y in range(rect[1], rect[3]):
-        for x in range(rect[0], rect[2]):
-            v = sum(px[x, y]) / 3
-            total += v
-            sq += v * v
-            n += 1
-    mean = total / n
-    return mean, max(0.0, sq / n - mean * mean) ** 0.5
+    out = []
+    for x in range(x0, x1):
+        out.append(px[x, y0])
+        out.append(px[x, y1 - 1])
+    for y in range(y0 + 1, y1 - 1):
+        out.append(px[x0, y])
+        out.append(px[x1 - 1, y])
+    return out
 
 
-def pick_source_tile(im: Image.Image, zone: dict, rect, forbidden):
-    """LA tuile de sol propre à répéter sur le rectangle.
+def _ring_distance(a, b) -> float:
+    n = min(len(a), len(b))
+    if n == 0:
+        return 1e9
+    return sum(
+        abs(a[i][0] - b[i][0]) + abs(a[i][1] - b[i][1]) + abs(a[i][2] - b[i][2])
+        for i in range(n)
+    ) / n
 
-    Une tuile répétée, pas un rectangle voisin recopié : c'est la seule façon
-    sûre. Un rectangle voisin fait la taille d'un personnage (1×2 tuiles) et
-    tombe presque toujours à cheval sur deux terrains — l'essai précédent a
-    recopié un bloc d'arbres sur un chemin. Une TUILE, elle, est par
-    construction d'un seul tenant.
 
-    Choix : parmi les tuiles voisines, la plus UNIFORME (écart-type faible =
-    du sol et rien d'autre) dont la teinte moyenne est la plus proche de celle
-    du pourtour de la destination. On préfère la plus proche à qualité égale.
+def _variance(im: Image.Image, rect) -> float:
+    """Écart-type des luminances d'un rectangle — une tuile de sol nu est
+    plate, une tuile qui porte un buisson ou un arbre ne l'est pas."""
+    px = im.load()
+    vals = [
+        sum(px[x, y]) / 3
+        for y in range(rect[1], rect[3])
+        for x in range(rect[0], rect[2])
+    ]
+    if not vals:
+        return 0.0
+    mean = sum(vals) / len(vals)
+    return (sum((v - mean) ** 2 for v in vals) / len(vals)) ** 0.5
+
+
+def _rects_overlap(a, b) -> bool:
+    return not (a[2] <= b[0] or b[2] <= a[0] or a[3] <= b[1] or b[3] <= a[1])
+
+
+def patch_tile(im: Image.Image, zone: dict, cell, forbidden) -> bool:
+    """Remplace UNE tuile par la tuile voisine qui lui ressemble le plus.
+
+    Tuile par tuile, et pas rectangle entier : un personnage fait deux tuiles
+    de haut et chevauche presque toujours deux terrains (le chemin et l'herbe,
+    l'herbe et la lisière). Recopier un rectangle de deux tuiles depuis un seul
+    endroit plaquait donc un bloc d'arbres en travers d'un chemin — c'est ce
+    qui a raté deux fois. Une tuile, elle, est d'un seul tenant : on lui trouve
+    une jumelle.
+
+    Le critère est le POURTOUR : c'est ce qui se raccordera visiblement, et
+    c'est la partie que le personnage ne recouvre presque pas (il tient dans le
+    centre de sa tuile). Une tuile candidate dont le pourtour colle a le même
+    sol.
     """
     sx, sy = zone["scale_x"], zone["scale_y"]
-    edge = _edge_pixels(im, rect)
-    target_mean = sum(sum(c) / 3 for c in edge) / len(edge)
-    tw, th = int(round(sx)), int(round(sy))
-    tx0 = (rect[0] + rect[2]) // 2
-    ty0 = (rect[1] + rect[3]) // 2
+    target = _ring(im, cell)
+    w, h = cell[2] - cell[0], cell[3] - cell[1]
     best, best_score = None, None
     for dy in range(-AUTO_SEARCH_TILES, AUTO_SEARCH_TILES + 1):
         for dx in range(-AUTO_SEARCH_TILES, AUTO_SEARCH_TILES + 1):
-            x = int(round(tx0 + dx * sx)) - tw // 2
-            y = int(round(ty0 + dy * sy)) - th // 2
-            cand = (x, y, x + tw, y + th)
+            if dx == 0 and dy == 0:
+                continue
+            ox, oy = int(round(dx * sx)), int(round(dy * sy))
+            cand = (cell[0] + ox, cell[1] + oy, cell[0] + ox + w, cell[1] + oy + h)
             if cand[0] < 0 or cand[1] < 0 or cand[2] > im.width or cand[3] > im.height:
                 continue
             if any(_rects_overlap(cand, f) for f in forbidden):
                 continue
-            mean, std = _stats(im, cand)
-            score = std * 3 + abs(mean - target_mean) * 2 + (abs(dx) + abs(dy))
+            # Le pourtour dit « même sol » ; la variance interne dit « rien
+            # dessus ». Sans le second terme, un buisson voisin gagne dès que
+            # son pourtour est de l'herbe — et on remplace un personnage par un
+            # buisson.
+            score = (
+                _ring_distance(target, _ring(im, cand))
+                + _variance(im, cand) * 1.5
+                + (abs(dx) + abs(dy)) * 0.4
+            )
             if best_score is None or score < best_score:
                 best, best_score = cand, score
-    return best
+    if best is None:
+        return False
+    im.paste(im.crop(best), (cell[0], cell[1]))
+    return True
+
+
+def character_cells(zone: dict, tx: int, ty: int):
+    """Les tuiles ENTIÈRES que couvre un personnage dont les PIEDS sont en
+    (tx, ty).
+
+    Mesuré au zoom sur les captures : le sprite déborde d'un bon tiers de tuile
+    à gauche et monte de presque deux tuiles — il occupe donc DEUX colonnes
+    (tx-1, tx) et TROIS rangées (ty-2 … ty), ombre comprise. Une boîte plus
+    petite laissait un moignon de corps et l'ombre, ce qui se voit autant que
+    le personnage entier."""
+    sx, sy = zone["scale_x"], zone["scale_y"]
+    px0, py0 = zone["origin_px"], zone["origin_py"]
+
+    def cell(cx, cy):
+        return (
+            int(round(px0 + cx * sx)),
+            int(round(py0 + cy * sy)),
+            int(round(px0 + (cx + 1) * sx)),
+            int(round(py0 + (cy + 1) * sy)),
+        )
+
+    return [cell(cx, cy) for cx in (tx - 1, tx) for cy in (ty - 2, ty - 1, ty)]
 
 
 def run_auto(preview: bool) -> None:
@@ -224,10 +296,6 @@ def run_auto(preview: bool) -> None:
         if not src.exists():
             print(f"{zone_name}: {src} absent, ignoré")
             continue
-        if not preview:
-            print(f"{zone_name}: {len(tiles)} personnage(s) repéré(s) — bouchage non branché "
-                  f"(voir la note en tête de fichier), relancer avec --preview pour les voir")
-            continue
         im = Image.open(src).convert("RGB")
         rects = [tile_rect(zone, tx, ty) for tx, ty in tiles]
         if preview:
@@ -236,23 +304,10 @@ def run_auto(preview: bool) -> None:
                 d.rectangle(r, outline=(255, 0, 0))
                 d.text((r[0], r[1] - 9), f"{tx},{ty}", fill=(255, 0, 0))
         else:
-            for rect in rects:
-                source = pick_source_tile(im, zone, rect, rects)
-                if source is None:
-                    print(f"  {zone_name} {rect}: aucune tuile propre trouvée, laissé tel quel")
-                    continue
-                tile = im.crop(source)
-                tw, th = tile.size
-                w, h = rect[2] - rect[0], rect[3] - rect[1]
-                # Phase : on répète la tuile en gardant l'alignement sur la
-                # grille de la source, pour que le motif du sol retombe juste.
-                patch = Image.new("RGB", (w + tw, h + th))
-                for py_ in range(0, h + th, th):
-                    for px_ in range(0, w + tw, tw):
-                        patch.paste(tile, (px_, py_))
-                phase_x = (rect[0] - source[0]) % tw
-                phase_y = (rect[1] - source[1]) % th
-                im.paste(patch.crop((phase_x, phase_y, phase_x + w, phase_y + h)), (rect[0], rect[1]))
+            cells = [c for (tx, ty) in tiles for c in character_cells(zone, tx, ty)]
+            for cell in cells:
+                if not patch_tile(im, zone, cell, cells):
+                    print(f"  {zone_name} {cell}: aucune tuile jumelle trouvée, laissée telle quelle")
         out = src.with_name(src.stem + (" (apercu)" if preview else " (sans PNJ)") + ".png")
         im.save(out)
         print(f"{zone_name} → {out.name} ({len(tiles)} personnages)")

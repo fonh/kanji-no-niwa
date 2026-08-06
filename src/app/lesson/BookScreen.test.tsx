@@ -71,6 +71,9 @@ function render(lesson: BookScreenLesson) {
 
 const buttons = () => Array.from(container.querySelectorAll('button'))
 const buttonByLabel = (label: string) =>
+  // 2026-08-07 : les boutons de cet écran sont la manette partagée
+  // (src/components/DsFacePad.tsx), donc étiquetés X/Y/A/B comme sur la carte —
+  // plus 'translation'/'readings'/'close'.
   buttons().find(b => b.getAttribute('aria-label') === label)
 const buttonByText = (text: string) => buttons().find(b => b.textContent === text)
 const click = (b: HTMLButtonElement | undefined) => {
@@ -97,7 +100,7 @@ describe('double page kanji', () => {
     render(makeLesson())
     const keyword = () => container.querySelector('[data-testid="book-keyword"]')!.textContent
     expect(keyword()).not.toContain('one') // keyword ?? meanings[0]
-    click(buttonByLabel('translation'))
+    click(buttonByLabel('X'))
     expect(keyword()).toContain('one')
   })
 
@@ -106,7 +109,7 @@ describe('double page kanji', () => {
     const rts = () => Array.from(container.querySelectorAll('rt')).map(rt => rt.textContent)
     expect(container.textContent).not.toContain('いっしょ')
     expect(rts().every(t => t === '')).toBe(true)
-    click(buttonByLabel('readings'))
+    click(buttonByLabel('Y'))
     expect(rts().some(t => t === 'いっしょ')).toBe(true)
   })
 
@@ -202,12 +205,12 @@ describe('relecture (leçon complétée) : même écran sans quiz', () => {
 describe('fermeture (B)', () => {
   it('B ouvre une confirmation ; はい ferme vers la carte, いいえ reste', () => {
     render(makeLesson())
-    click(buttonByLabel('close'))
+    click(buttonByLabel('B'))
     expect(container.textContent).toContain('レッスンを　やめる？')
     click(buttonByText('いいえ'))
     expect(container.textContent).not.toContain('レッスンを　やめる？')
     expect(pushMock).not.toHaveBeenCalled()
-    click(buttonByLabel('close'))
+    click(buttonByLabel('B'))
     click(buttonByText('はい'))
     expect(pushMock).toHaveBeenCalledWith('/map')
   })

@@ -90,6 +90,10 @@ ZONE_SCREENSHOT_OVERRIDES = {
     # sur les murs est pire que la grille : ADR-0006, « un joueur qui voit une
     # grille comprend qu'il voit une grille ».
     "MAP_VIOLET_POKEMON_SCHOOL":         "Pokémon School interior HGSS.png",
+    # Capture nettoyée de ses figurants incrustés (scrub-baked-npcs.py) : sans
+    # ça, les trois promeneurs peints dans l'image doublaient ceux que le
+    # moteur dessine (2026-08-07).
+    "MAP_ROUTE_31":                      "Johto Route 31 HGSS (sans PNJ).png",
 }
 
 # ── Indexer les screenshots disponibles ──────────────────────────────────────

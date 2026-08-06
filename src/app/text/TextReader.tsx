@@ -26,6 +26,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import JpText from '@/components/JpText'
+import DsFacePad from '@/components/DsFacePad'
 import { shuffledIndices } from '@/lib/dialogue-pages'
 import {
   answerTextQuestion,
@@ -324,39 +325,20 @@ export default function TextReader({ data }: { data: TextReaderData }) {
         </div>
       )}
 
-      {/* Boutons overlay X / Y / B (chrome console, comme livre/dialogue) */}
-      <div
-        className="fixed bottom-4 right-3 z-10 flex flex-col items-end gap-2"
-        onClick={e => e.stopPropagation()}
-      >
-        <div className="flex gap-2">
-          <button
-            aria-label="translation"
-            onClick={() => setShowEn(v => !v)}
-            className={`w-9 h-9 rounded-full border text-xs font-bold ${
-              showEn ? 'bg-amber-400/90 border-amber-600 text-black' : 'bg-white/10 border-white/25 text-white/70'
-            }`}
-          >
-            X
-          </button>
-          <button
-            aria-label="readings"
-            onClick={() => setShowReadings(v => !v)}
-            className={`w-9 h-9 rounded-full border text-xs font-bold ${
-              showReadings ? 'bg-amber-400/90 border-amber-600 text-black' : 'bg-white/10 border-white/25 text-white/70'
-            }`}
-          >
-            Y
-          </button>
-        </div>
-        <button
-          aria-label="close"
-          onClick={requestClose}
-          className="w-11 h-11 rounded-full bg-white/10 active:bg-white/30 border border-white/25 text-white/80 font-bold"
-        >
-          B
-        </button>
-      </div>
+      {/* La manette de la console — même composant, même losange, même place
+          que sur la carte, dans le menu et en combat (2026-08-07). Cet écran
+          gardait trois ronds d'un autre diamètre alignés autrement : un même
+          geste doit trouver le même bouton au même endroit. A est estompé (la
+          lecture n'avance pas au bouton, on fait défiler). */}
+      <DsFacePad
+        className="fixed bottom-6 right-4 z-10"
+        buttons={[
+          { area: 'x', label: 'X', onPress: () => setShowEn(v => !v), lit: showEn },
+          { area: 'y', label: 'Y', onPress: () => setShowReadings(v => !v), lit: showReadings },
+          { area: 'a', label: 'A', dimmed: true },
+          { area: 'b', label: 'B', onPress: requestClose },
+        ]}
+      />
 
       {/* Confirmation de fermeture (B) — le quiz reprendra à la question
           courante dans la même session (sessionStorage) */}

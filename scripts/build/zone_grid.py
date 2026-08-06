@@ -25,15 +25,32 @@ def interior_bounds(z: dict, tile_w: int, tile_h: int, is_outdoor: bool) -> tupl
         return tile_w, tile_h
     max_x = max(i % tile_w for i in solid)
     max_z = max(i // tile_w for i in solid)
-    for o in z.get("objects", []):
-        max_x = max(max_x, o.get("x", 0))
-        max_z = max(max_z, o.get("z", 0))
+
+    # Les warps et les rebords appartiennent toujours à la pièce.
     for w in z.get("warps", []):
         max_x = max(max_x, w.get("x", 0))
         max_z = max(max_z, w.get("z", 0))
     for lx, lz, _ldir in z.get("ledges", []):
         max_x = max(max_x, lx)
         max_z = max(max_z, lz)
+
+    # Les OBJETS, non (corrigé 2026-08-07). L'intention d'origine — « ne pas
+    # couper un PNJ scripté posé juste au-delà du mur le plus proche » — est
+    # conservée, mais bornée à UNE tuile de marge : la ROM gare aussi, dans la
+    # même liste, les objets qu'un script fera apparaître ailleurs, sur des
+    # tuiles très au-delà de la pièce. Les compter faisait enfler la grille bien
+    # au-delà du décor, et le recalage d'ADR-0006 tentait alors de caler une
+    # grille de 15×29 sur l'image d'une pièce de 12×13 : recalage dégénéré,
+    # capture rejetée, zone servie en damier de collision. C'est ce qui privait
+    # de décor le poste-frontière Route 31 ↔ Mauville, dont deux figurants sont
+    # garés en (13,28) et (14,28) pour une pièce qui s'arrête à (11,12).
+    room_x, room_z = max_x, max_z
+    for o in z.get("objects", []):
+        ox, oz = o.get("x", 0), o.get("z", 0)
+        if ox <= room_x + 1 and oz <= room_z + 1:
+            max_x = max(max_x, ox)
+            max_z = max(max_z, oz)
+
     return min(max_x + 1, tile_w), min(max_z + 1, tile_h)
 
 

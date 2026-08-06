@@ -20,6 +20,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import JpText from '@/components/JpText'
+import DsFacePad from '@/components/DsFacePad'
 import { parseInlineReadings, type ReadingSegment } from '@/lib/inline-reading'
 import { shuffledIndices } from '@/lib/dialogue-pages'
 import type { GrammarPageData, KanjiPageData } from '@/lib/lesson-book'
@@ -461,37 +462,23 @@ export default function BookScreen({ lesson }: { lesson: BookScreenLesson }) {
         </div>
       )}
 
-      {/* Boutons overlay Y / X / B (chrome console, comme la boîte de
-          dialogue — X/Y n'ont d'effet que sur la page courante) */}
-      <div className="fixed bottom-4 right-3 z-10 flex flex-col items-end gap-2" onClick={e => e.stopPropagation()}>
-        <div className="flex gap-2">
-          <button
-            aria-label="translation"
-            onClick={() => setShowEn(v => !v)}
-            className={`w-9 h-9 rounded-full border text-xs font-bold ${
-              showEn ? 'bg-amber-400/90 border-amber-600 text-black' : 'bg-white/10 border-white/25 text-white/70'
-            }`}
-          >
-            X
-          </button>
-          <button
-            aria-label="readings"
-            onClick={() => setShowReadings(v => !v)}
-            className={`w-9 h-9 rounded-full border text-xs font-bold ${
-              showReadings ? 'bg-amber-400/90 border-amber-600 text-black' : 'bg-white/10 border-white/25 text-white/70'
-            }`}
-          >
-            Y
-          </button>
-        </div>
-        <button
-          aria-label="close"
-          onClick={requestClose}
-          className="w-11 h-11 rounded-full bg-white/10 active:bg-white/30 border border-white/25 text-white/80 font-bold"
-        >
-          B
-        </button>
-      </div>
+      {/* La manette de la console, comme partout ailleurs (2026-08-07) — même
+          composant, même losange, même place. X/Y n'agissent que sur la page
+          courante ; A tourne la page. */}
+      <DsFacePad
+        className="fixed bottom-6 right-4 z-10"
+        buttons={[
+          { area: 'x', label: 'X', onPress: () => setShowEn(v => !v), lit: showEn },
+          { area: 'y', label: 'Y', onPress: () => setShowReadings(v => !v), lit: showReadings },
+          {
+            area: 'a',
+            label: 'A',
+            onPress: () => pageIndex + 1 < spreadCount && goToPage(pageIndex + 1),
+            dimmed: pageIndex + 1 >= spreadCount,
+          },
+          { area: 'b', label: 'B', onPress: requestClose },
+        ]}
+      />
 
       {/* Confirmation de fermeture (B) — reprise page 1, rien n'est retenu */}
       {confirmClose && (

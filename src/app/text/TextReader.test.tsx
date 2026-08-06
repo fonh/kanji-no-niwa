@@ -83,6 +83,9 @@ function render(data: TextReaderData) {
 
 const buttons = () => Array.from(container.querySelectorAll('button'))
 const buttonByLabel = (label: string) =>
+  // 2026-08-07 : les boutons de cet écran sont la manette partagée
+  // (src/components/DsFacePad.tsx), donc étiquetés X/Y/A/B comme sur la carte —
+  // plus 'translation'/'readings'/'close'.
   buttons().find(b => b.getAttribute('aria-label') === label)
 const buttonByText = (text: string) => buttons().find(b => b.textContent === text)
 const click = (b: HTMLButtonElement | undefined) => {
@@ -108,10 +111,10 @@ describe('fenêtre de lecture', () => {
     expect(rts.every(rt => rt.textContent === '')).toBe(true)
     expect(container.textContent).not.toContain('The garden is wide')
 
-    click(buttonByLabel('readings'))
+    click(buttonByLabel('Y'))
     expect(Array.from(container.querySelectorAll('rt')).some(rt => rt.textContent === 'にわ')).toBe(true)
 
-    click(buttonByLabel('translation'))
+    click(buttonByLabel('X'))
     expect(container.textContent).toContain('The garden is wide')
   })
 
@@ -208,11 +211,11 @@ describe('complétion (blanc/doré)', () => {
 describe('B : fermeture avec confirmation, reprise dans la même session', () => {
   it('B ouvre la confirmation ; いいえ reste, はい retourne à la carte', () => {
     render(makeData())
-    click(buttonByLabel('close'))
+    click(buttonByLabel('B'))
     expect(container.textContent).toContain(uiStrings.text_close_confirm.jp)
     click(buttonByText(uiStrings.no.jp))
     expect(pushMock).not.toHaveBeenCalled()
-    click(buttonByLabel('close'))
+    click(buttonByLabel('B'))
     click(buttonByText(uiStrings.yes.jp))
     expect(pushMock).toHaveBeenCalledWith('/map')
   })
