@@ -41,12 +41,12 @@ describe('mystery_egg_errand — traversée complète sur les vrais fichiers', (
   it('joue la quête de bout en bout, avec présence et idempotence', () => {
     let state = defaultPlayerState()
 
-    // Avant tout : Silver espionne le labo, le policier et l'assistant
-    // n'existent pas encore sur la carte
+    // Avant tout : Silver espionne le labo, l'assistant est déjà dans le labo
+    // (c'est lui qui accueille), le policier n'a encore aucune raison d'être là
     let visible = visibleNpcIds(state)
     expect(visible).toContain('silver_spying_new_bark')
+    expect(visible).toContain('elm_assistant_new_bark')
     expect(visible).not.toContain('policeman_new_bark')
-    expect(visible).not.toContain('elm_assistant_new_bark')
 
     // Mom avant la quête : intro, aucun effet
     const introTalk = talkTo(mom, state)
@@ -59,8 +59,10 @@ describe('mystery_egg_errand — traversée complète sur les vrais fichiers', (
     state = elmTalk.state
     expect(state.quest_progress.mystery_egg_errand.current_step).toBe('sent_by_elm')
 
-    // Silver disparaît dès que la mission est lancée (negate)
-    expect(visibleNpcIds(state)).not.toContain('silver_spying_new_bark')
+    // Silver reste posté devant le labo pendant toute la course : il ne
+    // disparaît qu'au retour, une fois le vol commis (negate sur egg_received,
+    // fidèle à scr_seq_0229_R30R0201.s:266)
+    expect(visibleNpcIds(state)).toContain('silver_spying_new_bark')
 
     // Reparler à Elm : sent_off, aucun effet rejoué
     const elmRetalk = talkTo(elm, state)
@@ -90,7 +92,7 @@ describe('mystery_egg_errand — traversée complète sur les vrais fichiers', (
     expect(eggRetalk.reached).toBe('after')
     expect(eggRetalk.state).toBe(state)
 
-    // Retour à Bourg Geon : le policier et l'assistant existent maintenant
+    // Retour à Bourg Geon : le policier enquête, Silver s'est volatilisé
     visible = visibleNpcIds(state)
     expect(visible).toContain('policeman_new_bark')
     expect(visible).toContain('elm_assistant_new_bark')

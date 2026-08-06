@@ -98,9 +98,59 @@ def audit_lessons(zone_id: str) -> tuple[int, set[str]]:
             if not (entry.get("on") or entry.get("kun")):
                 blocker(f"{zone_id} : {kid} sans lecture")
         npc_ref = lesson.get("npc_ref")
-        if npc_ref and not any(n["npc_id"] == npc_ref for n in NPCS):
-            blocker(f"{zone_id} leçon #{seq} : PNJ porteur inconnu ({npc_ref})")
+        if npc_ref:
+            giver = next((n for n in NPCS if n["npc_id"] == npc_ref), None) or next(
+                (t for t in TRAINERS if t.get("trainer_id") == npc_ref), None
+            )
+            if giver is None:
+                blocker(f"{zone_id} leçon #{seq} : PNJ porteur inconnu ({npc_ref})")
+            else:
+                audit_giver_reachable(zone_id, seq, giver)
     return len(lessons), taught
+
+
+# Le badge que ce parcours sert à décrocher : une leçon comptée « avant la
+# première arène » ne peut pas dépendre de lui.
+FIRST_GYM_BADGE = "falkner"
+
+
+def audit_giver_reachable(zone_id: str, seq: int, giver: dict) -> None:
+    """Une leçon d'avant la première arène doit être ATTEIGNABLE avant la
+    première arène.
+
+    Ajouté 2026-08-06 (carte de conception). L'audit comptait « 26 leçons,
+    140 kanji avant Falkner » en additionnant les fichiers de leçons, sans
+    jamais regarder si le personnage qui les porte existe à ce moment-là.
+    Il ne l'était pas : les 4 leçons de la Route 29 étaient sur Tuscany, la
+    sœur du MARDI, qui n'apparaît qu'APRÈS le badge de Falkner ; la leçon #5
+    de Mauville était sur Teala, gatée sur ce même badge. 26 kanji du budget
+    d'avant-arène n'étaient enseignables qu'après. Un compteur qui compte des
+    leçons injouables est pire que pas de compteur.
+
+    Deux formes de piège, les deux vérifiées ici :
+      - présence gatée sur le badge que ce parcours sert justement à gagner ;
+      - présence gatée sur un `time_window` (un jour de la semaine) : la leçon
+        existe, mais rien ne garantit qu'un joueur la voie sur son chemin.
+    """
+    ident = giver.get("npc_id") or giver.get("trainer_id")
+    if giver.get("role") != "lesson":
+        blocker(
+            f"{zone_id} leçon #{seq} : {ident} porte une leçon mais n'a pas "
+            f"role: lesson — le moteur ne lui ouvrira jamais l'écran-livre"
+        )
+    for cond in giver.get("unlock_conditions") or []:
+        if cond.get("type") == "badge_earned" and cond.get("badge_id") == FIRST_GYM_BADGE:
+            blocker(
+                f"{zone_id} leçon #{seq} : son porteur {ident} n'apparaît qu'avec le badge "
+                f"de {FIRST_GYM_BADGE} — la leçon est comptée avant la première arène et "
+                f"n'est atteignable qu'après"
+            )
+        if cond.get("type") == "time_window":
+            blocker(
+                f"{zone_id} leçon #{seq} : son porteur {ident} est calendaire "
+                f"({cond.get('days_of_week') or cond}) — une leçon du chemin critique ne "
+                f"peut pas dépendre du jour de la semaine"
+            )
 
 
 # Panneaux, PC et autres objets lisibles n'ont PAS de fichier de dialogue : le
@@ -240,6 +290,21 @@ def main() -> None:
         )
 
     print(f"\n  Total : {total_lessons} leçons, {len(all_kanji)} kanji distincts enseignés")
+
+    # Les verrous rencontrés en chemin, dans l'ordre — lus, pas devinés : c'est
+    # la seule liste qui dise ce qui peut arrêter un joueur avant l'arène.
+    maps_on_path = {m for _, m in CRITICAL_PATH}
+    roadblocks = json.load(open("content/map/roadblocks.json"))["roadblocks"]
+    crossed = [rb for rb in roadblocks if rb["from_zone"] in maps_on_path]
+    if crossed:
+        print(f"\n  Verrous sur le chemin ({len(crossed)}) :")
+        for rb in crossed:
+            keys = ", ".join(
+                c.get("step") or c.get("item_id") or c.get("badge_id") or c["type"]
+                for c in rb["unlock_conditions"]
+            )
+            deleg = f" → délégué à {rb['npc_id']}" if rb.get("npc_id") else ""
+            print(f"    {rb['from_zone']} ⇢ {rb['to_zone']} : clé = {keys}{deleg}")
 
     blockers = [m for lvl, m in problems if lvl == "BLOQUANT"]
     gaps = [m for lvl, m in problems if lvl == "MANQUE"]

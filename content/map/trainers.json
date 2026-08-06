@@ -51,7 +51,7 @@
   "tile_y": 44,
   "facing": "west",
   "sight_range": 4,
-  "position_status": "reposé sur l'objet ROM obj_R30_gsboy2 (TRAINER_YOUNGSTER_JOEY) — scripts/build/match-trainers-to-rom.py, issue 13",
+  "position_status": "reposé sur l'objet ROM obj_R30_gsboy2 (TRAINER_YOUNGSTER_JOEY) — scripts/build/match-trainers-to-rom.py, issue 13 | 2026-08-06 (issue 13, carte de conception) : présence gatée. FLAG_HIDE_ROUTE_30_YOUNGSTER_JOEY est posé au démarrage de partie (scr_seq_0149.s:129) et n'est levé qu'à la remise de l'œuf à Elm (scr_seq_0843_T20R0101.s:759) — à l'aller, sa tuile est occupée par la scène des deux dresseurs en plein combat (FLAG_HIDE_ROUTE_30_BATTLERS), pas par lui.",
   "trigger_type": "sight_auto",
   "sight_auto_result": "battle",
   "repeats": false,
@@ -61,7 +61,14 @@
   "sprite_id": "SPRITE_GSBOY2",
   "map_zone": "MAP_ROUTE_30",
   "matched_object_id": "obj_R30_gsboy2",
-  "rom_trainer": "TRAINER_YOUNGSTER_JOEY"
+  "rom_trainer": "TRAINER_YOUNGSTER_JOEY",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "mystery_egg_errand",
+    "step": "egg_delivered"
+   }
+  ]
  },
  {
   "trainer_id": "youngster_mikey_route30",
@@ -800,10 +807,10 @@
   "trainer_id": "executive_proton_slowpoke_well",
   "zone_id": "slowpoke-well",
   "name": "Executive Proton",
-  "tile_x": 23,
-  "tile_y": 8,
-  "facing": "north",
-  "position_status": "reposé sur l'objet ROM obj_D23R0104_rkanbum3 (TRAINER_EXECUTIVE_PROTON_PROTON_2) — scripts/build/match-trainers-to-rom.py, issue 13",
+  "tile_x": 27,
+  "tile_y": 3,
+  "facing": "south",
+  "position_status": "reposé sur l'objet ROM obj_D23R0104_rkanbum3 (TRAINER_EXECUTIVE_PROTON_PROTON_2) — scripts/build/match-trainers-to-rom.py, issue 13 | 2026-08-06 (issue 13, carte de conception, lint-npc-placements « tuile occupée deux fois ») : scripts/build/match-trainers-to-rom.py avait reposé ce Proton-là sur obj_D23R0104_rkanbum3 — le SEUL objet ROM portant std_trainer(TRAINER_EXECUTIVE_PROTON_PROTON_2), qui vit à la TOUR RADIO de Doublonville. Résultat : le Proton du Puits Ramoloss était servi au 4F de la Tour Radio, sur la tuile exacte de proton_3f_goldenrod. Le Proton du Puits est une rencontre SCRIPTÉE (obj_D26R0102_rkanbum3, script _EV_scr_seq_D26R0102_002, pas un std_trainer), d'où l'absence de correspondance mécanique. Reposé sur cet objet-là : MAP_SLOWPOKE_WELL_B1F (27,3), facingDirection 1.",
   "sight_range": 4,
   "trigger_type": "sight_auto",
   "sight_auto_result": "battle",
@@ -812,9 +819,8 @@
   "battle_length": 24,
   "dialogue_ref": "trainers/slowpoke-well/executive_proton_slowpoke_well",
   "sprite_id": "SPRITE_RKANBUM3",
-  "map_zone": "MAP_GOLDENROD_RADIO_TOWER_4F",
-  "matched_object_id": "obj_D23R0104_rkanbum3",
-  "rom_trainer": "TRAINER_EXECUTIVE_PROTON_PROTON_2"
+  "map_zone": "MAP_SLOWPOKE_WELL_B1F",
+  "matched_object_id": "obj_D26R0102_rkanbum3"
  },
  {
   "trainer_id": "camper_todd_route34",
@@ -2963,10 +2969,10 @@
   "trainer_id": "ariana_rocket_hq_mahogany",
   "zone_id": "mahogany-town",
   "name": "Executive Ariana",
-  "tile_x": 11,
-  "tile_y": 4,
-  "facing": "east",
-  "position_status": "reposé sur l'objet ROM obj_D23R0105_rkanbuw (TRAINER_EXECUTIVE_ARIANA_ARIANA) — scripts/build/match-trainers-to-rom.py, issue 13",
+  "tile_x": 32,
+  "tile_y": 30,
+  "facing": "north",
+  "position_status": "reposé sur l'objet ROM obj_D23R0105_rkanbuw (TRAINER_EXECUTIVE_ARIANA_ARIANA) — scripts/build/match-trainers-to-rom.py, issue 13 | 2026-08-06 (issue 13, carte de conception, lint-npc-placements « tuile occupée deux fois ») : même erreur que pour Proton — reposée sur obj_D23R0105_rkanbuw (Tour Radio 5F, le seul std_trainer(TRAINER_EXECUTIVE_ARIANA_ARIANA)), donc superposée à ariana_deck_goldenrod. L'Ariana du QG d'Acajou est une rencontre scriptée : obj_D35R0103_rkanbuw, FLAG_HIDE_ROCKET_HIDEOUT_B2F_ARIANA, MAP_TEAM_ROCKET_HEADQUARTERS_B2F (32,30), facingDirection 0.",
   "trigger_type": "talk",
   "role": "battle",
   "battle_length": 36,
@@ -2979,9 +2985,8 @@
    }
   ],
   "sprite_id": "SPRITE_RKANBUW",
-  "map_zone": "MAP_GOLDENROD_RADIO_TOWER_5F",
-  "matched_object_id": "obj_D23R0105_rkanbuw",
-  "rom_trainer": "TRAINER_EXECUTIVE_ARIANA_ARIANA"
+  "map_zone": "MAP_TEAM_ROCKET_HEADQUARTERS_B2F",
+  "matched_object_id": "obj_D35R0103_rkanbuw"
  },
  {
   "trainer_id": "poke_maniac_ron_route43",
@@ -6431,6 +6436,46 @@
   "rom_trainer": "TRAINER_SAGE_CHOW",
   "position_status": "2026-08-06 (issue 13, audit première arène) : les sages de la Tour Grospignon manquaient au contenu alors que la visite de la tour conditionne l'accès à l'arène. Reposés sur leurs objets ROM (std_trainer).",
   "dialogue_ref": "trainers/sprout-tower/sage_chow_sprout_tower"
+ },
+ {
+  "trainer_id": "sage_nico_sprout_tower",
+  "zone_id": "sprout-tower",
+  "name": "Sage Nico",
+  "map_zone": "MAP_SPROUT_TOWER_2F",
+  "tile_x": 20,
+  "tile_y": 13,
+  "facing": "south",
+  "sight_range": 4,
+  "sprite_id": "SPRITE_BOZU",
+  "trigger_type": "sight_auto",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "role": "battle",
+  "battle_length": 6,
+  "matched_object_id": "obj_D15R0102_bozu",
+  "rom_trainer": "TRAINER_SAGE_NICO",
+  "position_status": "2026-08-06 (issue 13, carte de conception) : les deux sages du 2F manquaient encore — la Tour Grospignon en compte SIX (guidebook § sprout-tower : Neal, Troy, Jin, Nico, Edmond, Chow) et le contenu n'en avait que quatre, laissant le 2F entièrement vide alors que le joueur doit le traverser pour monter. Reposés sur leurs objets ROM (150_D15R0102.json, std_trainer(TRAINER_SAGE_NICO/EDMOND)).",
+  "dialogue_ref": "trainers/sprout-tower/sage_nico_sprout_tower"
+ },
+ {
+  "trainer_id": "sage_edmond_sprout_tower",
+  "zone_id": "sprout-tower",
+  "name": "Sage Edmond",
+  "map_zone": "MAP_SPROUT_TOWER_2F",
+  "tile_x": 13,
+  "tile_y": 27,
+  "facing": "west",
+  "sight_range": 4,
+  "sprite_id": "SPRITE_BOZU",
+  "trigger_type": "sight_auto",
+  "sight_auto_result": "battle",
+  "repeats": false,
+  "role": "battle",
+  "battle_length": 6,
+  "matched_object_id": "obj_D15R0102_bozu_2",
+  "rom_trainer": "TRAINER_SAGE_EDMOND",
+  "position_status": "2026-08-06 (issue 13, carte de conception) : les deux sages du 2F manquaient encore — la Tour Grospignon en compte SIX (guidebook § sprout-tower : Neal, Troy, Jin, Nico, Edmond, Chow) et le contenu n'en avait que quatre, laissant le 2F entièrement vide alors que le joueur doit le traverser pour monter. Reposés sur leurs objets ROM (150_D15R0102.json, std_trainer(TRAINER_SAGE_NICO/EDMOND)).",
+  "dialogue_ref": "trainers/sprout-tower/sage_edmond_sprout_tower"
  },
  {
   "trainer_id": "sage_neal_sprout_tower",

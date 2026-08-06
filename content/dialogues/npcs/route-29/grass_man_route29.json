@@ -1,0 +1,34 @@
+{
+ "_note": "2026-08-06 (issue 13, carte de conception) — PNJ-leçon (content/lessons/route-29.json, leçons #3 et #4). Même raison que big_man_route29 : Tuscany ne pouvait pas porter des leçons « d'avant la première arène ». Objet ROM obj_R29_gsman1 (030_R29.json), PNJ ambiant de l'ouest de la route, sans drapeau conditionnel. Réplique dérivée de son rôle d'origine (msg_0373_R29_00009 : ne t'aventure pas dans les hautes herbes si tu n'es pas prêt) — transposée en conseil de lecture, la capture n'existant pas ici (règle d'adaptation #1, guidebook-adapted.md).",
+ "npc_id": "grass_man_route29",
+ "name": {
+  "jp": "くさむらの　おじさん",
+  "en": "Man by the Grass"
+ },
+ "zone_id": "route-29",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "greeting"
+  }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    {
+     "jp": "この　さきは　ヨシノシティだ。",
+     "en": "Cherrygrove City is just ahead."
+    },
+    {
+     "jp": "いそがなくて　いいよ。",
+     "en": "No need to rush."
+    },
+    {
+     "jp": "よめる　ものは、ここで　よんで　おきなさい。",
+     "en": "Read what there is to read while you're here."
+    }
+   ]
+  }
+ }
+}

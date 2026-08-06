@@ -10,10 +10,11 @@ import {
 /** Un poste possible pour un PNJ, gardé par des conditions.
  *
  * Le jeu d'origine déplace ses figurants au fil de l'histoire : l'assistant
- * d'Elm remet des Potions à la sortie du labo, puis tient le comptoir du Mart
- * de Ville Griotte. Sans ça, il faudrait le supprimer et le recréer sous un
- * autre identifiant — donc perdre son dialogue et son rôle (voir
- * content/opening-sequence.md § 3). */
+ * d'Elm tient le fond du labo pendant toute la course de l'œuf, puis quitte
+ * Bourg Geon pour le comptoir du Mart de Mauville quand Elm rappelle le joueur,
+ * juste après le premier badge. Sans ça, il faudrait le supprimer et le recréer
+ * sous un autre identifiant — donc perdre son dialogue et son rôle (voir
+ * content/opening-sequence.md). */
 export interface NpcPlacement {
   /** Zone MAP_* de ce poste. Absent = celle du PNJ (`map_zone` ou `zone_id`). */
   map_zone?: string

@@ -79,6 +79,45 @@
     }
    ],
    "npc_id": "guide_gent_cherrygrove"
+  },
+  {
+   "roadblock_id": "gym_guide_violet_sprout_tower",
+   "source": "Décompilé pokeheartgold : l'arène de Mauville a DEUX guides d'arène, chacun sur son propre drapeau (131_T22GYM0101.json : obj_T22GYM0101_sunglasses / FLAG_HIDE_VIOLET_GYM_GYM_GUY_BEFORE_SPROUT en (17,26), et obj_T22GYM0101_sunglasses_2 / FLAG_HIDE_VIOLET_GYM_GYM_GUY_AFTER_SPROUT en (15,20), au milieu du couloir). Battre l'Ancien Li au sommet de la Tour Grospignon échange les deux (scr_seq_0018_D15R0103.s:126-127), et celui d'avant-la-tour dit exactement ce verrou : « You must be here to challenge Falkner, right? You are quite welcome. ...Almost! This city has a tower called the Sprout Tower... Challenging Falkner may be too difficult if you haven't gone through their training » (msg_0558_T22GYM0101_00006). | ÉCART ASSUMÉ, à ne pas relire comme de la fidélité : dans HGSS ce guide ne barre RIEN — le couloir de l'arène fait 15 tuiles de large à sa hauteur, on le contourne, l'avertissement est consultatif. Ici la visite de la tour est une VRAIE condition d'accès (content/guidebook-adapted.md § violet-city, « Homme à lunettes noires — bloque l'entrée du Gym tant que Tour Grospignon n'est pas visitée » ; scripts/validate/audit-first-gym-run.py, chemin critique). Raison : la tour porte 2 des 26 leçons d'avant la première arène et le TM70 ; la sauter c'est arriver chez Falkner avec 10 kanji de moins que ce que le combat suppose. | 2026-08-06 : jusqu'ici ce verrou n'existait que comme réplique de PNJ (glasses_man_violet_city, état « blocking ») — un PNJ bavard qui ne barrait aucun franchissement. Il est maintenant un vrai verrou, et ce PNJ en est le délégué.",
+   "from_zone": "MAP_VIOLET",
+   "to_zone": "MAP_VIOLET_GYM",
+   "guard": {
+    "sprite_id": "SPRITE_SUNGLASSES",
+    "name": {
+     "jp": "サングラスの　ひと",
+     "en": "Man in Sunglasses"
+    },
+    "post": {
+     "tile_x": 31,
+     "tile_y": 35
+    },
+    "facing": "north"
+   },
+   "unlock_conditions": [
+    {
+     "type": "item_owned",
+     "item_id": "tm70_flash"
+    }
+   ],
+   "pages": [
+    {
+     "jp": "まって。　ハヤトに　かちに　きたんだね。",
+     "en": "Hold on. You've come to beat Falkner, haven't you."
+    },
+    {
+     "jp": "でも　まだ　はやいよ。",
+     "en": "But it's too soon."
+    },
+    {
+     "jp": "きたの　とうで　しゅぎょうしてから　おいで。",
+     "en": "Go and train at the tower to the north first."
+    }
+   ],
+   "npc_id": "glasses_man_violet_city"
   }
  ]
 }

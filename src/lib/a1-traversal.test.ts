@@ -244,7 +244,10 @@ describe('A1 — géométrie du jalon (registre réel)', () => {
   const INTERIOR_NPCS: Record<string, string[]> = {
     MAP_NEW_BARK_PLAYER_HOUSE_1F: ['mom_new_bark'],
     MAP_NEW_BARK_PLAYER_HOUSE_2F: ['player_pc_new_bark'],
-    MAP_NEW_BARK_ELMS_LAB_1F: ['prof_elm_lab', 'elm_assistant_new_bark'],
+    // 2026-08-06 (carte de conception) : le policier rejoint la liste — son
+    // objet ROM (obj_T20R0101_policeman, 058_T20R0101.json) vit DANS le labo
+    // cambriolé, il était servi sur la zone extérieure.
+    MAP_NEW_BARK_ELMS_LAB_1F: ['prof_elm_lab', 'elm_assistant_new_bark', 'policeman_new_bark'],
     MAP_CHERRYGROVE_POKECENTER_1F: ['pokecenter_clerk_cherrygrove'],
     // QA Route 30 (2026-08-03) : Mr. Pokémon et le Pr. Oak (présent chez lui,
     // role_origin « Présent chez Mr. Pokémon ») vivent tous deux DANS
@@ -258,6 +261,9 @@ describe('A1 — géométrie du jalon (registre réel)', () => {
     // (role_origin « Comptoir du fond ») vit DANS obj_T21FS0101_shopm1_2
     // (MAP_CHERRYGROVE_POKEMART), pas dehors sur la place de la ville.
     MAP_CHERRYGROVE_POKEMART: ['shopkeeper_cherrygrove'],
+    // 2026-08-06 (carte de conception) : même bug pour le vendeur du Mart de
+    // Mauville, planté dans un champ de la zone extérieure.
+    MAP_VIOLET_POKEMART: ['mart_vendor_violet_city'],
   }
 
   it('les PNJ d’intérieur sont servis DANS leur pièce et interagibles par A depuis la porte', () => {

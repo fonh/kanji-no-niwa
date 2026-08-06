@@ -39,7 +39,7 @@ Aucun état à réconcilier, aucun retour en arrière possible.
   progression, et traduire chaque condition existante en valeur de scène. Deux
   sources de vérité pour un seul fait.
 - **Dupliquer le PNJ sous un autre identifiant par étape** (un `elm_assistant_lab`
-  et un `elm_assistant_mart`, chacun gardé par ses conditions) — c'était la
+  et un `elm_assistant_violet_mart`, chacun gardé par ses conditions) — c'était la
   seule option possible avant, et elle marche. Rejetée : elle éclate le
   dialogue, l'inventaire de PNJ et le journal de quêtes en autant d'entités que
   d'étapes, pour un personnage que le joueur voit comme un seul. Le coût monte
@@ -53,7 +53,11 @@ Aucun état à réconcilier, aucun retour en arrière possible.
 
 - `content/opening-sequence.md` déroule l'ouverture étape par étape avec ses
   sources (décompilé + Bulbapedia + guidebook) : c'est le gabarit à remplir zone
-  par zone pour le reste du jeu.
+  par zone pour le reste du jeu. Réécrit en carte de conception complète le
+  2026-08-06 — le cas d'école du levier `placements[]` y est corrigé au passage :
+  l'assistant d'Elm ne va PAS au Mart de Ville Griotte, il quitte le labo pour le
+  Mart de Mauville quand Elm rappelle le joueur après le premier badge
+  (`scr_seq_0857_T22.s`, `msg_0543_T20R0101_00042`).
 - Un PNJ qui « part » n'est plus supprimé, il change de placement. `negate` reste
   réservé aux figurants qui quittent vraiment le récit (Silver entre deux
   apparitions).
@@ -68,4 +72,7 @@ Aucun état à réconcilier, aucun retour en arrière possible.
 - `scripts/validate/lint-npc-placements.py` refuse un poste dans un mur, un
   poste sans voisin praticable (PNJ injoignable, alors qu'il porte peut-être la
   clé de la suite), une liste sans poste par défaut, et deux postes aux
-  conditions identiques (le second serait mort).
+  conditions identiques (le second serait mort). Étendu le 2026-08-06 : il refuse
+  aussi **deux personnages sur la même tuile** d'une même zone — le défaut
+  qu'avaient l'Ancien de la Tour Grospignon et le sage Chow, puis Silver et Lyra
+  à Bourg Geon.

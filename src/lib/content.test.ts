@@ -66,7 +66,7 @@ describe('map registries', () => {
     const npcs = getMapNpcs()
     const silver = npcs.find(n => n.npc_id === 'silver_spying_new_bark')
     expect(silver!.unlock_conditions).toEqual([
-      { type: 'quest_step', quest_id: 'mystery_egg_errand', step: 'sent_by_elm', negate: true },
+      { type: 'quest_step', quest_id: 'mystery_egg_errand', step: 'egg_received', negate: true },
     ])
     const mom = npcs.find(n => n.npc_id === 'mom_new_bark')
     expect(mom!.unlock_conditions).toBeUndefined()

@@ -23,7 +23,8 @@
       "facing": "east",
       "source": "rom_matched",
       "matched_object_id": "obj_T20_gsrivel",
-      "matched_sprite_id": "SPRITE_GSRIVEL"
+      "matched_sprite_id": "SPRITE_GSRIVEL",
+      "position_status": "2026-08-06 (issue 13, carte de conception) : ATTRIBUTION FAUSSE. obj_T20_gsrivel (SPRITE_GSRIVEL, FLAG_HIDE_NEW_BARK_RIVAL) est SILVER, pas Lyra/Ethan — le sprite « ami » est SPRITE_VAR_1 (obj_T20_var_1 / obj_T20_var_1_2, FLAG_HIDE_NEW_BARK_FRIEND). Corrigé dans content/map/npcs.json ; ce fichier de placements est une sortie de build, il sera régénéré."
     },
     {
       "name": "Professeur Elm",
@@ -60,7 +61,7 @@
       "source": "generated",
       "matched_object_id": null,
       "matched_sprite_id": null,
-      "position_status": "repositionné 2026-08-03 (issue 13, bug D) : (3,12), sans repère ROM, tombait en pleine forêt — voir content/map/npcs.json pour le détail"
+      "position_status": "2026-08-06 : la vraie tuile de Silver est celle d'obj_T20_gsrivel, (10,7) — voir content/map/npcs.json. Ce fichier est une sortie de build."
     },
     {
       "name": "Assistant du Pr. Elm",

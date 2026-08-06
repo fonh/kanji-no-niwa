@@ -1,0 +1,36 @@
+{
+ "_note": "2026-08-06 (issue 13, carte de conception) — voir sage_nico_sprout_tower.json. Objet ROM obj_D15R0102_bozu_2, std_trainer(TRAINER_SAGE_EDMOND), 2F (13,27).",
+ "trainer_id": "sage_edmond_sprout_tower",
+ "name": {
+  "jp": "しゅぎょうそうの　エドモンド",
+  "en": "Sage Edmond"
+ },
+ "zone_id": "sprout-tower",
+ "jlpt_level": "N5",
+ "dialogue_states": {
+  "battle_intro": {
+   "pages": [
+    {
+     "jp": "この　かいだんは　くらいだろう。",
+     "en": "These stairs are dark, aren't they."
+    },
+    {
+     "jp": "よめる　ひとには　くらくない。",
+     "en": "Not to someone who can read."
+    }
+   ]
+  },
+  "post_battle": {
+   "pages": [
+    {
+     "jp": "きみには　くらくないようだ。",
+     "en": "It seems they're not dark to you."
+    },
+    {
+     "jp": "ちょうろうが　まって　いる。",
+     "en": "The elder is waiting."
+    }
+   ]
+  }
+ }
+}

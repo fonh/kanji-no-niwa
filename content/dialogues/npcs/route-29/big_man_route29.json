@@ -1,0 +1,34 @@
+{
+ "_note": "2026-08-06 (issue 13, carte de conception) — PNJ-leçon (content/lessons/route-29.json, leçons #1 et #2). Créé parce que les 4 leçons de la Route 29 étaient portées par Tuscany, qui n'existe que le MARDI et seulement APRÈS le badge de Falkner (content/map/npcs.json, fidèle au décompilé scr_seq_0225_R29.s : CheckBadge BADGE_ZEPHYR + GetWeekday == 2) — soit 20 des 140 kanji « d'avant la première arène » hors d'atteinte avant la première arène. Le porteur change, le curriculum ne bouge pas. Personnage sourcé, pas inventé : objet ROM obj_R29_gsbigman (030_R29.json), PNJ ambiant du milieu de route, sans drapeau conditionnel. Sa réplique reprend son rôle d'origine (msg_0373_R29_00010 : les rebords qu'on saute vers l'est sans pouvoir remonter).",
+ "npc_id": "big_man_route29",
+ "name": {
+  "jp": "おおきな　おじさん",
+  "en": "Burly Man"
+ },
+ "zone_id": "route-29",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "greeting"
+  }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    {
+     "jp": "あの　だんさが　みえるかい。",
+     "en": "See that little drop over there?"
+    },
+    {
+     "jp": "おりるのは　かんたん。　でも　もどれないよ。",
+     "en": "Easy to go down. But you can't come back up."
+    },
+    {
+     "jp": "みちは　いつも　ひとつの　むきに　すすむ。",
+     "en": "A road always runs one way."
+    }
+   ]
+  }
+ }
+}

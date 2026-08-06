@@ -65,12 +65,83 @@ def files_granting(quest_id: str, step: str) -> list[Path]:
     return out
 
 
+def files_granting_item(item_id: str) -> list[Path]:
+    """Fichiers de contenu qui remettent cet objet (`grant_item`).
+
+    Ajouté 2026-08-06 (carte de conception) : un verrou peut légitimement se
+    lever sur `item_owned` (le verrou de l'arène de Mauville se lève sur le
+    TM70 que l'Ancien de la Tour Grospignon remet). Jusqu'ici ces conditions
+    étaient imprimées « à vérifier à la main » — c'est-à-dire jamais vérifiées.
+    """
+    out = []
+    for path in list(DIALOGUES.rglob("*.json")) + list(LESSONS.glob("*.json")):
+        text = path.read_text(encoding="utf-8")
+        if item_id not in text:
+            continue
+        for m in re.finditer(r'\{[^{}]*"type"\s*:\s*"grant_item"[^{}]*\}', text):
+            if f'"{item_id}"' in m.group(0):
+                out.append(path)
+                break
+    return out
+
+
+def maps_reachable_without(start: str, barred: tuple[str, str], registry: dict) -> set[str]:
+    """MAP_* atteignables depuis `start` par les warps, SANS emprunter le
+    franchissement barré.
+
+    Le graphe des warps ne relie que les intérieurs, les bâtiments et les
+    passages (postes-frontière, escaliers de donjon) — jamais deux zones
+    extérieures entre elles, qui se touchent par les bords de carte. C'est
+    exactement la granularité voulue : « la clé est-elle dans la ville, ou
+    dans l'un des bâtiments qu'on peut atteindre sans franchir le verrou ? »
+    """
+    seen = {start}
+    queue = [start]
+    while queue:
+        cur = queue.pop()
+        for warp in registry.get(cur, {}).get("warps", []):
+            dest = warp.get("header")
+            if dest is None or dest in seen:
+                continue
+            if (cur, dest) == barred:
+                continue
+            seen.add(dest)
+            queue.append(dest)
+    return seen
+
+
+def map_of_content_file(path: Path, carriers: dict[str, str], zones_doc: dict) -> str | None:
+    """MAP_* où ce fichier de contenu se joue.
+
+    Priorité au personnage qui le porte (son `map_zone` explicite, sinon la
+    MAP_* de son `zone_id`) — c'est la seule donnée fiable : le chemin du
+    fichier ne dit que la ville de rattachement, pas l'étage.
+    """
+    ref = str(path.with_suffix("")).split("content/dialogues/", 1)[-1]
+    return carriers.get(ref)
+
+
 def main() -> None:
     doc = json.load(open(ROADBLOCKS))
     registry = {z["name"]: z for z in json.load(open(REGISTRY))["zones"]}
     zones_doc = json.load(open(ZONES))
     sprites = {s["label"] for s in json.load(open(SPRITE_LABELS))}
     errors: list[str] = []
+
+    # dialogue_ref → MAP_* où son porteur se tient (poste par défaut).
+    map_by_zone_id = {z["zone_id"]: z["map_name"] for z in zones_doc["zones"]}
+    carriers: dict[str, str] = {}
+    for entity in json.load(open(NPCS)) + json.load(open(Path("content/map/trainers.json"))):
+        ref = entity.get("dialogue_ref")
+        if not ref:
+            continue
+        placements = entity.get("placements") or []
+        maps = {pl.get("map_zone") for pl in placements if pl.get("map_zone")}
+        maps.add(entity.get("map_zone") or map_by_zone_id.get(entity["zone_id"]))
+        for m in maps:
+            if m:
+                carriers.setdefault(ref, m)
+                break
 
     for rb in doc["roadblocks"]:
         rid = rb["roadblock_id"]
@@ -129,28 +200,40 @@ def main() -> None:
 
         # La clé doit être du même côté que la serrure.
         allowed = zone_ids_for_map(src, zones_doc)
+        reachable_maps = maps_reachable_without(src, (src, dst), registry)
         for cond in rb.get("unlock_conditions", []):
-            if cond.get("type") != "quest_step":
-                # Les autres types (item_owned, badge_earned…) ne se localisent
-                # pas mécaniquement — à vérifier à la main, signalé comme tel.
-                print(f"  [à vérifier à la main] {rid}: condition {cond.get('type')} non localisable")
+            ctype = cond.get("type")
+            if ctype == "quest_step":
+                label = f"{cond['quest_id']}/{cond['step']}"
+                granters = files_granting(cond["quest_id"], cond["step"])
+            elif ctype == "item_owned":
+                label = f"objet {cond['item_id']}"
+                granters = files_granting_item(cond["item_id"])
+            else:
+                # badge_earned, count… : pas de lieu de remise à localiser.
+                print(f"  [à vérifier à la main] {rid}: condition {ctype} non localisable")
                 continue
-            granters = files_granting(cond["quest_id"], cond["step"])
+
             if not granters:
                 errors.append(
-                    f"{rid}: rien dans le contenu ne fait avancer "
-                    f"{cond['quest_id']} à l'étape « {cond['step']} » — verrou indéblocable"
+                    f"{rid}: rien dans le contenu ne donne {label} — verrou indéblocable"
                 )
                 continue
+
+            # Deux façons d'être « du bon côté », la première (le porteur et sa
+            # MAP_*, traversée par le graphe des warps) étant la fiable ; la
+            # seconde (le zone_id du chemin de fichier) reste le filet pour un
+            # fichier qu'aucun personnage ne porte.
             reachable = [
                 p for p in granters
-                if any(f"/{zid}/" in str(p) or p.stem == zid for zid in allowed)
+                if map_of_content_file(p, carriers, zones_doc) in reachable_maps
+                or any(f"/{zid}/" in str(p) or p.stem == zid for zid in allowed)
             ]
             if not reachable:
                 errors.append(
-                    f"{rid}: la clé est derrière la serrure — "
-                    f"{cond['quest_id']}/{cond['step']} n'est donné que par "
-                    f"{[str(p) for p in granters]}, hors de {src}"
+                    f"{rid}: la clé est derrière la serrure — {label} n'est donné que par "
+                    f"{[str(p) for p in granters]}, hors d'atteinte depuis {src} sans "
+                    f"franchir le verrou"
                 )
 
     print(f"{len(doc['roadblocks'])} verrou(s) vérifié(s)")

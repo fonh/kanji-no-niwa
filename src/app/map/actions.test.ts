@@ -117,9 +117,12 @@ describe('C1 — re-vérification serveur des écritures (zone courante + visibi
     expect(savePlayerStateMock).not.toHaveBeenCalled()
   })
 
-  it('entité masquée par ses unlock_conditions : l\'assistant d\'Elm avant egg_received → null', async () => {
+  it('entité masquée par ses unlock_conditions : le policier avant egg_received → null', async () => {
+    // 2026-08-06 : l'assistant d'Elm ne convient plus comme cobaye — il est
+    // désormais dans le labo dès le premier jour (c'est lui qui accueille).
+    // Le policier, lui, n'enquête qu'une fois le labo cambriolé.
     stateRef.current.current_zone = 'MAP_NEW_BARK_ELMS_LAB_1F' // bonne zone…
-    const result = await interactWithNpc('elm_assistant_new_bark') // …mais invisible
+    const result = await interactWithNpc('policeman_new_bark') // …mais invisible
     expect(result).toBeNull()
     expect(savePlayerStateMock).not.toHaveBeenCalled()
   })

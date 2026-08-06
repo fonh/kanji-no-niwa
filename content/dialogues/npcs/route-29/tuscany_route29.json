@@ -1,21 +1,60 @@
 {
- "_note": "Étape 3 point 2 — PNJ-leçon calendaire (content/lessons/route-29.json). Cette state 'greeting' ne se voit qu'une fois ses 4 leçons épuisées (le moteur sert la leçon en tête tant qu'il y en a) — elle porte le TwistedSpoon, sourcé (npc-inventory.md § route-29).",
+ "_note": "Étape 3 point 2 — PNJ-leçon calendaire (content/lessons/route-29.json). Cette state 'greeting' ne se voit qu'une fois ses 4 leçons épuisées (le moteur sert la leçon en tête tant qu'il y en a) — elle porte le TwistedSpoon, sourcé (npc-inventory.md § route-29). | 2026-08-06 (issue 13, carte de conception) : deuxième état. Le moteur sert le dialogue AVANT d'ouvrir l'écran-livre (« l'histoire d'abord », src/app/map/actions.ts) — un PNJ-leçon à plusieurs leçons rejouait donc sa réplique de remise de cadeau, Effect compris, à chaque leçon. L'Effect est idempotent, rien n'était cassé, mais le joueur s'entendait offrir quatre fois le même objet. L'état d'après-cadeau se sélectionne sur item_owned de l'objet remis : monotone, aucune donnée nouvelle.",
  "npc_id": "tuscany_route29",
- "name": { "jp": "トスカーナ", "en": "Tuscany" },
+ "name": {
+  "jp": "トスカーナ",
+  "en": "Tuscany"
+ },
  "zone_id": "route-29",
  "jlpt_level": "N5",
  "state_rules": [
-  { "default": true, "state": "greeting" }
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "twisted_spoon"
+    }
+   ],
+   "state": "after_gift"
+  },
+  {
+   "default": true,
+   "state": "greeting"
+  }
  ],
  "dialogue_states": {
   "greeting": {
    "pages": [
-    { "jp": "あら、きょうは　かようびね。", "en": "Oh, today's Tuesday." },
-    { "jp": "これを　あげる。", "en": "Here, take this." },
-    { "jp": "たいせつに　つかってね。", "en": "Take good care of it." }
+    {
+     "jp": "あら、きょうは　かようびね。",
+     "en": "Oh, today's Tuesday."
+    },
+    {
+     "jp": "これを　あげる。",
+     "en": "Here, take this."
+    },
+    {
+     "jp": "たいせつに　つかってね。",
+     "en": "Take good care of it."
+    }
    ],
    "effects": [
-    { "type": "grant_item", "item_id": "twisted_spoon" }
+    {
+     "type": "grant_item",
+     "item_id": "twisted_spoon"
+    }
+   ]
+  },
+  "after_gift": {
+   "pages": [
+    {
+     "jp": "わたしは　かようびの　むすめ。",
+     "en": "I'm the Tuesday sister."
+    },
+    {
+     "jp": "きょうだいは　7にん　いるのよ。",
+     "en": "There are seven of us."
+    }
    ]
   }
  }

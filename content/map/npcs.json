@@ -17,10 +17,10 @@
   "zone_id": "new-bark-town",
   "name": "Prof. Elm",
   "map_zone": "MAP_NEW_BARK_ELMS_LAB_1F",
-  "tile_x": 5,
-  "tile_y": 4,
+  "tile_x": 4,
+  "tile_y": 5,
   "facing": "south",
-  "position_status": "fix issue 12 (2026-07-30) : était (31,0) extérieur, tuile solide sans voisin marchable (injoignable). L'objet ROM matché (obj_T20_doctor, placements/new-bark-town.json) vit DANS le labo en HGSS. Désormais au fond du labo 1F (rangée nord, devant ses machines, comme HGSS), face au sud, interagible par A depuis (5,5)",
+  "position_status": "fix issue 12 (2026-07-30) : était (31,0) extérieur, tuile solide sans voisin marchable (injoignable). L'objet ROM matché (obj_T20_doctor, placements/new-bark-town.json) vit DANS le labo en HGSS. Désormais au fond du labo 1F (rangée nord, devant ses machines, comme HGSS), face au sud, interagible par A depuis (5,5) | 2026-08-06 : (5,4) était dans l'alcôve nord ; le script de transition du labo (scr_seq_0843_T20R0101.s, scr_seq_T20R0101_010) place explicitement Elm en MovePersonFacing(4, 0, 5, DIR_SOUTH) pour les scènes 0/3/8 — c'est-à-dire tout le début de partie. Aligné dessus.",
   "trigger_type": "talk",
   "role": "lesson",
   "sprite_id": "SPRITE_DOCTOR",
@@ -30,21 +30,29 @@
   "npc_id": "lyra_ethan_new_bark",
   "zone_id": "new-bark-town",
   "name": "Lyra/Ethan",
-  "tile_x": 10,
-  "tile_y": 7,
-  "facing": "east",
-  "position_status": "ROM-matched, voir content/map/placements/new-bark-town.json (obj_T20_gsrivel)",
+  "tile_x": 14,
+  "tile_y": 12,
+  "facing": "west",
+  "position_status": "2026-08-06 (issue 13, carte de conception) : était en (10,7), la tuile de SILVER (obj_T20_gsrivel / FLAG_HIDE_NEW_BARK_RIVAL) — confusion de personnages dans content/map/placements/new-bark-town.json. Lyra/Ethan, c'est obj_T20_var_1 (FLAG_HIDE_NEW_BARK_FRIEND, SPRITE_VAR_1, le sprite « ami » résolu à l'exécution), et le script de carte la fait sortir de chez elle en (686,0,396) DIR_WEST → (14,12) quand VAR_SCENE_NEW_BARK_TOWN_OW passe à 1, c'est-à-dire à la sortie du labo, compagnon en main (scr_seq_0842_T20.s, scr_seq_T20_009). Avant ça elle est au 2F de sa maison (guidebook § new-bark-town), donc absente de la carte extérieure : présence gatée sur sent_by_elm.",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/new-bark-town/lyra_ethan_new_bark"
+  "dialogue_ref": "npcs/new-bark-town/lyra_ethan_new_bark",
+  "sprite_id": "SPRITE_VAR_1",
+  "unlock_conditions": [
+   {
+    "type": "quest_step",
+    "quest_id": "mystery_egg_errand",
+    "step": "sent_by_elm"
+   }
+  ]
  },
  {
   "npc_id": "policeman_new_bark",
   "zone_id": "new-bark-town",
   "name": "Policeman",
-  "tile_x": 19,
+  "tile_x": 3,
   "tile_y": 6,
-  "facing": "south",
-  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/new-bark-town.json",
+  "facing": "east",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/new-bark-town.json | 2026-08-06 (issue 13, carte de conception) : était en (19,6) de la zone EXTÉRIEURE, généré sans repère ROM. L'objet ROM existe pourtant — obj_T20R0101_policeman, files/fielddata/eventdata/zone_event/058_T20R0101.json — et vit DANS le labo d'Elm en (3,6), face à l'est (facingDirection 3). Même bug de fond que Mom/Elm avant issue 12 (PNJ d'intérieur aplati sur la zone extérieure), jamais corrigé pour lui. C'est aussi ce que dit la scène : il enquête sur le vol DANS le labo cambriolé.",
   "trigger_type": "talk",
   "sprite_id": "SPRITE_POLICEMAN",
   "unlock_conditions": [
@@ -54,23 +62,24 @@
     "step": "egg_received"
    }
   ],
-  "dialogue_ref": "npcs/new-bark-town/policeman_new_bark"
+  "dialogue_ref": "npcs/new-bark-town/policeman_new_bark",
+  "map_zone": "MAP_NEW_BARK_ELMS_LAB_1F"
  },
  {
   "npc_id": "silver_spying_new_bark",
   "zone_id": "new-bark-town",
   "name": "Boy with Red Hair",
-  "tile_x": 9,
-  "tile_y": 10,
+  "tile_x": 10,
+  "tile_y": 7,
   "facing": "south",
-  "position_status": "repositionné 2026-08-03 (issue 13, bug D) : (3,12) était généré sans repère ROM et tombait en pleine forêt, hors de tout chemin — repéré en jeu par l'utilisateur (« PNJ dans les arbres »). (9,10) est en herbe praticable contre la clôture du labo, cohérent avec role_origin (« aperçu en train d'espionner le labo »), 3 tuiles adjacentes praticables vérifiées.",
+  "position_status": "repositionné 2026-08-03 (issue 13, bug D) : (3,12) était généré sans repère ROM et tombait en pleine forêt, hors de tout chemin — repéré en jeu par l'utilisateur (« PNJ dans les arbres »). (9,10) est en herbe praticable contre la clôture du labo, cohérent avec role_origin (« aperçu en train d'espionner le labo »), 3 tuiles adjacentes praticables vérifiées. | 2026-08-06 (issue 13, carte de conception) : reposé sur son VRAI objet ROM. obj_T20_gsrivel (057_T20.json, SPRITE_GSRIVEL, monde (682,391) → (10,7) avec world_origin (672,384)) porte FLAG_HIDE_NEW_BARK_RIVAL : c'est Silver, pas Lyra — content/map/placements/new-bark-town.json l'attribuait à « Lyra/Ethan (rival/mentor) », les deux personnages ayant été confondus par le nom de sprite. La tuile est l'alcôve au nord du labo, contre sa fenêtre : exactement le rôle sourcé (« aperçu en train d'espionner le labo »). Fenêtre de présence corrigée aussi : FLAG_HIDE_NEW_BARK_RIVAL n'est posé qu'à la remise du Pokédex chez Mr. Pokémon (scr_seq_0229_R30R0201.s:266), pas au départ en mission — Silver reste donc devant le labo pendant toute la course, et a disparu au retour, quand Maman annonce le cambriolage.",
   "trigger_type": "talk",
   "sprite_id": "SPRITE_HNS_SILVER",
   "unlock_conditions": [
    {
     "type": "quest_step",
     "quest_id": "mystery_egg_errand",
-    "step": "sent_by_elm",
+    "step": "egg_received",
     "negate": true
    }
   ],
@@ -81,53 +90,33 @@
   "zone_id": "new-bark-town",
   "name": "Prof. Elm's Assistant",
   "map_zone": "MAP_NEW_BARK_ELMS_LAB_1F",
-  "tile_x": 10,
-  "tile_y": 4,
-  "facing": "south",
-  "position_status": "fix issue 12 (2026-07-30) : était (29,1) extérieur, tuile solide injoignable — l'intention de l'audit G5 2026-07-21 (« dans le labo près d'Elm ») était déjà l'intérieur, impossible tant que les PNJ n'étaient servis qu'en zone extérieure. Désormais réellement dans le labo 1F (rangée nord côté est, près des étagères), interagible par A depuis (10,5) | 2026-08-06 (issue 13) : placements conditionnels — il tient le comptoir du Mart de Ville Griotte entre la remise de l'œuf et sa livraison (c'est là que HGSS le poste pour relayer l'appel d'Elm), puis regagne le labo. Voir content/opening-sequence.md.",
+  "tile_x": 9,
+  "tile_y": 12,
+  "facing": "west",
+  "position_status": "fix issue 12 (2026-07-30) : était (29,1) extérieur, tuile solide injoignable — l'intention de l'audit G5 2026-07-21 (« dans le labo près d'Elm ») était déjà l'intérieur, impossible tant que les PNJ n'étaient servis qu'en zone extérieure. Désormais réellement dans le labo 1F (rangée nord côté est, près des étagères), interagible par A depuis (10,5) | 2026-08-06 (issue 13) : placements conditionnels — il tient le comptoir du Mart de Ville Griotte entre la remise de l'œuf et sa livraison (c'est là que HGSS le poste pour relayer l'appel d'Elm), puis regagne le labo. Voir content/opening-sequence.md. | 2026-08-06 (issue 13, carte de conception) : le poste « comptoir du Mart de Ville Griotte entre egg_received et egg_delivered » était une invention — le décompilé dit l'inverse. Le clerc que HGSS fait apparaître au Mart de Griotte est FLAG_HIDE_CHERRYGROVE_MART_SPECIAL_CLERK, un SECOND vendeur (std_special_mart, scr_seq_0851_T21FS0101.s), pas l'assistant. L'assistant, lui, quitte le labo (FLAG_HIDE_ELMS_LAB_AIDE) pour le Mart de MAUVILLE (FLAG_HIDE_VIOLET_SHOP_LAB_AIDE, obj_T22FS0101_assistantm, (6,8)) au moment de l'appel d'Elm qui suit le PREMIER BADGE — scr_seq_0857_T22.s:28-30, et Elm le dit lui-même : « He should have met you with the Egg at Violet City's Poké Mart » (msg_0543_T20R0101_00042). Le guidebook curaté disait déjà la même chose (§ violet-city, « Assistant du Professeur Elm (dans le Mart) — rend l'œuf mystère après le 1er badge »). Tuile de labo alignée sur l'objet ROM obj_T20R0101_assistantm (9,12) ; présence rendue inconditionnelle (il est dans le labo dès la première visite dans HGSS).",
   "trigger_type": "talk",
-  "unlock_conditions": [
-   {
-    "type": "quest_step",
-    "quest_id": "mystery_egg_errand",
-    "step": "egg_received"
-   }
-  ],
   "dialogue_ref": "npcs/new-bark-town/elm_assistant_new_bark",
   "placements": [
    {
-    "map_zone": "MAP_NEW_BARK_ELMS_LAB_1F",
-    "tile_x": 10,
-    "tile_y": 4,
+    "map_zone": "MAP_VIOLET_POKEMART",
+    "tile_x": 6,
+    "tile_y": 8,
     "facing": "south",
     "conditions": [
      {
-      "type": "quest_step",
-      "quest_id": "mystery_egg_errand",
-      "step": "egg_delivered"
-     }
-    ]
-   },
-   {
-    "map_zone": "MAP_CHERRYGROVE_POKEMART",
-    "tile_x": 5,
-    "tile_y": 4,
-    "facing": "south",
-    "conditions": [
-     {
-      "type": "quest_step",
-      "quest_id": "mystery_egg_errand",
-      "step": "egg_received"
+      "type": "badge_earned",
+      "badge_id": "falkner"
      }
     ]
    },
    {
     "map_zone": "MAP_NEW_BARK_ELMS_LAB_1F",
-    "tile_x": 10,
-    "tile_y": 4,
-    "facing": "south"
+    "tile_x": 9,
+    "tile_y": 12,
+    "facing": "west"
    }
-  ]
+  ],
+  "sprite_id": "SPRITE_ASSISTANTM"
  },
  {
   "npc_id": "player_pc_new_bark",
@@ -141,15 +130,40 @@
   "trigger_type": "talk"
  },
  {
+  "npc_id": "big_man_route29",
+  "zone_id": "route-29",
+  "name": "Burly Man",
+  "tile_x": 46,
+  "tile_y": 8,
+  "facing": "south",
+  "position_status": "2026-08-06 (issue 13, carte de conception) : objet ROM obj_R29_gsbigman (030_R29.json, monde (622,392) → (46,8) avec world_origin (576,384)), facingDirection 1. PNJ ambiant du milieu de route, présent dès la première traversée — aucun drapeau conditionnel dans la ROM.",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSBIGMAN",
+  "dialogue_ref": "npcs/route-29/big_man_route29"
+ },
+ {
+  "npc_id": "grass_man_route29",
+  "zone_id": "route-29",
+  "name": "Man by the Grass",
+  "tile_x": 24,
+  "tile_y": 11,
+  "facing": "south",
+  "position_status": "2026-08-06 (issue 13, carte de conception) : objet ROM obj_R29_gsman1 (030_R29.json, monde (600,395) → (24,11)), facingDirection 1. PNJ ambiant de l'ouest de la route, juste avant Ville Griotte, présent dès la première traversée.",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSMAN1",
+  "dialogue_ref": "npcs/route-29/grass_man_route29"
+ },
+ {
   "npc_id": "tuscany_route29",
   "zone_id": "route-29",
   "name": "Tuscany",
-  "tile_x": 38,
-  "tile_y": 8,
+  "tile_x": 53,
+  "tile_y": 21,
   "facing": "south",
-  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-29.json",
+  "position_status": "2026-08-06 (issue 13, carte de conception) : était en (38,8), généré. Reposée sur son objet ROM obj_R29_gswoman2_2 (030_R29.json, FLAG_UNK_207 — le drapeau que scr_seq_0225_R29.s lève sur CheckBadge BADGE_ZEPHYR + GetWeekday == mardi, exactement les unlock_conditions portées ici), monde (629,405) → (53,21) avec world_origin (576,384).",
   "trigger_type": "talk",
-  "role": "lesson",
   "unlock_conditions": [
    {
     "type": "time_window",
@@ -162,7 +176,8 @@
     "badge_id": "falkner"
    }
   ],
-  "dialogue_ref": "npcs/route-29/tuscany_route29"
+  "dialogue_ref": "npcs/route-29/tuscany_route29",
+  "sprite_id": "SPRITE_GSWOMAN2"
  },
  {
   "npc_id": "lyra_ethan_route29",
@@ -310,10 +325,10 @@
   "npc_id": "glasses_man_violet_city",
   "zone_id": "violet-city",
   "name": "Man in Sunglasses",
-  "tile_x": 42,
-  "tile_y": 16,
-  "facing": "south",
-  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "tile_x": 32,
+  "tile_y": 34,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json | 2026-08-06 (issue 13, carte de conception) : était en (42,16), au nord de la ville sur le pont — soit à 20 tuiles de la porte de l'arène qu'il est censé barrer. Reposé contre la porte de l'arène (warp (479,257) → (31,33), abordée depuis (31,34)) : il se tient sur la tuile voisine (32,34) et devient le PNJ délégué du verrou gym_guide_violet_sprout_tower.",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/violet-city/glasses_man_violet_city"
  },
@@ -321,13 +336,14 @@
   "npc_id": "earl_violet_city",
   "zone_id": "violet-city",
   "name": "Earl",
-  "tile_x": 40,
-  "tile_y": 23,
+  "tile_x": 26,
+  "tile_y": 28,
   "facing": "south",
-  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json | 2026-08-06 : reposé sur l'objet ROM obj_T22_gsbigman (070_T22.json, monde (474,252) → (26,28) avec world_origin (448,224)), le PNJ qui porte le script T22_001 — celui qui demande « tu as battu le champion ? » puis emmène le joueur à l'École (msg_0556_T22_00001 à 00004). C'est Earl, et il erre bien entre l'arène et le Mart comme le dit le guidebook.",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/violet-city/earl_violet_city"
+  "dialogue_ref": "npcs/violet-city/earl_violet_city",
+  "sprite_id": "SPRITE_GSBIGMAN"
  },
  {
   "npc_id": "blond_boy_violet_city",
@@ -372,9 +388,8 @@
   "tile_x": 41,
   "tile_y": 40,
   "facing": "south",
-  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json | 2026-08-06 : n'est plus PNJ-leçon (la leçon #5 de la zone est passée au vendeur du Mart, toujours présent) ; garde son rôle sourcé : le Pal Pad après le 1er badge.",
   "trigger_type": "talk",
-  "role": "lesson",
   "unlock_conditions": [
    {
     "type": "badge_earned",
@@ -387,35 +402,46 @@
   "npc_id": "kimono_zuki_violet_city",
   "zone_id": "violet-city",
   "name": "Kimono Girl Zuki",
-  "tile_x": 60,
-  "tile_y": 45,
-  "facing": "south",
-  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "tile_x": 26,
+  "tile_y": 37,
+  "facing": "west",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json | 2026-08-06 : reposé sur l'objet ROM obj_T22_dancer (070_T22.json, monde (474,261) → (26,37)), et gaté comme dans le jeu d'origine : FLAG_HIDE_VIOLET_KIMONO_GIRL n'est levé qu'au moment où l'assistant d'Elm rend l'œuf au Mart de Mauville (scr_seq_0858_T22FS0101.s:77), donc APRÈS le premier badge. Sa réplique « tu portes un œuf » n'avait aucun sens avant.",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/violet-city/kimono_zuki_violet_city"
+  "dialogue_ref": "npcs/violet-city/kimono_zuki_violet_city",
+  "sprite_id": "SPRITE_DANCER",
+  "unlock_conditions": [
+   {
+    "type": "badge_earned",
+    "badge_id": "falkner"
+   }
+  ]
  },
  {
   "npc_id": "mart_vendor_violet_city",
   "zone_id": "violet-city",
   "name": "Mart Clerk",
-  "tile_x": 48,
-  "tile_y": 50,
+  "tile_x": 8,
+  "tile_y": 3,
   "facing": "south",
-  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json | 2026-08-06 : était en (48,50) de la zone EXTÉRIEURE — un vendeur de Mart planté dans un champ. Déplacé DANS MAP_VIOLET_POKEMART. La tuile de l'objet ROM (obj_T22FS0101_shopm1_2, (2,6)) est dans l'alcôve murée du comptoir, sans voisin praticable — exactement le défaut déjà rencontré pour le vendeur de Ville Griotte ; même résolution que lui : (8,3), la tuile praticable la plus proche formant un vrai comptoir, dos au mur nord.",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/violet-city/mart_vendor_violet_city"
+  "dialogue_ref": "npcs/violet-city/mart_vendor_violet_city",
+  "map_zone": "MAP_VIOLET_POKEMART",
+  "role": "lesson"
  },
  {
   "npc_id": "sages_sprout_tower",
   "zone_id": "sprout-tower",
   "name": "Tower Sages",
-  "tile_x": 5,
-  "tile_y": 8,
+  "tile_x": 11,
+  "tile_y": 15,
   "facing": "south",
-  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/sprout-tower.json",
+  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/sprout-tower.json | 2026-08-06 (issue 13, carte de conception) : (5,8) était généré, dans le couloir ouest du 1F à deux tuiles du sage Chow. Reposé sur l'objet ROM obj_D15R0101_bozu_2 (107_D15R0101.json, (11,15), facingDirection 1) — un des deux sages ambiants du 1F, c'est exactement le rôle que porte cette entrée (les 6 sages regroupés).",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/sprout-tower/sages_sprout_tower"
+  "dialogue_ref": "npcs/sprout-tower/sages_sprout_tower",
+  "map_zone": "MAP_SPROUT_TOWER_1F",
+  "sprite_id": "SPRITE_BOZU"
  },
  {
   "npc_id": "elder_li_sprout_tower",

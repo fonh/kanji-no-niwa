@@ -57,9 +57,18 @@ function stateAtSilver(lessons: string[], defeated: string[] = []): PlayerState 
   return state
 }
 
+// Joey n'existe sur la Route 30 qu'APRÈS la livraison de l'œuf (2026-08-06,
+// carte de conception — FLAG_HIDE_ROUTE_30_YOUNGSTER_JOEY, levé par
+// scr_seq_0843_T20R0101.s:759). L'état légitime porte donc l'étape.
 function stateAtJoey(lessons: string[], defeated: string[] = []): PlayerState {
   const state = stateWithLessons(lessons, defeated)
   state.current_zone = 'MAP_ROUTE_30'
+  state.quest_progress = {
+    mystery_egg_errand: {
+      current_step: 'egg_delivered',
+      step_entered_at: '2026-07-30T00:00:00.000Z',
+    },
+  }
   return state
 }
 

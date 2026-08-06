@@ -1,21 +1,60 @@
 {
- "_note": "Étape 3 (extension) — sourcé « Sommet (3F), bat le joueur, explique la technique » (npc-inventory.md), mais tagué leçon (pas combat) dans la colonne Type assigné — même règle que Guide Gent/Vendeuse : le rôle narratif d'origine et le rôle mécanique en jeu n'ont pas à correspondre (§ Leçons, aucun lien thématique). Pas de fichier trainers/ séparé : sa ligne 'bat le joueur' reste de la flaveur de dialogue, pas un combat modélisé.",
+ "_note": "Étape 3 (extension) — sourcé « Sommet (3F), bat le joueur, explique la technique » (npc-inventory.md), mais tagué leçon (pas combat) dans la colonne Type assigné — même règle que Guide Gent/Vendeuse : le rôle narratif d'origine et le rôle mécanique en jeu n'ont pas à correspondre (§ Leçons, aucun lien thématique). Pas de fichier trainers/ séparé : sa ligne 'bat le joueur' reste de la flaveur de dialogue, pas un combat modélisé. | 2026-08-06 (issue 13, carte de conception) : deuxième état. Le moteur sert le dialogue AVANT d'ouvrir l'écran-livre (« l'histoire d'abord », src/app/map/actions.ts) — un PNJ-leçon à plusieurs leçons rejouait donc sa réplique de remise de cadeau, Effect compris, à chaque leçon. L'Effect est idempotent, rien n'était cassé, mais le joueur s'entendait offrir quatre fois le même objet. L'état d'après-cadeau se sélectionne sur item_owned de l'objet remis : monotone, aucune donnée nouvelle.",
  "npc_id": "elder_li_sprout_tower",
- "name": { "jp": "ちょうろう　リー", "en": "Elder Li" },
+ "name": {
+  "jp": "ちょうろう　リー",
+  "en": "Elder Li"
+ },
  "zone_id": "sprout-tower",
  "jlpt_level": "N5",
  "state_rules": [
-  { "default": true, "state": "greeting" }
+  {
+   "if": [
+    {
+     "type": "item_owned",
+     "item_id": "tm70_flash"
+    }
+   ],
+   "state": "after_gift"
+  },
+  {
+   "default": true,
+   "state": "greeting"
+  }
  ],
  "dialogue_states": {
   "greeting": {
    "pages": [
-    { "jp": "よく　ここまで　のぼって　きたね。", "en": "You climbed all the way up here." },
-    { "jp": "これを　つかいなさい。", "en": "Use this." },
-    { "jp": "くらい　みちを　てらして　くれるよ。", "en": "It'll light up dark paths." }
+    {
+     "jp": "よく　ここまで　のぼって　きたね。",
+     "en": "You climbed all the way up here."
+    },
+    {
+     "jp": "これを　つかいなさい。",
+     "en": "Use this."
+    },
+    {
+     "jp": "くらい　みちを　てらして　くれるよ。",
+     "en": "It'll light up dark paths."
+    }
    ],
    "effects": [
-    { "type": "grant_item", "item_id": "tm70_flash" }
+    {
+     "type": "grant_item",
+     "item_id": "tm70_flash"
+    }
+   ]
+  },
+  "after_gift": {
+   "pages": [
+    {
+     "jp": "きみなら　ハヤトに　かてるだろう。",
+     "en": "You should be able to stand up to Falkner."
+    },
+    {
+     "jp": "ジムは　まちの　なかに　あるよ。",
+     "en": "The Gym is down in the town."
+    }
    ]
   }
  }

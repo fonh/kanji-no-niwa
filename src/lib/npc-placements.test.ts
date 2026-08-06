@@ -1,8 +1,8 @@
 // Placements conditionnels (issue 13, content/opening-sequence.md).
 //
 // Le jeu d'origine déplace ses figurants au fil de l'histoire — l'assistant
-// d'Elm tient le comptoir du Mart de Ville Griotte entre la remise de l'œuf et
-// sa livraison. Le moteur ne savait donner qu'UNE position par PNJ, ce qui
+// d'Elm quitte le labo pour le comptoir du Mart de Mauville quand Elm rappelle
+// le joueur après le premier badge. Le moteur ne savait donner qu'UNE position par PNJ, ce qui
 // obligeait soit à le figer, soit à le dupliquer sous un autre identifiant
 // (donc à perdre son dialogue et son rôle).
 import { describe, it, expect } from 'vitest'
@@ -91,9 +91,12 @@ describe('activePlacement', () => {
 
 describe('l’assistant d’Elm change vraiment de carte (contenu réel)', () => {
   const lab = getZoneByName('MAP_NEW_BARK_ELMS_LAB_1F')!
-  const mart = getZoneByName('MAP_CHERRYGROVE_POKEMART')!
+  const mart = getZoneByName('MAP_VIOLET_POKEMART')!
   const find = (zone: typeof lab, state: PlayerState) =>
     getNpcsForZone(zone, { state, ctx }).find(n => n.npc_id === 'elm_assistant_new_bark')
+
+  const withBadge = (state: PlayerState): PlayerState =>
+    ({ ...state, badges: [{ badge_id: 'falkner', earned_at: '2026-01-02T00:00:00Z' }] }) as unknown as PlayerState
 
   it('au labo au début, jamais au Mart', () => {
     const state = stateAt(null)
@@ -101,15 +104,17 @@ describe('l’assistant d’Elm change vraiment de carte (contenu réel)', () =>
     expect(find(mart, state)).toBeUndefined()
   })
 
-  it('au comptoir du Mart une fois l’œuf reçu', () => {
-    const state = stateAt('egg_received')
-    expect(find(mart, state)).toBeDefined()
-    expect(find(lab, state)).toBeUndefined()
+  it('toujours au labo pendant toute la course de l’œuf', () => {
+    for (const step of ['sent_by_elm', 'egg_received', 'egg_delivered']) {
+      const state = stateAt(step)
+      expect(find(lab, state)).toBeDefined()
+      expect(find(mart, state)).toBeUndefined()
+    }
   })
 
-  it('de retour au labo une fois l’œuf livré', () => {
-    const state = stateAt('egg_delivered')
-    expect(find(lab, state)).toBeDefined()
-    expect(find(mart, state)).toBeUndefined()
+  it('au comptoir du Mart de Mauville une fois le premier badge décroché', () => {
+    const state = withBadge(stateAt('egg_delivered'))
+    expect(find(mart, state)).toBeDefined()
+    expect(find(lab, state)).toBeUndefined()
   })
 })
