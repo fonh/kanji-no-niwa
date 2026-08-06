@@ -63,11 +63,16 @@ describe('blockingRoadblock', () => {
     expect(blockingRoadblock('MAP_ROUTE_29', 'MAP_CHERRYGROVE', emptyState, ctx)).toBeNull()
   })
 
-  it('barre Ville Griotte → Route 30 tant que la visite du guide n’est pas finie', () => {
-    const beforeTour = blockingRoadblock('MAP_CHERRYGROVE', 'MAP_ROUTE_30', emptyState, ctx)
-    expect(beforeTour?.roadblock_id).toBe('guide_gent_cherrygrove_tour')
-    const afterTour = withQuest('cherrygrove_welcome', 'map_given')
-    expect(blockingRoadblock('MAP_CHERRYGROVE', 'MAP_ROUTE_30', afterTour, ctx)).toBeNull()
+  it('barre Ville Griotte → Route 30 jusqu’à la PREMIÈRE réplique du guide', () => {
+    // La condition portait sur sa DEUXIÈME réplique : il fallait buter trois
+    // fois contre la sortie pour passer, et sa réplique d'adieu était livrée
+    // comme un blocage (issue 13). Un verrou délégué à un PNJ doit se lever dès
+    // ce que ce PNJ dit en premier — lint-roadblocks.py le vérifie désormais.
+    const before = blockingRoadblock('MAP_CHERRYGROVE', 'MAP_ROUTE_30', emptyState, ctx)
+    expect(before?.roadblock_id).toBe('guide_gent_cherrygrove_tour')
+    expect(before?.npc_id).toBe('guide_gent_cherrygrove')
+    const afterFirstLine = withQuest('cherrygrove_welcome', 'shoes_given')
+    expect(blockingRoadblock('MAP_CHERRYGROVE', 'MAP_ROUTE_30', afterFirstLine, ctx)).toBeNull()
   })
 })
 

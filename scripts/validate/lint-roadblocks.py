@@ -28,6 +28,7 @@ import sys
 from pathlib import Path
 
 ROADBLOCKS = Path("content/map/roadblocks.json")
+NPCS = Path("content/map/npcs.json")
 REGISTRY = Path("src/data/zone-registry.json")
 ZONES = Path("content/map/zones.json")
 DIALOGUES = Path("content/dialogues")
@@ -98,6 +99,33 @@ def main() -> None:
 
         if not rb.get("unlock_conditions"):
             errors.append(f"{rid}: aucune condition — le verrou ne se lèverait jamais")
+
+        # Un verrou qui délègue à un PNJ doit se lever dès la PREMIÈRE réplique
+        # de ce PNJ. Sinon le joueur bute plusieurs fois contre la même sortie
+        # sans comprendre pourquoi — et si la réplique qui lève le verrou n'est
+        # atteignable que par un autre chemin, il ne passe jamais.
+        npc_id = rb.get("npc_id")
+        if npc_id:
+            npc = next((n for n in json.load(open(NPCS)) if n["npc_id"] == npc_id), None)
+            if npc is None:
+                errors.append(f"{rid}: délègue à un PNJ inconnu ({npc_id})")
+            elif not npc.get("dialogue_ref"):
+                errors.append(f"{rid}: le PNJ {npc_id} n'a pas de dialogue à jouer")
+            else:
+                dlg = json.loads((DIALOGUES / f"{npc['dialogue_ref']}.json").read_text())
+                default = next(
+                    (r2["state"] for r2 in dlg.get("state_rules", []) if r2.get("default")), None
+                )
+                effects = json.dumps(
+                    dlg.get("dialogue_states", {}).get(default, {}).get("effects", []),
+                    ensure_ascii=False,
+                )
+                for cond in rb.get("unlock_conditions", []):
+                    if cond.get("type") == "quest_step" and f'"{cond["step"]}"' not in effects:
+                        errors.append(
+                            f"{rid}: la première réplique de {npc_id} (état « {default} ») "
+                            f"n'accorde pas {cond['step']} — le joueur devra buter plusieurs fois"
+                        )
 
         # La clé doit être du même côté que la serrure.
         allowed = zone_ids_for_map(src, zones_doc)
