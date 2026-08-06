@@ -75,6 +75,7 @@ def audit_lessons(zone_id: str) -> tuple[int, set[str]]:
     if not path.exists():
         return 0, set()
     lessons = json.load(open(path))
+    audit_grammar(zone_id, lessons)
     taught: set[str] = set()
     for lesson in lessons:
         seq = lesson["sequence_index"]
@@ -262,6 +263,31 @@ def audit_positions(zone_id: str, map_name: str) -> None:
                 blocker(f"{zone_id} : {kind} {ident} en ({x},{y}) — hors grille ou dans un mur")
             elif not neighbours:
                 blocker(f"{zone_id} : {kind} {ident} en ({x},{y}) — injoignable, aucun voisin praticable")
+
+
+def audit_grammar(zone_id: str, lessons: list) -> None:
+    """Une leçon qui déclare un `grammar_id` doit avoir sa page de grammaire.
+
+    Ajouté 2026-08-06, sur un constat de jeu : « les kanji sont appris mais je
+    n'ai vu aucune leçon de japonais, style grammaire ». Et pour cause — 21 des
+    26 leçons du chemin critique portaient un `grammar_id` sans aucun point
+    dans `content/grammar/<zone>.json`. Le moteur ne casse pas pour autant : il
+    sert la leçon SANS ses pages de grammaire et le mini-quiz perd sa question
+    de grammaire, en silence. Un trou de contenu qui se présente comme un jeu
+    qui marche est pire qu'une erreur.
+    """
+    path = ROOT / f"content/grammar/{zone_id}.json"
+    available = set()
+    if path.exists():
+        available = {p["grammar_id"] for p in json.load(open(path)).get("points", [])}
+    for lesson in lessons:
+        gid = lesson.get("grammar_id")
+        if gid and gid not in available:
+            blocker(
+                f"{zone_id} leçon #{lesson['sequence_index']} : point de grammaire {gid} "
+                f"déclaré mais absent de content/grammar/{zone_id}.json — la leçon "
+                f"n'enseignerait que des kanji, sans rien dire"
+            )
 
 
 def audit_items(zone_id: str) -> None:

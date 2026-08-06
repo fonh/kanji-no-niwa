@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import {
   saveMapProgress,
@@ -17,7 +17,6 @@ import DialogueBox, { type DialogueBoxHandle } from './DialogueBox'
 import type { DialoguePageEntry } from '@/lib/content'
 import {
   canTraverse,
-  isWalkable,
   terrainAt,
   zoneSpawn,
   findOutdoorZoneAt,
@@ -51,8 +50,8 @@ import {
   clearedLine,
   type MapProgress,
 } from '@/lib/obstacles'
+import { visibleRomObjects } from '@/lib/rom-decor'
 import { useAudioManager } from '@/lib/audio-manager'
-import uiStrings from '@/data/ui-strings.json'
 import { musicRefForMapName, SFX } from '@/lib/audio-tracks'
 
 export type { Zone, ZoneObject, ZoneWarp } from '@/lib/zone-geometry'
@@ -70,6 +69,9 @@ export interface PlayerPos {
 interface ActiveDialogue {
   name: string
   pages: DialoguePageEntry[]
+  /** Une leçon s'ouvre à la fermeture de la boîte : la dernière page se
+   * ferme alors toute seule (2026-08-06 — voir DialogueBox.autoCloseMs). */
+  lessonFollows?: boolean
 }
 
 interface Props {
@@ -148,13 +150,15 @@ const WARP_FADE_MS = 150
  * ici contre 2,4 s en CSS, elle disparaissait d'un coup au lieu de remonter). */
 const BANNER_MS = 2400
 
+/** Temps laissé sur la dernière réplique avant que l'écran-livre ne s'ouvre
+ * tout seul (2026-08-06). Assez pour finir de lire la ligne, assez court pour
+ * qu'on comprenne que c'est enchaîné et pas un bug. Un appui sur A ou B avant
+ * la fin abrège, comme d'habitude. */
+const LESSON_AUTOCLOSE_MS = 1400
+
 // Player sheet rows (public/sprites/characters/protagonist_ethan_ow.png,
 // 8×4 frames of 32px): 0=south, 1=north, 2=west, 3=east.
 
-// Decor spriteId -> curated npc sprite_id that represents the SAME character
-// through a different mechanism (issue 13) — used to suppress the decor
-// duplicate zone-wide, not just when they happen to sit on the same tile.
-const SPRITE_ALIASES: Record<string, string> = { SPRITE_GSRIVEL: 'SPRITE_HNS_SILVER' }
 
 function formatZoneName(name: string): string {
   return name.replace(/^MAP_/, '').replace(/_/g, ' ')
@@ -438,10 +442,13 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const offsetX = stageW / 2 - avatarPx.x
   const offsetY = stageH / 2 - avatarPx.y
 
-  const openDialogue = useCallback((name: string, pages: DialoguePageEntry[]) => {
-    if (pages.length === 0) return
-    setActiveDialogue({ name, pages })
-  }, [])
+  const openDialogue = useCallback(
+    (name: string, pages: DialoguePageEntry[], lessonFollows = false) => {
+      if (pages.length === 0) return
+      setActiveDialogue({ name, pages, lessonFollows })
+    },
+    []
+  )
 
   // Server action : sélectionne le dialogue_state actif contre le vrai état
   // joueur et applique ses Effect[] côté serveur (issue 02) — remplace
@@ -476,7 +483,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             const { zone_id, sequence_index } = result.lesson
             afterDialogueCloseRef.current = () =>
               router.push(`/lesson/${zone_id}/${sequence_index}`)
-            openDialogue(result.dialogue.name, result.dialogue.pages)
+            openDialogue(result.dialogue.name, result.dialogue.pages, true)
           } else if (result.kind === 'text') {
             // Textes débloqués par le moteur (issue 08) : PC du joueur,
             // panneau de Route 29 — la fenêtre de lecture est une route.
@@ -597,12 +604,17 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [startBattleEngagement]
   )
 
-  /** Obstacle already cleared by the player (力/水/飛 interactions)? */
-  const isCleared = useCallback(
-    (obj: Zone['objects'][number]) =>
-      progressRef.current.cleared.includes(obstacleKey(zoneRef.current.name, obj)),
-    []
+  /** Les objets ROM que la carte sert vraiment (src/lib/rom-decor.ts) :
+   * doublons du contenu curaté et figurants de scènes conditionnelles retirés.
+   * UNE seule liste pour le rendu, l'occupation de tuile et le bouton A —
+   * c'est leur divergence qui laissait un figurant retiré de l'affichage
+   * continuer à murer sa case (2026-08-06, Route 30 infranchissable). */
+  const romObjects = useMemo(
+    () => visibleRomObjects(zone, [...npcs, ...trainers], progress.cleared),
+    [zone, npcs, trainers, progress.cleared]
   )
+  const romObjectsRef = useRef(romObjects)
+  romObjectsRef.current = romObjects
 
   /** Solid occupants: NPCs, trainers, and visible decorative objects all
    * block movement, like in the original game — minus cleared obstacles.
@@ -611,21 +623,12 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
    * SPRITE_VAR_1 on the only door out) — never let one make a zone's exit
    * permanently unreachable, same principle as isWarpTile at the terrain
    * level (zone-geometry.ts). */
-  const isTileOccupied = useCallback(
-    (wx: number, wz: number) => {
-      if (warpAt(zoneRef.current, wx, wz)) return false
-      if (npcsRef.current.some(n => n.world_x === wx && n.world_z === wz)) return true
-      if (trainersRef.current.some(t => t.world_x === wx && t.world_z === wz)) return true
-      return zoneRef.current.objects.some(
-        o =>
-          o.x === wx &&
-          o.z === wz &&
-          !isCleared(o) &&
-          resolveNpcSprite(o.spriteId, o.eventFlag) !== null
-      )
-    },
-    [isCleared]
-  )
+  const isTileOccupied = useCallback((wx: number, wz: number) => {
+    if (warpAt(zoneRef.current, wx, wz)) return false
+    if (npcsRef.current.some(n => n.world_x === wx && n.world_z === wz)) return true
+    if (trainersRef.current.some(t => t.world_x === wx && t.world_z === wz)) return true
+    return romObjectsRef.current.some(o => o.x === wx && o.z === wz)
+  }, [])
 
   // ── Interception Roadblock (issue 10, CONTEXT.md « Roadblock NPC ») ───────
   // Sight Cone d'un PNJ à sight_auto_result `block` : le PNJ marche vers le
@@ -1179,9 +1182,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       enterWarp(warp)
       return
     }
-    const obj = z.objects.find(
-      o => o.x === fx && o.z === fz && !isCleared(o) && resolveNpcSprite(o.spriteId, o.eventFlag) !== null
-    )
+    const obj = romObjectsRef.current.find(o => o.x === fx && o.z === fz)
     if (!obj) return
 
     // Obstacles react to the matching CS-Kanji: cleared for good, or a
@@ -1203,7 +1204,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     // (issue 13). Le battement muet reste le repli si le pool est vide.
     const ambient = ambientLineFor(obj.id)
     openDialogue('', ambient ? ambient.pages : [{ jp: '・・・・・・', en: '' }])
-  }, [startNpcInteraction, startTrainerInteraction, enterWarp, openDialogue, isCleared, updateProgress])
+  }, [startNpcInteraction, startTrainerInteraction, enterWarp, openDialogue, updateProgress])
 
   const onB = useCallback(() => {
     // En combat, B n'abandonne pas (PRD) — BattleScreen gère ses entrées.
@@ -1418,64 +1419,17 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             <CollisionCanvas zone={zone} />
           )}
 
-          {/* Decorative object markers (background NPCs, items, props) —
-              rendered as the real overworld sprite (row 0 of the sheet, for
-              the ~90% of matches that have a standard 8-frame layout — or
-              the row matching the ROM's authored facingDirection, for the
-              handful of verified 4-row sheets, `sprite.rows === 4`, see
-              HNS_PEOPLE in npc-sprites.ts) for the ~98% of instances
-              resolved via resolveNpcSprite, falling back to a plain dot for
-              the rest. Static pose : nothing here ever walks
-              on its own (no patrol logic), so no walk-cycle animation — a
-              standing NPC that endlessly cycles its walk frames looks like
-              it's marching in place forever (issue 13, bug B). Solid to walk
-              into; A in front of one gives a wordless beat. Never rendered
-              on a door tile : ROM objects with a `FLAG_HIDE_*` eventFlag
-              (715 in the whole game) are conditional cameos our engine has
-              no state to gate — unconditionally showing them is wrong in
-              general, and glaringly so on a door (Mom stuck in her own
-              front door at Bourg Geon, issue 13). A door is always
-              traversable regardless of its contents (bug H) ; not drawing
-              anyone on it removes the visual half of the same bug. Skipped
-              too when a curated NPC with the same `sprite_id` sits within a
-              tile of this object : same character placed twice in the data
-              (ROM decor object + curated dialogue entry), and now that
-              curated NPCs can carry their own verified sprite (HNS_PEOPLE),
-              both would otherwise render side by side — e.g. two Pr. Elm at
-              Bourg Geon's lab (issue 13, regression from that change). The
-              curated NPC wins : it's the one with working interaction.
-              Same idea for `SPRITE_ALIASES` pairs, but zone-wide (no
-              adjacency check) — the ROM's `SPRITE_GSRIVEL` (a permanent,
-              un-gated decor object) and our curated Silver (`sprite_id:
-              SPRITE_HNS_SILVER`, gated by `unlock_conditions`, positioned
-              apart on purpose — spying from a distance, not greeting at the
-              door) are the same red-haired character rendered by two
-              different mechanisms ; showing both reads as an obvious
-              duplicate even a few tiles apart (issue 13). */}
-          {zone.objects.map(obj => {
-            if (progress.cleared.includes(`${zone.name}#${obj.id}`)) return null
-            if (warpAt(zone, obj.x, obj.z)) return null
-            // Objet posé dans un mur ou hors de la grille : ce n'est pas un
-            // figurant, c'est un emplacement de garage. La ROM y range les
-            // objets qu'un script fera apparaître ailleurs (coin haut-droit
-            // d'une cellule de carte — (31,0) à Bourg Geon, (63,0) à Ville
-            // Griotte — ou coordonnées carrément négatives). 93 objets dans
-            // tout le jeu. Les dessiner donnait des PNJ en lévitation hors
-            // carte : le Pr. Elm flottait dans le noir au coin de Bourg Geon,
-            // ce qui explique aussi qu'on ne le trouvait nulle part en ville
-            // (issue 13). Personne ne peut se tenir dans un mur — s'il y est,
-            // c'est qu'il n'y est pas.
-            if (!isWalkable(zone, obj.x, obj.z)) return null
-            if (
-              npcs.some(n => {
-                if (!n.sprite_id) return false
-                if (n.sprite_id === obj.spriteId) {
-                  return Math.abs(n.world_x - obj.x) <= 1 && Math.abs(n.world_z - obj.z) <= 1
-                }
-                return SPRITE_ALIASES[obj.spriteId] === n.sprite_id
-              })
-            )
-              return null
+          {/* Figurants du décor ROM — sprite overworld réel (rangée 0 pour
+              les planches 8-frames standard, ou la rangée du facingDirection
+              de la ROM pour les planches 4-rangées vérifiées, HNS_PEOPLE).
+              Pose STATIQUE : rien ici ne marche tout seul, animer le cycle de
+              marche donnait des PNJ qui piétinent sur place à l'infini
+              (issue 13). Solides ; A devant l'un d'eux donne une réplique
+              d'ambiance.
+              QUI est servi ici est décidé par visibleRomObjects
+              (src/lib/rom-decor.ts), pas ici : le rendu, l'occupation de
+              tuile et le bouton A doivent voir EXACTEMENT la même liste. */}
+          {romObjects.map(obj => {
             const px = worldToPixel(obj.x, obj.z)
             const sprite = resolveNpcSprite(obj.spriteId, obj.eventFlag)
             const frame = sprite
@@ -1783,6 +1737,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           name={activeDialogue.name}
           pages={activeDialogue.pages}
           onClose={closeDialogue}
+          autoCloseMs={activeDialogue.lessonFollows ? LESSON_AUTOCLOSE_MS : undefined}
           onChooseCompanion={async id => {
             await chooseCompanion(id)
           }}

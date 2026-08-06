@@ -55,6 +55,12 @@ interface DialogueBoxProps {
   /** Vitesse machine à écrire (ms/caractère) ; 0 = instantané. Non fourni :
    * le réglage もじの はやさ de l'écran せってい fait foi. */
   typewriterMsPerChar?: number
+  /** Fermeture AUTOMATIQUE de la dernière page, ce délai après la fin de la
+   * frappe. Réservé au cas « une leçon suit » (2026-08-06) : le joueur lisait
+   * la dernière réplique, croyait le dialogue fini, s'en allait — et ne
+   * faisait jamais la leçon, parce qu'il manquait un dernier appui sur A que
+   * rien n'annonçait. Non fourni : la boîte attend A comme partout ailleurs. */
+  autoCloseMs?: number
   ref?: Ref<DialogueBoxHandle>
 }
 
@@ -85,6 +91,7 @@ export default function DialogueBox({
   onClose,
   onChooseCompanion,
   typewriterMsPerChar,
+  autoCloseMs,
   ref,
 }: DialogueBoxProps) {
   const settings = useSettings()
@@ -174,6 +181,14 @@ export default function DialogueBox({
   // ce qui remet X/Y à masqué et relance la machine à écrire.
   const lineKey = reaction ? `r${reaction.resumeIndex}:${reaction.index}` : `p${pageIndex}`
 
+  // Dernière page de texte, sans réaction en cours : c'est là, et là seulement,
+  // que la fermeture automatique a un sens (une page à choix n'avance que par
+  // un choix, et couper une réaction en cours de lecture serait pire).
+  const autoAdvanceMs =
+    autoCloseMs && !reaction && page.kind === 'text' && pageIndex === routed.length - 1
+      ? autoCloseMs
+      : undefined
+
   return (
     <DialogueLineView
       key={lineKey}
@@ -184,6 +199,7 @@ export default function DialogueBox({
       inReaction={reaction !== null}
       counter={`${pageIndex + 1}/${routed.length}`}
       typewriterMsPerChar={msPerChar}
+      autoAdvanceMs={autoAdvanceMs}
       onAdvance={advance}
       onChooseCompanion={chooseCompanion}
       onChooseResponse={chooseResponse}
@@ -202,6 +218,8 @@ interface DialogueLineViewProps {
   inReaction: boolean
   counter: string
   typewriterMsPerChar: number
+  /** Avance toute seule ce délai après la fin de la frappe (voir autoCloseMs). */
+  autoAdvanceMs?: number
   onAdvance: () => void
   onChooseCompanion: (companionId: string) => void
   onChooseResponse: (reaction: BilingualLine[]) => void
@@ -216,6 +234,7 @@ function DialogueLineView({
   inReaction,
   counter,
   typewriterMsPerChar,
+  autoAdvanceMs,
   onAdvance,
   onChooseCompanion,
   onChooseResponse,
@@ -261,6 +280,15 @@ function DialogueLineView({
     if (!typingDone) setTypedCount(Number.MAX_SAFE_INTEGER)
     else onAdvance()
   }, [typingDone, onAdvance, playSfx, settings.textSound])
+
+  // Fermeture automatique de la dernière page (leçon qui suit). Le délai part
+  // de la FIN de la frappe, pas de l'affichage : sinon une longue réplique se
+  // fermerait avant d'être lue.
+  useEffect(() => {
+    if (!autoAdvanceMs || !typingDone) return
+    const timer = setTimeout(onAdvance, autoAdvanceMs)
+    return () => clearTimeout(timer)
+  }, [autoAdvanceMs, typingDone, onAdvance])
 
   const pressX = useCallback(() => setShowEn(v => !v), [])
   const pressY = useCallback(() => setShowReadings(v => !v), [])

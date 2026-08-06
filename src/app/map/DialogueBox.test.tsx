@@ -394,3 +394,55 @@ describe('DialogueBox — conversation_turn (UI minimale)', () => {
     void ref
   })
 })
+
+// Enchaînement dialogue → leçon (2026-08-06). Le joueur lisait la dernière
+// réplique d'un PNJ-leçon, croyait le dialogue fini, s'en allait — et ne
+// faisait jamais la leçon, faute d'un dernier appui sur A que rien n'annonçait.
+describe('fermeture automatique quand une leçon suit', () => {
+  it('la dernière page se ferme seule après le délai ; les précédentes non', () => {
+    vi.useFakeTimers()
+    try {
+      const onClose = vi.fn()
+      act(() => {
+        root.render(
+          <DialogueBox
+            name="エルムはかせ"
+            pages={[{ jp: 'いち' }, { jp: 'に' }]}
+            onClose={onClose}
+            typewriterMsPerChar={0}
+            autoCloseMs={1000}
+          />
+        )
+      })
+      // Page 1/2 : aucune fermeture automatique, même longtemps après.
+      act(() => void vi.advanceTimersByTime(5000))
+      expect(onClose).not.toHaveBeenCalled()
+
+      // A → page 2/2, la dernière : elle, se ferme seule.
+      act(() => {
+        container.querySelector('[class*="fixed"]')!.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+      })
+      expect(onClose).not.toHaveBeenCalled()
+      act(() => void vi.advanceTimersByTime(1000))
+      expect(onClose).toHaveBeenCalled()
+    } finally {
+      vi.useRealTimers()
+    }
+  })
+
+  it('sans autoCloseMs, rien ne se ferme tout seul (comportement par défaut)', () => {
+    vi.useFakeTimers()
+    try {
+      const onClose = vi.fn()
+      act(() => {
+        root.render(
+          <DialogueBox name="ママ" pages={[{ jp: 'いち' }]} onClose={onClose} typewriterMsPerChar={0} />
+        )
+      })
+      act(() => void vi.advanceTimersByTime(10000))
+      expect(onClose).not.toHaveBeenCalled()
+    } finally {
+      vi.useRealTimers()
+    }
+  })
+})
