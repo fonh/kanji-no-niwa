@@ -52,6 +52,7 @@ import {
   type MapProgress,
 } from '@/lib/obstacles'
 import { useAudioManager } from '@/lib/audio-manager'
+import uiStrings from '@/data/ui-strings.json'
 import { musicRefForMapName } from '@/lib/audio-tracks'
 
 export type { Zone, ZoneObject, ZoneWarp } from '@/lib/zone-geometry'
@@ -95,6 +96,12 @@ interface Props {
  * qui donne le cadrage du jeu d'origine. */
 const DS_SCREEN_W = 256
 const DS_SCREEN_H = 192
+
+/** Nombre de tuiles visibles en hauteur. La DS en montre une douzaine ; c'est
+ * ce cadrage serré qui fait l'exploration. Sans zoom, une capture de carte
+ * dessinée à ~12 px la tuile n'occupait qu'une bande au milieu d'un grand
+ * écran, le reste en noir (issue 13). */
+const VISIBLE_TILES_Y = 12
 
 const BANG_MS = 550
 
@@ -246,7 +253,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   // (PRD § Audio, "la piste music_ref se (re)lance à l'entrée de zone") — la
   // couche 'battle' (posée par BattleScreen le temps du combat) la recouvre
   // sans que ce composant ait à s'en soucier (voir audio-manager.tsx).
-  const { setBgmLayer } = useAudioManager()
+  const { setBgmLayer, audioBlocked } = useAudioManager()
   useEffect(() => {
     const musicRef = musicRefForMapName(zone.name)
     setBgmLayer('zone', musicRef ? { url: musicRef, loop: true } : null)
@@ -389,9 +396,14 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   const dialogueOpen = activeDialogue !== null
   const avatarPx = worldToPixel(playerPos.world_x, playerPos.world_z)
 
-  // Map container offset so avatar is centered in viewport
-  const offsetX = viewSize.w / 2 - avatarPx.x
-  const offsetY = viewSize.h / 2 - avatarPx.y
+  // Facteur d'agrandissement : on veut VISIBLE_TILES_Y tuiles sur la hauteur du
+  // cadre. Le monde est ensuite translaté DANS l'espace non zoomé, d'où la
+  // division par `zoom` pour recentrer sur le joueur.
+  const zoom = Math.max(1, viewSize.h / (VISIBLE_TILES_Y * zone.scale_y))
+  const stageW = viewSize.w / zoom
+  const stageH = viewSize.h / zoom
+  const offsetX = stageW / 2 - avatarPx.x
+  const offsetY = stageH / 2 - avatarPx.y
 
   const openDialogue = useCallback((name: string, pages: DialoguePageEntry[]) => {
     if (pages.length === 0) return
@@ -1247,8 +1259,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       onClick={onPress}
       className={`w-12 h-12 rounded-full border backdrop-blur-[2px] font-bold ${
         dimmed
-          ? 'bg-black/25 border-white/15 text-white/30'
-          : 'bg-black/35 active:bg-white/25 border-white/30 text-white/80'
+          ? 'bg-black/45 border-white/35 text-white/60'
+          : 'bg-black/45 active:bg-white/25 border-white/60 text-white'
       }`}
     >
       {label}
@@ -1267,6 +1279,17 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         data-testid="ds-screen"
         className="relative overflow-hidden"
         style={{ width: viewSize.w, height: viewSize.h }}
+      >
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: stageW,
+          height: stageH,
+          transform: `scale(${zoom})`,
+          transformOrigin: '0 0',
+          imageRendering: 'pixelated',
+        }}
       >
       {/* World — translates to keep player centered */}
       <div
@@ -1613,6 +1636,20 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         </div>
       </div>
       </div>
+      </div>
+
+      {/* Le navigateur a refusé de lancer la musique et attend un geste. On le
+          DIT, au lieu de laisser croire que le jeu n'a pas de musique : c'est
+          resté un mystère plusieurs jours faute du moindre signe à l'écran
+          (issue 13). Disparaît dès que le son part. */}
+      {audioBlocked && (
+        <div
+          data-testid="audio-blocked"
+          className="fixed top-3 left-1/2 -translate-x-1/2 z-[60] pointer-events-none rounded-full bg-black/70 border border-white/25 px-3 py-1 text-white/80 text-xs font-reading"
+        >
+          {uiStrings.audio_blocked_hint.jp}
+        </div>
+      )}
 
       {/* Panneau de nom de zone, à l'entrée d'une nouvelle zone. Le jeu
           d'origine le pose en HAUT À GAUCHE (pas centré), sous la forme d'une
@@ -1684,7 +1721,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           A à droite, Y à gauche, X en haut. Le bouton muet a disparu : le son
           se règle dans せってい (menu START), pas par un bouton flottant. */}
       <div
-        className="fixed bottom-6 left-4 z-[70] opacity-70 hover:opacity-100 transition-opacity"
+        className="fixed bottom-6 left-4 z-[70]"
         onClick={e => e.stopPropagation()}
       >
         <div
@@ -1702,7 +1739,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       </div>
 
       <div
-        className="fixed bottom-6 right-4 z-[70] opacity-70 hover:opacity-100 transition-opacity"
+        className="fixed bottom-6 right-4 z-[70]"
         onClick={e => e.stopPropagation()}
       >
         <div

@@ -25,6 +25,7 @@
 
 import {
   createContext,
+  useState,
   useCallback,
   useContext,
   useEffect,
@@ -82,6 +83,10 @@ interface AudioManagerValue {
   /** Baisse la musique tant qu'une voix parle par-dessus ; rend une fonction
    * qui la remonte. Appels imbriqués comptés. */
   duckBgm: () => () => void
+  /** Le navigateur a refusé de lancer la musique et attend un geste. Vrai tant
+   * que rien n'a pu être joué — permet de le DIRE au joueur au lieu de le
+   * laisser croire que le jeu n'a pas de musique (issue 13). */
+  audioBlocked: boolean
 }
 
 const noop = () => {}
@@ -96,6 +101,7 @@ const AudioManagerContext = createContext<AudioManagerValue>({
   setBgmLayer: noop,
   playSfx: noop,
   duckBgm: () => noop,
+  audioBlocked: false,
 })
 
 export function useAudioManager(): AudioManagerValue {
@@ -126,6 +132,7 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
   const bgmGain = VOLUME_GAIN[settings.bgmVolume]
   const sfxGain = VOLUME_GAIN[settings.sfxVolume]
   const audioElRef = useRef<HTMLAudioElement | null>(null)
+  const [audioBlocked, setAudioBlocked] = useState(false)
   const layersRef = useRef<Partial<Record<BgmLayerKey, BgmTrack | null>>>({})
   const activeUrlRef = useRef<string | null>(null)
   const pendingPlayRef = useRef(false)
@@ -157,16 +164,19 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
       el.play()
         .then(() => {
           pendingPlayRef.current = false
+          setAudioBlocked(false)
         })
         .catch(() => {
           /* toujours pas de geste exploitable — on retentera au prochain */
         })
     }
-    window.addEventListener('pointerdown', retry)
-    window.addEventListener('keydown', retry)
+    // Tous les gestes, pas seulement pointerdown/keydown : certains navigateurs
+    // (Brave, Safari) ne considèrent comme « geste utilisateur » qu'une partie
+    // d'entre eux, et un seul écouteur manquant laisse le jeu muet pour de bon.
+    const events = ['pointerdown', 'pointerup', 'mousedown', 'click', 'keydown', 'touchstart']
+    for (const ev of events) window.addEventListener(ev, retry)
     return () => {
-      window.removeEventListener('pointerdown', retry)
-      window.removeEventListener('keydown', retry)
+      for (const ev of events) window.removeEventListener(ev, retry)
       el.pause()
     }
   }, [])
@@ -211,8 +221,10 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
       el.play()
         .then(() => {
           pendingPlayRef.current = false
+          setAudioBlocked(false)
         })
         .catch(err => {
+          setAudioBlocked(true)
           // Bloqué par la politique autoplay : retry au prochain geste. On le
           // dit en dev — « il n'y a plus de musique » est resté un mystère
           // faute de la moindre trace côté navigateur (issue 13).
@@ -277,7 +289,9 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
   )
 
   return (
-    <AudioManagerContext.Provider value={{ muted, toggleMute, setBgmLayer, playSfx, duckBgm }}>
+    <AudioManagerContext.Provider
+      value={{ muted, toggleMute, setBgmLayer, playSfx, duckBgm, audioBlocked }}
+    >
       {children}
     </AudioManagerContext.Provider>
   )
