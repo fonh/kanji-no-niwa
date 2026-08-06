@@ -48,6 +48,12 @@ export interface Roadblock {
   guard: RoadblockGuard
   unlock_conditions: Condition[]
   pages: RoadblockPage[]
+  /** PNJ curaté qui EST ce bloqueur. Quand il est renseigné, la scène joue son
+   * dialogue réel (avec ses effets : avancement de quête, remise d'objet) au
+   * lieu des `pages` figées ci-dessus — sinon le joueur est arrêté par
+   * quelqu'un qui ne peut rien lui donner, donc bloqué pour de bon. Les
+   * `pages` restent le repli si le PNJ n'est pas joignable. */
+  npc_id?: string
 }
 
 export function getRoadblocks(): Roadblock[] {

@@ -113,6 +113,7 @@ export async function checkZoneEntry(
           guard: blocked.guard,
           name: blocked.guard.name.jp,
           pages: blocked.pages,
+          npc_id: blocked.npc_id,
         },
       }
     }
@@ -134,6 +135,11 @@ export interface BlockedCrossing {
   guard: RoadblockGuard
   name: string
   pages: RoadblockPage[]
+  /** Quand il est présent, le client doit jouer le DIALOGUE de ce PNJ (via
+   * interactWithNpc, qui applique ses effets) plutôt que les `pages` figées :
+   * c'est ce qui permet au bloqueur de remettre l'objet qui lève son propre
+   * verrou. */
+  npc_id?: string
 }
 
 // Position : écrit user_map_state (les colonnes users.map_* restent en place

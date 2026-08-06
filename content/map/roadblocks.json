@@ -42,7 +42,7 @@
   },
   {
    "roadblock_id": "guide_gent_cherrygrove_tour",
-   "source": "HGSS : le guide de Ville Griotte impose sa visite guidée avant de laisser partir vers la Route 30, et remet la Carte à la fin (content/guidebook-adapted.md § cherrygrove-city).",
+   "source": "HGSS : le guide de Ville Griotte impose sa visite guidée avant de laisser partir vers la Route 30, et remet la Carte à la fin (content/guidebook-adapted.md § cherrygrove-city). | 2026-08-06 : le verrou délègue au PNJ curaté guide_gent_cherrygrove — sans ça il arrêtait le joueur sans jamais pouvoir lui faire la visite ni lui remettre la carte, donc sans jamais se lever.",
    "from_zone": "MAP_CHERRYGROVE",
    "to_zone": "MAP_ROUTE_30",
    "guard": {
@@ -77,7 +77,8 @@
      "jp": "そのあとで　マップカードを　あげるからね。",
      "en": "I'll give you the Map Card afterwards."
     }
-   ]
+   ],
+   "npc_id": "guide_gent_cherrygrove"
   }
  ]
 }

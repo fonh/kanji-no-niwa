@@ -212,11 +212,18 @@ export function AudioManagerProvider({ children }: { children: React.ReactNode }
         .then(() => {
           pendingPlayRef.current = false
         })
-        .catch(() => {
-          /* bloqué par la politique autoplay : retry au prochain geste */
+        .catch(err => {
+          // Bloqué par la politique autoplay : retry au prochain geste. On le
+          // dit en dev — « il n'y a plus de musique » est resté un mystère
+          // faute de la moindre trace côté navigateur (issue 13).
+          if (process.env.NODE_ENV !== 'production') {
+            console.warn('[audio] lecture refusée pour', active.url, '—', err?.name ?? err)
+          }
         })
-    } catch {
-      /* lecteur indisponible (jsdom, navigateur exotique) : silence */
+    } catch (err) {
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn('[audio] lecteur indisponible pour', active.url, err)
+      }
     }
   }, [])
 

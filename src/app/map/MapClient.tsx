@@ -51,7 +51,7 @@ import {
   clearedLine,
   type MapProgress,
 } from '@/lib/obstacles'
-import { useAudioManager, MuteToggleButton } from '@/lib/audio-manager'
+import { useAudioManager } from '@/lib/audio-manager'
 import { musicRefForMapName } from '@/lib/audio-tracks'
 
 export type { Zone, ZoneObject, ZoneWarp } from '@/lib/zone-geometry'
@@ -90,6 +90,12 @@ interface Props {
 // repeats at this cadence. The avatar's CSS transition matches it so steps
 // chain into a continuous walk.
 /** Temps d'arrêt sur le « ! » avant que le garde ne se mette en marche. */
+/** Écran bas de la DS : 256×192. On ne reproduit pas la résolution (les
+ * captures de cartes sont à une autre échelle) mais bien le RATIO — c'est lui
+ * qui donne le cadrage du jeu d'origine. */
+const DS_SCREEN_W = 256
+const DS_SCREEN_H = 192
+
 const BANG_MS = 550
 
 const STEP_MS = 170
@@ -312,8 +318,20 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [zoneEntryByName]
   )
 
+  // Écran de jeu au format DS (256×192, soit 4:3), aussi grand que la fenêtre
+  // le permet (issue 13). Avant, le monde occupait toute la fenêtre : sur un
+  // écran d'ordinateur large, on voyait la carte ENTIÈRE d'un coup — plus
+  // aucune sensation d'exploration, et un rendu qui n'a rien à voir avec une
+  // DS. On cadre donc une fenêtre 4:3 centrée, et le monde y défile.
   useEffect(() => {
-    const update = () => setViewSize({ w: window.innerWidth, h: window.innerHeight })
+    const update = () => {
+      const w = window.innerWidth
+      const h = window.innerHeight
+      const ratio = DS_SCREEN_W / DS_SCREEN_H
+      // La plus grande boîte 4:3 qui tient dans la fenêtre.
+      const boxW = Math.min(w, h * ratio)
+      setViewSize({ w: Math.floor(boxW), h: Math.floor(boxW / ratio) })
+    }
     update()
     window.addEventListener('resize', update)
     return () => window.removeEventListener('resize', update)
@@ -751,6 +769,20 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             interceptingRef.current = null
           }, STEP_MS)
         }
+        // Quand le bloqueur EST un PNJ curaté, on joue SON dialogue : c'est le
+        // seul chemin qui applique ses effets (avancer la quête, remettre la
+        // carte). Sans ça, il arrête le joueur sans jamais pouvoir lui donner
+        // ce qui lève le verrou — blocage définitif (issue 13, le guide de
+        // Ville Griotte). Les pages figées restent le repli.
+        if (block.npc_id) {
+          interactWithNpc(block.npc_id)
+            .then(result => {
+              const pages = result?.kind === 'dialogue' ? result.dialogue.pages : block.pages
+              openDialogue(result?.kind === 'dialogue' ? result.dialogue.name : block.name, pages)
+            })
+            .catch(() => openDialogue(block.name, block.pages))
+          return
+        }
         openDialogue(block.name, block.pages)
       }
       // Le temps d'arrêt sur le « ! » : dans le jeu d'origine le personnage
@@ -1103,16 +1135,12 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     const dirForKey = (code: string): Direction | null => {
       switch (code) {
         case 'ArrowUp':
-        case 'KeyW':
           return 'north'
         case 'ArrowDown':
-        case 'KeyS':
           return 'south'
         case 'ArrowLeft':
-        case 'KeyA':
           return 'west'
         case 'ArrowRight':
-        case 'KeyD':
           return 'east'
         default:
           return null
@@ -1130,12 +1158,17 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         return
       }
       if (e.repeat) return
+      // Les quatre touches A/B/X/Y du clavier SONT les quatre boutons de la
+      // DS (issue 13). WASD est retiré du déplacement : il volait la touche A
+      // au bouton A, et les flèches suffisent — c'est la croix directionnelle.
       switch (e.code) {
+        case 'KeyA':
         case 'Space':
         case 'Enter':
           e.preventDefault()
           onA()
           break
+        case 'KeyB':
         case 'Escape':
         case 'Backspace':
           onB()
@@ -1183,7 +1216,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       key={dir}
       aria-label={dir}
       style={{ gridArea, touchAction: 'none' }}
-      className="w-11 h-11 bg-white/10 active:bg-white/30 border border-white/20 rounded flex items-center justify-center text-white/70 text-lg"
+      className="w-14 h-14 bg-black/35 active:bg-white/25 border border-white/25 rounded-lg backdrop-blur-[2px] flex items-center justify-center text-white/60 text-xl"
       onPointerDown={e => {
         e.preventDefault()
         ;(e.currentTarget as HTMLButtonElement).setPointerCapture(e.pointerId)
@@ -1197,10 +1230,44 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     </button>
   )
 
+  /** Bouton de face, style émulateur : rond translucide, grisé quand il ne
+   * sert à rien (X et Y hors dialogue) mais jamais retiré — un bouton qui
+   * apparaît et disparaît est plus déroutant qu'un bouton éteint. */
+  const faceButton = (
+    area: string,
+    label: string,
+    onPress: () => void,
+    dimmed: boolean
+  ) => (
+    <button
+      key={area}
+      data-testid={`button-${area}`}
+      aria-label={label}
+      style={{ gridArea: area, touchAction: 'none' }}
+      onClick={onPress}
+      className={`w-12 h-12 rounded-full border backdrop-blur-[2px] font-bold ${
+        dimmed
+          ? 'bg-black/25 border-white/15 text-white/30'
+          : 'bg-black/35 active:bg-white/25 border-white/30 text-white/80'
+      }`}
+    >
+      {label}
+    </button>
+  )
+
   const beatCount = allZoneNames.find(z => z.name === zone.name)?.beat_count ?? 0
 
   return (
-    <div className="fixed inset-0 overflow-hidden bg-black select-none font-chrome">
+    <div className="fixed inset-0 bg-black select-none font-chrome flex items-center justify-center">
+      {/* Cadre DS : le monde est découpé à ce rectangle, le reste de la fenêtre
+          reste noir (bordure d'émulateur). `relative` + `overflow-hidden` : tout
+          ce qui est posé dedans (monde, boutons) se cale sur le cadre, pas sur
+          la fenêtre. */}
+      <div
+        data-testid="ds-screen"
+        className="relative overflow-hidden"
+        style={{ width: viewSize.w, height: viewSize.h }}
+      >
       {/* World — translates to keep player centered */}
       <div
         style={{
@@ -1545,6 +1612,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           </div>
         </div>
       </div>
+      </div>
 
       {/* Panneau de nom de zone, à l'entrée d'une nouvelle zone. Le jeu
           d'origine le pose en HAUT À GAUCHE (pas centré), sous la forme d'une
@@ -1610,15 +1678,20 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         />
       )}
 
-      {/* DS-style controls — D-pad bottom-left, A/B bottom-right, X/Y only
-          during a dialogue (PRD § Interface) */}
-      <div className="fixed bottom-20 left-3 z-[70]" onClick={e => e.stopPropagation()}>
+      {/* Manette posée SUR le jeu, à la façon d'un émulateur (issue 13) :
+          translucide, sans fond opaque qui mange l'écran. La croix à gauche,
+          les quatre boutons en losange à droite comme sur une DS — B en bas,
+          A à droite, Y à gauche, X en haut. Le bouton muet a disparu : le son
+          se règle dans せってい (menu START), pas par un bouton flottant. */}
+      <div
+        className="fixed bottom-6 left-4 z-[70] opacity-70 hover:opacity-100 transition-opacity"
+        onClick={e => e.stopPropagation()}
+      >
         <div
           style={{
             display: 'grid',
             gridTemplateAreas: `". up ." "left . right" ". down ."`,
             gap: 2,
-            opacity: 0.85,
           }}
         >
           {dirButton('north', '▲', 'up')}
@@ -1628,58 +1701,21 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         </div>
       </div>
 
-      {/* A/B toujours visibles ; X/Y sont rendus par DialogueBox, uniquement
-          pendant un dialogue (PRD § Interface). Bouton muet (issue audio
-          jalon 1) au même niveau visuel, une seule instance globale (le
-          Provider vit à la racine, l'état survit la navigation) */}
-      <div className="fixed bottom-20 right-3 z-[70] flex flex-col items-end gap-2" onClick={e => e.stopPropagation()}>
-        <MuteToggleButton />
-        <div className="flex items-center gap-2">
-          <button
-            onClick={onB}
-            className="w-11 h-11 rounded-full bg-white/10 active:bg-white/30 border border-white/25 text-white/80 font-bold"
-          >
-            B
-          </button>
-          <button
-            onClick={onA}
-            className="w-12 h-12 rounded-full bg-white/15 active:bg-white/35 border border-white/30 text-white font-bold"
-          >
-            A
-          </button>
-        </div>
-
-        {/* X et Y au même rang que A et B (issue 13, demande explicite) : ils
-            étaient rendus DANS la boîte de dialogue, donc invisibles hors
-            dialogue — le joueur ne savait plus qu'ils existaient. Ils sont
-            désormais permanents et grisés quand ils ne servent à rien. */}
-        <div className="flex gap-2 justify-end mt-2">
-          <button
-            data-testid="button-x"
-            onClick={onX}
-            aria-disabled={dialogueOpen ? 'false' : 'true'}
-            title="X"
-            className={`w-9 h-9 rounded-full border text-xs font-bold ${
-              dialogueOpen
-                ? 'bg-white/15 active:bg-white/35 border-white/30 text-white'
-                : 'bg-white/5 border-white/15 text-white/25'
-            }`}
-          >
-            X
-          </button>
-          <button
-            data-testid="button-y"
-            onClick={onY}
-            aria-disabled={dialogueOpen ? 'false' : 'true'}
-            title="Y"
-            className={`w-9 h-9 rounded-full border text-xs font-bold ${
-              dialogueOpen
-                ? 'bg-white/15 active:bg-white/35 border-white/30 text-white'
-                : 'bg-white/5 border-white/15 text-white/25'
-            }`}
-          >
-            Y
-          </button>
+      <div
+        className="fixed bottom-6 right-4 z-[70] opacity-70 hover:opacity-100 transition-opacity"
+        onClick={e => e.stopPropagation()}
+      >
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateAreas: `". x ." "y . a" ". b ."`,
+            gap: 2,
+          }}
+        >
+          {faceButton('x', 'X', onX, !dialogueOpen)}
+          {faceButton('y', 'Y', onY, !dialogueOpen)}
+          {faceButton('a', 'A', onA, false)}
+          {faceButton('b', 'B', onB, false)}
         </div>
       </div>
 
