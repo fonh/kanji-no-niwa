@@ -3474,3 +3474,63 @@ jouable ; le modèle est en place, les suivants sont une entrée de données.
 - Poste-frontière nord d'Ecruteak (badge), Puits Ramoloss (déjà un PNJ
   bloqueur), Simularbre Route 36 (arrosoir — relève de `obstacles.json`, pas
   des verrous).
+
+---
+
+## 2026-08-06 (suite) — mise en scène : le levier qui manquait
+
+Question de QA : « si je dois parler à quelqu'un, récupérer un objet — est-ce
+que la position d'un PNJ va changer ? ce qu'il a à me dire changera aussi ? »
+
+Le texte changeait déjà (`state_rules`), la présence aussi
+(`unlock_conditions` + `negate`). **La position, non** : un PNJ n'avait qu'un
+`tile_x`/`tile_y`. Or le jeu d'origine déplace ses figurants en permanence —
+l'assistant d'Elm remet des Potions à la sortie du labo, puis tient le comptoir
+du Mart de Ville Griotte.
+
+### Ce que fait le jeu d'origine
+
+Il pilote sa mise en scène par des **variables de scène** : un entier par zone
+(`VAR_SCENE_NEW_BARK_TOWN_OW`, `VAR_SCENE_CHERRYGROVE_CITY_OW`,
+`VAR_SCENE_ROUTE_30_OW`), lu au chargement de la carte, écrit par les scripts —
+souvent depuis une AUTRE carte : `scr_seq_0229_R30R0201.s` (maison de
+Mr. Pokémon) écrit la scène de Ville Griotte ET celle de la Route 30, ce qui
+arme l'embuscade de Silver au retour.
+
+Ici l'équivalent existait déjà : **l'étape de quête EST la variable de scène**.
+`mystery_egg_errand` = `sent_by_elm` → `egg_received` → `egg_delivered`, trois
+valeurs ordonnées, déjà dans le vocabulaire `Condition` (ADR-0003).
+
+### Ce qui a été ajouté
+
+- **`placements[]`** : un PNJ déclare plusieurs postes, chacun gardé par des
+  conditions, le premier qui tient gagne. Ordre du plus tardif au plus précoce
+  (`quest_step` signifie « à ce stade OU APRÈS » : sans cet ordre, le poste
+  précoce gagnerait toujours). Le dernier poste est sans condition — c'est le
+  début de partie.
+- Le placement actif décide de la ZONE : un PNJ change légitimement de carte.
+  `getNpcsForZone` résout donc AVANT de filtrer par zone, et les gardes
+  d'écriture résolvent avec le même état — sinon un PNJ visible à l'écran serait
+  refusé en interaction.
+- Appelants purs (audits de traversée) : résolution sans état → poste par
+  défaut, c'est-à-dire le jeu à son début, l'état où la carte doit être
+  franchissable.
+- **`content/opening-sequence.md`** : l'ouverture déroulée étape par étape, avec
+  sources (décompilé + Bulbapedia Part 1/2 + guidebook), et pour chaque étape
+  qui apparaît, qui se déplace, quel texte change, et l'état (✅ en place / 🔜
+  écrit pas posé / ➖ hors périmètre). C'est le gabarit à remplir zone par zone.
+- **ADR-0007** : trois leviers de mise en scène, jamais un quatrième.
+- **`scripts/validate/lint-npc-placements.py`** : refuse un poste dans un mur,
+  un poste sans voisin praticable (PNJ injoignable alors qu'il porte peut-être
+  la clé de la suite), une liste sans poste par défaut, deux postes aux
+  conditions identiques. Testé contre ses cas d'échec avant branchement.
+
+### Appliqué
+
+L'assistant d'Elm : labo → comptoir du Mart de Griotte (entre `egg_received` et
+`egg_delivered`, là où HGSS le poste pour relayer l'appel d'Elm) → labo. Avec
+son second état de dialogue, qui manquait.
+
+Le reste des déplacements de l'ouverture (Lyra/Ethan, le guide de Griotte, Elm
+qui rattrape le joueur sur la Route 29, Silver à la fenêtre) est documenté et
+prêt à poser : c'est de la donnée, plus du moteur.

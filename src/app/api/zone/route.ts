@@ -1,3 +1,4 @@
+import { getQuestStepsIndex } from '@/lib/content'
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { getZoneByName } from '@/lib/zones'
@@ -28,7 +29,10 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json({
     zone,
-    npcs: filterVisibleNpcs(getNpcsForZone(zone), playerState),
+    npcs: filterVisibleNpcs(
+      getNpcsForZone(zone, { state: playerState, ctx: { questSteps: getQuestStepsIndex(), now: new Date() } }),
+      playerState
+    ),
     trainers: filterVisibleTrainers(getTrainersForZone(zone), playerState),
   })
 }

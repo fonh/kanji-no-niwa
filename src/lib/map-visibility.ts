@@ -55,13 +55,21 @@ export function filterVisibleTrainers(
 
 // ── Garde d'écriture (C1) ─────────────────────────────────────────────────────
 
+/** Résolveur de placement pour les gardes d'écriture : elles doivent voir la
+ * carte EXACTEMENT comme la lecture l'a servie, placements conditionnels
+ * compris — sinon un PNJ qui a changé de poste devient inaccessible en
+ * écriture alors qu'il est bien là à l'écran (ou l'inverse). */
+function resolverFor(state: PlayerState, now: Date) {
+  return { state, ctx: { questSteps: getQuestStepsIndex(), now } }
+}
+
 /** Le PNJ tel que la lecture l'aurait servi dans la zone courante du joueur
  * — null s'il n'y vit pas (zone_id/map_zone, règle de getNpcsForZone) ou s'il
  * est masqué par ses unlock_conditions. */
 export function accessibleNpc(state: PlayerState, npcId: string, now = new Date()): ZoneNpc | null {
   const zone = getZoneByName(state.current_zone)
   if (!zone) return null
-  const npc = getNpcsForZone(zone).find(n => n.npc_id === npcId)
+  const npc = getNpcsForZone(zone, resolverFor(state, now)).find(n => n.npc_id === npcId)
   if (!npc) return null
   return filterVisibleNpcs([npc], state, now)[0] ?? null
 }
@@ -90,7 +98,7 @@ export function findAccessibleDialogueCarrier(
 ): ZoneNpc | ZoneTrainer | null {
   const zone = getZoneByName(state.current_zone)
   if (!zone) return null
-  const npc = getNpcsForZone(zone).find(n => n.dialogue_ref === dialogueRef)
+  const npc = getNpcsForZone(zone, resolverFor(state, now)).find(n => n.dialogue_ref === dialogueRef)
   if (npc) return filterVisibleNpcs([npc], state, now)[0] ?? null
   const trainer = getTrainersForZone(zone).find(t => t.dialogue_ref === dialogueRef)
   if (trainer) return filterVisibleTrainers([trainer], state, now)[0] ?? null

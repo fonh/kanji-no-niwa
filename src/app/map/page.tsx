@@ -1,3 +1,4 @@
+import { getQuestStepsIndex } from '@/lib/content'
 import { redirect } from 'next/navigation'
 import { auth } from '@/lib/auth'
 import { sql } from '@/lib/db'
@@ -48,7 +49,10 @@ export default async function MapPage({ searchParams }: Props) {
     <>
       <MapClient
         zone={zone}
-        npcs={filterVisibleNpcs(getNpcsForZone(zone), playerState)}
+        npcs={filterVisibleNpcs(
+          getNpcsForZone(zone, { state: playerState, ctx: { questSteps: getQuestStepsIndex(), now: new Date() } }),
+          playerState
+        )}
         trainers={filterVisibleTrainers(getTrainersForZone(zone), playerState)}
         initialPos={initialPos}
         initialProgress={parseProgress(userRow?.map_progress)}

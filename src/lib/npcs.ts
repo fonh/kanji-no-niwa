@@ -1,5 +1,29 @@
 import type { Zone } from '@/lib/zone-geometry'
 import { zoneSlugForMapName } from '@/lib/zone-slug'
+import {
+  evalConditions,
+  type Condition,
+  type EvalContext,
+  type PlayerState,
+} from '@/lib/condition-effect'
+
+/** Un poste possible pour un PNJ, gardé par des conditions.
+ *
+ * Le jeu d'origine déplace ses figurants au fil de l'histoire : l'assistant
+ * d'Elm remet des Potions à la sortie du labo, puis tient le comptoir du Mart
+ * de Ville Griotte. Sans ça, il faudrait le supprimer et le recréer sous un
+ * autre identifiant — donc perdre son dialogue et son rôle (voir
+ * content/opening-sequence.md § 3). */
+export interface NpcPlacement {
+  /** Zone MAP_* de ce poste. Absent = celle du PNJ (`map_zone` ou `zone_id`). */
+  map_zone?: string
+  tile_x: number
+  tile_y: number
+  facing?: 'north' | 'south' | 'east' | 'west'
+  /** Absent ou vide = poste par défaut. Le DERNIER placement doit être dans ce
+   * cas, sinon le PNJ n'existe nulle part avant sa première condition. */
+  conditions?: Condition[]
+}
 
 interface RawNpc {
   npc_id: string
@@ -26,6 +50,10 @@ interface RawNpc {
   // src/lib/npc-sprites.ts), posé au cas par cas quand un vrai sprite
   // 4-directions vérifié existe (HNS_PEOPLE).
   sprite_id?: string
+  /** Postes successifs, du plus tardif au plus précoce — le PREMIER dont les
+   * conditions sont remplies gagne. Absent : le PNJ ne bouge jamais et
+   * `tile_x`/`tile_y` font foi (cas de la grande majorité). */
+  placements?: NpcPlacement[]
 }
 
 export interface ZoneNpc {
@@ -58,23 +86,55 @@ function zoneIdForMapName(mapName: string): string | undefined {
   return zoneSlugForMapName(mapName, knownZoneIds)
 }
 
-export function getNpcsForZone(zone: Zone): ZoneNpc[] {
+/** Le poste occupé par ce PNJ pour cet état de joueur.
+ *
+ * Sans état (appelants purs : tests de traversée, audits), c'est le poste par
+ * défaut — le dernier de la liste — qui répond. C'est le bon repli : il décrit
+ * le PNJ au début du jeu, donc l'état où la carte doit être franchissable. */
+export function activePlacement(
+  npc: Pick<RawNpc, 'map_zone' | 'tile_x' | 'tile_y' | 'facing' | 'placements'>,
+  resolver?: { state: PlayerState; ctx: EvalContext }
+): Required<Pick<NpcPlacement, 'tile_x' | 'tile_y'>> & NpcPlacement {
+  const legacy: NpcPlacement = {
+    map_zone: npc.map_zone,
+    tile_x: npc.tile_x,
+    tile_y: npc.tile_y,
+    facing: npc.facing,
+  }
+  const list = npc.placements
+  if (!list || list.length === 0) return legacy
+  const chosen = resolver
+    ? list.find(p => evalConditions(p.conditions ?? [], resolver.state, resolver.ctx))
+    : list.find(p => (p.conditions ?? []).length === 0)
+  const active = chosen ?? list[list.length - 1]
+  return { ...legacy, ...active }
+}
+
+export function getNpcsForZone(
+  zone: Zone,
+  resolver?: { state: PlayerState; ctx: EvalContext }
+): ZoneNpc[] {
   const zoneId = zoneIdForMapName(zone.name)
 
   // Un PNJ à `map_zone` explicite n'est servi QUE dans cette zone (c'est ce
   // qui place Mom dans sa maison et Elm dans son labo — issue 12) ; les
   // autres suivent l'heuristique de slug (zone extérieure de rattachement).
+  // Avec des placements, c'est le poste ACTIF qui décide de la zone : un PNJ
+  // peut légitimement changer de carte au fil de l'histoire.
   return rawNpcs
-    .filter(n => (n.map_zone ? n.map_zone === zone.name : zoneId !== undefined && n.zone_id === zoneId))
-    .map(n => ({
+    .map(n => ({ n, at: activePlacement(n, resolver) }))
+    .filter(({ n, at }) =>
+      at.map_zone ? at.map_zone === zone.name : zoneId !== undefined && n.zone_id === zoneId
+    )
+    .map(({ n, at }) => ({
       npc_id: n.npc_id,
       zone_id: n.zone_id,
       name: n.name,
-      world_x: zone.world_origin_x + n.tile_x,
-      world_z: zone.world_origin_y + n.tile_y,
+      world_x: zone.world_origin_x + at.tile_x,
+      world_z: zone.world_origin_y + at.tile_y,
       dialogue_ref: n.dialogue_ref,
       trigger_type: n.trigger_type,
-      facing: n.facing,
+      facing: at.facing ?? n.facing,
       sight_range: n.sight_range,
       sight_auto_result: n.sight_auto_result,
       repeats: n.repeats,

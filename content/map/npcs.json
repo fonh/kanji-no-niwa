@@ -84,7 +84,7 @@
   "tile_x": 10,
   "tile_y": 4,
   "facing": "south",
-  "position_status": "fix issue 12 (2026-07-30) : était (29,1) extérieur, tuile solide injoignable — l'intention de l'audit G5 2026-07-21 (« dans le labo près d'Elm ») était déjà l'intérieur, impossible tant que les PNJ n'étaient servis qu'en zone extérieure. Désormais réellement dans le labo 1F (rangée nord côté est, près des étagères), interagible par A depuis (10,5)",
+  "position_status": "fix issue 12 (2026-07-30) : était (29,1) extérieur, tuile solide injoignable — l'intention de l'audit G5 2026-07-21 (« dans le labo près d'Elm ») était déjà l'intérieur, impossible tant que les PNJ n'étaient servis qu'en zone extérieure. Désormais réellement dans le labo 1F (rangée nord côté est, près des étagères), interagible par A depuis (10,5) | 2026-08-06 (issue 13) : placements conditionnels — il tient le comptoir du Mart de Ville Griotte entre la remise de l'œuf et sa livraison (c'est là que HGSS le poste pour relayer l'appel d'Elm), puis regagne le labo. Voir content/opening-sequence.md.",
   "trigger_type": "talk",
   "unlock_conditions": [
    {
@@ -93,7 +93,41 @@
     "step": "egg_received"
    }
   ],
-  "dialogue_ref": "npcs/new-bark-town/elm_assistant_new_bark"
+  "dialogue_ref": "npcs/new-bark-town/elm_assistant_new_bark",
+  "placements": [
+   {
+    "map_zone": "MAP_NEW_BARK_ELMS_LAB_1F",
+    "tile_x": 10,
+    "tile_y": 4,
+    "facing": "south",
+    "conditions": [
+     {
+      "type": "quest_step",
+      "quest_id": "mystery_egg_errand",
+      "step": "egg_delivered"
+     }
+    ]
+   },
+   {
+    "map_zone": "MAP_CHERRYGROVE_POKEMART",
+    "tile_x": 5,
+    "tile_y": 4,
+    "facing": "south",
+    "conditions": [
+     {
+      "type": "quest_step",
+      "quest_id": "mystery_egg_errand",
+      "step": "egg_received"
+     }
+    ]
+   },
+   {
+    "map_zone": "MAP_NEW_BARK_ELMS_LAB_1F",
+    "tile_x": 10,
+    "tile_y": 4,
+    "facing": "south"
+   }
+  ]
  },
  {
   "npc_id": "player_pc_new_bark",
