@@ -15,10 +15,16 @@ import {
 } from '@/lib/content'
 import { attachCompanionOptions } from '@/lib/dialogue-pages'
 import { buildItemGetPages, newlyGrantedItems } from '@/lib/item-get'
+import { collectibleTextFor } from '@/lib/collectibles'
+import { visibleRomObjects } from '@/lib/rom-decor'
+import { getNpcsForZone } from '@/lib/npcs'
+import { getTrainersForZone } from '@/lib/trainers'
 import { getDailySRSStatusForUser } from '@/lib/daily-srs'
 import { resolveLessonInteraction } from '@/lib/lessons'
 import {
   accessibleNpc,
+  filterVisibleNpcs,
+  filterVisibleTrainers,
   findAccessibleDialogueCarrier,
 } from '@/lib/map-visibility'
 import { getPlayerState, savePlayerState } from '@/lib/player-state'
@@ -379,6 +385,42 @@ export async function chooseCompanion(companionId: string): Promise<{ companion_
   )
   if (next !== state) await savePlayerState(userId, next)
   return { companion_id: next.companion_id }
+}
+
+/** Ramasser une Poké Ball posée sur la carte (2026-08-06).
+ *
+ * Elle contient un TEXTE, pas un objet : le débloquer le fait entrer au
+ * どくしょノート du Sac, lisible tout de suite ou plus tard. Le client marque
+ * ensuite la ball ramassée (même `cleared` que les obstacles franchis), donc
+ * elle disparaît de la carte pour de bon.
+ *
+ * Même garde que partout ailleurs (C1) : la ball doit exister dans la zone
+ * COURANTE du joueur, telle que le serveur la servirait — jamais sur la seule
+ * parole du client. */
+export async function collectFoundText(
+  objectId: string
+): Promise<{ text_id: string } | null> {
+  const userId = await requireUserId()
+  const state = await getPlayerState(userId)
+  const textId = collectibleTextFor(objectId)
+  if (!textId) return null
+
+  const zone = getZoneByName(state.current_zone)
+  if (!zone) return null
+  const ctx = { questSteps: getQuestStepsIndex(), now: new Date() }
+  const served = visibleRomObjects(
+    zone,
+    [
+      ...filterVisibleNpcs(getNpcsForZone(zone, { state, ctx }), state),
+      ...filterVisibleTrainers(getTrainersForZone(zone), state),
+    ],
+    []
+  )
+  if (!served.some(o => o.id === objectId)) return null
+
+  const next = applyEffect({ type: 'unlock_text', text_id: textId }, state, ctx)
+  if (next !== state) await savePlayerState(userId, next)
+  return { text_id: textId }
 }
 
 // Events moteur-only (engine-contract.md § 1) : posés par une mécanique de

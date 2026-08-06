@@ -1,0 +1,104 @@
+{
+ "_note": "Texte secondaire ramassé au sol (2026-08-06). Les Poké Balls du jeu d'origine ne peuvent pas contenir de Potion ici — il n'y a ni PV ni soin — mais elles portent exactement ce que content/texts-progressifs.md prévoit pour une zone pauvre en PNJ : un texte trouvé (`found_object_ref`). Ramasser la ball débloque ce texte, il rejoint le どくしょノート du Sac, et la ball disparaît de la carte. Câblage : src/lib/collectibles.ts (id d'objet ROM → text_id).",
+ "text": {
+  "text_id": "bug_catcher_memo_route30",
+  "title": {
+   "jp": "むしとりの　おぼえがき",
+   "en": "A Bug Catcher's Notes"
+  },
+  "jp_text": "この　みちには　木（き）が　おおい。木（き）の　した、はっぱの　うら、いしの　あいだ。みつけたい　なら、はしっては　いけない。おとを　たてると　みんな　かくれて　しまう。しずかに　まつのが　いちばん　はやい。",
+  "en_text": "There are many trees along this road. Under the trees, behind the leaves, between the stones. If you want to find them, don't run. Make a noise and they all hide. Waiting quietly is the fastest way.",
+  "audio_ref": null,
+  "level": "N5",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "route-30",
+  "npc_ref": null,
+  "found_object_ref": "obj_R30_monstarball_2",
+  "event_ref": null,
+  "length_chars": 104,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　メモは　なにに　ついて　ですか。",
+     "en": "What are these notes about?"
+    },
+    "options": [
+     {
+      "jp": "むしの　さがしかた",
+      "en": "How to look for insects"
+     },
+     {
+      "jp": "木（き）の　なまえ",
+      "en": "The names of trees"
+     },
+     {
+      "jp": "みちの　ちず",
+      "en": "A map of the road"
+     },
+     {
+      "jp": "てんきの　こと",
+      "en": "The weather"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "みつけたい　とき、なにを　しては　いけませんか。",
+     "en": "What must you not do?"
+    },
+    "options": [
+     {
+      "jp": "まつ",
+      "en": "Wait"
+     },
+     {
+      "jp": "みる",
+      "en": "Look"
+     },
+     {
+      "jp": "はしる",
+      "en": "Run"
+     },
+     {
+      "jp": "すわる",
+      "en": "Sit"
+     }
+    ],
+    "correct_index": 2,
+    "answer_span": null
+   },
+   {
+    "type": "vocabulaire_contexte",
+    "prompt": {
+     "jp": "「しずかに」の　はんたいは　どれですか。",
+     "en": "What is the opposite of 「しずかに」?"
+    },
+    "options": [
+     {
+      "jp": "ゆっくり",
+      "en": "Slowly"
+     },
+     {
+      "jp": "うるさく",
+      "en": "Noisily"
+     },
+     {
+      "jp": "あかるく",
+      "en": "Brightly"
+     },
+     {
+      "jp": "ちいさく",
+      "en": "Small"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   }
+  ]
+ }
+}

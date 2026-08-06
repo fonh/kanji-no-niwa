@@ -9,6 +9,7 @@ import {
   chooseCompanion,
   interactWithNpc,
   checkZoneEntry,
+  collectFoundText,
   type BlockedCrossing,
 } from './actions'
 import { engageTrainer, type TrainerBattleStart } from './battle-actions'
@@ -51,6 +52,7 @@ import {
   type MapProgress,
 } from '@/lib/obstacles'
 import { visibleRomObjects } from '@/lib/rom-decor'
+import { collectibleTextFor } from '@/lib/collectibles'
 import { useAudioManager } from '@/lib/audio-manager'
 import { musicRefForMapName, SFX } from '@/lib/audio-tracks'
 import DsFacePad from '@/components/DsFacePad'
@@ -1175,6 +1177,21 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     const obj = romObjectsRef.current.find(o => o.x === fx && o.z === fz)
     if (!obj) return
 
+    // Poké Ball posée au sol (2026-08-06) : elle contient un TEXTE. On la
+    // ramasse, il rejoint le どくしょノート du Sac, la fenêtre de lecture
+    // s'ouvre — et la ball disparaît de la carte pour de bon (même `cleared`
+    // que les obstacles franchis, donc rom-decor.ts ne la sert plus).
+    if (collectibleTextFor(obj.id)) {
+      playSfx(SFX.keyItemFanfare)
+      updateProgress({ cleared: [...progressRef.current.cleared, obstacleKey(z.name, obj)] })
+      collectFoundText(obj.id)
+        .then(result => {
+          if (result) router.push(`/text/${result.text_id}`)
+        })
+        .catch(err => console.error('Failed to collect found text', err))
+      return
+    }
+
     // Obstacles react to the matching CS-Kanji: cleared for good, or a
     // short system line saying the way is blocked.
     const kind = obstacleKindOf(obj)
@@ -1194,7 +1211,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     // (issue 13). Le battement muet reste le repli si le pool est vide.
     const ambient = ambientLineFor(obj.id)
     openDialogue('', ambient ? ambient.pages : [{ jp: '・・・・・・', en: '' }])
-  }, [startNpcInteraction, startTrainerInteraction, enterWarp, openDialogue, updateProgress])
+  }, [startNpcInteraction, startTrainerInteraction, enterWarp, openDialogue, updateProgress, playSfx, router])
 
   const onB = useCallback(() => {
     // En combat, B n'abandonne pas (PRD) — BattleScreen gère ses entrées.

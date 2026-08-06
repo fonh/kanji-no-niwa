@@ -1,0 +1,104 @@
+{
+ "_note": "Texte secondaire ramassé au sol (2026-08-06). Les Poké Balls du jeu d'origine ne peuvent pas contenir de Potion ici — il n'y a ni PV ni soin — mais elles portent exactement ce que content/texts-progressifs.md prévoit pour une zone pauvre en PNJ : un texte trouvé (`found_object_ref`). Ramasser la ball débloque ce texte, il rejoint le どくしょノート du Sac, et la ball disparaît de la carte. Câblage : src/lib/collectibles.ts (id d'objet ROM → text_id).",
+ "text": {
+  "text_id": "fallen_signpost_route31",
+  "title": {
+   "jp": "たおれた　かんばん",
+   "en": "A Fallen Signpost"
+  },
+  "jp_text": "にしへ　いくと　キキョウシティ。ひがしへ　いくと　くらい　ほらあな。ほらあなには　あかりが　いる。もって　いない　ひとは　にしへ　いきなさい。",
+  "en_text": "West lies Violet City. East lies a dark cave. You need a light for the cave. If you don't have one, go west.",
+  "audio_ref": null,
+  "level": "N5",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "route-31",
+  "npc_ref": null,
+  "found_object_ref": "obj_R31_monstarball",
+  "event_ref": null,
+  "length_chars": 71,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　かんばんは　なにを　おしえて　いますか。",
+     "en": "What does this signpost tell you?"
+    },
+    "options": [
+     {
+      "jp": "みちの　いきさき",
+      "en": "Where the roads lead"
+     },
+     {
+      "jp": "おみせの　じかん",
+      "en": "Shop hours"
+     },
+     {
+      "jp": "ひとの　なまえ",
+      "en": "Someone's name"
+     },
+     {
+      "jp": "たべものの　ねだん",
+      "en": "Food prices"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "にしへ　いくと　なにが　ありますか。",
+     "en": "What is to the west?"
+    },
+    "options": [
+     {
+      "jp": "うみ",
+      "en": "The sea"
+     },
+     {
+      "jp": "ほらあな",
+      "en": "A cave"
+     },
+     {
+      "jp": "キキョウシティ",
+      "en": "Violet City"
+     },
+     {
+      "jp": "やま",
+      "en": "A mountain"
+     }
+    ],
+    "correct_index": 2,
+    "answer_span": null
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "あかりが　ない　ひとは　どうしますか。",
+     "en": "What should someone without a light do?"
+    },
+    "options": [
+     {
+      "jp": "ひがしへ　いく",
+      "en": "Go east"
+     },
+     {
+      "jp": "にしへ　いく",
+      "en": "Go west"
+     },
+     {
+      "jp": "ここで　まつ",
+      "en": "Wait here"
+     },
+     {
+      "jp": "かえる",
+      "en": "Go home"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   }
+  ]
+ }
+}

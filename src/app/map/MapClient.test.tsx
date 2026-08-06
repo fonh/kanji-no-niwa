@@ -318,8 +318,13 @@ describe('MapClient — fidélité des interactions (issue 12)', () => {
             ...zone,
             objects: [
               {
-                id: 'obj_ball',
-                spriteId: 'SPRITE_MONSTARBALL',
+                // Pas une SPRITE_MONSTARBALL : depuis 2026-08-06 une Poké Ball
+                // n'est servie que si elle porte un texte à ramasser
+                // (src/lib/collectibles.ts), et celle-ci est synthétique. Le
+                // défaut testé — la planche 16×16 tuilée dans une case 32×32 —
+                // ne dépend pas du sprite choisi.
+                id: 'obj_small_sprite',
+                spriteId: 'SPRITE_GSBOY1',
                 x: 2,
                 z: 2,
                 eventFlag: 'FLAG_NOTHING',
@@ -338,7 +343,7 @@ describe('MapClient — fidélité des interactions (issue 12)', () => {
         />
       )
     })
-    const marker = container.querySelector<HTMLElement>('[title="obj_ball"]')
+    const marker = container.querySelector<HTMLElement>('[title="obj_small_sprite"]')
     const sprite = marker!.querySelector('div')
     expect(sprite).not.toBeNull()
     expect(sprite!.style.backgroundRepeat).toBe('no-repeat')

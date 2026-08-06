@@ -26,6 +26,7 @@
 import { isWalkable, warpAt, type Zone, type ZoneObject } from '@/lib/zone-geometry'
 import { obstacleKey, obstacleKindOf } from '@/lib/obstacles'
 import { resolveNpcSprite } from '@/lib/npc-sprites'
+import { hasCollectible } from '@/lib/collectibles'
 
 /** Objet de décor ROM → sprite du PNJ curaté qui représente le MÊME
  * personnage par un autre mécanisme. Sert à supprimer le doublon à l'échelle
@@ -60,6 +61,18 @@ function isObstacle(obj: ZoneObject): boolean {
   return obstacleKindOf(obj) !== null
 }
 
+/** Une Poké Ball posée au sol. Même exception que les obstacles : son drapeau
+ * ROM (`FLAG_HIDE_ITEMBALL_*`) ne veut pas dire « figurant d'une scène qu'on ne
+ * joue pas » mais « pas encore ramassée » — exactement l'état que le `cleared`
+ * du joueur porte chez nous. Servie seulement si elle contient quelque chose :
+ * promettre un ramassage qui ne donne rien est pire que ne rien montrer
+ * (2026-08-06). */
+export const ITEM_BALL_SPRITE = 'SPRITE_MONSTARBALL'
+
+function isItemBall(obj: ZoneObject): boolean {
+  return obj.spriteId === ITEM_BALL_SPRITE
+}
+
 /** Les objets ROM que la carte sert vraiment, dans l'ordre du registre.
  *
  * @param occupants PNJ et dresseurs curatés DÉJÀ servis pour cette zone
@@ -85,6 +98,7 @@ export function visibleRomObjects(
     if (!isWalkable(zone, obj.x, obj.z)) return false
 
     if (isObstacle(obj)) return true
+    if (isItemBall(obj)) return hasCollectible(obj.id)
 
     // Doublon avec un personnage curaté : même tuile (quel que soit le sprite
     // — c'est le cas des dresseurs reposés sur leur objet ROM), ou même sprite

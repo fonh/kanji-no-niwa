@@ -173,6 +173,17 @@ ENGINE_RULES = [
     ("route-29", None, lambda st: _unlocked_texts.add("johto_entrance_sign_route29")),
     ("slowpoke-well", None, lambda st: _unlocked_texts.add("son_in_law_letter_slowpoke_well")),
     ("sprout-tower", None, lambda st: _unlocked_texts.add("ancient_inscription_sprout_tower")),
+    # Poké Balls ramassables (2026-08-06) : le texte est débloqué en marchant
+    # sur la ball, donc dès que la zone est visitée — table
+    # src/lib/collectibles.ts, contrat engine-contract.md § 2.
+    ("route-29", None, lambda st: _unlocked_texts.add("walker_notebook_route29")),
+    ("route-30", None, lambda st: _unlocked_texts.add("shopping_note_route30")),
+    ("route-30", None, lambda st: _unlocked_texts.add("bug_catcher_memo_route30")),
+    ("route-31", None, lambda st: _unlocked_texts.add("fallen_signpost_route31")),
+    ("route-31", None, lambda st: _unlocked_texts.add("unsent_letter_route31")),
+    ("violet-city", None, lambda st: _unlocked_texts.add("school_leaflet_violet")),
+    ("violet-city", None, lambda st: _unlocked_texts.add("rooftop_page_violet")),
+    ("sprout-tower", None, lambda st: _unlocked_texts.add("tower_rule_sprout_tower")),
     # § 3 — quest steps moteur
     ("route-39",
      lambda st: st.quests.get("moomoo_recovery", -1) >= step_index("moomoo_recovery", "sick_found"),

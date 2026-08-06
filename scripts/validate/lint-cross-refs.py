@@ -230,6 +230,33 @@ def check_gift_state_has_an_after(dialogue, path, errors):
     )
 
 
+def check_collectible_balls(errors):
+    """Poké Balls ramassables (2026-08-06) : la table src/lib/collectibles.ts,
+    le registre de zones et content/texts/ doivent dire la même chose.
+
+    Trois façons de casser la promesse « une ball = un texte » : un id d'objet
+    qui n'existe dans aucune zone (la ball n'apparaîtra jamais), un text_id
+    sans fichier (le ramassage ouvrirait une fenêtre vide), un objet qui n'est
+    pas une Poké Ball (on rendrait ramassable un figurant)."""
+    src = (ROOT / "src/lib/collectibles.ts").read_text()
+    pairs = re.findall(r"^\s*(obj_[A-Za-z0-9_]+):\s*'([a-z0-9_]+)',", src, re.M)
+    if not pairs:
+        errors.append("collectibles.ts: aucune paire ball→texte lue (format changé ?)")
+        return
+    zones = load_json(ROOT / "src/data/zone-registry.json")["zones"]
+    balls = {o["id"]: o["spriteId"] for z in zones for o in z["objects"]}
+    texts = {p.stem for p in (ROOT / "content/texts").rglob("*.json")}
+    for object_id, text_id in pairs:
+        if object_id not in balls:
+            errors.append(f"collectibles.ts: {object_id} n'existe dans aucune zone du registre")
+        elif balls[object_id] != "SPRITE_MONSTARBALL":
+            errors.append(
+                f"collectibles.ts: {object_id} n'est pas une Poké Ball ({balls[object_id]})"
+            )
+        if text_id not in texts:
+            errors.append(f"collectibles.ts: {object_id} promet le texte {text_id}, qui n'existe pas")
+
+
 def check_text_correct_index_uniformity(text_obj, path, warnings):
     questions = (text_obj.get("text") or {}).get("questions")
     if not isinstance(questions, list) or len(questions) < 2:
@@ -245,6 +272,8 @@ def check_text_correct_index_uniformity(text_obj, path, warnings):
 def main():
     errors = []
     warnings = []
+
+    check_collectible_balls(errors)
 
     zones = {z["zone_id"] for z in load_json(ROOT / "content/kanji-zone-assignment.json")["zones"]}
 

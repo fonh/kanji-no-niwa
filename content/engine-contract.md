@@ -46,6 +46,24 @@ le contenu. **Le moteur doit émettre l'Effect `unlock_text` lui-même**, au mom
 | `johto_entrance_sign_route29` | `sign_johto_entrance_route29` | Interaction avec le panneau d'entrée de Route 29 (tuile de carte, pas un NPC) |
 | `son_in_law_letter_slowpoke_well` | `son_in_law_letter_object_slowpoke_well` | Objet trouvé au Puits Ramoloss (pas de fichier dialogue dédié) — *text_id corrigé 2026-07-25, solveur de progression : la table donnait le found_object_ref en colonne text_id, le texte réel s'appelle `son_in_law_letter_slowpoke_well`* |
 | `ancient_inscription_sprout_tower` | `inscription_sprout_tower` | Inscription murale de la Tour Grospignon (tuile de carte) — *text_id corrigé 2026-07-25, même erreur : le texte réel s'appelle `ancient_inscription_sprout_tower`* |
+| `walker_notebook_route29` | `obj_R29_monstarball` | Poké Ball ramassée sur la Route 29 — *ajouté 2026-08-06, voir ci-dessous* |
+| `shopping_note_route30` | `obj_R30_monstarball` | Poké Ball ramassée sur la Route 30 |
+| `bug_catcher_memo_route30` | `obj_R30_monstarball_2` | Poké Ball ramassée sur la Route 30 |
+| `fallen_signpost_route31` | `obj_R31_monstarball` | Poké Ball ramassée sur la Route 31 |
+| `unsent_letter_route31` | `obj_R31_monstarball_2` | Poké Ball ramassée sur la Route 31 |
+| `school_leaflet_violet` | `obj_T22_monstarball` | Poké Ball ramassée à Mauville |
+| `rooftop_page_violet` | `obj_T22_monstarball_2` | Poké Ball ramassée à Mauville |
+| `tower_rule_sprout_tower` | `obj_D15R0101_monstarball` | Poké Ball ramassée au 1F de la Tour Grospignon |
+
+**Poké Balls ramassables (2026-08-06)** — le jeu d'origine sème des Poké Balls sur les routes et dans
+les donjons. Il n'y a ici ni Potion ni Antidote à y mettre, mais exactement ce que
+`content/texts-progressifs.md` prévoit pour une zone pauvre en PNJ : un texte trouvé. Ramasser la ball
+débloque son texte (il rejoint le どくしょノート du Sac) et la ball disparaît de la carte pour de bon —
+même mécanique de `cleared` que les obstacles franchis. Table de correspondance
+`id d'objet ROM → text_id` : **`src/lib/collectibles.ts`** ; l'`unlock_text` est appliqué côté serveur par
+`collectFoundText` (`src/app/map/actions.ts`), après avoir vérifié que la ball est bien servie dans la
+zone courante du joueur. Une ball qui ne porte aucun texte n'est pas affichée du tout — promettre un
+ramassage qui ne donne rien est pire que ne rien montrer (`src/lib/rom-decor.ts`).
 
 Les 4 autres textes non-CS trouvés avec un `found_object_ref`/`npc_ref` correspondant à un
 vrai fichier dialogue (`storyteller_burned_tower`, `storyteller_ecruteak`,

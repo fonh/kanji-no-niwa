@@ -1,0 +1,104 @@
+{
+ "_note": "Texte secondaire ramassé au sol (2026-08-06). Les Poké Balls du jeu d'origine ne peuvent pas contenir de Potion ici — il n'y a ni PV ni soin — mais elles portent exactement ce que content/texts-progressifs.md prévoit pour une zone pauvre en PNJ : un texte trouvé (`found_object_ref`). Ramasser la ball débloque ce texte, il rejoint le どくしょノート du Sac, et la ball disparaît de la carte. Câblage : src/lib/collectibles.ts (id d'objet ROM → text_id).",
+ "text": {
+  "text_id": "school_leaflet_violet",
+  "title": {
+   "jp": "がっこうの　ちらし",
+   "en": "A School Leaflet"
+  },
+  "jp_text": "キキョウシティの　がっこうへ　どうぞ。ここでは　もじの　よみかたを　おしえて　います。せんせいは　まちを　あるくのが　すきなので、がっこうに　いない　ことも　あります。いない　ときは、まちで　さがして　ください。",
+  "en_text": "Welcome to the school in Violet City. Here we teach how to read characters. Our teacher likes walking around town, so sometimes he isn't at the school. When he isn't, please look for him in town.",
+  "audio_ref": null,
+  "level": "N5",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "violet-city",
+  "npc_ref": null,
+  "found_object_ref": "obj_T22_monstarball",
+  "event_ref": null,
+  "length_chars": 106,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　ちらしは　なにの　ちらしですか。",
+     "en": "What is this leaflet for?"
+    },
+    "options": [
+     {
+      "jp": "がっこう",
+      "en": "A school"
+     },
+     {
+      "jp": "おみせ",
+      "en": "A shop"
+     },
+     {
+      "jp": "びょういん",
+      "en": "A hospital"
+     },
+     {
+      "jp": "ジム",
+      "en": "A Gym"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "がっこうでは　なにを　おしえて　いますか。",
+     "en": "What is taught there?"
+    },
+    "options": [
+     {
+      "jp": "りょうり",
+      "en": "Cooking"
+     },
+     {
+      "jp": "もじの　よみかた",
+      "en": "How to read characters"
+     },
+     {
+      "jp": "うたと　おどり",
+      "en": "Singing and dancing"
+     },
+     {
+      "jp": "つりの　しかた",
+      "en": "How to fish"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "せんせいが　がっこうに　いない　とき、どこに　いますか。",
+     "en": "Where is the teacher when he isn't at the school?"
+    },
+    "options": [
+     {
+      "jp": "いえ",
+      "en": "At home"
+     },
+     {
+      "jp": "うみ",
+      "en": "At the sea"
+     },
+     {
+      "jp": "まち",
+      "en": "In town"
+     },
+     {
+      "jp": "やま",
+      "en": "In the mountains"
+     }
+    ],
+    "correct_index": 2,
+    "answer_span": null
+   }
+  ]
+ }
+}

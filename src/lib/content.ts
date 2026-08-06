@@ -439,6 +439,17 @@ const ENGINE_UNLOCK_TEXTS: Record<string, string> = {
   forest_shrine_ilex: 'forest_shrine_ilex',
   son_in_law_letter_object_slowpoke_well: 'son_in_law_letter_slowpoke_well',
   inscription_sprout_tower: 'ancient_inscription_sprout_tower',
+  // Poké Balls ramassables (2026-08-06) — voir src/lib/collectibles.ts, qui
+  // est LA table ; ces entrées-ci n'existent que pour que le contrat moteur
+  // (engine-contract.md § 2) et lint-cross-refs voient les mêmes ids.
+  obj_R29_monstarball: 'walker_notebook_route29',
+  obj_R30_monstarball: 'shopping_note_route30',
+  obj_R30_monstarball_2: 'bug_catcher_memo_route30',
+  obj_R31_monstarball: 'fallen_signpost_route31',
+  obj_R31_monstarball_2: 'unsent_letter_route31',
+  obj_T22_monstarball: 'school_leaflet_violet',
+  obj_T22_monstarball_2: 'rooftop_page_violet',
+  obj_D15R0101_monstarball: 'tower_rule_sprout_tower',
 }
 
 /** text_id à débloquer quand le moteur voit une interaction avec cet objet /

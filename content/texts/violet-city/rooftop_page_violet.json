@@ -1,0 +1,104 @@
+{
+ "_note": "Texte secondaire ramassé au sol (2026-08-06). Les Poké Balls du jeu d'origine ne peuvent pas contenir de Potion ici — il n'y a ni PV ni soin — mais elles portent exactement ce que content/texts-progressifs.md prévoit pour une zone pauvre en PNJ : un texte trouvé (`found_object_ref`). Ramasser la ball débloque ce texte, il rejoint le どくしょノート du Sac, et la ball disparaît de la carte. Câblage : src/lib/collectibles.ts (id d'objet ROM → text_id).",
+ "text": {
+  "text_id": "rooftop_page_violet",
+  "title": {
+   "jp": "カルテの　1ページ",
+   "en": "A Page from a Notebook"
+  },
+  "jp_text": "きたの　とうは　むかしから　ここに　ある。かぜが　つよい　日（ひ）でも　たおれない。なかの　はしらが　ゆれて、ちからを　にがすからだ。かたい　ものが　いつも　つよいとは　かぎらない。",
+  "en_text": "The tower to the north has stood here since long ago. It does not fall, even on days of strong wind. The pillar inside sways, and lets the force go. What is hard is not always what is strong.",
+  "audio_ref": null,
+  "level": "N5",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "violet-city",
+  "npc_ref": null,
+  "found_object_ref": "obj_T22_monstarball_2",
+  "event_ref": null,
+  "length_chars": 91,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　ページは　なにに　ついて　かいて　ありますか。",
+     "en": "What is this page about?"
+    },
+    "options": [
+     {
+      "jp": "きたの　とう",
+      "en": "The tower to the north"
+     },
+     {
+      "jp": "うみの　さかな",
+      "en": "Fish in the sea"
+     },
+     {
+      "jp": "まちの　おみせ",
+      "en": "The shops in town"
+     },
+     {
+      "jp": "がっこうの　せんせい",
+      "en": "The school teacher"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "とうは　どうして　たおれませんか。",
+     "en": "Why doesn't the tower fall?"
+    },
+    "options": [
+     {
+      "jp": "いしで　できて　いるから",
+      "en": "Because it's made of stone"
+     },
+     {
+      "jp": "なかの　はしらが　ゆれるから",
+      "en": "Because the pillar inside sways"
+     },
+     {
+      "jp": "ちいさいから",
+      "en": "Because it is small"
+     },
+     {
+      "jp": "かぜが　ないから",
+      "en": "Because there is no wind"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "この　ぶんの　いいたい　ことは　なんですか。",
+     "en": "What is the point of this passage?"
+    },
+    "options": [
+     {
+      "jp": "かたい　ものが　いちばん　つよい",
+      "en": "The hardest thing is the strongest"
+     },
+     {
+      "jp": "ゆれる　ことも　つよさに　なる",
+      "en": "Swaying can be a kind of strength"
+     },
+     {
+      "jp": "とうは　あぶない",
+      "en": "The tower is dangerous"
+     },
+     {
+      "jp": "かぜは　こわい",
+      "en": "The wind is frightening"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   }
+  ]
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "_note": "Texte secondaire ramassé au sol (2026-08-06). Les Poké Balls du jeu d'origine ne peuvent pas contenir de Potion ici — il n'y a ni PV ni soin — mais elles portent exactement ce que content/texts-progressifs.md prévoit pour une zone pauvre en PNJ : un texte trouvé (`found_object_ref`). Ramasser la ball débloque ce texte, il rejoint le どくしょノート du Sac, et la ball disparaît de la carte. Câblage : src/lib/collectibles.ts (id d'objet ROM → text_id).",
+ "text": {
+  "text_id": "unsent_letter_route31",
+  "title": {
+   "jp": "ださなかった　てがみ",
+   "en": "An Unsent Letter"
+  },
+  "jp_text": "おげんきですか。こちらは　あめが　つづいて　います。まえに　はなした　まちへ、らいげつ　いきます。あなたにも　あいたいです。でも　この　てがみは　まだ　だしません。もうすこし　かんがえます。",
+  "en_text": "How are you? It has been raining here for days. Next month I will go to the town we talked about. I would like to see you too. But I will not send this letter yet. I will think a little longer.",
+  "audio_ref": null,
+  "level": "N5",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "route-31",
+  "npc_ref": null,
+  "found_object_ref": "obj_R31_monstarball_2",
+  "event_ref": null,
+  "length_chars": 95,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　てがみを　かいた　ひとは　どう　して　いますか。",
+     "en": "What is the writer doing about the letter?"
+    },
+    "options": [
+     {
+      "jp": "もう　だした",
+      "en": "Already sent it"
+     },
+     {
+      "jp": "まだ　ださない",
+      "en": "Has not sent it yet"
+     },
+     {
+      "jp": "すてた",
+      "en": "Threw it away"
+     },
+     {
+      "jp": "なくした",
+      "en": "Lost it"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "こちらの　てんきは　どうですか。",
+     "en": "What is the weather like there?"
+    },
+    "options": [
+     {
+      "jp": "ゆきが　ふる",
+      "en": "It snows"
+     },
+     {
+      "jp": "あめが　つづく",
+      "en": "It keeps raining"
+     },
+     {
+      "jp": "かぜが　つよい",
+      "en": "The wind is strong"
+     },
+     {
+      "jp": "はれて　いる",
+      "en": "It is clear"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "いつ　まちへ　いきますか。",
+     "en": "When will they go to the town?"
+    },
+    "options": [
+     {
+      "jp": "きょう",
+      "en": "Today"
+     },
+     {
+      "jp": "あした",
+      "en": "Tomorrow"
+     },
+     {
+      "jp": "らいげつ",
+      "en": "Next month"
+     },
+     {
+      "jp": "きょねん",
+      "en": "Last year"
+     }
+    ],
+    "correct_index": 2,
+    "answer_span": null
+   }
+  ]
+ }
+}

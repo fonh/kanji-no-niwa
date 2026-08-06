@@ -1,0 +1,104 @@
+{
+ "_note": "Texte secondaire ramassé au sol (2026-08-06). Les Poké Balls du jeu d'origine ne peuvent pas contenir de Potion ici — il n'y a ni PV ni soin — mais elles portent exactement ce que content/texts-progressifs.md prévoit pour une zone pauvre en PNJ : un texte trouvé (`found_object_ref`). Ramasser la ball débloque ce texte, il rejoint le どくしょノート du Sac, et la ball disparaît de la carte. Câblage : src/lib/collectibles.ts (id d'objet ROM → text_id).",
+ "text": {
+  "text_id": "shopping_note_route30",
+  "title": {
+   "jp": "おとした　メモ",
+   "en": "A Dropped Note"
+  },
+  "jp_text": "かえりに　かう　もの。パン　ふたつ。たまご。おちゃ。それから　ミルク。ミルクは　おもいから、さいごに　かう　こと。おかねは　たりると　おもう。",
+  "en_text": "Things to buy on the way home. Two loaves of bread. Eggs. Tea. And milk. Milk is heavy, so buy it last. I think I have enough money.",
+  "audio_ref": null,
+  "level": "N5",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "route-30",
+  "npc_ref": null,
+  "found_object_ref": "obj_R30_monstarball",
+  "event_ref": null,
+  "length_chars": 71,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　メモは　なんですか。",
+     "en": "What is this note?"
+    },
+    "options": [
+     {
+      "jp": "かいものの　リスト",
+      "en": "A shopping list"
+     },
+     {
+      "jp": "てがみ",
+      "en": "A letter"
+     },
+     {
+      "jp": "ちず",
+      "en": "A map"
+     },
+     {
+      "jp": "にっき",
+      "en": "A diary"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "パンを　いくつ　かいますか。",
+     "en": "How many loaves of bread?"
+    },
+    "options": [
+     {
+      "jp": "ひとつ",
+      "en": "One"
+     },
+     {
+      "jp": "ふたつ",
+      "en": "Two"
+     },
+     {
+      "jp": "みっつ",
+      "en": "Three"
+     },
+     {
+      "jp": "よっつ",
+      "en": "Four"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   },
+   {
+    "type": "inference",
+    "prompt": {
+     "jp": "どうして　ミルクを　さいごに　かいますか。",
+     "en": "Why buy the milk last?"
+    },
+    "options": [
+     {
+      "jp": "たかいから",
+      "en": "Because it's expensive"
+     },
+     {
+      "jp": "おもいから",
+      "en": "Because it's heavy"
+     },
+     {
+      "jp": "つめたいから",
+      "en": "Because it's cold"
+     },
+     {
+      "jp": "とおいから",
+      "en": "Because it's far"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   }
+  ]
+ }
+}

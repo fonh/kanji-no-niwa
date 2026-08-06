@@ -1,0 +1,104 @@
+{
+ "_note": "Texte secondaire ramassé au sol (2026-08-06). Les Poké Balls du jeu d'origine ne peuvent pas contenir de Potion ici — il n'y a ni PV ni soin — mais elles portent exactement ce que content/texts-progressifs.md prévoit pour une zone pauvre en PNJ : un texte trouvé (`found_object_ref`). Ramasser la ball débloque ce texte, il rejoint le どくしょノート du Sac, et la ball disparaît de la carte. Câblage : src/lib/collectibles.ts (id d'objet ROM → text_id).",
+ "text": {
+  "text_id": "walker_notebook_route29",
+  "title": {
+   "jp": "さんぽの　ノート",
+   "en": "A Walker's Notebook"
+  },
+  "jp_text": "きょうも　この　みちを　あるいた。あさは　すずしくて　きもちが　いい。ひるに　なると　ひとが　ふえる。まいにち　おなじ　みちでも、そらの　いろが　ちがう。あしたも　あるこう。",
+  "en_text": "I walked this road again today. Mornings are cool and pleasant. By midday there are more people. The same road every day, and yet the colour of the sky is never the same. I'll walk it again tomorrow.",
+  "audio_ref": null,
+  "level": "N5",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "route-29",
+  "npc_ref": null,
+  "found_object_ref": "obj_R29_monstarball",
+  "event_ref": null,
+  "length_chars": 87,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　ノートは　なんの　ノートですか。",
+     "en": "What kind of notebook is this?"
+    },
+    "options": [
+     {
+      "jp": "さんぽの　きろく",
+      "en": "A record of walks"
+     },
+     {
+      "jp": "かいものの　メモ",
+      "en": "A shopping memo"
+     },
+     {
+      "jp": "しごとの　よてい",
+      "en": "A work schedule"
+     },
+     {
+      "jp": "りょうりの　つくりかた",
+      "en": "A recipe"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "あさの　みちは　どうですか。",
+     "en": "What is the road like in the morning?"
+    },
+    "options": [
+     {
+      "jp": "あつい",
+      "en": "Hot"
+     },
+     {
+      "jp": "すずしい",
+      "en": "Cool"
+     },
+     {
+      "jp": "くらい",
+      "en": "Dark"
+     },
+     {
+      "jp": "うるさい",
+      "en": "Noisy"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "ひるに　なると　どう　なりますか。",
+     "en": "What happens around midday?"
+    },
+    "options": [
+     {
+      "jp": "あめが　ふる",
+      "en": "It rains"
+     },
+     {
+      "jp": "みちが　とじる",
+      "en": "The road closes"
+     },
+     {
+      "jp": "ひとが　ふえる",
+      "en": "More people come"
+     },
+     {
+      "jp": "かぜが　やむ",
+      "en": "The wind stops"
+     }
+    ],
+    "correct_index": 2,
+    "answer_span": null
+   }
+  ]
+ }
+}

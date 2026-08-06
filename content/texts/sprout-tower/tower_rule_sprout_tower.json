@@ -1,0 +1,104 @@
+{
+ "_note": "Texte secondaire ramassé au sol (2026-08-06). Les Poké Balls du jeu d'origine ne peuvent pas contenir de Potion ici — il n'y a ni PV ni soin — mais elles portent exactement ce que content/texts-progressifs.md prévoit pour une zone pauvre en PNJ : un texte trouvé (`found_object_ref`). Ramasser la ball débloque ce texte, il rejoint le どくしょノート du Sac, et la ball disparaît de la carte. Câblage : src/lib/collectibles.ts (id d'objet ROM → text_id).",
+ "text": {
+  "text_id": "tower_rule_sprout_tower",
+  "title": {
+   "jp": "とうの　きまり",
+   "en": "The Rule of the Tower"
+  },
+  "jp_text": "この　とうに　はいる　ひとへ。ひとつ、しずかに　あるく　こと。ふたつ、はしらに　さわらない　こと。みっつ、うえまで　のぼったら、ちょうろうに　あいさつを　する　こと。いそぐ　ひとは　のぼらなくて　いい。",
+  "en_text": "To those who enter this tower. One: walk quietly. Two: do not touch the pillar. Three: when you reach the top, greet the elder. Those in a hurry need not climb.",
+  "audio_ref": null,
+  "level": "N5",
+  "source": "original",
+  "tier": "secondaire",
+  "zone_id": "sprout-tower",
+  "npc_ref": null,
+  "found_object_ref": "obj_D15R0101_monstarball",
+  "event_ref": null,
+  "length_chars": 101,
+  "questions": [
+   {
+    "type": "idee_generale",
+    "prompt": {
+     "jp": "この　かみは　なんですか。",
+     "en": "What is this paper?"
+    },
+    "options": [
+     {
+      "jp": "とうの　きまり",
+      "en": "The rules of the tower"
+     },
+     {
+      "jp": "とうの　ちず",
+      "en": "A map of the tower"
+     },
+     {
+      "jp": "ひとの　なまえ",
+      "en": "A list of names"
+     },
+     {
+      "jp": "うたの　ことば",
+      "en": "The words of a song"
+     }
+    ],
+    "correct_index": 0,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "きまりは　いくつ　ありますか。",
+     "en": "How many rules are there?"
+    },
+    "options": [
+     {
+      "jp": "ひとつ",
+      "en": "One"
+     },
+     {
+      "jp": "ふたつ",
+      "en": "Two"
+     },
+     {
+      "jp": "みっつ",
+      "en": "Three"
+     },
+     {
+      "jp": "よっつ",
+      "en": "Four"
+     }
+    ],
+    "correct_index": 2,
+    "answer_span": null
+   },
+   {
+    "type": "detail_factuel",
+    "prompt": {
+     "jp": "うえまで　のぼったら　なにを　しますか。",
+     "en": "What do you do at the top?"
+    },
+    "options": [
+     {
+      "jp": "はしらに　さわる",
+      "en": "Touch the pillar"
+     },
+     {
+      "jp": "ちょうろうに　あいさつを　する",
+      "en": "Greet the elder"
+     },
+     {
+      "jp": "すぐ　かえる",
+      "en": "Leave at once"
+     },
+     {
+      "jp": "おおきな　こえで　よぶ",
+      "en": "Call out loudly"
+     }
+    ],
+    "correct_index": 1,
+    "answer_span": null
+   }
+  ]
+ }
+}
