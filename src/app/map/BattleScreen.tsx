@@ -33,6 +33,7 @@ import { winBattle, type BattleVictory, type TrainerBattleStart } from './battle
 import uiStrings from '@/data/ui-strings.json'
 import { useAudioManager } from '@/lib/audio-manager'
 import { CONTEXT_TRACKS, SFX } from '@/lib/audio-tracks'
+import { useDsScreenSize } from '@/lib/ds-screen'
 
 const TRANSITION_FRAMES = [
   '/sprites/ui/battle/transition/transition_00_rcsn22.png',
@@ -81,6 +82,7 @@ export default function BattleScreen({
   displayRng = Math.random,
 }: BattleScreenProps) {
   const p = { ...DEFAULT_PACING, ...pacing }
+  const dsScreen = useDsScreenSize()
   const [phase, setPhase] = useState<Phase>(() =>
     p.transitionMs > 0 ? 'transition' : p.vsMs > 0 ? 'vs' : 'intro'
   )
@@ -196,7 +198,17 @@ export default function BattleScreen({
   const outcome = progress.outcome
 
   return (
-    <div className="fixed inset-0 z-[80] bg-gray-950 font-chrome select-none overflow-hidden">
+    // Le combat vit DANS l'écran de la console, comme le reste du jeu
+    // (2026-08-06). En `fixed inset-0`, il s'étalait sur toute la fenêtre du
+    // navigateur : sur un moniteur large, les deux barres de vie se
+    // retrouvaient collées aux coins opposés, à plus de deux mille pixels
+    // l'une de l'autre, et le combat n'avait plus rien du cadrage du jeu.
+    <div className="fixed inset-0 z-[80] bg-black font-chrome select-none flex items-center justify-center">
+    <div
+      data-testid="battle-screen"
+      className="relative bg-gray-950 overflow-hidden"
+      style={{ width: dsScreen.w, height: dsScreen.h }}
+    >
       {phase === 'transition' && (
         <img
           src={TRANSITION_FRAMES[transitionFrame]}
@@ -208,21 +220,27 @@ export default function BattleScreen({
       )}
 
       {phase === 'vs' && (
-        <div className="absolute inset-0 flex items-center justify-center gap-8 bg-gray-900">
-          <SpriteBox
-            sheet={battle.player_back_sprite}
-            frame={64}
-            className="translate-y-2"
-          />
-          {/* 「たい」 (対) plutôt que « VS » : l'écran d'engagement HGSS affiche
-              VS, mais le latin visible joueur est hors exceptions PRD (revue
-              jalon 1, m1) — kana, pas le kanji 対 (N3, jamais pré-enseigné). */}
-          <span className="font-reading text-amber-400 text-5xl font-bold italic tracking-widest">
-            たい
-          </span>
-          <div className="flex flex-col items-center gap-2">
-            <TrainerSprite src={battle.battle_sprite} />
-            <span className="font-reading text-white/90 text-sm">{battle.trainer_name_jp}</span>
+        // Écran d'engagement : les deux camps GLISSENT vers le centre et s'y
+        // arrêtent, chacun depuis son bord — c'est ce que fait le jeu
+        // d'origine, et c'est ce qui manquait (les deux sprites apparaissaient
+        // déjà en place). La bande colorée traverse l'écran à mi-hauteur, donc
+        // au centre, pas en haut.
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-900 overflow-hidden">
+          <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-24 vs-band" />
+          <div className="relative flex items-center justify-center gap-8">
+            <div className="vs-slide-left">
+              <SpriteBox sheet={battle.player_back_sprite} frame={64} className="translate-y-2" />
+            </div>
+            {/* 「たい」 (対) plutôt que « VS » : l'écran d'engagement HGSS affiche
+                VS, mais le latin visible joueur est hors exceptions PRD (revue
+                jalon 1, m1) — kana, pas le kanji 対 (N3, jamais pré-enseigné). */}
+            <span className="font-reading text-amber-400 text-5xl font-bold italic tracking-widest vs-flash">
+              たい
+            </span>
+            <div className="flex flex-col items-center gap-2 vs-slide-right">
+              <TrainerSprite src={battle.battle_sprite} />
+              <span className="font-reading text-white/90 text-sm">{battle.trainer_name_jp}</span>
+            </div>
           </div>
         </div>
       )}
@@ -272,6 +290,7 @@ export default function BattleScreen({
           typewriterMsPerChar={p.typewriterMsPerChar}
         />
       )}
+    </div>
     </div>
   )
 }

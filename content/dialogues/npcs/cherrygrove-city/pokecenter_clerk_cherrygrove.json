@@ -1,17 +1,34 @@
 {
  "npc_id": "pokecenter_clerk_cherrygrove",
- "name": { "jp": "うけつけの　ひと", "en": "Center Clerk" },
+ "name": {
+  "jp": "うけつけの　ひと",
+  "en": "Center Clerk"
+ },
  "zone_id": "cherrygrove-city",
  "jlpt_level": "N5",
  "state_rules": [
-  { "default": true, "state": "intro" }
+  {
+   "default": true,
+   "state": "intro"
+  }
  ],
  "dialogue_states": {
   "intro": {
    "pages": [
-    { "jp": "ようこそ、ポケモンセンターへ。", "en": "Welcome to the Pokémon Center." },
-    { "jp": "きょうの　セッションは　もう　しましたか？", "en": "Have you done today's session yet?" }
+    {
+     "jp": "ようこそ、ポケモンセンターへ。",
+     "en": "Welcome to the Pokémon Center."
+    },
+    {
+     "jp": "きょうの　セッションは　もう　しましたか？",
+     "en": "Have you done today's session yet?"
+    },
+    {
+     "jp": "ここから　また　はじめられますよ。",
+     "en": "You can start again from here."
+    }
    ]
   }
- }
+ },
+ "_note": "2026-08-06 : troisième page. Entrer dans un Centre remet à zéro le compteur de défaites et en fait le point de retour (src/lib/blackout.ts) — l'infirmière le dit, faute de quoi le joueur ne saurait jamais que quelque chose s'est passé."
 }

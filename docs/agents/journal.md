@@ -122,7 +122,18 @@ Deux façons de le rattacher :
   table `ENGINE_UNLOCK_TEXTS` de `src/lib/content.ts`, documentée dans
   `content/engine-contract.md` § 2.
 
-### 3.5 Un son du jeu d'origine
+### 3.5 Une Poké Ball ramassable (un texte trouvé)
+
+Une ligne dans `src/lib/collectibles.ts` (`id d'objet ROM → text_id`), un
+fichier dans `content/texts/<zone>/`, et une entrée dans
+`ENGINE_UNLOCK_TEXTS` + `engine-contract.md` § 2. Le reste suit : la ball
+n'est servie que si elle porte un texte, le ramassage applique l'`unlock_text`
+côté serveur, le texte rejoint le どくしょノート, la ball disparaît pour de bon.
+Densités cibles par type de zone : `content/texts-progressifs.md` § Densité.
+`lint-cross-refs.py` vérifie que la table, le registre de zones et
+`content/texts/` disent la même chose.
+
+### 3.6 Un son du jeu d'origine
 
 `python3 scripts/build/extract-hgss-sfx.py --list <motif>` pour chercher, puis
 `extract-hgss-sfx.py SEQ_XXX -o out.wav`, puis `ffmpeg -c:a libopus`. Les
@@ -221,6 +232,10 @@ désormais ; ne pas les désactiver « juste pour voir ».
 - **Un même geste, un même bouton, au même endroit.** Le menu avait ses
   propres A/B d'un autre diamètre et X/Y en pastilles d'en-tête. Un seul
   composant : `src/components/DsFacePad.tsx`.
+- **Le combat aussi vit dans l'écran de la console.** En `fixed inset-0`, sur
+  un moniteur large, les deux barres de vie se retrouvaient collées aux coins
+  opposés à deux mille pixels l'une de l'autre. Même remède que le menu et la
+  plaque : `useDsScreenSize`.
 
 ### 4.6 Sources
 

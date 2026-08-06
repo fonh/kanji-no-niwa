@@ -417,6 +417,19 @@
   ]
  },
  {
+  "npc_id": "pokecenter_clerk_violet",
+  "zone_id": "violet-city",
+  "name": "Center Clerk",
+  "map_zone": "MAP_VIOLET_POKECENTER_1F",
+  "tile_x": 8,
+  "tile_y": 11,
+  "facing": "south",
+  "position_status": "2026-08-06 : objet ROM obj_T22PC0101_pcwoman1 (153_T22PC0101.json, (8,11), facingDirection 1) — le comptoir du Centre de Mauville. Ajoutée avec le retour au Centre après trois défaites (src/lib/blackout.ts) : le Centre de Mauville est celui du chemin critique entre Ville Griotte et l'arène, il lui fallait quelqu'un derrière le comptoir.",
+  "trigger_type": "talk",
+  "sprite_id": "SPRITE_PCWOMAN1",
+  "dialogue_ref": "npcs/violet-city/pokecenter_clerk_violet"
+ },
+ {
   "npc_id": "mart_vendor_violet_city",
   "zone_id": "violet-city",
   "name": "Mart Clerk",

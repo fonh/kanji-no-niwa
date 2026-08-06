@@ -53,7 +53,9 @@ import {
 } from '@/lib/obstacles'
 import { visibleRomObjects } from '@/lib/rom-decor'
 import { collectibleTextFor } from '@/lib/collectibles'
+import { DEFAULT_CENTER, isPokemonCenter, recordDefeat } from '@/lib/blackout'
 import { useAudioManager } from '@/lib/audio-manager'
+import uiStrings from '@/data/ui-strings.json'
 import { musicRefForMapName, SFX } from '@/lib/audio-tracks'
 import DsFacePad from '@/components/DsFacePad'
 import { DS_SCREEN_W, fitDsScreen } from '@/lib/ds-screen'
@@ -568,17 +570,6 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     }
   }, [])
 
-  const finishBattle = useCallback(
-    (result: { won: boolean }) => {
-      setBattle(null)
-      engagingRef.current = null
-      // Défaite : rien n'est écrit, le dresseur reste engageable (rejouable
-      // immédiatement). Victoire : l'état serveur a changé, on resynchronise.
-      if (result.won) refreshZoneEntities()
-    },
-    [refreshZoneEntities]
-  )
-
   // Ligne de vue (Sight Cone, ADR-0001) : dresseur rôle battle, non battu,
   // trigger sight_auto + joueur dans la ligne → embuscade.
   const checkSightLine = useCallback(
@@ -912,6 +903,15 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         // dans le jeu d'origine, qui ne l'affiche jamais à l'intérieur (voir
         // ZoneListEntry.banner_name). Le libellé hérité reste visible au HUD.
         showBanner(target?.banner_name)
+        // « Aller au Centre Pokémon » = y entrer : le compteur de défaites
+        // repart de zéro, et c'est ce Centre-là qui devient le point de retour
+        // (2026-08-06, src/lib/blackout.ts).
+        if (isPokemonCenter(newZone.name)) {
+          updateProgress({
+            defeats: 0,
+            last_center: { zone: newZone.name, world_x: pos.world_x, world_z: pos.world_z },
+          })
+        }
         markVisited(newZone.name)
         persistPosition(newZone.name, pos.world_x, pos.world_z)
         checkSightLine(newTrainers, pos.world_x, pos.world_z)
@@ -932,6 +932,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       openDialogue,
       playRoadblockScene,
       playSfx,
+      updateProgress,
     ]
   )
 
@@ -984,6 +985,32 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       )
     },
     [goToZoneWithFade]
+  )
+
+  const finishBattle = useCallback(
+    (result: { won: boolean }) => {
+      setBattle(null)
+      engagingRef.current = null
+      // Victoire : l'état serveur a changé, on resynchronise.
+      if (result.won) {
+        refreshZoneEntities()
+        return
+      }
+      // Défaite (2026-08-06) : le dresseur reste engageable — ce sont des
+      // quiz, on doit pouvoir retenter. Mais la TROISIÈME défaite depuis le
+      // dernier passage au Centre Pokémon y renvoie, comme le jeu d'origine
+      // renvoie au dernier Centre (src/lib/blackout.ts).
+      const outcome = recordDefeat(progressRef.current.defeats, progressRef.current.last_center)
+      updateProgress({ defeats: outcome.defeats })
+      if (!outcome.sendTo) return
+      const anchor = outcome.sendTo
+      goToZoneWithFade(anchor.zone, () => ({
+        world_x: anchor.world_x,
+        world_z: anchor.world_z,
+      }))
+      openDialogue('', [{ jp: uiStrings.blackout_to_center.jp }])
+    },
+    [refreshZoneEntities, updateProgress, goToZoneWithFade, openDialogue]
   )
 
   const settleStep = useCallback(

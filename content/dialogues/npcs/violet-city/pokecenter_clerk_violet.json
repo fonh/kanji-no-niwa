@@ -1,0 +1,34 @@
+{
+ "_note": "2026-08-06 — l'infirmière du Centre de Mauville. Ajoutée avec le retour au Centre après trois défaites (src/lib/blackout.ts) : le Centre de Mauville est le dernier avant l'arène, et le point de retour naturel de tout le secteur. Le SOIN lui-même n'a pas d'objet ici (il n'y a ni PV ni équipe) — ce qui compte, c'est que le compteur de défaites soit reparti de zéro en entrant, et sa réplique le dit. Deux états : l'accueil, et le mot d'après-retour quand le joueur vient d'être renvoyé ici.",
+ "npc_id": "pokecenter_clerk_violet",
+ "name": {
+  "jp": "うけつけの　ひと",
+  "en": "Center Clerk"
+ },
+ "zone_id": "violet-city",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "default": true,
+   "state": "intro"
+  }
+ ],
+ "dialogue_states": {
+  "intro": {
+   "pages": [
+    {
+     "jp": "ようこそ、ポケモンセンターへ。",
+     "en": "Welcome to the Pokémon Center."
+    },
+    {
+     "jp": "ゆっくり　やすんで　いって　くださいね。",
+     "en": "Please take your time and rest."
+    },
+    {
+     "jp": "つぎは　だいじょうぶ。ここから　また　はじめられますよ。",
+     "en": "You'll be fine next time. You can start again from here."
+    }
+   ]
+  }
+ }
+}

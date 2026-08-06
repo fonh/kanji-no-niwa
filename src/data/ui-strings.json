@@ -54,6 +54,9 @@
  "back_to_map": {
   "jp": "マップへ　もどる"
  },
+ "blackout_to_center": {
+  "jp": "めが　まわった…　ポケモンセンターまで　もどって　きた。"
+ },
  "mentor_name_elm": {
   "jp": "ウツギはかせ"
  },

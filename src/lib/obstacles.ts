@@ -36,6 +36,12 @@ export interface MapProgress {
   radio: boolean // carte EXPN / émission Flûte Poké (Kanto)
   cleared: string[] // obstacle keys, see obstacleKey()
   visited: string[] // MAP_* names
+  /** Défaites depuis le dernier passage au Centre Pokémon (2026-08-06,
+   * src/lib/blackout.ts). La troisième renvoie au Centre. */
+  defeats: number
+  /** Dernier Centre Pokémon visité — le point de retour. null tant que le
+   * joueur n'en a visité aucun (repli : celui de Ville Griotte). */
+  last_center: { zone: string; world_x: number; world_z: number } | null
 }
 
 export const DEFAULT_PROGRESS: MapProgress = {
@@ -50,6 +56,8 @@ export const DEFAULT_PROGRESS: MapProgress = {
   radio: false,
   cleared: [],
   visited: [],
+  defeats: 0,
+  last_center: null,
 }
 
 export function parseProgress(raw: unknown): MapProgress {
@@ -66,6 +74,14 @@ export function parseProgress(raw: unknown): MapProgress {
     radio: p.radio === true,
     cleared: Array.isArray(p.cleared) ? p.cleared : [],
     visited: Array.isArray(p.visited) ? p.visited : [],
+    defeats: typeof p.defeats === 'number' && p.defeats >= 0 ? Math.floor(p.defeats) : 0,
+    last_center:
+      p.last_center &&
+      typeof p.last_center.zone === 'string' &&
+      typeof p.last_center.world_x === 'number' &&
+      typeof p.last_center.world_z === 'number'
+        ? p.last_center
+        : null,
   }
 }
 
