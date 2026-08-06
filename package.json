@@ -10,7 +10,7 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "validate:content": "python3 scripts/validate/lint-kanji-budget.py && python3 scripts/validate/lint-cross-refs.py && python3 scripts/validate/lint-dialogue-states.py && python3 scripts/validate/lint-kanji-density.py && python3 scripts/validate/lint-lessons-kanji-coverage.py && python3 scripts/validate/lint-grammar-overlay.py && python3 scripts/validate/check-cs-kanji-deadlock.py && python3 scripts/validate/solve-progression.py",
+    "validate:content": "python3 scripts/validate/lint-kanji-budget.py && python3 scripts/validate/lint-cross-refs.py && python3 scripts/validate/lint-roadblocks.py && python3 scripts/validate/lint-dialogue-states.py && python3 scripts/validate/lint-kanji-density.py && python3 scripts/validate/lint-lessons-kanji-coverage.py && python3 scripts/validate/lint-grammar-overlay.py && python3 scripts/validate/check-cs-kanji-deadlock.py && python3 scripts/validate/solve-progression.py",
     "check": "npm run typecheck && npm run lint && npm run test && npm run validate:content",
     "db:migrate": "tsx --env-file=.env.local scripts/db/migrate.ts",
     "import:kanjidic2": "tsx --env-file=.env.local scripts/import/import-kanjidic2.ts",

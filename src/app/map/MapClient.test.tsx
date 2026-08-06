@@ -17,6 +17,9 @@ import type { ZoneListEntry } from '@/lib/zones'
 
 const interactWithNpcMock = vi.hoisted(() => vi.fn(async () => null))
 const engageTrainerMock = vi.hoisted(() => vi.fn(async () => null))
+const checkZoneEntryMock = vi.hoisted(() =>
+  vi.fn(async () => ({ allowed: true }) as Record<string, unknown>)
+)
 
 vi.mock('./actions', () => ({
   saveMapProgress: vi.fn(async () => {}),
@@ -24,7 +27,7 @@ vi.mock('./actions', () => ({
   reachDialogueState: vi.fn(async () => null),
   chooseCompanion: vi.fn(async () => ({ companion_id: null })),
   interactWithNpc: interactWithNpcMock,
-  checkZoneEntry: vi.fn(async () => ({ allowed: true })),
+  checkZoneEntry: checkZoneEntryMock,
 }))
 vi.mock('./battle-actions', () => ({
   engageTrainer: engageTrainerMock,
@@ -106,6 +109,8 @@ beforeEach(() => {
   root = createRoot(container)
   interactWithNpcMock.mockClear()
   engageTrainerMock.mockClear()
+  checkZoneEntryMock.mockReset()
+  checkZoneEntryMock.mockResolvedValue({ allowed: true })
   resolveNpcSpriteMock.mockReset()
   resolveNpcSpriteMock.mockReturnValue(null)
   vi.stubGlobal('fetch', vi.fn())
@@ -750,5 +755,65 @@ describe('MapClient — objets de décor garés hors carte (issue 13)', () => {
       )
     })
     expect(container.querySelector('[title="obj_ok"]')).not.toBeNull()
+  })
+})
+
+// Issue 13 — « il faut qu'ils m'arrêtent comme dans le jeu » : un verrou de
+// progression barre un franchissement précis, et un personnage vient le dire.
+// La décision est SERVEUR (checkZoneEntry) ; le client ne fait que jouer la
+// scène, donc c'est la réponse serveur qui est simulée ici.
+describe('MapClient — verrou de progression (issue 13)', () => {
+  const blocked = {
+    allowed: false,
+    roadblock: {
+      roadblock_id: 'rb_test',
+      guard: {
+        sprite_id: 'SPRITE_GSBIGMAN',
+        name: { jp: 'テスト', en: 'Test' },
+        post: { tile_x: 1, tile_y: 1 },
+        facing: 'south',
+      },
+      name: 'テスト',
+      pages: [{ jp: 'とおれないよ。', en: "You can't pass." }],
+    },
+  }
+
+  function renderOutdoor() {
+    const outdoor: Zone = { ...zone, is_outdoor: true }
+    act(() => {
+      root.render(
+        <MapClient
+          zone={outdoor}
+          npcs={[]}
+          trainers={[]}
+          initialPos={{ world_x: 0, world_z: 3 }}
+          initialProgress={DEFAULT_PROGRESS}
+          allZoneNames={[
+            { name: 'MAP_TEST_TOWN', is_outdoor: true, world_origin_x: 0, world_origin_y: 0, tile_width: 8, tile_height: 8 },
+            { name: 'MAP_NEXT', is_outdoor: true, world_origin_x: -8, world_origin_y: 0, tile_width: 8, tile_height: 8 },
+          ] as unknown as ZoneListEntry[]}
+        />
+      )
+    })
+  }
+
+  it('le garde n’apparaît pas tant que rien ne bloque', async () => {
+    renderOutdoor()
+    await act(async () => {})
+    expect(container.querySelector('[data-testid="roadblock-guard"]')).toBeNull()
+  })
+
+  it('un franchissement refusé fait surgir le garde, qui finit par parler', async () => {
+    resolveNpcSpriteMock.mockReturnValue({ url: '/sprites/overworld/gsbigman.png', cols: 8 })
+    checkZoneEntryMock.mockResolvedValue(blocked)
+    renderOutdoor()
+    // Marcher vers l'ouest : le pas sort de la zone → franchissement refusé.
+    await act(async () => {
+      window.dispatchEvent(new KeyboardEvent('keydown', { code: 'ArrowLeft' }))
+    })
+    await act(async () => {})
+    expect(container.querySelector('[data-testid="roadblock-guard"]')).not.toBeNull()
+    // Le serveur a bien été consulté avec la zone de départ.
+    expect(checkZoneEntryMock).toHaveBeenCalledWith('MAP_NEXT', expect.any(Number), 'MAP_TEST_TOWN')
   })
 })

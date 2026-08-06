@@ -3411,3 +3411,66 @@ correctif est le gating — c'est le même trou que « personne ne m'arrête ».
 **Reste à élucider** : pourquoi 0 leçon terminée alors qu'une leçon a été jouée
 avec succès le 04/08 ? Soit la complétion n'a jamais été écrite, soit elle l'a
 été puis perdue. À instrumenter au prochain passage sur une leçon.
+
+---
+
+## 2026-08-06 — verrous de progression, et l'affaire des « 0 leçon »
+
+### Les 0 leçon terminée : fausse alerte
+
+Ma lecture datait de 16:32 ; la leçon #1 a été terminée à 16:41. État réel :
+`completed_lessons = ['new-bark-town#1']`, 12 cartes SRS (6 kanji × sens/lecture),
+1 point de grammaire. Le pipeline de leçon fonctionne. Conséquence directe : les
+combats de dresseurs sont désormais constructibles — c'était bien
+`studiedItems.length === 0` qui les empêchait.
+
+### Verrous de progression
+
+**Sources.** `content/guidebook-adapted.md` est déjà une source curatée et
+adaptée : les marqueurs 🔒 et les mentions « bloque » y recensent les verrous du
+jeu d'origine zone par zone. Complété par le décompilé
+(`scr_seq_0842_T20.s` : `VAR_SCENE_NEW_BARK_WEST_EXIT` fait sortir Elm en
+courant tant qu'il n'a pas donné de starter) et StrategyWiki/Bulbapedia.
+
+**Modèle.** `content/map/roadblocks.json` : un verrou barre un FRANCHISSEMENT
+précis (zone de départ → zone d'arrivée) tant que ses `unlock_conditions` ne
+sont pas remplies. Trois décisions qui comptent :
+
+- **Un sens, pas une zone.** Le verrou ne s'applique qu'à l'aller. Le retour
+  n'est jamais bloqué — sinon un joueur qui franchit la limite au moment où la
+  condition tombe se retrouve enfermé du mauvais côté.
+- **Décision serveur.** `checkZoneEntry` tranche et renvoie de quoi JOUER la
+  scène ; le client n'évalue rien. Un verrou côté client se contourne.
+- **Le garde est un acteur, pas un PNJ.** Il surgit de son poste pour barrer la
+  route puis s'efface — comme Elm qui sort du labo. Aucun garde planté là en
+  permanence : ça n'existe pas dans le jeu d'origine pour ces scènes.
+
+**Scène animée** (demandée explicitement) : « ! » → temps d'arrêt → le garde
+marche jusqu'au joueur → il parle → il regagne son poste. Le temps d'arrêt
+(`BANG_MS`) manquait aussi à l'interception des PNJ bloqueurs existants : le
+« ! » et le premier pas tombaient dans la même image, on ne voyait jamais
+l'exclamation. `interceptionApproach` marche maintenant en L au lieu de suivre
+le seul axe de vue — sans quoi le mécanisme restait inutilisable pour une
+sortie de ville large de plusieurs tuiles.
+
+**Garde-fou : `scripts/validate/lint-roadblocks.py`.** Un verrou dont la
+condition n'est atteignable qu'APRÈS le franchissement qu'il barre est un
+blocage définitif — même famille d'erreur que le patch de terrain qui avait
+muré un joueur, en moins visible. La règle vérifiée : **la clé doit être du
+même côté que la serrure**. Vérifié aussi : zones connues, poste du garde sur
+une tuile praticable, sprite résoluble, réplique non vide. Le linter a été
+testé contre ses deux cas d'échec (clé derrière la serrure, poste dans un mur)
+avant d'être branché sur `npm run validate:content` — un validateur qui ne
+tombe jamais ne vaut rien.
+
+**Verrous écrits (2).** Sortie ouest de Bourg Geon (starter d'Elm) et Ville
+Griotte → Route 30 (visite du guide). Ce sont les deux du parcours réellement
+jouable ; le modèle est en place, les suivants sont une entrée de données.
+
+### Reste à écrire (sourcés, pas encore posés)
+
+- Gym de Violet fermé tant que la Tour Grospignon n'est pas visitée — demande
+  une Condition `visited_zone` ou un `event_cleared` qui n'existe pas encore.
+- Poste-frontière nord d'Ecruteak (badge), Puits Ramoloss (déjà un PNJ
+  bloqueur), Simularbre Route 36 (arrosoir — relève de `obstacles.json`, pas
+  des verrous).

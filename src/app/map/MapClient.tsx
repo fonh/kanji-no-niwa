@@ -2,7 +2,15 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { saveMapProgress, saveMapPosition, reachDialogueState, chooseCompanion, interactWithNpc, checkZoneEntry } from './actions'
+import {
+  saveMapProgress,
+  saveMapPosition,
+  reachDialogueState,
+  chooseCompanion,
+  interactWithNpc,
+  checkZoneEntry,
+  type BlockedCrossing,
+} from './actions'
 import { engageTrainer, type TrainerBattleStart } from './battle-actions'
 import BattleScreen from './BattleScreen'
 import DialogueBox, { type DialogueBoxHandle } from './DialogueBox'
@@ -81,6 +89,9 @@ interface Props {
 // One tile per input (PRD "Mouvement de l'avatar"); holding a direction
 // repeats at this cadence. The avatar's CSS transition matches it so steps
 // chain into a continuous walk.
+/** Temps d'arrêt sur le « ! » avant que le garde ne se mette en marche. */
+const BANG_MS = 550
+
 const STEP_MS = 170
 const HOP_MS = 280
 const SLIDE_MS = 110
@@ -166,6 +177,18 @@ function CollisionCanvas({ zone }: { zone: Zone }) {
   )
 }
 
+/** Direction d'un pas d'une tuile, ou null si les deux points sont confondus.
+ * Sert à faire regarder un acteur dans le sens de sa marche puis vers le
+ * joueur — un garde qui traverse la ville de dos est plus visible qu'on ne
+ * croit. */
+function directionBetween(fromX: number, fromZ: number, toX: number, toZ: number): Direction | null {
+  if (toX > fromX) return 'east'
+  if (toX < fromX) return 'west'
+  if (toZ > fromZ) return 'south'
+  if (toZ < fromZ) return 'north'
+  return null
+}
+
 export default function MapClient({ zone: initialZone, npcs: initialNpcs, trainers: initialTrainers, initialPos, initialProgress, allZoneNames, playerSpriteUrl = PLAYER_SPRITE_URL, followerSprite = null }: Props) {
   const [zone, setZone] = useState(initialZone)
   const [npcs, setNpcs] = useState(initialNpcs)
@@ -188,6 +211,15 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
   // Interception Roadblock (issue 10) : PNJ bloqueur en train de marcher vers
   // le joueur / de livrer sa ligne — mouvement gelé pendant toute la séquence.
   const [interceptingNpc, setInterceptingNpc] = useState<string | null>(null)
+  // Garde d'un verrou de progression : acteur transitoire, pas un PNJ de la
+  // zone — il surgit pour barrer la route puis disparaît (issue 13).
+  const [roadblockGuard, setRoadblockGuard] = useState<{
+    sprite_id: string
+    world_x: number
+    world_z: number
+    facing: Direction
+    bang: boolean
+  } | null>(null)
   // Suivi du compagnon : la tuile que le joueur vient de quitter. Les
   // planches follower extraites (pikachu) n'ont que la rangée « face sud »
   // fiable (voir npc-sprites.ts) — une seule rangée rendue, documenté pour
@@ -631,7 +663,10 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             finishInterception(blocker, false)
           })
       }
-      advance()
+      // Même temps d'arrêt que pour les verrous : le « ! » s'affiche, puis le
+      // PNJ se met en marche. Sans la pause, les deux tombent dans la même
+      // image et on ne voit jamais l'exclamation (issue 13).
+      interceptTimerRef.current = setTimeout(advance, BANG_MS)
     },
     [finishInterception, openDialogue, router]
   )
@@ -641,6 +676,89 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     setBanner({ label, key: Date.now() })
     bannerTimeoutRef.current = setTimeout(() => setBanner(null), 1900)
   }, [])
+
+  // ── Verrou de progression (issue 13) ──────────────────────────────────────
+  // Le serveur a refusé le franchissement et dit QUI barre la route. On joue
+  // la scène du jeu d'origine : le garde surgit de son poste avec un « ! »,
+  // marque un temps, marche jusqu'au joueur, parle, puis regagne son poste et
+  // disparaît. Le joueur n'a jamais bougé — inutile de le repousser, le pas
+  // a déjà été annulé.
+  const roadblockTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  useEffect(
+    () => () => {
+      if (roadblockTimerRef.current) clearTimeout(roadblockTimerRef.current)
+    },
+    []
+  )
+
+  const playRoadblockScene = useCallback(
+    (block: BlockedCrossing) => {
+      if (interceptingRef.current) return
+      interceptingRef.current = block.roadblock_id
+      const z = zoneRef.current
+      const home = {
+        x: z.world_origin_x + block.guard.post.tile_x,
+        z: z.world_origin_y + block.guard.post.tile_y,
+      }
+      const player = playerPosRef.current
+      setRoadblockGuard({
+        sprite_id: block.guard.sprite_id,
+        world_x: home.x,
+        world_z: home.z,
+        facing: block.guard.facing,
+        bang: true,
+      })
+
+      const path = interceptionApproach(
+        { world_x: home.x, world_z: home.z },
+        player.world_x,
+        player.world_z
+      )
+      let step = 0
+      const walk = () => {
+        if (step < path.length) {
+          const tile = path[step++]
+          setRoadblockGuard(g =>
+            g === null
+              ? g
+              : {
+                  ...g,
+                  world_x: tile.x,
+                  world_z: tile.z,
+                  bang: false,
+                  facing: directionBetween(g.world_x, g.world_z, tile.x, tile.z) ?? g.facing,
+                }
+          )
+          roadblockTimerRef.current = setTimeout(walk, STEP_MS)
+          return
+        }
+        // Arrivé à hauteur du joueur : il lui fait face, puis parle.
+        setRoadblockGuard(g =>
+          g === null
+            ? g
+            : {
+                ...g,
+                bang: false,
+                facing: directionBetween(g.world_x, g.world_z, player.world_x, player.world_z) ?? g.facing,
+              }
+        )
+        afterDialogueCloseRef.current = () => {
+          // Retour au poste, puis il s'efface.
+          setRoadblockGuard(g => (g === null ? g : { ...g, world_x: home.x, world_z: home.z }))
+          roadblockTimerRef.current = setTimeout(() => {
+            setRoadblockGuard(null)
+            interceptingRef.current = null
+          }, STEP_MS)
+        }
+        openDialogue(block.name, block.pages)
+      }
+      // Le temps d'arrêt sur le « ! » : dans le jeu d'origine le personnage
+      // s'exclame AVANT de se mettre en marche. Sans cette pause, les deux
+      // arrivent dans la même image et on ne voit que la marche.
+      roadblockTimerRef.current = setTimeout(walk, BANG_MS)
+    },
+    [openDialogue]
+  )
 
   const goToZone = useCallback(
     async (targetName: string, resolveSpawn?: (newZone: Zone) => PlayerPos | null) => {
@@ -653,13 +771,19 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         // outdoor→outdoor d'attemptStep ET warps) passent ici. Refus → le pas
         // est annulé (le joueur n'a pas bougé), même ressort que le blocage.
         const target = zoneEntryByName.get(targetName)
-        if (target?.is_outdoor && !progressRef.current.visited.includes(targetName)) {
-          const entry = await checkZoneEntry(targetName, new Date().getTimezoneOffset())
-          if (!entry.allowed) {
-            setBumpKey(k => k + 1)
-            openDialogue('', [{ jp: entry.jp }])
-            return
-          }
+        // Le verrou de progression s'évalue à CHAQUE franchissement (zone déjà
+        // visitée ou non) ; le gate SRS, lui, ne concerne que les zones jamais
+        // vues — c'est le serveur qui tranche les deux.
+        const entry = await checkZoneEntry(
+          targetName,
+          new Date().getTimezoneOffset(),
+          zoneRef.current.name
+        )
+        if (!entry.allowed) {
+          setBumpKey(k => k + 1)
+          if ('roadblock' in entry) playRoadblockScene(entry.roadblock)
+          else openDialogue('', [{ jp: entry.jp }])
+          return
         }
         const res = await fetch(`/api/zone?name=${encodeURIComponent(targetName)}`)
         // A 307 to the sign-in page (expired session) resolves as `ok` once
@@ -692,7 +816,16 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         isTransitioningRef.current = false
       }
     },
-    [persistPosition, checkSightLine, checkNpcInterception, showBanner, zoneEntryByName, markVisited, openDialogue]
+    [
+      persistPosition,
+      checkSightLine,
+      checkNpcInterception,
+      showBanner,
+      zoneEntryByName,
+      markVisited,
+      openDialogue,
+      playRoadblockScene,
+    ]
   )
 
   // Warps only (portes, escaliers, ascenseurs) : fondu au noir avant le swap
@@ -1181,6 +1314,50 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
               </div>
             )
           })}
+
+          {/* Garde d'un verrou de progression (issue 13) : acteur transitoire,
+              absent de la liste des PNJ de la zone — il surgit de son poste,
+              barre la route, puis s'efface. Même géométrie de rendu que les
+              PNJ pour qu'il se fonde dans le décor. */}
+          {roadblockGuard &&
+            (() => {
+              const px = worldToPixel(roadblockGuard.world_x, roadblockGuard.world_z)
+              const sprite = resolveNpcSprite(roadblockGuard.sprite_id)
+              const frame = sprite ? spriteFrameOffset(sprite, roadblockGuard.facing) : null
+              return (
+                <div
+                  data-testid="roadblock-guard"
+                  style={{
+                    position: 'absolute',
+                    left: px.x - (sprite ? SPRITE_FRAME_SIZE / 2 : 9) + zone.scale_x / 2,
+                    top: px.y - (sprite ? SPRITE_FRAME_SIZE : 16) + zone.scale_y,
+                    width: sprite ? SPRITE_FRAME_SIZE : 18,
+                    height: sprite ? SPRITE_FRAME_SIZE : 18,
+                    pointerEvents: 'none',
+                    zIndex: 8,
+                    transition: `left ${STEP_MS / 1000}s linear, top ${STEP_MS / 1000}s linear`,
+                  }}
+                >
+                  {roadblockGuard.bang && (
+                    <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-amber-300 text-base font-bold animate-bounce">
+                      ！
+                    </div>
+                  )}
+                  {sprite && (
+                    <div
+                      style={{
+                        width: SPRITE_FRAME_SIZE,
+                        height: SPRITE_FRAME_SIZE,
+                        backgroundImage: `url(${sprite.url})`,
+                        backgroundPosition: `${frame?.x ?? 0}px ${frame?.y ?? 0}px`,
+                        backgroundRepeat: 'no-repeat',
+                        imageRendering: 'pixelated',
+                      }}
+                    />
+                  )}
+                </div>
+              )
+            })()}
 
           {/* Curated NPC markers — comme dans le jeu d'origine : on se place
               à côté et on appuie sur A (issue 12 : plus AUCUNE interaction au

@@ -36,19 +36,36 @@ export function findInterceptingNpc<T extends RoadblockSource>(
 }
 
 /** Les tuiles que le PNJ traverse pour rejoindre le joueur : de sa position
- * (exclue) jusqu'à la case ADJACENTE au joueur (incluse), le long de son axe
- * de vue. Joueur déjà adjacent → []. */
+ * (exclue) jusqu'à la case ADJACENTE au joueur (incluse). Joueur déjà
+ * adjacent → [].
+ *
+ * Trajet en L (d'abord l'axe horizontal, puis le vertical), pas le seul axe de
+ * vue. La version d'origine ne suivait que `facing`, ce qui suffisait au cône
+ * de vue d'une tuile de large mais rendait le mécanisme inutilisable pour un
+ * verrou de progression : une sortie de ville fait plusieurs tuiles de haut,
+ * et le garde doit rejoindre le joueur où qu'il se présente (issue 13).
+ *
+ * Pas de pathfinding : le trajet ignore les obstacles, comme le jeu d'origine
+ * où ces scènes sont scriptées sur des couloirs dégagés. */
 export function interceptionApproach(
-  npc: SightSource,
+  npc: Pick<SightSource, 'world_x' | 'world_z'>,
   playerX: number,
   playerZ: number
 ): { x: number; z: number }[] {
-  const { dx, dz } = DIRECTION_DELTA[npc.facing]
-  const steps = Math.abs(playerX - npc.world_x) + Math.abs(playerZ - npc.world_z) - 1
   const path: { x: number; z: number }[] = []
-  for (let i = 1; i <= steps; i++) {
-    path.push({ x: npc.world_x + dx * i, z: npc.world_z + dz * i })
+  let { world_x: x, world_z: z } = npc
+  const stepToward = (target: number, current: number) => Math.sign(target - current)
+
+  while (x !== playerX) {
+    x += stepToward(playerX, x)
+    path.push({ x, z })
   }
+  while (z !== playerZ) {
+    z += stepToward(playerZ, z)
+    path.push({ x, z })
+  }
+  // La dernière tuile est celle du joueur : on s'arrête juste avant.
+  path.pop()
   return path
 }
 

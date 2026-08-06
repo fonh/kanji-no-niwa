@@ -22,6 +22,7 @@ import {
 } from '@/lib/map-visibility'
 import { getPlayerState, savePlayerState } from '@/lib/player-state'
 import { gateBlocksEntry } from '@/lib/zone-gate'
+import { blockingRoadblock, type RoadblockGuard, type RoadblockPage } from '@/lib/roadblocks'
 import { canReachZone, isWithinZoneBounds } from '@/lib/zone-geometry'
 import { getZoneByName } from '@/lib/zones'
 import uiStrings from '@/data/ui-strings.json'
@@ -74,22 +75,65 @@ export async function saveMapProgress(progress: unknown) {
 // zone extérieure à visited_zones).
 
 /** Le franchissement vers cette zone est-il permis maintenant ?
- * Zone visitée, intérieur, ou zone inconnue → toujours oui (et sans lire le
- * statut SRS). Sinon la ligne jp de blocage accompagne le refus. */
+ *
+ * Deux refus possibles, dans cet ordre :
+ *
+ *  - un VERROU DE PROGRESSION (content/map/roadblocks.json) : un personnage
+ *    barre ce franchissement précis tant que ses conditions ne sont pas
+ *    remplies. Le refus emporte de quoi jouer la scène côté client (garde,
+ *    poste, réplique) — mais la décision est prise ici : un verrou évalué par
+ *    le client se contourne. Il s'applique à CHAQUE tentative, zone déjà
+ *    visitée ou non : revenir sur ses pas doit rester bloqué tant que la
+ *    condition tient ;
+ *  - le gate SRS quotidien, lui, ne concerne que les zones extérieures
+ *    JAMAIS visitées.
+ */
 export async function checkZoneEntry(
   zoneName: string,
-  tzOffsetMinutes: number
-): Promise<{ allowed: true } | { allowed: false; jp: string }> {
+  tzOffsetMinutes: number,
+  fromZoneName?: string
+): Promise<
+  | { allowed: true }
+  | { allowed: false; jp: string }
+  | { allowed: false; roadblock: BlockedCrossing }
+> {
   const zone = getZoneByName(zoneName)
-  if (!zone || !zone.is_outdoor) return { allowed: true }
+  if (!zone) return { allowed: true }
   const userId = await requireUserId()
   const state = await getPlayerState(userId)
+
+  if (fromZoneName) {
+    const ctx = { questSteps: getQuestStepsIndex(), now: new Date() }
+    const blocked = blockingRoadblock(fromZoneName, zoneName, state, ctx)
+    if (blocked) {
+      return {
+        allowed: false,
+        roadblock: {
+          roadblock_id: blocked.roadblock_id,
+          guard: blocked.guard,
+          name: blocked.guard.name.jp,
+          pages: blocked.pages,
+        },
+      }
+    }
+  }
+
+  if (!zone.is_outdoor) return { allowed: true }
   if (state.visited_zones.includes(zoneName)) return { allowed: true }
   const status = await getDailySRSStatusForUser(userId, tzOffsetMinutes)
   if (gateBlocksEntry(zone, state.visited_zones, status.sessionDone)) {
     return { allowed: false, jp: uiStrings.srs_gate_blocked.jp }
   }
   return { allowed: true }
+}
+
+/** Ce que le client doit savoir pour JOUER la scène de blocage — jamais pour
+ * la décider. */
+export interface BlockedCrossing {
+  roadblock_id: string
+  guard: RoadblockGuard
+  name: string
+  pages: RoadblockPage[]
 }
 
 // Position : écrit user_map_state (les colonnes users.map_* restent en place

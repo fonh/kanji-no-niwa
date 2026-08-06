@@ -1,0 +1,83 @@
+{
+ "_note": "Verrous de progression (issue 13, « on peut se déplacer partout sans que personne nous arrête »). Un verrou barre un FRANCHISSEMENT précis (zone de départ → zone d'arrivée) tant que ses `unlock_conditions` ne sont pas remplies, et le fait barrer par un personnage : « ! », il marche jusqu'au joueur, parle, le joueur ne passe pas, il regagne son poste. Le jeu d'origine procède exactement ainsi (vérifié dans le décompilé : à Bourg Geon, `VAR_SCENE_NEW_BARK_WEST_EXIT` fait sortir le Pr. Elm en courant tant qu'il n'a pas donné de starter). Sources des verrous : content/guidebook-adapted.md (marqueurs 🔒 et « bloque »), décompilé pokeheartgold. Le garde est un acteur d'interception, PAS un PNJ permanent : il n'apparaît que pour barrer la route, puis repart — un garde planté là en permanence n'existe pas dans le jeu d'origine pour ces scènes. Les obstacles de terrain (CS-Kanji, Simularbre, Ronflex) ne passent PAS par ici : ils vivent dans content/map/obstacles.json. GARDE-FOU : scripts/validate/lint-roadblocks.py refuse tout verrou dont la condition n'est atteignable qu'APRÈS le franchissement qu'il barre — c'est-à-dire un blocage définitif.",
+ "roadblocks": [
+  {
+   "roadblock_id": "elm_west_exit_new_bark",
+   "source": "Décompilé pokeheartgold, scr_seq_0842_T20.s : VAR_SCENE_NEW_BARK_WEST_EXIT. Le Pr. Elm sort en courant du labo et barre la sortie ouest tant que le joueur n'a pas de starter.",
+   "from_zone": "MAP_NEW_BARK",
+   "to_zone": "MAP_ROUTE_29",
+   "guard": {
+    "sprite_id": "SPRITE_DOCTOR",
+    "name": {
+     "jp": "エルムはかせ",
+     "en": "Prof. Elm"
+    },
+    "post": {
+     "tile_x": 6,
+     "tile_y": 14
+    },
+    "facing": "west"
+   },
+   "unlock_conditions": [
+    {
+     "type": "quest_step",
+     "quest_id": "mystery_egg_errand",
+     "step": "sent_by_elm"
+    }
+   ],
+   "pages": [
+    {
+     "jp": "まって、まって！",
+     "en": "Wait, wait!"
+    },
+    {
+     "jp": "ひとりで　いくのは　あぶないよ。",
+     "en": "It's dangerous to go alone."
+    },
+    {
+     "jp": "ラボに　きて。　わたして　おきたい　ものが　あるんだ。",
+     "en": "Come to the lab. There's something I want to give you."
+    }
+   ]
+  },
+  {
+   "roadblock_id": "guide_gent_cherrygrove_tour",
+   "source": "HGSS : le guide de Ville Griotte impose sa visite guidée avant de laisser partir vers la Route 30, et remet la Carte à la fin (content/guidebook-adapted.md § cherrygrove-city).",
+   "from_zone": "MAP_CHERRYGROVE",
+   "to_zone": "MAP_ROUTE_30",
+   "guard": {
+    "sprite_id": "SPRITE_GSOLDMAN1",
+    "name": {
+     "jp": "あんないの　おじさん",
+     "en": "Guide Gent"
+    },
+    "post": {
+     "tile_x": 36,
+     "tile_y": 5
+    },
+    "facing": "north"
+   },
+   "unlock_conditions": [
+    {
+     "type": "quest_step",
+     "quest_id": "cherrygrove_welcome",
+     "step": "map_given"
+    }
+   ],
+   "pages": [
+    {
+     "jp": "おっと、そんなに　いそがないで。",
+     "en": "Whoa there, not so fast."
+    },
+    {
+     "jp": "この　まちを　あんないさせて　おくれよ。",
+     "en": "Let me show you around town first."
+    },
+    {
+     "jp": "そのあとで　マップカードを　あげるからね。",
+     "en": "I'll give you the Map Card afterwards."
+    }
+   ]
+  }
+ ]
+}
