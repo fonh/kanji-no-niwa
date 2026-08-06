@@ -1,7 +1,8 @@
 [
  {
+  "_note": "2026-08-07 (passe « les figurants deviennent des personnages ») : REDISTRIBUTION des porteurs, jamais du contenu. Les quatre leçons (kanji_ids, grammar_id, sequence_index) sont inchangées — content/curriculum-checkpoints.md fait foi et n'a pas bougé. Elles étaient toutes les quatre sur man_in_house_route30, seul PNJ-leçon de la zone, et enfermé dans la maison aux Noigrumes : un joueur qui traverse la route dehors ne rencontrait aucune leçon. Elles sont réparties sur les trois figurants ROM promus + lui, DANS L'ORDRE OÙ LE JOUEUR LES CROISE en montant de Ville Griotte vers la maison de Mr. Pokémon (l'ordre des leçons est imposé, src/lib/lessons.ts) : (13,78) → maison aux Noigrumes (porte en (11,67)) → (10,47) → (4,18). Effet de bord voulu : man_in_house ne rejoue plus quatre fois sa scène de remise de la ぼんぐりケース.",
   "zone_id": "route-30",
-  "npc_ref": "man_in_house_route30",
+  "npc_ref": "entrance_boy_route30",
   "sequence_index": 1,
   "kanji_ids": ["止", "池", "牛", "用", "考"],
   "grammar_id": "N5-064"
@@ -15,14 +16,14 @@
  },
  {
   "zone_id": "route-30",
-  "npc_ref": "man_in_house_route30",
+  "npc_ref": "road_man_route30",
   "sequence_index": 3,
   "kanji_ids": ["門", "顔", "風", "鳥", "世"],
   "grammar_id": "N5-066"
  },
  {
   "zone_id": "route-30",
-  "npc_ref": "man_in_house_route30",
+  "npc_ref": "north_girl_route30",
   "sequence_index": 4,
   "kanji_ids": ["代", "区", "寒", "度", "業"],
   "grammar_id": "N5-067"

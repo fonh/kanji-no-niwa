@@ -1,0 +1,60 @@
+{
+ "_note": "2026-08-07 (passe « les figurants deviennent des personnages ») — figurant promu en personnage curaté. SOURCE : objet ROM obj_R30_gsboy3_2, ~/pokeheartgold/files/fielddata/eventdata/zone_event/031_R30.json:293 — monde (557,366) → tuile (13,78) avec world_origin (544,288) ; facingDirection 3 = est ; eventFlag FLAG_NOTHING, donc présent dès la première traversée. RÔLE : scr_seq_R30_003 (scr_seq_0227_R30.s:179) → msg_0375_R30_00013 (msg_0375_R30.gmm:56) — il remarque les Running Shoes du joueur et prévient que courir fait du bruit. ADAPTATION : le jeu d'origine dit « le bruit les ATTIRE », notre texte trouvé bug_catcher_memo_route30 dit « le bruit les fait se cacher » — on garde le fait commun aux deux (courir se remarque) plutôt que de contredire un texte déjà écrit. Porte désormais la leçon #1 de la zone (redistribution, voir content/lessons/route-30.json) : c'est le premier personnage que le joueur croise en arrivant de Ville Griotte, la première leçon lui revient donc.",
+ "npc_id": "entrance_boy_route30",
+ "name": {
+  "jp": "みちの　こども",
+  "en": "Boy on the Road"
+ },
+ "zone_id": "route-30",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "mystery_egg_errand",
+     "step": "egg_received"
+    }
+   ],
+   "state": "on_the_way_back"
+  },
+  {
+   "default": true,
+   "state": "greeting"
+  }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    {
+     "jp": "あ、ランニングシューズ！",
+     "en": "Oh, Running Shoes!"
+    },
+    {
+     "jp": "それを　はくと　はやく　行（い）けるんだ。",
+     "en": "You can get around fast in those."
+    },
+    {
+     "jp": "でも　はしると　おとが　でるよ。ポケモンにも　トレーナーにも　きづかれる。",
+     "en": "But running makes noise. Pokémon and Trainers alike will notice you."
+    }
+   ]
+  },
+  "on_the_way_back": {
+   "pages": [
+    {
+     "jp": "もう　かえるの？　はやいね。",
+     "en": "Heading back already? That was quick."
+    },
+    {
+     "jp": "その　たまご、だいじに　もってね。",
+     "en": "Carry that egg carefully."
+    },
+    {
+     "jp": "はしると　ゆれるよ。",
+     "en": "It gets shaken about if you run."
+    }
+   ]
+  }
+ }
+}

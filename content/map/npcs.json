@@ -262,6 +262,48 @@
   "dialogue_ref": "npcs/cherrygrove-city/pokecenter_clerk_cherrygrove"
  },
  {
+  "npc_id": "entrance_boy_route30",
+  "zone_id": "route-30",
+  "name": "Boy on the Road",
+  "map_zone": "MAP_ROUTE_30",
+  "tile_x": 13,
+  "tile_y": 78,
+  "facing": "east",
+  "position_status": "2026-08-07 (passe « les figurants deviennent des personnages ») : figurant ROM promu en personnage curaté, position REPOSÉE sur son objet — obj_R30_gsboy3_2 (zone_event/031_R30.json:293), monde (557,366) → (13,78) avec world_origin (544,288), facingDirection 3 = est. eventFlag FLAG_NOTHING : aucune fenêtre de présence, donc aucune unlock_conditions. Premier personnage croisé en arrivant de Ville Griotte (l'entrée sud est en bas de grille ; le panneau de direction ROM_005 « sud → Ville Griotte » est juste à côté, tuile (10,75)). Tuile praticable, aucun autre personnage curaté dessus.",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSBOY3",
+  "dialogue_ref": "npcs/route-30/entrance_boy_route30"
+ },
+ {
+  "npc_id": "road_man_route30",
+  "zone_id": "route-30",
+  "name": "Man on the Road",
+  "map_zone": "MAP_ROUTE_30",
+  "tile_x": 10,
+  "tile_y": 47,
+  "facing": "east",
+  "position_status": "2026-08-07 (passe « les figurants deviennent des personnages ») : figurant ROM promu en personnage curaté, position REPOSÉE sur son objet — obj_R30_gsman1 (zone_event/031_R30.json:55), monde (554,335) → (10,47) avec world_origin (544,288), facingDirection 3 = est. eventFlag FLAG_NOTHING : aucune fenêtre de présence, donc aucune unlock_conditions. Milieu de route, au nord de la maison aux Noigrumes. Tuile praticable en pleine clairière, aucun autre personnage curaté dessus (les dresseurs les plus proches sont Joey (9,44) et Mikey (8,37)).",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSMAN1",
+  "dialogue_ref": "npcs/route-30/road_man_route30"
+ },
+ {
+  "npc_id": "north_girl_route30",
+  "zone_id": "route-30",
+  "name": "Girl in the North",
+  "map_zone": "MAP_ROUTE_30",
+  "tile_x": 4,
+  "tile_y": 18,
+  "facing": "south",
+  "position_status": "2026-08-07 (passe « les figurants deviennent des personnages ») : figurante ROM promue en personnage curaté, position REPOSÉE sur son objet — obj_R30_gsgirl2 (zone_event/031_R30.json:72), monde (548,306) → (4,18) avec world_origin (544,288), facingDirection 1 = sud. eventFlag FLAG_NOTHING : aucune fenêtre de présence, donc aucune unlock_conditions. Bord ouest de la route, juste au sud de Bug Catcher Don (6,10) — d'où sa réplique sur les regards de dresseurs. Tuile praticable, aucun autre personnage curaté dessus.",
+  "trigger_type": "talk",
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSGIRL2",
+  "dialogue_ref": "npcs/route-30/north_girl_route30"
+ },
+ {
   "npc_id": "man_in_house_route30",
   "zone_id": "route-30",
   "name": "Man in the House",

@@ -162,6 +162,43 @@ séquences multi-pistes marchent (les fanfares font 97 à 201 notes). Déclarer 
 chemin dans `SFX` (`src/lib/audio-tracks.ts`) avec le nom de la séquence ROM en
 commentaire — c'est la seule trace de provenance.
 
+### 3.8 Promouvoir un figurant ROM en personnage curaté
+
+Le décor de route est plein de silhouettes qui n'ont ni fiche ni dialogue : le
+moteur leur sert une réplique du pool commun (§ `ambient-lines.ts`) et le joueur
+traverse la zone sans que personne ne lui donne rien. Les promouvoir se fait
+zone par zone, et coûte trois fichiers :
+
+1. `content/map/npcs.json` — position **reposée sur l'objet ROM**
+   (`tile = monde − world_origin`), `sprite_id` = le `spriteId` de l'objet,
+   `map_zone` si c'est un intérieur ;
+2. `content/dialogues/npcs/<zone>/<npc_id>.json` ;
+3. ce qu'il apporte — leçon, objet, texte, ou rien.
+
+**Le doublon se supprime tout seul.** `rom-decor.ts` retire l'objet ROM dès
+qu'un personnage curaté occupe sa tuile : reposer le PNJ sur son objet suffit,
+il n'y a rien à retirer à la main. Le signal que ça a marché est un test rouge —
+une assertion « ce figurant n'a pas d'équivalent curaté » (`rom-decor.test.ts`)
+devient fausse par construction ; la mettre à jour fait partie de la passe.
+
+**Qui n'est PAS promouvable** — deux familles, et les deux se lisent dans le
+`zone_event` avant d'écrire quoi que ce soit :
+
+- **l'acteur de scène scriptée** : son `scriptId` le fait apparaître, marcher et
+  disparaître (`ShowPerson`/`ApplyMovement`/`HidePerson`), et sa tuile de
+  départ est souvent celle d'une **porte** — donc non praticable. L'homme aux
+  Noigrumes de la Route 30 est posé en (11,67), pile sur le warp de sa maison :
+  il sort, donne sa boîte, rentre. Le personnage curaté, lui, vit **dans** la
+  maison. Ne pas confondre l'acteur et l'habitant ;
+- **le figurant à drapeau conditionnel** (`eventFlag` ≠ `FLAG_NOTHING`) : sa
+  fenêtre de présence appartient à un scénario qu'on ne joue pas.
+  `FLAG_NOTHING` = présent depuis toujours = aucune `unlock_conditions` à
+  écrire, c'est le cas facile et c'est celui à chercher en premier.
+
+`facingDirection` se lit dans le décompilé, pas au jugé :
+`~/pokeheartgold/include/constants/global_fieldmap.h:5` —
+**0 = nord, 1 = sud, 2 = ouest, 3 = est**.
+
 ---
 
 ## 4. Ce qui nous a déjà mordus
@@ -184,6 +221,12 @@ désormais ; ne pas les désactiver « juste pour voir ».
 - **Une tuile de garage** : la ROM range hors carte (coin haut-droit,
   coordonnées négatives) les objets qu'un script fera apparaître ailleurs. 93
   dans tout le jeu. Ce n'est pas une position, c'est un entrepôt.
+- **Une tuile de porte prise pour une position** : variante de la précédente et
+  au moins aussi fréquente. Un acteur de scène scriptée est garé sur le warp
+  d'où il sortira — non praticable, donc silencieusement écarté du décor
+  (`rom-decor.ts`), mais recopié tel quel dans une entrée `npcs.json` il donne
+  un PNJ dans une porte. Le vrai personnage est de l'autre côté, dans
+  l'intérieur (§ 3.8).
 - **Un cône de vision aveugle** : un dresseur `sight_auto` dont la ligne de vue
   ne couvre aucune tuile praticable ne déclenche jamais son combat. Il en reste
   7 hors chemin critique (Liz/Route 32, Brandon et Kate/Route 34,
@@ -213,6 +256,17 @@ désormais ; ne pas les désactiver « juste pour voir ».
 - **Un objet sans libellé** : le Sac affichait l'`item_id` brut, donc du latin
   à l'écran (74 des 87 objets accordés). Repli 「？？？」 + refus sur le chemin
   critique.
+- **Toutes les leçons d'une zone sur un seul PNJ, à l'intérieur** : la Route 30
+  avait ses 4 leçons sur l'homme de la maison aux Noigrumes. Le joueur qui
+  monte la route dehors ne croise donc AUCUNE leçon, et rien ne le lui dit —
+  tous les garde-fous étaient verts, la leçon était « atteignable ». Le remède
+  n'est pas un mécanisme : c'est répartir les leçons **existantes** sur les
+  personnages de la zone **dans l'ordre où on les croise**. L'ordre des leçons
+  est imposé (`src/lib/lessons.ts`), donc `sequence_index` doit suivre la
+  géographie du sens d'entrée — sinon le premier personnage rencontré répond
+  「まだ　はやいよ」 et le joueur ne sait pas où aller. Le sens d'entrée se lit
+  dans la ROM : le panneau de direction (`bgs` type 1) dit quelle sortie mène
+  où.
 
 ### 4.4 Dialogues
 

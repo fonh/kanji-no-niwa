@@ -1,0 +1,60 @@
+{
+ "_note": "2026-08-07 (passe « les figurants deviennent des personnages ») — figurante promue en personnage curaté. SOURCE : objet ROM obj_R30_gsgirl2, ~/pokeheartgold/files/fielddata/eventdata/zone_event/031_R30.json:72 — monde (548,306) → tuile (4,18) avec world_origin (544,288) ; facingDirection 1 = sud ; eventFlag FLAG_NOTHING, donc présente dès la première traversée. RÔLE : scr_seq_R30_010 (scr_seq_0227_R30.s:233) → msg_0375_R30_00004 (msg_0375_R30.gmm:19) — « je ne suis pas dresseuse, mais si tu croises le regard d'un dresseur, prépare-toi à te battre ». Rôle conservé tel quel : c'est la règle exacte de nos dresseurs `sight_auto` (content/map/trainers.json). Nuance de position : en montant, le joueur a DÉJÀ traversé le cône de Youngster Mikey (8,37) — le couloir ouest n'a qu'une ouverture rangée 40, colonne x=8, il ne peut pas l'éviter — donc elle confirme ce qui vient d'arriver au lieu de l'annoncer, et prévient pour Bug Catcher Don (6,10), le seul qui reste au nord. Porte la leçon #4 de la zone (redistribution, voir content/lessons/route-30.json) : dernière personne croisée avant la maison de Mr. Pokémon.",
+ "npc_id": "north_girl_route30",
+ "name": {
+  "jp": "きたの　おんなのこ",
+  "en": "Girl in the North"
+ },
+ "zone_id": "route-30",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "mystery_egg_errand",
+     "step": "egg_received"
+    }
+   ],
+   "state": "on_the_way_back"
+  },
+  {
+   "default": true,
+   "state": "greeting"
+  }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    {
+     "jp": "わたしは　トレーナーじゃ　ないの。",
+     "en": "I'm not a Trainer."
+    },
+    {
+     "jp": "でも　トレーナーと　目（め）が　あったら、そこから　しょうぶ。もう　わかったでしょう？",
+     "en": "But the moment you meet a Trainer's eyes, that's a match. You've found that out by now, haven't you?"
+    },
+    {
+     "jp": "この　先（さき）にも　ひとり　いるからね。",
+     "en": "There's one more of them further on."
+    }
+   ]
+  },
+  "on_the_way_back": {
+   "pages": [
+    {
+     "jp": "Mr.ポケモンの　家（いえ）、行（い）けた？",
+     "en": "Did you make it to Mr. Pokémon's house?"
+    },
+    {
+     "jp": "あの　人（ひと）は　めずらしい　ものが　すきなんだって。",
+     "en": "They say he likes rare things."
+    },
+    {
+     "jp": "みなみへ　もどるなら、目（め）を　あわせないように　ね。",
+     "en": "If you're heading back south, mind you don't meet anyone's eyes."
+    }
+   ]
+  }
+ }
+}

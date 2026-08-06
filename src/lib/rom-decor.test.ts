@@ -30,11 +30,25 @@ describe('doublons avec le contenu curaté', () => {
     expect(ids).not.toContain('obj_R30_gsboy2') // Youngster Joey
   })
 
-  it('les figurants d’ambiance sans équivalent curaté restent, eux', () => {
+  it('les trois figurants d’ambiance de la Route 30, promus, ne doublent pas non plus', () => {
+    // 2026-08-07 : ces trois-là étaient l'exemple même du « figurant sans
+    // équivalent curaté » — ils sont désormais des personnages à part entière
+    // (content/map/npcs.json), reposés sur ces mêmes objets. Le tri doit donc
+    // les retirer du décor exactement comme les dresseurs ci-dessus, sans quoi
+    // chacun serait dessiné deux fois sur sa propre tuile.
     const ids = served(ROUTE_30)
-    expect(ids).toContain('obj_R30_gsman1')
-    expect(ids).toContain('obj_R30_gsgirl2')
-    expect(ids).toContain('obj_R30_gsboy3_2')
+    expect(ids).not.toContain('obj_R30_gsman1') // road_man_route30
+    expect(ids).not.toContain('obj_R30_gsgirl2') // north_girl_route30
+    expect(ids).not.toContain('obj_R30_gsboy3_2') // entrance_boy_route30
+  })
+
+  it('les figurants d’ambiance sans équivalent curaté restent, eux', () => {
+    // Une zone encore non passée en revue : le tri ne doit pas dépeupler la
+    // carte, il ne doit retirer que les doublons.
+    const ids = served(getZoneByName('MAP_ROUTE_31')!)
+    expect(ids).toContain('obj_R31_gsman1')
+    expect(ids).toContain('obj_R31_gsbigman')
+    expect(ids).toContain('obj_R31_gsboy1')
   })
 
   it('le Silver du décor ne double pas le Silver curaté, à Bourg Geon', () => {

@@ -124,9 +124,14 @@ Aucun dresseur nommé confirmé sur cette route dans le texte d'origine (zone tr
 | Bug Catcher Don | Dresseur de route — corrigé 2026-07-09 (extraction ROM `~/pokeheartgold`, source de vérité) : Don appartient à Route 30, pas Route 31 (inversion trouvée dans le dépouillement d'origine) | — | combat |
 | Youngster Joey | Dresseur de route (personnage culte de la franchise, easter-egg possible) | — | combat |
 | Youngster Mikey | Dresseur de route — corrigé 2026-07-09 (extraction ROM), même inversion que Don | — | combat |
-| Homme dans une maison (nord) | Donne l'Apricorn Box (objet-clé, débloque la cueillette d'Apricorns) | Apricorn Box | leçon #1 — 漢字: 止・池・牛・用・考 — 文法: ～あります (〜arimasu)<br>leçon #2 — 漢字: 肉・色・茶・通・遠 — 文法: ～いかがですか。 (〜ikaga desu ka.)<br>leçon #3 — 漢字: 門・顔・風・鳥・世 — 文法: いくつ～ (ikutsu~)<br>leçon #4 — 漢字: 代・区・寒・度・業 — 文法: いつか～ (itsuka～) |
+| Homme dans une maison (nord) | Donne l'Apricorn Box (objet-clé, débloque la cueillette d'Apricorns) | Apricorn Box | leçon #2 — 漢字: 肉・色・茶・通・遠 — 文法: ～いかがですか。 (〜ikaga desu ka.) |
 | Mr. Pokémon | Confie un "œuf mystère" au joueur | Mystery Egg (+ Exp. Share bien plus tard, contre l'Écaille du Lac Colère) | ambiant |
 | Professeur Oak | Présent chez Mr. Pokémon, donne le Pokédex, anime ensuite une émission radio | Pokédex | ambiant |
+| Enfant de la route (`entrance_boy_route30`) | Figurant ROM `obj_R30_gsboy3_2` (031_R30.json:293) — remarque les Running Shoes, prévient que courir fait du bruit (msg_0375_R30_00013) | — | leçon #1 — 漢字: 止・池・牛・用・考 — 文法: ～あります (〜arimasu) |
+| Monsieur de la route (`road_man_route30`) | Figurant ROM `obj_R30_gsman1` (031_R30.json:55) — explique que les PP s'épuisent et qu'il faut rentrer au Centre Pokémon (msg_0375_R30_00002) ; transposé sur la règle des trois défaites | — | leçon #3 — 漢字: 門・顔・風・鳥・世 — 文法: いくつ～ (ikutsu~) |
+| Fille du nord (`north_girl_route30`) | Figurante ROM `obj_R30_gsgirl2` (031_R30.json:72) — « je ne suis pas dresseuse, mais croiser le regard d'un dresseur, c'est un combat » (msg_0375_R30_00004) | — | leçon #4 — 漢字: 代・区・寒・度・業 — 文法: いつか～ (itsuka～) |
+
+*Redistribution 2026-08-07 (passe « les figurants deviennent des personnages ») : les quatre leçons étaient toutes sur l'homme dans la maison, donc invisibles pour qui traverse la route dehors. Contenu inchangé (curriculum-checkpoints.md fait foi) — seuls les porteurs changent, dans l'ordre où le joueur les croise du sud vers le nord.*
 
 **Side quests dans cette zone** : 0
 **Objets à aller chercher dans cette zone** : 3 (Apricorn Box, Mystery Egg, Pokédex)

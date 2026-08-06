@@ -1,0 +1,60 @@
+{
+ "_note": "2026-08-07 (passe « les figurants deviennent des personnages ») — figurant promu en personnage curaté. SOURCE : objet ROM obj_R30_gsman1, ~/pokeheartgold/files/fielddata/eventdata/zone_event/031_R30.json:55 — monde (554,335) → tuile (10,47) avec world_origin (544,288) ; facingDirection 3 = est ; movement 5 (il fait un pas de part et d'autre, xRange 1) ; eventFlag FLAG_NOTHING, donc présent dès la première traversée. RÔLE : scr_seq_R30_009 (scr_seq_0227_R30.s:224) → msg_0375_R30_00002 (msg_0375_R30.gmm:11) — il explique que les capacités s'épuisent (PP) et qu'il faut alors rentrer au Centre Pokémon. ADAPTATION : il n'y a ni PV ni PP ici, mais il y a exactement la même règle sous une autre forme — la TROISIÈME défaite depuis le dernier Centre renvoie au Centre (src/lib/blackout.ts, DEFEAT_LIMIT). Le rôle est conservé mot pour mot : quelqu'un sur la route explique la ressource qui s'épuise et où on la refait. Le script d'origine BRANCHE sur FLAG_GOT_POKEDEX (scr_seq_0227_R30.s:225) vers un texte msg_0375_R30_00003 identique au premier — un reliquat ; on honore la branche avec un vrai deuxième état, sélectionné sur l'étape de quête qui remet le Pokédex. Porte la leçon #3 de la zone (redistribution, voir content/lessons/route-30.json).",
+ "npc_id": "road_man_route30",
+ "name": {
+  "jp": "みちの　おじさん",
+  "en": "Man on the Road"
+ },
+ "zone_id": "route-30",
+ "jlpt_level": "N5",
+ "state_rules": [
+  {
+   "if": [
+    {
+     "type": "quest_step",
+     "quest_id": "mystery_egg_errand",
+     "step": "egg_received"
+    }
+   ],
+   "state": "after_pokedex"
+  },
+  {
+   "default": true,
+   "state": "greeting"
+  }
+ ],
+ "dialogue_states": {
+  "greeting": {
+   "pages": [
+    {
+     "jp": "しょうぶは　なんどでも　できる。",
+     "en": "You can take on as many matches as you like."
+    },
+    {
+     "jp": "でも　まけが　みっつ　かさなると、ポケモンセンターまで　もどされるよ。",
+     "en": "But once three losses pile up, you get sent back to the Pokémon Center."
+    },
+    {
+     "jp": "気（き）を　つけて　行（い）きなさい。",
+     "en": "Go carefully."
+    }
+   ]
+  },
+  "after_pokedex": {
+   "pages": [
+    {
+     "jp": "おや、ポケモンずかんを　もらったのか。",
+     "en": "Oh? So you were given a Pokédex."
+    },
+    {
+     "jp": "まけても　いいんだ。まけて　わかる　ことも　ある。",
+     "en": "It's fine to lose. There are things you only understand by losing."
+    },
+    {
+     "jp": "顔（かお）を　あげて　行（い）きなさい。",
+     "en": "Keep your head up and go on."
+    }
+   ]
+  }
+ }
+}
