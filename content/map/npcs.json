@@ -421,13 +421,15 @@
   "npc_id": "elder_li_sprout_tower",
   "zone_id": "sprout-tower",
   "name": "Elder Li",
-  "tile_x": 5,
-  "tile_y": 10,
+  "tile_x": 12,
+  "tile_y": 9,
   "facing": "south",
-  "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/sprout-tower.json",
+  "position_status": "2026-08-06 (issue 13, passe document) : était en (5,10) du 1F, TUILE OCCUPÉE par le sage Chow que je venais d'y poser depuis son objet ROM — deux personnages sur la même case. L'ancien de la tour se tient au 3F dans le jeu d'origine (objet ROM obj_D15R0103_chourou, 12,9), au bout du parcours des sages : c'est aussi ce qui donne son sens à la montée.",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/sprout-tower/elder_li_sprout_tower"
+  "dialogue_ref": "npcs/sprout-tower/elder_li_sprout_tower",
+  "map_zone": "MAP_SPROUT_TOWER_3F",
+  "sprite_id": "SPRITE_CHOUROU"
  },
  {
   "npc_id": "silver_sprout_tower",
