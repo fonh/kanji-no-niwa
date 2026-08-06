@@ -133,7 +133,28 @@ Densités cibles par type de zone : `content/texts-progressifs.md` § Densité.
 `lint-cross-refs.py` vérifie que la table, le registre de zones et
 `content/texts/` disent la même chose.
 
-### 3.6 Un son du jeu d'origine
+### 3.6 Regarder ce que le joueur voit, sans attendre une capture
+
+    python3 scripts/validate/render-zone-preview.py MAP_ROUTE_31 --around 23,16
+
+compose la capture de la zone (recalée par la mesure d'ADR-0006) et marque
+chaque endroit où le moteur DESSINERA quelqu'un — rouge/orange pour un PNJ ou
+dresseur curaté, bleu pour un objet ROM servi. La lecture est immédiate :
+
+- personnage visible **avec** un marqueur dessus → doublon ;
+- personnage visible **sans** marqueur → il est peint dans la capture ;
+- marqueur dans un mur, deux marqueurs sur la même case → bug de position ;
+- damier gris → la zone est servie sans capture (rejetée au recalage).
+
+Pour relever une tuile au pixel près, superposer une grille : recadrer l'image
+sur la fenêtre voulue, tracer une ligne tous les `scale_x`/`scale_y` pixels
+depuis `origin_px`/`origin_py`, numéroter, regarder. C'est comme ça qu'on a
+mesuré les figurants incrustés de la Route 31.
+
+**Aucun test n'attrape un bug d'affichage.** Cet outil est le seul moyen de les
+voir sans jouer — s'en servir avant de dire qu'une zone est finie.
+
+### 3.7 Un son du jeu d'origine
 
 `python3 scripts/build/extract-hgss-sfx.py --list <motif>` pour chercher, puis
 `extract-hgss-sfx.py SEQ_XXX -o out.wav`, puis `ffmpeg -c:a libopus`. Les
@@ -217,10 +238,23 @@ désormais ; ne pas les désactiver « juste pour voir ».
   continuer à bloquer.
 - **Les captures de carte contiennent des personnages peints dans les pixels**
   (ce sont des captures de partie). Repérage :
-  `scripts/build/scrub-baked-npcs.py --preview`. Le bouchage automatique n'est
-  **pas** au niveau — deux méthodes essayées, les deux abîment la carte. Ne pas
-  le rebrancher sans une vraie approche (détourage du sprite depuis sa planche,
-  reconstruction du sol d'après la grille de collision).
+  `render-zone-preview.py`, puis `scrub-baked-npcs.py --preview`. Le bouchage
+  automatique n'est **pas** au niveau — deux méthodes essayées, les deux
+  abîment la carte. Ne pas le rebrancher sans une vraie approche (détourage du
+  sprite depuis sa planche, reconstruction du sol d'après la grille de
+  collision).
+- **Un figurant incrusté n'est PAS sur la tuile de son objet ROM.** Beaucoup
+  errent (`movement` 3/5/14/15) : la capture les a figés là où ils se
+  trouvaient ce jour-là, une à deux tuiles à côté de leur position de spawn.
+  Dériver la liste des tuiles à boucher depuis le décompilé donne donc de
+  fausses coordonnées — c'était le cas de la première liste de la Route 31.
+  **Mesurer sur l'image**, jamais déduire.
+- **Une capture qui ne se cale pas est rejetée exprès.** Le poste-frontière
+  Route 31 ↔ Mauville est servi en grille de collision parce que la seule
+  capture de poste-frontière du dossier appartient à une AUTRE porte (recalage
+  dégénéré : 6,1 px/tuile en vertical contre ~11 attendus). Servir une image
+  qui ment sur les murs est pire que la grille (ADR-0006). Avant de conclure
+  « décor manquant = bug », regarder si la capture existe et si elle se cale.
 - **Une durée CSS et un minuteur JS qui divergent** : l'élément est retiré du
   DOM en plein écran. La plaque de nom de lieu disparaissait d'un coup au lieu
   de remonter.

@@ -70,13 +70,22 @@ REGISTRY = Path("src/data/zone-registry.json")
 # grille de collision plutôt qu'à la ressemblance de couleur. À reprendre à
 # tête reposée — une carte abîmée se voit plus qu'un doublon.
 #
-# Ajouter une zone = ajouter une ligne de tuiles. Rien à mesurer.
+# COMMENT ÉTABLIR LA LISTE D'UNE ZONE : `render-zone-preview.py <zone>` compose
+# la capture et marque chaque endroit où le moteur dessinera quelqu'un — un
+# personnage visible SANS marqueur est peint dans l'image. Pour relever sa
+# tuile, superposer une grille (voir la recette du journal). NE PAS reprendre
+# les coordonnées des objets ROM : beaucoup de ces figurants errent, la capture
+# les a figés ailleurs.
 AUTO_JOBS: dict[str, list[tuple[int, int]]] = {
     # Route 30 : la capture a été prise en cours de partie, avec les dresseurs
     # et les figurants du jeu d'origine en place. Sept personnages peints.
     "MAP_ROUTE_30": [(6, 10), (4, 18), (8, 37), (8, 38), (8, 39), (8, 41), (9, 44), (10, 47), (13, 78)],
-    # Route 31 : le promeneur du bord de l'eau et l'homme de l'ouest.
-    "MAP_ROUTE_31": [(52, 17), (28, 15)],
+    # Route 31 — tuiles MESURÉES sur la capture (grille rouge, 2026-08-07), pas
+    # déduites des objets ROM : ces figurants-là ERRENT (movement 3/14/15), et
+    # la capture les a figés là où ils se trouvaient ce jour-là, une à deux
+    # tuiles à côté de leur position de spawn. C'est l'erreur de la première
+    # liste, qui reprenait les coordonnées ROM.
+    "MAP_ROUTE_31": [(15, 14), (28, 16), (28, 25)],
     # Tour Grospignon 1F : les deux sages et les deux visiteuses du rez.
     "MAP_SPROUT_TOWER_1F": [(17, 24), (15, 20), (11, 19), (11, 15)],
 }

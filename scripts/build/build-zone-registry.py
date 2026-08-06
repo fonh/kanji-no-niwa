@@ -79,6 +79,17 @@ ZONE_SCREENSHOT_OVERRIDES = {
     "MAP_CHERRYGROVE_GUIDE_GENT_HOUSE":  "Cherrygrove Guide Gent House HGSS.png",
     "MAP_CHERRYGROVE_SOUTHEAST_HOUSE":   "Cherrygrove Southeast House HGSS.png",
     "MAP_NEW_BARK_SOUTHWEST_HOUSE":      "New Bark Southwest House HGSS.png",
+    # 2026-08-07 : l'École Pokémon d'Earl était servie SANS décor, donc en
+    # grille de collision nue — sa capture existait dans public/maps/ mais son
+    # nom ne contient pas « Violet », donc le matching par mots-clés ne pouvait
+    # pas la trouver. Assignée à la main, comme les maisons ci-dessus.
+    # Le poste-frontière Route 31 ↔ Mauville, lui, RESTE sans décor : la seule
+    # capture de poste-frontière du dossier (« Gate inside HGSS.png ») ne se
+    # cale pas sur sa grille (recalage dégénéré, pas vertical de 6,1 px/tuile
+    # contre ~11 attendus — c'est une AUTRE porte). Servir une image qui ment
+    # sur les murs est pire que la grille : ADR-0006, « un joueur qui voit une
+    # grille comprend qu'il voit une grille ».
+    "MAP_VIOLET_POKEMON_SCHOOL":         "Pokémon School interior HGSS.png",
 }
 
 # ── Indexer les screenshots disponibles ──────────────────────────────────────
