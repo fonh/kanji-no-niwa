@@ -1,16 +1,19 @@
 {
  "quest_id": "cherrygrove_welcome",
- "name": { "jp": "ヨシノシティの　あんない", "en": "Cherrygrove Welcome" },
- "zone_ids": ["cherrygrove-city"],
+ "name": {
+  "jp": "ヨシノシティの　あんない",
+  "en": "Cherrygrove Welcome"
+ },
+ "zone_ids": [
+  "cherrygrove-city"
+ ],
  "steps": [
   {
-   "step_id": "shoes_given",
-   "label": { "jp": "あんないの　おじさんに　ランニングシューズを　もらった。", "en": "The Guide Gent gave me the Running Shoes." },
-   "target_zone_id": "cherrygrove-city"
-  },
-  {
    "step_id": "map_given",
-   "label": { "jp": "マップカードも　もらった。30ばんどうろへ　いこう。", "en": "I also got the Map Card. Time to head for Route 30." },
+   "label": {
+    "jp": "あんないの　おじさんに　まちを　あんないして　もらった。30ばんどうろへ　いこう。",
+    "en": "The Guide Gent showed me around town. Time to head for Route 30."
+   },
    "target_zone_id": "route-30"
   }
  ]
