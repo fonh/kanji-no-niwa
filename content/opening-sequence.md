@@ -1089,7 +1089,7 @@ Capture (le tutoriel de Lyra est réattribué au Kanjidex) · échange · éleva
 - **Captures d'intérieur.** Les décors d'intérieur sont des captures de
   **partie** : des PNJ et l'avatar du joueur sont peints dans les pixels, d'où
   des doublons visibles à l'écran (un « Elm » dessiné à côté du vrai). Outil de
-  retouche : `scripts/build/scrub-baked-npcs.py`.
+  retouche : `scripts/build/find_baked_sprites.py` puis `scrub_baked_sprites.py`.
 - **Pas d'animation « objet obtenu ».** Le son existe (`SFX.itemGet`), la
   fenêtre et l'animation non. La ROM distingue en plus `SEQ_ME_ITEM`,
   `SEQ_ME_KEYITEM` et `SEQ_ME_BADGE` ; nous avons un seul son.

@@ -66,7 +66,7 @@ print(f"{len(zones)} zones dans zone-data.json")
 # d'assets HGSS réels déjà dans ce dépôt pour les autres).
 #
 # Cas à part : « (sans PNJ) » = capture retouchée par
-# scripts/build/scrub-baked-npcs.py. Les captures de cartes sont des captures
+# scripts/build/scrub_baked_sprites.py. Les captures de cartes sont des captures
 # de PARTIE : les PNJ y sont peints dans les pixels, et pour le labo d'Elm
 # l'avatar du joueur qui a pris la capture aussi, son Chikorita avec. Le moteur
 # dessinant ensuite ses propres sprites par-dessus, chaque personnage
@@ -90,10 +90,10 @@ ZONE_SCREENSHOT_OVERRIDES = {
     # sur les murs est pire que la grille : ADR-0006, « un joueur qui voit une
     # grille comprend qu'il voit une grille ».
     "MAP_VIOLET_POKEMON_SCHOOL":         "Pokémon School interior HGSS.png",
-    # Capture nettoyée de ses figurants incrustés (scrub-baked-npcs.py) : sans
+    # Capture nettoyée de ses figurants incrustés (scrub_baked_sprites.py) : sans
     # ça, les trois promeneurs peints dans l'image doublaient ceux que le
     # moteur dessine (2026-08-07).
-    "MAP_ROUTE_31":                      "Johto Route 31 HGSS (sans PNJ).png",
+    "MAP_ROUTE_31":                      "Johto Route 31 HGSS.png",
 }
 
 # ── Indexer les screenshots disponibles ──────────────────────────────────────

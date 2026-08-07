@@ -15,7 +15,7 @@ Lire le résultat est immédiat :
   - un personnage visible dans les pixels AVEC un marqueur dessus → **doublon**
     (il est peint dans la capture ET dessiné par le moteur) ;
   - un personnage visible SANS marqueur → il est peint dans la capture seule
-    (c'est une capture de partie) : à ajouter à scrub-baked-npcs.py ;
+    (c'est une capture de partie) : lancer scrub_baked_sprites.py sur la zone ;
   - un marqueur sur du vide → le moteur dessine quelqu'un que la capture ne
     montre pas ; c'est le cas normal ;
   - un damier gris au lieu du décor → la zone est servie sans capture
@@ -177,7 +177,7 @@ def main() -> None:
     print(f"{out}  ({len(entities)} personnage(s) curaté(s), {len(objects)} objet(s) ROM servi(s))")
     print("  rouge/orange = PNJ ou dresseur curaté (orange = conditionnel)")
     print("  bleu         = objet ROM servi (décor, obstacle, Poké Ball)")
-    print("  un personnage VISIBLE SANS marqueur est peint dans la capture → scrub-baked-npcs.py")
+    print("  un personnage VISIBLE SANS marqueur est peint dans la capture → scrub_baked_sprites.py")
 
 
 if __name__ == "__main__":
