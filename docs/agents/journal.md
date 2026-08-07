@@ -362,11 +362,25 @@ désormais ; ne pas les désactiver « juste pour voir ».
   retrouve seul, puis `scrub_baked_sprites.py <ZONE>` les efface.
 
   Ce qui rend la chose fiable : **une silhouette cuite EST le sprite de
-  `public/sprites/overworld/`, au pixel près** (les cartes sont en résolution
-  native, 16 px par tuile de décor — la grille de collision, elle, a son propre
-  pas, cf. ADR-0006). On la cherche donc par corrélation, planche par planche,
-  dans une fenêtre autour de son objet ROM. La séparation est nette : **erreur
-  1 à 15 pour une vraie silhouette, 39+ pour du bruit** — d'où le seuil à 30.
+  `public/sprites/overworld/`** (les cartes sont en résolution native, 16 px par
+  tuile de décor — la grille de collision, elle, a son propre pas, cf. ADR-0006).
+  On la cherche donc par corrélation. La séparation est nette : **erreur 1 à 15
+  pour une vraie silhouette, 39+ pour du bruit** — d'où le seuil à 30.
+
+  La recherche se fait de DEUX façons, et il faut les deux :
+  **l'index des couleurs rares** balaie tout le catalogue en quelques secondes
+  (ces sprites sont dessinés à la palette : si la vignette est là, ses pixels y
+  sont à l'identique, donc on ne teste que les positions où ses couleurs les plus
+  rares apparaissent) — c'est ce qui trouve un personnage qu'AUCUN objet de la
+  zone ne mentionne ; **le balayage autour de chaque objet ROM**, plus cher mais
+  insensible à un décalage de palette — indispensable sur les cartes relevées
+  sur atlas plutôt que capturées en jeu, où seuls ~12 % des pixels d'une
+  silhouette tombent juste et où l'index ne propose alors rien.
+
+  Corollaire d'échelle : une capture partagée (l'intérieur de Centre Pokémon sert
+  dans chaque ville) ne doit pas être nettoyée « depuis une zone », sinon le
+  résultat dépend des objets ROM de CETTE zone-là. C'est l'index, qui ne connaît
+  que les pixels, qui rend le nettoyage indépendant de la zone choisie.
   Et on n'efface QUE les pixels du sprite (son canal alpha est le découpage
   exact) **plus l'ombre au sol**, que le jeu dessine sous lui et qui ne fait pas
   partie de son alpha. Les deux méthodes précédentes recopiaient un rectangle :
