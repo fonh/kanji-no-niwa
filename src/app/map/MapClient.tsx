@@ -52,6 +52,7 @@ import {
   type MapProgress,
 } from '@/lib/obstacles'
 import { visibleRomObjects } from '@/lib/rom-decor'
+import { cameraOffset, depthZ, mapZoom, DEPTH_Z_CEILING } from '@/lib/map-camera'
 import { collectibleTextFor } from '@/lib/collectibles'
 import { DEFAULT_CENTER, isPokemonCenter, recordDefeat } from '@/lib/blackout'
 import { useAudioManager } from '@/lib/audio-manager'
@@ -112,9 +113,8 @@ interface Props {
  *
  * Sur un grand écran c'est donc le plafond qui décide (on voit un peu plus que
  * sur DS, à taille de pixel raisonnable) ; sur un téléphone, c'est le cadrage
- * (12 rangées, comme la console). */
-const VISIBLE_TILES_Y = 12
-const MAX_ZOOM = 4
+ * (12 rangées, comme la console). Les deux valeurs, et le cas du petit
+ * intérieur qui ne remplit pas le cadre, vivent dans src/lib/map-camera.ts. */
 
 const BANG_MS = 550
 
@@ -424,17 +424,24 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
     [zone]
   )
 
+  // Tri par profondeur et bornage de la caméra : src/lib/map-camera.ts.
+  const depth = useCallback((wz: number) => depthZ(wz, zone.world_origin_y), [zone.world_origin_y])
+
   const dialogueOpen = activeDialogue !== null
   const avatarPx = worldToPixel(playerPos.world_x, playerPos.world_z)
 
+  // La borne de la caméra, c'est le DÉCOR dessiné — la capture quand il y en a
+  // une, sinon la grille de collision (damier du CollisionCanvas).
+  const mapW = zone.screenshot_w || zone.origin_px + zone.tile_width * zone.scale_x
+  const mapH = zone.screenshot_h || zone.origin_py + zone.tile_height * zone.scale_y
   // Facteur d'agrandissement : on veut VISIBLE_TILES_Y tuiles sur la hauteur du
   // cadre. Le monde est ensuite translaté DANS l'espace non zoomé, d'où la
   // division par `zoom` pour recentrer sur le joueur.
-  const zoom = Math.min(MAX_ZOOM, Math.max(1, viewSize.h / (VISIBLE_TILES_Y * zone.scale_y)))
+  const zoom = mapZoom(viewSize.w, viewSize.h, mapW, mapH, zone.scale_y)
   const stageW = viewSize.w / zoom
   const stageH = viewSize.h / zoom
-  const offsetX = stageW / 2 - avatarPx.x
-  const offsetY = stageH / 2 - avatarPx.y
+  const offsetX = cameraOffset(avatarPx.x, stageW, mapW)
+  const offsetY = cameraOffset(avatarPx.y, stageH, mapH)
 
   const openDialogue = useCallback(
     (name: string, pages: DialoguePageEntry[], lessonFollows = false) => {
@@ -1390,7 +1397,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         <div
           key={banner.key}
           data-testid="zone-banner"
-          className="zone-banner absolute top-0 left-0 z-50 pointer-events-none"
+          className="zone-banner absolute top-0 left-0 z-[500] pointer-events-none"
           style={{ width: `${(136 / DS_SCREEN_W) * 100}%` }}
         >
           <div className="zone-banner-plate font-reading">{banner.label}</div>
@@ -1457,6 +1464,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                   width: sprite ? SPRITE_FRAME_SIZE : 16,
                   height: sprite ? SPRITE_FRAME_SIZE : 16,
                   pointerEvents: 'none',
+                  zIndex: depth(obj.z),
                 }}
                 title={obj.id}
               >
@@ -1495,7 +1503,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                     width: sprite ? SPRITE_FRAME_SIZE : 18,
                     height: sprite ? SPRITE_FRAME_SIZE : 18,
                     pointerEvents: 'none',
-                    zIndex: 8,
+                    zIndex: depth(roadblockGuard.world_z),
                     transition: `left ${STEP_MS / 1000}s linear, top ${STEP_MS / 1000}s linear`,
                   }}
                 >
@@ -1548,7 +1556,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                   width: sprite ? SPRITE_FRAME_SIZE : 18,
                   height: sprite ? SPRITE_FRAME_SIZE : 18,
                   pointerEvents: 'none',
-                  zIndex: 5,
+                  zIndex: depth(npc.world_z),
                   transition: `left ${STEP_MS / 1000}s linear, top ${STEP_MS / 1000}s linear`,
                 }}
                 title={npc.name}
@@ -1602,7 +1610,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                   width: sprite ? SPRITE_FRAME_SIZE : 18,
                   height: sprite ? SPRITE_FRAME_SIZE : 18,
                   pointerEvents: 'none',
-                  zIndex: 5,
+                  zIndex: depth(trainer.world_z),
                 }}
                 title={trainer.name}
               >
@@ -1652,7 +1660,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
                   height: SPRITE_FRAME_SIZE,
                   transition: `left ${STEP_MS / 1000}s linear, top ${STEP_MS / 1000}s linear`,
                   pointerEvents: 'none',
-                  zIndex: 9,
+                  zIndex: depth(followerPos.world_z),
                 }}
               >
                 <div
@@ -1682,7 +1690,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
               height: SPRITE_FRAME_SIZE,
               transition: `left ${STEP_MS / 1000}s linear, top ${STEP_MS / 1000}s linear`,
               pointerEvents: 'none',
-              zIndex: 10,
+              zIndex: depth(playerPos.world_z) + 1,
             }}
           >
             <div
@@ -1712,7 +1720,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           to open; B closes */}
       {floorPicker && (
         <div
-          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40"
+          className="fixed inset-0 z-[520] flex items-center justify-center bg-black/40"
           onClick={e => {
             e.stopPropagation()
             setFloorPicker(false)
@@ -1762,7 +1770,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           A à droite, Y à gauche, X en haut. Le bouton muet a disparu : le son
           se règle dans せってい (menu START), pas par un bouton flottant. */}
       <div
-        className="fixed bottom-6 left-4 z-[70]"
+        className="fixed bottom-6 left-4 z-[530]"
         onClick={e => e.stopPropagation()}
       >
         <div
@@ -1789,7 +1797,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
       />
 
       {/* HUD overlay — stopPropagation so taps on it never fall through */}
-      <div className="fixed bottom-0 left-0 right-0 z-50" onClick={e => e.stopPropagation()}>
+      <div className="fixed bottom-0 left-0 right-0 z-[510]" onClick={e => e.stopPropagation()}>
         {/* Zone picker drawer (dev navigation) with CS-Kanji dev toggles —
             the real acquisition flow (gym rewards) isn't built yet, so the
             chips grant/revoke abilities directly for testing.
@@ -1876,7 +1884,7 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
         style={{
           position: 'fixed',
           inset: 0,
-          zIndex: 90,
+          zIndex: DEPTH_Z_CEILING + 40,
           background: '#000',
           opacity: warpFading ? 1 : 0,
           pointerEvents: 'none',
