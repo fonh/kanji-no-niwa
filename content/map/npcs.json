@@ -36,14 +36,15 @@
   "position_status": "2026-08-06 (issue 13, carte de conception) : était en (10,7), la tuile de SILVER (obj_T20_gsrivel / FLAG_HIDE_NEW_BARK_RIVAL) — confusion de personnages dans content/map/placements/new-bark-town.json. Lyra/Ethan, c'est obj_T20_var_1 (FLAG_HIDE_NEW_BARK_FRIEND, SPRITE_VAR_1, le sprite « ami » résolu à l'exécution), et le script de carte la fait sortir de chez elle en (686,0,396) DIR_WEST → (14,12) quand VAR_SCENE_NEW_BARK_TOWN_OW passe à 1, c'est-à-dire à la sortie du labo, compagnon en main (scr_seq_0842_T20.s, scr_seq_T20_009). Avant ça elle est au 2F de sa maison (guidebook § new-bark-town), donc absente de la carte extérieure : présence gatée sur sent_by_elm.",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/new-bark-town/lyra_ethan_new_bark",
-  "sprite_id": "SPRITE_VAR_1",
+  "sprite_id": "SPRITE_HEROINE",
   "unlock_conditions": [
    {
     "type": "quest_step",
     "quest_id": "mystery_egg_errand",
     "step": "sent_by_elm"
    }
-  ]
+  ],
+  "_note_sprite": "apparence 2026-08-07 : le personnage n'était dessiné NULLE PART (aucun sprite_id, aucun objet ROM sous ses pieds) — une tuile vide qui répond au bouton A. SPRITE_VAR_1 ne se résout que depuis le drapeau d'un objet ROM ; le créneau VAR « ami » est la protagoniste opposée, et notre avatar par défaut est Ethan → Lyra (heroine)."
  },
  {
   "npc_id": "policeman_new_bark",
@@ -241,25 +242,29 @@
   "zone_id": "cherrygrove-city",
   "name": "Shopkeeper",
   "map_zone": "MAP_CHERRYGROVE_POKEMART",
-  "tile_x": 8,
-  "tile_y": 3,
+  "tile_x": 3,
+  "tile_y": 5,
   "facing": "south",
   "position_status": "fix QA Cherrygrove (2026-08-03) : était (44,8) sur la zone EXTÉRIEURE MAP_CHERRYGROVE, généré sans repère ROM — role_origin dit pourtant « Comptoir du fond » (à l'intérieur du Mart). Repositionné DANS MAP_CHERRYGROVE_POKEMART sur l'objet ROM matché (obj_T21FS0101_shopm1_2, sans flag conditionnel), (2,6) — mais cette tuile s'est révélée être dans une alcôve murée sans voisin marchable (vérifié par BFS, aucune tuile adjacente atteignable depuis la porte), même défaut que Elm avant issue 12. Déplacé en (8,3), la tuile marchable la plus proche formant un vrai comptoir (dos au mur nord, face au sud vers le joueur qui approche par (8,4)) — 70 tuiles de la pièce vérifiées atteignables depuis la porte par BFS, (8,3) en fait partie",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/cherrygrove-city/shopkeeper_cherrygrove"
+  "dialogue_ref": "npcs/cherrygrove-city/shopkeeper_cherrygrove",
+  "_note_sprite": "position 2026-08-07 : (2, 6) → (3,5), SUR le comptoir. Il était invisible (aucun sprite_id) et posé au milieu de la boutique. Son objet ROM obj_T21FS0101_shopm1_2 se tient en (2,6), derrière le comptoir — une tuile que la grille rend volontairement inatteignable. Comme l'infirmière du Centre Pokémon, il se tient donc sur le comptoir : dessiné au bon endroit, interpellable depuis l'allée, et son doublon ROM trié par la règle « même sprite à une case ».",
+  "sprite_id": "SPRITE_SHOPM1_2"
  },
  {
   "npc_id": "pokecenter_clerk_cherrygrove",
   "zone_id": "cherrygrove-city",
   "name": "Center Clerk",
   "map_zone": "MAP_CHERRYGROVE_POKECENTER_1F",
-  "tile_x": 15,
-  "tile_y": 5,
+  "tile_x": 8,
+  "tile_y": 12,
   "facing": "south",
   "position_status": "fix issue 12 (2026-07-30) : était (57,10) extérieur — une poche de tuiles peintes du bâtiment, isolée de tout chemin marchable (injoignable, même bug de fond que Mom/Elm : PNJ d'intérieur aplati sur la zone extérieure). Désormais dans le Centre Pokémon 1F, derrière le comptoir nord-est, interagible par A depuis (15,6)",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/cherrygrove-city/pokecenter_clerk_cherrygrove"
+  "dialogue_ref": "npcs/cherrygrove-city/pokecenter_clerk_cherrygrove",
+  "_note_sprite": "position 2026-08-07 : (15,5) → (8,12), AU comptoir de soins. Elle était invisible (aucun sprite_id) et posée à l'autre bout de la salle. L'objet ROM obj_T21PC0101_pcwoman1 se tient en (8,11), DERRIÈRE le comptoir — une tuile que la grille rend volontairement inatteignable (le jeu d'origine laisse parler par-dessus le comptoir, notre moteur exige une case adjacente). Elle se tient donc sur la tuile du comptoir lui-même : dessinée au bon endroit, interpellable depuis (8,13), et son doublon ROM disparaît par la règle « même sprite à une case ».",
+  "sprite_id": "SPRITE_PCWOMAN1"
  },
  {
   "npc_id": "entrance_boy_route30",
@@ -349,19 +354,22 @@
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-31.json",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/route-31/lyra_ethan_route31"
+  "dialogue_ref": "npcs/route-31/lyra_ethan_route31",
+  "sprite_id": "SPRITE_HEROINE",
+  "_note_sprite": "apparence 2026-08-07 : le personnage n'était dessiné NULLE PART (aucun sprite_id, aucun objet ROM sous ses pieds) — une tuile vide qui répond au bouton A. même personnage qu'à Bourg Geon et sur la Route 29, où la ROM la sert via SPRITE_VAR_2/FLAG_HIDE_ROUTE_29_FRIEND."
  },
  {
   "npc_id": "black_apricorn_man_route31",
   "zone_id": "route-31",
   "name": "Man by the Black Apricorn",
-  "tile_x": 32,
+  "tile_x": 28,
   "tile_y": 15,
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/route-31.json",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/route-31/black_apricorn_man_route31"
+  "dialogue_ref": "npcs/route-31/black_apricorn_man_route31",
+  "_note_sprite": "position 2026-08-07 : (32, 15) → (28,15), reposé sur obj_R31_gsbigman (SPRITE_GSBIGMAN), l'homme planté à côté du Bonguri noir de la Route 31 — il était posé 4 cases à l'est, invisible, pendant que son objet ROM était dessiné sans dialogue. Il hérite ainsi de l'apparence de son objet ROM (src/lib/rom-decor.ts)."
  },
  {
   "npc_id": "glasses_man_violet_city",
@@ -372,7 +380,9 @@
   "facing": "west",
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json | 2026-08-06 (issue 13, carte de conception) : était en (42,16), au nord de la ville sur le pont — soit à 20 tuiles de la porte de l'arène qu'il est censé barrer. Reposé contre la porte de l'arène (warp (479,257) → (31,33), abordée depuis (31,34)) : il se tient sur la tuile voisine (32,34) et devient le PNJ délégué du verrou gym_guide_violet_sprout_tower.",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/violet-city/glasses_man_violet_city"
+  "dialogue_ref": "npcs/violet-city/glasses_man_violet_city",
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 : le personnage n'était dessiné NULLE PART (aucun sprite_id, aucun objet ROM sous ses pieds) — une tuile vide qui répond au bouton A. aucun objet ROM à sa position ; sprite d'homme adulte générique de la zone (obj_T22_gsman1 en (41,30) porte le même)."
  },
  {
   "npc_id": "earl_violet_city",
@@ -397,19 +407,22 @@
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/violet-city/blond_boy_violet_city"
+  "dialogue_ref": "npcs/violet-city/blond_boy_violet_city",
+  "sprite_id": "SPRITE_GSBOY1",
+  "_note_sprite": "apparence 2026-08-07 : le personnage n'était dessiné NULLE PART (aucun sprite_id, aucun objet ROM sous ses pieds) — une tuile vide qui répond au bouton A. aucun objet ROM à sa position ; sprite de garçon générique."
  },
  {
   "npc_id": "glasses_boy_violet_city",
   "zone_id": "violet-city",
   "name": "Boy with Glasses",
-  "tile_x": 16,
+  "tile_x": 14,
   "tile_y": 35,
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/violet-city/glasses_boy_violet_city"
+  "dialogue_ref": "npcs/violet-city/glasses_boy_violet_city",
+  "_note_sprite": "position 2026-08-07 : (16, 35) → (14,35), reposé sur obj_T22_gsboy2, à 2 cases de son ancienne position, invisible de la même façon. Il hérite ainsi de l'apparence de son objet ROM (src/lib/rom-decor.ts)."
  },
  {
   "npc_id": "mart_boy_violet_city",
@@ -421,7 +434,9 @@
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/violet-city/mart_boy_violet_city"
+  "dialogue_ref": "npcs/violet-city/mart_boy_violet_city",
+  "sprite_id": "SPRITE_GSBOY2",
+  "_note_sprite": "apparence 2026-08-07 : le personnage n'était dessiné NULLE PART (aucun sprite_id, aucun objet ROM sous ses pieds) — une tuile vide qui répond au bouton A. aucun objet ROM à sa position ; sprite de garçon générique, celui-là même que la ROM pose ailleurs dans Irisia (obj_T22_gsboy2)."
  },
  {
   "npc_id": "teala_violet_city",
@@ -438,7 +453,9 @@
     "badge_id": "falkner"
    }
   ],
-  "dialogue_ref": "npcs/violet-city/teala_violet_city"
+  "dialogue_ref": "npcs/violet-city/teala_violet_city",
+  "sprite_id": "SPRITE_GSGIRL2",
+  "_note_sprite": "apparence 2026-08-07 : le personnage n'était dessiné NULLE PART (aucun sprite_id, aucun objet ROM sous ses pieds) — une tuile vide qui répond au bouton A. aucun objet ROM à sa position ; sprite de fille générique."
  },
  {
   "npc_id": "kimono_zuki_violet_city",
@@ -475,14 +492,16 @@
   "npc_id": "mart_vendor_violet_city",
   "zone_id": "violet-city",
   "name": "Mart Clerk",
-  "tile_x": 8,
-  "tile_y": 3,
+  "tile_x": 3,
+  "tile_y": 5,
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/violet-city.json | 2026-08-06 : était en (48,50) de la zone EXTÉRIEURE — un vendeur de Mart planté dans un champ. Déplacé DANS MAP_VIOLET_POKEMART. La tuile de l'objet ROM (obj_T22FS0101_shopm1_2, (2,6)) est dans l'alcôve murée du comptoir, sans voisin praticable — exactement le défaut déjà rencontré pour le vendeur de Ville Griotte ; même résolution que lui : (8,3), la tuile praticable la plus proche formant un vrai comptoir, dos au mur nord.",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/violet-city/mart_vendor_violet_city",
   "map_zone": "MAP_VIOLET_POKEMART",
-  "role": "lesson"
+  "role": "lesson",
+  "_note_sprite": "position 2026-08-07 : (2, 6) → (3,5), SUR le comptoir. Il était invisible (aucun sprite_id) et posé au milieu de la boutique. Son objet ROM obj_T22FS0101_shopm1_2 se tient en (2,6), derrière le comptoir — une tuile que la grille rend volontairement inatteignable. Comme l'infirmière du Centre Pokémon, il se tient donc sur le comptoir : dessiné au bon endroit, interpellable depuis l'allée, et son doublon ROM trié par la règle « même sprite à une case ».",
+  "sprite_id": "SPRITE_SHOPM1_2"
  },
  {
   "npc_id": "sages_sprout_tower",

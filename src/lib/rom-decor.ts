@@ -73,6 +73,27 @@ function isItemBall(obj: ZoneObject): boolean {
   return obj.spriteId === ITEM_BALL_SPRITE
 }
 
+/** L'apparence qu'un personnage curaté hérite du décor ROM qu'il remplace.
+ *
+ * Un PNJ curaté sans `sprite_id` n'était dessiné NULLE PART : le rendu ne
+ * produisait qu'un div vide de 18 px. Le joueur croisait donc des tuiles vides
+ * qui répondent au bouton A — Mr. Pokémon et le Prof. Chen invisibles dans leur
+ * propre maison, le vieux monsieur d'Écorcia invisible sur le chemin de la
+ * Route 30 (issue 13, QA du 2026-08-07).
+ *
+ * La curation repose la plupart de ces personnages SUR leur objet ROM, et
+ * `visibleRomObjects` retire justement cet objet pour ne pas dessiner deux fois
+ * le même personnage. L'apparence est donc là, sous ses pieds : on la lui rend
+ * plutôt que de la jeter. Ça ne dispense pas d'écrire `sprite_id` — c'est un
+ * filet, pas une source — mais aucun personnage posé sur son objet ROM ne peut
+ * plus devenir invisible par oubli.
+ */
+export function inheritedSpriteId(zone: Zone, worldX: number, worldZ: number): string | undefined {
+  const obj = zone.objects.find(o => o.x === worldX && o.z === worldZ)
+  if (!obj || isObstacle(obj) || isItemBall(obj)) return undefined
+  return resolveNpcSprite(obj.spriteId, obj.eventFlag) ? obj.spriteId : undefined
+}
+
 /** Les objets ROM que la carte sert vraiment, dans l'ordre du registre.
  *
  * @param occupants PNJ et dresseurs curatés DÉJÀ servis pour cette zone

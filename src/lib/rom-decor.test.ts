@@ -6,7 +6,7 @@ import { describe, it, expect } from 'vitest'
 import { getZoneByName } from './zones'
 import { getNpcsForZone } from './npcs'
 import { getTrainersForZone } from './trainers'
-import { visibleRomObjects } from './rom-decor'
+import { visibleRomObjects, inheritedSpriteId } from './rom-decor'
 import { canTraverse, warpAt } from './zone-geometry'
 import { resolveNpcSprite } from './npc-sprites'
 
@@ -47,8 +47,11 @@ describe('doublons avec le contenu curaté', () => {
     // carte, il ne doit retirer que les doublons.
     const ids = served(getZoneByName('MAP_ROUTE_31')!)
     expect(ids).toContain('obj_R31_gsman1')
-    expect(ids).toContain('obj_R31_gsbigman')
     expect(ids).toContain('obj_R31_gsboy1')
+    // obj_R31_gsbigman, lui, a rejoint le contenu curaté le 2026-08-07 :
+    // black_apricorn_man_route31 était posé 4 cases à l'est et invisible, il est
+    // revenu sur son objet — donc trié comme un doublon, comme il se doit.
+    expect(ids).not.toContain('obj_R31_gsbigman')
   })
 
   it('le Silver du décor ne double pas le Silver curaté, à Bourg Geon', () => {
@@ -132,5 +135,27 @@ describe('le couloir ouest de la Route 30 est franchissable', () => {
   it('avec le tri, le couloir remonte jusqu’en haut de la route', () => {
     const solids = new Set(visibleRomObjects(ROUTE_30, occupantsOf(ROUTE_30), []).map(o => `${o.x},${o.z}`))
     expect(northernmostReachable(solids)).toBeLessThan(10)
+  })
+})
+
+describe('un personnage curaté sans sprite déclaré', () => {
+  it('hérite de l’apparence de l’objet ROM qu’il remplace', () => {
+    // Vu en jeu (2026-08-07) : dans la maison de M. Pokémon, la capture montrait
+    // les figurants peints, et nos deux personnages — M. Pokémon et le Prof.
+    // Chen, posés sur leurs objets ROM en (9,7) et (8,7) — n'étaient dessinés
+    // nulle part. Ils portent le dialogue qui donne l'Œuf : invisibles, ils
+    // restaient une tuile vide qui répond au bouton A.
+    const house = getZoneByName('MAP_ROUTE_30_MR_POKEMON_HOUSE')!
+    expect(inheritedSpriteId(house, 9, 7)).toBe('SPRITE_GSGENTLEMAN')
+    expect(inheritedSpriteId(house, 8, 7)).toBe('SPRITE_OOKIDO')
+  })
+
+  it('n’hérite ni d’un arbre, ni d’une Poké Ball, ni d’une tuile vide', () => {
+    // Le filet ne doit pas déguiser un personnage en décor.
+    expect(inheritedSpriteId(ROUTE_30, 0, 0)).toBeUndefined()
+    const tree = ROUTE_30.objects.find(o => o.id === 'obj_R30_tree')!
+    expect(inheritedSpriteId(ROUTE_30, tree.x, tree.z)).toBeUndefined()
+    const ball = ROUTE_30.objects.find(o => o.spriteId === 'SPRITE_MONSTARBALL')
+    if (ball) expect(inheritedSpriteId(ROUTE_30, ball.x, ball.z)).toBeUndefined()
   })
 })

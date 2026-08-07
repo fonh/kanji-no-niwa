@@ -51,7 +51,7 @@ import {
   clearedLine,
   type MapProgress,
 } from '@/lib/obstacles'
-import { visibleRomObjects } from '@/lib/rom-decor'
+import { visibleRomObjects, inheritedSpriteId } from '@/lib/rom-decor'
 import { cameraOffset, depthZ, mapZoom, DEPTH_Z_CEILING } from '@/lib/map-camera'
 import { collectibleTextFor } from '@/lib/collectibles'
 import { DEFAULT_CENTER, isPokemonCenter, recordDefeat } from '@/lib/blackout'
@@ -1544,7 +1544,11 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
           {npcs.map(npc => {
             const px = worldToPixel(npc.world_x, npc.world_z)
             const intercepting = interceptingNpc === npc.npc_id
-            const sprite = npc.sprite_id ? resolveNpcSprite(npc.sprite_id) : null
+            // Sans sprite_id déclaré, le personnage hérite de l'apparence de
+            // l'objet ROM qu'il remplace (src/lib/rom-decor.ts) — sinon il est
+            // purement invisible.
+            const spriteId = npc.sprite_id ?? inheritedSpriteId(zone, npc.world_x, npc.world_z)
+            const sprite = spriteId ? resolveNpcSprite(spriteId) : null
             const frame = sprite ? spriteFrameOffset(sprite, npc.facing ?? 'south') : null
             return (
               <div
@@ -1598,7 +1602,9 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             // ne rendait qu'un div vide de 18px, donc RIEN à l'écran — d'où
             // « les dresseurs ne font rien », on ne pouvait pas les voir, et
             // encore moins deviner où passait leur ligne de vue (issue 13).
-            const sprite = trainer.sprite_id ? resolveNpcSprite(trainer.sprite_id) : null
+            const spriteId =
+              trainer.sprite_id ?? inheritedSpriteId(zone, trainer.world_x, trainer.world_z)
+            const sprite = spriteId ? resolveNpcSprite(spriteId) : null
             const frame = sprite ? spriteFrameOffset(sprite, trainer.facing) : null
             return (
               <div

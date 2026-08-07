@@ -41,7 +41,7 @@
    "trusted": true
   },
   "MAP_AZALEA_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -61,7 +61,7 @@
    "trusted": true
   },
   "MAP_AZALEA_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -301,7 +301,7 @@
    "trusted": true
   },
   "MAP_BLACKTHORN_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -321,7 +321,7 @@
    "trusted": true
   },
   "MAP_BLACKTHORN_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -461,7 +461,7 @@
    "trusted": true
   },
   "MAP_CELADON_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -571,7 +571,7 @@
    "trusted": true
   },
   "MAP_CERULEAN_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -591,7 +591,7 @@
    "trusted": true
   },
   "MAP_CERULEAN_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -631,7 +631,7 @@
    "trusted": true
   },
   "MAP_CHERRYGROVE_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -651,7 +651,7 @@
    "trusted": true
   },
   "MAP_CHERRYGROVE_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -741,7 +741,7 @@
    "trusted": true
   },
   "MAP_CIANWOOD_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -771,7 +771,7 @@
    "trusted": true
   },
   "MAP_CINNABAR_ISLAND_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -901,7 +901,7 @@
    "trusted": false
   },
   "MAP_ECRUTEAK_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -921,7 +921,7 @@
    "trusted": true
   },
   "MAP_ECRUTEAK_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -1041,7 +1041,7 @@
    "trusted": true
   },
   "MAP_FUCHSIA_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -1061,7 +1061,7 @@
    "trusted": true
   },
   "MAP_FUCHSIA_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -1261,7 +1261,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -1481,7 +1481,7 @@
    "trusted": true
   },
   "MAP_LAVENDER_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -1501,7 +1501,7 @@
    "trusted": true
   },
   "MAP_LAVENDER_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -1591,7 +1591,7 @@
    "trusted": true
   },
   "MAP_MAHOGANY_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -1751,7 +1751,7 @@
    "trusted": true
   },
   "MAP_MOUNT_SILVER_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -1981,7 +1981,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -2001,7 +2001,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -2111,7 +2111,7 @@
    "trusted": true
   },
   "MAP_PEWTER_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -2131,7 +2131,7 @@
    "trusted": true
   },
   "MAP_PEWTER_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -2291,7 +2291,7 @@
    "trusted": true
   },
   "MAP_ROUTE_10_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -2739,7 +2739,7 @@
    "trusted": true
   },
   "MAP_ROUTE_32_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -2909,7 +2909,7 @@
    "trusted": true
   },
   "MAP_ROUTE_3_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3329,7 +3329,7 @@
    "trusted": false
   },
   "MAP_SAFARI_ZONE_GATE_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3409,7 +3409,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3429,7 +3429,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -3749,7 +3749,7 @@
    "trusted": true
   },
   "MAP_VERMILION_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3769,7 +3769,7 @@
    "trusted": true
   },
   "MAP_VERMILION_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -3869,7 +3869,7 @@
    "trusted": true
   },
   "MAP_VIOLET_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3889,7 +3889,7 @@
    "trusted": true
   },
   "MAP_VIOLET_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -3958,7 +3958,7 @@
    "trusted": true
   },
   "MAP_VIRIDIAN_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16962",
+   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3978,7 +3978,7 @@
    "trusted": true
   },
   "MAP_VIRIDIAN_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10774",
+   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,

@@ -18,8 +18,8 @@ silhouette. Le sol autour n'est jamais réécrit — donc aucun raccord possible
     python3 scripts/build/scrub_baked_sprites.py MAP_ROUTE_30 --dry-run
     python3 scripts/build/scrub_baked_sprites.py MAP_ROUTE_30
 
-La carte d'origine est sauvegardée en `<nom>.baked.png` la première fois, pour
-qu'un second passage reparte toujours de l'original.
+La carte d'origine est sauvegardée sous scripts/sources/maps-baked/ la première
+fois, pour qu'un second passage reparte toujours de l'original.
 """
 
 from __future__ import annotations
@@ -46,6 +46,7 @@ OFFSETS = [
     if (dx, dy) != (0, 0)
 ]
 SHADOW_RX, SHADOW_RY = 9.0, 5.0  # demi-axes de l'ombre, en pixels
+BAKED = Path("scripts/sources/maps-baked")  # les originaux, avant effacement
 RING = 3  # épaisseur, en pixels, de la couronne de décor qui juge un décalage
 
 
@@ -74,7 +75,10 @@ def shadow_of(cx: float, cy: float, h: int, w: int) -> np.ndarray:
 def scrub(zone_name: str, threshold: float, dry_run: bool) -> int:
     zone = next(z for z in json.load(open(REGISTRY))["zones"] if z["name"] == zone_name)
     shot = Path("public") / zone["screenshot"].lstrip("/")
-    backup = shot.with_suffix(".baked.png")
+    # L'original vit HORS de public/maps/ : le registre y cherche ses captures
+    # par mot-clé, et une sauvegarde posée à côté se faisait servir à des zones
+    # qui partagent le nom (les quatre « Southwest House » ont pris le .baked).
+    backup = BAKED / shot.name
     if backup.exists():
         Image.open(backup).convert("RGB").save(shot)
 
@@ -140,6 +144,7 @@ def scrub(zone_name: str, threshold: float, dry_run: bool) -> int:
         print(f"{zone_name} : {done} silhouette(s) — essai à blanc, rien écrit")
         return done
     if not backup.exists():
+        backup.parent.mkdir(parents=True, exist_ok=True)
         Image.open(shot).convert("RGB").save(backup)
     Image.fromarray(img.astype(np.uint8)).save(shot)
     revalidate_alignment(zone_name, shot)
