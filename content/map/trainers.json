@@ -896,7 +896,9 @@
   "role": "battle",
   "sight_range": 4,
   "battle_length": 9,
-  "dialogue_ref": "trainers/route-34/pokefan_brandon_route34"
+  "dialogue_ref": "trainers/route-34/pokefan_brandon_route34",
+  "sprite_id": "SPRITE_LADY",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Pokéfan Brandon » (règle /pokéfan|lady|madam/). Habillage, pas une source."
  },
  {
   "trainer_id": "youngster_samuel_route34",
@@ -961,7 +963,9 @@
   "role": "battle",
   "sight_range": 3,
   "battle_length": 13,
-  "dialogue_ref": "trainers/route-34/ace_trainer_jenn_route34"
+  "dialogue_ref": "trainers/route-34/ace_trainer_jenn_route34",
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Jenn » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_irene_route34",
@@ -977,7 +981,9 @@
   "role": "battle",
   "sight_range": 3,
   "battle_length": 13,
-  "dialogue_ref": "trainers/route-34/ace_trainer_irene_route34"
+  "dialogue_ref": "trainers/route-34/ace_trainer_irene_route34",
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Irene » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_kate_route34",
@@ -993,7 +999,9 @@
   "role": "battle",
   "sight_range": 3,
   "battle_length": 13,
-  "dialogue_ref": "trainers/route-34/ace_trainer_kate_route34"
+  "dialogue_ref": "trainers/route-34/ace_trainer_kate_route34",
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Kate » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "beauty_victoria_goldenrod",
@@ -1333,7 +1341,10 @@
   "role": "battle",
   "sight_range": 4,
   "battle_length": 10,
-  "dialogue_ref": "trainers/national-park/pokefan_beverly_national_park"
+  "dialogue_ref": "trainers/national-park/pokefan_beverly_national_park",
+  "sprite_id": "SPRITE_COUNTERM",
+  "rom_object": "obj_D22R0101_counterm",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_D22R0101_counterm (SPRITE_COUNTERM), à 4 case(s) — le personnage le REPRÉSENTE (`rom_object`), le décor ne le dessine donc plus une seconde fois."
  },
  {
   "trainer_id": "lass_krise_national_park",
@@ -1369,7 +1380,9 @@
   "role": "battle",
   "sight_range": 4,
   "battle_length": 10,
-  "dialogue_ref": "trainers/national-park/pokefan_william_national_park"
+  "dialogue_ref": "trainers/national-park/pokefan_william_national_park",
+  "sprite_id": "SPRITE_LADY",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Pokéfan William » (règle /pokéfan|lady|madam/). Habillage, pas une source."
  },
  {
   "trainer_id": "school_kid_jack_national_park",
@@ -1740,7 +1753,10 @@
   "dialogue_ref": "trainers/route-39/pokefan_derek_route39",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_GSMIDDLEMAN1",
+  "rom_object": "obj_R39_gsmiddleman1_2",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_R39_gsmiddleman1_2 (SPRITE_GSMIDDLEMAN1), à 4 case(s) — le personnage le REPRÉSENTE (`rom_object`), le décor ne le dessine donc plus une seconde fois."
  },
  {
   "trainer_id": "pokefan_ruth_route39",
@@ -1756,7 +1772,9 @@
   "dialogue_ref": "trainers/route-39/pokefan_ruth_route39",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_LADY",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Pokéfan Ruth » (règle /pokéfan|lady|madam/). Habillage, pas une source."
  },
  {
   "trainer_id": "psychic_nelson_route39",
@@ -2638,7 +2656,10 @@
   "dialogue_ref": "trainers/route-42/poke_maniac_shane_route42",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_MOUNT_2",
+  "rom_object": "obj_R42_mount_2_2",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_R42_mount_2_2 (SPRITE_MOUNT_2), à 4 case(s) — le personnage le REPRÉSENTE (`rom_object`), le décor ne le dessine donc plus une seconde fois."
  },
  {
   "trainer_id": "super_nerd_hugh_mt_mortar",
@@ -3002,7 +3023,9 @@
   "dialogue_ref": "trainers/route-43/poke_maniac_ron_route43",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_MANIA",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Poké Maniac Ron » (règle /poké ?maniac|maniac/). Habillage, pas une source."
  },
  {
   "trainer_id": "poke_maniac_beckett_route43",
@@ -3018,7 +3041,9 @@
   "dialogue_ref": "trainers/route-43/poke_maniac_beckett_route43",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_MANIA",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Poké Maniac Beckett » (règle /poké ?maniac|maniac/). Habillage, pas une source."
  },
  {
   "trainer_id": "poke_maniac_brent_route43",
@@ -3034,7 +3059,9 @@
   "dialogue_ref": "trainers/route-43/poke_maniac_brent_route43",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_MANIA",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Poké Maniac Brent » (règle /poké ?maniac|maniac/). Habillage, pas une source."
  },
  {
   "trainer_id": "camper_spencer_route43",
@@ -3095,7 +3122,9 @@
     "step": "scale_obtained",
     "negate": true
    }
-  ]
+  ],
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : PROVISOIRE. Aucun objet ROM libre, aucune classe reconnue dans « The Raging Kanji » — silhouette d'adulte générique, à remplacer quand la zone passera à la passe PNJ."
  },
  {
   "trainer_id": "fisherman_raymond_lake_of_rage",
@@ -3178,7 +3207,9 @@
     "quest_id": "rocket_hq_mahogany",
     "step": "hq_fallen"
    }
-  ]
+  ],
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Alton » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_lois_lake_of_rage",
@@ -3207,7 +3238,10 @@
     "quest_id": "rocket_hq_mahogany",
     "step": "hq_fallen"
    }
-  ]
+  ],
+  "sprite_id": "SPRITE_GSMAN1",
+  "rom_object": "obj_T29_gsman1_2",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_T29_gsman1_2 (SPRITE_GSMAN1), à 2 case(s) — le personnage le REPRÉSENTE (`rom_object`), le décor ne le dessine donc plus une seconde fois."
  },
  {
   "trainer_id": "burglar_orson_goldenrod",
@@ -4081,7 +4115,9 @@
   "dialogue_ref": "trainers/route-44/ace_trainer_cybil_route44",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Cybil » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_allen_route44",
@@ -4097,7 +4133,9 @@
   "dialogue_ref": "trainers/route-44/ace_trainer_allen_route44",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Allen » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "poke_maniac_zach_route44",
@@ -4113,7 +4151,9 @@
   "dialogue_ref": "trainers/route-44/poke_maniac_zach_route44",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_MANIA",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Poké Maniac Zach » (règle /poké ?maniac|maniac/). Habillage, pas une source."
  },
  {
   "trainer_id": "bird_keeper_vance_route44",
@@ -4296,7 +4336,9 @@
   "dialogue_ref": "trainers/dragons-den/ace_trainer_kobe_dragons_den",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Kobe » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_piper_dragons_den",
@@ -4312,7 +4354,9 @@
   "dialogue_ref": "trainers/dragons-den/ace_trainer_piper_dragons_den",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Piper » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "twins_clea_gil_dragons_den",
@@ -4676,7 +4720,9 @@
   "dialogue_ref": "trainers/route-26/ace_trainer_gaven_route26",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Gaven » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_jamie_route26",
@@ -4692,7 +4738,9 @@
   "dialogue_ref": "trainers/route-26/ace_trainer_jamie_route26",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Jamie » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_jake_route26",
@@ -4708,7 +4756,9 @@
   "dialogue_ref": "trainers/route-26/ace_trainer_jake_route26",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Jake » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_joyce_route26",
@@ -4724,7 +4774,9 @@
   "dialogue_ref": "trainers/route-26/ace_trainer_joyce_route26",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Joyce » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "fisherman_scott_route26",
@@ -4780,7 +4832,9 @@
   "dialogue_ref": "trainers/route-27/ace_trainer_megan_route27",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Megan » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_blake_route27",
@@ -4796,7 +4850,9 @@
   "dialogue_ref": "trainers/route-27/ace_trainer_blake_route27",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Blake » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_reena_route27",
@@ -4812,7 +4868,9 @@
   "dialogue_ref": "trainers/route-27/ace_trainer_reena_route27",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Reena » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "ace_trainer_brian_route27",
@@ -4828,7 +4886,9 @@
   "dialogue_ref": "trainers/route-27/ace_trainer_brian_route27",
   "sight_auto_result": "battle",
   "repeats": false,
-  "sight_range": 4
+  "sight_range": 4,
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Ace Trainer Brian » (règle /ace trainer|cooltrainer/). Habillage, pas une source."
  },
  {
   "trainer_id": "bird_keeper_jose_route27",

@@ -159,3 +159,32 @@ describe('un personnage curaté sans sprite déclaré', () => {
     if (ball) expect(inheritedSpriteId(ROUTE_30, ball.x, ball.z)).toBeUndefined()
   })
 })
+
+describe('un personnage qui REPRÉSENTE un objet ROM sans être posé dessus', () => {
+  // `rom_object` (2026-08-07) : la coïncidence de tuile et la coïncidence de
+  // sprite ne suffisaient pas. Un personnage décalé de trois cases — parce que
+  // sa tuile ROM était inatteignable, ou parce que le curateur l'a rapproché du
+  // chemin — était dessiné À CÔTÉ de son propre figurant. C'est la façon
+  // explicite de dire « ces deux-là sont le même ».
+  const zone = ROUTE_30
+  const objet = zone.objects.find(o => o.spriteId !== 'SPRITE_MONSTARBALL' && o.id !== 'obj_R30_tree')!
+
+  it('retire l’objet représenté, où qu’il soit sur la carte', () => {
+    const loin = [{ world_x: objet.x + 6, world_z: objet.z + 6, rom_object: objet.id }]
+    expect(visibleRomObjects(zone, loin, []).map(o => o.id)).not.toContain(objet.id)
+  })
+
+  it('et lui donne son apparence', () => {
+    expect(inheritedSpriteId(zone, objet.x + 6, objet.z + 6, objet.id)).toBe(objet.spriteId)
+  })
+
+  it('sans rien retirer d’autre', () => {
+    const avant = visibleRomObjects(zone, occupantsOf(zone), []).length
+    const apres = visibleRomObjects(
+      zone,
+      [...occupantsOf(zone), { world_x: -999, world_z: -999, rom_object: objet.id }],
+      []
+    ).length
+    expect(avant - apres).toBeLessThanOrEqual(1)
+  })
+})

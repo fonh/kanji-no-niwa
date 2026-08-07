@@ -76,6 +76,29 @@ Le journal les liste toutes, mais celles-ci sont pour cette tâche :
 - un porteur de leçon gaté par un badge ou un jour de la semaine
   (`audit-first-gym-run.py` le refuse).
 
+## Ce qui est déjà automatisé — ne le refais pas à la main
+
+Trois commandes tiennent l'échelle à ta place. Lance-les AVANT de toucher au
+contenu, et re-lance-les après :
+
+```
+npm run maps:scrub     # efface les personnages peints dans les captures
+npm run maps:verify    # re-mesure : plus aucune silhouette peinte ?
+npm run npc:sprites    # habille tout personnage sans apparence
+```
+
+Conséquences pour ta passe :
+
+- **N'écris pas un `sprite_id` à la main si le personnage est posé sur son objet
+  ROM** : le moteur en hérite l'apparence tout seul. Reposer un personnage sur
+  son objet est donc doublement payant (apparence + doublon retiré).
+- **S'il est décalé de son objet**, note `rom_object: "obj_..."` : c'est la
+  façon explicite de dire « ces deux-là sont le même personnage », sinon le
+  décor dessine le figurant À CÔTÉ de ton personnage.
+- `npm run npc:sprites` laisse une trace de sa règle et de sa source dans
+  `_note_sprite`. Une note qui dit « PROVISOIRE » est un personnage à habiller
+  correctement pendant ta passe — c'est ta liste de travail.
+
 ## Comment tu vérifies ton travail sans moi
 
 `python3 scripts/validate/render-zone-preview.py MAP_ROUTE_30 --around 8,43`

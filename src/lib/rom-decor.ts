@@ -39,6 +39,12 @@ export interface DecorOccupant {
   world_x: number
   world_z: number
   sprite_id?: string
+  /** L'objet ROM que ce personnage REPRÉSENTE, quand il n'est pas posé
+   * exactement dessus. Écrit par `scripts/build/assign-npc-sprites.py` : c'est
+   * la façon explicite de dire « ces deux-là sont le même personnage », là où
+   * la coïncidence de tuile ou de sprite ne suffit pas (le curateur l'a décalé
+   * de trois cases pour le rendre joignable, par exemple). */
+  rom_object?: string
 }
 
 /** Présence CONDITIONNELLE dans la ROM : le jeu d'origine décide de montrer
@@ -88,8 +94,15 @@ function isItemBall(obj: ZoneObject): boolean {
  * filet, pas une source — mais aucun personnage posé sur son objet ROM ne peut
  * plus devenir invisible par oubli.
  */
-export function inheritedSpriteId(zone: Zone, worldX: number, worldZ: number): string | undefined {
-  const obj = zone.objects.find(o => o.x === worldX && o.z === worldZ)
+export function inheritedSpriteId(
+  zone: Zone,
+  worldX: number,
+  worldZ: number,
+  romObject?: string
+): string | undefined {
+  const obj = romObject
+    ? zone.objects.find(o => o.id === romObject)
+    : zone.objects.find(o => o.x === worldX && o.z === worldZ)
   if (!obj || isObstacle(obj) || isItemBall(obj)) return undefined
   return resolveNpcSprite(obj.spriteId, obj.eventFlag) ? obj.spriteId : undefined
 }
@@ -125,6 +138,7 @@ export function visibleRomObjects(
     // — c'est le cas des dresseurs reposés sur leur objet ROM), ou même sprite
     // à une tuile près (le personnage a été décalé à la curation).
     const duplicated = occupants.some(o => {
+      if (o.rom_object === obj.id) return true
       if (o.world_x === obj.x && o.world_z === obj.z) return true
       if (!o.sprite_id) return false
       const sameSprite =

@@ -10,6 +10,8 @@ interface RawTrainer {
   /** SPRITE_* de l'objet ROM correspondant — sans lui le dresseur était
    * dessiné comme un carré vide, donc invisible (issue 13). */
   sprite_id?: string
+  /** Objet ROM représenté — voir DecorOccupant (src/lib/rom-decor.ts). */
+  rom_object?: string
   name: string
   tile_x: number
   tile_y: number
@@ -24,6 +26,7 @@ export interface ZoneTrainer {
   trainer_id: string
   zone_id: string
   sprite_id?: string
+  rom_object?: string
   name: string
   world_x: number
   world_z: number
@@ -63,6 +66,7 @@ export function getTrainersForZone(zone: Zone): ZoneTrainer[] {
       trainer_id: t.trainer_id,
       zone_id: t.zone_id,
       sprite_id: t.sprite_id,
+      rom_object: t.rom_object,
       name: t.name,
       world_x: zone.world_origin_x + t.tile_x,
       world_z: zone.world_origin_y + t.tile_y,

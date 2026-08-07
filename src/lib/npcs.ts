@@ -51,6 +51,9 @@ interface RawNpc {
   // src/lib/npc-sprites.ts), posé au cas par cas quand un vrai sprite
   // 4-directions vérifié existe (HNS_PEOPLE).
   sprite_id?: string
+  /** L'objet ROM que ce personnage représente, quand il n'est pas posé
+   * exactement dessus — voir DecorOccupant (src/lib/rom-decor.ts). */
+  rom_object?: string
   /** Postes successifs, du plus tardif au plus précoce — le PREMIER dont les
    * conditions sont remplies gagne. Absent : le PNJ ne bouge jamais et
    * `tile_x`/`tile_y` font foi (cas de la grande majorité). */
@@ -72,6 +75,7 @@ export interface ZoneNpc {
   sight_auto_result?: string
   repeats?: boolean
   sprite_id?: string
+  rom_object?: string
 }
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -140,5 +144,6 @@ export function getNpcsForZone(
       sight_auto_result: n.sight_auto_result,
       repeats: n.repeats,
       sprite_id: n.sprite_id,
+      rom_object: n.rom_object,
     }))
 }

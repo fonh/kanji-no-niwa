@@ -1,0 +1,726 @@
+[1/214] MAP_ROUTE_30_APRICORN_HOUSE  (Apricorn Man House HGSS.png)
+MAP_ROUTE_30_APRICORN_HOUSE : aucune silhouette au seuil 30.0
+[2/214] MAP_AZALEA_GYM  (Azalea Gym HGSS.png)
+  gsboy3         tuile=(16, 22) px=(277, 323)  décalage=(+2,+0) tuiles  raccord=26.9
+  gsboy3         tuile=(16, 7) px=(277, 138)  décalage=(+3,-1) tuiles  raccord=36.6
+  gsbabygirl1    tuile=(2, 7) px=(72, 140)  décalage=(-3,-1) tuiles  raccord=29.8
+  gsbabygirl1    tuile=(3, 7) px=(88, 140)  décalage=(-3,-1) tuiles  raccord=32.1
+  gsleader2      tuile=(9, 5) px=(183, 113)  décalage=(-2,+0) tuiles  raccord=15.9
+  gsboy3         tuile=(7, 20) px=(149, 298)  décalage=(-1,+2) tuiles  raccord=20.9
+  recalage ADR-0006 réaccordé : Azalea Gym HGSS.png:94233
+MAP_AZALEA_GYM : 6 silhouette(s) effacée(s) → public/maps/Azalea Gym HGSS.png
+[3/214] MAP_BATTLE_FRONTIER_BATTLE_FACTORY  (Battle Frontier entrance HGSS.png)
+MAP_BATTLE_FRONTIER_BATTLE_FACTORY : aucune silhouette au seuil 30.0
+[4/214] MAP_BATTLE_TOWER  (Battle Tower HGSS.png)
+  gsboy1         tuile=(21, 14) px=(312, 263)  décalage=(-2,+0) tuiles  raccord=9.8
+  gsboy1         tuile=(21, 17) px=(312, 324)  décalage=(+0,+2) tuiles  raccord=11.1
+  bfsm           tuile=(15, 10) px=(230, 186)  décalage=(+2,+0) tuiles  raccord=27.7
+  bfsw1          tuile=(11, 10) px=(166, 187)  décalage=(+2,+0) tuiles  raccord=22.7
+  gsassistantm   tuile=(25, 11) px=(374, 211)  décalage=(-3,+0) tuiles  raccord=23.0
+  pcwoman1       tuile=(14, 16) px=(215, 298)  décalage=(-1,-2) tuiles  raccord=40.2
+  gsmiddleman1   tuile=(3, 15) px=(39, 286)  décalage=(+3,+0) tuiles  raccord=46.6
+  gsassistantm   tuile=(10, 15) px=(152, 286)  décalage=(-2,+0) tuiles  raccord=1.7
+  idol           tuile=(6, 13) px=(86, 250)  décalage=(+3,-2) tuiles  raccord=30.8
+  wifisf         tuile=(20, 10) px=(292, 188)  décalage=(-2,+0) tuiles  raccord=19.2
+  gorggeousm     tuile=(26, 15) px=(391, 286)  décalage=(-3,-3) tuiles  raccord=29.1
+  recalage ADR-0006 réaccordé : Battle Tower HGSS.png:31351
+MAP_BATTLE_TOWER : 11 silhouette(s) effacée(s) → public/maps/Battle Tower HGSS.png
+[5/214] MAP_BELL_TOWER_10F  (Bell Tower 10F HGSS.png)
+MAP_BELL_TOWER_10F : aucune silhouette au seuil 30.0
+[6/214] MAP_BELL_TOWER_1F  (Bell Tower 1F HGSS.png)
+  bozu           tuile=(9, 8) px=(71, 77)  décalage=(+3,+0) tuiles  raccord=13.8
+  recalage ADR-0006 réaccordé : Bell Tower 1F HGSS.png:21646
+MAP_BELL_TOWER_1F : 1 silhouette(s) effacée(s) → public/maps/Bell Tower 1F HGSS.png
+[7/214] MAP_BELL_TOWER_2F  (Bell Tower 2F HGSS.png)
+MAP_BELL_TOWER_2F : aucune silhouette au seuil 30.0
+[8/214] MAP_BELL_TOWER_3F  (Bell Tower 3F HGSS.png)
+MAP_BELL_TOWER_3F : aucune silhouette au seuil 30.0
+[9/214] MAP_BELL_TOWER_4F  (Bell Tower 4F HGSS.png)
+MAP_BELL_TOWER_4F : aucune silhouette au seuil 30.0
+[10/214] MAP_BELL_TOWER_5F  (Bell Tower 5F HGSS.png)
+MAP_BELL_TOWER_5F : aucune silhouette au seuil 30.0
+[11/214] MAP_BELL_TOWER_6F  (Bell Tower 6F HGSS.png)
+MAP_BELL_TOWER_6F : aucune silhouette au seuil 30.0
+[12/214] MAP_BELL_TOWER_7F  (Bell Tower 7F HGSS.png)
+MAP_BELL_TOWER_7F : aucune silhouette au seuil 30.0
+[13/214] MAP_BELL_TOWER_8F  (Bell Tower 8F HGSS.png)
+MAP_BELL_TOWER_8F : aucune silhouette au seuil 30.0
+[14/214] MAP_BELL_TOWER_9F  (Bell Tower 9F HGSS.png)
+MAP_BELL_TOWER_9F : aucune silhouette au seuil 30.0
+[15/214] MAP_BLACKTHORN  (Blackthorn City HGSS.png)
+MAP_BLACKTHORN : aucune silhouette au seuil 30.0
+[16/214] MAP_BLACKTHORN_GYM  (Blackthorn Gym HGSS.png)
+  gswoman3       tuile=(8, 61) px=(114, 777)  décalage=(+2,+1) tuiles  raccord=27.6
+  gsman3         tuile=(13, 40) px=(193, 520)  décalage=(+3,+3) tuiles  raccord=14.8
+  gsleader8      tuile=(12, 4) px=(174, 61)  décalage=(+2,+2) tuiles  raccord=32.6
+  sunglasses     tuile=(15, 82) px=(222, 1037)  décalage=(+2,+0) tuiles  raccord=18.0
+  gswoman3       tuile=(21, 45) px=(321, 580)  décalage=(+0,+3) tuiles  raccord=7.5
+  gsman3         tuile=(20, 54) px=(303, 690)  décalage=(-1,-3) tuiles  raccord=19.9
+  gsman3         tuile=(11, 66) px=(159, 839)  décalage=(-3,-1) tuiles  raccord=16.6
+  recalage ADR-0006 réaccordé : Blackthorn Gym HGSS.png:219489
+MAP_BLACKTHORN_GYM : 7 silhouette(s) effacée(s) → public/maps/Blackthorn Gym HGSS.png
+[17/214] MAP_POKEMON_LEAGUE_BRUNO_ROOM  (Bruno Room HGSS.png)
+  gsbigfour3     tuile=(7, 10) px=(167, 181)  décalage=(+3,+1) tuiles  raccord=52.0
+  recalage ADR-0006 réaccordé : Bruno Room HGSS.png:31444
+MAP_POKEMON_LEAGUE_BRUNO_ROOM : 1 silhouette(s) effacée(s) → public/maps/Bruno Room HGSS.png
+[18/214] MAP_BURNED_TOWER_1F  (Burned Tower 1F HGSS.png)
+  fire           tuile=(25, 8) px=(277, 51)  décalage=(+0,+3) tuiles  raccord=17.5
+  fire           tuile=(3, 9) px=(24, 63)  décalage=(+0,+3) tuiles  raccord=28.4
+  recalage ADR-0006 réaccordé : Burned Tower 1F HGSS.png:33829
+MAP_BURNED_TOWER_1F : 2 silhouette(s) effacée(s) → public/maps/Burned Tower 1F HGSS.png
+[19/214] MAP_CELADON_CONDOMINIUMS_1F  (Celadon Condominiums 1F HGSS.png)
+MAP_CELADON_CONDOMINIUMS_1F : aucune silhouette au seuil 30.0
+[20/214] MAP_CELADON_CONDOMINIUMS_2F  (Celadon Condominiums 2F HGSS.png)
+MAP_CELADON_CONDOMINIUMS_2F : aucune silhouette au seuil 30.0
+[21/214] MAP_CELADON_DEPARTMENT_STORE_1F  (Celadon Department Store 1F HGSS.png)
+  gswoman3       tuile=(2, 6) px=(23, 50)  décalage=(+0,+3) tuiles  raccord=19.4
+  gsgentleman    tuile=(15, 5) px=(231, 38)  décalage=(+3,+0) tuiles  raccord=11.1
+  gswoman6       tuile=(18, 11) px=(264, 99)  décalage=(-3,+0) tuiles  raccord=55.4
+  recalage ADR-0006 réaccordé : Celadon Department Store 1F HGSS.png:11110
+MAP_CELADON_DEPARTMENT_STORE_1F : 3 silhouette(s) effacée(s) → public/maps/Celadon Department Store 1F HGSS.png
+[22/214] MAP_CELADON_DEPARTMENT_STORE_2F  (Celadon Department Store 2F HGSS.png)
+  gsboy1         tuile=(14, 6) px=(216, 52)  décalage=(-3,+0) tuiles  raccord=47.8
+  gsmiddleman1   tuile=(13, 6) px=(199, 51)  décalage=(-2,+0) tuiles  raccord=23.2
+  leader3        tuile=(17, 6) px=(261, 50)  décalage=(+2,+0) tuiles  raccord=55.0
+  shopm1         tuile=(16, 11) px=(249, 100)  décalage=(-3,+0) tuiles  raccord=69.3
+  shopm1         tuile=(18, 11) px=(279, 100)  décalage=(+2,+2) tuiles  raccord=55.8
+  recalage ADR-0006 réaccordé : Celadon Department Store 2F HGSS.png:12599
+MAP_CELADON_DEPARTMENT_STORE_2F : 5 silhouette(s) effacée(s) → public/maps/Celadon Department Store 2F HGSS.png
+[23/214] MAP_CELADON_DEPARTMENT_STORE_3F  (Celadon Department Store 3F HGSS.png)
+  gsman1         tuile=(7, 6) px=(89, 63)  décalage=(-2,+3) tuiles  raccord=22.7
+  gsboy1         tuile=(18, 9) px=(262, 101)  décalage=(+2,-2) tuiles  raccord=35.1
+  gsdsboy        tuile=(13, 4) px=(183, 38)  décalage=(-2,+0) tuiles  raccord=41.6
+  gsdsboy        tuile=(14, 4) px=(199, 38)  décalage=(-3,+0) tuiles  raccord=39.5
+  recalage ADR-0006 réaccordé : Celadon Department Store 3F HGSS.png:12913
+MAP_CELADON_DEPARTMENT_STORE_3F : 4 silhouette(s) effacée(s) → public/maps/Celadon Department Store 3F HGSS.png
+[24/214] MAP_CELADON_DEPARTMENT_STORE_4F  (Celadon Department Store 4F HGSS.png)
+  gsboy1         tuile=(15, 10) px=(215, 126)  décalage=(-2,+0) tuiles  raccord=35.5
+  gsman1         tuile=(21, 6) px=(327, 63)  décalage=(+1,+2) tuiles  raccord=33.5
+  shopm1         tuile=(21, 11) px=(327, 137)  décalage=(-2,+0) tuiles  raccord=47.1
+  recalage ADR-0006 réaccordé : Celadon Department Store 4F HGSS.png:11150
+MAP_CELADON_DEPARTMENT_STORE_4F : 3 silhouette(s) effacée(s) → public/maps/Celadon Department Store 4F HGSS.png
+[25/214] MAP_CELADON_DEPARTMENT_STORE_5F  (Celadon Department Store 5F HGSS.png)
+  gswoman1       tuile=(2, 7) px=(6, 88)  décalage=(+0,+3) tuiles  raccord=20.2
+  gsgentleman    tuile=(15, 6) px=(215, 63)  décalage=(-3,+0) tuiles  raccord=20.3
+  seaman         tuile=(10, 11) px=(137, 136)  décalage=(+3,+0) tuiles  raccord=13.6
+  shopm1         tuile=(19, 10) px=(295, 125)  décalage=(+1,-3) tuiles  raccord=63.8
+  shopm1         tuile=(17, 10) px=(263, 125)  décalage=(-1,-3) tuiles  raccord=64.5
+  recalage ADR-0006 réaccordé : Celadon Department Store 5F HGSS.png:11176
+MAP_CELADON_DEPARTMENT_STORE_5F : 5 silhouette(s) effacée(s) → public/maps/Celadon Department Store 5F HGSS.png
+[26/214] MAP_CELADON_GAME_CORNER  (Celadon Game Corner HGSS.png)
+MAP_CELADON_GAME_CORNER : aucune silhouette au seuil 30.0
+[27/214] MAP_CELADON_PRIZE_CORNER  (Celadon Game Prize Corner HGSS.png)
+  sunglasses     tuile=(6, 7) px=(81, 80)  décalage=(-2,-1) tuiles  raccord=8.8
+  recalage ADR-0006 réaccordé : Celadon Game Prize Corner HGSS.png:4041
+MAP_CELADON_PRIZE_CORNER : 1 silhouette(s) effacée(s) → public/maps/Celadon Game Prize Corner HGSS.png
+[28/214] MAP_CELADON_GYM  (Celadon Gym HGSS.png)
+  gsgirl1        tuile=(13, 35) px=(223, 448)  décalage=(+0,+3) tuiles  raccord=30.6
+  gsleader12     tuile=(7, 3) px=(127, 54)  décalage=(-3,+0) tuiles  raccord=30.6
+  gsbabygirl1    tuile=(3, 31) px=(48, 401)  décalage=(+3,-1) tuiles  raccord=45.4
+  gsbabygirl1    tuile=(4, 31) px=(64, 401)  décalage=(+3,-1) tuiles  raccord=39.7
+  gswoman2       tuile=(7, 18) px=(126, 238)  décalage=(+2,+0) tuiles  raccord=32.8
+  gswoman2       tuile=(11, 17) px=(192, 218)  décalage=(-2,+0) tuiles  raccord=32.5
+  gswoman2       tuile=(6, 18) px=(96, 232)  décalage=(-1,-2) tuiles  raccord=43.8
+  gswoman2       tuile=(13, 17) px=(224, 218)  décalage=(+0,+3) tuiles  raccord=34.4
+  recalage ADR-0006 réaccordé : Celadon Gym HGSS.png:70203
+MAP_CELADON_GYM : 8 silhouette(s) effacée(s) → public/maps/Celadon Gym HGSS.png
+[29/214] MAP_CERULEAN_CAVE_1F  (Cerulean Cave 1F HGSS.png)
+MAP_CERULEAN_CAVE_1F : aucune silhouette au seuil 30.0
+[30/214] MAP_CERULEAN_CAVE_2F  (Cerulean Cave 2F HGSS.png)
+MAP_CERULEAN_CAVE_2F : aucune silhouette au seuil 30.0
+[31/214] MAP_CERULEAN_CAVE_B1F  (Cerulean Cave B1F HGSS.png)
+MAP_CERULEAN_CAVE_B1F : aucune silhouette au seuil 30.0
+[32/214] MAP_CERULEAN_GYM  (Cerulean Gym HGSS.png)
+  seaman         tuile=(18, 18) px=(296, 295)  décalage=(-1,+3) tuiles  raccord=37.9
+  gsswimmerw     tuile=(14, 10) px=(226, 208)  décalage=(-2,+0) tuiles  raccord=24.2
+  gsswimmerw     tuile=(13, 16) px=(208, 282)  décalage=(+2,+0) tuiles  raccord=9.4
+  gsswimmerw     tuile=(9, 13) px=(135, 244)  décalage=(+2,+0) tuiles  raccord=16.2
+  gsleader11     tuile=(10, -3) px=(166, 43)  décalage=(+3,+0) tuiles  raccord=39.3
+  sunglasses     tuile=(13, 21) px=(214, 332)  décalage=(+2,+0) tuiles  raccord=38.1
+  seaman         tuile=(19, 7) px=(309, 172)  décalage=(+0,+3) tuiles  raccord=24.6
+  recalage ADR-0006 réaccordé : Cerulean Gym HGSS.png:37031
+MAP_CERULEAN_GYM : 7 silhouette(s) effacée(s) → public/maps/Cerulean Gym HGSS.png
+[33/214] MAP_CHERRYGROVE  (Cherrygrove City HGSS.png)
+MAP_CHERRYGROVE : aucune silhouette au seuil 30.0
+[34/214] MAP_CHERRYGROVE_GUIDE_GENT_HOUSE  (Cherrygrove Guide Gent House HGSS.png)
+MAP_CHERRYGROVE_GUIDE_GENT_HOUSE : aucune silhouette au seuil 30.0
+[35/214] MAP_CHERRYGROVE_SOUTHEAST_HOUSE  (Cherrygrove Southeast House HGSS.png)
+MAP_CHERRYGROVE_SOUTHEAST_HOUSE : aucune silhouette au seuil 30.0
+[36/214] MAP_CHERRYGROVE_SOUTHWEST_HOUSE  (Cherrygrove Southwest House HGSS.png)
+  gsmiddleman1   tuile=(5, 2) px=(87, 37)  décalage=(+2,+0) tuiles  raccord=25.8
+  recalage ADR-0006 réaccordé : Cherrygrove Southwest House HGSS.png:5955
+MAP_CHERRYGROVE_SOUTHWEST_HOUSE : 1 silhouette(s) effacée(s) → public/maps/Cherrygrove Southwest House HGSS.png
+[37/214] MAP_CIANWOOD_GYM  (Cianwood Gym HGSS.png)
+  gsfighter      tuile=(18, 11) px=(279, 174)  décalage=(+3,+0) tuiles  raccord=11.9
+  gsfighter      tuile=(8, 9) px=(105, 138)  décalage=(-3,+0) tuiles  raccord=11.9
+  gsfighter      tuile=(5, 13) px=(63, 208)  décalage=(+2,+0) tuiles  raccord=15.1
+  gsfighter      tuile=(18, 7) px=(269, 102)  décalage=(+2,+0) tuiles  raccord=21.5
+  recalage ADR-0006 réaccordé : Cianwood Gym HGSS.png:68704
+MAP_CIANWOOD_GYM : 4 silhouette(s) effacée(s) → public/maps/Cianwood Gym HGSS.png
+[38/214] MAP_SEAFOAM_ISLANDS_CINNABAR_GYM  (Cinnabar Gym HGSS.png)
+  assistantm     tuile=(17, 13) px=(255, 129)  décalage=(+3,+0) tuiles  raccord=19.6
+  assistantm     tuile=(8, 19) px=(111, 203)  décalage=(-1,-3) tuiles  raccord=17.5
+  gsassistantm   tuile=(20, 16) px=(304, 166)  décalage=(+0,-3) tuiles  raccord=22.4
+  sunglasses     tuile=(16, 25) px=(238, 276)  décalage=(-2,+0) tuiles  raccord=17.8
+  gsassistantm   tuile=(13, 10) px=(189, 91)  décalage=(+2,+0) tuiles  raccord=25.0
+  gsassistantm   tuile=(9, 14) px=(125, 140)  décalage=(-3,+0) tuiles  raccord=23.4
+  assistantm     tuile=(15, 19) px=(223, 203)  décalage=(+2,+2) tuiles  raccord=26.6
+  gsleader15     tuile=(13, 14) px=(191, 140)  décalage=(+2,+1) tuiles  raccord=14.7
+  recalage ADR-0006 réaccordé : Cinnabar Gym HGSS.png:52085
+MAP_SEAFOAM_ISLANDS_CINNABAR_GYM : 8 silhouette(s) effacée(s) → public/maps/Cinnabar Gym HGSS.png
+[39/214] MAP_CINNABAR_ISLAND  (Cinnabar Island HGSS.png)
+MAP_CINNABAR_ISLAND : aucune silhouette au seuil 30.0
+[40/214] MAP_SAFFRON_COPYCAT_HOUSE_1F  (Copycat House 1F HGSS.png)
+  middlewoman1   tuile=(2, 8) px=(14, 88)  décalage=(+3,-3) tuiles  raccord=39.5
+  gsmiddleman1   tuile=(5, 7) px=(63, 76)  décalage=(+3,+0) tuiles  raccord=27.6
+  recalage ADR-0006 réaccordé : Copycat House 1F HGSS.png:5990
+MAP_SAFFRON_COPYCAT_HOUSE_1F : 2 silhouette(s) effacée(s) → public/maps/Copycat House 1F HGSS.png
+[41/214] MAP_SAFFRON_COPYCAT_HOUSE_2F  (Copycat House 2F HGSS.png)
+  gsgirl1        tuile=(5, 7) px=(64, 70)  décalage=(-3,+0) tuiles  raccord=23.8
+  jupetta        tuile=(9, 6) px=(128, 63)  décalage=(+2,+0) tuiles  raccord=1.5
+  mono_pip       tuile=(3, 7) px=(47, 68)  décalage=(+0,+3) tuiles  raccord=22.0
+  recalage ADR-0006 réaccordé : Copycat House 2F HGSS.png:5253
+MAP_SAFFRON_COPYCAT_HOUSE_2F : 3 silhouette(s) effacée(s) → public/maps/Copycat House 2F HGSS.png
+[42/214] MAP_DIGLETT_CAVE  (Diglett Cave HGSS.png)
+MAP_DIGLETT_CAVE : aucune silhouette au seuil 30.0
+[43/214] MAP_DRAGONS_DEN_SHRINE  (Dragons Den Dragon Shrine HGSS.png)
+  chourou        tuile=(7, 8) px=(79, 96)  décalage=(+0,+2) tuiles  raccord=24.1
+  gsoldman1      tuile=(4, 13) px=(32, 146)  décalage=(+0,+3) tuiles  raccord=16.9
+  gsoldman1      tuile=(10, 13) px=(128, 146)  décalage=(+0,+3) tuiles  raccord=18.3
+  recalage ADR-0006 réaccordé : Dragons Den Dragon Shrine HGSS.png:13967
+MAP_DRAGONS_DEN_SHRINE : 3 silhouette(s) effacée(s) → public/maps/Dragons Den Dragon Shrine HGSS.png
+[44/214] MAP_DRAGONS_DEN_ENTRANCE  (Dragons Den Entrance HGSS.png)
+MAP_DRAGONS_DEN_ENTRANCE : aucune silhouette au seuil 30.0
+[45/214] MAP_DRAGONS_DEN  (Dragons Den HGSS.png)
+  gsbabygirl1    tuile=(7, 35) px=(102, 429)  décalage=(+0,+2) tuiles  raccord=18.0
+  gswoman3       tuile=(13, 24) px=(198, 278)  décalage=(+0,-3) tuiles  raccord=6.9
+  gsman3         tuile=(31, 13) px=(490, 146)  décalage=(+0,+3) tuiles  raccord=6.6
+  recalage ADR-0006 réaccordé : Dragons Den HGSS.png:199292
+MAP_DRAGONS_DEN : 3 silhouette(s) effacée(s) → public/maps/Dragons Den HGSS.png
+[46/214] MAP_ECRUTEAK  (Ecruteak City HGSS.png)
+MAP_ECRUTEAK : aucune silhouette au seuil 30.0
+[47/214] MAP_NEW_BARK_ELMS_LAB_1F  (Elms lab 1F HGSS (sans PNJ).png)
+MAP_NEW_BARK_ELMS_LAB_1F : aucune silhouette au seuil 30.0
+[48/214] MAP_NEW_BARK_ELMS_LAB_2F  (Elms lab 2F HGSS.png)
+  gswoman1       tuile=(8, 5) px=(107, 61)  décalage=(+2,+0) tuiles  raccord=24.9
+  gsboy2         tuile=(4, 7) px=(43, 87)  décalage=(+1,+3) tuiles  raccord=33.9
+  recalage ADR-0006 réaccordé : Elms lab 2F HGSS.png:8207
+MAP_NEW_BARK_ELMS_LAB_2F : 2 silhouette(s) effacée(s) → public/maps/Elms lab 2F HGSS.png
+[49/214] MAP_EMBEDDED_TOWER_GROUDON_ROOM  (Embedded Tower Groudon HGSS.png)
+MAP_EMBEDDED_TOWER_GROUDON_ROOM : aucune silhouette au seuil 30.0
+[50/214] MAP_EMBEDDED_TOWER_KYOGRE_ROOM  (Embedded Tower Kyogre HGSS.png)
+MAP_EMBEDDED_TOWER_KYOGRE_ROOM : aucune silhouette au seuil 30.0
+[51/214] MAP_EMBEDDED_TOWER_RAYQUAZA_ROOM  (Embedded Tower Rayquaza HGSS.png)
+MAP_EMBEDDED_TOWER_RAYQUAZA_ROOM : aucune silhouette au seuil 30.0
+[52/214] MAP_SAFFRON_FIGHTING_DOJO  (Fighting Dojo HGSS.png)
+  gsleader1      tuile=(3, 14) px=(39, 148)  décalage=(-2,+0) tuiles  raccord=94.5
+  gsleader6      tuile=(3, 10) px=(39, 102)  décalage=(-1,-3) tuiles  raccord=55.5
+  gsleader13     tuile=(11, 8) px=(179, 72)  décalage=(+2,+1) tuiles  raccord=34.7
+  gsleader12     tuile=(11, 11) px=(185, 111)  décalage=(-3,+2) tuiles  raccord=23.3
+  gsfighter      tuile=(7, 6) px=(118, 51)  décalage=(+2,-1) tuiles  raccord=54.0
+  gsleader16     tuile=(12, 6) px=(198, 48)  décalage=(+1,+2) tuiles  raccord=36.0
+  gsleader14     tuile=(9, 10) px=(151, 98)  décalage=(-2,+2) tuiles  raccord=32.2
+  gsleader5      tuile=(6, 10) px=(100, 98)  décalage=(+1,+2) tuiles  raccord=9.1
+  gsleader8      tuile=(5, 13) px=(81, 135)  décalage=(+2,+0) tuiles  raccord=12.3
+  gsleader3      tuile=(4, 9) px=(53, 89)  décalage=(-2,-1) tuiles  raccord=41.2
+  gsleader11     tuile=(8, 10) px=(134, 98)  décalage=(-1,+2) tuiles  raccord=24.5
+  gsleader10     tuile=(10, 7) px=(166, 63)  décalage=(+3,+2) tuiles  raccord=32.5
+  gsleader4      tuile=(5, 7) px=(87, 62)  décalage=(+1,-3) tuiles  raccord=54.4
+  gsleader15     tuile=(12, 12) px=(199, 124)  décalage=(+1,-2) tuiles  raccord=22.2
+  gsleader2      tuile=(5, 11) px=(71, 113)  décalage=(+3,+2) tuiles  raccord=11.0
+  gsleader9      tuile=(10, 13) px=(167, 136)  décalage=(-3,+0) tuiles  raccord=6.7
+  gsleader7      tuile=(4, 6) px=(54, 48)  décalage=(-2,+0) tuiles  raccord=36.0
+  recalage ADR-0006 réaccordé : Fighting Dojo HGSS.png:10937
+MAP_SAFFRON_FIGHTING_DOJO : 17 silhouette(s) effacée(s) → public/maps/Fighting Dojo HGSS.png
+[53/214] MAP_FRONTIER_ACCESS_POKECENTER_1F  (Frontier Access HGSS.png)
+MAP_FRONTIER_ACCESS_POKECENTER_1F : aucune silhouette au seuil 30.0
+[54/214] MAP_FUCHSIA  (Fuchsia City HGSS.png)
+MAP_FUCHSIA : aucune silhouette au seuil 30.0
+[55/214] MAP_FUCHSIA_GYM  (Fuchsia Gym HGSS.png)
+MAP_FUCHSIA_GYM : aucune silhouette au seuil 30.0
+[56/214] MAP_ROUTE_43_MAHOGANY_GATEHOUSE  (Gate inside HGSS.png)
+MAP_ROUTE_43_MAHOGANY_GATEHOUSE : aucune silhouette au seuil 30.0
+[57/214] MAP_OLIVINE_LIGHTHOUSE_1F  (Glitter Lighthouse 1F HGSS.png)
+  seaman         tuile=(4, 5) px=(45, 45)  décalage=(-2,+1) tuiles  raccord=35.2
+  middlewoman1   tuile=(10, 12) px=(128, 132)  décalage=(+3,+0) tuiles  raccord=15.9
+  recalage ADR-0006 réaccordé : Glitter Lighthouse 1F HGSS.png:9305
+MAP_OLIVINE_LIGHTHOUSE_1F : 2 silhouette(s) effacée(s) → public/maps/Glitter Lighthouse 1F HGSS.png
+[58/214] MAP_OLIVINE_LIGHTHOUSE_2F  (Glitter Lighthouse 2F HGSS.png)
+  seaman         tuile=(16, 15) px=(224, 143)  décalage=(+0,-3) tuiles  raccord=38.2
+  recalage ADR-0006 réaccordé : Glitter Lighthouse 2F HGSS.png:7794
+MAP_OLIVINE_LIGHTHOUSE_2F : 1 silhouette(s) effacée(s) → public/maps/Glitter Lighthouse 2F HGSS.png
+[59/214] MAP_OLIVINE_LIGHTHOUSE_3F  (Glitter Lighthouse 3F HGSS.png)
+  seaman         tuile=(11, 14) px=(168, 148)  décalage=(+2,+0) tuiles  raccord=9.7
+  gsman2         tuile=(12, 6) px=(185, 37)  décalage=(+2,+1) tuiles  raccord=26.6
+  gsman2         tuile=(2, 9) px=(9, 87)  décalage=(+3,+0) tuiles  raccord=39.2
+  recalage ADR-0006 réaccordé : Glitter Lighthouse 3F HGSS.png:11390
+MAP_OLIVINE_LIGHTHOUSE_3F : 3 silhouette(s) effacée(s) → public/maps/Glitter Lighthouse 3F HGSS.png
+[60/214] MAP_OLIVINE_LIGHTHOUSE_4F  (Glitter Lighthouse 4F HGSS.png)
+MAP_OLIVINE_LIGHTHOUSE_4F : aucune silhouette au seuil 30.0
+[61/214] MAP_OLIVINE_LIGHTHOUSE_5F  (Glitter Lighthouse 5F HGSS.png)
+  seaman         tuile=(13, 7) px=(200, 74)  décalage=(+1,+3) tuiles  raccord=0.3
+  seaman         tuile=(6, 9) px=(91, 99)  décalage=(+0,-3) tuiles  raccord=0.6
+  recalage ADR-0006 réaccordé : Glitter Lighthouse 5F HGSS.png:11570
+MAP_OLIVINE_LIGHTHOUSE_5F : 2 silhouette(s) effacée(s) → public/maps/Glitter Lighthouse 5F HGSS.png
+[62/214] MAP_GOLDENROD_GLOBAL_TERMINAL_1F  (Global Terminal 1F PtHGSS.png)
+MAP_GOLDENROD_GLOBAL_TERMINAL_1F : aucune silhouette au seuil 30.0
+[63/214] MAP_GOLDENROD_GLOBAL_TERMINAL_2F  (Global Terminal 2F PtHGSS.png)
+MAP_GOLDENROD_GLOBAL_TERMINAL_2F : aucune silhouette au seuil 30.0
+[64/214] MAP_GOLDENROD_GLOBAL_TERMINAL_3F  (Global Terminal 3F PtHGSS.png)
+MAP_GOLDENROD_GLOBAL_TERMINAL_3F : aucune silhouette au seuil 30.0
+[65/214] MAP_GOLDENROD  (Goldenrod City HGSS.png)
+MAP_GOLDENROD : aucune silhouette au seuil 30.0
+[66/214] MAP_GOLDENROD_DEPARTMENT_STORE_1F  (Goldenrod Department Store 1F HGSS.png)
+  gsgentleman    tuile=(11, 5) px=(167, 51)  décalage=(+2,+0) tuiles  raccord=0.0
+  gsboy1         tuile=(21, 10) px=(310, 113)  décalage=(-2,+0) tuiles  raccord=16.6
+  delivery2      tuile=(5, 10) px=(71, 125)  décalage=(+2,+0) tuiles  raccord=16.6
+  middlewoman1   tuile=(23, 7) px=(344, 75)  décalage=(-2,+0) tuiles  raccord=18.4
+  gswoman6       tuile=(7, 8) px=(103, 87)  décalage=(-3,-1) tuiles  raccord=36.3
+  recalage ADR-0006 réaccordé : Goldenrod Department Store 1F HGSS.png:10512
+MAP_GOLDENROD_DEPARTMENT_STORE_1F : 5 silhouette(s) effacée(s) → public/maps/Goldenrod Department Store 1F HGSS.png
+[67/214] MAP_GOLDENROD_DEPARTMENT_STORE_2F  (Goldenrod Department Store 2F HGSS.png)
+  gsgirl1        tuile=(11, 5) px=(151, 51)  décalage=(+2,+0) tuiles  raccord=11.6
+  campboy        tuile=(19, 10) px=(279, 126)  décalage=(+2,+0) tuiles  raccord=0.1
+  gsgentleman    tuile=(6, 8) px=(87, 88)  décalage=(+0,+3) tuiles  raccord=46.2
+  shopm1         tuile=(24, 6) px=(361, 63)  décalage=(+0,-3) tuiles  raccord=50.6
+  shopm1         tuile=(24, 8) px=(361, 88)  décalage=(+0,+3) tuiles  raccord=51.1
+  recalage ADR-0006 réaccordé : Goldenrod Department Store 2F HGSS.png:12943
+MAP_GOLDENROD_DEPARTMENT_STORE_2F : 5 silhouette(s) effacée(s) → public/maps/Goldenrod Department Store 2F HGSS.png
+[68/214] MAP_GOLDENROD_DEPARTMENT_STORE_3F  (Goldenrod Department Store 3F HGSS.png)
+  mania          tuile=(11, 6) px=(151, 62)  décalage=(+2,+0) tuiles  raccord=13.0
+  gsman2         tuile=(5, 10) px=(70, 125)  décalage=(+3,+0) tuiles  raccord=15.8
+  shopm1         tuile=(24, 7) px=(361, 88)  décalage=(+0,-3) tuiles  raccord=44.6
+  recalage ADR-0006 réaccordé : Goldenrod Department Store 3F HGSS.png:12878
+MAP_GOLDENROD_DEPARTMENT_STORE_3F : 3 silhouette(s) effacée(s) → public/maps/Goldenrod Department Store 3F HGSS.png
+[69/214] MAP_GOLDENROD_DEPARTMENT_STORE_4F  (Goldenrod Department Store 4F HGSS.png)
+  gsdsboy        tuile=(1, 5) px=(7, 51)  décalage=(+0,+3) tuiles  raccord=24.1
+  gsboy1         tuile=(9, 9) px=(134, 113)  décalage=(+2,+0) tuiles  raccord=17.1
+  gsman2         tuile=(20, 11) px=(294, 137)  décalage=(-2,+0) tuiles  raccord=13.2
+  shopm1         tuile=(24, 8) px=(361, 88)  décalage=(+0,-3) tuiles  raccord=44.1
+  recalage ADR-0006 réaccordé : Goldenrod Department Store 4F HGSS.png:11813
+MAP_GOLDENROD_DEPARTMENT_STORE_4F : 4 silhouette(s) effacée(s) → public/maps/Goldenrod Department Store 4F HGSS.png
+[70/214] MAP_GOLDENROD_DEPARTMENT_STORE_5F  (Goldenrod Department Store 5F HGSS.png)
+  gsmiddleman1   tuile=(20, 11) px=(295, 137)  décalage=(-2,+0) tuiles  raccord=4.4
+  gsbigman       tuile=(3, 7) px=(23, 74)  décalage=(+0,+3) tuiles  raccord=41.7
+  gsgirl3        tuile=(13, 4) px=(183, 39)  décalage=(-2,+0) tuiles  raccord=9.5
+  shopm1         tuile=(24, 8) px=(361, 88)  décalage=(+0,-3) tuiles  raccord=28.6
+  recalage ADR-0006 réaccordé : Goldenrod Department Store 5F HGSS.png:12078
+MAP_GOLDENROD_DEPARTMENT_STORE_5F : 4 silhouette(s) effacée(s) → public/maps/Goldenrod Department Store 5F HGSS.png
+[71/214] MAP_GOLDENROD_DEPARTMENT_STORE_6F  (Goldenrod Department Store 6F HGSS.png)
+  gsman1         tuile=(11, 5) px=(151, 51)  décalage=(+2,+0) tuiles  raccord=8.1
+  gsgirl2        tuile=(18, 9) px=(262, 110)  décalage=(+2,+0) tuiles  raccord=41.6
+  gswoman6       tuile=(24, 7) px=(360, 74)  décalage=(+0,+3) tuiles  raccord=47.5
+  recalage ADR-0006 réaccordé : Goldenrod Department Store 6F HGSS.png:11403
+MAP_GOLDENROD_DEPARTMENT_STORE_6F : 3 silhouette(s) effacée(s) → public/maps/Goldenrod Department Store 6F HGSS.png
+[72/214] MAP_GOLDENROD_DEPARTMENT_STORE_BASEMENT  (Goldenrod Department Store Basement HGSS.png)
+  gsfighter      tuile=(17, 14) px=(263, 162)  décalage=(+1,-3) tuiles  raccord=10.6
+  gsfighter      tuile=(5, 16) px=(70, 187)  décalage=(+2,-1) tuiles  raccord=29.8
+  recalage ADR-0006 réaccordé : Goldenrod Department Store Basement HGSS.png:19318
+MAP_GOLDENROD_DEPARTMENT_STORE_BASEMENT : 2 silhouette(s) effacée(s) → public/maps/Goldenrod Department Store Basement HGSS.png
+[73/214] MAP_GOLDENROD_GYM  (Goldenrod Gym HGSS.png)
+MAP_GOLDENROD_GYM : aucune silhouette au seuil 30.0
+[74/214] MAP_GOLDENROD_RADIO_TOWER_1F  (Goldenrod Radio Tower 1F HGSS.png)
+MAP_GOLDENROD_RADIO_TOWER_1F : aucune silhouette au seuil 30.0
+[75/214] MAP_GOLDENROD_RADIO_TOWER_2F  (Goldenrod Radio Tower 2F HGSS.png)
+MAP_GOLDENROD_RADIO_TOWER_2F : aucune silhouette au seuil 30.0
+[76/214] MAP_GOLDENROD_RADIO_TOWER_3F  (Goldenrod Radio Tower 3F HGSS.png)
+MAP_GOLDENROD_RADIO_TOWER_3F : aucune silhouette au seuil 30.0
+[77/214] MAP_GOLDENROD_RADIO_TOWER_4F  (Goldenrod Radio Tower 4F HGSS.png)
+MAP_GOLDENROD_RADIO_TOWER_4F : aucune silhouette au seuil 30.0
+[78/214] MAP_GOLDENROD_RADIO_TOWER_5F  (Goldenrod Radio Tower 5F HGSS.png)
+MAP_GOLDENROD_RADIO_TOWER_5F : aucune silhouette au seuil 30.0
+[79/214] MAP_GOLDENROD_TUNNEL_1F  (Goldenrod Tunnel HGSS.png)
+MAP_GOLDENROD_TUNNEL_1F : aucune silhouette au seuil 30.0
+[80/214] MAP_GOLDENROD_GAME_CORNER  (HGSS Goldenrod Game Corner.png)
+  gsgentleman    tuile=(12, 5) px=(159, 51)  décalage=(-1,+3) tuiles  raccord=28.3
+  suit           tuile=(8, 5) px=(95, 50)  décalage=(+3,-2) tuiles  raccord=51.0
+  recalage ADR-0006 réaccordé : HGSS Goldenrod Game Corner.png:13748
+MAP_GOLDENROD_GAME_CORNER : 2 silhouette(s) effacée(s) → public/maps/HGSS Goldenrod Game Corner.png
+[81/214] MAP_POKEMON_LEAGUE_HALL_OF_FAME  (Hall of Fame HGSS.png)
+MAP_POKEMON_LEAGUE_HALL_OF_FAME : aucune silhouette au seuil 30.0
+[82/214] MAP_LAVENDER_HOUSE_OF_MEMORIES  (House of Memories HGSS.png)
+MAP_LAVENDER_HOUSE_OF_MEMORIES : aucune silhouette au seuil 30.0
+[83/214] MAP_ICE_PATH_1F  (Ice Path 1F HGSS.png)
+  gsmiddleman1   tuile=(48, 8) px=(679, 78)  décalage=(-3,+0) tuiles  raccord=3.8
+  dancer         tuile=(56, 31) px=(803, 359)  décalage=(-2,+0) tuiles  raccord=15.6
+  recalage ADR-0006 réaccordé : Ice Path 1F HGSS.png:162090
+MAP_ICE_PATH_1F : 2 silhouette(s) effacée(s) → public/maps/Ice Path 1F HGSS.png
+[84/214] MAP_ICE_PATH_B1F  (Ice Path B1F HGSS.png)
+MAP_ICE_PATH_B1F : aucune silhouette au seuil 30.0
+[85/214] MAP_ICE_PATH_B2F  (Ice Path B2F HGSS.png)
+MAP_ICE_PATH_B2F : aucune silhouette au seuil 30.0
+[86/214] MAP_ICE_PATH_B3F  (Ice Path B3F HGSS.png)
+MAP_ICE_PATH_B3F : aucune silhouette au seuil 30.0
+[87/214] MAP_ILEX_FOREST  (Ilex Forest HGSS.png)
+MAP_ILEX_FOREST : aucune silhouette au seuil 30.0
+[88/214] MAP_INDIGO_PLATEAU  (Indigo Plateau HGSS.png)
+MAP_INDIGO_PLATEAU : aucune silhouette au seuil 30.0
+[89/214] MAP_ROUTE_29  (Johto Route 29 HGSS.png)
+MAP_ROUTE_29 : aucune silhouette au seuil 30.0
+[90/214] MAP_ROUTE_30  (Johto Route 30 HGSS.png)
+  gsman1         tuile=(11, 48) px=(229, 589)  décalage=(-2,+0) tuiles  raccord=5.5
+  gsboy3         tuile=(13, 79) px=(260, 972)  décalage=(+0,-2) tuiles  raccord=13.8
+  gsboy3         tuile=(6, 11) px=(148, 124)  décalage=(+0,+2) tuiles  raccord=16.0
+  gsgirl2        tuile=(4, 18) px=(115, 221)  décalage=(-1,-2) tuiles  raccord=31.0
+  gsboy2         tuile=(9, 45) px=(200, 553)  décalage=(+2,+0) tuiles  raccord=9.9
+  gsboy2         tuile=(8, 38) px=(182, 466)  décalage=(+0,+3) tuiles  raccord=43.5
+  recalage ADR-0006 réaccordé : Johto Route 30 HGSS.png:217068
+MAP_ROUTE_30 : 6 silhouette(s) effacée(s) → public/maps/Johto Route 30 HGSS.png
+[91/214] MAP_ROUTE_31  (Johto Route 31 HGSS.png)
+  gsboy3         tuile=(28, 26) px=(435, 332)  décalage=(+2,+0) tuiles  raccord=20.0
+  gsman1         tuile=(51, 18) px=(805, 248)  décalage=(-3,-1) tuiles  raccord=10.1
+  gsboy1         tuile=(15, 15) px=(228, 208)  décalage=(+2,+0) tuiles  raccord=2.8
+  gsbigman       tuile=(28, 17) px=(434, 231)  décalage=(-2,+0) tuiles  raccord=1.0
+  recalage ADR-0006 réaccordé : Johto Route 31 HGSS.png:110509
+MAP_ROUTE_31 : 4 silhouette(s) effacée(s) → public/maps/Johto Route 31 HGSS.png
+[92/214] MAP_ROUTE_32  (Johto Route 32 HGSS.png)
+  gsboy2         tuile=(22, 41) px=(339, 576)  décalage=(+2,+0) tuiles  raccord=14.4
+  gsboy2         tuile=(12, 116) px=(177, 1509)  décalage=(+2,-2) tuiles  raccord=9.7
+  fishing        tuile=(14, 87) px=(198, 1152)  décalage=(+3,+0) tuiles  raccord=33.1
+  picnicgirl     tuile=(19, 54) px=(278, 737)  décalage=(-3,+1) tuiles  raccord=37.6
+  fishing        tuile=(21, 100) px=(309, 1312)  décalage=(+0,+3) tuiles  raccord=19.8
+  gsbigman       tuile=(23, 25) px=(357, 366)  décalage=(-2,+0) tuiles  raccord=14.2
+  gsbigman       tuile=(15, 129) px=(228, 1668)  décalage=(-2,+0) tuiles  raccord=7.8
+  gsman2         tuile=(20, 145) px=(306, 1880)  décalage=(-1,-2) tuiles  raccord=1.5
+  gsmiddleman1   tuile=(30, 18) px=(455, 281)  décalage=(+0,+3) tuiles  raccord=9.2
+  fishing        tuile=(15, 89) px=(229, 1177)  décalage=(+2,+0) tuiles  raccord=20.7
+  campboy        tuile=(4, 96) px=(53, 1268)  décalage=(+0,-3) tuiles  raccord=22.1
+  recalage ADR-0006 réaccordé : Johto Route 32 HGSS.png:334419
+MAP_ROUTE_32 : 11 silhouette(s) effacée(s) → public/maps/Johto Route 32 HGSS.png
+[93/214] MAP_ROUTE_33  (Johto Route 33 HGSS.png)
+MAP_ROUTE_33 : aucune silhouette au seuil 30.0
+[94/214] MAP_ROUTE_34  (Johto Route 34 HGSS.png)
+  policeman      tuile=(12, 20) px=(211, 246)  décalage=(-2,-3) tuiles  raccord=28.0
+  picnicgirl     tuile=(14, 45) px=(242, 555)  décalage=(+2,+0) tuiles  raccord=21.8
+  gswoman3       tuile=(24, 88) px=(389, 1082)  décalage=(-2,+0) tuiles  raccord=27.9
+  gswoman3       tuile=(13, 88) px=(226, 1081)  décalage=(-2,+0) tuiles  raccord=2.5
+  gsboy2         tuile=(24, 59) px=(387, 727)  décalage=(-3,+0) tuiles  raccord=33.7
+  gsboy2         tuile=(24, 34) px=(402, 419)  décalage=(-2,+0) tuiles  raccord=0.6
+  campboy        tuile=(14, 11) px=(227, 136)  décalage=(+0,-3) tuiles  raccord=20.6
+  gsmiddleman1   tuile=(30, 47) px=(484, 579)  décalage=(+0,-3) tuiles  raccord=9.4
+  gsoldman1      tuile=(13, 26) px=(227, 321)  décalage=(-2,+0) tuiles  raccord=18.9
+  gswoman3       tuile=(18, 92) px=(307, 1132)  décalage=(+2,+0) tuiles  raccord=7.1
+  recalage ADR-0006 réaccordé : Johto Route 34 HGSS.png:212717
+MAP_ROUTE_34 : 10 silhouette(s) effacée(s) → public/maps/Johto Route 34 HGSS.png
+[95/214] MAP_ROUTE_35  (Johto Route 35 HGSS.png)
+  campboy        tuile=(10, 30) px=(134, 348)  décalage=(+2,+0) tuiles  raccord=2.0
+  picnicgirl     tuile=(16, 31) px=(231, 360)  décalage=(+3,+0) tuiles  raccord=26.2
+  policeman      tuile=(14, 11) px=(198, 112)  décalage=(+2,-1) tuiles  raccord=34.8
+  campboy        tuile=(17, 31) px=(247, 360)  décalage=(+2,+0) tuiles  raccord=0.2
+  fire           tuile=(10, 19) px=(136, 208)  décalage=(+2,+0) tuiles  raccord=0.1
+  juggrer        tuile=(13, 23) px=(185, 258)  décalage=(-1,-2) tuiles  raccord=0.7
+  gsboy3         tuile=(27, 10) px=(405, 101)  décalage=(-2,+0) tuiles  raccord=21.2
+  gsman2         tuile=(16, 57) px=(230, 679)  décalage=(-3,+3) tuiles  raccord=11.7
+  picnicgirl     tuile=(4, 51) px=(54, 606)  décalage=(+0,+3) tuiles  raccord=6.4
+  gsmiddleman1   tuile=(21, 51) px=(311, 605)  décalage=(-2,+0) tuiles  raccord=1.9
+  recalage ADR-0006 réaccordé : Johto Route 35 HGSS.png:137658
+MAP_ROUTE_35 : 10 silhouette(s) effacée(s) → public/maps/Johto Route 35 HGSS.png
+[96/214] MAP_ROUTE_36  (Johto Route 36 HGSS.png)
+  gsgirl1        tuile=(82, 22) px=(999, 280)  décalage=(-2,+0) tuiles  raccord=0.8
+  gsboy1         tuile=(50, 25) px=(471, 329)  décalage=(-2,+0) tuiles  raccord=1.8
+  gsbigman       tuile=(75, 23) px=(873, 292)  décalage=(+2,+0) tuiles  raccord=15.4
+  gsgirl1        tuile=(63, 26) px=(693, 331)  décalage=(-2,+3) tuiles  raccord=34.8
+  mystery        tuile=(29, 22) px=(134, 291)  décalage=(+0,-2) tuiles  raccord=11.7
+  recalage ADR-0006 réaccordé : Johto Route 36 HGSS.png:121384
+MAP_ROUTE_36 : 5 silhouette(s) effacée(s) → public/maps/Johto Route 36 HGSS.png
+[97/214] MAP_ROUTE_37  (Johto Route 37 HGSS.png)
+  gsbabygirl1    tuile=(6, 20) px=(152, 286)  décalage=(+3,+3) tuiles  raccord=44.7
+  gsbabygirl1    tuile=(7, 20) px=(168, 286)  décalage=(-3,+3) tuiles  raccord=42.4
+  gswoman2       tuile=(2, 13) px=(87, 197)  décalage=(+2,+0) tuiles  raccord=25.0
+  gswoman2       tuile=(12, 13) px=(234, 197)  décalage=(+0,-3) tuiles  raccord=21.9
+  mystery        tuile=(18, 19) px=(343, 271)  décalage=(+0,-3) tuiles  raccord=22.4
+  recalage ADR-0006 réaccordé : Johto Route 37 HGSS.png:57322
+MAP_ROUTE_37 : 5 silhouette(s) effacée(s) → public/maps/Johto Route 37 HGSS.png
+[98/214] MAP_ROUTE_38  (Johto Route 38 HGSS.png)
+  gsgirl1        tuile=(33, 3) px=(528, 74)  décalage=(-3,+3) tuiles  raccord=39.9
+  gsboy1         tuile=(11, 2) px=(177, 63)  décalage=(+2,+0) tuiles  raccord=3.3
+  gsman2         tuile=(32, 13) px=(511, 210)  décalage=(+2,+0) tuiles  raccord=9.5
+  gswoman2       tuile=(22, 8) px=(351, 149)  décalage=(-2,+0) tuiles  raccord=0.0
+  seaman         tuile=(49, 6) px=(770, 122)  décalage=(-1,-2) tuiles  raccord=16.5
+  recalage ADR-0006 réaccordé : Johto Route 38 HGSS.png:113624
+MAP_ROUTE_38 : 5 silhouette(s) effacée(s) → public/maps/Johto Route 38 HGSS.png
+[99/214] MAP_ROUTE_39  (Johto Route 39 HGSS.png)
+  mystery        tuile=(22, 19) px=(421, 308)  décalage=(+0,+3) tuiles  raccord=2.3
+  seaman         tuile=(18, 40) px=(360, 581)  décalage=(+2,+0) tuiles  raccord=2.8
+  gsmiddleman1   tuile=(20, 43) px=(398, 618)  décalage=(-2,+0) tuiles  raccord=0.4
+  recalage ADR-0006 réaccordé : Johto Route 39 HGSS.png:154598
+MAP_ROUTE_39 : 3 silhouette(s) effacée(s) → public/maps/Johto Route 39 HGSS.png
+[100/214] MAP_ROUTE_40  (Johto Route 40 HGSS.png)
+  gsswimmerm     tuile=(17, 27) px=(250, 321)  décalage=(+2,+0) tuiles  raccord=0.0
+  gsswimmerw     tuile=(24, 36) px=(345, 430)  décalage=(+2,+0) tuiles  raccord=0.3
+  gsswimmerm     tuile=(15, 50) px=(215, 592)  décalage=(-2,+0) tuiles  raccord=0.0
+  gsmiddleman1   tuile=(28, 14) px=(423, 162)  décalage=(-3,+1) tuiles  raccord=9.6
+  recalage ADR-0006 réaccordé : Johto Route 40 HGSS.png:103876
+MAP_ROUTE_40 : 4 silhouette(s) effacée(s) → public/maps/Johto Route 40 HGSS.png
+[101/214] MAP_ROUTE_41  (Johto Route 41 HGSS.png)
+  gsswimmerm     tuile=(30, 8) px=(476, 107)  décalage=(-2,+0) tuiles  raccord=7.8
+  gsswimmerm     tuile=(31, 57) px=(490, 710)  décalage=(+2,+0) tuiles  raccord=2.7
+  gsswimmerw     tuile=(16, 57) px=(263, 706)  décalage=(-2,+0) tuiles  raccord=0.7
+  gsswimmerw     tuile=(35, 41) px=(553, 511)  décalage=(+2,-3) tuiles  raccord=10.9
+  gsswimmerw     tuile=(29, 21) px=(458, 265)  décalage=(-2,+0) tuiles  raccord=0.0
+  gsswimmerm     tuile=(30, 31) px=(487, 389)  décalage=(+2,+0) tuiles  raccord=0.2
+  gsswimmerw     tuile=(58, 34) px=(935, 424)  décalage=(-2,+0) tuiles  raccord=2.2
+  gsswimmerm     tuile=(57, 14) px=(919, 181)  décalage=(-2,-3) tuiles  raccord=28.8
+  gsswimmerw     tuile=(15, 6) px=(247, 77)  décalage=(-2,+0) tuiles  raccord=0.0
+  gsswimmerm     tuile=(49, 31) px=(788, 386)  décalage=(-2,+0) tuiles  raccord=0.6
+  recalage ADR-0006 réaccordé : Johto Route 41 HGSS.png:237215
+MAP_ROUTE_41 : 10 silhouette(s) effacée(s) → public/maps/Johto Route 41 HGSS.png
+[102/214] MAP_ROUTE_42  (Johto Route 42 HGSS.png)
+  mount          tuile=(85, 17) px=(1314, 216)  décalage=(-2,+0) tuiles  raccord=0.0
+  mania          tuile=(79, 11) px=(1220, 153)  décalage=(+2,+0) tuiles  raccord=1.9
+  fishing        tuile=(67, 15) px=(1027, 202)  décalage=(+1,+2) tuiles  raccord=31.5
+  recalage ADR-0006 réaccordé : Johto Route 42 HGSS.png:166610
+MAP_ROUTE_42 : 3 silhouette(s) effacée(s) → public/maps/Johto Route 42 HGSS.png
+[103/214] MAP_ROUTE_43  (Johto Route 43 HGSS.png)
+  campboy        tuile=(14, 53) px=(248, 669)  décalage=(-2,+0) tuiles  raccord=0.0
+  mania          tuile=(25, 15) px=(423, 200)  décalage=(+0,+3) tuiles  raccord=16.3
+  mania          tuile=(18, 8) px=(311, 113)  décalage=(+2,+0) tuiles  raccord=18.4
+  fishing        tuile=(8, 17) px=(151, 224)  décalage=(+2,+0) tuiles  raccord=27.4
+  mania          tuile=(19, 26) px=(327, 334)  décalage=(-2,+0) tuiles  raccord=20.4
+  picnicgirl     tuile=(14, 31) px=(247, 398)  décalage=(+2,+0) tuiles  raccord=19.6
+  recalage ADR-0006 réaccordé : Johto Route 43 HGSS.png:176980
+MAP_ROUTE_43 : 6 silhouette(s) effacée(s) → public/maps/Johto Route 43 HGSS.png
+[104/214] MAP_ROUTE_44  (Johto Route 44 HGSS.png)
+  mystery        tuile=(14, 17) px=(216, 262)  décalage=(+3,+3) tuiles  raccord=5.7
+  fishing        tuile=(32, 24) px=(503, 347)  décalage=(-2,+0) tuiles  raccord=0.0
+  fishing        tuile=(51, 5) px=(807, 100)  décalage=(+2,+0) tuiles  raccord=15.1
+  mania          tuile=(59, 4) px=(937, 87)  décalage=(-2,+0) tuiles  raccord=0.7
+  gsman2         tuile=(85, 11) px=(1353, 180)  décalage=(-2,+0) tuiles  raccord=21.7
+  gswoman3       tuile=(48, 26) px=(761, 370)  décalage=(-2,+0) tuiles  raccord=3.4
+  gsman3         tuile=(60, 25) px=(954, 358)  décalage=(-2,+0) tuiles  raccord=2.2
+  recalage ADR-0006 réaccordé : Johto Route 44 HGSS.png:172333
+MAP_ROUTE_44 : 7 silhouette(s) effacée(s) → public/maps/Johto Route 44 HGSS.png
+[105/214] MAP_ROUTE_45  (Johto Route 45 HGSS.png)
+  mount          tuile=(7, 51) px=(109, 630)  décalage=(+2,+1) tuiles  raccord=22.2
+  gsfighter      tuile=(22, 86) px=(350, 1073)  décalage=(-2,+0) tuiles  raccord=0.5
+  gsman1         tuile=(8, 126) px=(120, 1584)  décalage=(-2,+1) tuiles  raccord=26.4
+  gsmiddleman1   tuile=(8, 66) px=(127, 827)  décalage=(-2,-3) tuiles  raccord=7.3
+  mount          tuile=(25, 109) px=(398, 1364)  décalage=(+2,+1) tuiles  raccord=34.7
+  mount          tuile=(16, 29) px=(255, 360)  décalage=(+0,-3) tuiles  raccord=32.5
+  mount          tuile=(17, 108) px=(271, 1351)  décalage=(+2,+3) tuiles  raccord=14.3
+  gswoman3       tuile=(17, 61) px=(273, 763)  décalage=(+3,-3) tuiles  raccord=9.7
+  gsman3         tuile=(25, 32) px=(400, 396)  décalage=(+0,+3) tuiles  raccord=13.1
+  recalage ADR-0006 réaccordé : Johto Route 45 HGSS.png:428606
+MAP_ROUTE_45 : 9 silhouette(s) effacée(s) → public/maps/Johto Route 45 HGSS.png
+[106/214] MAP_ROUTE_46  (Johto Route 46 HGSS.png)
+  mount          tuile=(21, 33) px=(391, 381)  décalage=(-2,-3) tuiles  raccord=20.5
+  picnicgirl     tuile=(8, 28) px=(183, 322)  décalage=(-2,+0) tuiles  raccord=9.6
+  campboy        tuile=(8, 24) px=(183, 273)  décalage=(+2,+0) tuiles  raccord=0.2
+  gsman1         tuile=(11, 46) px=(233, 553)  décalage=(-3,+0) tuiles  raccord=0.2
+  recalage ADR-0006 réaccordé : Johto Route 46 HGSS.png:130662
+MAP_ROUTE_46 : 4 silhouette(s) effacée(s) → public/maps/Johto Route 46 HGSS.png
+[107/214] MAP_ROUTE_47  (Johto Route 47 HGSS.png)
+MAP_ROUTE_47 : aucune silhouette au seuil 30.0
+[108/214] MAP_ROUTE_48  (Johto Route 48 HGSS.png)
+MAP_ROUTE_48 : aucune silhouette au seuil 30.0
+[109/214] MAP_SAFARI_ZONE_ENTRANCE_EXTERIOR  (Johto Safari Zone HGSS.png)
+MAP_SAFARI_ZONE_ENTRANCE_EXTERIOR : aucune silhouette au seuil 30.0
+[110/214] MAP_ROUTE_1  (Kanto Route 1 HGSS.png)
+MAP_ROUTE_1 : aucune silhouette au seuil 30.0
+[111/214] MAP_ROUTE_10  (Kanto Route 10 HGSS.png)
+MAP_ROUTE_10 : aucune silhouette au seuil 30.0
+[112/214] MAP_ROUTE_11  (Kanto Route 11 HGSS.png)
+MAP_ROUTE_11 : aucune silhouette au seuil 30.0
+[113/214] MAP_ROUTE_12  (Kanto Route 12 HGSS.png)
+MAP_ROUTE_12 : aucune silhouette au seuil 30.0
+[114/214] MAP_ROUTE_13  (Kanto Route 13 HGSS.png)
+MAP_ROUTE_13 : aucune silhouette au seuil 30.0
+[115/214] MAP_ROUTE_14  (Kanto Route 14 HGSS.png)
+MAP_ROUTE_14 : aucune silhouette au seuil 30.0
+[116/214] MAP_ROUTE_15  (Kanto Route 15 HGSS.png)
+MAP_ROUTE_15 : aucune silhouette au seuil 30.0
+[117/214] MAP_ROUTE_16  (Kanto Route 16 HGSS.png)
+MAP_ROUTE_16 : aucune silhouette au seuil 30.0
+[118/214] MAP_ROUTE_17  (Kanto Route 17 HGSS.png)
+MAP_ROUTE_17 : aucune silhouette au seuil 30.0
+[119/214] MAP_ROUTE_18  (Kanto Route 18 HGSS.png)
+MAP_ROUTE_18 : aucune silhouette au seuil 30.0
+[120/214] MAP_ROUTE_19  (Kanto Route 19 HGSS.png)
+MAP_ROUTE_19 : aucune silhouette au seuil 30.0
+[121/214] MAP_ROUTE_2  (Kanto Route 2 HGSS.png)
+MAP_ROUTE_2 : aucune silhouette au seuil 30.0
+[122/214] MAP_ROUTE_20  (Kanto Route 20 HGSS.png)
+MAP_ROUTE_20 : aucune silhouette au seuil 30.0
+[123/214] MAP_ROUTE_21  (Kanto Route 21 HGSS.png)
+MAP_ROUTE_21 : aucune silhouette au seuil 30.0
+[124/214] MAP_ROUTE_22  (Kanto Route 22 HGSS.png)
+MAP_ROUTE_22 : aucune silhouette au seuil 30.0
+[125/214] MAP_ROUTE_24  (Kanto Route 24 HGSS.png)
+MAP_ROUTE_24 : aucune silhouette au seuil 30.0
+[126/214] MAP_ROUTE_25  (Kanto Route 25 HGSS.png)
+  gsgirl1        tuile=(34, 17) px=(628, 213)  décalage=(-2,+0) tuiles  raccord=9.6
+  gsgirl1        tuile=(64, 17) px=(1108, 213)  décalage=(-3,+0) tuiles  raccord=0.5
+  gsboy1         tuile=(23, 14) px=(453, 179)  décalage=(+2,+0) tuiles  raccord=18.9
+  gsassistantm   tuile=(72, 11) px=(1239, 141)  décalage=(+3,+1) tuiles  raccord=18.2
+  gsman3         tuile=(80, 13) px=(1369, 165)  décalage=(-2,+0) tuiles  raccord=1.9
+  campboy        tuile=(55, 6) px=(966, 80)  décalage=(+0,+2) tuiles  raccord=26.5
+  gsboy1         tuile=(52, 14) px=(919, 178)  décalage=(-3,-1) tuiles  raccord=21.6
+  gsgirl1        tuile=(60, 14) px=(1046, 176)  décalage=(+3,-1) tuiles  raccord=20.2
+  recalage ADR-0006 réaccordé : Kanto Route 25 HGSS.png:168174
+MAP_ROUTE_25 : 8 silhouette(s) effacée(s) → public/maps/Kanto Route 25 HGSS.png
+[127/214] MAP_ROUTE_26  (Kanto Route 26 HGSS.png)
+MAP_ROUTE_26 : aucune silhouette au seuil 30.0
+[128/214] MAP_ROUTE_27  (Kanto Route 27 HGSS.png)
+  mystery        tuile=(151, 16) px=(2456, 253)  décalage=(+1,+3) tuiles  raccord=6.3
+  gsman3         tuile=(74, 13) px=(1240, 215)  décalage=(-1,-2) tuiles  raccord=30.8
+  gswoman3       tuile=(170, 19) px=(2775, 285)  décalage=(-2,+0) tuiles  raccord=16.3
+  gsbigman       tuile=(36, 19) px=(617, 289)  décalage=(+2,+0) tuiles  raccord=0.4
+  gswoman3       tuile=(54, 12) px=(905, 202)  décalage=(+2,+0) tuiles  raccord=32.9
+  gsman2         tuile=(85, 24) px=(1414, 351)  décalage=(+2,+0) tuiles  raccord=3.0
+  gsman3         tuile=(106, 15) px=(1744, 239)  décalage=(-2,+0) tuiles  raccord=0.0
+  recalage ADR-0006 réaccordé : Kanto Route 27 HGSS.png:338919
+MAP_ROUTE_27 : 7 silhouette(s) effacée(s) → public/maps/Kanto Route 27 HGSS.png
+[129/214] MAP_ROUTE_28  (Kanto Route 28 HGSS.png)
+MAP_ROUTE_28 : aucune silhouette au seuil 30.0
+[130/214] MAP_ROUTE_3  (Kanto Route 3 HGSS.png)
+MAP_ROUTE_3 : aucune silhouette au seuil 30.0
+[131/214] MAP_ROUTE_4  (Kanto Route 4 HGSS.png)
+MAP_ROUTE_4 : aucune silhouette au seuil 30.0
+[132/214] MAP_ROUTE_5  (Kanto Route 5 HGSS.png)
+MAP_ROUTE_5 : aucune silhouette au seuil 30.0
+[133/214] MAP_ROUTE_6  (Kanto Route 6 HGSS.png)
+MAP_ROUTE_6 : aucune silhouette au seuil 30.0
+[134/214] MAP_ROUTE_7  (Kanto Route 7 HGSS.png)
+MAP_ROUTE_7 : aucune silhouette au seuil 30.0
+[135/214] MAP_ROUTE_8  (Kanto Route 8 HGSS.png)
+MAP_ROUTE_8 : aucune silhouette au seuil 30.0
+[136/214] MAP_ROUTE_9  (Kanto Route 9 HGSS.png)
+MAP_ROUTE_9 : aucune silhouette au seuil 30.0
+[137/214] MAP_POKEMON_LEAGUE_KAREN_ROOM  (Karen Room HGSS.png)
+MAP_POKEMON_LEAGUE_KAREN_ROOM : aucune silhouette au seuil 30.0
+[138/214] MAP_POKEMON_LEAGUE_KOGA_ROOM  (Koga Room HGSS.png)
+  gsbigfour2     tuile=(6, 10) px=(152, 214)  décalage=(-2,+0) tuiles  raccord=60.2
+  leag_door2     tuile=(6, 6) px=(142, 158)  décalage=(-3,+1) tuiles  raccord=37.8
+  recalage ADR-0006 réaccordé : Koga Room HGSS.png:49369
+MAP_POKEMON_LEAGUE_KOGA_ROOM : 2 silhouette(s) effacée(s) → public/maps/Koga Room HGSS.png
+[139/214] MAP_LAKE_OF_RAGE  (Lake of Rage HGSS dry.png)
+  gsman1         tuile=(71, 31) px=(1095, 464)  décalage=(+2,+0) tuiles  raccord=6.3
+  gsman1         tuile=(16, 16) px=(214, 289)  décalage=(+2,+2) tuiles  raccord=25.4
+  gsoldman1      tuile=(48, 48) px=(742, 662)  décalage=(+2,+0) tuiles  raccord=19.8
+  gswoman3       tuile=(71, 22) px=(1096, 352)  décalage=(+3,+2) tuiles  raccord=28.4
+  recalage ADR-0006 réaccordé : Lake of Rage HGSS dry.png:233910
+MAP_LAKE_OF_RAGE : 4 silhouette(s) effacée(s) → public/maps/Lake of Rage HGSS dry.png
+[140/214] MAP_LAVENDER_RADIO_STATION  (Lavender Radio Tower HGSS.png)
+MAP_LAVENDER_RADIO_STATION : aucune silhouette au seuil 30.0
+[141/214] MAP_LAVENDER  (Lavender Town HGSS.png)
+MAP_LAVENDER : aucune silhouette au seuil 30.0
+[142/214] MAP_MAHOGANY  (Mahogany Gym HGSS.png)
+MAP_MAHOGANY : aucune silhouette au seuil 30.0
+[143/214] MAP_MAHOGANY_SOUVENIR_SHOP  (Mahogany Town Shop HGSS.png)
+  gsoldwoman1    tuile=(5, 5) px=(22, 48)  décalage=(+3,+0) tuiles  raccord=40.7
+  recalage ADR-0006 réaccordé : Mahogany Town Shop HGSS.png:7083
+MAP_MAHOGANY_SOUVENIR_SHOP : 1 silhouette(s) effacée(s) → public/maps/Mahogany Town Shop HGSS.png
+[144/214] MAP_ROUTE_39_MOOMOO_FARM_HOUSE  (MooMoo Farm House HGSS.png)
+  middlewoman1   tuile=(10, 5) px=(136, 49)  décalage=(+2,+0) tuiles  raccord=12.1
+  gsmiddleman1   tuile=(7, 4) px=(87, 37)  décalage=(-2,+0) tuiles  raccord=40.2
+  recalage ADR-0006 réaccordé : MooMoo Farm House HGSS.png:4924
+MAP_ROUTE_39_MOOMOO_FARM_HOUSE : 2 silhouette(s) effacée(s) → public/maps/MooMoo Farm House HGSS.png
+[145/214] MAP_ROUTE_30_MR_POKEMON_HOUSE  (Mr Pokemon House HGSS.png)
+  ookido         tuile=(5, 6) px=(49, 63)  décalage=(+3,-2) tuiles  raccord=31.4
+  recalage ADR-0006 réaccordé : Mr Pokemon House HGSS.png:23402
+MAP_ROUTE_30_MR_POKEMON_HOUSE : 1 silhouette(s) effacée(s) → public/maps/Mr Pokemon House HGSS.png
+[146/214] MAP_SAFFRON_MR_PSYCHIC_HOUSE  (Mr Psychic House HGSS.png)
+  fishing        tuile=(8, 4) px=(124, 38)  décalage=(-3,+0) tuiles  raccord=27.0
+  recalage ADR-0006 réaccordé : Mr Psychic House HGSS.png:4817
+MAP_SAFFRON_MR_PSYCHIC_HOUSE : 1 silhouette(s) effacée(s) → public/maps/Mr Psychic House HGSS.png
+[147/214] MAP_MOUNT_MOON  (Mt Moon Square HGSS.png)
+MAP_MOUNT_MOON : aucune silhouette au seuil 30.0
+[148/214] MAP_MOUNT_MORTAR_2F  (Mt Mortar Basement HGSS.png)
+MAP_MOUNT_MORTAR_2F : aucune silhouette au seuil 30.0
+[149/214] MAP_MOUNT_MORTAR_1F_ENTRANCE  (Mt Mortar Entrance HGSS.png)
+MAP_MOUNT_MORTAR_1F_ENTRANCE : aucune silhouette au seuil 30.0
+[150/214] MAP_MOUNT_SILVER_CAVE_EXPERT_BELT_CHAMBER  (Mt. Silver Expert Belt HGSS.png)
+MAP_MOUNT_SILVER_CAVE_EXPERT_BELT_CHAMBER : aucune silhouette au seuil 30.0
+[151/214] MAP_MOUNT_SILVER  (Mt. Silver Summit HGSS.png)
+MAP_MOUNT_SILVER : aucune silhouette au seuil 30.0
+[152/214] MAP_MOUNT_SILVER_CAVE_UPPER_MOUNTAINSIDE  (Mt. Silver Upper Mountainside HGSS.png)
+MAP_MOUNT_SILVER_CAVE_UPPER_MOUNTAINSIDE : aucune silhouette au seuil 30.0
+[153/214] MAP_LAVENDER_NAME_RATER  (Name Rater HGSS.png)
+  gsoldman1      tuile=(5, 3) px=(118, 51)  décalage=(-3,+1) tuiles  raccord=47.3
+  recalage ADR-0006 réaccordé : Name Rater HGSS.png:9614
+MAP_LAVENDER_NAME_RATER : 1 silhouette(s) effacée(s) → public/maps/Name Rater HGSS.png
+[154/214] MAP_NATIONAL_PARK  (National Park HGSS.png)
+MAP_NATIONAL_PARK : aucune silhouette au seuil 30.0
+[155/214] MAP_NEW_BARK_SOUTHWEST_HOUSE  (New Bark Southwest House HGSS.png)
+MAP_NEW_BARK_SOUTHWEST_HOUSE : aucune silhouette au seuil 30.0
+[156/214] MAP_NEW_BARK  (New Bark Town HGSS.png)
+MAP_NEW_BARK : aucune silhouette au seuil 30.0
+[157/214] MAP_CIANWOOD_NORTH_HOUSE  (North Cianwood HGSS.png)
+MAP_CIANWOOD_NORTH_HOUSE : aucune silhouette au seuil 30.0
+[158/214] MAP_OLIVINE_LIGHTHOUSE_EXTERIOR  (Olivine Gym Exterior HGSS screenshot.png)
+MAP_OLIVINE_LIGHTHOUSE_EXTERIOR : aucune silhouette au seuil 30.0
+[159/214] MAP_OLIVINE_GYM  (Olivine Gym HGSS.png)
+  gsgentleman    tuile=(7, 23) px=(39, 268)  décalage=(+3,+0) tuiles  raccord=29.5
+  gsleader6      tuile=(14, 5) px=(85, 48)  décalage=(+0,+3) tuiles  raccord=28.5
+  recalage ADR-0006 réaccordé : Olivine Gym HGSS.png:22703
+MAP_OLIVINE_GYM : 2 silhouette(s) effacée(s) → public/maps/Olivine Gym HGSS.png
+[160/214] MAP_FUCHSIA_PAL_PARK_ENTRANCE  (Pal Park HGSS.png)
+MAP_FUCHSIA_PAL_PARK_ENTRANCE : aucune silhouette au seuil 30.0
+[161/214] MAP_PALLET  (Pallet Town HGSS.png)
+MAP_PALLET : aucune silhouette au seuil 30.0
+[162/214] MAP_PEWTER  (Pewter City HGSS.png)
+MAP_PEWTER : aucune silhouette au seuil 30.0
+[163/214] MAP_PEWTER_GYM  (Pewter Gym HGSS.png)
+  campboy        tuile=(6, 20) px=(198, 262)  décalage=(+0,-3) tuiles  raccord=21.0
+  mount          tuile=(9, 14) px=(231, 185)  décalage=(+0,+3) tuiles  raccord=20.0
+  gsleader14     tuile=(7, 2) px=(215, 41)  décalage=(+2,+0) tuiles  raccord=36.6
+  sunglasses     tuile=(11, 25) px=(278, 321)  décalage=(-2,+0) tuiles  raccord=30.3
+  recalage ADR-0006 réaccordé : Pewter Gym HGSS.png:62361
+MAP_PEWTER_GYM : 4 silhouette(s) effacée(s) → public/maps/Pewter Gym HGSS.png
+[164/214] MAP_LAKE_OF_RAGE_HIDDEN_POWER_HOUSE  (Player House 1F HGSS.png)
+MAP_LAKE_OF_RAGE_HIDDEN_POWER_HOUSE : aucune silhouette au seuil 30.0
+[165/214] MAP_POKEATHLON_DOME_INTERIOR_1F  (Pokeathlon Dome Interior 1F HGSS.png)
+  gswoman1       tuile=(16, 14) px=(278, 187)  décalage=(-3,+0) tuiles  raccord=6.1
+  gsboy1         tuile=(15, 23) px=(262, 299)  décalage=(+3,-1) tuiles  raccord=4.0
+  gsman1         tuile=(32, 9) px=(537, 137)  décalage=(-2,-2) tuiles  raccord=43.7
+  gsbigman       tuile=(40, 8) px=(661, 124)  décalage=(+3,+3) tuiles  raccord=14.2
+  gsmiddleman1   tuile=(34, 12) px=(567, 174)  décalage=(-2,+0) tuiles  raccord=11.9
+  gsman2         tuile=(41, 15) px=(678, 199)  décalage=(+2,+0) tuiles  raccord=16.5
+  gsoldman1      tuile=(5, 15) px=(102, 200)  décalage=(-3,-2) tuiles  raccord=15.0
+  pcwoman1       tuile=(36, 8) px=(599, 124)  décalage=(-2,+0) tuiles  raccord=38.6
+  pcwoman1       tuile=(23, 8) px=(391, 125)  décalage=(-3,-2) tuiles  raccord=53.3
+  pcwoman1       tuile=(11, 8) px=(199, 124)  décalage=(-3,+0) tuiles  raccord=33.0
+  pcwoman1       tuile=(21, 8) px=(359, 125)  décalage=(-1,-2) tuiles  raccord=47.0
+  pcwoman1       tuile=(25, 8) px=(423, 125)  décalage=(+1,-2) tuiles  raccord=54.4
+  recalage ADR-0006 réaccordé : Pokeathlon Dome Interior 1F HGSS.png:35938
+MAP_POKEATHLON_DOME_INTERIOR_1F : 12 silhouette(s) effacée(s) → public/maps/Pokeathlon Dome Interior 1F HGSS.png
+[166/214] MAP_POKEMON_LEAGUE_ENTRANCE  (Pokemon League Entrance HGSS.png)
+MAP_POKEMON_LEAGUE_ENTRANCE : aucune silhouette au seuil 30.0
+[167/214] MAP_PEWTER_POKEMART  (Poké Mart interior HGSS.png)
+  shopm1         tuile=(3, 4) px=(27, 45)  décalage=(+3,+2) tuiles  raccord=59.4
+  shopm1         tuile=(3, 6) px=(27, 70)  décalage=(+1,+3) tuiles  raccord=35.6
+  recalage ADR-0006 réaccordé : Poké Mart interior HGSS.png:11132
+MAP_PEWTER_POKEMART : 2 silhouette(s) effacée(s) → public/maps/Poké Mart interior HGSS.png
+[168/214] MAP_POKEATHLON_DOME_INTERIOR_2F_ENTRANCE  (Pokéathlon Dome 2F Entrance HGSS.png)
+MAP_POKEATHLON_DOME_INTERIOR_2F_ENTRANCE : aucune silhouette au seuil 30.0
+[169/214] MAP_PEWTER_POKECENTER_1F  (Pokémon Center inside HGSS.png)
+  pcwoman1       tuile=(13, 17) px=(201, 228)  décalage=(+2,-2) tuiles  raccord=51.0
+  pcwoman2       tuile=(6, 4) px=(87, 37)  décalage=(+2,+0) tuiles  raccord=33.9
+  pcwoman2       tuile=(11, 4) px=(167, 37)  décalage=(-3,+0) tuiles  raccord=34.6
+  pcwoman2       tuile=(3, 4) px=(23, 37)  décalage=(+2,+0) tuiles  raccord=22.8
+  pcwoman1       tuile=(8, 12) px=(119, 154)  décalage=(-3,+3) tuiles  raccord=60.5
+  recalage ADR-0006 réaccordé : Pokémon Center inside HGSS.png:17257
+MAP_PEWTER_POKECENTER_1F : 5 silhouette(s) effacée(s) → public/maps/Pokémon Center inside HGSS.png
+[170/214] MAP_VERMILION_POKEMON_FAN_CLUB  (Pokémon Fan Club HGSS.png)
+MAP_VERMILION_POKEMON_FAN_CLUB : aucune silhouette au seuil 30.0
+[171/214] MAP_ROUTE_22_POKEMON_LEAGUE_RECEPTION_GATE  (Pokémon League Reception Gate HGSS.png)
+  policeman      tuile=(9, 16) px=(135, 184)  décalage=(+0,+3) tuiles  raccord=18.4
+  policeman      tuile=(8, 9) px=(119, 97)  décalage=(-3,+0) tuiles  raccord=11.7
+  policeman      tuile=(14, 9) px=(216, 97)  décalage=(+3,+0) tuiles  raccord=11.2
+  recalage ADR-0006 réaccordé : Pokémon League Reception Gate HGSS.png:13451
+MAP_ROUTE_22_POKEMON_LEAGUE_RECEPTION_GATE : 3 silhouette(s) effacée(s) → public/maps/Pokémon League Reception Gate HGSS.png
+[172/214] MAP_VIOLET_POKEMON_SCHOOL  (Pokémon School interior HGSS.png)
+  gsdsboy        tuile=(7, 9) px=(103, 100)  décalage=(-1,-3) tuiles  raccord=34.5
+  gsdsboy        tuile=(8, 9) px=(120, 100)  décalage=(-2,-3) tuiles  raccord=18.4
+  gsman2         tuile=(14, 8) px=(201, 88)  décalage=(-1,-2) tuiles  raccord=25.0
+  gsbigman       tuile=(4, 3) px=(53, 38)  décalage=(+2,+0) tuiles  raccord=18.4
+  gsgirl2        tuile=(3, 9) px=(36, 100)  décalage=(+3,-3) tuiles  raccord=27.2
+  gsboy1         tuile=(10, 7) px=(135, 77)  décalage=(-1,-3) tuiles  raccord=34.3
+  gsboy1         tuile=(4, 7) px=(55, 77)  décalage=(+2,-3) tuiles  raccord=34.8
+  recalage ADR-0006 réaccordé : Pokémon School interior HGSS.png:7237
+MAP_VIOLET_POKEMON_SCHOOL : 7 silhouette(s) effacée(s) → public/maps/Pokémon School interior HGSS.png
+[173/214] MAP_NEW_BARK_PLAYER_HOUSE_2F  (Red House 2F HGSS.png)
+MAP_NEW_BARK_PLAYER_HOUSE_2F : aucune silhouette au seuil 30.0
+[174/214] MAP_ROCK_TUNNEL_1F  (Rock Tunnel 2 HGSS.png)
+MAP_ROCK_TUNNEL_1F : aucune silhouette au seuil 30.0
+[175/214] MAP_RUINS_OF_ALPH_NORTHEAST_ENTRANCE_FIRST_ROOM  (Ruins of Alph Entrance HGSS.png)

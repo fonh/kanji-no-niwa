@@ -19,7 +19,10 @@
     "import:jmdict": "tsx --env-file=.env.local scripts/import/import-jmdict.ts",
     "import:tatoeba": "tsx --env-file=.env.local scripts/import/import-tatoeba.ts",
     "build:vocab-audio": "python3 scripts/build/download-vocab-audio.py",
-    "prune": "tsx scripts/import/prune-parasites.ts"
+    "prune": "tsx scripts/import/prune-parasites.ts",
+    "maps:scrub": "python3 scripts/build/scrub-all-maps.py && python3 scripts/build/build-zone-registry.py",
+    "maps:verify": "python3 scripts/validate/lint-baked-sprites.py",
+    "npc:sprites": "python3 scripts/build/assign-npc-sprites.py --apply"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",

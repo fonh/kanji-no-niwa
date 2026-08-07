@@ -38,17 +38,6 @@ ZONES = Path("content/map/zones.json")
 REGISTRY = Path("src/data/zone-registry.json")
 SHEETS = Path("public/sprites/overworld")
 
-CRITICAL = {
-    "new-bark-town",
-    "route-29",
-    "cherrygrove-city",
-    "route-30",
-    "route-31",
-    "violet-city",
-    "sprout-tower",
-}
-
-
 SPRITES_TS = Path("src/lib/npc-sprites.ts")
 
 
@@ -121,28 +110,30 @@ def main() -> int:
         if herite:
             continue
 
-        cible = errors if entry["zone_id"] in CRITICAL else None
-        if cible is not None:
-            cible.append(
-                f"{eid} ({entry['zone_id']}, {home}): invisible — ni sprite_id, "
-                f"ni objet ROM sur sa tuile"
-            )
-        else:
+        # Un personnage POSÉ sur une carte servie et sans apparence est un bug :
+        # le joueur voit une tuile vide qui répond au bouton A. Un personnage
+        # dont la zone de contenu n'est reliée à AUCUN MAP_* est un manque d'une
+        # autre nature (la zone n'est pas encore jouable) : il n'est dessiné
+        # nulle part de toute façon, on le relève sans bloquer.
+        if zone is None or entry.get("tile_x") is None:
             muets.setdefault(entry["zone_id"], []).append(eid)
+        else:
+            errors.append(
+                f"{eid} ({entry['zone_id']}, {home}): invisible — ni sprite_id, "
+                f"ni objet ROM sous ses pieds. "
+                f"Lancer scripts/build/assign-npc-sprites.py"
+            )
 
     total_muets = sum(len(v) for v in muets.values())
-    print(f"{total_muets} personnage(s) encore invisibles hors chemin critique "
-          f"({len(muets)} zone(s)) — travail de la passe PNJ")
-    for zone_id in sorted(muets):
-        noms = ", ".join(sorted(muets[zone_id]))
-        print(f"  [INFO] {zone_id}: {noms}")
+    print(f"{total_muets} personnage(s) dans une zone de contenu sans carte "
+          f"({len(muets)} zone(s)) — non dessinés faute de MAP_*, pas faute de sprite")
 
     if errors:
-        print(f"\n{len(errors)} personnage(s) invisibles SUR LE CHEMIN CRITIQUE :")
+        print(f"\n{len(errors)} personnage(s) POSÉS sur une carte et invisibles :")
         for e in errors:
             print(f"  [ERREUR] {e}")
         return 1
-    print("Aucun personnage invisible sur le chemin critique.")
+    print(f"Tous les personnages posés sur une carte sont dessinés.")
     return 0
 
 

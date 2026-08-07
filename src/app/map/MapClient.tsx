@@ -1547,7 +1547,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             // Sans sprite_id déclaré, le personnage hérite de l'apparence de
             // l'objet ROM qu'il remplace (src/lib/rom-decor.ts) — sinon il est
             // purement invisible.
-            const spriteId = npc.sprite_id ?? inheritedSpriteId(zone, npc.world_x, npc.world_z)
+            const spriteId =
+              npc.sprite_id ?? inheritedSpriteId(zone, npc.world_x, npc.world_z, npc.rom_object)
             const sprite = spriteId ? resolveNpcSprite(spriteId) : null
             const frame = sprite ? spriteFrameOffset(sprite, npc.facing ?? 'south') : null
             return (
@@ -1603,7 +1604,8 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             // « les dresseurs ne font rien », on ne pouvait pas les voir, et
             // encore moins deviner où passait leur ligne de vue (issue 13).
             const spriteId =
-              trainer.sprite_id ?? inheritedSpriteId(zone, trainer.world_x, trainer.world_z)
+              trainer.sprite_id ??
+              inheritedSpriteId(zone, trainer.world_x, trainer.world_z, trainer.rom_object)
             const sprite = spriteId ? resolveNpcSprite(spriteId) : null
             const frame = sprite ? spriteFrameOffset(sprite, trainer.facing) : null
             return (

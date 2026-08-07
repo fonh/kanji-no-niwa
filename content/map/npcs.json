@@ -218,7 +218,9 @@
   "position_status": "fix QA Cherrygrove (2026-08-03) : était (35,0), généré sans repère ROM, un point arbitraire en haut de carte sans rapport avec la scène « accueille à l'entrée ». L'objet ROM obj_T21_gsoldman1 porte le flag FLAG_HIDE_CHERRYGROVE_GUIDE_GENT — nom qui désigne explicitement CE personnage — en (54,12), face au sud (facingDirection ROM 1, déjà la valeur retenue). Repositionné dessus, walkable, 4 voisins praticables vérifiés.",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/cherrygrove-city/guide_gent_cherrygrove"
+  "dialogue_ref": "npcs/cherrygrove-city/guide_gent_cherrygrove",
+  "sprite_id": "SPRITE_GSOLDMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_T21_gsoldman1 (SPRITE_GSOLDMAN1), sur sa propre tuile."
  },
  {
   "npc_id": "silver_card_cherrygrove",
@@ -319,7 +321,9 @@
   "position_status": "fix QA Route 30 (2026-08-03) : était (21,33) sur la zone EXTÉRIEURE MAP_ROUTE_30, généré sans repère ROM — role_origin dit pourtant explicitement « Homme dans une maison ». L'objet ROM matché (obj_R30R0101_gsmiddleman1, placements/route-30.json) vit DANS MAP_ROUTE_30_APRICORN_HOUSE en (5,5), même bug de fond que Mom/Elm avant issue 12 (PNJ d'intérieur aplati sur la zone extérieure), jamais corrigé pour Route 30. Désormais dans la maison, face au sud (facingDirection ROM 1), interagible par A depuis une tuile adjacente atteinte depuis la porte",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/route-30/man_in_house_route30"
+  "dialogue_ref": "npcs/route-30/man_in_house_route30",
+  "sprite_id": "SPRITE_GSMIDDLEMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_R30R0101_gsmiddleman1 (SPRITE_GSMIDDLEMAN1), sur sa propre tuile."
  },
  {
   "npc_id": "mr_pokemon_route30",
@@ -331,7 +335,9 @@
   "facing": "west",
   "position_status": "fix QA Route 30 (2026-08-03) : était (22,45) sur la zone EXTÉRIEURE MAP_ROUTE_30, généré sans repère ROM — Mr. Pokémon vit dans sa maison en HGSS, pas en plein air. L'objet ROM matché (obj_R30R0201_gsgentleman, placements/route-30.json) vit DANS MAP_ROUTE_30_MR_POKEMON_HOUSE en (9,7), face à l'ouest (facingDirection ROM 2, vers le Pr. Oak adjacent), même bug de fond que Mom/Elm avant issue 12, jamais corrigé pour Route 30",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/route-30/mr_pokemon_route30"
+  "dialogue_ref": "npcs/route-30/mr_pokemon_route30",
+  "sprite_id": "SPRITE_GSGENTLEMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_R30R0201_gsgentleman (SPRITE_GSGENTLEMAN), sur sa propre tuile."
  },
  {
   "npc_id": "prof_oak_route30",
@@ -343,7 +349,9 @@
   "facing": "east",
   "position_status": "fix QA Route 30 (2026-08-03) : était (6,54) sur la zone EXTÉRIEURE MAP_ROUTE_30, généré sans repère ROM — role_origin dit pourtant « Présent chez Mr. Pokémon ». L'objet ROM matché (obj_R30R0201_ookido, placements/route-30.json) vit DANS MAP_ROUTE_30_MR_POKEMON_HOUSE en (8,7), adjacent à Mr. Pokémon, face à l'est (facingDirection ROM 3, vers lui), même bug de fond que Mom/Elm avant issue 12, jamais corrigé pour Route 30",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/route-30/prof_oak_route30"
+  "dialogue_ref": "npcs/route-30/prof_oak_route30",
+  "sprite_id": "SPRITE_OOKIDO",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_R30R0201_ookido (SPRITE_OOKIDO), sur sa propre tuile."
  },
  {
   "npc_id": "lyra_ethan_route31",
@@ -369,7 +377,8 @@
   "trigger_type": "talk",
   "role": "lesson",
   "dialogue_ref": "npcs/route-31/black_apricorn_man_route31",
-  "_note_sprite": "position 2026-08-07 : (32, 15) → (28,15), reposé sur obj_R31_gsbigman (SPRITE_GSBIGMAN), l'homme planté à côté du Bonguri noir de la Route 31 — il était posé 4 cases à l'est, invisible, pendant que son objet ROM était dessiné sans dialogue. Il hérite ainsi de l'apparence de son objet ROM (src/lib/rom-decor.ts)."
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_R31_gsbigman (SPRITE_GSBIGMAN), sur sa propre tuile.",
+  "sprite_id": "SPRITE_GSBIGMAN"
  },
  {
   "npc_id": "glasses_man_violet_city",
@@ -422,7 +431,8 @@
   "trigger_type": "talk",
   "role": "lesson",
   "dialogue_ref": "npcs/violet-city/glasses_boy_violet_city",
-  "_note_sprite": "position 2026-08-07 : (16, 35) → (14,35), reposé sur obj_T22_gsboy2, à 2 cases de son ancienne position, invisible de la même façon. Il hérite ainsi de l'apparence de son objet ROM (src/lib/rom-decor.ts)."
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_T22_gsboy2 (SPRITE_GSBOY2), sur sa propre tuile.",
+  "sprite_id": "SPRITE_GSBOY2"
  },
  {
   "npc_id": "mart_boy_violet_city",
@@ -674,7 +684,9 @@
   "position_status": "generated, voir content/map/placements/ruins-of-alph.json",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/ruins-of-alph/young_man_ruins_of_alph"
+  "dialogue_ref": "npcs/ruins-of-alph/young_man_ruins_of_alph",
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Young Man in the Underground Room » (règle /\\bman\\b|\\bfather\\b|\\bmr\\b|\\bguru\\b|\\bgent\\b/). Habillage, pas une source."
  },
  {
   "npc_id": "researchers_ruins_of_alph",
@@ -686,7 +698,9 @@
   "position_status": "generated, voir content/map/placements/ruins-of-alph.json",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/ruins-of-alph/researchers_ruins_of_alph"
+  "dialogue_ref": "npcs/ruins-of-alph/researchers_ruins_of_alph",
+  "sprite_id": "SPRITE_ASSISTANTM",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Researchers » (règle /scientist|researcher|aide|assistant/). Habillage, pas une source."
  },
  {
   "npc_id": "kurt_azalea",
@@ -768,7 +782,9 @@
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/ilex-forest.json",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/ilex-forest/charcoal_apprentice_ilex"
+  "dialogue_ref": "npcs/ilex-forest/charcoal_apprentice_ilex",
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Charcoal Apprentice » (règle /apprentice|jumper|record.holder|athlete/). Habillage, pas une source."
  },
  {
   "npc_id": "ledge_youth_ilex",
@@ -780,7 +796,10 @@
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/ilex-forest.json",
   "trigger_type": "talk",
   "role": "lesson",
-  "dialogue_ref": "npcs/ilex-forest/ledge_youth_ilex"
+  "dialogue_ref": "npcs/ilex-forest/ledge_youth_ilex",
+  "sprite_id": "SPRITE_GSMIDDLEMAN1",
+  "rom_object": "obj_D36R0101_gsmiddleman1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_D36R0101_gsmiddleman1 (SPRITE_GSMIDDLEMAN1), à 3 case(s) — le personnage le REPRÉSENTE (`rom_object`), le décor ne le dessine donc plus une seconde fois."
  },
  {
   "npc_id": "naoko_ilex",
@@ -792,7 +811,9 @@
   "position_status": "generated (pas de sprite ROM matché), voir content/map/placements/ilex-forest.json",
   "trigger_type": "talk",
   "role": "ambient",
-  "dialogue_ref": "npcs/ilex-forest/naoko_ilex"
+  "dialogue_ref": "npcs/ilex-forest/naoko_ilex",
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : PROVISOIRE. Aucun objet ROM libre, aucune classe reconnue dans « Naoko » — silhouette d'adulte générique, à remplacer quand la zone passera à la passe PNJ."
  },
  {
   "npc_id": "daycare_couple_route34",
@@ -803,7 +824,9 @@
   "facing": "south",
   "position_status": "generated — intérieur de la maison de la pension, voir content/map/placements/route-34.json",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/route-34/daycare_couple_route34"
+  "dialogue_ref": "npcs/route-34/daycare_couple_route34",
+  "sprite_id": "SPRITE_GSMIDDLEMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Day Care Couple » (règle /couple|family|siblings|parents/). Habillage, pas une source."
  },
  {
   "npc_id": "lass_carrie_goldenrod",
@@ -1000,7 +1023,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/national-park/magnus_national_park",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : PROVISOIRE. Aucun objet ROM libre, aucune classe reconnue dans « Magnus » — silhouette d'adulte générique, à remplacer quand la zone passera à la passe PNJ."
  },
  {
   "npc_id": "retired_jumper_national_park",
@@ -1012,7 +1037,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/national-park/retired_jumper_national_park",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_SPORTSMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Retired Record-Holder » (règle /apprentice|jumper|record.holder|athlete/). Habillage, pas une source."
  },
  {
   "npc_id": "aprijuice_vendor_national_park",
@@ -1024,7 +1051,10 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/national-park/aprijuice_vendor_national_park",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSBOY3",
+  "rom_object": "obj_D22R0101_gsboy3_2",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_D22R0101_gsboy3_2 (SPRITE_GSBOY3), à 2 case(s) — le personnage le REPRÉSENTE (`rom_object`), le décor ne le dessine donc plus une seconde fois."
  },
  {
   "npc_id": "bench_teacher_national_park",
@@ -1036,7 +1066,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/national-park/bench_teacher_national_park",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_INSTRUCTOR",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Teacher on the Bench » (règle /teacher|instructor/). Habillage, pas une source."
  },
  {
   "npc_id": "whitney_national_park",
@@ -1047,7 +1079,9 @@
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/national-park.json",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/national-park/whitney_national_park"
+  "dialogue_ref": "npcs/national-park/whitney_national_park",
+  "sprite_id": "SPRITE_GSLEADER3",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : planche du personnage « Whitney », relevée dans les zone_event du décompilé (table NOMMES)."
  },
  {
   "npc_id": "sunny_route37",
@@ -1263,7 +1297,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/route-39/farm_girl_left_route39",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSGIRL2",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Farm Girl (Left) » (règle /\\bgirl\\b|\\bdaughter\\b/). Habillage, pas une source."
  },
  {
   "npc_id": "farm_girl_right_route39",
@@ -1275,7 +1311,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/route-39/farm_girl_right_route39",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSGIRL2",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Farm Girl (Right) » (règle /\\bgirl\\b|\\bdaughter\\b/). Habillage, pas une source."
  },
  {
   "npc_id": "farmer_wife_route39",
@@ -1287,7 +1325,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/route-39/farmer_wife_route39",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_FARMER",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Farmer's Wife » (règle /farmer/). Habillage, pas une source."
  },
  {
   "npc_id": "farmer_route39",
@@ -1299,7 +1339,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/route-39/farmer_route39",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_FARMER",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Farmer » (règle /farmer/). Habillage, pas une source."
  },
  {
   "npc_id": "sick_cow_route39",
@@ -1322,7 +1364,9 @@
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-39.json",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/route-39/baoba_route39"
+  "dialogue_ref": "npcs/route-39/baoba_route39",
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : PROVISOIRE. Aucun objet ROM libre, aucune classe reconnue dans « Baoba » — silhouette d'adulte générique, à remplacer quand la zone passera à la passe PNJ."
  },
  {
   "npc_id": "silver_gym_olivine",
@@ -1406,7 +1450,9 @@
      "monday"
     ]
    }
-  ]
+  ],
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : PROVISOIRE. Aucun objet ROM libre, aucune classe reconnue dans « Monica » — silhouette d'adulte générique, à remplacer quand la zone passera à la passe PNJ."
  },
  {
   "npc_id": "photographer_family_route40",
@@ -1417,7 +1463,9 @@
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-40.json",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/route-40/photographer_family_route40"
+  "dialogue_ref": "npcs/route-40/photographer_family_route40",
+  "sprite_id": "SPRITE_CAMERAMAN",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Photographer's Family » (règle /photographer|cameraman/). Habillage, pas une source."
  },
  {
   "npc_id": "whirl_legend_man_route40",
@@ -1428,7 +1476,9 @@
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-40.json",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/route-40/whirl_legend_man_route40"
+  "dialogue_ref": "npcs/route-40/whirl_legend_man_route40",
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Man Gazing at the Sea » (règle /\\bman\\b|\\bfather\\b|\\bmr\\b|\\bguru\\b|\\bgent\\b/). Habillage, pas une source."
  },
  {
   "npc_id": "pharmacist_cianwood",
@@ -1498,7 +1548,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-42.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/route-42/hiker_cs_route42",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_MOUNT",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Hiker from Mt. Mortar » (règle /hiker/). Habillage, pas une source."
  },
  {
   "npc_id": "eusine_route42",
@@ -1516,7 +1568,10 @@
     "quest_id": "suicune_hunt",
     "step": "cianwood_battle"
    }
-  ]
+  ],
+  "sprite_id": "SPRITE_MINAKI",
+  "rom_object": "obj_R42_minaki",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : obj_R42_minaki (SPRITE_MINAKI) est le seul exemplaire de cette planche de personnage nommé dans la zone, et personne d'autre ne le revendique."
  },
  {
   "npc_id": "ragecandy_vendor_mahogany",
@@ -1666,7 +1721,9 @@
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-43.json",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/route-43/picnicker_tiffany_route43"
+  "dialogue_ref": "npcs/route-43/picnicker_tiffany_route43",
+  "sprite_id": "SPRITE_PICNICGIRL",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Picnicker Tiffany » (règle /picnicker|lass|schoolgirl/). Habillage, pas une source."
  },
  {
   "npc_id": "gate_npc_route43",
@@ -1678,7 +1735,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-43.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/route-43/gate_npc_route43",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Young Man in the Gatehouse » (règle /\\bman\\b|\\bfather\\b|\\bmr\\b|\\bguru\\b|\\bgent\\b/). Habillage, pas une source."
  },
  {
   "npc_id": "tollbooth_lake_of_rage",
@@ -1690,7 +1749,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/lake-of-rage.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/lake-of-rage/tollbooth_lake_of_rage",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Tollbooth Man » (règle /\\bman\\b|\\bfather\\b|\\bmr\\b|\\bguru\\b|\\bgent\\b/). Habillage, pas une source."
  },
  {
   "npc_id": "rage_kanji_lake_of_rage",
@@ -1720,7 +1781,10 @@
     "quest_id": "red_scale_errand",
     "step": "scale_obtained"
    }
-  ]
+  ],
+  "sprite_id": "SPRITE_WATARU",
+  "rom_object": "obj_T29_wataru",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : obj_T29_wataru (SPRITE_WATARU) est le seul exemplaire de cette planche de personnage nommé dans la zone, et personne d'autre ne le revendique."
  },
  {
   "npc_id": "fishing_guru_lake_of_rage",
@@ -1738,7 +1802,9 @@
     "quest_id": "rocket_hq_mahogany",
     "step": "hq_fallen"
    }
-  ]
+  ],
+  "sprite_id": "SPRITE_FISHING",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Fishing Guru » (règle /fisherman|fishing/). Habillage, pas une source."
  },
  {
   "npc_id": "wesley_lake_of_rage",
@@ -1762,7 +1828,9 @@
     "quest_id": "rocket_hq_mahogany",
     "step": "hq_fallen"
    }
-  ]
+  ],
+  "sprite_id": "SPRITE_GSMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : PROVISOIRE. Aucun objet ROM libre, aucune classe reconnue dans « Wesley » — silhouette d'adulte générique, à remplacer quand la zone passera à la passe PNJ."
  },
  {
   "npc_id": "disguise_grunt_goldenrod",
@@ -2031,7 +2099,10 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/dragons-den.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/dragons-den/elder_master_dragons_den",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSWOMAN3",
+  "rom_object": "obj_D44R0102_gswoman3",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : reprise de l'objet ROM obj_D44R0102_gswoman3 (SPRITE_GSWOMAN3), à 2 case(s) — le personnage le REPRÉSENTE (`rom_object`), le décor ne le dessine donc plus une seconde fois."
  },
  {
   "npc_id": "shrine_elders_dragons_den",
@@ -2043,7 +2114,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/dragons-den.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/dragons-den/shrine_elders_dragons_den",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_BOZU",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « The Shrine Elders » (règle /sage|elder|monk/). Habillage, pas une source."
  },
  {
   "npc_id": "clair_dragons_den",
@@ -2061,7 +2134,10 @@
     "quest_id": "dragons_den_trial",
     "step": "trial_passed"
    }
-  ]
+  ],
+  "sprite_id": "SPRITE_WATARU",
+  "rom_object": "obj_D44R0102_wataru",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : obj_D44R0102_wataru (SPRITE_WATARU) est le seul exemplaire de cette planche de personnage nommé dans la zone, et personne d'autre ne le revendique."
  },
  {
   "npc_id": "kimono_dance_summit_ecruteak",
@@ -2113,7 +2189,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-26.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/route-26/siblings_house_route26",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_GSMIDDLEMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « The Siblings' House » (règle /couple|family|siblings|parents/). Habillage, pas une source."
  },
  {
   "npc_id": "healer_girl_route26",
@@ -2125,7 +2203,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-26.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/route-26/healer_girl_route26",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_PCWOMAN1",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Healer Girl » (règle /nurse|healer/). Habillage, pas une source."
  },
  {
   "npc_id": "tohjo_old_lady_route27",
@@ -2137,7 +2217,9 @@
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-27.json",
   "trigger_type": "talk",
   "dialogue_ref": "npcs/route-27/tohjo_old_lady_route27",
-  "role": "lesson"
+  "role": "lesson",
+  "sprite_id": "SPRITE_LADY",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Old Lady by the Falls » (règle /pokéfan|lady|madam/). Habillage, pas une source."
  },
  {
   "npc_id": "league_gate_man_route27",
@@ -2148,7 +2230,9 @@
   "facing": "south",
   "position_status": "generated (pas de sprite ROM matché) — voir content/map/placements/route-27.json",
   "trigger_type": "talk",
-  "dialogue_ref": "npcs/route-27/league_gate_man_route27"
+  "dialogue_ref": "npcs/route-27/league_gate_man_route27",
+  "sprite_id": "SPRITE_GSWOMAN3",
+  "_note_sprite": "apparence 2026-08-07 (assign-npc-sprites.py) : aucun objet ROM libre à 4 cases ; silhouette déduite de sa classe, écrite dans son nom « Reception Gate Attendant » (règle /attendant|receptionist|host/). Habillage, pas une source."
  },
  {
   "npc_id": "telepath_man_antichambre",

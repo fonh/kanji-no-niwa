@@ -133,17 +133,40 @@ Densités cibles par type de zone : `content/texts-progressifs.md` § Densité.
 `lint-cross-refs.py` vérifie que la table, le registre de zones et
 `content/texts/` disent la même chose.
 
-### 3.6bis Nettoyer une carte de ses personnages incrustés
+### 3.6bis Les cartes et les apparences, à l'échelle
+
+Trois commandes, jamais un personnage à la fois. Toutes idempotentes : on les
+relance sans réfléchir, elles ne refont que ce qui a changé.
 
 ```
-python3 scripts/build/find_baked_sprites.py MAP_ROUTE_30       # relever
+npm run maps:scrub     # efface les personnages peints de TOUTES les captures
+npm run maps:verify    # re-mesure : plus aucune silhouette peinte ? (lent)
+npm run npc:sprites    # donne une apparence à tout personnage qui n'en a pas
+```
+
+Le point important est le **bouclage** : `maps:verify` utilise le MÊME détecteur
+par corrélation que le nettoyage, mais il ne sait rien de ce qu'on a fait — il ne
+connaît que les pixels. On ne relit donc pas son propre travail, on le fait
+re-mesurer. C'est ce qui remplace « attendre qu'un humain joue et envoie une
+capture ».
+
+`npc:sprites` (`assign-npc-sprites.py`) descend une cascade, du plus sourcé au
+plus dégradé — objet ROM sous les pieds, objet ROM voisin non revendiqué, planche
+de personnage nommé unique dans la zone, table des personnages connus, homonyme
+déjà habillé ailleurs, classe écrite dans le nom, et en dernier recours une
+silhouette générique **signalée comme provisoire** dans le rapport. Ce qu'il
+n'invente jamais : il écrit sa règle et sa source dans `_note_sprite`.
+
+Une seule chose à faire à la main derrière : **regarder le avant/après** d'une
+carte modifiée (l'original reste sous `scripts/sources/maps-baked/`). Détails et
+pièges : § 4.5.
+
+Pour un cas isolé, les outils sous-jacents restent utilisables zone par zone :
+
+```
+python3 scripts/build/find_baked_sprites.py MAP_ROUTE_30
 python3 scripts/build/scrub_baked_sprites.py MAP_ROUTE_30 --dry-run
-python3 scripts/build/scrub_baked_sprites.py MAP_ROUTE_30      # effacer
-python3 scripts/build/build-zone-registry.py                   # re-générer
 ```
-
-Puis **regarder le avant/après** (l'original reste sous
-`scripts/sources/maps-baked/`). Détails et pièges : § 4.5.
 
 ### 3.6 Regarder ce que le joueur voit, sans attendre une capture
 
@@ -334,6 +357,11 @@ désormais ; ne pas les désactiver « juste pour voir ».
   coordonnées — c'était le cas de la première liste de la Route 31, qui en
   oubliait une quatrième au passage. C'est exactement ce que la corrélation
   ci-dessus règle : elle mesure sur l'image.
+- **`rom_object` dit « ces deux-là sont le même personnage ».** La coïncidence de
+  tuile et la coïncidence de sprite ne suffisent pas : un personnage décalé de
+  trois cases (sa tuile ROM était inatteignable, ou le curateur l'a rapproché du
+  chemin) était dessiné À CÔTÉ de son propre figurant. Le champ nomme l'objet
+  représenté ; le décor le retire, et le personnage en hérite l'apparence.
 - **Un PNJ sans `sprite_id` n'est dessiné NULLE PART** — le rendu ne produisait
   qu'un div vide de 18 px. 149 personnages étaient dans ce cas, dont M. Pokémon
   et le Prof. Chen, qui portent le dialogue de l'Œuf. Deux filets désormais :
@@ -409,7 +437,8 @@ commiter rouge ; ne jamais désactiver un contrôle pour faire passer une passe.
 | script | ce qu'il refuse |
 |---|---|
 | `lint-npc-placements.py` | poste dans un mur, poste injoignable, liste sans poste par défaut, **deux personnages sur une tuile** |
-| `lint-npc-sprites.py` | **personnage invisible** (ni `sprite_id` résoluble, ni objet ROM sous ses pieds) sur le chemin critique ; relève les autres zone par zone |
+| `lint-npc-sprites.py` | **personnage invisible** (ni `sprite_id` résoluble, ni objet ROM sous ses pieds) — sur TOUTE carte servie ; distingue « pas de sprite » de « zone de contenu sans MAP_* » |
+| `lint-baked-sprites.py` | **personnage encore peint** dans une capture servie (hors `npm run check` : lent — c'est le contrôle de bouclage de `maps:scrub`) |
 | `lint-roadblocks.py` | verrou muet, garde dans un mur, **clé hors d'atteinte sans franchir le verrou** (graphe des warps, `item_owned` compris) |
 | `lint-cross-refs.py` | ids croisés, `remove_item` sur un état par défaut, **remise d'objet sans état d'après** |
 | `lint-grammar-overlay.py` | résolution id→source, furigana sur tout kanji, cloze cohérent, distracteurs valides |

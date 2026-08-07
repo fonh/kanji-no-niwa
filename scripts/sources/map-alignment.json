@@ -1,7 +1,7 @@
 {
  "zones": {
   "MAP_AZALEA": {
-   "key": "Azalea Gym HGSS.png:44032",
+   "key": "Azalea Gym HGSS.png:94233",
    "naive_score": 0.1263,
    "origin_x": -17.5,
    "origin_y": 174.5,
@@ -11,7 +11,7 @@
    "trusted": false
   },
   "MAP_AZALEA_GYM": {
-   "key": "Azalea Gym HGSS.png:44032",
+   "key": "Azalea Gym HGSS.png:94233",
    "naive_score": 0.2037,
    "origin_x": 43.5,
    "origin_y": 62.0,
@@ -41,7 +41,7 @@
    "trusted": true
   },
   "MAP_AZALEA_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -61,7 +61,7 @@
    "trusted": true
   },
   "MAP_AZALEA_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -141,7 +141,7 @@
    "trusted": true
   },
   "MAP_BATTLE_TOWER": {
-   "key": "Battle Tower HGSS.png:33390",
+   "key": "Battle Tower HGSS.png:31351",
    "naive_score": 1.3019,
    "origin_x": 2.0,
    "origin_y": 13.0,
@@ -171,7 +171,7 @@
    "trusted": true
   },
   "MAP_BELL_TOWER_1F": {
-   "key": "Bell Tower 1F HGSS.png:25628",
+   "key": "Bell Tower 1F HGSS.png:21646",
    "naive_score": 0.9312,
    "origin_x": -58.0,
    "origin_y": -8.0,
@@ -281,7 +281,7 @@
    "trusted": true
   },
   "MAP_BLACKTHORN_GYM": {
-   "key": "Blackthorn Gym HGSS.png:103070",
+   "key": "Blackthorn Gym HGSS.png:219489",
    "naive_score": 0.7405,
    "origin_x": -10.5,
    "origin_y": 32.0,
@@ -301,7 +301,7 @@
    "trusted": true
   },
   "MAP_BLACKTHORN_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -321,7 +321,7 @@
    "trusted": true
   },
   "MAP_BLACKTHORN_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -341,7 +341,7 @@
    "trusted": true
   },
   "MAP_BURNED_TOWER_1F": {
-   "key": "Burned Tower 1F HGSS.png:38744",
+   "key": "Burned Tower 1F HGSS.png:33829",
    "naive_score": 0.1305,
    "origin_x": -8.0,
    "origin_y": -32.5,
@@ -391,7 +391,7 @@
    "trusted": true
   },
   "MAP_CELADON_DEPARTMENT_STORE_1F": {
-   "key": "Celadon Department Store 1F HGSS.png:13221",
+   "key": "Celadon Department Store 1F HGSS.png:11110",
    "naive_score": 1.0333,
    "origin_x": -3.25,
    "origin_y": -8.0,
@@ -401,7 +401,7 @@
    "trusted": true
   },
   "MAP_CELADON_DEPARTMENT_STORE_2F": {
-   "key": "Celadon Department Store 2F HGSS.png:15330",
+   "key": "Celadon Department Store 2F HGSS.png:12599",
    "naive_score": 0.9925,
    "origin_x": -8.5,
    "origin_y": -7.5,
@@ -411,7 +411,7 @@
    "trusted": true
   },
   "MAP_CELADON_DEPARTMENT_STORE_3F": {
-   "key": "Celadon Department Store 3F HGSS.png:15186",
+   "key": "Celadon Department Store 3F HGSS.png:12913",
    "naive_score": 1.1206,
    "origin_x": -10.5,
    "origin_y": -10.0,
@@ -421,7 +421,7 @@
    "trusted": true
   },
   "MAP_CELADON_DEPARTMENT_STORE_4F": {
-   "key": "Celadon Department Store 4F HGSS.png:12998",
+   "key": "Celadon Department Store 4F HGSS.png:11150",
    "naive_score": 0.9751,
    "origin_x": -11.0,
    "origin_y": -2.5,
@@ -431,7 +431,7 @@
    "trusted": true
   },
   "MAP_CELADON_DEPARTMENT_STORE_5F": {
-   "key": "Celadon Department Store 5F HGSS.png:12897",
+   "key": "Celadon Department Store 5F HGSS.png:11176",
    "naive_score": 0.8999,
    "origin_x": -10.0,
    "origin_y": 1.5,
@@ -451,7 +451,7 @@
    "trusted": true
   },
   "MAP_CELADON_GYM": {
-   "key": "Celadon Gym HGSS.png:33878",
+   "key": "Celadon Gym HGSS.png:70203",
    "naive_score": 0.1,
    "origin_x": 9.5,
    "origin_y": 28.0,
@@ -461,7 +461,7 @@
    "trusted": true
   },
   "MAP_CELADON_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -481,7 +481,7 @@
    "trusted": true
   },
   "MAP_CELADON_PRIZE_CORNER": {
-   "key": "Celadon Game Prize Corner HGSS.png:5271",
+   "key": "Celadon Game Prize Corner HGSS.png:4041",
    "naive_score": 0.9115,
    "origin_x": -4.75,
    "origin_y": 14.5,
@@ -491,7 +491,7 @@
    "trusted": true
   },
   "MAP_CERULEAN": {
-   "key": "Cerulean Gym HGSS.png:19381",
+   "key": "Cerulean Gym HGSS.png:37031",
    "naive_score": 0.4472,
    "origin_x": -1.0,
    "origin_y": -18.5,
@@ -551,7 +551,7 @@
    "trusted": true
   },
   "MAP_CERULEAN_GYM": {
-   "key": "Cerulean Gym HGSS.png:19381",
+   "key": "Cerulean Gym HGSS.png:37031",
    "naive_score": 0.9817,
    "origin_x": 1.5,
    "origin_y": 98.0,
@@ -571,7 +571,7 @@
    "trusted": true
   },
   "MAP_CERULEAN_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -591,7 +591,7 @@
    "trusted": true
   },
   "MAP_CERULEAN_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -631,7 +631,7 @@
    "trusted": true
   },
   "MAP_CHERRYGROVE_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -651,7 +651,7 @@
    "trusted": true
   },
   "MAP_CHERRYGROVE_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -681,7 +681,7 @@
    "trusted": true
   },
   "MAP_CIANWOOD": {
-   "key": "Cianwood Gym HGSS.png:31839",
+   "key": "Cianwood Gym HGSS.png:68704",
    "naive_score": 0.2157,
    "origin_x": -60.0,
    "origin_y": -3.5,
@@ -711,7 +711,7 @@
    "trusted": true
   },
   "MAP_CIANWOOD_GYM": {
-   "key": "Cianwood Gym HGSS.png:31839",
+   "key": "Cianwood Gym HGSS.png:68704",
    "naive_score": 1.2495,
    "origin_x": -10.5,
    "origin_y": -4.5,
@@ -741,7 +741,7 @@
    "trusted": true
   },
   "MAP_CIANWOOD_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -771,7 +771,7 @@
    "trusted": true
   },
   "MAP_CINNABAR_ISLAND_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -841,7 +841,7 @@
    "trusted": true
   },
   "MAP_DRAGONS_DEN": {
-   "key": "Dragons Den HGSS.png:218852",
+   "key": "Dragons Den HGSS.png:199292",
    "naive_score": 0.6043,
    "origin_x": 1.5,
    "origin_y": 0.5,
@@ -861,7 +861,7 @@
    "trusted": true
   },
   "MAP_DRAGONS_DEN_SHRINE": {
-   "key": "Dragons Den Dragon Shrine HGSS.png:19904",
+   "key": "Dragons Den Dragon Shrine HGSS.png:13967",
    "naive_score": 0.1036,
    "origin_x": -23.75,
    "origin_y": 7.25,
@@ -901,7 +901,7 @@
    "trusted": false
   },
   "MAP_ECRUTEAK_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -921,7 +921,7 @@
    "trusted": true
   },
   "MAP_ECRUTEAK_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -1041,7 +1041,7 @@
    "trusted": true
   },
   "MAP_FUCHSIA_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -1061,7 +1061,7 @@
    "trusted": true
   },
   "MAP_FUCHSIA_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -1111,7 +1111,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_DEPARTMENT_STORE_1F": {
-   "key": "Goldenrod Department Store 1F HGSS.png:14011",
+   "key": "Goldenrod Department Store 1F HGSS.png:10512",
    "naive_score": 0.8767,
    "origin_x": -2.25,
    "origin_y": -10.0,
@@ -1121,7 +1121,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_DEPARTMENT_STORE_2F": {
-   "key": "Goldenrod Department Store 2F HGSS.png:15639",
+   "key": "Goldenrod Department Store 2F HGSS.png:12943",
    "naive_score": 0.7412,
    "origin_x": -5.75,
    "origin_y": -8.0,
@@ -1131,7 +1131,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_DEPARTMENT_STORE_3F": {
-   "key": "Goldenrod Department Store 3F HGSS.png:14750",
+   "key": "Goldenrod Department Store 3F HGSS.png:12878",
    "naive_score": 0.721,
    "origin_x": -5.75,
    "origin_y": -4.0,
@@ -1141,7 +1141,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_DEPARTMENT_STORE_4F": {
-   "key": "Goldenrod Department Store 4F HGSS.png:14225",
+   "key": "Goldenrod Department Store 4F HGSS.png:11813",
    "naive_score": 0.8933,
    "origin_x": -7.25,
    "origin_y": 8.0,
@@ -1151,7 +1151,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_DEPARTMENT_STORE_5F": {
-   "key": "Goldenrod Department Store 5F HGSS.png:14148",
+   "key": "Goldenrod Department Store 5F HGSS.png:12078",
    "naive_score": 0.7253,
    "origin_x": -10.0,
    "origin_y": -10.0,
@@ -1161,7 +1161,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_DEPARTMENT_STORE_6F": {
-   "key": "Goldenrod Department Store 6F HGSS.png:13386",
+   "key": "Goldenrod Department Store 6F HGSS.png:11403",
    "naive_score": 0.835,
    "origin_x": -10.5,
    "origin_y": -10.0,
@@ -1171,7 +1171,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_DEPARTMENT_STORE_BASEMENT": {
-   "key": "Goldenrod Department Store Basement HGSS.png:21084",
+   "key": "Goldenrod Department Store Basement HGSS.png:19318",
    "naive_score": 2.043,
    "origin_x": -2.0,
    "origin_y": -2.0,
@@ -1191,7 +1191,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_GAME_CORNER": {
-   "key": "HGSS Goldenrod Game Corner.png:12437",
+   "key": "HGSS Goldenrod Game Corner.png:13748",
    "naive_score": 0.4892,
    "origin_x": -8.0,
    "origin_y": 11.5,
@@ -1241,7 +1241,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_NAME_RATER_HOUSE": {
-   "key": "Name Rater HGSS.png:12592",
+   "key": "Name Rater HGSS.png:9614",
    "naive_score": 0.2983,
    "origin_x": 50.0,
    "origin_y": 30.0,
@@ -1261,7 +1261,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -1361,7 +1361,7 @@
    "trusted": false
   },
   "MAP_ICE_PATH_1F": {
-   "key": "Ice Path 1F HGSS.png:164977",
+   "key": "Ice Path 1F HGSS.png:162090",
    "naive_score": 0.7367,
    "origin_x": -53.5,
    "origin_y": -8.0,
@@ -1421,7 +1421,7 @@
    "trusted": true
   },
   "MAP_LAKE_OF_RAGE": {
-   "key": "Lake of Rage HGSS dry.png:230935",
+   "key": "Lake of Rage HGSS dry.png:233910",
    "naive_score": 0.3541,
    "origin_x": -26.0,
    "origin_y": 111.0,
@@ -1471,7 +1471,7 @@
    "trusted": true
   },
   "MAP_LAVENDER_NAME_RATER": {
-   "key": "Name Rater HGSS.png:12592",
+   "key": "Name Rater HGSS.png:9614",
    "naive_score": 0.2983,
    "origin_x": 50.0,
    "origin_y": 30.0,
@@ -1481,7 +1481,7 @@
    "trusted": true
   },
   "MAP_LAVENDER_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -1501,7 +1501,7 @@
    "trusted": true
   },
   "MAP_LAVENDER_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -1591,7 +1591,7 @@
    "trusted": true
   },
   "MAP_MAHOGANY_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -1611,7 +1611,7 @@
    "trusted": true
   },
   "MAP_MAHOGANY_SOUVENIR_SHOP": {
-   "key": "Mahogany Town Shop HGSS.png:10610",
+   "key": "Mahogany Town Shop HGSS.png:7083",
    "naive_score": 0.7895,
    "origin_x": 1.5,
    "origin_y": -5.0,
@@ -1751,7 +1751,7 @@
    "trusted": true
   },
   "MAP_MOUNT_SILVER_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -1871,7 +1871,7 @@
    "trusted": true
   },
   "MAP_OLIVINE": {
-   "key": "Olivine Gym HGSS.png:13726",
+   "key": "Olivine Gym HGSS.png:22703",
    "naive_score": 0.0606,
    "origin_x": -5.5,
    "origin_y": -8.5,
@@ -1881,7 +1881,7 @@
    "trusted": false
   },
   "MAP_OLIVINE_GYM": {
-   "key": "Olivine Gym HGSS.png:13726",
+   "key": "Olivine Gym HGSS.png:22703",
    "naive_score": 0.4313,
    "origin_x": -2.0,
    "origin_y": -1.0,
@@ -1891,7 +1891,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_LIGHTHOUSE_1F": {
-   "key": "Glitter Lighthouse 1F HGSS.png:11049",
+   "key": "Glitter Lighthouse 1F HGSS.png:9305",
    "naive_score": 0.191,
    "origin_x": -10.75,
    "origin_y": 2.25,
@@ -1901,7 +1901,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_LIGHTHOUSE_2F": {
-   "key": "Glitter Lighthouse 2F HGSS.png:8974",
+   "key": "Glitter Lighthouse 2F HGSS.png:7794",
    "naive_score": 0.2402,
    "origin_x": -11.0,
    "origin_y": -23.5,
@@ -1911,7 +1911,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_LIGHTHOUSE_3F": {
-   "key": "Glitter Lighthouse 3F HGSS.png:13375",
+   "key": "Glitter Lighthouse 3F HGSS.png:11390",
    "naive_score": 0.8903,
    "origin_x": -10.75,
    "origin_y": -22.5,
@@ -1931,7 +1931,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_LIGHTHOUSE_5F": {
-   "key": "Glitter Lighthouse 5F HGSS.png:12943",
+   "key": "Glitter Lighthouse 5F HGSS.png:11570",
    "naive_score": 1.2255,
    "origin_x": -5.25,
    "origin_y": -1.5,
@@ -1981,7 +1981,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -2001,7 +2001,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -2081,7 +2081,7 @@
    "trusted": false
   },
   "MAP_PEWTER_GYM": {
-   "key": "Pewter Gym HGSS.png:33255",
+   "key": "Pewter Gym HGSS.png:62361",
    "naive_score": 0.5278,
    "origin_x": 104.0,
    "origin_y": 35.5,
@@ -2111,7 +2111,7 @@
    "trusted": true
   },
   "MAP_PEWTER_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -2131,7 +2131,7 @@
    "trusted": true
   },
   "MAP_PEWTER_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -2151,7 +2151,7 @@
    "trusted": true
   },
   "MAP_POKEATHLON_DOME": {
-   "key": "Pokeathlon Dome Interior 1F HGSS.png:42811",
+   "key": "Pokeathlon Dome Interior 1F HGSS.png:35938",
    "naive_score": 0.0357,
    "origin_x": -55.5,
    "origin_y": -48.5,
@@ -2161,7 +2161,7 @@
    "trusted": false
   },
   "MAP_POKEATHLON_DOME_INTERIOR_1F": {
-   "key": "Pokeathlon Dome Interior 1F HGSS.png:42811",
+   "key": "Pokeathlon Dome Interior 1F HGSS.png:35938",
    "naive_score": 0.1403,
    "origin_x": 30.0,
    "origin_y": 42.5,
@@ -2181,7 +2181,7 @@
    "trusted": true
   },
   "MAP_POKEMON_LEAGUE_BRUNO_ROOM": {
-   "key": "Bruno Room HGSS.png:33281",
+   "key": "Bruno Room HGSS.png:31444",
    "naive_score": 0.5382,
    "origin_x": 74.0,
    "origin_y": 79.5,
@@ -2221,7 +2221,7 @@
    "trusted": true
   },
   "MAP_POKEMON_LEAGUE_KOGA_ROOM": {
-   "key": "Koga Room HGSS.png:49474",
+   "key": "Koga Room HGSS.png:49369",
    "naive_score": 0.8889,
    "origin_x": 6.5,
    "origin_y": 115.0,
@@ -2291,7 +2291,7 @@
    "trusted": true
   },
   "MAP_ROUTE_10_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -2511,7 +2511,7 @@
    "trusted": true
   },
   "MAP_ROUTE_22_POKEMON_LEAGUE_RECEPTION_GATE": {
-   "key": "Pok\u00e9mon League Reception Gate HGSS.png:13471",
+   "key": "Pok\u00e9mon League Reception Gate HGSS.png:13451",
    "naive_score": 2.176,
    "origin_x": -5.75,
    "origin_y": -4.0,
@@ -2531,7 +2531,7 @@
    "trusted": true
   },
   "MAP_ROUTE_25": {
-   "key": "Kanto Route 25 HGSS.png:166197",
+   "key": "Kanto Route 25 HGSS.png:168174",
    "naive_score": 0.5611,
    "origin_x": 91.5,
    "origin_y": 22.5,
@@ -2571,7 +2571,7 @@
    "trusted": true
   },
   "MAP_ROUTE_27": {
-   "key": "Kanto Route 27 HGSS.png:371537",
+   "key": "Kanto Route 27 HGSS.png:338919",
    "naive_score": 0.9438,
    "origin_x": 56.0,
    "origin_y": 80.0,
@@ -2701,7 +2701,7 @@
    "trusted": true
   },
   "MAP_ROUTE_30_MR_POKEMON_HOUSE": {
-   "key": "Mr Pokemon House HGSS.png:10931",
+   "key": "Mr Pokemon House HGSS.png:23402",
    "naive_score": 0.3337,
    "origin_x": -15.5,
    "origin_y": 10.5,
@@ -2729,7 +2729,7 @@
    "score": 1.0615
   },
   "MAP_ROUTE_32": {
-   "key": "Johto Route 32 HGSS.png:506291",
+   "key": "Johto Route 32 HGSS.png:334419",
    "naive_score": 0.4072,
    "origin_x": -9.5,
    "origin_y": 76.0,
@@ -2739,7 +2739,7 @@
    "trusted": true
   },
   "MAP_ROUTE_32_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -2779,7 +2779,7 @@
    "trusted": true
   },
   "MAP_ROUTE_34": {
-   "key": "Johto Route 34 HGSS.png:255520",
+   "key": "Johto Route 34 HGSS.png:212717",
    "naive_score": 0.8031,
    "origin_x": 20.0,
    "origin_y": 13.0,
@@ -2799,7 +2799,7 @@
    "trusted": true
   },
   "MAP_ROUTE_35": {
-   "key": "Johto Route 35 HGSS.png:167755",
+   "key": "Johto Route 35 HGSS.png:137658",
    "naive_score": 0.6943,
    "origin_x": -8.5,
    "origin_y": -10.5,
@@ -2829,7 +2829,7 @@
    "trusted": true
   },
   "MAP_ROUTE_36": {
-   "key": "Johto Route 36 HGSS.png:146798",
+   "key": "Johto Route 36 HGSS.png:121384",
    "naive_score": 0.2971,
    "origin_x": -316.0,
    "origin_y": 27.0,
@@ -2859,7 +2859,7 @@
    "trusted": true
   },
   "MAP_ROUTE_37": {
-   "key": "Johto Route 37 HGSS.png:69746",
+   "key": "Johto Route 37 HGSS.png:57322",
    "naive_score": 0.5552,
    "origin_x": 56.0,
    "origin_y": 49.5,
@@ -2869,7 +2869,7 @@
    "trusted": true
   },
   "MAP_ROUTE_38": {
-   "key": "Johto Route 38 HGSS.png:140449",
+   "key": "Johto Route 38 HGSS.png:113624",
    "naive_score": 0.7781,
    "origin_x": 4.0,
    "origin_y": 57.0,
@@ -2889,7 +2889,7 @@
    "trusted": true
   },
   "MAP_ROUTE_39": {
-   "key": "Johto Route 39 HGSS.png:144015",
+   "key": "Johto Route 39 HGSS.png:154598",
    "naive_score": 0.7796,
    "origin_x": 81.5,
    "origin_y": 80.0,
@@ -2899,7 +2899,7 @@
    "trusted": true
   },
   "MAP_ROUTE_39_MOOMOO_FARM_HOUSE": {
-   "key": "MooMoo Farm House HGSS.png:6973",
+   "key": "MooMoo Farm House HGSS.png:4924",
    "naive_score": 0.9523,
    "origin_x": -10.5,
    "origin_y": -2.0,
@@ -2909,7 +2909,7 @@
    "trusted": true
   },
   "MAP_ROUTE_3_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -2939,7 +2939,7 @@
    "trusted": true
   },
   "MAP_ROUTE_40": {
-   "key": "Johto Route 40 HGSS.png:119574",
+   "key": "Johto Route 40 HGSS.png:103876",
    "naive_score": 0.7817,
    "origin_x": -10.5,
    "origin_y": 16.0,
@@ -2959,7 +2959,7 @@
    "trusted": true
   },
   "MAP_ROUTE_41": {
-   "key": "Johto Route 41 HGSS.png:262328",
+   "key": "Johto Route 41 HGSS.png:237215",
    "naive_score": 0.9077,
    "origin_x": 9.0,
    "origin_y": 17.0,
@@ -2969,7 +2969,7 @@
    "trusted": true
   },
   "MAP_ROUTE_42": {
-   "key": "Johto Route 42 HGSS.png:161292",
+   "key": "Johto Route 42 HGSS.png:166610",
    "naive_score": 0.49,
    "origin_x": -43.0,
    "origin_y": 43.0,
@@ -2989,7 +2989,7 @@
    "trusted": true
   },
   "MAP_ROUTE_43": {
-   "key": "Johto Route 43 HGSS.png:222660",
+   "key": "Johto Route 43 HGSS.png:176980",
    "naive_score": 0.6009,
    "origin_x": 25.0,
    "origin_y": 25.5,
@@ -3019,7 +3019,7 @@
    "trusted": true
   },
   "MAP_ROUTE_44": {
-   "key": "Johto Route 44 HGSS.png:202345",
+   "key": "Johto Route 44 HGSS.png:172333",
    "naive_score": 0.7441,
    "origin_x": -7.0,
    "origin_y": 59.5,
@@ -3029,7 +3029,7 @@
    "trusted": true
   },
   "MAP_ROUTE_45": {
-   "key": "Johto Route 45 HGSS.png:480312",
+   "key": "Johto Route 45 HGSS.png:428606",
    "naive_score": 0.7006,
    "origin_x": 2.5,
    "origin_y": 6.0,
@@ -3039,7 +3039,7 @@
    "trusted": true
   },
   "MAP_ROUTE_46": {
-   "key": "Johto Route 46 HGSS.png:157608",
+   "key": "Johto Route 46 HGSS.png:130662",
    "naive_score": 0.713,
    "origin_x": 68.0,
    "origin_y": -13.0,
@@ -3329,7 +3329,7 @@
    "trusted": false
   },
   "MAP_SAFARI_ZONE_GATE_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3359,7 +3359,7 @@
    "trusted": false
   },
   "MAP_SAFFRON_COPYCAT_HOUSE_1F": {
-   "key": "Copycat House 1F HGSS.png:8029",
+   "key": "Copycat House 1F HGSS.png:5990",
    "naive_score": 0.7228,
    "origin_x": -7.25,
    "origin_y": 6.5,
@@ -3369,7 +3369,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_COPYCAT_HOUSE_2F": {
-   "key": "Copycat House 2F HGSS.png:7100",
+   "key": "Copycat House 2F HGSS.png:5253",
    "naive_score": 0.6132,
    "origin_x": 8.5,
    "origin_y": -3.25,
@@ -3379,7 +3379,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_FIGHTING_DOJO": {
-   "key": "Fighting Dojo HGSS.png:13421",
+   "key": "Fighting Dojo HGSS.png:10937",
    "naive_score": 1.47,
    "origin_x": -2.0,
    "origin_y": -8.5,
@@ -3399,7 +3399,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_MR_PSYCHIC_HOUSE": {
-   "key": "Mr Psychic House HGSS.png:6566",
+   "key": "Mr Psychic House HGSS.png:4817",
    "naive_score": 0.9866,
    "origin_x": 4.25,
    "origin_y": 4.0,
@@ -3409,7 +3409,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3429,7 +3429,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -3509,7 +3509,7 @@
    "trusted": true
   },
   "MAP_SEAFOAM_ISLANDS_CINNABAR_GYM": {
-   "key": "Cinnabar Gym HGSS.png:24965",
+   "key": "Cinnabar Gym HGSS.png:52085",
    "naive_score": 0.4286,
    "origin_x": -4.5,
    "origin_y": -21.5,
@@ -3749,7 +3749,7 @@
    "trusted": true
   },
   "MAP_VERMILION_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3769,7 +3769,7 @@
    "trusted": true
   },
   "MAP_VERMILION_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -3869,7 +3869,7 @@
    "trusted": true
   },
   "MAP_VIOLET_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3889,7 +3889,7 @@
    "trusted": true
   },
   "MAP_VIOLET_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -3899,7 +3899,7 @@
    "trusted": true
   },
   "MAP_VIOLET_POKEMON_SCHOOL": {
-   "key": "Pok\u00e9mon School interior HGSS.png:7399",
+   "key": "Pok\u00e9mon School interior HGSS.png:7237",
    "naive_score": 0.5681,
    "origin_x": -2.75,
    "origin_y": 16.5,
@@ -3958,7 +3958,7 @@
    "trusted": true
   },
   "MAP_VIRIDIAN_POKECENTER_1F": {
-   "key": "Pok\u00e9mon Center inside HGSS.png:16546",
+   "key": "Pok\u00e9mon Center inside HGSS.png:17257",
    "naive_score": 0.9278,
    "origin_x": -9.75,
    "origin_y": -9.5,
@@ -3978,7 +3978,7 @@
    "trusted": true
   },
   "MAP_VIRIDIAN_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:10800",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11132",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
