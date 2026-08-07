@@ -46,6 +46,12 @@ OFFSETS = [
     if (dx, dy) != (0, 0)
 ]
 SHADOW_RX, SHADOW_RY = 9.0, 5.0  # demi-axes de l'ombre, en pixels
+#: Au-delà de ce raccord, le meilleur décor à recopier ne ressemble PAS à ce qui
+#: entoure la silhouette : on recopierait un pilier, une arche, un pan de mur —
+#: vu au Dojo de Parmanie, où un décor très chargé n'offrait aucun donneur
+#: plausible. Un personnage de trop se voit moins qu'un bout de décor en double,
+#: alors on renonce et on le signale.
+RACCORD_MAX = 55.0
 BAKED = Path("scripts/sources/maps-baked")  # les originaux, avant effacement
 RING = 3  # épaisseur, en pixels, de la couronne de décor qui juge un décalage
 
@@ -104,7 +110,7 @@ def scrub(zone_name: str, threshold: float, dry_run: bool) -> int:
         masks.append(full)
         taken |= dilate(full, 2)
 
-    done = 0
+    done = renonces = 0
     for hit, mask in zip(hits, masks):
         ring = dilate(mask, RING) & ~dilate(mask, 1)
         ry, rx = np.nonzero(ring)
@@ -127,8 +133,10 @@ def scrub(zone_name: str, threshold: float, dry_run: bool) -> int:
             err = float(np.abs(img[ry + dy, rx + dx] - img[ry, rx]).mean())
             if best_err is None or err < best_err:
                 best, best_err = (dx, dy), err
-        if best is None:
-            print(f"  ! {hit['sheet']} en {tuple(hit['tile'])} : aucun décor à recopier")
+        if best is None or best_err > RACCORD_MAX:
+            motif = "aucun décor à recopier" if best is None else f"raccord {best_err:.0f} trop mauvais"
+            print(f"  ! {hit['sheet']} en {tuple(hit['tile'])} : {motif} — laissé en place")
+            renonces += 1
             continue
         dx, dy = best
         if not dry_run:
@@ -148,7 +156,9 @@ def scrub(zone_name: str, threshold: float, dry_run: bool) -> int:
         Image.open(shot).convert("RGB").save(backup)
     Image.fromarray(img.astype(np.uint8)).save(shot)
     revalidate_alignment(zone_name, shot)
-    print(f"{zone_name} : {done} silhouette(s) effacée(s) → {shot}")
+    print(f"{zone_name} : {done} silhouette(s) effacée(s)"
+          + (f", {renonces} laissée(s) faute de décor plausible" if renonces else "")
+          + f" → {shot}")
     return done
 
 
@@ -170,7 +180,12 @@ def revalidate_alignment(zone_name: str, shot: Path) -> None:
     # Une même capture sert souvent plusieurs zones (un intérieur de Centre Pokémon
     # est le même dans toutes les villes) : elles ont chacune leur clé, et les
     # oublier casserait le recalage de toutes les autres.
-    name = fit["key"].rsplit(":", 1)[0]
+    # On indexe sur le nom du fichier SERVI, pas sur celui que porte la clé de
+    # cette zone : le registre résout la capture par mot-clé, et la zone choisie
+    # comme représentante d'un fichier peut très bien avoir une clé qui en nomme
+    # un autre. En s'appuyant dessus, on ne réaccordait alors AUCUNE des zones
+    # concernées (45 zones tombées sans recalage sur la passe complète).
+    name = shot.name
     size = shot.stat().st_size
     for other in doc["zones"].values():
         if other.get("key", "").rsplit(":", 1)[0] == name:
