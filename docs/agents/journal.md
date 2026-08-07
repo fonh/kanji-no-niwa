@@ -133,6 +133,18 @@ Densités cibles par type de zone : `content/texts-progressifs.md` § Densité.
 `lint-cross-refs.py` vérifie que la table, le registre de zones et
 `content/texts/` disent la même chose.
 
+### 3.6bis Nettoyer une carte de ses personnages incrustés
+
+```
+python3 scripts/build/find_baked_sprites.py MAP_ROUTE_30       # relever
+python3 scripts/build/scrub_baked_sprites.py MAP_ROUTE_30 --dry-run
+python3 scripts/build/scrub_baked_sprites.py MAP_ROUTE_30      # effacer
+python3 scripts/build/build-zone-registry.py                   # re-générer
+```
+
+Puis **regarder le avant/après** (l'original reste sous
+`scripts/sources/maps-baked/`). Détails et pièges : § 4.5.
+
 ### 3.6 Regarder ce que le joueur voit, sans attendre une capture
 
     python3 scripts/validate/render-zone-preview.py MAP_ROUTE_31 --around 23,16
@@ -291,22 +303,60 @@ désormais ; ne pas les désactiver « juste pour voir ».
   de tuile, bouton A) : c'est leur divergence qui laissait un figurant invisible
   continuer à bloquer.
 - **Les captures de carte contiennent des personnages peints dans les pixels**
-  (ce sont des captures de partie), d'où les doublons. Repérage :
-  `render-zone-preview.py`, puis `scrub-baked-npcs.py --preview`. Le bouchage
-  marche depuis le 2026-08-07, à trois conditions apprises à la dure :
-  **tuile par tuile** (un personnage chevauche deux terrains ; recopier son
-  rectangle d'un bloc plaque un pan d'arbres sur un chemin) ; la tuile jumelle
-  se choisit sur son **pourtour** ET sur sa **variance** (sans la variance, un
-  buisson voisin gagne et on remplace un personnage par un buisson) ; la boîte
-  couvre **deux colonnes sur trois rangées** autour des PIEDS (plus petit, il
-  reste un moignon de corps et l'ombre, ce qui se voit autant).
-  **Regarder le avant/après à chaque zone** — c'est la seule validation.
+  (ce sont des captures de partie), d'où les doublons. Depuis le 2026-08-07 ça
+  ne se relève plus à l'œil : `scripts/build/find_baked_sprites.py <ZONE>` les
+  retrouve seul, puis `scrub_baked_sprites.py <ZONE>` les efface.
+
+  Ce qui rend la chose fiable : **une silhouette cuite EST le sprite de
+  `public/sprites/overworld/`, au pixel près** (les cartes sont en résolution
+  native, 16 px par tuile de décor — la grille de collision, elle, a son propre
+  pas, cf. ADR-0006). On la cherche donc par corrélation, planche par planche,
+  dans une fenêtre autour de son objet ROM. La séparation est nette : **erreur
+  1 à 15 pour une vraie silhouette, 39+ pour du bruit** — d'où le seuil à 30.
+  Et on n'efface QUE les pixels du sprite (son canal alpha est le découpage
+  exact) **plus l'ombre au sol**, que le jeu dessine sous lui et qui ne fait pas
+  partie de son alpha. Les deux méthodes précédentes recopiaient un rectangle :
+  elles emportaient le décor autour et laissaient un raccord visible.
+
+  Deux pièges autour, tous deux payés :
+  **le recalage d'ADR-0006 est indexé par `fichier:taille`**, donc effacer un
+  pixel le périme — et pour TOUTES les zones qui partagent la capture (un
+  intérieur de Centre Pokémon sert dans chaque ville) ; le script réaccorde les
+  clés lui-même. **Les sauvegardes ne vivent pas dans `public/maps/`** (elles
+  vont sous `scripts/sources/maps-baked/`) : le registre y cherche ses captures
+  par mot-clé, et les quatre « Southwest House » se sont fait servir un `.baked`.
+
+  **Regarder le avant/après à chaque zone** reste la seule vraie validation.
 - **Un figurant incrusté n'est PAS sur la tuile de son objet ROM.** Beaucoup
   errent (`movement` 3/5/14/15) : la capture les a figés là où ils se
   trouvaient ce jour-là, une à deux tuiles à côté de leur position de spawn.
-  Dériver la liste des tuiles à boucher depuis le décompilé donne donc de
-  fausses coordonnées — c'était le cas de la première liste de la Route 31.
-  **Mesurer sur l'image**, jamais déduire.
+  Dériver la liste des tuiles depuis le décompilé donne donc de fausses
+  coordonnées — c'était le cas de la première liste de la Route 31, qui en
+  oubliait une quatrième au passage. C'est exactement ce que la corrélation
+  ci-dessus règle : elle mesure sur l'image.
+- **Un PNJ sans `sprite_id` n'est dessiné NULLE PART** — le rendu ne produisait
+  qu'un div vide de 18 px. 149 personnages étaient dans ce cas, dont M. Pokémon
+  et le Prof. Chen, qui portent le dialogue de l'Œuf. Deux filets désormais :
+  le moteur fait hériter l'apparence de l'**objet ROM sur la même tuile**
+  (`inheritedSpriteId`, `src/lib/rom-decor.ts`) — d'où l'intérêt de reposer un
+  personnage sur son objet — et `lint-npc-sprites.py` refuse tout invisible sur
+  le chemin critique. Écrire `sprite_id` reste la bonne pratique : l'héritage
+  est un filet, pas une source.
+- **Trier les personnages par profondeur, jamais par z-index fixe.** Un sprite
+  fait 32 px de haut pour une tuile de ~12 px à l'écran : deux personnages sur
+  des rangées voisines se chevauchent forcément, et c'est le plus bas qui doit
+  passer devant (`depthZ`, `src/lib/map-camera.ts`). Avec des z-index fixes, le
+  compagnon était dessiné sur la tête du joueur dès qu'il le suivait par le nord.
+- **La caméra s'arrête au bord du décor.** Sans borne, marcher au bord d'une
+  route faisait entrer une large bande noire dans le champ : la grille de
+  collision déborde de la capture. Et un intérieur plus petit que le cadre doit
+  être GROSSI pour le remplir, pas centré dans du noir (`mapZoom`).
+- **Un comptoir n'est pas franchissable, et le jeu d'origine laisse quand même
+  parler par-dessus.** Pas nous : notre moteur exige une case adjacente. Le
+  vendeur et l'infirmière se tiennent donc SUR la tuile du comptoir — dessinés
+  au bon endroit, interpellables depuis l'allée, et leur objet ROM (posé
+  derrière, sur une tuile volontairement inatteignable) est trié comme doublon
+  par la règle « même sprite à une case ».
 - **Une grille d'intérieur peut être fausse, et c'est ça qui fait rejeter la
   capture.** `interior_bounds` (scripts/build/zone_grid.py) bornait la pièce en
   incluant les OBJETS — or la ROM gare dans la même liste ceux qu'un script
@@ -359,6 +409,7 @@ commiter rouge ; ne jamais désactiver un contrôle pour faire passer une passe.
 | script | ce qu'il refuse |
 |---|---|
 | `lint-npc-placements.py` | poste dans un mur, poste injoignable, liste sans poste par défaut, **deux personnages sur une tuile** |
+| `lint-npc-sprites.py` | **personnage invisible** (ni `sprite_id` résoluble, ni objet ROM sous ses pieds) sur le chemin critique ; relève les autres zone par zone |
 | `lint-roadblocks.py` | verrou muet, garde dans un mur, **clé hors d'atteinte sans franchir le verrou** (graphe des warps, `item_owned` compris) |
 | `lint-cross-refs.py` | ids croisés, `remove_item` sur un état par défaut, **remise d'objet sans état d'après** |
 | `lint-grammar-overlay.py` | résolution id→source, furigana sur tout kanji, cloze cohérent, distracteurs valides |
