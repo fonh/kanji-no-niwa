@@ -129,8 +129,19 @@ describe('grammaire (issue 05)', () => {
 })
 
 describe('getLessonBlockedLines', () => {
-  it('[] tant que le fichier partagé n’existe pas (passe contenu à venir)', () => {
-    expect(getLessonBlockedLines('N5')).toEqual([])
+  it('sert le pool du palier depuis le fichier partagé (écrit 2026-08-07)', () => {
+    const lines = getLessonBlockedLines('N5')
+    expect(lines.length).toBeGreaterThan(1)
+    // Génériques par construction : une même ligne sert toutes les zones,
+    // donc aucune ne peut nommer un personnage ou un lieu. Et pas de latin.
+    for (const line of lines) expect(line).not.toMatch(/[A-Za-z]/)
+    // Au moins une renvoie au Carnet — c'est le seul endroit qui nomme le
+    // porteur de la prochaine leçon, et rien d'autre n'y renvoie.
+    expect(lines.some(l => l.includes('メニュー'))).toBe(true)
+  })
+
+  it('un palier sans pool retombe sur [] (l’appelant sert la ligne système)', () => {
+    expect(getLessonBlockedLines('N1')).toEqual([])
   })
 })
 

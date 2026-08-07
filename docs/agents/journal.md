@@ -101,7 +101,20 @@ se rediscute pas. Ce qui se décide, c'est **qui** le porte :
 - **présent sur le chemin critique** : pas de porteur gaté par un badge que la
   leçon sert justement à préparer, pas de porteur calendaire ;
 - `role: "lesson"` sur l'entrée carte, `npc_ref` dans le fichier de leçons ;
-- aucun lien thématique entre le PNJ et le contenu enseigné (PRD § Leçons).
+- aucun lien thématique entre le PNJ et le contenu enseigné (PRD § Leçons) ;
+- **dans l'ordre où le joueur les croise en entrant** — voir § 4.3, c'est la
+  règle la plus facile à casser et la plus pénible en jeu.
+
+Rien ne signale à l'écran qu'un PNJ a une leçon : `role` n'est même pas envoyé
+au client. C'est assumé (on parle à tout le monde, comme dans le jeu d'origine)
+— l'affordance est le **Carnet** (START → レッスン), qui nomme le porteur de la
+prochaine leçon. Le nom vient du fichier de dialogue (`name.jp`), pas du
+registre : un porteur sans dialogue afficherait son id latin.
+
+Ce qu'un porteur donne au joueur passe par l'écran-livre, et l'écran-livre
+passe d'abord par sa réplique (« l'histoire d'abord ») — la boîte se ferme
+seule 1,4 s après la dernière page (`LESSON_AUTOCLOSE_MS`), et B pendant la
+réplique abrège sans jamais escamoter la leçon.
 
 Une leçon qui déclare un `grammar_id` doit avoir son point dans
 `content/grammar/<zone>.json` — sinon l'écran-livre sert des pages kanji et
@@ -301,7 +314,25 @@ désormais ; ne pas les désactiver « juste pour voir ».
   géographie du sens d'entrée — sinon le premier personnage rencontré répond
   「まだ　はやいよ」 et le joueur ne sait pas où aller. Le sens d'entrée se lit
   dans la ROM : le panneau de direction (`bgs` type 1) dit quelle sortie mène
-  où.
+  où. → `lesson-chain.test.ts` (ajouté 2026-08-07) : il MARCHE la zone depuis
+  ses tuiles d'entrée et compare les distances à l'ordre des `sequence_index`
+  — un porteur d'intérieur compte à la distance de sa **porte**, puisque c'est
+  là que le joueur décide d'entrer. Mauville y est encore rouge et déclarée
+  comme dette : leçon #4 à 29 pas de l'entrée, #2 à 68.
+- **Un exemple de leçon écrit par gabarit** : une passe automatique a rempli
+  `lesson_examples[]` avec 「これは　X　です。」 → « This is <mot-clé>. » où X est
+  un composé quelconque contenant le kanji. Dès que le composé ne veut pas dire
+  le mot-clé, la traduction est FAUSSE et c'est ce que le joueur apprend :
+  牛肉 rendu « cow », 門限 « gate », 世論 « generation », 色気 « color ». **1560
+  exemples du corpus** (sur 4272) suivent ce gabarit. Le chemin critique en
+  compte 48, zéro sur la Route 30 depuis sa reprise
+  (`scripts/build/fix-route30-lesson-examples.py`).
+  → `audit-first-gym-run.py` les liste en MANQUE, et refuse en BLOQUANT un
+  exemple qui n'utilise même pas le kanji qu'il illustre.
+- **Un exemple qui n'illustre pas le sens enseigné** : les deux exemples de 風
+  portaient sur 風呂 (le bain) alors que la leçon enseigne « vent ». Aucun
+  linter ne peut l'attraper — c'est une relecture humaine, zone par zone, et
+  c'est la première chose à faire en ouvrant une zone déjà écrite.
 
 ### 4.4 Dialogues
 
@@ -444,8 +475,10 @@ commiter rouge ; ne jamais désactiver un contrôle pour faire passer une passe.
 | `lint-grammar-overlay.py` | résolution id→source, furigana sur tout kanji, cloze cohérent, distracteurs valides |
 | `lint-kanji-budget.py`, `lint-kanji-density.py` | budget de kanji inconnus par dialogue, densité plancher |
 | `solve-progression.py` | la progression écrite est-elle traversable de bout en bout |
-| `audit-first-gym-run.py` | le parcours début → première arène : leçons **atteignables**, grammaire présente, objets nommés, positions joignables, verrous listés |
+| `audit-first-gym-run.py` | le parcours début → première arène : leçons **atteignables**, grammaire présente, objets nommés, positions joignables, verrous listés, **exemple qui n'utilise pas son kanji** (et liste les exemples-gabarit) |
 | `a1-traversal.test.ts` | la carte reste franchissable ; PNJ d'intérieur servis dans leur pièce |
+| `lesson-chain.test.ts` | **l'ordre des leçons contre la marche réelle** (BFS depuis les tuiles d'entrée), le blocage hors d'ordre, et qu'un porteur soit utilisable : `role: "lesson"`, un dialogue, un nom japonais |
+| `MapClient.test.tsx` § « un PNJ-leçon parle avant que le livre ne s'ouvre » | l'écran-livre n'ouvre **jamais** tant que la boîte est à l'écran ; B n'escamote pas la leçon ; un état sans page n'arme pas une leçon fantôme pour la conversation suivante |
 
 ---
 

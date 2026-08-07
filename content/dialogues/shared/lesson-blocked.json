@@ -1,0 +1,10 @@
+{
+  "_note": "Banque partagée des lignes « tu vas trop vite » (PRD § Ordre des leçons ; câblage : getLessonBlockedLines, src/lib/content.ts). Créée le 2026-08-07 à l'inspection de la Route 30. AVANT : le fichier n'existait pas, le moteur retombait sur la ligne système ui-strings 「まだ　はやいよ。　じゅんばんに　まなぼうね。」 — correcte, mais elle ne dit pas OÙ aller. Sur la Route 30, un joueur qui passe devant la maison aux Noigrumes sans y entrer se fait rembarrer par les deux personnages suivants sans le moindre indice ; l'information existe pourtant, dans le Carnet (menu START → レッスン), qui nomme le porteur de la prochaine leçon. Ces lignes-ci y renvoient. Elles restent GÉNÉRIQUES : elles ne nomment jamais un personnage ni un lieu, puisqu'une même ligne sert toutes les zones — c'est le Carnet qui nomme. Le tirage est aléatoire à chaque refus (src/app/map/actions.ts) : les lignes doivent donc être interchangeables, jamais une suite. Kana majoritaire, lecture inline sur tout kanji (ADR-0002), niveau du palier.",
+  "N5": [
+    "まだ　はやいよ。　じゅんばんに　まなぼうね。",
+    "その　まえに　やる　ことが　あるはずだよ。",
+    "レッスンは　じゅんばん。　メニューの　レッスンで　たしかめて　ごらん。",
+    "まだ　ならって　いない　ことが　あるね。　メニューを　みて　ごらん。",
+    "あわてない、あわてない。　ひとつずつ　いこう。"
+  ]
+}

@@ -7553,10 +7553,10 @@
     "source": "tts_google"
    },
    {
-    "jp": "これは　牛肉（ぎゅうにく）です。",
-    "en": "This is cow.",
+    "jp": "牛（うし）の　ミルクを　のみます。",
+    "en": "I drink cow's milk.",
     "audio_ref": "/audio/kanji_examples/牛_2.webm",
-    "source": "tts_google"
+    "source": "generated"
    }
   ]
  },
@@ -9047,10 +9047,10 @@
     "license": "CC BY-NC 4.0"
    },
    {
-    "jp": "これは　色気（いろけ）です。",
-    "en": "This is color.",
+    "jp": "すきな　色（いろ）は　なんですか。",
+    "en": "What colour do you like?",
     "audio_ref": "/audio/kanji_examples/色_2.webm",
-    "source": "tts_google"
+    "source": "generated"
    }
   ]
  },
@@ -9954,10 +9954,10 @@
     "source": "tts_google"
    },
    {
-    "jp": "これは　鳥（とり）です。",
-    "en": "This is bird.",
+    "jp": "小（ちい）さな　鳥（とり）の　こえが　します。",
+    "en": "I can hear a small bird.",
     "audio_ref": "/audio/kanji_examples/鳥_2.webm",
-    "source": "tts_google"
+    "source": "generated"
    }
   ]
  },
@@ -10356,10 +10356,10 @@
     "source": "tts_google"
    },
    {
-    "jp": "これは　肉（にく）です。",
-    "en": "This is meat.",
+    "jp": "あの　みせの　肉（にく）は　おいしいです。",
+    "en": "The meat at that shop is good.",
     "audio_ref": "/audio/kanji_examples/肉_2.webm",
-    "source": "tts_google"
+    "source": "generated"
    }
   ]
  },
@@ -10458,24 +10458,16 @@
   "audio": "/audio/kanji/風.mp3",
   "lesson_examples": [
    {
-    "jp": "お　風呂（ふろ）　空（あ）い　てるよ。",
-    "en": "No one's in the bath.",
+    "jp": "きょうは　風（かぜ）が　つよいです。",
+    "en": "The wind is strong today.",
     "audio_ref": "/audio/kanji_examples/風_1.webm",
-    "source": "tatoeba",
-    "tatoeba_sentence_id": 2469523,
-    "tatoeba_audio_id": 139487,
-    "contributor": "yomi",
-    "license": "CC BY-NC 4.0"
+    "source": "generated"
    },
    {
-    "jp": "お　風呂先（ふろさき）に　入（はい）るね。",
-    "en": "I'm going to take a bath first.",
+    "jp": "あたたかい　風（かぜ）が　ふいて　います。",
+    "en": "A warm wind is blowing.",
     "audio_ref": "/audio/kanji_examples/風_2.webm",
-    "source": "tatoeba",
-    "tatoeba_sentence_id": 886077,
-    "tatoeba_audio_id": 46572,
-    "contributor": "yomi",
-    "license": "CC BY-NC 4.0"
+    "source": "generated"
    }
   ]
  },
@@ -10748,10 +10740,10 @@
     "source": "tts_google"
    },
    {
-    "jp": "これは　門限（もんげん）です。",
-    "en": "This is gate.",
+    "jp": "大（おお）きな　門（もん）の　まえで　まって　います。",
+    "en": "I'm waiting in front of the big gate.",
     "audio_ref": "/audio/kanji_examples/門_2.webm",
-    "source": "tts_google"
+    "source": "generated"
    }
   ]
  },
@@ -14400,10 +14392,10 @@
     "license": "CC BY-NC 4.0"
    },
    {
-    "jp": "これは　日系企業（にっけいきぎょう）です。",
-    "en": "This is business.",
+    "jp": "工業（こうぎょう）が　さかんな　まちです。",
+    "en": "It's a town where industry thrives.",
     "audio_ref": "/audio/kanji_examples/業_2.webm",
-    "source": "tts_google"
+    "source": "generated"
    }
   ]
  },
@@ -14499,10 +14491,10 @@
     "source": "tts_google"
    },
    {
-    "jp": "これは　地区（ちく）です。",
-    "en": "This is ward.",
+    "jp": "わたしは　この　区（く）に　すんで　います。",
+    "en": "I live in this ward.",
     "audio_ref": "/audio/kanji_examples/区_2.webm",
-    "source": "tts_google"
+    "source": "generated"
    }
   ]
  },
@@ -15803,10 +15795,10 @@
     "source": "tts_google"
    },
    {
-    "jp": "これは　世論（よろん）です。",
-    "en": "This is generation.",
+    "jp": "あたらしい　世（よ）が　はじまります。",
+    "en": "A new age is beginning.",
     "audio_ref": "/audio/kanji_examples/世_2.webm",
-    "source": "tts_google"
+    "source": "generated"
    }
   ]
  },

@@ -33,7 +33,8 @@ vi.mock('./battle-actions', () => ({
   engageTrainer: engageTrainerMock,
   winBattle: vi.fn(async () => null),
 }))
-vi.mock('next/navigation', () => ({ useRouter: () => ({ push: vi.fn() }) }))
+const pushMock = vi.hoisted(() => vi.fn())
+vi.mock('next/navigation', () => ({ useRouter: () => ({ push: pushMock }) }))
 // npc-sprites charge le manifeste de planches via require('@/data/…'), que le
 // projet jsdom de vitest ne résout pas — sans objet ici (marqueurs génériques),
 // sauf override ponctuel (mockReturnValueOnce) pour tester le cas résolu.
@@ -108,6 +109,7 @@ beforeEach(() => {
   document.body.appendChild(container)
   root = createRoot(container)
   interactWithNpcMock.mockClear()
+  pushMock.mockClear()
   engageTrainerMock.mockClear()
   checkZoneEntryMock.mockReset()
   checkZoneEntryMock.mockResolvedValue({ allowed: true })
@@ -875,5 +877,102 @@ describe('MapClient — plaque de nom de lieu', () => {
   it('une zone sans nom de section (bâtiment) n’en affiche aucune', () => {
     renderWith([entry('MAP_TEST_TOWN', null)])
     expect(container.querySelector('[data-testid="zone-banner"]')).toBeNull()
+  })
+})
+
+// ── Enchaînement « l'histoire d'abord » : dialogue → écran-livre ─────────────
+//
+// Décision produit (issue 13) : un PNJ qui a une leçon à donner dit d'ABORD sa
+// réplique ; l'écran-livre s'ouvre à la fermeture de la boîte. Le câblage tient
+// à un `afterDialogueCloseRef` armé au moment où la boîte s'ouvre — jusqu'ici
+// aucun test ne prouvait qu'il partait bien, ni qu'il ne partait pas trop tôt,
+// ni qu'il ne restait pas armé pour la conversation SUIVANTE.
+describe('MapClient — un PNJ-leçon parle avant que le livre ne s’ouvre', () => {
+  const talkToNpc = () => {
+    const buttonA = Array.from(container.querySelectorAll('button')).find(b => b.textContent === 'A')
+    click(buttonA!)
+  }
+
+  /** La boîte est-elle encore à l'écran ? (le nom du PNJ n'y est que là) */
+  const dialogueShowing = (name: string) => container.textContent?.includes(name) ?? false
+
+  it('la boîte s’ouvre d’abord, et l’écran-livre seulement à sa fermeture', async () => {
+    interactWithNpcMock.mockResolvedValueOnce({
+      kind: 'dialogue',
+      dialogue: { name: 'みちの　こども', state: 'greeting', pages: [{ jp: 'いち' }, { jp: 'に' }] },
+      lesson: { zone_id: 'route-30', sequence_index: 1 },
+    } as never)
+    render()
+    await act(async () => void talkToNpc())
+
+    // La réplique est à l'écran, et RIEN n'a encore navigué : c'est tout
+    // l'intérêt de « l'histoire d'abord ».
+    expect(dialogueShowing('みちの　こども')).toBe(true)
+    expect(pushMock).not.toHaveBeenCalled()
+
+    // A jusqu'au bout. L'invariant testé n'est pas le nombre d'appuis (il
+    // dépend de la machine à écrire et du nombre de pages) mais celui-ci :
+    // TANT QUE la boîte est là, l'écran-livre ne s'ouvre pas.
+    for (let i = 0; i < 12 && dialogueShowing('みちの　こども'); i++) {
+      expect(pushMock).not.toHaveBeenCalled()
+      await act(async () => void talkToNpc())
+    }
+    expect(dialogueShowing('みちの　こども')).toBe(false)
+    expect(pushMock).toHaveBeenCalledWith('/lesson/route-30/1')
+  })
+
+  it('B pendant la réplique n’escamote pas la leçon', async () => {
+    interactWithNpcMock.mockResolvedValueOnce({
+      kind: 'dialogue',
+      dialogue: { name: 'みちの　おじさん', state: 'greeting', pages: [{ jp: 'いち' }, { jp: 'に' }] },
+      lesson: { zone_id: 'route-30', sequence_index: 3 },
+    } as never)
+    render()
+    await act(async () => void talkToNpc())
+    const buttonB = Array.from(container.querySelectorAll('button')).find(b => b.textContent === 'B')
+    await act(async () => void click(buttonB!))
+    // Fermer tôt saute la fin de la réplique, jamais la leçon — sinon on
+    // apprendrait au joueur qu'il peut esquiver le contenu en appuyant sur B.
+    expect(pushMock).toHaveBeenCalledWith('/lesson/route-30/3')
+  })
+
+  it('un état de dialogue sans page ouvre le livre tout de suite, et ne le laisse pas armé', async () => {
+    // Le piège : `openDialogue` ignore une liste de pages vide, donc la boîte
+    // ne s'ouvre pas — et un `afterDialogueCloseRef` armé partirait à la
+    // fermeture de la conversation SUIVANTE, avec quelqu'un d'autre.
+    interactWithNpcMock.mockResolvedValueOnce({
+      kind: 'dialogue',
+      dialogue: { name: 'むごんの　ひと', state: 'greeting', pages: [] },
+      lesson: { zone_id: 'route-30', sequence_index: 4 },
+    } as never)
+    render()
+    await act(async () => void talkToNpc())
+    expect(pushMock).toHaveBeenCalledWith('/lesson/route-30/4')
+    expect(pushMock).toHaveBeenCalledTimes(1)
+
+    // Une conversation ordinaire ensuite : sa fermeture ne doit rien rouvrir.
+    interactWithNpcMock.mockResolvedValueOnce({
+      kind: 'dialogue',
+      dialogue: { name: 'べつの　ひと', state: 'greeting', pages: [{ jp: 'こんにちは' }] },
+    } as never)
+    await act(async () => void talkToNpc())
+    await act(async () => void talkToNpc())
+    expect(pushMock).toHaveBeenCalledTimes(1)
+  })
+
+  it('un blocage hors d’ordre reste une simple boîte de dialogue, sans leçon', async () => {
+    interactWithNpcMock.mockResolvedValueOnce({
+      kind: 'dialogue',
+      dialogue: {
+        name: 'きたの　おんなのこ',
+        state: 'lesson_blocked',
+        pages: [{ jp: 'まだ　はやいよ。' }],
+      },
+    } as never)
+    render()
+    await act(async () => void talkToNpc())
+    expect(container.textContent).toContain('きたの　おんなのこ')
+    await act(async () => void talkToNpc())
+    expect(pushMock).not.toHaveBeenCalled()
   })
 })

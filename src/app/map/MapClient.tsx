@@ -482,9 +482,19 @@ export default function MapClient({ zone: initialZone, npcs: initialNpcs, traine
             // L'histoire d'abord : on lit sa réplique, l'écran-livre s'ouvre
             // en refermant la boîte (issue 13).
             const { zone_id, sequence_index } = result.lesson
-            afterDialogueCloseRef.current = () =>
-              router.push(`/lesson/${zone_id}/${sequence_index}`)
-            openDialogue(result.dialogue.name, result.dialogue.pages, true)
+            const goToLesson = () => router.push(`/lesson/${zone_id}/${sequence_index}`)
+            // Sans page à lire, il n'y a pas de boîte, donc pas de fermeture :
+            // armer `afterDialogueCloseRef` engloutirait la leçon, et pire, la
+            // déclencherait à la fermeture de la PROCHAINE boîte, au milieu
+            // d'une autre conversation. Aucun état de dialogue n'est vide
+            // aujourd'hui — mais rien ne l'interdit, et le symptôme serait
+            // une leçon qui s'ouvre en parlant à quelqu'un d'autre.
+            if (result.dialogue.pages.length === 0) {
+              goToLesson()
+            } else {
+              afterDialogueCloseRef.current = goToLesson
+              openDialogue(result.dialogue.name, result.dialogue.pages, true)
+            }
           } else if (result.kind === 'text') {
             // Textes débloqués par le moteur (issue 08) : PC du joueur,
             // panneau de Route 29 — la fenêtre de lecture est une route.

@@ -48,6 +48,10 @@ TRAINERS = json.load(open("content/map/trainers.json"))
 REGISTRY = {z["name"]: z for z in json.load(open("src/data/zone-registry.json"))["zones"]}
 ITEM_LABELS = json.load(open("src/data/item-labels.json"))["items"]
 
+# Le gabarit d'exemple généré automatiquement (voir son usage plus bas).
+PLACEHOLDER_JP = re.compile(r"^これは.*です。$")
+PLACEHOLDER_EN = re.compile(r"^This is .*\.$")
+
 verbose = "--verbose" in sys.argv
 problems: list[tuple[str, str]] = []  # (gravité, message)
 
@@ -95,6 +99,27 @@ def audit_lessons(zone_id: str) -> tuple[int, set[str]]:
                     gap(f"{zone_id} : {kid} — exemple sans audio")
                 elif not (ROOT / "public" / ref.lstrip("/")).exists():
                     gap(f"{zone_id} : {kid} — audio manquant sur disque ({ref})")
+                # Un exemple qui ne montre pas le kanji enseigné n'illustre
+                # rien : la page droite du livre parle d'autre chose que la
+                # page gauche.
+                if kid not in ex.get("jp", ""):
+                    blocker(
+                        f"{zone_id} leçon #{seq} : l'exemple « {ex.get('jp','')} » "
+                        f"n'utilise pas {kid}"
+                    )
+                # Gabarit automatique 「これは　X　です。」 → « This is <mot-clé>. »
+                # (2026-08-07). Dès que X est un composé, la traduction est
+                # FAUSSE — 牛肉 rendu « cow », 門限 « gate », 世論
+                # « generation ». 1560 exemples du corpus suivent ce gabarit ;
+                # sur le chemin critique il n'en reste aucun, et c'est cette
+                # ligne qui le maintient.
+                if PLACEHOLDER_JP.match(ex.get("jp", "")) and PLACEHOLDER_EN.match(
+                    (ex.get("en") or "").strip()
+                ):
+                    gap(
+                        f"{zone_id} : {kid} — exemple-gabarit « {ex.get('jp','')} / "
+                        f"{ex.get('en','')} », traduction non vérifiée"
+                    )
             if not entry.get("meanings"):
                 blocker(f"{zone_id} : {kid} sans traduction")
             if not (entry.get("on") or entry.get("kun")):
