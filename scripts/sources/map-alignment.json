@@ -51,7 +51,7 @@
    "trusted": true
   },
   "MAP_AZALEA_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -61,7 +61,7 @@
    "trusted": true
   },
   "MAP_AZALEA_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -311,7 +311,7 @@
    "trusted": true
   },
   "MAP_BLACKTHORN_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -321,7 +321,7 @@
    "trusted": true
   },
   "MAP_BLACKTHORN_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -451,7 +451,7 @@
    "trusted": true
   },
   "MAP_CELADON_GYM": {
-   "key": "Celadon Gym HGSS.png:70203",
+   "key": "Celadon Gym HGSS.png:70344",
    "naive_score": 0.1,
    "origin_x": 9.5,
    "origin_y": 28.0,
@@ -471,7 +471,7 @@
    "trusted": true
   },
   "MAP_CELADON_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -581,7 +581,7 @@
    "trusted": true
   },
   "MAP_CERULEAN_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -591,7 +591,7 @@
    "trusted": true
   },
   "MAP_CERULEAN_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -641,7 +641,7 @@
    "trusted": true
   },
   "MAP_CHERRYGROVE_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -651,7 +651,7 @@
    "trusted": true
   },
   "MAP_CHERRYGROVE_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -671,7 +671,7 @@
    "trusted": true
   },
   "MAP_CHERRYGROVE_SOUTHWEST_HOUSE": {
-   "key": "Cherrygrove Southwest House HGSS.png:5955",
+   "key": "Cherrygrove Southwest House HGSS.png:5909",
    "naive_score": 0.9546,
    "origin_x": -4.5,
    "origin_y": 26.5,
@@ -731,7 +731,7 @@
    "trusted": true
   },
   "MAP_CIANWOOD_NORTH_HOUSE": {
-   "key": "North Cianwood HGSS.png:16719",
+   "key": "North Cianwood HGSS.png:18250",
    "naive_score": 0.5604,
    "origin_x": 36.5,
    "origin_y": 65.5,
@@ -751,7 +751,7 @@
    "trusted": true
   },
   "MAP_CIANWOOD_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -781,7 +781,7 @@
    "trusted": true
   },
   "MAP_CINNABAR_ISLAND_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -861,7 +861,7 @@
    "trusted": true
   },
   "MAP_DRAGONS_DEN_SHRINE": {
-   "key": "Dragons Den Dragon Shrine HGSS.png:13967",
+   "key": "Dragons Den Dragon Shrine HGSS.png:14228",
    "naive_score": 0.1036,
    "origin_x": -23.75,
    "origin_y": 7.25,
@@ -911,7 +911,7 @@
    "trusted": true
   },
   "MAP_ECRUTEAK_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -921,7 +921,7 @@
    "trusted": true
   },
   "MAP_ECRUTEAK_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -1031,7 +1031,7 @@
    "trusted": true
   },
   "MAP_FUCHSIA_PAL_PARK_ENTRANCE": {
-   "key": "Pal Park HGSS.png:297423",
+   "key": "Pal Park HGSS.png:254374",
    "naive_score": 0.2377,
    "origin_x": 689.5,
    "origin_y": 45.5,
@@ -1051,7 +1051,7 @@
    "trusted": true
   },
   "MAP_FUCHSIA_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -1061,7 +1061,7 @@
    "trusted": true
   },
   "MAP_FUCHSIA_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -1271,7 +1271,7 @@
    "trusted": true
   },
   "MAP_GOLDENROD_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -1411,7 +1411,7 @@
    "trusted": true
   },
   "MAP_INDIGO_PLATEAU": {
-   "key": "Indigo Plateau HGSS.png:42477",
+   "key": "Indigo Plateau HGSS.png:44374",
    "naive_score": 0.4881,
    "origin_x": -25.0,
    "origin_y": 0.5,
@@ -1491,7 +1491,7 @@
    "trusted": true
   },
   "MAP_LAVENDER_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -1501,7 +1501,7 @@
    "trusted": true
   },
   "MAP_LAVENDER_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -1601,7 +1601,7 @@
    "trusted": true
   },
   "MAP_MAHOGANY_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -1681,7 +1681,7 @@
    "trusted": true
   },
   "MAP_MOUNT_SILVER_CAVE_1F": {
-   "key": "Silver Cave entrance HGSS.png:28375",
+   "key": "Silver Cave entrance HGSS.png:24821",
    "naive_score": 0.1251,
    "origin_x": -8.5,
    "origin_y": -740.5,
@@ -1691,7 +1691,7 @@
    "trusted": true
   },
   "MAP_MOUNT_SILVER_CAVE_2F": {
-   "key": "Silver Cave entrance HGSS.png:28375",
+   "key": "Silver Cave entrance HGSS.png:24821",
    "naive_score": 0.0414,
    "origin_x": 4.0,
    "origin_y": -2.5,
@@ -1701,7 +1701,7 @@
    "trusted": false
   },
   "MAP_MOUNT_SILVER_CAVE_3F": {
-   "key": "Silver Cave entrance HGSS.png:28375",
+   "key": "Silver Cave entrance HGSS.png:24821",
    "naive_score": 0.5664,
    "origin_x": 12.5,
    "origin_y": -1.0,
@@ -1761,7 +1761,7 @@
    "trusted": true
   },
   "MAP_MOUNT_SILVER_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -1861,7 +1861,7 @@
    "trusted": true
   },
   "MAP_NEW_BARK_SOUTHWEST_HOUSE": {
-   "key": "New Bark Southwest House HGSS.png:7375",
+   "key": "New Bark Southwest House HGSS.png:6301",
    "naive_score": 0.6824,
    "origin_x": 19.5,
    "origin_y": 12.5,
@@ -1941,7 +1941,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR": {
-   "key": "Olivine Gym Exterior HGSS screenshot.png:49785",
+   "key": "Olivine Gym Exterior HGSS screenshot.png:29671",
    "naive_score": 0.2749,
    "origin_x": -10.5,
    "origin_y": -7.75,
@@ -1991,7 +1991,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -2001,7 +2001,7 @@
    "trusted": true
   },
   "MAP_OLIVINE_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -2121,7 +2121,7 @@
    "trusted": true
   },
   "MAP_PEWTER_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -2131,7 +2131,7 @@
    "trusted": true
   },
   "MAP_PEWTER_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -2221,7 +2221,7 @@
    "trusted": true
   },
   "MAP_POKEMON_LEAGUE_KOGA_ROOM": {
-   "key": "Koga Room HGSS.png:49856",
+   "key": "Koga Room HGSS.png:49923",
    "naive_score": 0.8889,
    "origin_x": 6.5,
    "origin_y": 115.0,
@@ -2301,7 +2301,7 @@
    "trusted": true
   },
   "MAP_ROUTE_10_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -2571,7 +2571,7 @@
    "trusted": true
   },
   "MAP_ROUTE_27": {
-   "key": "Kanto Route 27 HGSS.png:338919",
+   "key": "Kanto Route 27 HGSS.png:339257",
    "naive_score": 0.9438,
    "origin_x": 56.0,
    "origin_y": 80.0,
@@ -2749,7 +2749,7 @@
    "trusted": true
   },
   "MAP_ROUTE_32_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -2799,7 +2799,7 @@
    "trusted": true
   },
   "MAP_ROUTE_35": {
-   "key": "Johto Route 35 HGSS.png:137658",
+   "key": "Johto Route 35 HGSS.png:137909",
    "naive_score": 0.6943,
    "origin_x": -8.5,
    "origin_y": -10.5,
@@ -2829,7 +2829,7 @@
    "trusted": true
   },
   "MAP_ROUTE_36": {
-   "key": "Johto Route 36 HGSS.png:121384",
+   "key": "Johto Route 36 HGSS.png:121543",
    "naive_score": 0.2971,
    "origin_x": -316.0,
    "origin_y": 27.0,
@@ -2859,7 +2859,7 @@
    "trusted": true
   },
   "MAP_ROUTE_37": {
-   "key": "Johto Route 37 HGSS.png:57322",
+   "key": "Johto Route 37 HGSS.png:57430",
    "naive_score": 0.5552,
    "origin_x": 56.0,
    "origin_y": 49.5,
@@ -2889,7 +2889,7 @@
    "trusted": true
   },
   "MAP_ROUTE_39": {
-   "key": "Johto Route 39 HGSS.png:154598",
+   "key": "Johto Route 39 HGSS.png:154430",
    "naive_score": 0.7796,
    "origin_x": 81.5,
    "origin_y": 80.0,
@@ -2899,7 +2899,7 @@
    "trusted": true
   },
   "MAP_ROUTE_39_MOOMOO_FARM_HOUSE": {
-   "key": "MooMoo Farm House HGSS.png:4924",
+   "key": "MooMoo Farm House HGSS.png:5134",
    "naive_score": 0.9523,
    "origin_x": -10.5,
    "origin_y": -2.0,
@@ -2919,7 +2919,7 @@
    "trusted": true
   },
   "MAP_ROUTE_3_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -2939,7 +2939,7 @@
    "trusted": true
   },
   "MAP_ROUTE_40": {
-   "key": "Johto Route 40 HGSS.png:103876",
+   "key": "Johto Route 40 HGSS.png:103418",
    "naive_score": 0.7817,
    "origin_x": -10.5,
    "origin_y": 16.0,
@@ -3019,7 +3019,7 @@
    "trusted": true
   },
   "MAP_ROUTE_44": {
-   "key": "Johto Route 44 HGSS.png:172333",
+   "key": "Johto Route 44 HGSS.png:172613",
    "naive_score": 0.7441,
    "origin_x": -7.0,
    "origin_y": 59.5,
@@ -3339,7 +3339,7 @@
    "trusted": true
   },
   "MAP_SAFARI_ZONE_GATE_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -3349,7 +3349,7 @@
    "trusted": true
   },
   "MAP_SAFFRON": {
-   "key": "Saffron Gym HGSS.png:33399",
+   "key": "Saffron Gym HGSS.png:34136",
    "naive_score": 0.1167,
    "origin_x": 5.0,
    "origin_y": -4.0,
@@ -3369,7 +3369,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_COPYCAT_HOUSE_2F": {
-   "key": "Copycat House 2F HGSS.png:5253",
+   "key": "Copycat House 2F HGSS.png:5920",
    "naive_score": 0.6132,
    "origin_x": 8.5,
    "origin_y": -3.25,
@@ -3389,7 +3389,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_GYM": {
-   "key": "Saffron Gym HGSS.png:33399",
+   "key": "Saffron Gym HGSS.png:34136",
    "naive_score": 0.6211,
    "origin_x": -0.5,
    "origin_y": 6.5,
@@ -3419,7 +3419,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_POKECENTER_2F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -3429,7 +3429,7 @@
    "trusted": true
   },
   "MAP_SAFFRON_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -3489,7 +3489,7 @@
    "trusted": true
   },
   "MAP_SEAFOAM_ISLANDS_B3F": {
-   "key": "Seafoam Islands B3F HGSS.png:111388",
+   "key": "Seafoam Islands B3F HGSS.png:114016",
    "naive_score": 0.0434,
    "origin_x": 27.5,
    "origin_y": 18.5,
@@ -3669,7 +3669,7 @@
    "trusted": true
   },
   "MAP_UNION": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 2.1881,
    "origin_x": -2.25,
    "origin_y": -3.0,
@@ -3679,7 +3679,7 @@
    "trusted": true
   },
   "MAP_UNION_CAVE_1F": {
-   "key": "Union Cave 1F HGSS.png:148748",
+   "key": "Union Cave 1F HGSS.png:149964",
    "naive_score": 0.0604,
    "origin_x": 11.0,
    "origin_y": -242.0,
@@ -3699,7 +3699,7 @@
    "trusted": true
   },
   "MAP_UNION_CAVE_B2F": {
-   "key": "Union Cave B2F HGSS.png:114609",
+   "key": "Union Cave B2F HGSS.png:115334",
    "naive_score": 0.0922,
    "origin_x": 27.0,
    "origin_y": -430.5,
@@ -3759,7 +3759,7 @@
    "trusted": true
   },
   "MAP_VERMILION_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -3769,7 +3769,7 @@
    "trusted": true
   },
   "MAP_VERMILION_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -3879,7 +3879,7 @@
    "trusted": true
   },
   "MAP_VIOLET_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -3889,7 +3889,7 @@
    "trusted": true
   },
   "MAP_VIOLET_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -3968,7 +3968,7 @@
    "trusted": true
   },
   "MAP_VIRIDIAN_POKECENTER_B1F": {
-   "key": "Union Room HGSS.png:2274",
+   "key": "Union Room HGSS.png:4668",
    "naive_score": 1.3949,
    "origin_x": 1.0,
    "origin_y": -4.0,
@@ -3978,7 +3978,7 @@
    "trusted": true
   },
   "MAP_VIRIDIAN_POKEMART": {
-   "key": "Pok\u00e9 Mart interior HGSS.png:11254",
+   "key": "Pok\u00e9 Mart interior HGSS.png:11218",
    "naive_score": 1.1539,
    "origin_x": -8.0,
    "origin_y": 1.5,
@@ -4038,7 +4038,7 @@
    "trusted": true
   },
   "MAP_WHIRL_ISLANDS_B2F": {
-   "key": "Whirl Islands B2F HGSS.png:52911",
+   "key": "Whirl Islands B2F HGSS.png:107397",
    "naive_score": 0.4967,
    "origin_x": -3.5,
    "origin_y": 49.0,
